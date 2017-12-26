@@ -1,0 +1,3936 @@
+\pagenumbering{arabic}
+\part{Conceitos Matemáticos
+Fundamentais}\label{par:matematica}
+
+\begin{figure}
+ \noindent{\textsc{\textbf{Parte \ref{par:matematica}}}.  \textsl{Na
+abordagem matemática que baseia a Teoria da Elasticidade, há uma
+grande variedade de metodologias e notações. Didaticamente, é
+conveniente de\-fi\-nir\--se pre\-li\-mi\-nar\-men\-te, de forma
+clara, os fun\-da\-men\-tos ma\-te\-má\-ti\-cos essenciais a serem
+utilizados: suas restrições e suas formas. Para fins de clareza e
+facilidade de compreensão, esta parte centraliza todas as
+definições e conceitos matemáticos utilizados ao longo do texto.
+Em resumo, apresenta-se os conceitos elementares da Álgebra
+Abstrata, os fundamentos da Álgebra Linear e aspectos geométricos
+envolvidos, Álgebra e Cálculo Tensorial. O escopo e o nível de
+profundidade dos temas tratados abrange o necessário. Os tópicos
+apresentados podem ser aprofundados consultando-se a bibliografia
+utilizada, apresentada ao final desta parte. Ao leitor já
+familiarizado com os temas tratados, é recomendável passar
+rapidamente pelos capítulos, ficando a par do enfoque e notação
+utilizados.}}
+\end{figure}
+
+
+
+\chapter{Álgebra Abstrata Elementar}
+
+O enfoque da Álgebra Abstrata apresentado nos tópicos a seguir
+baseia-se fundamentalmente em dois conceitos elementares:
+\emph{conjunto} e \emph{função}. Os assuntos tratados, do mais
+simples ao mais elaborado, estão alicerçados direta ou
+indiretamente sobre um destes dois fundamentos ou sobre ambos.
+Eles objetivam basear o conceito de Espaço Vetorial e seus
+assuntos relacionados.
+
+\section{Coleções}
+
+\subsection{Conjunto}
+Denomina-se conjunto a uma coleção finita ou infinita de
+objetos\footnote{ O conceito de conjunto aqui considerado carece
+do rigor necessário a abordagens matemáticas mais formais. A
+definição de conjunto pela Teoria Axiomática de Conjuntos está
+fora do escopo deste livro. Admite-se, para todos os efeitos, que
+conjunto, aqui tratado como coleção de objetos, não cai no
+Paradoxo de Russel. Ver \aut{Cameron}\cite{cameron_1999_1}.},
+chamados \emph{elementos}, distintos ou não,  tal que sua
+ordenação não é importante. Desta forma, os conjuntos finitos $
+\con{A}=\lch \ele{a}_1,\ele{a}_2,\ele{a}_3 \rch$ e $\con{B} = \lch
+\ele{a}_2,\ele{a}_3,\ele{a}_1 \rch$ são iguais.
+
+\subsubsection{Exemplos}
+
+\begin{itemize}
+    \item Conjunto Finito: $ \lch \ele{a},\ele{b},\ele{b},\ele{c} \rch
+    $;
+    \item Conjunto dos Número Inteiros: $ \mathbb{Z}:= \lch \cdots,-2,-1,0,1,2,\cdots \rch
+    $;
+    \item Conjunto dos Número Reais: $ \mathbb{R}:= \lch \cdots \rch
+    $.
+\end{itemize}
+
+\subsubsection{Relações Importantes}
+Dados os conjuntos $\con{A}_1$ e
+$\con{A}_2$ e um elemento $\ele{a}$, as seguintes relações são
+definidas:
+\begin{itemize}
+    \item[i.] $\ele{a}\in\con{A}_1$ significa que $\ele{a}$ é
+elemento de $\con{A}_1$;
+    \item[ii.] $\ele{a}\notin\con{A}_1$ significa que $\ele{a}$ não é
+elemento de $\con{A}_1$;
+    \item[iii.] $\con{A}_1\subseteq\con{A}_2$ significa que todos os elementos $\con{A}_1$ são elementos de
+$\con{A}_2$.
+    \item[iv.] $\con{A}_1\subset\con{A}_2$ significa que $\con{A}_1\subseteq\con{A}_2$ e $\con{A}_1\neq\con{A}_2$.
+\end{itemize}
+
+
+\subsubsection{Conjunto Vazio}
+Trata-se do conjunto que não possui
+elementos, sendo representado por $\emptyset$.
+
+\subsubsection{Conjuntos União e Intersecção} Considerando dois conjuntos $\con{A}_1$ e
+$\con{A}_2$ diz-se que o conjunto $\con{A}_1\cup\con{A}_2$ formado
+por todos os elementos de $\con{A}_1$ e $\con{A}_2$ é o conjunto
+união destes dois conjuntos. O conjunto intersecção
+$\con{A}_1\cap\con{A}_2$ dos conjuntos $\con{A}_1$ e $\con{A}_2$ é
+formado por todos os elementos que pertencem a $\con{A}_1$ e a
+$\con{A}_2$ simultaneamente.
+
+\subsection{Tupla Ordenada}
+Denomina-se tupla ordenada a uma coleção finita de objetos,
+distintos ou não, tal que seu número de objetos $ n \geqslant 2 $.
+A ordem dos objetos é relevante, logo a tripla ordenada $ \lpa
+\ele{a}_1,\ele{a}_2,\ele{a}_3 \rpa \neq \lpa
+\ele{a}_2,\ele{a}_3,\ele{a}_1 \rpa$.
+
+\subsection{Produto Cartesiano}
+Sejam os conjuntos $\con{A}_1,\con{A}_2,\cdots,\con{A}_n$,
+$n\geqslant 2$ . Denomina-se produto cartesiano $ \con{A}_1 \times
+\con{A}_2 \times \cdots \times \con{A}_n$ ao conjunto formado por
+todas as combinações de tuplas ordenadas $ \lpa
+\ele{a}_1,\ele{a}_2,\cdots,\ele{a}_n \rpa $ de quaisquer elementos
+$\ele{a}_1 \in \con{A}_1,\ele{a}_2 \in \con{A}_2,\cdots,\ele{a}_n
+\in \con{A}_n$. Em outras palavras,
+\begin{equation}
+\con{A}_1 \times \con{A}_2 \times \cdots \times \con{A}_n := \lch
+\lpa \ele{a}_1,\ele{a}_2,\cdots,\ele{a}_n \rpa : \ele{a}_i \in
+\con{A}_i\, , \,i=1,\cdots,n \rch \,,\, n \geqslant  2\, .
+\end{equation}
+A fim de simplificar a notação, produtos cartesianos do tipo
+$\con{A}_1 \times \con{A}_2 \times \cdots \times \con{A}_n$ têm
+sua representação abreviada para $\crt{A}{n}$. Abrevia-se $
+\con{A} \times \con{A} \times \cdots \times \con{A} $, $\con{A}$
+repetido $n$ vezes, para $ \ele{A}^{n} $.
+
+\section{Funções}
+
+\subsection{Função}
+Sejam um conjunto $\con{D}$ e uma regra $\fun{f}$ qualquer, tal
+que $\fun{f}$ especifica, a partir do elemento $\ele{d} \in
+\con{D}$, o elemento $\fua{f}{\ele{d}}$. Denomina-se função ao par
+ordenado $\lpa \con{D},\fun{f} \rpa$, onde $\con{D}$ é chamado
+domínio da função. É conveniente explicitar o domínio $\con{D}$ da
+regra $\fun{f}$ como $\con{D}_\fun{f}$. Costuma-se abreviar a
+notação da função $\lpa \con{D}_\fun{f},\fun{f} \rpa$ para
+simplesmente $\fun{f}$. Desta forma, diz-se que $\fua{f}{\ele{d}}$
+é o valor da função $\fun{f}$ em $\ele{d}$. Pode-se resumir a
+descrição de $\lpa \con{D}_\fun{f},\fun{f} \rpa$ da seguinte
+forma:
+\begin{equation}
+\ele{d}\mapsto\fua{f}{\ele{d}}\,,\, \forall \, \ele{d} \in
+\con{D}_\fun{f}\,.
+\end{equation}
+
+
+\subsubsection{Imagem} Denomina-se imagem da função $\fun{f}$  ao conjunto
+formado por todos os valores de $\fun{f}$. Resumidamente, tem-se
+que a imagem
+\begin{equation}
+\con{R}_\fun{f} :=  \lch \fua{f}{\ele{d}} : d \in \con{D}_\fun{f}
+\rch \,.
+\end{equation}
+
+\subsubsection{Variável} Seja uma função $\lpa \con{D}_\fun{f},\fun{f}
+\rpa$. Denomina-se variável o símbolo matemático utilizado para
+descrever um valor. No caso de funções, ela é utilizada para
+descrever a regra $\fun{f}$. A variável \emph{representa}, então,
+um elemento qualquer do domínio $\con{D}_\fun{f}$. Para
+exemplificar, seja a função $\lpa \real,\fun{f} \rpa$, onde
+\begin{equation}
+ \fua{f}{x} = x^2 + 2\, .
+\end{equation}
+Esta sentença diz que o valor da função $\lpa \real,\fun{f} \rpa$,
+no lado esquerdo, é igual ao valor da expressão matemática à
+direita, onde a variável $x$, em ambos os lados, representa
+qualquer valor real.
+
+\subsubsection{Função Inversível}
+Uma função $\fun{f}$ é dita inversível se ela especifica, de forma
+\emph{unívoca}, $\ele{d}\mapsto\fua{f}{\ele{d}}\,,\, \forall \,
+\ele{d} \in \con{D}_\fun{f}$. Em outras palavras,
+\begin{equation}
+\fua{f}{\ele{d}_1}=\fua{f}{\ele{d}_2} \Rightarrow
+\ele{d}_1=\ele{d}_2,\, \forall \, \ele{d}_1,\ele{d}_2 \in
+\con{D}_\fun{f}.
+\end{equation}
+
+\subsubsection{Função Inversa}
+Seja $\fun{f}$ uma função inversível. Define-se a função inversa
+de $\fun{f}$ como sendo a função $\lpa
+\con{D}_\fun{f^{-1}},\fun{f^{-1}} \rpa$, tal que o domínio
+$\con{D}_\fun{f^{-1}}=\con{R}_\fun{f}$. Conforme prática anterior,
+abrevia-se a notação de $\lpa \con{D}_\fun{f^{-1}},\fun{f^{-1}}
+\rpa$ para apenas $\fun{f^{-1}}$.
+
+\subsubsection{Função Identidade} Uma função inversível $\fun{i}$ é chamada identidade se
+$\fua{\fun{i}}{\ele{d}}=\ele{d}, \forall\, \ele{d}\in\con{D}$.
+Para esta função, conclui-se que
+$\fua{\fun{i}}{\ele{d}}=\fua{\fun{i}^{-1}}{\ele{d}}=\ele{d}$.
+Convém identificar o domínio da função identidade com a notação
+$\fun{i}_\con{D}$.
+
+\subsection{Mapeamento}
+Seja a função $\lpa \con{D}_\fun{f},\fun{f} \rpa$ e conjuntos não
+vazios $\con{U}$ e $\con{V}$ quaisquer. Denomina-se mapeamento à
+tripla ordenada $\lpa \con{U},\con{V},\lpa \con{D}_\fun{f},\fun{f}
+\rpa \rpa$, tal que $\con{D}_\fun{f}=\con{U}$ e $\con{R}_\fun{f}
+\subseteq\con{V}$. Diz-se que $\lpa \con{U},\con{V},\lpa
+\con{D}_\fun{f},\fun{f} \rpa \rpa$ é o mapeamento $\fun{f}$ de
+$\con{U}$ para $\con{V}$ ou que a função $\fun{f}$ mapeia
+$\con{U}$ para $\con{V}$. Em outras palavras,
+\begin{equation}
+\ele{u} \mapsto \fua{f}{\ele{u}}\in \con{V}\,,\,\forall
+\ele{u}\in\ele{U}\,.
+\end{equation}
+Abreviadamente, escreve-se $\lpa \con{U},\con{V},\lpa
+\con{D}_\fun{f},\fun{f} \rpa \rpa$ como
+$\map{\fun{f}}{\con{U}}{\con{V}}$.
+
+\subsubsection{Mapeamento Injetor} Se a função $\fun{f}$ for inversível,
+diz-se que o mapeamento $\map{\fun{f}}{\con{U}}{\con{V}}$ é
+injetor.
+
+\subsubsection{Mapeamento Sobrejetor} Se o conjunto  $\con{V}=\con{R}_\fun{f}$,
+diz-se que o mapeamento $\map{\fun{f}}{\con{U}}{\con{V}}$ é
+sobrejetor.
+
+\subsubsection{Mapeamento Bijetor} Se o mapeamento $\map{\fun{f}}{\con{U}}{\con{V}}$
+for injetor e sobrejetor, diz-se que ele é bijetor.
+
+\subsubsection{Composição} Sejam os mapeamentos $\map{\fun{g}}{\con{U}}{\con{V}}$ e
+$\map{\fun{f}}{\con{V}}{\con{W}}$. Define-se
+$\map{\fun{h}}{\con{U}}{\con{W}}$ como o mapeamento composto de
+$\map{\fun{f}}{\con{V}}{\con{W}}$ com
+$\map{\fun{g}}{\con{U}}{\con{V}}$ se
+$\fua{h}{\ele{u}}=\fua{f}{\fua{g}{\ele{u}}}, \forall \, \ele{u}
+\in \con{}U$. Costuma-se utilizar a notação $\fun{\fun{f} \circ
+\fun{g}}$ para representar a função $\fun{h}$. Note que é
+importante a ordem das funções que fazem parte da composição.
+Pode-se demonstrar facilmente as seguintes propriedades:
+\begin{itemize}
+    \item[i.] Dado $\map{\fun{k}}{\con{W}}{\con{L}}$, tem-se
+ $\fun{k}\circ\lpa\fun{f}\circ\fun{g}\rpa=\lpa\fun{k}\circ\fun{f}\rpa\circ\fun{g}$ ;
+    \item[ii.] Se $\fun{f}$ e $\fun{g}$ definem mapeamentos bijetores,
+\begin{equation}
+\begin{array}{rcl}
+   \lpa\fun{f}\circ\fun{g}\rpa^{-1}& = & \fun{g}^{-1}\circ\fun{f}^{-1}, \nonumber \\
+   \fun{f}\circ\fun{f}^{-1} & = & \fun{i}_\con{W}, \nonumber \\
+   \fun{f}^{-1}\circ\fun{f} & = & \fun{i}_\con{V}\,; \nonumber \\
+\end{array}
+\end{equation}
+    \item[iii.]
+$\fun{f}\circ\fun{i}_\con{V}=\fun{i}_\con{W}\circ\fun{f}=\fun{f}$.
+\end{itemize}
+
+
+\subsubsection{Operação}Diz-se que o mapeamento $\map{\fun{f}}{\con{U}}{\con{V}}$ é uma
+operação se $\con{U}=\con{V}$ ou se $\con{U}=\con{V} \times
+\con{V} \times \cdots \times \con{V}$. A função $\fun{f}$ de uma
+operação é denominada \emph{operador}. Chama-se de operação
+\emph{binária} ao mapeamento $\map{\fun{f}}{\con{V} \times
+\con{V}}{\con{V}}$, descrito detalhadamente da forma
+\begin{equation}
+\lpa \ele{v}_1,\ele{v}_2 \rpa \mapsto
+\fua{f}{\ele{v}_1,\ele{v}_2}\in \con{V}\,,\,\forall
+\ele{v}_1,\ele{v}_2\in\ele{V}\,.
+\end{equation}
+
+\section{Grupos}
+
+\subsection{Grupo}
+Sejam um conjunto não vazio $\con{G}$ e uma operação binária
+$\map{\ast}{\con{G}\times\con{G}}{\con{G}}$, abreviada de
+$\fua{\ast}{\ele{g}_1,\ele{g}_2}$ para $\ele{g}_1\ast\ele{g}_2$,
+onde $\ele{g}_1,\ele{g}_2\in\con{G}$. Denomina-se grupo ao par
+ordenado $\lpa \con{G},\ast \rpa$ se forem respeitados os axiomas
+
+\begin{itemize}
+    \item[i.] Associatividade: $\ele{g}_1\ast\lpa \ele{g}_2 \ast \ele{g}_3 \rpa =
+    \lpa \ele{g}_1 \ast \ele{g}_2 \rpa \ast \ele{g}_3\, , \forall \, \ele{g}_1,\ele{g}_2,\ele{g}_3 \in
+    \con{G}$;
+    \item[ii.] Elemento identidade: $\exists1 \, \ele{e}\in\con{G}$ tal que $ \ele{g}_1\ast\ele{e}=\ele{e}\ast\ele{g}_1=
+     \ele{g}_1\,,\forall \, \ele{g}_1 \in \con{G}$;
+    \item[iii.] Elemento inverso: para cada $\ele{g}_1\in\con{G}, \,\exists1 \, \ele{b}\in\con{G}$ tal que
+$\ele{g}_1 \ast \ele{b}= \ele{b} \ast \ele{g}_1 = \ele{e}$.
+\end{itemize}
+
+Ao especificar $\ast$ como uma operação de adição $+$, diz-se que
+$\lpa \con{G},+ \rpa$ é \emph{grupo aditivo}. Quando $\ast$ é uma
+multiplicação $\cdot$, o par $\lpa \con{G},\cdot \rpa$ é
+\emph{grupo multiplicativo}. No grupo multiplicativo, adota-se a
+notação $\ele{g}_1^{-1}$ para o elemento inverso de ${\ele{g}_1}$
+e 1 para o elemento identidade, enquanto que, no grupo aditivo,
+adota-se $-\ele{g}_1$ e 0 respectivamente.
+
+A fim de facilitar referências posteriores, adota-se para o grupo
+$\lpa \con{G},\ast \rpa$ definido sobre o conjunto $\con{G}$ a
+notação $\gru{G}{\ast}$.
+
+\subsubsection{Grupo Abeliano} Se o grupo $\gru{G}{\ast}$
+respeitar o axioma da
+\begin{itemize}
+    \item[i.] Comutatividade: $\ele{g}_1\ast \ele{g}_2= \ele{g}_2\ast \ele{g}_1\, ,
+\forall \, \ele{g}_1,\ele{g}_2 \in \con{G}$,
+\end{itemize} diz-se que ele é abeliano. Se o grupo $\gru{G}{\ast}$ for
+abeliano, adota-se a notação $\gra{G}{\ast}$ .
+
+\subsection{Homomorfismo de Grupo}
+Sejam os grupos $\gru{G}{\hat{\ast}}$ e $\gru{W}{\overline{\ast}}$
+. Diz-se que a função $\fun{h}$ no mapeamento
+$\map{h}{\con{G}}{\con{W}}$ é um homomorfismo de grupo se
+\begin{itemize}
+ \item[i.] $\fua{h}{\ele{g}_1\hat{\ast}\ele{g}_2} =
+\fua{h}{\ele{g}_1}\overline{\ast}\,\fua{h}{\ele{g}_2}\, ,
+\,\forall\,\ele{g}_1,\ele{g}_2\in\con{G}$ e
+ \item[ii.] $\fua{h}{\ele{e}_\con{G}} = \ele{e}_\con{W}$, onde
+$\ele{e}_\con{G}\in\con{G}$ e $\ele{e}_\con{W}\in\con{W}$ são
+elementos identidade.
+\end{itemize}
+Os conjuntos $\con{G}$ e $\con{W}$ são então \emph{homomórficos}.
+Se $\map{h}{\con{G}}{\con{W}}$ for bijetor, então $\fun{h}$ é
+chamado \emph{isomorfismo} e os conjuntos em questão são
+\emph{isomórficos}. Se a função $\fun{f}$ em
+$\map{f}{\con{G}}{\con{G}}$ for um isomorfismo, então ela é
+chamada \emph{automorfismo}.
+
+Considerando a função $\fun{k}$ em
+$\map{\fun{k}}{\crt{G}{n}}{\con{W}}$ um homomorfismo de grupo,
+tem-se, genericamente, para todo $\ele{g}_i\in\con{G}_i$, que dado
+um $\ele{g}\in\con{G}_i$,
+\begin{eqnarray}
+  \lefteqn{\fua{k}{\ele{g}_1,\cdots,\ele{g}_i\hat{\ast}\ele{g},\cdots,\ele{g}_n}
+=} & & \nonumber\\
+  &
+&\fua{k}{\ele{g}_1,\cdots,\ele{g}_i,\cdots,\ele{g}_n}\overline{\ast}\,
+\fua{k}{\ele{g}_1,\cdots,\ele{g},\cdots,\ele{g}_n}\,.
+\end{eqnarray}
+A função $\con{k}$ é um isomorfismo se
+$\map{\fun{k}}{\crt{G}{n}}{\con{W}}$ for bijetor. Um homomorfismo
+$\fun{f}$ em $\map{\fun{f}}{\con{G}^n}{\con{G}}$ é um automorfismo
+se $\fun{f}$ for um isomorfismo.
+
+\subsection{Ação de Grupo}
+Sejam o grupo $\gru{G}{\ast}$ e um conjunto não vazio $\con{B}$.
+Diz-se que grupo $\gru{G}{\ast}$ \emph{age} em $\con{B}$ se existe
+um mapeamento $\map{\varphi}{\con{G}\times\con{B}}{\con{B}}$ tal
+que a função $\varphi$ respeita os axiomas
+\begin{itemize}
+    \item[i.]  Elemento identidade: $ \fua{\varphi}{\ele{e},\ele{b}}=\ele{b},
+\forall \, \ele{b} \in \con{B}$;
+    \item[ii.]  Associatividade: $ \fua{\varphi}{\ele{g}_1,\fua{\varphi}{\ele{g}_2,\ele{b}}}=
+\fua{\varphi}{\ele{g}_1\ast\ele{g}_2,\ele{b}}, \forall \, \ele{b}
+\in \con{B},\,\forall\, \ele{g}_1,\ele{g}_2\in\con{G}$.
+\end{itemize}
+Diz-se que o conjunto $\con{B}$, sobre o qual define-se a
+ação\footnote{Em termos mais precisos, diz-se que $\varphi$ é uma
+ação de grupo \emph{à esquerda}, já que se pode definir uma outra
+ação \emph{à direita} $\tilde{\varphi}$ onde
+$\map{\tilde{\varphi}}{\con{B}\times\con{G}}{\con{B}}$. Neste
+livro, este termo adicional é suprimido, pois as ações
+consideradas são sempre à esquerda.} $\varphi$ do grupo
+$\gru{G}{\ast}$, é um G-conjunto.
+
+
+\subsubsection{Ação Simplesmente Transitiva} Seja $\con{B}$
+um G-conjunto de $\gru{G}{\ast}$. A ação de grupo $\varphi$ em
+$\map{\varphi}{\con{G}\times\con{B}}{\con{B}}$ é dita simplesmente
+transitiva\footnote{Além da ação simplesmente transitiva, a Teoria
+de Grupos define outros tipos não apresentados no texto.Ver
+\aut{Milne}\cite{milne_2003_1}.} se, dados dois elementos
+quaisquer $\ele{b}_1,\ele{b}_2\in\con{B}$, existir um \emph{único}
+$\ele{g}\in{\con{G}}$ tal que
+$\fua{\varphi}{g,\ele{b}_1}=\ele{b}_2$.
+
+
+
+\section{Anéis}
+\subsection{Anel}
+Seja um grupo abeliano aditivo $\gra{R}{+}$ e uma operação binária
+multiplicativa $\map{\cdot}{\con{R}\times\con{R}}{\con{R}}$,
+abreviada de $\fua{\cdot}{\ele{r}_1,\ele{r}_2}$ para
+$\ele{r}_1\ele{r}_2$, onde $\ele{r}_1,\ele{r}_2\in\con{R}$.
+Denomina-se anel ao par ordenado $\lpa \gra{R}{+}\,,\cdot\rpa$,
+tal que sejam respeitados os axiomas
+\begin{itemize}
+    \item[i.] Multiplicação associativa: $\ele{r}_1\lpa \ele{r}_2 \ele{r}_3 \rpa =
+    \lpa \ele{r}_1\ele{r}_2 \rpa \ele{r}_3\, , \forall \, \ele{r}_1,\ele{r}_2,\ele{r}_3 \in
+    \con{R}$;
+    \item[ii.] Multiplicação distributiva: $\ele{r}_1\lpa \ele{r}_2 + \ele{r}_3 \rpa
+=\ele{r}_1\ele{r}_2+\ele{r}_1\ele{r}_3\, , \forall \,
+\ele{r}_1,\ele{r}_2,\ele{r}_3 \in
+    \con{R}$.
+\end{itemize}
+Caso o anel respeite os axiomas
+\begin{itemize}
+   \item[iii.] Multiplicação comutativa: $\ele{r}_1\ele{r}_2=\ele{r}_2\ele{r}_1\, ,
+    \forall \, \ele{r}_1,\ele{r}_2 \in
+    \con{R}$, e
+    \item[iv.] Identidade multiplicativa: $1\ele{r}_1= \ele{r}_1 \, ,
+    \forall \, \ele{r}_1 \in
+    \con{R}$
+\end{itemize}
+diz-se que ele é \emph{comutativo com elemento unitário}. Adota-se
+a notação $\ane{R}$ para o anel comutativo com elemento unitário
+$\lpa \gra{R}{+}\,,\cdot\rpa$, definido sobre o conjunto
+$\con{R}$.
+
+\subsection{Campo}
+Denomina-se campo ao anel comutativo com elemento unitário
+$\ane{F}$ se o axioma
+\begin{itemize}
+    \item[i.] Inverso multiplicativo: $\exists1\, \ele{r}^{-1}\in\con{F},\, \ele{r} \ele{r}^{-1}= 1 \, ,
+    \forall \, \ele{r} \neq 0\,,\,\ele{r}\in\con{F}$
+\end{itemize}
+for válido. A razão de $\ele{r} \neq 0$ está no fato de que não se
+define o inverso de 0. Pode-se observar que um campo é
+simultaneamente um grupo abeliano aditivo e multiplicativo.
+Denomina-se o elemento $\ele{r}\in\con{F}$ \emph{escalar}. A fim
+de particularizar a notação do campo $\ane{F}$, adota-se $\cam{F}$
+.
+
+\subsubsection{Exemplos}
+\begin{itemize}
+    \item Campo Racional: $\cam{\racional} = \lpa \lpa \racional,+\rpa ,\cdot \rpa $ ;
+    \item Campo Real: $\cam{\real} = \lpa \lpa \real,+\rpa ,\cdot \rpa $ ;
+    \item Campo Complexo: $\cam{\complexo} = \lpa \lpa \complexo,+\rpa ,\cdot \rpa $ .
+\end{itemize}
+
+
+\section{Arrays}\label{subsec:Arrays}
+\subsection{Array}
+Seja um anel $\ane{R}$ e uma função $\fun{h}$, chamada
+array\footnote{Na falta de uma expressão mais adequada em
+português, optou-se por utilizar o termo em inglês.}, que define o
+mapeamento $\map{\fun{h}}{\con{H}}{\con{R}}$ onde
+\begin{equation}
+\con{H} = \lch 1,2,\cdots,n_1 \rch \times \cdots \times \lch
+1,2,\cdots,n_q \rch.
+\end{equation}
+Cada membro deste produto cartesiano é um conjunto ordenado de
+números inteiros. Desta forma, tem-se que na descrição de um array
+a tupla ordenada
+\begin{equation}
+\lpa i_1,\cdots,i_q\rpa\mapsto\fua{\fun{h}}{\lpa
+i_1,\cdots,i_q\rpa}\in\con{R}, \forall\, i_k \in \lch 1,\cdots,n_k
+\rch, 1\leq k\leq q.
+\end{equation}
+O valor $\fua{\fun{h}}{\lpa i_1,\cdots,i_q\rpa}$ é representado
+pela notação $\fun{h}_{i_1\cdots i_q}$, tal que os elementos
+subscritos, chamados \emph{índices}, indicam a \emph{localização}
+ou o \emph{endereço} deste valor. A \emph{dimensão} de um array é
+dada pela tupla ordenada $(n_1,\cdots,n_q)$ ou
+$n_1\times\cdots\times n_q$.
+
+A fim de identificar a função $h$ como um array, adota-se a
+notação $\mat{H}$. Para disponibilizar o livre uso das operações
+de adição, multiplicação e suas inversas respectivas entre os
+elementos de um anel, de agora em diante, os valores de um array
+serão escalares, ou seja, $\ane{R}=\cam{R}$.
+
+\subsection{Símbolo de Levi-Civita} Seja um array
+$\epsilon$ cujo domínio é o produto cartesiano $\lch 1,\cdots,n
+\rch^n$ e uma tupla ordenada $\fua{p}{1,\cdots,n }$ resultado das
+transposições feitas em $\lpa 1,\cdots,n \rpa$. Entende-se por
+\emph{transposição} a troca de posição entre pares de elementos de
+uma tupla ordenada, ficando os demais inalterados.
+
+Seja $\fua{\alpha_p}{ 1,\cdots,n }$ o número de tranposições
+feitas em  $\lpa 1,\cdots,n \rpa$ por $\fun{p}$. Os valores de
+$\epsilon$ são então definidos da seguinte forma:
+\begin{equation}
+\begin{array}{lcl}
+  \epsilon_{i_1\cdots i_n}=\lpa-1\rpa^{\fua{\alpha_p}{ 1,\cdots,n }}\,
+& \mathrm{se} & \exists\,\,\fua{p}{1,\cdots,n }=\lpa
+i_1,\cdots,i_n\rpa\,; \\
+\epsilon_{i_1\cdots i_n}=0 & \mathrm{se} & \nexists\,\,
+\fua{p}{1,\cdots,n }=\lpa i_1,\cdots,i_n\rpa\,.
+\end{array}
+\end{equation}
+Denomina-se o array $\epsilon$ símbolo de Levi-Civita ou
+\emph{símbolo de permutação}.
+
+\subsection{Matriz}
+Uma matriz é um array de dimensão $n_1\times n_2$. O endereçamento
+dos valores $\mat{H}_{ij}$ da matriz, através dos índices,
+possibilita uma representação tabular onde os elementos com mesmo
+índice $i$ ficam na mesma linha, enquanto que os de mesmo índice
+$j$ ficam numa mesma coluna:
+\begin{equation}
+\mat{H} = \lco \begin{array}{cccc}
+\mat{H}_{11} & \mat{H}_{12} & \ldots & \mat{H}_{1n_2}\\
+\mat{H}_{21} & \mat{H}_{22} & \ldots & \mat{H}_{2n_2}\\
+\vdots & \vdots & \ddots & \vdots \\
+\mat{H}_{n_11} & \mat{H}_{n_12} & \ldots & \mat{H}_{n_1n_2}\\
+\end{array} \rco\,.
+\end{equation}
+Se $n_1=n_2=n$, diz-se que a matriz é \emph{quadrada} de dimensão
+$n$.
+
+\subsubsection{Adição} Sejam as matrizes $\mat{H}$ e $\mat{F}$ de
+dimensão $m\times n$. A soma $\mat{H+F}$ é uma matriz de dimensão
+$m\times n$ definida por
+\begin{equation}
+\lpa\mat{H+F}\rpa_{ij} = \mat{H}_{ij}+\mat{F}_{ij}.
+\end{equation}
+Desta forma, pode-se dizer que a adição de matrizes é associativa.
+
+\subsubsection{Multiplicação} Sejam as matrizes $\mat{H}$ de
+dimensão $m\times q$ e $\mat{F}$ de dimensão $q\times n$. A matriz
+$\mat{HF}$ de dimensão $m\times n$ representa o \emph{produto
+matricial} de $\mat{H}$ por $\mat{F}$ se
+\begin{equation}
+\lpa\mat{HF}\rpa_{ij} = \sum_{k=1}^{q}\mat{H}_{ik}\mat{F}_{kj}.
+\end{equation}
+Costuma-se representar em termos de potência $\mat{H}^n$ a matriz
+$\mat{H}\mat{H}\mat{H}...$, onde $\mat{H}$ é repetido $n$ vezes.
+
+\subsubsection{Multiplicação por Escalar}Seja uma matriz $\mat{H}$ de dimensão $m\times n$ e um campo
+$\cam{F}$. O produto de um escalar $\ele{r}\in\con{F}$ pela matriz
+$\mat{H}$ define uma matriz $\ele{r}\mat{\mat{H}}$ de dimensão
+$m\times n$, tal que
+\begin{equation}
+\lpa\ele{r}\mat{H}\rpa_{ij} = \ele{r}\mat{H}_{ij}.
+\end{equation}
+
+\subsubsection{Matriz Indentidade} É uma matriz quadrada de
+dimensão $n$, cujos escalares são representados pelo símbolo por
+$\delta_{ij}$, chamado \emph{delta de Kronecker}, tal que seu
+valor é 1 se $i=j$ e 0 caso $i\neq j$. A matriz identidade é
+representada por $\mat{I}$.
+
+\subsubsection{Matriz Nula} Trata-se de uma matriz cujos elementos são escalares nulos.
+
+\subsubsection{Matriz Transposta} Sejam as matrizes $\mat{H}$ e
+$\mat{F}$ quadradas de dimensão $n$. A matriz $\mat{F}$ é dita
+transposta de $\mat{H}$ se $\mat{H}_{ij}=\mat{F}_{ji}$. Costuma-se
+representar $\mat{H}^T$ para a matriz transposta de $\mat{H}$.
+Dadas as matrizes $\mat{A}$ e $\mat{B}$, pode-se obter as
+seguintes propriedades:
+\begin{itemize}
+    \item[i.] $\lpa\mat{A}^T\rpa^T =
+\mat{A}$\,;
+    \item[ii.] $\lpa\mat{A}+\mat{B}\rpa^T =
+\mat{A}^T+\mat{B}^T$\,;
+    \item[iii.] $\lpa\mat{A}\mat{B}\rpa^T =
+\mat{B}^T\mat{A}^T$\,.
+\end{itemize}
+Diz-se que a matriz $\mat{A}$ é \emph{simétrica} caso
+$\mat{A}^T=\mat{A}$ e \emph{anti-simétrica} se
+$\mat{A}^T=-\mat{A}$.
+
+
+\subsubsection{Matriz Diagonal} Uma matriz $\mat{H}$ quadrada de
+dimensão $n$ é dita diagonal se os escalares $\mat{H}_{ij}$ são
+nulos quando $i\neq j$.
+
+\subsubsection{Matriz Adjunta} Seja uma matriz $\mat{H}$ de dimensão $m \times n$
+definida sobre um campo complexo. A matriz $\mat{H}^*$ de dimensão
+$n \times m$ é dita a matriz adjunta de $\mat{H}$ se ela for a
+transposta da matriz dos conjugados complexos dos elementos de
+$\mat{H}$, ou seja, $\mat{H}^*_{ij}=\overline{\mat{H}_{ji}}$. Se
+os escalares de $\mat{H}$ forem reais (complexos sem a parte
+imaginária), então $\mat{H}^*=\mat{H}^T$. Neste caso, se a matriz
+$\mat{H}$ for simétrica, ela se torna um caso particular da
+chamada matriz \emph{Hermitiana} ou \emph{auto-adjunta}, onde
+$\mat{H}^*=\mat{H}$.
+
+A matriz $\mat{H}$ é dita $normal$ se ela comuta com sua adjunta,
+ou seja, $\mat{H}^*\mat{H}=\mat{H}\mat{H}^*$. Para elementos
+reais, $\mat{H}$ é normal se $\mat{H}^T\mat{H}=\mat{H}\mat{H}^T$.
+Desta forma, toda matriz simétrica real é normal.
+
+\subsubsection{Matriz Positiva-Semidefinida}Uma matriz $\mat{H}$ quadrada de dimensão
+$n$ é dita positiva-semidefinida se para uma matriz qualquer
+$\mat{X}$ de dimensão\footnote{Matrizes com dimensões $n\times 1$
+ou $1\times n$ são chamadas \emph{verticais} ou \emph{horizontais}
+respectivamente. Na literatura, costuma-se chamar uma matriz
+vertical de ``vetor''. No entanto, este livro utiliza o termo
+``vetor'' exclusivamente para denominar os elementos do conjunto
+que define um espaço vetorial.} $n\times 1$, o elemento
+\begin{equation}
+\lpa\mat{X}^*\mat{H}\mat{X}\rpa_{11}\geqslant0\,.
+\end{equation}
+Impondo que a matriz $\mat{X}$ sempre seja não nula,  $\mat{H}$ é
+chamada \emph{positiva-definida}, onde o elemento
+$\lpa\mat{X}^*\mat{H}\mat{X}\rpa_{11}>0$.
+
+\subsubsection{Matriz Inversa} Sejam as matrizes $\mat{H}$ e
+$\mat{F}$ quadradas de dimensão $n$. A matriz $\mat{F}$ é dita
+inversa de $\mat{H}$ se $\lpa\mat{HF}\rpa_{ij}=\delta_{ij}$.
+Costuma-se representar $\mat{H}^{-1}$ para a matriz inversa de
+$\mat{H}$. É importante observar que nem toda a matriz possui uma
+inversa. A condição para que possua está descrita a seguir no
+conceito de determinante.
+
+\subsubsection{Determinante} Seja uma matriz $\mat{H}$
+quadrada de dimensão $n$. O determinante de $\mat{H}$,
+representado $\det\mat{H}$, é o valor definido pela seguinte
+igualdade:
+\begin{equation}
+\lpa\det\mat{H}\rpa\epsilon_{i_1\cdots i_n} =
+\sum_{j_1=1}^{n}\sum_{j_2=1}^{n}\cdots\sum_{j_n=1}^{n}
+\mat{H}_{i_1j_1}\mat{H}_{i_2j_2}\cdots\mat{H}_{i_nj_n}\epsilon_{j_1\cdots
+j_n}.
+\end{equation}
+Se $\det\mat{H}=0$, a matriz $\mat{H}$ é dita \emph{singular}.
+Caso contrário, ela é dita \emph{não-singular} ou
+\emph{inversível}. O valor do determinante é a condição que indica
+se uma determinada matriz possui inversa ou não.
+
+Agora, sejam $\mat{A}$ e $\mat{B}$ matrizes quadradas de dimensão
+$n$. Através de manipulações de elementos em notação
+indicial\footnote{Caso o leitor necessite de um enfoque mais
+aprofundado em notação indicial, recomenda-se consultar
+\aut{Segel}\cite{segel_1999_1} e
+\aut{Malvern}\cite{malvern_1969_1}.} demonstra-se as seguintes
+propriedades:
+\begin{itemize}
+    \item[i.] $\det\mat{A}^T =
+\det\mat{A}$\,;
+    \item[ii.] $\det\lpa\mat{AB}\rpa =
+\det\lpa\mat{A}\rpa\det\lpa\mat{B}\rpa$\,;
+    \item[iii.] Se $\mat{A}$ for inversível, $\det\lpa\mat{A}^{-1}\rpa =
+\lpa\det\mat{A}\rpa^{-1}$\,;
+    \item[iv.] Se $\mat{A}$ for positiva-semidefinida, $\det\lpa\mat{A}\rpa \geqslant
+0$.
+\end{itemize}
+
+\subsubsection{Matriz Ortogonal} Uma matriz inversível $\mat{H}$ de dimensão $n$ é
+dita ortogonal se $\mat{H}^{-1}=\mat{H}^T$. Numa matriz ortogonal
+o valor do determinante é sempre $\pm 1$. Se o determinante for
+$+1$, então a matriz ortogonal é dita \emph{própria}, caso
+contrário ela é \emph{imprópria}.
+
+\subsubsection{Matriz Unitária} Uma matriz inversível $\mat{H}$ de dimensão $n$ é
+dita unitária se $\mat{H}^{-1}=\mat{H}^*$. Repare que para
+escalares complexos sem a parte imaginária, uma matriz unitária é
+ortogonal.
+
+\subsubsection{Similaridade} Sejam as matrizes $\mat{H}$ e
+$\mat{F}$ quadradas de dimensão $n$. Diz-se que $\mat{F}$ é
+similar a $\mat{H}$ se existir uma matriz inversível $\mat{C}$ de
+dimensão $n$, tal que
+\begin{equation}
+\mat{F}=\mat{C}^{-1}\mat{H}\mat{C}\,.
+\end{equation}
+A partir desta igualdade pode-se obter que
+\begin{equation}
+\mat{H}=\mat{C}\mat{F}\mat{C}^{-1}=\lpa\mat{C}^{-1}\rpa^{-1}\mat{F}\mat{C}^{-1}.
+\end{equation}
+A matriz inversível $\mat{C}^{-1}$ faz com que $\mat{H}$ também
+seja similar a $\mat{F}$. Conclui-se que se uma matriz é similar à
+outra, então elas são similares entre si. Neste contexto, é
+possível obter que
+\begin{equation}
+    \det\mat{F} =
+\det\mat{H}\,.
+\end{equation}
+
+\subsubsection{Traço} Seja uma matriz $\mat{H}$ quadrada
+de dimensão $n$. O traço de $\mat{H}$, representado
+$\trc{\mat{H}}$, é o valor definido pela igualdade
+\begin{equation}
+\trc{\mat{H}} = \sum_{i=1}^{n}\mat{H}_{ii}.
+\end{equation}
+
+Sejam $\mat{A}$ e $\mat{B}$ matrizes quadradas de dimensão $n$.
+Pode-se demonstrar que:
+\begin{itemize}
+    \item[i.] $\trc\mat{A}^T =
+\trc\mat{A}$\,;
+    \item[ii.] $\trc\lpa\mat{A+B}\rpa =
+\trc\mat{A}+\trc\mat{B}$\,;
+    \item[iii.] $\trc\mat{AB} =
+\trc\mat{BA}$\,;
+    \item[iv.] $\trc\mat{A} =
+\trc\mat{B}$, se $\mat{A}$ e $\mat{B}$ são similares.
+\end{itemize}
+
+\subsubsection{Polinômio Característico} Seja uma matriz $\mat{H}$
+quadrada de dimensão $n$ definida sobre o campo $\cam{F}$ e uma
+regra $\fun{g}$ descrita por
+\begin{equation}
+\fua{g}{x}=\det \lpa x\mat{I}-\mat{H} \rpa  \,.
+\end{equation}
+Desenvolvendo o termo à direita, pode-se encontrar que
+\begin{equation}
+\fua{g}{x}=
+(-1)^n\ele{a}_0-\ele{a}_1x+\cdots+\ele{a}_{n-2}x^{n-2}-\ele{a}_{n-1}x^{n-1}+x^{n}
+\,,
+\end{equation}
+onde $\ele{a}_i\in\con{F}$. A regra $\fun{g}$ é dita o polinômio
+característico de $\mat{H}$ e qualquer escalar $\lambda\in\con{F}$
+que seja raiz deste polinômio é chamado \emph{raiz característica}
+de $\mat{H}$. O conjunto das raízes características $\lch
+\lambda_1,\cdots,\lambda_n\rch$ de $\mat{H}$ é chamado
+\emph{espectro} de $\mat{H}$.
+
+Os coeficientes do polinômio característico podem ser encontrados
+através de uma regra de formação. Um coeficiente $\ele{a}_k$
+corresponde à soma dos determinantes de todas as sub-matrizes de
+$\mat{H}$ construídas da seguinte forma: retira-se de uma só vez
+$k$ linhas e colunas que tenham o mesmo índice. Em $\ele{a}_2$,
+por exemplo, se forem retiradas as linhas 2 e 3, também devem ser
+retiradas as colunas 2 e 3. Para este coeficiente é possível obter
+$n(n-1)/2$ sub-matrizes deste tipo.
+
+A partir desta regra, em qualquer polinômio característico, sempre
+ocorre que
+\begin{equation}
+\begin{array}{ccc}
+  \ele{a}_0=\det\mat{H} & \mathrm{e} & \ele{a}_{n-1}=\trc{\mat{H}}\,. \\
+\end{array}
+\end{equation}
+Em termos analíticos, pode-se demonstrar que os coeficientes do
+polinômio característico são expressões cujos termos envolvem
+determinantes de $\mat{H}$, potências de traço de $\mat{H}$ e
+traço de potências de $\mat{H}$.
+
+\begin{teo}[Cayley-Hamilton]\label{teo:cayley-hamilton}
+Seja uma matriz $\mat{H}$ quadrada de dimensão $n$ e seu polinômio
+característico $\fun{g}$. Sempre ocorre que
+$\fua{\fun{g}}{\mat{H}}=0$.
+\end{teo}
+
+
+\begin{teo}[Decomposição Espectral]\label{teo:espectral}
+Considerando uma matriz normal quadrada $\mat{H}$, sempre existe
+uma matriz unitária $\mat{U}$ tal que
+\begin{equation}
+\mat{H}=\mat{U}^*\tilde{\mat{H}}\mat{U} \nonumber,
+\end{equation}
+onde $\tilde{\mat{H}}$ é uma matriz diagonal cujos elementos
+constituem o espectro de $\mat{H}$.
+\end{teo}
+
+
+\chapter{Fundamentos da Álgebra Linear}
+
+\section{Espaços Métricos}
+
+\subsection{Espaço Métrico}
+Seja um conjunto $\con{M}$ e um mapeamento
+$\map{\varrho}{\con{M}\times\con{M}}{\real}$. O par ordenado $\lpa
+\con{M},\varrho \rpa$ é denominado espaço métrico se a função
+$\varrho$, chamada \emph{métrica}, respeitar os axiomas
+\begin{itemize}
+    \item[i.] Positividade: $\fua{\varrho}{\ele{m}_1,\ele{m}_2}\geqslant 0,\,\forall\, \ele{m}_1,
+\ele{m}_2\in\con{M}$;
+    \item[ii.] Definição: $\fua{\varrho}{\ele{m}_1,\ele{m}_2}=0 \Leftrightarrow
+\ele{m}_1=\ele{m}_2,\,\forall\, \ele{m}_1, \ele{m}_2\in\con{M}$;
+    \item[iii.] Simetria: $\fua{\varrho}{\ele{m}_1,\ele{m}_2}=\fua{\varrho}{\ele{m}_2,\ele{m}_1},
+\,\forall\, \ele{m}_1, \ele{m}_2\in\con{M}$;
+    \item[iv.] Desigualdade triangular:
+\begin{equation}
+\fua{\varrho}{\ele{m}_1,\ele{m}_2}\leq
+\fua{\varrho}{\ele{m}_1,\ele{m}_3}+\fua{\varrho}{\ele{m}_3,\ele{m}_2},
+\forall\, \ele{m}_1, \ele{m}_2,\ele{m}_3\in\con{M}\nonumber.
+\end{equation}
+\end{itemize}
+Os axiomas da métrica induzem intuitivamente o conceito de
+\emph{distância} entre os elementos de um espaço métrico.
+
+\subsubsection{Seqüência de Cauchy} Seja um espaço métrico $\lpa \con{M}, \varrho \rpa$
+e uma seqüência qualquer $\ele{m}_1,\ele{m}_2,\cdots\in\con{M}$.
+Diz-se que $\ele{m}_1,\ele{m}_2,\cdots$ é uma seqüência de Cauchy
+se
+\begin{equation}
+\lim_{\min{\lpa i,j
+\rpa}\to\infty}{\fua{\varrho}{\ele{m}_i,\ele{m}_j}}=0.
+\end{equation}
+Em outras palavras, ao se percorrer uma seqüência de Cauchy os
+elementos aproximam-se uns dos outros.
+
+Seja uma outra seqüência $\ele{u}_1,\ele{u}_2,\cdots\in\con{M}$
+\emph{convergente} para $\ele{w}\in\con{M}$. Diz-se então que
+\begin{equation}
+\lim_{i\to\infty}{\fua{\varrho}{\ele{u}_i,\ele{w}}}=0.
+\end{equation}
+Pela desigualdade triangular é certo dizer que
+\begin{equation}
+\fua{\varrho}{\ele{u}_i,\ele{u}_j}\leq\fua{\varrho}{\ele{u}_i,\ele{w}}+
+\fua{\varrho}{\ele{w},\ele{u}_j}.
+\end{equation}
+Fazendo $\min{\lpa i,j \rpa}\to\infty$, tem-se que o lado direito
+tende a zero, pois $\ele{u}_1$,$\ele{u}_2$,$\cdots$ converge para
+$\ele{w}$. Devido à condição da desigualdade, o lado esquerdo
+também tende a zero. Conclui-se, genericamente, que toda seqüência
+convergente é uma seqüência de Cauchy. A recíproca, entretanto,
+não é verdadeira.
+
+
+\subsubsection{Espaço Métrico Completo} Diz-se que um espaço métrico
+$\lpa \con{M}, \varrho \rpa$ é completo se toda seqüência de
+Cauchy em $\con{M}$ convergir para um elemento de $\con{M}$. Em
+outras palavras, para toda seqüência de Cauchy
+$\ele{m}_1,\ele{m}_2,\cdots\in\con{M}$ sempre existe um certo
+$\ele{w}\in\con{M}$ tal que
+\begin{equation}
+\lim_{i\to\infty}{\fua{\varrho}{\ele{m}_i,\ele{w}}}=0.
+\end{equation}
+Intuitivamente, em um espaço métrico completo não há ``buracos''.
+O conjunto $\con{M}$, neste caso, está ``completamente
+preenchido''.
+
+O conjunto dos racionais $\racional$, por exemplo, não é completo,
+visto que pode existir uma seqüência de Cauchy de número racionais
+convergindo para um número irracional. Exemplificando, a seqüência
+de Cauchy
+\begin{equation}
+0.14\,,\,0.141\,,\,0.1414\,,\,0.14142\,,\,0.141421 \,,\cdots\,\to
+\sqrt{2}\,\,.
+\end{equation}
+
+\section{Espaços Vetoriais}
+
+\subsection{Espaço Vetorial}
+Sejam um grupo abeliano aditivo $\gra{V}{+}$, um campo $\cam{F}$ e
+um mapeamento $\map{\diamond}{\con{F}\times\con{V}}{\con{V}}$.
+Tradicionalmente, adota-se a notação $\vto{x}$ para o elemento
+$\ele{x}\in\con{V}$. Conforme prática anterior, abrevia-se
+$\fua{\diamond}{\ele{a},\vto{x}}$ para $\ele{a}\vto{x}$, onde
+$\ele{a}\in\con{F}$ e $\vto{x}\in\con{V}$. Denomina-se espaço
+vetorial\footnote{Pode-se interpretar o conceito de espaço
+vetorial como uma conseqüência da junção, na forma de tupla
+ordenada, de um grupo com um anel. Na verdade, espaço vetorial é
+uma particularização de um conceito mais geral chamado Módulo de
+Anel ou R-Módulo. Ver \aut{Connel}\cite{connel_1999_1}.} à tripla
+ordenada $\lpa \gra{V}{+} , \cam{F} , \diamond \rpa$ que obedece
+aos seguintes axiomas:
+\begin{itemize}
+    \item[i.] $\ele{a} \lpa \vto{x} + \vto{y} \rpa = \ele{a}\vto{x}+\ele{a}\vto{y} ,
+    \forall \, \vto{x},\vto{y} \in V,\,\ele{a}\in\con{F}$;
+    \item[ii.] $\lpa \ele{a} + \ele{b}\rpa  \vto{x} = \ele{a}\vto{x}+\ele{b}\vto{x} ,
+    \forall \, \vto{x} \in V,\,\ele{a},\ele{b}\in\con{F}$;
+    \item[iii.] $\lpa \ele{a}\ele{b}\rpa  \vto{x} = \ele{a}\lpa\ele{b}\vto{x}\rpa   ,
+    \forall \, \vto{x} \in V,\,\ele{a},\ele{b}\in\con{F}$;
+    \item[iv.] $1\vto{x}= \vto{x}  ,
+    \forall \, \vto{x} \in \con{V}$, onde 1 é a identidade
+multiplicativa de $\con{F}$;
+    \item[v.] $ 0\vto{x} = \vto{y}0 = \vto{0}  \, , \forall \, \vto{x},\vto{y} \in \con{V}$,
+    onde $\vto{0}$ é o elemento nulo de $\con{V}$.
+\end{itemize}
+Chama-se \emph{vetor} o elemento ${\vto{x}\in\con{V}}$. A notação
+abreviada para o espaço vetorial $\lpa \gra{V}{+} , \cam{F} ,
+\diamond \rpa$ é $\evt{V}{F}$, onde os conjuntos $\con{V}$ e
+$\con{F}$ definem um grupo e um campo respectivamente.
+
+\subsubsection{Exemplos}
+\begin{itemize}
+    \item Espaço dos Racionais: $\evt{\racional}{\racional}=\lpa \lpa \con{\racional},+
+\rpa , \cam{\racional} , \diamond \rpa$;
+    \item Espaço Vetorial Real: $\evt{V}{\real}=\lpa \lpa \con{V},+
+\rpa , \cam{\real} , \diamond \rpa$;
+    \item Espaço Vetorial Complexo: $\evt{V}{\complexo}=\lpa \lpa \con{V},+
+\rpa , \cam{\complexo} , \diamond \rpa$.
+\end{itemize}
+
+\subsection{Combinação Linear}
+Sejam o espaço vetorial $\evt{V}{F}$, um subconjunto finito
+$\con{\tilde{V}}=\lch \vto{v}_1,\vto{v}_2,\cdots,\vto{v}_n \rch
+\subset \con{V}$ e uma seqüência
+$\ele{a}_1,\ele{a}_2,\cdots,\ele{a}_n \in \con{F}$. Diz-se que o
+vetor $\sum_{i=1}^n \ele{a}_i\vto{v}_i$ é uma combinação linear de
+$\con{\tilde{V}}$ em $\con{F}$.
+
+O subconjunto $\con{\tilde{V}}$ é \emph{linearmente dependente} se
+existir uma seqüência específica
+$\ele{\alpha}_1,\ele{\alpha}_2,\cdots,\ele{\alpha}_n \in \con{F}$,
+onde pelo menos um elemento $\ele{\alpha}_i \neq 0 $, que promova
+\begin{equation}
+\sum_{i=1}^n \ele{\alpha}_i\vto{v}_i=\vto{0}.
+\end{equation}
+Se não existir esta seqüência , o subconjunto $\con{\tilde{V}}$ é
+dito \emph{linearmente independente}.
+
+\subsection{Subespaço Vetorial}
+
+Sejam o espaço vetorial $\evt{V}{F}$ e um subconjunto $\con{U}
+\subseteq \con{V}$. Denomina-se subespaço vetorial de $\evt{V}{F}$
+o espaço vetorial $\lpa \gra{U}{+} , \cam{F} , \tilde{\diamond}
+\rpa$, tal que
+$\map{\tilde{\diamond}}{\con{F}\times\con{U}}{\con{U}}$.
+
+Se $\con{U} = \con{V}$ ou $\con{U} = \emptyset$, diz-se que
+$\evt{U}{F}$ é \emph{subespaço impróprio} de $\evt{V}{F}$, caso
+contrário ele é \emph{subespaço próprio} de $\evt{V}{F}$.
+Descrevendo mais detalhadamente o mapeamento
+$\map{\tilde{\diamond}}{\con{F}\times\con{U}}{\con{U}}$, tem-se
+que
+\begin{equation}
+\lpa \ele{a},\vto{v} \rpa \mapsto \tilde{\diamond}\lpa
+\ele{a},\vto{v} \rpa=a\vto{v} \in \con{U}, \, \forall\,
+\ele{a}\in\con{F}, \vto{v}\in\con{U}.
+\end{equation}
+Escolhendo $\ele{a}=0$, obtém-se que $\vto{0}\in\con{U}$. Notar
+que isto sempre é válido para qualquer subespaço de $\evt{V}{F}$.
+
+\subsubsection{Subespaço Gerado} Seja um espaço vetorial $\evt{V}{F}$ e um
+subconjunto não vazio $\con{U}$ de $\con{V}$. Denomina-se
+\emph{span} de $\con{U}$ ou $\con{spU}$ ao conjunto formado por
+todas as combinações lineares dos subconjuntos finitos de
+$\con{U}$.
+
+Seja um subconjunto qualquer $\con{\tilde{V}}=\lch
+\vto{v}_1,\vto{v}_2,\cdots,\vto{v}_n \rch \subset \con{U}$ e duas
+combinações lineares de $\con{\tilde{V}}$ em $\con{F}$ que são os
+vetores $\sum_{i=1}^n \ele{\alpha}_i\vto{v}_i\in\con{spU}$ e
+$\sum_{i=1}^n \ele{\beta}_i\vto{v}_i \in\con{spU}$, tal que
+$\ele{\alpha}_i,\ele{\beta}_i\in\con{F}$. Observa-se que
+\begin{equation}
+\sum_{i=1}^n \ele{\alpha}_i\vto{v}_i + \sum_{i=1}^n
+\ele{\beta}_i\vto{v}_i = \sum_{i=1}^n \underbrace{\lpa
+\ele{\alpha}_i+\ele{\beta}_i \rpa}_{\in\,\con{F}} \vto{v}_i\in
+\con{spU},
+\end{equation}
+onde se comprova uma operação aditiva
+$\map{+}{\con{spU}\times\con{spU}}{\con{spU}}$. A partir daí, é
+facilmente observável que $\con{spU}$ define um grupo abeliano
+aditivo $\gra{spU}{+}$ . Adotando-se um $\ele{k}\in\con{F}$,
+tem-se que
+\begin{equation}
+\ele{k}\,\sum_{i=1}^n \ele{\alpha}_i\vto{v}_i = \sum_{i=1}^n
+\underbrace{\lpa \ele{k}\ele{\alpha}_i \rpa}_{\in\,\con{F}}
+\vto{v}_i\in \con{spU},
+\end{equation}
+onde se comprova o mapeamento multiplicativo
+$\map{\tilde{\diamond}}{\con{F}\times\con{spU}}{\con{spU}}$.
+Juntamente com a definição de $\gra{spU}{+}$, pode-se obter,
+através das validações dos axiomas de espaço vetorial, que
+$\con{spU}$ define $\evt{spU}{F}$, subespaço de $\evt{V}{F}$.
+Diz-se que $\evt{spU}{F}$ é gerado por U.
+
+Em particular, se $\con{U}$ for finito e subconjunto próprio de
+$\con{V}$, $\con{U}\subset\con{V}$, tal que $\con{U}$ gere
+$\evt{V}{F}$, isto é $\con{V}=\con{spU}$, diz-se que $\evt{V}{F}$
+é \emph{dimensionalmente finito}.
+
+\subsection{Base}
+Seja um espaço vetorial $\evt{V}{F}$ e um subconjunto não vazio
+$\con{U}$ de $\con{V}$. Diz-se que $\con{U}$ é uma base de
+$\evt{V}{F}$ se ele for linearmente independente e gerar
+$\evt{V}{F}$, isto é $\con{V}=\con{spU}$.
+
+Caso $\evt{V}{F}$ seja dimensionalmente finito, então pode-se ter
+a base $\con{U}=\lch \vto{v}_1,\cdots,\vto{v}_n \rch$ e a
+seqüência $\ele{\alpha}_1,\ele{\alpha}_2,\cdots,\ele{\alpha}_n$ de
+$\con{F}$ tal que
+\begin{equation}
+\vto{w}=\sum_{i=1}^n \ele{\alpha}_i\vto{v}_i,\, \forall\,
+\vto{w}\in{V}.
+\end{equation}
+Seja uma outra seqüência
+$\ele{\beta}_1,\ele{\beta}_2,\cdots,\ele{\beta}_n$, tal que, por
+hipótese,
+\begin{equation}
+\vto{w}=\sum_{i=1}^n \ele{\beta}_i\vto{v}_i,\, \forall\,
+\vto{w}\in{V}.
+\end{equation}
+Subtraindo as duas expressões, tem-se que
+\begin{equation}
+\sum_{i=1}^n \lpa \ele{\alpha}_i-\ele{\beta}_i
+\rpa\vto{v}_i=\vto{0}\,.
+\end{equation}
+Conclui-se que $\ele{\alpha}_i=\ele{\beta}_i$ já que $\con{U}$,
+formado pelos vetores $\vto{v}_i$, é linearmente independente.
+Desta forma, a tupla ordenada
+$\lpa\ele{\alpha}_1,\ele{\alpha}_2,\cdots,\ele{\alpha}_n\rpa$,
+geradora de $\vto{w}$ na base $\con{U}$, é \emph{única}. Os
+escalares $\ele{\alpha}_i$ da tupla são então chamados
+\emph{coordenadas} de $\vto{w}$ na base $\con{U}$. É importante
+observar que a seqüência dos escalares na tupla corresponde à
+seqüência previamente definida para os vetores da base. Portanto,
+para se trabalhar com coordenadas, deve-se definir primeiramente a
+base e sua ordenação.
+
+\subsection{Dimensão}
+Seja um espaço vetorial dimensionalmente finito $\evt{V}{F}$. Por
+hipótese, sejam duas bases deste espaço: $\con{U}=\lch
+\vto{v}_1,\cdots,\vto{v}_n \rch$ e $\con{W}=\lch
+\vto{w}_1,\cdots,\vto{w}_m \rch$, tal que $m \geqslant n$. Pode-se
+afirmar, então, que
+\begin{equation}
+\con{V}=sp\lch \vto{v}_1,\cdots,\vto{v}_n,\vto{w}_1 \rch,
+\end{equation}
+onde o conjunto $\lch \vto{v}_1,\cdots,\vto{v}_n,\vto{w}_1 \rch$ é
+linearmente dependente. A retirada de um vetor $\vto{v}_i$ que
+seja combinação linear dos demais implica
+\begin{equation}
+\con{V}=sp\lch \vto{v}_1,\cdots,\vto{v}_{n-1},\vto{w}_1 \rch.
+\end{equation}
+Realizando inserções distintas sucessivas de membros de $\con{W}$
+e retiradas sucessivas de membros de $\con{U}$, tem-se no
+penúltimo passo,
+\begin{equation}
+\con{V}=sp\lch \vto{v}_i,\vto{w}_1,\cdots,\vto{w}_{n-1} \rch.
+\end{equation}
+Finalmente, após a retirada do último vetor $\vto{v}_i$ e inclusão
+de um dos $\vto{w}_i$ restantes, obtém-se
+\begin{equation}
+\con{V}=sp\lch \vto{w}_1,\cdots,\vto{w}_{n} \rch.
+\end{equation}
+Observa-se que a hipótese preliminar para a base $\con{W}$ só é
+confirmada para $m=n$. Genericamente, conclui-se que qualquer base
+de $\evt{V}{F}$ tem sempre a mesma quantidade de termos, chamada
+dimensão. A dimensão de $\evt{V}{F}$ é representada por
+$\dms{V}{F}$. Quando $\con{V}=\lch \vto{0} \rch$, convencionou-se
+que $\dms{V}{F}=0$.
+
+Através do procedimento desenvolvido, pode-se concluir também que
+todo subconjunto de $\con{V}$ linearmente independente com $n$
+termos é uma base de $\evt{V}{F}$.
+
+
+\subsection{Espaço Vetorial Normado}
+Seja um espaço vetorial $\evt{V}{F}$ e um mapeamento
+$\map{\eta}{\con{V}}{\con{F}}$. Um espaço vetorial normado é
+definido pelo par ordenado $\lpa \evt{V}{F},\eta \rpa$, tal que a
+função $\eta$, chamada \emph{norma}, deve respeitar os axiomas
+\begin{itemize}
+    \item[i.] Positividade: $\fua{\eta}{\vto{v}}\geqslant 0,\,\forall\, \vto{v}\in\con{V}$;
+    \item[ii.] Definição: $\fua{\eta}{\vto{v}}=0 \Leftrightarrow
+\vto{v}=\vto{0}$;
+    \item[iii.] Homogeneidade:
+$\fua{\eta}{\ele{a}\vto{v}}=|\ele{a}|\fua{\eta}{\vto{v}}$, tal que
+$|\ele{a}|$ indica o valor positivo de $\ele{a},\,\forall\,
+\vto{v}\in\con{V},\ele{a}\in\con{F}$;
+    \item[iv.] Desigualdade Triangular: $\fua{\eta}{\vto{v}+\vto{w}}\leq
+\fua{\eta}{\vto{v}}+\fua{\eta}{\vto{w}},\,\forall\,
+\vto{v},\vto{w}\in\con{V}$.
+\end{itemize}
+Para a norma de $\vto{v}$, costuma-se abreviar a notação
+$\fua{\eta}{\vto{v}}$ com $\| \vto{v}\|$.
+
+\subsection{Espaço Vetorial Métrico}
+Seja um espaço métrico $\lpa \con{M},\varrho \rpa$ tal que
+$\con{M}$ define o espaço vetorial $\evt{M}{F}$. Denomina-se o par
+ordenado $\lpa \evt{M}{F},\varrho \rpa$ espaço vetorial métrico. É
+conveniente lembrar que, neste caso, o mapeamento
+$\map{\varrho}{\con{M}\times\con{M}}{\real}$ define a distância
+entre dois vetores quaisquer. Caso o espaço métrico $\lpa
+\con{M},\varrho \rpa$ seja completo, então o espaço vetorial
+métrico $\lpa \evt{M}{F},\varrho \rpa$ também é dito completo.
+
+\subsection{Espaço de Banach}
+Seja um espaço vetorial métrico completo $\lpa \evt{M}{F},\varrho
+\rpa$ sobre o qual define-se a norma $\eta$ que mapeia $\con{M}$
+para $\con{F}$. O par ordenado $\lpa \lpa \evt{M}{F},\varrho \rpa
+, \eta  \rpa$ é chamado espaço de Banach. Em outras palavras, um
+espaço de Banach é um espaço métrico completo e normado, cuja
+notação é aqui abreviada para $\ebh{M}{F}$.
+
+\subsection{Espaço Vetorial Produto Interno}\label{subsec:EspacoProdutoInterno}
+Seja um espaço vetorial $\evt{V}{F}$ e um mapeamento
+$\map{\xi}{\con{V}\times\con{V}}{\con{F}}$. Denomina-se o par
+ordenado $\lpa \evt{V}{F},\xi \rpa$ de espaço vetorial produto
+interno se a função $\xi$, chamada \emph{produto interno},
+respeitar os axiomas
+\begin{itemize}
+    \item[i.] Positividade: $\fua{\xi}{\vto{v},\vto{v}}\geqslant 0,\,\forall\, \vto{v}\in\con{V}$;
+    \item[ii.] Definição: $\fua{\xi}{\vto{v},\vto{v}}=0 \Leftrightarrow
+\vto{v}=\vto{0},\,\forall\, \vto{v}\in\con{V}$;
+    \item[iii.] Simetria: $\fua{\xi}{\vto{v},\vto{w}}=\fua{\xi}{\vto{w},\vto{v}},\,\forall\,
+\vto{v},\vto{w}\in\con{V}$;
+    \item[iv.] Bilinearidade\footnote{Ver seção
+\ref{subsec:FuncoesLineares}.}: dados
+$\ele{a}_1,\ele{a}_2,\ele{a}_3\in\con{F},\,
+\vto{u},\vto{v},\vto{w}\in\con{V}$ quaisquer,
+\begin{equation}
+ \fua{\xi}{\ele{a}_1\vto{u},\lpa
+\ele{a}_2\vto{v}+\ele{a}_3\vto{w}\rpa} =
+\ele{a}_1\ele{a}_2\fua{\xi}{\vto{u},\vto{v}} +
+\ele{a}_1\ele{a}_3\fua{\xi}{\vto{u},\vto{w}}.\nonumber
+\end{equation}
+\end{itemize}
+Abrevia-se a notação do produto interno
+$\fua{\xi}{\vto{v},\vto{w}}$ para $\vto{v}\cdot\vto{w}$.
+
+\subsection{Espaço de Hilbert}
+Seja um espaço de Banach $\ebh{V}{F}$ sobre o qual define-se um
+produto interno $\xi$. Denomina-se espaço de Hilbert o par
+ordenado $\lpa \ebh{V}{F}, \xi \rpa$, tal que a norma em
+$\ebh{V}{F}$ é \emph{induzida} ou definida pelo produto interno,
+sendo respeitado o axioma da
+\begin{itemize}
+    \item[i.] Desigualdade de Cauchy-Schwarz: $|\vto{v}_1\cdot\vto{v}_2|\leqslant
+\|\vto{v}_1\|\|\vto{v}_2\|,\,\forall\,\vto{v}_1,\vto{v}_2\in\con{V}$.
+\end{itemize}
+
+Seja uma operação $\map{\fun{f}}{\con{F}}{\con{F}}$ e o mapeamento
+$\map{\xi}{\con{V}\times\con{V}}{\con{F}}$. No espaço de Hilbert a
+norma
+\begin{equation}
+ \fua{\eta}{\vto{v}} :=
+\fua{\fun{f}\circ\xi\,}{\vto{v},\vto{v}}\,\,\,\mathrm{ou}\,\,\,
+\|\vto{v}\|:=\fua{\fun{f}}{\vto{v}\cdot\vto{v}} ,\,\forall
+\,\vto{v}\in\con{V}.
+\end{equation}
+A notação $\lpa \ebh{V}{F}, \xi \rpa$ para espaço de Hilbert é
+abreviada com $\ehr{V}{F}$.
+
+
+\subsubsection{Espaço Vetorial Euclidiano} Trata-se de um espaço de
+Hilbert no campo real, $\ehr{V}{\real}$, onde o espaço vetorial
+$\evt{V}{\real}$ nele definido é dimensionalmente finito, a norma
+\begin{equation}
+ \fua{\eta}{\vto{v}} :=
+\sqrt{\fua{\xi}{\vto{v},\vto{v}}}\,\,\,\mathrm{ou}\,\,\,
+\|\vto{v}\|:=\sqrt{\vto{v}\cdot\vto{v}} ,\,\forall
+\,\vto{v}\in\con{V}
+\end{equation}
+e a métrica
+\begin{equation}
+ \fua{\varrho}{\vto{v},\vto{w}} := \|\vto{v}-\vto{w}\|
+ ,\,\forall
+\,\vto{v},\vto{w}\in\con{V}\,.
+\end{equation}
+
+ Abrevia-se um espaço vetorial Euclidiano
+$n$-dimensional $\ehr{V}{\real}$ com $\eeu{V}{n}$.
+
+\subsection{Ortogonalidade}
+Seja um espaço vetorial produto interno $\lpa \evt{V}{F},\xi \rpa
+$ e os vetores $\vto{v}_1,\vto{v}_2\in\con{V}$. Diz-se que
+$\vto{v}_1$ e $\vto{v}_2$ são ortogonais,
+$\vto{v}_1\perp\vto{v}_2$, se $\vto{v}_1\cdot\vto{v}_2=0$.
+
+Sejam os subconjuntos $\con{P}\subseteq\con{V}$ e
+$\con{Q}\subseteq\con{V}$. Se $\vto{u}\in\con{V}$ é ortogonal a
+qualquer elemento de $\con{P}$, diz-se que $\vto{u}\perp\con{P}$.
+Se qualquer elemento de $\con{P}$ for ortogonal a qualquer
+elemento de $\con{Q}$ então $\con{P}\perp\con{Q}$.
+
+\begin{teo} \label{teo:projecao}
+Seja um espaço vetorial produto interno $\lpa \evt{V}{F},\xi \rpa
+$ e um vetor não nulo $\vto{u}\in\con{V}$, onde são válidas as
+seguintes afirmações:
+
+\begin{itemize}
+    \item[i.] Todo vetor $\vto{v}\in{V}$ pode ser decomposto
+na forma $\vto{v}=\ele{a}\vto{u}+\vto{w}$ tal que
+$\vto{u}\perp\vto{w}$ e $\ele{a}\in\con{F}$;
+    \item[ii.] Seja um subconjunto $\con{P}\subseteq\con{V}$ tal que
+$\vto{u}\perp\con{P}$. Se $\lch \vto{w}_1,\cdots,\vto{w}_m \rch$ é
+uma base de $\evt{P}{\con{F}}$, então $\lch
+\vto{u},\vto{w}_1,\cdots,\vto{w}_m \rch$ é uma base de
+$\evt{V}{\con{F}}$;
+    \item[iii.] Seja um
+subconjunto $\con{P}\subseteq\con{V}$ tal que
+$\vto{u}\perp\con{P}$. Se $\dms{V}{\con{F}}=n$ e
+$\dms{P}{\con{F}}=m$, então $m=n-1$.
+\end{itemize}
+\begin{prova}
+\begin{itemize}
+    \item[i.] Supondo, por hipótese, que haja mais de uma
+decomposição para $\vto{v}$, pode-se dizer que
+$\vto{v}=\ele{\alpha}\vto{u}+\vto{w}_1$ e
+$\vto{v}=\ele{\beta}\vto{u}+\vto{w}_2$. Subtraindo a segunda
+igualdade da primeira, tem-se
+$[1]\,\,\,\vto{w}_1-\vto{w}_2=\lpa\ele{\beta}-\ele{\alpha}\rpa\vto{u}$.
+Por definição, $\vto{w}_1\cdot\vto{u}=0$ e
+$\vto{w}_2\cdot\vto{u}=0$. Logo
+$[2]\,\,\,\lpa\vto{w}_1-\vto{w}_2\rpa\cdot\vto{u}=0$. Combinando
+[1] e [2] obtém-se $\vto{u}\cdot\vto{u}=0$, que é impossível.
+\item[ii.] Avaliando os axiomas de espaço vetorial, pode-se
+demonstrar facilmente que $\evt{P}{\con{F}}$ é subespaço de
+$\evt{V}{\con{F}}$. O conjunto $\lch
+\vto{u},\vto{w}_1,\cdots,\vto{w}_m \rch$ é linearmente
+independente, pois nenhum elemento pode ser combinação linear dos
+demais: a parcela $\vto{w}_1,\cdots,\vto{w}_m$ é uma base e se,
+por hipótese, $\vto{u}=\sum^{m}_{i=1} \ele{\alpha}_i\vto{w}_i$,
+obtém-se que
+\begin{equation}
+\vto{u}\cdot\vto{u}=\sum^{m}_{i=1}
+\ele{\alpha}_i\lpa\vto{w}_i\cdot\vto{u}\rpa=0, \nonumber
+\end{equation}
+que é impossível. Seja um vetor qualquer $\vto{v}\in\con{V}$ e um
+$\vto{z}\in\con{P}$ ortogonal a $\vto{u}$. Através de \emph{i}.,
+pode-se afirmar que
+\begin{equation}
+\vto{v}=\ele{\alpha}\vto{u}+\vto{z}=\ele{\alpha}\vto{u}+\lpa
+\ele{\beta}_1\vto{w}_1+\cdots+\ele{\beta}_m\vto{w}_m \rpa,
+\nonumber
+\end{equation}
+mostrando que $\vto{v}$ é combinação linear de $\lch
+\vto{u},\vto{w}_1,\vto{w}_2,\cdots,\vto{w}_m\rch$.
+    \item[iii.] Seja $\dms{V}{\con{F}}=n$ e $\lch \vto{w}_1,\cdots,\vto{w}_m
+\rch$ base de $\evt{P}{\con{F}}$. Devido à \emph{ii}., tem-se que
+$\con{V}=\con{sp}\lch \vto{u},\vto{w}_1,\cdots,\vto{w}_m \rch$.
+Logo, $\dms{V}{\con{F}}=m+1=n$.
+\end{itemize}
+\end{prova}
+
+\end{teo}
+
+
+\subsection{Ortonormalidade}
+Seja um espaço de Hilbert $n$-dimensional $\ehr{V}{F}$ e
+$\con{U}=\lch \vun{v}_1,\vun{v}_2,\cdots \rch$ subconjunto próprio
+de $\con{V}$, cujos elementos são \emph{unitários}, $\| \vun{v}_i
+\|=1$, e ortogonais entre si. Denomina-se o subconjunto $\con{U}$
+ortonormal. Um subconjunto ortonormal é linearmente independente,
+já que não é possível que um vetor $\vun{v}_i\in\con{U}$ seja
+combinação linear dos demais vetores de $\con{U}$.
+
+Se for exigido que $\con{V}=\con{spU}$, então $\con{U}$ torna-se
+uma \emph{base ortonormal} do espaço vetorial $\evt{V}{\con{F}}$
+em $\ehr{V}{F}$, tal que
+$\con{U}=\lch\vun{v}_1,\cdots,\vun{v}_n\rch$.
+
+\begin{teo} \label{teo:temOrtonormal}
+Todo espaço vetorial $\evt{V}{\con{F}}$, sobre o qual define-se um
+espaço de Hilbert dimensionalmente finito $\ehr{V}{F}$, tem base
+ortonormal.
+
+\begin{prova}
+Primeiramente, admitamos que $\dms{V}{\con{F}}=1$. Nesta condição,
+qualquer conjunto com um único elemento é base de
+$\evt{V}{\con{F}}$. Portanto, pode-se dizer que $\lch \vun{v}
+\rch\subset\con{V}$ é uma base ortonormal. Agora, admitamos que
+$\dms{V}{\con{F}}=n$, $n>1$ e o espaço de dimensão $n-1$ possui
+base ortonormal. Seja um vetor unitário $\vun{u}\in\con{V}$.
+Segundo o teorema \ref{teo:projecao}, o conjunto $\con{V}=sp\lch
+\vun{u},\vun{w}_1,\cdots,\vun{w}_{n-1}\rch$, onde $\lch
+\vun{w}_1,\cdots,\vun{w}_{n-1}\rch\perp\vun{u}$ é base ortonormal
+de um espaço de dimensão $n-1$. Conclui-se, por indução, que
+independente do valor de $n$, o espaço $\evt{V}{\con{F}}$ sempre
+possui uma base ortonormal.
+\end{prova}
+\end{teo}
+
+\subsection{Conjuntos Recíprocos}\label{sec:conjuntosRecíprocos}
+Seja um espaço de Hilbert $n$-dimensional $\ehr{V}{F}$ e os
+subconjuntos ordenados $\con{U}=\lch \vto{u}_1,\cdots,\vto{u}_n
+\rch$, $\con{W}=\lch \vto{w}_1,\cdots,\vto{w}_n \rch$ de
+$\con{V}$. Estes conjuntos são ditos \emph{recíprocos} se
+\begin{equation}\label{eq:vetoresReciprocos}
+\vto{u}_i\cdot\vto{w}_j = \delta_{ij}\,.
+\end{equation}
+A fim de legitimar esta definição, deve-se verificar a existência
+de pelo menos um par de conjuntos recíprocos. Considerando que
+$\con{Z}=\lch \vto{z}_1,\cdots,\vto{z}_n \rch$ é uma base
+ortogonal de $\ehr{V}{F}$ e os vetores
+$\vto{g}_k=\sum_{j=1}^n\beta_j^{(k)}\vto{z}_j$, se $\con{Z}$ e
+$\lch\vto{g}_1,\cdots,\vto{g}_n\rch$ forem recíprocos, então os
+sistemas lineares a seguir devem ter soluções determinadas:
+\begin{equation}
+\lco \vto{z}_i\cdot\vto{z}_j \rco \lco \beta_j^{(k)} \rco =
+\lco\delta_{ik}\rco\,,
+\end{equation}
+onde $\lco \bullet \rco$ é a representação matricial contendo os
+escalares envolvidos. Em cada um dos sistemas lineares, $\det{\lco
+\vto{z}_i\cdot\vto{z}_j \rco}$ deve ser não nulo. Isto é sempre
+garantido, pois pode-se verificar facilmente que a matriz $\lco
+\vto{z}_i\cdot\vto{z}_j \rco$ é positiva-definida.
+
+Agora, supondo que existam outros vetores
+$\vto{h}_1,\cdots,\vto{h}_n\in\con{V}$ tais que os produtos
+internos $\vto{u}_i\cdot\vto{h}_j = \delta_{ij}$, tem-se, a partir
+de (\ref{eq:vetoresReciprocos}), que
+$\vto{u}_i\cdot(\vto{w}_j-\vto{h}_j)=0$. Desta forma, dado um
+vetor qualquer $\vto{x}=\sum_{j=1}^n\alpha_j\vto{v}_j$ de
+$\con{V}$, onde os vetores $\vto{v}_j$ definem uma base, então
+\begin{equation}
+(\vto{w}_i-\vto{h}_i)\cdot\vto{x}=\sum_{j=1}^n\alpha_j\underbrace{(\vto{w}_i-\vto{h}_i)\cdot\vto{v}_j}_{=0}=0\,.
+\end{equation}
+Se $\vto{x}=\vto{0}$, então $(\vto{w}_i-\vto{h}_i)$ assume
+qualquer valor, inclusive $\vto{0}$. Desta forma
+$\vto{w}_i=\vto{h}_i$ para qualquer $\vto{x}\in\con{V}$, garantido
+a unicidade do par de conjuntos recíprocos $\con{U}$ e $\con{W}$.
+
+Considerando que o conjunto $\con{U}$ é uma base de $\ehr{V}{F}$,
+seja então um vetor
+$\vto{u}=\sum_{i=1}^n\gamma_i\vto{w}_i\in\con{V}$. Caso $\vto{u}$
+seja nulo, então
+\begin{eqnarray}
+(\sum_{i=1}^n\gamma_i\vto{w}_i)\cdot\vto{u}_j&=&0\nonumber\\
+\sum_{j=1}^n\gamma_i\delta_{ij}&=&0\nonumber\\
+\gamma_j&=&0\,,
+\end{eqnarray}
+mostrando que o conjunto $\con{W}$ é linearmente independente,
+revelando-se, portanto, uma base de $\ehr{V}{F}$. É interessante
+notar que caso $\ehr{V}{F}$ seja um espaço vetorial Euclidiano,
+toda base ortonormal é recíproca à ela própria.
+
+\section{Espaços Vetoriais de Funções}\label{subsec:mapVet}
+
+\subsection{Espaço Vetorial de Funções}
+Sejam os espaços vetoriais $\evt{U}{F}$ e $\evt{W}{F}$. Seja
+$\cfu{U}{W}$ o conjunto de todas as funções que mapeiam $\con{U}$
+para $\con{W}$. Genericamente, uma função $\fun{h}$ que define
+$\map{\fun{h}}{U}{W}$ é um elemento do conjunto $\cfu{U}{W}$.
+
+Adotando o vetor $\vto{0}$ como uma função que define mapeamentos
+do tipo $\con{V}\mapsto\lch\vto{0}\rch$, pode-se definir o espaço
+vetorial de funções $\evt{\con{M}_{\con{U}\mapsto\con{W}}}{F}$,
+convenientemente representado por $\evf{U}{W}{F}$. A fim de
+identificar a função $\fun{m}\in\cfu{U}{W}$ como um vetor, sua
+notação é modificada para $\vtf{M}$. A descrição dos mapeamentos
+em questão fica da seguinte forma:
+\begin{equation}
+\vto{u}\mapsto\fua{\vtf{M}}{\vto{u}}\in\con{W},\,
+\forall\,\vto{u}\in\con{V},\vtf{M}\in\cfu{U}{W}.
+\end{equation}
+
+Uma vez que se define o espaço vetorial $\evf{U}{W}{F}$, é
+necessário definir como as operações - adição e multiplicação por
+escalar - entre suas funções interagem com os respectivos
+argumentos. Para tal objetivo, as seguintes igualdades são
+definidas:
+\begin{itemize}
+    \item[i.] $\fua{\lpa\vtf{M}_1+\vtf{M}_2\rpa}{\vto{u}}=
+\fua{\vtf{M}_1}{\vto{u}}+\fua{\vtf{M}_2}{\vto{u}},\,
+\forall\,\vtf{M}_1,\vtf{M}_2\in\cfu{U}{W}$;
+    \item[ii.] $\fua{\lpa\ele{a}\vtf{M}\rpa}{\vto{u}}=
+\ele{a}\fua{\vtf{M}}{\vto{u}},\,
+\forall\,\ele{a}\in\con{F},\vtf{M}\in\cfu{U}{W}$.
+\end{itemize}
+
+Seja um espaço vetorial $\evf{U}{U}{F}$. Pode-se dizer que uma
+função identidade $\ele{i}_\con{U}$ é elemento que define o vetor
+$\vtf{I}_\con{U}\in\cfu{U}{U}$.
+
+\subsection{Funcional}
+Sejam o espaços vetoriais $\evt{V}{F}$, $\evt{F}{F}$ e
+$\evf{V}{F}{F}$. Uma função $\vtf{F}\in\cfu{V}{F}$ onde se associa
+um vetor de $\con{V}$ a um escalar é chamada funcional. É
+interessante notar que um campo também é um espaço vetorial.
+
+\subsection{Função Transposta}
+Sejam os espaços vetoriais produto interno $\lpa \evt{V}{F},\xi
+\rpa$, $\lpa \evt{W}{F},\xi \rpa$  e os espaços vetoriais de
+funções $\evf{V}{W}{F}$ e $\evf{W}{V}{F}$. Existe uma única função
+$\vtf{G}^T\in\cfu{W}{V}$, chamada função transposta de
+$\vtf{G}\in\cfu{V}{W}$, tal que
+\begin{equation}
+\fua{\vtf{G}}{\vto{v}}\cdot\vto{w}=\vto{v}\cdot\fua{\vtf{G}^T}{\vto{w}},\,
+\forall\,\vto{v}\in\con{V},\vto{w}\in\con{W}.
+\end{equation}
+
+
+\subsubsection{Operador Simétrico} Seja um espaço vetorial de
+funções $\evf{V}{V}{F}$. Uma função $\vtf{S}\in\cfu{V}{V}$ é
+denominada operador simétrico se
+\begin{equation}
+\vtf{S}=\vtf{S}^{T}.
+\end{equation}
+Um operador $\vtf{G}\in\cfu{V}{V}$ é \emph{anti-simétrico} se
+$\vtf{G}=-\vtf{G}^{T}$.
+
+\section{Funções Lineares}
+
+\subsection{Homomorfismo de Espaço Vetorial}\label{subsec:FuncoesLineares}
+Sejam os espaços vetoriais $\evt{W}{F}$ e $\evt{V}{F}$, definidos
+sobre os grupos abelianos aditivos $\gra{W}{+}$ e $\gra{V}{+}$
+respectivamente. Diz-se que o homomorfismo de grupo $\fun{h}$ em
+$\map{\fun{h}}{\con{W}}{\con{V}}$ é um homomorfismo de espaço
+vetorial se, no caso de multiplicação por escalar, for válida a
+seguinte propriedade:
+\begin{equation}
+\fua{h}{\ele{a}\vto{w}}=\ele{a}\fua{h}{\vto{w}},\,\forall\,\ele{a}\in\con{F},\vto{w}\in\con{W}.
+\end{equation}
+Nestas condições, costuma-se dizer que $\map{h}{\con{W}}{\con{V}}$
+é uma \emph{transformação linear}. Seja um espaço vetorial
+$\evf{W}{V}{F}$, tal que as funções de $\cfu{W}{V}$ definam
+transformações lineares. Adota-se para estes espaços vetoriais a
+notação $\evl{W}{V}{F}$, tal que seu conjunto, agora representado
+$\cfl{W}{V}$, contém vetores chamados \emph{funções lineares}.
+Homomorfismos do tipo $\map{\vtf{K}}{\crt{W}{n}}{V}$ são chamados
+\emph{transformações multilineares} se
+\begin{equation}
+  \fua{\vtf{K}}{\vto{w}_1,\cdots,\ele{a}\vto{w}_i,\cdots,\vto{w}_n}
+=\ele{a}\fua{\vtf{K}}{\vto{w}_1,\cdots,\vto{w}_i,\cdots,\vto{w}_n},
+\,\forall\,\ele{a}\in\con{F},\vto{w}_i\in\con{W}_i.
+\end{equation}
+
+Especificamente, se uma função $\vtf{H}$ for elemento de
+$\cfl{V}{V}$, ela é chamada \emph{operador linear} em $\con{V}$ e
+$\map{\vtf{H}}{\con{V}}{\con{V}}$ é uma \emph{operação linear}. Um
+mapeamento $\map{\vtf{K}}{\con{V}^n}{V}$ é uma \emph{operação
+multilinear}.
+
+\subsection{Funcionais Coordenados}
+Seja $\evt{V}{F}$ um espaço vetorial dimensionalmente finito, onde
+$\con{U}=\lch \vto{v}_1,\cdots,\vto{v}_n \rch$ é uma base ordenada
+de $\con{V}$ e $\vto{v}\in\con{V}$ um vetor qualquer. As
+coordenadas
+ $\alpha_1,\cdots,\alpha_n$ de $\vto{v}$ na base $\con{U}$ podem ser reescritas como
+uma seqüência de valores dos seguintes funcionais lineares
+associados à base $\con{U}$:
+\begin{equation}
+\vtf{F}_{1}^\con{U},\cdots,\vtf{F}_n^\con{U}\in\cfl{V}{F},
+\end{equation}
+tal que $\fua{\vtf{F}_{i}^\con{U}}{\vto{v}}:=\alpha_i$. A
+combinação linear que define $\vto{v}$ pode então ser escrita da
+seguinte forma:
+\begin{equation}
+\vto{v}=\sum_{i=1}^{n}\fua{\vtf{F}^\con{U}_{i}}{\vto{v}}\vto{v}_i\,.
+\end{equation}
+Diz-se que os funcionais desta igualdade são os funcionais
+coordenados da base $\con{U}$, cujos valores em $\vto{v}$ são as
+coordenadas de $\vto{v}$. Em particular, para um vetor $\vto{v}_j$
+da base $\con{U}$, a decomposição em funcionais coordenados gera o
+seguinte:
+\begin{equation}
+\vto{v}_j=\sum_{i=1}^{n}\fua{\vtf{F}^\con{U}_{i}}{\vto{v}_j}\vto{v}_i=
+\sum_{i=1}^{n}\delta_{ij}\vto{v}_i\,.
+\end{equation}
+\paragraph{Produto Interno.} Considerando que $\evt{V}{F}$ define
+um espaço vetorial produto interno, dado um vetor
+$\vto{w}\in\con{V}$, o produto interno
+\begin{equation}
+\vto{v}\cdot\vto{w}  =  \sum_{i=1}^{n}\sum_{j=1}^{n}
+\fua{\vtf{F}^\con{U}_{i}}{\vto{v}}\fua{\vtf{F}^\con{U}_{j}}{\vto{w}}
+\vto{v}_i\cdot\vto{v}_j\,.
+\end{equation}
+Caso $\con{U}$ seja uma base ortonormal e $\evt{V}{F}$ seja um
+espaço vetorial Euclidiano, esta igualdade se transforma em
+\begin{equation}
+\vto{v}\cdot\vto{w} = \sum_{i=1}^{n}
+\fua{\vtf{F}^\con{U}_{i}}{\vto{v}}\fua{\vtf{F}^\con{U}_{i}}{\vto{w}}
+\,.
+\end{equation}
+Nesta situação, devido ao teorema \ref{teo:temOrtonormal}, o
+produto interno pode sempre ser expresso por um somatório deste
+tipo e os funcionais coordenados assumem a seguinte
+regra\footnote{Uma regra geral para funcionais coordenados
+definidos sobre uma base qualquer (ortonormal ou não) será
+apresentada na seção \ref{subsec:funcionaisVetores}.}:
+\begin{equation}
+\fua{\vtf{F}^\con{U}_{i}}{\vto{x}}=\vto{v}_i\cdot\vto{x}\,.
+\end{equation}
+
+
+\subsection{Operador Linear Positivo-Semidefinido}
+Seja o espaço vetorial produto interno $\lpa \evt{V}{F},\xi \rpa$
+e o espaço vetorial de funções $\evl{V}{V}{F}$. Um operador linear
+$\vtf{L}\in\cfl{V}{V}$ é dito positivo-semidefinido se
+\begin{equation}
+\vto{v}\cdot\fua{\vtf{L}}{\vto{v}}\geqslant0,\, \forall\,
+\vto{v}\in\con{V}.
+\end{equation}
+Impondo que $\vto{v}$ seja não nulo, o operador
+positivo-semidefinido torna-se um operador
+\emph{positivo-definido}, onde
+$\vto{v}\cdot\fua{\vtf{L}}{\vto{v}}>0$.
+
+
+\subsection{Transposição}
+Sejam os espaços vetoriais produto interno $\lpa \evt{V}{F},\xi
+\rpa$, $\lpa \evt{W}{F},\xi \rpa$  e os espaços vetoriais de
+funções $\evl{V}{W}{F}$ e $\evf{W}{V}{F}$. Seja uma função
+$\vtf{G}\in\cfl{V}{W}$ que admite a transposta
+$\vtf{G}^T\in\cfu{W}{V}$. Utilizando a definição de função
+transposta e aplicando multiplicação pelo escalar
+$\ele{a}\in\con{F}$ no argumento de $\vtf{G}^T$, tem-se que
+\begin{equation}
+\vto{v}\cdot\fua{\vtf{G}^T}{\ele{a}\vto{w}}=\fua{\vtf{G}}{\vto{v}}\cdot\lpa\ele{a}\vto{w}\rpa=
+\vto{v}\cdot\ele{a}\fua{\vtf{G}^T}{\vto{w}}\,
+\forall\,\vto{v}\in\con{V},\vto{w}\in\con{W}.
+\end{equation}
+Para os vetores $\vto{w}_1,\vto{w}_2\in\con{W}$, observa-se que
+\begin{equation}
+\vto{v}\cdot\fua{\vtf{G}^T}{\vto{w}_1+\vto{w}_2}=\fua{\vtf{G}}{\vto{v}}\cdot\lpa\vto{w}_1+\vto{w}_2\rpa=
+\vto{v}\cdot\lpa\fua{\vtf{G}^T}{\vto{w}_1}+\fua{\vtf{G}^T}{\vto{w}_2}\rpa\,
+\forall\,\vto{v}\in\con{V}.
+\end{equation}
+Conclui-se que $\vtf{G}^T$ também é uma função linear e portanto
+$\cfu{W}{V}=\cfl{W}{V}$. Nesta situação, pode-se obter as
+seguintes propriedades:
+\begin{itemize}
+    \item[i.] $\lpa\ele{a}\vtf{G}\rpa^T=\ele{a}\vtf{G}^T,\,\forall
+\,\ele{a}\in\con{F},\vtf{G}^T\in\cfl{W}{V},\vtf{G}\in\cfl{V}{W}$;
+    \item[ii.] $\lpa\vtf{G}\circ\vtf{M}\rpa^T=\vtf{M}^T\circ\vtf{G}^T,\,\forall
+\,\vtf{G},\vtf{M}\in\cfl{V}{W},\vtf{G}^T,\vtf{M}^T\in\cfl{W}{V}$;
+    \item[iii.] Se $\vtf{G}$ for inversível, $\lpa\vtf{G}^{-1}\rpa^T=\lpa\vtf{G}^T\rpa^{-1},\,\forall
+\,\vtf{G}^T,\vtf{G}^{-1}\in\cfl{W}{V}$.
+\end{itemize}
+\begin{prova}
+\begin{itemize}
+    \item[i.] Desenvolvendo a definição de função transposta, temos as seguintes igualdades: $
+\fua{\ele{a}\vtf{G}^T}{\vto{w}}\cdot\vto{v}=\vto{w}\cdot\ele{a}\fua{\vtf{G}}{\vto{v}}$
+e $
+\ele{a}\fua{\vtf{G}^T}{\vto{w}}\cdot\vto{v}=\vto{w}\cdot\ele{a}\fua{\vtf{G}}{\vto{v}}$.
+A partir delas, conclui-se que, para qualquer $\vto{v}$, $
+\fua{\ele{a}\vtf{G}^T}{\vto{w}}=\fua{\ele{a}\vtf{G}^T}{\vto{w}}$.
+    \item[ii.] Aplicando o mesmo procedimento do item anterior, temos as
+igualdades
+\begin{equation}
+\begin{array}{rcl}
+  \fua{\lpa\vtf{G}\circ\vtf{M}\rpa^T}{\vto{w}}\cdot\vto{v} & = & \vto{w}\cdot\fua{\lpa\vtf{G}\circ\vtf{M}\rpa}{\vto{v}} \nonumber \\
+  \fua{\lpa\vtf{G}\circ\vtf{M}\rpa}{\vto{v}}\cdot\vto{w} & = & \fua{\vtf{M}}{\vto{v}}\cdot\fua{\vtf{G}^T}{\vto{w}} \nonumber \\
+  \fua{\vtf{M}^T\circ\vtf{G}^T}{\vto{w}}\cdot\vto{v} & = & \fua{\vtf{G}^T}{\vto{w}}\cdot\fua{\vtf{M}}{\vto{v}} \nonumber \\
+\end{array}
+\end{equation}
+Combinando estas igualdades, chega-se a
+$\fua{\lpa\vtf{G}\circ\vtf{M}\rpa^T}{\vto{w}}=\fua{\vtf{M}^T\circ\vtf{G}^T}{\vto{w}}$,
+para qualquer $\vto{v}$.
+    \item[iii.] Dado que $\vtf{I}_\con{W}\in\cfu{W}{W}$, pode-se demonstrar facilmente que
+$\vtf{I}_\con{W}^{T}=\vtf{I}_\con{W}$. Com base nesta igualdade e
+aplicando a transposta nos dois lados de
+$\vtf{G}\circ\vtf{G}^{-1}=\vtf{I}_\con{W}$ chega-se à
+$(\vtf{G}^{-1})^T\circ\vtf{G}^T=\vtf{I}_\con{W}$. No entanto,
+sabemos que $(\vtf{G}^T)^{-1}\circ\vtf{G}^T=\vtf{I}_\con{W}$.
+Logo, conclui-se que $(\vtf{G}^{-1})^T=(\vtf{G}^T)^{-1}$.
+\end{itemize}
+\end{prova}
+
+
+
+\subsubsection{Função Ortogonal} Sejam o espaço vetorial produto interno
+$\lpa \evt{V}{F},\xi \rpa$ e o espaço vetorial de funções
+$\evl{V}{W}{F}$. Sejam as funções $\vtf{G}\in\cfl{V}{W}$ e
+$\vtf{G}^T\in\cfl{W}{V}$. Se $\vtf{G}$ for inversível e
+$\vtf{G}^T=\vtf{G}^{-1}$, diz-se que $\vtf{G}$ é uma função
+ortogonal. Para $\con{V}=\con{W}$, a função $\vtf{G}$ torna-se um
+\emph{operador ortogonal}. Neste caso, dados os vetores quaisquer
+$\vto{v},\vto{w}\in\con{V}$ e aplicando a definição de função
+transposta, pode-se concluir do desenvolvimento
+\begin{eqnarray}
+\fua{\vtf{G}}{\vto{v}}\cdot\fua{\vtf{G}}{\vto{w}}&=&
+\fua{\vtf{G}^T\circ\vtf{G}}{\vto{v}}\cdot\vto{w}\nonumber\\
+&=&
+\fua{\vtf{G}^{-1}\circ\vtf{G}}{\vto{v}}\cdot\vto{w}\nonumber\\
+&=& {\vto{v}}\cdot\vto{w}
+\end{eqnarray}
+que todo operador ortogonal preserva a operação produto interno,
+ou seja,
+\begin{equation}
+\fua{\xi}{\fua{\vtf{G}}{\vto{v}},\fua{\vtf{G}}{\vto{w}}}=\fua{\xi}{\vto{v},\vto{w}}.
+\end{equation}
+
+
+\subsection{Isometria} Seja um espaço vetorial métrico $\lpa
+\evt{V}{F},\varrho \rpa$. O operador linear
+$\vtf{K}\in\evl{V}{V}{F}$ é chamado isometria se
+\begin{equation}
+\fua{\varrho}{\vto{v}_1,\vto{v}_2}=\fua{\varrho}{\fua{\vtf{K}}{\vto{v}_1},\fua{\vtf{K}}{\vto{v}_2}},
+\,\forall\,\vto{v}_1,\vto{v}_2\in\con{V}.
+\end{equation}
+
+Em termos gerais, uma isometria é operador binário cujo mapeamento
+preserva a distância entre o par de elementos de um espaço
+métrico. Notar que nos espaços onde a métrica é induzida direta ou
+indiretamente pelo produto interno, como ocorre nos espaços
+vetoriais Euclidianos, todo operador ortogonal é uma isometria.
+
+
+\begin{teo}[Mudança de Base] \label{teo:temUnicaFuncaoBase}
+Sejam os espaços vetoriais $\evt{V}{F}$, $\evt{W}{F}$ e
+$\evl{V}{W}{F}$. Seja o subconjunto finito $\con{U}=\lch
+\vto{v}_1,\cdots,\vto{v}_n \rch\subset\con{V}$ uma base de
+$\evt{V}{F}$. Seja um subconjunto qualquer $\con{Z}=\lch
+\vto{w}_1,\cdots,\vto{w}_n \rch\subset\con{W}$. Neste contexto,
+são válidas as seguintes afirmações:
+\begin{itemize}
+    \item[i.] Sempre existe uma única função $\vtf{Q}\in\cfl{V}{W}$ tal que
+$\fua{\vtf{Q}}{\vto{v}_i}=\vto{w}_i$. Se $\con{Z}$ for uma base de
+$\evt{W}{F}$, então $\vtf{Q}$ é um isomorfismo que promove uma
+mudança de base.
+    \item[ii.] Sejam $\evt{V}{F}$ e $\evt{W}{F}$ definidores de espaços
+vetoriais Euclidianos e $\con{Z}$ uma base de $\evt{W}{F}$. Caso
+os vetores das bases $\con{U}$ e $\con{Z}$ forem unitários, a
+função $\vtf{Q}$ promotora de mudança de base é uma isometria
+ortogonal.
+\end{itemize}
+\begin{prova} Demonstrando cada um dos itens, tem-se:
+\begin{itemize}
+\item[i.] Seja um vetor qualquer $\vto{v}\in\con{V}$, sobre o qual
+$\vtf{Q}$ atua. Temos então que
+\begin{equation}
+\fua{\vtf{Q}}{\vto{v}}=
+\sum_{i=1}^{n}\fua{\vtf{F}^\con{U}_{i}}{\vto{v}}\vto{w}_i\,.
+\nonumber
+\end{equation}
+A combinação linear à direita da igualdade revela a condição de
+existência de $\vtf{Q}$, pois é sempre possível realizá-la. A
+unicidade de $\vtf{Q}$ é imediata, já que qualquer outra função
+$\vtf{H}\in\cfl{V}{W}$, onde $\vto{w}_i=\fua{\vtf{H}}{\vto{v}_i}$,
+gera $\fua{\vtf{Q}}{\vto{v}_i}=\fua{\vtf{H}}{\vto{v}_i}$. Agora,
+sejam vetores quaisquer $\vto{x},\vto{y}\in\con{V}$ e $\con{Z}$
+uma base de $\evt{W}{F}$. Novamente, desenvolvendo os vetores em
+funcionais coordenados e aplicando as propriedades de funções
+lineares, obtém-se que
+\begin{equation}
+\begin{array}{rcl}
+  \fua{\vtf{Q}}{\vto{x}}
+ & = & \sum_{i=1}^{n}\fua{\vtf{F}^\con{U}_{i}}{\vto{x}}\vto{w}_i\,; \nonumber\\
+ &   & \\
+  \fua{\vtf{Q}}{\vto{y}}
+ & = & \sum_{i=1}^{n}\fua{\vtf{F}^\con{U}_{i}}{\vto{y}}\vto{w}_i\,.\nonumber \\
+\end{array}
+\end{equation}
+A partir destas duas igualdades, conclui-se que caso
+$\vto{x}\neq\vto{y}$, é impossível obter
+$\fua{\vtf{Q}}{\vto{x}}=\fua{\vtf{Q}}{\vto{y}}$, já que o conjunto
+das coordenadas de $\vto{x}$ e $\vto{y}$ são diferentes e os
+elementos de $\con{Z}$ são linearmente independentes. Nesta
+condição, $\vtf{Q}$ é inversível. Para que este $\vtf{Q}$ defina
+um mapeamento bijetor é necessário que ele defina um mapeamento
+sobrejetor, ou seja, que sempre exista um $\vto{v}\in\con{V}$
+mapeando um $\vto{w}\in\con{W}$ qualquer. Isto é obtido a partir
+do seguinte desenvolvimento:
+\begin{equation}
+\begin{array}{rcl}
+  \vto{w} & = & \sum_{i=1}^{n}\fua{\vtf{F}^\con{Z}_{i}}{\vto{w}}\vto{w}_i \nonumber\\
+   & & \\
+   & = & \sum_{i=1}^{n}\fua{\vtf{F}^\con{Z}_{i}}{\vto{w}}\fua{\vtf{Q}}{\vto{v}_i} \nonumber\\
+   & & \\
+   & = & \fua{\vtf{Q}}{\sum_{i=1}^{n}\fua{\vtf{F}^\con{Z}_{i}}{\vto{w}}\vto{v}_i} \nonumber\\
+   & & \\
+   & = & \fua{\vtf{Q}}{\vto{v}}\,. \nonumber\\
+\end{array}
+\end{equation}
+\item[ii.] Consideremos
+$\alpha_i=\fua{\vtf{F}^\con{U}_{i}}{\vto{x}}$ e
+$\beta_i=\fua{\vtf{F}^\con{U}_{i}}{\vto{y}}$ as coordenadas de
+vetores $\vto{x},\vto{y}\in\con{V}$ quaisquer. A partir da métrica
+Euclidiana, pode-se escrever as seguintes igualdades:
+\begin{equation}
+\begin{array}{rcccl}
+  \fua{\varrho^{2}}{\vto{x},\vto{y}}& = &
+\sum_{i=1}^n\lpa\alpha_i-\beta_i \rpa^2\vto{v}_i\cdot\vto{v}_i & = &
+\sum_{i=1}^n\lpa\alpha_i-\beta_i \rpa^2\|\vto{v}_i\|^2\,;\\
+  \fua{\varrho^{2}}{\fua{\vtf{Q}}{\vto{x}},\fua{\vtf{Q}}{\vto{y}}}& = &
+\sum_{i=1}^n\lpa\alpha_i-\beta_i \rpa^2\vto{w}_i\cdot\vto{w}_i & =
+&
+\sum_{i=1}^n\lpa\alpha_i-\beta_i \rpa^2\|\vto{w}_i\|^2\,.\nonumber\\
+\end{array}
+\end{equation}
+Como os vetores das bases são unitários, as duas métricas
+apresentadas são iguais. Para demonstrar que esta isometria é
+ortogonal, sejam os vetores quaisquer $\vto{v}\in\con{V}$ e
+$\vto{w}\in\con{W}$. Desenvolvendo os escalares
+$\fua{\vtf{Q}}{\vto{v}}\cdot\vto{w}$ e
+$\vto{v}\cdot\fua{\vtf{Q}^{-1}}{\vto{w}}$, temos respectivamente:
+\begin{equation}
+\begin{array}{rccl}
+\sum_{i=1}^n\fua{\vtf{F}^\con{W}_{i}}{\fua{\vtf{Q}}{\vto{v}}}\fua{\vtf{F}^\con{W}_{i}}{\vto{w}}\|\vto{w}_i\|^2
+&=&\sum_{i=1}^n\fua{\vtf{F}^\con{U}_{i}}{\vto{v}}\fua{\vtf{F}^\con{W}_{i}}{\vto{w}}\,;\nonumber\\
+\sum_{i=1}^n\fua{\vtf{F}^\con{U}_{i}}{\vto{v}}\fua{\vtf{F}^\con{U}_{i}}{\fua{\vtf{Q}^{-1}}{\vto{w}}}\|\vto{v}_i\|^2
+& = &
+\sum_{i=1}^n\fua{\vtf{F}^\con{U}_{i}}{\vto{v}}\fua{\vtf{F}^\con{W}_{i}}{\vto{w}}\,.\nonumber
+\end{array}
+\end{equation}
+Conclui-se, então, que a igualdade
+\begin{equation}
+\fua{\vtf{Q}}{\vto{v}}\cdot\vto{w} =
+\vto{v}\cdot\fua{\vtf{Q}^{-1}}{\vto{w}}\nonumber
+\end{equation}
+ao ser comparada à definição de transposta permite concluir que
+$\vtf{Q}^T=\vtf{Q}^{-1}$.
+\end{itemize}
+\end{prova}
+\end{teo}
+
+
+
+\subsection{Matrizes Associadas}
+
+A fim de viabilizar manipulação algébrica de valores, é possível
+estabelecer uma estreita relação dos conceitos envolvendo matriz
+com aqueles envolvendo função linear. Convém que os espaços
+vetoriais envolvidos sejam dimensionalmente finitos, tais que seus
+vetores são definidos através dos valores de funcionais
+coordenados. A representação matricial de vetores e funções
+lineares envolve estes funcionais, que por sua vez necessitam do
+estabelecimento de uma base. Em termos práticos, isto ocorre
+segundo os conceitos apresentados a seguir.
+
+\subsubsection{Vetor e Matriz} Seja um espaço vetorial dimensionalmente finito $\evt{V}{F}$ e
+$\con{U}=\lch \vto{v}_1,\cdots,\vto{v}_n \rch$ uma base deste
+espaço. Em termos de funcionais coordenados, um vetor
+$\vto{v}\in\con{V}$ pode ser decomposto da seguinte forma:
+\begin{equation}
+\vto{v}=\sum_{i=1}^{n}\fua{\vtf{F}^\con{U}_{i}}{\vto{v}}\vto{v}_i\,.
+\end{equation}
+Com base nesta decomposição, pode-se associar ao vetor $\vto{v}$
+uma matriz $\mav{v}{U}$ de dimensão $n \times 1$, cujos escalares
+\begin{equation}
+\mav{v}{U}_{i1}=\fua{\vtf{F}^\con{U}_{i}}{\vto{v}}\,.
+\end{equation}
+Diz-se que $\mav{v}{U}$ é a \emph{matriz associada} a $\vto{v}$,
+formada pelas coordenadas de $\vto{v}$ na base $\con{U}$. É fácil
+verificar que a matriz associada a $\vto{0}$ é sempre uma matriz
+de escalares nulos $\lco 0 \rco$, qualquer que seja a base.
+
+\subsubsection{Função Linear e Matriz}Sejam os espaços vetoriais dimensionalmente finitos
+$\evt{V}{F}$, $\evt{W}{F}$ e as bases $\con{U}=\lch
+\vto{v}_1,\cdots,\vto{v}_n \rch\subset\con{V}$, $\con{Z}=\lch
+\vto{w}_1,\cdots,\vto{w}_m \rch\subset\con{W}$. Seja um espaço
+vetorial de funções $\evl{V}{W}{F}$ e uma função
+$\vtf{L}\in\cfl{V}{W}$. Sejam vetores quaisquer
+$\vto{v}\in\con{V}$ e $\vto{w}\in\con{W}$ tal que
+$\fua{\vtf{L}}{\vto{v}}=\vto{w}$. Utilizando as propriedades de
+funções lineares, pode-se realizar o seguinte desenvolvimento:
+\begin{eqnarray}
+  \fua{\vtf{L}}{\vto{v}} & = & \sum_{i=1}^{m}\fua{\vtf{F}^\con{Z}_{i}}{\fua{\vtf{L}}{\vto{v}}}\vto{w}_i \nonumber\\
+   & = & \sum_{i=1}^{m}\fua{\vtf{F}^\con{Z}_{i}}{ \sum_{j=1}^{n} \fua{\vtf{F}^\con{U}_{j}}{\vto{v}}\fua{\vtf{L}}{\vto{v}_j}  }\vto{w}_i \nonumber\\
+   & = &
+\sum_{i=1}^{m}\sum_{j=1}^{n}\underbrace{\fua{\vtf{F}^\con{Z}_{i}}{\fua{\vtf{L}}{\vto{v}_j}}}_{\maf{L}{U}{Z}_{ij}}
+\underbrace{\fua{\vtf{F}^\con{U}_{j}}{\vto{v}}}_{\mav{v}{U}_{j1}}\vto{w}_i\,.
+\end{eqnarray}
+É interessante observar que a decomposição de
+$\fua{\vtf{L}}{\vto{v}}$ em seus funcionais coordenados mostra que
+a função $\vtf{L}$ pode ser representada através de uma matriz de
+dimensão $m \times n$, cujos escalares $\maf{L}{U}{Z}_{ij}$ estão
+indicados na expressão final. Esta matriz multiplica a matriz $n
+\times 1$ associada a $\vto{v}$ na base $\con{U}$, tal que
+\begin{equation}
+\mav{w}{Z}=\maf{L}{U}{Z}\mav{v}{U}\,.
+\end{equation}
+De forma semelhante ao caso de vetores, diz-se que $\maf{L}{U}{Z}$
+é a matriz associada à função $\vtf{L}$ atuando nos vetores da
+base $\con{U}$, cujos escalares são as coordenadas na base
+$\con{Z}$. Em termos gerais, uma matriz $\maf{\bullet}{A}{B}$
+multiplica matrizes de coordenadas descritas na base $\con{A}$,
+gerando matrizes de coordenadas na base $\con{B}$.
+
+Utilizando o mesmo procedimento anterior, dados um
+$\ele{a}\in\con{F}$ e uma função
+$\ele{a}\vtf{G}+\vtf{H}\in\cfl{V}{W}$, onde
+$\fua{\lpa\ele{a}\vtf{G}+\vtf{H}\rpa}{\vto{v}}=\vto{w}$, é fácil
+obter que
+\begin{equation}
+\mav{w}{Z}=\lpa\ele{a}\maf{G}{U}{Z}+\maf{H}{U}{Z}\rpa
+\mav{v}{U}\,.
+\end{equation}
+
+\paragraph{Função Linear Composta.} Con\-si\-de\-ran\-do as
+condições anteriores, a\-cres\-cen\-te\-mos um espaço vetorial
+$\evl{W}{V}{F}$ e uma função $\vtf{H}\in\cfl{W}{V}$, tal que
+$\fua{\vtf{H}}{\vto{w}}=\vto{v}$. De forma similar à decomposição
+de $\fua{\vtf{L}}{\vto{v}}$, pode-se obter
+\begin{eqnarray}
+  \fua{\vtf{H}}{\vto{w}} & = &
+\sum_{j=1}^{n}\sum_{i=1}^{m}\underbrace{\fua{\vtf{F}^\con{U}_{j}}{\fua{\vtf{H}}{\vto{w}_i}}}_{\maf{H}{Z}{U}_{ji}}
+\underbrace{\fua{\vtf{F}^\con{Z}_{i}}{\vto{w}}}_{\mav{w}{Z}_{i1}}\vto{v}_j\,.
+\end{eqnarray}
+Sabendo que $\fua{\vtf{L}}{\vto{v}}=\vto{w}$, é possível inserir a
+decomposição de $\fua{\vtf{L}}{\vto{v}}$ em
+$\fua{\vtf{H}}{\vto{w}}$. Desta forma,
+\begin{eqnarray}
+  \fua{\vtf{H}\circ\vtf{L}}{\vto{v}} & = &
+\sum_{j=1}^{n}\sum_{k=1}^{n}\sum_{i=1}^{m} \underbrace{
+\underbrace{\fua{\vtf{F}^\con{U}_{j}}{\fua{\vtf{H}}{\vto{w}_i}}}_{\maf{H}{Z}{U}_{ji}}
+\underbrace{\fua{\vtf{F}^\con{Z}_{i}}{\fua{\vtf{L}}{\vto{v}_k}}}_{\maf{L}{U}{Z}_{ik}}
+}_{\mad{\lpa\vtf{H}\circ \vtf{L}\rpa_{\con{U}}}{\con{Z}}_{jk}}
+\underbrace{\fua{\vtf{F}^\con{U}_{k}}{\vto{v}}}_{\mav{v}{U}_{k1}}
+\underbrace{\fua{\vtf{F}^\con{Z}_{j}}{\vto{w}_j}}_{\delta_{jj}}\vto{v}_j\,,\nonumber\\
+\end{eqnarray}
+de onde se conclui que
+\begin{eqnarray}
+\mav{v}{U} & = & \mad{\lpa\vtf{H}\circ \vtf{L}\rpa_{\con{U}}}{\con{Z}}\mav{v}{U} \nonumber\\
+ & = & \maf{H}{Z}{U}\maf{L}{U}{Z}\mav{v}{U}\,.
+\end{eqnarray}
+Neste caso, $\maf{H}{Z}{U}\maf{L}{U}{Z}=\mat{I}$ . Para dizer que
+$\maf{H}{Z}{U}={\mad{\vtf{L}_\con{U}}{\con{Z}}}^{\,-1}$, a
+condição de inversão a ser obedecida $\det{\maf{L}{U}{Z}}\neq 0$
+requer que a matriz $\maf{L}{U}{Z}$ seja quadrada. Para tal,
+impõe-se que $\dms{V}{F}=\dms{W}{F}$, ou seja, $m=n$.
+
+Caso $\vtf{L}$ seja um isomorfismo, então seja
+$\vtf{H}=\vtf{L}^{-1}$. Nestas condições, é válida a seguinte
+igualdade:
+\begin{equation}
+\mad{\vtf{L}_{\con{Z}}^{-1}}{\con{U}}={\mad{\vtf{L}_{\con{U}}}{\con{Z}}}^{\,\,-1}\,.
+\end{equation}
+
+\subsubsection{Função Linear e Matriz Transposta}  Sejam os espaços vetoriais Euclidianos
+$\eeu{V}{n}$, $\eeu{W}{n}$ e duas bases unitárias $\con{U}=\lch
+\vun{v}_1,\cdots,\vun{v}_n \rch\subset\con{V}$, $\con{Z}=\lch
+\vun{w}_1,\cdots,\vun{w}_m \rch\subset\con{W}$. Seja um espaço
+vetorial $\evl{V}{W}{\real}$ e uma função $\vtf{G}\in\cfl{V}{W}$
+que admite transposta. Dados $\vto{v}\in\con{V}$ e
+$\vto{w}\in\con{W}$ quaisquer, a partir da definição de função
+transposta, pode-se chegar a
+\begin{equation}
+\sum_{i=1}^{n}
+\fua{\vtf{F}^\con{Z}_{i}}{\vto{w}}\fua{\vtf{F}^\con{Z}_{i}}{\fua{\vtf{G}}{\vto{v}}}
+=\sum_{i=1}^{n}
+\fua{\vtf{F}^\con{U}_{i}}{\fua{\vtf{G}^{T}}{\vto{w}}}\fua{\vtf{F}^\con{U}_{i}}{\vto{v}}
+\,.
+\end{equation}
+Em termos matriciais, pode-se reescrever esta igualdade da
+seguinte forma:
+\begin{equation}
+\lpa{\mav{w}{Z}}^{\,\,T}\maf{G}{U}{Z}\mav{v}{U}\rpa_{11} =
+\lpa{\mav{w}{Z}}^{\,\,T} {\mad{\vtf{G}^{T}_\con{Z}}{U}}^{\,\,T}
+\mav{v}{U}\rpa_{11} \,,
+\end{equation}
+de onde se diz que
+\begin{equation}
+{\mad{\vtf{G}_\con{U}}{Z}}^{\,\,T} =
+\mad{\vtf{G}^{T}_\con{Z}}{U}\,.
+\end{equation}
+Além disso, é possível obter
+\begin{equation}
+{\mad{\vtf{G}_\con{U}}{Z}}^{\,\,T} =
+{\mad{\lpa\vtf{G}\circ\vtf{I}\rpa_\con{U}}{Z}}^{\,\,T} =
+\mad{\vtf{I}^{T}_\con{Z}}{U}\mad{\vtf{G}^{T}_\con{U}}{Z} =
+{\mad{\vtf{G}_\con{Z}}{U}}^{\,\,T}\,.
+\end{equation}
+Conclui-se, então, que
+\begin{equation}\label{eq:transposta1}
+\mad{\vtf{G}^{T}_\con{Z}}{U} = {\mad{\vtf{G}_\con{U}}{Z}}^{\,\,T}
+= {\mad{\vtf{G}_\con{Z}}{U}}^{\,\,T}
+\end{equation}
+e
+\begin{equation}\label{eq:transposta2}
+{\mad{\vtf{G}_\con{U}}{Z}} = {\mad{\vtf{G}_\con{Z}}{U}}\,.
+\end{equation}
+
+\subsubsection{Operador Linear e Matrizes Similares} Sejam os
+espaços vetoriais $\evt{V}{F}$, $\evl{V}{V}{F}$, as bases
+$\con{U}=\lch \vto{v}_1,\cdots,\vto{v}_n \rch$, $\con{Z}=\lch
+\vto{w}_1,\cdots,\vto{w}_n \rch\subset\con{V}$ e um operador
+qualquer $\vtf{L}\in\cfl{V}{V}$. Nestas condições, pelo teorema
+\ref{teo:temUnicaFuncaoBase}, existe o automorfismo
+$\vtf{Q}\in\cfl{V}{V}$ promotor da mudança de base
+$\fua{\vtf{Q}}{\vto{v}_i}=\vto{w}_i$. Logo, para qualquer função
+de $\cfl{V}{V}$, existem quatro matrizes quadradas associadas:
+$\maf{\bullet}{U}{U}$, $\maf{\bullet}{U}{Z}$,
+$\maf{\bullet}{Z}{U}$, $\maf{\bullet}{Z}{Z}$.
+
+Baseando-se nos escalares das matrizes associadas ao automorfismo
+$\vtf{Q}$, são válidas as quatro igualdades a seguir:
+\begin{equation}
+\begin{array}{rclll}
+\mad{\vtf{Q}_\con{U}}{Z}& = & \mat{I}\,;\\
+\mad{\vtf{Q}_\con{U}}{U}& = & \mad{\lpa\vtf{Q}\circ\vtf{Q}^{-1}\rpa_\con{Z}}{U} & = & \maf{I}{Z}{U}\,; \\
+ \mad{\vtf{Q}_\con{Z}}{U}& = & \mad{\lpa\vtf{Q}\circ\vtf{Q}\rpa_\con{U}}{U} & = & \maf{I}{Z}{U}\maf{I}{Z}{U}\,; \\
+ \mad{\vtf{Q}_\con{Z}}{Z}& = & \mad{\lpa\vtf{Q}\circ\vtf{Q}\rpa_\con{U}}{Z} & = & \maf{I}{Z}{U}\maf{I}{Z}{U}\,. \\
+\end{array}
+\end{equation}
+A partir desta lista de igualdades, pode-se realizar o seguinte
+desenvolvimento:
+\begin{eqnarray}
+\maf{L}{U}{Z} & = & \mad{\lpa
+\vtf{I}\circ\vtf{L}\circ\vtf{I}\rpa_\con{U}}{Z} \, \nonumber \\
+ & = & \maf{I}{Z}{U}\maf{L}{Z}{U}\maf{I}{U}{Z} \, \nonumber \\
+ & = & {\maf{I}{U}{Z}}^{\,\,-1}\maf{L}{Z}{U}\maf{I}{U}{Z}\,.
+\end{eqnarray}
+A igualdade evidencia que as matrizes $\maf{L}{U}{Z}$ e
+$\maf{L}{Z}{U}$ são similares e que a matriz $\maf{L}{Z}{U}$ é
+\emph{convertida} para $\maf{L}{U}{Z}$ através da mudança de base
+$\vtf{Q}$. Convertendo as funções compostas $\vtf{L}\circ\vtf{Q}$
+e $\vtf{L}\circ\vtf{Q}^{-1}$, obtém-se os resultados
+\begin{eqnarray}
+\mad{\lpa\vtf{L}\circ\vtf{Q}\rpa_\con{U}}{Z} & = &
+{\maf{I}{U}{Z}}^{\,\,-1}\mad{\lpa\vtf{L}\circ\vtf{Q}\rpa_\con{Z}}{U}\maf{I}{U}{Z}  \nonumber \\
+\maf{L}{Z}{Z} & = &
+{\maf{I}{U}{Z}}^{\,\,-1}\maf{L}{U}{Z}\maf{I}{Z}{U}\maf{I}{Z}{U}\maf{I}{U}{Z}  \nonumber \\
+ & = &
+{\maf{I}{U}{Z}}^{\,\,-1}\maf{L}{U}{Z}\maf{I}{U}{Z}
+\end{eqnarray}
+e também
+\begin{eqnarray}
+\mad{\lpa\vtf{L}\circ\vtf{Q}^{-1}\rpa_\con{Z}}{U} & = &
+\maf{I}{U}{Z}\mad{\lpa\vtf{L}\circ\vtf{Q}^{-1}\rpa_\con{U}}{Z}{\maf{I}{U}{Z}}^{\,\,-1}  \nonumber \\
+\maf{L}{U}{U} & = &
+{\maf{I}{Z}{U}}^{\,\,-1}\maf{L}{Z}{U}\maf{I}{U}{Z}\maf{I}{U}{Z}\maf{I}{Z}{U}  \nonumber \\
+ & = &
+{\maf{I}{Z}{U}}^{\,\,-1}\maf{L}{Z}{U}\maf{I}{Z}{U}
+\label{eq_IuuIuz}\,.
+\end{eqnarray}
+Estes desenvolvimentos mostram que as quatro matrizes associadas a
+$\vtf{L}$ são similares. Genericamente, pode-se concluir que as
+matrizes associadas a um operador linear são sempre similares.
+
+\subsubsection{Operador Linear e Matriz Simétricos} Seja um espaço vetorial produto interno
+$\lpa \evt{V}{F}, \xi \rpa$, um espaço vetorial de operadores
+lineares $\evl{V}{V}{F}$, uma base $\con{U}\subset\con{V}$ e um
+operador simétrico qualquer $\vtf{S}\in\cfl{V}{V}$. Aplicando a
+definição de função transposta e desenvolvendo-a em termos
+matriciais, é possível concluir que
+\begin{equation}
+\mad{\vtf{S}_\con{U}}{U} = {\mad{\vtf{S}_\con{U}}{U}}^{\,\,T}\,.
+\end{equation}
+Considerando que haja uma segunda base $\con{Z}\subset\con{V}$,
+que o espaço vetorial produto interno seja Euclidiano e as bases
+sejam unitárias, através de (\ref{eq:transposta1}) e
+(\ref{eq:transposta2}), conclui-se que
+\begin{equation}
+\mad{\vtf{S}_\con{Z}}{U} = {\mad{\vtf{S}_\con{Z}}{U}}^{\,\,T} =
+{\mad{\vtf{S}_\con{U}}{Z}}^{\,\,T}   \,.
+\end{equation}
+
+\subsubsection{Operador Linear e Matriz Positivos-Semidefinidos} Seja um espaço vetorial
+produto interno $\lpa \evt{V}{F},\xi \rpa$, um espaço vetorial de
+operadores lineares $\evl{V}{V}{F}$, uma base qualquer
+$\con{Z}=\lch \vto{w}_1,\cdots,\vto{w}_n \rch\subset\con{V}$ e um
+operador positivo-semidefinido $\vtf{L}\in\cfl{V}{V}$. Dado um
+vetor qualquer $\vto{v}\in\con{V}$ é possível afirmar que
+\begin{equation}
+\vto{v}\cdot\fua{\vtf{L}}{\vto{v}}=\sum_{i=1}^n\fua{\vtf{F}^\con{Z}_{i}}{\vto{v}}
+\fua{\vtf{F}^\con{Z}_{i}}{\fua{\vtf{L}}{\vto{v}}}
+\underbrace{\vto{w}_i\cdot\vto{w}_i}_{>0}\geqslant0\,.
+\end{equation}
+A partir desta desigualdade pode-se escrever que
+\begin{equation}
+\lpa{\lco \vto{v} \rco^\con{Z}}^{\,\,T} \maf{L}{Z}{Z} \lco \vto{v}
+\rco^\con{Z}\rpa_{11} \geqslant 0,
+\end{equation}
+de onde se conclui que $\maf{L}{Z}{Z}$ é matriz
+positiva-semidefinida. Nestas condições, diz-se que a matriz
+associada a um operador positivo-semidefinido, descrita numa base
+qualquer, é positiva-semidefinida. Considerando vetores não nulos,
+esta generalização também é aplicável a operadores e matrizes
+positivos-definidos.
+
+\subsection{Determinante de Operador Linear}
+Seja um espaço vetorial dimensionalmente finito $\evt{V}{F}$, um
+espaço vetorial de funções $\evl{V}{V}{F}$ e um operador
+$\vtf{L}\in\cfl{V}{V}$. Como as matrizes associadas a $\vtf{L}$
+são similares, é possível escrever que
+\begin{equation}
+\det\vtf{L}:=\det \mat{L}\,,
+\end{equation}
+onde $\mat{L}$ é a matriz que representa uma matriz quadrada
+qualquer associada a $\vtf{L}$. Em outras palavras, o determinante
+de um operador linear independe das bases pelas quais suas
+matrizes associadas são descritas. Com base nisso, se $\vtf{L}$
+for um automorfismo, então
+\begin{equation}
+\det\vtf{L}^{-1}=\det \mat{L}^{-1}=\lpa \det \mat{L} \rpa^{-1}\,.
+\end{equation}
+Logo, $\det\vtf{L} \neq 0$ é condição necessária e suficiente para
+que $\vtf{L}$ seja inversível. Considerando que $\evt{V}{F}$
+define um espaço vetorial produto interno, caso $\vtf{L}$ seja
+ortogonal, então se $\det\vtf{L}=1$ ele é dito \emph{ortogonal
+próprio} e se $\det\vtf{L}=-1$ ele é \emph{impróprio}.
+
+\subsection{Traço de Operador Linear}
+Seja um espaço vetorial dimensionalmente finito $\evt{V}{F}$, um
+espaço vetorial de funções $\evl{V}{V}{F}$ e um operador
+$\vtf{L}\in\cfl{V}{V}$. Pelas mesmas razões que baseiam a
+definição de determinante de operador linear, pode-se afirmar que
+\begin{equation}
+\trc{\vtf{L}}:=\trc{\mat{L}}.
+\end{equation}
+
+\subsection{Autovalores e Autovetores}
+Seja um espaço vetorial dimensionalmente finito $\evt{V}{F}$, um
+espaço vetorial de funções $\evl{V}{V}{F}$ e um operador
+$\vtf{L}\in\cfl{V}{V}$. Um escalar $\lambda\in\con{F}$ é dito um
+autovalor de $\vtf{L}$ se existir um vetor $\vto{v}\in\con{V}$ não
+nulo, chamado autovetor de $\vtf{L}$, tal que
+\begin{equation}
+\fua{\vtf{L}}{\vto{v}}=\lambda\vto{v}\,.
+\end{equation}
+A partir da regra de adição entre as funções de $\cfl{V}{V}$, é
+possível reescrever esta igualdade na forma
+\begin{equation}\label{eq:probAutoValor}
+\lpa \lambda\vtf{I}-\vtf{L}\rpa\lpa\vto{v}\rpa=\vto{0}\,.
+\end{equation}
+Considerando uma base qualquer $\con{U}$ de $\evt{V}{F}$, a
+igualdade, em termos de matrizes associadas, se torna o seguinte
+sistema linear de equações:
+\begin{equation}
+\mad{\lpa \lambda\vtf{I}-\vtf{L}\rpa_\con{U}}{U} \mav{v}{U}=\lco
+0\rco\,.
+\end{equation}
+Para que $\vto{v}$ seja realmente não nulo (solução não-trivial),
+é necessário que
+\begin{equation}
+\det\lpa \lambda\vtf{I}-\vtf{L}\rpa=\det\lco
+\lambda\vtf{I}-\vtf{L}\rco=0\,,
+\end{equation}
+onde não há dependência de base. Em termos genéricos, a igualdade
+anterior fica
+\begin{equation}
+\det\lpa\lambda\mat{I}-\mat{L}\rpa=0\,.
+\end{equation}
+O termo à esquerda desta condição é o polinômio
+característico\footnote{Ver a definição de polinômio
+característico na seção \ref{subsec:Arrays}.} de $\mat{L}$ na
+variável $\lambda$, cujas raízes são os autovalores de $\vtf{L}$.
+O conjunto formado por estes autovalores é dito \emph{espectro} do
+operador em questão. Os coeficientes do polinômio característico
+são denominados \emph{invariantes principais} de $\vtf{L}$, porque
+seus valores são funções do traço ou do determinante de $\mat{L}$.
+Desta forma, costuma-se dizer que $\det\lpa
+\lambda\vtf{I}-\vtf{L}\rpa=0$ é a \emph{equação característica} do
+operador $\vtf{L}$.
+
+\subsubsection{Operadores Simétricos e Decomposição Espectral}Seja um espaço vetorial
+produto interno $\lpa \evt{V}{\real},\xi \rpa$, um espaço vetorial
+de operadores lineares $\evl{V}{V}{\real}$ e um operador simétrico
+qualquer $\vtf{S}\in\cfl{V}{V}$. Sejam $\lch
+\lambda_1,\cdots,\lambda_n\rch$ e
+$\lch\vto{v}_1,\cdots,\vto{v}_n\rch$ os autovalores e os
+autovetores de $\vtf{S}$ respectivamente. Genericamente, pode-se
+escrever que
+\begin{equation}
+\fua{\vtf{S}}{\vto{v}_i}=\lambda_i\vto{v}_i\,.
+\end{equation}
+Fazendo produto interno dos vetores nos dois lados da igualdade
+por $\vto{v}_j$, tem-se
+\begin{equation}
+\vto{v}_j\cdot\fua{\vtf{S}}{\vto{v}_i}=\lambda_i\vto{v}_i\cdot\vto{v}_j\,.
+\end{equation}
+Aplicando procedimento semelhante,
+\begin{equation}
+\vto{v}_i\cdot\fua{\vtf{S}}{\vto{v}_j}=\lambda_j\vto{v}_i\cdot\vto{v}_j\,.
+\end{equation}
+Da definição de função transposta para operadores simétricos,
+pode-se concluir que
+\begin{equation}
+\lpa\lambda_i-\lambda_j\rpa\vto{v}_i\cdot\vto{v}_j=0\,.
+\end{equation}
+Se para qualquer par de índices $ij$, os autovalores $\lambda_i$ e
+$\lambda_j$ forem iguais, os autovetores $\vto{v}_i$ e $\vto{v}_j$
+podem ser escolhidos arbitrariamente de tal forma que sejam
+ortogonais. Caso $\lambda_i\neq\lambda_j$, os autovetores são
+sempre ortogonais. Desta forma, o conjunto dos autovetores de
+$\vtf{S}$ é uma base de $\evt{V}{\real}$.
+
+Seja a base ortogonal dos autovetores
+$U=\lch\vto{v}_1,\cdots,\vto{v}_n\rch$. A matriz simétrica
+$\mat{S}$ associada ao operador $\vtf{S}$ é normal, pois seus
+escalares são reais. Pelo teorema \ref{teo:espectral}, tem-se que
+\begin{equation}\label{eq:decompSpectralS}
+\mat{S}=\mat{U}^{-1}\tilde{\mat{S}}\mat{U}.
+\end{equation}
+Avaliando a matriz diagonal $\tilde{\mat{S}}$, é possível
+desenvolver o seguinte:
+\begin{eqnarray}
+\tilde{\mat{S}}_{ij}& = &
+\lambda_{i}\delta_{ij} \nonumber \\
+& = &
+\fua{\vtf{F}^\con{U}_{j}}{\lambda_i\vto{v}_i} \nonumber \\
+& = &
+\fua{\vtf{F}^\con{U}_{j}}{\fua{\vtf{S}}{\vto{v}_i}} \nonumber \\
+& = & \maf{S}{U}{U}_{ij} \,.
+\end{eqnarray}
+Diz-se então que $\maf{S}{U}{U}$ é a \emph{representação
+espectral} de $\vtf{S}$.  Seja uma base qualquer $\con{Z}=\lch
+\vto{w}_1,\cdots,\vto{w}_n \rch\subset\con{V}$, tal que um
+automorfismo $\vtf{Q}$ mude $\con{U}$ para $\con{Z}$. Combinando
+(\ref{eq:decompSpectralS}) e a igualdade (\ref{eq_IuuIuz}),
+obtém-se
+\begin{equation}
+\mat{U}\mat{S}\mat{U}^{-1}={\maf{I}{Z}{U}}^{\,\,-1}\maf{S}{Z}{U}\maf{I}{Z}{U}.
+\end{equation}
+Admitindo que $\mat{U}=\maf{I}{U}{Z}$ e $\mat{S}=\maf{S}{Z}{U}$, a
+igualdade que descreve a conversão de $\maf{S}{U}{U}$ para
+$\maf{S}{Z}{U}$ torna-se a decomposição espectral de
+$\maf{S}{Z}{U}$.
+
+Considerando que $\vtf{S}$ seja positivo-semidefinido, é possível
+afirmar, a partir da desigualdade
+\begin{equation}
+\vto{v}_i\cdot\fua{\vtf{S}}{\vto{v}_i} = \lambda_i\lpa
+\vto{v}_i\cdot\vto{v}_i\rpa \geqslant 0,
+\end{equation}
+que os autovalores de $\vtf{S}$ são todos não negativos, já que o
+produto interno $\vto{v}_i\cdot\vto{v}_i$ é não negativo por
+definição. Para o caso de $\vtf{S}$ positivo-definido, seus
+autovalores são sempre positivos.
+
+\begin{teo}[Raiz Quadrada]\label{teo:raizQuadrada}
+Seja um espaço vetorial produto interno sobre o campo real $\lpa
+\evt{V}{\real},\xi \rpa$, um espaço vetorial de funções
+$\evl{V}{V}{\real}$ e um operador simétrico positivo-semidefinido
+$\vtf{S}\in\cfl{V}{V}$. Nestas condições, existe um e somente um
+operador simétrico positivo-semidefinido
+$\vtf{S}^{1/2}\in\cfl{V}{V}$ tal que
+\begin{equation}
+\vtf{S}^{1/2}\circ\vtf{S}^{1/2}=\vtf{S}\,.
+\end{equation}
+Caso $\vtf{S}$ seja positivo definido, então $\vtf{S}^{1/2}$
+também é positivo-definido.
+\newline
+\newline
+\begin{prova}\footnote{Adaptada de \aut{Gurtin}\cite{gurtin_1981_1}, pp. 13-14.}
+Seja uma base $\con{U}\in\con{V}$ dos autovetores de $\vtf{S}$.
+Pela decomposição espectral, a matriz $\maf{S}{U}{U}$ é uma matriz
+diagonal cujos elementos são os autovalores de $\vtf{S}$.
+Admitindo que
+\begin{equation}
+\lpa{\maf{S}{U}{U}}^{\,1/2}\rpa_{ii}=\sqrt{\lambda_i}\,\,,\nonumber
+\end{equation}
+onde $\lambda_i$ é sempre não negativo, tem-se que
+${\mad{\vtf{S}_{\con{U}}}{U}}^{\,1/2}{\mad{\vtf{S}_{\con{U}}}{U}}^{\,1/2}=\maf{S}{U}{U}$.
+Desta forma, podemos afirmar que existe uma matriz
+\begin{equation}
+\mad{\vtf{S}^{1/2}_{\con{U}}}{U}:={\maf{S}{U}{U}}^{\,1/2}\,.\nonumber
+\end{equation}
+Para demonstrar a unicidade de $\vtf{S}^{1/2}$, por hipótese, seja
+$\vtf{C}^{1/2}\circ\vtf{C}^{1/2}=\vtf{S}$. Adotando uma base
+qualquer $\con{Z}$, um vetor $\vto{u}\in\con{V}$ e a igualdade
+(\ref{eq:probAutoValor}), pode-se fazer o seguinte
+desenvolvimento:
+\begin{eqnarray}
+\mat{0}&=&\lpa \lambda_1\mat{I}-\mad{\vtf{S}^{1/2}_{\con{Z}}}{Z}\mad{\vtf{S}^{1/2}_{\con{Z}}}{Z}\rpa \lco \vto{v}_1 \rco^{Z} \nonumber\\
+&=&\lpa
+\sqrt{\lambda_1}\,\,\mat{I}+\mad{\vtf{S}^{1/2}_{\con{Z}}}{Z}\rpa
+\underbrace{\lpa\sqrt{\lambda_1}\,\,\mat{I}-\mad{\vtf{S}^{1/2}_{\con{Z}}}{Z}\rpa\lco
+\vto{v}_1 \rco^{Z}}_{\lco \vto{u} \rco^{Z}} \nonumber\,,
+\end{eqnarray}
+de onde se conclui que
+\begin{equation}
+-\sqrt{\lambda_1}\mav{u}{Z} =
+\mad{\vtf{S}^{1/2}_{\con{Z}}}{Z}\mav{u}{Z}\,.\nonumber
+\end{equation}
+A matriz $\lco \vto{u} \rco^{Z}$, que abrevia o termo destacado, é
+nula. Caso contrário, ocorreria uma situação impossível na qual um
+autovalor negativo está associado ao operador simétrico
+positivo-semidefinido $\vtf{S}^{1/2}$. No caso de $\lambda_1=0$,
+não há restrição para a matriz $\lco \vto{u} \rco^{Z}$, podendo
+ser nula, por exemplo. Então, o termo destacado fica assim:
+\begin{equation}
+\sqrt{\lambda_1}\lco \vto{v}_1 \rco^{Z} =
+\mad{\vtf{S}^{1/2}_{\con{Z}}}{Z}\lco \vto{v}_1
+\rco^{Z}\,.\nonumber
+\end{equation}
+Este mesmo procedimento pode ser aplicado ao operador
+$\vtf{C}^{1/2}$, de onde se conclui que
+\begin{equation}
+\mad{\vtf{S}^{1/2}_{\con{Z}}}{Z}\lco \vto{v}_i
+\rco^{Z}=\mad{\vtf{C}^{1/2}_{\con{Z}}}{Z}\lco \vto{v}_i
+\rco^{Z}\nonumber
+\end{equation}
+para qualquer um dos autovetores de $\vtf{S}$. Já que eles são não
+nulos, $\vtf{S}^{1/2}$ é único.
+\end{prova}
+\end{teo}
+
+
+\begin{teo}[Decomposição Polar]\label{teo:decompPolar}
+Seja um espaço vetorial produto interno sobre o campo real $\lpa
+\evt{V}{\real},\xi \rpa$, um espaço vetorial de funções
+$\evl{V}{V}{\real}$ e um operador linear $\vtf{L}\in\cfl{V}{V}$.
+Existem somente dois operadores simétricos positivos-semidefinidos
+$\vtf{S}_1,\vtf{S}_2\in\cfl{V}{V}$ e dois operadores ortogonais
+$\vtf{O}_1,\vtf{O}_2\in\cfl{V}{V}$ tais que
+\begin{equation}
+\vtf{L}=\vtf{S}_1\circ\vtf{O}_1=\vtf{O}_2\circ\vtf{S}_2\,.\nonumber
+\end{equation}
+O operador $\vtf{S}_1\circ\vtf{O}_1$ é uma decomposição polar de
+$\vtf{L}$ à esquerda, enquanto $\vtf{O}_2\circ\vtf{S}_2$ uma
+decomposição polar de $\vtf{L}$ à direita.
+\newline
+\newline
+\begin{prova}
+A fim de provar a existência destes operadores, vamos admitir que
+os operadores simétricos $\vtf{G}_1:=\vtf{L}\circ\vtf{L}^T$ e
+$\vtf{G}_2:=\vtf{L}^T\circ\vtf{L}$ sejam positivos-definidos. Pelo
+teorema \ref{teo:raizQuadrada}, é possível decompô-los da seguinte
+forma:
+\begin{eqnarray}
+\vtf{L}\circ\vtf{L}^T&=&\vtf{G}_1^{1/2}\circ\vtf{G}_1^{1/2}\,, \nonumber\\
+\vtf{L}^T\circ\vtf{L}&=&\vtf{G}_2^{1/2}\circ\vtf{G}_2^{1/2}\,,\nonumber
+\end{eqnarray}
+onde $\vtf{G}_1^{1/2}$ e $\vtf{G}_2^{1/2}$ são operadores
+simétricos positivos-definidos. A primeira decomposição pode ser
+reescrita assim:
+\begin{equation}
+\underbrace{\vtf{G}_1^{-1/2}\circ\vtf{L}}_{\vtf{P}_1}\circ
+\underbrace{\vtf{L}^T\circ\vtf{G}_1^{-1/2}}_{\vtf{P}_1^T}=\vtf{I}\,\nonumber
+\end{equation}
+onde $\vtf{G}_1^{-1/2}$ é a inversa de $\vtf{G}_1^{1/2}$ e
+$\vtf{P}_1$ é claramente ortogonal. Adotando o mesmo procedimento
+para a decomposição de $\vtf{L}^T\circ\vtf{L}$, é possível chegar
+a
+\begin{equation}
+\vtf{L}=\vtf{G}_1^{1/2}\circ\vtf{P}_1=\vtf{P}_2\circ\vtf{G}_2^{1/2}\,,\nonumber
+\end{equation}
+onde $\vtf{P}_2:=\vtf{L}\circ\vtf{G}_2^{-1/2}$. A unicidade é
+obtida pelo teorema \ref{teo:raizQuadrada}, onde os operadores
+$\vtf{G}_{1}$ e $\vtf{G}_{2}$ são únicos. Como $\vtf{P}_1$ e
+$\vtf{P}_2$ são definidos a partir $\vtf{L}$, $\vtf{G}_1$ e
+$\vtf{G}_2$, eles também são únicos.
+\end{prova}
+\end{teo}
+
+\chapter{Tópicos de Geometria Afim}\label{subsec:geometriaAfim}
+Os assuntos da Álgebra Linear são de natureza puramente abstrata.
+A caracterização de grande parte dos fenômenos físicos,
+entretanto, exige um arcabouço geométrico que um espaço vetorial,
+por si só, é incapaz de fornecer.
+
+Em geral, não existe, por exemplo, um elemento no espaço destinado
+a descrever fenômenos mecânicos correspondente ao vetor nulo
+$\vto{0}$, necessário na definição de espaço vetorial. Certas
+definições e operações necessárias à Física advêm fundamentalmente
+de conceitos geométricos como paralelismo, perpendicularismo,
+coplanaridade, colinearidade, etc...
+
+A abordagem de criação da geometria que é descrita nesta seção
+trata os axiomas eminentemente geométricos como simples
+conseqüências de axiomas algébricos. Neste contexto, um espaço
+vetorial gera uma geometria quando age sobre um conjunto. Vejamos,
+a seguir, como isto ocorre.
+
+\section{Espaços Afins}
+
+\subsection{Espaço Afim}
+Seja um espaço vetorial $\lpa \gra{V}{+} , \cam{F} , \diamond
+\rpa$ e o conjunto $\con{A}$ um G-conjunto de $\gra{V}{+}$ através
+de uma ação de grupo simplesmente transitiva $\oplus$. Nestas
+condições, o conjunto $\con{A}$ é conhecido como \emph{espaço
+puntual}, representado por $\epo{A}$, e seus elementos são
+chamados \emph{pontos}. A tripla ordenada $\lpa
+\evt{V}{F},\epo{A},\oplus \rpa$ é dominada espaço afim, cuja
+notação é abreviada para $\eaf{V}{A}{F}$.
+
+Reescrevendo as propriedades da ação de grupo simplesmente
+transitiva aplicadas no contexto de $\eaf{V}{A}{F}$, tem-se o
+seguinte:
+\begin{itemize}
+    \item[i.] $\exists1 \, \vto{v}\in\con{V}$ tal que $\vto{v}\oplus\ele{a}_1=\ele{a}_2\,,\, \ele{a}_1,\ele{a}_2\in\epo{A}$;
+    \item[ii.] $\vto{0}\oplus\ele{a} = \ele{a}\,,\forall\,\ele{a}\in\epo{A}$;
+    \item[iii.] $\vto{v}_1\oplus\lpa \vto{v}_2\oplus\ele{a} \rpa=\lpa\vto{v}_1+
+\vto{v}_2\rpa\oplus\ele{a},\,\forall\,\vto{v}_1,\vto{v}_2\in\con{V},\,\ele{a}\in\epo{A}$.
+\end{itemize}
+
+\subsection{Subespaço Afim}
+Seja o espaço afim $\eaf{V}{A}{F}$ e o subespaço vetorial
+$\evt{U}{F}$, onde $\con{U}\subset\con{V}$. Seja um ponto
+$\ele{a}\in\epo{A}$ e um subconjunto $\epo{S}\subset\epo{A}$ tal
+que $\epo{S}:=\lch \vto{u}\oplus\ele{a} : \vto{u}\in\con{U}\rch$.
+A tripla ordenada $\lpa \evt{U}{F},\epo{S},\oplus \rpa$ é
+denominada subespaço afim de $\eaf{V}{A}{F}$. É importante
+observar que o ponto $\ele{a}$ também pertence ao subespaço
+puntual $\epo{S}$, pois o vetor nulo é elemento de todo o conjunto
+que define um subespaço vetorial. Desta forma, é conveniente
+representar o subespaço puntual $\epo{S}$ gerado a partir de $a$
+com $\epo{S}_\ele{a}$.
+
+Se $\evt{V}{F}$ for dimensionalmente finito, diz-se que o espaço
+afim $\eaf{V}{A}{F}$, por ele definido, também é dimensionalmente
+finito. Além disso, considera-se que se $\dms{V}{F}=n$ então
+$\dim{\lpa\eaf{V}{A}{F}\rpa}=n$. Caso o subespaço afim
+$\saf{U}{S}{a}{F}$ seja unidimensional ele é denominado
+\emph{reta}, se for bidimensional ele é chamado \emph{plano}. Todo
+subespaço afim $n-1$ dimensional é dito um \emph{hiperplano}.
+
+\subsection{Sistema de Coordenadas Afim}
+Seja um subespaço $\saf{U}{S}{a}{F}$ do espaço afim
+$\eaf{V}{A}{F}$ dimensionalmente finito. Seja $\tilde{\con{U}}$
+uma base de $\evt{U}{F}$ e um ponto qualquer
+$\ele{o}\in\epo{S}_\ele{a}$ sobre o qual os vetores de
+$\tilde{\con{U}}$ agem. Diz-se que o par ordenado $(
+\ele{o},\tilde{\con{U}})$ é um sistema de coordenadas afim do
+subespaço $\saf{U}{S}{a}{F}$ . O ponto $\ele{o}$ é conhecido como
+\emph{ponto de referência} ou \emph{origem} do sistema de
+coordenadas.
+
+Considerando um ponto $\ele{x}\in\epo{S}_\ele{a}$ e um vetor
+$\vto{x}\in\con{U}$, onde $\ele{x}=\vto{x}\oplus\ele{o}$, diz-se
+que as coordenadas do ponto $\ele{x}$ no sistema de coordenadas $(
+\ele{o},\tilde{\con{U}})$ são as coordenadas do vetor $\vto{x}$ na
+base $\tilde{\con{U}}$.
+
+Numericamente, os escalares da matriz $\mav{x}{\tilde{U}}$ são as
+coordenadas de $\ele{x}$. Dado um segundo vetor
+$\vto{u}\in\con{U}$, é fácil concluir que as coordenadas do ponto
+$\vto{u}\oplus\ele{x}$ são as coordenadas do vetor
+$\vto{u}+\vto{x}$.
+
+\section{Semiafinidades}
+
+\subsection{Translação}
+Seja um espaço afim $\eaf{V}{A}{F}$, uma operação
+$\map{\tpv{}}{\epo{A}}{\epo{A}}$ e $\vto{v}$ um vetor qualquer de
+$\con{V}$. Diz-se que  $\tpv{}$  é a translação de $\epo{A}$
+associada com $\vto{v}$ se a regra desta função for descrita por
+\begin{equation}
+\fua{\tpv{}}{\ele{x}}=\vto{v}\oplus\ele{x}\,.
+\end{equation}
+Como o par de pontos $\lpa \ele{x}, \fua{\tpv{}}{\ele{x}}\rpa$
+determina um único vetor $\vto{v}$, pode-se afirmar que este vetor
+determina uma e apenas uma translação. Desta forma, é conveniente
+identificar o vetor na translação $\tpv{}$ com $\tpv{\vto{v}}$.
+
+Sejam os pontos $\ele{a}_1,\ele{a}_2\in\epo{A}$ onde
+$\fua{\tpv{\vto{v}}}{\ele{a}_1}=\ele{a}_2$. No contexto de espaço
+afim, devido à unicidade do vetor na ação simplesmente transitiva,
+uma translação é sempre um mapeamento bijetor. Desta forma, a
+função $\tpv{\vto{v}}$ em questão possui uma inversa, obtida da
+seguinte forma:
+\begin{eqnarray}
+\ele{a}_2&=&\vto{v}\oplus\ele{a}_1 \nonumber\\
+-\vto{v}\oplus\ele{a}_2&=&-\vto{v}\oplus\lpa\vto{v}\oplus\ele{a}_1\rpa \nonumber\\
+\lpa-\vto{v}\rpa\oplus\ele{a}_2&=&\vto{0}\oplus\ele{a}_1 \nonumber\\
+\fua{\tpv{-\vto{v}}}{\ele{a}_2}&=&\ele{a}_1,
+\end{eqnarray}
+de onde se pode definir que
+\begin{equation}
+\mathsf{T}^{-1}_{\vto{v}}=\tpv{-\vto{v}}.
+\end{equation}
+Considerando um terceiro ponto $\ele{a}_3\in\epo{A}$ e um segundo
+vetor $\vto{w}\in\con{V}$ tal que
+$\fua{\tpv{\vto{w}}}{\ele{a}_2}=\ele{a}_3$, pode-se realizar o
+seguinte desenvolvimento:
+\begin{eqnarray}
+\ele{a}_3&=&\fua{\tpv{\vto{w}}}{\ele{a}_2} \nonumber\\
+&=&\fua{\tpv{\vto{w}}}{\fua{\tpv{\vto{v}}}{\ele{a}_1}} \nonumber\\
+&=&\vto{w}\oplus\lpa\vto{v}\oplus\ele{a}_1\rpa \nonumber\\
+&=&\fua{\tpv{\vto{w}+\vto{v}}}{\ele{a}_1},
+\end{eqnarray}
+de onde se conclui que
+\begin{equation}
+\tpv{\vto{w}}\circ\tpv{\vto{v}}=\tpv{\vto{w}+\vto{v}}\,.
+\end{equation}
+A partir desta igualdade, é fácil demonstrar que a operação de
+composição de translações, envolvendo quaisquer vetores
+$\vto{v}_1,\vto{v}_2,\vto{v}_3\in\con{V}$, possui as propriedades
+\begin{itemize}
+    \item[i.] Associatividade:
+$\tpv{\vto{v}_1}\circ\lpa\tpv{\vto{v}_2}\circ\tpv{\vto{v}_3}\rpa=
+\lpa\tpv{\vto{v}_1}\circ\tpv{\vto{v}_2}\rpa\circ\tpv{\vto{v}_3}$;
+    \item[ii.] Comutatividade: $\tpv{\vto{v}_1}\circ\tpv{\vto{v}_2}=\tpv{\vto{v}_2}\circ\tpv{\vto{v}_1}$;
+    \item[iii.] Elemento Identidade: $\tpv{\vto{v}_1}\circ\tpv{\vto{0}}=\tpv{\vto{v}_1}$;
+    \item[iv.] Elemento Inverso: $\tpv{\vto{v}_1}\circ\mathsf{T}^{-1}_{\vto{v}_1}=\tpv{\vto{0}}$.
+\end{itemize}
+Desta forma, o conjunto $\con{T}$ de todas as translações que agem
+em $\epo{A}$ é um grupo abeliano $\gra{T}{\circ}$ na operação de
+composição.
+
+\subsubsection{Representações}
+Seja um espaço afim $\eaf{V}{A}{F}$ $n$-di\-men\-sio\-nal e uma
+translação $\tpv{\vto{x}}$, onde $\vto{x}\in\con{V}$. Sejam dois
+pontos quaisquer $\ele{o},\ele{x}\in\epo{A}$ tal que $\ele{x}$ é o
+valor da função $\tpv{\vto{x}}$ em $\ele{o}$. Pode-se representar,
+como na figura \ref{fg:translacao},que $\tpv{\vto{x}}$ mapeia ou
+translada o ponto $\ele{o}$ para o ponto $\ele{x}$.
+\begin{figure}[!htt]
+\centering
+\includegraphics{figs/ch1/translacao.eps}
+\caption{Representação da translação
+$\tpv{\vto{x}}$.}\label{fg:translacao}
+\end{figure}
+
+A representação na figura é propositalmente tendenciosa quando
+utiliza um segmento de linha retilínea com ponta em seta indicando
+o \emph{sentido} do mapeamento. Na verdade, qualquer elemento
+figurativo, retilíneo ou não, que descrevesse este sentido poderia
+ser utilizado. Como, tradicionalmente, retas são desenhadas como
+linhas retilíneas infinitas, a representação de $\tpv{\vto{x}}$ na
+figura também mostra uma \emph{direção} pois os pontos $\ele{o}$ e
+$\ele{x}$ pertencem à reta $\saf{X}{X}{a}{F}$, onde
+$\con{X}=sp\lch\vto{x}\rch$. Por isso, é possível suprimir da
+figura \ref{fg:translacao} o desenho desta reta.
+
+Considerando uma segunda translação $\tpv{\vto{y}}$ que mapeia
+$\ele{o}$ para um terceiro ponto $\ele{y}$ não pertencente à reta
+$\saf{X}{X}{a}{F}$, tem-se a nova reta $\saf{Y}{Y}{a}{F}$, onde
+$\con{Y}=sp\lch\vto{y}\rch$. Nesta situação, onde o ponto
+$\ele{o}$ pertence simultaneamente às retas $\saf{X}{X}{a}{F}$ e
+$\saf{Y}{Y}{a}{F}$, fica evidente que $\ele{a}=\ele{o}$. Como se
+tratam de duas retas distintas, pode-se dizer então que um
+\begin{figure}[!ht]
+\centering
+\includegraphics{figs/ch1/translacaoPlano}
+\caption{Representação do plano $\saf{P}{P}{o}{F}$, onde
+$\con{P}=sp\lch \vto{x},\vto{y}\rch$.}\label{fg:translacaoPlano}
+\end{figure}
+eventual conjunto $\lch \vto{x},\vto{y}\rch$ é linearmente
+independente. Desta forma, o subespaço afim $\saf{P}{P}{o}{F}$,
+onde $\con{P}=sp\lch \vto{x},\vto{y}\rch$, é um plano,
+tradicionalmente representado como na figura
+\ref{fg:translacaoPlano}. O desenho do plano também pode ser
+suprimido devido à representação das duas translações
+$\tpv{\vto{x}}$ e $\tpv{\vto{y}}$ atuando no ponto $o$.
+
+Ao se considerar um quarto ponto $\ele{z}$ não pertencente ao
+plano $\saf{P}{P}{o}{F}$, resultado da atuação  de uma translação
+$\tpv{\vto{z}}$ no ponto $o$, tem-se uma terceira reta
+$\saf{Z}{Z}{o}{F}$, onde $\con{Z}=sp\lch\vto{z}\rch$. De maneira
+similar aos casos anteriores, na figura \ref{fg:translacaoTrid}
+\begin{figure}[!ht]
+\centering
+\includegraphics{figs/ch1/translacaoTrid}
+\caption{Representação do subespaço $\saf{K}{H}{o}{F}$, onde
+$\con{K}=sp\lch
+\vto{x},\vto{y},\vto{z}\rch$.}\label{fg:translacaoTrid}
+\end{figure}
+as representações das três translações $\tpv{\vto{x}}$,
+$\tpv{\vto{y}}$ e $\tpv{\vto{z}}$ atuando no mesmo ponto $o$
+indicam um subespaço afim tridimensional $\saf{H}{H}{o}{F}$, onde
+$\con{H}=sp\lch \vto{x},\vto{y},\vto{z}\rch$.
+
+\paragraph{Translações Compostas.} Considerando as condições
+anteriores, sejam pontos distintos $\ele{a}_1$, $\ele{a}_2$ e
+$\ele{a}_3$ do espaço puntual $\epo{A}$. Sejam as translações
+$\tpv{\vto{v}_1}$, $\tpv{\vto{v}_2}$ e
+$\tpv{\vto{v}_2+\vto{v}_1}$, tal que
+$\fua{\tpv{\vto{v}_1}}{\ele{a}_1}=\ele{a}_2$ ,
+$\fua{\tpv{\vto{v}_2}}{\ele{a}_2}=\ele{a}_3$ e
+$\fua{\tpv{\vto{v}_2+\vto{v}_1}}{\ele{a}_1}=\ele{a}_3$, conforme
+as representações da figura \ref{fg:translacaoComposicao}.
+\begin{figure}[!ht]
+\centering
+\includegraphics{figs/ch1/translacaoComposicao}
+\caption{Representação da translação
+$\tpv{\vto{v}_2+\vto{v}_1}$.}\label{fg:translacaoComposicao}
+\end{figure}
+Já foi demonstrado que a translação $\tpv{\vto{v}_2+\vto{v}_1}$ é
+o resultado da composição $\tpv{\vto{v}_2}\circ\tpv{\vto{v}_1}$.
+Como a composição de translações é comutativa, a atuação de
+$\tpv{\vto{v}_2}$ seguida por $\tpv{\vto{v}_1}$, ou seja
+$\tpv{\vto{v}_1}\circ\tpv{\vto{v}_2}$, também deve definir a
+representação de $\tpv{\vto{v}_2+\vto{v}_1}$. Além disso, como os
+vetores $\vto{v}_1$ e $\vto{v}_2$ são diferentes, os pontos
+$\fua{\tpv{\vto{v}_1}}{\ele{a}_1}$ e
+$\fua{\tpv{\vto{v}_2}}{\ele{a}_1}$ são obrigatoriamente
+diferentes. Esta é a única restrição\footnote{A partir da
+representação do conceito de dilação são acrescentadas restrições
+adicionais à localização de pontos.} de localização para os pontos
+intermediários citados.
+
+\subsection{Paralelismo}
+Sejam o espaço afim $\eaf{V}{A}{F}$ com dimensão $n\geqslant2$ e
+dois de seus subespaços $\saf{U}{S}{a}{F}$ e $\saf{W}{S}{b}{F}$.
+Diz-se que estes subespaços são paralelos, ou seja
+$\saf{U}{S}{a}{F}
+\parallel \saf{W}{S}{b}{F}$, se
+$\con{U}\subseteq\con{W}$ ou $\con{W}\subseteq\con{U}$. A partir
+daí, pode-se deduzir as seguintes propriedades:
+\begin{itemize}
+    \item[i.] $\dim{\lpa\saf{U}{S}{a}{F}\rpa}=\dim{\lpa\saf{W}{S}{b}{F}\rpa}\implies\con{U}=\con{W}$;
+    \item[ii.] $\ele{a}=\ele{b}\implies$$\epo{S}_\ele{a}\subseteq\epo{S}_\ele{b}$ ou $\epo{S}_\ele{b}\subseteq\epo{S}_\ele{a}$;
+    \item[iii.] $\ele{a}\neq\ele{b}\implies\epo{S}_\ele{a}\cap\epo{S}_\ele{b}=\emptyset$.
+
+\end{itemize}
+
+\subsubsection{Representações} Considerando os subespaços paralelos
+$\saf{U}{S}{a}{F}$ uma linha e $\saf{W}{S}{b}{F}$ um plano, sejam
+os pares $( \ele{a}, \lch\vto{u} \rch )$ e $( \ele{b},
+\lch\vto{w}_1,\vto{w}_2 \rch )$ seus respectivos sistemas de
+coordenadas. Admitindo a condição da propriedade iii, pode-se
+observar um paralelismo entre uma reta e um plano representado na
+figura \ref{fg:paralelismoRetaPlano}.
+\begin{figure}[!ht]
+\centering
+\includegraphics{figs/ch1/paralelismoRetaPlano}
+\caption{Paralelismo onde o plano não contém a
+reta.}\label{fg:paralelismoRetaPlano}
+\end{figure}
+
+Agora, admitindo a condição da propriedade ii, tem-se a figura
+\ref{fg:paralelismoRetaNoPlano}.
+\begin{figure}[!ht]
+\centering
+\includegraphics{figs/ch1/paralelismoRetaNoPlano}
+\caption{Paralelismo onde a reta é subespaço do
+plano.}\label{fg:paralelismoRetaNoPlano}
+\end{figure}
+Notar que os planos foram desenhados para dar maior clareza às
+representações.
+\begin{axi}[Quinto Postulado de Euclides]
+Sejam um subespaço $\saf{U}{S}{a}{F}$ $m$-dimensional de um espaço
+afim $\eaf{V}{A}{F}$ $n$-dimensional, $n\geqslant 2$, e um ponto
+$\ele{x}\in\epo{A}$. Existe então um e somente um subespaço
+$m$-dimensional $\saf{W}{S}{b}{F}$  de $\eaf{V}{A}{F}$, paralelo a
+$\saf{U}{S}{a}{F}$, onde $\ele{x}\in\epo{S}_\ele{b}$.
+
+\begin{prova}
+Para demonstrar existência, se $\con{W}=sp\lch\vto{u}\rch$, onde
+$\vto{u}\in\con{U}$, e $\epo{S}_\ele{b}:=\lch \vto{w}\oplus\ele{b}
+: \vto{w}\in\con{W}\rch$, então tem-se uma reta $\saf{W}{S}{b}{F}$
+paralela a $\saf{U}{S}{a}{F}$. A fim de demonstrar unicidade,
+tem-se o seguinte: como $\saf{U}{S}{a}{F}$ e $\saf{W}{S}{b}{F}$
+são paralelos de mesma dimensão, tem-se que $\con{W}=\con{U}$.
+Considerando, por hipótese, um terceiro subespaço $m$-dimensional
+$\saf{U}{S}{c}{F}
+\parallel \saf{U}{S}{a}{F}$ contento o ponto $\ele{x}$, tem-se
+obrigatoriamente $\saf{U}{S}{c}{F} \parallel \saf{U}{S}{b}{F}$.
+Com base nas propriedades do paralelismo, caso $\ele{c}=\ele{b}$,
+tem-se que $\epo{S}_\ele{c}=\epo{S}_\ele{b}$. Se
+$\ele{c}\neq\ele{b}$, obtém-se a inconsistência
+$\epo{S}_\ele{b}\cap\epo{S}_\ele{c}=\emptyset$ já que, por
+hipótese, $\ele{x}$ pertence simultaneamente aos espaços
+$\epo{S}_\ele{b}$ e $\epo{S}_\ele{c}$.
+\end{prova}
+\end{axi}
+
+
+\subsection{Dilação}
+Seja um espaço afim $\eaf{V}{A}{F}$ de dimensão $n\geqslant 1$.
+Diz-se que uma função $\mathsf{D}$ no mapeamento bijetor
+$\map{\mathsf{D}}{\epo{A}}{\epo{A}}$ é uma dilação de $\epo{A}$
+\footnote{Alguns autores adotam o termo ``dilatação'' no lugar de
+dilação. Este livro entende dilação conforme
+\aut{Houaiss}\cite{houaiss_2001_1} que, dentre outros
+significados, apresenta o termo como o ``ato ou efeito de
+expandir-se, ampliar-se''. No texto, tal definição se encaixa em
+uma das abordagens representativas dada ao termo.} se existir um
+escalar não nulo $\ele{r}\in\con{F}$, chamado \emph{coeficiente de
+dilação}, tal que
+\begin{equation}\label{eq:dilacao}
+\fua{\mathsf{D}}{\vto{v}\oplus\ele{a}}=\lpa\ele{r}\vto{v}\rpa\oplus\fua{\mathsf{D}}{\ele{a}}\,,\,\forall\,
+\ele{a}\in\epo{A},\vto{v}\in\con{V}.
+\end{equation}
+Pode-se demonstrar facilmente que as dilações, em relação à
+composição, possuem as propriedades de
+\begin{itemize}
+    \item[i.] Associatividade:
+$\mathsf{D}_1\circ\lpa\mathsf{D}_2\circ\mathsf{D}_3\rpa=
+\lpa\mathsf{D}_1\circ\mathsf{D}_2\rpa\circ\mathsf{D}_3$;
+    \item[ii.] Elemento Identidade: $\mathsf{D}_1\circ\mathsf{D}_2=\mathsf{D}_2$ se $\mathsf{D}_1=\fun{i}_{\epo{A}}$;
+    \item[iii.] Elemento Inverso: $\mathsf{D}_1\circ\mathsf{D}_1^{-1}=\fun{i}_{\epo{A}}$.
+\end{itemize}
+As propriedades ii e iii baseiam-se no fato de que a função
+identidade $\fun{i}_{\epo{A}}$ também é uma dilação (de
+coeficiente unitário). Desta forma, o conjunto $\con{D}$ de todas
+as dilações que agem em $\epo{A}$ define o grupo
+$\gru{\con{D}}{\circ}$.
+
+Agora, considerando uma translação qualquer $\tpv{\vto{w}}$,
+pode-se realizar o seguinte desenvolvimento:
+\begin{equation}
+\fua{\tpv{\vto{w}}}{\vto{v}\oplus\ele{a}}=\vto{w}\oplus\lpa\vto{v}\oplus\ele{a}\rpa
+=\vto{v}\oplus\lpa\vto{w}\oplus\ele{a}\rpa
+=\vto{v}\oplus\fua{\tpv{\vto{w}}}{\ele{a}},
+\end{equation}
+de onde se pode afirmar, comparando com a igualdade
+(\ref{eq:dilacao}), que $\tpv{\vto{w}}$ é uma dilação de
+coeficiente unitário. No entanto, nem toda dilação é uma
+translação já que é possível ocorrer simultaneamente
+$\fua{\mathsf{D}}{\ele{a}}=\ele{a}$ e
+$\fua{\mathsf{D}}{\vto{v}\oplus\ele{a}}\neq\vto{v}\oplus\ele{a}$,
+fato que é impossível no caso de translações: se
+$\fua{\tpv{}}{\ele{a}}=\ele{a}$ então obrigatoriamente
+$\fua{\tpv{}}{\vto{v}\oplus\ele{a}}=\vto{v}\oplus\ele{a}$.
+
+\subsubsection{Dilação Central} A dilação que não é uma translação é
+dita dilação central, representada por $\dcl{a}$, onde o ponto
+$\ele{a}$ é considerado o \emph{centro da dilação}. Desta forma,
+\begin{equation}
+\fua{\dcl{a}}{\vto{v}\oplus\ele{a}}=\lpa\ele{u}\vto{v}\rpa\oplus\ele{a}\,,\,\forall\,
+\ele{a}\in\epo{A},\vto{v}\in\con{V},
+\end{equation}
+onde $\ele{u}\in\con{F}$. A dilação $\dcl{a}$ em questão é única
+pois supondo uma outra dilação $\tilde{\mathsf{U}}_{\ele{a}}$ de
+coeficiente $\ele{u}$, a igualdade anterior revela que, para
+quaisquer $\ele{a}$ e $\vto{v}$,
+$\fua{\tilde{\mathsf{U}}_{\ele{a}}}{\vto{v}\oplus\ele{a}}=\fua{\dcl{a}}{\vto{v}\oplus\ele{a}}$.
+
+\subsubsection{Representações} Tomando o ponto $\ele{a}$ e o
+subconjunto $\con{U}=sp\lch \vto{v} \rch$, pode-se definir a reta
+$\saf{U}{S}{a}{F}$. Considerando a dilação $\mathsf{D}_1$,
+obtém-se, da mesma forma, que $\fua{\mathsf{D}_1}{a}$ e
+$\ele{r}\vto{v}$ definem a reta
+$\saf{U}{S}{\fua{\mathsf{D}_1}{a}}{F}$ paralela à
+$\saf{U}{S}{a}{F}$, pois o conjunto $sp\lch \vto{v} \rch=sp\lch
+\ele{r}\vto{v} \rch$. Considerando que a dilação não é central, ou
+seja $\ele{a}\neq\fua{\mathsf{D}_1}{a}$, as retas em questão são
+representadas segundo a figura \ref{fg:dilacao}.
+\begin{figure}[!ht]
+\centering
+\includegraphics{figs/ch1/dilacao}
+\caption{A dilação não central $\mathsf{D}_1$.}\label{fg:dilacao}
+\end{figure}
+Além do paralelismo das retas envolvidas numa dilação, esta figura
+mostra uma outra importante característica representativa das
+translações: como o vetor $\ele{r}\vto{v}$ é um múltiplo do vetor
+$\vto{v}$, o tamanho das linhas retilíneas
+$\overline{\ele{a},\vto{v}\oplus\ele{a}}$ e
+$\overline{\fua{\mathsf{D}_1}{a},\fua{\mathsf{D}_1}{\vto{v}\oplus\ele{a}}}$
+refletem esta multiplicidade. Em outras palavras, além de
+evidenciar aspectos envolvendo direção e sentido, convém que a
+representação de uma translação também informe aspectos
+relacionados a \emph{magnitude}\footnote{Uma das formas para
+mensurar esta magnitude utiliza o conceito de métrica.}, expressa
+em termos da multiplicidade dos vetores envolvidos. A figura
+\ref{fg:dilacaoCentral} mostra a dilação central $\mathsf{D}_2$.
+Repare que neste caso há uma única reta $\saf{U}{S}{a}{F}$, pois
+$\ele{a}=\fua{\mathsf{D}_2}{\ele{a}}$.
+\begin{figure}[!ht]
+\centering
+\includegraphics{figs/ch1/dilacaoCentral}
+\caption{A dilação $\mathsf{D}_2$ com centro em
+$\ele{a}$.}\label{fg:dilacaoCentral}
+\end{figure}
+
+A partir do conceito de magnitude, uma dilação pode ser
+classificada como
+\begin{itemize}
+    \item[i.] \emph{Contração}, se $|\ele{r}|<1$;
+    \item[ii.] \emph{Expansão}, se $|\ele{r}|>1$;
+    \item[iii.] Translação, se $|\ele{r}|=1$ e a dilação não for central.
+\end{itemize}
+
+\begin{prp}
+Sejam um espaço afim $\eaf{V}{A}{F}$ e uma dilação $\mathsf{D}$ de
+$\epo{A}$ com coeficiente $\ele{r}$. Considerando em $\epo{A}$ um
+ponto ``$\ele{a}$'' qualquer, as dilações centrais  $\dcl{a}$,
+$\dcl{\fua{\mathsf{D}}{\ele{a}}}$ de coeficiente $\ele{r}$ e a
+translação $\tpv{\vto{u}}$, onde
+$\fua{\mathsf{D}}{\ele{a}}=\fua{\tpv{\vto{u}}}{\ele{a}}$, é sempre
+possível realizar as seguintes decomposições:
+\begin{equation}
+\mathsf{D} = \tpv{\vto{u}}\circ\dcl{a} =
+\dcl{\fua{\mathsf{D}}{\ele{a}}}\circ\tpv{\vto{u}}\,,\nonumber
+\end{equation}
+onde cada uma delas é única.
+\newline
+\newline
+\begin{prova}
+A unicidade das decomposições é diretamente verificada já que as
+funções $\tpv{\vto{u}}$, $\dcl{a}$ e
+$\dcl{\fua{\mathsf{D}}{\ele{a}}}$ são únicas. Dado um vetor
+$\vto{v}$ e considerando a definição de dilação, é possível
+realizar os seguintes desenvolvimentos:
+\begin{eqnarray}
+\fua{\mathsf{D}}{\vto{v}\oplus\ele{a}}&=&\ele{r}\vto{v}\oplus\fua{\mathsf{D}}{\ele{a}}
+\nonumber\\
+&=&\ele{r}\vto{v}\oplus\vto{u}\oplus\ele{a}
+\nonumber\\
+&=&\vto{u}\oplus\ele{r}\vto{v}\oplus\ele{a}
+\nonumber\\
+&=&\fua{\tpv{\vto{u}}\circ\dcl{a}}{\vto{v}\oplus\ele{a}}\nonumber
+\end{eqnarray}
+e
+\begin{eqnarray}
+\fua{\mathsf{D}}{\vto{v}\oplus\ele{a}}&=&\ele{r}\vto{v}\oplus\fua{\mathsf{D}}{\ele{a}}
+\nonumber\\
+&=&-\vto{v}\oplus\ele{r}\vto{v}\oplus\vto{v}\oplus\fua{\mathsf{D}}{\ele{a}}
+\nonumber\\
+&=&-\vto{v}\oplus\fua{\dcl{\vto{v}\oplus\fua{\mathsf{D}}{\ele{a}}}}{\vto{v}\oplus\fua{\tpv{\vto{u}}}{\vto{v}\oplus\ele{a}}}
+\nonumber\\
+&=&\fua{\dcl{\fua{\mathsf{D}}{\ele{a}}}\circ\tpv{\vto{u}}}{\vto{v}\oplus\ele{a}}\,.\nonumber
+\end{eqnarray}
+\end{prova}
+\end{prp}
+
+
+\subsection{Semiafinidade}
+Seja um espaço afim $\eaf{V}{A}{F}$ de dimensão $n\geqslant 1$.
+Sejam um mapeamento bijetor $\map{\mathsf{S}}{\epo{A}}{\epo{A}}$ e
+$\mathsf{D}$ uma dilação qualquer de $\epo{A}$. A função
+$\mathsf{S}$ é dita uma semiafinidade de $\epo{A}$ e o seu
+mapeamento uma \emph{transformação semiafim} se a função composta
+$\mathsf{S}\circ\mathsf{D}\circ\mathsf{S}^{-1}$ for uma dilação de
+$\epo{A}$.
+
+Em particular, sejam $\mathsf{D}_1$ e $\mathsf{D}_2$ dilações
+quaisquer de $\epo{A}$. Como as dilações definem um grupo na
+operação de composição, qualquer função do tipo
+$\mathsf{D}_2\circ\mathsf{D}_1\circ\mathsf{D}_2^{-1}$ é uma
+dilação. Neste caso, pode-se dizer que a dilação $\mathsf{D}_2$ é
+uma semiafinidade. É importante salientar que apesar da definição
+de semiafinidade necessitar do conceito de dilação, a primeira
+função engloba ou generaliza a segunda. Desta forma, toda dilação
+e, por conseqüência, toda translação são tipos específicos de
+semiafinidades.
+
+A composição de semiafinidades
+$\mathsf{S}_1\circ\cdots\circ\mathsf{S}_n$ também é uma
+semiafinidade já que, a partir de uma dilação $\mathsf{D}$, a
+composição
+\begin{equation}
+\mathsf{S}_1\circ\cdots\circ\mathsf{S}_n\circ\mathsf{D}\circ\mathsf{S}^{-1}_n\circ\cdots\circ\mathsf{S}^{-1}_1
+\end{equation}
+é uma dilação. Isto ocorre porque as composições mais internas
+$\mathsf{S}_i\circ\mathsf{D}\circ\mathsf{S}^{-1}_i$,
+$i=n,\cdots,1$ , são dilações sucessivas. A partir daí, pode-se
+demonstrar que semiafinidades possuem as propriedades de
+associatividade, elemento identidade e elemento inverso. Portanto,
+o conjunto $\con{S}$ de todas as semiafinidades de $\epo{A}$
+define o grupo $\gru{\con{S}}{\circ}$.
+
+\subsubsection{Afinidade} Uma semiafinidade $\mathsf{A}$ de $\epo{A}$ é
+dita uma afinidade deste mesmo espaço e
+$\map{\mathsf{A}}{\epo{A}}{\epo{A}}$ uma \emph{transformação afim}
+se os coeficientes da dilação $\mathsf{D}$ e da dilação
+$\mathsf{A}\circ\mathsf{D}\circ\mathsf{A}^{-1}$ forem iguais.
+
+Por um processo semelhante ao aplicado no caso de composição de
+semiafinidades, uma composição de afinidades
+$\mathsf{A}_1\circ\cdots\circ\mathsf{A}_n$ é também uma afinidade.
+Isso possibilita afirmar que o conjunto $\con{A}$ de todas as
+afinidades de $\epo{A}$ gera o grupo $\gru{\con{A}}{\circ}$.
+
+Sejam as dilações $\mathsf{D}_1$ e $\mathsf{D}_2$ com coeficientes
+$\ele{r}_1$ e $\ele{r}_2$ respectivamente. O desenvolvimento
+\begin{eqnarray}
+\fua{\mathsf{D}_2\circ\mathsf{D}_1\circ\mathsf{D}_2^{-1}}{\vto{v}\oplus\ele{a}}&=&
+\fua{\mathsf{D}_2\circ\mathsf{D}_1}{\ele{r}_2^{-1}\vto{v}\oplus\fua{\mathsf{D}_2^{-1}}{\ele{a}}}\nonumber\\
+& = & \fua{\mathsf{D}_2}{\ele{r}_1\ele{r}_2^{-1}\vto{v}\oplus\fua{\mathsf{D}\circ\mathsf{D}_2^{-1}}{\ele{a}}}\nonumber\\
+& = &
+\ele{r}_1\vto{v}\oplus\fua{\mathsf{D}_2\circ\mathsf{D}\circ\mathsf{D}_2^{-1}}{\ele{a}}
+\end{eqnarray}
+permite concluir que toda dilação e, por conseqüência, toda
+translação são afinidades.
+
+\paragraph{Afinidade Pseudo-Automórfica.} Seja um espaço afim
+$\eaf{V}{A}{F}$ e um espaço vetorial de operadores lineares
+$\evl{V}{V}{F}$. Dado o mapeamento bijetor
+$\map{\mathsf{L}}{\epo{A}}{\epo{A}}$, se existir um único operador
+inversível $\vtf{L}\in\cfl{V}{V}$ associado à $\mathsf{L}$ tal que
+\begin{equation}\label{eq:afinidadePseudo}
+\fua{\mathsf{L}}{\vto{v}\oplus\ele{a}}=\fua{\vtf{L}}{\vto{v}}\oplus\fua{\mathsf{L}}{\ele{a}},\,\forall
+\ele{a}\in\epo{A},\vto{v}\in\con{V},
+\end{equation}
+então a função $\mathsf{L}$ é sempre uma afinidade.  Considerando
+uma dilação $\mathsf{D}$ de $\epo{A}$ com coeficiente $\ele{r}$, a
+função composta $\mathsf{L}\circ\mathsf{D}\circ\mathsf{L}^{-1}$
+deve ser uma dilação com coeficiente $\ele{r}$. Isto é verificado
+através do seguinte desenvolvimento:
+\begin{eqnarray}
+\fua{\mathsf{L}\circ\mathsf{D}\circ\mathsf{L}^{-1}}{\vto{v}\oplus\ele{a}}&=&
+\fua{\mathsf{L}\circ\mathsf{D}}{\fua{\vtf{L}^{-1}}{\vto{v}}\oplus\fua{\mathsf{L}^{-1}}{\ele{a}}}\nonumber\\
+& = & \fua{\mathsf{L}}{\ele{r}\fua{\vtf{L}^{-1}}{\vto{v}}\oplus\fua{\mathsf{D}\circ\mathsf{L}^{-1}}{\ele{a}}}\nonumber\\
+& = &
+\ele{r}\vto{v}\oplus\fua{\mathsf{L}\circ\mathsf{D}\circ\mathsf{L}^{-1}}{\ele{a}}\,.
+\end{eqnarray}
+Afinidades cujas regras são descritas por
+(\ref{eq:afinidadePseudo}) são denominadas pseudo-automórficas, já
+que os operandos envolvidos não são elementos do mesmo conjunto
+como são nos homomorfismos puros. Pode-se demonstrar facilmente
+que o conjunto $\con{L}$ de afinidades pseudo-automórficas define
+o grupo $\gru{\con{L}}{\circ}$.
+
+Considerando $\vto{v}$ não nulo na definição de dilação
+(\ref{eq:dilacao}), é possível afirmar que toda dilação e, por
+conseqüência, toda translação são afinidades pseudo-automórficas,
+pois todo par escalar-vetor não nulo, como $\ele{r}\vto{v}$, é par
+autovalor-autovetor de pelo menos um operador linear\footnote{Esta
+afirmação procede pois para o vetor $\ele{r}\vto{v}$ em
+(\ref{eq:dilacao}) pode-se definir um operador cuja regra é
+$\fua{\vtf{L}}{\vto{x}}=\ele{r}\vto{x}$.}.
+
+
+\subsubsection{Representações} Sejam $\ele{a}$ e
+$\vto{v}\oplus\ele{a}$ pontos do espaço puntual
+$\epo{S}_{\ele{a}}$ definido pela reta $\saf{W}{S}{a}{F}$ do
+espaço afim $\eaf{V}{A}{F}$, onde o subconjunto $\con{W}=sp\lch
+\vto{v} \rch$. Seja $\mathsf{D}$ uma dilação não
+central\footnote{A dilação em questão é não central simplesmente
+para tornar mais clara a representação.} qualquer de $\epo{A}$ com
+coeficiente $\ele{r}$, de onde se pode definir a reta
+$\saf{W}{S}{\fua{\mathsf{D}}{a}}{F}$, pois $sp\lch
+\vto{v}\rch=sp\lch r\vto{v}\rch$. Considerando a atuação de uma
+semiafinidade $\mathsf{S}$ em $\epo{A}$, pode-se definir que
+\begin{equation}
+\fua{\mathsf{S}}{\vto{v}\oplus\ele{a}}=\vto{u}\oplus\fua{\mathsf{S}}{\ele{a}},
+\vto{u}\in\con{V},
+\end{equation}
+cujos pontos envolvidos pertencem à reta
+$\saf{U}{S}{\fua{\mathsf{S}}{a}}{F}$, onde $\con{U}=sp\lch \vto{u}
+\rch$. Segundo a definição de semiafinidade, é obrigatório que a
+função $\mathsf{S}\circ\mathsf{D}\circ\mathsf{S}^{-1}$ seja uma
+dilação. Aplicando esta dilação em ambos os lados da expressão
+anterior, tem-se que
+\begin{eqnarray}
+\fua{\mathsf{S}\circ\mathsf{D}\circ\mathsf{S}^{-1}}{\fua{\mathsf{S}}{\vto{v}\oplus\ele{a}}}&=&\ele{s}\vto{u}\oplus
+\fua{\mathsf{S}\circ\mathsf{D}\circ\mathsf{S}^{-1}}{\fua{\mathsf{S}}{\ele{a}}}\nonumber\\
+\fua{\mathsf{S}\circ\mathsf{D}}{\vto{v}\oplus\ele{a}}&=&\ele{s}\vto{u}\oplus
+\fua{\mathsf{S}\circ\mathsf{D}}{\ele{a}}.
+\end{eqnarray}
+A última igualdade informa que o subespaço
+$\epo{S}_{\fua{\mathsf{S}\circ\mathsf{D}}{\ele{a}}}$ define uma
+reta paralela à reta $\saf{U}{S}{\fua{\mathsf{S}}{a}}{F}$ já que
+$sp\lch \vto{u} \rch=sp\lch \ele{s}\vto{u} \rch$. Com base nisso,
+a figura \ref{fg:semiafinidade} mostra o efeito da semiafinidade
+$\mathsf{S}$ sobre os pontos $\ele{a}$, $\vto{v}\oplus\ele{a}$,
+$\fua{\mathsf{D}}{\ele{a}}$,
+$\fua{\mathsf{D}}{\vto{v}\oplus\ele{a}}$ nas suas respectivas
+retas. Pela figura, notar que se $\ele{r}=\ele{s}$, há uma
+afinidade.
+\begin{figure}[!ht]
+\centering
+\includegraphics{figs/ch1/semiafinidade}
+\caption{A atuação da semiafinidade
+$\mathsf{S}$.}\label{fg:semiafinidade}
+\end{figure}
+
+Em termos gerais, pode-se dizer que uma semiafinidade sempre
+mapeia retas paralelas para retas paralelas. Quando ela for uma
+afinidade, além de se preservar o paralelismo entre as retas,
+preserva-se também o coeficiente de uma eventual dilação
+envolvida.
+
+
+
+\section{Espaços Afins Métricos}
+
+\subsection{Espaço Afim Métrico}
+
+Diz-se que um espaço afim $\eaf{V}{A}{F}$ é métrico se seu espaço
+vetorial $\evt{V}{F}$ for métrico. Além disso, ao considerar um
+sistema de coordenadas $(\ele{o} , \tilde{\con{U}})$ de um
+subespaço $\saf{U}{S}{\ele{a}}{F}$ do espaço afim em questão, a
+distância $d$ entre dois pontos quaisquer $\vto{v}_1\oplus\ele{o}$
+e $\vto{v}_2\oplus\ele{o}$ de $\epo{S}_\ele{a}$ é definida segundo
+a igualdade
+\begin{equation}
+\fua{d}{\vto{v}_1\oplus\ele{o},\vto{v}_2\oplus\ele{o}}=\fua{\varrho}{\vto{v}_1,\vto{v}_2}\,.
+\end{equation}
+Com base nesta igualdade e seguindo o mesmo padrão desta
+definição, os diversos tipos de espaços vetoriais métricos
+qualificam com a mesma nomenclatura seus respectivos espaços afins
+relacionados. Um \emph{espaço afim de Banach} é definido por um
+espaço de Banach se
+\begin{equation}
+\|{\vto{v}_1\oplus\ele{o}}\|:=\|\vto{v}_1\|\,.
+\end{equation}
+De maneira similar, um espaço de Hilbert define um \emph{espaço
+afim de Hilbert} caso
+\begin{equation}
+\lpa\vto{v}_1\oplus\ele{o}\rpa\cdot\lpa\vto{v}_2\oplus\ele{o}\rpa:=\vto{v}_1\cdot\vto{v}_2\,.
+\end{equation}
+
+\subsection{Afinidades Isométricas}
+
+Seja $\eaf{V}{A}{F}$ um espaço afim  métrico e um espaço vetorial
+$\evl{V}{V}{F}$. Uma afinidade $\mathsf{K}$ de $\epo{A}$ é dita
+isométrica se ela for pseudo-automórfica e o operador linear
+$\vtf{K}\in\cfl{V}{V}$ em
+\begin{equation}
+\fua{\mathsf{K}}{\vto{v}\oplus\ele{a}}=\fua{\vtf{K}}{\vto{v}}\oplus\fua{\mathsf{K}}{\ele{a}},\,\forall
+\ele{a}\in\epo{A},\vto{v}\in\con{V},
+\end{equation}
+for uma isometria. Em particular, se
+$\fua{\mathsf{K}}{\ele{a}}=\ele{a}$, diz-se que a afinidade
+isométrica, com representação $\mathsf{K}_\ele{a}$, está centrada
+em $\ele{a}$. Neste caso,
+\begin{itemize}
+\item[i.] se $\det\vtf{K} > 0$ , $\vtf{K}$ é uma \emph{rotação} e
+$\mathsf{K}_\ele{a}$ uma rotação centrada em $\ele{a}$;
+    \item[ii.] se $\det\vtf{K} < 0$, $\vtf{K}$ é uma \emph{reflexão} e $\mathsf{K}_\ele{a}$ uma reflexão centrada em $\ele{a}$.
+\end{itemize}
+
+\subsubsection{Representações} Sejam os sistema de coordenadas $(
+\ele{o},\con{U})$ do espaço afim $n$-dimensional $\eaf{V}{A}{F}$,
+onde $\con{U}=\lch \vto{u}_1,\cdots,\vto{u}_n \rch$. Dado um plano
+$\saf{V_{pq}}{S}{o}{F}$, onde o subconjunto $\con{V}_{pq}=sp\lch
+\vto{u}_p ,\vto{u}_q \rch$, seja $\theta_{pq}$ o menor ângulo
+definido entre as linhas
+$\overline{\ele{o},\vto{u}_p\oplus\ele{o}}$ e
+$\overline{\ele{o},\vto{u}_q\oplus\ele{o}}$. Desta forma, é
+evidente que $0<\theta_{pq}<\pi$.
+
+Considerando um espaço vetorial $\evl{V}{V}{F}$, seja um operador
+linear $\vtf{L}\in\cfl{V}{V}$. Aplicando este operador nos vetores
+da base $\con{U}$, os ângulos $\theta_{pq}$ se modificam para
+$\tilde{\theta}_{pq}$ na base $\con{\tilde{U}}=\lch
+\fua{\vtf{L}}{\vto{u}_1},\cdots,\fua{\vtf{L}}{\vto{u}_n} \rch$.
+Diz-se que $\vtf{L}$ \emph{preserva orientação} se
+$0<\tilde{\theta}_{pq}<\pi$ for válido para qualquer ângulo
+$\tilde{\theta}_{pq}$. Neste caso, pode-se obter que $\det\vtf{L}
+> 0$. Se pelo menos um dos ângulos $\tilde{\theta}_{pq}$ não
+obedecer a desigualdade anterior, obtém-se que $\det\vtf{L} < 0$.
+
+Considerando, agora, que $\eaf{V}{A}{F}$ é bidimensional, seja uma
+afinidade isométrica centrada cuja regra é
+\begin{equation}
+\fua{\mathsf{K}_{\ele{x}}}{\vto{v}\oplus\ele{x}}=\fua{\vtf{K}}{\vto{v}}\oplus\ele{x},
+\end{equation}
+onde $\ele{x}\in\epo{A}$, $\vtf{K}\in\cfl{V}{V}$ e
+$\vto{v}\in\con{V}$. Se $\vtf{K}$ preservar orientação, então
+tem-se na figura \ref{fg:rotacao} a representação de rotações
+centradas.
+\begin{figure}[!ht]
+\centering
+\includegraphics{figs/ch1/rotacao}
+\caption{Rotações centradas.}\label{fg:rotacao}
+\end{figure}
+
+Caso $\vtf{K}$ não preserve orientação realizando sobre
+$\vto{u}_2$ o efeito combinado de uma rotação com uma mudança de
+sinal de suas coordenadas, por exemplo, tem-se as reflexões
+conforme a figura \ref{fg:reflexao}.
+\begin{figure}[!ht]
+\centering
+\includegraphics{figs/ch1/reflexao}
+\caption{Reflexões centradas.}\label{fg:reflexao}
+\end{figure}
+
+
+\begin{prp}\label{prop:AfinidadesIgualdade}
+Seja um espaço afim $\eaf{V}{A}{F}$, uma afinidade isométrica
+centrada $\mathsf{K}_{\ele{a}}$ e $\mathsf{D}$ uma dilação
+qualquer de $\epo{A}$. É sempre válido que a afinidade
+pseudo-automórfica
+\begin{equation}
+\mathsf{D}\circ\mathsf{K}_{\ele{a}}=\mathsf{K}_{\fua{\mathsf{D}}{\ele{a}}}\circ\mathsf{D}\,.\nonumber
+\end{equation}
+\begin{prova}
+Considerando $\mathsf{D}$ de coeficiente $\ele{r}$, um vetor
+qualquer $\vto{v}\in\con{V}$ e um ponto qualquer
+$\ele{a}\in\epo{A}$, podemos realizar o seguinte desenvolvimento:
+\begin{eqnarray}
+\fua{\mathsf{D}\circ\mathsf{K}_{\ele{a}}}{\vto{v}\oplus\ele{a}}&=&\fua{\mathsf{D}}{\fua{\vtf{K}}{\vto{v}}\oplus\ele{a}}\nonumber\\
+&=&\fua{\vtf{K}}{\ele{r}\vto{v}}\oplus\fua{\mathsf{D}}{\ele{a}}\nonumber\\
+&=&\fua{\mathsf{K}_{\fua{\mathsf{D}}{\ele{a}}}}{\ele{r}\vto{v}\oplus\fua{\mathsf{D}}{\ele{a}}}\nonumber\\
+&=&\fua{\mathsf{K}_{\fua{\mathsf{D}}{\ele{a}}}\circ\mathsf{D}}{\vto{v}\oplus\ele{a}}\,.\nonumber
+\end{eqnarray}
+\end{prova}
+\end{prp}
+
+\subsection{Perpendicularidade}
+Sejam o espaço afim produto interno $\eaf{V}{A}{F}$ com dimensão
+$n\geqslant2$ e dois de seus subespaços $\saf{U}{S}{a}{F}$ e
+$\saf{W}{S}{b}{F}$. Diz-se que $\saf{U}{S}{a}{F}$ é perpendicular
+a $\saf{W}{S}{b}{F}$, ou $\saf{U}{S}{a}{F}\perp\saf{W}{S}{b}{F}$,
+se $\con{U}\perp\con{W}$.
+
+\subsubsection{Representação} Seja $\eaf{V}{A}{\real}$ um espaço afim de Hilbert com dimensão
+$n\geqslant2$, dois de seus subespaços $\saf{U}{S}{a}{\real}$,
+$\saf{W}{S}{a}{\real}$ e os vetores quaisquer $\vto{u}\in\con{U}$,
+$\vto{w}\in\con{W}$. Considerando que os subespaços não são
+paralelos, a partir da desigualdade de Cauchy-Schwarz, é possível
+quantificar o valor do menor ângulo $\theta$ formado pelas linhas
+$\overline{\ele{a},\vto{u}\oplus\ele{a}}$ e
+$\overline{\ele{a},\vto{w}\oplus\ele{a}}$ especificando que
+\begin{equation}
+\cos\theta:=\frac{|\vto{u}\cdot\vto{w}|}{ \|\vto{u}\|
+\|\vto{w}\|}\,,\, 0\leqslant\theta\leqslant\pi\,.
+\end{equation}
+Agora, seja $\saf{U}{S}{a}{\real}$ uma reta onde $\con{U}=sp\lch
+\vto{u}_1 \rch$ e  $\saf{W}{S}{a}{\real}$ um plano cujo conjunto
+$\con{W}=sp\lch \vto{w}_1,\vto{w}_2 \rch$. Se estes dois
+subespaços afins forem perpendiculares, pela definição anterior,
+tem-se a representação da figura
+\ref{fg:perpendicularidadeRetaPlano}.
+\begin{figure}[!ht]
+\centering
+\includegraphics{figs/ch1/perpendicularidadeRetaPlano}
+\caption{Perpendicularidade de uma reta com um
+plano.}\label{fg:perpendicularidadeRetaPlano}
+\end{figure}
+Através da definição de perpendicularidade, a linha
+$\overline{\ele{a},\vto{u}_1\oplus\ele{a}}$ forma uma ângulo de
+valor $\pi/ 2$ com todas as linhas do tipo descritas por
+$\overline{\ele{a},\vto{w}\oplus\ele{a}}$. Diz-se então que a reta
+$\saf{U}{S}{a}{\real}$ ``encontra'' o plano $\saf{W}{S}{a}{\real}$
+segundo um ângulo reto. Procedimento idêntico pode ser aplicado ao
+caso de dois planos não paralelos.
+
+
+\subsection{Vetores Axiais}
+Sejam um espaço afim $\eaf{V}{A}{F}$, um espaço vetorial
+$\evl{V}{V}{F}$ e uma reflexão qualquer $\vtf{M}\in\cfl{V}{V}$. Um
+vetor não nulo $\vto{r}\in\con{V}$ é dito axial se existir pelo
+menos uma rotação $\vtf{R}\in\cfl{V}{V}$ tal que
+\begin{equation}\label{eq:vetorAxial}
+\fua{\vtf{M}}{\vto{r}}=\fua{\vtf{R}}{\vto{r}}.
+\end{equation}
+Vetores que não obedecem a esta igualdade são denominados
+\emph{polares}.
+
+Os vetores axiais são geralmente utilizados para representar
+quantidades de natureza não vetorial, mas que, eventualmente,
+precisam ser orientadas, como, por exemplo, áreas, volumes e
+hiper-volumes. É comum construir vetores axiais a partir de
+vetores polares utilizando o conceito de produto externo,
+apresentado a seguir.
+
+
+\subsection{Produto Externo}
+Seja o espaço vetorial $\evt{V}{F}$ e o conjunto
+$\con{P}\subseteq\con{V}$ formado por vetores axiais. Uma
+transformação binária
+$\map{\barwedge}{\con{V}\times\con{V}}{\con{P}}$ é denominada
+produto externo se os seguintes axiomas forem obedecidos:
+\begin{itemize}
+    \item[i.] $\vto{v}_1\barwedge\lpa\vto{v}_2\barwedge\vto{v}_3\rpa=\lpa\vto{v}_1\barwedge\vto{v}_2\rpa\barwedge\vto{v}_3\,,\,\forall\vto{v}_1,\vto{v}_2,\vto{v}_3\in\con{V}$;
+    \item[ii.] $\vto{v}_1\barwedge\lpa\vto{v}_2+\vto{v}_3\rpa=\vto{v}_1\barwedge\vto{v}_2+\vto{v}_1\barwedge\vto{v}_3\,,\,\forall\vto{v}_1,\vto{v}_2,\vto{v}_3\in\con{V}$;
+    \item[iii.] $\ele{a}_1\vto{v}_1\barwedge\ele{a}_2\vto{v}_2=\ele{a}_1\ele{a}_2\lpa \vto{v}_1\barwedge\vto{v}_2 \rpa\,,\,\forall\vto{v}_1,\vto{v}_2\in\con{V},\ele{a}_1,\ele{a}_2\in\con{F}$;
+    \item[iv.] $\vto{v}_1\barwedge\vto{v}_2=-\lpa\vto{v}_2\barwedge\vto{v}_1\rpa\,,\,\forall\vto{v}_1,\vto{v}_2\in\con{V}$;
+    \item[v.] $\vto{v}_1\barwedge\vto{v}_2=\vto{0}$, se $\vto{v}_1,\vto{v}_2\in\con{V}$ forem linearmente dependentes.
+\end{itemize}
+
+\subsubsection{Produto Vetorial} Seja o espaço de Hilbert $\ehr{V}{\real}$ tridimensional
+e o subconjunto $\con{U}=\lch \vun{u}_1, \vun{u}_2, \vun{u}_3\rch$
+de $\con{V}$ uma base ortonormal ordenada deste espaço. Um produto
+externo $\map{\wedge}{\con{V}\times\con{V}}{\con{V}}$ é denominado
+produto vetorial se, para quaisquer $\vto{v},\vto{w}\in\con{V}$,
+as coordenadas
+\begin{equation}
+\begin{array}{rcl}
+\fua{\vtf{F}^\con{U}_{1}}{\vto{v}\wedge\vto{w}} & = &
+\fua{\vtf{F}^\con{U}_{2}}{\vto{v}}\fua{\vtf{F}^\con{U}_{3}}{\vto{w}}
+-
+\fua{\vtf{F}^\con{U}_{3}}{\vto{v}}\fua{\vtf{F}^\con{U}_{2}}{\vto{w}}\, ,\\
+\fua{\vtf{F}^\con{U}_{2}}{\vto{v}\wedge\vto{w}} & = &
+\fua{\vtf{F}^\con{U}_{3}}{\vto{v}}\fua{\vtf{F}^\con{U}_{1}}{\vto{w}}
+-
+\fua{\vtf{F}^\con{U}_{1}}{\vto{v}}\fua{\vtf{F}^\con{U}_{3}}{\vto{w}}\,\mathrm{e}\\
+\fua{\vtf{F}^\con{U}_{3}}{\vto{v}\wedge\vto{w}} & = &
+\fua{\vtf{F}^\con{U}_{1}}{\vto{v}}\fua{\vtf{F}^\con{U}_{2}}{\vto{w}}
+-
+\fua{\vtf{F}^\con{U}_{2}}{\vto{v}}\fua{\vtf{F}^\con{U}_{1}}{\vto{w}}\,.\\
+\end{array}
+\end{equation}
+
+
+\paragraph{Representações.} Seja $\eaf{V}{A}{\real}$ um espaço
+afim de Hilbert tridimensional e $( \ele{o},\con{U})$ um sistema
+de coordenadas deste espaço, onde $\con{U}=\lch \vun{u}_1,
+\vun{u}_2, \vun{u}_3\rch$ é uma base ortonormal ordenada. Dados
+dois vetores quaisquer $\vto{v}, \vto{w}\in\con{V}$, através das
+coordenadas do vetor $\vto{v}\wedge\vto{w}$, é possível obter que
+a reta $\saf{sp\lch\vto{v}\wedge\vto{w}\rch}{S}{a}{\real}$ é
+perpendicular ao plano
+$\saf{sp\lch\vto{v},\vto{w}\rch}{S}{a}{\real}$. O sentido do vetor
+$\vto{v}\wedge\vto{w}$, no entanto, depende da orientação do
+sistema de coordenadas: a representação da tripla ordenada $\lpa
+\vto{v},\vto{w},\vto{v}\wedge\vto{w} \rpa$ obedecerá a regra da
+mão direita\footnote{Regra da mão direita: estende-se o dedo
+indicador da mão direita no sentido do primeiro vetor e o dedo
+médio na direção do segundo. O terceiro vetor deve estar no mesmo
+sentido do polegar a fim de que a regra seja obedecida. Feito este
+procedimento com a mão esquerda, tem-se a regra da mão esquerda.}
+se $\lpa \vun{u}_1, \vun{u}_2, \vun{u}_3\rpa$ também a obedecer,
+conforme figura \ref{fg:maoDireita}.
+\begin{figure}[!ht]
+\centering
+\includegraphics{figs/ch1/maoDireita}
+\caption{Produto vetorial na regra da mão
+direita.}\label{fg:maoDireita}
+\end{figure}
+
+Da mesma forma, $\lpa \vto{v},\vto{w},\vto{v}\wedge\vto{w} \rpa$
+obedece a regra da mão esquerda se $\lpa \vun{u}_1, \vun{u}_2,
+\vun{u}_3\rpa$ estiver assim orientada.
+
+\chapter{Álgebra Tensorial}
+
+Existe um grande número de fenômenos físicos que podem ser
+descritos por quantidades que se relacionam matematicamente de
+maneira linear. Tal relacionamento pode ser representado por uma
+função multilinear cujo domínio inclui as quantidades físicas
+envolvidas. Para alguns problemas estudados, é conveniente que a
+imagem desta função seja formada por escalares. Eles quantificam,
+de uma forma simples, a linearidade entre os elementos do domínio.
+
+A modelagem da característica linear entre variáveis através de
+funcionais multilineares é o principal objetivo do estudo da
+teoria de tensores. Atualmente, existem duas abordagens para a
+apresentação desta teoria, descritas a seguir.
+\begin{itemize}
+  \item[a)] Abordagem baseada em coordenadas: considera um tensor como um array
+multidimensional. As coordenadas do tensor são os escalares deste
+array, obtidos a partir da definição de uma base. Vetores são
+tratados como tensores unidimensionais.
+  \item[b)] Abordagem intrínseca: um tensor é visto simplesmente como uma função multilinear,
+cuja definição independe do estabelecimento de uma base. As
+coordenadas do tensor são os valores definidos por seus funcionais
+coordenados. Neste caso, vetores são tensores que possuem apenas
+um argumento (função linear).
+\end{itemize}
+
+Será utilizada, ao longo do texto, a abordagem intrínseca para o
+estudo de tensores. Consideramos que tal abordagem facilita o
+entendimento por serem mais mais simples seus conceitos e mais
+agradável sua manipulação.
+
+\section{Vetores e Funcionais Lineares}
+
+\subsection{Espaço Dual}
+Seja um espaço de Hilbert $\ehr{V}{F}$. O espaço vetorial de
+funcionais lineares $\evl{V}{F}{F}$ é denominado espaço dual de
+$\ehr{V}{F}$, representado por $\edu{V}{F}$, onde
+$V^*:=\cfl{V}{F}$. Na presença de um espaço dual, os vetores dos
+conjuntos $\con{V}$ e $\con{V^*}$ são chamados
+\emph{contravariantes} e \emph{covariantes} respectivamente.
+
+Considerando o espaço de Hilbert dimensionalmente finito,  seja
+$\con{U}=\lch \vto{v}_1,\cdots,\vto{v}_n\rch$ uma base de
+$\ehr{V}{F}$. Seja um funcional qualquer $\vtf{G}$ de $V^*$ e um
+vetor qualquer $\vto{v}\in\con{V}$. O desenvolvimento a seguir
+mostra que o espaço dual é também $n$-dimensional:
+\begin{eqnarray}
+\fua{\vtf{G}}{\vto{v}} & = &
+\fua{\vtf{G}}{\sum_{i=1}^{n}\fua{\vtf{F}^\con{U}_{i}}{\vto{v}}\vto{v}_i}\nonumber\\
+\fua{\vtf{G}}{\vto{v}} & = &
+\lco\sum_{i=1}^{n}\fua{\vtf{G}}{\vto{v}_i}\vtf{F}^\con{U}_{i}\rco\lpa\vto{v}\rpa\nonumber\\
+\vtf{G} & = &
+\sum_{i=1}^{n}\fua{\vtf{G}}{\vto{v}_i}\vtf{F}^\con{U}_{i}\,.
+\end{eqnarray}
+Observa-se que os funcionais coordenados $\vtf{F}^\con{U}_{i}$
+constituem uma base em $\edu{V}{F}$.
+
+\subsection{A Relação Vetor e Funcional Linear}
+Seja um espaço de Hilbert $\ehr{V}{F}$ e seu espaço dual
+$\edu{V}{F}$. Existe uma relação bijetora, descrita no teorema
+apresentado a seguir, entre os vetores de $\con{V}$ e os
+funcionais de $\con{V^*}$, de tal forma que, dado um vetor
+qualquer $\vto{u}\in\con{V}$ e seu funcional linear correspondente
+$\vtf{U}\in\con{V^*}$, é possível definir
+\begin{equation}\label{eq:VetorFuncional}
+\fua{\vto{u}}{\vto{v}}=\fua{\vtf{U}}{\vto{v}}\,,\forall\,\vto{v}\in\con{V}.
+\end{equation}
+
+\begin{teo}[Representação de Riesz]\label{teo:RepresentacaoRiesz}
+Seja um espaço de Hilbert $\ehr{V}{F}$ e seu espaço dual
+$\edu{V}{F}$. Considerando um vetor qualquer $\vto{v}\in\con{V}$,
+seja uma transformação linear
+$\map{\vartheta_{\vto{v}}}{\con{V}}{F}$ onde o funcional
+$\vartheta_{\vto{v}}\in\con{V^*}$ é descrito pela regra
+\begin{equation}
+\fua{\vartheta_{\vto{v}}}{\vto{x}}=\vto{v}\cdot\vto{x}\,.\nonumber
+\end{equation}
+Desta forma, o mapeamento $\map{\Theta}{\con{V}}{\con{V^*}}$ é
+sempre uma transformação linear bijetora se
+$\fua{\Theta}{\vto{v}}=\vartheta_{\vto{v}}$.
+\newline
+\newline
+\begin{prova}
+Primeiramente, vamos mostrar que $\Theta$ é uma função linear.
+Dados os vetores quaisquer $\vto{v}$, $\vto{u}$, $\vto{x}$ de
+$\con{V}$ e os escalares quaisquer $\alpha,\beta\in\con{F}$, a
+transformação linear é constatado a partir do seguinte
+desenvolvimento:
+\begin{eqnarray}
+\fua{\vartheta_{\alpha\vto{u}+\beta\vto{v}}}{\vto{x}}&=
+&\lpa\alpha\vto{u}+\beta\vto{v}\rpa\cdot\vto{x}\nonumber\\
+&=&\alpha\lpa\vto{u}\cdot\vto{x}\rpa+\beta\lpa\vto{v}\cdot\vto{x}\rpa\nonumber\\
+&=&\alpha\fua{\vartheta_\vto{u}}{\vto{x}}+\beta\fua{\vartheta_\vto{v}}{\vto{x}}\nonumber\\
+&=&\fua{\lco\alpha\vartheta_\vto{u}
++\beta\vartheta_\vto{v}\rco}{\vto{x}}\nonumber\\
+\vartheta_{\alpha\vto{u}+\beta\vto{v}}&=&\alpha\vartheta_\vto{u}
++\beta\vartheta_\vto{v}\nonumber\\
+\fua{\Theta}{\alpha\vto{u}+\beta\vto{v}}&=&\alpha\fua{\Theta}{\vto{u}}+\beta\fua{\Theta}{\vto{v}}\,.\nonumber
+\end{eqnarray}
+Agora, para mostrar que $\Theta$ define um mapeamento injetor, se
+\begin{eqnarray}
+\lco\fua{\Theta}{\vto{u}}\rco\lpa\vto{x}\rpa&=&\lco\fua{\Theta}{\vto{v}}\rco\lpa\vto{x}\rpa\nonumber\\
+\vto{u}\cdot\vto{x}&=&\vto{v}\cdot\vto{x}\,,\nonumber
+\end{eqnarray}
+logo $\lpa\vto{u}-\vto{v}\rpa\cdot\vto{x}=0$. Como esta igualdade
+deve ser válida para qualquer $\vto{x}$, se $\vto{x}\neq\vto{0}$,
+então $\vto{u}=\vto{v}$. Para provar que o mapeamento de $\Theta$
+é sobrejetor, consideremos uma base
+$\con{U}=\lch\vto{v}_1,\cdots,\vto{v}_n\rch$ de $\ehr{V}{F}$, sua
+base recíproca $\con{W}=\lch\vto{w}_1,\cdots,\vto{w}_n\rch$ e um
+funcional qualquer $\vartheta\in\con{V^*}$. Dado um vetor
+$\vto{v}\in\con{V}$ definido por
+$\vto{v}=\sum_{i=1}^{n}\fua{\vartheta}{\vto{v}_i}\vto{w}_i$ e um
+vetor qualquer $\vto{x}=\sum_{i=1}^{n}\alpha_i\vto{v}_i$, tem-se o
+desenvolvimento a seguir:
+\begin{eqnarray}
+\fua{\vartheta_{\vto{v}}}{\vto{x}}&=&\vto{v}\cdot\vto{x}\nonumber\\
+&=&\lpa\sum_{i=1}^{n}\fua{\vartheta}{\vto{v}_i}\vto{w}_i\rpa\cdot\lpa\sum_{j=1}^{n}\alpha_j\vto{v}_j\rpa\nonumber\\
+&=&\sum_{i=1}^{n}\sum_{j=1}^{n}\fua{\vartheta}{\vto{v}_i}\alpha_j\delta_{ij}\nonumber\\
+&=&\sum_{i=1}^{n}\alpha_i\fua{\vartheta}{\vto{v}_i}\nonumber\\
+&=&\fua{\vartheta}{\sum_{i=1}^{n}\alpha_i\vto{v}_i}\nonumber\\
+&=&\fua{\vartheta}{\vto{x}}\,.\nonumber
+\end{eqnarray}
+Desta forma, tem-se que $\vartheta_{\vto{v}}=\vartheta$, de onde
+se conclui que o funcional $\vartheta$ é definido por
+$\fua{\Theta}{\vto{v}}$.
+\end{prova}
+\end{teo}
+
+
+\subsection{Coordenadas de Vetores}\label{subsec:funcionaisVetores}
+Seja um espaço de Hilbert $\ehr{V}{F}$ e $\edu{V}{F}$ seu espaço
+dual. Seja $\con{U}=\lch\vto{v}_1,\cdots,\vto{v}_n\rch$ uma base
+de $\ehr{V}{F}$ e
+$\vtf{F}_1^\con{U},\cdots,\vtf{F}_n^\con{U}\in\con{V^*}$ os
+funcionais coordenados por ela definidos. A partir do teorema
+\ref{teo:RepresentacaoRiesz}, sejam os vetores
+$\vto{f}_1,\cdots,\vto{f}_n\in\con{V}$ respectivamente associados
+aos funcionais $\vtf{F}_1^\con{U},\cdots,\vtf{F}_n^\con{U}$. Desta
+forma, dado um vetor qualquer $\vto{v}\in\con{V}$, tem-se que
+\begin{equation}
+\vto{v}=\sum_{i=1}^n \fua{\vtf{F}_i^\con{U}}{\vto{v}}\vto{v}_i =
+\sum_{i=1}^n \fua{\vartheta_{\vto{f}_i}}{\vto{v}}\vto{v}_i =
+\sum_{i=1}^n \lpa \vto{f}_i \cdot \vto{v} \rpa\vto{v}_i\,.
+\end{equation}
+Apesar da conclusão desta igualdade, a regra para os funcionais
+coordenados $\vtf{F}_i^\con{U}$ fica indeterminada já que os
+vetores $\vto{f}_i$ são desconhecidos. Para resolver o problema de
+uma forma simples, pode-se definir que $\con{U}$ e
+$\lch\vto{f}_1,\cdots,\vto{f}_n\rch$ são recíprocos, ou seja, que
+\begin{equation}
+\vto{f}_i\cdot\vto{v}_j = \delta_{ij}\,.
+\end{equation}
+
+Como o par de bases recíprocas $\con{U}$ e
+$\lch\vto{f}_1,\cdots,\vto{f}_n\rch$ é único\footnote{Ver seção
+\ref{sec:conjuntosRecíprocos}.}, o conjunto ordenado
+$\lch\vto{f}_1,\cdots,\vto{f}_n\rch$ pode ser representado por
+$\con{U}_*=\lch \vto{v}_1^*,\cdots,\vto{v}_n^* \rch$ e a regra
+para os funcionais coordenados na base $\con{U}$ definida por
+\begin{equation}\label{eq:regraGeralVetor}
+\fua{\vtf{F}_i^\con{U}}{\vto{x}}=\vto{v}_i^*\cdot\vto{x}\,.
+\end{equation}
+A unicidade no par de bases recíprocas permite dizer também que
+$\lpa\con{U}_*\rpa_*=\con{U}$. Desta forma, os funcionais
+coordenados na base $\con{U}_*$ ficam definidos por
+\begin{equation}\label{eq:regraGeralVetorCovariante}
+\fua{\vtf{F}_i^\con{U_*}}{\vto{x}}=\vto{v}_i\cdot\vto{x}\,.
+\end{equation}
+Os valores $\fua{\vtf{F}_i^\con{U}}{\vto{x}}$ e
+$\fua{\vtf{F}_i^\con{U_*}}{\vto{x}}$ são denominados as
+coordenadas covariantes e contravariantes do vetor $\vto{x}$
+respectivamente. Para que estas coordenadas sejam determinadas
+relativas somente à base $\con{U}$, considera-se que
+\begin{equation}
+\vtf{F}_i^{{}_*\con{U}}:=\vtf{F}_i^\con{U_*}\,.
+\end{equation}
+
+\section{Tensores}
+
+\subsection{Espaço Tensorial}
+Sejam os espaços de Hilbert $\ehr{V_1}{F},\cdots,\ehr{V_n}{F}$. O
+espaço vetorial de funcionais multilineares
+$\evl{\crt{V}{n}}{F}{F}$ é denominado espaço tensorial,
+representado por $\ete{\crt{V}{n}}{F}$. Um funcional $\vtf{T}$ do
+conjunto $\cfl{\crt{V}{n}}{F}$, agora representado\footnote{Alguns
+autores costumam denominar o conjunto $\cfl{\crt{V}{n}}{\real}$ de
+\emph{produto tensorial} entre os conjuntos
+$\con{V}_1,\cdots,\con{V}_n$ e representá-lo por
+$\con{V}_1\otimes\cdots\otimes\con{V}_n$.} por
+$\cft{\crt{V}{n}}{F}$, é dito um \emph{tensor} de ordem $n$, cuja
+notação é alterada para $\tnr{T}$. Em particular, dado o conjunto
+$\con{V}$, diz-se que $\tnr{T}\in\cft{\con{V}^n}{F}$ é um tensor
+de ordem $n$ em $\con{V}$.
+
+\begin{prp}\label{prp:DualTensorial}
+O espaço tensorial $\ete{\con{V}}{F}$ é o espaço dual
+$\edu{V}{F}$.
+\newline
+\begin{prova}
+No teorema \ref{teo:RepresentacaoRiesz}, o isomorfismo provoca a
+igualdade $\cft{\con{V}}{F}=\con{V}^*$.
+\end{prova}
+\end{prp}
+
+\subsubsection{Tipos} Seja o conjunto $\con{V}^{(p,q)}:=\con{V}^p\times\lpa\con{V^*}\rpa^q$.
+ Todo espaço tensorial de ordem $p+q$ na forma
+$\ete{\con{V}^{(p,q)}}{F}$ é classificado como sendo do tipo $\lpa
+p,q\rpa$ em $\con{V}$. Tais espaços são ditos possuir \emph{ordem
+contravariante} $p$ e \emph{ordem covariante} $q$.
+
+Agora, seja um espaço tensorial $\ete{\con{U}^{(p,q)}}{F}$. Se
+este espaço for do tipo $\lpa 0,0\rpa$, os tensores do conjunto
+$\cft{\con{U}^{(0,0)}}{F}$ são, por definição, escalares. Caso o
+espaço tensorial for do tipo $\lpa 1,0\rpa$, segundo a igualdade
+(\ref{eq:VetorFuncional}) e a proposição \ref{prp:DualTensorial},
+pode-se considerar que os tensores em questão são os vetores de
+$\con{U}$. A partir desta consideração, um conjunto
+$\con{V}^{(p,q)}$, cuja tupla ordenada contem um misto de $p$
+vetores e $q$ funcionais lineares, pode ser convenientemente
+interpretado como um conjunto $\con{V}^{p+q}$, dotado com tuplas
+de $p$ vetores \emph{contravariantes} e $q$ vetores
+\emph{covariantes}.
+
+\subsection{Produto Tensorial}
+
+Sejam os espaços tensoriais reais $\ete{\crt{V}{p}}{\real}$ e
+$\ete{\crt{U}{q}}{\real}$. Um dado mapeamento
+$\map{\otimes}{\cft{\crt{V}{p}}{\real}\times\cft{\crt{U}{q}}{\real}}
+{\cft{\crt{V}{p}\times\crt{U}{q}}{\real}}$ é denominado produto
+tensorial se, a partir dos tensores quaisquer
+$\tnr{V}\in\cft{\crt{V}{p}}{\real}$ e
+$\tnr{U}\in\cft{\crt{U}{q}}{\real}$, for válida, para qualquer
+$\lpa\vto{v}_1,\cdots,\vto{v}_p,\vto{u}_1,\cdots,\vto{u}_q\rpa\in\crt{V}{p}\times\crt{U}{q}$,
+a seguinte igualdade:
+\begin{equation}\label{eq:produtoTensorial}
+\fua{\tnr{V}\otimes\tnr{U}}{\vto{v}_1,\cdots,\vto{v}_p,\vto{u}_1,\cdots,\vto{u}_q}=
+\fua{\tnr{V}}{\vto{v}_1,\cdots,\vto{v}_p}\fua{\tnr{U}}{\vto{u}_1,\cdots,\vto{u}_q}\,.
+\end{equation}
+Fica evidente que um produto tensorial gera um tensor cuja ordem é
+a soma das ordens dos tensores que o definem. Caso $\tnr{V}$ e
+$\tnr{U}$ sejam tensores do tipo $\lpa p,m \rpa$ e $\lpa q,n \rpa$
+respectivamente, então $\tnr{V}\otimes\tnr{U}$ é do tipo $\lpa
+p+q,m+n \rpa$.
+
+A partir da igualdade (\ref{eq:produtoTensorial}), as propriedades
+a seguir podem ser facilmente obtidas para quaisquer
+$\tnr{V}_1,\tnr{V}_2\in\cft{\crt{V}{p}}{\real}$,
+$\tnr{U}\in\cft{\crt{U}{q}}{\real}$ e
+$\tnr{W}\in\cft{\crt{W}{r}}{\real}$:
+\begin{itemize}
+  \item[i.] $\tnr{U}\otimes\tnr{W}=\tnr{0} \implies$$\tnr{U}=\tnr{0}$ ou $\tnr{W}=\tnr{0}$ ;
+  \item[ii.] Associatividade:
+$\lpa\tnr{V}_1\otimes\tnr{U}\rpa\otimes\tnr{W}=\tnr{V}_1\otimes\lpa\tnr{U}\otimes\tnr{W}\rpa$
+; \item[iii.] Distributividade à direita:
+$\lpa\tnr{V}_1+\tnr{V}_2\rpa\otimes\tnr{U}=\tnr{V}_1\otimes\tnr{U}+\tnr{V}_2\otimes\tnr{U}$
+; \item[iv.] Distributividade à esquerda:
+$\tnr{U}\otimes\lpa\tnr{V}_1+\tnr{V}_2\rpa=\tnr{U}\otimes\tnr{V}_1+\tnr{U}\otimes\tnr{V}_2$
+.
+\end{itemize}
+
+\subsection{Tensor Poliádico}
+
+Considerando os espaços tensoriais
+$\ete{\con{V}_1}{\real},\cdots,\ete{\con{V}_n}{\real}$, um tensor
+$\vto{v}_1\otimes\cdots\otimes\vto{v}_n\in\cft{\crt{V}{n}}{\real}$,
+onde $\vto{v}_i$ é um vetor qualquer de $\con{V}_i$, é qualificado
+como poliádico de ordem $n$. Se $n=2$, o tensor é \emph{diádico};
+para $n=3$, o tensor é \emph{triádico} e assim por diante. Cada
+vetor que compõe o tensor poliádico é uma \emph{políade}. Os
+vetores de um tensor diádico são \emph{díades}; os do tensor
+triádico são \emph{tríades}, etc... A partir do teorema
+\ref{teo:RepresentacaoRiesz} e utilizando
+(\ref{eq:produtoTensorial}), tem-se para qualquer $\lpa
+\vto{x}_1,\cdots,\vto{x}_n\rpa\in\crt{V}{n}$ que
+\begin{equation}\label{eq:produtorioPoliadico}
+\fua{\vto{v}_1\otimes\cdots\otimes\vto{v}_n}{\vto{x}_1,\cdots,\vto{x}_n}=\prod_{i=1}^{n}
+\vto{v}_i\cdot\vto{x}_i\,.
+\end{equation}
+
+\begin{prp}\label{prp:igualdadeTensorial}
+Sejam os espaços de Hilbert
+$\ehr{V_1}{\real},\cdots,\ehr{V_p}{\real}$ dimensionalmente
+finitos e o conjunto genérico $\con{U}_i=\{ {\vto{v}_1}^{(i)}
+,\cdots, {\vto{v}_{n_i}}^{(i)}\}$ representando uma base ordenada
+qualquer de um destes espaços. Considerando tensores quaisquer
+$\tnr{T}_1,\tnr{T}_2\in\cft{\crt{V}{p}}{\real}$ e uma tupla
+qualquer $\lpa \vto{x}_1,\cdots,\vto{x}_p\rpa\in\crt{V}{p}$,
+tem-se o seguinte:
+\begin{itemize}
+  \item[i.]É sempre válido que
+\begin{eqnarray}
+  \lefteqn{\fua{\tnr{T}_1}{
+\vto{x}_1,\cdots,\vto{x}_p}
+=} & & \nonumber \\
+  &
+&\sum_{j_1=1}^{n_1}\cdots\sum_{j_p=1}^{n_p}
+\fua{\vtf{F}_{j_1}^{\con{U}_1}}{\vto{x}_1}\cdots
+\fua{\vtf{F}_{j_p}^{\con{U}_p}}{\vto{x}_p}\fua{\tnr{T}_1}{
+{\vto{v}_{j_1}}^{(1)},\cdots,{\vto{v}_{j_p}}^{(p)}}\nonumber\,.
+\end{eqnarray}
+  \item[ii.]Se as igualdades
+\begin{equation}
+\fua{\tnr{T}_1}{
+{\vto{v}_{j_1}}^{(1)},\cdots,{\vto{v}_{j_p}}^{(p)}}=\fua{\tnr{T}_2}{
+{\vto{v}_{j_1}}^{(1)},\cdots,{\vto{v}_{j_p}}^{(p)}}\nonumber
+\end{equation}
+forem verificadas, então $\tnr{T}_1=\tnr{T}_2$.
+\end{itemize}
+\begin{prova}
+A verificação da igualdade no item i. depende fundamentalmente das
+propriedades de multilinearidade. Daí, seja o seguinte
+desenvolvimento:
+\begin{eqnarray}
+ & \fua{\tnr{T}_1}{
+\vto{x}_1,\cdots,\vto{x}_p}
+  & \nonumber\\
+  &
+=\fua{\tnr{T}_1}{
+\sum_{j_1=1}^{n_1}\fua{\vtf{F}_{j_1}^{\con{U}_1}}{\vto{x}_1}{\vto{v}_{j_1}}^{(1)},
+\cdots,\sum_{j_p=1}^{n_p}\fua{\vtf{F}_{j_p}^{\con{U}_p}}{\vto{x}_p}{\vto{v}_{j_p}}^{(p)}}
+& \nonumber \\
+&=\sum_{j_1=1}^{n_1}\fua{\vtf{F}_{j_1}^{\con{U}_1}}{\vto{x}_1}\fua{\tnr{T}_1}{
+{\vto{v}_{j_1}}^{(1)},
+\cdots,\sum_{j_p=1}^{n_p}\fua{\vtf{F}_{j_p}^{\con{U}_p}}{\vto{x}_p}{\vto{v}_{j_p}}^{(p)}}
+& \nonumber\\
+&=\sum_{j_1=1}^{n_1}\fua{\vtf{F}_{j_1}^{\con{U}_1}}{\vto{x}_1}\sum_{j_2=1}^{n_2}\fua{\vtf{F}_{j_2}^{\con{U}_2}}{\vto{x}_2}\fua{\tnr{T}_1}{
+{\vto{v}_{j_1}}^{(1)},{\vto{v}_{j_2}}^{(2)},
+\cdots,\sum_{j_p=1}^{n_p}\fua{\vtf{F}_{j_p}^{\con{U}_p}}{\vto{x}_p}{\vto{v}_{j_p}}^{(p)}}\,,
+& \nonumber
+\end{eqnarray}
+e assim sucessivamente. No caso do item ii. se
+\begin{equation}
+\fua{\tnr{T}_1}{
+{\vto{v}_{j_1}}^{(1)},\cdots,{\vto{v}_{j_p}}^{(p)}}=\fua{\tnr{T}_2}{
+{\vto{v}_{j_1}}^{(1)},\cdots,{\vto{v}_{j_p}}^{(p)}}, \nonumber
+\end{equation} é óbvio que
+\begin{eqnarray}
+  & \fua{\tnr{T}_1}{
+\vto{x}_1,\cdots,\vto{x}_p}
+  & \nonumber\\
+&=\sum_{j_1=1}^{n_1}\cdots\sum_{j_p=1}^{n_p}
+\fua{\vtf{F}_{j_1}^{\con{U}_1}}{\vto{x}_1}\cdots
+\fua{\vtf{F}_{j_p}^{\con{U}_p}}{\vto{x}_p}\fua{\tnr{T}_2}{
+{\vto{v}_{j_1}}^{(1)},\cdots,{\vto{v}_{j_p}}^{(p)}} & \nonumber\\
+&=\fua{\tnr{T}_2}{ \vto{x}_1,\cdots,\vto{x}_p}\,. & \nonumber
+\end{eqnarray}
+\end{prova}
+\end{prp}
+
+\begin{teo}\label{teo:BasesPoliadicas}
+Sejam os espaços de Hilbert
+$\ehr{V_1}{\real},\cdots,\ehr{V_p}{\real}$ dimensionalmente
+finitos e o conjunto genérico $\{ {\vto{v}_1}^{(i)} ,\cdots,
+{\vto{v}_{n_i}}^{(i)}\} \subset \con{V}_i$ representando uma base
+ordenada qualquer de um destes espaços. O conjunto
+$\con{T}^{\otimes}_{\con{V}_{1,p}}\subset\cft{\crt{V}{p}}{\real}$
+formado por todos os tensores poliádicos de ordem p construídos na
+forma
+${\vto{v}_{j_1}}^{(1)}\otimes{\vto{v}_{j_2}}^{(2)}\otimes\cdots\otimes{\vto{v}_{j_p}}^{(p)}$,
+onde $j_i=1,\cdots,n_i$ , é uma base do espaço tensorial
+$\ete{\crt{V}{p}}{\real}$.
+\newline
+\newline
+\begin{prova}
+Em primeiro lugar, devemos verificar se os tensores
+${\vto{v}_{j_1}}^{(1)}\otimes\cdots\otimes{\vto{v}_{j_p}}^{(p)}$
+são linearmente independentes. Para tal, seja um tensor
+\begin{equation}
+\tnr{T}:=\sum_{j_1=1}^{n_1}\cdots\sum_{j_p=1}^{n_p}\alpha_{j_1\cdots
+j_p}{\vto{v}_{j_1}}^{(1)}\otimes\cdots\otimes{\vto{v}_{j_p}}^{(p)},\nonumber
+\end{equation}
+onde $\alpha_{j_1\cdots j_p}\in\real$. Para que os tensores
+poliádicos sejam linearmente independentes, se $\tnr{T}=\tnr{0}$,
+então $\alpha_{j_1\cdots j_p}=0$. Isto é comprovado da seguinte
+forma: seja $(\vto{x}_1,\cdots,\vto{x}_p)$ uma tupla ordenada
+qualquer de vetores de $\crt{V}{p}$. Para $\tnr{T}=\tnr{0}$,
+tem-se que cada um dos termos
+\begin{eqnarray}
+\fua{\alpha_{j_1\cdots
+j_p}{\vto{v}_{j_1}}^{(1)}\otimes\cdots\otimes{\vto{v}_{j_p}}^{(p)}}{\vto{x}_1,\cdots,\vto{x}_p}&=&0\nonumber\\
+\alpha_{j_1\cdots j_p} \prod_{k=1}^{p}
+{\vto{v}_{j_k}}^{(k)}\cdot\vto{x}_k&=&0\,.\nonumber
+\end{eqnarray}
+Em particular, caso os vetores de $(\vto{x}_1,\cdots,\vto{x}_p)$
+sejam não nulos, então
+\begin{eqnarray}
+\alpha_{j_1\cdots j_p} \prod_{k=1}^{p} \underbrace{\overbrace{{\vto{v}_{j_k}}^{(k)}}^{\neq\vto{0}}\cdot\overbrace{\vto{x}_k}^{\neq\vto{0}}}_{\neq 0}&=&0\nonumber\\
+\alpha_{j_1\cdots j_p} &=&0\,.\nonumber
+\end{eqnarray}
+Em segundo lugar, devemos mostrar que os tensores poliádicos geram
+$\cft{\crt{V}{p}}{\real}$. Para tal, seja um tensor qualquer
+$\tnr{T}_1\in\cft{\crt{V}{p}}{\real}$ onde
+\begin{equation}
+\beta_{j_1\cdots
+j_p}:=\fua{\tnr{T}_1}{{\vto{v}_{j_1}}^{(1)},\cdots,{\vto{v}_{j_p}}^{(p)}}\nonumber
+\end{equation}
+e um tensor
+\begin{equation}
+\tnr{T}_2:=\sum_{j_1=1}^{n_1}\cdots\sum_{j_p=1}^{n_p}\beta_{j_1\cdots
+j_p}{\vto{v}_{j_1}}^{(1)}\otimes\cdots\otimes{\vto{v}_{j_p}}^{(p)}\,.\nonumber
+\end{equation}
+Seja, agora, o seguinte desenvolvimento:
+\begin{eqnarray}
+\fua{\tnr{T}_2}{{\vto{v}_{j_1}}^{(1)},\cdots,{\vto{v}_{j_p}}^{(p)}}&=&\beta_{j_1\cdots
+j_p}\underbrace{\prod_{k=1}^{p}
+{\vto{v}_{j_k}}^{(k)}\cdot{\vto{v}_{j_k}}^{(k)}}_{\gamma_{j_1\cdots j_p}}\nonumber\\
+&=&\fua{\tnr{T}_1}{{\vto{v}_{j_1}}^{(1)},\cdots,{\vto{v}_{j_p}}^{(p)}}\gamma_{j_1\cdots
+j_p}\nonumber\,,
+\end{eqnarray}
+de onde, a partir do item ii. da proposição
+\ref{prp:igualdadeTensorial}, tem-se
+\begin{equation}
+\tnr{T}_1=
+\sum_{j_1=1}^{n_1}\cdots\sum_{j_p=1}^{n_p}\frac{\beta_{j_1\cdots
+j_p}}{\gamma_{j_1\cdots
+j_p}}{\vto{v}_{j_1}}^{(1)}\otimes\cdots\otimes{\vto{v}_{j_p}}^{(p)}\,.\nonumber
+\end{equation}
+Conclui-se que o tensor qualquer $\tnr{T}_1$ é uma combinação
+linear dos tensores poliádicos em questão.
+\end{prova}
+\end{teo}
+
+\begin{prp}\label{prp:dimensaoTensorial}
+Sejam os espaços de Hilbert
+$\ehr{V_1}{\real},\cdots,\ehr{V_p}{\real}$ dimensionalmente
+finitos e um espaço tensorial $\ete{\crt{V}{p}}{\real}$. Sempre é
+válido que
+\begin{equation}
+\dim\lpa\ete{\crt{V}{p}}{\real}\rpa=\prod_{i=1}^{p}
+\dim\lpa\ehr{V_i}{\real}\rpa\,.\nonumber
+\end{equation}
+\begin{prova}
+A construção da base de tensores poliádicos descrita no teorema
+\ref{teo:BasesPoliadicas} permite constatar que existem
+$n_1n_2\cdots n_p$ tensores na forma
+${\vto{v}_{j_1}}^{(1)},\cdots,{\vto{v}_{j_p}}^{(p)}$, onde
+$j_i=1,\cdots,n_i$ e os vetores pertencem à $\{{\vto{v}_1}^{(i)}
+,\cdots, {\vto{v}_{n_i}}^{(i)}\}$, base de $\ehr{V_i}{\real}$.
+\end{prova}
+\end{prp}
+
+\subsection{Coordenadas de Tensores}
+
+Seja o espaço tensorial real dimensionalmente finito
+$\ete{\crt{V}{p}}{\real}$, o conjunto
+$\con{T}^{\otimes}_{\con{V}_{1,p}}$ sua base de tensores
+poliádicos e o conjunto $\{ {\vto{v}_1}^{(i)} ,\cdots,
+{\vto{v}_{n_i}}^{(i)}\}$ uma base de $\ehr{V_i}{\real}$. Segundo o
+teorema \ref{teo:BasesPoliadicas}, um tensor qualquer
+$\tnr{T}\in\cft{\crt{V}{p}}{\real}$ pode ser decomposto da
+seguinte forma:
+\begin{equation}
+\tnr{T}=\sum_{i_1=1}^{n_1}\cdots\sum_{i_p=1}^{n_p}\beta_{i_1\cdots
+i_p}{\vto{v}_{i_1}}^{(1)}\otimes\cdots\otimes{\vto{v}_{i_p}}^{(p)}\,,
+\end{equation}
+onde $\beta_{i_1\cdots i_p}\in\real$ são as coordenadas de
+$\tnr{T}$ na base $\con{T}^{\otimes}_{\con{V}_{1,p}}$. Como ocorre
+no caso de vetores, a partir de transformações lineares do tipo
+\begin{equation}
+\map{\vtf{F}_{i_1\cdots
+i_p}^{\con{T}^{\otimes}_{\con{V}_{1,p}}}}{\cft{\crt{V}{p}}{\real}}{\real}\,,
+\end{equation}
+pode-se considerar que os escalares
+\begin{equation}
+\beta_{i_1\cdots i_p}:=\fua{\vtf{F}_{i_1\cdots
+i_p}^{\con{T}^{\otimes}_{\con{V}_{1,p}}}}{\tnr{T}}\,,
+\end{equation}
+onde cada função é o funcional coordenado de $\tnr{T}$ na base
+$\con{T}^{\otimes}_{\con{V}_{1,p}}$. A regra de cada um destes
+funcionais é definida por
+\begin{equation}\label{eq:contravarianteTensor}
+\fua{\vtf{F}_{i_1\cdots
+i_p}^{\con{T}^{\otimes}_{\con{V}_{1,p}}}}{\tnr{X}}=\fua{\tnr{X}}
+{{\vto{v}_{i_1}^*}^{(1)},\cdots,{\vto{v}_{i_p}^*}^{(p)}}\,,
+\end{equation}
+cujos valores são as coordenadas contravariantes de $\tnr{X}$ na
+base $\con{T}^{\otimes}_{\con{V}_{1,p}}$. Nesta mesma base, suas
+coordenadas covariantes são os valores
+\begin{equation}\label{eq:covarianteTensor}
+\fua{\vtf{F}_{i_1\cdots
+i_p}^{{}_*\con{T}^{\otimes}_{\con{V}_{1,p}}}}{\tnr{X}}:=\fua{\tnr{X}}
+{{\vto{v}_{i_1}}^{(1)},\cdots,{\vto{v}_{i_p}}^{(p)}}\,.
+\end{equation}
+Caso $p=1$, as regras destes funcionais abrangem o caso de
+funcionais coordenados para vetores (\ref{eq:regraGeralVetor}) e
+(\ref{eq:regraGeralVetorCovariante}).
+
+Conclui-se, então, que dada uma base de tensores poliádicos, um
+tensor de $\cft{\crt{V}{p}}{\real}$ pode ser caracterizado por
+dois arrays de dimensão $n_1\times\cdots\times n_p$, onde
+$n_i=\dim\lpa\ehr{V_i}{\real}\rpa$.
+
+
+\begin{prp}\label{prp:somaPoliadicos}
+Dado um espaço tensorial $\ete{\crt{V}{p}}{\real}$
+dimensionalmente finito, um tensor qualquer
+$\tnr{T}\in\cft{\crt{V}{p}}{\real}$ pode sempre ser decomposto
+numa soma de tensores poliádicos, ou seja,
+\begin{equation}
+\tnr{T}=\sum_{k=1}^m\vto{v}_{1k}\otimes\cdots\otimes\vto{v}_{pk}\,,\,
+m\geq 1,\nonumber
+\end{equation}
+onde $\vto{v}_{ik}\in\con{V}_i$ é a $i$-ésima políade do $k$-ésimo
+tensor poliádico.
+\newline
+\newline
+\begin{prova}
+Segundo o teorema \ref{teo:BasesPoliadicas}, considerando uma base
+$\{{\vto{v}_{1}}^{(i)},\cdots,{\vto{v}_{n_i}}^{(i)}\}$ de
+$\ehr{V_i}{\real}$, um tensor qualquer
+\begin{eqnarray}
+\tnr{T}&=&\sum_{i_1=1}^{n_1}\cdots\sum_{i_q=1}^{n_q}\cdots\sum_{i_p=1}^{n_p}\beta_{i_1\cdots
+i_p}{\vto{v}_{i_1}}^{(1)}\otimes\cdots\otimes{\vto{v}_{i_q}}^{(q)}\otimes\cdots\otimes{\vto{v}_{i_p}}^{(p)}\nonumber\\
+&=&\sum_{i_1=1}^{n_1}\cdots\sum_{i_q=1}^{n_q}\cdots\sum_{i_p=1}^{n_p}{\vto{v}_{i_1}}^{(1)}
+\otimes\cdots\otimes\underbrace{\lpa\beta_{i_1\cdots
+i_p}\rpa{\vto{v}_{i_q}}^{(q)}}_{\vto{u}_{i_1\cdots
+i_p}}\otimes\cdots\otimes{\vto{v}_{i_p}}^{(p)}\nonumber\,,
+\end{eqnarray}
+onde o vetor destacado define $\tnr{T}$ como uma soma de
+$n_1\cdots n_q \cdots n_p$ tensores poliádicos, cada um com $p$
+políades.
+\end{prova}
+\end{prp}
+
+\begin{prp}\label{prp:produtorioFuncionais}
+Seja um espaço tensorial $\ete{\crt{V}{p}}{\real}$ e $\con{U}_i$
+uma base de $\ehr{V_i}{\real}$. Dado que $\con{V}_{1,p}$ é
+construído a partir dos vetores de $\con{U}_i$, considerando os
+vetores quaisquer $\vto{v}_i\in\con{V_i}$, as coordenadas
+\begin{equation}
+\fua{\vtf{F}_{j_1\cdots
+j_p}^{\con{T}^{\otimes}_{\con{V}_{1,p}}}}{\vto{v}_1\otimes\cdots\otimes\vto{v}_p}=\prod_{k=1}^p
+\fua{\vtf{F}_{j_k}^{\con{U}_k}}{\vto{v}_k}\nonumber
+\end{equation}
+e
+\begin{equation}
+\fua{\vtf{F}_{j_1\cdots
+j_p}^{{}_*\con{T}^{\otimes}_{\con{V}_{1,p}}}}{\vto{v}_1\otimes\cdots\otimes\vto{v}_p}=\prod_{k=1}^p
+\fua{\vtf{F}_{j_k}^{{}_*\con{U}_k}}{\vto{v}_k}\nonumber\,.
+\end{equation}
+\begin{prova}
+As igualdades são conseqüências de (\ref{eq:regraGeralVetor}),
+(\ref{eq:regraGeralVetorCovariante}),
+(\ref{eq:produtorioPoliadico}), (\ref{eq:contravarianteTensor}) e
+(\ref{eq:covarianteTensor}).
+\end{prova}
+\end{prp}
+
+\section{Funções Elevadas}
+
+\subsection{Elevação}
+A uma função multilinear qualquer $\vtf{G}$, cujos argumentos são
+vetores, é sempre possível associar uma função linear
+$\vtf{G}^\otimes$ que tem um tensor como argumento. Diz-se que
+$\vtf{G}$ é ``elevada'' à $\vtf{G}^\otimes$. Esta
+elevação\footnote{O termo em inglês é ``lifting''.} estabelece uma
+conveniente e importante relação, descrita no teorema a seguir,
+entre uma seqüência qualquer de vetores e um tensor.
+
+
+\begin{teo}[Elevação]\label{teo:Lifting}
+Sejam os espaços de Hilbert
+$\ehr{V_1}{\real},\cdots,\ehr{V_p}{\real}$ e o espaço vetorial
+$\evt{W}{\real}$. Seja o espaço vetorial
+$\evl{\crt{V}{p}}{W}{\real}$ de funções multilineares e
+$\evl{\cft{\crt{V}{p}}{\real}}{W}{\real}$ o espaço vetorial das
+funções lineares que mapeiam um tensor real para um vetor de
+$\con{W}$. Dada uma função qualquer
+$\vtf{G}\in\cfl{\crt{V}{p}}{W}$ e uma tupla qualquer
+$(\vto{v}_1,\cdots,\vto{v}_p)\in\crt{V}{p}$, existe uma única
+função $\vtf{G}^\otimes\in\cfl{\cft{\crt{V}{p}}{\real}}{W}$,
+chamada função elevada de $\vtf{G}$, onde o vetor
+\begin{equation}
+\fua{\vtf{G}}{\vto{v}_1,\cdots,\vto{v}_p}=\fua{\vtf{G}^\otimes}{\vto{v}_1\otimes\cdots\otimes\vto{v}_p}.\nonumber
+\end{equation}
+\newline
+\begin{prova}\footnote{Adaptada de \aut{Backus}\cite{backus_1997_1}, pp. 43-45.}
+Seja um tensor qualquer $\tnr{T}\in\cft{\crt{V}{p}}{\real}$ e sua
+decomposição
+\begin{equation}
+\tnr{T}=\sum_{i_1=1}^{n_1}\cdots\sum_{i_p=1}^{n_p}\fua{\vtf{F}_{i_1\cdots
+i_p}^{\con{T}^{\otimes}_{\con{V}_{1,p}}}}{\tnr{T}}{\vto{u}_{i_1}}^{(1)}\otimes\cdots\otimes{\vto{u}_{i_p}}^{(p)}\,,
+\nonumber
+\end{equation}
+onde se considera
+$\con{U}_i=\{{\vto{u}_{1}}^{(i)},\cdots,{\vto{u}_{n_i}}^{(i)}\}$
+uma base de $\ehr{V_i}{\real}$. A partir da proposição
+\ref{prp:somaPoliadicos} e da igualdade deste teorema, pode-se
+dizer que
+\begin{eqnarray}
+\fua{\vtf{G}^\otimes}{\tnr{T}}&=&\sum_{i_1=1}^{n_1}\cdots\sum_{i_p=1}^{n_p}\fua{\vtf{F}_{i_1\cdots
+i_p}^{\con{T}^{\otimes}_{\con{V}_{1,p}}}}{\tnr{T}}\fua{\vtf{G}^\otimes}{{\vto{u}_{i_1}}^{(1)}\otimes\cdots\otimes{\vto{u}_{i_p}}^{(p)}}\nonumber\\
+&=&\sum_{i_1=1}^{n_1}\cdots\sum_{i_p=1}^{n_p}\underbrace{\fua{\vtf{F}_{i_1\cdots
+i_p}^{\con{T}^{\otimes}_{\con{V}_{1,p}}}}{\tnr{T}}}\underbrace{\fua{\vtf{G}}{{\vto{u}_{i_1}}^{(1)},\cdots,{\vto{u}_{i_p}}^{(p)}}}\,.\nonumber
+\end{eqnarray}
+Os termos destacados são unicamente determinados para qualquer
+tensor $\tnr{T}$, logo $\vtf{G}^\otimes$ existe e fica unicamente
+determinado. A fim de constatar a igualdade do teorema, seja
+\begin{equation}
+\tnr{T}=\vto{v}_1\otimes\cdots\otimes\vto{v}_p\,.\nonumber
+\end{equation}
+Do resultado do desenvolvimento anterior e considerando a
+proposição \ref{prp:produtorioFuncionais}, tem-se que
+\begin{eqnarray}
+\fua{\vtf{G}^\otimes}{\vto{v}_1\otimes\cdots\otimes\vto{v}_p}&=&\sum_{i_1=1}^{n_1}\cdots\sum_{i_p=1}^{n_p}
+\prod_{k=1}^p \fua{\vtf{F}_{i_k}^{\con{U}_{\con{V}_k}}}{\vto{v}_k}
+\fua{\vtf{G}}{{\vto{u}_{i_1}}^{(1)},\cdots,{\vto{u}_{i_p}}^{(p)}}\nonumber\\
+&=&
+\fua{\vtf{G}}{\sum_{i_1=1}^{n_1}\fua{\vtf{F}_{i_1}^{\con{U}_1}}{\vto{v}_1}
+{\vto{u}_{i_1}}^{(1)},\cdots,\sum_{i_p=1}^{n_p}\fua{\vtf{F}_{i_p}^{\con{U}_p}}{\vto{v}_p}{\vto{u}_{i_p}}^{(p)}}\nonumber\nonumber\\
+&=& \fua{\vtf{G}}{\vto{v}_1,\cdots,\vto{v}_p}\,.\nonumber
+\end{eqnarray}
+\end{prova}
+\end{teo}
+
+
+\subsection{Contração}
+Seja um espaço tensorial $\ete{\con{V}_{(p)}}{\real}$, onde
+$\con{V}_{(p)}:=\crt{V}{p}$, e o conjunto $\con{V}_{(p-n)}$,
+formado a partir da retirada de $n$ conjuntos quaisquer de
+$\con{V}_{(p)}$. Considerando o espaço tensorial
+$\ete{\con{V}_{(p-n)}}{\real}$ e o espaço vetorial
+$\evl{\con{V}_{(p)}}{\cft{\con{V}_{(p-n)}}{\real}}{\real}$, diz-se
+que a função elevada de
+$\vtf{C}_n\in\cfl{\con{V}_{(p)}}{\cft{\con{V}_{(p-n)}}{\real}}$,
+representada $\vtf{C}_n^{\otimes}$, é uma contração de ordem $n$.
+A partir do teorema \ref{teo:Lifting}, dado um tensor qualquer
+$\tnr{T}\in\cft{\con{V}_{(p)}}{\real}$ com decomposição
+\begin{equation}\label{eq:decomposicaoTensor}
+\tnr{T}=\sum_{k=1}^m\vto{v}_{1k}\otimes\cdots\otimes\vto{v}_{pk}\,,\,
+m\geq 1,
+\end{equation}
+tem-se que o tensor
+\begin{equation}\label{eq:elevadaTensor}
+\fua{\vtf{C}_n^\otimes}{\tnr{T}}=\sum_{k=1}^m\fua{\vtf{C}^n}{\vto{v}_{1k},\cdots,\vto{v}_{pk}}
+\end{equation}
+e sua ordem é $p-n$.
+
+\subsubsection{Traço de Tensor}
+Seja o conjunto $\con{V}_{(p)}:=\crt{V}{p}$, onde $p\geq 2$, cujo
+produto cartesiano contem pelo menos um par de conjuntos iguais.
+Dado que $\con{V}_r=\con{V}_s$, $1\leq r < s \leq p$, seja o
+conjunto
+\begin{equation}
+\con{V}_{(p-2)}:=\con{V}_1\times\cdots\times\con{V}_{r-1}\times\con{V}_{r+1}
+\times\cdots\times\con{V}_{s-1}\times\con{V}_{s+1}\times\cdots\times\con{V}_p\,.
+\end{equation}
+Com base nos espaços $\ete{\con{V}_{(p)}}{\real}$,
+$\ete{\con{V}_{(p-2)}}{\real}$ e
+$\evl{\con{V}_{(p)}}{\cft{\con{V}_{(p-2)}}{\real}}{\real}$, diz-se
+que a contração $\vtf{C}_2^\otimes$, cujo valor
+\begin{eqnarray}
+  \lefteqn{\fua{\vtf{C}_2}{\vto{u}_1,\cdots,\vto{u}_p}:=} & & \nonumber\\
+  &
+&\lpa
+\vto{u}_r\cdot\vto{u}_s\rpa\vto{u}_1\otimes\cdots\otimes\vto{u}_{r-1}\otimes\vto{u}_{r+1}
+\otimes\cdots\otimes\vto{u}_{s-1}\otimes\vto{u}_{s+1}\otimes\cdots\otimes\vto{u}_p\,,\,\forall\,\vto{u}_i\in\con{V}_i\,,\nonumber\\
+\end{eqnarray}
+é o traço em $r,s$, representada $\trt{r}{s}$. Nas condições da
+igualdade (\ref{eq:elevadaTensor}), tem-se que
+\begin{eqnarray}
+  \lefteqn{\fua{\trt{r}{s}}{\tnr{T}}=} & & \nonumber\\
+  &
+&\sum_{k=1}^m\lpa
+\vto{v}_{rk}\cdot\vto{v}_{sk}\rpa\vto{v}_{1k}\otimes\cdots\otimes\vto{v}_{r-1k}\otimes\vto{v}_{r+1k}
+\otimes\cdots\otimes\vto{v}_{s-1k}\otimes\vto{v}_{s+1k}\otimes\cdots\otimes\vto{v}_{pk}\,.\nonumber\\
+\end{eqnarray}
+
+\subsubsection{Produto Contrativo}
+Sejam os produtos cartesianos $\con{W}=\crt{W}{t}\times\crt{V}{s}$
+e $\con{Z}=\crt{V}{s}\times\crt{Z}{m}$, a partir dos quais se
+estabelece que $\con{V}_{(p)}:=W\times\con{Z}$, $p=t+m+2s$. Seja,
+então, o conjunto
+\begin{eqnarray}
+\lefteqn{\con{V}_{(p-2q)}:=} & & \nonumber\\
+& &
+\con{W}_1\times\cdots\con{W}_t\times\con{V}_{q+1}\times\cdots\times\con{V}_{s}\times\con{V}_{q+1}\times\cdots\times\con{V}_{s}\times\con{Z}_1\times\cdots\times\con{Z}_m\,,\nonumber\\
+\end{eqnarray}
+resultante da retirada dos primeiros $q$ pares de conjuntos iguais
+em $\con{V}_{(p)}$. Seja a contração $\vtf{C}_{2q}^\otimes$ tal
+que
+\begin{eqnarray}
+\lefteqn{\fua{\vtf{C}_{2q}}{\vto{w}_1,\cdots,\vto{w}_t,\vto{x}_1,\cdots,\vto{x}_s,\vto{y}_1,\cdots,\vto{y}_s,\vto{z}_1,\cdots,\vto{z}_m}:=} & & \nonumber\\
+  &
+&\lpa
+\vto{x}_1\cdot\vto{y}_1\rpa\cdots\lpa\vto{x}_q\cdot\vto{y}_q\rpa
+ \vto{w}_1\otimes\cdots\otimes\vto{w}_{t}\otimes\vto{x}_{q+1}\otimes\cdots\otimes\vto{x}_{s}\otimes\nonumber\\
+& & \vto{y}_{q+1}\otimes\cdots\otimes\vto{y}_{s}
+\otimes\vto{z}_1\otimes\cdots\otimes\vto{z}_m\,,
+\end{eqnarray}
+onde $\vto{w}_i\in\con{W}_i$, $\vto{x}_j,\vto{y}_j\in\con{V}_j$,
+$\vto{z}_k\in\con{W}_k$. Considerando os tensores quaisquer
+$\tnr{W}\in\cft{\con{W}}{\real}$ e
+$\tnr{Z}\in\cft{\con{Z}}{\real}$ com decomposições
+\begin{equation}
+\tnr{W}=\sum_{k=1}^m\vto{w}_{1k}\otimes\cdots\otimes\vto{w}_{tk}\otimes
+\vto{x}_{1k}\otimes\cdots\otimes\vto{x}_{qk},\,\vto{w}_{ik}\in\con{W}_i,\,\vto{x}_{jk}\in\con{V}_j,
+\end{equation}
+e
+\begin{equation}
+\tnr{Z}=\sum_{k=1}^n\vto{y}_{1k}\otimes\cdots\otimes\vto{y}_{tk}\otimes
+\vto{z}_{1k}\otimes\cdots\otimes\vto{z}_{qk},\,\vto{y}_{ik}\in\con{V}_i,\,\vto{z}_{jk}\in\con{Z}_j,
+\end{equation}
+tem-se que o tensor de ordem $p-2q$
+\begin{eqnarray}\label{eq:funcaoContrativoTensorial}
+\lefteqn{\fua{\vtf{C}_{2q}^\otimes}{\tnr{W}\otimes\tnr{Z}}=} & & \nonumber\\
+& &\sum_{i=1}^m\sum_{j=1}^n\lpa
+\vto{x}_{1i}\cdot\vto{y}_{1j}\rpa\cdots\lpa\vto{x}_{qi}\cdot\vto{y}_{qj}\rpa
+\vto{w}_{1i}\otimes\cdots\otimes\vto{w}_{ti}\otimes\vto{x}_{q+1i}\otimes\cdots\otimes\vto{x}_{si}\otimes\nonumber\\
+& &
+\vto{y}_{q+1j}\otimes\cdots\otimes\vto{y}_{sj}\otimes\vto{z}_{1j}\otimes\cdots\otimes\vto{z}_{mj}\,.
+\end{eqnarray}
+A função no mapeamento
+$\map{\odot_q}{\cft{\con{W}}{\real}\times\cft{\con{Z}}{\real}}{\cft{\con{V}_{(p-2q)}}{\real}}$,
+onde
+\begin{equation}\label{eq:produtoContrativo}
+\tnr{W}\odot_q\tnr{Z}:=\fua{\vtf{C}_{2q}^\otimes}{\tnr{W}\otimes\tnr{Z}},
+\end{equation}
+é denominada produto contrativo de ordem $q$. Para este produto,
+são válidas as igualdades:
+\begin{itemize}
+\item[i.] $\tnr{W}\odot_0\tnr{Z}=\tnr{W}\otimes\tnr{Z}$;
+\item[ii.] Bilinearidade: dados
+$\tnr{Z}_1,\tnr{Z}_1\in\cft{\con{Z}}{\real}$ e
+$\ele{a},\ele{b}_1,\ele{b}_2\in\real$ quaisquer,
+\begin{equation}
+\lpa\ele{a}\tnr{W}\rpa\odot_q\lpa\ele{b}_1\tnr{Z}_1+\ele{b}_2\tnr{Z}_2\rpa=\ele{a}\ele{b}_1\lpa
+\tnr{W}\odot_q\tnr{Z}_1\rpa+\ele{a}\ele{b}_2\lpa
+\tnr{W}\odot_q\tnr{Z}_2\rpa.\nonumber
+\end{equation}
+\end{itemize}
+Além destas propriedades, o produto contrativo pode ser
+associativo. Sejam os tensores $\tnr{Y}\in\cft{\con{Y}}{\real}$ e
+$\tnr{K}\in\cft{\con{K}}{\real}$, onde
+\begin{equation}
+\begin{array}{rcl}
+\con{Y}&=&\con{V}_1\times\cdots\con{V}_s\times\con{Y}_1\times\cdots\times\con{Y}_u\times\con{W}_1\times\cdots\times\con{W}_m,\\
+\con{K}&=&\con{W}_1\times\cdots\con{W}_m\times\con{K}_1\times\cdots\times\con{K}_n.
+\end{array}
+\end{equation}
+Nestas condições, tem-se
+\begin{itemize}
+\item[iii.] Associatividade:
+$\tnr{W}\odot_q\lpa\tnr{Y}\odot_r\tnr{K}\rpa=\lpa\tnr{W}\odot_q\tnr{Y}\rpa\odot_r\tnr{K}$,
+onde $q\leqslant s$ e $r\leqslant m$.
+\end{itemize}
+
+\paragraph{Produto Interno.} Considerando o produto cartesiano $\crt{V}{s}$,
+o produto contrativo $\tnr{T}_1\odot_s\tnr{T}_2$, onde
+$\tnr{T}_1,\tnr{T}_2\in\cft{\crt{V}{s}}{\real}$, representado na
+forma $\tnr{T}_1\odot\tnr{T}_2$, torna-se o produto
+interno\footnote{Alguns autores entendem o produto contrativo como
+sendo um produto interno generalizado. O termo ``produto interno''
+é aqui compreendido conforme a seção
+\ref{subsec:EspacoProdutoInterno}.} entre $\tnr{T}_1$ e
+$\tnr{T}_2$, pois a função $\odot$ define o mapeamento
+$\map{\odot}{\crt{V}{s}\times\crt{V}{s}}{\con{\real}}$, obedecendo
+as propriedades apresentadas na seção
+\ref{subsec:EspacoProdutoInterno}. Na prática, a notação é
+alterada para $\tnr{T}_1\cdot\tnr{T}_2$ se $s=1$, para
+$\tnr{T}_1:\tnr{T}_2$  se $s=2$, para $\tnr{T}_1\cdot:\tnr{T}_2$
+se $s=3$, para $\tnr{T}_1::\tnr{T}_2$ se $s=4$, etc...
+
+Diz-se então que $\ete{V}{\real}$ é um \emph{espaço tensorial
+produto interno}. Caso sejam definidas uma métrica e uma norma
+para este espaço, pode-se ter, de forma similar ao caso de espaços
+vetoriais, \emph{espaços tensoriais de Banach e Hilbert}.
+
+\section{Tensores e Funções Lineares}
+
+\subsection{A Relação Tensor e Função Linear}
+
+Conforme o teorema apresentado a seguir, pode-se estabelecer uma
+relação bijetora entre um tensor e uma função linear,
+generalizando a relação descrita no teorema
+\ref{teo:RepresentacaoRiesz} para o caso de escalares reais.
+\begin{teo}\label{teo:RieszGeneralizado}
+Seja o espaço tensorial real $\ete{\crt{V}{p}}{\real}$ e um
+produto contrativo de ordem q, $1\leqslant q \leqslant p$. Sejam
+os espaços tensoriais reais $\ete{\con{U}_e}{\real}$,
+$\ete{\con{W}_e}{\real}$, $\ete{\con{U}_d}{\real}$ e
+$\ete{\con{W}_d}{\real}$, onde os produtos cartesianos
+\begin{eqnarray}
+\con{U}_e:=\crt{V}{q}\,, &&
+\con{W}_e:=\con{V}_{q+1}\times\cdots\times\con{V}_{p}\,,
+\nonumber\\
+\con{U}_d:=\con{V}_{p-q+1}\times\cdots\times\con{V}_{p}\,, &&
+\con{W}_d:=\crt{V}{p-q}\,.\nonumber
+\end{eqnarray}
+Sejam os espaços vetoriais
+\begin{eqnarray}
+\evl{\cft{\con{U}_e}{\real}}{\cft{\con{W}_e}{\real}}{\real}&e&
+\evl{\cft{\con{U}_d}{\real}}{\cft{\con{W}_d}{\real}}{\real}.\nonumber
+\end{eqnarray}
+Dado um tensor qualquer $\tnr{T}\in\cft{\crt{V}{p}}{\real}$, sejam
+as funções lineares
+\begin{eqnarray}
+{\stackrel{\rightarrow}{\psi}}_{\tnr{T}}\in\cfl{\cft{\con{U}_e}{\real}}{\cft{\con{W}_e}{\real}}&e&
+\stackrel{\leftarrow}{\psi}_{\tnr{T}}\in\cfl{\cft{\con{U}_d}{\real}}{\cft{\con{W}_d}{\real}}\nonumber
+\end{eqnarray}
+definidas pelas regras
+\begin{eqnarray}
+\fua{\stackrel{\rightarrow}{\psi}_{\tnr{T}}}{\tnr{X}}=\tnr{X}\odot_q\tnr{T}&e&\fua{\stackrel{\leftarrow}{\psi}_{\tnr{T}}}{\tnr{Y}}=\tnr{T}\odot_q\tnr{Y}.\nonumber
+\end{eqnarray}
+Os mapeamentos
+\begin{eqnarray}
+\map{\stackrel{\rightarrow}{\Psi}}{\cft{\crt{V}{p}}{\real}}{\cfl{\cft{\con{U}_e}{\real}}{\cft{\con{W}_e}{\real}}}&e&
+\map{\stackrel{\leftarrow}{\Psi}}{\cft{\crt{V}{p}}{\real}}{\cfl{\cft{\con{U}_d}{\real}}{\cft{\con{W}_d}{\real}}}\nonumber
+\end{eqnarray}
+são transformações lineares bijetoras se, respectivamente,
+\begin{eqnarray}
+\fua{\stackrel{\rightarrow}{\Psi}}{\tnr{T}}=\stackrel{\rightarrow}{\psi}_{\tnr{T}}&e&\fua{\stackrel{\leftarrow}{\Psi}}{\tnr{T}}=\stackrel{\leftarrow}{\psi}_{\tnr{T}}.\nonumber
+\end{eqnarray}
+\begin{prova}
+A demonstração deste teorema se processa de maneira similar à do
+teorema \ref{teo:RepresentacaoRiesz}, ou seja, dados
+$\tnr{T}_1,\tnr{T}_2\in\cft{\crt{V}{p}}{\real}$ e
+$\alpha,\beta\in\real$ quaisquer, constata-se que
+\begin{itemize}
+\item[i.] $\stackrel{\rightarrow}{\Psi}$ é uma função linear:
+\begin{eqnarray}
+\fua{\stackrel{\rightarrow}{\psi}_{\alpha\tnr{T}_1+\beta\tnr{T}_2}}{\tnr{X}}&=
+&\tnr{X}\odot_q\lpa\alpha\tnr{T}_1+\beta\tnr{T}_2\rpa\nonumber\\
+&=&\alpha\lpa\tnr{X}\odot_q\tnr{T}_1\rpa+\beta\lpa\tnr{X}\odot_q\tnr{T}_2\rpa\nonumber\\
+&=&\alpha\fua{\stackrel{\rightarrow}{\psi}_{\tnr{T}_1}}{\tnr{X}}+\beta\fua{\stackrel{\rightarrow}{\psi}_{\tnr{T}_2}}{\tnr{X}}\nonumber\\
+&=&\fua{\lco\alpha\stackrel{\rightarrow}{\psi}_{\tnr{T}_1}
++\beta\stackrel{\rightarrow}{\psi}_{\tnr{T}_2}\rco}{\tnr{X}}\nonumber\\
+\stackrel{\rightarrow}{\psi}_{\alpha\tnr{T}_1+\beta\tnr{T}_2}&=&\alpha\stackrel{\rightarrow}{\psi}_{\tnr{T}_1}
++\beta\stackrel{\rightarrow}{\psi}_{\tnr{T}_2}\nonumber\\
+\fua{\stackrel{\rightarrow}{\Psi}}{\alpha\tnr{T}_1+\beta\tnr{T}_2}&=&\alpha\fua{\stackrel{\rightarrow}{\Psi}}{\tnr{T}_1}+\beta\fua{\stackrel{\rightarrow}{\Psi}}{\tnr{T}_2}\,.\nonumber
+\end{eqnarray}
+\item[ii.] $\stackrel{\rightarrow}{\Psi}$ define um mapeamento
+injetor:
+\begin{eqnarray}
+\lco\fua{\stackrel{\rightarrow}{\Psi}}{\tnr{T}_1}\rco\lpa\tnr{X}\rpa&=&\lco\fua{\stackrel{\rightarrow}{\Psi}}{\tnr{T}_2}\rco\lpa\tnr{X}\rpa\nonumber\\
+\tnr{X}\odot_q\tnr{T}_1&=&\tnr{X}\odot_q\tnr{T}_2\nonumber\\
+\tnr{X}\odot_q\lpa\tnr{T}_1-\tnr{T}_2\rpa&=&\tnr{0}\nonumber\\
+\tnr{T}_1&=&\tnr{T}_2\,.\nonumber
+\end{eqnarray}
+\item[iii.] $\stackrel{\rightarrow}{\Psi}$ define um mapeamento
+sobrejetor: dada uma função
+$\stackrel{\rightarrow}{\psi}\in\cfl{\cft{\con{U}_e}{\real}}{\cft{\con{W}_e}{\real}}$
+qualquer, uma base $\con{T}^{\otimes}_{\con{V}_{1,q}}$ formada
+pelos conjuntos $\{ {\vto{v}_1}^{(i)} ,\cdots,
+{\vto{v}_{n_i}}^{(i)}\}$ e um tensor
+\begin{equation}
+\tnr{Z}=\sum_{i_1=1}^{n_1}\cdots\sum_{i_q=1}^{n_q}{\vto{v}_{i_1}}^{(1)}\otimes\cdots\otimes{\vto{v}_{i_q}}^{(q)}
+\otimes\fua{\stackrel{\rightarrow}{\psi}}{{\vto{v}_{i_1}^*}^{(1)}\otimes\cdots\otimes{\vto{v}_{i_q}^*}^{(q)}}\,,
+\nonumber
+\end{equation}
+pode-se dizer que
+\begin{eqnarray}
+\fua{\stackrel{\rightarrow}{\psi}_{\tnr{Z}}}{\tnr{X}}&=&\tnr{X}\odot_q\tnr{Z}\nonumber\\
+&=&\lpa\sum_{i_1=1}^{n_1}\cdots\sum_{i_p=1}^{n_q}\fua{\vtf{F}_{i_1\cdots
+i_p}^{\con{T}^{\otimes}_{\con{V}_{1,q}}}}{\tnr{X}}{\vto{v}_{i_1}^*}^{(1)}\otimes\cdots\otimes{\vto{v}_{i_q}^*}^{(q)}\rpa
+\odot_q\nonumber\\
+&&\lpa\sum_{j_1=1}^{n_1}\cdots\sum_{j_q=1}^{n_q}{\vto{v}_{j_1}}^{(1)}\otimes\cdots\otimes{\vto{v}_{j_q}}^{(q)}
+\otimes\fua{\stackrel{\rightarrow}{\psi}}{{\vto{v}_{j_1}^*}^{(1)}\otimes\cdots\otimes{\vto{v}_{j_q}^*}^{(q)}}\rpa\nonumber\\
+&=&\sum_{i_1=1}^{n_1}\cdots\sum_{i_p=1}^{n_q}\sum_{j_1=1}^{n_1}\cdots\sum_{j_q=1}^{n_q}\fua{\vtf{F}_{i_1\cdots
+i_p}^{\con{T}^{\otimes}_{\con{V}_{1,q}}}}{\tnr{X}}\delta_{i_1j_1}\cdots\delta_{i_qj_q}
+\fua{\stackrel{\rightarrow}{\psi}}{{\vto{v}_{j_1}^*}^{(1)}\otimes\cdots\otimes{\vto{v}_{j_q}^*}^{(q)}}\nonumber\\
+&=&\fua{\stackrel{\rightarrow}{\psi}}{\sum_{j_1=1}^{n_1}\cdots\sum_{j_q=1}^{n_q}\fua{\vtf{F}_{j_1\cdots
+j_p}^{\con{T}^{\otimes}_{\con{V}_{1,q}}}}{\tnr{X}}
+{\vto{v}_{j_1}^*}^{(1)}\otimes\cdots\otimes{\vto{v}_{j_q}^*}^{(q)}}\nonumber\\
+&=&\fua{\stackrel{\rightarrow}{\psi}}{\tnr{X}}\nonumber\\
+\fua{\stackrel{\rightarrow}{\Psi}}{\tnr{Z}}&=&\stackrel{\rightarrow}{\psi}\nonumber\,.
+\end{eqnarray}
+\end{itemize}
+A demonstração para a função $\stackrel{\leftarrow}{\Psi}$ segue
+esta mesma metodologia.
+\end{prova}
+\end{teo}
+
+\begin{prp}
+Considerando as condições do teorema \ref{teo:RieszGeneralizado},
+\begin{itemize}
+\item[i.] se $q=p$, então $\stackrel{\rightarrow}{\Psi} \,=\,
+\stackrel{\leftarrow}{\Psi}$ ;
+
+\item[ii.] se $2q=p$, os tensores $\tnr{X}$, $\tnr{Y}$,
+$\fua{\stackrel{\rightarrow}{\psi}_{\tnr{T}}}{\tnr{X}}$ e
+$\fua{\stackrel{\leftarrow}{\psi}_{\tnr{T}}}{\tnr{Y}}$ possuem
+ordens iguais;
+
+\item[iii.] se $2q=p$ e $\con{V}_1=\cdots=\con{V}_p$, as funções
+$\stackrel{\rightarrow}{\psi}_{\tnr{T}}$ e
+$\stackrel{\leftarrow}{\psi}_{\tnr{T}}$ são operadores lineares;
+
+\item[iv.] Dada uma tupla qualquer
+$(\vto{v}_1,\cdots,\vto{v}_p)\in\crt{V}{p}$, é sempre válido que
+\begin{equation}
+\fua{\tnr{T}}{\vto{v}_1,\cdots,\vto{v}_p}=\fua{\stackrel{\rightarrow}{\psi}_{\tnr{T}}}{\vto{v}_1\otimes\cdots\otimes\vto{v}_q}
+\odot\lpa\vto{v}_{q+1}\otimes\cdots\otimes\vto{v}_p\rpa\nonumber
+\end{equation}
+e
+\begin{equation}
+\fua{\tnr{T}}{\vto{v}_1,\cdots,\vto{v}_p}=\lpa\vto{v}_1\otimes\cdots\otimes\vto{v}_{p-q}\rpa\odot
+\fua{\stackrel{\leftarrow}{\psi}_{\tnr{T}}}{\vto{v}_{p-q+1}\otimes\cdots\otimes\vto{v}_p}\,.\nonumber
+\end{equation}
+\end{itemize}
+\begin{prova}
+\begin{itemize}
+\item[i.] Se $q=p$, então
+$\fua{\stackrel{\rightarrow}{\psi}_{\tnr{T}}}{\tnr{X}}=\fua{\stackrel{\leftarrow}{\psi}_{\tnr{T}}}{\tnr{X}}$,
+$\forall\, \tnr{X}$;
+
+\item[ii.] Facilmente comprovada pelas condições do teorema
+\ref{teo:RieszGeneralizado}.
+
+
+\item[iii.] Facilmente comprovada pelas condições do teorema
+\ref{teo:RieszGeneralizado}.
+
+
+\item[iv.] Se $\tnr{T}$ for decomposto conforme a proposição
+\ref{prp:somaPoliadicos}, de (\ref{eq:produtorioPoliadico}) e
+(\ref{eq:produtoContrativo}), as igualdades em questão ficam
+evidentes.
+
+
+\end{itemize}
+\end{prova}
+\end{prp}
+
+
+\subsubsection{Função Composta}
+
+\subsubsection{Função Transposta}
+
+\subsubsection{Função Identidade}
+
+\subsubsection{Função Inversa}

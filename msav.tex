@@ -1,0 +1,191 @@
+\documentclass[openleft,smallroyalvopaper,10pt,twoside,showtrims]{memoir}
+
+	
+
+\medievalpage[15]
+\setlrmargins{*}{1.4cm}{*}
+\setulmargins{*}{*}{1}
+\checkandfixthelayout
+
+
+
+\makepagestyle{myheadings}
+\makeevenhead{myheadings}{{\textsc\leftmark}}{}{}
+\makeoddhead{myheadings}{}{}{{\textsc\rightmark}}
+\makeheadrule{myheadings}{\textwidth}{.2pt}
+\makeevenfoot{myheadings}{\small{\thepage}}{}{\footnotesize\textsc{Roberto D Algarte}}
+\makeoddfoot{myheadings}{\footnotesize\textsc{A Matemática dos Corpos Deformáveis}}{}{\small{\thepage}}
+
+\begin{comment}
+\makeatletter
+\newcommand\thickhrulefill{\leavevmode \leaders \hrule height 1ex \hfill \kern \z@}
+\setlength\midchapskip{10pt}
+\makechapterstyle{VZ14}{
+	\renewcommand\chapternamenum{}
+	\renewcommand\printchaptername{}
+	\renewcommand\chapnamefont{\Large\scshape}
+	\renewcommand\printchapternum{%
+		\chapnamefont\null\thickhrulefill\quad
+		\@chapapp\space\thechapter\quad\thickhrulefill}
+	\renewcommand\printchapternonum{%
+		\par\thickhrulefill\par\vskip\midchapskip
+		\hrule\vskip\midchapskip
+	}
+	\renewcommand\chaptitlefont{\Huge\scshape\centering}
+	\renewcommand\afterchapternum{%
+		\par\nobreak\vskip\midchapskip\hrule\vskip\midchapskip}
+	\renewcommand\afterchaptertitle{%
+		\par\vskip\midchapskip\hrule\nobreak\vskip\afterchapskip}
+}
+\makeatother
+\chapterstyle{VZ14}
+\end{comment}
+
+
+
+
+
+
+
+
+\nouppercaseheads
+
+\pagestyle{myheadings}
+
+\usepackage{msav}
+
+\include{gloss}
+
+\makeglossaries
+
+\newtheorem{teo}{Teorema}
+\newtheorem{coro}{Corolário}[teo]
+\newtheorem{axi}{Axioma}
+\newtheorem{prp}{Proposição}
+
+\makeindex
+
+\author{Roberto Dias Algarte}
+\title{Entendendo a Teoria Matemática da Mecânica dos Sólidos Deformáveis}
+\date{Versão 1.1.1 - Outubro de 2006}
+
+
+
+\begin{document}
+	
+	
+%%%%%%%%%%%%%%%%%%%%% Título dos Capítulos
+\newsavebox{\ChpNumBox}
+%\definecolor{ChapBlue}{rgb}{0.00,0.65,0.65}
+\definecolor{ChapBlue}{rgb}{0.70,0.70,0.70}
+\makeatletter
+\newcommand*{\thickhrulefill}{%
+	\leavevmode\leaders\hrule height 1\p@ \hfill \kern \z@}
+\newcommand*\BuildChpNum[2]{%
+	\begin{tabular}[t]{@{}c@{}}
+		\makebox[0pt][c]{#1\strut} \\[.5ex]
+		\colorbox{ChapBlue}{%
+			\rule[-10em]{0pt}{0pt}%
+			\rule{1ex}{0pt}\color{black}#2\strut
+			\rule{1ex}{0pt}}%
+\end{tabular}}
+\makechapterstyle{BlueBox}{%
+	\renewcommand{\chapnamefont}{\large\scshape}
+	\renewcommand{\chapnumfont}{\Huge\bfseries}
+	\renewcommand{\chaptitlefont}{\raggedright\Huge\bfseries}
+	\setlength{\beforechapskip}{20pt}
+	\setlength{\midchapskip}{26pt}
+	\setlength{\afterchapskip}{40pt}
+	\renewcommand{\printchaptername}{}
+	\renewcommand{\chapternamenum}{}
+	\renewcommand{\printchapternum}{%
+		\sbox{\ChpNumBox}{%
+\BuildChpNum{\chapnamefont\@chapapp}%
+{\chapnumfont\thechapter}}}
+\renewcommand{\printchapternonum}{%
+\sbox{\ChpNumBox}{%
+\BuildChpNum{\chapnamefont\vphantom{\@chapapp}}%
+{\chapnumfont\hphantom{\thechapter}}}}
+\renewcommand{\afterchapternum}{}
+\renewcommand{\printchaptertitle}[1]{%
+\usebox{\ChpNumBox}\hfill
+\parbox[t]{\hsize-\wd\ChpNumBox-1em}{%
+\vspace{\midchapskip}%
+\thickhrulefill\par
+\chaptitlefont ##1\par}}%
+}
+\chapterstyle{BlueBox}
+%%%%%%%%%%%%%%%%%%%%% Fim Título dos Capítulos
+
+
+
+
+%%\pagenumbering{roman}
+%\pagestyle{fancy}
+%\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+%\renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}}
+%\fancyhf{} % delete current setting for header and footer
+%\fancyhead[LE,RO]{\bfseries\thepage}
+%\fancyhead[LO]{\bfseries\rightmark}
+%\fancyhead[RE]{\bfseries\leftmark}
+%
+%
+%%COMENTAR O COMANDO ABAIXO
+%%\fancyfoot[RE,RO]{\begin{scriptsize}\copyright\textbf{2004-2007 Roberto Dias
+%%Algarte}\end{scriptsize}}
+%
+%\renewcommand{\headrulewidth}{0.5pt}
+%
+%% COMENTAR O COMANDO ABAIXO
+%%\renewcommand{\footrulewidth}{0.5pt}
+%
+%\addtolength{\headheight}{0.5pt} \fancypagestyle{plain}{
+%\fancyhead{}\renewcommand{\headrulewidth}{0pt} }
+%
+%\frontmatter%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\maketitle
+%\include{dedic}
+%\include{pref}
+
+\tableofcontents*
+
+
+\tcblistof[\chapter*]{mteo}{Lista de Teoremas e Corolários}
+
+%\chapter*{Lista de Proposições}
+%\listtheorems{prp}
+
+%linha de teste de retorno de versão
+
+
+%\listoffigures
+
+\mainmatter%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+    \include{partes/parte1/parte1}
+    \include{partes/parte1/c_oqueAlgebra}
+    \include{partes/parte1/c_algabst}
+    \include{partes/parte1/c_alglin}
+    \include{partes/parte1/c_algtens}
+%    \include{partes/parte1/c_geoafim}
+%    \include{partes/parte1/c_diftens}
+%   \include{partes/parte1/c_medida}
+    \include{partes/parte1/bibCh1}
+%    \include{partes/parte2/parte2}
+%    \include{partes/parte2/c_meccont}
+%    \include{partes/parte2/c_cinemat}
+%    \include{partes/parte2/bibCh2}
+
+
+\backmatter%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\printglossary[title=Notação e Símbolos,style=super]
+
+
+\printindex
+
+\end{document}
+
+

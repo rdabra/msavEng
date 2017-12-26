@@ -1,0 +1,39 @@
+QtiPlot 0.8.5 project file
+<windows>	2
+<table>
+table1	30	2	03-02-2007 23:06:21
+geometry	50	50	449	242	
+header	1[X]	2[Y]	
+ColWidth	100	100	
+com	col(1)	col(1)
+ColType	0;0/6	0;0/6	
+Comments			
+WindowLabel		2
+<data>
+</data>
+</table>
+<SurfacePlot>
+graph1	03-02-2007 23:07:20
+geometry	maximized
+SurfaceFunction	1/y*(x^y-1)	0	2	-2	2	-2	2
+Style	frame	nofloor	hiddenline
+grids	42
+title		#000000	Lucida Grande	23	75	0
+colors	#000000	#000000	#000000	#000000	#ffffff	#000000	#ff0000	#0000ff	1
+axesLabels			
+tics	5	5	5	5	5	5
+tickLengths	0.0567891	0.0340735	0.0567891	0.0340735	0.0567891	0.0340735
+options	0	1	0
+numbersFont	Lucida Grande	19	50	0
+xAxisLabelFont	Lucida Grande	19	75	0
+yAxisLabelFont	Lucida Grande	19	75	0
+zAxisLabelFont	Lucida Grande	19	75	0
+rotation	31	0	15
+zoom	0.9
+scaling	1	1	1
+shift	0.15	0	0
+LineWidth	1
+WindowLabel		2
+</SurfacePlot>
+<log>
+</log>

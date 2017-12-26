@@ -1,0 +1,427 @@
+% Lingua portuguesa %
+\usepackage[portuges]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+
+
+% Marca d'água DRAFT
+%\usepackage{draftcopy}
+
+% Procura Inversa
+\usepackage[active]{srcltx}
+
+% Incluindo fontes ams %
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{mathtools}
+\usepackage[pdftex]{graphicx}
+\graphicspath{ {partes/parte1/figs/c_algabst/}}
+\usepackage{epstopdf}
+\usepackage{makeidx}
+\usepackage{nicefrac}
+\usepackage{multicol}
+\usepackage[bottom]{footmisc}
+\usepackage{comment}
+\usepackage[indexonlyfirst,nogroupskip,toc,sort=use]{glossaries-extra}
+\renewcommand{\glossarypreamble}{\small}
+\usepackage[margin=15pt,font=small,labelfont=bf,labelsep=endash,aboveskip=-3pt,belowskip=-8pt]{caption}
+\usepackage{pstricks}
+\usepackage[most]{tcolorbox}
+\usepackage{forest}
+
+
+
+\allowdisplaybreaks
+
+% URLS
+\usepackage{url}
+\urlstyle{tt}
+
+% \usepackage{showidx}
+
+% Fontes
+
+\usepackage{kpfonts}
+\usepackage[T1]{fontenc}
+\usepackage[small,euler-hat-accent]{eulervm}
+
+
+%Comando para referenciar indices do glossaries
+\newcommand{\gloref}[1]{\ensuremath{\,}\gls{#1}\ensuremath{\,}}
+
+
+
+% recursos de desenhos para latex
+\usepackage{epsfig}
+\usepackage{color}
+
+% lista de teoremas
+%\usepackage{ntheorem}
+
+
+% Layout de Página
+%\setlength{\hoffset}{0.0cm}
+%\setlength{\voffset}{0.25cm}
+%\setlength{\oddsidemargin}{0.0cm}
+%\setlength{\topmargin}{0.0cm}
+%\setlength{\marginparwidth}{0.0cm}
+%\setlength{\marginparsep}{0.0cm}
+%\setlength{\headheight}{0.0cm}
+%\setlength{\headsep}{0.0cm}
+%\setlength{\textwidth}{16.0cm}
+%\setlength{\textheight}{25.0cm}
+
+% Espaçamento
+\linespread{1.11}
+
+% Comandos Gerais
+\newcommand{\dis}{\displaystyle}
+\newcommand{\hyp}{\hyphenation}
+\newcommand{\aut}{\textsc}
+\newcommand{\nob}[1]{\textbf{#1}}
+\newcommand{\rotpsi}{\mathbin{\text{\rotatebox[origin=c]{180}{$\Psi$}}}}
+%\newcommand{\textsb}[1]{{\fontfamily{jkpx}\fontseries{sb}\selectfont #1}}
+\newcommand{\textsb}[1]{{\fontfamily{jkpx}\fontseries{sb}\selectfont #1}}
+
+
+
+% Delimitadores
+\newcommand {\lpa}{\left (}
+\newcommand {\rpa}{\right )}
+\newcommand {\lco}{\left [}
+\newcommand {\rco}{\right ]}
+\newcommand {\lch}{\left \{}
+\newcommand {\rch}{\right \}}
+
+
+%Elemento de Conjunto
+\newcommand {\ele}{}
+
+%Conjunto
+\newcommand {\con}{}
+\newcommand {\viz}[1]{\{#1\}_{\textrm{v}}}
+
+\newcommand {\racional}{\mathbb{Q}}
+\newcommand {\real}{\mathbb{R}}
+\newcommand{\tempo}{\mathbb{T}}
+\newcommand {\complexo}{\mathbb{C}}
+\newcommand {\nat}{\mathbb{N}}
+
+% Negritos para o cmbright
+\usepackage{bm}
+%\newcommand{\negmath}[1]{\boldsymbol{#1}}
+%\newcommand{\negmath}[1]{\pmb{{#1}}}
+\newcommand{\negmath}[1]{\mathbold{{#1}}}
+%\newcommand{\negsymbol}[1]{\bm{#1}}
+
+%Produto Vetorial
+\newcommand {\xis}{\,\negsymbol{\negmath{x}}\,}
+
+%Rodape
+%\newcommand {\rodape}[1]{\footnote{\fontfamily{bch}\selectfont #1}}
+\newcommand {\rodape}[1]{\footnote{#1}}
+
+%TituloFigura
+%\newcommand {\titfigura}[1]{\caption{ \small{#1}}}
+\newcommand {\titfigura}[1]{\caption{#1}}
+
+% Prefacio das Partes
+\newcommand{\prefacio}[2]{\vspace*{.2\textheight}\noindent{\textbf{Parte #1}.\textsl{ #2}}}
+
+%\newcommand {\prefacio}[2]{\preface[]{\noindent{\textbf{Parte #1}.\textsl{ #2}}}}
+
+
+%Ambiente de demonstração
+%\newenvironment {prova}{\fontfamily{bch}\selectfont \footnotesize \textbf{Demonstração}.}{\hfill $\Box$}
+\newenvironment {prova}{\footnotesize\noindent \textbf{Demonstração}.}{\hfill $\Box$}
+
+%Ambiente de exemplo
+\newtcolorbox[auto counter, number within=chapter]{example}[1][]{%
+	enhanced jigsaw, % better frame drawing
+	breakable=unlimited,
+	before skip=7pt,
+	after skip=7pt,
+	left=2mm,
+	right=0mm,
+	top=0mm,
+	bottom=0.5mm,
+	boxsep=1mm,
+	borderline west={1pt}{0pt}{black!23!white}, % straigh vertical line at the left edge
+	sharp corners, % No rounded corners
+	boxrule=0pt, % no real frame,
+	fonttitle={\small\bfseries},
+	coltitle={black},  % Black colour for title
+	opacityfill=0,
+	fontupper=\small,
+	title={Exemplo~\thetcbcounter.\ },  % Fixed title
+	attach title to upper, % Move the title into the box
+	 #1
+}
+
+\newcounter{th}
+\newtcbtheorem[list inside=mteo]{mteo}{Teorema}
+{
+	enhanced jigsaw,
+	arc=0mm,outer arc=.5mm,
+	breakable=true,
+	colback=black!4!white,
+	before skip=7pt,
+	after skip=7pt,
+	leftrule=0pt,
+	rightrule=0pt,
+	coltitle=black,
+	top=0.5mm,
+	bottom=0.5mm,
+	left=0mm,
+	right=0mm,
+	colframe=black!23!white,
+	fonttitle=\bfseries,
+	separator sign dash,
+	theorem style=standard,
+	fontupper=\itshape,
+	titlerule=0mm,
+	separator sign dash,
+	before title={\stepcounter{th}}
+}{teo}
+
+
+
+\newtcbtheorem[number within=th,list inside=mteo]{mcoro}{Corolário}
+{
+	enhanced jigsaw,
+	arc=0mm,outer arc=.5mm,
+	breakable=true,
+	colback=black!4!white,
+	before skip=7pt,
+	after skip=14pt,
+	leftrule=0pt,
+	rightrule=0pt,
+	coltitle=black,
+	top=0.5mm,
+	bottom=0.5mm,
+	left=0mm,
+	right=0mm,
+	colframe=black!23!white,
+	fonttitle=\bfseries,
+	separator sign dash,
+	theorem style=standard,
+	fontupper=\itshape,
+	titlerule=0mm,
+	separator sign dash,
+}{cor}
+
+
+\tcolorboxenvironment{proof}{	
+	enhanced jigsaw, % better frame drawing
+	breakable=unlimited,
+	before skip=7pt,
+	after skip=10pt,
+	left=1mm,
+	right=0mm,
+	top=0mm,
+	bottom=0mm,
+	boxsep=1mm,
+	borderline west={1.5pt}{0pt}{black!23!white}, % straigh vertical line at the left edge
+	sharp corners, % No rounded corners
+	boxrule=0pt, % no real frame,
+	fonttitle={\small\bfseries},
+	coltitle={black},  % Black colour for title
+	opacityfill=0,
+	attach title to upper, % Move the title into the box
+}
+
+
+%função sinal de
+\newcommand{\sgn}[1]{\mathop{\mathrm{sgn}}\lpa #1\rpa}
+
+%função matriz adjunta de
+\newcommand{\adj}[1]{\mathop{\mathrm{adj}}\lpa #1\rpa}
+
+%span de
+\DeclareMathOperator{\spn}{span}
+
+% Produto Cartesiano
+\newcommand {\crt}[2]{\con{#1}^{\times #2}}
+%Funcao
+\newcommand {\fun}{}
+%Funcao
+\newcommand {\fn}[1]{\mathit{#1}}
+%Funcao e argumento
+\newcommand {\fua}[2]{#1(#2)}
+%Mapeamento
+\newcommand {\map}[3]{#1 : #2 \mapsto #3}
+%grupo
+\newcommand {\gru}[2]{\negmath{G}_{\con{#1}#2}}
+%grupo abeliano
+\newcommand {\gra}[2]{\negmath{\overline{G}}_{\con{#1}#2}}
+%grupo de operadores
+\newcommand {\grp}[1]{\negmath{GP}_{\con{#1}}}
+%grupo qualquer de operadores
+\newcommand {\gqq}[2]{\negmath{GP}_{\con{#1}}^{#2}}
+%subgrupo de suboperadores
+\newcommand {\grs}[1]{\negmath{GP}_{\con{#1}}}
+%grupo abeliano de operadores
+\newcommand {\gpa}[1]{\negmath{\overline{GP}}_{\con{#1}}}
+%grupo ortogonal
+\newcommand {\gro}[1]{\negmath{GO}_{\con{#1}}}
+%grupo ortogonal qualquer
+\newcommand {\grl}[2]{{\negmath{GO}}^{#1}_{\con{#2}}}
+%grupo ortogonal proprio
+\newcommand {\grr}[1]{\grl{+}{#1}}
+%grupo ortogonal improprio
+\newcommand {\gri}[1]{\grl{-}{#1}}
+%grupo de invariï¿½cia qualquer
+\newcommand {\grn}[2]{{\negmath{GI}^{#1}}_{\con{#2}}}
+%grupo de isotropia qualquer
+\newcommand {\gso}[2]{{\negmath{G\hat{I}}^{#1}}_{\con{#2}}}
+%grupo de ant-isotropia qualquer
+\newcommand {\gsm}[2]{{\negmath{G\hat{I}^+}^{#1}}_{\con{#2}}}
+%hiperdeterminante
+\newcommand {\hpd}[1]{\mathrm{Det}\,#1}
+%Anel
+\newcommand {\ane}[1]{\mathcal{R}_{\con{#1}}}
+%Campo
+\newcommand {\cam}[1]{\mathcal{F}_{\con{#1}}}
+%Vetor
+\newcommand {\vto}[1]{\negmath{#1}}
+%Vetor Unitario
+\newcommand {\vun}[1]{\negmath{\hat{#1}}}
+%Espaço Vetorial
+\newcommand {\evt}[2]{\negmath{V}_\con{#1}^\con{#2}}
+%Dimensao
+\newcommand {\dms}[2]{\mathrm{dim}\lpa \evt{#1}{#2} \rpa}
+%Dimensao de ....
+\newcommand {\dmq}[1]{\mathrm{dim}\lpa #1 \rpa}
+%Espaï¿½ de Banach
+\newcommand {\ebh}[2]{\negmath{B}_\con{#1}^\con{#2}}
+%Espaï¿½ de Hilbert
+\newcommand {\ehr}[2]{\negmath{H}_\con{#1}^\con{#2}}
+%Espaï¿½ Vetorial Euclidiano
+\newcommand {\eeu}[2]{\negmath{E}_\con{#1}^\con{#2}}
+%Conjunto de funcoes
+\newcommand {\cfu}[2]{\con{M}_{\con{#1}\mapsto\con{#2}}}
+%Espaço Vetorial de Funcoes
+\newcommand {\evf}[3]{\negmath{M}_{\con{#1}\mapsto\con{#2}}^\con{#3}}
+%Função como vetor
+\newcommand {\vtf}[1]{\pmb{#1}}
+%Funcional
+\newcommand {\fci}[2]{\digamma_{\con{#1}\mapsto\con{#2}}}
+%Espaço vetorial de funções lineares
+\newcommand {\evl}[3]{\fua{\negmath{\mathcal{L}}_{#1}}{#2,#3}}
+%Conjunto de funcoes lineares
+\newcommand {\cfl}[2]{\con{L}_{\con{#1}\mapsto\con{#2}}}
+%Conjunto de funcoes ortogonais
+\newcommand {\cfo}[1]{\con{O}_{\con{#1}}}
+%matriz
+\newcommand {\mat}[1]{\mathit{#1}}
+%traço
+\newcommand {\trc}[1]{\mathrm{tr}\,#1}
+% matriz de ...
+\newcommand {\mad}[2]{\lco #1 \rco^\con{#2}}
+% matriz do vetor
+\newcommand {\mav}[2]{{[ #1 ]}^{#2}}
+% matriz da função vetorial
+\newcommand {\maf}[3]{[{#1}_{\con{#2}} ]^\con{#3}}
+% matriz da função tensorial
+\newcommand {\mas}[3]{\lco #1_{#2} \rco^{#3}}
+% espaï¿½ pontual
+\newcommand {\epo}[1]{\mathscr{#1}}
+% espaço afim
+\newcommand {\eaf}[3]{\negmath{A}_{\con{#1},\epo{#2}}^\con{#3}}
+% subespaï¿½ afim
+\newcommand {\saf}[4]{\negmath{A}_{\con{#1},\epo{#2}\ele{#3}}^\con{#4}}
+% translacao por vetor
+\newcommand {\tpv}[1]{\mathsf{T}_{#1}}
+% dilaï¿½o central
+\newcommand {\dcl}[1]{\mathsf{U}_{\ele{#1}}}
+%Espaï¿½ Dual
+\newcommand {\edu}[2]{\negmath{D}_\con{{#1}^*}^\con{#2}}
+%Espaï¿½ Tensorial
+\newcommand {\ete}[2]{\fua{\pmb{\mathcal{L}}_{#1}}{#2}}
+%Espaï¿½ Tensorial Alternante
+\newcommand {\etn}[2]{\fua{\pmb{\mathcal{LA}}_{#1}}{#2}}
+%Espaï¿½ Tensorial Simï¿½rico
+\newcommand {\ets}[2]{\negmath{TS}_\con{#1}^\con{#2}}
+%Conjunto de tensores
+\newcommand {\cft}[2]{\con{T}_{\con{#1}\mapsto\con{#2}}}
+%Conjunto de tensores alternantes
+\newcommand {\cfa}[2]{\con{TA}_{\con{#1}\mapsto\con{#2}}}
+%Conjunto de tensores simï¿½ricos
+\newcommand {\cfs}[2]{\con{TS}_{\con{#1}\mapsto\con{#2}}}
+%Tensor
+\newcommand {\tnr}[1]{\vtf{#1}}
+%Conjunto de poliï¿½icos
+\newcommand {\cfp}[1]{\con{T}^{\otimes}_{\con{#1}}}
+%traï¿½ de tensor
+\newcommand {\trt}[2]{\mathrm{tr}^{#1,#2}}
+%funï¿½o tensorial ï¿½direita
+\newcommand {\rft}[2] {\tnr{#1}_{{\overleftarrow{\odot}#2}}}
+%funï¿½o tensorial ï¿½esquerda
+\newcommand {\lft}[2] {\tnr{#1}_{{\overrightarrow{\odot}#2}}}
+%funï¿½o tensorial ï¿½direita ï¿½esquerda
+\newcommand {\ftr}[2] {\tnr{#1}_{{\odot#2}}}
+%funï¿½o tensorial ï¿½direita ï¿½esquerda inversa
+\newcommand {\fti}[2] {\tnr{#1}_{{\odot#2}}^{-1}}
+%funï¿½o tensorial ï¿½direita ï¿½esquerda transposta
+\newcommand {\ftt}[2] {\tnr{#1^T}_{\odot#2}}
+%conjunto de tensores invariantes
+\newcommand {\cti}[2] {\con{TI}_{#1\mapsto #2}}
+%conjunto de tensores isotrï¿½icos
+\newcommand {\cts}[2] {\con{T\hat{I}}_{#1\mapsto #2}}
+%conjunto de tensores ant-isotrï¿½icos
+\newcommand {\ctt}[2] {\con{T\hat{I}^+}_{#1\mapsto #2}}
+%derivada de funï¿½o tensorial
+\newcommand {\dvt}[1] {\mathrm{D}#1}
+%derivada generalizada de funï¿½o tensorial
+\newcommand {\dtg}[2] {\mathrm{D}^{#1}#2}
+%conjunto de funï¿½es g-suaves
+\newcommand {\sug}[1] {\mathcal{C}_\mathrm{G}^{#1}}
+%conjunto de funï¿½es g-suaves
+\newcommand {\suf}[1] {\mathcal{C}_\mathrm{F}^{#1}}
+%F-derivada de funï¿½o tensorial
+\newcommand {\dvf}[1] {\mathrm{D}_\mathrm{F}#1}
+%G-derivada de funï¿½o tensorial
+\newcommand {\dvg}[1] {\mathrm{D}_\mathrm{G}#1}
+%G-derivada material
+\newcommand {\dvgm}[1] {\mathrm{D\scriptstyle{r}}_\mathrm{G}#1}
+%G-derivada espacial
+\newcommand {\dvge}[1] {\mathrm{D\scriptstyle{s}}_\mathrm{G}#1}
+%G-derivada parcial
+\newcommand {\dvp}[2] {{\mathrm{\partial}\scriptstyle{#1}}_{\mathrm{G}}#2}
+%G-derivada generalizada de funï¿½o tensorial
+\newcommand {\dgg}[2] {\mathrm{D}^{#1}_\mathrm{G}#2}
+%F-derivada generalizada de funï¿½o tensorial
+\newcommand {\dgf}[2] {\mathrm{D}^{#1}_\mathrm{F}#2}
+% Gradiente Generalizado
+\newcommand {\grd}[3] {\mathrm{Grad}_{#1}\fua{#2}{#3}}
+% Divergente  Generalizado
+\newcommand {\drd}[3] {\mathrm{Div}_{#1}\fua{#2}{#3}}
+% Gradiente Generalizado qualquer
+\newcommand {\gqu}[2] {\mathrm{Grad}_{#1}{#2}}
+% Divergente  Generalizado qualquer
+\newcommand {\dqu}[2] {\mathrm{Div}_{#1}{#2}}
+%Classe de conjuntos
+\newcommand {\css}[1] {\mathfrak{#1}}
+%Corpo
+\newcommand {\cor}[1]{\boldsymbol{\mathcal{#1}}}
+%Espaï¿½ Medida
+\newcommand {\ems}[3]{\negmath{S}_{\cor{#1},\con{#2}}^\css{#3}}
+%Funï¿½o de conjunto
+\newcommand {\fuc}[1]{\mathsf{#1}}
+%Funï¿½o Tensorial Associada a Campo
+\newcommand {\fac}[1]{\mathfrak{#1}}
+%Espaço-tempo Newtoniano
+\newcommand {\enw}[3]{\lpa\epo{#1}\times #2 \rpa_{\con{#3}}}
+%Referencial
+\newcommand {\rfr}[2]{((\ele{#1},\con{#2}),\lch t_{\ele{#1}} \rch)}
+%Subbold
+\newcommand {\subold}[2]{{#1}_{\mbox{\boldmath \scriptsize{$\mathsf{#2}$}}}}
+%Subbold com subscrito
+\newcommand {\subolds}[3]{{#1}_{\mbox{\boldmath \scriptsize{$\mathsf{#2}$}}_{#3}}}
+%partícula
+\newcommand {\prt}[1]{\negsymbol{\mathfrak{#1}}}
+
+
+
