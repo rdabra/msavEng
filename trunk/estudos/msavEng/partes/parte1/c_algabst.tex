@@ -1,0 +1,649 @@
+\chapter{Coleções e Relações}
+
+
+Podemos dizer que é no mínimo inócuo estudar um determinado objeto matemático fundamental sem que ele esteja reunido com outros objetos matemáticos, compartilhando algum tipo de característica comum eleita para análise. Esse ajuntamento criterioso, que pode encerrar objetos e que define uma espécie de escopo, de abrangência, vamos denominá-lo coleção\index{coleção}. A partir daí, é possível estabelecer relações entre objetos coligidos, chamados \textsb{elementos}\index{elementos}, e também relações entre elementos de diferentes coleções. Tais relações\index{relação} são expressas por meio de \textsb{regras}\index{regra} que descrevem genericamente como elas devem ocorrer. Por conta de seu caráter genérico, essas regras, bem como coleções e elementos, são todos descritos segundo uma linguagem tipicamente algébrica.
+
+\section{Conjuntos}
+
+A coleção algébrica menos restrita em termos conceituais é denominada conjunto\index{conjunto}\rodape{O conceito de conjunto aqui considerado carece do rigor necessário a abordagens matemáticas mais formais. A definição de conjunto pela Teoria Axiomática de Conjuntos está fora do escopo deste livro. Ver \aut{Cameron}\cite{cameron_1999_1}.}, que pode conter os mais variados elementos distintos, numa quantidade finita ou infinita deles. Assim, de uma coleção finita $a,b,b,a,c$ podemos definir o conjunto finito $\lch \gloref{eleA},b,c \rch$, formado por três elementos distintos\footnote{Um conjunto não admite repetição de elementos. Ver \aut{Shen \& Vereshchagin}\cite{shen_2002_1}.}. Tal distinção, aqui representada por letras diferentes, depende das características do elemento eleitas para análise (fig. \ref{fg:conjunto}). Importante ressaltar que a sequência descritiva dos elementos de um conjunto não altera sua definição: por exemplo, as definições $\gloref{conjA}\gloref{defPor}\lch \ele{a},\ele{b}\rch$ e $\con{A}:=\lch \ele{b},\ele{a}\rch$ são idênticas. Por falar em comparações, os conjuntos $\con{A}$ e $\con{B}$ são ditos iguais, $\con{A}=\con{B}$, se os mesmos elementos os constituem; caso contrário, eles são diferentes: $\con{A}\neq\con{B}$.
+
+
+\begin{figure}[!ht]
+	\centering
+	\begin{center}
+		\scalebox{.72}{\input{partes/parte1/figs/c_algabst/conjunto.pstex_t}}
+	\end{center}
+	\titfigura{Neste exemplo, dois elementos são idênticos quando tiverem os mesmos número de lados, altura e cor de preenchimento. Se para a obtenção de $\varDelta$, o critério de seleção de objetos tiver sido ``\texttt{triângulos}'', $\varDelta$ é uma coleção; se tiver sido ``\texttt{triângulos de altura > 1}'', $\varDelta$ também é uma coleção; mas, se tiver sido ``\texttt{triângulos brancos, pretos ou cinzas, de altura > 1}'', $\varDelta$ é um conjunto.}\label{fg:conjunto}
+\end{figure}
+
+
+O \textsb{conjunto vazio}\index{conjunto!vazio} $\gloref{emptyset}$ é aquele desprovido de elementos e sua existência reforça no conceito de conjunto a ideia de seleção regida por algum critério: o conjunto vazio é resultado de uma seleção em cujo critério nenhum objeto se enquadra. Por exemplo, na coleção de todos os seres humanos vivos, o conjunto daqueles que possuem idade superior a duzentos anos é vazio; algo que não ocorreria fosse a idade mínima cento e um anos. No âmbito específico dos conjuntos, a citada ``seleção regida por critério'' é denominada \textsb{especificação}\index{conjunto!especificação de}, cuja sintaxe matemática é a seguinte:
+\begin{equation}
+\texttt{\emph{conjunto} }:=\,\,\,\lch  \texttt{ \emph{seleção} } : \texttt{ \emph{critério} }  \rch\,.
+\end{equation}
+A partir desse padrão e considerando $\ele{x}$ um elemento qualquer,
+\begin{equation}
+\con{P}:=\lch x\gloref{pertence} \gloref{inte}: x \bmod 2 = 0 \rch
+\end{equation}
+é o conjunto dos números pares. A especificação anterior lê-se ``o conjunto $\con{P}$ é definido pelos elementos pertencentes ao conjunto dos inteiros tal que o resto de sua divisão por dois é zero''.
+
+
+A relação entre um objeto e um conjunto consiste em averiguar, através da ideia intuitiva de pertencimento, se o primeiro é ou não elemento do segundo. Aliás, essa ideia é de fundamental importância na chamada Teoria Ingênua de Conjuntos\footnote{Ver \aut{Halmos}\cite{halmos_19742_1}.}. Dito isso, se $\ele{a}$ é elemento do conjunto $\con{A}$, dizemos que ele \textsb{pertence}\index{pertence} ao conjunto ou que $\ele{a}\in\con{A}\,$; caso contrário, dizemos que não pertence a $\con{A}$, ou $\ele{a}\gloref{notin}\con{A}\,$. Quando todos os elementos de um conjunto $\con{A}_1$ pertencem ao conjunto $\con{A}$, diz-se que $\con{A}_1$ é \textsb{subconjunto}\index{subconjunto} de $\con{A}$. Nessas condições, se $\con{A}_1\neq\con{A}$ diz-se que ele é \textsb{subconjunto próprio}\index{subconjunto!próprio} de $\con{A}$ ou que $\con{A}_1\gloref{subset}\con{A}$; mas, se $\con{A}_1$ for subconjunto de $\con{A}$ ou igual a $\con{A}$, ele é dito \textsb{subconjunto impróprio}\index{subconjunto!impróprio} de $\con{A}$, descrito $\con{A}_1\gloref{subseteq}\con{A}$. Assim, concluímos que todo conjunto é subconjunto impróprio dele mesmo. O conjunto $\emptyset$ não seria subconjunto impróprio de um conjunto qualquer $\con{A}$ se ele possuísse algum elemento que não pertencesse a $\con{A}$; como isso é impossível porque $\emptyset$ não possui elementos, então $\emptyset\subseteq\con{A}$.
+
+As relações entre conjuntos também dependem da ideia de pertencimento. A \textsb{união}\index{conjunto!união} dos conjuntos $\con{A}_1$ e $\con{A}_2$ é o conjunto $\con{A}_1\gloref{cup}\con{A}_2$, ao qual todos os elementos de $\con{A}_1$ e $\con{A}_2$ pertencem. Representamos $\gloref{bigcup}\con{A}_i$ a união de $n$ conjuntos quaisquer $\con{A}_i$. O conjunto definido pelos elementos que pertencem tanto a $\con{A}_1$ quanto a $\con{A}_2$ é a \textsb{intersecção}\index{conjunto!intersecção} $\con{A}_1\gloref{cap}\con{A}_2$. Em outras palavras, se o elemento $x \in \con{A}_1\cap\con{A}_2$ então $\lpa x \in \con{A}_1\rpa \gloref{wedge} \lpa x \in \con{A}_2\rpa$, onde $\wedge$ significa ``E'' em português. De maneira similar à união, $\gloref{bigcap}\con{A}_i$ é como escrevemos a intersecção de $n$ conjuntos $\con{A}_i$. Utilizando diagramas de Venn (figura \ref{fg:interDistrib}), pode-se constatar que a intersecção é distributiva na união, ou seja, que
+\begin{equation}
+A_1\cap\lpa A_2\cup A_3\rpa=\lpa A_1\cap A_2\rpa\cup\lpa A_1\cap A_3\rpa.
+\end{equation}
+Quando um conjunto $\con{A}_1\cap\con{A}_2$ é vazio dizemos que $\con{A}_1$ e $\con{A}_2$ são \textsb{disjuntos}\index{conjuntos!disjuntos}. Nessa situação, se $x\in\con{A}_1\cup\con{A}_2$ então
+$x\in\con{A}_1\gloref{vee} x\in\con{A}_2$, onde o símbolo $\vee$ significa ``OU'' em termos literais.
+\begin{figure}[!ht]
+\centering
+\begin{center}
+\scalebox{.72}{\input{partes/parte1/figs/c_algabst/interseccao.pstex_t}}
+\end{center}
+\titfigura{A intersecção é distributiva na união.}\label{fg:interDistrib}
+\end{figure}
+
+O conjunto \textsb{diferença}\index{conjunto!diferença} $\con{A}_1\gloref{setminus}\con{A}_2$ é composto pelos elementos de $\con{A}_1$ que não pertencem a $\con{A}_2$. Se o conjunto $\con{A}_1$ é subconjunto de $\con{A}$, então o conjunto $\gloref{complementar}_1:=\con{A}\setminus\con{A}_1$ é dito \textsb{complementar}\index{conjunto!complementar} de $\con{A}_1$ em $\con{A}$. Com isso, se $A_1$ e $A_2$ forem subconjuntos de $A$, é possível constatar, também por diagramas de Venn, que o complemento da união $\lpa A_1\cup A_2\rpa' = A_1'\cap A_2'$, que o complemento da intersecção $\lpa A_1\cap A_2\rpa' = A_1'\cup A_2'$ e que a diferença $A_1\setminus A_2= A_1\cap A_2'$. A partir dessas igualdades, podemos dizer que na união a diferença é distribuída conforme
+\begin{equation}\label{eq:distribUniao}
+A_1\setminus\lpa A_2\cup A_3\rpa=\lpa A_1\setminus A_2\rpa\cap \lpa A_1\setminus A_3\rpa\,,
+\end{equation}
+e na intersecção segundo
+\begin{equation}\label{eq:distriInters}
+A_1\setminus\lpa A_2\cap A_3\rpa=\lpa A_1\setminus A_2\rpa\cup \lpa A_1\setminus A_3\rpa\,.
+\end{equation}
+{\footnotesize
+\begin{proof}
+Sejam os conjuntos $A_1,A_2,A_3\subset A$. Temos então que $A_1\setminus\lpa A_2\cup A_3\rpa=A_1\cap\lpa A_2\cup A_3\rpa'=A_1\cap A_2'\cap A_3'$. Temos também que $\lpa A_1\setminus A_2\rpa\cap \lpa A_1\setminus A_3\rpa=A_1\cap A_2'\cap A_1\cap A_3'=A_1\cap A_2'\cap A_3'$. Concluímos então a igualdade \eqref{eq:distribUniao}. Para provarmos \eqref{eq:distriInters}, eis o seguinte:
+\begin{align}
+A_1\setminus\lpa A_2\cap A_3\rpa&= A_1\cap\lpa A_2\cap A_3\rpa'\nonumber\\
+&= A_1\cap\lpa A_2'\cup A_3'\rpa\nonumber\\
+&= \lpa A_1\cap A_2' \rpa \cup \lpa A_1\cap A_3'\rpa\nonumber\\
+&= \lpa A_1\setminus A_2\rpa\cup \lpa A_1\setminus A_3\rpa.\nonumber
+\end{align}
+\end{proof}}
+
+\section{Sequências}\index{sequência}
+
+Quando os elementos de uma coleção precisam estar ordenados, diz-se em Matemática que ela é uma sequência.
+Para tal ordenação, os elementos que constituem a sequência possuem suas posições respectivas, identificadas sequencialmente por números inteiros não negativos, definidores do conjunto $\gloref{naturais}$, chamados \textsb{índices}\index{índice}. Assim, todo elemento que constitui uma sequência possui uma determinada posição, rotulada por um índice único. A igualdade de duas sequências é alcançada quando ambas são formadas pelos mesmos elementos igualmente posicionados. Na sequência $\lpa a,b,c\rpa$ por exemplo, o elemento $b$ tem posição 2, caso o índice inicie em 1; disso resultando $\lpa a,b,c\rpa\neq\lpa a,c,b\rpa$. Por conta dessa necessária característica posicional, uma sequência pode se constituir de elementos indistintos: a coleção $a,b,c,a$ é válida como sequência $\lpa a,b,c,a\rpa$, onde os dois elementos $a$ possuem a primeira e a quarta posições.
+
+Se uma sequência é finita, ela é denominada \textsb{tupla}\index{tupla}. A tupla de um ú\-ni\-co elemento é denominada \textsb{mônada}\index{mônada}, de dois elementos \textsb{dupla}\index{dupla}, de três elementos \textsb{tripla}\index{tripla}, de quatro elementos \textsb{quádrupla}\index{quádrupla}, de $n$ elementos \textsb{ênupla}\index{ênupla} ou $n$-tupla, onde $n\in\mathbb{N}$. Denomina-se \textsb{transposição}\index{transposição} a troca de posições entre pares de elementos de uma $n$-tupla, $n>1$, mantendo-se os demais inalterados se for o caso. A \textsb{sequência vazia}\index{sequência!vazia} existe e é chamada $0$-tupla.
+
+Há ocasiões em que é bastante conveniente combinar elementos de vários conjuntos em tuplas. Como exemplo, posições num espaço tridimensional geralmente são representadas por meio de triplas, cada qual resultante da combinação de três conjuntos numéricos. A construção de tuplas desse tipo ocorre da seguinte forma: o número $n\geqslant 2$ de elementos das tuplas corresponde ao número de conjuntos que terão seus elementos combinados; os elementos de um conjunto específico terão uma única posição nas tuplas; uma dada combinação de $n$ elementos, cada qual pertencente a um dos $n$ conjuntos constitui uma única tupla. Dizemos que o conjunto formado por todas as $n$-tuplas assim construídas é o \textsb{produto cartesiano}\index{produto!cartesiano} dos $n$ conjuntos envolvidos. Nos termos da especificação de conjuntos, dada uma coleção $\con{A}_1,\con{A}_2,\cdots,\con{A}_n$ , o produto cartesiano
+\begin{equation}
+\con{A}_1 \gloref{times} \con{A}_2 \times \cdots \times \con{A}_n := \lch
+\lpa \ele{a}_1,\ele{a}_2,\cdots,\ele{a}_n \rpa : \ele{a}_i \in
+\con{A}_i\, , \,i=1,\cdots,n \rch \,,\, n \geqslant  2\, .
+\end{equation}
+A fim de simplificar a notação, reduzimos $\con{A}_1 \times \con{A}_2 \times \cdots \times \con{A}_n$ para $\gloref{crt}$. Nessas condições, se todos os $n$ conjuntos forem iguais a $A$, adota-se o formato $\gloref{crtEq}$, denominado \textsb{potência cartesiana}\index{potência!cartesiana}.
+
+Se pelo menos um dos conjuntos envolvidos no produto cartesiano for vazio, o resultado é sempre conjunto vazio: $A_1\times \emptyset=\emptyset\times A_1=\emptyset$. Porque a sequência é uma coleção onde a ordem de seus elementos importa, o produto cartesiano $A_1\times A_2$ é comutativo apenas quando um dos conjuntos for vazio ou se ambos forem iguais. Em outras palavras, se o conjunto $A_1\neq A_2\neq \emptyset$, então $A_1\times A_2\neq A_2\times A_1$.
+A ordenação dos elementos da sequência também determina a não associatividade do produto cartesiano, se os conjuntos envolvidos não forem vazios. Nessas condições, $\lpa A \times B\rpa \times C\neq A \times \lpa B \times C\rpa$ porque dupla de dupla e elemento não é a mesma coisa que dupla de elemento e dupla; ou seja, $\lpa\lpa a, b\rpa, c\rpa\neq \lpa a, \lpa  b, c\rpa\rpa$, onde $a,b,c$ são elementos quaisquer de $A,B,C$ respectivamente, mesmo que tais conjuntos não sejam disjuntos.
+
+O produto cartesiano é distributivo na união, intersecção e diferença de conjuntos. Assim, para quaisquer conjuntos $A,B,C$ podemos escrever o seguinte:
+\begin{align}
+A \times \lpa B \cup C\rpa  &= \lpa A \times B\rpa \cup \lpa A \times C\rpa\,;\label{eq:distUniao}\\
+A \times \lpa B \cap C\rpa  &= \lpa A \times B\rpa \cap \lpa A \times C\rpa\,;\label{eq:distInter}\\
+A \times \lpa B \setminus C\rpa  &= \lpa A \times B\rpa \setminus \lpa A \times C\rpa\,;
+\end{align}
+{\footnotesize
+\begin{proof}
+Sejam os conjuntos $A=\lch a_1,a_2,\cdots \rch$, $B=\lch b_1,b_2,\cdots \rch$ e $C=\lch c_1,c_2,\cdots \rch$. Para constatar \eqref{eq:distUniao}, tem-se o desenvolvimento a seguir:
+\begin{align}
+\lch a_1,a_2,\cdots \rch\times\lpa\lch b_1,b_2,\cdots \rch\cup\lch c_1,c_2,\cdots \rch\rpa=\lch a_1,a_2,\cdots \rch\times\lpa\lch b_1,b_2,\cdots,c_1,c_2,\cdots \rch\rpa= \nonumber\\
+=\lch \lpa a_1,b_1 \rpa,\lpa a_1,b_2 \rpa, \lpa a_2,b_1 \rpa,\lpa a_2,b_2 \rpa,\cdots,\lpa a_1,c_1 \rpa,\lpa a_1,c_2 \rpa, \lpa a_2,c_1 \rpa,\lpa a_2,c_2 \rpa,\cdots \rch=\nonumber\\
+=\lpa\lch a_1,a_2,\cdots \rch\times\lch b_1,b_2,\cdots \rch\rpa\cup\lpa\lch a_1,a_2,\cdots \rch\times\lch c_1,c_2,\cdots \rch\rpa\,.\nonumber
+\end{align}
+A igualdade \eqref{eq:distInter} pode ser demonstrada pelo seguinte raciocínio: se $\lpa a_1,x\rpa\in A\times\lpa B\cap C\rpa$ então, pelo conceito de intersecção e produto cartesiano,
+\begin{equation*}
+\lpa a_1\in A\rpa \wedge \lpa x\in\lpa B\cap C\rpa\rpa=\lpa a_1\in A\rpa\wedge\lpa x\in B\rpa \wedge \lpa x\in C\rpa\,.
+\end{equation*}
+Logo a dupla $\lpa a_1,x\rpa\in \lpa A\times B\rpa\wedge\lpa a_1,x\rpa\in \lpa A\times C\rpa$. Pode-se aplicar essa mesma estratégia para demonstrar a última igualdade: se  $\lpa a_1,x\rpa\in A\times\lpa B\setminus C\rpa$ então
+\begin{equation*}
+\lpa a_1\in A\rpa \wedge \lpa x\in\lpa B\setminus C\rpa\rpa=\lpa a_1\in A\rpa\wedge\lpa x\in B\rpa \wedge \lpa x\notin C\rpa\,.
+\end{equation*}
+Logo a dupla $\lpa a_1,x\rpa\in \lpa A\times B\rpa\wedge\lpa a_1,x\rpa\notin \lpa A\times C\rpa$.
+\end{proof}}
+
+
+\section{Funções}\index{função}
+
+O estabelecimento de relações entre entidades constitui o fundamento do que se conhece por linguagem, cuja finalidade é viabilizar o ato de pensar. No âmbito da linguagem algébrica, relacionar dois objetos significa descrever ou estabelecer algum elo matemático entre eles. Nesse contexto, os tipos de interação nesse par de objetos podem incluir vínculos de causa e efeito, transformações, dependências, atribuições, associações, entre outros. Essas correspondências são descritas por regras que especificam, através de expressões matemáticas, como serão construídos os pares de objetos relacionados.
+
+O conceito basilar que rege as relações algébricas chama-se função, \emph{aqui entendida como a atribuição sistemática de um e somente um valor a cada elemento de um dado conjunto}. Em termos mais precisos, dizemos que função é uma dupla $\lpa \con{D},f \rpa$, onde $\con{D}$ é o conjunto ao qual nos referimos, chamado \textsb{domínio}\index{domínio} da função, e $f$ é a regra que implementa a tal atribuição sistemática. Para evitar confusões, adotaremos aqui a notação consagrada que toma a regra por função, ou seja, $\gloref{funcao}$ neste caso representará, além de regra, a função $\lpa \con{D},f \rpa$ e a diferença dos significados dependerá do contexto. O objeto relacionado a um elemento $d\in D$ representamos $\gloref{valor}$, chamado \textsb{valor da função}\index{função!valor de} $f$ em $d$, a partir do qual pode-se escrever matematicamente a característica fundamental das funções, a saber, 
+\begin{equation}
+\fua{f}{\ele{d}_1}\neq\fua{f}{\ele{d}_2}\implies \ele{d}_1\neq \ele{d}_2\,,\,\,\forall\, d_1,d_2\in D. 
+\end{equation}
+Quando queremos dar enfoque ao domínio $\con{D}$ da função $f$, utilizamos a notação combinada $\gloref{dominio}$. Há também uma representação alternativa para a função $f$ que leva em conta o seu domínio:
+\begin{equation}
+\ele{d}\gloref{mapsto}\fua{f}{\ele{d}}\,,\, \gloref{forall} \, \ele{d} \in
+\con{D}\,,
+\end{equation}
+onde cada elemento $d$ relaciona-se com um valor $\fua{f}{d}$ por $f$. 
+
+A descrição da regra $f$ é feita via expressões algébricas, nas quais o símbolo representante de qualquer elemento do domínio é chamado \textsb{variável}\index{variável}. Para exemplificar, seja a função $\lpa \gloref{real},f \rpa$ tal que
+\begin{equation}
+ \fua{f}{x} = x^2 + 2\, ,
+\end{equation}
+onde a variável $x$, em ambos os lados, representa
+qualquer valor real. Essa sentença diz que o valor da função $f$,
+no lado esquerdo, é igual ao valor da expressão algébrica à
+direita. Dizemos também que a variável $\ele{x}$
+é o \textsb{argumento}\index{argumento} de $f$.
+
+Além do domínio, há pelo menos dois conjuntos notáveis adicionais no estudo das funções. O primeiro, o qual denominamos \textsb{imagem}\index{imagem} da função $f$, representado $\gloref{imagem}$, é formado por todos os valores da função $f$, ou
+\begin{equation}
+\con{R}_f :=  \lch \fua{f}{\ele{d}} : d \in D_f\rch \,.
+\end{equation}
+Quando se quer estudar a parcela do domínio de $f$ relacionada a um determinado subconjunto de sua imagem, falamos em \textsb{preimagem}\index{preimagem}. Melhor explicando, dado um conjunto
+$\con{B}\subseteq\con{R}_f$, a preimagem de $\con{B}$ é o conjunto $\gloref{preimagem}\subseteq\con{D}_f$ tal que
+\begin{equation}
+\con{R}^{-1}_{\con{B}} :=  \lch \ele{d}\in\con{D}_f:
+\fua{f}{\ele{d}}\in\con{B} \rch  \,.
+\end{equation}
+
+Se a função $f$ define valores distintos para os elementos de seu domínio, diz-se que ela é \textsb{inversível}\index{função!inversível} e a resultante correspondência elemento-valor é um para um, ou \textsb{unívoca}.  Em termos mais rigorosos, $f$ é inversível quando
+\begin{equation}\label{eq:funcaoInversivel}
+\ele{d}_1\neq\ele{d}_2 \gloref{implicabid} \fua{f}{\ele{d}_1}\neq\fua{f}{\ele{d}_2}
+,\,\forall\,  \ele{d}_1,\ele{d}_2 \in
+\con{D}_f.
+\end{equation}
+Quando os valores de $f$ inversível constituem uma imagem $\con{R}_f$, uma função $\gloref{inversa}$ é dita \textsb{inversa}\index{função!inversa} de $f$ se
+\begin{eqnarray}\label{eq:Inversa}
+\con{D}_\fun{f^{-1}}=\con{R}_f&\text{e}&\fua{f^{-1}}{\fua{f}{d}}=d\,,\,\,\forall d\in D_f\,.
+\end{eqnarray}
+Como consequência, temos que $f_{-1}$ também é inversível. Assim, considerando $g:=f^{-1}$ e sua imagem $R_g$, pode-se admitir que existe um $g^{-1}$ onde, segundo a definição de função inversa,
+\begin{align}
+\fua{g^{-1}}{\fua{g}{\fua{f}{d}}}=&\fua{f}{d}\nonumber\\
+\fua{g^{-1}}{\fua{f^{-1}}{\fua{f}{d}}}=&\fua{f}{d}\nonumber\\
+\fua{g^{-1}}{d}=&\fua{f}{d}\,,
+\end{align}
+para qualquer elemento $d\in D_f$; o que nos faz concluir que a função $f$ é a inversa de $f^{-1}$ e ambas portanto são ditas inversas entre si.
+
+Podemos dizer que a sobreposição da inversa de uma função à ela própria resulta uma função na qual cada um de seus valores é idêntico ao seu argumento respectivo. Generalizando essa característica, uma função desse tipo recebe o nome de \textsb{identidade}\index{função!identidade}, representada $i$, onde $\fua{i}{\ele{d}}=\ele{d}, \forall\, \ele{d}\in\con{D}_i$. Nesse caso, há sempre uma imagem de $i$ tal que $R_i=D_i$, permitindo concluir $i=i^{-1}$, uma vez que a função identidade é sempre inversível.
+
+\section{Mapeamentos}\index{mapeamento}
+
+Há um outro tipo de relação algébrica na qual ambos os objetos envolvidos são elementos de conjuntos e a entidade relacional é uma função. A intenção final é relacionar conjuntos, dispondo para isso de atributos tipicamente funcionais. Assim, diz-se de um conjunto-origem $U$, sobre o qual uma função $f$ ``atua'' e um conjunto-destino $V$, ao qual os valores de $f$ pertencem. A essa relação denominamos mapeamento quando o domínio $D_f=U$ e a imagem $R_f\subseteq V$, onde $V$ é chamado \textsb{contradomínio}\index{contradomínio}. Em termos matemáticos, o mapeamento é uma tripla $\lpa U, V, f\rpa$ onde se diz que $f$ mapeia $U$ para $V$ ou que
+\begin{equation}
+\ele{u} \mapsto \fua{f}{\ele{u}}\in \con{V}\,,\,\forall
+\ele{u}\in\ele{U}\,.
+\end{equation}
+A fim de enfatizar o caráter de correspondência origem-destino entre elementos de conjuntos, preferimos utilizar a notação $\map{f}{\con{U}}{\con{V}}$ ao invés da tripla $\lpa U, V, f\rpa$.
+
+
+Se a imagem $R_f$ for igual ao contradomínio $V$, o mapeamento é chamado \textsb{sobrejetor}\index{mapeamento!sobrejetor} e a função $f$ uma \textsb{sobrejeção}\index{sobrejeção}, pela qual fica implícita a existência de uma imagem. Agora, quando a função $f$ é inversível, dizemos de um mapeamento \textsb{injetor}\index{mapeamento!injetor} e denominamos $f$ uma \textsb{injeção}\index{injeção}. Considerando a imagem da injeção $f$, é possível definir o mapeamento $\map{f^{-1}}{\con{R}_f}{\con{U}}$, onde $\con{R}_f$, domínio de $f^{-1}$, é subconjunto impróprio de $V$. A função $f$ pode ser, cumulativamente, uma sobrejeção e uma injeção, quando recebe o nome de \textsb{bijeção}\index{bijeção} e o mapeamento respectivo é dito \textsb{bijetor}\index{mapeamento!bijetor}. A bijeção $f$ implica invariavelmente a existência do mapeamento $\map{f^{-1}}{\con{V}}{\con{U}}$, que também é bijetor.
+
+\begin{figure}[!ht]
+\centering
+\begin{center}
+\scalebox{.70}{\input{partes/parte1/figs/c_algabst/mapeamentos.pstex_t}}
+\end{center}
+\titfigura{As funções $f$ e $g$ mapeiam $U$ para $V$, sendo $f$ uma injeção e $g$ uma sobrejeção. Se a imagem $R_f$ fosse igual ao contradomínio $V$, $f$ seria uma bijeção.}\label{fg:mapeamentos}
+\end{figure}
+
+Dizemos que o mapeamento $\map{f}{\con{U}}{\con{V}}$ é uma \textsb{operação}\index{operação} e sua função um \textsb{operador}\index{operação} se o domínio $U=V^n$. Nesse caso, quando $n$ assume os valores 1, 2, 3 e 4, operação e operador são classificados \textsb{unários}\index{operação!unária}, \textsb{binários}\index{operação!binária}, \textsb{ternários}\index{operação!ternária} e \textsb{quaternários}\index{operação!quaternária} respectivamente; quando $n>4$, eles são chamados $n$\textsb{-ários}\index{operação!$n$-ária}. Os argumentos do operador são denominados \textsb{operandos}\index{operando} e o inteiro $n$ define a quantidade deles. Interessante notar que a operação injetora unária $\map{f}{\con{V}}{\con{V}}$ é sempre sobrejetora, pois a condição de inversibilidade \eqref{eq:funcaoInversivel} garante que um par qualquer de elementos distintos de $V$ corresponde a um par de elementos distintos de $V$ pela ação de $f$; assim, a imagem $R_f=V$. Por conta disso, podemos afirmar que todo operador injetor unário é uma bijeção.
+
+
+No final da seção anterior, consideramos superficialmente uma tal ``sobreposição'' de funções; algo relativo a uma função que tem como argumento o valor de uma outra função.  Esse importante conceito, em termos mais precisos, pode ser apresentado como se segue. Sejam os três mapeamentos $\map{\fun{g}}{\con{U}}{\con{V}}$, $\map{f}{\con{V}}{\con{W}}$ e $\map{\fun{h}}{\con{U}}{\con{W}}$ onde $\fua{h}{\ele{u}}=\fua{f}{\fua{g}{\ele{u}}}, \forall \, \ele{u}
+\in U$. Nessas condições, diz-se que $h$ é a função \textsb{composta}\index{função!composta} de $f$ e $g$, representada $\fun{f \circ\fun{g}}$. Notar que a composição de funções só é comutativa numa situação particular onde as regras e os domínios envolvidos permitem. Além disso, temos as seguintes propriedades:
+\begin{itemize}\label{prop:Composicao}
+	\setlength\itemsep{.1em}
+	\item[i.] Dado $\map{\fun{k}}{\con{W}}{\con{L}}$, tem-se
+	$\fun{k}\circ\lpa f\circ\fun{g}\rpa=\lpa\fun{k}\circ f\rpa\circ\fun{g}$ ;
+	\item[ii.] Se $f$ e $\fun{g}$ forem bijeções, $f\circ\fun{g}$ também é uma bijeção e
+	\begin{equation}
+	\begin{array}{rcl}
+	\lpa f\circ\fun{g}\rpa^{-1}& = & \fun{g}^{-1}\circ f^{-1}, \nonumber \\
+	f\circ f^{-1} & = & \fun{i}_\con{W}, \nonumber \\
+	f^{-1}\circ f & = & \fun{i}_\con{V}\,; \nonumber \\
+	\end{array}
+	\end{equation}
+	\item[iii.]
+	$f\circ\fun{i}_\con{V}=i_\con{W}\circ f=f$.
+\end{itemize}
+
+{\footnotesize
+\begin{proof}
+Utilizando a definição de função composta em cada par de funções alternadamente, fica demonstrado o primeiro item. No segundo, se é unívoca a relação entre $v$ e $u$ em $v=\fua{g}{u}$ para qualquer $v\in V$, então em $\fua{f^{-1}}{w}=\fua{g}{u}$ ou $w=\fua{f}{\fua{g}{u}}$ a relação entre $u$ e $w$ também é unívoca para qualquer $w\in W$; logo $f\circ g$ é uma bijeção. Agora, considerando $u$, $v$ e $w$ elementos quaisquer de $U$, $V$ e $W$ respectivamente, a primeira igualdade em ii é comprovada da seguinte forma:
+\begin{equation*}
+\fua{\lpa f\circ\fun{g}\rpa^{-1}}{w}= u = \fua{g^{-1}}{v} = \fua{g^{-1}}{\fua{f^{-1}}{w}}=\fua{g^{-1}\circ f^{-1}}{w}  
+\end{equation*}
+e as demais igualdades são consequências triviais das definições de função composta e identidade.
+\end{proof}}
+
+\section{Grupos}\index{grupo}
+
+A entidade algébrica mais fundamental que congrega os conceitos de coleção e relação chama-se grupo, definido por um conjunto e um mapeamento. Os elementos que constituem o conjunto estão todos inter-re\-la\-cio\-na\-dos pelo mapeamento, expresso por uma operação binária cujo operador deve obedecer a algumas restrições. O conceito subjacente se apoia na ``conciliação'' de dois elementos quaisquer do conjunto, de tal forma que ela se relacione funcionalmente com um elemento desse mesmo conjunto.
+
+Adição e multiplicação de números reais, composição de funções inversíveis, subtração de inteiros são exemplos de ações matemáticas que o conceito de grupo pretende generalizar: todas elas são associativas, admitem um elemento identidade e um elemento inverso. Assim, podemos definir em termos rigorosos o conceito até agora exposto de forma intuitiva. Sejam um conjunto não vazio $\gloref{grupo}$ e uma operação binária
+$\map{\ast}{\con{G}\times\con{G}}{\con{G}}$, abreviada de
+$\fua{\ast}{\ele{g}_1,\ele{g}_2}$ para $\ele{g}_1\ast\ele{g}_2$,
+onde $\ele{g}_1,\ele{g}_2\in\con{G}$. Denomina-se grupo o par
+ordenado $\lpa \con{G},\ast \rpa$ quando forem respeitados os axiomas
+\begin{itemize}\label{ax:grupo}
+\setlength\itemsep{.1em}
+    \item[i.] Associatividade, se $\ele{g}_1\ast\lpa \ele{g}_2 \ast \ele{g}_3 \rpa =
+    \lpa \ele{g}_1 \ast \ele{g}_2 \rpa \ast \ele{g}_3\, , \forall \, \ele{g}_1,\ele{g}_2,\ele{g}_3 \in
+    \con{G}$;
+    \item[ii.] Elemento identidade, se $\exists! \, \ele{e}\in\con{G}$ tal que $ \ele{g}_1\ast\ele{e}=\ele{e}\ast\ele{g}_1=
+     \ele{g}_1\,,\forall \, \ele{g}_1 \in \con{G}$;
+    \item[iii.] Elemento inverso, se $\exists! \, \ele{b}\in\con{G}$ tal que
+$\ele{g}_1 \ast \ele{b}= \ele{b} \ast \ele{g}_1 = \ele{e}$, $\forall \ele{g}_1\neq\ele{e}$.
+\end{itemize}
+Como exemplo, o conjunto $P$ formado por todos os operadores unários inversíveis, atuantes num conjunto $V$, constitui o grupo $\lpa \con{P},\circ\rpa$, segundo as propriedades da composição de funções.
+
+Em termos notacionais, quando for importante explicitar o operador, utilizaremos a representação $\lpa \con{G},\ast \rpa$ para grupos, caso contrário falaremos simplesmente do grupo $G$, que terá tratamento indistinto de conjunto a fim de evitar abuso notacional. Considerando então esse grupo, há operações $\ast$, como a adição e a multiplicação de números reais, que obedecem também ao axioma da
+\begin{itemize}
+    \item[i.] Comutatividade: $\ele{g}_1\ast \ele{g}_2= \ele{g}_2\ast \ele{g}_1\, ,
+\forall \, \ele{g}_1,\ele{g}_2 \in \con{G}$,
+\end{itemize}
+característica que torna $G$ um grupo \textsb{comutativo}\index{grupo!comutativo} ou \textsb{abeliano}\index{grupo!abeliano}. Em contrapartida, os grupos onde a ordem dos operandos afeta o valor de seu operador são denominados \textsb{não-abelianos}\index{grupo!não-abeliano} ou \textsb{não-co\-mu\-ta\-ti\-vos}\index{grupo!não-comutativo}. O grupo abeliano que implementa o conceito genérico da adição é denominado \textsb{aditivo}\index{grupo!aditivo} e aquele que implementa o da multiplicação é \textsb{multiplicativo}\index{grupo!aditivo}, ambos representados respectivamente por $\lpa \con{G},+ \rpa$ e $\lpa \con{G},\cdot\rpa$.
+Adotamos as notações $\ele{g}_1^{-1}$ e $-\ele{g}_1$ como elementos inversos de ${\ele{g}_1}\in G$ no contexto das operações de multiplicação e adição respectivamente.
+
+O fato de conjuntos constituírem grupos não impede que a partir deles sejam definidos mapeamentos. Quando isso ocorre, fica claro que o argumento da função envolvida deve admitir qualquer valor da operação definida no domínio, pois o agrupamento de todos esses valores constitui o próprio domínio. Em outras palavras, dado o mapeamento $\map{h}{\con{G}}{\con{W}}$, onde os conjuntos envolvidos definem os grupos $\lpa G, \ast\rpa$ e $\lpa W, \rtimes\rpa$, tem-se que qualquer elemento $g\in G$ é valor de algum $g_1\ast g_2$, onde $g1,g2\in G$. Portanto, fica evidente que o valor $\fua{h}{g}=\fua{h}{g_1\ast g_2}$.
+
+Pode ocorrer que a operação do grupo $W$ entre os valores $\fua{h}{g_1}$ e $\fua{h}{g_2}$, ou seja $\fua{h}{g_1}\rtimes\fua{h}{g_2}$, resulte igual ao valor $\fua{h}{g_1\ast g_2}$. Além disso, se $h$ mapear o elemento identidade de $G$ para o de $W$, diz-se que esses grupos são, no contexto operacional, estruturalmente similares ou \textsb{homomórficos}\index{grupo!homomórfico} em $h$. Em linguagem matemática, a função $\fun{h}$ em
+$\map{h}{\con{G}}{\con{W}}$ é um \textsb{homomorfismo de grupo}\index{grupo!homomorfismo de} se fizer os grupos $G$ e $W$ homomórficos, ou seja se
+\begin{itemize}
+\setlength\itemsep{.1em}
+ \item[i.] $\fua{h}{\ele{g}_1\ast\ele{g}_2} =
+\fua{h}{\ele{g}_1}{\rtimes}\,\fua{h}{\ele{g}_2}\, ,
+\,\forall\,\ele{g}_1,\ele{g}_2\in\con{G}$ e
+ \item[ii.] $\fua{h}{\ele{e}_\con{G}} = \ele{e}_\con{W}$, onde
+$\ele{e}_\con{G}\in\con{G}$ e $\ele{e}_\con{W}\in\con{W}$ são
+elementos identidade.
+\end{itemize}
+Um homomorfismo-bijeção é dito um \textsb{isomorfismo}\index{grupo!isomorfismo de} e os grupos envolvidos são \textsb{isomórficos}\index{grupo!isomórfico} em $h$. Se a função $f$ no mapeamento $\map{f}{\con{G}}{\con{G}}$ for um isomorfismo, então ela é denominada um \textsb{automorfismo}\index{grupo!automorfismo de}.
+
+Vamos considerar agora o mapeamento $\map{\fun{k}}{\crt{G}{n}}{\con{W}}$, onde o domínio é um produto cartesiano de $n$ conjuntos que definem cada qual um grupo. Nesse caso, diz-se que $k$ é homomorfismo de grupo se, para todo grupo $G_i$ e quaisquer elementos $g_{i_1},g_{i_2}\in G_i$,
+\begin{align}
+  \lefteqn{\fua{k}{\ele{g}_1,\cdots,g_{i_1}\ast g_{i_2},\cdots,\ele{g}_n}=} & & \nonumber\\
+  & &\fua{k}{\ele{g}_1,\cdots,g_{i_1},\cdots,\ele{g}_n}\rtimes\fua{k}{\ele{g}_1,\cdots,g_{i_2},\cdots,\ele{g}_n}
+\end{align}
+e também
+\begin{equation}
+\fua{k}{e_{G_1},\cdots,e_{G_n}} = e_W\,.
+\end{equation}
+Da mesma forma, $\con{k}$ é um isomorfismo se for um homomorfismo-bijeção.
+
+Neste nosso estudo, uma relação muito importante que precisa ser estabelecida é aquela que envolve um conjunto algébrico, definidor de um grupo, e um conjunto geométrico: no primeiro, é possível operar seus elementos conforme já mostramos; no segundo, podem ser observados tamanhos, formas e posições. Uma estratégia para se realizar consistentemente essa relação algébrico-geométrica é utilizar uma função denominada \textsb{ação de grupo}\index{ação de grupo}. Seja então $\map{\varphi}{\con{G}\times\con{B}}{\con{B}}$, onde $G$ é um grupo e $B$ um conjunto não vazio, geométrico ou não. Diz-se que a função $\varphi$ é a ação do grupo\rodape{Em termos mais precisos, diz-se que $\varphi$ é uma
+ação de grupo \textsb{à esquerda}\index{ação de grupo!à esquerda},
+já que se pode definir uma ação $\tilde{\varphi}$ à direita onde
+$\map{\tilde{\varphi}}{\con{B}\times\con{G}}{\con{B}}$. Neste trabalho, tal rigor não é necessário.} $G$ sobre $B$ se ela respeitar os axiomas
+\begin{itemize}
+\setlength\itemsep{.1em}
+    \item[i.]  Elemento identidade, $ \fua{\varphi}{\ele{e},\ele{b}}=\ele{b}\,,
+\forall \, \ele{b} \in \con{B}$, e
+    \item[ii.]  Associatividade, $ \fua{\varphi}{\ele{g}_1,\fua{\varphi}{\ele{g}_2,\ele{b}}}=
+\fua{\varphi}{\ele{g}_1\ast\ele{g}_2,\ele{b}}, \forall \, \ele{b}
+\in \con{B},\,\forall\, \ele{g}_1,\ele{g}_2\in\con{G}$.
+\end{itemize}
+Quando isso ocorre, preserva-se a estrutura do conjunto $B$, agora denominado um \textsb{$G$-conjunto}\index{conjunto!G-}, pois permanecem inalterados os atributos matemáticos que o caracterizam. Nessas condições, a ação de grupo $\varphi$ é dita \textsb{simplesmente transitiva}\index{ação de grupo!simplesmente transitiva} se
+\begin{equation}
+\exists !\,\, \ele{g}\in{\con{G}}\textrm{ tal que } \fua{\varphi}{g,\ele{b}_1}=\ele{b}_2,\,\forall\, \ele{b}_1,\ele{b}_2\in\con{B}\,.
+\end{equation}
+Dessa definição, pode-se concluir que \emph{numa ação de grupo simplesmente transitiva, quando fixamos um determinado elemento $b_1$, há uma correspondência unívoca entre os elementos $g$ e $b_2$ dos conjuntos envolvidos}.
+
+Pode ocorrer que um conjunto $R$ defina um grupo abeliano aditivo e multiplicativo simultaneamente, no qual a multiplicação de adições resulte na adição de multiplicações, ou seja, na distributividade
+\begin{equation}
+\ele{r}\cdot\gloref{sum}r_i
+=\sum_{i=1}^{n}r\cdot r_i\,\, , \forall \,
+\ele{r},\ele{r}_i \in
+    \con{R}\,\text{ e } n\in\gloref{inteirosPosNNulo}.
+\end{equation}
+Nessas circunstâncias, a tripla $\lpa R, +, \cdot \rpa$ é denominada \textsb{campo}\index{campo}, abreviada por $\gloref{campo}$. Quando for conveniente, a fim de simplificar a notação, $\mathcal{R}$ também representará o conjunto $R$ definidor do campo. Costuma-se dizer que um elemento de $\mathcal{R}$ é um \textsb{escalar}\index{escalar}, do qual $x\in\real$ e $c\in\gloref{complexo}$ são exemplos.
+
+
+\section{Arrays}\index{array}
+
+Já sabemos que sequências são coleções de elementos ordenados; ou, mais precisamente, elementos arranjados em fila, cada qual dotado de uma posição rotulada por um índice. Generalizando essa ideia, pode-se admitir coleções de elementos que estão arranjados num número maior de perspectivas, como a disposição em tabela (bidimensional) por exemplo.
+
+Seja então uma coleção $H$ cujos elementos são escalares, arranjados segundo o mapeamento $\map{\fun{h}}{\crt{N}{q}}{\mathcal{R}}$, onde a função $h$ é chamada \textsb{endereçamento}\index{array!endereçamento de} e cada $N_i = \lch 1,2,\cdots,n_i \rch$ é um subconjunto finito de $\mathbb{N}^*$ formado por números ordinais\footnote{Números inteiros destinados a rotular posições em sequência.}. Nessas condições, chamamos a coleção $H$ de array\rodape{Na falta de um termo adequado em português, optou-se pela denominação inglesa.}, representado por $\gloref{array}$, cujos elementos escalares $\fua{\fun{h}}{( i_1,\cdots,i_q)}$ são escritos nas notações $h_{i_1\cdots i_q}$ ou  $\gloref{elArray1}$, onde os índices subscritos explicitam a posição do escalar no arranjo. A descrição das perspectivas ou a \textsb{dimensão}\index{array!dimensão de} de um array é dada pela ênupla $(n_1 , \cdots , n_q)$, ou pela representação mais usual $n_1\times\cdots\times n_q\,$.
+
+Entre outras operações, os arrays podem ser submetidos a adições e multiplicações. Se o array $\mat{A+B}$ é a soma dos arrays $\mat{A}$ e $\mat{B}$, então os três arrays têm a mesma dimensão $n_1\times\cdots\times n_q\,$ e cada elemento
+\begin{equation}\label{eq:adicaoArray}
+\mat{(A+B)}_{i_1\cdots i_q}=\mat{A}_{i_1\cdots i_q}+\mat{B}_{i_1\cdots i_q}\,.
+\end{equation}
+A multiplicação $\mat{AB}$, por sua vez, exige que os $q$ últimos termos da dimensão de $\mat{A}$ e os $q$ primeiros termos da dimensão de $\mat{B}$ sejam iguais; em outras palavras, se $m_1\times\cdots\times
+m_p\times n_1\times\cdots\times n_q$ é a dimensão de $\mat{A}$ então $n_1\times\cdots\times n_q\times l_1\times\cdots\times l_s$ é a dimensão de $\mat{B}$. Assim, o array $\mat{AB}$ resulta com dimensão $m_1\times\cdots\times m_p\times l_1\times\cdots\times l_s$ e cada elemento
+\begin{equation}
+\lpa\mat{AB}\rpa_{i_1\cdots i_pj_1\cdots j_s} =
+\sum_{k_1=1}^{n_1}\cdots\sum_{k_q=1}^{n_q} \mat{A}_{i_1\cdots
+	i_pk_1\cdots k_q}\mat{B}_{k_1\cdots k_qj_1\cdots j_s}\,.
+\end{equation}
+Também é possível proceder à multiplicação de um escalar $\alpha$ por um array qualquer $\mat{A}$ de dimensão $n_1\times\cdots\times n_q$ segundo
+\begin{equation}
+\lpa\alpha\mat{A}\rpa_{i_1\cdots i_q} := \alpha \cdot \mat{A}_{i_1\cdots
+	i_q}\,.
+\end{equation}
+Essa definição de multiplicação para o caso $\alpha=-1$, quando se obtém o inverso aditivo $-\mat{A}$, aliada à adição definida em \eqref{eq:adicaoArray}, permite dizer que o conjunto $Y$ dos arrays de dimensão $n_1\times\cdots\times n_q$ constitui um grupo abeliano aditivo se considerarmos a existência nesse conjunto de um \textsb{array nulo}\index{array!nulo} $0$ constituído apenas por escalares nulos. Como não é possível obter o inverso multiplicativo para todos elementos de $Y$, este conjunto não define um grupo multiplicativo.
+
+Um exemplo de array que é muito utilizado para viabilizar a notação indicial de grandezas e operações algébricas complicadas é o chamado \textsb{Símbolo de Levi-Civita}\index{Levi-Civita!Símbolo de} ou \textsb{Símbolo de Permutação}\index{Permutação!Símbolo de}, representado pela letra $\epsilon$,  cujos escalares são definidos da seguinte forma:
+\begin{equation}
+    \epsilon_{i_1\cdots i_n}=
+\begin{dcases}
+    \lpa-1\rpa^{\fua{\alpha_p}{ 1,\cdots,n }}  & \text{se } \exists\,\,\fua{p}{1,\cdots,n }=\lpa
+i_1,\cdots,i_n\rpa\\\
+0 & \text{se }  \nexists\,\,
+\fua{p}{1,\cdots,n }=\lpa i_1,\cdots,i_n\rpa
+\end{dcases}\,,
+\end{equation}
+onde a função $p$ permuta os elementos da ênupla $(1,\cdots,n)$. Nesse caso desse array, o domínio de endereçamento é $N^n$, tal que o conjunto de ordinais $N = \lch 1,2,\cdots,n \rch$. O termo $\fua{\alpha_p}{ 1,\cdots,n }$ significa o número de transposições realizadas em $\lpa 1,\cdots,n \rpa$, após as quais a ênupla resultante é $\fua{p}{1,\cdots,n }$. Por conta de sua definição, dizemos que a dimensão do Símbolo de Levi-Civita é $n\times\cdots\times n$, com $n$ repetido $n$ vezes; e a este número $n$ denominados \textsb{ordem}. Assim, o array $\epsilon$ de ordem dois resulta num arranjo tabular; mais precisamente,
+\begin{equation}
+\epsilon=
+\begin{bmatrix}
+    0 & 1  \\
+    -1 & 0
+\end{bmatrix}\,.
+\end{equation}
+
+Há um outro array notável $\delta$, também bastante utilizado em notações indiciais, chamado \textsb{Delta de Kronecker}\index{Delta de Kronecker}. Para defini-lo, o domínio do endereçamento precisa ser $N^{2q}$, onde a potência é um número par e o conjunto $N = \lch 1,2,\cdots,n \rch$. Nesse contexto, cada um de seus elementos
+\begin{equation}
+    \delta_{i_1\cdots i_{q}j_1\cdots j_{q}}:=
+\begin{dcases}
+    \lpa-1\rpa^{\fua{\alpha_p}{ j_1,\cdots,j_q }}  & \text{se } \exists\,\,\fua{p}{j_1,\cdots,j_{q} }=\lpa
+i_1,\cdots,i_q\rpa\\
+0 & \text{se }  \nexists\,\,
+\fua{p}{j_1,\cdots,j_{q} }=\lpa
+i_1,\cdots,i_q\rpa
+\end{dcases}\,.
+\end{equation}
+Interessante notar que para construir $\delta$ é necessário especificar o número $2q$ de termos da dimensão e o número $n$ de cada conjunto de ordinais, enquanto $\epsilon$ requer apenas a ordem, que se iguala a ambos os números citados. No caso particular de $q=1$, a dimensão do Delta de Kronecker fica $n\times n$ e assim o arranjo resulta tabular, conforme se observa em
+\begin{equation}\label{eq:matrizIdentidade}
+\delta=
+\begin{bmatrix}
+    1      & 0       & \cdots & 0\\
+    0      & 1       & \ddots & \vdots\\
+	\vdots & \ddots  & \ddots & 0\\
+	0      & \cdots  & 0      & 1
+\end{bmatrix}\,.
+\end{equation}
+
+Para efetuar manipulação de índices, o Delta de Kronecker com dimensão $n\times n$ possui a seguinte propriedade que viabiliza o desenvolvimento de expressões e diversas demonstrações apresentadas ao longo do texto:
+\begin{equation}
+\sum_{i_q=1}^{n}\mat{A}_{i_1\cdots i_q}\delta_{i_qj}=\mat{A}_{i_1\cdots i_{q-1}j}\,,
+\end{equation}
+onde $\mat{A}$ é um array de dimensão $n\times\cdots\times n$, com $n$ repetido $q$ vezes. Nessa igualdade, o índice $i_q$ do array, sobre o qual o somatório é realizado, resulta trocado pelo índice $j$ do Delta de Kronecker. Da mesma forma,
+\begin{equation}
+\sum_{i_1=1}^{n}\delta_{ji_1}\mat{A}_{i_1\cdots i_q}=\mat{A}_{ji_2\cdots i_q}\,.
+\end{equation}
+
+Neste ponto convém dizer que todo o array de dimensão $n_1\times n_2$, onde os elementos ficam dispostos em formato tabular, é chamado \textsb{matriz}\index{matriz}, cujo escalares são endereçados através de linhas e colunas: o escalar de posição $ij$ diz respeito à linha $i$ e coluna $j$. Caso $n_1=n_2=n$, diz-se que a matriz é \textsb{quadrada}\index{matriz!quadrada} de ordem $n$. A partir do já citado grupo abeliano aditivo $Y$ de arrays, consideremos paras as definições que se seguem o conjunto $M\subset Y$ formado por matrizes e o conjunto $\overline{M}\subset M$ formado por matrizes quadradas de ordem $n$. Um elemento de $\overline{M}$, por exemplo, é o Delta de Kronecker com dimensão $n\times n$, representado em \eqref{eq:matrizIdentidade}, o qual chamamos \textsb{matriz identidade}\index{matriz!identidade} $\mat{I}$ porque $\mat{A}\mat{I} = \mat{A}$.
+
+
+Se existir uma matriz $\mat{B}\in\overline{M}$ tal que $\mat{A}\mat{B} = \mat{I}$, dizemos que ela é a \textsb{inversa}\index{matriz!inversa} de $\mat{A}$, representada $\mat{A}^{-1}$. A condição de inversibilidade de uma matriz depende do valor de uma função chamada \textsb{determinante}\index{determinante}. Essa função, que define o mapeamento $\map{\gloref{determ}}{\overline{M}}{\mathcal{R}}$, onde $\mathcal{R}$ é campo real ou complexo, tem sua regra descrita por
+\begin{equation}\label{eq:Determinante}
+\det\mat{X} = \frac{1}{n!}\sum_{i_1=1}^n\cdots\sum_{i_n=1}^n
+\sum_{j_1=1}^n\cdots\sum_{j_n=1}^n\epsilon_{i_1\cdots
+	i_n}\epsilon_{j_1\cdots j_n}
+\prod_{k=1}^{n}\mat{X}_{i_kj_k}\,,
+\end{equation}
+a qual denominamos \textsb{fórmula de Leibniz}\index{fórmula!de Leibniz}. Se
+$\det\mat{X}=0$, a matriz $\mat{X}$ é dita
+\textsb{singular}\index{matriz!singular} ou \textsb{não-inversível}\index{matriz!não-inversível}; caso contrário, ela é dita \textsb{não-singular}\index{matriz!não-singular} ou
+\textsb{inversível}\index{matriz!inversível}.  Pela definição apresentada, pode-se obter que o determinante tem valor zero quando seu argumento é a matriz nula e o valor 1 no caso da matriz identidade. Além disso, o determinante de matrizes quadradas tem como principal característica ``preservar'' operações de multiplicação, ou seja, o determinante do produto é o produto dos determinantes, $\det{\mathrm{AB}}=\det{\mathrm{A}}\cdot\det{\mathrm{B}}$. Por conta dessa propriedade e como $\det{\mat{I}}=1$, podemos afirmar que o determinante é um homomorfismo de grupo, pois  $\overline{M}$ é subconjunto do grupo abeliano aditivo $Y$ de arrays. Por falar nisso e relembrando as classificações de grupos, concluímos que um subconjunto de $\overline{M}$ formado apenas por matrizes inversíveis constitui um grupo multiplicativo não-comutativo.
+
+{\footnotesize
+\begin{proof}
+Queremos demonstrar a propriedade multiplicativa do determinante; e para tal, precisamos de uma definição preliminar, apresentada a seguir. Uma matriz inversível é chamada \textsb{elementar}\index{matriz!elementar} quando difere da matriz identidade por uma das seguintes ações de linha: troca, multiplicação por escalar ou adição pelo múltiplo de uma outra linha. A multiplicação de uma matriz elementar $\mat{E}$ por uma outra qualquer $\mat{B}\in\overline{M}$ significa realizar em $\mat{B}$ a mesma ação de linha que foi realizada em $\mat{I}$ para se chegar a $\mat{E}$. Numa matriz inversível $\mat{A}$ é possível realizar sucessivas ações de linha que resultam na matriz identidade. Isso significa dizer que
+\begin{equation*}
+\mat{E}_r\mat{E}_{r-1}\cdots\mat{E}_{2}\mat{E}_{1}\mat{A}=\mat{I}\,,
+\end{equation*}
+onde as matrizes $\mat{E}_i$ são elementares. Logo,
+\begin{equation*}
+\mat{A}=\mat{E}_{1}^{-1}\mat{E}_{2}^{-1}\cdots\mat{E}_{r-1}^{-1}\mat{E}_r^{-1}\,,
+\end{equation*}
+que é a decomposição de $\mat{A}$ em matrizes elementares, pois a inversa de uma matriz elementar também é elementar. O determinante de uma matriz $\mat{A}'$ que resulta de uma ação de linha sobre a matriz $\mat{A}$ é dado por $\det{\mat{A}'}=\alpha\det{\mat{A}}$, onde $\alpha\in\real$. Assim, podemos generalizar afirmando que $\det{\mat{E}}=\beta\det{\mat{I}}=\beta$, onde $\beta\in\real$. Reunindo tudo que foi apresentado até agora, podemos dizer que
+\begin{equation*}
+\det{\mat{AB}}=\det{\mat{E}_{1}^{-1}\mat{E}_{2}^{-1}\cdots\mat{E}_{r-1}^{-1}\mat{E}_r^{-1}\mat{B}}=\kappa\det{\mat{B}}\,,
+\end{equation*}
+onde $\kappa\in\real$ resulta das $r$ ações de linha em $\mat{B}$. Também procede afirmar que
+\begin{equation*}
+\det{\mat{E}_{1}^{-1}\mat{E}_{2}^{-1}\cdots\mat{E}_{r-1}^{-1}\mat{E}_r^{-1}\mat{I}}=\kappa\det{\mat{I}}=\kappa\,.
+\end{equation*}
+Logo, concluímos que $\det{\mat{AB}}=\det{\mat{A}}\det{\mat{B}}$. Agora vamos supor que $\mat{A}$ seja singular. Nesse caso, fica claro que $\det{\mat{A}}\det{\mat{B}}=0$. Se a matriz singular $\mat{AB}$ for inversível, então existe uma matriz quadrada $\mat{C}$ onde $\mat{ABC}=\mat{I}$. Mas dizer isso significa dizer também que a matriz $\mat{BC}$ é a inversa de $\mat{A}$, o que é inconsistente, pois $\mat{A}$ é singular. Logo, $\mat{AB}$ também é singular, e portanto $\det{\mat{AB}}=0$. E nesse caso também $\det{\mat{AB}}=\det{\mat{A}}\det{\mat{B}}$.
+\end{proof}}
+
+Se $\mat{A},\mat{B}\in M$ têm dimensões $n_1\times n_2$ e $n_2\times n_1$ respectivamente, de tal forma que $\mat{A}_{ij}=\mat{B}_{ji}$, diz-se que elas são \textsb{transpostas} ou que uma é a \textsb{transposta}\index{matriz!transposta} da outra, quando se adota a representação $\gloref{mTransp}$ para $\mat{B}$ e $\mat{B}^\text{T}$ para $\mat{A}$. Em particular, a matriz $\mat{S}\in\overline{M}$ é dita \textsb{simétrica}\index{matriz!simétrica} quando é idêntica à sua transposta e \textsb{anti-simétrica}\index{matriz!anti-simétrica} se $\mat{S}=-\mat{S}^\text{T}$. Da definição de matriz transposta resultam as seguintes propriedades:
+\begin{itemize}
+\setlength\itemsep{.1em}
+	\item[i.] $(\mat{A}^\text{T})^\text{T} =
+	\mat{A}$\,;
+	\item[ii.] $\lpa\mat{A}+\mat{B}\rpa^\text{T} =
+	\mat{A}^\text{T}+\mat{B}^\text{T}$\,;
+	\item[iii.] $\lpa\mat{A}\mat{B}\rpa^\text{T} =
+	\mat{B}^\text{T}\mat{A}^\text{T}$\,.
+	\item[iv.] $\lpa\mat{A}^{-1}\rpa^\text{T} =
+\lpa\mat{A}^\text{T}\rpa^{-1}$, se $\mat{A}$ for inversível\,.
+\end{itemize}
+{\footnotesize
+\begin{proof}
+A demonstração do primeiro item é trivial. Para o segundo, considerando a propriedade do Delta de Kronecker e a representação $\lpa\mat{A}+\mat{B}\rpa_{ji}$ como um elemento de $\lpa\mat{A}+\mat{B}\rpa^\text{T}$, podemos afirmar que
+\begin{align*}
+\lpa \mat{A} + \mat{B}\rpa_{ji} & = \sum_{i=1}^{n_1}\sum_{j=1}^{n_2}\delta_{ji}\lpa \mat{A} + \mat{B}\rpa_{ij}\delta_{ji}\nonumber\\
+& = \sum_{i=1}^{n_1}\sum_{j=1}^{n_2}\delta_{ji}\lpa\mat{A}_{ij} + \mat{B}_{ij}\rpa\delta_{ji}\nonumber\\
+& = \sum_{i=1}^{n_1}\sum_{j=1}^{n_2}\delta_{ji}\mat{A}_{ij}\delta_{ji} + \delta_{ji}\mat{B}_{ij}\delta_{ji}\nonumber\\
+& = \sum_{i=1}^{n_1}\sum_{j=1}^{n_2}\mat{A}_{ji} + \mat{B}_{ji}= \mat{A}_{ji} + \mat{B}_{ji}\,.
+\end{align*}
+A demonstração da terceira propriedade pode ser feita seguindo essa mesma ideia:
+\begin{align*}
+\lpa \mat{A}\mat{B}\rpa_{ji}& = \sum_{i=1}^{n_1}\sum_{j=1}^{n_2}\delta_{ji}\lpa \mat{A}\mat{B}\rpa_{ij}\delta_{ji}\nonumber\\
+& = \sum_{i=1}^{n_1}\sum_{j=1}^{n_2}\delta_{ji}\lpa\sum_{k=1}^{n_2}\mat{A}_{ik} \mat{B}_{kj}\rpa\delta_{ji}\nonumber\\
+& = \sum_{k=1}^{n_2}\sum_{i=1}^{n_1}\sum_{j=1}^{n_2}\delta_{ji}\mat{A}_{ik} \mat{B}_{kj}\delta_{ji}\nonumber\\
+& = \sum_{k=1}^{n_2}\mat{A}_{jk} \mat{B}_{ki}= \sum_{k=1}^{n_2}\mat{B}^\text{T}_{ik} \mat{A}^\text{T}_{kj}\,.\nonumber
+\end{align*}
+A quarta propriedade demonstramos a partir de $\mat{A}^\text{T}(\mat{A}^\text{T})^{-1}=\mat{I}$ e aplicando a transposta em ambos os lados da igualdade $\mat{A}^{-1}\mat{A}=\mat{I}$, quando igualamos os lados esquerdos das duas expressões, ou seja, $\mat{A}^\text{T}(\mat{A}^\text{T})^{-1}=\mat{A}^\text{T}(\mat{A}^{-1})^\text{T}$.
+\end{proof}}
+
+Um caso mais genérico de transposição de matrizes envolve escalares complexos e seus conjugados. Consideremos então as matrizes $\mat{H}$ e $\mat{F}$ de dimensões $n_1\times n_2$ e $n_2\times n_1$ respectivamente, cujos elementos são números complexos. Diz-se que essas matrizes são \textsb{transpostas conjugadas}, ou que uma é a \textsb{transposta conjugada}\index{matriz!transposta conjugada} da outra, se $\mat{H}_{ij}=\gloref{compConj}$. Em outras palavras, $\mat{F}$ é a transposta conjugada \gloref{transpConj} da matriz $\mat{H}$ se for a transposta dos conjugados complexos dos elementos de $\mat{H}$. Dessa forma, se
+\begin{alignat*} {3}
+\mat{H}=
+\begin{bmatrix}
+    1+3\mathrm{\gloref{imag}}      & -1 + \mathrm{i} & 2\mathrm{i}\\
+    2+\mathrm{i}      & 4 & -\mathrm{i}\\
+\end{bmatrix} & \qquad\text{então} \qquad & \mat{H}^\dagger=
+\begin{bmatrix}
+    1-3\mathrm{i}      & 2-\mathrm{i}\\
+    -1 - \mathrm{i}      & 4\\
+    -2\mathrm{i}      & \mathrm{i}\\
+\end{bmatrix} \,.
+\end{alignat*}
+Quando os elementos envolvidos são apenas escalares reais, tem-se a igualdade $\mat{H}^\dagger=\mat{H}^\text{T}$. Convém dizer também que as quatro propriedades anteriormente apresentadas para matrizes transpostas são válidas para o caso das conjugadas transpostas: $(\mat{H}_1^\dagger)^\dagger =\mat{H}_1$;  $(\mat{H}_1+\mat{H}_2)^\dagger = \mat{H}_1^\dagger+\mat{H}_2^\dagger$, $(\mat{H}_1\mat{H}_2)^\dagger =\mat{H}_2^\dagger\mat{H}_1^\dagger$ e $(\mat{H}_1^\dagger)^{-1}=(\mat{H}_1^{-1})^\dagger$, se $\mat{H}_1$ for inversível, onde as matrizes $\mat{H}_1,\mat{H}_2\in M$.  Por conta dessa última propriedade, escrevemos que $\mat{H}_1^{-\dagger}:=(\mat{H}_1^\dagger)^{-1}=(\mat{H}_1^{-1})^\dagger$.
+
+No âmbito das matrizes inversíveis, aquelas cuja inversa se iguala à transposta conjugada, ou seja que $\mat{U}^{-1}=\mat{U}^\dagger$ onde $\mat{U}\in\overline{M}$, são denominadas \textsb{unitárias}\index{matriz!unitária}. A partir da propriedade $\det{\mat{H}}^\dagger=\overline{\det{\mat{H}}}$, tem-se que
+\begin{equation}
+1=\det{\mat{UU}^{-1}}=\det{\mat{UU}^\dagger}= \det{\mat{U}}\overline{\det\mat{U}} = | \det{\mat{U}} |^2\,,
+\end{equation}
+de onde se conclui $\det{\mat{U}}=\pm 1$. Com isso, dada uma matriz $\mat{A}\in\overline{M}$, o determinante $\det{\mat{U}\mat{A}}=\pm\det{\mat{A}}$; o que evidencia, a menos de um sinal eventual, a \emph{neutralidade} da matriz unitária no determinante do produto em questão. Numa situação particular onde os elementos da matriz unitária são reais, ela é classificada \textsb{ortogonal}\index{matriz!ortogonal}; e nesse caso, ela é \textsb{ortogonal própria}\index{matriz!ortogonal própria} se seu determinante é positivo e \textsb{ortogonal imprópria}\index{matriz!ortogonal imprópria} se negativo. Além disso, para qualquer matriz inversível $A$, o determinante da inversa é o inverso do determinante, conforme demonstrado na afirmação a seguir:
+\begin{equation}
+1=\det{\mat{A}\mat{A}^{-1}}=\det{\mat{A}}\cdot\det{\mat{A}^{-1}}\implies \det{\mat{A}^{-1}}= \lpa\det{\mat{A}}\rpa^{-1}\,.
+\end{equation}
+
+
+
+Quando uma matriz quadrada $\mat{A}$ é igual à sua transposta conjugada, ou seja $\mat{A}=\mat{A}^\dagger$, ela recebe o nome de matriz \textsb{Hermitiana}\index{matriz!Hermitiana}. Matrizes reais e simétricas são exemplos de matrizes Hermitianas: se os elementos da matriz quadrada $\mat{S}$ são reais, então $\mat{S}^\dagger=\mat{S}^\text{T}$, e sendo $\mat{S}$ simétrica, $\mat{S}^\dagger=\mat{S}$.
+Da mesma forma que as matrizes anti-simétricas, uma matriz \textsb{anti-Hermitiana}\index{matriz!anti-Hermitiana} é aquela que se iguala ao negativo de sua transposta conjugada, ou quando $\mat{A}=-\mat{A}^\dagger$. Seja então uma matriz qualquer $\mat{B}\in\overline{M}$ a partir da qual se realiza o seguinte desenvolvimento:
+\begin{equation}
+\mat{B} = \dfrac{1}{2} \lpa \mat{B} + \mat{B}\rpa = \dfrac{1}{2} \lpa \mat{B} + \mat{B} + \mat{B}^\dagger - \mat{B}^\dagger\rpa = \underbrace{\dfrac{1}{2} \lpa \mat{B} + \mat{B}^\dagger\rpa}_{\mat{B}_1} + \underbrace{\dfrac{1}{2} \lpa \mat{B} - \mat{B}^\dagger\rpa}_{\mat{B}_2}\,.
+\end{equation}
+Pelas propriedades das transpostas conjugadas, podemos obter que a matriz rotulada $\mat{B}_1$ é igual à sua transposta conjugada e que $\mat{B}_2$ se iguala ao negativo de sua transposta conjugada; fatos que as tornam, respectivamente, as \textsb{parcelas Hermitiana e anti-Hermitiana}\index{matriz!parcela Hermitiana de}\index{matriz!parcela anti-Hermitiana de} de $\mat{B}$. Assim, podemos generalizar esse resultado dizendo que toda matriz quadrada pode ser decomposta aditivamente em uma parcela Hermitiana e uma outra parcela anti-Hermitiana.
+
+Quando uma matriz quadrada $\mat{N}$ comuta com sua transposta conjugada, ou seja, quando $\mat{N}^\dagger\mat{N}=\mat{N}\mat{N}^\dagger$, ela é dita uma matriz \textsb{normal}\index{matriz!normal}\label{nm:Normal}. Essas matrizes, por tornarem o produto  $\mat{N}^\dagger\mat{N}$ uma matriz Hermitiana, \emph{são sempre passiveis de diagonalização por uma matriz unitária}. Para entendermos o que é isso, vamos considerar primeiramente as matrizes $\mat{A},\mat{B}\in\overline{M}$ e dizer que elas são denominadas \textsb{similares}\index{matrizes!similares} quando existir uma matriz inversível $\mat{Q}$ onde
+\begin{equation}
+\mat{A} = \mat{Q}^{-1}\mat{B}\mat{Q}\,.
+\end{equation}
+Se esta igualdade for verdadeira, as posições de $\mat{A}$ e $\mat{B}$ não influenciam a definição, pois adotando $\mat{P}:=\mat{Q}^{-1}$, chegaremos a $\mat{B} = \mat{P}^{-1}\mat{A}\mat{P}$, que garante a reciprocidade do conceito de similaridade. Além disso, matrizes similares têm determinantes iguais conforme se constata nas igualdades a seguir:
+\begin{equation}
+\det \mat{A} = \det \mat{Q}^{-1}\det\mat{B}\det\mat{Q}=(\det\mat{Q})^{-1}\det\mat{Q}\det\mat{B}=\det\mat{B}.
+\end{equation}
+Uma operação $\map{q}{\overline{M}}{\overline{M}}$ é uma \textsb{transformação de similaridade}\index{transformação!de similaridade} se
+\begin{equation}
+\fua{q}{\mat{X}} = \mat{Q}^{-1}\mat{X}\mat{Q}.
+\end{equation}
+Um importante exemplo do uso dessa transformação é a citada \textsb{diagonalização}\index{diagonalização}, definida a partir do conceito de matriz \textsb{diagonal}\index{matriz!diagonal}; que é uma matriz quadrada cujos elementos das posições $i\neq j$ são nulos. Assim, se existir uma transformação de similaridade na matriz quadrada $\mat{A}$ onde $\fua{q}{A}$ resulte diagonal, diz-se que a transformação é uma diagonalização de $\mat{A}$ ou que a matriz $\mat{A}$ é \textsb{diagonalizável}\index{matriz!diagonalizável}. Quando inexiste diagonalização para um dada matriz ou se ela é não-diagonalizável, nós a denominamos matriz \textsb{defectiva}\index{matriz!defectiva}. Sobre a diagonalização de matrizes normais por unitárias, há um importante teorema, apresentado a seguir.
+
+\begin{mteo}{Diagonalização Espectral}{decompSpec}
+Para cada matriz normal $\mat{N}$, há
+sempre uma matriz unitária $\mat{U}$ tal que
+\begin{equation}
+\widetilde{\mat{N}} = \mat{U}^\dagger\mat{N}\mat{U}\,,
+\end{equation}
+onde $\widetilde{\mat{N}}$ é uma matriz diagonal cujos elementos
+constituem o espectro de $\mat{N}$.
+\end{mteo}
+
+
+{\footnotesize
+\begin{proof}
+Primeiramente precisamos dizer que, considerando uma matriz quadrada qualquer $\mat{A}$ e uma matriz unitária $\mat{U}$, sempre é possível obter uma matriz \textsb{triangular superior}\index{matriz!triangular superior} $\mat{T} = \mat{U}^\dagger\mat{A}\mat{U}$, onde os elementos nas posições $i>j$ são nulos. Essa afirmação é conhecida como \textsb{Lema de Schur}\index{Schur!Lema de}, cuja tediosa demonstração pode ser verificada em  \aut{Strang}\cite{strang_2006_4}. A partir daí,  precisamos mostrar que se $\mat{A}$ for normal, $\mat{T}$ é diagonal. Para tal, seja o seguinte desenvolvimento: se $\mat{A}$ é normal,
+\begin{align}
+\mat{A}\mat{A}^\dagger & = \mat{A}^\dagger\mat{A}\nonumber\\
+\mat{UTU}^\dagger\lpa\mat{UTU}^\dagger\rpa^\dagger & = \lpa\mat{UTU}^\dagger\rpa^\dagger\mat{UTU}^\dagger\nonumber\\
+\mat{U}\mat{TT}^\dagger\mat{U}^\dagger & = \mat{U}\mat{T}^\dagger\mat{T}\mat{U}^\dagger\nonumber\\
+\mat{TT}^\dagger & = \mat{T}^\dagger\mat{T}\nonumber\,,
+\end{align}
+de onde se conclui que $\mat{T}$ também é normal. A partir da última igualdade desse desenvolvimento, tem-se que para cada posição $ij$
+\begin{align}
+\sum_{k=1}^n\mat{T}_{ik}\mat{T}_{kj}^\dagger & = \sum_{k=1}^n\mat{T}_{ik}^\dagger\mat{T}_{kj}\nonumber\\
+\sum_{k=1}^n\mat{T}_{ik}\overline{\mat{T}_{jk}} & = \sum_{k=1}^n\overline{\mat{T}_{ki}}\mat{T}_{kj}\nonumber
+\end{align}
+Para o elemento na posição $i=j=1$, essa última igualdade resulta $\sum_{k=1}^n|\mat{T}_{1k}|^2=|\mat{T}_{11}|^2$, de onde se pode concluir $\sum_{k=2}^n|\mat{T}_{1k}|^2=0$. Como os termos do somatório são não negativos, eles só podem ser nulos, ou seja $|\mat{T}_{1k}|^2=0$ para $k>1$. Por indução, ao percorrermos todas as posições $i=j$, verificaremos que além de nulos os elementos de $\mat{T}$ das posições $i>j$ também são nulos os das posições $i<j$; o que comprova $\mat{T}$ diagonal. 
+\end{proof}}
+
+Vamos esclarecer agora o termo ``espectro'' no teorema apresentado; mas antes, precisamos de algumas definições importantes. Denomina-se \textsb{traço}\index{matriz!traço de} a função em  $\map{\gloref{traco}}{\overline{M}}{\mathcal{R}}$ cuja regra é
+\begin{equation}
+\trc{\mat{X}} = \sum_{i=1}^{n}\mat{X}_{ii}\,,
+\end{equation}
+ou seja, o traço de uma matriz quadrada corresponde à soma de seus elementos diagonais. Considerando as matrizes $\mat{A,B}\in\overline{M}$, fica claro que $\trc{(\mat{A+B})}=\trc{\mat{A}}+\trc{\mat{B}}$, onde a soma é preservada; fato que torna a função traço um homomorfismo de grupo em  $\overline{M}\subset Y$ na operação de adição. Além disso, como os elementos diagonais respectivos de $\mat{AB}$ e de $\mat{BA}$ são idênticos, temos $\trc{\mat{AB}}=\trc{\mat{BA}}$. A partir dessa propriedade, se $\mat{A}$ e $\mat{B}$ forem similares, então
+\begin{equation}
+\trc{\mat{A}}=\trc{\mat{U}^{-1}\mat{B}\mat{U}}=\trc{(\mat{U}^{-1}\mat{B})\mat{U}}=\trc{\mat{U}(\mat{U}^{-1}\mat{B})}=\trc{\mat{B}}\,,
+\end{equation}
+o que permite afirmar genericamente que traços de matrizes similares são sempre iguais. 
+
+Entre outros benefícios, a função traço é uma ferramenta conveniente para podermos apresentar o que se conhece por \textsb{polinômio característico}\index{polinômio característico!de matriz}\label{pg:PolinomioCarac} de matriz: trata-se da função na operação $\map{g}{\mathcal{R}}{\mathcal{R}}$ com regra
+\begin{equation}
+\fua{g}{x}=\det \lpa \mat{H} - x\mat{I} \rpa  \,,
+\end{equation}
+onde $\mat{H}$ é uma matriz quadrada. Desenvolvendo o termo à direita, obtém-se
+\begin{equation}\label{eq:poliCaracDesen}
+\fua{g}{x}=(-1)^nx^n+a_1x^{n-1}+a_2x^{n-2}+\cdots+a_{n-1}x+a_n\,,
+\end{equation}
+que é um polinômio de ordem $n$, chamado polinômio
+característico de $\mat{H}$, cujos coeficientes são
+\begin{align}
+a_1 & = \lpa-1\rpa^{n+1}\trc{\mat{H}}\label{eq:coefAUm}\,;\\
+a_2 & = -\dfrac{1}{2}\lco a_{1}\trc{\mat{H}}+\lpa-1\rpa^n\trc{\mat{H}^2}\rco\,;\\
+&\cdots\nonumber\\
+a_n & = -\dfrac{1}{n}\lco a_{n-1}\trc{\mat{H}}+a_{n-2}\trc{\mat{H}^2}+\cdots+a_1\trc{\mat{H}^{n-1}}+\lpa-1\rpa^n\trc{\mat{H}^n}\rco\,.
+\end{align}
+Qualquer escalar $\lambda\in\mathcal{R}$ que seja raiz deste polinômio é chamado \textsb{raiz característica}\index{matriz!raiz característica de} de $\mat{H}$.
+O conjunto $\lch\lambda_1,\cdots,\lambda_n\rch$ das raízes características de $\mat{H}$ é chamado \textsb{espectro}\index{matriz!espectro de} de $\mat{H}$. No caso de matrizes normais submetidas à decomposição espectral, trata-se do mesmo conjunto de escalares que compõem a matriz $\widetilde{\mat{N}}$ resultante de diagonalização de $\mat{N}$ por matriz unitária. Nesse ponto, convém dizer que matrizes envolvidas em transformações de similaridade, como é o caso particular de $\widetilde{\mat{N}}$ e $\mat{N}$, sempre possuem o mesmo espectro e por isso são chamadas \textsb{isoespectrais}\index{matrizes!isoespectrais}.
+
+{\footnotesize
+\begin{proof}
+Já sabemos que o determinante da inversa é o inverso do determinante. Sejam então as matrizes $\mat{A}$ e $\mat{B}$ similares através da matriz inversível $\mat{Q}$. Pode-se então dizer que o polinômio característico $\det (\mat{A} - x\mat{I})=\det (\mat{Q}^{-1}\mat{B}\mat{Q} - x\mat{I})$. Das igualdades
+\begin{equation*}
+\mat{Q}^{-1}x\mat{I}\mat{Q}=x\mat{Q}^{-1}\mat{I}\mat{Q}=x\mat{Q}^{-1}\mat{Q}=x\mat{I}\,,
+\end{equation*}
+é possível afirmar que
+\begin{align*}
+\det \lpa\mat{A} - x\mat{I}\rpa&=\det \lpa\mat{Q}^{-1}\mat{B}\mat{Q} - \mat{Q}^{-1}x\mat{I}\mat{Q}\rpa\\
+&=\det \lco\mat{Q}^{-1}\lpa\mat{B} - x\mat{I}\rpa\mat{Q}\rco\\
+&=\lpa\det\mat{Q}\rpa^{-1} \det \lpa\mat{B} - x\mat{I}\rpa \det\mat{Q}\\
+&=\det \lpa\mat{B} - x\mat{I}\rpa\,,
+\end{align*}
+de onde se conclui $\mat{A}$ e $\mat{B}$ como matrizes isoespectrais.
+\end{proof}}
+
+O espectro de uma matriz guarda estreita relação com as funções determinante e traço, \emph{que são homomorfismos de grupo nos quais as operações de multiplicação e adição são respectivamente  preservadas}. Se $\lch\lambda_1,\cdots,\lambda_n\rch$ é o espectro de $\mat{A}$, essa estreita relação se expressa nas seguintes igualdades:
+\begin{alignat}{3}
+\det{\mat{A}}  = \prod_{i=1}^n  \lambda_i & \qquad\text{e} \qquad & \trc{\mat{A}} & = \sum_{i=1}^n  \lambda_i \,.
+\end{alignat}
+Quando duas matrizes têm iguais pares de valores determinante e traço, podemos dizer que ambas guardam entre si uma espécie de equivalência\footnote{Não confundir com a definição corrente de matrizes equivalentes.} se interpretarmos essas duas funções como medidas escalares cujos valores absolutos revelam aspectos quantitativos e os sinais revelam aspectos qualitativos da matriz envolvida. Nesse contexto e por conta das igualdades anteriores, matrizes isoespectrais também apresentam tal equivalência; \emph{algo que, em certa medida, confere ao espectro de matrizes uma característica de métrica}.
+
+{\footnotesize
+\begin{proof}
+Vamos demonstrar as duas igualdades anteriores. Para provar a primeira, seja a regra do polinômio característico de $\mat{A}$ descrita em sua forma fatorada
+\begin{equation*}
+\fua{g}{x}=(-1)^n\lpa x-\lambda_n\rpa\lpa x-\lambda_{n-1}\rpa\cdots\lpa x-\lambda_2\rpa\lpa x-\lambda_1\rpa\,,
+\end{equation*}
+de onde resulta a igualdade
+\begin{equation*}
+\det{(\mat{A}-x\mat{I})}=\lpa \lambda_n-x\rpa\lpa \lambda_{n-1}-x\rpa\cdots\lpa \lambda_2-x\rpa\lpa \lambda_1-x\rpa\,,
+\end{equation*}
+válida para qualquer $x\in\mathcal{R}$. Então, se $x=0$, temos
+\begin{equation*}
+\det{\mat{A}}=\lambda_n\lambda_{n-1}\cdots\lambda_2\lambda_1\,.
+\end{equation*}
+Para provar a segunda igualdade, uma das chamadas Fórmulas de Viète, segundo \aut{Vinberg}\cite{vinberg_2003_1}, diz que para polinômios com formato igual ao da regra \eqref{eq:poliCaracDesen}, tem-se que
+\begin{equation*}
+-\dfrac{a_1}{(-1)^n}=\lambda_n+\lambda_{n-1}+\cdots+\lambda_2+\lambda_1\,.
+\end{equation*}
+Podemos então substituir o coeficiente $a_1$ pelo termo à direita em \eqref{eq:coefAUm}, resultando
+\begin{equation*}
+\trc{\mat{A}}=\lambda_n+\lambda_{n-1}+\cdots+\lambda_2+\lambda_1\,.
+\end{equation*}
+\end{proof}}
+
+
+Agora, considerando uma matriz $\mat{A}\in\overline{M}$, diz-se que ela é \textsb{positiva-se\-mi\-de\-fi\-nida}\index{matriz!positiva-semidefinida} ou \textsb{não-negativa}\index{matriz!não-negativa} se 
+\begin{equation}
+\gloref{parteReal}\lpa\mat{X}^\dagger\mat{A}\mat{X}\rpa_{11}\geqslant0\,,
+\end{equation}
+onde $\mat{X}$ é uma matriz não nula qualquer de dimensão $n\times 1$. Quando a desigualdade impõe que  o lado esquerdo seja sempre positivo, $\mat{A}$ é classificada como \textsb{positiva-definida}\index{matriz!positiva-definida}. Uma condição necessária e suficiente para garantir a positividade de uma matriz é que o espectro de sua parcela hermitiana seja constituído de elementos não negativos\footnote{Essa condição será comprovada com a definição de autovalor à p.\pageref{sec:autoPares}.}, quando a matriz é positiva-semidefinida; da mesma forma, se esses elementos forem todos positivos, a matriz é positiva-de\-fi\-ni\-da. Diante disso e das duas propriedades apresentadas no parágrafo anterior, pode-se concluir que o determinante e o traço de uma matriz hermitiana positiva-se\-mi\-de\-fi\-ni\-da são sempre não negativos, enquanto que os de uma matriz hermitiana positiva-definida são sempre positivos. Assim, no contexto das matrizes hermitianas, o determinante não negativo indica a positividade da matriz; o que permite afirmar que toda matriz simétrica positiva-definida é inversível. Além disso, quando uma matriz hermitiana positiva-definida $\mat{H}$ pré ou pós multiplica uma outra matriz qualquer $\mat{B}\in\overline{M}$, tem-se que
+\begin{equation}
+\sgn{\det{\lpa\mat{BH}\rpa}}=\sgn{\det{\lpa\mat{HB}\rpa}}=\sgn{\det{\mat{B}}} \sgn{\det{\mat{H}}}=\sgn{\det{\mat{B}}}\,,
+\end{equation}
+onde o sinal \gloref{signum} do determinante de $\mat{B}$ define o sinal do produto dos determinantes, tornando o conceito de positividade matricial intuitivamente similar ao de positividade escalar, no qual um número positivo quando multiplicado por outro não lhe altera o sinal.
+
+Encerramos este capítulo apresentando a seguir uma igualdade de caráter fundamental, propriedade de qualquer matriz quadrada, e que vai viabilizar desenvolvimentos apresentados em capítulos posteriores.
+
+\begin{mteo}{Cayley-Hamilton}{cayleyhamilton}\index{Cayley-Hamilton!Teorema de}
+Seja um mapeamento $\map{\hat{g}}{\overline{M}}{\overline{M}}$ cuja regra da função é descrita por
+\begin{equation}
+\fua{\hat{g}}{\mat{X}}=(-1)^n\mat{X}^n+a_1\mat{X}^{n-1}+a_2\mat{X}^{n-2}+\cdots+a_{n-1}\mat{X}+a_n\mat{I}\,.
+\end{equation}
+Se os coeficientes $a_1,\cdots,a_n$ forem os mesmos do polinômio característico de uma matriz $\mat{H}\in\overline{M}$, então a matriz $\fua{\hat{g}}{\mat{H}}$ é nula.
+\end{mteo}
+
+{\footnotesize
+\begin{proof}
+Para demonstrar o teorema precisamos apresentar preliminarmente algumas definições. Há um algoritmo\footnote{Segundo \aut{Knuth}\cite{knuth_1997_1}, a palavra ``algoritmo'' possui a mesma origem etimológica da palavra ``álgebra''.}, chamado \textsb{Expansão de Laplace}\index{Laplace!Expansão de} ou \textsb{Expansão Cofatorial}, que é utilizado em alguns casos para calcular determinantes. Vamos a ele: dada uma matriz quadrada $\mat{A}$, pode-se obter, para qualquer linha $i$ de $\mat{A}$, que
+\begin{equation*}
+\det{\mat{A}} = \sum_{j=1}^{n}\mat{A}_{ij} \underbrace{\lpa-1\rpa^{i+j}\det{\mat{M}_{(ij)}}}_{\mat{C}_{ij}}\,,
+\end{equation*}
+onde $\mat{C}$ é chamada de \textsb{matriz dos cofatores}\index{matriz!dos cofatores} de $\mat{A}$ e $\mat{M}_{(ij)}$ é uma matriz de ordem $n-1$ resultante da remoção na matriz $\mat{A}$ de sua linha $i$ e de sua coluna $j$. Denomina-se \textsb{matriz adjunta}\index{matriz!adjunta} de $\mat{A}$, representada $\gloref{adju}{\mat{A}}$, a matriz $\mat{C}^{T}$. Agora, considerando $\mat{A}=\det(\mat{H}-x\mat{I})$, pela importante propriedade $\adj{\mat{B}}\mat{B}=(\det\mat{B})\mat{I}$, temos que
+\begin{equation*}
+\adj{\mat{A}}(\mat{H}-x\mat{I})=\fua{g}{x}\mat{I}=\mat{I}(-1)^nx^n+\mat{I}a_1x^{n-1}+\cdots+\mat{I}a_{n-1}x+\mat{I}a_n\,.
+\end{equation*}
+Via tedioso desenvolvimento, a adjunta de $\mat{A}$ resulta um polinômio de ordem $q$ com coeficientes matriciais $\mat{H}_i$, descrito na seguinte igualdade:
+\begin{equation*}
+\adj{\mat{A}} = \mat{H}_1x^q+\mat{H}_2x^{q-1}+\cdots+\mat{H}_{n-1}x+\mat{H}_{n}\,.
+\end{equation*}
+Assim, temos também que o produto
+\begin{equation*}
+\adj{\mat{A}}(\mat{H}-x\mat{I})=-\mat{H}_1x^{q+1}+(\mat{H}_1\mat{H}-\mat{H}_2)x^q+\cdots+
+(\mat{H}_{n-2}\mat{H}-\mat{H}_{n-1})x+\mat{H}_n\mat{H}\,.
+\end{equation*}
+Comparando as duas expressões à direita que igualam $\adj{\mat{A}}(\mat{H}-x\mat{I})$, conclui-se que a ordem $n=q+1$ e as seguintes igualdades:
+\begin{align*}
+\mat{I}(-1)^n&=-\mat{H}_1\\
+\mat{I}a_1&=\mat{H}_1\mat{H}-\mat{H}_2\\
+\vdots\\
+\mat{I}a_{n-1}&=\mat{H}_{n-2}\mat{H}-\mat{H}_{n-1}\\
+\mat{I}a_{n}&=\mat{H}_n\mat{H}\,.
+\end{align*}
+Pós-multiplicando a sequência das igualdades sucessivamente por $\mat{H}^n,\mat{H}^{n-1},\cdots,\mat{H},\mat{H}^0$ e somando todas elas, obteremos
+\begin{equation*}
+(-1)^n\mat{H}^n+a_1\mat{H}^{n-1}+a_2\mat{H}^{n-2}+\cdots+a_{n-1}\mat{H}+a_n\mat{I}=0\,,
+\end{equation*}
+ou seja, $\fua{\hat{g}}{\mat{H}}=0$.
+\end{proof}}
+
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../../msav.tex"
+%%% End:

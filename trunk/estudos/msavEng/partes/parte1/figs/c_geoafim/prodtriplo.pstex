@@ -1,0 +1,226 @@
+%!PS-Adobe-2.0 EPSF-2.0
+%%Title: /home/roberto/algarte/docs/msav/partes/parte1/figs/c_geoafim/prodtriplo.fig
+%%Creator: fig2dev Version 3.2 Patchlevel 4
+%%CreationDate: Sun Jan 14 23:45:40 2007
+%%For: roberto@rmalinux (Roberto Dias Algarte)
+%%BoundingBox: 0 0 170 128
+%%Magnification: 1.0000
+%%EndComments
+/$F2psDict 200 dict def
+$F2psDict begin
+$F2psDict /mtrx matrix put
+/col-1 {0 setgray} bind def
+/col0 {0.000 0.000 0.000 srgb} bind def
+/col1 {0.000 0.000 1.000 srgb} bind def
+/col2 {0.000 1.000 0.000 srgb} bind def
+/col3 {0.000 1.000 1.000 srgb} bind def
+/col4 {1.000 0.000 0.000 srgb} bind def
+/col5 {1.000 0.000 1.000 srgb} bind def
+/col6 {1.000 1.000 0.000 srgb} bind def
+/col7 {1.000 1.000 1.000 srgb} bind def
+/col8 {0.000 0.000 0.560 srgb} bind def
+/col9 {0.000 0.000 0.690 srgb} bind def
+/col10 {0.000 0.000 0.820 srgb} bind def
+/col11 {0.530 0.810 1.000 srgb} bind def
+/col12 {0.000 0.560 0.000 srgb} bind def
+/col13 {0.000 0.690 0.000 srgb} bind def
+/col14 {0.000 0.820 0.000 srgb} bind def
+/col15 {0.000 0.560 0.560 srgb} bind def
+/col16 {0.000 0.690 0.690 srgb} bind def
+/col17 {0.000 0.820 0.820 srgb} bind def
+/col18 {0.560 0.000 0.000 srgb} bind def
+/col19 {0.690 0.000 0.000 srgb} bind def
+/col20 {0.820 0.000 0.000 srgb} bind def
+/col21 {0.560 0.000 0.560 srgb} bind def
+/col22 {0.690 0.000 0.690 srgb} bind def
+/col23 {0.820 0.000 0.820 srgb} bind def
+/col24 {0.500 0.190 0.000 srgb} bind def
+/col25 {0.630 0.250 0.000 srgb} bind def
+/col26 {0.750 0.380 0.000 srgb} bind def
+/col27 {1.000 0.500 0.500 srgb} bind def
+/col28 {1.000 0.630 0.630 srgb} bind def
+/col29 {1.000 0.750 0.750 srgb} bind def
+/col30 {1.000 0.880 0.880 srgb} bind def
+/col31 {1.000 0.840 0.000 srgb} bind def
+
+end
+save
+newpath 0 128 moveto 0 0 lineto 170 0 lineto 170 128 lineto closepath clip newpath
+-165.2 352.3 translate
+1 -1 scale
+
+/cp {closepath} bind def
+/ef {eofill} bind def
+/gr {grestore} bind def
+/gs {gsave} bind def
+/sa {save} bind def
+/rs {restore} bind def
+/l {lineto} bind def
+/m {moveto} bind def
+/rm {rmoveto} bind def
+/n {newpath} bind def
+/s {stroke} bind def
+/sh {show} bind def
+/slc {setlinecap} bind def
+/slj {setlinejoin} bind def
+/slw {setlinewidth} bind def
+/srgb {setrgbcolor} bind def
+/rot {rotate} bind def
+/sc {scale} bind def
+/sd {setdash} bind def
+/ff {findfont} bind def
+/sf {setfont} bind def
+/scf {scalefont} bind def
+/sw {stringwidth} bind def
+/tr {translate} bind def
+/tnt {dup dup currentrgbcolor
+  4 -2 roll dup 1 exch sub 3 -1 roll mul add
+  4 -2 roll dup 1 exch sub 3 -1 roll mul add
+  4 -2 roll dup 1 exch sub 3 -1 roll mul add srgb}
+  bind def
+/shd {dup dup currentrgbcolor 4 -2 roll mul 4 -2 roll mul
+  4 -2 roll mul srgb} bind def
+ /DrawEllipse {
+	/endangle exch def
+	/startangle exch def
+	/yrad exch def
+	/xrad exch def
+	/y exch def
+	/x exch def
+	/savematrix mtrx currentmatrix def
+	x y tr xrad yrad sc 0 0 1 startangle endangle arc
+	closepath
+	savematrix setmatrix
+	} def
+
+/$F2psBegin {$F2psDict begin /$F2psEnteredState save def} def
+/$F2psEnd {$F2psEnteredState restore end} def
+
+$F2psBegin
+10 setmiterlimit
+0 slj 0 slc
+ 0.06299 0.06299 sc
+%
+% Fig objects follow
+%
+% 
+% here starts figure with depth 50
+% Ellipse
+15.000 slw
+n 4144 4821 23 23 0 360 DrawEllipse gs 0.00 setgray ef gr gs col0 s gr
+
+% Ellipse
+n 4490 3858 23 23 0 360 DrawEllipse gs 0.00 setgray ef gr gs col0 s gr
+
+% Ellipse
+n 5027 4101 23 23 0 360 DrawEllipse gs 0.00 setgray ef gr gs col0 s gr
+
+% Ellipse
+n 5269 4655 23 23 0 360 DrawEllipse gs 0.00 setgray ef gr gs col0 s gr
+
+% Ellipse
+n 2977 5029 23 23 0 360 DrawEllipse gs 0.00 setgray ef gr gs col0 s gr
+
+% Ellipse
+n 2661 5396 23 23 0 360 DrawEllipse gs 0.00 setgray ef gr gs col0 s gr
+
+% Ellipse
+n 3502 5022 23 23 0 360 DrawEllipse gs 0.00 setgray ef gr gs col0 s gr
+
+% Ellipse
+n 2978 4492 23 23 0 360 DrawEllipse gs 0.00 setgray ef gr gs col0 s gr
+
+% Ellipse
+n 3906 3761 23 23 0 360 DrawEllipse gs 0.00 setgray ef gr gs col0 s gr
+
+% Arc
+7.500 slw
+n 4292.6 4739.8 129.9 -52.3 30.1 arc
+gs col0 s gr
+
+% Arc
+n 4159.9 4613.3 177.3 -120.8 -57.9 arc
+gs col0 s gr
+
+% Polyline
+30.000 slw
+gs  clippath
+3482 5085 m 3481 4965 l 3278 4966 l 3444 5026 l 3279 5086 l cp
+eoclip
+n 3011 5028 m
+ 3467 5026 l gs col0 s gr gr
+
+% arrowhead
+15.000 slw
+n 3279 5086 m 3444 5026 l 3278 4966 l 3279 5086 l  cp gs 0.00 setgray ef gr  col0 s
+% Polyline
+30.000 slw
+gs  clippath
+5060 4158 m 4985 4064 l 4826 4191 l 4993 4135 l 4902 4285 l cp
+eoclip
+n 4168 4799 m
+ 5011 4121 l gs col0 s gr gr
+
+% arrowhead
+15.000 slw
+n 4902 4285 m 4993 4135 l 4826 4191 l 4902 4285 l  cp gs 0.00 setgray ef gr  col0 s
+% Polyline
+30.000 slw
+gs  clippath
+5262 4728 m 5243 4610 l 5042 4641 l 5215 4676 l 5061 4760 l cp
+eoclip
+n 4167 4838 m
+ 5238 4672 l gs col0 s gr gr
+
+% arrowhead
+15.000 slw
+n 5061 4760 m 5215 4676 l 5042 4641 l 5061 4760 l  cp gs 0.00 setgray ef gr  col0 s
+% Polyline
+30.000 slw
+gs  clippath
+2630 5348 m 2721 5426 l 2853 5272 l 2701 5359 l 2762 5194 l cp
+eoclip
+n 2960 5055 m
+ 2686 5376 l gs col0 s gr gr
+
+% arrowhead
+15.000 slw
+n 2762 5194 m 2701 5359 l 2853 5272 l 2762 5194 l  cp gs 0.00 setgray ef gr  col0 s
+% Polyline
+30.000 slw
+gs  clippath
+3036 4508 m 2916 4507 l 2915 4710 l 2976 4546 l 3035 4711 l cp
+eoclip
+n 2975 4996 m
+ 2976 4523 l gs col0 s gr gr
+
+% arrowhead
+15.000 slw
+n 3035 4711 m 2976 4546 l 2915 4710 l 3035 4711 l  cp gs 0.00 setgray ef gr  col0 s
+% Polyline
+30.000 slw
+gs  clippath
+4542 3881 m 4429 3840 l 4360 4031 l 4473 3897 l 4473 4072 l cp
+eoclip
+n 4150 4788 m
+ 4481 3875 l gs col0 s gr gr
+
+% arrowhead
+15.000 slw
+n 4473 4072 m 4473 3897 l 4360 4031 l 4473 4072 l  cp gs 0.00 setgray ef gr  col0 s
+% Polyline
+7.500 slw
+ [60] 0 sd
+gs  clippath
+3972 3766 m 3855 3792 l 3898 3990 l 3922 3816 l 4015 3964 l cp
+eoclip
+n 4141 4817 m
+ 3917 3794 l gs col0 s gr gr
+ [] 0 sd
+% arrowhead
+15.000 slw
+n 4015 3964 m 3922 3816 l 3898 3990 l 4015 3964 l  cp gs 0.00 setgray ef gr  col0 s
+% here ends figure;
+$F2psEnd
+rs
+showpage

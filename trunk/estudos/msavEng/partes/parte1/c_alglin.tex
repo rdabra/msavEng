@@ -1,0 +1,848 @@
+
+\chapter{Cartilha de Álgebra Linear}
+
+No capítulo anterior, dotamos os conjuntos de uma estrutura aditiva, aos quais denominamos grupos, e cumulativamente de uma estrutura multiplicativa, quan\-do recebem o nome de campo. Todo o conjunto estruturado por um outro conjunto, por uma operação ou por alguma propriedade a qual todos os elementos estão sujeitos é denominado \textsb{espaço}\index{espaço}. Neste capítulo, prosseguiremos com esta estruturação cumulativa, agora realizada por campo, por norma, por métrica e por produto interno. Vamos iniciar reunindo os conceitos de grupo aditivo e campo de tal forma que dessa interação os escalares confiram aos elementos do grupo certas características multiplicativas: abreviação de adições repetitivas, positividade e negatividade. Quanto às relações entre os elementos desses espaços, a Álgebra Linear interessa-se por funções homomórficas específicas, nas quais os escalares precisam ser considerados de tal forma que as estruturas dos espaços estudados sejam preservadas.
+
+\section{Estruturação por Campo}\label{sec:espacoVet}
+
+O espaço grupo-campo é o objeto fundamental da Álgebra Linear e a interação que o define está submetida a restrições. Para apresentá-las, vamos descrever e complementar matematicamente o que foi dito até agora. Seja um grupo abeliano aditivo $V$ estruturado por um campo $\mathcal{R}$ através da função em $\map{p}{\mathcal{R}\times\con{V}}{\con{V}}$. Essa função, cujos valores $\fua{p}{\alpha,\gloref{vetor}}$ são representados por $\alpha\vto{x}$ ou $\vto{x}\alpha$ deve obedecer aos seguintes axiomas:
+\begin{itemize}
+\setlength\itemsep{.1em}
+    \item[i.] $\alpha \lpa \vto{x} + \vto{y} \rpa = \alpha\vto{x}+\alpha\vto{y}$;
+    \item[ii.] $\lpa \alpha + \beta\rpa  \vto{x} = \alpha\vto{x}+\beta\vto{x}$;
+    \item[iii.] $\lpa \alpha\beta\rpa  \vto{x} = \alpha\lpa\beta\vto{x}\rpa$;
+    \item[iv.] $1\vto{x}= \vto{x}$, onde 1 é a identidade multiplicativa de $\mathcal{R}$;
+    \item[v.] $ 0\vto{x} = \vto{0}$, onde $\vto{0}$ é o elemento nulo de $\con{V}$;
+\end{itemize}
+onde $\alpha,\beta\in \mathcal{R}$ e $\vto{x}, \vto{y}\in V$ são elementos quaisquer de seus respectivos conjuntos. Nessas condições, um elemento de $V$ é denominado \textsb{vetor}\index{vetor} e a tripla $(V,\mathcal{R},p)$ é um \textsb{espaço vetorial}\index{espaço!vetorial} de $V$ em $\mathcal{R}$, cuja representação será abreviada pelo símbolo $\gloref{espacVet}$, que será tratado de agora em diante como um conjunto, por razões de simplicidade notacional. Caso o campo $\mathcal{R}$ seja complexo, o espaço vetorial $V_\complexo$ é dito complexo\index{espaço!vetorial complexo}, qualquer que seja o grupo $V$; da mesma forma, $V_\real$ é chamado de espaço vetorial real\index{espaço!vetorial real}. Diante das definições já apresentadas, podemos concluir que se um campo é um grupo, $\mathcal{R}_{\mathcal{R}}$ ou $\mathcal{R}$ é também um espaço vetorial.
+
+Da mesma forma que conjuntos admitem subconjuntos, conforme já mostramos, espaços podem admitir subespaços. Visto isoladamente, um \textsb{subespaço vetorial}\index{subespaço vetorial} é na verdade um espaço vetorial cujos elementos também pertencem a outro espaço vetorial. Em termos mais precisos, dizemos que o espaço vetorial $(S,\mathcal{R},\tilde{p})$, onde $\map{\tilde{p}}{\mathcal{R}\times S}{S}$, é um subespaço vetorial de $V_\mathcal{R}$ se o conjunto $S\subseteq V$; situação que nos permite utilizar a notação $S_\mathcal{R}\subseteq V_\mathcal{R}$. Interessante notar que como todo e qualquer espaço vetorial possui o elemento nulo por definição, então todo e qualquer subespaço vetorial deve contemplar pelo menos o vetor $\vto{0}$.
+
+
+A possibilidade de multiplicação por escalares, conforme preconiza o mapeamento definido pela função $p$, permite combinar os vetores de um conjunto finito $\con{\tilde{U}}=\lch \vto{v}_1,\vto{v}_2,\cdots,\vto{v}_n \rch\subset V_\mathcal{R}$ da seguinte forma:
+\begin{equation}
+\alpha_1\vto{v}_1+\alpha_2\vto{v}_2+\cdots+\alpha_n\vto{v}_n\,,
+\end{equation}
+onde os elementos $\alpha_i\in\mathcal{R}$ são escalares quaisquer. Assim, diz-se que essa expressão é a \textsb{combinação linear}\index{vetor!combinação linear de} de $\con{\tilde{U}}$ em $\mathcal{R}$ e, sendo conhecidos os escalares, o vetor $\sum_{i=1}^n \alpha_i\vto{v}_i$ é dito \emph{uma} combinação linear de $\con{\tilde{U}}$ em $\mathcal{R}$. Se porventura ocorrer uma combinação linear nula quando houver pelo menos um escalar não nulo na sequência de $n>1$ escalares $\alpha_1,\cdots,\alpha_n$, diremos que o conjunto $\con{\tilde{U}}$ é \textsb{linearmente dependente}\index{dependência linear}. Nesse caso, há uma combinação linear do conjunto $\con{\tilde{U}}$ que promove $\sum_{i=1}^n \alpha_i\vto{v}_i=\vto{0}$. Sendo $\alpha_1$ não nulo, por exemplo, o vetor $\vto{v}_1=\sum_{i=2}^n (\alpha_i/a_1)\vto{v}_i$, de onde se diz que ele resulta uma combinação linear dos demais vetores. Isso já não ocorre se a sequência de escalares nulos for a única sequência possível para tornar nula a combinação linear de $\con{\tilde{U}}$; quando se diz que esse conjunto é \textsb{linearmente independente}\index{independência linear}. Para que tal independência ocorra, nenhum dos vetores que constituem $\tilde{U}$ pode ser nulo.
+
+Relembrando nossa definição de espaço vetorial, cabe observar que a multiplicação por escalar definida no mapeamento $\map{p}{\mathcal{R}\times V}{V}$ em conjunto com a operação $\map{+}{V \times V}{V}$, própria de grupos abelianos aditivos, garantem que toda combinação linear de quaisquer vetores de $V_\mathcal{R}$ é também vetor de $V_\mathcal{R}$; ou seja, se $n$ vetores $\vto{v}_i\in V_\mathcal{R}$, então o vetor $\sum_{i=1}^n\alpha_i\vto{v}_i\in V_\mathcal{R}$. Diante disso, seja $U$ qualquer subconjunto não vazio  de $V_\mathcal{R}$, expresso da seguinte maneira:
+\begin{equation}
+U=\bigcup_{i=1}^\infty \tilde{U}_i\,,
+\end{equation}
+onde cada conjunto $\tilde{U}_i\subset U$ é finito. Nesses termos, o subconjunto de $V_\mathcal{R}$ constituído por todas as combinações lineares dos subconjuntos $\tilde{U}_i$ é dito um \textsb{subconjunto gerado}\index{subconjunto!gerado} por $U$, cuja representação é $\gloref{sconjGer}$. Em outras palavras, temos que
+\begin{equation}
+\spn (U) := \lch \sum_{i=1}^n \alpha_i\vto{v}_i \,:\, \forall n\in \mathbb{N}\,,\,\,\forall \alpha_i \in \mathcal{R},\,\,\forall \vto{v}_i \in U \rch\,.
+\end{equation}
+Tomemos agora dois elementos quaisquer do subconjunto gerado por $U$, a saber: $\vto{x}:=\sum_{i=1}^n \varphi_i\vto{v}_i$ e $\vto{y}:=\sum_{i=1}^n \beta_i\vto{v}_i$, onde $\varphi_i,\beta_i\in\mathcal{R}$. A adição desses dois vetores resulta no vetor $\vto{x}+\vto{y}=\sum_{i=1}^n (\varphi_i+\ele{\beta}_i)\vto{v}_i$, que também é elemento de $\spn (U)$, pois $\varphi_i+\beta_i\in\mathcal{R}$ e $\vto{v}_i\in U$; ou seja, a operação de adição pode ser definida por $\map{+}{\spn (U)\times \spn (U)}{\spn (U)}$. Ademais, a multiplicação de um escalar qualquer $\alpha\in\mathcal{R}$ por $\vto{x}$ resulta  $\alpha\vto{x}=\sum_{i=1}^n \alpha\varphi_i\vto{v}_i\in\spn{(U)}$, pois $\alpha\varphi_i\in\mathcal{R}$; o que comprova a multiplicação $\map{p}{\mathcal{R}\times\spn (U)}{\spn (U)}$. Diante disso, considerando os mesmos vetores $\vto{x}$ e $\vto{y}$, podemos constatar a observância dos cinco axiomas definidores de espaço vetorial e dos quatro axiomas definidores de grupo abeliano aditivo: associatividade, comutatividade, elemento inverso e elemento identidade\footnote{Ver p. \pageref{ax:grupo}.}. Portanto, é possível afirmar que o subconjunto gerado por $U$ define o espaço vetorial $\spn{(U)}_\mathcal{R}\subseteq V_\mathcal{R}$. Diante da generalidade do que foi exposto, podemos dizer que todo subconjunto gerado define um \textsb{subespaço gerado}\index{subespaço!gerado}.
+
+Ainda considerando as condições anteriores, quando o subconjunto $U$ gera $V_\mathcal{R}$, ou seja quando $\spn{(U)}_\mathcal{R}=V_\mathcal{R}$, dizemos que o espaço vetorial  $V_\mathcal{R}$ é \textsb{dimensionalmente finito} se $U$ for finito. Caso $U$ linearmente independente gere $V_\mathcal{R}$, ele é denominado uma \textsb{base}\index{base} de $V_\mathcal{R}$. Reunindo esses dois conceitos, quando a base $U$ é finita constituída por $n$ termos, ou torna $V_\mathcal{R}$ dimensionalmente finito, um vetor qualquer $\vto{w}\in V_\mathcal{R}$ é gerado por uma e somente uma combinação linear $\sum_{i=1}^n\alpha_i\vto{v}_i$. Logo, no contexto da base $U$, há uma relação unívoca entre o vetor $\vto{w}$ e a ênupla $(\alpha_i,\cdots,\alpha_n)$, definida a partir do mesmo sequenciamento dos elementos da base. A essa ênupla que define o vetor $\vto{w}$ na base $U$ damos o nome de \textsb{coordenadas}\index{vetor!coordenadas de} de $\vto{w}$ na base $U$.
+
+{\footnotesize
+\begin{proof}
+Verifiquemos se procede a afirmação de que a combinação linear $\sum_{i=1}^n\alpha_i\vto{v}_i$ é a única que define $\vto{w}$ na base $U$. Se houvesse uma outra combinação linear $\sum_{i=1}^n\beta_i\vto{v}_i$ que definisse $\vto{w}$, então a diferença das duas seria $\sum_{i=1}^n(\alpha_i-\beta_i)\vto{v}_i=\vto{0}$. Como os vetores da base são não nulos e linearmente independentes, da igualdade anterior resulta que $\alpha_i-\beta_i=0$, ou que $\alpha_i=\beta_i$.
+\end{proof}}
+
+Neste ponto vamos considerar $\con{U}_1=\lch \vto{v}_1,\cdots,\vto{v}_n \rch$ uma base de $V_\mathcal{R}$ e o conjunto $\con{U}_2=\lch \vto{w}_1,\cdots,\vto{w}_m \rch$ linearmente independente  tais que $m \geqslant n$. Se $U_1$ gera $V_\mathcal{R}$ então o conjunto linearmente dependente $\{\vto{w}_1\}\cup U_1=\lch \vto{w}_1,\vto{v}_1,\cdots,\vto{v}_{n} \rch$ também gera $V_\mathcal{R}$. Ao retirarmos desse conjunto um elemento $\vto{v}_k$ de $U_1$, o conjunto resultante  $(\{\vto{w}_1\}\cup U_1)\setminus \{\vto{v}_k\}$ também gera $V_\mathcal{R}$ porque $\vto{w}_1$ é uma combinação linear de $U_1$. Repetindo este procedimento de inclusão de elementos de $U_2$ e remoção de elementos de $U_1$, chegaremos ao conjunto $\lch \vto{w}_1,\cdots,\vto{w}_{n} \rch$, que resulta uma base de $V_\mathcal{R}$. Assim, conjuntos linearmente independentes, geradores do mesmo espaço vetorial dimensionalmente finito, possuem o mesmo número de vetores. Portanto, dada a generalidade dessa constatação, diz-se que qualquer base de $V_\mathcal{R}$ possui $n$ elementos, ou que a \textsb{dimensão}\index{dimensão!de espaço vetorial} de $V_\mathcal{R}$ é $n$, escrita $\gloref{dimen}=n$. Ademais, podemos afirmar que \emph{qualquer subconjunto de $V_\mathcal{R}$ com $n$ elementos linearmente independentes é uma base de $V_\mathcal{R}$}, disso resultando $\dim (W_\mathcal{R}) <  \dim (V_\mathcal{R})$ se $W_\mathcal{R}\subset V_\mathcal{R}$.
+
+Há um tipo importante de espaço vetorial no qual o conjunto envolvido sofre uma estruturação adicional.
+Quando dizemos que esse conjunto é estruturado por uma \textsb{norma}\index{norma}, é possível associar a cada um de seus elementos um número real não negativo, que viabiliza o conceito de tamanho ou intensidade de um vetor. Como ocorre na estruturação por campo, a estruturação por norma também se dá segundo alguns critérios. Diz-se então que um \textsb{espaço normado}\index{espaço!normado} é definido pela dupla $(V_\mathcal{R},\eta)$, onde $V_\mathcal{R}$ é um espaço vetorial e a função em $\map{\eta}{V_\mathcal{R}}{\gloref{realNNeg}}$, denominada norma, respeita os axiomas
+\begin{itemize}
+	\setlength\itemsep{.1em}
+	\item[i.] Da definição: $\fua{\eta}{\vto{v}}=0 \Leftrightarrow
+\vto{v}=\vto{0}$;
+	\item[ii.] Da homogeneidade:
+$\fua{\eta}{\alpha\vto{x}}=|\alpha|\fua{\eta}{\vto{x}}\text{ }$ e
+	\item[iii.] Da desigualdade triangular: $\fua{\eta}{\vto{x}+\vto{y}}\leq
+\fua{\eta}{\vto{x}}+\fua{\eta}{\vto{y}}$;
+\end{itemize}
+onde $\alpha\in\mathcal{R}$ e $\vto{x},\vto{y}\in V_\mathcal{R}$ são elementos quaisquer. A desigualdade triangular no último item impõe que o tamanho da soma de vetores nunca é maior que a soma dos tamanhos de cada um deles. No contexto notacional, para não nos diferenciarmos muito do costumeiro, utilizaremos de agora em diante a representação $\gloref{norma}$ para o valor $\fua{\eta}{\vto{x}}$.
+
+
+Dizemos que dois vetores incidem um no outro ou têm uma inter-relação de incidência quando for possível descrever um relativamente ao outro. Em outras palavras, dados os vetores não nulos $\vto{u},\vto{v}\in U_\mathcal{R}$, diz-se que $\vto{u}$ incide em $\vto{v}$ se existir um vetor, múltiplo de $\vto{v}$, que seja função de $\vto{u}$; ou seja, existe um mapeamento $\map{f}{U_\mathcal{R}}{U_\mathcal{R}}$ onde o vetor $\fua{f}{\vto{u}}=\alpha\vto{v}$, $\alpha\in\mathcal{R}$. Como $f$ é um operador unário, ou seja, uma bijeção, a incidência resulta comutativa: se $\vto{u}$ incide em $\vto{v}$, $\vto{v}$ incide em $\vto{u}$. A relação de incidência entre dois vetores é geralmente expressa em valores reais não negativos, onde o valor zero significa o limite mínimo onde inexiste incidência de um vetor no outro, quando ambos são ditos \textsb{ortogonais}\index{vetores!ortogonais}. Seja então a função em $\map{\xi}{U_\mathcal{R}\times U_\mathcal{R}}{\mathcal{R}}$ que expressa a relação de incidência em qualquer par de vetores de $U_\mathcal{R}$, respeitando os axiomas
+\begin{itemize}\label{prop:produtoInterno}
+	\setlength\itemsep{.1em}
+	\item[i.] Da positividade: $\fua{\xi}{\vto{u},\vto{u}}\geqslant0$;
+	\item[ii.] Da definição: $\fua{\xi}{\vto{u},\vto{u}}=0 \Leftrightarrow
+	\vto{u}=\vto{0}$;
+	\item[iii.] Da simetria conjugada: $\fua{\xi}{\vto{u}_1,\vto{u}_2}=\overline{\fua{\xi}{\vto{u}_2,\vto{u}_1}}\,\,$;
+	\item[iv.] Da linearidade\footnote{Ver definição à p. \pageref{def:linear}.} no primeiro argumento:\begin{equation*}
+	\fua{\xi}{\alpha_1\vto{u}_1+\alpha_2\vto{u}_2,
+		\vto{u}_3} =
+	\alpha_1\fua{\xi}{\vto{u}_1,\vto{u}_3} + \alpha_2\fua{\xi}{\vto{u}_2,\vto{u}_3}\text{ e }
+	\end{equation*}
+	\item[v.] Da linearidade conjugada no segundo argumento:\begin{equation*}
+\fua{\xi}{\vto{u}_1,\alpha_2\vto{u}_2+
+	\alpha_3\vto{u}_3} =
+\overline{\alpha_2}\fua{\xi}{\vto{u}_1,\vto{u}_2} + \overline{\alpha_3}\fua{\xi}{\vto{u}_1,\vto{u}_3}\,;
+	\end{equation*}
+\end{itemize}
+onde $\vto{u}_1,\vto{u}_2,\vto{u}_3\in U_\mathcal{R}$ e $\alpha_1,\alpha_2,\alpha_3\in\mathcal{R}$ são elementos quaisquer. Nessas condições, a função $\xi$ é denominada \textsb{produto interno positivo-definido} porque no produto interno de um vetor por ele mesmo, o primeiro axioma exige como resultado um número real não negativo. Para fins de simplificação, denominaremos a função $\xi$ simplesmente de \textsb{produto interno}\index{produto!interno}, e a dupla  $(U_\mathcal{R},\xi)$ um \textsb{espaço produto interno}\index{espaço!produto interno}. Como ocorre com outras estruturações já apresentadas, essa dupla permite afirmar que o produto interno $\xi$ estrutura $U$ de tal sorte que a relação de incidência em qualquer dupla de vetores pode ser obtida.
+A fim de abreviar a notação, utilizaremos $\gloref{prdint}$ para representar o produto interno $\fua{\xi}{\vto{x},\vto{y}}$.
+
+No contexto do espaço produto interno $(U_\mathcal{R},\xi)$, podemos apresentar agora, em termos mais matemáticos, a definição de ortogonalidade. Assim, vetores quaisquer $\vto{u}_1,\vto{u}_2\in U_\mathcal{R}$ são ditos ortogonais, com representação $\vto{u}_1\gloref{perpend}\vto{u}_2$, se $\vto{u}_1\cdot\vto{u}_2=0$. Dados os subconjuntos $U_1\subset U_\mathcal{R}$ e $U_2\subset U_\mathcal{R}$, se $\vto{u}\in U_\mathcal{R}$ é ortogonal a qualquer vetor de $U_1$, diz-se que $\vto{u}\perp\con{U}_1$, e se qualquer vetor de $\con{U}_1$ for ortogonal a qualquer vetor de $\con{U}_2$, então $\con{U}_1\perp\con{U}_2$. Um conjunto $U_3=\{\vto{u}_1,\cdots,\vto{u}_n\}\subset U_\mathcal{R}$ é denominado ortogonal se $\vto{u}_i\perp\vto{u}_j$ para $i\neq j$. Diante disso, se $U_3$ é formado por vetores não nulos, fazendo o produto interno de ambos os lados da igualdade $\alpha\vto{u}_j=\vto{u}_i$, onde $\alpha\in\mathcal{R}$ e $i\neq j$, por $\vto{u}_j$ resulta que $\alpha\vto{u}_j\cdot\vto{u}_j=0$, de onde podemos concluir que $\alpha=0$, ou seja, que todo conjunto ortogonal é linearmente independente. Esse resultado nos permite afirmar categoricamente que num \emph{espaço vetorial $n$-dimensional, qualquer subconjunto ortogonal de $n$ elementos é base}.
+
+Quando ocorre estruturação cumulativa por norma e produto interno do conjunto em $V_\mathcal{R}$, podemos definir a tripla $(V_\mathcal{R},\eta,\xi)$ como um \textsb{espaço normado produto interno}\index{espaço!normado produto interno}. Nesses espaços, a relação de incidência entre vetores, expressa pelo produto interno, pode ser utilizada para definir a norma, segundo a regra genérica
+\begin{equation}
+ \fua{\eta}{\vto{x}} = \fua{g\circ\xi}{\vto{x},\vto{x}},
+\end{equation}
+onde a função em $\map{g}{\real^+}{\real^+}$ permite dizer que \emph{a norma é induzida pelo produto interno}\footnote{Como a norma num espaço produto interno não demanda maiores esforços além de uma mera definição formal, alguns autores consideram esse espaço um tipo de espaço normado, o que torna nossa classificação ``espaço normado produto interno'' um pleonasmo.}. Uma propriedade importante, chamada \textsb{Desigualdade de Cauchy-Schwarz}, válida para qualquer espaço normado produto interno cuja norma é induzida pelo produto interno segundo $\fua{g}{x}=\sqrt{x}$, garante que o valor da incidência entre dois vetores nunca é maior que o produto de seus tamanhos, ou seja,
+\begin{equation}
+|\, \vto{v}_1\cdot\vto{v}_2| \leqslant
+\|\vto{v}_1\|\,\,\|\vto{v}_2\|\,,\,\forall\,\vto{v}_1,\vto{v}_2\in\con{V}_\mathcal{R}\,.
+\end{equation}
+{\footnotesize
+\begin{proof} Considerando nulo um dos vetores, a constatação da igualdade é trivial. Agora, seja o vetor $\vto{v}=\vto{v}_1-\lambda\vto{v}_2$ onde $\vto{v}_2\neq \vto{0}$ e $\lambda=(\vto{v}_1\cdot\vto{v}_2)/\|\vto{v}_2\|^2$. A partir da simetria conjugada do produto interno e sabendo que o conjugado do produto é o produto dos conjugados, podemos realizar então o seguinte desenvolvimento:
+\begin{align*}
+	0&\leqslant\vto{v}\cdot\vto{v}\\
+	0&\leqslant\vto{v}_1\cdot\vto{v}_1-\vto{v}_1\cdot\lambda\vto{v}_2-\lambda\vto{v}_2\cdot\vto{v}_1+\lambda\vto{v}_2\cdot\lambda\vto{v}_2\\
+	0&\leqslant\vto{v}_1\cdot\vto{v}_1-\overline{\lambda}\vto{v}_1\cdot\vto{v}_2-\lambda\overline{\vto{v}_1\cdot\vto{v}_2}+\lambda\overline{\lambda}\vto{v}_2\cdot\vto{v}_2\\
+	0&\leqslant\|\vto{v}_1\|^2-\dfrac{|\vto{v}_1\cdot\vto{v}_2|^2}{\|\vto{v}_2\|^2}-\dfrac{|\vto{v}_1\cdot\vto{v}_2|^2}{\|\vto{v}_2\|^2}+\dfrac{|\vto{v}_1\cdot\vto{v}_2|^2}{\|\vto{v}_2\|^4}\|\vto{v}_2\|^2\\
+	\|\vto{v}_1\|^2&\geqslant\dfrac{|\vto{v}_1\cdot\vto{v}_2|^2}{\|\vto{v}_2\|^2}\\
+	\|\vto{v}_1\|\,\,\|\vto{v}_2\|&\geqslant |\vto{v}_1\cdot\vto{v}_2|\,\,.
+\end{align*}
+\end{proof}
+}
+
+Dois vetores quaisquer $\gloref{unita}$ e $\vun{u}_2$ de um espaço $(V_\mathcal{R},\eta,\xi)$ são ditos \textsb{ortonormais}\index{vetores!ortonormais} se forem \textsb{unitários}\index{vetor!unitário}, onde $\|\vun{u}_i\|=1$, e ortogonais. Diante disso, se o espaço vetorial $V_\mathcal{R}$ for $n$-dimensional e o conjunto de ortonormais $\hat{U}=\{\vun{u}_1,\vun{u}_2,\cdots,\vun{u}_n\}$ gerar esse espaço, diz-se que $\hat{U}$ é um \textsb{base ortonormal} de $V_\mathcal{R}$. Em termos gerais, quando há uma base ortogonal $\{\vto{u}_1,\vto{u}_2,\cdots,\vto{u}_n\}$, sempre há uma base ortonormal $\{\vun{u}_1,\vun{u}_2,\cdots,\vun{u}_n\}$ onde $\vun{u}_i:=\vto{u}_i/\|\vto{u}_i\|$, quando se diz que a base ortonormal resulta da \textsb{normalização}\index{base!normalizada} da ortogonal.
+
+
+\section{Estruturação por Métrica}
+
+Se a interação conjunto-campo confere ao primeiro características multiplicativas, um conjunto estruturado por métrica dispõe do conceito de distância. Em outras palavras, num espaço conjunto-métrica, ou \textsb{espaço métrico}\index{espaço!métrico}, há sempre uma distância entre dois elementos quaisquer, medida em termos escalares. Esta ideia de distância é basilar na Matemática, viabilizando, por exemplo, a definição usual de derivada e por consequência o Cálculo Diferencial elementar.
+
+Como ocorre na estruturação por campo, a estruturação por métrica, para ser assim denominada, também está sujeita a restrições. Numa linguagem mais matemática, elas podem ser descritas conforme o texto a seguir. Seja um conjunto $\con{A}$ e um mapeamento $\map{\varrho}{\con{A}\times\con{A}}{\real}$. Dados os elementos quaisquer $a_1,a_2,a_3\in A$, a dupla $(A,\varrho)$ é dita um espaço métrico e a função $\varrho$ uma \textsb{métrica} ou uma \textsb{função distância}\index{função!distância} se respeitar os axiomas
+\begin{itemize}
+\setlength\itemsep{.1em}
+    \item[i.] Da positividade: $\fua{\varrho}{\ele{a}_1,\ele{a}_2}\geqslant 0$\,;
+    \item[ii.] Da definição: $\fua{\varrho}{\ele{a}_1,\ele{a}_2}=0 \Leftrightarrow \ele{a}_1=\ele{a}_2$\,;
+    \item[iii.] Da comutatividade: $\fua{\varrho}{\ele{a}_1,\ele{a}_2}=\fua{\varrho}{\ele{a}_2,\ele{a}_1}$\,\,\,e
+    \item[iv.] Da desigualdade triangular: $\fua{\varrho}{\ele{a}_1,\ele{a}_2}\leq\fua{\varrho}{\ele{a}_1,\ele{a}_3}+\fua{\varrho}{\ele{a}_3,\ele{a}_2}$\,.
+\end{itemize}
+Se interpretarmos distâncias como caminhos, o último axioma informa, em outras palavras, a inexistência de atalhos que possam diminuir a distância entre os elementos $a_1$ e $a_2$. Além disso, a existência de espaços métricos permite dizer que a função no mapeamento bijetor $\map{f}{A}{B}$, onde os conjuntos definem $(A,\varrho_A)$ e $(B,\varrho_B)$, é uma \textsb{isometria}\index{isometria} quando $\fua{\varrho_A}{\ele{a}_1,\ele{a}_2}=\fua{\varrho_B}{\fua{f}{\ele{a}_1},\fua{f}{\ele{a}_2}}$. Em outras palavras, uma isometria preserva a distância entre os elementos de seu domínio.
+
+A partir da definição rigorosa de métrica, surge um vasto conjunto de novas definições no estudo dos espaços assim estruturados. Dentre elas, apresentaremos a seguir aquelas que nos conduzirão à importante definição do ente matemático denominado contínuo, objeto fundamental do nosso estudo particular. Vamos iniciar então considerando o espaço métrico $(A,\varrho)$, um elemento $a\in A$ e um escalar $r\in \real$, a partir dos quais o conjunto
+\begin{equation}
+\overline{B}_{\ele{a},\ele{r}}:=\lch \ele{x}\in\con{A} \,:\,
+\fua{\varrho}{\ele{a},\ele{x}}\leqslant r \rch
+\end{equation}
+é dito uma \textsb{bola fechada}\index{bola!fechada} com centro $a$ e raio $r$. Trata-se pois de um subconjunto de $A$ delimitado por uma fronteira, nesse caso uma esfera, cujos elementos pertencem a esse subconjunto. Quando tal esfera não está inclusa, que é o caso de
+\begin{equation}
+B_{\ele{a},\ele{r}}:=\lch \ele{x}\in\con{A} \,:\,
+\fua{\varrho}{\ele{a},\ele{x}}< r \rch\,,
+\end{equation}
+dizemos de uma \textsb{bola aberta}\index{bola!aberta} com centro $a$ e raio $r$. Nesses termos, a \textsb{esfera}\index{esfera} propriamente dita, também com centro $a$ e raio $r$, resulta assim definida:
+\begin{equation}
+\partial B_{\ele{a},\ele{r}}:=\lch \ele{x}\in\con{A} \,:\,
+\fua{\varrho}{\ele{a},\ele{x}}= r \rch\,.
+\end{equation}
+
+\begin{figure}[!ht]
+	\centering
+	\begin{center}
+		\scalebox{.72}{\input{partes/parte1/figs/c_algabst/bolas.pstex_t}}
+	\end{center}
+	\titfigura{Esfera, bolas fechada e aberta.}\label{fg:bolas}
+\end{figure}
+
+
+Um subconjunto $A_1$ de $A$ é dito \textsb{aberto}\index{conjunto!aberto} em $A$ se quaisquer de seus elementos for centro de uma bola aberta subconjunto de $A_1$, ou seja, para qualquer $a\in A_1$, sempre existe um $\ele{r}\in\real$ tal que $\ele{B}_{\ele{a},\ele{r}}\subset A_1$. Um conjunto $A_2\subset A$ é dito \textsb{fechado}\index{conjunto!fechado} se seu complementar for aberto em $A$. Assim, podemos dizer que o complementar do conjunto aberto $A_1$ é fechado em $A$. Em linhas gerais, conjuntos abertos, que generalizam o conceito de intervalos abertos, são desprovidos de elementos limítrofes, que remetem à ideia de um contorno e de um interior. Conjuntos dotados de interior e contorno são fechados porque seus complementares são abertos. Em termos matemáticos, dado um conjunto qualquer $A_3\subset A$, diz-se de um \textsb{interior}\index{interior} $\widehat{A}_3$ de $A_3$ definido por
+\begin{equation}
+\widehat{A}_3=\lch\ele{x}\in A_3\,:\,\exists\,\ele{r}\in\real\text{ onde }\ele{B}_{\ele{x},\ele{r}}\subset A_3\rch
+\end{equation}
+e de um \textsb{fechamento}\index{fechamento} $\overline{A}_3$ de $A_3$ definido por
+\begin{equation}
+\overline{A}_3=\lch\ele{x}\in\con{A}\,:\, A_3\cap\ele{B}_{\ele{x},\ele{r}}\neq\emptyset\,,\,\forall\,\ele{r}\in\real\rch\,,
+\end{equation}
+tais que $\partial A_3:=\overline{A}_3\setminus \widehat{A}_3$ é o \textsb{contorno}\index{conjunto!contorno de} de $A_3$. Dessas definições, podemos dizer que se o conjunto $A_3=\widehat{A}_3$, ele é aberto; mas se $A_3=\overline{A}_3$, ele é fechado.
+
+
+\begin{figure}[!ht]
+	\centering
+	\begin{center}
+		\scalebox{.72}{\input{partes/parte1/figs/c_algabst/contorno.pstex_t}}
+	\end{center}
+	\titfigura{Contorno, fechamento e interior de $A_3$.}
+\end{figure}
+
+
+Quando ocorre de um conjunto aberto ter um complementar aberto diz-se que ele é \textsb{fechado-aberto}. Como exemplo, os conjuntos $W_1=[1,2]$ e $W_2=[3,4]$, definidos por intervalos reais, resultam fechados-abertos em $W_1\cup W_2$. Por definição, o conjunto vazio e o conjunto $A$, do qual os demais selecionados para estudo são subconjuntos, são considerados fechados-abertos. Diante disso, o espaço $(A,\varrho)$ é dito \textsb{conexo} se inexistir subconjunto próprio não vazio que seja fechado-aberto em $A$; caso contrário, o espaço é dito \textsb{desconexo}\index{espaço!desconexo}, como ocorre com o espaço métrico definido por $W_1\cup W_2$ no exemplo apresentado. Em outras palavras, podemos dizer que um espaço desconexo é definido por um conjunto de ``fragmentos'' dispersos, resultado da união de subconjuntos abertos disjuntos não vazios.
+
+{\footnotesize
+\begin{proof}
+Vamos mostrar por que $W_1=[1,2]$ e $W_2=[3,4]$ são fechados-abertos no conjunto $W:=W_1\cup W_2$. Seja um intervalo aberto $(w-1/2,w+1/2)$ em $\real$. Em $W$, esse intervalo centrado em $w=2$ resulta $(3/2,2]$, que também é aberto porque inexistem elementos maiores que 2 e menores que $5/2$. Um intervalo aberto subconjunto de $W_1$ sempre é obtido para qualquer $w\in W_1$, ocorrendo o mesmo para $W_2$; o que os torna abertos. Além disso, $W_1$ e $W_2$ também são fechados por serem complementares abertos entre si.
+\end{proof}}
+
+Agora, seja um espaço métrico $(U,\varrho)$ e um conjunto $C=\{U_1, U_2,\cdots\}$ constituído por infinitos subconjuntos de $U$. Dizemos que $C$ recobre $U$ ou que $C$ é um \textsb{recobrimento}\index{conjunto!recobrimento de} de $U$ quando $U\subseteq \bigcup_{i=1}^\infty U_i$. Se para qualquer valor $r \in \real$ existir um conjunto finito $\{ B_{{u_1},r}\,,B_{{u_2},r}\,,\cdots,B_{{u_n}\,,r}\}$, $u_i\in U$, que recobre $U$, dizemos que $(U,\varrho)$ é um espaço \textsb{totalmente limitado}\index{espaço!totalmente limitado}. Limitação total é uma restrição que impõe ao conjunto definidor do espaço uma forte característica de finidade, a partir da qual pode-se dispor do conceito de tamanho.
+
+Há alguns espaços métricos nos quais é convergente qualquer sequência de elementos que, quando percorrida, as distâncias entre os elementos a percorrer tendem a zero. Por conta desse critério, os conjuntos que o obedecem resultam desprovidos de ``vazios'', apresentando-se completamente ``preenchidos''. Em termos matemáticos, dado o espaço métrico $(V,\varrho)$, na sequência de elementos $v_1,v_2,\cdots,v_n\in V$ onde
+\begin{equation}
+\lim_{\min{\lpa i,j\rpa}\to\infty}{\fua{\varrho}{\ele{v}_i,\ele{v}_j}}=0\,,
+\end{equation}
+denominada \textsb{Sequência de Cauchy}, a infinita diminuição das distâncias fica garantida. Se qualquer Sequência de Cauchy em $V$ for convergente, ou seja, se além do limite anterior, existir um $v\in V$ onde
+\begin{equation}
+\lim_{i\to\infty}{\fua{\varrho}{\ele{v}_i,\ele{v}}}=0\,,
+\end{equation}
+diz-se que o espaço métrico é \textsb{completo}\index{espaço!métrico completo}. Se o espaço métrico completo também for conexo e totalmente limitado, diz-se que esse espaço é um \textsb{contínuo}\index{contínuo}. Sendo assim, para os fins de nosso estudo, \emph{todo o contínuo é um espaço métrico definido por um conjunto desprovido de ``vazios'', não ``fragmentado'' e detentor de um tamanho}.
+
+\begin{mteo}{Isometria Preserva Completude de Espaço Métrico}{isoComp}
+Uma isometria cujo domínio e a imagem são espaços métricos, se o domínio for completo a imagem também o será.
+\end{mteo}
+\hspace{1pt}
+{\footnotesize
+\begin{proof}
+Verifiquemos se a isometria preserva mesmo a condição de completude do espaço. Considerando o mapeamento isométrico $\map{f}{V}{W}$, onde $\fua{\varrho_W}{\fua{f}{x},\fua{f}{y}}=\fua{\varrho_V}{x,y}$, o domínio $V$ é um espaço métrico completo e $W$ é um espaço métrico, as igualdades
+\begin{equation*}
+\lim_{\min{\lpa i,j\rpa}\to\infty}{\fua{\varrho_W}{\fua{f}{\ele{v}_i},\fua{f}{\ele{v}_j}}}=\lim_{\min{\lpa i,j\rpa}\to\infty}{\fua{\varrho_V}{\ele{v}_i,\ele{v}_j}}=0\,,
+\end{equation*}
+mostram que a sequencia $\fua{f}{\ele{v}_1},\fua{f}{\ele{v}_2},\cdots,\fua{f}{\ele{v}_n}\in W$ é de Cauchy. Além disso, dado um elemento qualquer $\fua{f}{v}\in W$, as igualdades
+\begin{equation*}
+\lim_{i\to\infty}{\fua{\varrho_W}{\fua{f}{\ele{v}_i},\fua{f}{\ele{v}}}}=\lim_{i\to\infty}{\fua{\varrho_V}{\ele{v}_i,\ele{v}}}=0\,.
+\end{equation*}
+\end{proof}}
+
+
+Como o tema deste capítulo é Álgebra Linear, vamos considerar que o espaço métrico $(V,\varrho)$, estruturado por $\varrho$, também o seja pelo campo $\mathcal{R}$. Assim, podemos definir a dupla $(V_\mathcal{R},\varrho)$, a qual denominaremos \textsb{espaço vetorial métrico}\index{espaço!vetorial métrico}. A partir daí, os tipos específicos de espaços vetoriais e métricos já apresentados podem ser conciliados, de onde surgem três importantes espaços: um espaço normado métrico completo ou, mais abreviadamente, \textsb{espaço de Banach}\index{espaço!de Banach}\index{Banach!espaço de}, representado $(V_\mathcal{R},\varrho,\eta)$, onde
+\begin{equation}
+\fua{\varrho}{\vto{v}_1,\vto{v}_2} := \fua{\eta}{\vto{v}_1-\vto{v}_2}
+,\,\forall
+\,\vto{v}_1,\vto{v}_2\in\con{V}_\mathcal{R}\,;
+\end{equation}
+um espaço de Banach com produto interno $(V_\mathcal{R},\varrho,\eta,\xi)$, chamado \textsb{espaço de Hilbert}\index{espaço!de Hilbert}\index{Hilbert!espaço de}, cuja norma é induzida pelo produto interno segundo a regra $\fua{\eta}{\vto{x}}=\sqrt{\fua{\xi}{\vto{x},\vto{x}}}$; e um espaço de Hilbert real $n$-dimensional $(V_\real,\varrho,\eta,\xi)$, denominado \textsb{espaço Euclidiano}\index{espaço!Euclidiano}. A fim de evitar abuso notacional, os espaços vetoriais métricos aqui descritos serão doravante identificados apenas pelo espaço vetorial que o define: por exemplo, a quádrupla $(V_\mathcal{R},\varrho,\eta,\xi)$ será sempre descrita como o ``espaço de Hilbert $V_\mathcal{R}$'', ficando implícitas as funções definidoras.
+
+\begin{figure}[ht]
+\centering
+{\small
+\begin{forest}
+	for tree={align=center,parent anchor=south, child anchor=north}
+	[Vetorial\\$U_\mathcal{R}$
+	[Produto Interno\\$(U_\mathcal{R}{,}\xi)$ [Normado Produto Interno\\$(U_\mathcal{R}{,}\eta{,}\xi)$,name=normProdInt ] ]
+	[Normado\\$(U_\mathcal{R}{,}\eta)$,name=normd]
+	[Vetorial Métrico Completo\\$(U_\mathcal{R}{,}\varrho)$
+	[Banach\\$(U_\mathcal{R}{,}\varrho{,}\eta)$,name=bana [Hilbert\\$(U_\mathcal{R}{,}\varrho{,}\eta{,}\xi)$,name=hilb [Euclidiano\\$(U_\real{,}\varrho{,}\eta{,}\xi)$]]]] ]
+	]
+	\draw (normProdInt)--(normd);
+	\draw (bana)--(normd);
+	\draw (hilb)--(normProdInt);
+\end{forest}
+}
+\newline
+\titfigura{Conciliação dos espaços vetoriais apresentados.}
+\end{figure}
+
+\begin{mteo}{Base Ortogonal em Espaços de Hilbert}{temOrtonormal}
+	Todo espaço de Hilbert tem base ortogonal.
+\end{mteo}
+
+{\footnotesize
+\begin{proof}
+Através de complicada demonstração, a partir do chamado \textsb{Lema de Zorn}\index{Zorn, Lema de}\footnote{Ver \aut{Kreyszig}\cite{kreyszig_1978_1}.}, pode-se obter que todo espaço de Hilbert possui uma base. Garantida a existência de uma base, o \textsb{Algoritmo de Gram-Schmidt}\index{Gram-Schmidt!Algoritmo de} consegue encontrar um conjunto ortogonal a partir de qualquer conjunto, conforme mostrado a seguir. Seja uma base  $U=\{\vto{u}_1,\cdots,\vto{u}_n\}$ e um conjunto $X=\{\vto{x}_1,\cdots,\vto{x}_n\}$ onde $\vto{x}_1=\vto{u}_1$. Quando o valor $n=2$, o objetivo é encontrar um $\vto{x}_2\perp\vto{x}_1$ para que $X$ seja ortogonal. O algoritmo propõe que o vetor $\vto{x}_2=p_{21}\vto{x}_1+\vto{u}_2$, onde  $p_{21}:=-(\vto{u}_2\cdot\vto{x}_1)/\|\vto{x}_1\|^2$. Se um vetor qualquer $\vto{u}=\alpha_1\vto{u}_1+\alpha_2\vto{u}_2$, tem-se então $\vto{u}=(\alpha_1-p_{21})\vto{x}_1+\alpha_2\vto{x}_2$; logo, $\spn (U)=\spn(X)$. No caso de $n=3$, encontra-se um vetor $\vto{x}_3\perp\{\vto{x}_1,\vto{x}_2\}$ através da igualdade $\vto{x}_3=p_{31}\vto{x}_1+p_{32}\vto{x}_2+\vto{u}_3$, onde os reais $p_{31}:=-(\vto{u}_3\cdot\vto{x}_1)/\|\vto{x}_1\|^2$ e $p_{32}:=-(\vto{u}_3\cdot\vto{x}_2)/\|\vto{x}_2\|^2$. Um vetor $\vto{u}=\alpha_1\vto{u}_1+\alpha_2\vto{u}_2+\alpha_3\vto{u}_3$ pode ser reescrito como   $\vto{u}=(\alpha_1-\alpha_2 p_{21}-\alpha_3 p_{31})\vto{x}_1+(\alpha_2-\alpha_3 p_{32})\vto{x}_2+\alpha_3\vto{x}_3$, resultando novamente $\spn (U)=\spn(X)$. Segue-se com esse mesmo procedimento para qualquer $n>3$.
+\end{proof}
+}
+
+Uma consequência importante desse teorema é a existência de bases ortonormais resultantes da normalização de bases ortogonais. Diante disso, sejam $\vto{x}$ e $\vto{y}$ vetores quaisquer do espaço Euclidiano $E_\real$, sendo $\hat{B}=\{\vun{v}_1,\cdots,\vun{v}_n\}$ uma base ortonormal desse espaço. Podemos dizer então que
+\begin{equation}
+\vto{x}\cdot\vto{y}=\sum_{i=1}^{n}\sum_{j=1}^{n}\alpha_i\beta_j\vun{v}_i\cdot\vun{v}_j=\sum_{i=1}^{n}\sum_{j=1}^{n}\alpha_i\beta_j\delta_{ij}=\sum_{i=1}^{n}\alpha_i\beta_i\,,
+\end{equation}
+onde $(\alpha_1,\cdots,\alpha_n)$ e $(\beta_1,\cdots,\beta_n)$ são as coordenadas de $\vto{x}$ e $\vto{y}$ respectivamente. Por conta dessa igualdade, costuma-se estabelecer uma base ortonormal padrão em espaços Euclidianos que recebe o nome de \textsb{base natural}\index{base!natural}, representada pelo subconjunto $O=\,$\gloref{baseNatural}. O preestabelecimento dessa base permite dizer dos escalares $x_i:=\vto{x}\cdot\vun{e}_i$ que constituem as coordenadas naturais\index{coordenadas!naturais} \gloref{coordNat} de $\vto{x}$, ficando implícita a base utilizada.
+
+Outra consequência da existência de conjuntos ortogonais em espaços de Hilbert são os chamados \textsb{conjuntos recíprocos}\index{conjuntos!recíprocos}. Dizemos que $\con{U}=\lch \vto{u}_1,\cdots,\vto{u}_n
+\rch$ e $\con{W}=\lch \vto{w}_1,\cdots,\vto{w}_n \rch$, subconjuntos do espaço de Hilbert $V_\mathcal{R}$, são recíprocos ou \textsb{biortogonais}\index{conjuntos!biortogonais} se seus vetores forem não nulos e $\vto{u}_i\cdot\vto{w}_j = \delta_{ij}$. Como o par de conjuntos recíprocos é único, costumamos utilizar representações relativas a um dos conjuntos: por exemplo, o conjunto $U^\perp:=W$ e os vetores $\vto{u}^i:=\vto{w}_i$. Considerando $U$ uma base de $V_\mathcal{R}$ e $\con{U}^\perp$ seu conjunto recíproco, seja um vetor $\vto{u}=\sum_{i=1}^n\gamma_i\vto{u}^i$. Se esse vetor for nulo, então
+\begin{equation}
+(\sum_{j=1}^n\gamma_j\vto{u}^j)\cdot\vto{u}_i\,=\,\sum_{j=1}^n\gamma_j\delta_{ij}\,=\,\gamma_i\,=\,0\,.
+\end{equation}
+A constatação dos escalares $\gamma_i$ nulos para um vetor nulo indica que $U^\perp$ é linearmente independente. Além disso, como os dois conjuntos recíprocos possuem o mesmo número de termos, podemos concluir finalmente que se um deles for base de um dado espaço vetorial, o outro também será. Assim, se $(\alpha_1,\cdots,\alpha_n)$ forem as coordenadas de um dado vetor na base $U$, costumamos representar $(\alpha^1,\cdots,\alpha^n)$ como as coordenadas desse mesmo vetor na base $U^\perp$. Interessante observar que se a base envolvida for ortonormal, sua base recíproca é ela própria, ou seja, $U^\perp=U$ no caso descrito.
+
+{\footnotesize
+\begin{proof}
+Vamos demonstrar a existência e a unicidade de conjuntos recíprocos nas condições apresentadas. Pelo teorema \ref{teo:temOrtonormal}, podemos admitir um subconjunto ortogonal $Z=\{\vto{z}_1,\cdots,\vto{z}_n\}$. A partir daí, seja o subconjunto $\{\vto{\tilde{z}}_1,\cdots,\vto{\tilde{z}}_n\}$ onde $\vto{\tilde{z}}_i:=\vto{z}_i/\|\vto{z}_i\|^2$. Assim,  $\vto{z}_i\cdot\vto{\tilde{z}}_j=(\vto{z}_i\cdot\vto{z}_j)/\|\vto{z}_j\|^2=\delta_{ij}$. Agora, supondo que exista um outro subconjunto
+$\{\vto{x}_1,\cdots,\vto{x}_n\}$ recíproco a $Z$, podemos dizer que
+$\vto{z}_i\cdot(\vto{\tilde{z}}_j-\vto{x}_j)=0$. Como os vetores $\vto{z}_i$, $\vto{\tilde{z}}_j$ e $\vto{x}_j$ não podem ser nulos, então $\vto{\tilde{z}}_j=\vto{x}_j$.
+\end{proof}
+}
+
+
+
+
+\section{Funções Lineares}\label{sec:FuncLin}
+
+As relações fundamentais estudadas pela Álgebra Linear têm como principal atributo preservar as estruturas dos grupos envolvidos e também aquelas definidas por campos. Tais relações expressam-se em homomorfismos de grupos definidores de espaços vetoriais cuja estrutura deve ser mantida. Além da estruturação típica desses espaços, o homomorfismo precisa preservar também uma eventual estrutura métrica. Na prática, isso significa que, sendo o domínio do homomorfismo um espaço vetorial, sua imagem também deve ser um espaço vetorial; se o domínio é um espaço vetorial métrico, a imagem também. Selecionadas a partir do critério de que definem o mesmo mapeamento, essas funções coligidas costumam ser estudados no âmbito de espaços vetoriais, quando adquirem restrições adicionais no comportamento em relação aos seus argumentos.
+
+Vamos iniciar o estudo das funções lineares considerando primeiramente um grupo abeliano aditivo $V^{U}$ constituído por funções genéricas que definem mapeamentos do tipo $U\mapsto V$, onde $U$ e $V$ são espaços métricos completos. Dizemos que esse grupo constitui um \textsb{espaço de funções}\index{espaço!de funções} \gloref{espacFunc} se o valor da função zero for sempre o vetor nulo, ou seja $\map{\vto{0}}{U}{\{\vto{0}\}}$, e se para quaisquer $\alpha\in\mathcal{R}$ e $\vtf{f},\vtf{g}\in V^U_\mathcal{R}$ as seguintes restrições forem respeitadas:
+\begin{itemize}
+\setlength\itemsep{.1em}
+\item[i.] $\fua{\lco\alpha\vtf{f}\rco}{x}=\alpha\,\fua{\vtf{f}}{x}$;
+\item[ii.]$\fua{\lco\vtf{f}+\vtf{g}\rco}{x}=\fua{\vtf{f}}{x}+\fua{\vtf{g}}{x}$.
+\end{itemize}
+Pode ocorrer que o domínio $U$ seja o produto cartesiano $W^{\times q}$, quando uma função qualquer $\vtf{f}$ do espaço vetorial de funções passa a ter como argumento uma $q$-tupla de vetores ou $q$ vetores, e seu valor é representado $\fua{\vtf{f}}{w_1,\cdots,w_q}$, onde a tupla $(w_1,\cdots,w_q)\in W^{\times q}$ ou $w_i\in W_i$.
+
+
+Um exemplo muito comum de espaço de funções é aquele constituído por funções denominadas contínuas. Para defini-las precisamos antes dizer que um conjunto $S\subset U$ é chamado \textsb{vizinhança}\index{vizinhança} de um elemento $u\in S$, representada $\viz{u}$, quando há um número real $r>0$ que define a bola aberta $B_{u,r}\subset S$. Nesse contexto, a função em $\map{\vtf{g}}{U}{V}$ é dita \textsb{contínua}\index{função!contínua} no elemento $u\in U$ se para qualquer $x\in\viz{u}$ o valor $\fua{\vtf{g}}{x}\in \viz{\fua{\vtf{g}}{u}}$. Em termos mais pragmáticos, $\vtf{g}$ é contínua em $u$ quando
+\begin{equation}
+\lim_{x\to u}\fua{\vtf{g}}{x}=\fua{\vtf{g}}{u},\,\, \forall\, x\in U\,,
+\end{equation}
+ou seja, quando $x\to u$ implicar $\fua{\vtf{g}}{x}\to\fua{\vtf{g}}{u}$. No caso de uma função ser contínua em qualquer vetor do domínio, ela é dita contínua no domínio ou simplesmente contínua. Além disso, se uma bijeção e sua função inversa forem contínuas em seus domínios respectivos, cada qual é dita um \textsb{homeomorfismo}\index{homeomorfismo}\footnote{Não confundir com homomorfismo, sem o "e".}.
+
+Ainda sobre a continuidade de funções, precisamos apresentar também um tipo especial, cuja restrição é ainda mais forte do que a apresentada na igualdade anterior: a função $\vtf{g}$ é dita \textsb{contínua de Lipschitz}\index{função!contínua de Lipschitz} em $u$ se existir um $\vartheta\in\real^+$ não nulo, denominado \textsb{constante de Lipschitz}\index{Lipschitz!constante de}, onde
+\begin{equation}
+\vartheta \geqslant\dfrac{ \fua{\varrho}{\fua{\vtf{g}}{x},\fua{\vtf{g}}{u}}}{\fua{\varrho}{x,u}}\,,\forall\, x\in \{U\setminus \{u\}\}\,.
+\end{equation}
+Dessa definição pode-se concluir que a continuidade de Lipschitz inclui a continuidade tradicional e limita a alteração das distâncias promovida pela função.
+
+Neste ponto, consideremos $V^U_\mathcal{R}$ um espaço vetorial de funções que mapeiam $U_\mathcal{R}$ para $V_\mathcal{R}$, ambos espaços métricos completos. Seja então a função $\vto{h}\in V^U_\mathcal{R}$ um homomorfismo pelo qual a estrutura aditiva do grupo $U$ fica preservada. O homomorfismo precisa preservar também a estrutura criada pelo campo $\mathcal{R}$ de tal forma que
+\begin{equation}
+\fua{\vtf{h}}{\alpha\vto{u}_1+\beta\vto{u}_2}=\alpha\fua{\vtf{h}}{\vto{u}_1}+\beta\fua{\vtf{h}}{\vto{u}_2}
+\end{equation}
+e $\fua{\vtf{h}}{\vto{0}}=\vto{0}$, para quaisquer $\alpha,\beta\in\mathcal{R},\,\vto{u}_1,\vto{u}_2\in U$. Nessas condições, dizemos que $\vtf{h}$ é uma \textsb{função linear}\index{função!linear}\label{def:linear} e o mapeamento por ela definido uma \textsb{transformação linear}\index{transformação!linear}. Se o espaço de funções $V^U_\mathcal{R}$ for constituído apenas por funções lineares, costuma-se representá-lo pela notação $\gloref{evl}$. Agora, para o caso de $U_\mathcal{R}=W^{\times q}_\mathcal{R}$, uma função $\vtf{k}$ é dita \textsb{multilinear}\index{função!multilinear}, ou  \textsb{bilinear}\index{função!bilinear} se $q=2$,  quando
+\begin{align}
+\lefteqn{\fua{\vtf{k}}{\vto{w}_1,\cdots,\alpha\vto{w}_i+ \beta\vto{w},\cdots,\vto{w}_q}=} & & \nonumber\\
+& &\alpha\fua{\vtf{k}}{\vto{w}_1,\cdots,\vto{w}_i,\cdots,\vto{w}_q}+\beta\fua{\vtf{k}}{\vto{w}_1,\cdots,\vto{w},\cdots,\vto{w}_q}
+\end{align}
+e $\fua{\vtf{k}}{\vto{0},\cdots,\vto{0}}=\vto{0}$, para quaisquer $\alpha,\beta\in\mathcal{R}$ e $\vto{w},\vto{w}_i\in W_i$. Nesses termos, sendo o domínio   $U_\mathcal{R}=V_\mathcal{R}^q$, os vetores de $V^{V^q}_\mathcal{R}$ resultam \textsb{operadores multilineares}\index{operador!multilinear} e os mapeamentos que definem são \textsb{operações multilineares}\index{operação!multilinear}. Todas essas funções lineares podem ser contínuas e constituir um espaço normado de funções se for definida uma norma. Nesse sentido, considerando $Z_\mathcal{R}$ e $Y_\mathcal{R}$ espaços de Banach, uma condição necessária e suficiente para que uma função linear $\vtf{h}$ seja contínua em $Z_\mathcal{R}$ impõe que ela seja \textsb{limitada}\index{função!limitada}, isto é, que exista um $\nu\in\real^+$ onde
+\begin{equation}\label{eq:funcaoLimitada}
+\nu\geqslant \|\fua{\vtf{h}}{\vto{z}}\|/\|\vto{z}\| \,,\forall\, \vto{z}\in \{Z_\mathcal{R}\setminus\{\vto{0}\}\}\,.
+\end{equation}
+A partir daí, $Y_\mathcal{R}^Z$ torna-se um espaço normado de funções lineares contínuas quando a norma é definida como sendo o menor dos valores de $\nu$, ou pela regra
+\begin{equation}\label{eq:normaFuncao}
+\fua{\eta}{\vtf{x}}=\sup\lch \|\fua{\vtf{x}}{\vto{z}}\|/\|\vto{z}\| \,,\forall\, \vto{z}\in \{Z_\mathcal{R}\setminus\{\vto{0}\}\} \rch\,.
+\end{equation}
+Para o nosso estudo, \emph{convém que o espaço vetorial de funções lineares contínuas $Y_\mathcal{R}^Z$, além de normado, seja também métrico produto interno, onde $\fua{\varrho}{\vtf{h}_1,\vtf{h}_2} := \|\vtf{h}_1-\vtf{h}_2\|$ e o produto interno\label{txt:prodInt} induza a norma segundo  $\|\vtf{h}\|:=\sqrt{\vtf{h}\cdot\vtf{h}}\,\,$}.
+
+Considerando as condições anteriores, se o espaço destino $V_\mathcal{R}=\mathcal{R}_\mathcal{R}$, um elemento $\vtf{f}\in \mathcal{R}^{U_\mathcal{R}}$ que define o mapeamento $\map{\vtf{f}}{U_\mathcal{R}}{\mathcal{R}_\mathcal{R}}$ é denominado \textsb{funcional}\index{funcional}. Em termos menos rigorosos, podemos afirmar que \emph{o funcional mapeia um espaço vetorial para seu campo estruturante}. A partir dos conceitos de funcional e de função linear, as coordenadas de um vetor qualquer numa determinada base podem ser definidas como uma sequência de valores de funcionais lineares que têm esse vetor como argumento. Assim, dada uma base $B=\{\vto{u}_1,\cdots,\vto{u}_n\}$ do espaço vetorial $U_\mathcal{R}$, diz-se que uma ênupla de funcionais lineares $(\vtf{f}_1^{B},\cdots,\vtf{f}_n^{B})$ contém os \textsb{funcionais coordenados}\index{funcionais coordenados} da base $B$ se cada \gloref{funcCoord} pertencer a $\mathcal{R}^{U_\mathcal{R}}$ e
+\begin{equation}
+\vto{u}=\sum_{i=1}^{n}\fua{\vtf{f}^\con{B}_{i}}{\vto{u}}\vto{u}_i\,,\,\forall\,\, \vto{u}\in U_\mathcal{R}\,,
+\end{equation}
+onde $(\fua{\vtf{f}^\con{B}_{1}}{\vto{u}},\cdots,\fua{\vtf{f}^\con{B}_{n}}{\vto{u}})$ são as coordenadas de $\vto{u}$ na base $B$. Diante disso, como o vetor
+\begin{equation}
+\vto{u}_i=\sum_{j=1}^{n}\fua{\vtf{f}^\con{B}_{j}}{\vto{u}_i}\vto{u}_j\,,
+\end{equation}
+resulta que $\fua{\vtf{f}^{B}_j}{\vto{u}_i}=\delta_{ij}$. Ademais, considerando $U_\mathcal{R}$ um espaço de Hilbert e o conjunto $\hat{B}=\{\vun{u}_1,\cdots,\vun{u}_n\}$ uma base ortonormal desse espaço, podemos afirmar que
+\begin{equation}
+	\vto{x}\cdot\vun{u}_i=\sum_{j=1}^{n}\fua{\vtf{f}^\con{\hat{B}}_{j}}{\vto{x}}\vun{u}_j\cdot\vun{u}_i=\sum_{j=1}^{n}\fua{\vtf{f}^\con{\hat{B}}_{j}}{\vto{x}}\delta_{ji}=\fua{\vtf{f}^\con{\hat{B}}_{i}}{\vto{x}}\,,\,\forall\, \vto{x}\in U_\mathcal{R}\,,
+\end{equation}
+de onde a seguinte regra garante a existência de funcionais coordenados:
+\begin{equation}\label{eq:regraCoord}
+\fua{\vtf{f}^{\hat{B}}_i}{\vto{x}}=\vto{x}\cdot\vun{u}_i\,.
+\end{equation}
+
+Agora, considerando $U_\mathcal{R}$ e $V_\mathcal{R}$ espaços de Hilbert, dizemos que $\vtf{g}^\dagger\in U^V_\mathcal{R}$ é a \textsb{função adjunta}\index{função!adjunta} de $\vtf{g}\in V^U_\mathcal{R}$ quando, dados os vetores quaisquer $\vto{u}\in U_\mathcal{R}$ e $\vto{v}\in V_\mathcal{R}$,
+\begin{equation}\label{eq:funcaoTransposta}
+\fua{\vtf{g}}{\vto{u}}\cdot\vto{v}=\vto{u}\cdot\fua{\vtf{g}^\dagger}{\vto{v}}\,.
+\end{equation}
+ Em particular, se o campo $\mathcal{R}=\real$, dizemos que a função $\vtf{g}^\dagger$ é a \textsb{transposta}\index{função!transposta} de $\vtf{g}$. Pela igualdade anterior, ficam válidas as propriedades a seguir para quaisquer $\alpha\in\mathcal{R}$ e $\vtf{k}\in U^V_\mathcal{R}$.
+\begin{itemize}
+	\setlength\itemsep{.1em}
+	\item[i.] $\lpa\alpha\vtf{g}\rpa^\dagger=\overline{\alpha}\vtf{g}^\dagger$;
+	\item[ii.] $\lpa\vtf{g}\circ\vtf{k}\rpa^\dagger=\vtf{k}^\dagger\circ\vtf{g}^\dagger$;
+	\item[iii.] Se $\vtf{g}$ for linear, $\vtf{g}^\dagger$ também é linear;
+	\item[iv.] Se $\vtf{g}$ for uma bijeção, há uma função $\vtf{g}^{-\dagger}:=\lpa\vtf{g}^{-1}\rpa^\dagger=\lpa\vtf{g}^\dagger\rpa^{-1}$.
+\end{itemize}
+
+{\footnotesize
+\begin{proof}
+Primeiramente, precisamos demonstrar a existência e a unicidade das funções transpostas. Na igualdade apresentada, sejam $\vto{u}=\vun{u}_k$ e $\vto{v}=\vun{v}_k$, onde os vetores à direita pertencem às bases ortonormais $B_1$ e $B_2$ respectivamente, ambas dos espaços $n$-dimensionais $U_\mathcal{R}$ e $V_\mathcal{R}$. Assim, pode-se realizar o seguinte desenvolvimento:
+\begin{align*}
+\vun{u}_k\cdot\fua{\vtf{g}^\dagger}{\vun{v}_k}&=\fua{\vtf{g}}{\vun{u}_k}\cdot\vun{v}_k\\
+\vun{u}_k\cdot\sum_{i=1}^n{\vtf{f}_i^{B_2}}[\fua{\vtf{g}^\dagger}{\vun{v}_k}]\vun{u}_i&=\sum_{i=1}^n{\vtf{f}_i^{B_1}}\lco\fua{\vtf{g}}{\vun{u}_k}\rco\vun{v}_i\cdot\vun{v}_k\\
+\overline{{\vtf{f}_k^{B_2}}[\fua{\vtf{g}^\dagger}{\vun{v}_k}]}&={\vtf{f}_k^{B_1}}\lco\fua{\vtf{g}}{\vun{u}_k}\rco\,.
+\end{align*}
+Nessas condições, podemos dizer que se $\vtf{g}$ existe, $\vtf{g}^\dagger$ também existe. Agora, supondo que existam duas funções $\vtf{g}_1^\dagger$ e $\vtf{g}_2^\dagger$ transpostas de $\vtf{g}$, tem-se duas igualdades conforme \eqref{eq:funcaoTransposta}. Ao subtraí-las, obtém-se $\vto{u}\cdot(\fua{\vtf{g}_1^\dagger}{\vto{v}}-\fua{\vtf{g}_2^\dagger}{\vto{v}})=0$,  que é válida para quaisquer $\vto{u}$ e $\vto{v}$; assim $\vtf{g}_1^\dagger=\vtf{g}_2^\dagger$. No caso das propriedades, a primeira pode ser comprovada a partir da igualdade $\fua{\lpa\alpha\vtf{g}\rpa^\dagger}{\vto{u}}\cdot\vto{v}=\vto{u}\cdot\alpha\fua{\vtf{g}}{\vto{v}}$ e da igualdade  $\overline{\alpha}\fua{\vtf{g}^\dagger}{\vto{u}}\cdot\vto{v}=\vto{u}\cdot\alpha\fua{\vtf{g}}{\vto{v}}$. A segunda propriedade podemos constatá-la através das seguintes igualdades: $\fua{\vtf{g}\circ\vtf{k}}{\vto{u}}\cdot\vto{v}=\fua{\vtf{k}}{\vto{u}}\cdot\fua{\vtf{g}^\dagger}{\vto{v}}=\vto{u}\cdot\fua{\vtf{k}^\dagger\circ\vtf{g}^\dagger}{\vto{u}}$. Demonstremos agora a afirmação de que a transposta de uma função linear também é linear. Dado o escalar $\alpha\in\mathcal{R}$,
+\begin{equation*}
+\vto{v}\cdot\fua{\vtf{g}^\dagger}{\ele{a}\vto{u}}=\overline{\alpha}\lco\fua{\vtf{g}}{\vto{v}}\cdot\vto{u}\rco=\overline{\alpha}[\vto{v}\cdot\fua{\vtf{g}^\dagger}{\vto{u}}]=\vto{v}\cdot\alpha\fua{\vtf{g}^\dagger}{\vto{u}}.
+\end{equation*}
+Considerando $\vto{u}_1,\vto{u}_2\in U^V_\mathcal{R}$, temos que
+\begin{equation*}
+\vto{v}\cdot\fua{\vtf{g}^\dagger}{\vto{u}_1+\vto{u}_2}=\fua{\vtf{g}}{\vto{v}}\cdot\lpa\vto{u}_1+\vto{u}_2\rpa=\vto{v}\cdot[\fua{\vtf{g}^\dagger}{\vto{u}_1}+\fua{\vtf{g}^\dagger}{\vto{u}_2}].
+\end{equation*}
+Para provar a quarta propriedade, precisamos saber que uma função identidade sempre é igual à sua transposta; algo que não é difícil de verificar. Sendo assim, transpondo ambos os lados da igualdade $\vtf{i}_V=\vtf{g}\circ\vtf{g}^{-1}$ obtém-se $\vtf{i}_V=(\vtf{g}^{-1})^\dagger\circ\vtf{g}^\dagger$, devido à segunda propriedade. Sabemos também que $\vtf{i}_V=(\vtf{g}^\dagger)^{-1}\circ\vtf{g}^\dagger$, o que comprova $(\vtf{g}^{-1})^\dagger=(\vtf{g}^\dagger)^{-1}$.
+\end{proof}
+}
+
+Dado um espaço vetorial $V_\mathcal{R}$, o espaço vetorial $\evl{\mathcal{R}}{V}{\mathcal{R}}$ é chamado \textsb{espaço dual}\index{espaço!dual} de $V_\mathcal{R}$, representado $V^*_\mathcal{R}$, cujos elementos são ditos \textsb{vetores duais}\index{vetor!dual}. Em termos genéricos, vetores duais são medidas escalares dos vetores de um determinado espaço vetorial cuja estrutura fica preservada; algo que a norma, como medida escalar, não garante, por ser ela um funcional não linear. Já nos funcionais coordenados, o vetor $\vtf{f}^\con{B}_{i}$ é dual e, de alguma forma, ``mede'' seu argumento em relação ao vetor de índice $i$ da base $B$, quando chamamos de coordenada o valor da medida. Conforme apresentado, no contexto de bases ortonormais, a medição dos funcionais coordenados se expressa na relação de incidência do argumento com um vetor da base, ou seja, no produto interno dos dois. Um subconjunto $\{\vtf{g}_1,\cdots,\vtf{g}_m\}$ de $V^*_\mathcal{R}$ é dito o \textsb{conjunto dual}\index{conjunto!dual} de $\{\vto{w}_1,\cdots,\vto{w}_m\}\subset V_\mathcal{R}$ se $\fua{\vtf{g}_i}{\vto{w}_j}=\delta_{ij}$. Quando tal subconjunto for dual de uma base $B=\{\vto{u}_1,\cdots,\vto{u}_n\}$ de $V_\mathcal{R}$, seus elementos serão os funcionais coordenados de $B$, conforme demonstram as seguintes igualdades:
+\begin{equation*}
+\fua{\vtf{g}_i}{\vto{x}}=\vtf{g}_i(\sum_{j=1}^{n}\fua{\vtf{f}^\con{B}_{j}}{\vto{x}}\vto{u}_j)=\sum_{j=1}^{n}\fua{\vtf{f}^\con{B}_{j}}{\vto{x}}\fua{\vtf{g}_i}{\vto{u}_j}=\sum_{j=1}^{n}\fua{\vtf{f}^\con{B}_{j}}{\vto{x}}\delta_{ij}=\fua{\vtf{f}^\con{B}_{i}}{\vto{x}}\,.
+\end{equation*}
+Ocorre que um conjunto formado por funcionais coordenados, no caso o subconjunto $B^*:=\{\vtf{f}^\con{B}_1,\cdots,\vtf{f}^\con{B}_n\}$, é uma base do espaço dual, ou seja, o conjunto dual $B^*$ de uma base $B$ é ele próprio uma base do espaço dual, quando o chamamos \textsb{base dual}\index{base!dual}. Diante disso, podemos afirmar que espaços duais possuem a mesma dimensão dos espaços vetoriais aos quais estão relacionados; nos termos descritos, $\dim (V_\mathcal{R})=\dim (V_\mathcal{R}^*)$. Assim, dado um vetor dual qualquer $\vtf{h}\in V^*_\mathcal{R}$, as igualdades
+\begin{equation*}
+\fua{\vtf{h}}{\vto{x}}=\vtf{h}[\,{\sum_{i=1}^n\fua{\vtf{f}_i^B}{\vto{x}}\vto{u}_i}\,]=\sum_{i=1}^n\fua{\vtf{h}}{\vto{u}_i}\fua{\vtf{f}_i^B}{\vto{x}}=[\,\sum_{i=1}^n\fua{\vtf{h}}{\vto{u}_i}\vtf{f}_i^B\,] (\vto{x})
+\end{equation*}
+permitem concluir que os escalares $\fua{\vtf{h}}{\vto{u}_i}$ constituem as coordenadas de $\vtf{h}$ em $B^*$. Convém que essa estreita correspondência entre espaços vetoriais e duais fique ainda mais forte, de tal forma que vetores e vetores duais se relacionem de maneira unívoca, quando esses últimos são denominados \textsb{covetores}\index{covetor}. Aproveitando o formato da regra \eqref{eq:regraCoord}, o teorema descrito a seguir, de extrema relevância para o nosso estudo, estabelece essa relação.
+
+\begin{mteo}{Representação de Riesz-Fréchet}{repRiesz}
+Seja o mapeamento $\map{\Phi}{U_\mathcal{R}}{U^*_\mathcal{R}}$, onde $U_\mathcal{R}$ é um espaço de Hilbert e $U^*_\mathcal{R}$ seu espaço dual. Se para qualquer vetor $\vto{u}\in U_\mathcal{R}$ for definido um covetor $\fua{\Phi}{\vto{u}}$, representado \gloref{covetor}, com regra
+\begin{equation}
+\fua{\vtf{u}^*}{\vto{x}}=\vto{x}\cdot\vto{u}\,,
+\end{equation}
+a função $\Phi$ resulta um isomorfismo e, sendo $\vtf{u}^*$ contínuo, a norma $\|\vtf{u}^*\|_{U^*_\mathcal{R}}=\|\vto{u}\|_{U_\mathcal{R}}$.
+\end{mteo}
+
+{\footnotesize
+\begin{proof}
+Primeiramente, verifiquemos se um subconjunto de funcionais coordenados é mesmo uma base do espaço dual. Dados um vetor dual qualquer $\vtf{g}\in V^*_\mathcal{R}$, um vetor qualquer $\vto{x}\in V_\mathcal{R}$ e o subconjunto $B=\{\vto{v}_1,\cdots,\vto{v}_n\}$ uma base qualquer de $V_\mathcal{R}$, tem-se o seguinte desenvolvimento:
+\begin{eqnarray}
+\fua{\vtf{g}}{\vto{x}} & = &
+\vtf{g}(\sum_{i=1}^{n}\fua{\vtf{f}^\con{B}_{i}}{\vto{x}}\vto{v}_i)\nonumber\\
+\fua{\vtf{g}}{\vto{x}} & = &
+\sum_{i=1}^{n}\fua{\vtf{g}}{\vto{v}_i}\fua{\vtf{f}^\con{B}_{i}}{\vto{x}}\nonumber\\
+\fua{\vtf{g}}{\vto{x}} & = &
+\sum_{i=1}^{n}[\fua{\vtf{g}}{\vto{v}_i}\vtf{f}^\con{B}_{i}]\lpa\vto{x}\rpa\nonumber\\
+\fua{\vtf{g}}{\vto{x}} & = &
+[\sum_{i=1}^{n}\fua{\vtf{g}}{\vto{v}_i}\vtf{f}^\con{B}_{i}]\lpa\vto{x}\rpa\nonumber\\
+\vtf{g} & = &
+\sum_{i=1}^{n}\fua{\vtf{g}}{\vto{v}_i}\vtf{f}^\con{B}_{i}\nonumber\,,
+\end{eqnarray}
+de onde se pode concluir que os funcionais coordenados de $B$ geram $U^*_\mathcal{R}$. Além disso, se $\vto{x}$ for nulo, então $\sum_{i=1}^{n}\fua{\vtf{f}^\con{B}_{i}}{\vto{x}}\vto{v}_i=\vto{0}$, de onde resulta $\fua{\vtf{f}^\con{B}_{i}}{\vto{x}}=0$ válido para qualquer $\vto{x}$; logo, $\vtf{f}^\con{B}_{i}=\vto{0}$. Diante dessa independência linear, os funcionais coordenados de $B$ constituem uma base de $V^*_\mathcal{R}$. Nos termos do teorema, considerando $\vto{u}$ e $\vto{v}$ vetores quaisquer de $U_\mathcal{R}$, constatamos que  $\Phi$ é um homomorfismo pelas seguintes igualdades:
+\begin{equation*}
+\fua{\lco\fua{\Phi}{\vto{u}+\vto{v}}\rco}{\vto{x}}=\fua{\lpa\vto{u}+\vto{v}\rpa^*}{\vto{x}}=\vto{x}\cdot(\vto{u}+\vto{v})=\fua{\vto{u}^*}{\vto{x}}+\fua{\vto{v}^*}{\vto{x}}=\fua{\lco\fua{\Phi}{\vto{u}}+\fua{\Phi}{\vto{v}}\rco}{\vto{x}}\,.
+\end{equation*}
+Se $\Phi$ não fosse uma injeção existiriam diferentes covetores $\vto{u}^*$ e $\vto{v}^*$ onde o escalar $\fua{\vto{u}^*}{\vto{x}}=\fua{\vto{v}^*}{\vto{x}}$ ou $\vto{x}\cdot\vto{u}=\vto{x}\cdot\vto{v}$. Dessa suposição resultam as igualdades $\vto{x}\cdot(\vto{u}-\vto{v})=\fua{(\vto{u}-\vto{v})^*}{\vto{x}}=0$, que não corroboram $\vto{u}^*\neq\vto{v}^*$. Para provar que $\Phi$ é uma sobrejeção, precisamos obter para qualquer funcional $\vtf{g}\in U_\mathcal{R}^*$ um vetor $\vto{u}\in U_\mathcal{R}$ tal que $\fua{\Phi}{\vto{u}}=\vtf{g}$. Considerando a regra \eqref{eq:regraCoord} e o conjunto $\hat{B}=\{\vun{u}_1,\cdots,\vun{u}_n\}$ uma base ortonormal de $U_\mathcal{R}$ cujos funcionais coordenados geram $U^*_\mathcal{R}$, podemos dizer que
+\begin{equation*}
+\fua{\vtf{g}}{\vto{x}}=\fua{\lco\sum_{i=1}^n\alpha_i\vtf{f}^{\hat{B}}_i\rco}{\vto{x}}=\sum_{i=1}^n\alpha_i\fua{\vtf{f}^{\hat{B}}_i}{\vto{x}}=\sum_{i=1}^n\alpha_i\lpa\vto{x}\cdot\vun{u}_i\rpa=\vto{x}	\cdot \lpa \sum_{i=1}^n\overline{\alpha_i} \vun{u}_i\rpa\,.
+\end{equation*}
+Como $\fua{\vtf{g}}{\vto{x}}=\fua{\lco\fua{\Phi}{\vto{u}}\rco}{\vto{x}}=\vto{x}\cdot\vto{u}$, conseguimos constatar  a existência de $\vto{u}=\sum_{i=1}^n\overline{\alpha_i} \vun{u}_i$. Finalmente, aplicando a definição \eqref{eq:normaFuncao} nas condições aqui colocadas e deixando implícita a representação dos espaços nas normas, temos $\|\vto{u}^*\|=\sup\{ |\vto{x}\cdot\vto{u}|/\|\vto{x}\|\}$ para qualquer $\vto{x}$ não nulo. Se $\vto{u}$ for nulo, fica evidente que $\|\vto{u}^*\|=\|\vto{u}\|$; se não for, $\vto{u}^*$ é não nulo e podemos concluir que $\|\vto{u}^*\|\geqslant |\, \vto{x}\cdot\vto{u}|/\|\vto{x}\|$. A desigualdade de Cauchy-Schwarz preconiza que $|\, \vto{x}\cdot\vto{u}| \leqslant \|\vto{x}\|\,\,\|\vto{u}\|$. Subtraindo essas duas desigualdades obtém-se $(\|\vto{u}^*\|-\|\vto{u}\|)\|\vto{x}\|\geqslant 0$, cujo lado esquerdo pode ser nulo para quaisquer $\vto{u}^*$, $\vto{u}$ e $\vto{x}$ não nulos; logo $\|\vto{u}^*\|=\|\vto{u}\|$.
+\end{proof}
+}
+
+A Representação de Riesz-Fréchet permite definir uma regra para funcionais coordenados de bases não necessariamente ortonormais, apresentada a seguir. Considerando as mesmas condições do teorema, seja $B=\{\vto{u}_1,\cdots,\vto{u}_n\}$ uma base de $U_\mathcal{R}$ e $B^*=\{\vtf{f}_1^B,\cdots,\vtf{f}_n^B\}$ sua base dual. Nesse contexto, os funcionais $\vtf{f}_i^B\in U_\mathcal{R}^*$ estão relacionados univocamente a vetores $\vto{v}_i\in U_\mathcal{R}$, de tal forma que, dado um vetor qualquer $\vto{u}\in U_\mathcal{R}$, temos as igualdades
+\begin{equation*}
+\fua{\vtf{f}_i^B}{\vto{u}}=\vto{u}\cdot\vto{v_i}=\sum_{j=1}^n\fua{\vtf{f}_j^B}{\vto{u}}\vto{u}_j \cdot \vto{v}_i\,,
+\end{equation*}
+de onde resulta $\vto{u}_j \cdot \vto{v}_i=\delta_{ji}$, quando se chega à identidade $\fua{\vtf{f}_i^B}{\vto{u}}=\fua{\vtf{f}_i^B}{\vto{u}}$. Assim, concluímos que o subconjunto $\{\vto{v}_1,\cdots,\vto{v}_n\}$, univocamente relacionado a $B^*$, é a base recíproca $B^\perp=\{\vto{u}^1,\cdots,\vto{u}^n\}$, ou seja, os covetores $(\vto{u}^i)^*=\vtf{f}_i^B$.
+A regra de funcionais coordenados pode ser expressa por
+\begin{equation}\label{eq:regraFuncCoord}
+\fua{\vtf{f}_i^B}{\vto{x}}=\fua{(\vto{u}^i)^*}{\vto{x}}=\vto{x} \cdot \vto{u}^i\,.
+\end{equation}
+Se $B^\perp$ é a base recíproca de $B$, o inverso também é verdadeiro; logo, a partir da regra anterior, podemos afirmar que
+\begin{equation}
+\fua{\vtf{f}_i^{B^\perp}}{\vto{x}}=\fua{(\vto{u}_i)^*}{\vto{x}}=\vto{x} \cdot \vto{u}_i\,.
+\end{equation}
+A figura \ref{fg:espacoDual} resume os relacionamentos entre a base $B$ com as bases recíprocas e duais que ela induz.
+\begin{figure}[!ht]
+\centering
+\begin{center}
+\scalebox{.70}{\input{partes/parte1/figs/c_algabst/espacoDual.pstex_t}}
+\end{center}
+\titfigura{Relacionamentos das bases induzidas por $B$ nos termos do teorema \ref{teo:repRiesz}.}\label{fg:espacoDual}
+\end{figure}
+No caso particular de uma base ortonormal $\hat{B}$, já sabemos que ela é recíproca à ela própria, ou seja, os vetores  $\vun{u}_i=\vun{u}^i$, o que nos leva a concluir que os vetores de $\hat{B}$ e de $\hat{B}^*$ têm uma relação unívoca nos termos do teorema anterior. Assim, podemos dizer que os escalares
+\begin{equation}
+\fua{\vtf{f}_i^{\hat{B}}}{\vto{x}}=\fua{(\vun{u}_i)^*}{\vto{x}}=\vto{x} \cdot \vun{u}_i\,.
+\end{equation}
+Nesse contexto, o produto interno entre dois vetores quaisquer $\vto{u}$ e $\vto{v}$ conduzem às seguintes igualdades:
+\begin{equation}\label{eq:prodIntGen}
+\vto{u}\cdot\vto{v}=\sum_{i=1}^n\sum_{j=1}^n\fua{\vtf{f}_i^{B}}{\vto{u}}\overline{\fua{\vtf{f}_j^{B^\perp}}{\vto{v}}}\,\vto{u}_i\cdot\vto{u}^j=\sum_{i=1}^n\fua{\vtf{f}_i^{B}}{\vto{u}}\overline{\fua{\vtf{f}_i^{B^\perp}}{\vto{v}}}\,.
+\end{equation}
+Se $B$ for ortonormal, então a base $B^\perp=B$. Além disso, se o campo $\mathcal{R}$ for real, tem-se que  $\vto{u}\cdot\vto{v}=\sum_{i=1}^n\fua{\vtf{f}_i^{B}}{\vto{u}}\fua{\vtf{f}_i^{B}}{\vto{v}}$.
+
+Ainda considerando os termos do teorema anterior, a igualdade entre os valores das normas de vetores e de covetores contínuos permite dizer que $U^*_\mathcal{R}$ é também um espaço de Hilbert. Como a propriedade é importante, vamos apresentá-la em termos mais formais, no corolário a seguir.
+
+\begin{mcoro}{Espaço Dual de Hilbert}{dualHilb}
+Se os funcionais lineares de $U_\mathcal{R}^*$ forem contínuos e o espaço $U_\mathcal{R}$ for de Hilbert, então $U_\mathcal{R}^*$ também será espaço de Hilbert.
+\end{mcoro}
+\hspace{1pt}
+{\footnotesize
+\begin{proof}
+O espaço $U_\mathcal{R}^*$ é normado pela definição \eqref{eq:normaFuncao} e métrico produto interno também por  definição (Ver p. \pageref{txt:prodInt}). Resta agora mostrarmos que $U_\mathcal{R}^*$ é completo, condição que fica garantida se a bijeção $\Phi$ for isométrica, nos termos do teorema \ref{teo:isoComp}. A partir da regra de covetores, definida na Representação de Riesz-Fréchet, se $\vto{u}=\vto{v}-\vto{w}$ então
+\begin{equation*}
+\fua{(\vto{v}-\vto{w})^*}{\vto{x}}=\vto{x}\cdot(\vto{v}-\vto{w})=\vto{x}\cdot\vto{v}-\vto{x}\cdot\vto{w}=\fua{\vto{v}^*}{\vto{x}}-\fua{\vto{w}^*}{\vto{x}}=\fua{(\vto{v}^*-\vto{w}^*)}{\vto{x}}\,,
+\end{equation*}
+de onde concluímos que $(\vto{v}-\vto{w})^*=(\vto{v}^*-\vto{w}^*)$, ou que $\fua{\Phi}{\vto{v}-\vto{w}}=\fua{\Phi}{\vto{v}}-\fua{\Phi}{\vto{w}}$. Assim, sabendo que $\|\fua{\Phi}{\vto{x}}\|_{U_\mathcal{R}^*}=\|\vto{x}\|_{U_\mathcal{R}}$, temos que a métrica $\fua{\varrho_{U_\mathcal{R}^*}}{\fua{\Phi}{\vto{v}},\fua{\Phi}{\vto{w}}}$ é igual a
+\begin{equation*}
+\|\fua{\Phi}{\vto{v}}-\fua{\Phi}{\vto{w}}\|_{U_\mathcal{R}^*}= \|\fua{\Phi}{\vto{v}-\vto{w}}\|_{U_\mathcal{R}^*}= \|\vto{v}-\vto{w}\|_{U_\mathcal{R}}\,,
+\end{equation*}
+ de onde concluímos que $\Phi$ é uma isometria.
+\end{proof}
+}
+
+Um vetor $\vtf{h}$ do espaço de funções $V^V_\mathcal{R}$ é dito um operador  \textsb{Hermitiano}\index{operador!Hermitiano} ou \textsb{auto-adjunto}\index{operador!auto-adjunto} quando $\vtf{h}=\vtf{h}^\dagger$; mas, se $\vtf{h}=-\vtf{h}^\dagger$, ele é chamado \textsb{anti-Hermitiano}\index{operador!anti-Hermitiano}. Quando o campo $\mathcal{R}$ for real, o operador Hermitiano recebe o nome de \textsb{simétrico}\index{operador!simétrico} enquanto o anti-Hermitiano é denominado \textsb{antissimétrico}\index{operador!antissimétrico}.
+Uma função de $U^V_\mathcal{R}$ é dita \textsb{unitária}\index{função!unitária} quando for uma bijeção linear cuja adjunta é igual à inversa. Dessa definição, dizemos que um operador unitário $\vtf{q}\in V^V_\mathcal{R}$ preserva o produto interno porque, para quaisquer $\vto{u},\vto{v}\in V_\mathcal{R}$, são válidas as igualdades
+\begin{equation}
+\fua{\vtf{q}}{\vto{u}}\cdot\fua{\vtf{q}}{\vto{v}}=\vto{u}\cdot\fua{\vtf{q}^\dagger\circ\vtf{q}}{\vto{v}}=\vto{u}\cdot\fua{\vtf{q}^{-1}\circ\vtf{q}}{\vto{v}}=\vto{u}\cdot\vto{v}\,.
+\end{equation}
+Diante disso, no contexto de espaços de Hilbert, dizemos que \emph{operadores unitários preservam a norma}, pois $\|\fua{\vtf{q}}{\vto{u}}\|^2=\fua{\vtf{q}}{\vto{u}}\cdot\fua{\vtf{q}}{\vto{u}}=\vto{u}\cdot\vto{u}=\|\vto{u}\|^2$.
+
+No capítulo anterior, dissemos que o conjunto de todos os operadores unários inversíveis constitui um grupo na operação de composição. Vejamos agora se o conjunto $O\subset V^V_\mathcal{R}$ de todos os operadores unitários, por serem operadores unários e inversíveis, define o grupo $(\gloref{grOrto},\circ)$, denominado \textsb{grupo unitário}\index{grupo!unitário}. Isso pode ser verificado pelas igualdades
+\begin{equation}
+\lpa \vtf{q}_1\circ\vtf{q}_2 \rpa^{-1} =
+\vtf{q}_2^{-1}\circ\vtf{q}_1^{-1} = \vtf{q}_2^\dagger\circ\vtf{q}_1^\dagger =
+\lpa \vtf{q}_1\circ\vtf{q}_2 \rpa^{T}
+\end{equation}
+que evidenciam, para quaisquer $\vtf{q}_1,\vtf{q}_2\in O$, a bijeção\footnote{Ver propriedades na página \pageref{prop:Composicao}.} $\vtf{q}_1\circ\vtf{q}_2$ como elemento do conjunto $O$. Grupos e operadores unitários no contexto de campos reais são denominados ortogonais. Além desse tipo de operador linear, há os que preservam a métrica ou a distância, quando são chamados \textsb{operadores isométricos}\index{operador!isométrico}. Em termos mais rigorosos, $\vtf{k}\in V^V_\mathcal{R}$ é um operador isométrico quando for uma bijeção linear onde  $\varrho\,[\fua{\vtf{k}}{\vto{u}},\fua{\vtf{k}}{\vto{v}}]=\fua{\varrho}{\vto{u},\vto{v}}$, para quaisquer $\vto{u},\vto{v}\in V_\mathcal{R}$. De maneira similar aos operadores unitários, o conjunto de todas os operadores isométricos define um grupo $(I,\circ)$, denominado \textsb{grupo isométrico}\index{grupo!isométrico}, porque a composição de operadores isométricos é também uma operador isométrico, ou seja, considerando quaisquer $\vtf{k},\vtf{g}\in I$, tem-se
+\begin{equation}
+\varrho\,\lco\fua{\vtf{g}\circ\vtf{k}}{\vto{u}},\fua{\vtf{g}\circ\vtf{k}}{\vto{v}}\rco = \varrho\,\lco{\fua{\vtf{g}}{\vto{u}},\fua{\vtf{g}}{\vto{v}}}\rco=\fua{\varrho}{\vto{u},\vto{v}}
+\end{equation}
+para quaisquer $\vto{u},\vto{v}\in V_\mathcal{R}$. \emph{No contexto de espaços Euclidianos, um grupo ortogonal é sempre isométrico porque todo operador que preserva produto interno é uma isométrico. Além disso, um grupo isométrico de operadores lineares sempre preserva produto interno.}
+
+{\footnotesize
+\begin{proof}
+Convém que verifiquemos essas tão categóricas afirmações. Se $V_\real$ for um espaço Euclidiano e se $\vtf{k}\in V^V_\real$ preservar o produto interno, então
+\begin{align*}
+	\varrho\lco\fua{\vtf{k}}{\vto{u}},\fua{\vtf{k}}{\vto{v}}\rco^2&=\|\fua{\vtf{k}}{\vto{u}}-\fua{\vtf{k}}{\vto{v}}\|^2\\
+	&=\fua{\vtf{k}}{\vto{u}}\cdot\fua{\vtf{k}}{\vto{u}}-2\fua{\vtf{k}}{\vto{u}}\cdot\fua{\vtf{k}}{\vto{v}}+\fua{\vtf{k}}{\vto{v}}\cdot\fua{\vtf{k}}{\vto{v}}\\
+	&={\vto{u}}\cdot{\vto{u}}-2{\vto{u}}\cdot{\vto{v}}+{\vto{v}}\cdot{\vto{v}}\\
+	&=\|\vto{u}-\vto{v}\|^2 \\
+	&= \fua{\varrho}{\vto{u},\vto{v}}^2\,,
+\end{align*}
+de onde se constata $\vtf{k}$ uma isometria. Agora, seja $\vtf{g}\in V^V_\real$ uma isometria. Elevando os dois lados da igualdade  $\varrho[\fua{\vtf{g}}{\vto{u}},\fua{\vtf{g}}{\vto{v}}]=\fua{\varrho}{\vto{u},\vto{v}}$ ao quadrado, obtemos
+\begin{align*}
+\fua{\vtf{g}}{\vto{u}}\cdot\fua{\vtf{g}}{\vto{u}}-2\fua{\vtf{g}}{\vto{u}}\cdot\fua{\vtf{g}}{\vto{v}}+\fua{\vtf{g}}{\vto{v}}\cdot\fua{\vtf{g}}{\vto{v}}&={\vto{u}}\cdot{\vto{u}}-2{\vto{u}}\cdot{\vto{v}}+{\vto{v}}\cdot{\vto{v}}\\
+\varrho[\fua{\vtf{g}}{\vto{u}},\vto{0}]^2-2\fua{\vtf{g}}{\vto{u}}\cdot\fua{\vtf{g}}{\vto{v}}+\varrho[\fua{\vtf{g}}{\vto{v}},\vto{0}]^2&=\fua{\varrho}{\vto{u},\vto{0}}^2-2{\vto{u}}\cdot{\vto{v}}+\fua{\varrho}{\vto{v},\vto{0}}^2\\
+\varrho[\fua{\vtf{g}}{\vto{u}},\fua{\vtf{g}}{\vto{0}}]^2-2\fua{\vtf{g}}{\vto{u}}\cdot\fua{\vtf{g}}{\vto{v}}+\varrho[\fua{\vtf{g}}{\vto{v}},\fua{\vtf{g}}{\vto{0}}]^2&=\fua{\varrho}{\vto{u},\vto{0}}^2-2{\vto{u}}\cdot{\vto{v}}+\fua{\varrho}{\vto{v},\vto{0}}^2\\
+\fua{\vtf{g}}{\vto{u}}\cdot\fua{\vtf{g}}{\vto{v}}&= {\vto{u}}\cdot{\vto{v}}\,\,.
+\end{align*}
+\end{proof}
+}
+
+
+
+
+\section{Representações Matriciais}
+
+Sabemos que um vetor qualquer pode ser identificado por suas coordenadas, representadas por uma ênupla, numa determinada base, de tal sorte que ênuplas distintas nunca implicam vetores iguais: a relação é portanto unívoca. Assim, expressões que envolvem vetores podem ser descritas por elementos coordenados, coligidos convenientemente em matrizes, quando fica disponível todo o arcabouço aritmético-funcional aplicável a esse tipo de coleção, apresentado no capítulo anterior. A relação que se estabelece entre vetores e matrizes também é unívoca e, como ocorre com as ênuplas, dependente de uma base. Na prática, a representação matricial de um vetor ocorre da seguinte forma: seja $\vto{u}$ um elemento qualquer do espaço vetorial  $U_\mathcal{R}$, do qual o subconjunto $B=\{\vto{u}_1,\cdots,\vto{u}_n\}$ é uma base qualquer. Assim, definimos \gloref{repVet} como sendo a \textsb{matriz representativa}\index{matriz!representativa} de $\vto{u}$ na base $B$, cuja dimensão é $n\times 1$ e os elementos $\mav{\vto{u}}{B}_{i1}:=\fua{\vtf{f}^\con{B}_{i}}{\vto{u}}$. Diante disso, fica evidente que a matriz representativa do vetor nulo é sempre nula. Além disso, da linearidade de funcionais coordenados podemos desenvolver
+\begin{equation*}
+\alpha\sum_{i=1}^{n}\fua{\vtf{f}^\con{B}_{i}}{\vto{x}}\vto{u}_i+\beta\sum_{i=1}^{n}\fua{\vtf{f}^\con{B}_{i}}{\vto{y}}\vto{u}_i= \sum_{i=1}^{n}\lco\alpha\fua{\vtf{f}^\con{B}_{i}}{\vto{x}}+\beta\fua{\vtf{f}^\con{B}_{i}}{\vto{y}}\rco\vto{u}_i=\sum_{i=1}^{n}\fua{\vtf{f}^\con{B}_{i}}{\alpha\vto{x}+\beta\vto{y}}\vto{u}_i,
+\end{equation*}
+de onde concluímos que
+\begin{equation}
+\alpha\mav{\vto{x}}{B}+\beta\mav{\vto{y}}{B}=\mav{\alpha\vto{x}+\beta\vto{y}}{B}\,,
+\end{equation}
+onde $\vto{x},\vto{y}\in U_\mathcal{R}$ são vetores quaisquer e $\alpha,\beta\in\mathcal{R}$ escalares quaisquer. No que diz respeito aos vetores da base $B$, se os representamos relativos à própria base $B$, temos $\mav{\vto{u}_j}{B}_{i1}=\fua{\vtf{f}^\con{B}_{i}}{\vto{u}_j}=\delta_{ij}$. Costuma-se adotar tal estratégia para a base natural $O=\{\vun{e}_1,\cdots,\vun{e}_n\}$ de espaços Euclidianos, onde $\mav{\vun{e}_j}{O}_{i1}=\delta_{ij}\,$.
+
+Considerando $V_\mathcal{R}$ um espaço vetorial $m$-dimensional, seja $\vtf{g}$ um elemento qualquer de um espaço de funções $\evl{\mathcal{R}}{U}{V}$. No ato de mapear vetores de $U$ para vetores de $V$, a função $\vtf{g}$ termina por relacionar indiretamente duas bases distintas, de tal forma que a representação matricial desse relacionamento precisa evidenciar ambas as bases. Diante disso, se $C=\{\vto{v}_1,\cdots,\vto{v}_m\}$ for uma base de $V_\mathcal{R}$ e $\vto{u}\in U_\mathcal{R}$ um vetor qualquer, temos
+\begin{align*}
+\fua{\vtf{g}}{\vto{u}}&= \sum_{i=1}^{m}\fua{\vtf{f}^\con{C}_{i}}{\fua{\vtf{g}}{\vto{u}}}\vto{v}_i\nonumber\\
+\fua{\vtf{g}}{\vto{u}}&=\sum_{i=1}^{m}\vtf{f}^\con{C}_{i}  \lco \sum_{j=1}^{n} \fua{\vtf{f}^\con{B}_{j}}{\vto{u}}\fua{\vtf{g}}{\vto{u}_j}\rco\vto{v}_i\nonumber\\
+\fua{\vtf{g}}{\vto{u}}&=\sum_{i=1}^{m}\sum_{j=1}^{n} \vtf{f}^\con{C}_{i}\lco\fua{\vtf{g}}{\vto{u}_j}  \rco\fua{\vtf{f}^\con{B}_{j}}{\vto{u}}\vto{v}_i\,,\nonumber
+\end{align*}
+quando podemos afirmar que
+\begin{equation}\label{eq:repMatMape}
+\mav{\fua{\vtf{g}}{\vto{u}}}{C}=\maf{\vtf{g}}{B}{C}\mav{\vto{u}}{B}\,,
+\end{equation}
+onde \gloref{repFun} é a matriz $m\times n$ de elementos $\maf{\vtf{g}}{B}{C}_{ij}:=\vtf{f}^\con{C}_{i}\lco\fua{\vtf{g}}{\vto{u}_j}\rco$, representativa nas bases $B$ e $C$ da função linear $\vtf{g}\in\evl{\mathcal{R}}{U}{V}$. Em outras palavras, para bases quaisquer $B$ e $C$ de dimensão $n$ e $m$ respectivamente, a matriz $m\times 1$ representativa em $C$ do valor $\fua{\vtf{g}}{\vto{u}}$ resulta do produto da matriz $m\times n$, representativa em $B$ e $C$ da função $\vtf{g}$, com a matriz $n\times 1$ representativa em $B$ do vetor $\vto{u}$. Do procedimento  que conduziu à esse resultado, dados $\vtf{h}\in\evl{\mathcal{R}}{U}{V}$ e $\alpha,\beta\in\mathcal{R}$, pode-se obter também a igualdade
+\begin{equation}
+\mav{[\fua{\alpha\vtf{g}+\beta\vtf{h}]}{\vto{u}}}{C}=\lpa\alpha\maf{\vtf{g}}{B}{C}+\beta\maf{\vtf{h}}{B}{C}\rpa\mav{\vto{u}}{B}\,.
+\end{equation}
+Pode ocorrer que $U$ seja igual a $V$, quando as funções envolvidas resultam operadores lineares. Diante disso, as bases $B$ e $C$ também podem ser iguais, o que nos permite escrever, por exemplo,  $\mav{\fua{\vtf{g}}{\vto{u}}}{B}=\maf{\vtf{g}}{B}{B}\mav{\vto{u}}{B}$, de onde se diz que $\maf{\vtf{g}}{B}{B}$ é a matriz representativa em $B$ do operador linear $\vtf{g}$.
+
+
+As funções lineares compostas também podem ser representadas em termos matriciais. Vejamos como. Considerando $\vtf{l}$ uma função do espaço $\evl{\mathcal{R}}{V}{W}$, o conjunto $Z$ uma base do espaço vetorial $q$-dimensional $W_\mathcal{R}$ e $\vto{v}=\fua{\vtf{g}}{\vto{u}}$ um vetor de $W_\mathcal{R}$, podemos escrever
+$\mav{\fua{\vtf{l}}{\vto{v}}}{Z}=\maf{\vtf{l}}{C}{Z}\mav{\vto{v}}{C}$. Dessa igualdade, resulta que a matriz
+\begin{equation}
+\mav{\fua{\vtf{l}\circ\vtf{g}}{\vto{u}}}{Z}=\maf{\vtf{l}}{C}{Z}\mav{\fua{\vtf{g}}{\vto{u}}}{C}=\maf{\vtf{l}}{C}{Z}\maf{\vtf{g}}{B}{C}\mav{\vto{u}}{B}\,.
+\end{equation}
+Aproveitando esse interessante resultado, se a função linear $\vtf{g}$ for uma bijeção e a dimensão $m=n$, temos então que
+\begin{equation}\label{eq:matRepInv}
+\mav{\vto{u}}{B}=\mav{\fua{\vtf{g}^{-1}\circ\vtf{g}}{\vto{u}}}{B}=\maf{\vtf{g}^{-1}_C}{}{B}\maf{\vtf{g}}{B}{C}\mav{\vto{u}}{B} \implies \maf{\vtf{g}^{-1}_C}{}{B} = {\maf{\vtf{g}}{B}{C}}^{-1}\,.
+\end{equation}
+Em termos matriciais, o produto interno dos vetores $\vto{x},\vto{y}\in X_\mathcal{R}$, onde $X_\mathcal{R}$ é um espaço de Hilbert, pode ser descrito por uma das seguintes igualdades:
+\begin{equation}
+\vto{x}\cdot\vto{y} = \lpa\mav{\vto{x}}{B}{\mav{\vto{y}}{B^\perp}}^\text{T}\rpa_{11} = \lpa{\mav{\vto{x}}{B}}^\text{T}{\mav{\vto{y}}{B^\perp}}\rpa_{11}\,,
+\end{equation}
+conforme a igualdade \eqref{eq:prodIntGen}. Se a função $\vtf{g}\in\evl{\mathcal{R}}{X}{Y}$, onde $Y_\mathcal{R}$ também é um espaço de Hilbert, possui um transposta adjunta, a partir dos vetores das bases $B=\{\vto{x}_i,\cdots,\vto{x}_n\}$ de $U_\mathcal{R}$ e $C=\{\vto{y}_i,\cdots,\vto{y}_m\}$ de $Y_\mathcal{R}$, podemos realizar o desenvolvimento a seguir:
+\begin{align}\label{eq:matRepTransp}
+\fua{\vtf{g}}{\vto{x}_i}\cdot \vto{y}^j &= \overline{\vtf{g}^\dagger(\vto{y}^j)\cdot\vto{x}_i}\nonumber\\
+\vtf{f}^C_j\lco\fua{\vtf{g}}{\vto{x}_i}\rco &=\overline{\vtf{f}^{B^\perp}_i[\vtf{g}^\dagger(\vto{y}^j)]}\nonumber\\
+{\maf{\vtf{g}}{B}{C}}^\dagger&=[\vtf{g}^\dagger_{C^\perp}]^{B^\perp}\,,
+\end{align}
+onde as matrizes à direita e à esquerda têm dimensão $n\times m$.
+
+Há conceitos que surgem a partir destas representações matriciais de vetores e funções lineares. Um deles, de fundamental importância, denominamos \textsb{mudança de coordenadas}\index{mudança!de coordenadas}. Neste nosso estudo, \emph{mudar as coordenadas de um vetor ou operador linear de uma base $B$ para uma base $C$ significa relacionar univocamente a matriz representativa desse vetor ou operador linear em $B$ com sua respectiva matriz representativa em $C$}. Para fundamentar matematicamente essa ideia, apresentamos o teorema a seguir.
+
+\begin{mteo}{Mudança de Coordenadas em Vetores}{mudCoordVec}
+Se $U(B)_\mathcal{R}$ e $U(C)_\mathcal{R}$ são espaços vetoriais constituídos pelas matrizes representativas dos vetores de um espaço vetorial $U_\mathcal{R}$ nas suas  bases $B$ e $C$ respectivamente, há uma única transformação linear bijetora $\map{\Gamma}{U(B)_\mathcal{R}}{U(C)_\mathcal{R}}$, denominada mudança de coordenadas de $B$ para $C$, onde ${\Gamma}({\mav{\vto{x}}{B}})=\mav{\vto{x}}{C}$ para qualquer $\vto{x}\in U_\mathcal{R}$.
+\end{mteo}
+
+{\footnotesize
+\begin{proof}
+Se $B=\{\vto{x}_1,\vto{x}_2\}$ e $C=\{\alpha_1\vto{x}_1,\alpha_2\vto{x}_2\}$, a existência de $\Gamma$ fica garantida pela regra
+\begin{equation*}
+\fua{\Gamma}{\mat{X}}=\begin{bmatrix}
+1/\alpha_1 & 0\\
+0&1/\alpha_2
+\end{bmatrix} \mat{X}\,.
+\end{equation*}
+A unicidade de $\Gamma$ é resultado trivial da suposição ${\Gamma_1}({\mav{\vto{x}}{B}})=\mav{\vto{x}}{C}$ e ${\Gamma_2}({\mav{\vto{x}}{B}})=\mav{\vto{x}}{C}$. Nas condições do teorema, podemos afirmar também que $\mav{\alpha\vto{u}+\beta\vto{v}}{B}=\alpha\mav{\vto{u}}{B}+\beta\mav{\vto{v}}{B}$ para quaisquer $\vto{u},\vto{v}\in U_\mathcal{R}$ e $\alpha,\beta\in\mathcal{R}$, de onde se conclui a linearidade de $\Gamma$, ou seja,
+\begin{align*}
+\Gamma(\alpha\mav{\vto{u}}{B}+\beta\mav{\vto{v}}{B})&=\Gamma(\mav{\alpha\vto{u}+\beta\vto{v}}{B})\\
+&=\mav{\alpha\vto{u}+\beta\vto{v}}{C}\\
+&=\alpha\mav{\vto{u}}{C}+\beta\mav{\vto{v}}{C}\\
+&=\alpha\Gamma(\mav{\vto{u}}{B})+\beta\Gamma(\mav{\vto{v}}{B}).
+\end{align*}
+Como as matrizes que descrevem $\vto{x}\in U_\mathcal{R}$ nas bases $B$ e $C$ são únicas, fica evidente que $\Gamma$ é uma injeção. Aliado a isso, $\Gamma$ resulta uma bijeção porque inexiste matriz em $U(C)_\mathcal{R}$ que não tenha uma correspondente em $U(B)_\mathcal{R}$, pois qualquer vetor de $U_\mathcal{R}$ pode ser descrito em $B$ e $C$.
+\end{proof}
+}
+
+Considerando agora $B=\{\vto{u}_1,\cdots,\vto{u}_n\}$ e $C=\{\vto{v}_1,\cdots,\vto{v}_n\}$ bases distintas do espaço vetorial $U_\mathcal{R}$, ambas viabilizam representações matriciais distintas para qualquer vetor $\vto{u}\in U_\mathcal{R}$. Sendo assim, as igualdades
+\begin{equation*}
+\fua{\vtf{f}_i^C}{\vto{u}}=\vtf{f}_i^C[\,{\sum_{j=1}^n\fua{\vtf{f}_j^B}{\vto{u}}\vto{u}_j}\,]=\sum_{j=1}^n\fua{\vtf{f}_i^C}{\vto{u}_j}\fua{\vtf{f}_j^B}{\vto{u}}
+\end{equation*}
+em conjunto com a expressão \eqref{eq:repMatMape} permitem afirmar que
+\begin{equation}\label{eq:matrizMudBase}
+\mav{\vto{u}}{C}=\maf{\vtf{i}}{B}{C}\mav{\vto{u}}{B}\,,
+\end{equation}
+onde $\vtf{i}$ é a função identidade em $U_\mathcal{R}$. Assim sendo, nos termos do teorema anterior, podemos dizer de uma regra
+\begin{equation}\label{eq:regraMudCoord}
+\fua{\Gamma}{\mat{X}}=\maf{\vtf{i}}{B}{C}\mat{X}
+\end{equation}
+relativa à mudança de coordenadas $\map{\Gamma}{U(B)_\mathcal{R}}{U(C)_\mathcal{R}}$, de onde resulta que a matriz representativa $\fua{\Gamma^{-1}}{\mat{X}}=\maf{\vtf{i}}{C}{B}\mat{X}$. No caso específico de espaços de Hilbert, há uma regra para funcionais coordenados descrita pela igualdade \eqref{eq:regraFuncCoord}, que permite especificar o elemento matricial $\maf{\vtf{i}}{B}{C}_{ij}=\vto{u}_j\cdot\vto{v}^i$.
+
+
+Nas condições da igualdade \eqref{eq:matrizMudBase}, como a matriz $\maf{\vtf{i}}{B}{C}$ é quadrada de ordem $n$ e uma função identidade é igual à sua inversa e à sua transposta adjunta, podemos afirmar, a partir de \eqref{eq:matRepInv} e \eqref{eq:matRepTransp}, que
+\begin{equation}\label{eq:mudaBaseTransp}
+\maf{\vtf{i}}{B}{C}={\maf{\vtf{i}}{C}{B}}^{-1}
+\end{equation}
+e, no caso específico de espaços de Hilbert,
+\begin{equation}\label{eq:mudaBaseTranspHilbert}
+\maf{\vtf{i}}{B}{C}={\maf{\vtf{i}}{C}{B}}^{-1}={\maf{\vtf{i}}{C^\perp}{B^\perp}}^\dagger\,.
+\end{equation}
+Em outras palavras, a matriz que viabiliza a mudança de coordenadas de $C$ para $B$ tem como inversa a matriz que viabiliza a mudança de coordenadas de $B$ para $C$, cuja transposta conjugada viabiliza a mudança de $C^\perp$ para $B^\perp$.
+
+Sendo $U_\mathcal{R}$ um espaço vetorial qualquer, os vetores da base $C$ podem ser descritos na base $B$ de acordo com as seguintes expressões:
+\begin{equation}\label{eq:mudaBase}
+\vto{v}_j=\sum_{i=1}^n\vto{u}_i\fua{\vtf{f}_i^B}{\vto{v}_j}=\sum_{i=1}^n\vto{u}_i\maf{\vtf{i}}{C}{B}_{ij}\,,
+\end{equation}
+a partir das quais, dada uma base qualquer $Z$ de $U_\mathcal{R}$, podemos dizer que
+\begin{equation*}
+\fua{\vtf{f}_k^Z}{\vto{v}_j}=\sum_{i=1}^n\fua{\vtf{f}_k^Z}{\vto{u}_i}\maf{\vtf{i}}{C}{B}_{ij}=\sum_{i=1}^n\maf{\vtf{i}}{B}{Z}_{ki}\maf{\vtf{i}}{C}{B}_{ij}\,.
+\end{equation*}
+Assim, reunindo todos os vetores de ambas as bases, temos
+\begin{equation}
+\begin{bmatrix}
+\mav{\vto{v}_1}{Z}_{11} & \mav{\vto{v}_2}{Z}_{11} & \cdots & \mav{\vto{v}_n}{Z}_{11}  \\
+\vdots & \vdots & \vdots & \vdots \\
+\vdots & \vdots & \vdots & \vdots \\
+\mav{\vto{v}_1}{Z}_{n1} & \mav{\vto{v}_2}{Z}_{n1} & \cdots & \mav{\vto{v}_n}{Z}_{n1}
+\end{bmatrix} = \begin{bmatrix}
+\mav{\vto{u}_1}{Z}_{11} & \mav{\vto{u}_2}{Z}_{11} & \cdots & \mav{\vto{u}_n}{Z}_{11}  \\
+\vdots & \vdots & \vdots & \vdots \\
+\vdots & \vdots & \vdots & \vdots \\
+\mav{\vto{u}_1}{Z}_{n1} & \mav{\vto{u}_2}{Z}_{n1} & \cdots & \mav{\vto{u}_n}{Z}_{n1}
+\end{bmatrix} \maf{\vtf{i}}{C}{B}\,,
+\end{equation}
+de onde se conclui que $\maf{\vtf{i}}{C}{B}$ muda a base $B$ para $C$, ou seja, ela viabiliza uma \textsb{mudança de base}\index{mudança!de base}. Nessa mudança, quando a matriz que muda as coordenadas é inversa àquela que muda a base, dizemos que as coordenadas dos vetores de $U_\mathcal{R}$ são \textsb{contravariantes}\index{coordenadas!contravariantes}, pois sofrem uma transformação contrária à da mudança de base, como é o caso dos valores de $\Gamma$ em \eqref{eq:regraMudCoord}. Agora, vejamos o que acontece com mudanças de coordenadas em vetores duais. Se $\vtf{h}\in U^*_\mathcal{R}$ é um vetor dual qualquer, já sabemos que $\mav{\vtf{h}}{B^*}$ é sua matriz representativa na base dual $B^*$. Assim, a partir de \eqref{eq:mudaBase}, temos as igualdades
+\begin{equation}
+\mav{\vtf{h}}{C^*}=\fua{\vtf{h}}{\vto{v}_j}=\sum_{i=1}^n\fua{\vtf{h}}{\vto{u}_i}\maf{\vtf{i}}{C}{B}_{ij}=\sum_{i=1}^n\mav{\vtf{h}}{B^*}_i\maf{\vtf{i}}{C}{B}_{ij}\,,
+\end{equation}
+de onde concluímos que a mudança de coordenadas em $\vtf{h}$ de $B^*$ para $C^*$ é viabilizada pela mesma matriz $\maf{\vtf{i}}{C}{B}$ responsável pela mudança de base, quando dizemos que as coordenadas de vetores duais são \textsb{covariantes}\index{coordenadas!covariantes}. Pode-se definir então uma mudança de coordenadas $\map{\Gamma^*}{U^*(B^*)_\mathcal{R}}{U^*(C^*)_\mathcal{R}}$ onde
+\begin{equation}
+\fua{\Gamma^*}{\mat{X}}=\mat{X}\,\maf{\vtf{i}}{C}{B}\,.
+\end{equation}
+Diante do exposto, se o espaço $U_\mathcal{R}$ for de Hilbert, os escalares $\fua{\vtf{f}_i^B}{\vto{u}}=\vto{u}\cdot\vto{u}^i$ são as coordenadas contravariantes de um vetor $\vto{u}\in U_\mathcal{R}$, cujo covetor
+\begin{equation*}
+\vto{u}^*=\sum_{i=1}^n\fua{\vto{u}^*}{\vto{u}_i} \vtf{f}_i^{B^*}= \sum_{i=1}^n (\vto{u}_i\cdot\vto{u}) (\vto{u}^i)^*\,.
+\end{equation*}
+Embora impreciso, costuma-se considerar os escalares $\vto{u}_i\cdot\vto{u}$ como sendo elementos das coordenadas ``covariantes'' do vetor $\vto{u}$, no contexto de um espaço de Hilbert. Se tal espaço for real, considerando $\hat{B}=\{\vun{u}_1,\cdots,\vun{u}_n\}$ uma base ortonormal de $U_\real$, podemos dizer que as coordenadas contravariantes e covariantes de um vetor $\vto{u}$ qualquer são sempre iguais porque as igualdades $\vun{u}_i=\vun{u}^i$ e a comutatividade do produto interno implicam $\fua{\vto{u}^*}{\vto{u}_i}=\fua{\vtf{f}_i^{\hat{B}}}{\vto{u}}$. Isso também ocorre num espaço Euclidiano tridimensional, quando a base $\{\vun{e}_1,\vun{e}_2,\vun{e}_3\}$  é denominada \textsb{base cartesiana}\index{base!cartesiana} e as combinações lineares de seus elementos são \textsb{vetores cartesianos}\index{vetor!cartesiano}. Agora, \emph{uma consequência importante das igualdades \eqref{eq:mudaBaseTransp} é que a matriz ${\maf{\vtf{i}}{C}{B}}$ resulta unitária se as bases envolvidas forem ortonormais}, pois a recíproca de uma base ortonormal é ela própria. A partir dessa constatação, seja o corolário a seguir, que descreve a relação entre matrizes representativas de operadores lineares.
+
+\begin{mcoro}{Mudança de Coordenadas em Operadores Lineares}{mudaBase}
+Se $Y(B)_\mathcal{R}$ e $Y(C)_\mathcal{R}$ são espaços vetoriais constituídos pelas matrizes representativas dos operadores de $\evl{\mathcal{R}}{Y}{Y}$ descritas nas bases $B$ e $C$ do espaço vetorial $Y_\mathcal{R}$ respectivamente, a mudança de coordenadas $\map{\Theta}{Y(B)_\mathcal{R}}{Y(C)_\mathcal{R}}$ é sempre uma transformação de similaridade onde $\fua{\Theta}{\mat{X}}=\maf{\vtf{i}}{B}{C}\mat{X}\,\maf{\vtf{i}}{C}{B}$.
+\end{mcoro}
+
+{\footnotesize
+\begin{proof}
+Considerando uma função qualquer $\vtf{g}\in\evl{\mathcal{R}}{Y}{Y}$ e um vetor qualquer $\vto{u}\in Y_\mathcal{R}$, a última igualdade do desenvolvimento
+\begin{align}
+\mav{\fua{\vtf{g}}{\vto{u}}}{B}&=\maf{\vtf{g}}{B}{B}\mav{\vto{u}}{B}\nonumber\\
+\maf{\vtf{i}}{C}{B}\mav{\fua{\vtf{g}}{\vto{u}}}{C}&=\maf{\vtf{g}}{B}{B}\maf{\vtf{i}}{C}{B}\mav{\vto{u}}{C}\nonumber\\
+\mav{\fua{\vtf{g}}{\vto{u}}}{C}&=\maf{\vtf{i}}{B}{C}\maf{\vtf{g}}{B}{B}\maf{\vtf{i}}{C}{B}\mav{\vto{u}}{C}\nonumber
+\end{align}
+e a igualdade $\mav{\fua{\vtf{g}}{\vto{u}}}{C}=\maf{\vtf{g}}{C}{C}\mav{\vto{u}}{C}$ nos permitem afirmar que
+\begin{equation*}
+\maf{\vtf{g}}{C}{C} = \maf{\vtf{i}}{B}{C}\maf{\vtf{g}}{B}{B}\maf{\vtf{i}}{C}{B}\,.
+\end{equation*}
+Como $\maf{\vtf{i}}{B}{C}={\maf{\vtf{i}}{C}{B}}^{-1}$, concluímos que as matrizes $\maf{\vtf{g}}{C}{C}$ e $\maf{\vtf{g}}{B}{B}$ são similares.
+\end{proof}
+}
+
+Neste capítulo, seguiremos então trabalhando com funções lineares que admitem mudança de coordenadas, ou seja, com operadores lineares. Nesse contexto, alguns conceitos típicos de matrizes podem ser aplicados a tais operadores. Vejamos quais. Nas condições do corolário anterior, as matrizes $\fua{\Theta}{\mat{X}}$ e $\mat{X}$ são similares, de onde se pode concluir que \emph{o determinante e o traço de matrizes representativas de operadores lineares são imunes ou indiferentes a mudanças de base}. Diante dessa indiferença, consideramos os escalares $\det\vtf{g}:=\det [\vtf{g}]$ e $\trc\vtf{g}:= \trc{\maf{\vtf{g}}{}{}}$ como sendo respectivamente o \textsb{determinante}\index{determinante!de operador linear} e o \textsb{traço}\index{traço!de operador linear} do operador $\vtf{g}\in\evl{\mathcal{R}}{Y}{Y}$, onde $\maf{\vtf{g}}{}{}$ é a matriz representativa desse operador numa base qualquer de $Y_\mathcal{R}$. Um outro conceito que operadores lineares herdam de matrizes é o de positividade. Considerando $B$ uma base qualquer de $Y_\mathcal{R}$, se o escalar
+\begin{equation}
+\Re\lpa{\mav{\vto{y}}{B}}^\dagger\maf{\vtf{g}}{B}{B}{\mav{\vto{y}}{B}}\rpa_{11}\geqslant0\,,\,\,\forall\,\vto{y}\in Y_\real\,,
+\end{equation}
+a matriz $\maf{\vtf{g}}{B}{B}$ é dita não-negativa, segundo definição apresentada no capítulo anterior. Essa desigualdade continua válida se $B$ for ortonormal, quando se obtém
+\begin{equation}
+\underbrace{\Re\lpa{\mav{\vto{y}}{B}}^\dagger\mav{\fua{\vtf{g}}{\vto{y}}}{B}\rpa_{11}   }_{\Re(\vto{y}\cdot\fua{\vtf{g}}{\vto{y}})}\geqslant0\,,\,\,\forall\,\vto{y}\in Y_\real\,,
+\end{equation}
+onde $\vtf{g}$ é dito um \textsb{operador linear não-negativo}\footnote{Ou positivo-semidefinido\index{operador linear!positivo-semidefinido}.}\index{operador linear!não-negativo} ou um \textsb{operador linear positivo-definido}\index{operador linear!positivo-definido} se o produto interno à esquerda for sempre positivo.
+
+Neste ponto, vamos interromper brevemente a evolução do conteúdo teórico para tratarmos de um exemplo: o assunto mudança de coordenadas é demasiado importante para o nosso estudo e convém discorrermos sobre algo menos abstrato.
+
+\begin{example}
+Eis uma historinha pueril. A professora Bruna, residente à margem de um rio de largura extensa, entrega a um barqueiro, em frente à sua casa, um presente que deve ser transportado até um ponto da outra margem, onde mora o engenheiro Carlos, estimado destinatário da encomenda. Num determinado ponto da travessia, o barqueiro é obrigado a mudar sua velocidade de sorte que tal manobra o impedirá de chegar na hora marcada e no local exato onde Carlos aguarda ansiosamente o presente. Ciente da importância de sua incumbência, o barqueiro, a partir das medições de seus instrumentos, envia uma mensagem de texto para o telefone de Carlos informando o seguinte: \textsl{Carlos, agora são 14:00 e após percorridos 30km rio adentro (perpendicular à margem) e 5km rio acima (contra o sentido da correnteza) em relação à Bruna, eu estava a 49km/h rio adentro e 13,1km/h rio acima quando avistei uma parte muito rasa do leito, sendo obrigado a reduzir em 20\% minha velocidade norte e em 40\% a velocidade leste. Como não me será possível corrigir a rota, peço que me encontre nos novos local e hora em que chegarei à sua margem. Não se esqueça que Bruna está localizada em relação à você 30km rio abaixo e 55km rio adentro.} Embora bastante frustrado, Carlos respirou fundo, manteve a calma e lembrou-se de suas saudosas aulas de Álgebra Linear. Voltou para casa, pegou lápis, papel e calculadora; sentou-se à mesa e raciocinou: ``Em primeiro lugar, vou admitir um espaço Euclidiano bidimensional com a base natural $O=\{\vun{e}_1,\vun{e}_2\}$, onde $\vun{e}_1$ representa o leste e $\vun{e}_2$ o norte. Assim, em relação à essa base, já sei que $\mav{\vto{c}_1}{O}=[-1\;\;0]^\text{T}$ e $\mav{\vto{c}_2}{O}=[-0,42\;\;0,91]^\text{T}$ são as matrizes representativas dos vetores de meu ponto de vista $C=\{\vto{c}_1,\vto{c}_2\}$, onde $\vto{c}_1$ relaciona-se com o sentido rio adentro e $\vto{c}_2$ com rio acima. Por essa mesma lógica, no caso de Bruna, sei que as matrizes $\mav{\vto{b}_1}{O}=[0,87\;\;0,5]^\text{T}$ e $\mav{\vto{b}_2}{O}=[0\;\;1]^\text{T}$ representam os vetores de seu ponto de vista $B=\{\vto{b}_1,\vto{b}_2\}$.  O barqueiro disse que sua velocidade $\vto{v}$ era descrita por $\mav{\vto{v}}{B}=[49\;\;13.1]^\text{T}$ quando precisou fazer uma mudança $\vtf{f}$ representada por
+\begin{equation*}
+\mav{\vtf{f}_O}{O}=\begin{bmatrix}
+0,6      & 0 \\
+0      & 0,8 \\
+\end{bmatrix}\,.
+\end{equation*}
+Para obter o que preciso, vou descrever $\vto{v}$ e $\vtf{f}$ no meu ponto de vista. Ainda me lembro das igualdades $\mav{\vto{v}}{C}=\maf{\vtf{i}}{B}{C}\mav{\vto{v}}{B}$ e $\mav{\vtf{f}_C}{C}=\maf{\vtf{i}}{O}{C}\mav{\vtf{f}_O}{O}\maf{\vtf{i}}{C}{O}$, onde
+\begin{alignat*}{3}
+\maf{\vtf{i}}{B}{C}_{ij}=\vto{b}_j\cdot\vto{c}^i & \qquad\text{e} \qquad & \maf{\vtf{i}}{O}{C}_{ij}=\vun{e}_j\cdot\vto{c}^i\,.
+\end{alignat*}
+Diante disso, preciso descobrir minha base recíproca $C^\perp=\{\vto{c}^1,\vto{c}^2\}$, onde o produto interno $\vto{c}_i\cdot\vto{c}^j=\delta_{ij}$. Dessa última igualdade, posso escrever os sistemas
+\begin{alignat*}{3}
+\begin{cases}
+-x=1\\-0,42x+0,91y=0	
+\end{cases}
+& \qquad\text{e} \qquad &
+\begin{cases}
+	-x=0\\-0,42x+0,91y=1	
+\end{cases}\,,
+\end{alignat*}
+cujas soluções conduzem à $[\vto{c}^1]^{O}=[-1\;\;-0,46]^\text{T}$ e $[\vto{c}^2]^{O}=[0\;\;1,1]^\text{T}$, que viabilizam as matrizes
+\begin{alignat*}{3}
+\maf{\vtf{i}}{B}{C}=
+\begin{bmatrix}
+	-1,1      & -0,46 \\
+	0,55      & 1,1 \\
+\end{bmatrix}
+	& \qquad\text{e} \qquad &
+\maf{\vtf{i}}{O}{C}=
+\begin{bmatrix}
+	-1      & 0 \\
+	-0,42     & 0,91 \\
+\end{bmatrix}\,.
+\end{alignat*}
+Daí, chego às representações sob minha perspectiva:
+\begin{alignat*}{3}
+	\mav{\vto{v}}{C}=
+	\begin{bmatrix}
+		-59,93       \\
+		41,36       \\
+	\end{bmatrix}
+	& \qquad\text{e} \qquad &
+	\mav{\vtf{f}_C}{C}=
+	\begin{bmatrix}
+		0,6      & 0,25 \\
+		0,25     & 0,77 \\
+	\end{bmatrix}\,.
+\end{alignat*}
+Após o desvio, a velocidade $\fua{\vtf{f}}{\vto{v}}$ do barco fica  $\mav{\fua{\vtf{f}}{\vto{v}}}{C}=[-25,62\;\;16,87]^\text{T}$. Bem, no momento do desvio, o deslocamento $\vto{u}$ do barco era $\mav{\vto{u}}{B}=[30\;\;5]^\text{T}$ ou, do meu ponto de vista, $\mav{\vto{u}}{C}=\maf{\vtf{i}}{B}{C}\mav{\vto{u}}{B}=[-35,3\;\;22]^\text{T}$. Como ele informou a posição de Bruna em relação a mim, o barco está percorrendo o deslocamento que lhe resta $\mav{\vto{z}}{C}=[-24,7\;\;8]^\text{T}$ numa velocidade rio adentro de -25,62km/h, o que demandará 0,96h. Nesse tempo, com velocidade de 16,87km/h rio acima, ele vai percorrer 16,2km nesse sentido, que significa 8,2km rio acima de onde estou. Ele chegará nesse ponto por volta das 15:00. Como agora são 14:30, de carro chegarei a tempo.''
+\end{example}
+
+
+\section{Autovalores e Autovetores}\label{sec:autoPares}
+
+Considerando um espaço de Hilbert $U_\mathcal{R}$ $n$-dimensional, denominamos $\alpha\vto{u}\in U_\mathcal{R}$, onde $\alpha\in\mathcal{R}$, um \textsb{múltiplo escalar}\index{múltiplo escalar} do vetor $\vto{u}$. O escalar $\alpha$, que indica essa multiplicidade, no contexto da norma $\|\alpha\vto{u}\|=|\alpha|\|\vto{u}\|$, promove uma espécie de redimensionamento de $\vto{u}$, ou seja, se $|\alpha|<1$, há uma diminuição de seu tamanho ou intensidade; se $|\alpha|>1$, há um aumento. O vetor $\vto{u}$ é chamado \textsb{autovetor}\index{autovetor} de um operador qualquer $\vtf{l}\in\evl{\mathcal{R}}{U}{U}$ se for não nulo e o valor $\fua{\vtf{l}}{\vto{u}}$ for seu múltiplo escalar, ou seja, se $\fua{\vtf{l}}{\vto{u}}=\alpha\vto{u}$, onde a multiplicidade $\alpha$ é dita o \textsb{autovalor}\index{autovalor} de $\vtf{l}$. Em outras palavras, \emph{um vetor que $\vtf{l}$ redimensione é seu autovetor e o sinal-magnitude desse redimensionamento seu autovalor}.
+
+Vamos supor agora que, conhecido o operador $\vtf{l}$, queremos descobrir todos os seus autovalores e autovetores a partir das incógnitas da equação $\fua{\vtf{l}}{\vto{x}}=\lambda\vto{x}$ ou, melhor dizendo, a partir de $\lambda$ e $\vto{x}$ em
+\begin{equation}\label{eq:probAutoValor}
+\fua{(\vtf{l}-\lambda\vtf{i})}{\vto{x}}=\vto{0},
+\end{equation}
+onde $\vtf{i}$ é a função identidade em $U_\mathcal{R}$. Numa base qualquer desse espaço, a matriz $[\vtf{i}]=\mat{I}$ e a representação matricial da equação anterior resulta $([\vtf{l}]-\lambda\mat{I})[\vto{x}]=0$. Se a matriz $[\vtf{l}]-\lambda\mat{I}$ fosse inversível, a pré multiplicação de sua inversa por ambos os lados da equação matricial anterior resultaria em $[\vto{x}]=0$ ou num autovetor nulo. Para que isso não ocorra, tal matriz precisa ser singular, ou seja,
+\begin{equation}\label{eq:autoMatricial}
+\det{([\vtf{l}]-\lambda\mat{I})}=0\,.
+\end{equation}
+Sabemos que o lado esquerdo dessa equação é o polinômio característico\footnote{Ver definição à p. \pageref{pg:PolinomioCarac}.} de $[\vtf{l}]$ na variável $\lambda$, cujas $n$ raízes características de $[\vtf{l}]$ solucionam \eqref{eq:autoMatricial}, ou seja, há $n$ autovalores de $\vtf{l}$, não necessariamente distintos. De posse dos autovalores, podemos determinar cada um dos autovetores correspondentes a partir da equação $([\vtf{l}]-\lambda\mat{I})[\vto{x}]=0$. Como todo esse desenvolvimento independe de base, diz-se que $\det(\vtf{l}-\lambda\vtf{i})$ é o polinômio característico de $\vtf{l}$.
+
+Para subsidiar o importante Teorema da Decomposição Polar, sobre o qual discorreremos mais adiante, convém apresentar agora três propriedades do operador hermitiano: a) \emph{os autovalores de um operador hermitiano são sempre reais}; b) \emph{dois autovetores distintos de um operador hermitiano são sempre ortogonais}; c) \emph{o operador hermitiano resultante da composição de um operador com o seu adjunto é sempre não-negativo}. Essa última propriedade implica dizer que os $n$ autovetores do operador hermitiano são distintos entre si e o conjunto por eles formado é uma base do espaço $U_\mathcal{R}$, pois conjuntos ortogonais são sempre linearmente independentes.
+
+{\footnotesize
+\begin{proof}
+Vamos demonstrar as três propriedades descritas acima. Seja $\vtf{h}\in\evl{\mathcal{R}}{U}{U}$ um operador hermitiano com autovalores $\lambda_i$ e autovetores $\vto{x}_i$, de onde podemos escrever a expressão $\fua{\vtf{h}}{\vto{x}_i}=\lambda_i\vto{x}_i$. Fazendo o produto interno de um autovalor $\vto{x}_j$ pelos dois lados dessa igualdade, obtém-se $\vto{x}_j\cdot\fua{\vtf{h}}{\vto{x}_i}=\vto{x}_j\cdot\lambda_i\vto{x}_i$ (a). Agora, tomando a igualdade $\fua{\vtf{h}}{\vto{x}_j}=\lambda_i\vto{x}_j$ e fazendo o produto interno de ambos os lados por $\vto{x}_i$, o resultado é $\fua{\vtf{h}}{\vto{x}_j}\cdot\vto{x}_i=\lambda_j\vto{x}_j\cdot\vto{x}_i$ (b). Porque $\vtf{h}$ é hermitiano, subtraindo-se (b) de (a), pode-se realizar o seguinte desenvolvimento:
+\begin{align*}
+\vto{x}_j\cdot\fua{\vtf{h}}{\vto{x}_i}-\fua{\vtf{h}}{\vto{x}_j}\cdot\vto{x}_i&=\vto{x}_j\cdot\lambda_i\vto{x}_i-\lambda_j\vto{x}_j\cdot\vto{x}_i\\
+0&=(\overline{\lambda_i}-\lambda_j)\vto{x}_j\cdot\vto{x}_i\,.
+\end{align*}
+Como a última igualdade é válida para qualquer par $(i,j)$, quando $i=j$, o escalar $\overline{\lambda_i}=\lambda_i$, o que comprova a propriedade (a). A partir dela e se $\vto{x}_i\neq\vto{x}_j$, o escalar real $\lambda_i\neq\lambda_j$. Diante disso e da última igualdade, a conclusão que $\vto{x}_i\perp\vto{x}_j$ demonstra a propriedade (b). Para a terceira propriedade, considerando o operador hermitiano $\vtf{g}\circ\vtf{g}^\dagger$, onde $\vtf{g}\in\evl{\mathcal{R}}{U}{U}$, precisamos mostrar que é não-negativo o número real $\Re([\vtf{y}]^\dagger[\vtf{g}][\vtf{g}]^\dagger[\vtf{y}])_{11}$, cujas matrizes são descritas numa base ortonormal qualquer. Se a matriz $\mat{A}=[\vtf{g}]^\dagger[\vtf{y}]$, o número real anterior fica $\Re(\mat{A}^\dagger \mat{A})_{11}$, que é sempre não-negativo, pois $(\mat{A}^\dagger \mat{A})_{11}=\sum_{i=1}^{n}\overline{\mat{A}_{i1}}\mat{A}_{i1}=\sum_{i=1}^{n}|\mat{A}_{i1}|^2$.
+\end{proof}
+}
+
+Além das propriedades citadas, todo operador hermitiano, no contexto de espaços de Hilbert, possui matriz representativa hermitiana, pois para uma base ortonormal qualquer $\hat{B}$, são válidas as seguintes igualdades:
+\begin{equation}\label{eq:matOpeHermit}
+{\maf{\vtf{h}}{\hat{B}}{\hat{B}}}^\dagger=[\vtf{h}^\dagger_{\hat{B}}]^{\hat{B}}=[\vtf{h}_{\hat{B}}]^{\hat{B}}\,,
+\end{equation}
+a partir de \eqref{eq:matRepTransp}. Por serem hermitianas, tais matrizes representativas são normais, ou seja, são passíveis de diagonalização espectral\footnote{Ver definição de matriz normal à p. \pageref{nm:Normal}.}. Assim, dado um operador hermitiano qualquer $\vtf{h}\in\evl{\mathcal{R}}{U}{U}$,
+seja $\vto{x}_i$ cada um de seus $n$ autovetores mutuamente ortogonais. Se $\widetilde{\mat{H}}$ for a matriz diagonal resultante da diagonalização espectral de $[\vtf{h}_{\hat{B}}]^{\hat{B}}$ e  $X=\{\vto{x}_1,\cdots,\vto{x}_n\}$ a base ortogonal de seus autovetores, tem-se
+\begin{equation}
+\widetilde{\mat{H}}_{ij}=\lambda_{j}\delta_{ij}=\lambda_{j}\vto{x}_j\cdot\vto{x}^i=\lambda_{j}\fua{\vtf{f}_i^X}{\vto{x}_j}=\fua{\vtf{f}_i^X}{\lambda_{j}\vto{x}_j}=\fua{\vtf{f}_i^X}{\fua{\vtf{h}}{\vto{x}_j}}=[\vtf{h}_X]^X_{ij}\,.
+\end{equation}
+À essa matriz representativa de $\vtf{h}$, descrita pela base de seus autovetores, que corresponde à matriz diagonal espectral de $[\vtf{h}_{\hat{B}}]^{\hat{B}}$, damos o nome de \textsb{representação espectral} do operador $\vtf{h}$. Ainda nas condições colocadas, queremos agora mudar a base $X$, que descreve a matriz representativa de $\vtf{h}$, para uma base qualquer $C$ de $U_\mathcal{R}$. Podemos escrever então que
+\begin{equation}
+[\vtf{h}_C]^C=\maf{\vtf{i}}{X}{C}\mav{\vtf{h}_X}{X}{\maf{\vtf{i}}{C}{X}}=\maf{\vtf{i}}{X}{C}\mav{\vtf{h}_X}{X}{\maf{\vtf{i}}{X}{C}}^\dagger\,,
+\end{equation}
+pois $\maf{\vtf{i}}{X}{C}$ é uma matriz unitária. Além disso, como as matrizes representativas, em bases ortonormais, do operador hermitiano $\vtf{h}$ são normais, a mudança de base de $X$ para $C$ resulta uma decomposição espectral\footnote{Nos termos do teorema \ref{teo:decompSpec}, diz-se que as igualdades $\widetilde{\mat{N}} = \mat{U}^\dagger\mat{N}\mat{U}$ e $\mat{N}= \mat{U}\widetilde{\mat{N}}\mat{U}^\dagger$ são a diagonalização e a \textsb{decomposição}\index{decomposição espectral} espectrais de $\mat{N}$ respectivamente.}. Agora, consideremos o operador $\vtf{h}$ não-negativo. Da definição apresentada ao final da seção anterior, podemos escrever que o escalar $\Re(\vto{x}_i\cdot\fua{\vtf{h}}{\vto{x}_i})\geqslant 0$. A partir dessa desigualdade, como os autovalores de $\vtf{h}$ são reais, temos $\lambda_i(\vto{x}_i\cdot\vto{x}_i)\geqslant 0$, de onde resultam autovalores $\lambda_i$ não negativos, uma vez que o produto interno $\vto{x}_i\cdot\vto{x}_i$ é positivo.
+
+Antes de tratarmos do teorema que vai finalizar este capítulo, precisamos apresentar uma definição adicional no âmbito dos operadores lineares. Em nosso estudo, um operador hermitiano não-negativo $\vtf{h}$ pode ser decomposto segundo a igualdade $\vtf{h}=\vtf{h}^{\nicefrac{1}{2}}\circ\vtf{h}^{\nicefrac{1}{2}}$, onde o operador $\vtf{h}^{\nicefrac{1}{2}}\in\evl{\mathcal{R}}{U}{U}$, único e hermitiano não-negativo, é denominado \index{operador!raiz quadrada de} \textsb{raiz quadrada} de $\vtf{h}$. Já sabemos  que a composição de funções se expressa, em termos matriciais, como o produto das matrizes representativas dessas funções. Assim, a denominação ``raiz quadrada'' se deve à igualdade $[\vtf{h}]=[\vtf{h}^{\nicefrac{1}{2}}][\vtf{h}^{\nicefrac{1}{2}}]$, que remete ao mesmo conceito aplicado a escalares.
+
+{\footnotesize
+\begin{proof}\footnote{Demonstração adaptada de \aut{Gurtin}\cite{gurtin_1981}, pp. 13-14.}
+Precisamos mostrar que a raiz quadrada existe e é única. Para a última igualdade apresentada, válida para uma base qualquer, vamos escolher a base ortonormal $\hat{X}=\{\vun{x}_1,\cdots,\vun{x}_n\}$ formada a partir dos autovetores de $\vtf{h}$. Assim,
+\begin{equation*}
+\maf{\vtf{h}}{\hat{X}}{\hat{X}}=\maf{\vtf{h}^{\nicefrac{1}{2}}}{\hat{X}}{\hat{X}}\maf{\vtf{h}^{\nicefrac{1}{2}}}{\hat{X}}{\hat{X}},
+\end{equation*}
+e já sabemos que $\maf{\vtf{h}}{\hat{X}}{\hat{X}}_{ij}=\lambda_i\delta_{ij}$, sendo $\lambda_i\geq 0$. Se admitirmos $\maf{\vtf{h}^{\nicefrac{1}{2}}}{\hat{X}}{\hat{X}}_{ij}=\delta_{ij}\sqrt{\lambda_{i}}$, essa matriz resulta não-negativa e hermitiana, de onde se conclui $\vtf{h}^{\nicefrac{1}{2}}$ hermitiano não-negativo por conta das igualdades \eqref{eq:matOpeHermit}. Diante disso, fica constatada a existência de uma raiz quadrada de $\vtf{h}$. Para demonstrar a unicidade de $\vtf{h}^{\nicefrac{1}{2}}$, por hipótese, seja $\vtf{c}^{\nicefrac{1}{2}}\circ\vtf{c}^{\nicefrac{1}{2}}=\vtf{h}$. Adotando uma base qualquer $\con{B}$, um vetor $\vto{u}\in\con{V}$ e a igualdade \eqref{eq:probAutoValor}, pode-se fazer o seguinte
+desenvolvimento:
+\begin{eqnarray}
+0&=&\lpa \mad{\vtf{h}^{\nicefrac{1}{2}}_{\con{B}}}{B}\mad{\vtf{h}^{\nicefrac{1}{2}}_{\con{B}}}{B}-\lambda\mat{I}\rpa \lco \vto{x}_i \rco^{B} \nonumber\\
+&=&\lpa\mad{\vtf{h}^{\nicefrac{1}{2}}_{\con{B}}}{B}+\sqrt{\lambda_i}\,\,\mat{I}\rpa\underbrace{\lpa\mad{\vtf{h}^{\nicefrac{1}{2}}_{\con{B}}}{B}-\sqrt{\lambda_i}\,\,\mat{I}\rpa\lco\vto{x}_i \rco^{B}}_{\lco \vto{u} \rco^{B}} \nonumber\,,
+\end{eqnarray}
+de onde se conclui que
+\begin{equation}
+-\sqrt{\lambda_i}\mav{\vto{u}}{B} =
+\mad{\vtf{h}^{\nicefrac{1}{2}}_{\con{B}}}{B}\mav{\vto{u}}{B}\,.\nonumber
+\end{equation}
+A matriz $\lco \vto{u} \rco^{B}$, que abrevia o termo destacado, é
+nula; caso contrário, ocorreria a situação impossível de um
+autovalor negativo associado ao operador hermitiano
+não-negativo $\vtf{h}^{\nicefrac{1}{2}}$. No caso de $\lambda_i=0$,
+não há restrição para a matriz $\lco \vto{u} \rco^{B}$, podendo
+ser nula, por exemplo. Então, o termo destacado fica assim:
+\begin{equation}
+\sqrt{\lambda_i}\lco \vto{x}_i \rco^{B} =
+\mad{\vtf{h}^{\nicefrac{1}{2}}_{\con{B}}}{B}\lco \vto{x}_i
+\rco^{B}\,.\nonumber
+\end{equation}
+Este mesmo procedimento pode ser aplicado ao operador
+$\vtf{c}^{\nicefrac{1}{2}}$, de onde se conclui que
+\begin{equation}
+\mad{\vtf{h}^{\nicefrac{1}{2}}_{\con{B}}}{B}\lco \vto{x}_i
+\rco^{B}=\mad{\vtf{c}^{\nicefrac{1}{2}}_{\con{B}}}{B}\lco \vto{x}_i
+\rco^{B}\nonumber
+\end{equation}
+para qualquer um dos autovetores de $\vtf{h}$. Já que eles são não
+nulos, $\vtf{h}^{\nicefrac{1}{2}}$ é único.
+\end{proof}
+}
+
+
+Um operador do grupo unitário $(O,\circ)$, cujos elementos têm o espaço de Hilbert $U_\mathcal{R}$ como domínio, pode ser representado por uma matriz unitária, se a base utilizada for ortonormal. Em outras palavras, se $\vtf{q}\in O$ e $\hat{B}$ é base ortonormal de $U_\mathcal{R}$, pelas igualdades \eqref{eq:matRepInv} e \eqref{eq:matRepTransp}, a matriz
+\begin{equation}
+{\maf{\vtf{q}}{\hat{B}}{\hat{B}}}^{-1}={\maf{\vtf{q}}{\hat{B}}{\hat{B}}}^\dagger.
+\end{equation}
+Convém recordar que um operador unitário preserva a norma, ou seja, ele não altera o ``tamanho'' ou a ``intensidade'' dos vetores de seu domínio. Para o nosso estudo, seria muito interessante poder discriminar essa característica em operadores lineares quaisquer por meio de uma decomposição, de tal sorte que haja uma parcela unitária e uma não-unitária, responsável exclusivamente por alterações da norma. O teorema a seguir viabiliza essa demanda\footnote{O termo ``polar'' que dá nome ao teorema diz respeito a uma característica similar à forma polar de um número complexo, onde há uma parcela real não-negativa que descreve magnitude e outra de magnitude sempre unitária}.
+
+\begin{mteo}{Decomposição Polar}{decoPolar}\label{teo:decompPolar}\index{decomposição polar}
+Uma bijeção qualquer $\vtf{g}\in\evl{\mathcal{R}}{U}{U}$, onde $U_\mathcal{R}$ é um espaço de Hilbert, possui uma única decomposição $\vtf{g}=\vtf{q}\circ\vtf{h}^{\nicefrac{1}{2}}\,$, onde $\vtf{q}\in\evl{\mathcal{R}}{U}{U}$ é unitário e $\vtf{h}=\vtf{g}\circ\vtf{g}^\dagger$ hermitiano não-negativo.
+\end{mteo}
+
+
+{\footnotesize
+\begin{proof}
+Sejam a bijeção $\vtf{g}\in\evl{\mathcal{R}}{U}{U}$ e o operador hermitiano não-negativo $\vtf{h}=\vtf{g}\circ\vtf{g}^{\dagger}$. Sabemos que a decomposição 	$\vtf{h}=\vtf{h}^{\nicefrac{1}{2}}\circ\vtf{h}^{\nicefrac{1}{2}}$ existe, e portanto
+\begin{align*}
+\vtf{h}^{\nicefrac{1}{2}}\circ\vtf{h}^{\nicefrac{1}{2}}&=\vtf{g}\circ\vtf{g}^{\dagger}\\
+\vtf{i}&=\underbrace{\vtf{h}^{-\nicefrac{1}{2}}\circ\vtf{g}}_{\vtf{q}}\circ\underbrace{\vtf{g}^{\dagger}\circ\vtf{h}^{-\nicefrac{1}{2}}}_{\vtf{q}^{\dagger}}\,,
+\end{align*}	
+de onde concluímos que o termo destacado $\vtf{q}$ é unitário. Assim, podemos afirmar que a decomposição polar existe pois a bijeção $\vtf{g}=\vtf{q}\circ\vtf{h}^{\nicefrac{1}{2}}$. Como a raiz quadrada $\vtf{h}^{\nicefrac{1}{2}}$ é única para $\vtf{g}\circ\vtf{g}^\dagger$, então o operador unitário $\vtf{q}=\vtf{g}\circ\vtf{h}^{-\nicefrac{1}{2}}$ também é único; o que resulta numa decomposição polar única para $\vtf{g}$.
+\end{proof}
+}
+
+\begin{mcoro}{Decomposições Polares à Direita e à Esquerda}{decompPolarEsquerda}\label{teo:decompPolarEsquerda}
+Dada a decomposição polar $\vtf{g}=\vtf{q}\circ\vtf{h}_1^{\nicefrac{1}{2}}$, a igualdade $\vtf{g}=\vtf{h}_2^{\nicefrac{1}{2}}\circ\vtf{q}$, onde $\vtf{h}_2=\vtf{g}^\dagger\circ\vtf{g}$, é única. Por isso, a primeira decomposição denominamos \textsb{decomposição polar à direita}\index{decomposição polar!à direita} e a segunda \textsb{decomposição polar à esquerda}\index{decomposição polar!à esquerda}.
+\end{mcoro}
+
+{\footnotesize
+\begin{proof}
+A demonstração da decomposição polar à esquerda segue o mesmo procedimento da demonstração do teorema anterior. Comprovemos agora que os operadores unitários em ambas as decomposições são iguais. A partir da decomposição polar à esquerda cujo operador unitário é $\vtf{q}_1$, se a parcela $\vtf{c}=\vtf{q}_1^{-1}\circ\vtf{h}_2^{\nicefrac{1}{2}}\circ\vtf{q}_1$ da igualdade $\vtf{g}=\vtf{q}_1\circ\vtf{q}_1^{-1}\circ\vtf{h}_2^{\nicefrac{1}{2}}\circ\vtf{q}_1$ for hermitiana não-negativa,  constata-se uma decomposição polar à direita e portanto $\vtf{q}_1=\vtf{q}$. A comprovação de que $\vtf{c}=\vtf{c}^\dagger$ é trivial. Vamos verificar agora se, dada uma base ortonormal qualquer e um vetor $\vto{x}\in U_\mathcal{R}$, o escalar $\Re([\vto{x}]^\dagger[\vtf{c}][\vto{x}])_{11}$ é não-negativo. Da igualdade $[\vto{x}]^\dagger[\vtf{c}][\vto{x}]=[\vto{x}]^\dagger[\vtf{q}_1]^{-1}[\vtf{h}_2^{\nicefrac{1}{2}}][\vtf{q}_1][\vto{x}]$, podemos concluir que $\Re(\mat{A}^\dagger[\vtf{h}_2^{\nicefrac{1}{2}}]\mat{A})_{11}\geq 0$, onde $\mat{A}=[\vtf{q}_1][\vto{x}]$, pois $\vtf{h}_2^{\nicefrac{1}{2}}$ é não-negativo.
+\end{proof}
+
+% Quando for falar sobre tensores, dizer que um tensor é elemento do espaço dual de um espaço vetorial constituído por enuplas de vetores. Diz-se que o elemento desse espaço vetorial é um vetor de ordem n e o elemento do espaço dual um vetor dual de ordem n ou tensor.
+
+%Estudar esta afirmação com cuidado: "quando a regra de um tensor f for f(x,y)=u*(x)v*(y), então a relação entre f e (u,v) é unívoca, quando chamados f de produto tensorial de u com v, representando u\otimes v".
+
+}
+
+
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../../msav.tex"
+%%% End: 

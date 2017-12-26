@@ -1,0 +1,961 @@
+ \chapter{A Cinemática do Contínuo}
+
+
+
+\section{O Corpo e o Espaço-Tempo Newtoniano}
+
+
+\subsection{Espaço-Tempo Newtoniano}\index{espaço-tempo!Newtoniano}
+Considerando o espaço afim Euclidiano tridimensional $\eaf{V}{A}{\real}$ e o conjunto dos
+reais $\real$, representando o tempo, diz-se que o conjunto $\epo{A}\times\real$ é um
+espaço-tempo Newtoniano. Um subconjunto deste espaço significa o produto cartesiano  dos
+subespaços de apenas um ou de ambos os termos constituintes. Em outras palavras, dado o
+conjunto $\con{U}\subseteq\con{V}$, o espaço-tempo Newtoniano
+$\epo{S}_{\ele{a}}\times\tempo$, onde $\saf{U}{S}{\ele{a}}{\real}$ é subespaço de
+$\eaf{V}{A}{\real}$ e $\tempo\subseteq\real$ é uma duração do tempo, é subconjunto de
+$\epo{A}\times\real$.
+
+
+
+Em termos genéricos, de agora em diante, convém representar o espaço-tempo Newtoniano
+gerado a partir de um espaço afim Euclidiano tridimensional qualquer $\eaf{M}{M}{\real}$
+pela notação $\enw{M}{\tempo}{M}\,$, onde $\tempo$ é uma duração do tempo.
+
+
+\subsubsection{Referencial}\index{referencial}
+
+Seja o espaço-tempo Newtoniano $\enw{M}{\tempo}{M}\,$, tal que $\con{M}$ define o espaço orientado Euclidiano $(\eeu{M}{3},\hat{\tnr{P}})$. Seja o par ordenado
+$(\ele{o},\tilde{\con{U}})$ um sistema de coordenadas afim de $\eaf{M}{M}{\real}\,$, onde
+$\tilde{\con{U}}$ é base de $\eeu{M}{3}$. Considerando o conjunto $\lch t_{\ele{o}} \rch$
+uma base de $\tempo$, o par ordenado $\rfr{o}{\tilde{\con{U}}}$ é denominado uma
+base\index{espaço-tempo!Newtoniano!base do} ou um referencial de $\enw{M}{\tempo}{M}\,$. Se a base $\tilde{\con{U}}$ é positivamente ou negativamente orientada, o referencial por ela definido recebe a mesma classificação.
+
+O referencial é a modelagem matemática do conceito de observador, registrando um dado
+evento físico por meio dos pares ponto e instante do tempo. Além disso, ele viabiliza a
+eventual substituição do estudo de pontos pelo de vetores, bem como o de campos
+tensoriais pelo de funções tensoriais\rodape{Ver seções \ref{sec:AfimMetrico} e
+\ref{sec:AfimTensorial}.}.
+
+
+\subsection{Configurações do Corpo}
+
+\subsubsection{Corpo}\index{corpo}
+
+Seja o espaço de Banach $\ebh{\cor{M}}{\real}$, o espaço medida $\ems{M}{\fuc{m}}{M}$ e
+o espaço-tempo Newtoniano $\enw{M}{\tempo}{M}\,$. Seja
+$\overline{\epo{B}}\subseteq\epo{M}$ o fechamento de um conjunto aberto conexo
+$\epo{B}_{\ele{a}}$, cujo contorno $\partial\epo{B}_{\ele{b}}$ é regular\rodape{Trata-se
+de uma restrição matemática, a partir da qual é possível definir as Identidades de Green,
+fundamentais para o estudo da Dinâmica. Ver seções \ref{sec:contornoRegular} e
+\ref{sec:funcaoIntegravel}.}. Sejam os espaços vetoriais $\eeu{B}{3}$ e $\eeu{\partial
+B}{3}$, definidores dos subespaços afins Euclidianos $\saf{B}{B}{\ele{a}}{\real}$ e
+$\saf{\partial B}{\partial B}{\ele{b}}{\real}$. Um subconjunto $\cor{B}\subseteq\cor{M}$
+é denominado corpo se existir, para um determinado instante $t\in\tempo$, um mapeamento
+bijetor
+\begin{equation}\label{eq:configuracao}
+\map{\chi_t}{\cor{B}}{\overline{\epo{B}}}\,,
+\end{equation}
+onde a função $\chi_t$ é um $\sug{1}$-difeomorfismo\rodape{Em outras palavras, $\chi_t$ e sua inversa são homeomorfismos G-diferenciáveis em seus domínios respectivos.}. Nestas condições, diz-se que $\chi_t$ é uma \emph{configuração}\index{configuração!de corpo} de $\cor{B}$ e a imagem
+$\overline{\epo{B}}$, representada $\overline{\epo{B}}_t$, é dita a \emph{região}\index{região!de corpo} ocupada por $\cor{B}$. A medida $\fuc{m}$ é chamada \emph{função
+massa}\index{função!massa} e o escalar real $\fua{\fuc{m}}{\cor{B}}$ representa a massa
+de $\cor{B}$.
+
+\subsubsection{Universo}\index{universo} Considerando as condições anteriores, se
+o mapeamento (\ref{eq:configuracao}) for válido para qualquer $\cor{B}\subseteq\cor{M}$,
+diz-se que $\cor{M}$ é um universo\rodape{Na verdade, o mundo natural é um espaço-tempo,
+relacionado a um espaço afim métrico quadridimensional, definido pelo chamado espaço
+vetorial de Minkowski.}. Em outras palavras, $\cor{M}$ é considerado um universo se ele e
+seus subconjuntos próprios forem corpos. Como conseqüência, conclui-se que todo universo
+é tridimensional.
+
+
+\subsubsection{Configurações Vetoriais}\index{configuração!vetorial}
+As diversas configurações de um corpo $\cor{B}$, definidas segundo
+(\ref{eq:configuracao}), não permitem eventuais manipulações algébricas, necessárias ao
+estudo da Cinemática, entre os diferentes pontos relacionados a suas partículas. Tal
+manipulação se dá através do uso de vetores. Para este fim, seja um referencial
+$\rfr{o}{\tilde{\con{U}}}$ do espaço-tempo Newtoniano $\enw{M}{\tempo}{M}$, onde
+$\epo{M}$ é a região de um universo $\cor{M}$. Seja $\overline{\epo{B}}_t\subset\epo{M}$
+a região de $\cor{B}$ no instante $t$ e o espaços afins Euclidianos tridimensionais
+$\saf{B}{B}{\ele{a}}{\real}$ e $\saf{\partial B}{\partial C}{\ele{b}}{\real}$, tal que
+$\partial\epo{B}_{\ele{b}}$ é o contorno regular de $\epo{B}_{\ele{a}}$ cujo fechamento é
+$\overline{\epo{B}_t}$. Nestas condições, pode-se definir um mapeamento característico
+com regra
+\begin{equation}
+\fua{\fac{F}_{\overline{\epo{B}}_t}^{\overline{C}}}{x}= \lch
+\begin{array}{l}
+\fua{\fac{F}_{\partial\epo{B}_\ele{b}}^{\partial\ele{B}}}{x}\,,\,\,\forall\ele{x}\in\partial\epo{B}_\ele{b}\\
+\fua{\fac{F}_{\epo{B}_\ele{a}}^{\ele{B}}}{x}\,,\,\,\forall\ele{x}\in\epo{B}_\ele{a}
+\end{array}\right.\,.
+\end{equation}
+A partir daí, com base em (\ref{eq:configuracao}), pode-se definir o mapeamento bijetor
+\begin{equation}\label{eq:configuracaoVetorial}
+\map{\fac{F}_{\overline{\epo{B}}_t}^{\overline{B}}\circ\chi_t}{\cor{B}}{\overline{\con{B}}}\,,
+\end{equation}
+onde, no instante $t$, a função $\fac{F}_{\overline{\epo{B}}}^{\overline{B}}\circ\chi_t$ é dita uma
+configuração vetorial de $\cor{B}$ e a imagem $\overline{B} \subset \con{M}$ sua região vetorial, representada por $\overline{B}_t$.
+
+\paragraph{As Configurações Material e Espacial.}\index{configuração!material}\index{configuração!espacial} A configuração vetorial resolve
+em parte o problema da manipulação algébrica de vetores necessária ao estudo da
+Cinemática. Quando a perspectiva de análise é a própria partícula do corpo e não os
+diversos pontos que ela ocupa em cada instante de tempo, persiste a impossibilidade
+algébrica, já que no mapeamento ($\ref{eq:configuracaoVetorial}$) os elementos do domínio
+não são vetores.
+
+A identificação das partículas de um corpo como sendo vetores é feita adotando-se uma
+configuração vetorial arbitrária. Isto ocorre da seguinte forma: considerando as
+condições do item anterior, seja $C_\chi$ o conjunto formado por todas as configurações
+possíveis do corpo $\cor{B}$ e uma configuração qualquer $\chi_r\in C_\chi\,$,
+arbitrariamente definida. Nos termos de
+(\ref{eq:configuracaoVetorial}), a configuração vetorial de $\cor{B}$ feita por $\chi_r$
+define
+\begin{equation}\label{eq:configuracaoVetorialRef}
+\map{\fac{F}_{\overline{\epo{B}}_r}^{\overline{B}_r}\circ\chi_r}{\cor{B}}{\overline{\con{B}}_r}\,.
+\end{equation}
+Quando esta configuração vetorial arbitrária é utilizada para
+identificar ou \emph{rotular} as partículas do corpo, ela é denominada configuração
+material ou \emph{de referência}\index{configuração!de referência}\rodape{É importante
+ressaltar que não há interdependência entre os conceitos de configuração de referência e
+de referencial.} e a imagem $\overline{\con{B}}_r$ é dita a \emph{região material ou de referência}\index{região!de referência}\index{região!material} de $\cor{B}$. Neste contexto, diz-se que a partícula
+\begin{equation}
+\prt{u}:=\fua{\lco\chi_r^{-1}\circ{\fac{F}_{\overline{\epo{B}}_r}^{\overline{B}_r}}^{-1}\rco}{\vto{u}}
+\end{equation}
+é rotulada pelo vetor $\vto{u}$. Os vetores da região que rotula um corpo são
+denominados \emph{vetores materiais ou de referência}\index{vetor!material}\index{vetor!de referência}. Da mesma forma, pode-se definir, a partir da configuração $\chi_t\,$, o mapeamento bijetor
+\begin{equation}\label{eq:configuracaoVetorialEsp}
+\map{\fac{F}_{\overline{\epo{B}}_t}^{\overline{B}_t}\circ\chi_t}{\cor{B}}{\overline{\con{B}}_t}\,,
+\end{equation}
+onde a função nele definida é dita a configuração espacial do
+corpo $\cor{B}$ e $\overline{B}_t$ é sua \emph{região espacial}\index{região!espacial}. Os vetores desta região são ditos \emph{espaciais}\index{vetor!espacial}.
+
+Combinando os conceitos de configuração material e espacial, pode-se definir o mapeamento
+\begin{equation}
+\map{\fac{F}_{\overline{\epo{B}}_t}^{\overline{B}_t}\circ\chi_t\circ\chi_r^{-1}\circ{\fac{F}_{\overline{\epo{B}}_r}^{\overline{B}_r}}^{-1}}{\overline{\con{B}}_r}{\overline{\con{B}}_t}\,,
+\end{equation}
+onde a bijeção
+\begin{equation}\label{eq:configEspacialDescMaterial}
+\negsymbol{\chi}_t:=\fac{F}_{\overline{\epo{B}}_t}^{\overline{B}_t}\circ\chi_t\circ\chi_r^{-1}\circ{\fac{F}_{\overline{\epo{B}}_r}^{\overline{B}_r}}^{-1}\,,
+\end{equation}
+no instante $t$, é dita a descrição material da configuração espacial do
+corpo $\cor{B}$. Da mesma forma, a função inversa
+\begin{equation}
+\negsymbol{\chi}_t^{-1}:=\fac{F}_{\overline{\epo{B}}_r}^{\overline{B}_r}\circ\chi_r\circ\chi_t^{-1}\circ{\fac{F}_{\overline{\epo{B}}_t}^{\overline{B}_t}}^{-1}
+\end{equation}
+é a descrição espacial da configuração material de $\cor{B}$. Em termos gerais,
+a descrição no domínio material de toda e qualquer quantidade mecânica mensurável, selecionada para estudo, é qualificada como \emph{Lagrangiana}\index{descrição!Lagrangiana}. Se este domínio for uma região
+espacial, tem-se a descrição \emph{Euleriana}\index{descrição!Euleriana}.
+
+As configurações vetoriais presentes em (\ref{eq:configuracaoVetorial}) e (\ref{eq:configuracaoVetorialRef}) pressupõem a existência dos respectivos referenciais
+$\rfr{o}{\tilde{\con{U}}}$ e $\rfr{o_r}{\tilde{\con{U}}_r}\,$ sincronizados, ou seja, $t_{o_r}=t_o\,$. O primeiro é denominado um \emph{referencial espacial}\index{referencial!espacial} enquanto o segundo um \emph{referencial material}\index{referencial!material}.
+
+Com base no que foi exposto, a figura \ref{fg:configvet} apresenta, para um dado instante $t$, um esquema envolvento as configurações do corpo $\cor{B}$ e suas descrições material e espacial.
+\begin{figure}[!ht]
+\centering
+\begin{center}
+\input{partes/parte2/figs/c_cinemat/configvet.pstex_t}
+\end{center}
+\titfigura{Configurações e Regiões do Corpo $\cor{B}$ no instante $t$.}\label{fg:configvet}
+\end{figure}
+
+
+\begin{prp}
+Sejam o espaço medida $\ems{\con{M}}{\fuc{m}}{M}$ e o espaço-tempo Newtoniano
+$\enw{M}{\tempo}{M}\,$, onde $\cor{M}$ é um universo e $\epo{M}$ é formado pelas regiões
+dos corpos de $\cor{M}$. Dado um corpo qualquer $\cor{B}\subseteq\cor{M}$ e sua região
+$\epo{B}_r\subseteq\epo{M}$, tal que uma configuração arbitrária
+$\map{\chi_r}{\cor{B}}{\epo{B}_r}\,$, é possível definir o espaço medida
+$\ems{\epo{M}}{\fuc{m^*}}{M^*}$, onde
+ a massa $\fua{\fuc{m}^*}{\epo{B}_r}:=\fua{\fuc{m}}{\cor{B}}$ e a classe $\css{M^*}$ é formada pelas regiões
+dos conjuntos que constituem $\css{M}$.
+\end{prp}
+\begin{prova} Para simplificar as representações subseqüentes, admitiremos a notação $\fua{\chi_r}{\cor{A}}$ para
+a região definida pela configuração $\chi_r$. Temos que mostrar que $\css{M^*}$ é um
+$\sigma$-anel. Para tal, consideremos uma classe
+$\lch\fua{\chi_r}{\cor{B}_1},\fua{\chi_r}{\cor{B}_2},\cdots\rch\subseteq\css{M^*}$, onde
+$\lch\cor{B}_1,\cor{B}_2,\cdots\rch\subseteq\css{M}$. Como a função $\chi_t$ é uma
+bijeção, pode-se afirmar que o conjunto
+\begin{equation}
+\bigcup_{i=1}^{\infty}\fua{\chi_r}{\cor{B}_i}=\fua{\chi_r}{\bigcup_{i=1}^{\infty}\cor{B}_i}\,.\nonumber
+\end{equation}
+Já que a classe $\css{M}$ é um $\sigma$-anel e $\css{M^*}$ contém as regiões dos
+conjuntos de $\css{M}$, então
+\begin{equation}
+\bigcup_{i=1}^{\infty}\cor{B}_i\in\css{M}\implies\fua{\chi_r}{\bigcup_{i=1}^{\infty}\cor{B}_i}\in\css{M^*}\nonumber\,.
+\end{equation}
+
+Sabe-se que $\fua{\chi_r}{\emptyset}=\emptyset$. Logo, se $\emptyset\in\css{M}$ então
+$\emptyset\in\css{M^*}$. Além disso, dados os conjuntos $\fua{\chi_r}{\cor{B}_i}$ e
+$\fua{\chi_r}{\cor{B}_j}$ quaisquer,
+\begin{equation}
+\fua{\chi_r}{\cor{B}_i}/\fua{\chi_r}{\cor{B}_j}=\fua{\chi_r}{\cor{B}_i/\cor{B}_j}\,.\nonumber
+\end{equation}
+Como $\cor{B}_i/\cor{B}_j\in\css{M}$ então
+$\fua{\chi_r}{\cor{B}_i/\cor{B}_j}\in\css{M^*}$.
+\end{prova}
+
+\section{Deformações do Corpo}\index{deformação}\label{sec:deformacao}
+Seja um corpo $\cor{B}$ de um universo $\cor{M}$ e $\enw{M}{\tempo}{M}$ um espaço-tempo
+Newtoniano, onde $\epo{M}$ é a região dos corpos de $\cor{M}$. A descrição material $\negsymbol{\chi}_t$ de uma configuração espacial qualquer de $\cor{B}$, nos termos de
+(\ref{eq:configEspacialDescMaterial}), é denominada uma deformação do corpo $\cor{B}$.
+Deformar um corpo, neste contexto, significa alterar-lhe seu estado morfológico, ou seja,
+não apenas seu formato mas também sua posição\rodape{Ver seção \ref{sec:EspacoTempo} .}.
+Neste contexto, um corpo passível de sofrer deformações é dito
+\emph{deformável}\index{corpo!deformável}. No âmbito deste trabalho, todo e qualquer
+corpo é deformável; desta forma, na denominação ``corpo'', de agora em diante, ficará
+subentendido o adjetivo ``deformável''.
+
+\subsection{O Gradiente de Deformação}\index{gradiente!de deformação}
+Uma necessidade fundamental do estudo aqui realizado é a determinação do comportamento da variação da
+deformação $\negsymbol{\chi}_t$ no seu domínio de atuação. Em termos matemáticos, esta variação pode ser medida pela derivada da deformação $\negsymbol{\chi}_t\,$, representada, nos termos da seção
+\ref{sec:GradienteDivergente}, pelo conceito de gradiente.
+
+Em última análise, o tensor de segunda ordem
+$\fua{\gqu{}{\negsymbol{\chi}_t}}{\vto{x}_r}\in{\con{T}}_{\con{M}^2\mapsto\con{\real}}$
+determina, em termos quantitativos e qualitativos, as características de deformação
+sofridas pelo conjunto de pontos do corpo. Devido a sua importância, o tensor
+$\subolds{\tnr{F}}{x}{r}:=\fua{\gqu{}{\negsymbol{\chi}_t}}{\vto{x}_r}$ recebe o nome óbvio de gradiente de deformação em $\vto{x}_r\in\overline{B}_r$.
+
+Levando-se em conta a definição de configuração de um corpo, a deformação
+$\negsymbol{\chi}_t$ é também um $\sug{1}$-difeomorfismo e sua derivada
+$\fua{\dvg{\negsymbol{\chi}_t}}{\vto{x}_r}$ é portanto inversível. Com base no conceito de
+gradiente, pode-se dizer que a função representante do gradiente de deformação
+\begin{equation}
+{\subolds{\tnr{F}}{x}{r}}_{\odot 1} = \fua{\dvg{\negsymbol{\chi}_t}}{\vto{x}_r}\,.
+\end{equation}
+Neste contexto, utilizando a definição (\ref{eq:representanteInversaSimples}),
+\begin{equation}
+{\subolds{\tnr{F}}{x}{r}^{-1}}_{\odot1} = \lco\fua{\dvg{\negsymbol{\chi}_t}}{\vto{x}_r}\rco^{-1}\,,
+\end{equation}
+de onde se pode concluir, nos termos da seção \ref{sec:HiperdeterminanteOperador}, que a
+quantidade escalar $\det{{\subolds{\tnr{F}}{x}{r}}_{\odot 1}}$ é não nula.
+
+Uma deformação é classificada como \emph{homogênea}\index{deformação!homogênea},
+representada $\overline{\negsymbol{\chi}_t}$,  se seu gradiente for constante ao
+longo do domínio. Neste caso, com base na proposição \ref{teo:gradienteConstante},
+pode-se dizer, em termos genéricos, que
+\begin{equation}\label{eq:deformacaoHomogenea}
+\fua{\ftr{{F}}{1}}{\vto{h}_1-\vto{h}_2}=
+\fua{\overline{\negsymbol{\chi}_t}}{\vto{h}_1} -
+\fua{\overline{\negsymbol{\chi}_t}}{\vto{h}_2}\,,
+\end{equation}
+onde $\tnr{F}$ possui o mesmo valor ao longo de $\con{M}$, sendo denominado gradiente de deformação homogênea. Os vetores $\vto{h}_1$ e $\vto{h}_2$ são elementos quaisquer de $\overline{B}_r$. Desta forma, deformações homogêneas possuem, invariavelmente, a regra
+\begin{equation}\label{eq:regraDeformacaoHomogenea}
+\fua{\overline{\negsymbol{\chi}_t}}{\vto{x}_r} =  \fua{\ftr{{F}}{1}}{\vto{x}_r} +
+\vto{c}\,,
+\end{equation}
+onde $\vto{c}\in\con{M}$ representa um vetor fixo qualquer.
+
+\subsubsection{Deformação Isocórica}\index{deformação!isocórica}
+Uma deformação é dita isocórica quando ela preserva o volume do corpo por ela deformado.
+Em termos matemáticos, isto é definido conforme apresentado a seguir. Considerando as
+condições anteriores e um referencial positivamente orientado, seja
+$\{\vto{u},\vto{v},\vto{w}\}\subset\overline{B}_r$ um conjunto linearmente independente
+qualquer. Com base nas representações geométricas apresentadas na seção
+\ref{sec:produtoVetorial}, uma deformação $\negsymbol{\chi}_t$ é isocórica se e somente
+se
+\begin{equation}
+\fua{\negsymbol{\chi}_t}{\vto{u}}\cdot(\fua{\negsymbol{\chi}_t}{\vto{v}}\wedge\fua{\negsymbol{\chi}_t}{\vto{w}})=\vto{u}\cdot(\vto{v}\wedge\vto{w})\,.
+\end{equation}
+Considerando o caso de deformação homogênea, a igualdade
+(\ref{eq:regraDeformacaoHomogenea}) gera, para qualquer $\vto{c}\in\con{M}$,
+\begin{equation}
+\lpa\fua{\ftr{{F}}{1}}{\vto{u}}+\vto{c}\rpa\cdot
+\lco\lpa\fua{\ftr{{F}}{1}}{\vto{v}}+\vto{c}\rpa\wedge\lpa\fua{\ftr{{F}}{1}}{\vto{w}}+\vto{c}\rpa\rco=\vto{u}\cdot(\vto{v}\wedge\vto{w})\,.
+\end{equation}
+Sendo assim, especificando $\vto{c}=\vto{0}$ nesta igualdade, pode-se dizer, com base na
+proposição \ref{teo:produtoTriplo}, que numa deformação homogênea isocórica
+\begin{equation}
+\det\tnr{{F}}=1\,.
+\end{equation}
+
+
+\subsection{Deformações Afins}\index{deformação!afim}
+Considerando as condições definidas na seção \ref{sec:deformacao}, seja a transformação afim
+\begin{equation}
+\map{\mathsf{H}}{\epo{M}}{\epo{M}}\,,
+\end{equation}
+onde a afinidade $\mathsf{H}$ não inclui
+reflexões\rodape{Ver seção \ref{sec:afinidade}.}. Sejam os referenciais
+sincronizados $\rfr{o_r}{\tilde{\con{U}_r}}$ e $\rfr{o}{\tilde{\con{U}}}$, promotores dos campos característicos
+$\fac{F}_{\overline{\epo{B}}_r}^{\overline{B}_r}$ e
+$\fac{F}_{\overline{\epo{B}}_t}^{\overline{B}_t}$, onde $\overline{\epo{B}}_r$ e
+$\overline{\epo{B}}_t$ são as regiões material e espacial de um corpo $\cor{B}$,
+respectivamente. Uma configuração espacial qualquer $\negsymbol{\chi}_t$ de $\cor{B}$ é
+dita uma deformação afim ou uma \emph{afinidade vetorial}\index{afinidade!vetorial},
+representada $\negsymbol{\vartheta}_t$, se
+\begin{equation}
+\negsymbol{\vartheta}_t=\fac{F}_{\overline{\epo{B}}_t}^{\overline{B}_t}\circ\mathsf{H}\circ
+{\fac{F}_{\overline{\epo{B}}_r}^{\overline{B}_r}}^{-1}.
+\end{equation}
+A partir daí, pode-se realizar o seguinte desenvolvimento
+\begin{eqnarray}\label{eq:defAfimRegra}
+\fua{\negsymbol{\vartheta}_t}{\vto{x}} & = &
+\fua{\fac{F}_{\overline{\epo{B}}_t}^{\overline{B}_t}\circ\mathsf{H}}{\vto{x}_r\oplus
+o_r}\nonumber\\
+& = &
+\fua{\fac{F}_{\overline{\epo{B}}_t}^{\overline{B}_t}}{\fua{\vtf{l}}{\vto{x}_r}+\fua{\mathsf{H}}{\ele{o_r}}}\nonumber\\
+& = &
+\fua{\fac{F}_{\overline{\epo{B}}_t}^{\overline{B}_t}}{\fua{\vtf{l}}{\vto{x}_r}+\vto{z}\oplus
+o}\nonumber\\
+& = & \lpa\tnr{A}\odot_1\vto{x}_r\rpa+\vto{z}\,,
+\end{eqnarray}
+onde $\vto{z}\in\con{M}$ é o vetor que associa os pontos $\ele{o}$ e $\fua{\mathsf{H}}{\ele{o_r}}$. Com base na última igualdade, a diferenciação da deformação afim
+$\negsymbol{\vartheta}_t$ permite dizer que o gradiente de deformação afim
+\begin{equation}\label{eq:gradDeformacaoAfim}
+\fua{\gqu{}{\negsymbol{\vartheta}_t}}{\vto{x}_r}=\tnr{A}\,.
+\end{equation}
+Tomando esta igualdade e o resultado de (\ref{eq:defAfimRegra}), pode-se dizer, com base
+em (\ref{eq:regraDeformacaoHomogenea}), que toda deformação afim
+$\negsymbol{\vartheta}_t$ é homogênea. Desta forma,
+\begin{equation}
+\fua{\ftr{\tnr{A}}{1}}{\vto{h}_1-\vto{h}_2}= \fua{\negsymbol{\vartheta}_t}{\vto{h}_1} -
+\fua{\negsymbol{\vartheta}_t}{\vto{h}_2}\,,\,\forall\, \vto{h}_1,\vto{h}_2\in\overline{B}_r\,.
+\end{equation}
+
+\subsubsection{Decomposição Polar do Gradiente de Deformação Afim}\index{Decomposição Polar!do gradiente de deformação afim}
+Considerando as condições da seção anterior, do desenvolvimento que resulta na igualdade
+(\ref{eq:defAfimRegra}), pode-se dizer que o vetor
+$\fua{\negsymbol{\vartheta}_t}{\vto{x}_r}=\fua{\vtf{l}}{\vto{x}_r}+\vto{z}\,$. Como as regras possíveis para a afinidade $\mathsf{H}$ excluem as reflexões, então $\det \vtf{l} > 0$. De acordo com o teorema \ref{teo:decompPolar}, o operador linear
+\begin{equation}\label{eq:decompOperadorAfim}
+\vtf{l}=\vtf{p}_1\circ\vtf{o}=\vtf{o}\circ\vtf{p}_2\,,
+\end{equation}
+onde $\vtf{p}_1,\vtf{p}_2\in\cfl{M}{M}$ são operadores simétricos positivos-definidos
+e o operador $\vtf{o}\in\cfl{M}{M}$ é ortogonal próprio. Com base nas definições (\ref{eq:funRepCompostaDireita}) e (\ref{eq:funRepCompostaEsquerda}), como os operadores lineares em (\ref{eq:decompOperadorAfim}) são funções representantes de tensores, tal igualdade pode ser reescrita na forma
+\begin{equation}
+\tnr{A}_{\odot_1}=\lpa\tnr{P}_1\tnr{O}\rpa_{\odot_1}=\lpa\tnr{O}\tnr{P}_2\rpa_{\odot_1}\,,
+\end{equation}
+onde, obviamente, $\tnr{P}_1,\tnr{P}_2\in{\con{T}}_{\con{M}^2\mapsto\con{\real}}$ são
+tensores simétricos po\-si\-ti\-vo-se\-mi\-de\-fi\-ni\-dos e
+$\tnr{O}\in{\con{T}}_{\con{M}^2\mapsto\con{\real}}$ é tensor ortogonal próprio.
+Em termos gerais, conclui-se que o tensor
+\begin{equation}\label{eq:decompGradAfim}
+\tnr{A}=\tnr{P}_1\tnr{O}=\tnr{O}\tnr{P}_2\,.
+\end{equation}
+A partir destas igualdades e de (\ref{eq:gradDeformacaoAfim}), diz-se que houve a decomposição polar do gradiente de deformação afim $\tnr{A}$.
+
+Neste contexto, o objetivo agora é interpretar, em termos geométricos, a decomposição
+(\ref{eq:decompGradAfim}). Para tal, seja a deformação afim
+\begin{equation}\label{eq:rotacaoDilacaoRotacao}
+\negsymbol{\vartheta}_t=\fac{F}_{\overline{\epo{B}}_t}^{\overline{B}_t}\circ
+\mathsf{D}_1\circ\mathsf{K}\circ\subold{\mathsf{T}}{v} \circ
+{\fac{F}_{\overline{\epo{B}}_r}^{\overline{B}_r}}^{-1}=\fac{F}_{\overline{\epo{B}}_t}^{\overline{B}_t}\circ
+\mathsf{K}\circ\mathsf{D}_2\circ\subold{\mathsf{T}}{v} \circ
+{\fac{F}_{\overline{\epo{B}}_r}^{\overline{B}_r}}^{-1}\,,
+\end{equation}
+onde $\mathsf{T}_\vto{v}$ é uma translação associada a um vetor fixo $\vto{v}\in\con{M}$,
+$\mathsf{D}_1$ e $\mathsf{D}_2$ são dilações e $\mathsf{K}$ uma rotação. A partir daí,
+pode-se realizar o seguinte desenvolvimento:
+\begin{eqnarray}\label{eq:decompDefAfim}
+\fua{\negsymbol{\vartheta}_t}{\vto{x}_r} & = &
+\fua{\fac{F}_{\overline{\epo{B}}_t}^{\overline{B}_t}\circ\mathsf{D}_1\circ\mathsf{K}}{\vto{v}+\vto{x}_r\oplus
+o_r}\nonumber\\
+& = &
+\fua{\fac{F}_{\overline{\epo{B}}_t}^{\overline{B}_t}\circ\mathsf{D}_1}{\fua{\tnr{R}_{\odot_1}}{\vto{v}+\vto{x}_r}\oplus
+\fua{\mathsf{K}}{o_r}}\nonumber\\
+& = &
+\fua{\fac{F}_{\overline{\epo{B}}_t}^{\overline{B}_t}}{\fua{{\tnr{S}_1\tnr{R}}_{\odot_1}}{\vto{v}+\vto{x}_r}\oplus
+\fua{\mathsf{D}_1\circ\mathsf{K}}{o_r}}\nonumber\\
+& = &
+\fua{\fac{F}_{\overline{\epo{B}}_t}^{\overline{B}_t}}{\fua{{\tnr{S}_1\tnr{R}}_{\odot_1}}{\vto{v}+\vto{x}_r}+
+\vto{z}\oplus\ele{o}}\nonumber\\
+& = &
+\fua{{\tnr{S}_1\tnr{R}}_{\odot_1}}{\vto{x}_r}+
+\underbrace{\fua{{\tnr{S}_1\tnr{R}}_{\odot_1}}{\vto{v}}+\vto{z}}_{\overline{\vto{v}}}\,.\label{eq:dilacaoRotacao}
+\end{eqnarray}
+De maneira similar, desenvolvendo o termo mais à direita em
+(\ref{eq:rotacaoDilacaoRotacao}), chega-se facilmente a
+\begin{equation}\label{eq:rotacaoDilacao}
+\fua{\negsymbol{\vartheta}_t}{\vto{x}_r} =
+\fua{{\tnr{R}\tnr{S}_2}_{\odot_1}}{\vto{x}_r}+\overline{\vto{v}}\,.
+\end{equation}
+Diferenciando $\negsymbol{\vartheta}_t$ a partir das igualdades
+(\ref{eq:dilacaoRotacao}) e (\ref{eq:rotacaoDilacao}), com base em
+(\ref{eq:gradDeformacaoAfim}) e (\ref{eq:rotacaoDilacaoRotacao}), pode-se afirmar que
+\begin{equation}\label{eq:decompGeoGradAfim}
+\tnr{A}=\tnr{S}_1\tnr{R}=\tnr{R}\tnr{S}_2\,.
+\end{equation}
+É fácil observar este resultado não é alterado pela mudança da posição de
+$\mathsf{T}_\vto{v}$ na composição de afinidades em (\ref{eq:rotacaoDilacaoRotacao}).
+Desta forma, os tensores em (\ref{eq:decompGeoGradAfim}) são únicos. Comparando tais
+tensores com os de (\ref{eq:decompGradAfim}), que também são únicos, conclui-se que a
+decomposição polar do gradiente de deformação afim $\tnr{A}$ resulta do efeito combinado
+de uma rotação com uma dilação. Nos termos da seção \ref{sec:funcaoTensorialTransposta},
+dados os tensores $\tnr{V}:=\tnr{S}_1$ e $\tnr{U}:=\tnr{S}_2$, para funções
+representantes com contração à direita,
+\begin{equation}\label{eq:decompPolarFinal1}
+\tnr{A}=\tnr{V}\odot_1\tnr{R}=\tnr{R}\odot_1\tnr{U}\,,
+\end{equation}
+onde o tensor $\tnr{V}$ é denominado \emph{tensor de estiramento pós-rotacional}\index{tensor!de estiramento pós-rotacional}\index{tensor!de estiramento à esquerda} e
+$\tnr{U}$ é o \emph{tensor de estiramento pré-rotacional}\index{tensor!de estiramento pré-rotacional}\index{tensor!de estiramento à direita}\rodape{\aut{Noll}\cite{noll_1974_2} ``batizou'' os tensores $\tnr{V}$ e $\tnr{U}$ \emph{tensor de estiramento à esquerda} e \emph{tensor de estiramento à direita} respectivamente. Ao contrário da quase unanimidade dos textos relacionados à Mecânica do Contínuo, tal denominação, onde fica implícito um tensor de rotação, não será utilizada neste trabalho.}. Se a igualdade anterior é verdadeira, utilizando as definições (\ref{eq:composicaoMultipla}), (\ref{eq:representanteInversaSimples}) e (\ref{eq:transpostaTensor}), fica fácil obter que
+\begin{equation}\label{eq:veDois}
+\tnr{A}\odot_1\tnr{A^T}=\tnr{V^2}
+\end{equation}
+e
+\begin{equation}\label{eq:uDois}
+\tnr{A^T}\odot_1\tnr{A}=\tnr{U^2}\,.
+\end{equation}
+Para funções com contração à esquerda, (\ref{eq:decompPolarFinal1}) é reescrita na forma
+\begin{equation}\label{eq:decompPolarFinal2}
+\tnr{A}=\tnr{R}\odot_1\tnr{V}=\tnr{U}\odot_1\tnr{R}\,.
+\end{equation}
+
+É importante salientar que, com base nas igualdades anteriores, como o domínio de atuação da deformação afim $\negsymbol{\vartheta}_t$ é $\overline{\con{B}}_r$, então $\tnr{V}_{\odot 1}$ é uma função material enquanto $\tnr{U}_{\odot 1}$ é espacial.
+
+\subsubsection{Exemplos}
+As descrições das deformações afins a seguir são realizadas por meio de um único
+referencial $\rfr{o}{\hat{\con{U}}}$, onde o conjunto
+$\hat{\con{U}}=\lch\vun{e}_1,\vun{e}_2,\vun{e}_3\rch$ é base ortonormal positivamente
+orientada do espaço $\eeu{M}{3}\,$. Para as representações de cada um dos tipos de
+deformação mostradas a seguir, a região
+$\overline{{\epo{B}}}_r$, definidora da região material, é um cubo com os  seguintes pontos: $\ele{x}_1:=o$,
+$\ele{x}_2:=\vun{e}_1\oplus o$, $\ele{x}_3:=(\vun{e}_1+\vun{e}_3)\oplus o$,
+$\ele{x}_4:=\vun{e}_3\oplus o$, $\ele{x}_5:=(\vun{e}_1+\vun{e}_2)\oplus o$,
+$\ele{x}_6:=\vun{e}_2\oplus o$, $\ele{x}_7:=(\vun{e}_2+\vun{e}_3)\oplus o$ e
+$\ele{x}_8:=(\vun{e}_1+\vun{e}_2+\vun{e}_3)\oplus o\,$.
+
+\paragraph{Deformação Rígida.}\index{deformação!rígida}
+Uma deformação afim $\negsymbol{\vartheta}_t$ é chamada deformação rígida se, nos termos
+de (\ref{eq:decompDefAfim}), possuir a seguinte regra:
+\begin{equation}
+\fua{\negsymbol{\vartheta}_t}{\vto{x}_r} =
+\fua{{\tnr{R}}_{\odot_1}}{\vto{x}_r}+\overline{\vto{v}}\,.
+\end{equation}
+O gradiente de deformação rígida é portanto um tensor de rotação. Com base nesta regra, o
+exemplo proposto está representado na figura \ref{fg:deformacaoRigida} tal que as coordenadas
+\begin{equation}
+\lco\fua{\negsymbol{\vartheta}_t\circ\fac{F}_{\overline{\epo{B}}_r}^{\overline{B}_r}}
+{\ele{x}_i}\rco^{\hat{\con{U}}}=\lco
+\begin{array}{ccc}
+\cos\theta & -\sin\theta & 0 \\
+\sin\theta & \cos\theta & 0 \\
+0 & 0 & 1
+\end{array}\rco\lco
+\fua{\fac{F}_{\overline{\epo{B}}_r}^{\overline{B}_r}}
+{\ele{x}_i}\rco^{\hat{\con{U}}} + \sum_{j=1}^3\lco\vun{e}_j\rco^{\hat{\con{U}}}\,,
+\end{equation}
+onde $i=1,\dots,8$. Nesta igualdade, a matriz está associada ao tensor de rotação
+$\tnr{R}$ que promove um giro anti-horário de ângulo $\theta$ em torno do eixo
+$\overline{ox_4}$ do cubo. O último termo da soma são as coordenadas do vetor
+$\overline{\vto{v}}$ da translação envolvida.
+\begin{figure}[!ht]
+\centering
+\begin{center}
+\input{partes/parte2/figs/c_cinemat/rigida.pstex_t}
+\end{center}
+\titfigura{Deformação Rígida.}\label{fg:deformacaoRigida}
+\end{figure}
+
+\paragraph{Alongamento Puro.}
+Uma deformação afim $\negsymbol{\vartheta}_t$ é dita um alongamento puro se sua regra for
+\begin{equation}\label{eq:estiramentoPuro}
+\fua{\negsymbol{\vartheta}_t}{\vto{x}_r}=\fua{{\tnr{U}}_{\odot_1}}{\vto{x}_r}\,,
+\end{equation}
+onde
+\begin{equation}
+\tnr{U}=\tnr{V}=\sum_{i=1}^3\alpha_{ii} {\vun{e}_{i}} \otimes{\vun{e}_{i}}\,,
+\end{equation}
+tal que $\vun{e}_{i}$ e $\alpha_{ii}$ são os autovetores e os autovalores de $\tnr{U}$,
+respectivamente. Para a situação mostrada na figura \ref{fg:alongamentoPuro},
+\begin{equation}
+\lco\fua{\negsymbol{\vartheta}_t\circ\fac{F}_{\overline{\epo{B}}_r}^{\overline{B}_r}}
+{\ele{x}_i}\rco^{\hat{\con{U}}}=\lco
+\begin{array}{ccc}
+\alpha_{11} & 0 & 0 \\
+0 & \alpha_{22} & 0 \\
+0 & 0 & \alpha_{33}
+\end{array}\rco\lco
+\fua{\fac{F}_{\overline{\epo{B}}_r}^{\overline{B}_r}} {\ele{x}_i}\rco^{\hat{\con{U}}}\,,
+\end{equation}
+\begin{figure}[!ht]
+\centering
+\begin{center}
+\input{partes/parte2/figs/c_cinemat/estira.pstex_t}
+\end{center}
+\titfigura{Alongamento Puro}\label{fg:alongamentoPuro}
+\end{figure}
+
+Se o volume do cubo for preservado pelos valores $\alpha_{ii}$, o alongamento puro é isocórico.
+
+
+\paragraph{Cisalhamento Simples.}
+A deformação não isocórica
+$\negsymbol{\vartheta}_t$ é um cisalhamento simples na direção de $\vun{e}_i$ ao longo
+do vetor $\vun{e}_j$, $i\neq j$, se o gradiente de deformação
+\begin{equation}
+\tnr{A}=\tnr{I}+\gamma{\vun{e}_{i}} \otimes{\vun{e}_{j}}\,.
+\end{equation}
+Para fins de exemplo, adotando $i=2$ e $j=3$, tem-se
+\begin{equation}
+\lco\fua{\negsymbol{\vartheta}_t\circ\fac{F}_{\overline{\epo{B}}_r}^{\overline{B}_r}}
+{\ele{x}_i}\rco^{\hat{\con{U}}}=\lco
+\begin{array}{ccc}
+1 & 0 & 0 \\
+0 & 1 & \gamma \\
+0 & 0 & 1
+\end{array}\rco\lco
+\fua{\fac{F}_{\overline{\epo{B}}_r}^{\overline{B}_r}} {\ele{x}_i}\rco^{\hat{\con{U}}}\,,
+\end{equation}
+cuja representação é mostrada na figura \ref{fg:cisalhamentoSimples}.
+\begin{figure}[!ht]
+\centering
+\begin{center}
+\input{partes/parte2/figs/c_cinemat/cisalha.pstex_t}
+\end{center}
+\titfigura{Cisalhamento Simples.}\label{fg:cisalhamentoSimples}
+\end{figure}
+
+
+\subsection{Medidas de Estiramento}\index{estiramento!medidas de}
+Considerando um deformação afim qualquer, uma medida de estiramento\rodape{Neste
+trabalho, ``medida de estiramento'' é a tradução de ``strain measure''.} deve informar,
+de alguma maneira, o nível ou a quantidade de estiramento envolvida em tal deformação.
+Além disso, fica claro que a evolução desta medida deve se equiparar a evolução do
+estiramento e no caso de deformações rígidas ela deve ser nula.
+
+Existe ainda uma terceira restrição para se definir uma medida de estiramento: para
+níveis de estiramento muito baixos, deve haver uma proporcionalidade direta entre o
+estiramento propriamente dito e sua medida. Tal restrição compatibiliza o enfoque geral
+aqui abordado com o conceito clássico de medida de estiramento, apresentado a seguir.
+
+A partir das condições definidas na seção \ref{sec:deformacao}, seja um tensor de estiramento qualquer $\tnr{S}\in{\con{T}}_{\con{M}^2\mapsto\con{\real}}$. Na reta definida por um de seus autovetores $\vun{e}_i$, dado $\real^+$ o conjunto dos reais positivos, \aut{Love}\cite{love_1944_2} apresenta a função $\overline{e}$, denominada ``extensão'', onde
+$\map{\overline{e}}{\real^+}{\real}$ e
+\begin{equation}\label{eq:extensao}
+\fua{\overline{e}}{\alpha_{ii}}:=\alpha_{ii}-1
+\end{equation}
+é um escalar muito pequeno. A expressão anterior estabeleceu-se ao longo dos anos e se
+tornou base para a definição clássica da medida dos pequenos estiramentos. No contexto
+desta seção, uma característica importante desta função é o fato de
+$\fua{\dvg{\overline{e}_{ii}}}{\ele{x}}=1\,$.
+
+Sejam os subconjuntos $\con{TS}\subset{\con{T}}_{\con{M}^2\mapsto\con{\real}}$, formado por tensores simétricos, e $\con{TS}^+\subset\con{TS}$, formado por tensores simétricos positivos-definidos. Em termos genéricos, compilando as informações anteriores, diz-se que a função tensorial no mapeamento $\map{\epsilon}{\con{TS}^+}{\con{TS}}$ é uma medida de estiramento e seus valores são \emph{tensores medida de estiramento}\index{tensor!medida de estiramento} se
+\begin{equation}\label{eq:medidaEstiramento}
+\fua{\epsilon}{\tnr{S}}=\sum_{i=1}^3\fua{e}{\alpha_{ii}}\vun{e}_{i}\otimes\vun{e}_{i}\,,
+\end{equation}
+tal que $e$, denominada \emph{função medida de estiramento}\index{função!medida de estiramento}, define o mapeamento $\map{e}{\real^+}{\real}$ e obedece as seguintes restrições:
+\begin{itemize}
+ \item [i.] $e$ deve ser monótona, ou seja, $x_1>x_2\implies\fua{e}{x_1}>\fua{e}{x_2}$, $\forall x_1,x_2\in\real^+\,$;
+ \item [ii.]$\fua{e}{1}=0\,$;
+ \item [iii.]$e$ deve ser G-suave de grau um ou seja $e\in\sug{1}$;
+ \item [iv.] a função $\fua{\dvg{e}}{1}=1\,$.
+\end{itemize}
+
+Pode-se definir então o \emph{tensor medida de estiramento}\index{tensor!medida de estiramento} $\tnr{E}_{\tnr{S}}=\fua{\epsilon}{\tnr{S}}$. Desta forma, tem-se os tensores $\tnr{E}_{\tnr{U}}=\fua{\epsilon}{\tnr{U}}$ e $\tnr{E}_{\tnr{V}}=\fua{\epsilon}{\tnr{V}}$, a partir dos quais podem ser construídas funções representantes do tipo material e espacial respectivamente. De (\ref{eq:decompPolarFinal1}), (\ref{eq:decompPolarFinal2}) e (\ref{eq:medidaEstiramento}), obtém-se que
+\begin{eqnarray}
+\fua{\epsilon}{\tnr{V}} & = & \fua{\epsilon}{\tnr{R}\odot_1\tnr{U}\odot_1\tnr{R}^T}\nonumber\\
+& = & \fua{\epsilon}{\sum_{i=1}^3\alpha_{ii}(\tnr{R}\odot_1\vun{e}_{i})\otimes(\vun{e}_{i}\odot_1\tnr{R}^T)}\nonumber\\
+& = & \sum_{i=1}^3\fua{e}{\alpha_{ii}}(\tnr{R}\odot_1\vun{e}_{i})\otimes(\vun{e}_{i}\odot_1\tnr{R}^T)\nonumber\\
+ & = & \tnr{R}\odot_1\fua{\epsilon}{\tnr{U}}\odot_1\tnr{R}^T\,.
+\end{eqnarray}
+
+\begin{figure}[!b]
+\centering
+\begin{center}
+\input{partes/parte2/figs/c_cinemat/sethhill.pstex_t}
+\end{center}
+\titfigura{Funções Medidas de Estiramento de Seth-Hill.}\label{fg:SethHill}
+\end{figure}
+\subsubsection{Medidas de Seth-Hill}\index{Seth-Hill!medidas de}
+Considerando as condições anteriores, uma medida de estiramento $\epsilon^{(k)}$ é dita uma medida de Seth-Hill se a regra de sua função medida de estiramento for
+\begin{equation}
+\fua{e^{(k)}}{x}=\frac{1}{k}\lpa x^{k} - 1 \rpa\,,
+\end{equation}
+onde $k\neq0$. Notar que esta definição é uma generalização de (\ref{eq:extensao}), onde  $k=1$. Quando $k$ for um valor inteiro, com base em (\ref{eq:composicaoMultipla}) e  (\ref{eq:medidaEstiramento}), pode-se realizar o seguinte desenvolvimento:
+\begin{eqnarray}
+\fua{\epsilon^{(k)}}{\tnr{S}}&=&\sum_{i=1}^3\frac{1}{k}\lpa \alpha_{ii}^{k} - 1 \rpa\vun{e}_{i}\otimes\vun{e}_{i}\nonumber\\
+&=&\frac{1}{k}\lpa\sum_{i=1}^3\alpha_{ii}^{k} \vun{e}_{i}\otimes\vun{e}_{i} - \tnr{I}\rpa\nonumber\\
+&=&\frac{1}{k}\lpa \tnr{S^k} - \tnr{I}\rpa\label{eq:tensorHill}\,.
+\end{eqnarray}
+A plotagem de alguns valores $\fua{e^{(k)}}{x}$ contra pares de valores $(x,k)$ é apresentada na figura \ref{fg:SethHill}.
+
+
+\paragraph{Exemplos.}
+Com base nas igualdades (\ref{eq:veDois}), (\ref{eq:uDois}) e (\ref{eq:tensorHill}),  a tabela \ref{tb:medidasHill} mostra os exemplos mais utilizados de tensores medida de Seth-Hill no âmbito das deformações afins.
+\begin{table}[!htt]
+\centering
+\begin{tabular}{|c|c|c|c|}
+\hline
+& & &\\
+\textbf{   Valor de $k$   } & \textbf{   Tensor  de } &\textbf{   Expressão de    } & \textbf{   Tensor   } \\
+& \textbf{   Estiramento } & \textbf{   Seth-Hill   } & \textbf{   medida de...   }\\
+& & & \\
+\hline
+& & & \\
+-2 & $\tnr{U}$   & $\tnr{E}_{\tnr{U}}^{(-2)}=\frac{1}{2}\lpa\tnr{I} - \tnr{A}^{-1}\odot_1\tnr{A}^{-T}\rpa$   & Almansi\index{Almansi!tensor medida de}\\
+& & & \\
+\hline
+& & & \\
+-2 & $\tnr{V}$  & $\tnr{E}_{\tnr{V}}^{(-2)}=\frac{1}{2}\lpa\tnr{I} - \tnr{A}^{-T}\odot_1\tnr{A}^{-1}\rpa$   & Almansi-Hamel\index{Almansi-Hamel!tensor medida de} \\
+& & & \\
+\hline
+& & & \\
+-2 & $\tnr{V}^{-1}$  & $\tnr{E}_{\tnr{V}^{-1}}^{(-2)}=\frac{1}{2}\lpa\tnr{I} - \tnr{A}\odot_1\tnr{A}^{T}\rpa$   & Finger\index{Finger!tensor medida de} \\
+& & & \\
+\hline
+& & &\\
+$\to 0$ & - & $\tnr{E}^{(0)}=\sum_{i=1}^3\ln\alpha_{ii}\vun{e}_{i}\otimes\vun{e}_{i}$   & Henky\index{Henky!tensor medida de} \\
+& & &\\
+\hline
+& & &\\
+$1$ &  $\tnr{U}$ &$\tnr{E}_{\tnr{U}}^{(1)}=\tnr{U}-\tnr{I}$ & Biot\index{Biot!tensor medida de} \\
+& & &\\
+\hline
+& & & \\
+$2$ & $\tnr{U}$ & $\tnr{E}_{\tnr{U}}^{(2)}=\frac{1}{2}\lpa \tnr{A}^{T}\odot_1\tnr{A}-\tnr{I}\rpa$ & Green-St Venant\index{Green-St Venant!tensor medida de} \\
+& & & \\
+\hline
+& & &\\
+$2$ & $\tnr{U}^{-1}$ & $\tnr{E}_{\tnr{U}^{-1}}^{(2)}=\frac{1}{2}\lpa \tnr{A}^{-1}\odot_1\tnr{A}^{-T}-\tnr{I}\rpa$ & Piola\index{Piola!tensor medida de} \\
+& & & \\
+\hline
+\end{tabular}
+\titfigura{Exemplos de tensores medidas de Seth-Hill.}\label{tb:medidasHill}
+\end{table}
+
+\subsection{Funções-Deslocamento}\index{função!-deslocamento}
+No contexto das condições apresentadas na seção \ref{sec:deformacao}, para uma deformação
+qualquer $\negsymbol{\chi}_t\,$ do corpo $\cor{B}$, a função no mapeamento
+$\map{\negsymbol{\delta}_t}{\overline{B}_r}{\con{M}}\,$ com regra
+\begin{equation}\label{eq:deslocamento}
+\fua{\negsymbol{\delta}_t}{\vto{x}_r}=\fua{\negsymbol{\chi}_t}{\vto{x}_r}-\vto{x}_r
+\end{equation}
+é denominada uma função-deslocamento do corpo $\cor{B}$ sob a deformação $\negsymbol{\chi}_t\,$. O valor desta função no vetor $\vto{u}$ é dito o \emph{deslocamento}\index{deslocamento} da partícula $\prt{u}\,$.
+
+Para realizar a descrição Euleriana da função-deslocamento, seja $\vto{x}=\fua{\negsymbol{\chi}_t}{\vto{x}_r}$ em
+(\ref{eq:deslocamento}). Desta forma, pode-se definir a função-deslocamento espacial
+\begin{equation}
+\negsymbol{\Delta}_t=\negsymbol{\delta}_t\circ\negsymbol{\chi}_t^{-1}\,
+\end{equation}
+onde
+\begin{equation}\label{eq:deslocamentoEuleriano}
+\fua{\negsymbol{\Delta}_t}{\vto{x}}=\vto{x}-\fua{\negsymbol{\chi}_t^{-1}}{\vto{x}}\,.
+\end{equation}
+O valor desta função indica o deslocamento da partícula que ocupa o ponto $\vto{x}\oplus o\,$ num instante fixo $t$.
+
+Muitas vezes, é conveniente investigar o comportamento ou a distribuição do
+deslocamento de um corpo deformado ao longo de seus pontos. Para tal, deriva-se, em
+alguma direção, a função-deslocamento no seu domínio de atuação. A função resultante
+representa o tensor de segunda ordem
+\begin{equation}\label{eq:gradienteDeslocamento}
+\tnr{J}:=\fua{\gqu{}{\negsymbol{\delta}_t}}{\vto{x}_r}=\tnr{F}-\tnr{I}\,,
+\end{equation}
+denominado \emph{gradiente de função-deslocamento}\index{gradiente!de função-deslocamento}.
+Com base nesta igualdade, tomando uma deformação homogênea qualquer definida por
+(\ref{eq:regraDeformacaoHomogenea}), pode-se realizar, a partir de (\ref{eq:deslocamento}), o seguinte desenvolvimento:
+\begin{eqnarray}
+\fua{\overline{\negsymbol{\delta}}_t}{\vto{x}_r}&=&
+\fua{\ftr{{F}}{1}}{\vto{x}_r} -\vto{x}_r +
+\vto{c}\nonumber\\
+&=&
+\lpa\overline{\tnr{F}}-\tnr{I}\rpa\odot_1\vto{x}_r + \vto{c}\nonumber\\
+&=&\fua{\ftr{\overline{J}}{1}}{\vto{x}_r} +
+\vto{c}\,.\label{eq:deslocamentoHomogeneo}
+\end{eqnarray}
+Da última igualdade resulta que a regra da chamada \emph{função-deslocamento homogêneo}\index{função!-deslocamento homogêneo} $\overline{\negsymbol{\delta}}_t$ possui forma similar ao da sua deformação homogênea associada.
+
+A intenção agora é estabelecer uma importante relação entre o gradiente de função-deslocamento e
+algumas medidas de Seth-Hill. Tomando o tensor de Green-St Venant, com base nas
+igualdades (\ref{eq:funRepresentanteIdentidade}) e (\ref{eq:gradienteDeslocamento}) ,
+tem-se o seguinte desenvolvimento:
+\begin{eqnarray}
+\tnr{E}_{\tnr{U}}^{(2)}&=&\frac{1}{2}\lco \lpa\tnr{J}+\tnr{I}\rpa^{T}\odot_1\lpa\tnr{J}+\tnr{I}\rpa-\tnr{I}\rco\nonumber\\
+&=&\frac{1}{2}\lco \lpa\tnr{J}^T\odot_1\tnr{J}+\tnr{J}^T+\tnr{J}+\tnr{I}\rpa-\tnr{I}\rco\nonumber\\
+&=&\frac{1}{2}\lpa \tnr{J}+\tnr{J}^T+\underbrace{\tnr{J}^T\odot_1\tnr{J}}\rpa\label{eq:greenPequeno}\,.
+\end{eqnarray}
+Procedendo de maneira similar com o tensor de Almansi, chega-se a
+\begin{equation}\label{eq:almansiPequeno}
+\tnr{E}_{\tnr{U}}^{(-2)}=-\frac{1}{2}\lpa \tnr{J}^{-1}+\tnr{J}^{-T}+\underbrace{\tnr{J}^{-1}\odot_1\tnr{J}^{-T}}\rpa\,.
+\end{equation}
+
+Na prática, medidas de estiramento são variáveis fundamentais para o estudo de grande parte dos problemas da Mecânica do Contínuo. Alguns destes problemas, sob certas circunstâncias, podem ser simplificados de maneira significativa admitindo que medidas de estiramento, notadamente não lineares, sejam linearizadas. A retirada do termo destacado em (\ref{eq:greenPequeno}) lineariza o lado direito desta expressão. Para o caso de (\ref{eq:almansiPequeno}), entretanto, tal linearização é válida se a variável de análise for $\tnr{J}^{-1}$. Desta forma, tem-se como resultado
+\begin{equation}
+\tnr{\tilde{E}}_{\tnr{U}}^{(2)}:=\frac{1}{2}\lpa \tnr{J}+\tnr{J}^T\rpa
+\end{equation}
+e
+\begin{equation}
+\tnr{\tilde{E}}_{\tnr{U}}^{(-2)}:=-\frac{1}{2}\lpa \tnr{J}^{-1}+\tnr{J}^{-T}\rpa\,,
+\end{equation}
+onde os tensores $\tnr{\tilde{E}}_{\tnr{U}}^{(2)}$  e  $\tnr{\tilde{E}}_{\tnr{U}}^{(-2)}$ são as versões linearizadas dos tensores medidas originais correspondentes. Quando for o caso, esta linearização também pode ser feita em outras expressões de medidas de estiramento.
+
+É importante dizer que a omissão dos termos não lineares só é sustentável se eles não
+forem significativos, ou seja, se as deformações envolvidas forem pequenas ou
+\emph{infinitesimais}\index{deformação!infinitesimal}. Por conta disso, tais tensores
+linearizados são chamados \emph{tensores medida de estiramento
+infinitesimal}\index{tensor!medida de estiramento infinitesimal}.
+
+\section{Movimentos do Corpo}
+Seja o espaço-tempo Newtoniano $\enw{M}{\tempo}{M}$ e um corpo qualquer $\cor{B}$ de um
+universo $\cor{M}$, tal que $\epo{M}$ é formado pelas regiões dos corpos de $\cor{M}$. Seja o conjunto $C_\chi$ formado por todas as configurações possíveis
+deste corpo. Uma função $\varphi_{\cor{B}}$, com regra
+$\fua{\varphi_{\cor{B}}}{t}=\chi_t\,$, é dita um movimento de $\cor{B}$ se ela define o
+mapeamento bijetor
+\begin{equation}
+\map{\varphi_{\cor{B}}}{\tempo}{B_\chi}\,,
+\end{equation}
+onde a imagem $B_\chi\subseteq C_\chi$.
+
+\subsection{Movimentos Vetoriais}\index{movimento!vetorial}
+Dadas as condições anteriores e as condições que permitem chegar à definição
+(\ref{eq:configuracaoVetorialEsp}), tem-se a configuração espacial
+\begin{equation}
+\fua{\phi_{\cor{B}}}{t}:=\fac{F}_{\overline{\epo{B}}_t}^{\overline{B}_t}\circ\lco\fua{\varphi_{\cor{B}}}{t}\rco\,.
+\end{equation}
+A função $\phi_{\cor{B}}$ é dita um movimento vetorial de $\cor{B}$ e define o mapeamento bijetor
+\begin{equation}
+\map{\phi_{\cor{B}}}{\tempo}{B_{\fac{F}{}{}\circ\chi}}\,,
+\end{equation}
+onde a imagem $B_{\fac{F}{}{}\circ\chi}$ é o conjunto das configurações espaciais de
+$\cor{B}$ ao longo da duração $\tempo$. A descrição Lagrangiana
+$\negsymbol{\phi}_{\cor{B}}$ do movimento vetorial de $\cor{B}$ define a regra
+\begin{equation}\label{eq:movimentoLagrangiano}
+\fua{\negsymbol{\phi}_{\cor{B}}}{t}=\fua{\phi_{\cor{B}}}{t}\circ\chi_r^{-1}\circ{\fac{F}_{\overline{\epo{B}}_r}^{\overline{B}_r}}^{-1}\,,
+\end{equation}
+a partir da qual tem-se o mapeamento
+\begin{equation}
+\map{\negsymbol{\phi}_{\cor{B}}}{\tempo}{B_{\negsymbol{\chi}}}\,,
+\end{equation}
+onde $B_{\negsymbol{\chi}}$ é conjunto das descrições Lagrangianas das configurações espaciais de $\cor{B}$. De maneira similar, o movimento vetorial $\negsymbol{\phi}_{\cor{B}}^{-1}$ é resultado da descrição Euleriana do movimento vetorial de $\cor{B}$ cuja regra é
+\begin{equation}\label{eq:movimentoEuleriano}
+\fua{\negsymbol{\phi}_{\cor{B}}^{-1}}{t}={\fac{F}_{\overline{\epo{B}}_r}^{\overline{B}_r}}\circ\chi_r\circ\lco\fua{\phi_{\cor{B}}}{t}\rco^{-1}\,.
+\end{equation}
+Este movimento define
+\begin{equation}
+\map{\negsymbol{\phi}_{\cor{B}}^{-1}}{\tempo}{B_{\negsymbol{\chi}^{-1}}}\,,
+\end{equation}
+onde $B_{\negsymbol{\chi}^{-1}}$ é o conjunto das descrições Eulerianas da configuração
+material do corpo $\cor{B}$.
+
+
+\subsection{Trajetórias}\index{trajetória}
+Considerando as condições anteriores, dado um corpo $\cor{B}$, seja o mapeamento $\map{\subolds{\negsymbol{\delta}}{u}{r}}{\tempo}{\con{M}}$, onde $\vto{u}_r$ é um vetor qualquer da região material $\overline{B}_r$. A função $\subolds{\negsymbol{\delta}}{u}{r}$ é dita a trajetória da partícula $\prt{u}$ sob uma função-deslocamento $\negsymbol{\delta}_t$ de $\cor{B}$, se sua regra for
+\begin{equation}\label{eq:trajetoria}
+\fua{\subolds{\negsymbol{\delta}}{u}{r}}{t}=\fua{\negsymbol{\delta}_t}{\vto{u}_r}\,.
+\end{equation}
+Em termos Eulerianos, esta regra fica
+\begin{equation}\label{eq:trajetoriaEuleriana}
+\fua{\subold{\negsymbol{\Delta}}{u}}{t}=\fua{\negsymbol{\Delta}_t}{\vto{u}}\,,
+\end{equation}
+tal que $\vto{u}$ é um vetor qualquer da região espacial $\overline{B}$.
+Tomando as definições (\ref{eq:deslocamento}), (\ref{eq:deslocamentoEuleriano}), (\ref{eq:movimentoLagrangiano}) e (\ref{eq:movimentoEuleriano}), pode-se reescrever as expressão anteriores nas formas
+\begin{equation}\label{eq:trajetoriaDetalhada}
+\fua{\subolds{\negsymbol{\delta}}{u}{r}}{t}=\fua{\lco\fua{\negsymbol{\phi}_{\cor{B}}}{t}\rco}{\vto{u}_r}-\vto{u}_r
+\end{equation}
+e
+\begin{equation}\label{eq:trajetoriaEspacialDetalhada}
+\fua{\subold{\negsymbol{\Delta}}{u}}{t}=\vto{u}-\fua{\lco\fua{\negsymbol{\phi}^{-1}_{\cor{B}}}{t}\rco}{\vto{u}}\,.
+\end{equation}
+
+
+\subsubsection{Taxas das Trajetórias}\index{taxa!da trajetória}
+O conceito de taxa de uma variável diz respeito ao comportamento de sua variação ao longo
+do tempo. Em outras palavras, a taxa de uma variável é uma medida da rapidez de sua
+evolução. Na prática, tal medida é obtida pela derivada da variável em estudo na duração
+do tempo. Seja então a trajetória esta variável de estudo. Considerando as condições
+da definição (\ref{eq:trajetoria}), a taxa
+\begin{equation}
+\subolds{\negsymbol{\upsilon}}{u}{r} :=
+\fua{\dvg{\subolds{\negsymbol{\delta}}{u}{r}}}{t}\,,
+\end{equation}
+que promove $\map{\subolds{\negsymbol{\upsilon}}{u}{r}}{\tempo}{\con{M}}\,$, é chamada
+\emph{função-velocidade material}\index{função!-velocidade material} da partícula
+$\prt{u}$, no instante $t$, da trajetória $\subolds{\negsymbol{\delta}}{u}{r}$. O vetor
+$\fua{\subolds{\negsymbol{\upsilon}}{u}{r}}{t_1}=\fua{\lco\fua{\dvg{\subolds{\negsymbol{\delta}}{u}{r}}}{t_1}\rco}{t_1}$
+é a \emph{velocidade material}\index{velocidade!material} de $\prt{u}$ no instante
+$t_1\,$. Genericamente, uma taxa é representada acentuando a variável com um ponto. Logo,
+$\fua{\dot{\subolds{\negsymbol{\delta}}{u}{r}}}{t}:=\fua{\subolds{\negsymbol{\upsilon}}{u}{r}}{t}\,$.
+Pode-se concluir então que a função-velocidade material descreve a rapidez da evolução do
+deslocamento de uma partícula.
+
+A fim de proceder à derivação da trajetória, a igualdade (\ref{eq:trajetoriaDetalhada})
+pode ser reinterpretada na seguinte forma:
+\begin{equation}
+\fua{\subolds{\negsymbol{\delta}}{u}{r}}{t}=\subolds{\lco\fua{\negsymbol{\phi}_{\cor{B}}}{t}\rco}{u}{r}-\vto{u}_r\,.
+\end{equation}
+Como $\vto{u}_r$ é uma constante nesta igualdade, é possível dizer que a
+função-velocidade
+\begin{equation}\label{eq:funcaoVelocidadeMaterial}
+\subolds{\negsymbol{\upsilon}}{u}{r}=\subolds{\lco\dvg{\fua{\negsymbol{\phi}_{\cor{B}}}{t}}\rco}{u}{r}
+=\subolds{\lco\fua{\dot{\negsymbol{\phi}_{\cor{B}}}}{t}\rco}{u}{r}
+\end{equation}
+para qualquer instante de tempo $t$. A descrição Euleriana desta função toma a forma
+\begin{equation}\label{eq:funcaoVelocidadeEleriana}
+\subold{\negsymbol{\upsilon}}{u}=\subold{\lco\fua{\fua{\dot{\negsymbol{\phi}_{\cor{B}}}}{t}\circ\negsymbol{\phi}^{-1}_{\cor{B}}}{t}\rco}{u}\,,
+\end{equation}
+onde $\subold{\negsymbol{\upsilon}}{u}$ é a função-velocidade material no ponto $\vto{u}\oplus o$, onde $\vto{u}\in\con{R}_{\subolds{\negsymbol{\delta}}{u}{r}}$. O valor $\fua{\subold{\negsymbol{\upsilon}}{u}}{t_1}$ é a velocidade material em $\vto{u}\oplus o$ no instante $t_1$ ou a velocidade material da partícula que ocupa o ponto $\vto{u}\oplus o$ neste mesmo instante. Cabe ressaltar que embora esta função-velocidade seja relativa a um vetor da região espacial, a perspectiva de análise continua sendo a partícula na sua trajetória.
+
+Para um dada partícula em uma dada trajetória, também é fundamental a medição da rapidez
+da evolução de sua velocidade. Neste contexto, a função no mapeamento
+$\map{\subolds{\negsymbol{\alpha}}{u}{r}}{\tempo}{\con{M}}$, com regra
+\begin{equation}
+\fua{\subolds{\negsymbol{\alpha}}{u}{r}}{t} =
+\fua{\lco\fua{\dgg{2}{{\subolds{\negsymbol{\delta}}{u}{r}}}}{t}\rco}{t}\,,
+\end{equation}
+é denominada a \emph{função-aceleração material}\index{função!-aceleração material} da
+partícula $\prt{u}$, no instante $t$, na trajetória $\subolds{\negsymbol{\delta}}{u}{r}$.
+O vetor $\fua{\subolds{\negsymbol{\alpha}}{u}{r}}{t_1}$ é a
+\emph{aceleração}\index{aceleração} de $\prt{u}$ no instante $t_1$. Neste caso, define-se
+$\ddot{\subolds{\negsymbol{\delta}}{u}{r}}=\subolds{\negsymbol{\alpha}}{u}{r}\,$. Por
+procedimento similar ao da função-velocidade material, obtém-se que função-aceleração
+material é
+\begin{equation}
+\subolds{\negsymbol{\alpha}}{u}{r}
+=\subolds{\lco\fua{\ddot{\negsymbol{\phi}_{\cor{B}}}}{t}\rco}{u}{r}\,.
+\end{equation}
+A partir daí, a função-aceleração material no ponto $\vto{u}\oplus o$,
+$\vto{u}\in\con{R}_{\subolds{\negsymbol{\delta}}{u}{r}}$,  toma a forma
+\begin{equation}
+\subold{\negsymbol{\alpha}}{u}=\subold{\lco\fua{\ddot{\negsymbol{\phi}_{\cor{B}}}}{t}\circ\fua{\negsymbol{\phi}^{-1}_{\cor{B}}}{t}\rco}{u}\,.
+\end{equation}
+
+Agora, tomando por base a descrição (\ref{eq:trajetoriaEspacialDetalhada}), pode-se
+definir a taxa da descrição Euleriana da trajetória $\subolds{\negsymbol{\delta}}{u}{r}$
+como sendo
+\begin{equation}
+\subold{\negsymbol{\Upsilon}}{u} = \fua{\dvg{\subold{\negsymbol{\Delta}}{u}}}{t}\,.
+\end{equation}
+Esta taxa é a \emph{função-velocidade espacial}\index{função!-velocidade espacial}, no
+instante $t$, do ponto $\vto{u}\oplus o$. Diz-se que seu valor é a \emph{velocidade
+espacial}\index{velocidade!espacial} de $\vto{u}\oplus o$ num dado instante. Aqui, a
+perspectiva de análise deixa de ser a partícula na sua trajetória e passa a ser um ponto
+qualquer. Em outras palavras, não se observa o corpo, mas o espaço.
+
+Novamente, pode-se representar a função $\subold{\negsymbol{\Upsilon}}{u}$ com
+$\dot{\subold{\negsymbol{\Delta}}{u}}\,$. Como o vetor  $\vto{u}$ é constante em
+(\ref{eq:trajetoriaEspacialDetalhada}), por procedimento similiar ao que resultou
+(\ref{eq:funcaoVelocidadeMaterial}), chega-se à função
+\begin{equation}\label{eq:velocidadeEspacial}
+\subold{\negsymbol{\Upsilon}}{u}=-\subold{\lco\fua{\lco\negsymbol{\phi}^{-1}_{\cor{B}}\rco^{\cdot}}{t}\rco}{u}\,.
+\end{equation}
+Para a descrição Lagrangiana desta função, tem-se a função-velocidade espacial
+\begin{equation}\label{eq:velocidadeEspacialLagrangiana}
+\subolds{\negsymbol{\Upsilon}}{u}{r}=-\subolds{\lco\fua{\lco\negsymbol{\phi}^{-1}_{\cor{B}}\rco^{\cdot}}{t}
+\circ\fua{\negsymbol{\phi}_{\cor{B}}}{t}\rco}{u}{r}
+\end{equation}
+da posição da partícula $\prt{u}\,$ no instante $t$. O vetor
+$\fua{\subolds{\negsymbol{\Upsilon}}{u}{r}}{t_1}$ é a velocidade espacial de $\prt{u}\,$
+no instante $t_1$. Em outras palavras, neste mesmo instante, o vetor citado é a
+velocidade espacial do ponto ocupado por $\prt{u}$.
+
+Definindo-se \emph{função-aceleração espacial}\index{função!-aceleração espacial} do
+ponto $\vto{u}\oplus o$ no instante $t$ com a regra
+\begin{equation}
+\fua{\subold{\negsymbol{\Lambda}}{u}}{t} =
+\fua{\lco\fua{\dgg{2}{\subold{\negsymbol{\Delta}}{u}}}{t}\rco}{t}\,,
+\end{equation}
+obtém-se, via procedimento já apresentado, que a função
+\begin{equation}
+\subold{\negsymbol{\Lambda}}{u}=-\subold{\lco\fua{\lco\negsymbol{\phi}^{-1}_{\cor{B}}\rco^{\cdot\cdot}}{t}\rco}{u}
+\end{equation}
+e a função-aceleração espacial da posição da partícula $\prt{u}$ é
+\begin{equation}
+\subolds{\negsymbol{\Lambda}}{u}{r}=-\subolds{\lco\fua{\lco\negsymbol{\phi}^{-1}_{\cor{B}}\rco^{\cdot\cdot}}{t}\circ\fua{\negsymbol{\phi}_{\cor{B}}}{t}\rco}{u}{r}\,.
+\end{equation}
+
+\subsection{Taxas e Distribuições}
+
+Nesta seção, o objetivo é estudar funções genéricas cujas regras dependem do tempo e das
+regiões do corpo em estudo. A elas são aplicados os conceitos de taxa e de variação nas
+distribuições material e espacial.
+
+Para tal, são considerados os mapeamentos material
+$\map{\negsymbol{\psi}}{\overline{B}_r\times\tempo}{\con{M}}$ e espacial
+$\map{\negsymbol{\Psi}}{\overline{B}\times\tempo}{\con{M}}$. No contexto da seção
+anterior, os subscritos $E$ e $L$ nas regras
+\begin{equation}\label{eq:descricaoEulerianapsi}
+\fua{\negsymbol{\psi}_E}{\vto{x},t}=\fua{\negsymbol{\psi}}{\fua{\lco\fua{\negsymbol{\phi}^{-1}_{\cor{B}}}{t}\rco}{\vto{x}},t}
+\end{equation}
+e
+\begin{equation}\label{eq:descricaoLagrangianaPsi}
+\fua{\negsymbol{\Psi}_L}{\vto{x}_r,t}=\fua{\negsymbol{\Psi}}{\fua{\lco\fua{\negsymbol{\phi}_{\cor{B}}}{t}\rco}{\vto{x}_r},t}
+\end{equation}
+definem as descrições Euleriana e Lagrangiana de suas funções respectivas.
+
+\subsubsection{Distribuições Material e Espacial}
+Dadas as condições anteriores, para medir a distribuição material de $\negsymbol{\psi}$, seja um instante de tempo $t_1\,$, onde a regra
+\begin{equation}
+\fua{\negsymbol{\psi}_{t_1}}{\vto{x}_r}=\fua{\negsymbol{\psi}}{\vto{x}_r,t_1}
+\end{equation}
+apresenta a função material $\map{\negsymbol{\psi}_{t_1}}{\overline{B}_r}{\con{M}}$, descrevendo $\negsymbol{\psi}$ em um dado instante de tempo. Nos termos da seção
+\ref{sec:GradienteDivergente}, a variação da distribuição material $\negsymbol{\psi}_{t_1}$ na partícula $\prt{u}$ é medida pela função $\fua{\dvg{{\negsymbol{\psi}}_{t_1}}}{\vto{u}_r}$, que representa o tensor de segunda ordem $\fua{\gqu{}{\negsymbol{\psi}_{t_1}}}{\vto{u}_r}$.
+
+Utilizando a mesma metodologia, a função vetorial em $\map{\negsymbol{\Psi}_{t_1}}{\overline{B}}{\con{M}}\,$, cuja regra é
+\begin{equation}
+\fua{\negsymbol{\Psi}_{t_1}}{\vto{x}}=\fua{\negsymbol{\Psi}}{\vto{x},t_1}\,,
+\end{equation}
+descreve a distribuição espacial de $\negsymbol{\Psi}$ no instante $t_1$. A medida de sua variação no ponto $\vto{u}\oplus o$ é obtida por meio do tensor $\fua{\gqu{}{\negsymbol{\Psi}_{t_1}}}{\vto{u}}\,$.
+
+\subsubsection{Evoluções Temporais}
+Considerando as condições anteriores, a fim de analisar a evolução temporal da função $\negsymbol{\psi}$, seja um vetor $\vto{u}_r\in\overline{B}_r$ a partir do qual define-se a regra
+\begin{equation}
+\fua{\subolds{\negsymbol{\psi}}{u}{r}}{t}=\fua{\negsymbol{\psi}}{\vto{u}_r,t}\,,
+\end{equation}
+onde $\map{\subolds{\negsymbol{\psi}}{u}{r}}{\tempo}{\con{M}}$ e descreve a função
+$\negsymbol{\psi}$ relativa a uma partícula $\prt{u}$. Aplicando o conceito de taxa
+apresentado na seção anterior, pode-se dizer que a função
+\begin{equation}\label{eq:evolucaoMaterialFuncao}
+\dot{\subolds{\negsymbol{\psi}}{u}{r}} := \fua{\dvg{\subolds{\negsymbol{\psi}}{u}{r}}}{t}
+\end{equation}
+mede a variação da evolução temporal de $\subolds{\negsymbol{\psi}}{u}{r}$ relativa à
+partícula $\prt{u}$ no instante $t$. De maneira similar, a função na regra
+\begin{equation}
+\fua{\subold{\negsymbol{\Psi}}{u}}{t}=\fua{\negsymbol{\Psi}}{\vto{u},t}\,
+\end{equation}
+está relacionada ao ponto $\vto{u}\oplus o\,$. Neste contexto, diz-se que a taxa
+\begin{equation}
+\dot{\subold{\negsymbol{\Psi}}{u}} := \fua{\dvg{\subold{\negsymbol{\Psi}}{u}}}{t}
+\end{equation}
+é a variação da evolução temporal de $\subold{\negsymbol{\Psi}}{u}$ no ponto
+$\vto{u}\oplus o\,$ no instante $t$.
+
+\paragraph{Taxas Materiais e Espaciais.}
+Nos termos da proposição \ref{teo:derivadaParcial}, seja um par ordenado qualquer
+$(\vto{x}_r,t)\in\overline{B}_r\times\tempo$ e a definição
+(\ref{eq:evolucaoMaterialFuncao}), a partir dos quais o desenvolvimento a seguir é
+realizado.
+\begin{eqnarray}
+\fua{\lco\dvg{\fua{\negsymbol{\psi}}{\vto{x}_r,t}}\rco}{\vto{x}_r,t}&=&
+\fua{\lco\fua{\dvp{1}{\negsymbol{\psi}}}{\vto{x}_r,t}\rco}{\vto{x}_r}+
+\fua{\lco\fua{\dvp{2}{\negsymbol{\psi}}}{\vto{x}_r,t}\rco}{t}\nonumber\\
+&=&\fua{\lco\fua{\dvg{\negsymbol{\psi}_t}}{\vto{x}_r}\rco}{\vto{x}_r}+
+\fua{\lco\fua{\dvg{\subolds{\negsymbol{\psi}}{x}{r}}}{t}\rco}{t}\nonumber\\
+&=&\fua{\gqu{}{\negsymbol{\psi}_{t}}}{\vto{x}_r}\odot_1\vto{x}_r+
+\fua{\dot{\subolds{\negsymbol{\psi}}{x}{r}}}{t}\label{eq:desenvTaxaMaterial}\,.
+\end{eqnarray}
+Procedendo de maneira semelhante para o caso da taxa espacial de $\negsymbol{\Psi}$, dado um par qualquer $(\vto{h},h)\in\overline{B}\times\tempo$, chega-se à
+\begin{equation}
+ \fua{\lco\dvg{\fua{\negsymbol{\Psi}}{\vto{x},t}}\rco}{\vto{x},t}=\fua{\gqu{}{\negsymbol{\Psi}_{t}}}{\vto{x}}\odot_1\vto{x}+\fua{\dot{\subold{\negsymbol{\Psi}}{x}}}{t}\label{eq:desenvTaxaEspacial}\,.
+\end{equation}
+Utilizando a Regra da Cadeia (teorema \ref{teo:RegraCadeia}), pode-se realizar o seguinte desenvolvimento:
+\begin{eqnarray}
+\fua{\lco\dvg{\fua{\negsymbol{\psi}_E}{\vto{x},t}}\rco}{\vto{x},t}&=&\fua{\lco\fua{\dvp{1}{\negsymbol{\psi}}}{\fua{\lco\fua{\negsymbol{\phi}^{-1}_{\cor{B}}}{t}\rco}{\vto{x}}
+,t}\rco}{\vto{x}}+\fua{\lco\fua{\dvp{2}{\negsymbol{\psi}_E}}{\vto{x},t}\rco}{t}\nonumber\\
+&=&\fua{\lco\fua{\dvg{\negsymbol{\psi}_t\circ\lco\fua{\negsymbol{\phi}^{-1}_{\cor{B}}}{t}\rco}}{\vto{x}}\rco}{\vto{x}}+
+\fua{\lco\fua{\dvg{\subold{\negsymbol{\psi}_E}{x}}}{t}\rco}{t}\nonumber\\
+&=&\fua{\lco\fua{\lco\dvg{{\negsymbol{\psi}}_{t}}\rco_E}{\vto{x}}\rco}{
+\fua{\lco\dvg{\fua{\lco\fua{\negsymbol{\phi}^{-1}_{\cor{B}}}{t}\rco}{\vto{x}}}\rco}{\vto{x}}
+}+\fua{\dot{\subold{\negsymbol{\psi}_E}{x}}}{t}\nonumber\\
+&=&\fua{\lco\gqu{}{{\negsymbol{\psi}}_{t}}\rco_E}{\vto{x}}\odot_1
+\subold{\lco\fua{\lco\negsymbol{\phi}^{-1}_{\cor{B}}\rco^{\cdot}}{t}\rco}{x}+
+\fua{\dot{\subold{\negsymbol{\psi}_E}{x}}}{t}\nonumber\\
+&=&-\fua{\lco\gqu{}{{\negsymbol{\psi}}_{t}}\rco_E}{\vto{x}}\odot_1\fua{\subold{\negsymbol{\Upsilon}}{h}}{t}+
+\fua{\dot{\subold{\negsymbol{\psi}_E}{x}}}{t}\label{eq:desenvTaxaMaterialEuleriana}\,.
+\end{eqnarray}
+Procedendo de maneira similar, obtém-se o vetor
+\begin{equation}
+\fua{\lco\dvg{\fua{\negsymbol{\Psi}_L}{\vto{x}_r,t}}\rco}{\vto{x}_r,t}=\fua{\lco\gqu{}{{\negsymbol{\Psi}}_{t}}\rco_L}{\vto{x}_r}\odot_1\fua{\subolds{\negsymbol{\upsilon}}{h}{r}}{t}+h\fua{\dot{\subolds{\negsymbol{\Psi}_L}{x}{r}}}{t}\label{eq:desenvTaxaEspacialLagrangiana}\,.
+\end{equation}
+
+ Diz-se que as funções $\dvgm{\negsymbol{\Psi}}$ e $\dvge{\negsymbol{\psi}}$ são as taxas material e espacial de $\negsymbol{\Psi}$ e $\negsymbol{\psi}$ respectivamente, caso
+$\dvgm{\negsymbol{\Psi}}=\lco\dvg{\negsymbol{\Psi}_L}\rco_E$ e
+$\dvge{\negsymbol{\psi}}=\lco\dvg{\negsymbol{\psi}_E}\rco_L$. Nestas condições,
+utilizando os resultados (\ref{eq:desenvTaxaMaterialEuleriana}) e
+(\ref{eq:desenvTaxaEspacialLagrangiana}), tem-se que
+\begin{equation}
+\fua{\lco\dvge{\fua{\negsymbol{\psi}}{\vto{x}_r,t}}\rco}{\vto{x}_r,t}=h\fua{\dot{\subolds{\negsymbol{\psi}}{x}{r}}}{t}-\fua{\gqu{}{{\negsymbol{\psi}}_{t}}}{\vto{x}_r}\odot_1\fua{\subolds{\negsymbol{\Upsilon}}{h}{r}}{t}
+\end{equation}
+e
+\begin{equation}
+\fua{\lco\dvgm{\fua{\negsymbol{\Psi}}{\vto{x},t}}\rco}{\vto{x},h}=h\fua{\dot{\subold{\negsymbol{\Psi}}{x}}}{t}+\fua{\gqu{}{{\negsymbol{\Psi}}_{t}}}{\vto{x}}\odot_1\fua{\subold{\negsymbol{\upsilon}}{h}}{t}\,.
+\end{equation}
+Com base nas igualdades (\ref{eq:desenvTaxaMaterial}) e (\ref{eq:desenvTaxaEspacial}),
+pode-se  concluir que a taxa material $\dvgm{\negsymbol{\psi}}=\dvg{\negsymbol{\psi}}$ e
+a taxa espacial $\dvge{\negsymbol{\Psi}}=\dvg{\negsymbol{\Psi}}$.

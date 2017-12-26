@@ -1,0 +1,955 @@
+\chapter{Diferenciação de Funções Tensoriais}
+
+\section{Diferenciabilidade de Funções Tensoriais}
+
+\subsection{Função Tensorial Limitada}\index{função!tensorial!limitada}
+Sejam os espaços tensoriais normados $\ete{\crt{V}{p}}{\con{F}}$ e
+$\ete{\crt{W}{q}}{\con{F}}$ com as respectivas normas
+$\|\bullet\|_{\ete{\crt{V}{p}}{\con{F}}}$ e
+$\|\bullet\|_{\ete{\crt{W}{q}}{\con{F}}}$. A função no mapeamento
+\begin{equation}\label{eq:mapFuncaoLimitada}
+\map{\psi}{{T}_{\con{\crt{V}{p}}\mapsto\con{\con{F}}}}{\cft{\crt{W}{q}}{\con{F}}}
+\end{equation}
+é dita limitada em  ${T}_{\con{\crt{V}{p}}\mapsto\con{\con{F}}}$
+se existir uma constante $\Lambda\in\con{F}$ tal que
+\begin{equation}
+\|\fua{\psi}{\tnr{X}}\|_{\ete{\crt{W}{q}}{\con{F}}}\leqslant\Lambda\|\tnr{X}\|_{\ete{\crt{V}{p}}{\con{F}}}\,,\,
+\forall\,\tnr{X}\in\cft{\crt{V}{p}}{\con{F}}\,.
+\end{equation}
+Das possíveis constantes $\Lambda$ que obedecem a desigualdade
+anterior, seja $\lambda$ a menor delas. Nesta situação, para a
+função $\psi$, é possível definir que
+\begin{equation}
+\| \psi \| = \lambda\,.
+\end{equation}
+O conjunto de funções limitadas é portanto normado. Além disso, se
+os espaços tensoriais $\ete{\crt{V}{p}}{\con{F}}$ e
+$\ete{\crt{W}{q}}{\con{F}}$ forem de Banach, toda função limitada
+linear é contínua.
+\newline
+
+\noindent\begin{prova} Vamos demonstrar agora se a última
+afirmação é verídica. Para tal, suponhamos uma seqüência de Cauchy
+qualquer $\lim_{i\to\infty}{\fua{\varrho}{\tnr{X}_i,\tnr{T}_0}}=0$
+em ${T}_{\con{\crt{V}{p}}\mapsto\con{\con{F}}}$. Isto indica que
+$\tnr{X}_i\to\tnr{T}_0$, quando $i\to\infty$. Então, pode-se dizer
+que $\lim_{i\to\infty}{\| \tnr{X}_i-\tnr{T}_0 \|}=0$. Com base
+nisso e considerando a função em ($\ref{eq:mapFuncaoLimitada}$)
+limitada linear, a desigualdade
+\begin{equation}
+{\|\fua{\psi}{\tnr{X}_i}-\fua{\psi}{\tnr{T}_0}\|}=
+{\|\fua{\psi}{\tnr{X}_i-\tnr{T}_0}\|}\leqslant\|\psi\|\|
+\tnr{X}_i-\tnr{T}_0\|\,\nonumber
+\end{equation}
+quando $i\to\infty$, permite concluir que
+$\fua{\psi}{\tnr{X}_i}\to\fua{\psi}{\tnr{T}_0}$\,.
+\end{prova}
+
+
+
+\subsection{Funções Tensoriais
+Tangentes}\index{funções!tensoriais!tangentes} Dados os espaços
+tensoriais de Banach $\ete{\crt{V}{p}}{\con{F}}$ e
+$\ete{\crt{W}{q}}{\con{F}}$ com as respectivas normas
+$\|\bullet\|_{\ete{\crt{V}{p}}{\con{F}}}$ e
+$\|\bullet\|_{\ete{\crt{W}{q}}{\con{F}}}$, seja
+$\con{\tilde{T}}_{\con{\crt{V}{p}}\mapsto\con{\con{F}}}$ um
+subconjunto aberto de $\cft{\crt{V}{p}}{\con{F}}$ e o mapeamento
+\begin{equation}
+\map{\psi}{{\tilde{T}}_{\con{\crt{V}{p}}\mapsto\con{\con{F}}}}{\cft{\crt{W}{q}}{\con{F}}}\,.
+\end{equation}
+Considerando um tensor
+$\tnr{T}_0\in{\tilde{T}}_{\con{\crt{V}{p}}\mapsto\con{\con{F}}}$,
+toda e qualquer função $\kappa$, tal que
+\begin{equation}
+\map{\kappa}{{\tilde{T}}_{\con{\crt{V}{p}}\mapsto\con{\con{F}}}}{\cft{\crt{W}{q}}{\con{F}}}\,,
+\end{equation}
+é dita tangente à $\psi$ em $\tnr{T}_0$ e vice-versa se, dados o
+escalar $\alpha\in\con{F}$ e um tensor qualquer não nulo
+$\tnr{H}\in{\tilde{T}}_{\con{\crt{V}{p}}\mapsto\con{\con{F}}}$ ,
+\begin{equation}\label{eq:funcaoTangenteGateaux}
+\lim_{\alpha\to 0}\frac{\| \fua{\psi}{\alpha\tnr{H}+\tnr{T}_0} -
+\fua{\kappa}{\alpha\tnr{H}+\tnr{T}_0}
+ \|_{\ete{\crt{W}{q}}{\con{F}}}}
+{\|\alpha\tnr{H}\|_{\ete{\crt{V}{p}}{\con{F}}}}=0\,.
+\end{equation}
+Em outras palavras, o valor no numerador aproxima-se de zero de
+forma mais rápida do que no denominador quando o tensor
+$\alpha\tnr{H}\to\negmath{0}$, segundo a ``direção'' definida por
+$\tnr{H}$. Nestas condições, fica evidente que,
+no limite, $\fua{\psi}{\tnr{T}_0}=\fua{\kappa}{\tnr{T}_0}$. Além disso, se
+duas funções são tangentes a $\psi$ em $\tnr{T}_0$, então elas são
+tangentes entre si.
+\newline
+
+\noindent\begin{prova} Para provar a afirmação anterior, sejam
+duas funções $\kappa_1$ e $\kappa_2$ tangentes a $\psi$ em
+$\tnr{T}_0$. Como a soma dos limites é o limite da soma, tem-se
+que
+\begin{equation}
+\lim_{\alpha\to 0}\frac{\| \fua{\psi}{\alpha\tnr{H}+\tnr{T}_0} -
+\fua{\kappa_1}{\alpha\tnr{H}+\tnr{T}_0}
+ \|_{\ete{\crt{W}{q}}{\con{F}}}+\| \fua{\kappa_2}{\alpha\tnr{H}+\tnr{T}_0}- \fua{\psi}{\alpha\tnr{H}+\tnr{T}_0}
+ \|_{\ete{\crt{W}{q}}{\con{F}}}}
+{\|\alpha\tnr{H}\|_{\ete{\crt{V}{p}}{\con{F}}}}=0\,. \nonumber
+\end{equation}
+A partir da desigualdade triangular, é certo dizer que o valor do
+numerador
+\begin{eqnarray}
+  \lefteqn{\| \fua{\psi}{\alpha\tnr{H}+\tnr{T}_0} -
+\fua{\kappa_1}{\alpha\tnr{H}+\tnr{T}_0}
+ \|_{\ete{\crt{W}{q}}{\con{F}}}
++} & & \nonumber\\
+  &
+&\| \fua{\kappa_2}{\alpha\tnr{H}+\tnr{T}_0}-
+\fua{\psi}{\alpha\tnr{H}+\tnr{T}_0}
+ \|_{\ete{\crt{W}{q}}{\con{F}}}\geqslant\| \fua{\kappa_2}{\alpha\tnr{H}+\tnr{T}_0} -
+\fua{\kappa_1}{\alpha\tnr{H}+\tnr{T}_0}
+\|_{\ete{\crt{W}{q}}{\con{F}}}\,.\nonumber
+\end{eqnarray}
+Tal desigualdade permite concluir que
+\begin{equation}
+\lim_{\alpha\to 0}\frac{\| \fua{\kappa_2}{\alpha\tnr{H}+\tnr{T}_0}
+- \fua{\kappa_1}{\alpha\tnr{H}+\tnr{T}_0}
+ \|_{\ete{\crt{W}{q}}{\con{F}}}}
+{\|\alpha\tnr{H}\|_{\ete{\crt{V}{p}}{\con{F}}}}=0\,. \nonumber
+\end{equation}
+\end{prova}
+
+\subsubsection{Abordagens Forte e
+Fraca}\index{funções!tensoriais!tangentes!fortes} Considerando as
+condições anteriores, seja o conjunto $\con{TG}_{\tnr{T}_0}$
+formado por pares ordenados de funções tangentes entre si em
+$\tnr{T}_0$, cujo domínio é um subconjunto aberto de $\cft{\crt{V}{p}}{\con{F}}$ que contém $\tnr{T}_0$. Pode ocorrer que exista um conjunto
+$\overline{\con{TG}}_{\tnr{T}_0}\subseteq\con{TG}_{\tnr{T}_0}$,
+tal que seus pares de funções sejam tangentes em $\tnr{T}_0$
+independente da forma como o tensor $\alpha\tnr{H}\to\negmath{0}$ em
+(\ref{eq:funcaoTangenteGateaux}). Em outras palavras, considerando
+$\tnr{Y}:=\alpha\tnr{H}$, para que
+$(\psi,\kappa)\in\overline{\con{TG}}_{\tnr{T}_0}$, deve ser válida
+a igualdade:
+\begin{equation}\label{eq:funcaoTangenteFrechet}
+\lim_{\tnr{Y}\to \negmath{0}}\frac{\| \fua{\psi}{\tnr{Y}+\tnr{T}_0} -
+\fua{\kappa}{\tnr{Y}+\tnr{T}_0}
+ \|_{\ete{\crt{W}{q}}{\con{F}}}}
+{\|\tnr{Y}\|_{\ete{\crt{V}{p}}{\con{F}}}}=0\,.
+\end{equation}
+Pode-se observar que esta condição é mais restritiva ou mais
+\emph{forte} do que a condição (\ref{eq:funcaoTangenteGateaux}). A
+primeira é então denominada abordagem forte para funções
+tensoriais tangentes enquanto a segunda é denominada abordagem
+fraca\index{funções!tensoriais!tangentes!fracas}. É importante
+enfatizar a diferença entre as duas abordagens: utilizando uma
+terminologia geométrica, na abordagem fraca, o ``caminho''
+trilhado pela variável no domínio
+${\tilde{T}}_{\con{\crt{V}{p}}\mapsto\con{\con{F}}}$ é definido
+pelo tensor $\tnr{H}$ arbitrado; na abordagem forte, arbitra-se o
+próprio ``caminho'' a ser trilhado. Para fins didáticos, os
+``caminhos'' em ambas as abordagens estão representados na figura
+a seguir.
+
+\begin{figure}[!htt]
+\centering
+\includegraphics{partes/parte1/figs/c_diftens/AbordagemForteFraca.eps}
+\titfigura{À esquerda, abordagem fraca com tensores arbitrários e
+``caminhos'' radiais. À direita, abordagem forte com ``caminhos''
+arbitrários.}
+\end{figure}
+
+Cabe ressaltar que se o domínio tensorial das funções tangentes
+for unidimensional (independente da ordem), as abordagens forte e
+fraca ficam idênticas. Desta forma,
+\begin{eqnarray}
+\dim\lpa\ete{\crt{V}{p}}{\con{F}}\rpa=1&\implies &
+\overline{\con{TG}}_{\tnr{T}_0}=\con{TG}_{\tnr{T}_0}\,.\nonumber
+\end{eqnarray}
+
+\noindent\begin{prova} Para o caso do espaço tensorial unidimensional $\ete{\crt{V}{p}}{\con{F}}$, seja o conjunto $\lch\tnr{H}\rch$ uma de suas bases. Neste contexto, o tensor $\tnr{Y}$ em (\ref{eq:funcaoTangenteFrechet}) pode sempre ser escrito como a combinação linear $\alpha\tnr{H}$, resultando assim a expressão (\ref{eq:funcaoTangenteGateaux}).
+\end{prova}
+
+\subsection{Diferenciabilidade de Gâteaux}\index{Gâteaux!diferenciabilidade de}
+Sejam os espaços tensoriais de Banach $\ete{\crt{V}{p}}{\con{F}}$
+e $\ete{\crt{W}{q}}{\con{F}}$ e o espaço vetorial de funções
+tensoriais lineares
+\begin{equation}
+\evl{\cft{\crt{V}{p}}{\con{F}}}{\cft{\crt{W}{q}}{\con{F}}}{\con{F}}\,.\nonumber
+\end{equation}
+Considerando ${\tilde{T}}_{\con{\crt{V}{p}}\mapsto\con{\con{F}}}$
+um subconjunto aberto de $\cft{\crt{V}{p}}{\con{F}}$, seja um
+tensor
+$\tnr{T}_0\in{\tilde{T}}_{\con{\crt{V}{p}}\mapsto\con{\con{F}}}$ e
+o conjunto dos pares ordenados de funções tensoriais tangentes
+$\con{TG}_{\tnr{T}_0}$. Dado o mapeamento
+\begin{equation}
+\map{\psi}{{\tilde{T}}_{\con{\crt{V}{p}}\mapsto\con{\con{F}}}}{\cft{\crt{W}{q}}{\con{F}}}\,,
+\end{equation}
+se existir o par de funções tangentes
+$(\psi,\psi_D)\in\con{TG}_{\tnr{T}_0}$, onde
+\begin{equation}\label{eq:funcaoGDerivada}
+\fua{\psi_D}{\tnr{X}}=\fua{\psi}{\tnr{T}_0}+\fua{\lco\fua{\dvt{\psi}}{\tnr{T}_0}\rco}{\tnr{X}-\tnr{T}_0}\,,
+\end{equation}
+tal que a função
+\begin{equation}
+\lco\fua{\dvt{\psi}}{\tnr{T}_0}\rco\in
+\cfl{\cft{\crt{V}{p}}{\con{F}}}{\cft{\crt{W}{q}}{\con{F}}}
+\end{equation}
+é limitada, então este par é único. Nestas condições, a função
+$\psi$ é dita \emph{diferenciável de Gâteaux}\index{Gâteaux!função
+diferenciável de} ou
+\emph{G-diferenciável}\index{função!G-diferenciável} em
+$\tnr{T}_0$. Combinando (\ref{eq:funcaoGDerivada}) com
+(\ref{eq:funcaoTangenteGateaux}), obtém-se que
+\begin{equation}\label{eq:derivadaGateauxIni}
+\lim_{\alpha\to 0}\frac{\|
+\fua{\psi}{\alpha\tnr{\tnr{H}}+\tnr{T}_0} - \fua{\psi}{\tnr{T}_0}-
+\alpha\fua{\lco\fua{\dvt{\psi}}{\tnr{T}_0}\rco}{\tnr{H}}
+ \|_{\ete{\crt{W}{q}}{\con{F}}}}
+{\|\alpha\tnr{H}\|_{\ete{\crt{V}{p}}{\con{F}}}}=0\,.
+\end{equation}
+O termo $\alpha\fua{\lco\fua{\dvt{\psi}}{\tnr{T}_0}\rco}{\tnr{H}}$
+é denominado o \emph{diferencial de
+Gâteaux}\index{Gâteaux!diferencial de} ou o
+\emph{G-diferencial}\index{G-diferencial} de $\psi$ em $\tnr{T}_0$
+na direção $\tnr{H}$. Chama-se o tensor
+$\fua{\lco\fua{\dvt{\psi}}{\tnr{T}_0}\rco}{\tnr{H}}$ de
+\emph{derivada direcional}\index{derivada!direcional} de $\psi$ em
+$\tnr{T}_0$ na direção $\tnr{H}$. A função tensorial linear
+limitada $\lco\fua{\dvt{\psi}}{\tnr{T}_0}\rco$ é chamada
+\emph{derivada fraca}\index{derivada!fraca} ou \emph{derivada de
+Gâteaux}\index{Gâteaux!derivada de} ou
+\emph{G-derivada}\index{G-derivada} de $\psi$ em $\tnr{T}_0$. A função $\dvt{\psi}$ é denominada simplesmente a derivada de
+Gâteaux ou a G-derivada de $\psi$. Além disso, se a
+função $\psi$ for G-diferenciável em qualquer tensor $\tnr{T}_0$
+do seu domínio, diz-se que ela é G-diferenciável em
+${\tilde{T}}_{\con{\crt{V}{p}}\mapsto\con{\con{F}}}$.
+\newline
+
+\noindent\begin{prova} Vamos mostrar que a função $\psi_D$ é
+única. Para tal, admitamos, por hipótese, que existam duas funções
+$\psi_{D1}$ e $\psi_{D2}$ tangentes à $\psi$ em $\tnr{T}_0$, tais
+que
+\begin{equation}
+\fua{\psi_{D1}}{\tnr{X}}=
+\fua{\psi}{\tnr{T}_0}+\fua{\lco\fua{\dvt{\psi_1}}{\tnr{T}_0}\rco}{\tnr{X}-\tnr{T}_0}\nonumber
+\end{equation}
+e
+\begin{equation}
+\fua{\psi_{D2}}{\tnr{X}}=
+\fua{\psi}{\tnr{T}_0}+\fua{\lco\fua{\dvt{\psi_2}}{\tnr{T}_0}\rco}{\tnr{X}-\tnr{T}_0}\,.\nonumber
+\end{equation}
+Desta forma, $\psi_{D1}$ e $\psi_{D2}$ são tangentes entre si em
+$\tnr{T}_0$. Aplicando a abordagem fraca de funções tangentes,
+obtém-se que
+\begin{eqnarray}
+\lim_{\alpha\to 0}\frac{\|
+\fua{\lco\fua{\dvt{\psi_1}}{\tnr{T}_0}\rco}{\alpha\tnr{H}} -
+\fua{\lco\fua{\dvt{\psi_2}}{\tnr{T}_0}\rco}{\alpha\tnr{H}}
+ \|_{\ete{\crt{W}{q}}{\con{F}}}}
+{\|\alpha\tnr{H}\|_{\ete{\crt{V}{p}}{\con{F}}}}&=&0\,.\nonumber
+\end{eqnarray}
+Elimina-se, pelas propriedades de funções lineares e normas, o
+escalar $\alpha$. Logo,
+\begin{equation}
+\frac{\|
+\fua{\lco\fua{\dvt{\psi_1}}{\tnr{T}_0}-\fua{\dvt{\psi_2}}{\tnr{T}_0}\rco}{\tnr{H}}
+ \|_{\ete{\crt{W}{q}}{\con{F}}}}
+{\|\tnr{H}\|_{\ete{\crt{V}{p}}{\con{F}}}} = 0\,.\nonumber
+\end{equation}
+Como $\tnr{H}$, por definição, é não nulo, a igualdade anterior é válida se o numerador for zero. Logo, é possível dizer que para qualquer $\tnr{H}\in{\tilde{T}}_{\con{\crt{V}{p}}\mapsto\con{\con{F}}}$ não nulo,
+\begin{equation}
+\fua{\lco\fua{\dvt{\psi_1}}{\tnr{T}_0}\rco}{\tnr{H}}=
+\fua{\lco\fua{\dvt{\psi_2}}{\tnr{T}_0}\rco}{\tnr{H}}\,.
+\nonumber
+\end{equation}
+\end{prova}
+
+\subsubsection{Diferenciabilidade de Ordem Arbitrária}
+Considerando as condições anteriores, sejam o espaço tensorial
+$\ete{\lpa\crt{V}{p}\rpa^{k+1}}{\con{F}}$ e o espaço tensorial de funções lineares
+\begin{equation}
+\evl{\cft{\lpa\crt{V}{p}\rpa^{k+1}}{\con{F}}}{\cft{\crt{W}{q}}{\con{F}}}{\con{F}}\,,\nonumber
+\end{equation}
+onde $k\geqslant 0$. Considerando $\fua{\dtg{0}{\psi}}{\tnr{T}_0}:=\psi$, se existir o par ordenado de funções tensoriais $\lpa \fua{\dtg{k}{\psi}}{\tnr{T}_0},\psi_{\con{D}^{k+1}} \rpa\in\con{TG}_{\tnr{T}_0}$, tal que
+\begin{eqnarray}
+  \lefteqn{\fua{\psi_{D^{k+1}}}{\tnr{X}}=\fua{\lco\fua{\dtg{k}{\psi}}{\tnr{T}_0}\rco}{\tnr{H}_1\otimes\cdots\otimes\tnr{H}_{k-1}\otimes\tnr{T}_0}+} & & \nonumber\\
+  &
+&\fua{\lco\fua{\dtg{k+1}{\psi}}{\tnr{T}_0}\rco}{\tnr{H}_1\otimes\cdots\otimes\tnr{H}_{k}\otimes\lpa\tnr{X}-\tnr{T}_0\rpa}\,,
+\end{eqnarray}
+onde $\tnr{H}_i\in{\tilde{T}}_{\con{\crt{V}{p}}\mapsto\con{\con{F}}}$ e a função
+\begin{equation}
+\lco\fua{\dtg{k+1}{\psi}}{\tnr{T}_0}\rco\in
+\cfl{\cft{\lpa\crt{V}{p}\rpa^{k+1}}{\con{F}}}{\cft{\crt{W}{q}}{\con{F}}}
+\end{equation}
+é limitada, então este par é único.
+
+Neste contexto, diz-se que $\psi$ é G-diferenciável de ordem $k+1$ em $\tnr{T}_0$. A função linear $\fua{\dtg{k+1}{\psi}}{\tnr{T}_0}$ é a G-derivada de ordem $k+1$ de $\psi$ em $\tnr{T}_0$. Em termos genéricos, a igualdade (\ref{eq:derivadaGateauxIni}) assume a seguinte forma:
+\begin{equation}
+\begin{array}{rrr}\label{eq:derivadaGateauxGenerica}
+&\lim_{\alpha\to
+0}\frac{1}{\|\alpha\tnr{H}\|_{\ete{\crt{V}{p}}{\con{F}}}} \| \fua{\lco\fua{\dtg{k}{\psi}}{\tnr{T}_0}\rco}{\tnr{H}_1\otimes\cdots\otimes\tnr{H}_{k-1}\otimes\lpa\alpha\tnr{H}+\tnr{T}_0\rpa}- & \\
+&\fua{\lco\fua{\dtg{k}{\psi}}{\tnr{T}_0}\rco}{\tnr{H}_1\otimes\cdots\otimes\tnr{H}_{k-1}\otimes\tnr{T}_0}- &
+\\  &
+\alpha\fua{\lco\fua{\dtg{k+1}{\psi}}{\tnr{T}_0}\rco}{\tnr{H}_1\otimes\cdots\otimes\tnr{H}_{k}\otimes\tnr{H}}\|_{\ete{\crt{W}{q}}{\con{F}}}=0\,. &
+\end{array}
+\end{equation}
+
+
+
+
+
+\subsubsection{Diferenciabilidade de Fréchet}\index{Fréchet!diferenciabilidade de}
+Considerando as condições anteriores, se agora existir o par de
+funções tangentes
+$(\psi,\psi_D)\in\overline{\con{TG}}_{\tnr{T}_0}$, então a função
+$\psi$ é dita \emph{diferenciável de Fréchet}\index{Fréchet!função
+diferenciável de} ou
+\emph{F-diferenciável}\index{função!F-diferenciável} em
+$\tnr{T}_0$. Combinando (\ref{eq:funcaoGDerivada}) e
+(\ref{eq:funcaoTangenteFrechet}), obtém-se
+\begin{equation}
+\lim_{\tnr{Y}\to \negmath{0}}\frac{\|
+\fua{\psi}{\tnr{\tnr{Y}}+\tnr{T}_0} - \fua{\psi}{\tnr{T}_0}-
+\fua{\lco\fua{\dvt{\psi}}{\tnr{T}_0}\rco}{\tnr{Y}}
+ \|_{\ete{\crt{W}{q}}{\con{F}}}}
+{\|\tnr{Y}\|_{\ete{\crt{V}{p}}{\con{F}}}}=0\,.
+\end{equation}
+O tensor $\fua{\lco\fua{\dvt{\psi}}{\tnr{T}_0}\rco}{\tnr{Y}}$ é
+denominado o \emph{diferencial de
+Fréchet}\index{Fréchet!diferencial de} ou o
+\emph{F-di\-fe\-ren\-cial}\index{F-diferencial} de $\psi$ em
+$\tnr{T}_0$. A função tensorial limitada linear
+$\lco\fua{\dvt{\psi}}{\tnr{T}_0}\rco$ é chamada \emph{derivada
+forte}\index{derivada!forte} ou \emph{derivada de
+Fréchet}\index{Fréchet!derivada de} ou
+\emph{F-derivada}\index{F-derivada}\footnote{A demonstração de que
+a F-derivada é única pode ser feita utilizando a mesma metodologia
+aplicada à G-derivada, substituindo as ocorrências de $\tnr{Y}$
+por $\alpha\tnr{H}$ em (\ref{eq:funcaoTangenteFrechet}).} de
+$\psi$ em $\tnr{T}_0$. A função $\dvt{\psi}$ é a derivada de Fréchet ou a F-derivada de $\psi$.
+
+Convém enfatizar que uma função F-diferenciável é sempre
+G-di\-fe\-ren\-ciá\-vel\footnote{Uma função
+G-di\-fe\-ren\-ciá\-vel é sempre F-diferenciável em condições
+especiais. Ver \aut{Wouk}\cite{wouk_1979_1}, pp. 268-270.} e suas
+derivadas respectivas são iguais. Apesar disso, é conveniente
+utilizar notações diferentes para cada uma das derivadas: as
+derivadas $\fua{\dvf{\psi}}{\tnr{T}_0}$ e
+$\fua{\dvg{\psi}}{\tnr{T}_0}$ indicam, respectivamente, que $\psi$
+é F-diferenciável e G-diferenciável em $\tnr{T}_0$. Caso $\psi$
+seja F ou G-diferenciável no seu domínio, então as notações
+respectivas para as derivadas são $\fua{\dvf{\psi}}{\tnr{X}}$ e
+$\fua{\dvg{\psi}}{\tnr{X}}$.
+
+O conceito de derivadas de ordens superiores também é extensível à abordagem forte de funções tangentes. Desta forma, diz-se que $\fua{\dgg{k}{\psi}}{\tnr{T}_0}$ e $\fua{\dgf{k}{\psi}}{\tnr{T}_0}$ são respectivamente a G-derivada e a F-derivada de ordem $k$ de $\psi$ em $\tnr{T}_0$.
+
+\subsubsection{Calculando a Derivada Direcional}
+Ainda sob as condições anteriores, a igualdade
+(\ref{eq:derivadaGateauxIni}) revela que o numerador aproxima-se mais rápido de $0$ do que o denominador.
+Desta forma, é possível concluir que
+\begin{equation}\label{eq:numeradorGateaux}
+\lim_{\alpha\to 0}\lco\fua{\psi}{\alpha\tnr{\tnr{H}}+\tnr{T}_0} - \fua{\psi}{\tnr{T}_0}-
+\alpha\fua{\lco\fua{\dvg{\psi}}{\tnr{T}_0}\rco}{\tnr{H}}\rco
+ =\negmath{0}\,.
+\end{equation}
+Já que $\alpha$ nunca é $0$, o termo entre colchetes nesta expressão nunca é zero, ou seja, sempre há um \emph{resíduo}. Tal resíduo pode ser definido pela função tensorial no mapeamento
+\begin{equation}
+\map{\ele{r}_\psi}{{\tilde{T}}_{\con{\crt{V}{p}}\mapsto\con{\con{F}}}}{\cft{\crt{W}{q}}{\con{F}}}\,,
+\end{equation}
+onde
+\begin{equation}
+\lim_{\tnr{X}\to \negmath{0}}\fua{\ele{r}_\psi}{\tnr{X}}=\negmath{0}\,.
+\end{equation}
+Com base nisso, pode-se entender a expressão
+(\ref{eq:numeradorGateaux}) segundo a igualdade
+\begin{equation}\label{eq:gderivadaResiduo}
+\fua{\psi}{\alpha\tnr{\tnr{H}}+\tnr{T}_0} - \fua{\psi}{\tnr{T}_0}-
+\alpha\fua{\lco\fua{\dvg{\psi}}{\tnr{T}_0}\rco}{\tnr{H}}
+ = \fua{\ele{r}_\psi}{\tnr{H}}\,,
+\end{equation}
+onde $\ele{r}_\psi$ é dita a \emph{função
+resíduo}\index{função!resíduo} de $\psi$ em $\tnr{T}_0\,$.
+Neste contexto, isolando o termo da derivada direcional na igualdade anterior e em seguida aplicando $\lim_{\alpha\to 0}$ em ambos os lados da expressão resultante, obtém-se que
+\begin{equation}\label{eq:calculoDerivadaDirecional}
+\fua{\lco\fua{\dvg{\psi}}{\tnr{T}_0}\rco}{\tnr{H}} =
+\lim_{\alpha\to 0}\frac{\fua{\psi}{\alpha\tnr{\tnr{H}}+\tnr{T}_0}
+- \fua{\psi}{\tnr{T}_0}}{\alpha}\,.
+\end{equation}
+Vale ressaltar que para qualquer $\tnr{H}$, esta igualdade fornece
+uma regra para a derivada $\fua{\dvg{\psi}}{\tnr{T}_0}$. Além disso, se $\tnr{T}_0$ também for um tensor qualquer, ou seja, se $\psi$ for G-diferenciável no seu domínio, tem-se a regra para a derivada direcional de $\psi$.
+
+COLOCAR UMA PROPOSIÇÂO QUE MOSTRE A DERIVADA DIRECIONAL DE UMA FUNÇÂO ESCALAR
+
+\paragraph{Derivadas Direcionais de Ordem Arbitrária.} O cálculo da
+derivada direcional de ordem $k+1$, $k\geqslant 0$, é
+feito a partir de (\ref{eq:derivadaGateauxGenerica}), generalizando a igualdade
+(\ref{eq:calculoDerivadaDirecional}). Desta forma,
+\begin{eqnarray}\label{eq:calculoDerivadaDirecionalOrdemN}
+  \lefteqn{\fua{\lco\fua{\dgg{k+1}{\psi}}{\tnr{T}_0}\rco}{\tnr{H}_1\otimes\cdots\otimes\tnr{H}_{k}\otimes\tnr{H}}
+=\lim_{\alpha\to
+0}\frac{1}{\alpha}} & & \nonumber\\
+  &
+&\fua{\lco\fua{\dgg{k}{\psi}}{\tnr{T}_0}\rco}{\tnr{H}_1\otimes\cdots\otimes\tnr{H}_{k-1}\otimes\lpa \alpha\tnr{\tnr{H}}+\tnr{T}_0\rpa}
+-\nonumber\\  & &
+\qquad\fua{\lco\fua{\dgg{k}{\psi}}{\tnr{T}_0}\rco}{\tnr{H}_1\otimes\cdots\otimes\tnr{H}_{k-1}\otimes\tnr{T}_0}\,,
+\end{eqnarray}
+onde
+$\tnr{H}_i\in{\tilde{T}}_{\con{\crt{V}{p}}\mapsto\con{\con{F}}}$ e
+$\fua{\dgg{0}{\psi}}{\tnr{T}_0}:=\psi\,$. Para tensores
+$\tnr{H},\tnr{H}_1,\cdots,\tnr{H}_k$ quaisquer, obtém-se a regra
+da G-derivada $\fua{\dgg{k+1}{\psi}}{\tnr{T}_0}$ e por
+conseqüência da F-derivada $\fua{\dgf{k+1}{\psi}}{\tnr{T}_0}$.
+
+\paragraph{Derivadas Parciais.}\index{derivada!parcial}\label{sec:derivadaParcial}
+Considerando as condições anteriores, seja o inteiro $m\geqslant 1$ e o conjunto
+\begin{equation}
+\con{P}={T}_{\con{\crt{V}{p_1}}\mapsto\con{\con{F}}}\times\cdots\times{T}_{\con{\crt{V}{p_m}}\mapsto\con{\con{F}}}
+\end{equation}
+definidor de um espaço vetorial de Banach. Seja o mapeamento
+\begin{equation}
+\map{\omega}{\tilde{\con{P}}}{\cft{\crt{W}{q}}{\con{F}}}\,.
+\end{equation}
+onde $\tilde{\con{P}}$ é subconjunto aberto de $\con{P}\,$.
+
+Com base na proposição \ref{prp:somaPoliadicos}, a condição de existência da função no mapeamento anterior é garantida se, por exemplo,
+\begin{equation}
+\fua{\omega}{\tnr{X}_1,\cdots,\tnr{X}_m}=
+\fua{\psi}{\sum_{k=1}^m\underbrace{\vto{x}_{1k}\otimes\cdots\otimes\vto{x}_{pk}}_{\tnr{X}_k}}\,,
+\end{equation}
+onde $p=p_1=\cdots=p_m\,$. A derivada direcional (\ref{eq:calculoDerivadaDirecional}) toma então a seguinte forma genérica:
+\begin{eqnarray}\label{eq:derivadaDirecionalVariasVariaveis}
+\lefteqn{\fua{\lco\fua{\dvg{\omega}}{\tnr{T}_1,\cdots,\tnr{T}_m}\rco}{\tnr{H}_1,\cdots,\tnr{H}_m} =\lim_{\alpha\to 0}\frac{1}{\alpha}} & & \nonumber\\
+& &
+\fua{\omega}{\alpha\tnr{H}_1+\tnr{T}_1,\cdots,\alpha\tnr{H}_m+\tnr{T}_m}
+- \fua{\omega}{\tnr{T}_1,\cdots,\tnr{T}_m}\,.
+\end{eqnarray}
+A partir daí, diz-se que a função no lado esquerdo da igualdade
+\begin{eqnarray}\label{eq:derivadaDirecionalParcial}
+\lefteqn{\fua{\lco\fua{\dvg{\omega}}{\tnr{T}_1,\cdots,\tnr{T}_m}\rco}{\tnr{H}_r} =\lim_{\alpha\to
+0}\frac{1}{\alpha}} & & \nonumber\\
+& &
+\fua{\omega}{\tnr{T}_1,\cdots,\alpha\tnr{H}_r+\tnr{T}_r,\cdots,\tnr{T}_m}
+- \fua{\omega}{\tnr{T}_1,\cdots,\tnr{T}_m}
+\end{eqnarray}
+é a G-derivada parcial de $\omega$ em $\tnr{T}_r\,$. Neste caso, a função $\dvg{\omega}$ fica representada por $\dvp{r}{\omega}$, onde $\mathrm{r}$ é o índice do elemento da tupla sobre o qual a derivada parcial é definida. Vale lembrar que os conceitos aqui apresentadas também são válidos no contexto da função $\psi$ F-diferenciável.
+
+\begin{prp}\label{teo:derivadaParcial}
+Sejam os espaços de Banach $\ebh{P}{F}$ e $\ete{\crt{V}{p_i}}{\con{F}}$ tais que o conjunto
+\begin{equation*}
+\con{P}:={T}_{\con{\crt{V}{p_1}}\mapsto\con{\con{F}}}\times\cdots\times{T}_{\con{\crt{V}{p_m}}\mapsto\con{\con{F}}}\,,
+\end{equation*}
+onde $m\geqslant 1$. Dados um espaço tensorial $\ete{\crt{W}{q}}{\con{F}}$ e $\tilde{\con{P}}$ um subconjunto aberto de $\con{P}\,$, seja a função em  $\map{\omega}{\tilde{\con{P}}}{\cft{\crt{W}{q}}{\con{F}}}$ G-diferenciável na tupla ordenada $(\tnr{T}_1,\cdots,\tnr{T}_m)\,$. Nestas condições, para qualquer elemento   $(\tnr{H}_1,\cdots,\tnr{H}_m)\in\tilde{\con{P}}\,$, a derivada direcional
+\begin{equation*}
+\fua{\lco\fua{\dvg{\omega}}{\tnr{T}_1,\cdots,\tnr{T}_m}\rco}{\tnr{H}_1,\cdots,\tnr{H}_m} =
+\sum_{r=1}^{m}\fua{\lco\fua{\dvp{r}{\omega}}{\tnr{T}_1,\cdots,\tnr{T}_m}\rco}{\tnr{H}_r}\,.
+\end{equation*}
+\end{prp}
+\begin{prova}\rodape{Adaptada de \aut{Zeidler}\cite{zeidler_1995_1}, pp. 232-233.}
+O processo mostrado a seguir, que utiliza $m=2\,$, pode ser generalizado para valores maiores. Tomando as definições (\ref{eq:derivadaDirecionalVariasVariaveis}) e (\ref{eq:derivadaDirecionalParcial}), concluimos facilmente as igualdades
+\begin{equation*}
+\fua{\lco\fua{\dvg{\omega}}{\tnr{T}_1,\tnr{T}_2}\rco}{\tnr{H}_1,\negmath{0}}=\fua{\lco\fua{\dvp{1}{\omega}}{\tnr{T}_1,\tnr{T}_2}\rco}{\tnr{H}_1}
+\end{equation*}
+e
+\begin{equation*}
+\fua{\lco\fua{\dvg{\omega}}{\tnr{T}_1,\tnr{T}_2}\rco}{\negmath{0},\tnr{H}_2}=\fua{\lco\fua{\dvp{2}{\omega}}{\tnr{T}_1,\tnr{T}_2}\rco}{\tnr{H}_2}\,,
+\end{equation*}
+rotuladas respectivamente por (i) e (ii). Somando estas duas expressões, chegamos à igualdade (iii)
+\begin{equation*}
+\fua{\lco\fua{\dvg{\omega}}{\tnr{T}_1,\tnr{T}_2}\rco}{\lpa\tnr{H}_1,\negmath{0}\rpa+\lpa\negmath{0},\tnr{H}_2\rpa}=\fua{\lco\fua{\dvp{1}{\omega}}{\tnr{T}_1,\tnr{T}_2}\rco}{\tnr{H}_1}+\fua{\lco\fua{\dvp{2}{\omega}}{\tnr{T}_1,\tnr{T}_2}\rco}{\tnr{H}_2}\,,
+\end{equation*}
+válida para quaisquer $\tnr{H}_1,\tnr{H}_2\in\tilde{\con{P}}\,$. Como estamos tratando com espaços vetoriais, fica claro que a tupla ordenada  $(\tnr{Z}_1,\tnr{Z}_2):=(\tnr{H}_1,\negmath{0})+(\negmath{0},\tnr{H}_2)\,$ é elemento de $\con{P}$. Fazendo $\tnr{H}_2=\negmath{0}$ em (iii), obtemos de (i) que $(\tnr{Z}_1,\tnr{Z}_2)=(\tnr{H}_1,\negmath{0})\,$. Da mesma forma, se $\tnr{H}_1=\negmath{0}\,$, obtemos de (ii) e (iii) que  $(\tnr{Z}_1,\tnr{Z}_2)=(\negmath{0},\tnr{H}_2)\,$. Como estas duas situações confirmam-se mutuamente, fica óbvio que $(\tnr{Z}_1,\tnr{Z}_2)=(\tnr{H}_1,\tnr{H}_2)\,$ para quaisquer $\tnr{H}_1,\tnr{H}_2\in\tilde{\con{P}}\,$.
+\end{prova}
+
+\subsection{Funções Tensoriais Suaves}\index{função!tensorial!suave}
+Sejam os espaços tensoriais de Banach $\ete{\crt{V}{p}}{\con{F}}$
+e $\ete{\crt{W}{q}}{\con{F}}$ e o subconjunto aberto
+${\tilde{T}}_{\con{\crt{V}{p}}\mapsto\con{\con{F}}}\subset\cft{\crt{V}{p}}{\con{F}}$.
+Sejam os conjuntos $\mathcal{C}_\mathrm{G}^0$, formado por todas as funções contínuas em seu domínio, e $\mathcal{D}_\mathrm{G}^1$, formado por todas as
+funções G-diferenciáveis de ordem $1$ em seu domínio. Considerando
+uma função qualquer $\psi\in\con\mathcal{D}_\mathrm{G}^1$ que
+mapeia
+${\tilde{T}}_{\con{\crt{V}{p}}\mapsto\con{\con{F}}}\mapsto\con{\cft{\crt{W}{q}}{\con{F}}}$,
+a G-derivada $\dvg{\psi}$ define o mapeamento
+\begin{equation}
+\map{\dvg{\psi}}{{\tilde{T}}_{\con{\crt{V}{p}}\mapsto\con{\con{F}}}}
+{\con{LB}_{{\tilde{T}}_{\con{\crt{V}{p}}\mapsto\con{\con{F}}}\mapsto\cft{\crt{W}{q}}{\con{F}}}}
+ \,,
+\end{equation}
+onde o conjunto
+\begin{equation}
+\con{LB}_{{\tilde{T}}_{\con{\crt{V}{p}}\mapsto\con{\con{F}}}\mapsto\cft{\crt{W}{q}}{\con{F}}}\subset
+\cfl{\cft{\crt{V}{p}}{\con{F}}}{\cft{\crt{W}{q}}{\con{F}}}
+\end{equation}
+é, por definição, normado. Neste contexto, caso as funções $\psi$ e $\dvg{\psi}$ sejam
+elementos de $\mathcal{C}_\mathrm{G}^0$, diz-se que $\psi$ também é elemento do conjunto
+$\sug{1}\subset\mathcal{D}_\mathrm{G}^1$, formado por todas as
+funções contínuas cuja G-derivada é contínua. É comum dizer também
+que $\psi$ é de classe $\sug{1}$ ou que é G-suave de ordem 1. Da
+mesma forma, para o caso de funções F-diferenciáveis, define-se o
+conjunto $\suf{1}\subset\mathcal{D}_\mathrm{F}$ das funções cuja
+\emph{F-derivada} é contínua.
+
+Em termos gerais, para que a função $\psi$ seja G-suave de ordem
+$k+1$, ou da classe $\sug{k+1}$, ela e sua G-derivada
+$\dgg{k}{\psi}$ devem ser G-suaves de ordem $k$. Em
+outras palavras,
+\begin{equation}
+\psi\in\sug{k}\,\,\mathrm{e}\,\,\dgg{k}{\psi}\in\sug{k}\Longleftrightarrow\psi\in\sug{k+1}\,,\,\,k\geqslant
+0\,.
+\end{equation}
+
+\subsubsection{Difeomorfismo}\index{difeomorfismo} Considerando as condições anteriores,
+dado um tensor
+$\tnr{T}_0\in{\tilde{T}}_{\con{\crt{V}{p}}\mapsto\con{\con{F}}}$,
+a função tensorial $\psi$ é um difeomorfismo em $\tnr{T}_0$ se ela
+for uma bijeção G-diferenciável em $\tnr{T}_0$ e sua função
+inversa for G-diferenciável em $\fua{\psi}{\tnr{T}_0}$. Se a
+bijeção $\psi$ e sua inversa forem G-suaves de ordem $n$, então diz-se que $\psi$ é um
+\emph{$\sug{n}$-difeomorfismo}.
+
+\begin{teo}[Função Inversa Local]\index{Função Inversa Local!Teorema da}\label{teo:FuncaoInversaLocal}
+Sejam os espaços tensoriais de Banach $\ete{\crt{V}{p}}{\con{F}}$
+e $\ete{\crt{W}{q}}{\con{F}}$. Seja o subconjunto aberto
+${\tilde{T}}_{\con{\crt{V}{p}}\mapsto\con{\con{F}}}\subset\cft{\crt{V}{p}}{\con{F}}$
+e um tensor
+$\tnr{T}_0\in{\tilde{T}}_{\con{\crt{V}{p}}\mapsto\con{\con{F}}}$.
+Uma função tensorial $\psi$ é um $\sug{n}$-difeomorfismo em
+$\tnr{T}_0$ se e somente se sua derivada
+$\fua{\dvg{\psi}}{\tnr{T}_0}$ for uma bijeção.
+\end{teo}
+\begin{prova}
+Este teorema é uma aplicação do Teorema da Função
+Implícita\rodape{Ver \aut{Zeidler}\cite{zeidler_1995_1}, pp.
+259-260.}.
+\end{prova}
+
+
+\subsection{Regras Fundamentais Para Derivadas}
+São apresentadas a seguir algumas regras aqui consideradas
+fundamentais nos procedimentos de obtenção de derivadas. A
+abordagem aplicada para se conseguir tais regras faz uso do
+cálculo da derivada direcional, considerando o argumento de
+direção um tensor qualquer.
+
+\begin{teo}[Regra da Soma]\index{Regra da Soma}\label{teo:RegraSome}
+Sejam os espaços tensoriais de Banach $\ete{\crt{V}{p}}{\con{F}}$ e
+$\ete{\crt{W}{q}}{\con{F}}$. Seja o subconjunto aberto
+${\tilde{T}}_{\con{\crt{V}{p}}\mapsto\con{\con{F}}}\subset\cft{\crt{V}{p}}{\con{F}}$.
+Sejam as funções $\psi$, $\psi_1$ e $\psi_2$ que mapeiam
+${\tilde{T}}_{\con{\crt{V}{p}}\mapsto\con{\con{F}}}\mapsto\cft{\crt{W}{q}}{\con{F}}$. Se
+$\psi$ for G-diferenciável no seu domínio com regra
+\begin{equation}
+\fua{\psi}{\tnr{X}}=\fua{\psi_1}{\tnr{X}}+\fua{\psi_2}{\tnr{X}}\,,\nonumber
+\end{equation}
+então a função
+\begin{equation}
+\fua{\dvg{\psi}}{\tnr{X}}=\fua{\dvg{\psi_1}}{\tnr{X}}+
+\fua{\dvg{\psi_2}}{\tnr{X}}\,.\nonumber
+\end{equation}
+\end{teo}
+\begin{prova}
+Considerando o tensor $\tnr{H}\in{\tilde{T}}_{\con{\crt{V}{p}}\mapsto\con{\con{F}}}$ uma
+direção qualquer, seja o seguinte desenvolvimento:
+\begin{eqnarray}
+\fua{\lco\fua{\dvg{\psi}}{\tnr{X}}\rco}{\tnr{H}}&=&
+\lim_{\alpha\to
+0}\frac{\fua{\psi_1}{\alpha\tnr{\tnr{H}}+\tnr{X}}+\fua{\psi_2}{\alpha\tnr{\tnr{H}}+\tnr{X}}
+- \fua{\psi_1}{\tnr{X}}-\fua{\psi_2}{\tnr{X}}}{\alpha} \nonumber\\
+&=&\lim_{\alpha\to 0}\frac{\fua{\psi_1}{\alpha\tnr{\tnr{H}}+\tnr{X}} -
+\fua{\psi_1}{\tnr{X}}}{\alpha}+\lim_{\alpha\to
+0}\frac{\fua{\psi_2}{\alpha\tnr{\tnr{H}}+\tnr{X}} - \fua{\psi_2}{\tnr{X}}}{\alpha}
+\nonumber\\
+&=&\fua{\lco\fua{\dvg{\psi_1}}{\tnr{X}}\rco}{\tnr{H}}+\fua{\lco\fua{\dvg{\psi_2}}{\tnr{X}}\rco}{\tnr{H}}\nonumber\\
+&=&\fua{\lco\fua{\dvg{\psi_1}}{\tnr{X}}+\fua{\dvg{\psi_2}}{\tnr{X}}\rco}{\tnr{H}}\,.\nonumber
+\end{eqnarray}
+A última igualdade é obtida porque as derivadas $\fua{\dvg{\psi_1}}{\tnr{X}}$ e
+$\fua{\dvg{\psi_2}}{\tnr{X}}$ são elementos de um espaço vetorial de funções lineares.
+\end{prova}
+
+\begin{teo}[Regra do Produto]\index{Regra do Produto}\label{teo:RegraProduto}
+Sejam os quatro espaços tensoriais de Banach
+$\ete{\crt{V}{p}}{\con{F}}$,
+$\ete{\crt{K}{r}\times\crt{Z}{s}}{\con{F}}$,
+$\ete{\crt{K}{r}\times\crt{W}{q}}{\con{F}}$ e
+$\ete{\crt{W}{q}\times\crt{Z}{s}}{\con{F}}$. Sejam o subconjunto
+aberto
+${\tilde{T}}_{\con{\crt{V}{p}}\mapsto\con{\con{F}}}\subset\cft{\crt{V}{p}}{\con{F}}$
+e os mapeamentos:
+\begin{eqnarray}
+&
+\map{\psi}{{\tilde{T}}_{\con{\crt{V}{p}}\mapsto\con{\con{F}}}}{\cft{\crt{K}{r}\times\crt{Z}{s}}{\con{F}}}\,,
+&\nonumber\\
+&
+\map{\psi_1}{{\tilde{T}}_{\con{\crt{V}{p}}\mapsto\con{\con{F}}}}{\cft{\crt{K}{r}\times\crt{W}{q}}{\con{F}}}\,,
+&\nonumber\\
+&
+\map{\psi_2}{{\tilde{T}}_{\con{\crt{V}{p}}\mapsto\con{\con{F}}}}{\cft{\crt{W}{q}\times\crt{Z}{s}}{\con{F}}}\,.
+&\nonumber
+\end{eqnarray}
+Se $\psi$ for G-diferenciável no seu domínio com
+regra
+\begin{equation}
+\fua{\psi}{\tnr{X}}=\fua{\psi_1}{\tnr{X}}\odot_q\fua{\psi_2}{\tnr{X}}\,,\nonumber
+\end{equation}
+então
+\begin{eqnarray}
+\fua{\lco\fua{\dvg{\psi}}{\tnr{X}}\rco}{\tnr{H}}=\fua{\psi_1}{\tnr{X}}\odot_q\fua{\lco\fua{\dvg{\psi_2}}{\tnr{X}}\rco}{\tnr{H}}+\nonumber\\
+\fua{\lco\fua{\dvg{\psi_1}}{\tnr{X}}\rco}{\tnr{H}}\odot_q\fua{\psi_2}{\tnr{X}}\,,\forall\,\tnr{H}\in{\tilde{T}}_{\con{\crt{V}{p}}\mapsto\con{\con{F}}}\,.\nonumber
+\end{eqnarray}
+\end{teo}
+\begin{prova}
+A igualdade anterior é o resultado do seguinte desenvolvimento:
+\begin{eqnarray}
+\fua{\lco\fua{\dvg{\psi}}{\tnr{X}}\rco}{\tnr{H}}=\lim_{\alpha\to
+0}\frac{1}{\alpha}\,\,\fua{\psi_1}{\alpha\tnr{\tnr{H}}+\tnr{X}}\odot_q\fua{\psi_2}{\alpha\tnr{\tnr{H}}+\tnr{X}}
+- \fua{\psi_1}{\tnr{X}}\odot_q\fua{\psi_2}{\tnr{X}}\,,\nonumber
+\end{eqnarray}
+adicionando e subtraindo o termo
+$\fua{\psi_1}{\alpha\tnr{\tnr{H}}+\tnr{X}}\odot_q\fua{\psi_2}{\tnr{X}}$,
+tem-se
+\begin{eqnarray}
+\fua{\lco\fua{\dvg{\psi}}{\tnr{X}}\rco}{\tnr{H}}=\lim_{\alpha\to
+0}\frac{1}{\alpha}\,\,\fua{\psi_1}{\alpha\tnr{\tnr{H}}+\tnr{X}}\odot_q\fua{\psi_2}{\alpha\tnr{\tnr{H}}+\tnr{X}}
+-
+\fua{\psi_1}{\alpha\tnr{\tnr{H}}+\tnr{X}}\odot_q\fua{\psi_2}{\tnr{X}}+\nonumber\\
+\fua{\psi_1}{\alpha\tnr{\tnr{H}}+\tnr{X}}\odot_q\fua{\psi_2}{\tnr{X}}-
+\fua{\psi_1}{\tnr{X}}\odot_q\fua{\psi_2}{\tnr{X}}=\nonumber\\
+\lim_{\alpha\to
+0}\frac{1}{\alpha}\,\,\fua{\psi_1}{\alpha\tnr{\tnr{H}}+\tnr{X}}\odot_q\lpa
+\fua{\psi_2}{\alpha\tnr{\tnr{H}}+\tnr{X}} -
+\fua{\psi_2}{\tnr{X}}\rpa + \nonumber\\
+\lpa \fua{\psi_1}{\alpha\tnr{\tnr{H}}+\tnr{X}} -
+\fua{\psi_1}{\tnr{X}}\rpa\odot_q\fua{\psi_2}{\tnr{X}}=\,\nonumber\\
+\lim_{\alpha\to
+0}\frac{1}{\alpha}\,\fua{\psi_1}{\alpha\tnr{\tnr{H}}+\tnr{X}}\odot_q\lpa
+\fua{\psi_2}{\alpha\tnr{\tnr{H}}+\tnr{X}} -
+\fua{\psi_2}{\tnr{X}}\rpa + \nonumber\\
+\lim_{\alpha\to 0}\frac{1}{\alpha}\,\lpa
+\fua{\psi_1}{\alpha\tnr{\tnr{H}}+\tnr{X}} -
+\fua{\psi_1}{\tnr{X}}\rpa\odot_q\fua{\psi_2}{\tnr{X}}\,.\nonumber
+\end{eqnarray}
+\end{prova}
+
+
+\begin{teo}[Regra da Cadeia]\index{Regra da Cadeia}\label{teo:RegraCadeia}
+Sejam os espaços tensoriais de Banach $\ete{\crt{V}{p}}{\con{F}}$,
+$\ete{\crt{K}{s}}{\con{F}}$ e $\ete{\crt{W}{q}}{\con{F}}$. Sejam
+os subconjunto abertos
+${\tilde{T}}_{\con{\crt{V}{p}}\mapsto\con{\con{F}}}\subset\cft{\crt{V}{p}}{\con{F}}$
+e
+${\tilde{T}}_{\con{\crt{K}{s}}\mapsto\con{\con{F}}}\subset\cft{\crt{K}{s}}{\con{F}}$
+sobre os quais definem-se mapeamentos:
+\begin{eqnarray}
+&
+\map{\psi}{{\tilde{T}}_{\con{\crt{V}{p}}\mapsto\con{\con{F}}}}{\cft{\crt{W}{q}}{\con{F}}}\,,
+&\nonumber\\
+&
+\map{\psi_2}{{\tilde{T}}_{\con{\crt{V}{p}}\mapsto\con{\con{F}}}}{{\tilde{T}}_{\con{\crt{K}{s}}\mapsto\con{\con{F}}}}\,,
+&\nonumber\\
+&
+\map{\psi_1}{{\tilde{T}}_{\con{\crt{K}{s}}\mapsto\con{\con{F}}}}{\cft{\crt{W}{q}}{\con{F}}}\,.
+&\nonumber
+\end{eqnarray}
+Se $\psi$ for G-diferenciável no seu domínio com regra
+\begin{equation}
+\fua{\psi}{\tnr{X}}=\fua{\psi_1\circ\psi_2}{\tnr{X}}\,,\nonumber
+\end{equation}
+então
+\begin{eqnarray}
+\fua{\dvg{\psi}}{\tnr{X}}=\fua{\dvg{\psi_1}}{\fua{\psi_2}{\tnr{X}}}\circ\fua{\dvg{\psi_2}}{\tnr{X}}\,.\nonumber
+\end{eqnarray}
+\end{teo}
+\begin{prova}\rodape{Adaptada de
+\aut{Zeidler}\cite{zeidler_1995_1}, pg. 248.} Segundo a igualdade
+(\ref{eq:gderivadaResiduo}), tem-se que
+\begin{equation}
+\alpha\fua{\lco\fua{\dvg{\psi_1}}{\tnr{Y}}\rco}{\tnr{Z}}
+ = \fua{\psi_1}{\alpha\tnr{\tnr{Z}}+\tnr{Y}} - \fua{\psi_1}{\tnr{Y}}-
+\fua{\ele{r}_{\psi_1}}{\tnr{Z}}\,.\nonumber
+\end{equation}
+Como $\tnr{Y}$ e $\tnr{Z}$ são tensores quaisquer, então seja
+$\tnr{Y}=\fua{\psi_2}{\tnr{X}}$ , onde
+\begin{equation} \fua{\psi_2}{\tnr{X}}
+ = \fua{\psi_2}{\beta\tnr{\tnr{H}}+\tnr{X}} - \beta\fua{\lco\fua{\dvg{\psi_2}}{\tnr{X}}\rco}{\tnr{H}} -
+\fua{\ele{r}_{\psi_2}}{\tnr{H}}\,,\nonumber
+\end{equation}
+e
+$\tnr{Z}=\frac{\beta}{\alpha}\fua{\lco\fua{\dvg{\psi_2}}{\tnr{X}}\rco}{\tnr{H}}$.
+Desenvolvendo a primeira igualdade, chega-se a
+\begin{eqnarray}
+\fua{\lco\fua{\lco\dvg{\psi_1}\rco\circ\psi_2}{\tnr{X}}\rco}{\fua{\lco\fua{\dvg{\psi_2}}{\tnr{X}}\rco}{\tnr{H}}}
+ = \fua{\psi_1}{\fua{\psi_2}{\beta\tnr{\tnr{H}}+\tnr{X}}-
+ \fua{\ele{r}_{\psi_2}}{\tnr{H}}} - \nonumber\\
+ \fua{\psi_1\circ\psi_2}{\tnr{X}}-
+\fua{\ele{r}_{\psi_1}}{\fua{\lco\fua{\dvg{\psi_2}}{\tnr{X}}\rco}{\tnr{H}}}\,.\nonumber
+\end{eqnarray}
+Fazendo $\beta \to 0$, utilizando o teorema \ref{teo:RieszGeneralizado} e aplicando o
+conceito de funções representantes, pode-se realizar o seguinte desenvolvimento, para
+qualquer $\tnr{H}\in{\tilde{T}}_{\con{\crt{V}{p}}\mapsto\con{\con{F}}}$:
+\begin{eqnarray}
+\fua{\lco\fua{\dvg{\psi}}{\tnr{X}}\rco}{\tnr{H}}&=&\fua{\lco\fua{\lco\dvg{\psi_1}\rco\circ\psi_2}{\tnr{X}}\rco}
+{\fua{\lco\fua{\dvg{\psi_2}}{\tnr{X}}\rco}{\tnr{H}}}\nonumber\\
+\fua{\lco\fua{\dvg{\psi}}{\tnr{X}}\rco}{\tnr{H}}&=&\ftr{A}{s}\circ\fua{\ftr{B}{p}}{\tnr{H}}\nonumber\\
+\fua{\dvg{\psi}}{\tnr{X}}&=&\ftr{A}{s}\circ\ftr{B}{p}\,.\nonumber
+\end{eqnarray}
+\end{prova}
+
+
+\subsection{Gradiente e Divergente}\index{gradiente}\label{sec:GradienteDivergente} Sejam os espaços tensoriais de Banach
+$\ete{\crt{V}{p}}{\con{F}}$ e $\ete{\crt{W}{q}}{\con{F}}$. Seja o
+subconjunto aberto
+${\tilde{T}}_{\con{\crt{V}{p}}\mapsto\con{\con{F}}}\subset\cft{\crt{V}{p}}{\con{F}}$
+e a função em
+\begin{equation}
+\map{\psi}{{\tilde{T}}_{\con{\crt{V}{p}}\mapsto\con{\con{F}}}}{\cft{\crt{W}{q}}{\con{F}}}
+\end{equation}
+G-diferenciável em
+$\tnr{T}_0\in{\tilde{T}}_{\con{\crt{V}{p}}\mapsto\con{\con{F}}}$.
+Segundo o teorema \ref{teo:RieszGeneralizado}, pode-se interpretar
+a G-derivada de $\psi$ nas formas
+\begin{eqnarray}
+\fua{\dvg{\psi}}{\tnr{T}_0}=\rft{\bar{G}}{p}&\mathrm{ou}&
+\fua{\dvg{\psi}}{\tnr{T}_0}=\lft{\hat{G}}{p}\,.
+\end{eqnarray}
+Os tensores
+$\tnr{\bar{G}}\in{\con{T}}_{\con{\crt{W}{q}}\times\con{\crt{V}{p}}\mapsto\con{\con{F}}}$
+e
+$\tnr{\hat{G}}\in{\con{T}}_{\con{\crt{V}{p}}\times\con{\crt{W}{q}}\mapsto\con{\con{F}}}$,
+presentes nas funções representantes, com notações alteradas para
+$\grd{r}{\psi}{\tnr{T}_0}$ e $\grd{e}{\psi}{\tnr{T}_0}$
+respectivamente, são denominados gradiente \emph{à
+direita}\index{gradiente!à direita} e \emph{à
+esquerda}\index{gradiente!à esquerda} de $\psi$ em $\tnr{T}_0$.
+Neste contexto, a regra da G-derivada de $\psi$, para qualquer
+tensor
+$\tnr{T}_0\in{\con{T}}_{\con{\crt{V}{p}}\mapsto\con{\con{F}}}$,
+pode ser escrita nas seguintes formas:
+\begin{equation}
+\fua{\lco\fua{\dvg{\psi}}{\tnr{T}_0}\rco}{\tnr{X}}=\grd{r}{\psi}{\tnr{T}_0}\odot_p\tnr{X}
+\end{equation}
+ou
+\begin{equation}
+\fua{\lco\fua{\dvg{\psi}}{\tnr{T}_0}\rco}{\tnr{X}}=\tnr{X}\odot_p\grd{e}{\psi}{\tnr{T}_0}\,.
+\end{equation}
+As funções $\gqu{r}{\psi}$ e
+$\gqu{e}{\psi}$ são chamadas os
+gradientes à direita e à esquerda  de $\psi$ respectivamente. Além disso, se eventuais conceitos posteriores
+independem das abordagens à direita ou à esquerda, será utilizada
+a notação $\gqu{}{\psi}$.
+
+Para os casos onde $q\geqslant p$, dado o tensor
+identidade\index{divergente}
+$\tnr{I}\in{\con{T}}_{\con{\crt{V}{p}\times\crt{V}{p}}\mapsto\con{\con{F}}}$,
+diz-se que o tensor
+\begin{equation}
+\drd{r}{\psi}{\tnr{T}_0}:=\grd{r}{\psi}{\tnr{T}_0}\odot_{2p}\tnr{I}
+\end{equation}
+de ordem $q-p$ é o divergente \emph{à direita}\index{divergente!à
+direita} de $\psi$ em $\tnr{T}_0$ se
+$\crt{W}{q}=\crt{Z}{q-p}\times\crt{V}{p}$. Da mesma forma, o
+tensor de ordem $q-p$
+\begin{equation}
+\drd{e}{\psi}{\tnr{T}_0}:=\tnr{I}\odot_{2p}\grd{e}{\psi}{\tnr{T}_0}
+\end{equation}
+é o divergente \emph{à esquerda}\index{divergente!à esquerda} de
+$\psi$ em $\tnr{T}_0$ se
+$\crt{W}{q}=\crt{V}{p}\times\crt{U}{q-p}$. As funções
+$\dqu{r}{\psi}$ e $\dqu{e}{\psi}$ são os divergentes à direita e à esquerda de $\psi$ respectivamente. Além
+disso, se os conceitos à direita e à esquerda forem irrelevantes,
+utiliza-se a notação $\dqu{}{\psi}$.
+
+\begin{prp}
+Sejam os quatro espaços tensoriais de Banach
+$\ete{\crt{V}{p}}{\con{F}}$,
+$\ete{\crt{K}{r}\times\crt{Z}{s}}{\con{F}}$,
+$\ete{\crt{K}{r}\times\crt{W}{q}}{\con{F}}$ e
+$\ete{\crt{W}{q}\times\crt{Z}{s}}{\con{F}}$. Sejam o subconjunto
+aberto
+${\tilde{T}}_{\con{\crt{V}{p}}\mapsto\con{\con{F}}}\subset\cft{\crt{V}{p}}{\con{F}}$
+e os mapeamentos:
+\begin{eqnarray}
+&
+\map{\psi}{{\tilde{T}}_{\con{\crt{V}{p}}\mapsto\con{\con{F}}}}{\cft{\crt{K}{r}\times\crt{Z}{s}}{\con{F}}}\,,
+&\nonumber\\
+&
+\map{\psi_1}{{\tilde{T}}_{\con{\crt{V}{p}}\mapsto\con{\con{F}}}}{\cft{\crt{K}{r}\times\crt{W}{q}}{\con{F}}}\,,
+&\nonumber\\
+&
+\map{\psi_2}{{\tilde{T}}_{\con{\crt{V}{p}}\mapsto\con{\con{F}}}}{\cft{\crt{W}{q}\times\crt{Z}{s}}{\con{F}}}\,.
+&\nonumber
+\end{eqnarray}
+Se $\psi$ for G-diferenciável no seu domínio com regra
+\begin{equation}
+\fua{\psi}{\tnr{X}}=\fua{\psi_1}{\tnr{X}}\odot_q\fua{\psi_2}{\tnr{X}}\,,\nonumber
+\end{equation}
+então são válidos os seguintes itens:
+\begin{itemize}
+\item[i.] para qualquer
+$\tnr{H}\in{T}_{\con{\crt{V}{p}}\mapsto\con{\con{F}}}$,
+\begin{eqnarray}
+\grd{r}{\psi}{\tnr{X}}\odot_p\tnr{H}=\fua{\psi_1}{\tnr{X}}\odot_q\grd{r}{\psi_2}{\tnr{X}}\odot_p\tnr{H}+\nonumber\\
+\tnr{H}\odot_p\grd{e}{\psi_1}{\tnr{X}}\odot_q\fua{\psi_2}{\tnr{X}}=\tnr{H}\odot_p\grd{e}{\psi}{\tnr{X}}\,;
+ \nonumber
+\end{eqnarray}
+\item[ii.] se $p=q=r=s$ ,
+\begin{eqnarray}
+\grd{r}{\psi}{\tnr{X}}=\fua{\psi_1}{\tnr{X}}\odot_p\grd{r}{\psi_2}{\tnr{X}}+\nonumber\\
+\lco\fua{\psi_2}{\tnr{X}}\rco_{(1,p+1)(p,2p)}\odot_p\lco\grd{e}{\psi_1}{\tnr{X}}\rco_{(1,2p+1)(p,3p)}
+ \nonumber
+\end{eqnarray}
+e
+\begin{eqnarray}
+\grd{e}{\psi}{\tnr{X}}=\lco\grd{r}{\psi_2}{\tnr{X}}\rco_{(1,2p+1)(p,3p)}\odot_p\lco\fua{\psi_1}{\tnr{X}}\rco_{(1,p+1)(p,2p)}+\nonumber\\
+\grd{e}{\psi_1}{\tnr{X}}\odot_q\fua{\psi_2}{\tnr{X}}\,.
+ \nonumber
+\end{eqnarray}
+
+
+\item[iii.] se $p=q=r=s$ e $\con{V}_i=\con{K}_i=\con{Z}_i$ ,
+\begin{equation}
+\drd{r}{\psi}{\tnr{X}}=\fua{\psi_1}{\tnr{X}}\odot_p\drd{r}{\psi_2}{\tnr{X}}+
+\lco\fua{\psi_2}{\tnr{X}}\rco_{(1,p+1)(p,2p)}\odot_p\drd{r}{\psi_1}{\tnr{X}}\nonumber
+\end{equation}
+e
+\begin{equation}
+\drd{e}{\psi}{\tnr{X}}=\drd{e}{\psi_2}{\tnr{X}}\odot_p\lco\fua{\psi_1}{\tnr{X}}\rco_{(1,p+1)(p,2p)}+
+\drd{e}{\psi_1}{\tnr{X}}\odot_p\fua{\psi_2}{\tnr{X}}\nonumber\,.
+\end{equation}
+\end{itemize}
+\end{prp}
+\begin{prova} Os itens a seguir referem-se aos itens respectivos
+do teorema.
+\begin{itemize}
+\item[i.] É uma conseqüência direta da aplicação da regra do
+produto com a definição de gradiente.
+
+\item[ii.] Dadas as condições do ítem, o tensor
+$\grd{e}{\psi_1}{\tnr{X}}\in\cft{\crt{V}{p}\times\crt{K}{p}\times\crt{W}{p}}{\con{F}}$
+no ítem i. pode ser transposto para
+$\lco\grd{e}{\psi_1}{\tnr{X}}\rco_{(1,2p+1)(p,3p)}\in\cft{\crt{W}{p}\times\crt{K}{p}\times\crt{V}{p}}{\con{F}}$.
+Desta forma, o produto contrativo com o tensor $\tnr{H}$ na
+igualdade
+\begin{eqnarray}
+\grd{r}{\psi}{\tnr{X}}\odot_p\tnr{H}=\fua{\psi_1}{\tnr{X}}\odot_p\grd{r}{\psi_2}{\tnr{X}}\odot_p\tnr{H}+\nonumber\\
+\lco\fua{\psi_2}{\tnr{X}}\rco_{(1,p+1)(p,2p)}\odot_p\lco\grd{r}{\psi_1}{\tnr{X}}\rco_{(1,2p+1)(p,3p)}\odot_p\tnr{H}\,,\forall\,\tnr{H}\in\crt{V}{p}\,.
+ \nonumber
+\end{eqnarray}
+pode ser eliminado. A igualdade para o gradiente à esquerda é
+obtida da mesma forma.
+
+\item[iii.]
+Pelas condições do ítem, pode-se verificar facilmente que
+\begin{equation}
+\lco\grd{e}{\psi_1}{\tnr{X}}\rco_{(1,2p+1)(p,3p)}= \grd{r}{\psi_1}{\tnr{X}}\,.\nonumber
+\end{equation}
+Tomando a igualdade do gradiente à direita no ítem ii, tem-se,
+para um tensor identidade
+$\tnr{I}\in{\con{T}}_{\con{\crt{V}{p}\times\crt{V}{p}}\mapsto\con{\con{F}}}$,
+que
+\begin{eqnarray}
+\grd{r}{\psi}{\tnr{X}}\odot_{2p}\tnr{I}&=&\fua{\psi_1}{\tnr{X}}\odot_q\grd{r}{\psi_2}{\tnr{X}}\odot_{2p}\tnr{I}+\nonumber\\
+&&\lco\fua{\psi_2}{\tnr{X}}\rco_{(1,p+1)(p,2p)}\odot_q\grd{r}{\psi_1}{\tnr{X}}\odot_{2p}\tnr{I}\,.
+ \nonumber
+\end{eqnarray}
+Tal desenvolvimento também pode ser realizado para a igualdade do
+gradiente à esquerda.
+\end{itemize}
+\end{prova}
+
+
+
+\begin{prp}\label{teo:gradienteConstante}
+Sejam os espaços tensoriais de Banach
+$\ete{\crt{V}{p}}{\con{F}}$ e $\ete{\crt{W}{q}}{\con{F}}$. Seja o
+subconjunto aberto ${\tilde{T}}_{\con{\crt{V}{p}}\mapsto\con{\con{F}}}\subset\cft{\crt{V}{p}}{\con{F}}$
+e a função no mapeamento
+\begin{equation}\nonumber
+\map{\psi}{{\tilde{T}}_{\con{\crt{V}{p}}\mapsto\con{\con{F}}}}{\cft{\crt{W}{q}}{\con{F}}}
+\end{equation}
+G-diferenciável no seu domínio. Considerando os gradientes $\gqu{r}{\psi}$ e
+$\gqu{e}{\psi}$ constantes em ${\tilde{T}}_{\con{\crt{V}{p}}\mapsto\con{\con{F}}}$ com regras respectivas  $\fua{\gqu{r}{\psi}}{\tnr{X}}=\tnr{G}_r$ e $\fua{\gqu{e}{\psi}}{\tnr{X}}=\tnr{G}_e$, então
+\begin{equation}\nonumber
+ \tnr{G}_r \odot_p \lpa \tnr{H}_1 - \tnr{H}_2 \rpa = \lpa \tnr{H}_1 - \tnr{H}_2 \rpa \odot_p \tnr{G}_e = \fua{\psi}{\tnr{H}_1} - \fua{\psi}{\tnr{H}_2}\,,
+\end{equation}
+onde $\tnr{H}_1$ e $\tnr{H}_2$ são tensores quaisquer de ${\tilde{T}}_{\con{\crt{V}{p}}\mapsto\con{\con{F}}}\,$.
+\end{prp}
+\begin{prova}
+Consideremos, primeiramente, uma regra qualquer para $\psi$ tal que sua G-derivada, com regra $\fua{\dvg{\psi}}{\tnr{X}}=\tnr{G}$, é constante. Desta forma, seja a regra $\fua{\psi}{\tnr{X}}=\tnr{G}\odot_p \tnr{X} + \tnr{C}$, onde $\tnr{C}\in{\tilde{T}}_{\con{\crt{V}{p}}\mapsto\con{\con{F}}}$ é também constante. Aplicando (\ref{eq:calculoDerivadaDirecional}), tem-se que
+\begin{equation}\nonumber
+ \fua{\lco\fua{\dvg{\psi}}{\tnr{X}}\rco}{\tnr{H}}=\fua{\psi}{\tnr{H}}-\tnr{C}\,,\,\forall\,\tnr{H}\in{\tilde{T}}_{\con{\crt{V}{p}}\mapsto\con{\con{F}}}\,.
+\end{equation}
+Tomando os tensores $\tnr{H}_1$ e $\tnr{H}_2$ quaisquer, tem-se duas igualdades no formato na igualdade anterior. Quando tais igualdades são subtraídas uma da outra obtém-se
+\begin{equation}\nonumber
+ \fua{\lco\fua{\dvg{\psi}}{\tnr{X}}\rco}{\tnr{H}_1}-\fua{\lco\fua{\dvg{\psi}}{\tnr{X}}\rco}{\tnr{H}_2}=\fua{\psi}{\tnr{H}_1}-\fua{\psi}{\tnr{H}_2}\,.
+\end{equation}
+A partir daí, com base na definição de gradiente, obtém-se as últimas igualdades da proposição.
+\end{prova}
+
+\subsection{Contornos Regulares}\index{contorno!regular}\label{sec:contornoRegular}
+Sejam os subespaços afins $\saf{U}{S}{\ele{a}}{F}$ e $\saf{
+\partial U}{\partial S}{\ele{b}}{F}$ do espaço afim de Hilbert
+$\eaf{V}{A}{F}$, cuja dimensão é maior que 2, onde $\partial U$ e
+$\epo{\partial S}_\ele{b}$ são os contornos dos conjuntos
+$\con{U}$ e $\epo{S}_\ele{a}$ respectivamente. Seja $\ehr{W}{F}$
+subespaço bidimensional de $\ehr{V}{F}$. O contorno $\epo{\partial S}_\ele{b}$ é
+dito regular se para cada
+$\ele{u}\in\epo{\partial S}_\ele{b}$ existir um mapeamento bijetor
+\begin{equation}
+\map{\zeta}{\con{Z}}{\viz{\lch\ele{u}\rch}\cap\epo{\partial S}_\ele{b}}\,,
+\end{equation}
+onde
+ \begin{itemize}
+    \item[i.] o conjunto $\con{Z}\subset\con{W}$ é aberto;
+    \item[ii.] o conjunto $\viz{\lch\ele{u}\rch}\subset\epo{A}$;
+    \item[iii.] a bijeção $\zeta$ é G-suave de ordem 1 em $\con{Z}$;
+    \item[iv.] a função $\zeta^{-1}$ é contínua em
+    $\viz{\lch\ele{u}\rch}\cap\epo{\partial S}_\ele{b}$;
+    \item[v.] a derivada $\fua{\dvg{\zeta}}{\fua{\zeta^{-1}}{\ele{u}}}$ é inversível.
+\end{itemize}
+
+
+\subsubsection{Função Normal Unitária}
+Considerando as condições do ítem anterior, seja o campo característico
+$\fac{F}_{\epo{\partial S}_\ele{b}}^{\partial\con{U}}$, tal que os pontos de
+$\epo{\partial S}_\ele{b}$ são relacionados, de forma biunívoca, aos vetores de
+$\partial\con{U}$. Seja $\lch \vun{w}_1 , \vun{w}_2\rch$ uma das bases ortonormais de
+$\ehr{W}{F}$. Adotando
+\begin{equation}
+\overline{\zeta}:=\fac{F}_{\epo{\partial
+S}_\ele{b}}^{\partial\con{U}}\circ\zeta\,,
+\end{equation}
+dado $\vto{z}_\vto{u}=\fua{\overline{\zeta}^{\,-1}}{\vto{u}}$, onde $\vto{u}=\fua{\fac{F}_{\epo{\partial
+S}_\ele{b}}^{\partial\con{U}}}{\ele{u}}$, o vetor polar
+\begin{equation}
+\vto{n}_\vto{u}:=\frac{\fua{\lco\fua{\dvg{\overline{\zeta}}}{\vto{z}_\vto{u}}\rco}{\vun{w}_1}\barwedge
+\fua{\lco\fua{\dvg{\overline{\zeta}}}{\vto{z}_\vto{u}}\rco}{\vun{w}_2}}{\|
+\fua{\lco\fua{\dvg{\overline{\zeta}}}{\vto{z}_\vto{u}}\rco}{\vun{w}_1}\barwedge
+\fua{\lco\fua{\dvg{\overline{\zeta}}}{\vto{z}_\vto{u}}\rco}{\vun{w}_2}\|_{\ehr{V}{F}}}
+\end{equation}
+é denominado \emph{vetor normal unitário}\index{vetor!normal
+unitário} ao conjunto $\viz{\lch\vto{u}\rch}\cap\partial\con{U}$. Se
+existir pelo menos mais uma função $\overline{\zeta}'\neq\overline{\zeta}$ definida a
+partir de $\vto{u}$ e $\con{Z'}\subset\con{W}$ e
+\begin{equation}
+\vto{n}'_\vto{u}:=\frac{\fua{\lco\fua{\dvg{\overline{\zeta}'}}{\vto{z}'_\vto{u}}\rco}{\vun{w}_1}\barwedge
+\fua{\lco\fua{\dvg{\overline{\zeta}'}}{\vto{z}'_\vto{u}}\rco}{\vun{w}_2}}{\|
+\fua{\lco\fua{\dvg{\overline{\zeta}'}}{\vto{z}'_\vto{u}}\rco}{\vun{w}_1}\barwedge
+\fua{\lco\fua{\dvg{\overline{\zeta}'}}{\vto{z}'_\vto{u}}\rco}{\vun{w}_2}\|_{\ehr{V}{F}}}=\vto{n}_\vto{u}\,,\,\forall\,\vto{u}\in\partial\con{U}\,,
+\end{equation}
+diz-se que o contorno regular $\partial\con{U}$ é
+\emph{orientável}\index{contorno!orientável}. Neste contexto, é
+possível definir o mapeamento
+\begin{equation}
+\map{\fac{N}_{\partial \con{U}}}{\partial \con{U}}{\con{V}}\,,
+\end{equation}
+com regra
+$\fua{\fac{N}_{\partial\con{U}}}{\vto{x}}=\vto{n}_\vto{x}$. A
+função $\fac{N}_{\partial \con{U}}$ é denominada normal unitária
+ao contorno orientável $\partial \con{U}$. Se o vetor $\fua{\fac{N}_{\partial
+U}}{\vto{u}}+\vto{u}\notin \con{U}$ para todo $\vto{u}\in\partial
+\con{U}$, tem-se a representação $\fac{N}^+$  e o contorno orientável
+$\partial \con{U}$ é dito estar \emph{positivamente
+orientado}\index{contorno!positivamente orientado}. Caso
+$\fua{\fac{N}_{\partial U}}{\vto{u}}+\vto{u}\in \con{U}$ para todo
+$\vto{u}\in\partial \con{U}$, tem-se $\fac{N}^-$ e o contorno
+$\partial \con{U}$ está \emph{negativamente
+orientado}\index{contorno!negativamente orientado}.

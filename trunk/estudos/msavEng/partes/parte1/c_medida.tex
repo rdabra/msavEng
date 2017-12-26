@@ -1,0 +1,401 @@
+\chapter{Teoria Básica da Medida}
+
+\section{Espaço Mensurável}
+
+\subsection{Classe}\index{classe}
+Trata-se de um conjunto cujos elementos são conjuntos. Se o
+conjunto $\con{A}$ é elemento da classe $\css{M}$, então
+$\con{A}\in\css{M}$ e sua representação se torna $\cor{A}$.
+Se os conjuntos de $\css{M}$ são disjuntos
+então tal classe é dita \emph{disjunta}\index{classe!disjunta}. Se
+$\css{M}$ é formada por subconjuntos do conjunto $\con{M}$ diz-se
+que $\css{M}$ é classe de $\con{M}$. Neste caso, a representação de $\con{M}$ muda para $\cor{M}$.
+
+\subsubsection{Classe Contável}\index{classe!contável}
+Uma classe é contável se existir uma bijeção entre seus elementos
+e o conjunto dos naturais $\nat$.
+
+\subsection{Anel de Conjunto}\index{anel!de conjunto}
+Seja uma classe $\css{M}$ do conjunto não vazio $\cor{M}$. Tal
+classe é dita um anel do conjunto $\cor{M}$ se
+\begin{itemize}
+\item[i.] o conjunto $\emptyset\in\css{M}$,
+
+\item[ii.] dada uma classe contável
+$\lch\cor{M}_1,\cdots,\cor{M}_n\rch\subseteq\css{M}$, a união
+$\bigcup_{i=1}^{n}\cor{M}_i\in\css{M}$ e
+
+\item[iii.] dados $\cor{A},\cor{B}\in\css{M}$, o conjunto
+diferença $\cor{A}/\cor{B}\in\css{M}$.
+\end{itemize}
+
+\subsubsection{Anel Sigma}\index{anel!sigma} Um anel $\css{M}$ do
+conjunto $\cor{M}$ é dito um anel sigma ou
+\emph{$\sigma$-anel}\index{$\sigma$-anel} ou
+\emph{$\sigma$-álgebra}\index{$\sigma$-álgebra} do conjunto
+considerado se, dada a classe contável
+$\lch\cor{M}_1,\cor{M}_2,\cdots\rch\subseteq\css{M}$, a união
+$\bigcup_{i=1}^{\infty}\cor{M}_i\in\css{M}$.
+
+\subsection{Espaço Mensurável}\index{espaço!mensurável}
+O par ordenado $\lpa\cor{M},\css{M}\rpa$, onde $\css{M}$ é um
+$\sigma$-anel de $\cor{M}$, é denominado espaço mensurável. Se o
+conjunto $\cor{M}$ define um campo, então o espaço mensurável é
+dito um \emph{campo mensurável}\index{campo!mensurável}.
+
+\section{Espaço Medida}
+
+\subsection{Função de Conjunto}\index{função!de conjunto}
+Denomina-se função de conjunto o par ordenado $\lpa
+\css{M}_\fuc{f},\fuc{f} \rpa$, onde a classe $\css{M}_\fuc{f}$ é o domínio
+da regra $\fuc{f}$. Em outras palavras, uma função de conjunto é
+aquela que possui um conjunto como argumento.
+
+\subsubsection{Função de Conjunto Aditiva}\index{função!de
+conjunto!aditiva} Dada uma classe $\css{M}$ do conjunto $\cor{M}$,
+seja o mapeamento $\map{\fuc{m}}{\css{M}}{\real}$. A função de
+conjunto $\fuc{m}$ é chamada aditiva em $\css{M}$ se, dada a
+classe disjunta
+$\lch\cor{M}_1,\cdots,\cor{M}_n\rch\subseteq\css{M}$, tem-se a
+igualdade
+\begin{equation}
+\fua{\fuc{m}}{\bigcup_{i=1}^{n}\cor{M}_i}=\sum_{i=1}^n\fua{\fuc{m}}{\cor{M}_i}\,.
+\end{equation}
+Vale ressaltar que $\fua{\fuc{m}}{\emptyset}=0$, pois
+$\fua{\fuc{m}}{\emptyset}=\fua{\fuc{m}}{\emptyset\cup\emptyset}=\fua{\fuc{m}}{\emptyset}+\fua{\fuc{m}}{\emptyset}$.
+
+\paragraph{Conteúdo.} A função de conjunto aditiva $\fuc{m}$ no
+anel $\css{M}$ do conjunto $\cor{M}$ é dita um conteúdo neste anel
+se
+\begin{equation}
+\fua{\fuc{m}}{\cor{A}}\geqslant0\,,\,\forall\,\cor{A}\in\css{M}\,.
+\end{equation}
+
+\paragraph{Medida.} O conteúdo $\fuc{m}$ no $\sigma$-anel
+$\css{M}$ do conjunto $\cor{M}$ é denominado uma medida ou um
+\emph{$\sigma$-conteúdo}\index{$\sigma$-conteúdo} neste anel. Em
+outras palavras, dada a classe disjunta
+$\lch\cor{M}_1,\cor{M}_2,\cdots\rch\subseteq\css{M}$,
+\begin{equation}
+\fua{\fuc{m}}{\bigcup_{i=1}^{\infty}\cor{M}_i}=\sum_{i=1}^\infty\fua{\fuc{m}}{\cor{M}_i}\,.
+\end{equation}
+
+\subsection{Espaço Medida}\index{espaço!medida}
+Dado o espaço mensurável $\lpa\cor{M},\css{M}\rpa$ e uma medida
+$\fuc{m}$ em $\css{M}$, chama-se o par ordenado
+$\lpa\lpa\cor{M},\css{M}\rpa,\fuc{m}\rpa$ de espaço medida, cuja
+representação é abreviada para $\ems{M}{\fuc{m}}{M}\,$.
+
+\section{Funções Mensuráveis}
+
+\subsection{Função Mensurável}\index{função!mensurável}
+Sejam o espaço mensurável $\lpa\cor{M},\css{M}\rpa$ e o campo
+mensurável $\lpa\con{F},\css{F}\rpa$. A função no mapeamento
+$\map{f}{\cor{M}}{\con{F}}$ é dita mensurável se a preimagem
+\begin{equation}
+\con{R}^{-1}_{\con{E},\fun{f}}\in\css{M}\,,\,\forall\,\con{E}\in\css{F}\,.
+\end{equation}
+
+\subsubsection{Função Simples}\index{função!simples} Sejam o
+espaço mensurável $\lpa\cor{M},\css{M}\rpa$ e o campo mensurável
+$\lpa\con{F},\css{F}\rpa$. Considerando a classe disjunta
+$\lch\cor{M}_1,\cdots,\cor{M}_n\rch\subseteq\css{M}$, a função
+mensurável no mapeamento $\map{s}{\cor{M}}{\con{F}}$ é dita simples se
+sua regra for
+\begin{equation}
+\fua{s}{\ele{x}}=\sum_{i=1}^n\alpha_i\fua{\delta_{\cor{M}_i}}{\ele{x}}\,,
+\end{equation}
+onde $\alpha_i\in\con{F}$ e a regra
+\begin{equation}
+\fua{\delta_{\cor{M}_i}}{\ele{x}}= \left\{
+\begin{array}{ll}
+1 & \textrm{se $\ele{x}\in\cor{M}_i$}\\
+0 & \textrm{se $\ele{x}\notin\cor{M}_i$}
+\end{array} \right.\,.
+\end{equation}
+A função $\delta_{\cor{M}_i}$ é conhecida como \emph{função
+característica}\index{função!característica de conjunto} de
+$\cor{M}_i$.
+
+
+\subsection{Convergência de Funções Mensuráveis}\index{convergência!de funções mensuráveis}
+Sejam o espaço medida $\ems{M}{\fuc{m}}{\css{M}}$ e o campo
+mensurável $\lpa\con{F},\css{F}\rpa$. Seja o mapeamento
+$\map{f}{\cor{M}}{\con{F}}$, onde $\fun{f}$ é mensurável. Uma seqüencia
+de funções mensuráveis $\fun{f}_1,\fun{f}_2,\cdots$ que também
+fazem $\cor{M}\mapsto\con{F}$ é dita convergente na medida para
+$\fun{f}$ se, dado um número real $\epsilon>0$,
+\begin{equation}
+\lim_{i\to\infty}\fua{\fuc{m}}{\lch\ele{x}\,:\,|\fua{f_i}{\ele{x}}-\fua{f}{\ele{x}}
+|\leqslant\epsilon  \rch}=0\,.
+\end{equation}
+
+\subsection{Integração de Função Simples}\index{integração!de função simples}
+Sejam o espaço medida $\ems{M}{\fuc{m}}{\css{M}}$ e o campo
+mensurável $\lpa\con{F},\css{F}\rpa$. Seja o mapeamento
+$\map{s}{\cor{M}}{\con{F}}$, onde $\fun{s}$ é função simples com regra
+\begin{equation}
+\fua{s}{\ele{x}}=\sum_{i=1}^n\alpha_i\fua{\delta_{\cor{M}_i}}{\ele{x}}\,.
+\end{equation}
+ A função $\fun{s}$ é dita integrável em um conjunto
+ $\cor{E}\in\css{M}$ se
+\begin{equation}
+\fua{\fuc{m}}{\bigcup_{i=1}^n\cor{E}\cap\cor{M}_i}<\infty\,.
+\end{equation}
+Se $\fun{s}$  é integrável, diz-se então que o escalar
+\begin{equation}
+\int_{\cor{E}}\fun{s}\,:=\,\sum_{i=1}^n\alpha_i\fua{\fuc{m}}{\cor{E}\cap\cor{M}_i}
+\end{equation}
+é a \emph{integral}\index{integral!de função simples} de $\fun{s}$
+em $\cor{E}\,$.
+
+\subsection{Seqüência Fundamental Média}\index{seqüência!fundamental média}
+Dados o espaço medida $\ems{M}{\fuc{m}}{\css{M}}$ e o campo
+mensurável $\lpa\con{F},\css{F}\rpa$, seja a seqüência de funções
+simples $\fun{s}_1,\fun{s}_2,\cdots$ que mapeiam $\cor{M}$ para
+$\con{F}$. Tal seqüência é dita fundamental média em
+$\cor{E}\in\css{M}$ se suas funções forem integráveis em $\cor{E}$
+e
+\begin{equation}
+\lim_{\min{\lpa i,j \rpa}\to\infty}
+\int_{\cor{E}}\fun{s}_i-\int_{\cor{E}}\fun{s}_j =0\,.
+\end{equation}
+Em outras palavras, ao se percorrer as funções de uma seqüência
+fundamental média, as integrais dos termos $\fun{s}_i$ e
+$\fun{s}_j$ tendem à igualdade.
+
+\subsection{Integração de Função Mensurável}\index{integração!de função mensurável}
+A partir do espaço medida $\ems{M}{\fuc{m}}{\css{M}}$ e do campo
+mensurável $\lpa\con{F},\css{F}\rpa$, seja a função em
+$\map{f}{\cor{M}}{\con{F}}$ mensurável. Se existir uma seqüência
+fundamental média $\fun{s}_1,\fun{s}_2,\cdots$, convergente na
+medida para $\fun{f}$, tal que suas funções simples são todas
+integráveis em $\cor{E}\in\css{M}$, então a função $\fun{f}$ é
+dita integrável em $\cor{E}$. Caso isto ocorra, o valor
+\begin{equation}
+\int_{\cor{E}}\fun{f}:=\lim_{i\to\infty} \int_{\cor{E}}\fun{s}_i
+\end{equation}
+é a \emph{integral}\index{integral!de função mensurável} de
+$\fun{f}$ em $\cor{E}\,$.
+
+\subsubsection{Propriedades Fundamentais de Integrais}
+Os teoremas a seguir apresentam as principais
+propriedades\footnote{Demonstrações destas propriedades são
+encontradas em \aut{Munroe}\cite{munroe_1971_1}, pp. 127-129.} de
+integrais de funções mensuráveis.
+
+
+\begin{teo}
+Dados o espaço medida $\ems{M}{\fuc{m}}{\css{M}}$ e o campo
+mensurável $\lpa\con{F},\css{F}\rpa$, seja a função em
+$\map{f}{\con{M}}{\con{F}}$ mensurável e integrável em cada conjunto da
+classe disjunta
+$\lch\cor{M}_1,\cdots,\cor{M}_n\rch\subseteq\css{M}$. Nestas
+condições,
+\begin{equation}
+\int_{\bigcup_{i=1}^{n}\cor{M}_i}\fun{f}\,=\,\sum_{i=1}^n\int_{\cor{M}_i}\fun{f}\,.\nonumber
+\end{equation}
+\end{teo}
+
+
+\begin{teo}\label{teo:IntegralLinear}
+Sejam o espaço medida $\ems{M}{\fuc{m}}{\css{M}}$ e o campo
+mensurável $\lpa\con{F},\css{F}\rpa$. Sejam os mapeamentos
+$\map{f}{\cor{M}}{\con{F}}$ e $\map{g}{\cor{M}}{\con{F}}$, onde $\fun{f}$ e
+$\fun{g}$ são elementos de espaços vetoriais de funções mensuráveis e integráveis em $\cor{E}\in\css{M}$.
+Dados $\alpha,\beta\in\con{F}$, a função
+$\alpha\fun{f}+\beta\fun{g}$ também é integrável em $\cor{E}$ e
+\begin{equation}
+\int_{\cor{E}}\lpa\alpha\fun{f}+\beta\fun{g}\rpa\,=\,
+\alpha\int_{\cor{E}}\fun{f}+
+\beta\int_{\cor{E}}\fun{g}\,.\nonumber
+\end{equation}
+\end{teo}
+
+\begin{teo}
+Sejam o espaço medida $\ems{M}{\fuc{m}}{\css{M}}$ e o campo
+mensurável $\lpa\con{F},\css{F}\rpa$. Dada a função em
+$\map{f}{\cor{M}}{\con{F}}$ mensurável e integrável em
+$\cor{E}\in\css{M}$, se $\fua{\fuc{m}}{\cor{E}}=0$, então
+\begin{equation}
+\int_{\cor{E}}\fun{f}\,=\,0\,.\nonumber
+\end{equation}
+\end{teo}
+
+\begin{teo}
+Sejam o espaço medida $\ems{M}{\fuc{m}}{\css{M}}$ e o campo
+mensurável $\lpa\con{F},\css{F}\rpa$. Sejam os mapeamentos
+$\map{f}{\cor{M}}{\con{F}}$ e $\map{g}{\cor{M}}{\con{F}}$, onde $\fun{f}$ e
+$\fun{g}$ são mensuráveis e integráveis em $\cor{E}\in\css{M}$.
+Dado o conjunto $\cor{A}\subseteq\cor{E}$, onde
+$\fua{\fuc{m}}{\cor{A}}=0$, se
+\begin{equation}
+\fua{\fun{f}}{\ele{x}}\geqslant\fua{\fun{g}}{\ele{x}}\,,\,\forall\,\ele{x}\in\cor{A}'\,,\nonumber
+\end{equation}
+então
+\begin{equation}
+\int_{\cor{E}}\fun{f}\,\geqslant\,\int_{\cor{E}}\fun{g}\,.\nonumber
+\end{equation}
+\end{teo}
+
+\section{Integração de Funções Tensoriais}
+
+\subsection{Função Tensorial Mensurável}\index{função!tensorial!mensurável}
+Dado o espaço tensorial $\ete{\crt{V}{p}}{F}$, sejam o espaço
+mensurável $\lpa\cft{\crt{V}{p}}{F},\css{V}\rpa$ e o campo
+mensurável $\lpa\con{F},\css{F}\rpa$. Nestas condições, a função
+tensorial em
+\begin{equation}
+\map{\nu}{\cft{\crt{V}{p}}{F}}{\con{F}}
+\end{equation}
+é dita mensurável. Desta forma, dado um tensor qualquer
+$\tnr{T}\in\cft{\crt{V}{p}}{F}$, a função representante
+$\ftr{T}{p}$ é mensurável.
+
+\subsection{Função Tensorial Integrável}\index{função!tensorial!integrável}\label{sec:funcaoIntegravel}
+Dados os espaços tensoriais $\ete{\crt{V}{p}}{F}$ e
+$\ete{\crt{W}{q}}{F}$, seja o mapeamento
+\begin{equation}
+\map{\psi}{\cft{\crt{V}{p}}{F}}{\cft{\crt{W}{q}}{F}}\,.
+\end{equation}
+Dado um tensor qualquer $\tnr{X}\in\cft{\crt{W}{q}}{F}$, a função
+$\psi$ é dita integrável em
+${\tilde{T}}_{\con{\crt{V}{p}}\mapsto\con{\con{F}}}\subseteq\cft{\crt{V}{p}}{F}$
+se a função no mapeamento
+\begin{equation}
+\map{\ftr{X}{q}\circ\psi}{\cft{\crt{V}{p}}{F}}{\con{F}}
+\end{equation}
+for mensurável e também integrável em
+${\tilde{T}}_{\con{\crt{V}{p}}\mapsto\con{\con{F}}}$. Nestas
+condições, com base no teorema \ref{teo:IntegralLinear},
+conclui-se que a função tensorial $\mathcal{I}_\psi$ com regra
+\begin{equation}\label{eq:funcaoI}
+\fua{\mathcal{I}_\psi}{\tnr{X}}=
+\int_{{\tilde{T}}_{\con{\crt{V}{p}}\mapsto\con{\con{F}}}}\ftr{X}{q}\circ\psi\,,
+\end{equation}
+é linear. Em outras palavras, dado o espaço vetorial
+$\evl{\cft{\crt{W}{q}}{\con{F}}}{\con{F}}{\con{F}}$ ,
+\begin{equation}
+\mathcal{I}_\psi\in\cfl{\cft{\crt{W}{q}}{\con{F}}}{\con{F}}.
+\end{equation}
+O teorema \ref{teo:RieszGeneralizado} permite afirmar que existe
+um único tensor $\tnr{E}\in\cft{\crt{W}{q}}{F}$ tal que
+\begin{equation}\label{eq:tensorFuncaoI}
+\fua{\ftr{E}{q}}{\tnr{T}}=\fua{\mathcal{I}_\psi}{\tnr{T}}\,,\,\forall\,\tnr{T}\in\cft{\crt{W}{q}}{F}\,.
+\end{equation}
+Tal tensor é denominado a \emph{integral}\index{integral!de função
+tensorial} de $\psi$ em
+${\tilde{T}}_{\con{\crt{V}{p}}\mapsto\con{\con{F}}}$, representado
+por
+\begin{equation}\label{eq:tensorIntegral}
+\int_{{\tilde{T}}_{\con{\crt{V}{p}}\mapsto\con{\con{F}}}}\psi\,.
+\end{equation}
+
+\begin{prp}\label{prp:integralIdentidade}
+Dados os espaços tensoriais $\ete{\crt{V}{p}}{F}$ e
+$\ete{\crt{U}{r}\times\crt{W}{s}}{F}$, seja o mapeamento
+\begin{equation}
+\map{\psi}{\cft{\crt{V}{p}}{F}}{\cft{\crt{U}{r}\times\crt{W}{s}}{F}}\,.\nonumber
+\end{equation}
+Considerando os tensores $\tnr{A}\in\cft{\crt{U}{r}}{F}$ e $\tnr{B}\in\cft{\crt{W}{s}}{F}$,
+são válidas as seguintes igualdades:
+\begin{eqnarray}
+\tnr{A}\odot_r\int_{\cft{\crt{V}{p}}{F}}\psi&=&\int_{\cft{\crt{V}{p}}{F}}\rft{A}{r}\circ\psi\,;\nonumber\\
+\lco\int_{\cft{\crt{V}{p}}{F}}\psi\rco\odot_s\tnr{B}&=&\int_{\cft{\crt{V}{p}}{F}}\lft{B}{s}\circ\psi
+\,.\nonumber
+\end{eqnarray}
+\end{prp}
+\begin{prova}
+A partir da regra (\ref{eq:funcaoI}), tem-se o desenvolvimento a seguir:
+\begin{eqnarray}
+\fua{\mathcal{I}_{\lco\rft{A}{r}\circ\psi\rco}}{\tnr{X}}&=&
+\int_{\cft{\crt{V}{p}}{F}}\ftr{X}{s}\circ\lco\rft{A}{r}\circ\psi\rco\nonumber\\
+&=&
+\int_{\cft{\crt{V}{p}}{F}}\lco \tnr{X}\odot_s\tnr{A}\rco_{\overleftarrow{\odot} r}\circ\psi\nonumber\\
+&=&
+\fua{\mathcal{I}_\psi}{\tnr{X}\odot_s\tnr{A}}\,.\nonumber
+\end{eqnarray}
+Associadas às funções lineares $\fua{\mathcal{I}_{\lco\rft{A}{r}\circ\psi\rco}}{\tnr{X}}$ e $\fua{\mathcal{I}_\psi}{\tnr{X}\odot_s\tnr{A}}$, sejam respectivamente as integrais $\tnr{E_1}\in\cft{\crt{W}{s}}{F}$ e $\tnr{E_2}\in\cft{\crt{U}{r}}{F}$ abreviações de $\int_{\cft{\crt{V}{p}}{F}}\rft{A}{r}\circ\psi$ e $\int_{\cft{\crt{V}{p}}{F}}\psi$. Da igualdade anterior, é possível concluir que
+\begin{equation}
+\fua{\lft{{E_1}}{s}}{\tnr{X}}=\fua{\lft{{E_2}}{r}}{\tnr{X}\odot_s\tnr{A}}=
+\lpa\tnr{X}\odot_s\tnr{A}\rpa \odot_r  \tnr{{E_2}} = \fua{\lco \tnr{A}\odot_r\tnr{{E_2}}\rco_{\overrightarrow{\odot} s}}{\tnr{X}}\,,\,\forall \tnr{X}\in\cft{\crt{W}{s}}{F}\,.
+\nonumber
+\end{equation}
+A partir da notação adotada (\ref{eq:tensorIntegral}), conclui-se a primeira igualdade do teorema. A demonstração da segunda igualdade é feita de forma similar.
+\end{prova}
+
+\subsubsection{Identidades de Green}\index{Green!identidades de}
+A partir de um conjunto fechado $\con{A}$, tal que seu contorno é orientável, as identidades de Green são igualdades que apresentam uma importante relação entre integrais definidas sobre o interior $\widehat{\con{A}}$ e integrais definidas sobre o contorno $\partial{\con{A}}$.
+
+Dentre as identidades de Green, a mais geral é aquela que resulta do chamado Teorema de Green. De um corolário deste teorema, denominado Teorema de Gauss-Ostrogradsky ou \emph{Teorema da Divergência}\index{Divergência!Teorema da}, resulta uma outra identidade de Green, fundamental no estudo da Dinâmica de corpos contínuos. Estes dois teoremas são apresentados a seguir.
+
+
+\begin{teo}[Green]\index{Green!teorema de}\label{teo:Green}
+Seja o espaço de Hilbert $\ehr{V}{F}$ com dimensão maior que 2 e
+um conjunto fechado $\con{U}\subset\con{V}$, tal que seu contorno
+${\partial\con{U}}$ é orientável. Dado o espaço tensorial
+$\ete{\crt{W}{q}}{F}$, seja o mapeamento
+\begin{equation}
+\map{\psi}{\con{V}}{\cft{\crt{W}{q}}{\con{F}}}\nonumber\,,
+\end{equation}
+onde a função $\psi$ é contínua em $\con{U}$ e G-suave de ordem 1 no interior
+$\widehat{U}$. Considerando o contorno ${\partial\con{U}}$
+positivamente orientado, sejam os mapeamentos
+\begin{eqnarray}
+\map{\psi^\otimes_e}{\partial\con{U}}{\cft{\con{V}\times\crt{W}{q}}{\con{F}}}
+\,\,\,&e&\,\,\,
+\map{\psi^\otimes_r}{\partial\con{U}}{\cft{\crt{W}{q}\times\con{V}}{\con{F}}}\,,\nonumber
+\end{eqnarray}
+onde
+\begin{eqnarray}
+\fua{\psi^\otimes_e}{\vto{x}}= \fua{\fac{N}^+_{{\partial\con{U}}}}{\vto{x}} \otimes \fua{\psi}{\vto{x}}
+\,\,\,&e&\,\,\,
+\fua{\psi^\otimes_r}{\vto{x}}= \fua{\psi}{\vto{x}}\otimes\fua{\fac{N}^+_{{\partial\con{U}}}}{\vto{x}}\,.\nonumber
+\end{eqnarray}
+Neste contexto, são válidas as igualdades
+\begin{eqnarray}
+\int_{\widehat{U}}\gqu{e}{\psi}\,=\,\int_{\partial\con{U}}\psi^\otimes_e\nonumber\,\,\,
+&e&\,\,\,
+\int_{\widehat{U}}\gqu{r}{\psi}\,=\,\int_{\partial\con{U}}\psi^\otimes_r\nonumber\,.
+\end{eqnarray}
+\end{teo}
+
+\begin{teo}[Gauss-Ostrogradsky]\index{Gauss-Ostrogradsky!teorema de}
+Considerando as condições do teorema \ref{teo:Green}, seja $\crt{W}{q}=\con{V}\times\crt{Z}{p}\times\con{V}$. Sejam os mapeamentos
+\begin{eqnarray}
+\map{\psi^\odot_e}{\partial\con{U}}{\cft{\crt{Z}{p}\times\con{V}}{\con{F}}}
+\,\,\,&e&\,\,\,
+\map{\psi^\odot_r}{\partial\con{U}}{\cft{\con{V}\times\crt{Z}{p}}{\con{F}}}\,,\nonumber
+\end{eqnarray}
+onde
+\begin{eqnarray}
+\fua{\psi^\odot_e}{\vto{x}}= \fua{\fac{N}^+_{{\partial\con{U}}}}{\vto{x}} \odot \fua{\psi}{\vto{x}}
+\,\,\,&e&\,\,\,
+\fua{\psi^\odot_r}{\vto{x}}= \fua{\psi}{\vto{x}}\odot\fua{\fac{N}^+_{{\partial\con{U}}}}{\vto{x}}\,.\nonumber
+\end{eqnarray}
+Desta forma, tem-se que
+\begin{eqnarray}
+\int_{\widehat{U}}\dqu{e}{\psi}\,=\,\int_{\partial\con{U}}\psi^\odot_e\nonumber\,\,\,
+&e&\,\,\,
+\int_{\widehat{U}}\dqu{r}{\psi}\,=\,\int_{\partial\con{U}}\psi^\odot_r\nonumber\,.
+\end{eqnarray}
+\end{teo}
+\begin{prova}
+Dado o tensor identidade $\tnr{I}\in\cft{V^2}{\con{F}}$, a partir da identidade de Green $\int_{\widehat{U}}\gqu{e}{\psi}=\int_{\partial\con{U}}\psi^\otimes_e$, pode-se dizer que o produto contrativo
+\begin{equation}
+\tnr{I}\odot_2\int_{\widehat{U}}\gqu{e}{\psi}=\tnr{I}\odot_2\int_{\partial\con{U}}\psi^\otimes_e\,.\nonumber
+\end{equation}
+Com base na proposição \ref{prp:integralIdentidade}, é possível dizer que
+\begin{equation}
+\int_{\widehat{U}}\rft{I}{2}\circ\gqu{e}{\psi}=\int_{\partial\con{U}}\rft{I}{2}\circ\psi^\otimes_e\,.\nonumber
+\end{equation}
+A partir da igualdade (\ref{eq:funcaRepresentanteXIdentidade}), para quaisquer vetores $\vto{x}\in\widehat{U}$ e $\vto{y}\in\partial\con{U}$,
+\begin{equation}
+\fua{\rft{I}{2}\circ\gqu{e}{\psi}}{\vto{x}}=\tnr{I}\odot_2\fua{\gqu{e}{\psi}}{\vto{x}}=\fua{\dqu{e}{\psi}}{\vto{x}}\nonumber
+\end{equation}
+e
+\begin{equation}
+\fua{\rft{I}{2}\circ\psi^\otimes_e}{\vto{y}}=\tnr{I}\odot_2\lco\fua{\fac{N}^+_{{\partial\con{U}}}}{\vto{y}} \otimes \fua{\psi}{\vto{y}}\rco=\fua{\fac{N}^+_{{\partial\con{U}}}}{\vto{y}} \odot \fua{\psi}{\vto{y}}\,.\nonumber
+\end{equation}
+A demonstração para $\int_{\widehat{U}}\dqu{r}{\psi}\,=\,\int_{\partial\con{U}}\psi^\odot_r$ segue a mesma metodologia.
+\end{prova}

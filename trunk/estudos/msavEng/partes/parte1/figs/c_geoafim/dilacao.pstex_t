@@ -1,0 +1,25 @@
+\begin{picture}(0,0)%
+\includegraphics{partes/parte1/figs/c_geoafim/dilacao.pstex}%
+\end{picture}%
+\setlength{\unitlength}{4144sp}%
+%
+\begingroup\makeatletter\ifx\SetFigFont\undefined%
+\gdef\SetFigFont#1#2#3#4#5{%
+  \reset@font\fontsize{#1}{#2pt}%
+  \fontfamily{#3}\fontseries{#4}\fontshape{#5}%
+  \selectfont}%
+\fi\endgroup%
+\begin{picture}(2243,1641)(3451,-5317)
+\put(3730,-4336){\makebox(0,0)[lb]{\smash{{\SetFigFont{10}{12.0}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\tpv{\vto{v}}$}%
+}}}}
+\put(3451,-4929){\makebox(0,0)[lb]{\smash{{\SetFigFont{10}{12.0}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$a$}%
+}}}}
+\put(3870,-5272){\makebox(0,0)[lb]{\smash{{\SetFigFont{10}{12.0}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\fua{\mathsf{D}_1}{a}$}%
+}}}}
+\put(4455,-4548){\makebox(0,0)[lb]{\smash{{\SetFigFont{10}{12.0}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\tpv{\fua{\vtf{s}}{\vto{v}}}$}%
+}}}}
+\put(4561,-3808){\makebox(0,0)[lb]{\smash{{\SetFigFont{10}{12.0}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\vto{v}\oplus\ele{a}$}%
+}}}}
+\put(5617,-4067){\makebox(0,0)[lb]{\smash{{\SetFigFont{10}{12.0}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\fua{\mathsf{D}_1}{\fua{\vtf{s}}{\vto{v}}\oplus a}$}%
+}}}}
+\end{picture}%
