@@ -124,22 +124,13 @@ A_1\setminus\lpa A_2\cap A_3\rpa&= A_1\cap\lpa A_2\cap A_3\rpa'\nonumber\\
 In Algebra, a collection is called sequence when its elements need to be ordered. To this ordering, each element of the sequence has a position identified by an ordinal number\footnote{Ordinals are integer numbers, elements of $\gloref{naturais}$, used to label positions sequentially.}, called \textsb{index}\index{element!index of}, which grows from left to right on the sequence notation $\lpa a,b,c\rpa$. Thereby, every element of a sequence has a unique position, labeled by an index; and from this we conclude that two sequences are equal if and only if they have the same elements equally indexed. For example, the sequence $\lpa a,b,c\rpa\neq\lpa a,c,b\rpa$ because each of the elements $b$ and $c$ have different indexes in each of the sequences. Differently from sets, the positional restriction of sequences does not forbid indistinct elements: the collection $a,b,c,a$ is valid as a sequence $\lpa a,b,c,a\rpa$ since the two $a$ elements have different indexes. When a sequence is finite, it is called a \textsb{tuple}\index{tuple}. The tuple that has one element is a \textsb{monad}\index{monad}; two elements, a \textsb{double}\index{double}; three elements, a \textsb{triple}\index{triple}; four elements, a \textsb{quadruple}\index{quadruple}; $n$ elements, a $n$\textsb{-tuple}\index{$n$-tuple}, where $n\in\mathbb{N}$. There is also an \textsb{empty sequence}\index{sequence!empty}, called $0$-tuple. When any two elements in a $n$-tuple, $n>1$, interchange positions, we called it a \textsb{transposition}\index{transposition}.
 
 
-Elements of sets can be used to build sequences. For instance, we can build doubles of the type $(x,x/2)$, where $x\in \mathbb{Z}$ and $x/2\in\gloref{racionais}$. If there is a collection of sets $\con{A}_1,\con{A}_2,\cdots,\con{A}_n$, not necessarily distinct, $n$-tuples of the type $(a_1,\cdots,a_n)$ can also be built, where each element $a_i\in A_i$. Thereby, the set of all these constructed $n$-tuples is called the \textsb{cartesian product}\index{product!cartesian} of the sets $A_i$.
-
-
-
-Há ocasiões em que é bastante conveniente combinar elementos de vários conjuntos em tuplas. Como exemplo, posições num espaço tridimensional geralmente são representadas por meio de triplas, cada qual resultante da combinação de três conjuntos numéricos. A construção de tuplas desse tipo ocorre da seguinte forma: o número $n\geqslant 2$ de elementos das tuplas corresponde ao número de conjuntos que terão seus elementos combinados; os elementos de um conjunto específico terão uma única posição nas tuplas; uma dada combinação de $n$ elementos, cada qual pertencente a um dos $n$ conjuntos constitui uma única tupla. Dizemos que o conjunto formado por todas as $n$-tuplas assim construídas é o \textsb{produto cartesiano}\index{produto!cartesiano} dos $n$ conjuntos envolvidos. Nos termos da especificação de conjuntos, dada uma coleção $\con{A}_1,\con{A}_2,\cdots,\con{A}_n$ , o produto cartesiano
+Elements of sets can be used to build sequences. For instance, we can build doubles of the type $(x,x/2)$, where $x\in \mathbb{Z}$ and $x/2\in\gloref{racionais}$. If there is a collection of sets $\con{A}_1,\con{A}_2,\cdots,\con{A}_n$, not necessarily distinct, $n$-tuples of the type $(a_1,\cdots,a_n)$ can also be built, where each element $a_i\in A_i$. Thereby, the set of all these constructed $n$-tuples is called the \textsb{cartesian product}\index{product!cartesian} of the sets $A_i$. In mathematical terms, if a collection $\con{A}_1,\con{A}_2,\cdots,\con{A}_n$ of sets is given, the set 
 \begin{equation}
 \con{A}_1 \gloref{times} \con{A}_2 \times \cdots \times \con{A}_n := \lch
 \lpa \ele{a}_1,\ele{a}_2,\cdots,\ele{a}_n \rpa : \ele{a}_i \in
-\con{A}_i\, , \,i=1,\cdots,n \rch \,,\, n \geqslant  2\, .
+\con{A}_i\, , \,i=1,\cdots,n \rch \,,\, n \geqslant  2\,,
 \end{equation}
-A fim de simplificar a notação, reduzimos $\con{A}_1 \times \con{A}_2 \times \cdots \times \con{A}_n$ para $\gloref{crt}$. Nessas condições, se todos os $n$ conjuntos forem iguais a $A$, adota-se o formato $\gloref{crtEq}$, denominado \textsb{potência cartesiana}\index{potência!cartesiana}.
-
-Se pelo menos um dos conjuntos envolvidos no produto cartesiano for vazio, o resultado é sempre conjunto vazio: $A_1\times \emptyset=\emptyset\times A_1=\emptyset$. Porque a sequência é uma coleção onde a ordem de seus elementos importa, o produto cartesiano $A_1\times A_2$ é comutativo apenas quando um dos conjuntos for vazio ou se ambos forem iguais. Em outras palavras, se o conjunto $A_1\neq A_2\neq \emptyset$, então $A_1\times A_2\neq A_2\times A_1$.
-A ordenação dos elementos da sequência também determina a não associatividade do produto cartesiano, se os conjuntos envolvidos não forem vazios. Nessas condições, $\lpa A \times B\rpa \times C\neq A \times \lpa B \times C\rpa$ porque dupla de dupla e elemento não é a mesma coisa que dupla de elemento e dupla; ou seja, $\lpa\lpa a, b\rpa, c\rpa\neq \lpa a, \lpa  b, c\rpa\rpa$, onde $a,b,c$ são elementos quaisquer de $A,B,C$ respectivamente, mesmo que tais conjuntos não sejam disjuntos.
-
-O produto cartesiano é distributivo na união, intersecção e diferença de conjuntos. Assim, para quaisquer conjuntos $A,B,C$ podemos escrever o seguinte:
+is their cartesian product. In order to simplify notation, $\con{A}_1 \times \con{A}_2 \times \cdots \times \con{A}_n$ is compacted to $\gloref{crt}$. When all the $n$ sets are equal to $A$, we adopt the format $\gloref{crtEq}$, called \textsb{cartesian power}\index{cartesian!power}. If one of the terms in a cartesian product is the empty set, the result is also the empty set: $A_1\times \emptyset=\emptyset\times A_1=\emptyset$. As element ordering distinguishes sequences, the cartesian product $A_1\times A_2$ is commutative only when one of the sets is empty or when they are equal; in other words, if a set $A_1\neq A_2\neq \emptyset$, then $A_1\times A_2\neq A_2\times A_1$. Element order in sequences also makes the cartesian product non-associative when sets involved are not empty. Thereby, the set $\lpa A \times B\rpa \times C\neq A \times \lpa B \times C\rpa$ because double of double and element differs from double of element and double; that is, the double $\lpa\lpa a, b\rpa, c\rpa\neq \lpa a, \lpa  b, c\rpa\rpa$, where $a,b,c$ are any elements of $A,B,C$ respectively, even when such sets are not disjoint. The cartesian product is distributive in union, intersection and difference of sets. Therefore, given any sets $A,B,C$, we can write the following:
 \begin{align}
 A \times \lpa B \cup C\rpa  &= \lpa A \times B\rpa \cup \lpa A \times C\rpa\,;\label{eq:distUniao}\\
 A \times \lpa B \cap C\rpa  &= \lpa A \times B\rpa \cap \lpa A \times C\rpa\,;\label{eq:distInter}\\
@@ -147,22 +138,23 @@ A \times \lpa B \setminus C\rpa  &= \lpa A \times B\rpa \setminus \lpa A \times 
 \end{align}
 {\footnotesize
 \begin{proof}
-Sejam os conjuntos $A=\lch a_1,a_2,\cdots \rch$, $B=\lch b_1,b_2,\cdots \rch$ e $C=\lch c_1,c_2,\cdots \rch$. Para constatar \eqref{eq:distUniao}, tem-se o desenvolvimento a seguir:
+Let the sets $A=\lch a_1,a_2,\cdots \rch$, $B=\lch b_1,b_2,\cdots \rch$ and $C=\lch c_1,c_2,\cdots \rch$. In order to verify \eqref{eq:distUniao}, here's the following development:
 \begin{align}
 \lch a_1,a_2,\cdots \rch\times\lpa\lch b_1,b_2,\cdots \rch\cup\lch c_1,c_2,\cdots \rch\rpa=\lch a_1,a_2,\cdots \rch\times\lpa\lch b_1,b_2,\cdots,c_1,c_2,\cdots \rch\rpa= \nonumber\\
 =\lch \lpa a_1,b_1 \rpa,\lpa a_1,b_2 \rpa, \lpa a_2,b_1 \rpa,\lpa a_2,b_2 \rpa,\cdots,\lpa a_1,c_1 \rpa,\lpa a_1,c_2 \rpa, \lpa a_2,c_1 \rpa,\lpa a_2,c_2 \rpa,\cdots \rch=\nonumber\\
 =\lpa\lch a_1,a_2,\cdots \rch\times\lch b_1,b_2,\cdots \rch\rpa\cup\lpa\lch a_1,a_2,\cdots \rch\times\lch c_1,c_2,\cdots \rch\rpa\,.\nonumber
 \end{align}
-A igualdade \eqref{eq:distInter} pode ser demonstrada pelo seguinte raciocínio: se $\lpa a_1,x\rpa\in A\times\lpa B\cap C\rpa$ então, pelo conceito de intersecção e produto cartesiano,
+Equality \eqref{eq:distInter} can be demonstrated through the following reasoning: if $\lpa a_1,x\rpa\in A\times\lpa B\cap C\rpa$ then, by the concepts of intersection and cartesian product,
 \begin{equation*}
 \lpa a_1\in A\rpa \wedge \lpa x\in\lpa B\cap C\rpa\rpa=\lpa a_1\in A\rpa\wedge\lpa x\in B\rpa \wedge \lpa x\in C\rpa\,.
 \end{equation*}
-Logo a dupla $\lpa a_1,x\rpa\in \lpa A\times B\rpa\wedge\lpa a_1,x\rpa\in \lpa A\times C\rpa$. Pode-se aplicar essa mesma estratégia para demonstrar a última igualdade: se  $\lpa a_1,x\rpa\in A\times\lpa B\setminus C\rpa$ então
+And then the double $\lpa a_1,x\rpa\in \lpa A\times B\rpa\wedge\lpa a_1,x\rpa\in \lpa A\times C\rpa$. This same strategy can be used to prove the last equality: if  $\lpa a_1,x\rpa\in A\times\lpa B\setminus C\rpa$ then
 \begin{equation*}
 \lpa a_1\in A\rpa \wedge \lpa x\in\lpa B\setminus C\rpa\rpa=\lpa a_1\in A\rpa\wedge\lpa x\in B\rpa \wedge \lpa x\notin C\rpa\,.
 \end{equation*}
-Logo a dupla $\lpa a_1,x\rpa\in \lpa A\times B\rpa\wedge\lpa a_1,x\rpa\notin \lpa A\times C\rpa$.
+Therefore, double $\lpa a_1,x\rpa\in \lpa A\times B\rpa\wedge\lpa a_1,x\rpa\notin \lpa A\times C\rpa$.
 \end{proof}}
+
 
 
 \section{Funções}\index{função}
