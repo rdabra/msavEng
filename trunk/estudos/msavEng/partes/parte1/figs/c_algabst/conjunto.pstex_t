@@ -2,7 +2,7 @@
 \includegraphics{conjunto.eps}%
 \end{picture}%
 %
-%  Created by WinFIG version 7.1 
+%  Created by WinFIG version 7.4 
 %  METADATA <version>1.0</version> 
 %
 \setlength{\unitlength}{3947sp}%
@@ -13,8 +13,8 @@
   \fontfamily{#3}\fontseries{#4}\fontshape{#5}%
   \selectfont}%
 \fi\endgroup%
-\begin{picture}(4695,2685)(736,-3886)
-%  METADATA <id>25</id> 
-\put(856,-1468){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\varDelta$}%
+\begin{picture}(4695,2685)(723,-6677)
+%  METADATA <id>28</id> 
+\put(827,-4277){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\varDelta$}%
 }}}}
 \end{picture}%
