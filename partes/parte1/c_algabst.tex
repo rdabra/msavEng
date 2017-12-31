@@ -124,7 +124,7 @@ A_1\setminus\lpa A_2\cap A_3\rpa&= A_1\cap\lpa A_2\cap A_3\rpa'\nonumber\\
 In Algebra, a collection is called sequence when its elements need to be ordered. To this ordering, each element of the sequence has a position identified by an ordinal number\footnote{Ordinals are integer numbers, elements of $\gloref{naturais}$, used to label positions sequentially.}, called \textsb{index}\index{element!index of}, which grows from left to right on the sequence notation $\lpa a,b,c\rpa$. Thereby, every element of a sequence has a unique position, labeled by an index; and from this we conclude that two sequences are equal if and only if they have the same elements equally indexed. For example, the sequence $\lpa a,b,c\rpa\neq\lpa a,c,b\rpa$ because each of the elements $b$ and $c$ have different indexes in each of the sequences. Differently from sets, the positional restriction of sequences does not forbid indistinct elements: the collection $a,b,c,a$ is valid as a sequence $\lpa a,b,c,a\rpa$ since the two $a$ elements have different indexes. When a sequence is finite, it is called a \textsb{tuple}\index{tuple}. The tuple that has one element is a \textsb{monad}\index{monad}; two elements, a \textsb{double}\index{double}; three elements, a \textsb{triple}\index{triple}; four elements, a \textsb{quadruple}\index{quadruple}; $n$ elements, a $n$\textsb{-tuple}\index{$n$-tuple}, where $n\in\mathbb{N}$. There is also an \textsb{empty sequence}\index{sequence!empty}, called $0$-tuple. When any two elements in a $n$-tuple, $n>1$, interchange positions, we called it a \textsb{transposition}\index{transposition}.
 
 
-Elements of sets can be used to build sequences. For instance, we can build doubles of the type $(x,x/2)$, where $x\in \mathbb{Z}$ and $x/2\in\gloref{racionais}$. If there is a collection of sets $\con{A}_1,\con{A}_2,\cdots,\con{A}_n$, not necessarily distinct, $n$-tuples of the type $(a_1,\cdots,a_n)$ can also be built, where each element $a_i\in A_i$. Thereby, the set of all these constructed $n$-tuples is called the \textsb{cartesian product}\index{product!cartesian} of the sets $A_i$. In mathematical terms, if a collection $\con{A}_1,\con{A}_2,\cdots,\con{A}_n$ of sets is given, the set 
+Elements of sets can be used to build sequences. For instance, we can build doubles of the type $(x,x/2)$, where $x\in \mathbb{Z}$ and $x/2\in\gloref{racionais}$. If there is a collection of sets $\con{A}_1,\con{A}_2,\cdots,\con{A}_n$, not necessarily distinct, $n$-tuples of the type $(a_1,\cdots,a_n)$ can also be built, where each element $a_i\in A_i$. Thereby, the set of all these constructed $n$-tuples is called the \textsb{cartesian product}\index{product!cartesian} of the sets $A_i$. In mathematical terms, if a collection $\con{A}_1,\con{A}_2,\cdots,\con{A}_n$ of sets is given, the set
 \begin{equation}
 \con{A}_1 \gloref{times} \con{A}_2 \times \cdots \times \con{A}_n := \lch
 \lpa \ele{a}_1,\ele{a}_2,\cdots,\ele{a}_n \rpa : \ele{a}_i \in
@@ -157,61 +157,51 @@ Therefore, double $\lpa a_1,x\rpa\in \lpa A\times B\rpa\wedge\lpa a_1,x\rpa\noti
 
 
 
-\section{Funções}\index{função}
+\section{Functions}\index{function}
 
-O estabelecimento de relações entre entidades constitui o fundamento do que se conhece por linguagem, cuja finalidade é viabilizar o ato de pensar. No âmbito da linguagem algébrica, relacionar dois objetos significa descrever ou estabelecer algum elo matemático entre eles. Nesse contexto, os tipos de interação nesse par de objetos podem incluir vínculos de causa e efeito, transformações, dependências, atribuições, associações, entre outros. Essas correspondências são descritas por regras que especificam, através de expressões matemáticas, como serão construídos os pares de objetos relacionados.
+The act of thinking is fundamentally based on the capacity of making relationships between entities in order to clarify something obscure or, more pretentiously, to disclose the unknown. To correlate entities in algebra thinking means to describe or establish a mathematical link between them. Thereby, among the many kinds of interaction that justifies pairing these entities or objects, there can be links of cause and effect, transformations, dependencies, attributions, associations and so on. These relationships are described by rules that specify, through mathematical expressions, how a certain pairing of objects is done.   
 
-O conceito basilar que rege as relações algébricas chama-se função, \emph{aqui entendida como a atribuição sistemática de um e somente um valor a cada elemento de um dado conjunto}. Em termos mais precisos, dizemos que função é uma dupla $\lpa \con{D},f \rpa$, onde $\con{D}$ é o conjunto ao qual nos referimos, chamado \textsb{domínio}\index{domínio} da função, e $f$ é a regra que implementa a tal atribuição sistemática. Para evitar confusões, adotaremos aqui a notação consagrada que toma a regra por função, ou seja, $\gloref{funcao}$ neste caso representará, além de regra, a função $\lpa \con{D},f \rpa$ e a diferença dos significados dependerá do contexto. O objeto relacionado a um elemento $d\in D$ representamos $\gloref{valor}$, chamado \textsb{valor da função}\index{função!valor de} $f$ em $d$, a partir do qual pode-se escrever matematicamente a característica fundamental das funções, a saber,
+The fundamental concept that establishes algebraic relationships is called function, here understood as \emph{a systematic assignment of one and only one object to each element of a given set}. More precisely, we define function as a double $\lpa \con{D},f \rpa$, where $\con{D}$ is this given set, called the \textsb{domain}\index{domain} of the function, and $f$ is the rule that impolements the so called systematic assignment. In order to avoid confusions, we adopt here the usual notation that considers the rule also a function, that is, the context will define if $\gloref{funcao}$ is a rule or a function $\lpa \con{D},f \rpa$. The object related to an element $d\in D$ is represented by $\gloref{valor}$, called the \text{value of function}\index{function!value of} $f$ in $d$, which allows us to write the fundamental characteristic of functions, namely,
 \begin{equation}
 \fua{f}{\ele{d}_1}\neq\fua{f}{\ele{d}_2}\implies \ele{d}_1\neq \ele{d}_2\,,\,\,\forall\, d_1,d_2\in D.
 \end{equation}
-Quando queremos dar enfoque ao domínio $\con{D}$ da função $f$, utilizamos a notação combinada $\gloref{dominio}$. Há também uma representação alternativa para a função $f$ que leva em conta o seu domínio:
-\begin{equation}
-\ele{d}\gloref{mapsto}\fua{f}{\ele{d}}\,,\, \gloref{forall} \, \ele{d} \in
-\con{D}\,,
-\end{equation}
-onde cada elemento $d$ relaciona-se com um valor $\fua{f}{d}$ por $f$.
+When we want to emphasize the domain $D$ of function $f$, we use the combined notation $\gloref{dominio}$. There is also an alternative notation for the function $f$ that makes its domain explicit: $\ele{d}\gloref{mapsto}\fua{f}{\ele{d}}$, where each element $d\in D$ is related to a value $\fua{f}{d}$ by $f$ in terms already described.
 
-A descrição da regra $f$ é feita via expressões algébricas, nas quais o símbolo representante de qualquer elemento do domínio é chamado \textsb{variável}\index{variável}. Para exemplificar, seja a função $\lpa \gloref{real},f \rpa$ tal que
+
+The description of $f$, as a rule, is done through an algebraic expression, where the symbol that represents any element of the domain is called a \textsb{variable}\index{variable}. For example, let  $\lpa \gloref{real},f \rpa$ be a function and
 \begin{equation}
  \fua{f}{x} = x^2 + 2\, ,
 \end{equation}
-onde a variável $x$, em ambos os lados, representa
-qualquer valor real. Essa sentença diz que o valor da função $f$,
-no lado esquerdo, é igual ao valor da expressão algébrica à
-direita. Dizemos também que a variável $\ele{x}$
-é o \textsb{argumento}\index{argumento} de $f$.
+where variable $x$ represents any real value. This sentence says that the value of function $f$, on the left side, equals the value of the algebraic expression on the right. We also say that variable $x$ is the \textsb{argument}\index{argument} of $f$.
 
-Além do domínio, há pelo menos dois conjuntos notáveis adicionais no estudo das funções. O primeiro, o qual denominamos \textsb{imagem}\index{imagem} da função $f$, representado $\gloref{imagem}$, é formado por todos os valores da função $f$, ou
+
+
+Besides domain, there are at least two additional special sets when we study functions. The first one, represented by $\gloref{imagem}$, is the \textsb{image}\index{image} of the function $f$, defined by all the values of $f$; in other words,
 \begin{equation}
 \con{R}_f :=  \lch \fua{f}{\ele{d}} : d \in D_f\rch \,.
 \end{equation}
-Quando se quer estudar a parcela do domínio de $f$ relacionada a um determinado subconjunto de sua imagem, falamos em \textsb{preimagem}\index{preimagem}. Melhor explicando, dado um conjunto
-$\con{B}\subseteq\con{R}_f$, a preimagem de $\con{B}$ é o conjunto $\gloref{preimagem}\subseteq\con{D}_f$ tal que
+The second one arises when we want to study the part of the function domain, called \textsb{preimage}\index{preimage}, which is related to a certain subset of the image. In other words, given a subset $\con{B}\subseteq\con{R}_f$, the preimage of $\con{B}$ is the set $\gloref{preimagem}\subseteq\con{D}_f$ such as
 \begin{equation}
 \con{R}^{-1}_{\con{B}} :=  \lch \ele{d}\in\con{D}_f:
 \fua{f}{\ele{d}}\in\con{B} \rch  \,.
 \end{equation}
 
-Se a função $f$ define valores distintos para os elementos de seu domínio, diz-se que ela é \textsb{inversível}\index{função!inversível} e a resultante correspondência elemento-valor é um para um, ou \textsb{unívoca}.  Em termos mais rigorosos, $f$ é inversível quando
+A function $f$ is said to be \textsb{invertible}\index{function!invertible} if it assigns distinct values to its domain elements, resulting in an element-value correlation of one-to-one, called \textsb{biunivocal correlation}\index{biunivocal!correlation}. In more rigorous terms, $f$ is invertible when
 \begin{equation}\label{eq:funcaoInversivel}
 \ele{d}_1\neq\ele{d}_2 \gloref{implicabid} \fua{f}{\ele{d}_1}\neq\fua{f}{\ele{d}_2}
 ,\,\forall\,  \ele{d}_1,\ele{d}_2 \in
 \con{D}_f.
 \end{equation}
-Quando os valores de $f$ inversível constituem uma imagem $\con{R}_f$, uma função $\gloref{inversa}$ é dita \textsb{inversa}\index{função!inversa} de $f$ se
+When all the values of the invertible function $f$ define an image $\con{R}_f$, the function $\gloref{inversa}$ is called the \textsb{inverse}\index{function!inverse} of $f$ if
 \begin{eqnarray}\label{eq:Inversa}
-\con{D}_\fun{f^{-1}}=\con{R}_f&\text{e}&\fua{f^{-1}}{\fua{f}{d}}=d\,,\,\,\forall d\in D_f\,.
+\con{D}_\fun{f^{-1}}=\con{R}_f&\text{and}&\fua{f^{-1}}{\fua{f}{d}}=d\,,\,\,\forall d\in D_f\,.
 \end{eqnarray}
-Como consequência, temos que $f_{-1}$ também é inversível. Assim, considerando $g:=f^{-1}$ e sua imagem $R_g$, pode-se admitir que existe um $g^{-1}$ onde, segundo a definição de função inversa,
-\begin{align}
-\fua{g^{-1}}{\fua{g}{\fua{f}{d}}}=&\fua{f}{d}\nonumber\\
-\fua{g^{-1}}{\fua{f^{-1}}{\fua{f}{d}}}=&\fua{f}{d}\nonumber\\
-\fua{g^{-1}}{d}=&\fua{f}{d}\,,
-\end{align}
-para qualquer elemento $d\in D_f$; o que nos faz concluir que a função $f$ é a inversa de $f^{-1}$ e ambas portanto são ditas inversas entre si.
+As a consequence, we can state that $f^{-1}$ is also invertible. Therefore, considering  $g:=f^{-1}$ and its image $R_g$, there exists a function $g^{-1}$ where, according to the previous definition,
+\begin{equation}
+\fua{f}{d}=\fua{g^{-1}}{\fua{g}{\fua{f}{d}}}=\fua{g^{-1}}{\fua{f^{-1}}{\fua{f}{d}}}=\fua{g^{-1}}{d}\,,
+\end{equation}
+for any element $d\in D_f$. Thereby, we state that $f$ is the inverse function of $f^{-1}$ and then both are the inverse of each other. The superposition of a function and its inverse results in a special function, whose values equals the arguments, called the \textsb{identity}\index{function!identity} function, represented by $i$. Thereby, as  $\fua{i}{\ele{d}}=\ele{d}, \forall\, \ele{d}\in\con{D}_i$, the image $R_i=D_i$, and then we conclude that $i=i^{-1}$ since $i$ is obviously invertible.
 
-Podemos dizer que a sobreposição da inversa de uma função à ela própria resulta uma função na qual cada um de seus valores é idêntico ao seu argumento respectivo. Generalizando essa característica, uma função desse tipo recebe o nome de \textsb{identidade}\index{função!identidade}, representada $i$, onde $\fua{i}{\ele{d}}=\ele{d}, \forall\, \ele{d}\in\con{D}_i$. Nesse caso, há sempre uma imagem de $i$ tal que $R_i=D_i$, permitindo concluir $i=i^{-1}$, uma vez que a função identidade é sempre inversível.
 
 \section{Mapeamentos}\index{mapeamento}
 
