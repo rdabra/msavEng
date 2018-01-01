@@ -167,14 +167,11 @@ The fundamental concept that establishes algebraic relationships is called funct
 \end{equation}
 When we want to emphasize the domain $D$ of function $f$, we use the combined notation $\gloref{dominio}$. There is also an alternative notation for the function $f$ that makes its domain explicit: $\ele{d}\gloref{mapsto}\fua{f}{\ele{d}}$, where each element $d\in D$ is related to a value $\fua{f}{d}$ by $f$ in terms already described.
 
-
 The description of $f$, as a rule, is done through an algebraic expression, where the symbol that represents any element of the domain is called a \textsb{variable}\index{variable}. For example, let  $\lpa \gloref{real},f \rpa$ be a function and
 \begin{equation}
  \fua{f}{x} = x^2 + 2\, ,
 \end{equation}
 where variable $x$ represents any real value. This sentence says that the value of function $f$, on the left side, equals the value of the algebraic expression on the right. We also say that variable $x$ is the \textsb{argument}\index{argument} of $f$.
-
-
 
 Besides domain, there are at least two additional special sets when we study functions. The first one, represented by $\gloref{imagem}$, is the \textsb{image}\index{image} of the function $f$, defined by all the values of $f$; in other words,
 \begin{equation}
@@ -203,14 +200,16 @@ As a consequence, we can state that $f^{-1}$ is also invertible. Therefore, cons
 for any element $d\in D_f$. Thereby, we state that $f$ is the inverse function of $f^{-1}$ and then both are the inverse of each other. The superposition of a function and its inverse results in a special function, whose values equals the arguments, called the \textsb{identity}\index{function!identity} function, represented by $i$. Thereby, as  $\fua{i}{\ele{d}}=\ele{d}, \forall\, \ele{d}\in\con{D}_i$, the image $R_i=D_i$, and then we conclude that $i=i^{-1}$ since $i$ is obviously invertible.
 
 
-\section{Mapeamentos}\index{mapeamento}
+\section{Mappings}\index{mapping}
 
-Há um outro tipo de relação algébrica na qual ambos os objetos envolvidos são elementos de conjuntos e a entidade relacional é uma função. A intenção final é relacionar conjuntos, dispondo para isso de atributos tipicamente funcionais. Assim, diz-se de um conjunto-origem $U$, sobre o qual uma função $f$ ``atua'' e um conjunto-destino $V$, ao qual os valores de $f$ pertencem. A essa relação denominamos mapeamento quando o domínio $D_f=U$ e a imagem $R_f\subseteq V$, onde $V$ é chamado \textsb{contradomínio}\index{contradomínio}. Em termos matemáticos, o mapeamento é uma tripla $\lpa U, V, f\rpa$ onde se diz que $f$ mapeia $U$ para $V$ ou que
-\begin{equation}
-\ele{u} \mapsto \fua{f}{\ele{u}}\in \con{V}\,,\,\forall
-\ele{u}\in\ele{U}\,.
-\end{equation}
-A fim de enfatizar o caráter de correspondência origem-destino entre elementos de conjuntos, preferimos utilizar a notação $\map{f}{\con{U}}{\con{V}}$ ao invés da tripla $\lpa U, V, f\rpa$.
+There is another algebraic relationship whose main purpose is to relate sets by using functions. In order to do this, it is considered that any function value is also a set element. Thereby, we have a source-set $U$, on which a function $f$ ``acts'' and a target-set $V$, to which all the values of $f$ belong. This relationship is called mapping when the domain $D_f=U$ and the image $R_f\subseteq V$, where $V$ is called the \textsb{codomain}\index{codomain} of $f$. In more rigorous terms, a mapping is a triple $\lpa U, V, f\rpa$ where $f$ maps $U$ to $V$, that is, $\ele{u} \mapsto \fua{f}{\ele{u}}\in \con{V}$ for every $\ele{u}\in\ele{U}$. Instead of representing a mapping by a tuple, we prefer to notate it as $\map{f}{\con{U}}{\con{V}}$, where the arrow makes source-target relationship explicit.
+
+If the image $R_f$ equals codomain $V$, the mapping $\map{f}{\con{U}}{\con{V}}$ is called \textsb{surjective}\index{mapping!surjective} and the function $f$ is a \textsb{surjection}\index{surjection}. Thereby, we can say that in a surjective mapping notation, the function image is always explicit. Now, when $f$ is an invertible function, the mapping is said to be  \textsb{injective}\index{mapping!injective} and its function to be an \textsb{injection}\index{injection}. In this context, considering the image of the injection $f$, it is possible to define a mapping  $\map{f^{-1}}{\con{R}_f}{\con{U}}$, where $\con{R}_f$, domain of $f^{-1}$, is an improper subset of $V$. The function $f$ can cumulatively be an injection and a surjection, when it is called a \textsb{bijection}\index{bijection} and its respective mapping a \textsb{bijective mapping}\index{mapping!bijective}. This bijection $f$ invariably implies the existence of the bijective mapping $\map{f^{-1}}{\con{V}}{\con{U}}$.
+
+
+
+
+
 
 
 Se a imagem $R_f$ for igual ao contradomínio $V$, o mapeamento é chamado \textsb{sobrejetor}\index{mapeamento!sobrejetor} e a função $f$ uma \textsb{sobrejeção}\index{sobrejeção}, pela qual fica implícita a existência de uma imagem. Agora, quando a função $f$ é inversível, dizemos de um mapeamento \textsb{injetor}\index{mapeamento!injetor} e denominamos $f$ uma \textsb{injeção}\index{injeção}. Considerando a imagem da injeção $f$, é possível definir o mapeamento $\map{f^{-1}}{\con{R}_f}{\con{U}}$, onde $\con{R}_f$, domínio de $f^{-1}$, é subconjunto impróprio de $V$. A função $f$ pode ser, cumulativamente, uma sobrejeção e uma injeção, quando recebe o nome de \textsb{bijeção}\index{bijeção} e o mapeamento respectivo é dito \textsb{bijetor}\index{mapeamento!bijetor}. A bijeção $f$ implica invariavelmente a existência do mapeamento $\map{f^{-1}}{\con{V}}{\con{U}}$, que também é bijetor.
