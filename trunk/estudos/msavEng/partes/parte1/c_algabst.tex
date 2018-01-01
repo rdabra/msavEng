@@ -207,31 +207,23 @@ There is another algebraic relationship whose main purpose is to relate sets by 
 If the image $R_f$ equals codomain $V$, the mapping $\map{f}{\con{U}}{\con{V}}$ is called \textsb{surjective}\index{mapping!surjective} and the function $f$ is a \textsb{surjection}\index{surjection}. Thereby, we can say that in a surjective mapping notation, the function image is always explicit. Now, when $f$ is an invertible function, the mapping is said to be  \textsb{injective}\index{mapping!injective} and its function to be an \textsb{injection}\index{injection}. In this context, considering the image of the injection $f$, it is possible to define a mapping  $\map{f^{-1}}{\con{R}_f}{\con{U}}$, where $\con{R}_f$, domain of $f^{-1}$, is an improper subset of $V$. The function $f$ can cumulatively be an injection and a surjection, when it is called a \textsb{bijection}\index{bijection} and its respective mapping a \textsb{bijective mapping}\index{mapping!bijective}. This bijection $f$ invariably implies the existence of the bijective mapping $\map{f^{-1}}{\con{V}}{\con{U}}$.
 
 
-
-
-
-
-
-Se a imagem $R_f$ for igual ao contradomínio $V$, o mapeamento é chamado \textsb{sobrejetor}\index{mapeamento!sobrejetor} e a função $f$ uma \textsb{sobrejeção}\index{sobrejeção}, pela qual fica implícita a existência de uma imagem. Agora, quando a função $f$ é inversível, dizemos de um mapeamento \textsb{injetor}\index{mapeamento!injetor} e denominamos $f$ uma \textsb{injeção}\index{injeção}. Considerando a imagem da injeção $f$, é possível definir o mapeamento $\map{f^{-1}}{\con{R}_f}{\con{U}}$, onde $\con{R}_f$, domínio de $f^{-1}$, é subconjunto impróprio de $V$. A função $f$ pode ser, cumulativamente, uma sobrejeção e uma injeção, quando recebe o nome de \textsb{bijeção}\index{bijeção} e o mapeamento respectivo é dito \textsb{bijetor}\index{mapeamento!bijetor}. A bijeção $f$ implica invariavelmente a existência do mapeamento $\map{f^{-1}}{\con{V}}{\con{U}}$, que também é bijetor.
-
 \begin{figure}[!ht]
 \centering
 \begin{center}
 \scalebox{.70}{\input{partes/parte1/figs/c_algabst/mapeamentos.pstex_t}}
 \end{center}
-\titfigura{As funções $f$ e $g$ mapeiam $U$ para $V$, sendo $f$ uma injeção e $g$ uma sobrejeção. Se a imagem $R_f$ fosse igual ao contradomínio $V$, $f$ seria uma bijeção.}\label{fg:mapeamentos}
+\titfigura{Functions $f$ and $g$ map $U$ to $V$, where $f$ is an injection and $g$ a surjection. If image $R_f$ were equal to the codomain $V$, $f$ would be a bijection.}\label{fg:mapeamentos}
 \end{figure}
 
-Dizemos que o mapeamento $\map{f}{\con{U}}{\con{V}}$ é uma \textsb{operação}\index{operação} e sua função um \textsb{operador}\index{operação} se o domínio $U=V^n$. Nesse caso, quando $n$ assume os valores 1, 2, 3 e 4, operação e operador são classificados \textsb{unários}\index{operação!unária}, \textsb{binários}\index{operação!binária}, \textsb{ternários}\index{operação!ternária} e \textsb{quaternários}\index{operação!quaternária} respectivamente; quando $n>4$, eles são chamados $n$\textsb{-ários}\index{operação!$n$-ária}. Os argumentos do operador são denominados \textsb{operandos}\index{operando} e o inteiro $n$ define a quantidade deles. Interessante notar que a operação injetora unária $\map{f}{\con{V}}{\con{V}}$ é sempre sobrejetora, pois a condição de inversibilidade \eqref{eq:funcaoInversivel} garante que um par qualquer de elementos distintos de $V$ corresponde a um par de elementos distintos de $V$ pela ação de $f$; assim, a imagem $R_f=V$. Por conta disso, podemos afirmar que todo operador injetor unário é uma bijeção.
+The mapping $\map{f}{\con{U}}{\con{V}}$ is said to be an \textsb{operation}\index{operation} and its function an \textsb{operator}\index{operator} if the domain $U=V^n$. In this case, when $n$ is 1, 2, 3 or 4, operation and operator are classified as \textsb{unary}\index{operation!unary}, \textsb{binary}\index{operation!binary}, \textsb{ternary}\index{operation!ternary} e \textsb{quaternary}\index{operation!quaternary} respectively; when $n>4$, they are called $n$\textsb{-ary}\index{operation!$n$-ary}. The arguments of an operator are called \textsb{operands}\index{operand} and integer $n$ define their quantities. It is interesting to note that the unary injective operation $\map{f}{\con{V}}{\con{V}}$ is always surjective since the condition of invertibility \eqref{eq:funcaoInversivel} assures that any pair of distinct elements of $V$ is related to a pair of distinct elements of $V$ through $f$; thereby, image $R_f=V$ and then we can state that any injective unary operator is a bijection.      
 
 
-No final da seção anterior, consideramos superficialmente uma tal ``sobreposição'' de funções; algo relativo a uma função que tem como argumento o valor de uma outra função.  Esse importante conceito, em termos mais precisos, pode ser apresentado como se segue. Sejam os três mapeamentos $\map{\fun{g}}{\con{U}}{\con{V}}$, $\map{f}{\con{V}}{\con{W}}$ e $\map{\fun{h}}{\con{U}}{\con{W}}$ onde $\fua{h}{\ele{u}}=\fua{f}{\fua{g}{\ele{u}}}, \forall \, \ele{u}
-\in U$. Nessas condições, diz-se que $h$ é a função \textsb{composta}\index{função!composta} de $f$ e $g$, representada $\fun{f \circ\fun{g}}$. Notar que a composição de funções só é comutativa numa situação particular onde as regras e os domínios envolvidos permitem. Além disso, temos as seguintes propriedades:
+At the end of the last section, we talked superficially about ``superposition'' of functions, namely, when a function has a function value as argument. This important concept, in more precise terms, can be presented as follows. Let's say that $\map{\fun{g}}{\con{U}}{\con{V}}$, $\map{f}{\con{V}}{\con{W}}$ and $\map{\fun{h}}{\con{U}}{\con{W}}$ are mappings where $\fua{h}{\ele{u}}=\fua{f}{\fua{g}{\ele{u}}}$, for any $\ele{u}\in U$. In this context, it is said that $h$ is a  \textsb{composite function}\index{function!composite} of $f$ and $g$, usually represented by $\fun{f \circ\fun{g}}$. Note that the composition of functions is not generally commutative, except in particular mappings whose functions and domains permit. Moreover, the following properties are valid:
 \begin{itemize}\label{prop:Composicao}
 	\setlength\itemsep{.1em}
-	\item[i.] Dado $\map{\fun{k}}{\con{W}}{\con{L}}$, tem-se
+	\item[i.] Given $\map{\fun{k}}{\con{W}}{\con{L}}$, we have
 	$\fun{k}\circ\lpa f\circ\fun{g}\rpa=\lpa\fun{k}\circ f\rpa\circ\fun{g}$ ;
-	\item[ii.] Se $f$ e $\fun{g}$ forem bijeções, $f\circ\fun{g}$ também é uma bijeção e
+	\item[ii.] If $f$ and $\fun{g}$ are bijections, $f\circ\fun{g}$ is also a bijection and
 	\begin{equation}
 	\begin{array}{rcl}
 	\lpa f\circ\fun{g}\rpa^{-1}& = & \fun{g}^{-1}\circ f^{-1}, \nonumber \\
@@ -243,16 +235,18 @@ No final da seção anterior, consideramos superficialmente uma tal ``sobreposição
 	$f\circ\fun{i}_\con{V}=i_\con{W}\circ f=f$.
 \end{itemize}
 
+
 {\footnotesize
 \begin{proof}
-Utilizando a definição de função composta em cada par de funções alternadamente, fica demonstrado o primeiro item. No segundo, se é unívoca a relação entre $v$ e $u$ em $v=\fua{g}{u}$ para qualquer $v\in V$, então em $\fua{f^{-1}}{w}=\fua{g}{u}$ ou $w=\fua{f}{\fua{g}{u}}$ a relação entre $u$ e $w$ também é unívoca para qualquer $w\in W$; logo $f\circ g$ é uma bijeção. Agora, considerando $u$, $v$ e $w$ elementos quaisquer de $U$, $V$ e $W$ respectivamente, a primeira igualdade em ii é comprovada da seguinte forma:
+For the second item, if the relationship between $v$ and $u$ is biunivocal in $v=\fua{g}{u}$ for any $v\in V$, then the relationship between $u$ e $w$ is also biunivocal in $\fua{f^{-1}}{w}=\fua{g}{u}$ or $w=\fua{f}{\fua{g}{u}}$ for any $w\in W$; from where $f\circ g$ results a bijection. Now, considering $u$, $v$ e $w$ any elements of $U$, $V$ and $W$ respectively, the first equality in ii is verified as follows:
 \begin{equation*}
-\fua{\lpa f\circ\fun{g}\rpa^{-1}}{w}= u = \fua{g^{-1}}{v} = \fua{g^{-1}}{\fua{f^{-1}}{w}}=\fua{g^{-1}\circ f^{-1}}{w}
+\fua{\lpa f\circ\fun{g}\rpa^{-1}}{w}= u = \fua{g^{-1}}{v} = \fua{g^{-1}}{\fua{f^{-1}}{w}}=\fua{g^{-1}\circ f^{-1}}{w}.
 \end{equation*}
-e as demais igualdades são consequências triviais das definições de função composta e identidade.
+The other equalities on the list can be easily proved from the definition of composite functions.
 \end{proof}}
 
-\section{Grupos}\index{grupo}
+
+\section{Groups}\index{group}
 
 A entidade algébrica mais fundamental que congrega os conceitos de coleção e relação chama-se grupo, definido por um conjunto e um mapeamento. Os elementos que constituem o conjunto estão todos inter-re\-la\-cio\-na\-dos pelo mapeamento, expresso por uma operação binária cujo operador deve obedecer a algumas restrições. O conceito subjacente se apoia na ``conciliação'' de dois elementos quaisquer do conjunto, de tal forma que ela se relacione funcionalmente com um elemento desse mesmo conjunto.
 
