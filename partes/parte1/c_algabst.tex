@@ -248,33 +248,39 @@ The other equalities on the list can be easily proved from the definition of com
 
 \section{Groups}\index{group}
 
-The most fundamental algebraic entity that gathers the concepts of collection and relationship is called group, defined by a set and a mapping: a pair of set elements is related to an element of the same set by a mapping, namely, a binary operation, that must obey certain restrictions. In other words, a double of set elements is functionally related to an element of the same set.
+The most fundamental algebraic entity that gathers the concepts of collection and relationship is called group, defined by a set and a mapping: a pair of set elements is related to an element of the same set by a mapping, namely, a binary operation that must obey certain restrictions. In other words, a double of set elements is functionally related to an element of the same set.
 
-Addition and multiplication of real numbers, composition of invertible functions, subtraction of integers are all examples of mathematical combinations which the concept of group generalizes: they are all associative, they admit identity and inverse elements. Thereby, we can now define in more rigorous terms these intuitive concepts.   
-
-Adição e multiplicação de números reais, composição de funções inversíveis, subtração de inteiros são exemplos de ações matemáticas que o conceito de grupo pretende generalizar: todas elas são associativas, admitem um elemento identidade e um elemento inverso. Assim, podemos definir em termos rigorosos o conceito até agora exposto de forma intuitiva. Sejam um conjunto não vazio $\gloref{grupo}$ e uma operação binária
-$\map{\ast}{\con{G}\times\con{G}}{\con{G}}$, abreviada de
-$\fua{\ast}{\ele{g}_1,\ele{g}_2}$ para $\ele{g}_1\ast\ele{g}_2$,
-onde $\ele{g}_1,\ele{g}_2\in\con{G}$. Denomina-se grupo o par
-ordenado $\lpa \con{G},\ast \rpa$ quando forem respeitados os axiomas
+Addition and multiplication of real numbers, composition of invertible functions, subtraction of integers are all examples of mathematical combinations that the concept of group generalizes: they are all associative, they admit identity and inverse elements. Thereby, we can now define in more rigorous terms these intuitive concept. Let $\gloref{grupo}$ be a non-empty set and $\map{\ast}{\con{G}^2}{\con{G}}$ a binary operation from which the notation $\fua{\ast}{\ele{g}_1,\ele{g}_2}$ is shortened to $\ele{g}_1\ast\ele{g}_2$,
+where $\ele{g}_1,\ele{g}_2\in\con{G}$. The double $\lpa \con{G},\ast \rpa$ is called a group when the following axioms are valid:
 \begin{itemize}\label{ax:grupo}
-\setlength\itemsep{.1em}
-    \item[i.] Associatividade, se $\ele{g}_1\ast\lpa \ele{g}_2 \ast \ele{g}_3 \rpa =
-    \lpa \ele{g}_1 \ast \ele{g}_2 \rpa \ast \ele{g}_3\, , \forall \, \ele{g}_1,\ele{g}_2,\ele{g}_3 \in
-    \con{G}$;
-    \item[ii.] Elemento identidade, se $\exists! \, \ele{e}\in\con{G}$ tal que $ \ele{g}_1\ast\ele{e}=\ele{e}\ast\ele{g}_1=
-     \ele{g}_1\,,\forall \, \ele{g}_1 \in \con{G}$;
-    \item[iii.] Elemento inverso, se $\exists! \, \ele{b}\in\con{G}$ tal que
-$\ele{g}_1 \ast \ele{b}= \ele{b} \ast \ele{g}_1 = \ele{e}$, $\forall \ele{g}_1\neq\ele{e}$.
+	\setlength\itemsep{.1em}
+	\item[i.] Associativity, where $\ele{g}_1\ast\lpa \ele{g}_2 \ast \ele{g}_3 \rpa =
+	\lpa \ele{g}_1 \ast \ele{g}_2 \rpa \ast \ele{g}_3\, , \forall \, \ele{g}_1,\ele{g}_2,\ele{g}_3 \in
+	\con{G}$;
+	\item[ii.] Identity element, if $\exists! \, \ele{e}\in\con{G}$ such as $ \ele{g}_1\ast\ele{e}=\ele{e}\ast\ele{g}_1=
+	\ele{g}_1\,,\forall \, \ele{g}_1 \in \con{G}$;
+	\item[iii.] Inverse element, if $\exists! \, \ele{b}\in\con{G}$ such as
+	$\ele{g}_1 \ast \ele{b}= \ele{b} \ast \ele{g}_1 = \ele{e}$, $\forall \ele{g}_1\neq\ele{e}$.
 \end{itemize}
-Como exemplo, o conjunto $P$ formado por todos os operadores unários inversíveis, atuantes num conjunto $V$, constitui o grupo $\lpa \con{P},\circ\rpa$, segundo as propriedades da composição de funções.
+As an example, the set $P$ of all unary invertible operators whose (co)domain is $V$, defines a group $\lpa \con{P},\circ\rpa$, according to the properties of function composition.  
+
+When it is convenient to make the operator explicit, we shall represent a group by $\lpa \con{G},\ast \rpa$; otherwise, we'll refer to a group $G$, indistinct from a set, in order to avoid abuse of notation. Considering this group $G$, there are operations $\ast$, like addition and multiplication of real numbers, that also obey the axiom of  
+\begin{itemize}
+	\item[i.] Commutativity: $\ele{g}_1\ast \ele{g}_2= \ele{g}_2\ast \ele{g}_1\, ,
+	\forall \, \ele{g}_1,\ele{g}_2 \in \con{G}$,
+\end{itemize}
+from which the group $G$ becomes \textsb{commutative}\index{group!commutative} or \textsb{abelian}\index{group!abelian}. In contrast, groups in which the order of operands affects the operator value are called \textsb{non-abelian}\index{group!non-abelian} or \textsb{non-commutative}\index{group!non-commutative}. The abelian group that implements the generalized concept of addition is called \textsb{aditive}\index{grupo!aditivo} 
+
+
 
 Em termos notacionais, quando for importante explicitar o operador, utilizaremos a representação $\lpa \con{G},\ast \rpa$ para grupos, caso contrário falaremos simplesmente do grupo $G$, que terá tratamento indistinto de conjunto a fim de evitar abuso notacional. Considerando então esse grupo, há operações $\ast$, como a adição e a multiplicação de números reais, que obedecem também ao axioma da
 \begin{itemize}
     \item[i.] Comutatividade: $\ele{g}_1\ast \ele{g}_2= \ele{g}_2\ast \ele{g}_1\, ,
 \forall \, \ele{g}_1,\ele{g}_2 \in \con{G}$,
 \end{itemize}
-característica que torna $G$ um grupo \textsb{comutativo}\index{grupo!comutativo} ou \textsb{abeliano}\index{grupo!abeliano}. Em contrapartida, os grupos onde a ordem dos operandos afeta o valor de seu operador são denominados \textsb{não-abelianos}\index{grupo!não-abeliano} ou \textsb{não-co\-mu\-ta\-ti\-vos}\index{grupo!não-comutativo}. O grupo abeliano que implementa o conceito genérico da adição é denominado \textsb{aditivo}\index{grupo!aditivo} e aquele que implementa o da multiplicação é \textsb{multiplicativo}\index{grupo!aditivo}, ambos representados respectivamente por $\lpa \con{G},+ \rpa$ e $\lpa \con{G},\cdot\rpa$.
+característica que torna $G$ um grupo \textsb{comutativo}\index{grupo!comutativo} ou \textsb{abeliano}\index{grupo!abeliano}. Em contrapartida, os grupos onde a ordem dos operandos afeta o valor de seu operador são denominados \textsb{não-abelianos}\index{grupo!não-abeliano} ou \textsb{não-co\-mu\-ta\-ti\-vos}\index{grupo!não-comutativo}. 
+
+O grupo abeliano que implementa o conceito genérico da adição é denominado \textsb{aditivo}\index{grupo!aditivo} e aquele que implementa o da multiplicação é \textsb{multiplicativo}\index{grupo!aditivo}, ambos representados respectivamente por $\lpa \con{G},+ \rpa$ e $\lpa \con{G},\cdot\rpa$.
 Adotamos as notações $\ele{g}_1^{-1}$ e $-\ele{g}_1$ como elementos inversos de ${\ele{g}_1}\in G$ no contexto das operações de multiplicação e adição respectivamente.
 
 O fato de conjuntos constituírem grupos não impede que a partir deles sejam definidos mapeamentos. Quando isso ocorre, fica claro que o argumento da função envolvida deve admitir qualquer valor da operação definida no domínio, pois o agrupamento de todos esses valores constitui o próprio domínio. Em outras palavras, dado o mapeamento $\map{h}{\con{G}}{\con{W}}$, onde os conjuntos envolvidos definem os grupos $\lpa G, \ast\rpa$ e $\lpa W, \rtimes\rpa$, tem-se que qualquer elemento $g\in G$ é valor de algum $g_1\ast g_2$, onde $g1,g2\in G$. Portanto, fica evidente que o valor $\fua{h}{g}=\fua{h}{g_1\ast g_2}$.
