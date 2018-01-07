@@ -1,7 +1,7 @@
 \chapter{Collections and Relationships}
 
 
-It is at least innocuous to study a fundamental object that is completely isolated, without getting it together with other objects. Resulting or not from some selection criteria, this gathering of objects that defines a scope of study, a comprehensiveness of analysis, we shall call it a collection\index{collection}. Thence, between these collected objects, called  \textsb{elements}\index{elements}, it is possible to establish relationships; even when these elements belong to different collections. A \textsb{rule}\index{rule} expresses  generically how such relationship\index{relationship} must occur and, because of this generic character, we describe it, together with collections and elements, in an algebraic approach. Therefore, before developing the main subject of this chapter, let's start with some basic remarks about Algebra.
+It is at least innocuous to study a fundamental object that is completely isolated, without getting it together with other objects. Resulting or not from some selection criteria, this gathering of objects that defines a scope of study, a comprehensiveness of analysis, we shall call it a collection\index{collection}. Thereby, between these collected objects, called  \textsb{elements}\index{elements}, it is possible to establish relationships; even when these elements belong to different collections. A \textsb{rule}\index{rule} expresses  generically how such relationship\index{relationship} must occur and, because of this generic character, we describe it, together with collections and elements, in an algebraic approach. Therefore, before developing the main subject of this chapter, let's start with some basic remarks about Algebra.
 
 
 
@@ -177,7 +177,7 @@ Besides domain, there are at least two additional special sets when we study fun
 \begin{equation}
 \con{R}_f :=  \lch \fua{f}{\ele{d}} : d \in D_f\rch \,.
 \end{equation}
-The second one arises when we want to study the part of the function domain, called \textsb{preimage}\index{preimage}, which is related to a certain subset of the image. In other words, given a subset $\con{B}\subseteq\con{R}_f$, the preimage of $\con{B}$ is the set $\gloref{preimagem}\subseteq\con{D}_f$ such as
+The second one arises when we want to study the part of the function domain, called \textsb{preimage}\index{preimage}, which is related to a certain subset of the image. In other words, given a subset $\con{B}\subseteq\con{R}_f$, the preimage of $\con{B}$ is the set $\gloref{preimagem}\subseteq\con{D}_f$ such that
 \begin{equation}
 \con{R}^{-1}_{\con{B}} :=  \lch \ele{d}\in\con{D}_f:
 \fua{f}{\ele{d}}\in\con{B} \rch  \,.
@@ -257,9 +257,9 @@ where $\ele{g}_1,\ele{g}_2\in\con{G}$. The double $\lpa \con{G},\ast \rpa$ is ca
 	\item[i.] Associativity, where $\ele{g}_1\ast\lpa \ele{g}_2 \ast \ele{g}_3 \rpa =
 	\lpa \ele{g}_1 \ast \ele{g}_2 \rpa \ast \ele{g}_3\, , \forall \, \ele{g}_1,\ele{g}_2,\ele{g}_3 \in
 	\con{G}$;
-	\item[ii.] Identity element, if $\exists! \, \ele{e}\in\con{G}$ such as $ \ele{g}_1\ast\ele{e}=\ele{e}\ast\ele{g}_1=
+	\item[ii.] Identity element, if $\exists! \, \ele{e}\in\con{G}$ such that $ \ele{g}_1\ast\ele{e}=\ele{e}\ast\ele{g}_1=
 	\ele{g}_1\,,\forall \, \ele{g}_1 \in \con{G}$;
-	\item[iii.] Inverse element, if $\exists! \, \ele{b}\in\con{G}$ such as
+	\item[iii.] Inverse element, if $\exists! \, \ele{b}\in\con{G}$ such that
 	$\ele{g}_1 \ast \ele{b}= \ele{b} \ast \ele{g}_1 = \ele{e}$, $\forall \ele{g}_1\neq\ele{e}$.
 \end{itemize}
 As an example, the set $P$ of all unary invertible operators whose (co)domain is $V$, defines a group $\lpa \con{P},\circ\rpa$, according to the properties of function composition.
@@ -309,7 +309,7 @@ In our study, we shall need to establish a relation between an algebraic set tha
 \end{itemize}
 When $\varphi$ observe these axioms, the structure of $B$ is preserved, now called a \textsb{$G$-set}\index{set!G-}, since its fundamental mathematical attributes remain unaltered. Thereby, given an element $b_0\in B$, the group action $\varphi$ is classified as \textsb{simply transitive}\index{grupo!action!simply transitive} if
 \begin{equation}
-\exists !\,\, \ele{g}\in{\con{G}}\textrm{ such as } \fua{\varphi}{g,\ele{b_0}}=\ele{b},\,\forall\, \ele{b}\in\con{B}\,.
+\exists !\,\, \ele{g}\in{\con{G}}\textrm{ such that } \fua{\varphi}{g,\ele{b_0}}=\ele{b},\,\forall\, \ele{b}\in\con{B}\,.
 \end{equation}
 From these definition, we conclude that \emph{in a simply transitive group action, when we fix an element of $B$ in the domain, there is a biunivocal correspondence between the elements of the group and of the codomain.}
 
@@ -402,7 +402,7 @@ where $\mat{A}$ is a $n\times\cdots\times n$ array, with $n$ repeated $q$ times.
 At this point, it is convenient to say that every $n_1\times n_2$ array, whose elements are arranged in a tabular format, is called a \textsb{matrix}\index{matrix}. The elements of a matrix are addressed by lines and comuns: the escalar with $ij$ position is located on the line $i$ and column $j$. If $n_1=n_2=n$, we have a \textsb{square matrix}\index{matrix!square} of order $n$. Henceforth, recalling the additive group $Y$ of arrays, we will consider   
 $M\subset Y$ a set of matrices and  $\overline{M}\subset M$ a set of square matrices with order $n$. For example, the set $\overline{M}$ has the $n\times n$ Kronecker Delta, represented in \eqref{eq:matrizIdentidade}, as an element, which we usually call \textsb{identity matrix}\index{matrix!identity} $\mat{I}$ because $\mat{A}\mat{I} = \mat{A}$, for any $\mat{A}\in\overline{M}$.
 
-If there exists a matrix $\mat{B}\in\overline{M}$ such as $\mat{A}\mat{B} = \mat{I}$, we call it the \textsb{inverse}\index{matrix!inverse} of $\mat{A}$, notated by $\mat{A}^{-1}$. The condition of invertibility of a matrix depends on the value of a function called \textsb{determinant}\index{determinant}, which defines a mapping $\map{\gloref{determ}}{\overline{M}}{\mathcal{R}}$ where $\mathcal{R}$ is a real or complex field and $\det$ is described by the equality
+If there exists a matrix $\mat{B}\in\overline{M}$ such that $\mat{A}\mat{B} = \mat{I}$, we call it the \textsb{inverse}\index{matrix!inverse} of $\mat{A}$, notated by $\mat{A}^{-1}$. The condition of invertibility of a matrix depends on the value of a function called \textsb{determinant}\index{determinant}, which defines a mapping $\map{\gloref{determ}}{\overline{M}}{\mathcal{R}}$ where $\mathcal{R}$ is a real or complex field and $\det$ is described by the equality
 \begin{equation}\label{eq:Determinante}
 \det\mat{X} = \frac{1}{n!}\sum_{i_1=1}^n\cdots\sum_{i_n=1}^n
 \sum_{j_1=1}^n\cdots\sum_{j_n=1}^n\epsilon_{i_1\cdots
@@ -501,53 +501,44 @@ A given square matrix $\mat{A}$ that equals its transpose conjugate $\mat{A}^\da
 Considering the properties of conjugate transposes, we can obtain that the matrix $\mat{B}_1$ equals its transpose conjugate and matrix $\mat{B}_2$ equals the negative of its transpose conjugate; thereby, we say that they are respectively the \textsb{Hermitian} and \textsb{anti-Hermitian}\index{matrix!Hermitian part of}\index{matrix!anti-Hermitian part of} parts of $\mat{B}$. Thus, this result is generalized by saying that every square matrix can be decomposed additively in a Hermitian and an anti-Hermitian parts.
 
 
-Quando uma matriz quadrada $\mat{A}$ é igual à sua transposta conjugada, ou seja $\mat{A}=\mat{A}^\dagger$, ela recebe o nome de matriz \textsb{Hermitiana}\index{matriz!Hermitiana}. Matrizes reais e simétricas são exemplos de matrizes Hermitianas: se os elementos da matriz quadrada $\mat{S}$ são reais, então $\mat{S}^\dagger=\mat{S}^\text{T}$, e sendo $\mat{S}$ simétrica, $\mat{S}^\dagger=\mat{S}$.
-Da mesma forma que as matrizes anti-simétricas, uma matriz \textsb{anti-Hermitiana}\index{matriz!anti-Hermitiana} é aquela que se iguala ao negativo de sua transposta conjugada, ou quando $\mat{A}=-\mat{A}^\dagger$. Seja então uma matriz qualquer $\mat{B}\in\overline{M}$ a partir da qual se realiza o seguinte desenvolvimento:
-\begin{equation}
-\mat{B} = \dfrac{1}{2} \lpa \mat{B} + \mat{B}\rpa = \dfrac{1}{2} \lpa \mat{B} + \mat{B} + \mat{B}^\dagger - \mat{B}^\dagger\rpa = \underbrace{\dfrac{1}{2} \lpa \mat{B} + \mat{B}^\dagger\rpa}_{\mat{B}_1} + \underbrace{\dfrac{1}{2} \lpa \mat{B} - \mat{B}^\dagger\rpa}_{\mat{B}_2}\,.
-\end{equation}
-Pelas propriedades das transpostas conjugadas, podemos obter que a matriz rotulada $\mat{B}_1$ é igual à sua transposta conjugada e que $\mat{B}_2$ se iguala ao negativo de sua transposta conjugada; fatos que as tornam, respectivamente, as \textsb{parcelas Hermitiana e anti-Hermitiana}\index{matriz!parcela Hermitiana de}\index{matriz!parcela anti-Hermitiana de} de $\mat{B}$. Assim, podemos generalizar esse resultado dizendo que toda matriz quadrada pode ser decomposta aditivamente em uma parcela Hermitiana e uma outra parcela anti-Hermitiana.
-
-Quando uma matriz quadrada $\mat{N}$ comuta com sua transposta conjugada, ou seja, quando $\mat{N}^\dagger\mat{N}=\mat{N}\mat{N}^\dagger$, ela é dita uma matriz \textsb{normal}\index{matriz!normal}\label{nm:Normal}. Essas matrizes, por tornarem o produto  $\mat{N}^\dagger\mat{N}$ uma matriz Hermitiana, \emph{são sempre passiveis de diagonalização por uma matriz unitária}. Para entendermos o que é isso, vamos considerar primeiramente as matrizes $\mat{A},\mat{B}\in\overline{M}$ e dizer que elas são denominadas \textsb{similares}\index{matrizes!similares} quando existir uma matriz inversível $\mat{Q}$ onde
+Any square matrix $\mat{N}$ is called \textsb{normal}\index{matrix!normal}\label{nm:Normal} when it comutes with its conjugate transpose, that is, when $\mat{N}^\dagger\mat{N}=\mat{N}\mat{N}^\dagger$. These matrices, for making the product $\mat{N}^\dagger\mat{N}$ an Hermitian matrix, \emph{are always susceptible of diagonalization by a unitary matrix}. In order to understand what this means, let's consider firstly the matrices $\mat{A},\mat{B}\in\overline{M}$ and say that they are called \textsb{similar}\index{matrix!similar} when an invertible matrix $\mat{Q}$ exists such that
 \begin{equation}
 \mat{A} = \mat{Q}^{-1}\mat{B}\mat{Q}\,.
 \end{equation}
-Se esta igualdade for verdadeira, as posições de $\mat{A}$ e $\mat{B}$ não influenciam a definição, pois adotando $\mat{P}:=\mat{Q}^{-1}$, chegaremos a $\mat{B} = \mat{P}^{-1}\mat{A}\mat{P}$, que garante a reciprocidade do conceito de similaridade. Além disso, matrizes similares têm determinantes iguais conforme se constata nas igualdades a seguir:
+It is important to note that $\mat{A}$ and $\mat{B}$ positions in the equality do not affect the definition, since by adopting $\mat{P}:=\mat{Q}^{-1}$, we arrive at $\mat{B} = \mat{P}^{-1}\mat{A}\mat{P}$, where the concept of similarity is maintained. Moreover, similar matrices have the same determinant value as can be verified in the following equalities:
 \begin{equation}
 \det \mat{A} = \det \mat{Q}^{-1}\det\mat{B}\det\mat{Q}=(\det\mat{Q})^{-1}\det\mat{Q}\det\mat{B}=\det\mat{B}.
 \end{equation}
-Uma operação $\map{q}{\overline{M}}{\overline{M}}$ é uma \textsb{transformação de similaridade}\index{transformação!de similaridade} se
+An operation $\map{q}{\overline{M}}{\overline{M}}$ is a \textsb{similarity transformation}\index{similarity!transformation} if
 \begin{equation}
 \fua{q}{\mat{X}} = \mat{Q}^{-1}\mat{X}\mat{Q}.
 \end{equation}
-Um importante exemplo do uso dessa transformação é a citada \textsb{diagonalização}\index{diagonalização}, definida a partir do conceito de matriz \textsb{diagonal}\index{matriz!diagonal}; que é uma matriz quadrada cujos elementos das posições $i\neq j$ são nulos. Assim, se existir uma transformação de similaridade na matriz quadrada $\mat{A}$ onde $\fua{q}{A}$ resulte diagonal, diz-se que a transformação é uma diagonalização de $\mat{A}$ ou que a matriz $\mat{A}$ é \textsb{diagonalizável}\index{matriz!diagonalizável}. Quando inexiste diagonalização para um dada matriz ou se ela é não-diagonalizável, nós a denominamos matriz \textsb{defectiva}\index{matriz!defectiva}. Sobre a diagonalização de matrizes normais por unitárias, há um importante teorema, apresentado a seguir.
+An important example of this transformation is called \textsb{diagonalization}\index{diagonalization}, defined from the concept of \textsb{diagonal matrix}\index{matrix!diagonal}, which is a square matrix whose elements in positions $i\neq j$ are null. Thereby, if there exists a similarity transformation in a square matrix $\mat{A}$ which $\fua{q}{A}$ results diagonal, this transformation is called a diagonalization of $\mat{A}$ or matrix $\mat{A}$ is said to be \textsb{diagonalizable}\index{matrix!diagonalizable}. Finally, it is now possible to clearly understand diagonalization of normal matrices by unitary. 
 
-\begin{mteo}{Diagonalização Espectral}{decompSpec}
-Para cada matriz normal $\mat{N}$, há
-sempre uma matriz unitária $\mat{U}$ tal que
+\begin{mteo}{Spectral Diagonalization}{decompSpec}
+For any normal matrix $\mat{N}$, there is always an unitary matrix $\mat{U}$ such that 
 \begin{equation}
 \widetilde{\mat{N}} = \mat{U}^\dagger\mat{N}\mat{U}\,,
 \end{equation}
-onde $\widetilde{\mat{N}}$ é uma matriz diagonal cujos elementos
-constituem o espectro de $\mat{N}$.
+where $\widetilde{\mat{N}}$ is a diagonal matrix whose elements constitute the spectrum of $\mat{N}$.
 \end{mteo}
-
-
+\hspace{1pt}
 {\footnotesize
 \begin{proof}
-Primeiramente precisamos dizer que, considerando uma matriz quadrada qualquer $\mat{A}$ e uma matriz unitária $\mat{U}$, sempre é possível obter uma matriz \textsb{triangular superior}\index{matriz!triangular superior} $\mat{T} = \mat{U}^\dagger\mat{A}\mat{U}$, onde os elementos nas posições $i>j$ são nulos. Essa afirmação é conhecida como \textsb{Lema de Schur}\index{Schur!Lema de}, cuja tediosa demonstração pode ser verificada em  \aut{Strang}\cite{strang_2006_4}. A partir daí,  precisamos mostrar que se $\mat{A}$ for normal, $\mat{T}$ é diagonal. Para tal, seja o seguinte desenvolvimento: se $\mat{A}$ é normal,
+Firstly we must say that, considering any square matrix $\mat{A}$ and a unitary matrix $\mat{U}$, it is always possible to obtain an \textsb{upper triangular matrix}\index{matrix!upper triangular} $\mat{T} = \mat{U}^\dagger\mat{A}\mat{U}$, whose elements in positions $i>j$ are null. This statement is known as \textsb{Schur's Lemma}\index{Schur!Lemma}, whose tedious proof can be seen in \aut{Strang}\cite{strang_2006_4}. Now we need to show that if $\mat{A}$ is normal, $\mat{T}$ is diagonal: if $\mat{A}$ is normal,
 \begin{align}
 \mat{A}\mat{A}^\dagger & = \mat{A}^\dagger\mat{A}\nonumber\\
 \mat{UTU}^\dagger\lpa\mat{UTU}^\dagger\rpa^\dagger & = \lpa\mat{UTU}^\dagger\rpa^\dagger\mat{UTU}^\dagger\nonumber\\
 \mat{U}\mat{TT}^\dagger\mat{U}^\dagger & = \mat{U}\mat{T}^\dagger\mat{T}\mat{U}^\dagger\nonumber\\
 \mat{TT}^\dagger & = \mat{T}^\dagger\mat{T}\nonumber\,,
 \end{align}
-de onde se conclui que $\mat{T}$ também é normal. A partir da última igualdade desse desenvolvimento, tem-se que para cada posição $ij$
+from where we conclude that $\mat{T}$ is also normal. From the last equality, we have to each position $ij$  
 \begin{align}
 \sum_{k=1}^n\mat{T}_{ik}\mat{T}_{kj}^\dagger & = \sum_{k=1}^n\mat{T}_{ik}^\dagger\mat{T}_{kj}\nonumber\\
-\sum_{k=1}^n\mat{T}_{ik}\overline{\mat{T}_{jk}} & = \sum_{k=1}^n\overline{\mat{T}_{ki}}\mat{T}_{kj}\nonumber
+\sum_{k=1}^n\mat{T}_{ik}\overline{\mat{T}_{jk}} & = \sum_{k=1}^n\overline{\mat{T}_{ki}}\mat{T}_{kj}\,.\nonumber
 \end{align}
-Para o elemento na posição $i=j=1$, essa última igualdade resulta $\sum_{k=1}^n|\mat{T}_{1k}|^2=|\mat{T}_{11}|^2$, de onde se pode concluir $\sum_{k=2}^n|\mat{T}_{1k}|^2=0$. Como os termos do somatório são não negativos, eles só podem ser nulos, ou seja $|\mat{T}_{1k}|^2=0$ para $k>1$. Por indução, ao percorrermos todas as posições $i=j$, verificaremos que além de nulos os elementos de $\mat{T}$ das posições $i>j$ também são nulos os das posições $i<j$; o que comprova $\mat{T}$ diagonal.
+For the element in position $i=j=1$, this last equality results $\sum_{k=1}^n|\mat{T}_{1k}|^2=|\mat{T}_{11}|^2$, from where we can say that $\sum_{k=2}^n|\mat{T}_{1k}|^2=0$.
+Since the terms in this sum are non negative, they can only be null, that is, $|\mat{T}_{1k}|^2=0$ when $k>1$. By induction, when we run through all the positions $i=j$, we verify that not only the elements of $\mat{T}$ in $i>j$ are null but also in $i<j$; which proves $\mat{T}$ diagonal.
 \end{proof}}
 
 Vamos esclarecer agora o termo ``espectro'' no teorema apresentado; mas antes, precisamos de algumas definições importantes. Denomina-se \textsb{traço}\index{matriz!traço de} a função em  $\map{\gloref{traco}}{\overline{M}}{\mathcal{R}}$ cuja regra é
