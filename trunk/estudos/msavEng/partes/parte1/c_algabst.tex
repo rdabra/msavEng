@@ -541,93 +541,95 @@ For the element in position $i=j=1$, this last equality results $\sum_{k=1}^n|\m
 Since the terms in this sum are non negative, they can only be null, that is, $|\mat{T}_{1k}|^2=0$ when $k>1$. By induction, when we run through all the positions $i=j$, we verify that not only the elements of $\mat{T}$ in $i>j$ are null but also in $i<j$; which proves $\mat{T}$ diagonal.
 \end{proof}}
 
-Vamos esclarecer agora o termo ``espectro'' no teorema apresentado; mas antes, precisamos de algumas definições importantes. Denomina-se \textsb{traço}\index{matriz!traço de} a função em  $\map{\gloref{traco}}{\overline{M}}{\mathcal{R}}$ cuja regra é
+Now let's clarify the term ``spectrum'' cited by the theorem above; but before that, we need some important definitions. The function in $\map{\gloref{traco}}{\overline{M}}{\mathcal{R}}$ is called \textsb{trace}\index{matrix!trace of} when its rule is defined by
 \begin{equation}
 \trc{\mat{X}} = \sum_{i=1}^{n}\mat{X}_{ii}\,,
 \end{equation}
-ou seja, o traço de uma matriz quadrada corresponde à soma de seus elementos diagonais. Considerando as matrizes $\mat{A,B}\in\overline{M}$, fica claro que $\trc{(\mat{A+B})}=\trc{\mat{A}}+\trc{\mat{B}}$, onde a soma é preservada; fato que torna a função traço um homomorfismo de grupo em  $\overline{M}\subset Y$ na operação de adição. Além disso, como os elementos diagonais respectivos de $\mat{AB}$ e de $\mat{BA}$ são idênticos, temos $\trc{\mat{AB}}=\trc{\mat{BA}}$. A partir dessa propriedade, se $\mat{A}$ e $\mat{B}$ forem similares, então
+that is, the trace of a matrix is the sum of its diagonal elements. Considering the matrices $\mat{A,B}\in\overline{M}$, it is clear that $\trc{(\mat{A+B})}=\trc{\mat{A}}+\trc{\mat{B}}$, where sum is preserved; thereby, the trace function results a group homomorphism on $\overline{M}\subset Y$ because $Y$ is an additive group. Moreover, since the respective diagonal elements of $\mat{AB}$ and $\mat{BA}$ are identical, it is true that $\trc{\mat{AB}}=\trc{\mat{BA}}$. Thence, if $\mat{A}$ and $\mat{B}$ are similar,
 \begin{equation}
-\trc{\mat{A}}=\trc{\mat{U}^{-1}\mat{B}\mat{U}}=\trc{(\mat{U}^{-1}\mat{B})\mat{U}}=\trc{\mat{U}(\mat{U}^{-1}\mat{B})}=\trc{\mat{B}}\,,
+\trc{\mat{A}}=\trc{\mat{Q}^{-1}\mat{B}\mat{Q}}=\trc{\mat{Q}\mat{Q}^{-1}\mat{B}}=\trc{\mat{B}}\,,
 \end{equation}
-o que permite afirmar genericamente que traços de matrizes similares são sempre iguais.
+and then we can state generically that all similar matrices have the same trace. 
 
-Entre outros benefícios, a função traço é uma ferramenta conveniente para podermos apresentar o que se conhece por \textsb{polinômio característico}\index{polinômio característico!de matriz}\label{pg:PolinomioCarac} de matriz: trata-se da função na operação $\map{g}{\mathcal{R}}{\mathcal{R}}$ com regra
+Among other benefits, the trace function is a convenient tool to present what is known by \textsb{characteristic polynomial}\index{matrix!characteristic polynomial of}\label{pg:PolinomioCarac} of matrix: it is the function in operation $\map{g}{\mathcal{R}}{\mathcal{R}}$, whose rule is
 \begin{equation}
 \fua{g}{x}=\det \lpa \mat{H} - x\mat{I} \rpa  \,,
 \end{equation}
-onde $\mat{H}$ é uma matriz quadrada. Desenvolvendo o termo à direita, obtém-se
+where $\mat{H}$ is a square matrix. By developing the right term, we arrive at
 \begin{equation}\label{eq:poliCaracDesen}
 \fua{g}{x}=(-1)^nx^n+a_1x^{n-1}+a_2x^{n-2}+\cdots+a_{n-1}x+a_n\,,
 \end{equation}
-que é um polinômio de ordem $n$, chamado polinômio
-característico de $\mat{H}$, cujos coeficientes são
+which is a polynomial of order $n$, named characteristic polynomial of $\mat{H}$, whose coefficients are
 \begin{align}
 a_1 & = \lpa-1\rpa^{n+1}\trc{\mat{H}}\label{eq:coefAUm}\,;\\
 a_2 & = -\dfrac{1}{2}\lco a_{1}\trc{\mat{H}}+\lpa-1\rpa^n\trc{\mat{H}^2}\rco\,;\\
 &\cdots\nonumber\\
 a_n & = -\dfrac{1}{n}\lco a_{n-1}\trc{\mat{H}}+a_{n-2}\trc{\mat{H}^2}+\cdots+a_1\trc{\mat{H}^{n-1}}+\lpa-1\rpa^n\trc{\mat{H}^n}\rco\,.
 \end{align}
-Qualquer escalar $\lambda\in\mathcal{R}$ que seja raiz deste polinômio é chamado \textsb{raiz característica}\index{matriz!raiz característica de} de $\mat{H}$.
-O conjunto $\lch\lambda_1,\cdots,\lambda_n\rch$ das raízes características de $\mat{H}$ é chamado \textsb{espectro}\index{matriz!espectro de} de $\mat{H}$. No caso de matrizes normais submetidas à decomposição espectral, trata-se do mesmo conjunto de escalares que compõem a matriz $\widetilde{\mat{N}}$ resultante de diagonalização de $\mat{N}$ por matriz unitária. Nesse ponto, convém dizer que matrizes envolvidas em transformações de similaridade, como é o caso particular de $\widetilde{\mat{N}}$ e $\mat{N}$, sempre possuem o mesmo espectro e por isso são chamadas \textsb{isoespectrais}\index{matrizes!isoespectrais}.
+Any scalar $\lambda\in\mathcal{R}$ that is root of this polynomial is called a \textsb{characteristic root}\index{matrix!characteristic root of} of $\mat{H}$. The set 
+$\lch\lambda_1,\cdots,\lambda_n\rch$ of characteristic roots of $\mat{H}$ is called the \textsb{spectrum}\index{matrix!spectrum of} of $\mat{H}$. In the case of a normal matrix $\mat{N}$ submitted to spectral diagonalization, its spectrum is the set of scalars that constitute the diagonal matrix $\widetilde{\mat{N}}$, which results from the diagonalization of $\mat{N}$ by unitary matrix. At this point, it is convenient to say that matrices involved in similarity transformations, like $\widetilde{\mat{N}}$ and $\mat{N}$, always have the same spectrum e that is why they are called \textsb{isospectral}\index{matrices!isospectral}.
+
 
 {\footnotesize
 \begin{proof}
-Já sabemos que o determinante da inversa é o inverso do determinante. Sejam então as matrizes $\mat{A}$ e $\mat{B}$ similares através da matriz inversível $\mat{Q}$. Pode-se então dizer que o polinômio característico $\det (\mat{A} - x\mat{I})=\det (\mat{Q}^{-1}\mat{B}\mat{Q} - x\mat{I})$. Das igualdades
+Let's prove this last statement. We already know that the determinant of the inverse is the inverse of the determinant. Let $\mat{A}$ an $\mat{B}$ be similar matrices through invertible matrix $\mat{Q}$. Then, it can be said that the characteristic polynomial $\det (\mat{A} - x\mat{I})=\det (\mat{Q}^{-1}\mat{B}\mat{Q} - x\mat{I})$. From the following equalities
 \begin{equation*}
 \mat{Q}^{-1}x\mat{I}\mat{Q}=x\mat{Q}^{-1}\mat{I}\mat{Q}=x\mat{Q}^{-1}\mat{Q}=x\mat{I}\,,
 \end{equation*}
-é possível afirmar que
+it is possible to say that 
 \begin{align*}
 \det \lpa\mat{A} - x\mat{I}\rpa&=\det \lpa\mat{Q}^{-1}\mat{B}\mat{Q} - \mat{Q}^{-1}x\mat{I}\mat{Q}\rpa\\
 &=\det \lco\mat{Q}^{-1}\lpa\mat{B} - x\mat{I}\rpa\mat{Q}\rco\\
 &=\lpa\det\mat{Q}\rpa^{-1} \det \lpa\mat{B} - x\mat{I}\rpa \det\mat{Q}\\
 &=\det \lpa\mat{B} - x\mat{I}\rpa\,,
 \end{align*}
-de onde se conclui $\mat{A}$ e $\mat{B}$ como matrizes isoespectrais.
+from where we conclude $\mat{A}$ and $\mat{B}$ isospectral.
 \end{proof}}
 
-O espectro de uma matriz guarda estreita relação com as funções determinante e traço, \emph{que são homomorfismos de grupo nos quais as operações de multiplicação e adição são respectivamente  preservadas}. Se $\lch\lambda_1,\cdots,\lambda_n\rch$ é o espectro de $\mat{A}$, essa estreita relação se expressa nas seguintes igualdades:
+The spectrum of a matrix has a close relation with determinant and trace functions, which \emph{respectively preserve the operations of multiplication and addition}. If   
+$\lch\lambda_1,\cdots,\lambda_n\rch$ is the spectrum of $\mat{A}$, this close relation is expressed through the following equalities:
 \begin{alignat}{3}
-\det{\mat{A}}  = \prod_{i=1}^n  \lambda_i & \qquad\text{e} \qquad & \trc{\mat{A}} & = \sum_{i=1}^n  \lambda_i \,.
+\det{\mat{A}}  = \prod_{i=1}^n  \lambda_i & \qquad\text{and} \qquad & \trc{\mat{A}} & = \sum_{i=1}^n  \lambda_i \,.
 \end{alignat}
-Quando duas matrizes têm iguais pares de valores determinante e traço, podemos dizer que ambas guardam entre si uma espécie de equivalência\footnote{Não confundir com a definição corrente de matrizes equivalentes.} se interpretarmos essas duas funções como medidas escalares cujos valores absolutos revelam aspectos quantitativos e os sinais revelam aspectos qualitativos da matriz envolvida. Nesse contexto e por conta das igualdades anteriores, matrizes isoespectrais também apresentam tal equivalência; \emph{algo que, em certa medida, confere ao espectro de matrizes uma característica de métrica}.
+When two matrices have the same pair of determinant and trace, we can say that these matrices have a kind of equivalence if we interpret the two functions as scalar measures whose absolute values express a quantitative aspect and whose signs express a qualitative aspect of the matrix in question. Therefore, isospectral matrices are said to be equivalent in this sense; \emph{something that, in a certain way, confers a metric feature on the spectrum of matrices}.
 
 {\footnotesize
 \begin{proof}
-Vamos demonstrar as duas igualdades anteriores. Para provar a primeira, seja a regra do polinômio característico de $\mat{A}$ descrita em sua forma fatorada
+Let's verify the two equalities above. For the first one, let the rule of the characteristic polynomial of $\mat{A}$ be described in its factorized form by
 \begin{equation*}
 \fua{g}{x}=(-1)^n\lpa x-\lambda_n\rpa\lpa x-\lambda_{n-1}\rpa\cdots\lpa x-\lambda_2\rpa\lpa x-\lambda_1\rpa\,,
 \end{equation*}
-de onde resulta a igualdade
+from where the following equality results:
 \begin{equation*}
 \det{(\mat{A}-x\mat{I})}=\lpa \lambda_n-x\rpa\lpa \lambda_{n-1}-x\rpa\cdots\lpa \lambda_2-x\rpa\lpa \lambda_1-x\rpa\,,
 \end{equation*}
-válida para qualquer $x\in\mathcal{R}$. Então, se $x=0$, temos
+valid for any $x\in\mathcal{R}$. Thus, if $x=0$, we have
 \begin{equation*}
 \det{\mat{A}}=\lambda_n\lambda_{n-1}\cdots\lambda_2\lambda_1\,.
 \end{equation*}
-Para provar a segunda igualdade, uma das chamadas Fórmulas de Viète, segundo \aut{Vinberg}\cite{vinberg_2003_1}, diz que para polinômios com formato igual ao da regra \eqref{eq:poliCaracDesen}, tem-se que
+In order to prove the second equality, one of the so called Viète Formulae, according to \aut{Vinberg}\cite{vinberg_2003_1}, states that 
 \begin{equation*}
--\dfrac{a_1}{(-1)^n}=\lambda_n+\lambda_{n-1}+\cdots+\lambda_2+\lambda_1\,.
+-\dfrac{a_1}{(-1)^n}=\lambda_n+\lambda_{n-1}+\cdots+\lambda_2+\lambda_1\,,
 \end{equation*}
-Podemos então substituir o coeficiente $a_1$ pelo termo à direita em \eqref{eq:coefAUm}, resultando
+valid for polynomials having the same format of \eqref{eq:poliCaracDesen}. Thence we can substitute the coefficient $a_1$ by the right term of \eqref{eq:coefAUm}, resulting   
 \begin{equation*}
 \trc{\mat{A}}=\lambda_n+\lambda_{n-1}+\cdots+\lambda_2+\lambda_1\,.
 \end{equation*}
 \end{proof}}
 
-
-Agora, considerando uma matriz $\mat{A}\in\overline{M}$, diz-se que ela é \textsb{positiva-se\-mi\-de\-fi\-nida}\index{matriz!positiva-semidefinida} ou \textsb{não-negativa}\index{matriz!não-negativa} se
+A matrix $\mat{A}\in\overline{M}$ is said to be \textsb{positive-semidefinite}\index{matrix!positive-semidefinite} or \textsb{non negative}\index{matrix!non negative} if
 \begin{equation}
 \gloref{parteReal}\lpa\mat{X}^\dagger\mat{A}\mat{X}\rpa_{11}\geqslant0\,,
 \end{equation}
-onde $\mat{X}$ é uma matriz não nula qualquer de dimensão $n\times 1$. Quando a desigualdade impõe que  o lado esquerdo seja sempre positivo, $\mat{A}$ é classificada como \textsb{positiva-definida}\index{matriz!positiva-definida}. Uma condição necessária e suficiente para garantir a positividade de uma matriz é que o espectro de sua parcela hermitiana seja constituído de elementos não negativos\footnote{Essa condição será comprovada com a definição de autovalor à p.\pageref{sec:autoPares}.}, quando a matriz é positiva-semidefinida; da mesma forma, se esses elementos forem todos positivos, a matriz é positiva-de\-fi\-ni\-da. Diante disso e das duas propriedades apresentadas no parágrafo anterior, pode-se concluir que o determinante e o traço de uma matriz hermitiana positiva-se\-mi\-de\-fi\-ni\-da são sempre não negativos, enquanto que os de uma matriz hermitiana positiva-definida são sempre positivos. Assim, no contexto das matrizes hermitianas, o determinante não negativo indica a positividade da matriz; o que permite afirmar que toda matriz simétrica positiva-definida é inversível. Além disso, quando uma matriz hermitiana positiva-definida $\mat{H}$ pré ou pós multiplica uma outra matriz qualquer $\mat{B}\in\overline{M}$, tem-se que
+where $\mat{X}$ is a non zero $n\times 1$ matrix. When the inequality imposes the left side to be always positive, $\mat{A}$ is called  \textsb{positive-definite}\index{matrix!positive-definite}. A necessary and sufficient condition that ensures positivity of a matrix is that the spectrum of its hermitian part be constituted of non negative elements\footnote{This condition will be verified after the definition of eigenvalue on the next chapter %à p.\pageref{sec:autoPares}
+.}, when this matrix results non negative; similarly, if these same elements are all positive, the matrix is positive-definite. Thereby, from the two equalities of the previous paragraph, it can be concluded that the determinant and trace of a non negative Hermitian matrix are always non negative, while for a positive-definite Hermitian matrix both are positive. Therefore, in the context of Hermitian matrices, the determinant value indicates whether a matrix is non negative or not. From this conclusion, we can state that \emph{every positive-definite hermitian matrix is invertible}. Moreover, when a positive-definite hermitian matrix $\mat{H}$ pre or post multiplies any matrix 
+$\mat{B}\in\overline{M}$, we have
 \begin{equation}
 \sgn{\det{\lpa\mat{BH}\rpa}}=\sgn{\det{\lpa\mat{HB}\rpa}}=\sgn{\det{\mat{B}}} \sgn{\det{\mat{H}}}=\sgn{\det{\mat{B}}}\,,
 \end{equation}
-onde o sinal \gloref{signum} do determinante de $\mat{B}$ define o sinal do produto dos determinantes, tornando o conceito de positividade matricial intuitivamente similar ao de positividade escalar, no qual um número positivo quando multiplicado por outro não lhe altera o sinal.
+where the sign ``\gloref{signum}'' of the determinant of $\mat{B}$ defines the sign of the product of the determinants, making the concept of matrix positivity similar to  scalar positivity, in which the sign of a product is not defined by an eventual positive number.   
 
-Encerramos este capítulo apresentando a seguir uma igualdade de caráter fundamental, propriedade de qualquer matriz quadrada, e que vai viabilizar desenvolvimentos apresentados em capítulos posteriores.
+We will finish this chapter by presenting the following fundamental equality, a property of any square matrix that will make further developments feasible.  
 
 \begin{mteo}{Cayley-Hamilton}{cayleyhamilton}\index{Cayley-Hamilton!Teorema de}
 Seja um mapeamento $\map{\hat{g}}{\overline{M}}{\overline{M}}$ cuja regra da função é descrita por
