@@ -269,11 +269,11 @@ When it is convenient to make the operator explicit, we shall represent a group 
 	\item[i.] Commutativity: $\ele{g}_1\ast \ele{g}_2= \ele{g}_2\ast \ele{g}_1\, ,
 	\forall \, \ele{g}_1,\ele{g}_2 \in \con{G}$,
 \end{itemize}
-from which the group $G$ becomes \textsb{commutative}\index{group!commutative} or \textsb{abelian}\index{group!abelian}. In contrast, groups in which the order of operands affects the operator value are called \textsb{non-abelian}\index{group!non-abelian} or \textsb{non-commutative}\index{group!non-commutative}. The abelian group that implements the generalized concept of addition is called \textsb{additive}\index{group!additive} and of multiplication \textsb{multiplicative}\index{group!multiplicative}, both represented respectively by $\lpa \con{G},+ \rpa$ e $\lpa \con{G},\cdot\rpa$. We adopt the notations $\ele{g}_1^{-1}$ and $-\ele{g}_1$ as the inverse elements of ${\ele{g}_1}\in G$ in multiplication and addition respectively.
+from which the group $G$ becomes \textsb{commutative}\index{group!commutative} or \textsb{abelian}\index{group!abelian}. In contrast, groups in which the order of operands affects the operator value are called \textsb{non-abelian}\index{group!non-abelian} or \textsb{non-commutative}\index{group!non-commutative}. The abelian group that implements the generalized concept of addition is called \textsb{additive}\index{group!additive} and of multiplication, \textsb{multiplicative}\index{group!multiplicative}, both represented respectively by $\lpa \con{G},+ \rpa$ e $\lpa \con{G},\cdot\rpa$. We adopt the notations $\ele{g}_1^{-1}$ and $-\ele{g}_1$ as the inverse elements of ${\ele{g}_1}\in G$ in multiplication and addition respectively.
 
-Sets defining groups can also be used to define mappings. When this happens, the function must admit as argument any value of the operation involved, since the set of all these values is the domain itself. In other words, given a mapping $\map{h}{\con{G}}{\con{W}}$, where the sets involved define groups $\lpa G, \ast\rpa$ and $\lpa W, \rtimes\rpa$, we have any element $g\in G$ as a value of some $g_1\ast g_2$, where $g_1,g_2\in G$. Therefore, it is evident that the value $\fua{h}{g}=\fua{h}{g_1\ast g_2}$.
+Sets defining groups can also be used to define mappings. When this happens, the function must admit as argument any value of the operation involved, since the set of all these values is the domain itself. In other words, given a mapping $\map{h}{\con{G}}{\con{W}}$, where the sets involved define groups $\lpa G, \ast\rpa$ and $\lpa W, \rtimes\rpa$, we have each element $g\in G$ as a value of some $g_1\ast g_2$, where $g_1,g_2\in G$. Therefore, it is evident that the value $\fua{h}{g}=\fua{h}{g_1\ast g_2}$.
 
-The operation in $W$ can take the elements $\fua{h}{g_1}$ and $\fua{h}{g_2}$ of $W$ as operands, that is, $\fua{h}{g_1}\rtimes\fua{h}{g_2}$, and have a resulting value of $\fua{h}{g_1\ast g_2}\in W$. Moreover, if $h$ maps the identity element of $G$ to the identity element of $W$, we say that these two groups, in an operational context, are structurally similar or \textsb{homomorphic}\index{group!homomorphic} in $h$. In mathematical terms, the function in $\map{h}{\con{G}}{\con{W}}$ is said to be a \textsb{group homomorphism}\index{group!homomorphism} if it makes $G$ and $W$ homomorphic, that is, if
+The operation in group $W$ can take the elements $\fua{h}{g_1}$ and $\fua{h}{g_2}$ of $W$ as operands, that is, $\fua{h}{g_1}\rtimes\fua{h}{g_2}$, and have a resulting value of $\fua{h}{g_1\ast g_2}\in W$. Moreover, if $h$ maps the identity element of $G$ to the identity element of $W$, we say that these two groups, in an operational context, are structurally similar or \textsb{homomorphic}\index{group!homomorphic} in $h$. In mathematical terms, the function in $\map{h}{\con{G}}{\con{W}}$ is said to be a \textsb{group homomorphism}\index{group!homomorphism} if it makes $G$ and $W$ homomorphic, that is, if
 \begin{itemize}
 	\setlength\itemsep{.1em}
 	\item[i.] $\fua{h}{\ele{g}_1\ast\ele{g}_2} =
@@ -286,10 +286,10 @@ The operation in $W$ can take the elements $\fua{h}{g_1}$ and $\fua{h}{g_2}$ of 
 A bijection-homomorphism is named \textsb{isomorphism}\index{group!isomorphism} and the groups involved are \textsb{isomorphic}\index{group!isomorphic} in $h$. If the function in mapping $\map{f}{\con{G}}{\con{G}}$ is an isomorphism, then $f$ is called \textsb{automorphism}\index{group!automorphism}.
 
 
-Now, let's consider the mapping $\map{\fun{k}}{\crt{G}{n}}{\con{W}}$ whose domain is the catersian product of $n$ sets, each of them defining a group. In this case, the function $k$ can be called a group homomorphism if, for any group $G_i$ and any elements $g_{i_1},g_{i_2}\in G_i$,
+Now, let's consider the mapping $\map{\fun{k}}{\crt{G}{n}}{\con{W}}$ whose domain is the cartesian product of $n$ sets, each of them defining a group. In this case, the function $k$ can be called a group homomorphism if, for any group $G_i$ and any elements $g_{i_1},g_{i_2}\in G_i$,
 \begin{align}
-	\lefteqn{\fua{k}{\ele{g}_1,\cdots,g_{i_1}\ast g_{i_2},\cdots,\ele{g}_n}=} & & \nonumber\\
-	& &\fua{k}{\ele{g}_1,\cdots,g_{i_1},\cdots,\ele{g}_n}\rtimes\fua{k}{\ele{g}_1,\cdots,g_{i_2},\cdots,\ele{g}_n}
+\lefteqn{\fua{k}{\ele{g}_1,\cdots,g_{i_1}\ast g_{i_2},\cdots,\ele{g}_n}=} & & \nonumber\\
+& &\fua{k}{\ele{g}_1,\cdots,g_{i_1},\cdots,\ele{g}_n}\rtimes\fua{k}{\ele{g}_1,\cdots,g_{i_2},\cdots,\ele{g}_n}
 \end{align}
 and also
 \begin{equation}
@@ -399,8 +399,8 @@ where $\mat{A}$ is a $n\times\cdots\times n$ array, with $n$ repeated $q$ times.
 \sum_{i_1=1}^{n}\delta_{ji_1}\mat{A}_{i_1\cdots i_q}=\mat{A}_{ji_2\cdots i_q}\,.
 \end{equation}
 
-At this point, it is convenient to say that every $n_1\times n_2$ array, whose elements are arranged in a tabular format, is called a \textsb{matrix}\index{matrix}. The elements of a matrix are addressed by lines and comuns: the escalar with $ij$ position is located on the line $i$ and column $j$. If $n_1=n_2=n$, we have a \textsb{square matrix}\index{matrix!square} of order $n$. Henceforth, recalling the additive group $Y$ of arrays, we will consider
-$M\subset Y$ a set of matrices and  $\overline{M}\subset M$ a set of square matrices with order $n$. For example, the set $\overline{M}$ has the $n\times n$ Kronecker Delta, represented in \eqref{eq:matrizIdentidade}, as an element, which we usually call \textsb{identity matrix}\index{matrix!identity} $\mat{I}$ because $\mat{A}\mat{I} = \mat{A}$, for any $\mat{A}\in\overline{M}$.
+At this point, it is convenient to say that every $n_1\times n_2$ array, whose elements are arranged in a tabular format, is called a \textsb{matrix}\index{matrix}. The elements of a matrix are addressed by lines and columns: the escalar with $ij$ position is located on the line $i$ and column $j$. If $n_1=n_2=n$, we have a \textsb{square matrix}\index{matrix!square} of order $n$. Henceforth, recalling the additive group $Y$ of arrays, we will consider
+$M\subset Y$ a set of matrices and  $\overline{M}\subset M$ a set of square matrices with order $n$. For example, the set $\overline{M}$ has the $n\times n$ Kronecker Delta, represented in \eqref{eq:matrizIdentidade}, as an element, which we usually call \textsb{identity matrix}\index{matrix!identity} $\mat{I}$ because $\mat{A}\mat{I} = \mat{I}\mat{A} = \mat{A}$, for any $\mat{A}\in\overline{M}$.
 
 If there exists a matrix $\mat{B}\in\overline{M}$ such that $\mat{A}\mat{B} = \mat{I}$, we call it the \textsb{inverse}\index{matrix!inverse} of $\mat{A}$, notated by $\mat{A}^{-1}$. The condition of invertibility of a matrix depends on the value of a function called \textsb{determinant}\index{determinant}, which defines a mapping $\map{\gloref{determ}}{\overline{M}}{\mathcal{R}}$ where $\mathcal{R}$ is a real or complex field and $\det$ is described by the equality
 \begin{equation}\label{eq:Determinante}
@@ -484,7 +484,7 @@ A more generic case of matrix transposition involves complex scalars and their c
 When the elements involved are all real scalars, we have the equality $\mat{H}^\dagger=\mat{H}^\text{T}$. Moreover, it is convenient to say that the four properties presented above for transpose matrices are also valid for conjugate transposes, namely, $(\mat{H}_1^\dagger)^\dagger =\mat{H}_1$,  $(\mat{H}_1+\mat{H}_2)^\dagger = \mat{H}_1^\dagger+\mat{H}_2^\dagger$, $(\mat{H}_1\mat{H}_2)^\dagger =\mat{H}_2^\dagger\mat{H}_1^\dagger$ and $(\mat{H}_1^\dagger)^{-1}=(\mat{H}_1^{-1})^\dagger$, if $\mat{H}_1$ is invertible, where matrices $\mat{H}_1,\mat{H}_2\in M$.
 
 
-In the context of invertible matrices, a matrix whose inverse equals to its conjugate transpose, that is, when  $\mat{U}^{-1}=\mat{U}^\dagger$ where $\mat{U}\in\overline{M}$, is called  \textsb{unitary}\index{matrix!unitary}. Considering the property $\det{\mat{H}}^\dagger=\overline{\det{\mat{H}}}$, we have
+In the context of invertible matrices, a matrix whose inverse equals its conjugate transpose, that is, when  $\mat{U}^{-1}=\mat{U}^\dagger$ where $\mat{U}\in\overline{M}$, is called  \textsb{unitary}\index{matrix!unitary}. Considering the property $\det{\mat{H}}^\dagger=\overline{\det{\mat{H}}}$, we have
 \begin{equation}
 1=\det{\mat{UU}^{-1}}=\det{\mat{UU}^\dagger}= \det{\mat{U}}\overline{\det\mat{U}} = | \det{\mat{U}} |^2\,,
 \end{equation}
@@ -494,14 +494,14 @@ while an \textsb{improper orthogonal matrix}\index{matrix!improper orthogonal} h
 1=\det{\mat{A}\mat{A}^{-1}}=\det{\mat{A}}\cdot\det{\mat{A}^{-1}}\implies \det{\mat{A}^{-1}}= \lpa\det{\mat{A}}\rpa^{-1}\,.
 \end{equation}
 
-A given square matrix $\mat{A}$ that equals its transpose conjugate $\mat{A}^\dagger$ is called \textsb{Hermitian}\index{matrix!Hermitian}. Real symmetric matrices are examples of Hermitian matrices: if the elements of the square matrix  $\mat{S}$ are real, then $\mat{S}^\dagger=\mat{S}^\text{T}$, and since $\mat{S}$ is symmetric, $\mat{S}^\dagger=\mat{S}$. Similarly to antisymmetric matrices, an \textsb{anti-Hermitian}\index{matrix!anti-Hermitian} matrix $\mat{A}$ equals the negative of its transpose conjugate, that is, $\mat{A}=-\mat{A}^\dagger$. Thus, let $\mat{B}\in\overline{M}$ be a matrix from which we write the following development:
+A given square matrix $\mat{A}$ that equals its conjugate transpose $\mat{A}^\dagger$ is called \textsb{Hermitian}\index{matrix!Hermitian}. Real symmetric matrices are examples of Hermitian matrices: if the elements of the square matrix  $\mat{S}$ are real, then $\mat{S}^\dagger=\mat{S}^\text{T}$, and since $\mat{S}$ is symmetric, $\mat{S}^\dagger=\mat{S}$. Similarly to antisymmetric matrices, an \textsb{anti-Hermitian}\index{matrix!anti-Hermitian} matrix $\mat{A}$ equals the negative of its conjugate transpose, that is, $\mat{A}=-\mat{A}^\dagger$. Thus, let $\mat{B}\in\overline{M}$ be a matrix from which we write the following development:
 \begin{equation}
 \mat{B} = \dfrac{1}{2} \lpa \mat{B} + \mat{B}\rpa = \dfrac{1}{2} \lpa \mat{B} + \mat{B} + \mat{B}^\dagger - \mat{B}^\dagger\rpa = \underbrace{\dfrac{1}{2} \lpa \mat{B} + \mat{B}^\dagger\rpa}_{\mat{B}_1} + \underbrace{\dfrac{1}{2} \lpa \mat{B} - \mat{B}^\dagger\rpa}_{\mat{B}_2}\,.
 \end{equation}
-Considering the properties of conjugate transposes, we can obtain that the matrix $\mat{B}_1$ equals its transpose conjugate and matrix $\mat{B}_2$ equals the negative of its transpose conjugate; thereby, we say that they are respectively the \textsb{Hermitian} and \textsb{anti-Hermitian}\index{matrix!Hermitian part of}\index{matrix!anti-Hermitian part of} parts of $\mat{B}$. Thus, this result is generalized by saying that every square matrix can be decomposed additively in a Hermitian and an anti-Hermitian parts.
+Considering the properties of conjugate transposes, we can obtain that the matrix $\mat{B}_1$ equals its conjugate transpose and matrix $\mat{B}_2$ equals the negative of its conjugate transpose; thereby, we say that they are respectively the \textsb{Hermitian} and \textsb{anti-Hermitian}\index{matrix!Hermitian part of}\index{matrix!anti-Hermitian part of} parts of $\mat{B}$. This result is generalized by saying that every square matrix can be decomposed additively in a Hermitian and an anti-Hermitian parts.
 
 
-Any square matrix $\mat{N}$ is called \textsb{normal}\index{matrix!normal}\label{nm:Normal} when it comutes with its conjugate transpose, that is, when $\mat{N}^\dagger\mat{N}=\mat{N}\mat{N}^\dagger$. These matrices, for making the product $\mat{N}^\dagger\mat{N}$ an Hermitian matrix, \emph{are always susceptible of diagonalization by a unitary matrix}. In order to understand what this means, let's consider firstly the matrices $\mat{A},\mat{B}\in\overline{M}$ and say that they are called \textsb{similar}\index{matrix!similar} when an invertible matrix $\mat{Q}$ exists such that
+Any square matrix $\mat{N}$ is called \textsb{normal}\index{matrix!normal}\label{nm:Normal} when it commutes with its conjugate transpose, that is, when $\mat{N}^\dagger\mat{N}=\mat{N}\mat{N}^\dagger$. These matrices, which make the product $\mat{N}^\dagger\mat{N}$ an Hermitian matrix, \emph{are always susceptible of diagonalization by a unitary matrix}. In order to understand what this means, let's consider firstly the matrices $\mat{A},\mat{B}\in\overline{M}$ and say that they are called \textsb{similar}\index{matrix!similar} when an invertible matrix $\mat{Q}$ exists such that
 \begin{equation}
 \mat{A} = \mat{Q}^{-1}\mat{B}\mat{Q}\,.
 \end{equation}
@@ -513,7 +513,7 @@ An operation $\map{q}{\overline{M}}{\overline{M}}$ is a \textsb{similarity trans
 \begin{equation}
 \fua{q}{\mat{X}} = \mat{Q}^{-1}\mat{X}\mat{Q}.
 \end{equation}
-An important example of this transformation is called \textsb{diagonalization}\index{diagonalization}, defined from the concept of \textsb{diagonal matrix}\index{matrix!diagonal}, which is a square matrix whose elements in positions $i\neq j$ are null. Thereby, if there exists a similarity transformation in a square matrix $\mat{A}$ which $\fua{q}{A}$ results diagonal, this transformation is called a diagonalization of $\mat{A}$ or matrix $\mat{A}$ is said to be \textsb{diagonalizable}\index{matrix!diagonalizable}. Finally, it is now possible to clearly understand diagonalization of normal matrices by unitary.
+An important example of this transformation is called \textsb{diagonalization}\index{diagonalization}, defined from the concept of \textsb{diagonal matrix}\index{matrix!diagonal}, which is a square matrix whose elements in positions $i\neq j$ are null. Thereby, if there exists a similarity transformation in a square matrix $\mat{A}$ which $\fua{q}{A}$ results diagonal, this transformation is called a diagonalization of $\mat{A}$ or matrix $\mat{A}$ is said to be \textsb{diagonalizable}\index{matrix!diagonalizable}. Finally, it is now possible to understand the diagonalization of normal matrices by unitary.
 
 \begin{mteo}{Spectral Diagonalization}{decompSpec}
 For any normal matrix $\mat{N}$, there is always an unitary matrix $\mat{U}$ such that
