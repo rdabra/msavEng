@@ -307,14 +307,14 @@ In our study, we shall need to establish a relation between an algebraic set tha
 \fua{\varphi}{\ele{g}_1\ast\ele{g}_2,\ele{b}}, \forall \, \ele{b}
 \in \con{B},\,\forall\, \ele{g}_1,\ele{g}_2\in\con{G}$.
 \end{itemize}
-When $\varphi$ observe these axioms, the structure of $B$ is preserved, now called a \textsb{$G$-set}\index{set!G-}, since its fundamental mathematical attributes remain unaltered. Thereby, given an element $b_0\in B$, the group action $\varphi$ is classified as \textsb{simply transitive}\index{grupo!action!simply transitive} if
+When $\varphi$ observe these axioms, the structure of $B$ is preserved, now called a \textsb{$G$-set}\index{set!G-}, since its fundamental mathematical attributes remain unaltered. Thereby, given an element $b_0\in B$, the group action $\varphi$ is classified as \textsb{simply transitive}\index{group!action!simply transitive} if
 \begin{equation}
 \exists !\,\, \ele{g}\in{\con{G}}\textrm{ such that } \fua{\varphi}{g,\ele{b_0}}=\ele{b},\,\forall\, \ele{b}\in\con{B}\,.
 \end{equation}
 From these definition, we conclude that \emph{in a simply transitive group action, when we fix an element of $B$ in the domain, there is a biunivocal correspondence between the elements of the group and of the codomain.}
 
 
-There can be an abelian group $R$ that is simultaneously additive and multiplicative, on which the multiplication of additions results the addition of multiplications, or in other words, on which the following distributivity is valid: 
+There can be an abelian group $R$ that is simultaneously additive and multiplicative, on which the multiplication of additions results the addition of multiplications, or in other words, on which the following distributivity is valid:
 \begin{equation}
 \ele{r}\cdot\gloref{sum}r_i
 =\sum_{i=1}^{n}r\cdot r_i\,\, , \forall \,
@@ -333,13 +333,13 @@ Arrays can be added and multiplied. If an array  $\mat{A+B}$ is the sum of $\mat
 \begin{equation}\label{eq:adicaoArray}
 \mat{(A+B)}_{i_1\cdots i_q}=\mat{A}_{i_1\cdots i_q}+\mat{B}_{i_1\cdots i_q}\,.
 \end{equation}
-In its turn, the multiplication $\mat{AB}$ requires that the last $q$ elements of the dimension of $A$ and the first $q$ elements of the dimension of $B$ are equal; in other words, if $m_1\times\cdots\times m_p\times n_1\times\cdots\times n_q$ is the dimension of $\mat{A}$, then $n_1\times\cdots\times n_q\times l_1\times\cdots\times l_s$ must be the dimension of $\mat{B}$. Thereby, the resulting dimension of array $\mat{AB}$ is $m_1\times\cdots\times m_p\times l_1\times\cdots\times l_s$ and each element 
+In its turn, the multiplication $\mat{AB}$ requires that the last $q$ elements of the dimension of $A$ and the first $q$ elements of the dimension of $B$ are equal; in other words, if $m_1\times\cdots\times m_p\times n_1\times\cdots\times n_q$ is the dimension of $\mat{A}$, then $n_1\times\cdots\times n_q\times l_1\times\cdots\times l_s$ must be the dimension of $\mat{B}$. Thereby, the resulting dimension of array $\mat{AB}$ is $m_1\times\cdots\times m_p\times l_1\times\cdots\times l_s$ and each element
 \begin{equation}
 \lpa\mat{AB}\rpa_{i_1\cdots i_pj_1\cdots j_s} =
 \sum_{k_1=1}^{n_1}\cdots\sum_{k_q=1}^{n_q} \mat{A}_{i_1\cdots
 	i_pk_1\cdots k_q}\mat{B}_{k_1\cdots k_qj_1\cdots j_s}\,.
 \end{equation}
-It is also possible to multiply a scalar $\alpha$ and an array $\mat{C}$ with dimension $n_1\times\cdots\times n_q$ according to 
+It is also possible to multiply a scalar $\alpha$ and an array $\mat{C}$ with dimension $n_1\times\cdots\times n_q$ according to
 \begin{equation}
 \lpa\alpha\mat{C}\rpa_{i_1\cdots i_q} := \alpha \cdot \mat{C}_{i_1\cdots
 	i_q}\,.
@@ -390,16 +390,16 @@ where the addressing domain is $N^{2q}$ and the set $N = \lch 1,2,\cdots,n \rch$
 \end{bmatrix}\,.
 \end{equation}
 
-Along this text, the following important property of the Kronecker Delta will be used to handle indices in various proofs and expression developments:  
+Along this text, the following important property of the Kronecker Delta will be used to handle indices in various proofs and expression developments:
 \begin{equation}
 \sum_{i_q=1}^{n}\mat{A}_{i_1\cdots i_q}\delta_{i_qj}=\mat{A}_{i_1\cdots i_{q-1}j}\,,
 \end{equation}
-where $\mat{A}$ is a $n\times\cdots\times n$ array, with $n$ repeated $q$ times. In this equality, the index $i_q$ of the array, on which the sum is made,  results changed by the index $j$ of the Kronecker Delta. Similarly, 
+where $\mat{A}$ is a $n\times\cdots\times n$ array, with $n$ repeated $q$ times. In this equality, the index $i_q$ of the array, on which the sum is made,  results changed by the index $j$ of the Kronecker Delta. Similarly,
 \begin{equation}
 \sum_{i_1=1}^{n}\delta_{ji_1}\mat{A}_{i_1\cdots i_q}=\mat{A}_{ji_2\cdots i_q}\,.
 \end{equation}
 
-At this point, it is convenient to say that every $n_1\times n_2$ array, whose elements are arranged in a tabular format, is called a \textsb{matrix}\index{matrix}. The elements of a matrix are addressed by lines and comuns: the escalar with $ij$ position is located on the line $i$ and column $j$. If $n_1=n_2=n$, we have a \textsb{square matrix}\index{matrix!square} of order $n$. Henceforth, recalling the additive group $Y$ of arrays, we will consider   
+At this point, it is convenient to say that every $n_1\times n_2$ array, whose elements are arranged in a tabular format, is called a \textsb{matrix}\index{matrix}. The elements of a matrix are addressed by lines and comuns: the escalar with $ij$ position is located on the line $i$ and column $j$. If $n_1=n_2=n$, we have a \textsb{square matrix}\index{matrix!square} of order $n$. Henceforth, recalling the additive group $Y$ of arrays, we will consider
 $M\subset Y$ a set of matrices and  $\overline{M}\subset M$ a set of square matrices with order $n$. For example, the set $\overline{M}$ has the $n\times n$ Kronecker Delta, represented in \eqref{eq:matrizIdentidade}, as an element, which we usually call \textsb{identity matrix}\index{matrix!identity} $\mat{I}$ because $\mat{A}\mat{I} = \mat{A}$, for any $\mat{A}\in\overline{M}$.
 
 If there exists a matrix $\mat{B}\in\overline{M}$ such that $\mat{A}\mat{B} = \mat{I}$, we call it the \textsb{inverse}\index{matrix!inverse} of $\mat{A}$, notated by $\mat{A}^{-1}$. The condition of invertibility of a matrix depends on the value of a function called \textsb{determinant}\index{determinant}, which defines a mapping $\map{\gloref{determ}}{\overline{M}}{\mathcal{R}}$ where $\mathcal{R}$ is a real or complex field and $\det$ is described by the equality
@@ -409,7 +409,7 @@ If there exists a matrix $\mat{B}\in\overline{M}$ such that $\mat{A}\mat{B} = \m
 	i_n}\epsilon_{j_1\cdots j_n}
 \prod_{k=1}^{n}\mat{X}_{i_kj_k}\,,
 \end{equation}
-which we call \textsb{Leibniz formula}\index{Leibniz!formula}. When $\det\mat{X}=0$, matrix $\mat{X}$ is said to be \textsb{singular}\index{matrix!singular} or \textsb{non-invertible}\index{matrix!non-invertible}; otherwise, it is called \textsb{non-singular}\index{matrix!non-singular} or \textsb{invertible}\index{matrix!invertible}. From the above definition, we can obtain a zero value determinant when its argument is the zero matrix and a unitary value for the identity matrix. Moreover, the main property of determinants of square matrices is to preserve multiplications, that is, the determinant of the product is the product of determinants; in other words $\det{\mathrm{AB}}=\det{\mathrm{A}}\cdot\det{\mathrm{B}}$. Recalling our classification of groups, we can say that a subset of $\overline{M}$ whose matrices are all invertible defines, together with the operation of multiplication, a non-abelian group.   
+which we call \textsb{Leibniz formula}\index{Leibniz!formula}. When $\det\mat{X}=0$, matrix $\mat{X}$ is said to be \textsb{singular}\index{matrix!singular} or \textsb{non-invertible}\index{matrix!non-invertible}; otherwise, it is called \textsb{non-singular}\index{matrix!non-singular} or \textsb{invertible}\index{matrix!invertible}. From the above definition, we can obtain a zero value determinant when its argument is the zero matrix and a unitary value for the identity matrix. Moreover, the main property of determinants of square matrices is to preserve multiplications, that is, the determinant of the product is the product of determinants; in other words $\det{\mathrm{AB}}=\det{\mathrm{A}}\cdot\det{\mathrm{B}}$. Recalling our classification of groups, we can say that a subset of $\overline{M}$ whose matrices are all invertible defines, together with the operation of multiplication, a non-abelian group.
 
 
 {\footnotesize
@@ -422,7 +422,7 @@ where matrices $\mat{E}_i$ are elementary. Thus, the equality
 \begin{equation*}
 \mat{A}=\mat{E}_{1}^{-1}\mat{E}_{2}^{-1}\cdots\mat{E}_{r-1}^{-1}\mat{E}_r^{-1}
 \end{equation*}
-is a decomposition of $\mat{A}$ in elementary matrices, since the inverse of an elementary matrix is also elementary. The determinant of a matrix $\mat{A}'$ that results from a line action on the matrix $\mat{A}$ is given by $\det{\mat{A}'}=\alpha\det{\mat{A}}$, onde $\alpha\in\real$. Therefore, we can state that $\det{\mat{E}}=\beta\det{\mat{I}}=\beta$, where $\beta\in\real$. Considering what has been defined so far, we can say that  
+is a decomposition of $\mat{A}$ in elementary matrices, since the inverse of an elementary matrix is also elementary. The determinant of a matrix $\mat{A}'$ that results from a line action on the matrix $\mat{A}$ is given by $\det{\mat{A}'}=\alpha\det{\mat{A}}$, onde $\alpha\in\real$. Therefore, we can state that $\det{\mat{E}}=\beta\det{\mat{I}}=\beta$, where $\beta\in\real$. Considering what has been defined so far, we can say that
 \begin{equation*}
 \det{\mat{AB}}=\det{\mat{E}_{1}^{-1}\mat{E}_{2}^{-1}\cdots\mat{E}_{r-1}^{-1}\mat{E}_r^{-1}\mat{B}}=\kappa\det{\mat{B}}\,,
 \end{equation*}
@@ -462,13 +462,13 @@ The third item can be verified similarly:
 & = \sum_{k=1}^{n_2}\sum_{i=1}^{n_1}\sum_{j=1}^{n_2}\delta_{ji}\mat{A}_{ik} \mat{B}_{kj}\delta_{ji}\nonumber\\
 & = \sum_{k=1}^{n_2}\mat{A}_{jk} \mat{B}_{ki}= \sum_{k=1}^{n_2}\mat{B}^\text{T}_{ik} \mat{A}^\text{T}_{kj}\,.\nonumber
 \end{align*}
-The fourth property we verify from $\mat{A}^\text{T}(\mat{A}^\text{T})^{-1}=\mat{I}$ and transposing both sides of the equality $\mat{A}^{-1}\mat{A}=\mat{I}$, when 
+The fourth property we verify from $\mat{A}^\text{T}(\mat{A}^\text{T})^{-1}=\mat{I}$ and transposing both sides of the equality $\mat{A}^{-1}\mat{A}=\mat{I}$, when
 we equal the left sides of these two expressions, arriving at the equality $\mat{A}^\text{T}(\mat{A}^\text{T})^{-1}=\mat{A}^\text{T}(\mat{A}^{-1})^\text{T}$.
 \end{proof}}
 
 
 A more generic case of matrix transposition involves complex scalars and their conjugates. Thus, let's consider $\mat{H}$ and $\mat{F}$ matrices with dimensions $n_1\times n_2$ e $n_2\times n_1$ respectively, whose elements are complex numbers. We say that these matrices are \textsb{conjugate transpose}, or that one is the conjugate transpose
-\index{matrix!conjugate transpose} of the other if $\mat{H}_{ij}=\gloref{compConj}$. In other words, $\mat{F}$ is the conjugate transpose \gloref{transpConj} of matrix  $\mat{H}$ if it is the transpose of the complex conjugates of the elements of $\mat{H}$. For example, if    
+\index{matrix!conjugate transpose} of the other if $\mat{H}_{ij}=\gloref{compConj}$. In other words, $\mat{F}$ is the conjugate transpose \gloref{transpConj} of matrix  $\mat{H}$ if it is the transpose of the complex conjugates of the elements of $\mat{H}$. For example, if
 \begin{alignat*} {3}
 \mat{H}=
 \begin{bmatrix}
@@ -493,8 +493,8 @@ while an \textsb{improper orthogonal matrix}\index{matrix!improper orthogonal} h
 \begin{equation}
 1=\det{\mat{A}\mat{A}^{-1}}=\det{\mat{A}}\cdot\det{\mat{A}^{-1}}\implies \det{\mat{A}^{-1}}= \lpa\det{\mat{A}}\rpa^{-1}\,.
 \end{equation}
- 
-A given square matrix $\mat{A}$ that equals its transpose conjugate $\mat{A}^\dagger$ is called \textsb{Hermitian}\index{matrix!Hermitian}. Real symmetric matrices are examples of Hermitian matrices: if the elements of the square matrix  $\mat{S}$ are real, then $\mat{S}^\dagger=\mat{S}^\text{T}$, and since $\mat{S}$ is symmetric, $\mat{S}^\dagger=\mat{S}$. Similarly to antisymmetric matrices, an \textsb{anti-Hermitian}\index{matrix!anti-Hermitian} matrix $\mat{A}$ equals the negative of its transpose conjugate, that is, $\mat{A}=-\mat{A}^\dagger$. Thus, let $\mat{B}\in\overline{M}$ be a matrix from which we write the following development:  
+
+A given square matrix $\mat{A}$ that equals its transpose conjugate $\mat{A}^\dagger$ is called \textsb{Hermitian}\index{matrix!Hermitian}. Real symmetric matrices are examples of Hermitian matrices: if the elements of the square matrix  $\mat{S}$ are real, then $\mat{S}^\dagger=\mat{S}^\text{T}$, and since $\mat{S}$ is symmetric, $\mat{S}^\dagger=\mat{S}$. Similarly to antisymmetric matrices, an \textsb{anti-Hermitian}\index{matrix!anti-Hermitian} matrix $\mat{A}$ equals the negative of its transpose conjugate, that is, $\mat{A}=-\mat{A}^\dagger$. Thus, let $\mat{B}\in\overline{M}$ be a matrix from which we write the following development:
 \begin{equation}
 \mat{B} = \dfrac{1}{2} \lpa \mat{B} + \mat{B}\rpa = \dfrac{1}{2} \lpa \mat{B} + \mat{B} + \mat{B}^\dagger - \mat{B}^\dagger\rpa = \underbrace{\dfrac{1}{2} \lpa \mat{B} + \mat{B}^\dagger\rpa}_{\mat{B}_1} + \underbrace{\dfrac{1}{2} \lpa \mat{B} - \mat{B}^\dagger\rpa}_{\mat{B}_2}\,.
 \end{equation}
@@ -513,10 +513,10 @@ An operation $\map{q}{\overline{M}}{\overline{M}}$ is a \textsb{similarity trans
 \begin{equation}
 \fua{q}{\mat{X}} = \mat{Q}^{-1}\mat{X}\mat{Q}.
 \end{equation}
-An important example of this transformation is called \textsb{diagonalization}\index{diagonalization}, defined from the concept of \textsb{diagonal matrix}\index{matrix!diagonal}, which is a square matrix whose elements in positions $i\neq j$ are null. Thereby, if there exists a similarity transformation in a square matrix $\mat{A}$ which $\fua{q}{A}$ results diagonal, this transformation is called a diagonalization of $\mat{A}$ or matrix $\mat{A}$ is said to be \textsb{diagonalizable}\index{matrix!diagonalizable}. Finally, it is now possible to clearly understand diagonalization of normal matrices by unitary. 
+An important example of this transformation is called \textsb{diagonalization}\index{diagonalization}, defined from the concept of \textsb{diagonal matrix}\index{matrix!diagonal}, which is a square matrix whose elements in positions $i\neq j$ are null. Thereby, if there exists a similarity transformation in a square matrix $\mat{A}$ which $\fua{q}{A}$ results diagonal, this transformation is called a diagonalization of $\mat{A}$ or matrix $\mat{A}$ is said to be \textsb{diagonalizable}\index{matrix!diagonalizable}. Finally, it is now possible to clearly understand diagonalization of normal matrices by unitary.
 
 \begin{mteo}{Spectral Diagonalization}{decompSpec}
-For any normal matrix $\mat{N}$, there is always an unitary matrix $\mat{U}$ such that 
+For any normal matrix $\mat{N}$, there is always an unitary matrix $\mat{U}$ such that
 \begin{equation}
 \widetilde{\mat{N}} = \mat{U}^\dagger\mat{N}\mat{U}\,,
 \end{equation}
@@ -532,7 +532,7 @@ Firstly we must say that, considering any square matrix $\mat{A}$ and a unitary 
 \mat{U}\mat{TT}^\dagger\mat{U}^\dagger & = \mat{U}\mat{T}^\dagger\mat{T}\mat{U}^\dagger\nonumber\\
 \mat{TT}^\dagger & = \mat{T}^\dagger\mat{T}\nonumber\,,
 \end{align}
-from where we conclude that $\mat{T}$ is also normal. From the last equality, we have to each position $ij$  
+from where we conclude that $\mat{T}$ is also normal. From the last equality, we have to each position $ij$
 \begin{align}
 \sum_{k=1}^n\mat{T}_{ik}\mat{T}_{kj}^\dagger & = \sum_{k=1}^n\mat{T}_{ik}^\dagger\mat{T}_{kj}\nonumber\\
 \sum_{k=1}^n\mat{T}_{ik}\overline{\mat{T}_{jk}} & = \sum_{k=1}^n\overline{\mat{T}_{ki}}\mat{T}_{kj}\,.\nonumber
@@ -549,7 +549,7 @@ that is, the trace of a matrix is the sum of its diagonal elements. Considering 
 \begin{equation}
 \trc{\mat{A}}=\trc{\mat{Q}^{-1}\mat{B}\mat{Q}}=\trc{\mat{Q}\mat{Q}^{-1}\mat{B}}=\trc{\mat{B}}\,,
 \end{equation}
-and then we can state generically that all similar matrices have the same trace. 
+and then we can state generically that all similar matrices have the same trace.
 
 Among other benefits, the trace function is a convenient tool to present what is known by \textsb{characteristic polynomial}\index{matrix!characteristic polynomial of}\label{pg:PolinomioCarac} of matrix: it is the function in operation $\map{g}{\mathcal{R}}{\mathcal{R}}$, whose rule is
 \begin{equation}
@@ -566,7 +566,7 @@ a_2 & = -\dfrac{1}{2}\lco a_{1}\trc{\mat{H}}+\lpa-1\rpa^n\trc{\mat{H}^2}\rco\,;\
 &\cdots\nonumber\\
 a_n & = -\dfrac{1}{n}\lco a_{n-1}\trc{\mat{H}}+a_{n-2}\trc{\mat{H}^2}+\cdots+a_1\trc{\mat{H}^{n-1}}+\lpa-1\rpa^n\trc{\mat{H}^n}\rco\,.
 \end{align}
-Any scalar $\lambda\in\mathcal{R}$ that is root of this polynomial is called a \textsb{characteristic root}\index{matrix!characteristic root of} of $\mat{H}$. The set 
+Any scalar $\lambda\in\mathcal{R}$ that is root of this polynomial is called a \textsb{characteristic root}\index{matrix!characteristic root of} of $\mat{H}$. The set
 $\lch\lambda_1,\cdots,\lambda_n\rch$ of characteristic roots of $\mat{H}$ is called the \textsb{spectrum}\index{matrix!spectrum of} of $\mat{H}$. In the case of a normal matrix $\mat{N}$ submitted to spectral diagonalization, its spectrum is the set of scalars that constitute the diagonal matrix $\widetilde{\mat{N}}$, which results from the diagonalization of $\mat{N}$ by unitary matrix. At this point, it is convenient to say that matrices involved in similarity transformations, like $\widetilde{\mat{N}}$ and $\mat{N}$, always have the same spectrum e that is why they are called \textsb{isospectral}\index{matrices!isospectral}.
 
 
@@ -576,7 +576,7 @@ Let's prove this last statement. We already know that the determinant of the inv
 \begin{equation*}
 \mat{Q}^{-1}x\mat{I}\mat{Q}=x\mat{Q}^{-1}\mat{I}\mat{Q}=x\mat{Q}^{-1}\mat{Q}=x\mat{I}\,,
 \end{equation*}
-it is possible to say that 
+it is possible to say that
 \begin{align*}
 \det \lpa\mat{A} - x\mat{I}\rpa&=\det \lpa\mat{Q}^{-1}\mat{B}\mat{Q} - \mat{Q}^{-1}x\mat{I}\mat{Q}\rpa\\
 &=\det \lco\mat{Q}^{-1}\lpa\mat{B} - x\mat{I}\rpa\mat{Q}\rco\\
@@ -586,7 +586,7 @@ it is possible to say that
 from where we conclude $\mat{A}$ and $\mat{B}$ isospectral.
 \end{proof}}
 
-The spectrum of a matrix has a close relation with determinant and trace functions, which \emph{respectively preserve the operations of multiplication and addition}. If   
+The spectrum of a matrix has a close relation with determinant and trace functions, which \emph{respectively preserve the operations of multiplication and addition}. If
 $\lch\lambda_1,\cdots,\lambda_n\rch$ is the spectrum of $\mat{A}$, this close relation is expressed through the following equalities:
 \begin{alignat}{3}
 \det{\mat{A}}  = \prod_{i=1}^n  \lambda_i & \qquad\text{and} \qquad & \trc{\mat{A}} & = \sum_{i=1}^n  \lambda_i \,.
@@ -607,11 +607,11 @@ valid for any $x\in\mathcal{R}$. Thus, if $x=0$, we have
 \begin{equation*}
 \det{\mat{A}}=\lambda_n\lambda_{n-1}\cdots\lambda_2\lambda_1\,.
 \end{equation*}
-In order to prove the second equality, one of the so called Viète Formulae, according to \aut{Vinberg}\cite{vinberg_2003_1}, states that 
+In order to prove the second equality, one of the so called Viète Formulae, according to \aut{Vinberg}\cite{vinberg_2003_1}, states that
 \begin{equation*}
 -\dfrac{a_1}{(-1)^n}=\lambda_n+\lambda_{n-1}+\cdots+\lambda_2+\lambda_1\,,
 \end{equation*}
-valid for polynomials having the same format of \eqref{eq:poliCaracDesen}. Thence we can substitute the coefficient $a_1$ by the right term of \eqref{eq:coefAUm}, resulting   
+valid for polynomials having the same format of \eqref{eq:poliCaracDesen}. Thence we can substitute the coefficient $a_1$ by the right term of \eqref{eq:coefAUm}, resulting
 \begin{equation*}
 \trc{\mat{A}}=\lambda_n+\lambda_{n-1}+\cdots+\lambda_2+\lambda_1\,.
 \end{equation*}
@@ -622,35 +622,35 @@ A matrix $\mat{A}\in\overline{M}$ is said to be \textsb{positive-semidefinite}\i
 \gloref{parteReal}\lpa\mat{X}^\dagger\mat{A}\mat{X}\rpa_{11}\geqslant0\,,
 \end{equation}
 where $\mat{X}$ is a non zero $n\times 1$ matrix. When the inequality imposes the left side to be always positive, $\mat{A}$ is called  \textsb{positive-definite}\index{matrix!positive-definite}. A necessary and sufficient condition that ensures positivity of a matrix is that the spectrum of its hermitian part be constituted of non negative elements\footnote{This condition will be verified after the definition of eigenvalue on the next chapter %à p.\pageref{sec:autoPares}
-.}, when this matrix results non negative; similarly, if these same elements are all positive, the matrix is positive-definite. Thereby, from the two equalities of the previous paragraph, it can be concluded that the determinant and trace of a non negative Hermitian matrix are always non negative, while for a positive-definite Hermitian matrix both are positive. Therefore, in the context of Hermitian matrices, the determinant value indicates whether a matrix is non negative or not. From this conclusion, we can state that \emph{every positive-definite hermitian matrix is invertible}. Moreover, when a positive-definite hermitian matrix $\mat{H}$ pre or post multiplies any matrix 
+.}, when this matrix results non negative; similarly, if these same elements are all positive, the matrix is positive-definite. Thereby, from the two equalities of the previous paragraph, it can be concluded that the determinant and trace of a non negative Hermitian matrix are always non negative, while for a positive-definite Hermitian matrix both are positive. Therefore, in the context of Hermitian matrices, the determinant value indicates whether a matrix is non negative or not. From this conclusion, we can state that \emph{every positive-definite hermitian matrix is invertible}. Moreover, when a positive-definite hermitian matrix $\mat{H}$ pre or post multiplies any matrix
 $\mat{B}\in\overline{M}$, we have
 \begin{equation}
 \sgn{\det{\lpa\mat{BH}\rpa}}=\sgn{\det{\lpa\mat{HB}\rpa}}=\sgn{\det{\mat{B}}} \sgn{\det{\mat{H}}}=\sgn{\det{\mat{B}}}\,,
 \end{equation}
-where the sign ``\gloref{signum}'' of the determinant of $\mat{B}$ defines the sign of the product of the determinants, making the concept of matrix positivity similar to  scalar positivity, in which the sign of a product is not defined by an eventual positive number.   
+where the sign ``\gloref{signum}'' of the determinant of $\mat{B}$ defines the sign of the product of the determinants, making the concept of matrix positivity similar to  scalar positivity, in which the sign of a product is not defined by an eventual positive number.
 
-We will finish this chapter by presenting the following fundamental equality, a property of any square matrix that will make further developments feasible.  
+We will finish this chapter by presenting the following fundamental equality, a property of any square matrix that will make further developments feasible.
 
 \begin{mteo}{Cayley-Hamilton}{cayleyhamilton}
 Let $\overline{M}$ be the set of all square matrices and $\map{\hat{g}}{\overline{M}}{\overline{M}}$ a mapping whose function rule is described by
 \begin{equation}
 \fua{\hat{g}}{\mat{X}}=(-1)^n\mat{X}^n+a_1\mat{X}^{n-1}+a_2\mat{X}^{n-2}+\cdots+a_{n-1}\mat{X}+a_n\mat{I}\,.
 \end{equation}
-If the coefficients on this rule equal the coefficients of the characteristic polynomial of a square matrix $\mat{H}$, then the matrix $\fua{\hat{g}}{\mat{H}}$ is null.  
+If the coefficients on this rule equal the coefficients of the characteristic polynomial of a square matrix $\mat{H}$, then the matrix $\fua{\hat{g}}{\mat{H}}$ is null.
 \end{mteo}
 
 
 {\footnotesize
 \begin{proof}
-In order to verify this theorem, we need to present some preliminary definitions. There is an algorithm \footnote{After \aut{Knuth}\cite{knuth_1997_1}, the word ``algorithm'' has the same etymological source of ``algebra''.}, called \textsb{Laplace Expansion}\index{Expansion!Laplace} or \textsb{Cofactorial Expansion}\index{Expansion!Cofactorial}, that is used in certain cases to find determinants. Here it is: given a square matrix $\mat{A}$, we can obtain for any line $i$ that   
+In order to verify this theorem, we need to present some preliminary definitions. There is an algorithm \footnote{After \aut{Knuth}\cite{knuth_1997_1}, the word ``algorithm'' has the same etymological source of ``algebra''.}, called \textsb{Laplace Expansion}\index{Expansion!Laplace} or \textsb{Cofactorial Expansion}\index{Expansion!Cofactorial}, that is used in certain cases to find determinants. Here it is: given a square matrix $\mat{A}$, we can obtain for any line $i$ that
 \begin{equation*}
 \det{\mat{A}} = \sum_{j=1}^{n}\mat{A}_{ij} \underbrace{\lpa-1\rpa^{i+j}\det{\mat{M}_{(ij)}}}_{\mat{C}_{ij}}\,,
 \end{equation*}
-where $\mat{C}$ is called \textsb{cofactor matrix}\index{matrix!cofactor} of $\mat{A}$ and $\mat{M}_{(ij)}$ is a matrix of order $n-1$ which results from removing the line $i$ and the column $j$ from $\mat{A}$. The matrix $\mat{C}^{T}$ is called the \textsb{adjugate matrix}\index{matrix!adjugate} of $\mat{A}$, represented by $\gloref{adju}{\mat{A}}$. Now, considering $\mat{A}=\mat{H}-x\mat{I}$ and the property $\adj{\mat{X}}\mat{X}=(\det\mat{X})\mat{I}$, we have that      
+where $\mat{C}$ is called \textsb{cofactor matrix}\index{matrix!cofactor} of $\mat{A}$ and $\mat{M}_{(ij)}$ is a matrix of order $n-1$ which results from removing the line $i$ and the column $j$ from $\mat{A}$. The matrix $\mat{C}^{T}$ is called the \textsb{adjugate matrix}\index{matrix!adjugate} of $\mat{A}$, represented by $\gloref{adju}{\mat{A}}$. Now, considering $\mat{A}=\mat{H}-x\mat{I}$ and the property $\adj{\mat{X}}\mat{X}=(\det\mat{X})\mat{I}$, we have that
 \begin{equation*}
 \adj{\mat{A}}(\mat{H}-x\mat{I})=\fua{g}{x}\mat{I}=\mat{I}(-1)^nx^n+\mat{I}a_1x^{n-1}+\cdots+\mat{I}a_{n-1}x+\mat{I}a_n\,.
 \end{equation*}
-Through a tedious development, it can be obtained that the adjugate of $\mat{A}$ results a polynomial of order $q$, with matrix coefficients $\mat{H}_i$, described in 
+Through a tedious development, it can be obtained that the adjugate of $\mat{A}$ results a polynomial of order $q$, with matrix coefficients $\mat{H}_i$, described in
 \begin{equation*}
 \adj{\mat{A}} = \mat{H}_1x^q+\mat{H}_2x^{q-1}+\cdots+\mat{H}_{n-1}x+\mat{H}_{n}\,.
 \end{equation*}
