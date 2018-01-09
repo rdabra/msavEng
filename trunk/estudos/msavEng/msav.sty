@@ -422,3 +422,49 @@
 \newcommand {\subolds}[3]{{#1}_{\mbox{\boldmath \scriptsize{$\mathsf{#2}$}}_{#3}}}
 %partícula
 \newcommand {\prt}[1]{\negsymbol{\mathfrak{#1}}}
+
+
+% TITLE PAGE
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+
+\newcommand*{\plogo}{\fbox{$\mathcal{PL}$}} % Generic publisher logo
+
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+\newcommand*{\titleGP}{\begingroup % Create the command for including the title page in the document
+	\centering % Center all text
+	\vspace*{\baselineskip} % White space at the top of the page
+	
+	\rule{\textwidth}{1.6pt}\vspace*{-\baselineskip}\vspace*{2pt} % Thick horizontal line
+	\rule{\textwidth}{0.4pt}\\[\baselineskip] % Thin horizontal line
+	
+	%{\large A TRAGÉDIA DE}\\[0.8\baselineskip]
+	{\huge MATHEMATICAL FOUNDATIONS OF}\\[0.5\baselineskip]
+	{\huge ELEMENTARY CONTINUUM MECHANICS}\\[0.0\baselineskip]
+	%{\emph{com a chegada do Conde de Richmond e }}\\
+	%{\emph{a Batalha no Campo de Bosworth}}\\[0.3\baselineskip]
+	
+	\rule{\textwidth}{0.4pt}\vspace*{-\baselineskip}\vspace{3.2pt} % Thin horizontal line
+	\rule{\textwidth}{1.6pt}\\[\baselineskip] % Thick horizontal line
+	\vspace*{3\baselineskip}
+	
+	\scshape % Small caps 
+	{\LARGE Roberto Dias Algarte} \\ [3\baselineskip]
+	
+	
+	
+	
+	
+	\vfill % Whitespace between editor names and publisher logo
+	
+	
+	{\scshape 2018} \\[0.3\baselineskip] % Year published
+	{\large Springer-Verlag Berlin Heidelberg GmbH}\par % Publisher
+	
+	\endgroup}
+
