@@ -13,8 +13,8 @@
 \makeevenhead{myheadings}{{\textsc\leftmark}}{}{}
 \makeoddhead{myheadings}{}{}{{\textsc\rightmark}}
 \makeheadrule{myheadings}{\textwidth}{.2pt}
-\makeevenfoot{myheadings}{\small{\thepage}}{}{\footnotesize\textsc{Roberto D Algarte}}
-\makeoddfoot{myheadings}{\footnotesize\textsc{Mathematical Elements of Continuum Mechanics}}{}{\small{\thepage}}
+\makeevenfoot{myheadings}{\small{\thepage}}{}{\footnotesize\textsc{}}
+\makeoddfoot{myheadings}{\footnotesize\textsc{}}{}{\small{\thepage}}
 
 \begin{comment}
 \makeatletter
@@ -148,6 +148,12 @@
 %\include{dedic}
 %\include{pref}
 
+
+\thispagestyle{empty}
+\titleGP
+
+\include{summary}
+
 \tableofcontents*
 
 
@@ -162,6 +168,7 @@
 %\listoffigures
 
 \mainmatter%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 
     \include{partes/parte1/parte1}
 %    \include{partes/parte1/c_oqueAlgebra}
