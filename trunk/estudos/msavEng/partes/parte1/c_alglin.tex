@@ -48,7 +48,33 @@ Considering the previous conditions in the case where $U$ spans the space $V_\ma
 Let's verify if it is true that $\sum_{i=1}^n\alpha_i\vto{v}_i$ is the only linear combination that defines $\vto{w}$ on $U$. If there were another linear combination $\sum_{i=1}^n\beta_i\vto{v}_i$ defining $\vto{w}$, then the difference between them would be $\sum_{i=1}^n(\alpha_i-\beta_i)\vto{v}_i=\vto{0}$. As $U$ does not have a zero element, from the previous equality we have $\alpha_i-\beta_i=0$, or $\alpha_i=\beta_i$.
 \end{proof}}
 
-Neste ponto vamos considerar $\con{U}_1=\lch \vto{v}_1,\cdots,\vto{v}_n \rch$ uma base de $V_\mathcal{R}$ e o conjunto $\con{U}_2=\lch \vto{w}_1,\cdots,\vto{w}_m \rch$ linearmente independente  tais que $m \geqslant n$. Se $U_1$ gera $V_\mathcal{R}$ então o conjunto linearmente dependente $\{\vto{w}_1\}\cup U_1=\lch \vto{w}_1,\vto{v}_1,\cdots,\vto{v}_{n} \rch$ também gera $V_\mathcal{R}$. Ao retirarmos desse conjunto um elemento $\vto{v}_k$ de $U_1$, o conjunto resultante  $(\{\vto{w}_1\}\cup U_1)\setminus \{\vto{v}_k\}$ também gera $V_\mathcal{R}$ porque $\vto{w}_1$ é uma combinação linear de $U_1$. Repetindo este procedimento de inclusão de elementos de $U_2$ e remoção de elementos de $U_1$, chegaremos ao conjunto $\lch \vto{w}_1,\cdots,\vto{w}_{n} \rch$, que resulta uma base de $V_\mathcal{R}$. Assim, conjuntos linearmente independentes, geradores do mesmo espaço vetorial dimensionalmente finito, possuem o mesmo número de vetores. Portanto, dada a generalidade dessa constatação, diz-se que qualquer base de $V_\mathcal{R}$ possui $n$ elementos, ou que a \textsb{dimensão}\index{dimensão!de espaço vetorial} de $V_\mathcal{R}$ é $n$, escrita $\gloref{dimen}=n$. Ademais, podemos afirmar que \emph{qualquer subconjunto de $V_\mathcal{R}$ com $n$ elementos linearmente independentes é uma base de $V_\mathcal{R}$}, disso resultando $\dim (W_\mathcal{R}) <  \dim (V_\mathcal{R})$ se $W_\mathcal{R}\subset V_\mathcal{R}$.
+
+
+Now, let's consider $\con{U}_1=\lch \vto{v}_1,\cdots,\vto{v}_n \rch$ a basis of $V_\mathcal{R}$ and $\con{U}_2=\lch \vto{w}_1,\cdots,\vto{w}_m \rch$ a linear independent set such that $m \geqslant n$. If $U_1$ spans $V_\mathcal{R}$, then the linear dependent set $\{\vto{w}_1\}\cup U_1=\lch \vto{w}_1,\vto{v}_1,\cdots,\vto{v}_{n} \rch$ also spans $V_\mathcal{R}$. When an element $\vto{v}_k$ is removed from $U_1$, the resulting set $(\{\vto{w}_1\}\cup U_1)\setminus \{\vto{v}_k\}$ also spans $V_\mathcal{R}$ because $\vto{w}_1$ is a linear combination of $U_1$. If we proceed including elements of $U_2$ and removing elements of $U_1$, we shall obtain the set $\lch \vto{w}_1,\cdots,\vto{w}_{n} \rch$, which is a basis of $V_\mathcal{R}$. Thereby, linearly independent sets which span the same finite-dimensional vector space have the same number of vectors. From this general statement, we can say that every basis of $V_\mathcal{R}$ has $n$ elements, or that the \textsb{dimension}\index{vector space!dimension of} of $V_\mathcal{R}$ is $n$, written $\gloref{dimen}=n$. Therefore, we can also state that \emph{every subset of $V_\mathcal{R}$ having $n$ linearly independent vectors is a basis of $V_\mathcal{R}$}, from which results the following: if $W_\mathcal{R}\subset V_\mathcal{R}$ then $\dim (W_\mathcal{R}) <  \dim (V_\mathcal{R})$ .             
+
+
+There is an important type of vector space whose group is additionally structured by what is called a \textsb{norm}\index{norm}, which assigns to each one of the group elements a non negative real number that enables the concept of vector size or vector intensity.       
+
+
+
+
+
+
+Há um tipo importante de espaço vetorial no qual o conjunto envolvido sofre uma estruturação adicional.
+Quando dizemos que esse conjunto é estruturado por uma \textsb{norma}\index{norma}, é possível associar a cada um de seus elementos um número real não negativo, que viabiliza o conceito de tamanho ou intensidade de um vetor. Como ocorre na estruturação por campo, a estruturação por norma também se dá segundo alguns critérios. Diz-se então que um \textsb{espaço normado}\index{espaço!normado} é definido pela dupla $(V_\mathcal{R},\eta)$, onde $V_\mathcal{R}$ é um espaço vetorial e a função em $\map{\eta}{V_\mathcal{R}}{\gloref{realNNeg}}$, 
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 Há um tipo importante de espaço vetorial no qual o conjunto envolvido sofre uma estruturação adicional.
 Quando dizemos que esse conjunto é estruturado por uma \textsb{norma}\index{norma}, é possível associar a cada um de seus elementos um número real não negativo, que viabiliza o conceito de tamanho ou intensidade de um vetor. Como ocorre na estruturação por campo, a estruturação por norma também se dá segundo alguns critérios. Diz-se então que um \textsb{espaço normado}\index{espaço!normado} é definido pela dupla $(V_\mathcal{R},\eta)$, onde $V_\mathcal{R}$ é um espaço vetorial e a função em $\map{\eta}{V_\mathcal{R}}{\gloref{realNNeg}}$, denominada norma, respeita os axiomas
