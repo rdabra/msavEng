@@ -21,7 +21,7 @@ where $\alpha,\beta\in \mathcal{R}$ and $\vto{x}, \vto{y}\in V$ are any elements
 As a set admits a subset under the conditions already presented, spaces admit subspaces. A \textsb{vector subspace}\index{vector subspace}, structured by the field $\mathcal{R}$, is actually a vector space in $\mathcal{R}$ whose elements also belong to a set that defines a vector space in $\mathcal{R}$. In more precise terms, we say that the vector space $(S,\mathcal{R},\tilde{p})$, where $\map{\tilde{p}}{\mathcal{R}\times S}{S}$, is a vector subspace of $V_\mathcal{R}$ if the set $S\subseteq V$ or, in a detailed notation, if the space $S_\mathcal{R}\subseteq V_\mathcal{R}$. It is important to say that as all vector spaces are defined to have a null element $\vto{0}$, then $\vto{0}$ must belong to any vector subspace.
 
 
-The possibility of multiplication by scalars, according to the mapping defined by $p$, enables to combine the vectors of  $\con{\tilde{U}}=\lch \vto{v}_1,\vto{v}_2,\cdots,\vto{v}_n \rch\subset V_\mathcal{R}$ as in  
+The possibility of multiplication by scalars, according to the mapping defined by $p$, enables to combine the vectors of  $\con{\tilde{U}}=\lch \vto{v}_1,\vto{v}_2,\cdots,\vto{v}_n \rch\subset V_\mathcal{R}$ as in
 \begin{equation}
 \alpha_1\vto{v}_1+\alpha_2\vto{v}_2+\cdots+\alpha_n\vto{v}_n\,,
 \end{equation}
@@ -33,7 +33,7 @@ Recalling our definition of vector space, it is important to observe that the mu
 \begin{equation}
 U=\bigcup_{i=1}^\infty \tilde{U}_i\,,
 \end{equation}
-where each set $\tilde{U}_i\subset U$ is finite. Thereby, the subset of $V_\mathcal{R}$ constituted by all linear combinations of the subsets $\tilde{U}_i$ is called a \textsb{span}\index{set!span of} of $U$, whose representation is  $\gloref{sconjGer}$. In other words, 
+where each set $\tilde{U}_i\subset U$ is finite. Thereby, the subset of $V_\mathcal{R}$ constituted by all linear combinations of the subsets $\tilde{U}_i$ is called a \textsb{span}\index{set!span of} of $U$, whose representation is  $\gloref{sconjGer}$. In other words,
 \begin{equation}
 \spn (U) := \lch \sum_{i=1}^n \alpha_i\vto{v}_i \,:\, \forall n\in \mathbb{N}\,,\,\,\forall \alpha_i \in \mathcal{R},\,\,\forall \vto{v}_i \in U \rch\,.
 \end{equation}
@@ -49,81 +49,55 @@ Let's verify if it is true that $\sum_{i=1}^n\alpha_i\vto{v}_i$ is the only line
 \end{proof}}
 
 
-
-Now, let's consider $\con{U}_1=\lch \vto{v}_1,\cdots,\vto{v}_n \rch$ a basis of $V_\mathcal{R}$ and $\con{U}_2=\lch \vto{w}_1,\cdots,\vto{w}_m \rch$ a linear independent set such that $m \geqslant n$. If $U_1$ spans $V_\mathcal{R}$, then the linear dependent set $\{\vto{w}_1\}\cup U_1=\lch \vto{w}_1,\vto{v}_1,\cdots,\vto{v}_{n} \rch$ also spans $V_\mathcal{R}$. When an element $\vto{v}_k$ is removed from $U_1$, the resulting set $(\{\vto{w}_1\}\cup U_1)\setminus \{\vto{v}_k\}$ also spans $V_\mathcal{R}$ because $\vto{w}_1$ is a linear combination of $U_1$. If we proceed including elements of $U_2$ and removing elements of $U_1$, we shall obtain the set $\lch \vto{w}_1,\cdots,\vto{w}_{n} \rch$, which is a basis of $V_\mathcal{R}$. Thereby, linearly independent sets which span the same finite-dimensional vector space have the same number of vectors. From this general statement, we can say that every basis of $V_\mathcal{R}$ has $n$ elements, or that the \textsb{dimension}\index{vector space!dimension of} of $V_\mathcal{R}$ is $n$, written $\gloref{dimen}=n$. Therefore, we can also state that \emph{every subset of $V_\mathcal{R}$ having $n$ linearly independent vectors is a basis of $V_\mathcal{R}$}, from which results the following: if $W_\mathcal{R}\subset V_\mathcal{R}$ then $\dim (W_\mathcal{R}) <  \dim (V_\mathcal{R})$ .             
-
-
-There is an important type of vector space whose group is additionally structured by what is called a \textsb{norm}\index{norm}, which assigns to each one of the group elements a non negative real number that enables the concept of vector size or vector intensity.       
+Now, let's consider $\con{U}_1=\lch \vto{v}_1,\cdots,\vto{v}_n \rch$ a basis of $V_\mathcal{R}$ and $\con{U}_2=\lch \vto{w}_1,\cdots,\vto{w}_m \rch$ a linear independent set such that $m \geqslant n$. If $U_1$ spans $V_\mathcal{R}$, then the linear dependent set $\{\vto{w}_1\}\cup U_1=\lch \vto{w}_1,\vto{v}_1,\cdots,\vto{v}_{n} \rch$ also spans $V_\mathcal{R}$. When an element $\vto{v}_k$ is removed from $U_1$, the resulting set $(\{\vto{w}_1\}\cup U_1)\setminus \{\vto{v}_k\}$ also spans $V_\mathcal{R}$ because $\vto{w}_1$ is a linear combination of $U_1$. If we proceed including elements of $U_2$ and removing elements of $U_1$, we shall obtain the set $\lch \vto{w}_1,\cdots,\vto{w}_{n} \rch$, which is a basis of $V_\mathcal{R}$. Thereby, linearly independent sets which span the same finite-dimensional vector space have the same number of vectors. From this general statement, we can say that every basis of $V_\mathcal{R}$ has $n$ elements, or that the \textsb{dimension}\index{vector space!dimension of} of $V_\mathcal{R}$ is $n$, written $\gloref{dimen}=n$. Therefore, we can also state that \emph{every subset of $V_\mathcal{R}$ having $n$ linearly independent vectors is a basis of $V_\mathcal{R}$}, from which results the following: if $W_\mathcal{R}\subset V_\mathcal{R}$ then $\dim (W_\mathcal{R}) <  \dim (V_\mathcal{R})$ .
 
 
-
-
-
-
-Há um tipo importante de espaço vetorial no qual o conjunto envolvido sofre uma estruturação adicional.
-Quando dizemos que esse conjunto é estruturado por uma \textsb{norma}\index{norma}, é possível associar a cada um de seus elementos um número real não negativo, que viabiliza o conceito de tamanho ou intensidade de um vetor. Como ocorre na estruturação por campo, a estruturação por norma também se dá segundo alguns critérios. Diz-se então que um \textsb{espaço normado}\index{espaço!normado} é definido pela dupla $(V_\mathcal{R},\eta)$, onde $V_\mathcal{R}$ é um espaço vetorial e a função em $\map{\eta}{V_\mathcal{R}}{\gloref{realNNeg}}$, 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Há um tipo importante de espaço vetorial no qual o conjunto envolvido sofre uma estruturação adicional.
-Quando dizemos que esse conjunto é estruturado por uma \textsb{norma}\index{norma}, é possível associar a cada um de seus elementos um número real não negativo, que viabiliza o conceito de tamanho ou intensidade de um vetor. Como ocorre na estruturação por campo, a estruturação por norma também se dá segundo alguns critérios. Diz-se então que um \textsb{espaço normado}\index{espaço!normado} é definido pela dupla $(V_\mathcal{R},\eta)$, onde $V_\mathcal{R}$ é um espaço vetorial e a função em $\map{\eta}{V_\mathcal{R}}{\gloref{realNNeg}}$, denominada norma, respeita os axiomas
+There is an important type of vector space whose group is additionally structured by what is called a \textsb{norm}\index{norm}, which assigns to each one of the group elements a non negative real number that enables the concept of vector size or vector intensity. Like the case of structuring by field, structuring by norm also occurs according to some restrictions. Thereby, we say that a \textsb{normed space}\index{space!normed} is defined by the double $(V_\mathcal{R},\eta)$, where $V_\mathcal{R}$ is a vector space and the function in $\map{\eta}{V_\mathcal{R}}{\gloref{realNNeg}}$, called norm, observes the axioms
 \begin{itemize}
 	\setlength\itemsep{.1em}
-	\item[i.] Da definição: $\fua{\eta}{\vto{v}}=0 \Leftrightarrow
+	\item[i.] Of definition: $\fua{\eta}{\vto{v}}=0 \Leftrightarrow
 \vto{v}=\vto{0}$;
-	\item[ii.] Da homogeneidade:
-$\fua{\eta}{\alpha\vto{x}}=|\alpha|\fua{\eta}{\vto{x}}\text{ }$ e
-	\item[iii.] Da desigualdade triangular: $\fua{\eta}{\vto{x}+\vto{y}}\leq
+	\item[ii.] Of homogeneity:
+$\fua{\eta}{\alpha\vto{x}}=|\alpha|\fua{\eta}{\vto{x}}\text{ }$ and
+	\item[iii.] Of triangular inequality\index{inequality!triangular}: $\fua{\eta}{\vto{x}+\vto{y}}\leq
 \fua{\eta}{\vto{x}}+\fua{\eta}{\vto{y}}$;
 \end{itemize}
-onde $\alpha\in\mathcal{R}$ e $\vto{x},\vto{y}\in V_\mathcal{R}$ são elementos quaisquer. A desigualdade triangular no último item impõe que o tamanho da soma de vetores nunca é maior que a soma dos tamanhos de cada um deles. No contexto notacional, para não nos diferenciarmos muito do costumeiro, utilizaremos de agora em diante a representação $\gloref{norma}$ para o valor $\fua{\eta}{\vto{x}}$.
+where $\alpha\in\mathcal{R}$ and $\vto{x},\vto{y}\in V_\mathcal{R}$ are any elements of their respective sets. On the last item, the triangular inequality axiom imposes that the size of a vector sum is never greater than the sum of vector sizes. In notational terms, as the use of $\eta$ is not very common, $\gloref{norma}$ is also written to represent the value $\fua{\eta}{\vto{x}}$.
 
-
-Dizemos que dois vetores incidem um no outro ou têm uma inter-relação de incidência quando for possível descrever um relativamente ao outro. Em outras palavras, dados os vetores não nulos $\vto{u},\vto{v}\in U_\mathcal{R}$, diz-se que $\vto{u}$ incide em $\vto{v}$ se existir um vetor, múltiplo de $\vto{v}$, que seja função de $\vto{u}$; ou seja, existe um mapeamento $\map{f}{U_\mathcal{R}}{U_\mathcal{R}}$ onde o vetor $\fua{f}{\vto{u}}=\alpha\vto{v}$, $\alpha\in\mathcal{R}$. Como $f$ é um operador unário, ou seja, uma bijeção, a incidência resulta comutativa: se $\vto{u}$ incide em $\vto{v}$, $\vto{v}$ incide em $\vto{u}$. A relação de incidência entre dois vetores é geralmente expressa em valores reais não negativos, onde o valor zero significa o limite mínimo onde inexiste incidência de um vetor no outro, quando ambos são ditos \textsb{ortogonais}\index{vetores!ortogonais}. Seja então a função em $\map{\xi}{U_\mathcal{R}\times U_\mathcal{R}}{\mathcal{R}}$ que expressa a relação de incidência em qualquer par de vetores de $U_\mathcal{R}$, respeitando os axiomas
+We define that two vectors project on each other or have a projective interrelationship when it is possible to describe one in terms of the other. In more precise terms, given the non null vectors $\vto{u},\vto{v}\in U_\mathcal{R}$, it is said that $\vto{u}$ projects on $\vto{v}$ if there is a vector multiple of $\vto{v}$ and function of $\vto{u}$, that is, if there is a mapping $\map{f}{U_\mathcal{R}}{U_\mathcal{R}}$ where the vetor $\fua{f}{\vto{u}}=\alpha\vto{v}$, $\alpha\in\mathcal{R}$. As a unary operator, $f$ is a bijection and then a projection results commutative: if $\vto{u}$ projects on $\vto{v}$, $\vto{v}$ projects on $\vto{u}$. The projective interrelationship of two vectors is usually expressed by scalar values, where zero value means that there is no projection between these vectors or that they are \textsb{orthogonal}\index{vectors!orthogonal}.  Let the function in $\map{\xi}{U_\mathcal{R}\times U_\mathcal{R}}{\mathcal{R}}$ express a projective relationship between any pair of vectors of $U_\mathcal{R}$, observing the axioms
 \begin{itemize}\label{prop:produtoInterno}
 	\setlength\itemsep{.1em}
-	\item[i.] Da positividade: $\fua{\xi}{\vto{u},\vto{u}}\geqslant0$;
-	\item[ii.] Da definição: $\fua{\xi}{\vto{u},\vto{u}}=0 \Leftrightarrow
+	\item[i.] Of positivity: $\fua{\xi}{\vto{u},\vto{u}}\geqslant0$;
+	\item[ii.] Of definition: $\fua{\xi}{\vto{u},\vto{u}}=0 \Leftrightarrow
 	\vto{u}=\vto{0}$;
-	\item[iii.] Da simetria conjugada: $\fua{\xi}{\vto{u}_1,\vto{u}_2}=\overline{\fua{\xi}{\vto{u}_2,\vto{u}_1}}\,\,$;
-	\item[iv.] Da linearidade\footnote{Ver definição à p. \pageref{def:linear}.} no primeiro argumento:\begin{equation*}
+	\item[iii.] Of conjugate symmetry: $\fua{\xi}{\vto{u}_1,\vto{u}_2}=\overline{\fua{\xi}{\vto{u}_2,\vto{u}_1}}\,\,$;
+	\item[iv.] Of linearity\footnote{See definition at p. \pageref{def:linear}.} in the first argument:\begin{equation*}
 	\fua{\xi}{\alpha_1\vto{u}_1+\alpha_2\vto{u}_2,
 		\vto{u}_3} =
-	\alpha_1\fua{\xi}{\vto{u}_1,\vto{u}_3} + \alpha_2\fua{\xi}{\vto{u}_2,\vto{u}_3}\text{ e }
+	\alpha_1\fua{\xi}{\vto{u}_1,\vto{u}_3} + \alpha_2\fua{\xi}{\vto{u}_2,\vto{u}_3}\text{ and }
 	\end{equation*}
-	\item[v.] Da linearidade conjugada no segundo argumento:\begin{equation*}
+	\item[v.] Of conjugate linearity in the second argument:\begin{equation*}
 \fua{\xi}{\vto{u}_1,\alpha_2\vto{u}_2+
 	\alpha_3\vto{u}_3} =
 \overline{\alpha_2}\fua{\xi}{\vto{u}_1,\vto{u}_2} + \overline{\alpha_3}\fua{\xi}{\vto{u}_1,\vto{u}_3}\,;
 	\end{equation*}
-\end{itemize}
-onde $\vto{u}_1,\vto{u}_2,\vto{u}_3\in U_\mathcal{R}$ e $\alpha_1,\alpha_2,\alpha_3\in\mathcal{R}$ são elementos quaisquer. Nessas condições, a função $\xi$ é denominada \textsb{produto interno positivo-definido} porque no produto interno de um vetor por ele mesmo, o primeiro axioma exige como resultado um número real não negativo. Para fins de simplificação, denominaremos a função $\xi$ simplesmente de \textsb{produto interno}\index{produto!interno}, e a dupla  $(U_\mathcal{R},\xi)$ um \textsb{espaço produto interno}\index{espaço!produto interno}. Como ocorre com outras estruturações já apresentadas, essa dupla permite afirmar que o produto interno $\xi$ estrutura $U$ de tal sorte que a relação de incidência em qualquer dupla de vetores pode ser obtida.
-A fim de abreviar a notação, utilizaremos $\gloref{prdint}$ para representar o produto interno $\fua{\xi}{\vto{x},\vto{y}}$.
+\end{itemize} 
+where $\vto{u}_1,\vto{u}_2,\vto{u}_3\in U_\mathcal{R}$ and  $\alpha_1,\alpha_2,\alpha_3\in\mathcal{R}$ are any elements of their respective sets. In this context, the function $\xi$ is called a \textsb{positive-definite inner product} because the projection of a vector on itself is a non negative real number, as described by the first axiom. In our study, $\xi$ is simply called an inner product\index{inner product}, and the double $(U_\mathcal{R},\xi)$ an \textsb{inner product space}\index{space!inner product}. From this double, we conclude that $\xi$ structures the group $U$ in such a way that a projective interrelationship of any pair of its elements can be obtained. 
+Henceforth, in order to shorten notation, $\gloref{prdint}$ will also be used to represent the inner product $\fua{\xi}{\vto{x},\vto{y}}$. 
 
-No contexto do espaço produto interno $(U_\mathcal{R},\xi)$, podemos apresentar agora, em termos mais matemáticos, a definição de ortogonalidade. Assim, vetores quaisquer $\vto{u}_1,\vto{u}_2\in U_\mathcal{R}$ são ditos ortogonais, com representação $\vto{u}_1\gloref{perpend}\vto{u}_2$, se $\vto{u}_1\cdot\vto{u}_2=0$. Dados os subconjuntos $U_1\subset U_\mathcal{R}$ e $U_2\subset U_\mathcal{R}$, se $\vto{u}\in U_\mathcal{R}$ é ortogonal a qualquer vetor de $U_1$, diz-se que $\vto{u}\perp\con{U}_1$, e se qualquer vetor de $\con{U}_1$ for ortogonal a qualquer vetor de $\con{U}_2$, então $\con{U}_1\perp\con{U}_2$. Um conjunto $U_3=\{\vto{u}_1,\cdots,\vto{u}_n\}\subset U_\mathcal{R}$ é denominado ortogonal se $\vto{u}_i\perp\vto{u}_j$ para $i\neq j$. Diante disso, se $U_3$ é formado por vetores não nulos, fazendo o produto interno de ambos os lados da igualdade $\alpha\vto{u}_j=\vto{u}_i$, onde $\alpha\in\mathcal{R}$ e $i\neq j$, por $\vto{u}_j$ resulta que $\alpha\vto{u}_j\cdot\vto{u}_j=0$, de onde podemos concluir que $\alpha=0$, ou seja, que todo conjunto ortogonal é linearmente independente. Esse resultado nos permite afirmar categoricamente que num \emph{espaço vetorial $n$-dimensional, qualquer subconjunto ortogonal de $n$ elementos é base}.
+Considering the inner product space $(U_\mathcal{R},\xi)$, it is now possible to present in more mathematical terms the definition of orthogonality: any vectors $\vto{u}_1,\vto{u}_2\in U_\mathcal{R}$ are said to be orthogonal, or $\vto{u}_1\gloref{perpend}\vto{u}_2$, when $\vto{u}_1\cdot\vto{u}_2=0$. Given the subsets $U_1\subset U_\mathcal{R}$ and $U_2\subset U_\mathcal{R}$, if $\vto{u}\in U_\mathcal{R}$ is orthogonal to any vector of $U_1$, we write $\vto{u}\perp\con{U}_1$, and if any vetor of $\con{U}_1$ is orthogonal to any vector of $\con{U}_2$, we write $\con{U}_1\perp\con{U}_2$. A set $U_3=\{\vto{u}_1,\cdots,\vto{u}_n\}\subset U_\mathcal{R}$ is called orthogonal if $\vto{u}_i\perp\vto{u}_j$, $i\neq j$. Thereby, when the vectors of $U_3$ are non null, the inner product of each side of $\alpha\vto{u}_j=\vto{u}_i$ and $\vto{u}_j$, where $\alpha\in\mathcal{R}$ and $i\neq j$, the result is $\alpha\,(\vto{u}_j\cdot\vto{u}_j)=0$, from where we conclude that $\alpha=0$ or that every orthogonal set is linearly independent. This conclusion permits us to state that in a \emph{$n$-dimensional inner product space, every orthogonal subset of $n$ elements is a basis}.
 
-Quando ocorre estruturação cumulativa por norma e produto interno do conjunto em $V_\mathcal{R}$, podemos definir a tripla $(V_\mathcal{R},\eta,\xi)$ como um \textsb{espaço normado produto interno}\index{espaço!normado produto interno}. Nesses espaços, a relação de incidência entre vetores, expressa pelo produto interno, pode ser utilizada para definir a norma, segundo a regra genérica
+From a cumulative structuring of a set $V_\mathcal{R}$ by norm and inner product, it is possible to define a triple $(V_\mathcal{R},\eta,\xi)$, called a \textsb{normed inner product space}\index{space!normed inner product}. In these spaces, the projective interrelationship of vectors, expressed by the inner product, can be used to define a norm  according the generic rule 
 \begin{equation}
  \fua{\eta}{\vto{x}} = \fua{g\circ\xi}{\vto{x},\vto{x}},
 \end{equation}
-onde a função em $\map{g}{\real^+}{\real^+}$ permite dizer que \emph{a norma é induzida pelo produto interno}\footnote{Como a norma num espaço produto interno não demanda maiores esforços além de uma mera definição formal, alguns autores consideram esse espaço um tipo de espaço normado, o que torna nossa classificação ``espaço normado produto interno'' um pleonasmo.}. Uma propriedade importante, chamada \textsb{Desigualdade de Cauchy-Schwarz}, válida para qualquer espaço normado produto interno cuja norma é induzida pelo produto interno segundo $\fua{g}{x}=\sqrt{x}$, garante que o valor da incidência entre dois vetores nunca é maior que o produto de seus tamanhos, ou seja,
+where the function in $\map{g}{\real^+}{\real^+}$ enables us to say that \emph{the norm is induced by the inner product}\footnote{When the inner product induces the norm, some authors consider the inner product space involved as implicitly being a normed space.}. A very important property, called \textsb{Cauchy-Schwarz Inequality}\index{inequality!Cauchy-Schwarz}, valid for every normed inner product space whose inner product induces the norm through $\fua{g}{x}=\sqrt{x}$, assures that the value of a projection is never greater than the product of the sizes of the vectors involved, that is,
 \begin{equation}
 |\, \vto{v}_1\cdot\vto{v}_2| \leqslant
 \|\vto{v}_1\|\,\,\|\vto{v}_2\|\,,\,\forall\,\vto{v}_1,\vto{v}_2\in\con{V}_\mathcal{R}\,.
 \end{equation}
 {\footnotesize
-\begin{proof} Considerando nulo um dos vetores, a constatação da igualdade é trivial. Agora, seja o vetor $\vto{v}=\vto{v}_1-\lambda\vto{v}_2$ onde $\vto{v}_2\neq \vto{0}$ e $\lambda=(\vto{v}_1\cdot\vto{v}_2)/\|\vto{v}_2\|^2$. A partir da simetria conjugada do produto interno e sabendo que o conjugado do produto é o produto dos conjugados, podemos realizar então o seguinte desenvolvimento:
+\begin{proof} If one of the vectors is null, the equality is straightforward. Now, let $\vto{v}=\vto{v}_1-\lambda\vto{v}_2$ be a vector where $\vto{v}_2\neq \vto{0}$ and $\lambda=(\vto{v}_1\cdot\vto{v}_2)/\|\vto{v}_2\|^2$. From the conjugate symmetry property of the inner product and knowing that the conjugate of the product is the product of the conjugates,
 \begin{align*}
 	0&\leqslant\vto{v}\cdot\vto{v}\\
 	0&\leqslant\vto{v}_1\cdot\vto{v}_1-\vto{v}_1\cdot\lambda\vto{v}_2-\lambda\vto{v}_2\cdot\vto{v}_1+\lambda\vto{v}_2\cdot\lambda\vto{v}_2\\
@@ -135,7 +109,7 @@ onde a função em $\map{g}{\real^+}{\real^+}$ permite dizer que \emph{a norma é i
 \end{proof}
 }
 
-Dois vetores quaisquer $\gloref{unita}$ e $\vun{u}_2$ de um espaço $(V_\mathcal{R},\eta,\xi)$ são ditos \textsb{ortonormais}\index{vetores!ortonormais} se forem \textsb{unitários}\index{vetor!unitário}, onde $\|\vun{u}_i\|=1$, e ortogonais. Diante disso, se o espaço vetorial $V_\mathcal{R}$ for $n$-dimensional e o conjunto de ortonormais $\hat{U}=\{\vun{u}_1,\vun{u}_2,\cdots,\vun{u}_n\}$ gerar esse espaço, diz-se que $\hat{U}$ é um \textsb{base ortonormal} de $V_\mathcal{R}$. Em termos gerais, quando há uma base ortogonal $\{\vto{u}_1,\vto{u}_2,\cdots,\vto{u}_n\}$, sempre há uma base ortonormal $\{\vun{u}_1,\vun{u}_2,\cdots,\vun{u}_n\}$ onde $\vun{u}_i:=\vto{u}_i/\|\vto{u}_i\|$, quando se diz que a base ortonormal resulta da \textsb{normalização}\index{base!normalizada} da ortogonal.
+Any two vectors $\gloref{unita}$ and $\vun{u}_2$ of $(V_\mathcal{R},\eta,\xi)$ are said to be orthonormal if they are orthogonal and each one is \textsb{unitary}\index{vector!unitary}, where $\|\vun{u}_i\|=1$. Thereby, if the vector space $V_\mathcal{R}$ is $n$-dimensional, a subset $\hat{U}=\{\vun{u}_1,\vun{u}_2,\cdots,\vun{u}_n\}$ of orthonormal vectors is called an \textsb{orthonormal basis}\index{basis!orthonormal} of $V_\mathcal{R}$. It is important to note that to every orthogonal basis $\{\vto{u}_1,\vto{u}_2,\cdots,\vto{u}_n\}$, there is always an orthonormal basis $\{\vun{u}_1,\vun{u}_2,\cdots,\vun{u}_n\}$ where each $\vun{u}_i:=\vto{u}_i/\|\vto{u}_i\|$, when we say that the orthonormal basis results from the \textsb{normalization}\index{basis!normalization of} of the ortogonal basis.
 
 
 \section{Estruturação por Métrica}
