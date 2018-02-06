@@ -115,21 +115,23 @@ Any two vectors $\gloref{unita}$ and $\vun{u}_2$ of $(V_\mathcal{R},\eta,\xi)$ a
 \section{Structuring by Metrics}
 
 
-If the group-field interaction assigns to the group certain multiplicative features, a group that is structured by metrics acquires the concept of distance. In other words, in a group-metrics space or a \textsb{metric space}\index{space!metric}, there is always a distance between two elements, measured in scalar values. This idea of distance is fundamental in Mathematics, making, for example, the usual notion of derivative viable and consequently of the elementary Differential Calculus as a whole. 
+If the group-field interaction assigns to the group certain multiplicative features, a set that is structured by metrics acquires the concept of distance. In other words, in a set-metrics space or a \textsb{metric space}\index{space!metric}, there is always a distance between two elements, measured in scalar values. This idea of distance is fundamental in Mathematics, making, for example, the usual notion of derivative viable and consequently of the elementary Differential Calculus as a whole. 
 
 
-Like structuring by field, the structure of metrics in a group is also subjected to restrictions, described hereafter. Le 
-
-
-Como ocorre na estruturação por campo, a estruturação por métrica, para ser assim denominada, também está sujeita a restrições. Numa linguagem mais matemática, elas podem ser descritas conforme o texto a seguir. Seja um conjunto $\con{A}$ e um mapeamento $\map{\varrho}{\con{A}\times\con{A}}{\real}$. Dados os elementos quaisquer $a_1,a_2,a_3\in A$, a dupla $(A,\varrho)$ é dita um espaço métrico e a função $\varrho$ uma \textsb{métrica} ou uma \textsb{função distância}\index{função!distância} se respeitar os axiomas
+Like structuring by field, the structure of metrics in a set is also subjected to restrictions, described as follows. Let  
+$\con{A}$ be a set and $\map{\varrho}{\con{A}\times\con{A}}{\real}$ a mapping. Given any elements $a_1,a_2,a_3\in A$, the double $(A,\varrho)$ is said to be a metric space and the function $\varrho$ a \textsb{metric}\index{metric} or a \textsb{distance function}\index{function!distance} if it observes the axioms
 \begin{itemize}
-\setlength\itemsep{.1em}
-    \item[i.] Da positividade: $\fua{\varrho}{\ele{a}_1,\ele{a}_2}\geqslant 0$\,;
-    \item[ii.] Da definição: $\fua{\varrho}{\ele{a}_1,\ele{a}_2}=0 \Leftrightarrow \ele{a}_1=\ele{a}_2$\,;
-    \item[iii.] Da comutatividade: $\fua{\varrho}{\ele{a}_1,\ele{a}_2}=\fua{\varrho}{\ele{a}_2,\ele{a}_1}$\,\,\,e
-    \item[iv.] Da desigualdade triangular: $\fua{\varrho}{\ele{a}_1,\ele{a}_2}\leq\fua{\varrho}{\ele{a}_1,\ele{a}_3}+\fua{\varrho}{\ele{a}_3,\ele{a}_2}$\,.
+	\setlength\itemsep{.1em}
+	\item[i.] Of positivity: $\fua{\varrho}{\ele{a}_1,\ele{a}_2}\geqslant 0$\,;
+	\item[ii.] Of definition: $\fua{\varrho}{\ele{a}_1,\ele{a}_2}=0 \Leftrightarrow \ele{a}_1=\ele{a}_2$\,;
+	\item[iii.] Of commutativity: $\fua{\varrho}{\ele{a}_1,\ele{a}_2}=\fua{\varrho}{\ele{a}_2,\ele{a}_1}$\,\,\,and
+	\item[iv.] Of triangular inequality: $\fua{\varrho}{\ele{a}_1,\ele{a}_2}\leq\fua{\varrho}{\ele{a}_1,\ele{a}_3}+\fua{\varrho}{\ele{a}_3,\ele{a}_2}$\,.
 \end{itemize}
-Se interpretarmos distâncias como caminhos, o último axioma informa, em outras palavras, a inexistência de atalhos que possam diminuir a distância entre os elementos $a_1$ e $a_2$. Além disso, a existência de espaços métricos permite dizer que a função no mapeamento bijetor $\map{f}{A}{B}$, onde os conjuntos definem $(A,\varrho_A)$ e $(B,\varrho_B)$, é uma \textsb{isometria}\index{isometria} quando $\fua{\varrho_A}{\ele{a}_1,\ele{a}_2}=\fua{\varrho_B}{\fua{f}{\ele{a}_1},\fua{f}{\ele{a}_2}}$. Em outras palavras, uma isometria preserva a distância entre os elementos de seu domínio.
+If distances are intuitively seen as paths, from the last axiom we can state that the distance from $a_1$ to $a_2$ always establishes the shortest path between these two elements. Moreover, the existence of metric spaces enables us to define the function in a bijective mapping $\map{f}{A}{B}$, where the sets define $(A,\varrho_A)$ and $(B,\varrho_B)$, to called \textsb{isometry}\index{isometry} when $\fua{\varrho_A}{\ele{a}_1,\ele{a}_2}=\fua{\varrho_B}{\fua{f}{\ele{a}_1},\fua{f}{\ele{a}_2}}$. In other words, isometries preserve distance between the elements of their domain.       
+  
+
+
+
 
 A partir da definição rigorosa de métrica, surge um vasto conjunto de novas definições no estudo dos espaços assim estruturados. Dentre elas, apresentaremos a seguir aquelas que nos conduzirão à importante definição do ente matemático denominado contínuo, objeto fundamental do nosso estudo particular. Vamos iniciar então considerando o espaço métrico $(A,\varrho)$, um elemento $a\in A$ e um escalar $r\in \real$, a partir dos quais o conjunto
 \begin{equation}
