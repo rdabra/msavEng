@@ -115,7 +115,7 @@ Any two vectors $\gloref{unita}$ and $\vun{u}_2$ of $(V_\mathcal{R},\eta,\xi)$ a
 \section{Structuring by Metrics}
 
 
-If the group-field interaction assigns to the group certain multiplicative features, a set that is structured by metrics acquires the concept of distance. In other words, in a set-metrics space or a \textsb{metric space}\index{space!metric}, there is always a distance between two elements, measured in scalar values. This idea of distance is fundamental in Mathematics, making, for example, the usual notion of derivative viable and consequently of the elementary Differential Calculus as a whole. 
+If the group-field interaction assigns to the group certain multiplicative features, a set that is structured by metrics carries with it the concept of distance. In other words, in a set-metrics space or a \textsb{metric space}\index{space!metric}, there is always a distance between two elements, measured in scalar values. This idea of distance is fundamental in Mathematics, making, for example, the usual notion of derivative viable and consequently of elementary Differential Calculus as a whole. 
 
 
 Like structuring by field, the structure of metrics in a set is also subjected to restrictions, described as follows. Let  
@@ -127,8 +127,15 @@ $\con{A}$ be a set and $\map{\varrho}{\con{A}\times\con{A}}{\real}$ a mapping. G
 	\item[iii.] Of commutativity: $\fua{\varrho}{\ele{a}_1,\ele{a}_2}=\fua{\varrho}{\ele{a}_2,\ele{a}_1}$\,\,\,and
 	\item[iv.] Of triangular inequality: $\fua{\varrho}{\ele{a}_1,\ele{a}_2}\leq\fua{\varrho}{\ele{a}_1,\ele{a}_3}+\fua{\varrho}{\ele{a}_3,\ele{a}_2}$\,.
 \end{itemize}
-If distances are intuitively seen as paths, from the last axiom we can state that the distance from $a_1$ to $a_2$ always establishes the shortest path between these two elements. Moreover, the existence of metric spaces enables us to define the function in a bijective mapping $\map{f}{A}{B}$, where the sets define $(A,\varrho_A)$ and $(B,\varrho_B)$, to called \textsb{isometry}\index{isometry} when $\fua{\varrho_A}{\ele{a}_1,\ele{a}_2}=\fua{\varrho_B}{\fua{f}{\ele{a}_1},\fua{f}{\ele{a}_2}}$. In other words, isometries preserve distance between the elements of their domain.       
+If distances are intuitively seen as paths, from the last axiom we can state that the distance from $a_1$ to $a_2$ always establishes the shortest path between these two elements. Moreover, the existence of metric spaces enables us to call the function in a bijective mapping $\map{f}{A}{B}$, where the sets define $(A,\varrho_A)$ and $(B,\varrho_B)$, an \textsb{isometry}\index{isometry} when $\fua{\varrho_A}{\ele{a}_1,\ele{a}_2}=\fua{\varrho_B}{\fua{f}{\ele{a}_1},\fua{f}{\ele{a}_2}}$. In other words, an isometry preserves distances between the elements of its domain. 
   
+
+From the above definitions, many new concepts arise concerning the study of spaces structured by metrics. Among these concepts, we shall present hereafter those involved in the definition of ``continuum'': a set of fundamental relevance in our study. Let's start by considering a metric space $(A,\varrho)$, an element $a\in A$ and a scalar $r\in \real$, from which the set 
+\begin{equation}
+\overline{B}_{\ele{a},\ele{r}}:=\lch \ele{x}\in\con{A} \,:\,
+\fua{\varrho}{\ele{a},\ele{x}}\leqslant r \rch
+\end{equation}
+is said to be a \textsb{closed ball}\index{ball!closed} with center $a$ and radius $r$. It is then a subset of $A$ with a kind of border, a sphere in this case, 
 
 
 
