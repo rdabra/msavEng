@@ -130,27 +130,17 @@ $\con{A}$ be a set and $\map{\varrho}{\con{A}\times\con{A}}{\real}$ a mapping. G
 If distances are intuitively seen as paths, from the last axiom we can state that the distance from $a_1$ to $a_2$ always establishes the shortest path between these two elements. Moreover, the existence of metric spaces enables us to call the function in a bijective mapping $\map{f}{A}{B}$, where the sets define $(A,\varrho_A)$ and $(B,\varrho_B)$, an \textsb{isometry}\index{isometry} when $\fua{\varrho_A}{\ele{a}_1,\ele{a}_2}=\fua{\varrho_B}{\fua{f}{\ele{a}_1},\fua{f}{\ele{a}_2}}$. In other words, an isometry preserves distances between the elements of its domain. 
   
 
-From the above definitions, many new concepts arise concerning the study of spaces structured by metrics. Among these concepts, we shall present hereafter those involved in the definition of ``continuum'': a set of fundamental relevance in our study. Let's start by considering a metric space $(A,\varrho)$, an element $a\in A$ and a scalar $r\in \real$, from which the set 
+From the above definitions, many new concepts arise concerning the study of spaces structured by metrics. Among these concepts, we shall present hereafter those involved in the definition of ``continuum'', a set of fundamental relevance in our study. Let's start by considering a metric space $(A,\varrho)$, an element $a\in A$ and a scalar $r\in \real$, from which the set 
 \begin{equation}
 \overline{B}_{\ele{a},\ele{r}}:=\lch \ele{x}\in\con{A} \,:\,
 \fua{\varrho}{\ele{a},\ele{x}}\leqslant r \rch
 \end{equation}
-is said to be a \textsb{closed ball}\index{ball!closed} with center $a$ and radius $r$. It is then a subset of $A$ with a kind of border, a sphere in this case, 
-
-
-
-
-A partir da definição rigorosa de métrica, surge um vasto conjunto de novas definições no estudo dos espaços assim estruturados. Dentre elas, apresentaremos a seguir aquelas que nos conduzirão à importante definição do ente matemático denominado contínuo, objeto fundamental do nosso estudo particular. Vamos iniciar então considerando o espaço métrico $(A,\varrho)$, um elemento $a\in A$ e um escalar $r\in \real$, a partir dos quais o conjunto
-\begin{equation}
-\overline{B}_{\ele{a},\ele{r}}:=\lch \ele{x}\in\con{A} \,:\,
-\fua{\varrho}{\ele{a},\ele{x}}\leqslant r \rch
-\end{equation}
-é dito uma \textsb{bola fechada}\index{bola!fechada} com centro $a$ e raio $r$. Trata-se pois de um subconjunto de $A$ delimitado por uma fronteira, nesse caso uma esfera, cujos elementos pertencem a esse subconjunto. Quando tal esfera não está inclusa, que é o caso de
+is said to be a \textsb{closed ball}\index{ball!closed} with center $a$ and radius $r$. It is then a subset of $A$ delimited by a ``spheric" set whose elements belong to this subset. When such sphere is not included in the subset, as is the case with   
 \begin{equation}
 B_{\ele{a},\ele{r}}:=\lch \ele{x}\in\con{A} \,:\,
 \fua{\varrho}{\ele{a},\ele{x}}< r \rch\,,
 \end{equation}
-dizemos de uma \textsb{bola aberta}\index{bola!aberta} com centro $a$ e raio $r$. Nesses termos, a \textsb{esfera}\index{esfera} propriamente dita, também com centro $a$ e raio $r$, resulta assim definida:
+we call $B_{\ele{a},\ele{r}}$ an \textsb{open ball}\index{ball!open} with center $a$ and radius $r$. Thereby, the sphere itself, also with center $a$ and radius $r$, can be defined as follows:
 \begin{equation}
 \partial B_{\ele{a},\ele{r}}:=\lch \ele{x}\in\con{A} \,:\,
 \fua{\varrho}{\ele{a},\ele{x}}= r \rch\,.
@@ -161,28 +151,31 @@ dizemos de uma \textsb{bola aberta}\index{bola!aberta} com centro $a$ e raio $r$
 	\begin{center}
 		\scalebox{.72}{\input{partes/parte1/figs/c_algabst/bolas.pstex_t}}
 	\end{center}
-	\titfigura{Esfera, bolas fechada e aberta.}\label{fg:bolas}
+	\titfigura{Sphere, closed and open balls.}\label{fg:bolas}
 \end{figure}
 
 
-Um subconjunto $A_1$ de $A$ é dito \textsb{aberto}\index{conjunto!aberto} em $A$ se quaisquer de seus elementos for centro de uma bola aberta subconjunto de $A_1$, ou seja, para qualquer $a\in A_1$, sempre existe um $\ele{r}\in\real$ tal que $\ele{B}_{\ele{a},\ele{r}}\subset A_1$. Um conjunto $A_2\subset A$ é dito \textsb{fechado}\index{conjunto!fechado} se seu complementar for aberto em $A$. Assim, podemos dizer que o complementar do conjunto aberto $A_1$ é fechado em $A$. Em linhas gerais, conjuntos abertos, que generalizam o conceito de intervalos abertos, são desprovidos de elementos limítrofes, que remetem à ideia de um contorno e de um interior. Conjuntos dotados de interior e contorno são fechados porque seus complementares são abertos. Em termos matemáticos, dado um conjunto qualquer $A_3\subset A$, diz-se de um \textsb{interior}\index{interior} $\widehat{A}_3$ de $A_3$ definido por
+A subset $A_1$ of $A$ is said to be \textsb{open}\index{set!open} in $A$ if any of its elements is the center of an open ball subset of $A_1$, that is, for every $a\in A_1$, there is always a scalar $\ele{r}\in\real$ such that  $\ele{B}_{\ele{a},\ele{r}}\subset A_1$. A set $A_2\subset A$ is  
+\textsb{closed}\index{set!closed} if its complement is open in $A$. Thereby, we can say that the complement of the open set $A_1$ is closed in $A$. In general terms, open sets, being a generalization of open intervals, are deprived of elements in borders, which refers to the idea of boundaries and interiors. Subsets that results from the union of a boundary and a interior are closed because their complements are open. In mathematical terms, considering a set $A_3\subset A$, there is an \textsb{interior}\index{set!interior of} $\widehat{A}_3$ of $A_3$ defined by 
 \begin{equation}
-\widehat{A}_3=\lch\ele{x}\in A_3\,:\,\exists\,\ele{r}\in\real\text{ onde }\ele{B}_{\ele{x},\ele{r}}\subset A_3\rch
+\widehat{A}_3=\lch\ele{x}\in A_3\,:\,\exists\,\ele{r}\in\real\text{ where }\ele{B}_{\ele{x},\ele{r}}\subset A_3\rch
 \end{equation}
-e de um \textsb{fechamento}\index{fechamento} $\overline{A}_3$ de $A_3$ definido por
+and a \textsb{closure}\index{set!closure of} $\overline{A}_3$ of $A_3$ defined by
 \begin{equation}
 \overline{A}_3=\lch\ele{x}\in\con{A}\,:\, A_3\cap\ele{B}_{\ele{x},\ele{r}}\neq\emptyset\,,\,\forall\,\ele{r}\in\real\rch\,,
 \end{equation}
-tais que $\partial A_3:=\overline{A}_3\setminus \widehat{A}_3$ é o \textsb{contorno}\index{conjunto!contorno de} de $A_3$. Dessas definições, podemos dizer que se o conjunto $A_3=\widehat{A}_3$, ele é aberto; mas se $A_3=\overline{A}_3$, ele é fechado.
-
-
+such that $\partial A_3:=\overline{A}_3\setminus \widehat{A}_3$ is the 
+\textsb{boundary}\index{set!boundary of} of $A_3$. From these definitions, we can conclude that $A_3$ is open when $A_3=\widehat{A}_3$ and closed when $A_3=\overline{A}_3$.
 \begin{figure}[!ht]
 	\centering
 	\begin{center}
 		\scalebox{.72}{\input{partes/parte1/figs/c_algabst/contorno.pstex_t}}
 	\end{center}
-	\titfigura{Contorno, fechamento e interior de $A_3$.}
+	\titfigura{Boundary, closure and interior of $A_3$.}
 \end{figure}
+
+
+An open set is called \textsb{clopen}\index{set!clopen} when its complement is also open. As an example, the sets $W_1=[1,2]$ e $W_2=[3,4]$, defined by intervals of real values,   
 
 
 Quando ocorre de um conjunto aberto ter um complementar aberto diz-se que ele é \textsb{fechado-aberto}. Como exemplo, os conjuntos $W_1=[1,2]$ e $W_2=[3,4]$, definidos por intervalos reais, resultam fechados-abertos em $W_1\cup W_2$. Por definição, o conjunto vazio e o conjunto $A$, do qual os demais selecionados para estudo são subconjuntos, são considerados fechados-abertos. Diante disso, o espaço $(A,\varrho)$ é dito \textsb{conexo} se inexistir subconjunto próprio não vazio que seja fechado-aberto em $A$; caso contrário, o espaço é dito \textsb{desconexo}\index{espaço!desconexo}, como ocorre com o espaço métrico definido por $W_1\cup W_2$ no exemplo apresentado. Em outras palavras, podemos dizer que um espaço desconexo é definido por um conjunto de ``fragmentos'' dispersos, resultado da união de subconjuntos abertos disjuntos não vazios.
