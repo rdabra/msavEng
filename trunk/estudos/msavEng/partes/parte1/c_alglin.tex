@@ -21,11 +21,11 @@ where $\alpha,\beta\in \mathcal{R}$ and $\vto{x}, \vto{y}\in V$ are any elements
 As a set admits a subset under the conditions already presented, spaces admit subspaces. A \textsb{vector subspace}\index{vector subspace}, structured by the field $\mathcal{R}$, is actually a vector space in $\mathcal{R}$ whose elements also belong to a set that defines a vector space in $\mathcal{R}$. In more precise terms, we say that the vector space $(S,\mathcal{R},\tilde{p})$, where $\map{\tilde{p}}{\mathcal{R}\times S}{S}$, is a vector subspace of $V_\mathcal{R}$ if the set $S\subseteq V$ or, in a detailed notation, if the space $S_\mathcal{R}\subseteq V_\mathcal{R}$. It is important to say that as all vector spaces are defined to have a null element $\vto{0}$, then $\vto{0}$ must belong to any vector subspace.
 
 
-The possibility of multiplication by scalars, according to the mapping defined by $p$, enables to combine the vectors of  $\con{\tilde{U}}=\lch \vto{v}_1,\vto{v}_2,\cdots,\vto{v}_n \rch\subset V_\mathcal{R}$ as in
+The possibility of multiplication by scalars, according to the mapping defined by $p$, enables us to combine the vectors of  $\con{\tilde{U}}=\lch \vto{v}_1,\vto{v}_2,\cdots,\vto{v}_n \rch\subset V_\mathcal{R}$ as in
 \begin{equation}
 \alpha_1\vto{v}_1+\alpha_2\vto{v}_2+\cdots+\alpha_n\vto{v}_n\,,
 \end{equation}
-where $\alpha_i\in\mathcal{R}$ are any scalars. Thereby, this expression is called \emph{the} \textsb{linear combination}\index{vector!linear combination of} of $\con{\tilde{U}}$ in $\mathcal{R}$ and, when the scalars are given, the vector $\sum_{i=1}^n \alpha_i\vto{v}_i$ is said to be \emph{a} linear combination of $\con{\tilde{U}}$ in $\mathcal{R}$. Considering $n>1$, if the zero vector is a linear combination of $\con{\tilde{U}}$ when at least one of the scalars $\alpha_1,\cdots,\alpha_n$ is not null, then we classify $\con{\tilde{U}}$ as \textsb{linearly dependent}\index{linear dependence}. In this case, admitting that $\alpha _1\neq 0$, from the equality $\sum_{i=1}^n \alpha_i\vto{v}_i=\vto{0}$, we can write that $\vto{v}_1=\sum_{i=2}^n (\alpha_i/a_1)\vto{v}_i$, where $\vto{v}_1$ is said to be a linear combination of the other vectors. However, this linear combination of vectors can not be written when a sequence of null scalars is the only possible sequence to make any linear combination of $\con{\tilde{U}}$ equals the zero vector. In this context, if the vectors of $\con{\tilde{U}}$ are not zero, this set is called \textsb{linearly independent}\index{linear independence}.
+where $\alpha_i$ are any scalars of $\mathcal{R}$. Thereby, this expression is called \emph{the} \textsb{linear combination}\index{vector!linear combination of} of $\con{\tilde{U}}$ in $\mathcal{R}$ and, when the scalars are given, the vector $\sum_{i=1}^n \alpha_i\vto{v}_i$ is said to be \emph{a} linear combination of $\con{\tilde{U}}$ in $\mathcal{R}$. Considering $n>1$, if the zero vector is a linear combination of $\con{\tilde{U}}$ when at least one of the scalars $\alpha_1,\cdots,\alpha_n$ is not null, then we classify $\con{\tilde{U}}$ as \textsb{linearly dependent}\index{linear dependence}. In this case, admitting that $\alpha _1\neq 0$, from the equality $\sum_{i=1}^n \alpha_i\vto{v}_i=\vto{0}$, we can write that $\vto{v}_1=\sum_{i=2}^n (\alpha_i/a_1)\vto{v}_i$, where $\vto{v}_1$ is said to be a linear combination of the other vectors. However, this linear combination of vectors can not be written when a sequence of null scalars is the only possible sequence to make any linear combination of $\con{\tilde{U}}$ equals the zero vector. In this context, if the vectors of $\con{\tilde{U}}$ are not zero, this set is called \textsb{linearly independent}\index{linear independence}.
 
 
 
@@ -173,19 +173,25 @@ such that $\partial A_3:=\overline{A}_3\setminus \widehat{A}_3$ is the
 	\end{center}
 	\titfigura{Boundary, closure and interior of $A_3$.}
 \end{figure}
-
-
-An open set is called \textsb{clopen}\index{set!clopen} when its complement is also open. As an example, the sets $W_1=[1,2]$ e $W_2=[3,4]$, defined by intervals of real values,   
-
-
-Quando ocorre de um conjunto aberto ter um complementar aberto diz-se que ele é \textsb{fechado-aberto}. Como exemplo, os conjuntos $W_1=[1,2]$ e $W_2=[3,4]$, definidos por intervalos reais, resultam fechados-abertos em $W_1\cup W_2$. Por definição, o conjunto vazio e o conjunto $A$, do qual os demais selecionados para estudo são subconjuntos, são considerados fechados-abertos. Diante disso, o espaço $(A,\varrho)$ é dito \textsb{conexo} se inexistir subconjunto próprio não vazio que seja fechado-aberto em $A$; caso contrário, o espaço é dito \textsb{desconexo}\index{espaço!desconexo}, como ocorre com o espaço métrico definido por $W_1\cup W_2$ no exemplo apresentado. Em outras palavras, podemos dizer que um espaço desconexo é definido por um conjunto de ``fragmentos'' dispersos, resultado da união de subconjuntos abertos disjuntos não vazios.
+An open subset is called closed-open or \textsb{clopen}\index{set!clopen} when its complement is also open. As an example, the sets $W_1={1,\cdots,2}$ e $W_2={3,\cdots,4}$, defined by intervals of real values, are clopen subsets of $W_1\cup W_2$. It is important to say that the open set and the set $A$, to which the subsets in question belong, are defined to be clopen.
 
 {\footnotesize
 \begin{proof}
-Vamos mostrar por que $W_1=[1,2]$ e $W_2=[3,4]$ são fechados-abertos no conjunto $W:=W_1\cup W_2$. Seja um intervalo aberto $(w-1/2,w+1/2)$ em $\real$. Em $W$, esse intervalo centrado em $w=2$ resulta $(3/2,2]$, que também é aberto porque inexistem elementos maiores que 2 e menores que $5/2$. Um intervalo aberto subconjunto de $W_1$ sempre é obtido para qualquer $w\in W_1$, ocorrendo o mesmo para $W_2$; o que os torna abertos. Além disso, $W_1$ e $W_2$ também são fechados por serem complementares abertos entre si.
+Let's prove that $W_1$ and $W_2$ are clopen in $W:=W_1\cup W_2$. Let $(w-1/2,w+1/2)$ be an open interval in $\real$ where $w\in W$. This interval centered in $w=2$ results $(3/2,2)$, which is also open since there are no elements greater than 2 e less than $5/2$. Through this same process, it is always possible to find an open interval centered in any $w\in W_1$; when we conclude that $W_1$ is open in $W$. By this same reasoning, $W_2$ is also open. But $W_1$ and $W_2$ are also closed because they are each other's open complement in $W$. 
 \end{proof}}
 
-Agora, seja um espaço métrico $(U,\varrho)$ e um conjunto $C=\{U_1, U_2,\cdots\}$ constituído por infinitos subconjuntos de $U$. Dizemos que $C$ recobre $U$ ou que $C$ é um \textsb{recobrimento}\index{conjunto!recobrimento de} de $U$ quando $U\subseteq \bigcup_{i=1}^\infty U_i$. Se para qualquer valor $r \in \real$ existir um conjunto finito $\{ B_{{u_1},r}\,,B_{{u_2},r}\,,\cdots,B_{{u_n}\,,r}\}$, $u_i\in U$, que recobre $U$, dizemos que $(U,\varrho)$ é um espaço \textsb{totalmente limitado}\index{espaço!totalmente limitado}. Limitação total é uma restrição que impõe ao conjunto definidor do espaço uma forte característica de finidade, a partir da qual pode-se dispor do conceito de tamanho.
+Still considering the conditions above, the space $(A,\varrho)$ is called \textsb{connected}\index{space!connected} when there is no proper non empty subset that is clopen in $A$; otherwise, the space is said to be \textsb{disconnected}\index{space!disconnected}, as is the case of a metric space defined by $W_1\cup W_2$. In other words, a disconnected space results from the union of disjoint open non empty subsets. Intuitively, we can say that this space is fragmented, constituted by scattered collections of elements. 
+
+Now, let $(U,\varrho)$ be a metric space and $C=\{U_1, U_2,\cdots\}$ an infinite set constituted by subsets of $U$. We say that $C$ covers $U$ or that $C$ is a \textsb{cover}\index{set!cover of} of $U$ when $U\subseteq \bigcup_{i=1}^\infty U_i$. If there is always a finite set $\{ B_{{u_1},r}\,,B_{{u_2},r}\,,\cdots,B_{{u_n}\,,r}\}$, $u_i\in U$, defined by any $r \in \real$, we say that $(U,\varrho)$ is a \textsb{totally bounded}\index{space!totally bounded} space. Total boundedness is a restriction that imposes on the space in question a strong feature of finitude, from which it is possible to attain the concept of size. 
+
+
+
+
+
+
+
+
+
 
 Há alguns espaços métricos nos quais é convergente qualquer sequência de elementos que, quando percorrida, as distâncias entre os elementos a percorrer tendem a zero. Por conta desse critério, os conjuntos que o obedecem resultam desprovidos de ``vazios'', apresentando-se completamente ``preenchidos''. Em termos matemáticos, dado o espaço métrico $(V,\varrho)$, na sequência de elementos $v_1,v_2,\cdots,v_n\in V$ onde
 \begin{equation}
