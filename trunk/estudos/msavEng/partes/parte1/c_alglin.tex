@@ -2,7 +2,7 @@
 \chapter{A Primer on Linear Algebra}
 
 A set is called \textsb{space}\index{space} when it is structured by another set, by an operation or by some relevant property to which all of its elements are subjected.
-In the previous chapter, we created a space with an additive structure, called an additive group, and cumulatively assigned to this space a multiplicative structure, when it became a field. In this chapter, the cumulative structuring of these specific spaces is developed, now using fields, norms, metrics and inner products as structural entities. Firstly, we shall gather the concepts of additive group and field in such a way that, from this interaction, scalars end up assigning certain multiplicative properties to group elements: abbreviation of repetitive additions, positivity and negativity. Regarding the relationships between these spaces, Linear Algebra deals mainly with specific homomorphic functions in which scalars are considered and structures preserved.
+In the previous chapter, we created a space with an additive structure, called an additive group, and cumulatively assigned to this space a multiplicative structure, when it became a field. In this chapter, the cumulative structuring of these specific spaces is developed, now using fields, norms, metrics and inner products as structural entities. Firstly, we shall gather the concepts of additive group and field in such a way that, from this interaction, scalars end up assigning certain multiplicative properties to group elements, namely, abbreviation of repetitive additions, positivity and negativity. Regarding the relationships between these spaces, Linear Algebra deals mainly with specific homomorphic functions in which scalars are considered and structures preserved.
 
 
 \section{Structuring by Field}\label{sec:espacoVet}
@@ -81,13 +81,13 @@ We define that two vectors project on each other or have a projective interrelat
 	\alpha_3\vto{u}_3} =
 \overline{\alpha_2}\fua{\xi}{\vto{u}_1,\vto{u}_2} + \overline{\alpha_3}\fua{\xi}{\vto{u}_1,\vto{u}_3}\,;
 	\end{equation*}
-\end{itemize} 
-where $\vto{u}_1,\vto{u}_2,\vto{u}_3\in U_\mathcal{R}$ and  $\alpha_1,\alpha_2,\alpha_3\in\mathcal{R}$ are any elements of their respective sets. In this context, the function $\xi$ is called a \textsb{positive-definite inner product} because the projection of a vector on itself is a non negative real number, as described by the first axiom. In our study, $\xi$ is simply called an inner product\index{inner product}, and the double $(U_\mathcal{R},\xi)$ an \textsb{inner product space}\index{space!inner product}. From this double, we conclude that $\xi$ structures the group $U$ in such a way that a projective interrelationship of any pair of its elements can be obtained. 
-Henceforth, in order to shorten notation, $\gloref{prdint}$ will also be used to represent the inner product $\fua{\xi}{\vto{x},\vto{y}}$. 
+\end{itemize}
+where $\vto{u}_1,\vto{u}_2,\vto{u}_3\in U_\mathcal{R}$ and  $\alpha_1,\alpha_2,\alpha_3\in\mathcal{R}$ are any elements of their respective sets. In this context, the function $\xi$ is called a \textsb{positive-definite inner product} because the projection of a vector on itself is a non negative real number, as described by the first axiom. In our study, $\xi$ is simply called an inner product\index{inner product}, and the double $(U_\mathcal{R},\xi)$ an \textsb{inner product space}\index{space!inner product}. From this double, we conclude that $\xi$ structures the group $U$ in such a way that a projective interrelationship of any pair of its elements can be obtained.
+Henceforth, in order to shorten notation, $\gloref{prdint}$ will also be used to represent the inner product $\fua{\xi}{\vto{x},\vto{y}}$.
 
 Considering the inner product space $(U_\mathcal{R},\xi)$, it is now possible to present in more mathematical terms the definition of orthogonality: any vectors $\vto{u}_1,\vto{u}_2\in U_\mathcal{R}$ are said to be orthogonal, or $\vto{u}_1\gloref{perpend}\vto{u}_2$, when $\vto{u}_1\cdot\vto{u}_2=0$. Given the subsets $U_1\subset U_\mathcal{R}$ and $U_2\subset U_\mathcal{R}$, if $\vto{u}\in U_\mathcal{R}$ is orthogonal to any vector of $U_1$, we write $\vto{u}\perp\con{U}_1$, and if any vetor of $\con{U}_1$ is orthogonal to any vector of $\con{U}_2$, we write $\con{U}_1\perp\con{U}_2$. A set $U_3=\{\vto{u}_1,\cdots,\vto{u}_n\}\subset U_\mathcal{R}$ is called orthogonal if $\vto{u}_i\perp\vto{u}_j$, $i\neq j$. Thereby, when the vectors of $U_3$ are non null, the inner product of each side of $\alpha\vto{u}_j=\vto{u}_i$ and $\vto{u}_j$, where $\alpha\in\mathcal{R}$ and $i\neq j$, the result is $\alpha\,(\vto{u}_j\cdot\vto{u}_j)=0$, from where we conclude that $\alpha=0$ or that every orthogonal set is linearly independent. This conclusion permits us to state that in a \emph{$n$-dimensional inner product space, every orthogonal subset of $n$ elements is a basis}.
 
-From a cumulative structuring of a set $V_\mathcal{R}$ by norm and inner product, it is possible to define a triple $(V_\mathcal{R},\eta,\xi)$, called a \textsb{normed inner product space}\index{space!normed inner product}. In these spaces, the projective interrelationship of vectors, expressed by the inner product, can be used to define a norm  according the generic rule 
+From a cumulative structuring of a set $V_\mathcal{R}$ by norm and inner product, it is possible to define a triple $(V_\mathcal{R},\eta,\xi)$, called a \textsb{normed inner product space}\index{space!normed inner product}. In these spaces, the projective interrelationship of vectors, expressed by the inner product, can be used to define a norm  according the generic rule
 \begin{equation}
  \fua{\eta}{\vto{x}} = \fua{g\circ\xi}{\vto{x},\vto{x}},
 \end{equation}
@@ -115,10 +115,10 @@ Any two vectors $\gloref{unita}$ and $\vun{u}_2$ of $(V_\mathcal{R},\eta,\xi)$ a
 \section{Structuring by Metrics}
 
 
-If the group-field interaction assigns to the group certain multiplicative features, a set that is structured by metrics carries with it the concept of distance. In other words, in a set-metrics space or a \textsb{metric space}\index{space!metric}, there is always a distance between two elements, measured in scalar values. This idea of distance is fundamental in Mathematics, making, for example, the usual notion of derivative viable and consequently of elementary Differential Calculus as a whole. 
+If the group-field interaction assigns to the group certain multiplicative features, a set that is structured by metrics carries with it the concept of distance. In other words, in a set-metrics space or a \textsb{metric space}\index{space!metric}, there is always a distance between two elements, measured in scalar values. This idea of distance is fundamental in Mathematics, making, for example, the usual notion of derivative viable and consequently of elementary Differential Calculus as a whole.
 
 
-Like structuring by field, the structure of metrics in a set is also subjected to restrictions, described as follows. Let  
+Like structuring by field, the structure of metrics in a set is also subjected to restrictions, described as follows. Let
 $\con{A}$ be a set and $\map{\varrho}{\con{A}\times\con{A}}{\real}$ a mapping. Given any elements $a_1,a_2,a_3\in A$, the double $(A,\varrho)$ is said to be a metric space and the function $\varrho$ a \textsb{metric}\index{metric} or a \textsb{distance function}\index{function!distance} if it observes the axioms
 \begin{itemize}
 	\setlength\itemsep{.1em}
@@ -127,15 +127,15 @@ $\con{A}$ be a set and $\map{\varrho}{\con{A}\times\con{A}}{\real}$ a mapping. G
 	\item[iii.] Of commutativity: $\fua{\varrho}{\ele{a}_1,\ele{a}_2}=\fua{\varrho}{\ele{a}_2,\ele{a}_1}$\,\,\,and
 	\item[iv.] Of triangular inequality: $\fua{\varrho}{\ele{a}_1,\ele{a}_2}\leq\fua{\varrho}{\ele{a}_1,\ele{a}_3}+\fua{\varrho}{\ele{a}_3,\ele{a}_2}$\,.
 \end{itemize}
-If distances are intuitively seen as paths, from the last axiom we can state that the distance from $a_1$ to $a_2$ always establishes the shortest path between these two elements. Moreover, the existence of metric spaces enables us to call the function in a bijective mapping $\map{f}{A}{B}$, where the sets define $(A,\varrho_A)$ and $(B,\varrho_B)$, an \textsb{isometry}\index{isometry} when $\fua{\varrho_A}{\ele{a}_1,\ele{a}_2}=\fua{\varrho_B}{\fua{f}{\ele{a}_1},\fua{f}{\ele{a}_2}}$. In other words, an isometry preserves distances between the elements of its domain. 
-  
+If distances are intuitively seen as paths, from the last axiom we can state that the distance from $a_1$ to $a_2$ always establishes the shortest path between these two elements. Moreover, the existence of metric spaces enables us to call the function in a bijective mapping $\map{f}{A}{B}$, where the sets define $(A,\varrho_A)$ and $(B,\varrho_B)$, an \textsb{isometry}\index{isometry} when $\fua{\varrho_A}{\ele{a}_1,\ele{a}_2}=\fua{\varrho_B}{\fua{f}{\ele{a}_1},\fua{f}{\ele{a}_2}}$. In other words, an isometry preserves distances between the elements of its domain.
 
-From the above definitions, many new concepts arise concerning the study of spaces structured by metrics. Among these concepts, we shall present hereafter those involved in the definition of ``continuum'', a set of fundamental relevance in our study. Let's start by considering a metric space $(A,\varrho)$, an element $a\in A$ and a scalar $r\in \real$, from which the set 
+
+From the above definitions, many new concepts arise concerning the study of spaces structured by metrics. Among these concepts, we shall present hereafter those involved in the definition of ``continuum'', a space of fundamental relevance in our study. Let's start by considering a metric space $(A,\varrho)$, an element $a\in A$ and a scalar $r\in \real$, from which the set
 \begin{equation}
 \overline{B}_{\ele{a},\ele{r}}:=\lch \ele{x}\in\con{A} \,:\,
 \fua{\varrho}{\ele{a},\ele{x}}\leqslant r \rch
 \end{equation}
-is said to be a \textsb{closed ball}\index{ball!closed} with center $a$ and radius $r$. It is then a subset of $A$ delimited by a ``spheric" set whose elements belong to this subset. When such sphere is not included in the subset, as is the case with   
+is said to be a \textsb{closed ball}\index{ball!closed} with center $a$ and radius $r$. It is then a subset of $A$ delimited by a ``spheric" set whose elements belong to this subset. When such sphere is not included in the subset, as is the case with
 \begin{equation}
 B_{\ele{a},\ele{r}}:=\lch \ele{x}\in\con{A} \,:\,
 \fua{\varrho}{\ele{a},\ele{x}}< r \rch\,,
@@ -155,8 +155,8 @@ we call $B_{\ele{a},\ele{r}}$ an \textsb{open ball}\index{ball!open} with center
 \end{figure}
 
 
-A subset $A_1$ of $A$ is said to be \textsb{open}\index{set!open} in $A$ if any of its elements is the center of an open ball subset of $A_1$, that is, for every $a\in A_1$, there is always a scalar $\ele{r}\in\real$ such that  $\ele{B}_{\ele{a},\ele{r}}\subset A_1$. A set $A_2\subset A$ is  
-\textsb{closed}\index{set!closed} if its complement is open in $A$. Thereby, we can say that the complement of the open set $A_1$ is closed in $A$. In general terms, open sets, being a generalization of open intervals, are deprived of elements in borders, which refers to the idea of boundaries and interiors. Subsets that results from the union of a boundary and a interior are closed because their complements are open. In mathematical terms, considering a set $A_3\subset A$, there is an \textsb{interior}\index{set!interior of} $\widehat{A}_3$ of $A_3$ defined by 
+A subset $A_1$ of $A$ is said to be \textsb{open}\index{set!open} in $A$ if any of its elements is the center of an open ball subset of $A_1$, that is, for every $a\in A_1$, there is always a scalar $\ele{r}\in\real$ such that  $\ele{B}_{\ele{a},\ele{r}}\subset A_1$. A set $A_2\subset A$ is
+\textsb{closed}\index{set!closed} if its complement is open in $A$. Thereby, we can say that the complement of the open set $A_1$ is closed in $A$. In general terms, open sets, being a generalization of open intervals, are devoid of elements in borders, which refers to the idea of boundaries and interiors. Subsets that results from the union of a boundary and a interior are closed because their complements are open. In mathematical terms, considering a set $A_3\subset A$, there is an \textsb{interior}\index{set!interior of} $\widehat{A}_3$ of $A_3$ defined by
 \begin{equation}
 \widehat{A}_3=\lch\ele{x}\in A_3\,:\,\exists\,\ele{r}\in\real\text{ where }\ele{B}_{\ele{x},\ele{r}}\subset A_3\rch
 \end{equation}
@@ -164,80 +164,74 @@ and a \textsb{closure}\index{set!closure of} $\overline{A}_3$ of $A_3$ defined b
 \begin{equation}
 \overline{A}_3=\lch\ele{x}\in\con{A}\,:\, A_3\cap\ele{B}_{\ele{x},\ele{r}}\neq\emptyset\,,\,\forall\,\ele{r}\in\real\rch\,,
 \end{equation}
-such that $\partial A_3:=\overline{A}_3\setminus \widehat{A}_3$ is the 
-\textsb{boundary}\index{set!boundary of} of $A_3$. From these definitions, we can conclude that $A_3$ is open when $A_3=\widehat{A}_3$ and closed when $A_3=\overline{A}_3$.
-\begin{figure}[!ht]
+such that $\partial A_3:=\overline{A}_3\setminus \widehat{A}_3$ is the
+\textsb{boundary}\index{set!boundary of} of $A_3$. From these definitions, we can conclude that $A_3$ is open when $A_3=\widehat{A}_3$ and closed when $A_3=\overline{A}_3$. An open subset is called closed-open or \textsb{clopen}\index{set!clopen} when its complement is also open. As an example, the sets $W_1={1,\cdots,2}$ e $W_2={3,\cdots,4}$, defined by intervals of real values, are clopen subsets of $W_1\cup W_2$.
+\begin{figure}[!h]
 	\centering
 	\begin{center}
 		\scalebox{.72}{\input{partes/parte1/figs/c_algabst/contorno.pstex_t}}
 	\end{center}
 	\titfigura{Boundary, closure and interior of $A_3$.}
 \end{figure}
-An open subset is called closed-open or \textsb{clopen}\index{set!clopen} when its complement is also open. As an example, the sets $W_1={1,\cdots,2}$ e $W_2={3,\cdots,4}$, defined by intervals of real values, are clopen subsets of $W_1\cup W_2$. It is important to say that the open set and the set $A$, to which the elements of the subsets $A_i$ belong, are defined to be clopen.
+It is important to say that the open set and the set $A$, to which the elements of the subsets $A_i$ belong, are defined to be clopen.
 
 {\footnotesize
 \begin{proof}
-Let's prove that $W_1$ and $W_2$ are clopen in $W:=W_1\cup W_2$. Let $(w-1/2,w+1/2)$ be an open interval in $\real$ where $w\in W$. This interval centered in $w=2$ results $(3/2,2)$, which is also open since there are no elements greater than 2 e less than $5/2$. Through this same process, it is always possible to find an open interval centered in any $w\in W_1$; when we conclude that $W_1$ is open in $W$. By this same reasoning, $W_2$ is also open. But $W_1$ and $W_2$ are also closed because they are each other's open complement in $W$. 
+Let's prove that $W_1$ and $W_2$ are clopen in $W:=W_1\cup W_2$. Let $(w-1/2,w+1/2)$ be an open interval in $\real$ where $w\in W$. This interval centered in $w=2$ results $(3/2,2)$, which is also open since there are no elements greater than 2 e less than $5/2$. Through this same process, it is always possible to find an open interval centered in any $w\in W_1$; when we conclude that $W_1$ is open in $W$. By this same reasoning, $W_2$ is also open. But $W_1$ and $W_2$ are also closed because they are each other's open complement in $W$.
 \end{proof}}
 
-Still considering the conditions above, the space $(A,\varrho)$ is called \textsb{connected}\index{space!connected} when there is no proper non empty subset that is clopen in $A$; otherwise, the space is said to be \textsb{disconnected}\index{space!disconnected}, as is the case of a metric space defined by $W_1\cup W_2$. In other words, a disconnected space results from the union of disjoint open non empty subsets. Intuitively, we can say that this space is fragmented, constituted by scattered collections of elements. 
+Still considering the conditions above, the space $(A,\varrho)$ is called \textsb{connected}\index{space!connected} when there is no proper non empty subset that is clopen in $A$; otherwise, the space is said to be \textsb{disconnected}\index{space!disconnected}, as is the case of a metric space defined by $W_1\cup W_2$. In other words, a disconnected space results from the union of disjoint open non empty subsets. Intuitively, we can say that this space is fragmented, constituted by scattered collections of elements.
 
-Now, let $(U,\varrho)$ be a metric space and $C=\{U_1, U_2,\cdots\}$ an infinite set constituted by subsets of $U$. We say that $C$ covers $U$ or that $C$ is a \textsb{cover}\index{set!cover of} of $U$ when $U\subseteq \bigcup_{i=1}^\infty U_i$. If there is always a finite set $\{ B_{{u_1},r}\,,B_{{u_2},r}\,,\cdots,B_{{u_n}\,,r}\}$, $u_i\in U$, defined by any $r \in \real$, we say that $(U,\varrho)$ is a \textsb{totally bounded}\index{space!totally bounded} space. Total boundedness is a restriction that imposes on the space in question a strong feature of finitude, from which it is possible to attain the concept of size. 
+A metric space $(U,\varrho)$ is called \textsb{bounded}\index{space!bounded} if there are an element $u\in U$ and a scalar $r \in \real$ such that $U\subset B_{{u},r}$. Now we shall restrict this condition a little more, but firstly let $C=\{U_1, U_2,\cdots\}$ be an infinite set constituted by subsets of $U$. We say that $C$ covers $U$ or that $C$ is a \textsb{cover}\index{set!cover of} of $U$ when $U\subseteq \bigcup_{i=1}^\infty U_i$. If there is a finite set $\{ B_{{u_1},r}\,,B_{{u_2},r}\,,\cdots,B_{{u_n}\,,r}\}$, $u_i\in U$ and $r \in \real$, that covers $U$, we say that $(U,\varrho)$ is a \textsb{totally bounded}\index{space!totally bounded} space. Boundedness and, more strongly, total boundedness are restrictions that impose on the space in question a feature of being delimited, from which it is possible to attain the concept of size.
 
-
-
-
-
-
-
-
-
-
-Há alguns espaços métricos nos quais é convergente qualquer sequência de elementos que, quando percorrida, as distâncias entre os elementos a percorrer tendem a zero. Por conta desse critério, os conjuntos que o obedecem resultam desprovidos de ``vazios'', apresentando-se completamente ``preenchidos''. Em termos matemáticos, dado o espaço métrico $(V,\varrho)$, na sequência de elementos $v_1,v_2,\cdots,v_n\in V$ onde
+Considering a sequence where distances between its elements decrease as it progresses, there are metric spaces in which every such sequence is convergent. In simple terms, we may say that these spaces result devoid of ``voids'' or completely ``filled''. Mathematically, given a metric space $(V,\varrho)$, in a sequence of elements $v_1,v_2,\cdots,v_n\in V$ where
 \begin{equation}
 \lim_{\min{\lpa i,j\rpa}\to\infty}{\fua{\varrho}{\ele{v}_i,\ele{v}_j}}=0\,,
 \end{equation}
-denominada \textsb{Sequência de Cauchy}, a infinita diminuição das distâncias fica garantida. Se qualquer Sequência de Cauchy em $V$ for convergente, ou seja, se além do limite anterior, existir um $v\in V$ onde
+called \textsb{Cauchy Sequence}\index{Cauchy!Sequence}, the infinite decrease of distances is assured. If any Cauchy Sequence in $V$ is convergent, that is, in addition to the limit above, if there is a $v\in V$ where
 \begin{equation}
 \lim_{i\to\infty}{\fua{\varrho}{\ele{v}_i,\ele{v}}}=0\,,
 \end{equation}
-diz-se que o espaço métrico é \textsb{completo}\index{espaço!métrico completo}. Se o espaço métrico completo também for conexo e totalmente limitado, diz-se que esse espaço é um \textsb{contínuo}\index{contínuo}. Sendo assim, para os fins de nosso estudo, \emph{todo o contínuo é um espaço métrico definido por um conjunto desprovido de ``vazios'', não ``fragmentado'' e detentor de um tamanho}.
+the metric space in question is said to be \textsb{complete}\index{space!complete metric}. When a complete metric space is also connected and totally bounded, it is called a        
+\textsb{continuum}\index{continuum}. Thereby, for the purposes of our study, \emph{every continuum is a metric space defined by a delimited set that is devoid of ``voids'' and not ``fragmented''.}
 
-\begin{mteo}{Isometria Preserva Completude de Espaço Métrico}{isoComp}
-Uma isometria cujo domínio e a imagem são espaços métricos, se o domínio for completo a imagem também o será.
+\begin{mteo}{Isometry Preserves Completeness}{isoComp}
+If an isometry has a complete domain then its image is also complete.
 \end{mteo}
-\hspace{1pt}
+
 {\footnotesize
 \begin{proof}
-Verifiquemos se a isometria preserva mesmo a condição de completude do espaço. Considerando o mapeamento isométrico $\map{f}{V}{W}$, onde $\fua{\varrho_W}{\fua{f}{x},\fua{f}{y}}=\fua{\varrho_V}{x,y}$, o domínio $V$ é um espaço métrico completo e $W$ é um espaço métrico, as igualdades
+Considering the isometric mapping  $\map{f}{V}{W}$, where the domain $V$ is complete, and $\ele{v}_1,\ele{v}_2,\cdots,\ele{v}_n$ any Cauchy Sequence in $V$, from the definition of isometry, the equalities
 \begin{equation*}
-\lim_{\min{\lpa i,j\rpa}\to\infty}{\fua{\varrho_W}{\fua{f}{\ele{v}_i},\fua{f}{\ele{v}_j}}}=\lim_{\min{\lpa i,j\rpa}\to\infty}{\fua{\varrho_V}{\ele{v}_i,\ele{v}_j}}=0\,,
+\lim_{\min{\lpa i,j\rpa}\to\infty}{\fua{\varrho_V}{\ele{v}_i,\ele{v}_j}}=\lim_{\min{\lpa i,j\rpa}\to\infty}{\fua{\varrho_W}{\fua{f}{\ele{v}_i},\fua{f}{\ele{v}_j}}}=0
 \end{equation*}
-mostram que a sequencia $\fua{f}{\ele{v}_1},\fua{f}{\ele{v}_2},\cdots,\fua{f}{\ele{v}_n}\in W$ é de Cauchy. Além disso, dado um elemento qualquer $\fua{f}{v}\in W$, as igualdades
+show that $\fua{f}{\ele{v}_1},\fua{f}{\ele{v}_2},\cdots,\fua{f}{\ele{v}_n}\in \con{R}_{f}$ is also a Cauchy Sequence. Moreover, if $\ele{v}_1,\ele{v}_2,\cdots,\ele{v}_n$ converges to $v$, the equalities
 \begin{equation*}
-\lim_{i\to\infty}{\fua{\varrho_W}{\fua{f}{\ele{v}_i},\fua{f}{\ele{v}}}}=\lim_{i\to\infty}{\fua{\varrho_V}{\ele{v}_i,\ele{v}}}=0\,.
+\lim_{i\to\infty}{\fua{\varrho_V}{\ele{v}_i,\ele{v}}}=\lim_{i\to\infty}{\fua{\varrho_W}{\fua{f}{\ele{v}_i},\fua{f}{\ele{v}}}}=0
 \end{equation*}
+show that every Cauchy Sequence in $\con{R}_{f}$ is convergent.
 \end{proof}}
 
 
-Como o tema deste capítulo é Álgebra Linear, vamos considerar que o espaço métrico $(V,\varrho)$, estruturado por $\varrho$, também o seja pelo campo $\mathcal{R}$. Assim, podemos definir a dupla $(V_\mathcal{R},\varrho)$, a qual denominaremos \textsb{espaço vetorial métrico}\index{espaço!vetorial métrico}. A partir daí, os tipos específicos de espaços vetoriais e métricos já apresentados podem ser conciliados, de onde surgem três importantes espaços: um espaço normado métrico completo ou, mais abreviadamente, \textsb{espaço de Banach}\index{espaço!de Banach}\index{Banach!espaço de}, representado $(V_\mathcal{R},\varrho,\eta)$, onde
+Now, let's bring the concept of distance to the subject of vector spaces, which are the most fundamental constructs of Linear Algebra. A vector space $V_\mathcal{R}$ that is structured by a metric $\varrho$ is defined to be a \textsb{metric vetor space}\index{vector space!metric} $(V_\mathcal{R},\varrho)$. From this definition, specific types of metric and vector spaces already presented can be combined, and then three important spaces arise: a normed complete space or, more briefly, a
+\textsb{Banach space}\index{space!Banach}\index{Banach space}, represented by  $(V_\mathcal{R},\varrho,\eta)$, where
 \begin{equation}
 \fua{\varrho}{\vto{v}_1,\vto{v}_2} := \fua{\eta}{\vto{v}_1-\vto{v}_2}
 ,\,\forall
 \,\vto{v}_1,\vto{v}_2\in\con{V}_\mathcal{R}\,;
 \end{equation}
-um espaço de Banach com produto interno $(V_\mathcal{R},\varrho,\eta,\xi)$, chamado \textsb{espaço de Hilbert}\index{espaço!de Hilbert}\index{Hilbert!espaço de}, cuja norma é induzida pelo produto interno segundo a regra $\fua{\eta}{\vto{x}}=\sqrt{\fua{\xi}{\vto{x},\vto{x}}}$; e um espaço de Hilbert real $n$-dimensional $(V_\real,\varrho,\eta,\xi)$, denominado \textsb{espaço Euclidiano}\index{espaço!Euclidiano}. A fim de evitar abuso notacional, os espaços vetoriais métricos aqui descritos serão doravante identificados apenas pelo espaço vetorial que o define: por exemplo, a quádrupla $(V_\mathcal{R},\varrho,\eta,\xi)$ será sempre descrita como o ``espaço de Hilbert $V_\mathcal{R}$'', ficando implícitas as funções definidoras.
+a Banach space with an inner product $(V_\mathcal{R},\varrho,\eta,\xi)$, called a \textsb{Hilbert space}\index{space!Hilbert}\index{Hilbert space}, whose inner product induces the norm through $\fua{\eta}{\vto{x}}=\sqrt{\fua{\xi}{\vto{x},\vto{x}}}$; and a real $n$-dimensional Hilbert space $(V_\real,\varrho,\eta,\xi)$, called \textsb{Euclidean space}\index{space!Euclidean}. In order to avoid notational abuse, all metric vector spaces will henceforth be identified only by the definer vector space: for example, the quadruple $(V_\mathcal{R},\varrho,\eta,\xi)$ will be described by ``the Hilbert space $V_\mathcal{R}$'', where the functions are implied.
 
 \begin{figure}[ht]
 \centering
 {\small
 \begin{forest}
 	for tree={align=center,parent anchor=south, child anchor=north}
-	[Vetorial\\$U_\mathcal{R}$
-	[Produto Interno\\$(U_\mathcal{R}{,}\xi)$ [Normado Produto Interno\\$(U_\mathcal{R}{,}\eta{,}\xi)$,name=normProdInt ] ]
-	[Normado\\$(U_\mathcal{R}{,}\eta)$,name=normd]
-	[Vetorial Métrico Completo\\$(U_\mathcal{R}{,}\varrho)$
-	[Banach\\$(U_\mathcal{R}{,}\varrho{,}\eta)$,name=bana [Hilbert\\$(U_\mathcal{R}{,}\varrho{,}\eta{,}\xi)$,name=hilb [Euclidiano\\$(U_\real{,}\varrho{,}\eta{,}\xi)$]]]] ]
+	[Vector\\$U_\mathcal{R}$
+	[Inner Product\\$(U_\mathcal{R}{,}\xi)$ [Normed Inner Product\\$(U_\mathcal{R}{,}\eta{,}\xi)$,name=normProdInt ] ]
+	[Normed\\$(U_\mathcal{R}{,}\eta)$,name=normd]
+	[Complete Vector\\$(U_\mathcal{R}{,}\varrho)$
+	[Banach\\$(U_\mathcal{R}{,}\varrho{,}\eta)$,name=bana [Hilbert\\$(U_\mathcal{R}{,}\varrho{,}\eta{,}\xi)$,name=hilb [Euclidean\\$(U_\real{,}\varrho{,}\eta{,}\xi)$]]]] ]
 	]
 	\draw (normProdInt)--(normd);
 	\draw (bana)--(normd);
@@ -245,7 +239,7 @@ um espaço de Banach com produto interno $(V_\mathcal{R},\varrho,\eta,\xi)$, cham
 \end{forest}
 }
 \newline
-\titfigura{Conciliação dos espaços vetoriais apresentados.}
+\titfigura{Combination of vector and metric spaces.}
 \end{figure}
 
 \begin{mteo}{Base Ortogonal em Espaços de Hilbert}{temOrtonormal}
