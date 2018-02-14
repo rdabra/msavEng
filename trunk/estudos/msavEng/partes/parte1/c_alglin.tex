@@ -242,9 +242,21 @@ a Banach space with an inner product $(V_\mathcal{R},\varrho,\eta,\xi)$, called 
 \titfigura{Combination of vector and metric spaces.}
 \end{figure}
 
-\begin{mteo}{Base Ortogonal em Espaços de Hilbert}{temOrtonormal}
-	Todo espaço de Hilbert tem base ortogonal.
+\begin{mteo}{Orthogonal Basis in Hilbert Spaces}{temOrtonormal}
+	Every Hilbert space has orthogonal basis.
 \end{mteo}
+
+
+
+{\footnotesize
+\begin{proof}
+Through a very long proof, starting from the so called \textsb{Zorn's Lemma}\index{Zorn's Lemma}, it is possible to obtain that every Hilbert space has a basis\footnote{See \aut{Kreyszig}\cite{kreyszig_1978_1}.}. Once the existence of a basis is assured, the \textsb{Gram-Schmidt Algorithm}\index{Gram-Schmidt!Algorithm} is able to find an orthogonal set from any other set as follows. Let $U=\{\vto{u}_1,\cdots,\vto{u}_n\}$ be a basis and $X=\{\vto{x}_1,\cdots,\vto{x}_n\}$ a set where $\vto{x}_1=\vto{u}_1$. If  $n=2$, the goal is to find a $\vto{x}_2\perp\vto{x}_1$    
+	
+Garantida a existência de uma base, o \textsb{Algoritmo de Gram-Schmidt}\index{Gram-Schmidt!Algoritmo de} consegue encontrar um conjunto ortogonal a partir de qualquer conjunto, conforme mostrado a seguir. Seja uma base  $U=\{\vto{u}_1,\cdots,\vto{u}_n\}$ e um conjunto $X=\{\vto{x}_1,\cdots,\vto{x}_n\}$ onde $\vto{x}_1=\vto{u}_1$. Quando o valor $n=2$, o objetivo é encontrar um $\vto{x}_2\perp\vto{x}_1$ para que $X$ seja ortogonal. O algoritmo propõe que o vetor $\vto{x}_2=p_{21}\vto{x}_1+\vto{u}_2$, onde  $p_{21}:=-(\vto{u}_2\cdot\vto{x}_1)/\|\vto{x}_1\|^2$. Se um vetor qualquer $\vto{u}=\alpha_1\vto{u}_1+\alpha_2\vto{u}_2$, tem-se então $\vto{u}=(\alpha_1-p_{21})\vto{x}_1+\alpha_2\vto{x}_2$; logo, $\spn (U)=\spn(X)$. No caso de $n=3$, encontra-se um vetor $\vto{x}_3\perp\{\vto{x}_1,\vto{x}_2\}$ através da igualdade $\vto{x}_3=p_{31}\vto{x}_1+p_{32}\vto{x}_2+\vto{u}_3$, onde os reais $p_{31}:=-(\vto{u}_3\cdot\vto{x}_1)/\|\vto{x}_1\|^2$ e $p_{32}:=-(\vto{u}_3\cdot\vto{x}_2)/\|\vto{x}_2\|^2$. Um vetor $\vto{u}=\alpha_1\vto{u}_1+\alpha_2\vto{u}_2+\alpha_3\vto{u}_3$ pode ser reescrito como   $\vto{u}=(\alpha_1-\alpha_2 p_{21}-\alpha_3 p_{31})\vto{x}_1+(\alpha_2-\alpha_3 p_{32})\vto{x}_2+\alpha_3\vto{x}_3$, resultando novamente $\spn (U)=\spn(X)$. Segue-se com esse mesmo procedimento para qualquer $n>3$.
+\end{proof}
+}
+
+
 
 {\footnotesize
 \begin{proof}
