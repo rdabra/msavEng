@@ -67,7 +67,7 @@ where $\alpha\in\mathcal{R}$ and $\vto{x},\vto{y}\in V_\mathcal{R}$ are any elem
 We define that two vectors project on each other or have a projective interrelationship when it is possible to describe one in terms of the other. In more precise terms, given the non null vectors $\vto{u},\vto{v}\in U_\mathcal{R}$, it is said that $\vto{u}$ projects on $\vto{v}$ if there is a vector multiple of $\vto{v}$ and function of $\vto{u}$, that is, if there is a mapping $\map{f}{U_\mathcal{R}}{U_\mathcal{R}}$ where the vetor $\fua{f}{\vto{u}}=\alpha\vto{v}$, $\alpha\in\mathcal{R}$. As a unary operator, $f$ is a bijection and then a projection results commutative: if $\vto{u}$ projects on $\vto{v}$, $\vto{v}$ projects on $\vto{u}$. The projective interrelationship of two vectors is usually expressed by scalar values, where zero value means that there is no projection between these vectors or that they are \textsb{orthogonal}\index{vectors!orthogonal}.  Let the function in $\map{\xi}{U_\mathcal{R}\times U_\mathcal{R}}{\mathcal{R}}$ express a projective relationship between any pair of vectors of $U_\mathcal{R}$, observing the axioms
 \begin{itemize}\label{prop:produtoInterno}
 	\setlength\itemsep{.1em}
-	\item[i.] Of positivity: $\fua{\xi}{\vto{u},\vto{u}}\geqslant0$;
+	\item[i.] Of positivity: $\fua{\xi}{\vto{u},\vto{u}}\in \real^+$;
 	\item[ii.] Of definition: $\fua{\xi}{\vto{u},\vto{u}}=0 \Leftrightarrow
 	\vto{u}=\vto{0}$;
 	\item[iii.] Of conjugate symmetry: $\fua{\xi}{\vto{u}_1,\vto{u}_2}=\overline{\fua{\xi}{\vto{u}_2,\vto{u}_1}}\,\,$;
@@ -239,7 +239,7 @@ a Banach space with an inner product $(V_\mathcal{R},\varrho,\eta,\xi)$, called 
 \end{forest}
 }
 \newline
-\titfigura{Combination of vector and metric spaces.}
+\titfigura{Combination of vector spaces.}
 \end{figure}
 
 \begin{mteo}{Orthogonal Basis in Hilbert Spaces}{temOrtonormal}
@@ -247,41 +247,31 @@ a Banach space with an inner product $(V_\mathcal{R},\varrho,\eta,\xi)$, called 
 \end{mteo}
 
 
-
 {\footnotesize
 \begin{proof}
-Through a very long proof, starting from the so called \textsb{Zorn's Lemma}\index{Zorn's Lemma}, it is possible to obtain that every Hilbert space has a basis\footnote{See \aut{Kreyszig}\cite{kreyszig_1978_1}.}. Once the existence of a basis is assured, the \textsb{Gram-Schmidt Algorithm}\index{Gram-Schmidt!Algorithm} is able to find an orthogonal set from any other set as follows. Let $U=\{\vto{u}_1,\cdots,\vto{u}_n\}$ be a basis and $X=\{\vto{x}_1,\cdots,\vto{x}_n\}$ a set where $\vto{x}_1=\vto{u}_1$. If  $n=2$, the goal is to find a $\vto{x}_2\perp\vto{x}_1$    
-	
-Garantida a existência de uma base, o \textsb{Algoritmo de Gram-Schmidt}\index{Gram-Schmidt!Algoritmo de} consegue encontrar um conjunto ortogonal a partir de qualquer conjunto, conforme mostrado a seguir. Seja uma base  $U=\{\vto{u}_1,\cdots,\vto{u}_n\}$ e um conjunto $X=\{\vto{x}_1,\cdots,\vto{x}_n\}$ onde $\vto{x}_1=\vto{u}_1$. Quando o valor $n=2$, o objetivo é encontrar um $\vto{x}_2\perp\vto{x}_1$ para que $X$ seja ortogonal. O algoritmo propõe que o vetor $\vto{x}_2=p_{21}\vto{x}_1+\vto{u}_2$, onde  $p_{21}:=-(\vto{u}_2\cdot\vto{x}_1)/\|\vto{x}_1\|^2$. Se um vetor qualquer $\vto{u}=\alpha_1\vto{u}_1+\alpha_2\vto{u}_2$, tem-se então $\vto{u}=(\alpha_1-p_{21})\vto{x}_1+\alpha_2\vto{x}_2$; logo, $\spn (U)=\spn(X)$. No caso de $n=3$, encontra-se um vetor $\vto{x}_3\perp\{\vto{x}_1,\vto{x}_2\}$ através da igualdade $\vto{x}_3=p_{31}\vto{x}_1+p_{32}\vto{x}_2+\vto{u}_3$, onde os reais $p_{31}:=-(\vto{u}_3\cdot\vto{x}_1)/\|\vto{x}_1\|^2$ e $p_{32}:=-(\vto{u}_3\cdot\vto{x}_2)/\|\vto{x}_2\|^2$. Um vetor $\vto{u}=\alpha_1\vto{u}_1+\alpha_2\vto{u}_2+\alpha_3\vto{u}_3$ pode ser reescrito como   $\vto{u}=(\alpha_1-\alpha_2 p_{21}-\alpha_3 p_{31})\vto{x}_1+(\alpha_2-\alpha_3 p_{32})\vto{x}_2+\alpha_3\vto{x}_3$, resultando novamente $\spn (U)=\spn(X)$. Segue-se com esse mesmo procedimento para qualquer $n>3$.
+Through a very long proof, starting from the so called \textsb{Zorn's Lemma}\index{Zorn's Lemma}, it is possible to obtain that every Hilbert space has a basis\footnote{See \aut{Kreyszig}\cite{kreyszig_1978_1}.}. Once the existence of a basis is assured, the \textsb{Gram-Schmidt Algorithm}\index{Gram-Schmidt!Algorithm} is able to find an orthogonal set from any other set as follows. Let $U=\{\vto{u}_1,\cdots,\vto{u}_n\}$ be a basis and $X=\{\vto{x}_1,\cdots,\vto{x}_n\}$ a set where $\vto{x}_1=\vto{u}_1$. If  $n=2$, the goal is to find a $\vto{x}_2\perp\vto{x}_1$ that makes $X$ orthogonal. The algorithm proposes that $\vto{x}_2=p_{21}\vto{x}_1+\vto{u}_2$, where $p_{21}:=-(\vto{u}_2\cdot\vto{x}_1)/\|\vto{x}_1\|^2$. It is evident that any vector $\vto{u}=\alpha_1\vto{u}_1+\alpha_2\vto{u}_2$, and then $\vto{u}=(\alpha_1-p_{21})\vto{x}_1+\alpha_2\vto{x}_2$; therefore, $\spn (U)=\spn(X)$. When $n=3$, the vector $\vto{x}_3\perp\{\vto{x}_1,\vto{x}_2\}$ is found from $\vto{x}_3=p_{31}\vto{x}_1+p_{32}\vto{x}_2+\vto{u}_3$, where scalars $p_{31}:=-(\vto{u}_3\cdot\vto{x}_1)/\|\vto{x}_1\|^2$ and $p_{32}:=-(\vto{u}_3\cdot\vto{x}_2)/\|\vto{x}_2\|^2$. A vector $\vto{u}=\alpha_1\vto{u}_1+\alpha_2\vto{u}_2+\alpha_3\vto{u}_3$ can be rewritten as $\vto{u}=(\alpha_1-\alpha_2 p_{21}-\alpha_3 p_{31})\vto{x}_1+(\alpha_2-\alpha_3 p_{32})\vto{x}_2+\alpha_3\vto{x}_3$, from which results $\spn (U)=\spn(X)$. This same process can be done for any $n>3$.             
 \end{proof}
 }
 
-
-
-{\footnotesize
-\begin{proof}
-Através de complicada demonstração, a partir do chamado \textsb{Lema de Zorn}\index{Zorn, Lema de}\footnote{Ver \aut{Kreyszig}\cite{kreyszig_1978_1}.}, pode-se obter que todo espaço de Hilbert possui uma base. Garantida a existência de uma base, o \textsb{Algoritmo de Gram-Schmidt}\index{Gram-Schmidt!Algoritmo de} consegue encontrar um conjunto ortogonal a partir de qualquer conjunto, conforme mostrado a seguir. Seja uma base  $U=\{\vto{u}_1,\cdots,\vto{u}_n\}$ e um conjunto $X=\{\vto{x}_1,\cdots,\vto{x}_n\}$ onde $\vto{x}_1=\vto{u}_1$. Quando o valor $n=2$, o objetivo é encontrar um $\vto{x}_2\perp\vto{x}_1$ para que $X$ seja ortogonal. O algoritmo propõe que o vetor $\vto{x}_2=p_{21}\vto{x}_1+\vto{u}_2$, onde  $p_{21}:=-(\vto{u}_2\cdot\vto{x}_1)/\|\vto{x}_1\|^2$. Se um vetor qualquer $\vto{u}=\alpha_1\vto{u}_1+\alpha_2\vto{u}_2$, tem-se então $\vto{u}=(\alpha_1-p_{21})\vto{x}_1+\alpha_2\vto{x}_2$; logo, $\spn (U)=\spn(X)$. No caso de $n=3$, encontra-se um vetor $\vto{x}_3\perp\{\vto{x}_1,\vto{x}_2\}$ através da igualdade $\vto{x}_3=p_{31}\vto{x}_1+p_{32}\vto{x}_2+\vto{u}_3$, onde os reais $p_{31}:=-(\vto{u}_3\cdot\vto{x}_1)/\|\vto{x}_1\|^2$ e $p_{32}:=-(\vto{u}_3\cdot\vto{x}_2)/\|\vto{x}_2\|^2$. Um vetor $\vto{u}=\alpha_1\vto{u}_1+\alpha_2\vto{u}_2+\alpha_3\vto{u}_3$ pode ser reescrito como   $\vto{u}=(\alpha_1-\alpha_2 p_{21}-\alpha_3 p_{31})\vto{x}_1+(\alpha_2-\alpha_3 p_{32})\vto{x}_2+\alpha_3\vto{x}_3$, resultando novamente $\spn (U)=\spn(X)$. Segue-se com esse mesmo procedimento para qualquer $n>3$.
-\end{proof}
-}
-
-Uma consequência importante desse teorema é a existência de bases ortonormais resultantes da normalização de bases ortogonais. Diante disso, sejam $\vto{x}$ e $\vto{y}$ vetores quaisquer do espaço Euclidiano $E_\real$, sendo $\hat{B}=\{\vun{v}_1,\cdots,\vun{v}_n\}$ uma base ortonormal desse espaço. Podemos dizer então que
+The theorem above also assures the existence of orthonormal bases because they can be obtained from normalization of orthogonal bases. Thereby, let  $\vto{x}$ and $\vto{y}$ be any vectors of Euclidean space $E_\real$, of which $\hat{B}=\{\vun{v}_1,\cdots,\vun{v}_n\}$ is an orthonormal basis. Then, we can say that
 \begin{equation}
-\vto{x}\cdot\vto{y}=\sum_{i=1}^{n}\sum_{j=1}^{n}\alpha_i\beta_j\vun{v}_i\cdot\vun{v}_j=\sum_{i=1}^{n}\sum_{j=1}^{n}\alpha_i\beta_j\delta_{ij}=\sum_{i=1}^{n}\alpha_i\beta_i\,,
+	\vto{x}\cdot\vto{y}=\sum_{i=1}^{n}\sum_{j=1}^{n}\alpha_i\beta_j\vun{v}_i\cdot\vun{v}_j=\sum_{i=1}^{n}\sum_{j=1}^{n}\alpha_i\beta_j\delta_{ij}=\sum_{i=1}^{n}\alpha_i\beta_i\,,
 \end{equation}
-onde $(\alpha_1,\cdots,\alpha_n)$ e $(\beta_1,\cdots,\beta_n)$ são as coordenadas de $\vto{x}$ e $\vto{y}$ respectivamente. Por conta dessa igualdade, costuma-se estabelecer uma base ortonormal padrão em espaços Euclidianos que recebe o nome de \textsb{base natural}\index{base!natural}, representada pelo subconjunto $O=\,$\gloref{baseNatural}. O preestabelecimento dessa base permite dizer dos escalares $x_i:=\vto{x}\cdot\vun{e}_i$ que constituem as coordenadas naturais\index{coordenadas!naturais} \gloref{coordNat} de $\vto{x}$, ficando implícita a base utilizada.
+where $(\alpha_1,\cdots,\alpha_n)$ and $(\beta_1,\cdots,\beta_n)$ are the coordinates of $\vto{x}$ and $\vto{y}$ respectively. As a consequence of this equality, where inner products of basis vectors do not contribute numerically, a standard orthonormal basis $O=\,$\gloref{baseNatural}, called \textsb{natural basis}\index{basis!natural}, is defined in Euclidean spaces. From this basis, it is possible to say that the scalars  $x_i:=\vto{x}\cdot\vun{e}_i$ constitute the \textsb{natural coordinates}\index{coordinates!natural} \gloref{coordNat} of $\vto{x}$.   
 
-Outra consequência da existência de conjuntos ortogonais em espaços de Hilbert são os chamados \textsb{conjuntos recíprocos}\index{conjuntos!recíprocos}. Dizemos que $\con{U}=\lch \vto{u}_1,\cdots,\vto{u}_n
-\rch$ e $\con{W}=\lch \vto{w}_1,\cdots,\vto{w}_n \rch$, subconjuntos do espaço de Hilbert $V_\mathcal{R}$, são recíprocos ou \textsb{biortogonais}\index{conjuntos!biortogonais} se seus vetores forem não nulos e $\vto{u}_i\cdot\vto{w}_j = \delta_{ij}$. Como o par de conjuntos recíprocos é único, costumamos utilizar representações relativas a um dos conjuntos: por exemplo, o conjunto $U^\perp:=W$ e os vetores $\vto{u}^i:=\vto{w}_i$. Considerando $U$ uma base de $V_\mathcal{R}$ e $\con{U}^\perp$ seu conjunto recíproco, seja um vetor $\vto{u}=\sum_{i=1}^n\gamma_i\vto{u}^i$. Se esse vetor for nulo, então
+
+The presence of \textsb{reciprocal sets}\index{sets!reciprocal} is another consequence of the existence of orthogonal sets in Hilbert spaces. We say that $\con{U}=\lch \vto{u}_1,\cdots,\vto{u}_n
+\rch$ and $\con{W}=\lch \vto{w}_1,\cdots,\vto{w}_n \rch$, subsets of the Hilbert space $V_\mathcal{R}$, are reciprocal or \textsb{biorthogonal}\index{sets!biorthogonal} if their vectors are non zero and $\vto{u}_i\cdot\vto{w}_j = \delta_{ij}$. As the pair of reciprocal sets is unique, notations relative to one of these sets are usually defined: for instance, a set $U^\perp:=W$ and vectors $\vto{u}^i:=\vto{w}_i$. It is interesting to note that if the subset $U$ is orthonormal, its reciprocal set $U^\perp=U$. Now, considering $B$ a basis of $V_\mathcal{R}$ and $\con{B}^\perp$ its reciprocal set, let $\vto{u}=\sum_{i=1}^n\gamma_i\vto{u}^i$. If this vector $\vto{u}$ is zero, then     
 \begin{equation}
 (\sum_{j=1}^n\gamma_j\vto{u}^j)\cdot\vto{u}_i\,=\,\sum_{j=1}^n\gamma_j\delta_{ij}\,=\,\gamma_i\,=\,0\,.
 \end{equation}
-A constatação dos escalares $\gamma_i$ nulos para um vetor nulo indica que $U^\perp$ é linearmente independente. Além disso, como os dois conjuntos recíprocos possuem o mesmo número de termos, podemos concluir finalmente que se um deles for base de um dado espaço vetorial, o outro também será. Assim, se $(\alpha_1,\cdots,\alpha_n)$ forem as coordenadas de um dado vetor na base $U$, costumamos representar $(\alpha^1,\cdots,\alpha^n)$ como as coordenadas desse mesmo vetor na base $U^\perp$. Interessante observar que se a base envolvida for ortonormal, sua base recíproca é ela própria, ou seja, $U^\perp=U$ no caso descrito.
+This result shows that $B^\perp$ is linearly independent since the scalars $\gamma_i$ are zero when $\vto{u}=0$. Moreover, as both reciprocal sets have the same number of elements, we can conclude that if one of them is a basis of $V_\mathcal{R}$, so is the other. Thereby, if $(\alpha_1,\cdots,\alpha_n)$ are the coordinates of a vector on basis $B$, we usually use  $(\alpha^1,\cdots,\alpha^n)$ to represent the coordinates of this same vector on basis $B^\perp$. 
+
+
 
 {\footnotesize
 \begin{proof}
-Vamos demonstrar a existência e a unicidade de conjuntos recíprocos nas condições apresentadas. Pelo teorema \ref{teo:temOrtonormal}, podemos admitir um subconjunto ortogonal $Z=\{\vto{z}_1,\cdots,\vto{z}_n\}$. A partir daí, seja o subconjunto $\{\vto{\tilde{z}}_1,\cdots,\vto{\tilde{z}}_n\}$ onde $\vto{\tilde{z}}_i:=\vto{z}_i/\|\vto{z}_i\|^2$. Assim,  $\vto{z}_i\cdot\vto{\tilde{z}}_j=(\vto{z}_i\cdot\vto{z}_j)/\|\vto{z}_j\|^2=\delta_{ij}$. Agora, supondo que exista um outro subconjunto
-$\{\vto{x}_1,\cdots,\vto{x}_n\}$ recíproco a $Z$, podemos dizer que
-$\vto{z}_i\cdot(\vto{\tilde{z}}_j-\vto{x}_j)=0$. Como os vetores $\vto{z}_i$, $\vto{\tilde{z}}_j$ e $\vto{x}_j$ não podem ser nulos, então $\vto{\tilde{z}}_j=\vto{x}_j$.
+Let's verify the uniqueness and existence of reciprocal sets on the context above. From theorem \ref{teo:temOrtonormal}, we can admit an orthogonal subset $Z=\{\vto{z}_1,\cdots,\vto{z}_n\}$. Thereby, let $\{\vto{\tilde{z}}_1,\cdots,\vto{\tilde{z}}_n\}$ be a subset where $\vto{\tilde{z}}_i:=\vto{z}_i/\|\vto{z}_i\|^2$. Therefore, $\vto{z}_i\cdot\vto{\tilde{z}}_j=(\vto{z}_i\cdot\vto{z}_j)/\|\vto{z}_j\|^2=\delta_{ij}$, which proves the existence. Now, suposing that there exists another subset $\{\vto{x}_1,\cdots,\vto{x}_n\}$ reciprocal to $Z$, we can say that $\vto{z}_i\cdot(\vto{\tilde{z}}_j-\vto{x}_j)=0$. As vectors $\vto{z}_i$, $\vto{\tilde{z}}_j$ and $\vto{x}_j$ can not be zero, then $\vto{\tilde{z}}_j=\vto{x}_j$, which proves the uniqueness.
 \end{proof}
 }
 
