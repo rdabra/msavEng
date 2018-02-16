@@ -265,20 +265,23 @@ The presence of \textsb{reciprocal sets}\index{sets!reciprocal} is another conse
 \begin{equation}
 (\sum_{j=1}^n\gamma_j\vto{u}^j)\cdot\vto{u}_i\,=\,\sum_{j=1}^n\gamma_j\delta_{ij}\,=\,\gamma_i\,=\,0\,.
 \end{equation}
-This result shows that $B^\perp$ is linearly independent since the scalars $\gamma_i$ are zero when $\vto{u}=0$. Moreover, as both reciprocal sets have the same number of elements, we can conclude that if one of them is a basis of $V_\mathcal{R}$, so is the other. Thereby, if $(\alpha_1,\cdots,\alpha_n)$ are the coordinates of a vector on basis $B$, we usually use  $(\alpha^1,\cdots,\alpha^n)$ to represent the coordinates of this same vector on basis $B^\perp$. 
+This result shows that $B^\perp$ is linearly independent since the scalars $\gamma_i$ are zero when $\vto{u}=0$. Moreover, as both reciprocal sets have the same number of elements, we can conclude that if one of them is a basis of $V_\mathcal{R}$, so is the other. Thereby, if $(\alpha_1,\cdots,\alpha_n)$ are the coordinates of a vector on basis $B$, we usually use $(\alpha^1,\cdots,\alpha^n)$ to represent the coordinates of this same vector on basis $B^\perp$. 
 
 
 
 {\footnotesize
 \begin{proof}
-Let's verify the uniqueness and existence of reciprocal sets on the context above. From theorem \ref{teo:temOrtonormal}, we can admit an orthogonal subset $Z=\{\vto{z}_1,\cdots,\vto{z}_n\}$. Thereby, let $\{\vto{\tilde{z}}_1,\cdots,\vto{\tilde{z}}_n\}$ be a subset where $\vto{\tilde{z}}_i:=\vto{z}_i/\|\vto{z}_i\|^2$. Therefore, $\vto{z}_i\cdot\vto{\tilde{z}}_j=(\vto{z}_i\cdot\vto{z}_j)/\|\vto{z}_j\|^2=\delta_{ij}$, which proves the existence. Now, suposing that there exists another subset $\{\vto{x}_1,\cdots,\vto{x}_n\}$ reciprocal to $Z$, we can say that $\vto{z}_i\cdot(\vto{\tilde{z}}_j-\vto{x}_j)=0$. As vectors $\vto{z}_i$, $\vto{\tilde{z}}_j$ and $\vto{x}_j$ can not be zero, then $\vto{\tilde{z}}_j=\vto{x}_j$, which proves the uniqueness.
+Let's verify the uniqueness and existence of reciprocal sets on the context above. From theorem \ref{teo:temOrtonormal}, we can admit an orthogonal subset $Z=\{\vto{z}_1,\cdots,\vto{z}_n\}$. Thereby, let $\{\vto{\tilde{z}}_1,\cdots,\vto{\tilde{z}}_n\}$ be a subset where $\vto{\tilde{z}}_i:=\vto{z}_i/\|\vto{z}_i\|^2$. Therefore, $\vto{z}_i\cdot\vto{\tilde{z}}_j=(\vto{z}_i\cdot\vto{z}_j)/\|\vto{z}_j\|^2=\delta_{ij}$, which proves the existence. Now, supposing that there exists another subset $\{\vto{x}_1,\cdots,\vto{x}_n\}$ reciprocal to $Z$, we can say that $\vto{z}_i\cdot(\vto{\tilde{z}}_j-\vto{x}_j)=0$. As vectors $\vto{z}_i$, $\vto{\tilde{z}}_j$ and $\vto{x}_j$ can not be zero, then $\vto{\tilde{z}}_j=\vto{x}_j$, which proves the uniqueness.
 \end{proof}
 }
 
 
 
 
-\section{Funções Lineares}\label{sec:FuncLin}
+\section{Linear Functions}\label{sec:FuncLin}
+
+
+The most fundamental relationships studied in Linear Algebra have the feature of preserving the group structures involved, including those defined by fields. Such relationships are expressed by homomorphisms whose main property is to keep vector spaces structures unaltered. Moreover, if these vector spaces are metric, it is required that this additional structure remain unchanged as well. In practical terms, this means that  
 
 As relações fundamentais estudadas pela Álgebra Linear têm como principal atributo preservar as estruturas dos grupos envolvidos e também aquelas definidas por campos. Tais relações expressam-se em homomorfismos de grupos definidores de espaços vetoriais cuja estrutura deve ser mantida. Além da estruturação típica desses espaços, o homomorfismo precisa preservar também uma eventual estrutura métrica. Na prática, isso significa que, sendo o domínio do homomorfismo um espaço vetorial, sua imagem também deve ser um espaço vetorial; se o domínio é um espaço vetorial métrico, a imagem também. Selecionadas a partir do critério de que definem o mesmo mapeamento, essas funções coligidas costumam ser estudados no âmbito de espaços vetoriais, quando adquirem restrições adicionais no comportamento em relação aos seus argumentos.
 
