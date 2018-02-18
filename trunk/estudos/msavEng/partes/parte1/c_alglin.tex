@@ -239,7 +239,7 @@ a Banach space with an inner product $(V_\mathcal{R},\varrho,\eta,\xi)$, called 
 \end{forest}
 }
 \newline
-\titfigura{Combination of vector spaces.}
+\titfigura{Relevant combinations of vector spaces.}
 \end{figure}
 
 \begin{mteo}{Orthogonal Basis in Hilbert Spaces}{temOrtonormal}
@@ -249,7 +249,7 @@ a Banach space with an inner product $(V_\mathcal{R},\varrho,\eta,\xi)$, called 
 
 {\footnotesize
 \begin{proof}
-Through a very long proof, starting from the so called \textsb{Zorn's Lemma}\index{Zorn's Lemma}, it is possible to obtain that every Hilbert space has a basis\footnote{See \aut{Kreyszig}\cite{kreyszig_1978_1}.}. Once the existence of a basis is assured, the \textsb{Gram-Schmidt Algorithm}\index{Gram-Schmidt!Algorithm} is able to find an orthogonal set from any other set as follows. Let $U=\{\vto{u}_1,\cdots,\vto{u}_n\}$ be a basis and $X=\{\vto{x}_1,\cdots,\vto{x}_n\}$ a set where $\vto{x}_1=\vto{u}_1$. If  $n=2$, the goal is to find a $\vto{x}_2\perp\vto{x}_1$ that makes $X$ orthogonal. The algorithm proposes that $\vto{x}_2=p_{21}\vto{x}_1+\vto{u}_2$, where $p_{21}:=-(\vto{u}_2\cdot\vto{x}_1)/\|\vto{x}_1\|^2$. It is evident that any vector $\vto{u}=\alpha_1\vto{u}_1+\alpha_2\vto{u}_2$, and then $\vto{u}=(\alpha_1-p_{21})\vto{x}_1+\alpha_2\vto{x}_2$; therefore, $\spn (U)=\spn(X)$. When $n=3$, the vector $\vto{x}_3\perp\{\vto{x}_1,\vto{x}_2\}$ is found from $\vto{x}_3=p_{31}\vto{x}_1+p_{32}\vto{x}_2+\vto{u}_3$, where scalars $p_{31}:=-(\vto{u}_3\cdot\vto{x}_1)/\|\vto{x}_1\|^2$ and $p_{32}:=-(\vto{u}_3\cdot\vto{x}_2)/\|\vto{x}_2\|^2$. A vector $\vto{u}=\alpha_1\vto{u}_1+\alpha_2\vto{u}_2+\alpha_3\vto{u}_3$ can be rewritten as $\vto{u}=(\alpha_1-\alpha_2 p_{21}-\alpha_3 p_{31})\vto{x}_1+(\alpha_2-\alpha_3 p_{32})\vto{x}_2+\alpha_3\vto{x}_3$, from which results $\spn (U)=\spn(X)$. This same process can be done for any $n>3$.             
+Through a long and tedious proof, starting from the so called \textsb{Zorn's Lemma}\index{Zorn's Lemma}, it is possible to obtain that every Hilbert space has a basis\footnote{See \aut{Kreyszig}\cite{kreyszig_1978_1}.}. Once the existence of a basis is assured, the \textsb{Gram-Schmidt Algorithm}\index{Gram-Schmidt!Algorithm} is able to find an orthogonal set from any other set as follows. Let $U=\{\vto{u}_1,\cdots,\vto{u}_n\}$ be a basis and $X=\{\vto{x}_1,\cdots,\vto{x}_n\}$ a set where $\vto{x}_1=\vto{u}_1$. If  $n=2$, the goal is to find a $\vto{x}_2\perp\vto{x}_1$ that makes $X$ orthogonal. The algorithm proposes that $\vto{x}_2=p_{21}\vto{x}_1+\vto{u}_2$, where $p_{21}:=-(\vto{u}_2\cdot\vto{x}_1)/\|\vto{x}_1\|^2$. It is evident that any vector $\vto{u}=\alpha_1\vto{u}_1+\alpha_2\vto{u}_2$, and then $\vto{u}=(\alpha_1-p_{21})\vto{x}_1+\alpha_2\vto{x}_2$; therefore, $\spn (U)=\spn(X)$. When $n=3$, vector $\vto{x}_3\perp\{\vto{x}_1,\vto{x}_2\}$ is found from $\vto{x}_3=p_{31}\vto{x}_1+p_{32}\vto{x}_2+\vto{u}_3$, where scalar $p_{31}:=-(\vto{u}_3\cdot\vto{x}_1)/\|\vto{x}_1\|^2$ and scalar $p_{32}:=-(\vto{u}_3\cdot\vto{x}_2)/\|\vto{x}_2\|^2$. A vector $\vto{u}=\alpha_1\vto{u}_1+\alpha_2\vto{u}_2+\alpha_3\vto{u}_3$ can be rewritten as the vector $\vto{u}=(\alpha_1-\alpha_2 p_{21}-\alpha_3 p_{31})\vto{x}_1+(\alpha_2-\alpha_3 p_{32})\vto{x}_2+\alpha_3\vto{x}_3$, from which results $\spn (U)=\spn(X)$. This same process can be done for any $n>3$.             
 \end{proof}
 }
 
@@ -281,24 +281,41 @@ Let's verify the uniqueness and existence of reciprocal sets on the context abov
 \section{Linear Functions}\label{sec:FuncLin}
 
 
-The most fundamental relationships studied in Linear Algebra have the feature of preserving the group structures involved, including those defined by fields. Such relationships are expressed by homomorphisms whose main property is to keep vector spaces structures unaltered. Moreover, if these vector spaces are metric, it is required that this additional structure remain unchanged as well. In practical terms, this means that  
+The most fundamental relationships studied in Linear Algebra have the feature of preserving the group structures involved, including those defined by fields. Such relationships are expressed by homomorphisms whose main property is to keep vector spaces structures unaltered. Moreover, if these vector spaces are metric, it is required that this additional structure to remain unchanged as well. In practical terms, this means that if the homomorphism domain is a metric vector space, so must be its image. Selected through a criteria of same mapping definition, we study these functions by gathering them in a vector space, where there are additional restrictions concerning the relations to their arguments.       
 
-As relações fundamentais estudadas pela Álgebra Linear têm como principal atributo preservar as estruturas dos grupos envolvidos e também aquelas definidas por campos. Tais relações expressam-se em homomorfismos de grupos definidores de espaços vetoriais cuja estrutura deve ser mantida. Além da estruturação típica desses espaços, o homomorfismo precisa preservar também uma eventual estrutura métrica. Na prática, isso significa que, sendo o domínio do homomorfismo um espaço vetorial, sua imagem também deve ser um espaço vetorial; se o domínio é um espaço vetorial métrico, a imagem também. Selecionadas a partir do critério de que definem o mesmo mapeamento, essas funções coligidas costumam ser estudados no âmbito de espaços vetoriais, quando adquirem restrições adicionais no comportamento em relação aos seus argumentos.
 
-Vamos iniciar o estudo das funções lineares considerando primeiramente um grupo abeliano aditivo $V^{U}$ constituído por funções genéricas que definem mapeamentos do tipo $U\mapsto V$, onde $U$ e $V$ são espaços métricos completos. Dizemos que esse grupo constitui um \textsb{espaço de funções}\index{espaço!de funções} \gloref{espacFunc} se o valor da função zero for sempre o vetor nulo, ou seja $\map{\vto{0}}{U}{\{\vto{0}\}}$, e se para quaisquer $\alpha\in\mathcal{R}$ e $\vtf{f},\vtf{g}\in V^U_\mathcal{R}$ as seguintes restrições forem respeitadas:
+Let's start the study of linear functions considering first an additive group $V^{U}$ constituted of generic functions that define mappings of the type $U\mapsto V$, where $U$ and $V$ are complete spaces with an additive structure. This group is said to define a vector space \gloref{espacFunc}, usually called a \textsb{function space}\index{space!function}, if for any $\vtf{f},\vtf{g}\in V^U_\mathcal{R}$ and $\alpha\in\mathcal{R}$ the following restrictions are observed:
 \begin{itemize}
-\setlength\itemsep{.1em}
-\item[i.] $\fua{\lco\alpha\vtf{f}\rco}{x}=\alpha\,\fua{\vtf{f}}{x}$;
-\item[ii.]$\fua{\lco\vtf{f}+\vtf{g}\rco}{x}=\fua{\vtf{f}}{x}+\fua{\vtf{g}}{x}$.
-\end{itemize}
-Pode ocorrer que o domínio $U$ seja o produto cartesiano $W^{\times q}$, quando uma função qualquer $\vtf{f}$ do espaço vetorial de funções passa a ter como argumento uma $q$-tupla de vetores ou $q$ vetores, e seu valor é representado $\fua{\vtf{f}}{w_1,\cdots,w_q}$, onde a tupla $(w_1,\cdots,w_q)\in W^{\times q}$ ou $w_i\in W_i$.
+	\setlength\itemsep{.1em}
+	\item[i.] $\fua{\vtf{0}}{x}=0$;
+	\item[ii.] $\fua{\lco\alpha\vtf{f}\rco}{x}=\alpha\,\fua{\vtf{f}}{x}$;
+	\item[iii.]$\fua{\lco\vtf{f}+\vtf{g}\rco}{x}=\fua{\vtf{f}}{x}+\fua{\vtf{g}}{x}$.
+\end{itemize}   
+The domain $U$ may eventually be a cartesian product $W^{\times q}$, where any function $\vtf{f}$ of the function space has a $q$-tuple of vectors or $q$ vectors as arguments, and its value is represented by $\fua{\vtf{f}}{w_1,\cdots,w_q}$, where the tuple $(w_1,\cdots,w_q)\in W^{\times q}$ or the vectors $w_i\in W_i$.
 
-
-Um exemplo muito comum de espaço de funções é aquele constituído por funções denominadas contínuas. Para defini-las precisamos antes dizer que um conjunto $S\subset U$ é chamado \textsb{vizinhança}\index{vizinhança} de um elemento $u\in S$, representada $\viz{u}$, quando há um número real $r>0$ que define a bola aberta $B_{u,r}\subset S$. Nesse contexto, a função em $\map{\vtf{g}}{U}{V}$ é dita \textsb{contínua}\index{função!contínua} no elemento $u\in U$ se para qualquer $x\in\viz{u}$ o valor $\fua{\vtf{g}}{x}\in \viz{\fua{\vtf{g}}{u}}$. Em termos mais pragmáticos, $\vtf{g}$ é contínua em $u$ quando
+An important example of function space is the space constituted by continuous functions. In order to define these type of functions, we need to say firstly that a set $S\subset U$ is called a \textsb{neighborhood}\index{neighborhood} of an element $u\in S$, represented by $\viz{u}$, when there is a real number $r>0$ that defines an open ball $B_{u,r}\subset S$. In this context, the function in $\map{\vtf{g}}{U}{V}$ is said to be 
+\textsb{continuous}\index{function!continuous} on an element $u\in S$ if for any neighborhood $\viz{\fua{\vtf{g}}{u}}$ in the codomain there is a neighborhood $\viz{u}$ in the domain where every element $x\in\viz{u}$ is related to a value $\fua{\vtf{g}}{x}\in \viz{\fua{\vtf{g}}{u}}$. In more direct terms, $\vtf{g}$ is continuous on $u$ when      
 \begin{equation}
 \lim_{x\to u}\fua{\vtf{g}}{x}=\fua{\vtf{g}}{u},\,\, \forall\, x\in U\,,
 \end{equation}
-ou seja, quando $x\to u$ implicar $\fua{\vtf{g}}{x}\to\fua{\vtf{g}}{u}$. No caso de uma função ser contínua em qualquer vetor do domínio, ela é dita contínua no domínio ou simplesmente contínua. Além disso, se uma bijeção e sua função inversa forem contínuas em seus domínios respectivos, cada qual é dita um \textsb{homeomorfismo}\index{homeomorfismo}\footnote{Não confundir com homomorfismo, sem o "e".}.
+that is, when $x\to u$ implies $\fua{\vtf{g}}{x}\to\fua{\vtf{g}}{u}$. In the case of a function that is continuous on any element of the domain, it is called continuous on the domain or simply continuous. Moreover, if a bijection and its inverse function are continuous on their respective domains, each one is called a  \textsb{homeomorphism}\index{homeomorphism}\footnote{Not to be confused with homomorphism, without ``e''.}.
+
+
+
+
+ 
+
+
+     
+
+
+
+
+
+
+
+
+
 
 Ainda sobre a continuidade de funções, precisamos apresentar também um tipo especial, cuja restrição é ainda mais forte do que a apresentada na igualdade anterior: a função $\vtf{g}$ é dita \textsb{contínua de Lipschitz}\index{função!contínua de Lipschitz} em $u$ se existir um $\vartheta\in\real^+$ não nulo, denominado \textsb{constante de Lipschitz}\index{Lipschitz!constante de}, onde
 \begin{equation}
