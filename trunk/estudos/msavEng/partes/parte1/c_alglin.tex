@@ -308,7 +308,15 @@ There is also a particular type of function continuity that has a stronger restr
 From this definition we can conclude that every Lipschitz continuous function is also continuous, with the property of presenting upper limited distance ratios relative to every element $u$ of its domain. 
 
 
-Now, let a function $\vto{h}\in V^U_\mathcal{R}$ be a homomorphism through which the additive structure of $U$ is preserved. 
+Now, considering that $U$ and $V$ define complete vector spaces on $\mathcal{R}$, let a function $\vto{h}\in V^U_\mathcal{R}$ be a homomorphism that keeps the additive structure of $U$ unaltered. To our purposes, this function must also preserve the structure created by the field $\mathcal{R}$ in such a way that
+\begin{alignat}{2}
+\fua{\vtf{h}}{\alpha\vto{u}_1+\beta\vto{u}_2}=\alpha\fua{\vtf{h}}{\vto{u}_1}+\beta\fua{\vtf{h}}{\vto{u}_2} & \quad\text{and}\quad & \fua{\vtf{h}}{\vto{0}}=\vto{0} \,,
+\end{alignat}
+for all $\alpha,\beta\in\mathcal{R},\,\vto{u}_1,\vto{u}_2\in U$. Thereby, we call $\vtf{h}$ a \textsb{linear function}\index{function!linear}\label{def:linear} and the corresponding mapping a \textsb{linear transformation}\index{transformation!linear}. If the function space $V^U_\mathcal{R}$ has only linear functions, its usual representation is $\gloref{evl}$. Now, in the case of $U_\mathcal{R}=W^{\times q}_\mathcal{R}$, a function $\vtf{k}$ is said to be \textsb{multilinear}\index{function!multilinear}, or \textsb{bilinear}\index{função!bilinear} if $q=2$, when 
+\begin{align}
+\lefteqn{\fua{\vtf{k}}{\vto{w}_1,\cdots,\alpha\vto{w}_i+ \beta\vto{w},\cdots,\vto{w}_q}=} & & \nonumber\\
+& &\alpha\fua{\vtf{k}}{\vto{w}_1,\cdots,\vto{w}_i,\cdots,\vto{w}_q}+\beta\fua{\vtf{k}}{\vto{w}_1,\cdots,\vto{w},\cdots,\vto{w}_q}
+\end{align}
 
 
  Seja então a função $\vto{h}\in V^U_\mathcal{R}$ um homomorfismo pelo qual a estrutura aditiva do grupo $U$ fica preservada. O homomorfismo precisa preservar também a estrutura criada pelo campo $\mathcal{R}$ de tal forma que
