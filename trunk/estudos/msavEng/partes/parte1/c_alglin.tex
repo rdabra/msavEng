@@ -321,41 +321,15 @@ for all $\alpha,\beta\in\mathcal{R}$ and $\vto{w},\vto{w}_i\in W_i$. In this con
 \begin{equation}\label{eq:funcaoLimitada}
 \nu\geqslant \|\fua{\vtf{h}}{\vto{z}}\|/\|\vto{z}\| \,,\forall\, \vto{z}\in \{Z_\mathcal{R}\setminus\{\vto{0}\}\}\,.
 \end{equation}
-
-
-
-
-
-Nesses termos, sendo o domínio $U_\mathcal{R}=V_\mathcal{R}^q$, os vetores de $V^{V^q}_\mathcal{R}$ resultam \textsb{operadores multilineares}\index{operador!multilinear} e os mapeamentos que definem são \textsb{operações multilineares}\index{operação!multilinear}. Todas essas funções lineares podem ser contínuas e constituir um espaço normado de funções se for definida uma norma. Nesse sentido, considerando $Z_\mathcal{R}$ e $Y_\mathcal{R}$ espaços de Banach, uma condição necessária e suficiente para que uma função linear $\vtf{h}$ seja contínua em $Z_\mathcal{R}$ impõe que ela seja \textsb{limitada}\index{função!limitada}, isto é, que exista um $\nu\in\real^+$ onde
-
-
-
-
-
-
-
-
-
-
-
- Seja então a função $\vto{h}\in V^U_\mathcal{R}$ um homomorfismo pelo qual a estrutura aditiva do grupo $U$ fica preservada. O homomorfismo precisa preservar também a estrutura criada pelo campo $\mathcal{R}$ de tal forma que
-\begin{equation}
-\fua{\vtf{h}}{\alpha\vto{u}_1+\beta\vto{u}_2}=\alpha\fua{\vtf{h}}{\vto{u}_1}+\beta\fua{\vtf{h}}{\vto{u}_2}
-\end{equation}
-e $\fua{\vtf{h}}{\vto{0}}=\vto{0}$, para quaisquer $\alpha,\beta\in\mathcal{R},\,\vto{u}_1,\vto{u}_2\in U$. Nessas condições, dizemos que $\vtf{h}$ é uma \textsb{função linear}\index{função!linear}\label{def:linear} e o mapeamento por ela definido uma \textsb{transformação linear}\index{transformação!linear}. Se o espaço de funções $V^U_\mathcal{R}$ for constituído apenas por funções lineares, costuma-se representá-lo pela notação $\gloref{evl}$. Agora, para o caso de $U_\mathcal{R}=W^{\times q}_\mathcal{R}$, uma função $\vtf{k}$ é dita \textsb{multilinear}\index{função!multilinear}, ou  \textsb{bilinear}\index{função!bilinear} se $q=2$,  quando
-\begin{align}
-\lefteqn{\fua{\vtf{k}}{\vto{w}_1,\cdots,\alpha\vto{w}_i+ \beta\vto{w},\cdots,\vto{w}_q}=} & & \nonumber\\
-& &\alpha\fua{\vtf{k}}{\vto{w}_1,\cdots,\vto{w}_i,\cdots,\vto{w}_q}+\beta\fua{\vtf{k}}{\vto{w}_1,\cdots,\vto{w},\cdots,\vto{w}_q}
-\end{align}
-e $\fua{\vtf{k}}{\vto{0},\cdots,\vto{0}}=\vto{0}$, para quaisquer $\alpha,\beta\in\mathcal{R}$ e $\vto{w},\vto{w}_i\in W_i$. Nesses termos, sendo o domínio   $U_\mathcal{R}=V_\mathcal{R}^q$, os vetores de $V^{V^q}_\mathcal{R}$ resultam \textsb{operadores multilineares}\index{operador!multilinear} e os mapeamentos que definem são \textsb{operações multilineares}\index{operação!multilinear}. Todas essas funções lineares podem ser contínuas e constituir um espaço normado de funções se for definida uma norma. Nesse sentido, considerando $Z_\mathcal{R}$ e $Y_\mathcal{R}$ espaços de Banach, uma condição necessária e suficiente para que uma função linear $\vtf{h}$ seja contínua em $Z_\mathcal{R}$ impõe que ela seja \textsb{limitada}\index{função!limitada}, isto é, que exista um $\nu\in\real^+$ onde
-\begin{equation}\label{eq:funcaoLimitada}
-\nu\geqslant \|\fua{\vtf{h}}{\vto{z}}\|/\|\vto{z}\| \,,\forall\, \vto{z}\in \{Z_\mathcal{R}\setminus\{\vto{0}\}\}\,.
-\end{equation}
-A partir daí, $Y_\mathcal{R}^Z$ torna-se um espaço normado de funções lineares contínuas quando a norma é definida como sendo o menor dos valores de $\nu$, ou pela regra
+From this condition, a function space $Y_\mathcal{R}^Z$ constituted of linear bounded functions can be called a normed space of linear functions when the minimum of values $\nu$ is defined as norm; in other words, when the following rule is admitted:  
 \begin{equation}\label{eq:normaFuncao}
 \fua{\eta}{\vtf{x}}=\sup\lch \|\fua{\vtf{x}}{\vto{z}}\|/\|\vto{z}\| \,,\forall\, \vto{z}\in \{Z_\mathcal{R}\setminus\{\vto{0}\}\} \rch\,.
 \end{equation}
-Para o nosso estudo, \emph{convém que o espaço vetorial de funções lineares contínuas $Y_\mathcal{R}^Z$, além de normado, seja também métrico produto interno, onde $\fua{\varrho}{\vtf{h}_1,\vtf{h}_2} := \|\vtf{h}_1-\vtf{h}_2\|$ e o produto interno\label{txt:prodInt} induza a norma segundo  $\|\vtf{h}\|:=\sqrt{\vtf{h}\cdot\vtf{h}}\,\,$}.
+In our study, we define that \emph{a vector space $Y_\mathcal{R}^Z$ of continuous linear functions is not only normed but also metric inner product where the distance $\fua{\varrho}{\vtf{h}_1,\vtf{h}_2} := \|\vtf{h}_1-\vtf{h}_2\|$ and the inner product\label{txt:prodInt} $\vtf{h}\cdot\vtf{h}=\|\vtf{h}\|^2\,\,$ for all $\vtf{h},\vtf{h}_1,\vtf{h}_2\in Y_\mathcal{R}^Z$}.   
+
+Any element of a function space $\mathcal{R}^{U_\mathcal{R}}$, where domain and codomain are complete vector spaces, is called a \textsb{functional}\index{functional}.   
+
+Still considering the previous conditions, if the codomain $V_\mathcal{R}=\mathcal{R}_\mathcal{R}$, an element $\vtf{f}\in \mathcal{R}^{U_\mathcal{R}}$ that defines $\map{\vtf{f}}{U_\mathcal{R}}{\mathcal{R}_\mathcal{R}}$ is called a \textsb{functional}\index{functional}.
 
 Considerando as condições anteriores, se o espaço destino $V_\mathcal{R}=\mathcal{R}_\mathcal{R}$, um elemento $\vtf{f}\in \mathcal{R}^{U_\mathcal{R}}$ que define o mapeamento $\map{\vtf{f}}{U_\mathcal{R}}{\mathcal{R}_\mathcal{R}}$ é denominado \textsb{funcional}\index{funcional}. Em termos menos rigorosos, podemos afirmar que \emph{o funcional mapeia um espaço vetorial para seu campo estruturante}. A partir dos conceitos de funcional e de função linear, as coordenadas de um vetor qualquer numa determinada base podem ser definidas como uma sequência de valores de funcionais lineares que têm esse vetor como argumento. Assim, dada uma base $B=\{\vto{u}_1,\cdots,\vto{u}_n\}$ do espaço vetorial $U_\mathcal{R}$, diz-se que uma ênupla de funcionais lineares $(\vtf{f}_1^{B},\cdots,\vtf{f}_n^{B})$ contém os \textsb{funcionais coordenados}\index{funcionais coordenados} da base $B$ se cada \gloref{funcCoord} pertencer a $\mathcal{R}^{U_\mathcal{R}}$ e
 \begin{equation}
