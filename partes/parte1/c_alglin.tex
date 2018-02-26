@@ -317,19 +317,33 @@ for all $\alpha,\beta\in\mathcal{R},\,\vto{u}_1,\vto{u}_2\in U$. Thereby, we cal
 \lefteqn{\fua{\vtf{k}}{\vto{w}_1,\cdots,\alpha\vto{w}_i+ \beta\vto{w},\cdots,\vto{w}_q}=} & & \nonumber\\
 & &\alpha\fua{\vtf{k}}{\vto{w}_1,\cdots,\vto{w}_i,\cdots,\vto{w}_q}+\beta\fua{\vtf{k}}{\vto{w}_1,\cdots,\vto{w},\cdots,\vto{w}_q}\,,
 \end{align}
-for all $\alpha,\beta\in\mathcal{R}$ and $\vto{w},\vto{w}_i\in W_i$. In this context, when domain $U_\mathcal{R}=V_\mathcal{R}^q$, the vectors of $V^{V^q}_\mathcal{R}$ are called \textsb{multilinear operators}\index{operator!multilinear} and the mappings they define are \textsb{multilinear operations}\index{operation!multilinear}. Linear functions, as we presented, can also be continuous and constitute a normed function space if a norm is defined. Thereby, considering a linear mapping $\map{\vtf{h}}{Z_\mathcal{R}}{Y_\mathcal{R}}$ whose domain and codomain are Banach spaces, a necessary and sufficient condition for $\vtf{h}$ to be continuous requires that it is \textsb{bounded}\index{function!bounded}, namely, that there exists a number $\nu\in\real^+$ where 
+for all $\alpha,\beta\in\mathcal{R}$ and $\vto{w},\vto{w}_i\in W_i$. In this context, when domain $U_\mathcal{R}=V_\mathcal{R}^q$, the vectors of $V^{V^q}_\mathcal{R}$ are called \textsb{multilinear operators}\index{operator!multilinear} and the mappings they define are \textsb{multilinear operations}\index{operation!multilinear}. Linear functions, as we presented, can also be continuous and constitute a normed function space if a norm is defined. In our study, given $Y_\mathcal{R}$ and $Z_\mathcal{R}$ Banach spaces, we define that \emph{a vector space $\evl{\mathcal{R}}{Z}{Y}$ of continuous linear functions is not only normed but also metric inner product where the norm and the inner product\label{txt:prodInt} are related through $\|\vtf{h}\|=\sqrt{\vtf{h}\cdot\vtf{h}}$ and the distance $\fua{\varrho}{\vtf{h},\vtf{g}} := \|\vtf{h}-\vtf{g}\|$ for all $\vtf{h},\vtf{g}\in Y_\mathcal{R}^Z$}. Thereby, for any linear function $\vtf{h}$ in $Y_\mathcal{R}^Z$ to be continuous, a necessary and sufficient condition requires that it is \textsb{bounded}\index{function!bounded}, namely, that there exists a number $\nu\in\real^+$ where 
 \begin{equation}\label{eq:funcaoLimitada}
 \nu\geqslant \|\fua{\vtf{h}}{\vto{z}}\|/\|\vto{z}\| \,,\forall\, \vto{z}\in \{Z_\mathcal{R}\setminus\{\vto{0}\}\}\,.
 \end{equation}
-From this condition, a function space $Y_\mathcal{R}^Z$ constituted of linear bounded functions can be called a normed space of linear functions when the minimum of values $\nu$ is defined as norm; in other words, when the following rule is admitted:  
+Here, we consider the minimum of all these values $\nu$ to be the norm of $\vtf{h}$. In more precise terms, the following rule is defined: 
 \begin{equation}\label{eq:normaFuncao}
 \fua{\eta}{\vtf{x}}=\sup\lch \|\fua{\vtf{x}}{\vto{z}}\|/\|\vto{z}\| \,,\forall\, \vto{z}\in \{Z_\mathcal{R}\setminus\{\vto{0}\}\} \rch\,.
 \end{equation}
-In our study, we define that \emph{a vector space $Y_\mathcal{R}^Z$ of continuous linear functions is not only normed but also metric inner product where the distance $\fua{\varrho}{\vtf{h}_1,\vtf{h}_2} := \|\vtf{h}_1-\vtf{h}_2\|$ and the inner product\label{txt:prodInt} $\vtf{h}\cdot\vtf{h}=\|\vtf{h}\|^2\,\,$ for all $\vtf{h},\vtf{h}_1,\vtf{h}_2\in Y_\mathcal{R}^Z$}.   
 
-Any element of a function space $\mathcal{R}^{U_\mathcal{R}}$, where domain and codomain are complete vector spaces, is called a \textsb{functional}\index{functional}.   
+As a field $\mathcal{R}$ is also a vector space, we call a \textsb{functional}\index{functional} any element of the function space $\mathcal{R}^{U_\mathcal{R}}_\mathcal{R}$ or simply $\mathcal{R}^{U_\mathcal{R}}$, whose domain and codomain are complete. Therefore, it can be stated that \emph{a functional maps a complete space to its structuring field}. By gathering the concepts of functional and linear function, the coordinates of a vector on a certain basis can be obtained from a sequence of values of linear functionals whose argument is the vector in question. Thereby, given a basis $B=\{\vto{u}_1,\cdots,\vto{u}_n\}$ of the complete space $U_\mathcal{R}$, the elements of $n$-tuple $(\vtf{f}_1^{B},\cdots,\vtf{f}_n^{B})$ are called \textsb{coordinate functionals}\index{coordinate functionals} of basis $B$ if each \gloref{funcCoord} belongs to $\evl{\mathcal{R}}{U}{\mathcal{R}}$ and           
+\begin{equation}
+\vto{u}=\sum_{i=1}^{n}\fua{\vtf{f}^\con{B}_{i}}{\vto{u}}\vto{u}_i\,,\,\forall\,\, \vto{u}\in U_\mathcal{R}\,,
+\end{equation}
+where $(\fua{\vtf{f}^\con{B}_{1}}{\vto{u}},\cdots,\fua{\vtf{f}^\con{B}_{n}}{\vto{u}})$ are the coordinates of $\vto{u}$ on basis $B$. Therefore, as any basis vector 
+\begin{equation}
+\vto{u}_i=\sum_{j=1}^{n}\fua{\vtf{f}^\con{B}_{j}}{\vto{u}_i}\vto{u}_j\,,
+\end{equation}
+it results that $\fua{\vtf{f}^{B}_j}{\vto{u}_i}=\delta_{ij}$. Moreover, considering the set $\hat{B}=\{\vun{u}_1,\cdots,\vun{u}_n\}$ an orthonormal basis of the Hilbert space $U_\mathcal{R}$, we can say that 
+\begin{equation}
+\vto{x}\cdot\vun{u}_i=\sum_{j=1}^{n}\fua{\vtf{f}^\con{\hat{B}}_{j}}{\vto{x}}\vun{u}_j\cdot\vun{u}_i=\sum_{j=1}^{n}\fua{\vtf{f}^\con{\hat{B}}_{j}}{\vto{x}}\delta_{ji}=\fua{\vtf{f}^\con{\hat{B}}_{i}}{\vto{x}}\,,\,\forall\, \vto{x}\in U_\mathcal{R}\,,
+\end{equation}
+from where the following rule assures the existence of coordinate functionals:
+\begin{equation}\label{eq:regraCoord}
+\fua{\vtf{f}^{\hat{B}}_i}{\vto{x}}=\vto{x}\cdot\vun{u}_i\,.
+\end{equation}
 
-Still considering the previous conditions, if the codomain $V_\mathcal{R}=\mathcal{R}_\mathcal{R}$, an element $\vtf{f}\in \mathcal{R}^{U_\mathcal{R}}$ that defines $\map{\vtf{f}}{U_\mathcal{R}}{\mathcal{R}_\mathcal{R}}$ is called a \textsb{functional}\index{functional}.
+
 
 Considerando as condições anteriores, se o espaço destino $V_\mathcal{R}=\mathcal{R}_\mathcal{R}$, um elemento $\vtf{f}\in \mathcal{R}^{U_\mathcal{R}}$ que define o mapeamento $\map{\vtf{f}}{U_\mathcal{R}}{\mathcal{R}_\mathcal{R}}$ é denominado \textsb{funcional}\index{funcional}. Em termos menos rigorosos, podemos afirmar que \emph{o funcional mapeia um espaço vetorial para seu campo estruturante}. A partir dos conceitos de funcional e de função linear, as coordenadas de um vetor qualquer numa determinada base podem ser definidas como uma sequência de valores de funcionais lineares que têm esse vetor como argumento. Assim, dada uma base $B=\{\vto{u}_1,\cdots,\vto{u}_n\}$ do espaço vetorial $U_\mathcal{R}$, diz-se que uma ênupla de funcionais lineares $(\vtf{f}_1^{B},\cdots,\vtf{f}_n^{B})$ contém os \textsb{funcionais coordenados}\index{funcionais coordenados} da base $B$ se cada \gloref{funcCoord} pertencer a $\mathcal{R}^{U_\mathcal{R}}$ e
 \begin{equation}
