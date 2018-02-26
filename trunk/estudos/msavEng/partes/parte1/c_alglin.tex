@@ -326,7 +326,7 @@ Here, we consider the minimum of all these values $\nu$ to be the norm of $\vtf{
 \fua{\eta}{\vtf{x}}=\sup\lch \|\fua{\vtf{x}}{\vto{z}}\|/\|\vto{z}\| \,,\forall\, \vto{z}\in \{Z_\mathcal{R}\setminus\{\vto{0}\}\} \rch\,.
 \end{equation}
 
-As a field $\mathcal{R}$ is also a vector space, we call a \textsb{functional}\index{functional} any element of the function space $\mathcal{R}^{U_\mathcal{R}}_\mathcal{R}$ or simply $\mathcal{R}^{U_\mathcal{R}}$, whose domain and codomain are complete. Therefore, it can be stated that \emph{a functional maps a complete space to its structuring field}. By gathering the concepts of functional and linear function, the coordinates of a vector on a certain basis can be obtained from a sequence of values of linear functionals whose argument is the vector in question. Thereby, given a basis $B=\{\vto{u}_1,\cdots,\vto{u}_n\}$ of the complete space $U_\mathcal{R}$, the elements of $n$-tuple $(\vtf{f}_1^{B},\cdots,\vtf{f}_n^{B})$ are called \textsb{coordinate functionals}\index{coordinate functionals} of basis $B$ if each \gloref{funcCoord} belongs to $\evl{\mathcal{R}}{U}{\mathcal{R}}$ and           
+As any field $\mathcal{R}$ is also a vector space, we call a \textsb{functional}\index{functional} an element of the function space $\mathcal{R}^{U_\mathcal{R}}_\mathcal{R}$ or simply $\mathcal{R}^{U_\mathcal{R}}$, whose domain and codomain are complete. Therefore, it can be stated that \emph{a functional maps a complete space to its structuring field}. By gathering the concepts of functional and linear function, the coordinates of a vector on a certain basis can be obtained from a sequence of values of linear functionals whose argument is the vector in question. In this sense, given a basis $B=\{\vto{u}_1,\cdots,\vto{u}_n\}$ of the complete space $U_\mathcal{R}$, the elements of the $n$-tuple $(\vtf{f}_1^{B},\cdots,\vtf{f}_n^{B})$ are called \textsb{coordinate functionals}\index{coordinate functionals} of basis $B$ if each \gloref{funcCoord} belongs to $\evl{\mathcal{R}}{U}{\mathcal{R}}$ and           
 \begin{equation}
 \vto{u}=\sum_{i=1}^{n}\fua{\vtf{f}^\con{B}_{i}}{\vto{u}}\vto{u}_i\,,\,\forall\,\, \vto{u}\in U_\mathcal{R}\,,
 \end{equation}
@@ -338,35 +338,18 @@ it results that $\fua{\vtf{f}^{B}_j}{\vto{u}_i}=\delta_{ij}$. Moreover, consider
 \begin{equation}
 \vto{x}\cdot\vun{u}_i=\sum_{j=1}^{n}\fua{\vtf{f}^\con{\hat{B}}_{j}}{\vto{x}}\vun{u}_j\cdot\vun{u}_i=\sum_{j=1}^{n}\fua{\vtf{f}^\con{\hat{B}}_{j}}{\vto{x}}\delta_{ji}=\fua{\vtf{f}^\con{\hat{B}}_{i}}{\vto{x}}\,,\,\forall\, \vto{x}\in U_\mathcal{R}\,,
 \end{equation}
-from where the following rule assures the existence of coordinate functionals:
+from which we obtain the following rule that assures the existence of coordinate functionals:
 \begin{equation}\label{eq:regraCoord}
 \fua{\vtf{f}^{\hat{B}}_i}{\vto{x}}=\vto{x}\cdot\vun{u}_i\,.
 \end{equation}
 
 
-
-Considerando as condições anteriores, se o espaço destino $V_\mathcal{R}=\mathcal{R}_\mathcal{R}$, um elemento $\vtf{f}\in \mathcal{R}^{U_\mathcal{R}}$ que define o mapeamento $\map{\vtf{f}}{U_\mathcal{R}}{\mathcal{R}_\mathcal{R}}$ é denominado \textsb{funcional}\index{funcional}. Em termos menos rigorosos, podemos afirmar que \emph{o funcional mapeia um espaço vetorial para seu campo estruturante}. A partir dos conceitos de funcional e de função linear, as coordenadas de um vetor qualquer numa determinada base podem ser definidas como uma sequência de valores de funcionais lineares que têm esse vetor como argumento. Assim, dada uma base $B=\{\vto{u}_1,\cdots,\vto{u}_n\}$ do espaço vetorial $U_\mathcal{R}$, diz-se que uma ênupla de funcionais lineares $(\vtf{f}_1^{B},\cdots,\vtf{f}_n^{B})$ contém os \textsb{funcionais coordenados}\index{funcionais coordenados} da base $B$ se cada \gloref{funcCoord} pertencer a $\mathcal{R}^{U_\mathcal{R}}$ e
-\begin{equation}
-\vto{u}=\sum_{i=1}^{n}\fua{\vtf{f}^\con{B}_{i}}{\vto{u}}\vto{u}_i\,,\,\forall\,\, \vto{u}\in U_\mathcal{R}\,,
-\end{equation}
-onde $(\fua{\vtf{f}^\con{B}_{1}}{\vto{u}},\cdots,\fua{\vtf{f}^\con{B}_{n}}{\vto{u}})$ são as coordenadas de $\vto{u}$ na base $B$. Diante disso, como o vetor
-\begin{equation}
-\vto{u}_i=\sum_{j=1}^{n}\fua{\vtf{f}^\con{B}_{j}}{\vto{u}_i}\vto{u}_j\,,
-\end{equation}
-resulta que $\fua{\vtf{f}^{B}_j}{\vto{u}_i}=\delta_{ij}$. Ademais, considerando $U_\mathcal{R}$ um espaço de Hilbert e o conjunto $\hat{B}=\{\vun{u}_1,\cdots,\vun{u}_n\}$ uma base ortonormal desse espaço, podemos afirmar que
-\begin{equation}
-	\vto{x}\cdot\vun{u}_i=\sum_{j=1}^{n}\fua{\vtf{f}^\con{\hat{B}}_{j}}{\vto{x}}\vun{u}_j\cdot\vun{u}_i=\sum_{j=1}^{n}\fua{\vtf{f}^\con{\hat{B}}_{j}}{\vto{x}}\delta_{ji}=\fua{\vtf{f}^\con{\hat{B}}_{i}}{\vto{x}}\,,\,\forall\, \vto{x}\in U_\mathcal{R}\,,
-\end{equation}
-de onde a seguinte regra garante a existência de funcionais coordenados:
-\begin{equation}\label{eq:regraCoord}
-\fua{\vtf{f}^{\hat{B}}_i}{\vto{x}}=\vto{x}\cdot\vun{u}_i\,.
-\end{equation}
-
-Agora, considerando $U_\mathcal{R}$ e $V_\mathcal{R}$ espaços de Hilbert, dizemos que $\vtf{g}^\dagger\in U^V_\mathcal{R}$ é a \textsb{função adjunta}\index{função!adjunta} de $\vtf{g}\in V^U_\mathcal{R}$ quando, dados os vetores quaisquer $\vto{u}\in U_\mathcal{R}$ e $\vto{v}\in V_\mathcal{R}$,
+Now, considering $U_\mathcal{R}$ and $V_\mathcal{R}$ Hilbert spaces, we call $\vtf{g}^\dagger\in U^V_\mathcal{R}$ the \textsb{adjoint function}\index{function!ajoint} of $\vtf{g}\in V^U_\mathcal{R}$ when, given any vectors $\vto{u}\in U_\mathcal{R}$ and $\vto{v}\in V_\mathcal{R}$,
 \begin{equation}\label{eq:funcaoTransposta}
 \fua{\vtf{g}}{\vto{u}}\cdot\vto{v}=\vto{u}\cdot\fua{\vtf{g}^\dagger}{\vto{v}}\,.
 \end{equation}
- Em particular, se o campo $\mathcal{R}=\real$, dizemos que a função $\vtf{g}^\dagger$ é a \textsb{transposta}\index{função!transposta} de $\vtf{g}$. Pela igualdade anterior, ficam válidas as propriedades a seguir para quaisquer $\alpha\in\mathcal{R}$ e $\vtf{k}\in U^V_\mathcal{R}$.
+Particularly, if $\mathcal{R}=\real$, the function $\vtf{g}^\dagger$ is called the  
+\textsb{transpose}\index{function!transpose} of $\vtf{g}$. From the previous equality, the following properties are valid for all $\alpha\in\mathcal{R}$ and $\vtf{k}\in U^V_\mathcal{R}\,$:
 \begin{itemize}
 	\setlength\itemsep{.1em}
 	\item[i.] $\lpa\alpha\vtf{g}\rpa^\dagger=\overline{\alpha}\vtf{g}^\dagger$;
@@ -375,25 +358,32 @@ Agora, considerando $U_\mathcal{R}$ e $V_\mathcal{R}$ espaços de Hilbert, dizemo
 	\item[iv.] Se $\vtf{g}$ for uma bijeção, há uma função $\vtf{g}^{-\dagger}:=\lpa\vtf{g}^{-1}\rpa^\dagger=\lpa\vtf{g}^\dagger\rpa^{-1}$.
 \end{itemize}
 
+
 {\footnotesize
 \begin{proof}
-Primeiramente, precisamos demonstrar a existência e a unicidade das funções transpostas. Na igualdade apresentada, sejam $\vto{u}=\vun{u}_k$ e $\vto{v}=\vun{v}_k$, onde os vetores à direita pertencem às bases ortonormais $B_1$ e $B_2$ respectivamente, ambas dos espaços $n$-dimensionais $U_\mathcal{R}$ e $V_\mathcal{R}$. Assim, pode-se realizar o seguinte desenvolvimento:
+Firstly, we need to prove the existence and uniqueness of transpose functions. On equality \eqref{eq:funcaoTransposta}, let's consider $\vto{u}=\vun{u}_k$ and $\vto{v}=\vun{v}_k$, where vectors on the right sides belong to orthonormal bases $\hat{B}_1$ and $\hat{B}_2$ of $n$-dimensional Hilbert spaces $U_\mathcal{R}$ and $V_\mathcal{R}$ respectively. Thereby, we can develop the following:
 \begin{align*}
 \vun{u}_k\cdot\fua{\vtf{g}^\dagger}{\vun{v}_k}&=\fua{\vtf{g}}{\vun{u}_k}\cdot\vun{v}_k\\
 \vun{u}_k\cdot\sum_{i=1}^n{\vtf{f}_i^{B_2}}[\fua{\vtf{g}^\dagger}{\vun{v}_k}]\vun{u}_i&=\sum_{i=1}^n{\vtf{f}_i^{B_1}}\lco\fua{\vtf{g}}{\vun{u}_k}\rco\vun{v}_i\cdot\vun{v}_k\\
 \overline{{\vtf{f}_k^{B_2}}[\fua{\vtf{g}^\dagger}{\vun{v}_k}]}&={\vtf{f}_k^{B_1}}\lco\fua{\vtf{g}}{\vun{u}_k}\rco\,.
 \end{align*}
-Nessas condições, podemos dizer que se $\vtf{g}$ existe, $\vtf{g}^\dagger$ também existe. Agora, supondo que existam duas funções $\vtf{g}_1^\dagger$ e $\vtf{g}_2^\dagger$ transpostas de $\vtf{g}$, tem-se duas igualdades conforme \eqref{eq:funcaoTransposta}. Ao subtraí-las, obtém-se $\vto{u}\cdot(\fua{\vtf{g}_1^\dagger}{\vto{v}}-\fua{\vtf{g}_2^\dagger}{\vto{v}})=0$,  que é válida para quaisquer $\vto{u}$ e $\vto{v}$; assim $\vtf{g}_1^\dagger=\vtf{g}_2^\dagger$. No caso das propriedades, a primeira pode ser comprovada a partir da igualdade $\fua{\lpa\alpha\vtf{g}\rpa^\dagger}{\vto{u}}\cdot\vto{v}=\vto{u}\cdot\alpha\fua{\vtf{g}}{\vto{v}}$ e da igualdade  $\overline{\alpha}\fua{\vtf{g}^\dagger}{\vto{u}}\cdot\vto{v}=\vto{u}\cdot\alpha\fua{\vtf{g}}{\vto{v}}$. A segunda propriedade podemos constatá-la através das seguintes igualdades: $\fua{\vtf{g}\circ\vtf{k}}{\vto{u}}\cdot\vto{v}=\fua{\vtf{k}}{\vto{u}}\cdot\fua{\vtf{g}^\dagger}{\vto{v}}=\vto{u}\cdot\fua{\vtf{k}^\dagger\circ\vtf{g}^\dagger}{\vto{u}}$. Demonstremos agora a afirmação de que a transposta de uma função linear também é linear. Dado o escalar $\alpha\in\mathcal{R}$,
+From this result, it can be said that if $\vtf{g}$ exists, so does $\vtf{g}^\dagger$. Now, supposing the existence of two transpose functions $\vtf{g}_1^\dagger$ and $\vtf{g}_2^\dagger$ of $\vtf{g}$, there are two equalities similar to \eqref{eq:funcaoTransposta}. Subtracting one from the other, we obtain $\vto{u}\cdot(\fua{\vtf{g}_1^\dagger}{\vto{v}}-\fua{\vtf{g}_2^\dagger}{\vto{v}})=0$, which is valid for all $\vto{u}$ and $\vto{v}$; thereby, $\vtf{g}_1^\dagger=\vtf{g}_2^\dagger$. Considering the properties now, the first can be verified from  $\fua{\lpa\alpha\vtf{g}\rpa^\dagger}{\vto{u}}\cdot\vto{v}=\vto{u}\cdot\alpha\fua{\vtf{g}}{\vto{v}}$ and from  $\overline{\alpha}\fua{\vtf{g}^\dagger}{\vto{u}}\cdot\vto{v}=\vto{u}\cdot\alpha\fua{\vtf{g}}{\vto{v}}$, which results from the conjugate linearity of the inner product. The second can be proved from $\fua{\vtf{g}\circ\vtf{k}}{\vto{u}}\cdot\vto{v}=\fua{\vtf{k}}{\vto{u}}\cdot\fua{\vtf{g}^\dagger}{\vto{v}}=\vto{u}\cdot\fua{\vtf{k}^\dagger\circ\vtf{g}^\dagger}{\vto{u}}$. Let's verify if the adjoint of a linear function is also linear: given a scalar $\alpha\in\mathcal{R}$,
 \begin{equation*}
 \vto{v}\cdot\fua{\vtf{g}^\dagger}{\ele{a}\vto{u}}=\overline{\alpha}\lco\fua{\vtf{g}}{\vto{v}}\cdot\vto{u}\rco=\overline{\alpha}[\vto{v}\cdot\fua{\vtf{g}^\dagger}{\vto{u}}]=\vto{v}\cdot\alpha\fua{\vtf{g}^\dagger}{\vto{u}}.
-\end{equation*}
-Considerando $\vto{u}_1,\vto{u}_2\in U^V_\mathcal{R}$, temos que
+\end{equation*} 
+Considering $\vto{u}_1,\vto{u}_2\in U^V_\mathcal{R}$, we have
 \begin{equation*}
 \vto{v}\cdot\fua{\vtf{g}^\dagger}{\vto{u}_1+\vto{u}_2}=\fua{\vtf{g}}{\vto{v}}\cdot\lpa\vto{u}_1+\vto{u}_2\rpa=\vto{v}\cdot[\fua{\vtf{g}^\dagger}{\vto{u}_1}+\fua{\vtf{g}^\dagger}{\vto{u}_2}].
 \end{equation*}
-Para provar a quarta propriedade, precisamos saber que uma função identidade sempre é igual à sua transposta; algo que não é difícil de verificar. Sendo assim, transpondo ambos os lados da igualdade $\vtf{i}_V=\vtf{g}\circ\vtf{g}^{-1}$ obtém-se $\vtf{i}_V=(\vtf{g}^{-1})^\dagger\circ\vtf{g}^\dagger$, devido à segunda propriedade. Sabemos também que $\vtf{i}_V=(\vtf{g}^\dagger)^{-1}\circ\vtf{g}^\dagger$, o que comprova $(\vtf{g}^{-1})^\dagger=(\vtf{g}^\dagger)^{-1}$.
+In order to prove the equality on the fourth property, we need to know that an identity operator always equals its transpose; which is not difficult to verify. Thereby, ``adjoiting''  both sides of equality $\vtf{i}_V=\vtf{g}\circ\vtf{g}^{-1}$, we obtain $\vtf{i}_V=(\vtf{g}^{-1})^\dagger\circ\vtf{g}^\dagger$, from the second property. We also know that $\vtf{i}_V=(\vtf{g}^\dagger)^{-1}\circ\vtf{g}^\dagger$, which proves $(\vtf{g}^{-1})^\dagger=(\vtf{g}^\dagger)^{-1}$.  
 \end{proof}
 }
+
+
+Considering a complete space $V_\mathcal{R}$, the linear function space $\evl{\mathcal{R}}{V}{\mathcal{R}}$ is said to be the \textsb{dual space}\index{space!dual} of $V_\mathcal{R}$, represented by $V^*_\mathcal{R}$, whose elements are called \textsb{dual vectors}\index{vector!dual}. Intuitively, a dual vector is a scalar measure of vectors that keeps the structure of its domain unaltered; a feature that the norm, being a scalar measure, does not assure, since it is a non linear functional. The coordinate functional $\vtf{f}^\con{B}_{i}$, in turn, is indeed a dual vector and, in a certain way, ``measures'' its argument in relation to the $i$-th vector of basis $B$, when we call the value of this measure a coordinate. As already presented, in the context of orthonormal bases, the measurement of a coordinate functional is expressed through the projective interrelationship between its argument and a basis vector, that is, the inner product of both. A subset       
+
+
+
 
 Dado um espaço vetorial $V_\mathcal{R}$, o espaço vetorial $\evl{\mathcal{R}}{V}{\mathcal{R}}$ é chamado \textsb{espaço dual}\index{espaço!dual} de $V_\mathcal{R}$, representado $V^*_\mathcal{R}$, cujos elementos são ditos \textsb{vetores duais}\index{vetor!dual}. Em termos genéricos, vetores duais são medidas escalares dos vetores de um determinado espaço vetorial cuja estrutura fica preservada; algo que a norma, como medida escalar, não garante, por ser ela um funcional não linear. Já nos funcionais coordenados, o vetor $\vtf{f}^\con{B}_{i}$ é dual e, de alguma forma, ``mede'' seu argumento em relação ao vetor de índice $i$ da base $B$, quando chamamos de coordenada o valor da medida. Conforme apresentado, no contexto de bases ortonormais, a medição dos funcionais coordenados se expressa na relação de incidência do argumento com um vetor da base, ou seja, no produto interno dos dois. Um subconjunto $\{\vtf{g}_1,\cdots,\vtf{g}_m\}$ de $V^*_\mathcal{R}$ é dito o \textsb{conjunto dual}\index{conjunto!dual} de $\{\vto{w}_1,\cdots,\vto{w}_m\}\subset V_\mathcal{R}$ se $\fua{\vtf{g}_i}{\vto{w}_j}=\delta_{ij}$. Quando tal subconjunto for dual de uma base $B=\{\vto{u}_1,\cdots,\vto{u}_n\}$ de $V_\mathcal{R}$, seus elementos serão os funcionais coordenados de $B$, conforme demonstram as seguintes igualdades:
 \begin{equation*}
