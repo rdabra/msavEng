@@ -326,7 +326,7 @@ Here, we consider the minimum of all these values $\nu$ to be the norm of $\vtf{
 \fua{\eta}{\vtf{x}}=\sup\lch \|\fua{\vtf{x}}{\vto{z}}\|/\|\vto{z}\| \,,\forall\, \vto{z}\in \{Z_\mathcal{R}\setminus\{\vto{0}\}\} \rch\,.
 \end{equation}
 
-As any field $\mathcal{R}$ is also a vector space, we call a \textsb{functional}\index{functional} an element of the function space $\mathcal{R}^{U_\mathcal{R}}_\mathcal{R}$ or simply $\mathcal{R}^{U_\mathcal{R}}$, whose domain and codomain are complete. Therefore, it can be stated that \emph{a functional maps a complete space to its structuring field}. By gathering the concepts of functional and linear function, the coordinates of a vector on a certain basis can be obtained from a sequence of values of linear functionals whose argument is the vector in question. In this sense, given a basis $B=\{\vto{u}_1,\cdots,\vto{u}_n\}$ of the complete space $U_\mathcal{R}$, the elements of the $n$-tuple $(\vtf{f}_1^{B},\cdots,\vtf{f}_n^{B})$ are called \textsb{coordinate functionals}\index{coordinate functionals} of basis $B$ if each \gloref{funcCoord} belongs to $\evl{\mathcal{R}}{U}{\mathcal{R}}$ and           
+As any field $\mathcal{R}$ is also a vector space, we call a \textsb{functional}\index{functional} an element of the function space $\mathcal{R}^{U_\mathcal{R}}_\mathcal{R}$ or simply $\mathcal{R}^{U_\mathcal{R}}$, whose domain and codomain are complete vector spaces. Therefore, it can be stated that \emph{a functional maps a complete vector space to its structuring field}. By gathering the concepts of functional and linear function, the coordinates of a vector on a certain basis can be obtained from a sequence of values of linear functionals whose argument is the vector in question. In this sense, given a basis $B=\{\vto{u}_1,\cdots,\vto{u}_n\}$ of the complete vector space $U_\mathcal{R}$, the elements of the $n$-tuple $(\vtf{f}_1^{B},\cdots,\vtf{f}_n^{B})$ are called \textsb{coordinate functionals}\index{coordinate functionals} of basis $B$ if each \gloref{funcCoord} belongs to $\evl{\mathcal{R}}{U}{\mathcal{R}}$ and           
 \begin{equation}
 \vto{u}=\sum_{i=1}^{n}\fua{\vtf{f}^\con{B}_{i}}{\vto{u}}\vto{u}_i\,,\,\forall\,\, \vto{u}\in U_\mathcal{R}\,,
 \end{equation}
@@ -380,32 +380,30 @@ In order to prove the equality on the fourth property, we need to know that an i
 }
 
 
-Considering a complete space $V_\mathcal{R}$, the linear function space $\evl{\mathcal{R}}{V}{\mathcal{R}}$ is said to be the \textsb{dual space}\index{space!dual} of $V_\mathcal{R}$, represented by $V^*_\mathcal{R}$, whose elements are called \textsb{dual vectors}\index{vector!dual}. Intuitively, a dual vector is a scalar measure of vectors that keeps the structure of its domain unaltered; a feature that the norm, being a scalar measure, does not assure, since it is a non linear functional. The coordinate functional $\vtf{f}^\con{B}_{i}$, in turn, is indeed a dual vector and, in a certain way, ``measures'' its argument in relation to the $i$-th vector of basis $B$, when we call the value of this measure a coordinate. As already presented, in the context of orthonormal bases, the measurement of a coordinate functional is expressed through the projective interrelationship between its argument and a basis vector, that is, the inner product of both. A subset       
-
-
-
-
-Dado um espaço vetorial $V_\mathcal{R}$, o espaço vetorial $\evl{\mathcal{R}}{V}{\mathcal{R}}$ é chamado \textsb{espaço dual}\index{espaço!dual} de $V_\mathcal{R}$, representado $V^*_\mathcal{R}$, cujos elementos são ditos \textsb{vetores duais}\index{vetor!dual}. Em termos genéricos, vetores duais são medidas escalares dos vetores de um determinado espaço vetorial cuja estrutura fica preservada; algo que a norma, como medida escalar, não garante, por ser ela um funcional não linear. Já nos funcionais coordenados, o vetor $\vtf{f}^\con{B}_{i}$ é dual e, de alguma forma, ``mede'' seu argumento em relação ao vetor de índice $i$ da base $B$, quando chamamos de coordenada o valor da medida. Conforme apresentado, no contexto de bases ortonormais, a medição dos funcionais coordenados se expressa na relação de incidência do argumento com um vetor da base, ou seja, no produto interno dos dois. Um subconjunto $\{\vtf{g}_1,\cdots,\vtf{g}_m\}$ de $V^*_\mathcal{R}$ é dito o \textsb{conjunto dual}\index{conjunto!dual} de $\{\vto{w}_1,\cdots,\vto{w}_m\}\subset V_\mathcal{R}$ se $\fua{\vtf{g}_i}{\vto{w}_j}=\delta_{ij}$. Quando tal subconjunto for dual de uma base $B=\{\vto{u}_1,\cdots,\vto{u}_n\}$ de $V_\mathcal{R}$, seus elementos serão os funcionais coordenados de $B$, conforme demonstram as seguintes igualdades:
+Considering a complete vector space $V_\mathcal{R}$, the linear function space $\evl{\mathcal{R}}{V}{\mathcal{R}}$ is said to be the \textsb{dual space}\index{space!dual} of $V_\mathcal{R}$, represented by $V^*_\mathcal{R}$, whose elements are called \textsb{dual vectors}\index{vector!dual}. Intuitively, a dual vector is a scalar measure of vectors that keeps the structure of its domain unaltered; a feature that the norm, being a scalar measure, does not assure, since it is a non linear functional. The coordinate functional $\vtf{f}^\con{B}_{i}$, in turn, is indeed a dual vector and, in a certain way, ``measures'' its argument in relation to the $i$-th vector of basis $B$, when we call the value of this measure a coordinate. As already presented, in the context of orthonormal bases, the measurement of a coordinate functional is expressed through the projective interrelationship between its argument and a basis vector, that is, the inner product of both. A subset 
+$\{\vtf{g}_1,\cdots,\vtf{g}_m\}$ of $V^*_\mathcal{R}$ is a \textsb{dual set}\index{set!dual} of $\{\vto{w}_1,\cdots,\vto{w}_m\}\subset V_\mathcal{R}$ if $\fua{\vtf{g}_i}{\vto{w}_j}=\delta_{ij}$. When such a subset is dual of a basis $B=\{\vto{u}_1,\cdots,\vto{u}_n\}$ of $V_\mathcal{R}$, its elements will be the coordinate functionals of $B$, as can be verified by the following development:
 \begin{equation*}
 \fua{\vtf{g}_i}{\vto{x}}=\vtf{g}_i(\sum_{j=1}^{n}\fua{\vtf{f}^\con{B}_{j}}{\vto{x}}\vto{u}_j)=\sum_{j=1}^{n}\fua{\vtf{f}^\con{B}_{j}}{\vto{x}}\fua{\vtf{g}_i}{\vto{u}_j}=\sum_{j=1}^{n}\fua{\vtf{f}^\con{B}_{j}}{\vto{x}}\delta_{ij}=\fua{\vtf{f}^\con{B}_{i}}{\vto{x}}\,.
 \end{equation*}
-Ocorre que um conjunto formado por funcionais coordenados, no caso o subconjunto $B^*:=\{\vtf{f}^\con{B}_1,\cdots,\vtf{f}^\con{B}_n\}$, é uma base do espaço dual, ou seja, o conjunto dual $B^*$ de uma base $B$ é ele próprio uma base do espaço dual, quando o chamamos \textsb{base dual}\index{base!dual}. Diante disso, podemos afirmar que espaços duais possuem a mesma dimensão dos espaços vetoriais aos quais estão relacionados; nos termos descritos, $\dim (V_\mathcal{R})=\dim (V_\mathcal{R}^*)$. Assim, dado um vetor dual qualquer $\vtf{h}\in V^*_\mathcal{R}$, as igualdades
+But a set constituted of coordinate functionals, in this case $B^*:=\{\vtf{f}^\con{B}_1,\cdots,\vtf{f}^\con{B}_n\}$, is a basis of its dual space, that is, a dual set $B^*$ of a basis $B$ is itself a basis of the dual space, when we call it a \textsb{dual basis}\index{basis!dual}. Thereby, we can state that a complete vector space and its dual have the same dimension or that $\dim (V_\mathcal{R})=\dim (V_\mathcal{R}^*)$ in the present context. Given any dual vector $\vtf{h}\in V^*_\mathcal{R}$, equalities 
 \begin{equation*}
 \fua{\vtf{h}}{\vto{x}}=\vtf{h}[\,{\sum_{i=1}^n\fua{\vtf{f}_i^B}{\vto{x}}\vto{u}_i}\,]=\sum_{i=1}^n\fua{\vtf{h}}{\vto{u}_i}\fua{\vtf{f}_i^B}{\vto{x}}=[\,\sum_{i=1}^n\fua{\vtf{h}}{\vto{u}_i}\vtf{f}_i^B\,] (\vto{x})
 \end{equation*}
-permitem concluir que os escalares $\fua{\vtf{h}}{\vto{u}_i}$ constituem as coordenadas de $\vtf{h}$ em $B^*$. Convém que essa estreita correspondência entre espaços vetoriais e duais fique ainda mais forte, de tal forma que vetores e vetores duais se relacionem de maneira unívoca, quando esses últimos são denominados \textsb{covetores}\index{covetor}. Aproveitando o formato da regra \eqref{eq:regraCoord}, o teorema descrito a seguir, de extrema relevância para o nosso estudo, estabelece essa relação.
+enable to conclude that scalars $\fua{\vtf{h}}{\vto{u}_i}$ are the coordinates of $\vtf{h}$ in $B^*$. It is convenient that this strong correspondence between a complete vector space and its dual becomes even stronger, in such a way that vectors and dual vectors are biunivocaly related, when dual vectors are renamed to \textsb{covectors}\index{covector}. By defining a rule similar to \eqref{eq:regraCoord}, the following theorem, extremely relevant for our study, establishes this one-to-one relationship. 
 
-\begin{mteo}{Representação de Riesz-Fréchet}{repRiesz}
-Seja o mapeamento $\map{\Phi}{U_\mathcal{R}}{U^*_\mathcal{R}}$, onde $U_\mathcal{R}$ é um espaço de Hilbert e $U^*_\mathcal{R}$ seu espaço dual. Se para qualquer vetor $\vto{u}\in U_\mathcal{R}$ for definido um covetor $\fua{\Phi}{\vto{u}}$, representado \gloref{covetor}, com regra
+\begin{mteo}{Riesz-Fréchet Representation}{repRiesz}
+Let $\map{\Phi}{U_\mathcal{R}}{U^*_\mathcal{R}}$ be a mapping where $U_\mathcal{R}$ is a Hilbert space and 
+$U^*_\mathcal{R}$ its dual space. If for every $\vto{u}\in U_\mathcal{R}$, a covector  \gloref{covetor}$:=\fua{\Phi}{\vto{u}}$ is described by the rule  
 \begin{equation}
 \fua{\vtf{u}^*}{\vto{x}}=\vto{x}\cdot\vto{u}\,,
 \end{equation}
-a função $\Phi$ resulta um isomorfismo e, sendo $\vtf{u}^*$ contínuo, a norma $\|\vtf{u}^*\|_{U^*_\mathcal{R}}=\|\vto{u}\|_{U_\mathcal{R}}$.
+then $\Phi$ results an isomorphism. Moreover, if $\vtf{u}^*$ is continuous,  $\|\vtf{u}^*\|_{U^*_\mathcal{R}}=\|\vto{u}\|_{U_\mathcal{R}}$.
 \end{mteo}
-
+\hspace{1pt}
 {\footnotesize
 \begin{proof}
-Primeiramente, verifiquemos se um subconjunto de funcionais coordenados é mesmo uma base do espaço dual. Dados um vetor dual qualquer $\vtf{g}\in V^*_\mathcal{R}$, um vetor qualquer $\vto{x}\in V_\mathcal{R}$ e o subconjunto $B=\{\vto{v}_1,\cdots,\vto{v}_n\}$ uma base qualquer de $V_\mathcal{R}$, tem-se o seguinte desenvolvimento:
+Let's verify first if a subset of coordinate functionals is really a basis of its dual space. 
+Given a dual vector $\vtf{g}\in V^*_\mathcal{R}$, a vector $\vto{x}\in V_\mathcal{R}$ and a basis $B=\{\vto{v}_1,\cdots,\vto{v}_n\}$ of $V_\mathcal{R}$, we have the following:
 \begin{eqnarray}
 \fua{\vtf{g}}{\vto{x}} & = &
 \vtf{g}(\sum_{i=1}^{n}\fua{\vtf{f}^\con{B}_{i}}{\vto{x}}\vto{v}_i)\nonumber\\
@@ -418,6 +416,43 @@ Primeiramente, verifiquemos se um subconjunto de funcionais coordenados é mesmo 
 \vtf{g} & = &
 \sum_{i=1}^{n}\fua{\vtf{g}}{\vto{v}_i}\vtf{f}^\con{B}_{i}\nonumber\,,
 \end{eqnarray}
+from which we conclude that the coordinate functionals of $B$ span $U^*_\mathcal{R}$. Moreover, if 
+$\vto{x}$ is zero, then $\sum_{i=1}^{n}\fua{\vtf{f}^\con{B}_{i}}{\vto{x}}\vto{v}_i=\vto{0}$, where 
+equality $\fua{\vtf{f}^\con{B}_{i}}{\vto{x}}=0$ is true for all $\vto{x}$, and therefore $\vtf{f}^\con{B}_{i}=\vtf{0}$. This linear independence assures that the coordinate functionals of $B$ constitute a basis of $V^*_\mathcal{R}$. Now, considering $\vto{u}$ and $\vto{v}$ vectors of $U_\mathcal{R}$, the function $\Phi$ results an homomorphism from the following equalities:
+\begin{equation*}
+\fua{\lco\fua{\Phi}{\vto{u}+\vto{v}}\rco}{\vto{x}}=\fua{\lpa\vto{u}+\vto{v}\rpa^*}{\vto{x}}=\vto{x}\cdot(\vto{u}+\vto{v})=\fua{\vto{u}^*}{\vto{x}}+\fua{\vto{v}^*}{\vto{x}}=\fua{\lco\fua{\Phi}{\vto{u}}+\fua{\Phi}{\vto{v}}\rco}{\vto{x}}\,.
+\end{equation*}
+If $\Phi$ were not an injection, there would be different covectors $\vto{u}^*$ e $\vto{v}^*$ where $\fua{\vto{u}^*}{\vto{x}}=\fua{\vto{v}^*}{\vto{x}}$ or $\vto{x}\cdot\vto{u}=\vto{x}\cdot\vto{v}$. From this supposition, the following equalities result: $\vto{x}\cdot(\vto{u}-\vto{v})=\fua{(\vto{u}-\vto{v})^*}{\vto{x}}=0$, which do not confirm $\vto{u}^*\neq\vto{v}^*$. In order to prove that $\Phi$ is a surjection, we need to obtain for any functional $\vtf{g}\in U_\mathcal{R}^*$ a vector $\vto{u}\in U_\mathcal{R}$ such that $\fua{\Phi}{\vto{u}}=\vtf{g}$. Considering the rule \eqref{eq:regraCoord} and an orthonormal basis $\hat{B}=\{\vun{u}_1,\cdots,\vun{u}_n\}$ of $U_\mathcal{R}$ whose coordinate functionals span $U^*_\mathcal{R}$, we can say that 
+\begin{equation*}
+\fua{\vtf{g}}{\vto{x}}=\fua{[\sum_{i=1}^n\alpha_i\vtf{f}^{\hat{B}}_i]}{\vto{x}}=\sum_{i=1}^n\alpha_i\fua{\vtf{f}^{\hat{B}}_i}{\vto{x}}=\sum_{i=1}^n\alpha_i\lpa\vto{x}\cdot\vun{u}_i\rpa=\vto{x}	\cdot ( \sum_{i=1}^n\overline{\alpha_i} \vun{u}_i)\,.
+\end{equation*}
+As $\fua{\vtf{g}}{\vto{x}}=\fua{\lco\fua{\Phi}{\vto{u}}\rco}{\vto{x}}=\vto{x}\cdot\vto{u}$, the existence of $\vto{u}=\sum_{i=1}^n\overline{\alpha_i} \vun{u}_i$ is verified. Finally, using definition \eqref{eq:normaFuncao} on the present conditions and leaving spaces representations on norms implicit, we have $\|\vto{u}^*\|=\sup\{ |\vto{x}\cdot\vto{u}|/\|\vto{x}\|\}$ for all non zero $\vto{x}$.
+
+
+
+
+
+
+Finalmente, aplicando a definição \eqref{eq:normaFuncao} nas condições aqui colocadas e deixando implícita a representação dos espaços nas normas, temos $\|\vto{u}^*\|=\sup\{ |\vto{x}\cdot\vto{u}|/\|\vto{x}\|\}$ para qualquer $\vto{x}$ não nulo. Se $\vto{u}$ for nulo, fica evidente que $\|\vto{u}^*\|=\|\vto{u}\|$; se não for, $\vto{u}^*$ é não nulo e podemos concluir que $\|\vto{u}^*\|\geqslant |\, \vto{x}\cdot\vto{u}|/\|\vto{x}\|$. A desigualdade de Cauchy-Schwarz preconiza que $|\, \vto{x}\cdot\vto{u}| \leqslant \|\vto{x}\|\,\,\|\vto{u}\|$. Subtraindo essas duas desigualdades obtém-se $(\|\vto{u}^*\|-\|\vto{u}\|)\|\vto{x}\|\geqslant 0$, cujo lado esquerdo pode ser nulo para quaisquer $\vto{u}^*$, $\vto{u}$ e $\vto{x}$ não nulos; logo $\|\vto{u}^*\|=\|\vto{u}\|$.
+ 
+ 
+ 
+
+
+
+
+
+Primeiramente, verifiquemos se um subconjunto de funcionais coordenados é mesmo uma base do espaço dual. Dados um vetor dual qualquer $\vtf{g}\in V^*_\mathcal{R}$, um vetor qualquer $\vto{x}\in V_\mathcal{R}$ e o subconjunto $B=\{\vto{v}_1,\cdots,\vto{v}_n\}$ uma base qualquer de $V_\mathcal{R}$, tem-se o seguinte desenvolvimento:
+\begin{eqnarray*}
+\fua{\vtf{g}}{\vto{x}} & = &
+\vtf{g}(\sum_{i=1}^{n}\fua{\vtf{f}^\con{B}_{i}}{\vto{x}}\vto{v}_i)\nonumber\\
+ & = &
+\sum_{i=1}^{n}\fua{\vtf{g}}{\vto{v}_i}\fua{\vtf{f}^\con{B}_{i}}{\vto{x}}\nonumber\\
+ & = &
+\sum_{i=1}^{n}[\fua{\vtf{g}}{\vto{v}_i}\vtf{f}^\con{B}_{i}]\lpa\vto{x}\rpa\nonumber\\
+ & = &
+[\sum_{i=1}^{n}\fua{\vtf{g}}{\vto{v}_i}\vtf{f}^\con{B}_{i}]\lpa\vto{x}\rpa\,,
+\end{eqnarray*}
 de onde se pode concluir que os funcionais coordenados de $B$ geram $U^*_\mathcal{R}$. Além disso, se $\vto{x}$ for nulo, então $\sum_{i=1}^{n}\fua{\vtf{f}^\con{B}_{i}}{\vto{x}}\vto{v}_i=\vto{0}$, de onde resulta $\fua{\vtf{f}^\con{B}_{i}}{\vto{x}}=0$ válido para qualquer $\vto{x}$; logo, $\vtf{f}^\con{B}_{i}=\vto{0}$. Diante dessa independência linear, os funcionais coordenados de $B$ constituem uma base de $V^*_\mathcal{R}$. Nos termos do teorema, considerando $\vto{u}$ e $\vto{v}$ vetores quaisquer de $U_\mathcal{R}$, constatamos que  $\Phi$ é um homomorfismo pelas seguintes igualdades:
 \begin{equation*}
 \fua{\lco\fua{\Phi}{\vto{u}+\vto{v}}\rco}{\vto{x}}=\fua{\lpa\vto{u}+\vto{v}\rpa^*}{\vto{x}}=\vto{x}\cdot(\vto{u}+\vto{v})=\fua{\vto{u}^*}{\vto{x}}+\fua{\vto{v}^*}{\vto{x}}=\fua{\lco\fua{\Phi}{\vto{u}}+\fua{\Phi}{\vto{v}}\rco}{\vto{x}}\,.
