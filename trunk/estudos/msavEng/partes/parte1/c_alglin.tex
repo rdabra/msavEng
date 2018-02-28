@@ -426,102 +426,69 @@ If $\Phi$ were not an injection, there would be different covectors $\vto{u}^*$ 
 \begin{equation*}
 \fua{\vtf{g}}{\vto{x}}=\fua{[\sum_{i=1}^n\alpha_i\vtf{f}^{\hat{B}}_i]}{\vto{x}}=\sum_{i=1}^n\alpha_i\fua{\vtf{f}^{\hat{B}}_i}{\vto{x}}=\sum_{i=1}^n\alpha_i\lpa\vto{x}\cdot\vun{u}_i\rpa=\vto{x}	\cdot ( \sum_{i=1}^n\overline{\alpha_i} \vun{u}_i)\,.
 \end{equation*}
-As $\fua{\vtf{g}}{\vto{x}}=\fua{\lco\fua{\Phi}{\vto{u}}\rco}{\vto{x}}=\vto{x}\cdot\vto{u}$, the existence of $\vto{u}=\sum_{i=1}^n\overline{\alpha_i} \vun{u}_i$ is verified. Finally, using definition \eqref{eq:normaFuncao} on the present conditions and leaving spaces representations on norms implicit, we have $\|\vto{u}^*\|=\sup\{ |\vto{x}\cdot\vto{u}|/\|\vto{x}\|\}$ for all non zero $\vto{x}$.
-
-
-
-
-
-
-Finalmente, aplicando a definição \eqref{eq:normaFuncao} nas condições aqui colocadas e deixando implícita a representação dos espaços nas normas, temos $\|\vto{u}^*\|=\sup\{ |\vto{x}\cdot\vto{u}|/\|\vto{x}\|\}$ para qualquer $\vto{x}$ não nulo. Se $\vto{u}$ for nulo, fica evidente que $\|\vto{u}^*\|=\|\vto{u}\|$; se não for, $\vto{u}^*$ é não nulo e podemos concluir que $\|\vto{u}^*\|\geqslant |\, \vto{x}\cdot\vto{u}|/\|\vto{x}\|$. A desigualdade de Cauchy-Schwarz preconiza que $|\, \vto{x}\cdot\vto{u}| \leqslant \|\vto{x}\|\,\,\|\vto{u}\|$. Subtraindo essas duas desigualdades obtém-se $(\|\vto{u}^*\|-\|\vto{u}\|)\|\vto{x}\|\geqslant 0$, cujo lado esquerdo pode ser nulo para quaisquer $\vto{u}^*$, $\vto{u}$ e $\vto{x}$ não nulos; logo $\|\vto{u}^*\|=\|\vto{u}\|$.
- 
- 
- 
-
-
-
-
-
-Primeiramente, verifiquemos se um subconjunto de funcionais coordenados é mesmo uma base do espaço dual. Dados um vetor dual qualquer $\vtf{g}\in V^*_\mathcal{R}$, um vetor qualquer $\vto{x}\in V_\mathcal{R}$ e o subconjunto $B=\{\vto{v}_1,\cdots,\vto{v}_n\}$ uma base qualquer de $V_\mathcal{R}$, tem-se o seguinte desenvolvimento:
-\begin{eqnarray*}
-\fua{\vtf{g}}{\vto{x}} & = &
-\vtf{g}(\sum_{i=1}^{n}\fua{\vtf{f}^\con{B}_{i}}{\vto{x}}\vto{v}_i)\nonumber\\
- & = &
-\sum_{i=1}^{n}\fua{\vtf{g}}{\vto{v}_i}\fua{\vtf{f}^\con{B}_{i}}{\vto{x}}\nonumber\\
- & = &
-\sum_{i=1}^{n}[\fua{\vtf{g}}{\vto{v}_i}\vtf{f}^\con{B}_{i}]\lpa\vto{x}\rpa\nonumber\\
- & = &
-[\sum_{i=1}^{n}\fua{\vtf{g}}{\vto{v}_i}\vtf{f}^\con{B}_{i}]\lpa\vto{x}\rpa\,,
-\end{eqnarray*}
-de onde se pode concluir que os funcionais coordenados de $B$ geram $U^*_\mathcal{R}$. Além disso, se $\vto{x}$ for nulo, então $\sum_{i=1}^{n}\fua{\vtf{f}^\con{B}_{i}}{\vto{x}}\vto{v}_i=\vto{0}$, de onde resulta $\fua{\vtf{f}^\con{B}_{i}}{\vto{x}}=0$ válido para qualquer $\vto{x}$; logo, $\vtf{f}^\con{B}_{i}=\vto{0}$. Diante dessa independência linear, os funcionais coordenados de $B$ constituem uma base de $V^*_\mathcal{R}$. Nos termos do teorema, considerando $\vto{u}$ e $\vto{v}$ vetores quaisquer de $U_\mathcal{R}$, constatamos que  $\Phi$ é um homomorfismo pelas seguintes igualdades:
-\begin{equation*}
-\fua{\lco\fua{\Phi}{\vto{u}+\vto{v}}\rco}{\vto{x}}=\fua{\lpa\vto{u}+\vto{v}\rpa^*}{\vto{x}}=\vto{x}\cdot(\vto{u}+\vto{v})=\fua{\vto{u}^*}{\vto{x}}+\fua{\vto{v}^*}{\vto{x}}=\fua{\lco\fua{\Phi}{\vto{u}}+\fua{\Phi}{\vto{v}}\rco}{\vto{x}}\,.
-\end{equation*}
-Se $\Phi$ não fosse uma injeção existiriam diferentes covetores $\vto{u}^*$ e $\vto{v}^*$ onde o escalar $\fua{\vto{u}^*}{\vto{x}}=\fua{\vto{v}^*}{\vto{x}}$ ou $\vto{x}\cdot\vto{u}=\vto{x}\cdot\vto{v}$. Dessa suposição resultam as igualdades $\vto{x}\cdot(\vto{u}-\vto{v})=\fua{(\vto{u}-\vto{v})^*}{\vto{x}}=0$, que não corroboram $\vto{u}^*\neq\vto{v}^*$. Para provar que $\Phi$ é uma sobrejeção, precisamos obter para qualquer funcional $\vtf{g}\in U_\mathcal{R}^*$ um vetor $\vto{u}\in U_\mathcal{R}$ tal que $\fua{\Phi}{\vto{u}}=\vtf{g}$. Considerando a regra \eqref{eq:regraCoord} e o conjunto $\hat{B}=\{\vun{u}_1,\cdots,\vun{u}_n\}$ uma base ortonormal de $U_\mathcal{R}$ cujos funcionais coordenados geram $U^*_\mathcal{R}$, podemos dizer que
-\begin{equation*}
-\fua{\vtf{g}}{\vto{x}}=\fua{\lco\sum_{i=1}^n\alpha_i\vtf{f}^{\hat{B}}_i\rco}{\vto{x}}=\sum_{i=1}^n\alpha_i\fua{\vtf{f}^{\hat{B}}_i}{\vto{x}}=\sum_{i=1}^n\alpha_i\lpa\vto{x}\cdot\vun{u}_i\rpa=\vto{x}	\cdot \lpa \sum_{i=1}^n\overline{\alpha_i} \vun{u}_i\rpa\,.
-\end{equation*}
-Como $\fua{\vtf{g}}{\vto{x}}=\fua{\lco\fua{\Phi}{\vto{u}}\rco}{\vto{x}}=\vto{x}\cdot\vto{u}$, conseguimos constatar  a existência de $\vto{u}=\sum_{i=1}^n\overline{\alpha_i} \vun{u}_i$. Finalmente, aplicando a definição \eqref{eq:normaFuncao} nas condições aqui colocadas e deixando implícita a representação dos espaços nas normas, temos $\|\vto{u}^*\|=\sup\{ |\vto{x}\cdot\vto{u}|/\|\vto{x}\|\}$ para qualquer $\vto{x}$ não nulo. Se $\vto{u}$ for nulo, fica evidente que $\|\vto{u}^*\|=\|\vto{u}\|$; se não for, $\vto{u}^*$ é não nulo e podemos concluir que $\|\vto{u}^*\|\geqslant |\, \vto{x}\cdot\vto{u}|/\|\vto{x}\|$. A desigualdade de Cauchy-Schwarz preconiza que $|\, \vto{x}\cdot\vto{u}| \leqslant \|\vto{x}\|\,\,\|\vto{u}\|$. Subtraindo essas duas desigualdades obtém-se $(\|\vto{u}^*\|-\|\vto{u}\|)\|\vto{x}\|\geqslant 0$, cujo lado esquerdo pode ser nulo para quaisquer $\vto{u}^*$, $\vto{u}$ e $\vto{x}$ não nulos; logo $\|\vto{u}^*\|=\|\vto{u}\|$.
+As $\fua{\vtf{g}}{\vto{x}}=\fua{\lco\fua{\Phi}{\vto{u}}\rco}{\vto{x}}=\vto{x}\cdot\vto{u}$, the existence of $\vto{u}=\sum_{i=1}^n\overline{\alpha_i} \vun{u}_i$ is verified. Finally, using definition \eqref{eq:normaFuncao} on the present conditions, leaving space representation on norms implicit, we obtain equality $\|\vto{u}^*\|=\sup\{ |\vto{x}\cdot\vto{u}|/\|\vto{x}\|\}$ for all non zero $\vto{x}$.
+If $\vto{u}$ is zero, it is evident that $\|\vto{u}^*\|=\|\vto{u}\|$; otherwise, $\vto{u}^*$ is non zero and we conclude that $\|\vto{u}^*\|\geqslant |\, \vto{x}\cdot\vto{u}|/\|\vto{x}\|$. Cauchy-Schwarz Inequality states that $|\, \vto{x}\cdot\vto{u}| \leqslant \|\vto{x}\|\,\,\|\vto{u}\|$. Subtracting these two previous inequalities, we arrive at $(\|\vto{u}^*\|-\|\vto{u}\|)\|\vto{x}\|\geqslant 0$, whose left side can be zero for any non zero $\vto{u}^*$, $\vto{u}$ and $\vto{x}$; therefore, $\|\vto{u}^*\|=\|\vto{u}\|$.    
 \end{proof}
 }
 
-A Representação de Riesz-Fréchet permite definir uma regra para funcionais coordenados de bases não necessariamente ortonormais, apresentada a seguir. Considerando as mesmas condições do teorema, seja $B=\{\vto{u}_1,\cdots,\vto{u}_n\}$ uma base de $U_\mathcal{R}$ e $B^*=\{\vtf{f}_1^B,\cdots,\vtf{f}_n^B\}$ sua base dual. Nesse contexto, os funcionais $\vtf{f}_i^B\in U_\mathcal{R}^*$ estão relacionados univocamente a vetores $\vto{v}_i\in U_\mathcal{R}$, de tal forma que, dado um vetor qualquer $\vto{u}\in U_\mathcal{R}$, temos as igualdades
+The Riesz-Fréchet Representation enables us to define a rule for coordinate functionals of bases not necessarily orthogonal. Then, let's see how this happens. Considering the conditions of the theorem, let $B=\{\vto{u}_1,\cdots,\vto{u}_n\}$ be a basis of $U_\mathcal{R}$ and $B^*=\{\vtf{f}_1^B,\cdots,\vtf{f}_n^B\}$ its dual correspondent. In this context, functionals $\vtf{f}_i^B\in U_\mathcal{R}^*$ are biunivocaly related to $\vto{v}_i\in U_\mathcal{R}$ in such a way that, given a vector $\vto{u}\in U_\mathcal{R}$, the following equalities are valid:
 \begin{equation*}
-\fua{\vtf{f}_i^B}{\vto{u}}=\vto{u}\cdot\vto{v_i}=\sum_{j=1}^n\fua{\vtf{f}_j^B}{\vto{u}}\vto{u}_j \cdot \vto{v}_i\,,
+\fua{\vtf{f}_i^B}{\vto{u}}=\vto{u}\cdot\vto{v_i}=\sum_{j=1}^n\fua{\vtf{f}_j^B}{\vto{u}}\vto{u}_j \cdot \vto{v}_i\,.
 \end{equation*}
-de onde resulta $\vto{u}_j \cdot \vto{v}_i=\delta_{ji}$, quando se chega à identidade $\fua{\vtf{f}_i^B}{\vto{u}}=\fua{\vtf{f}_i^B}{\vto{u}}$. Assim, concluímos que o subconjunto $\{\vto{v}_1,\cdots,\vto{v}_n\}$, univocamente relacionado a $B^*$, é a base recíproca $B^\perp=\{\vto{u}^1,\cdots,\vto{u}^n\}$, ou seja, os covetores $(\vto{u}^i)^*=\vtf{f}_i^B$.
-A regra de funcionais coordenados pode ser expressa por
+In order to obtain the identity $\fua{\vtf{f}_i^B}{\vto{u}}=\fua{\vtf{f}_i^B}{\vto{u}}$, inner product 
+$\vto{u}_j \cdot \vto{v}_i$ must be $\delta_{ji}$. Thereby, we can say that a subset $\{\vto{v}_1,\cdots,\vto{v}_n\}$, whose elements are biunivocaly related to the vectors of $B^*$, is the reciprocal basis $B^\perp=\{\vto{u}^1,\cdots,\vto{u}^n\}$, that is, covectors $(\vto{u}^i)^*=\vtf{f}_i^B$. The rule for coordinate functionals can be described by    
 \begin{equation}\label{eq:regraFuncCoord}
 \fua{\vtf{f}_i^B}{\vto{x}}=\fua{(\vto{u}^i)^*}{\vto{x}}=\vto{x} \cdot \vto{u}^i\,.
 \end{equation}
-Se $B^\perp$ é a base recíproca de $B$, o inverso também é verdadeiro; logo, a partir da regra anterior, podemos afirmar que
+If $B^\perp$ is the reciprocal basis of $B$, the inverse is also true; thus, from the previous rule, we can affirm that  
 \begin{equation}
 \fua{\vtf{f}_i^{B^\perp}}{\vto{x}}=\fua{(\vto{u}_i)^*}{\vto{x}}=\vto{x} \cdot \vto{u}_i\,.
 \end{equation}
-A figura \ref{fg:espacoDual} resume os relacionamentos entre a base $B$ com as bases recíprocas e duais que ela induz.
+In this context, the inner product between any two vectors $\vto{u}$ and $\vto{v}$ leads to the following equalities: 
+\begin{equation}\label{eq:prodIntGen}
+\vto{u}\cdot\vto{v}=\sum_{i=1}^n\sum_{j=1}^n\fua{\vtf{f}_i^{B}}{\vto{u}}\overline{\fua{\vtf{f}_j^{B^\perp}}{\vto{v}}}\,\vto{u}_i\cdot\vto{u}^j=\sum_{i=1}^n\fua{\vtf{f}_i^{B}}{\vto{u}}\overline{\fua{\vtf{f}_i^{B^\perp}}{\vto{v}}}\,.
+\end{equation}
+If $B$ is orthonormal, then basis $B^\perp=B$. Moreover, if the field $\mathcal{R}$ is real, we have $\vto{u}\cdot\vto{v}=\sum_{i=1}^n\fua{\vtf{f}_i^{B}}{\vto{u}}\fua{\vtf{f}_i^{B}}{\vto{v}}$. Figure \ref{fg:espacoDual} summarizes the relationships between basis $B$ and the reciprocal bases it induces.  
 \begin{figure}[!ht]
 \centering
 \begin{center}
 \scalebox{.70}{\input{partes/parte1/figs/c_algabst/espacoDual.pstex_t}}
 \end{center}
-\titfigura{Relacionamentos das bases induzidas por $B$ nos termos do teorema \ref{teo:repRiesz}.}\label{fg:espacoDual}
+\titfigura{Relationships between bases induced by $B$ in terms of theorem \ref{teo:repRiesz}.}\label{fg:espacoDual}
 \end{figure}
-No caso particular de uma base ortonormal $\hat{B}$, já sabemos que ela é recíproca à ela própria, ou seja, os vetores  $\vun{u}_i=\vun{u}^i$, o que nos leva a concluir que os vetores de $\hat{B}$ e de $\hat{B}^*$ têm uma relação unívoca nos termos do teorema anterior. Assim, podemos dizer que os escalares
+
+In the particular case of an orthonormal basis $\hat{B}$ vectors $\vun{u}_i=\vun{u}^i$, from which we conclude that the vectors of $\hat{B}$ and of $\hat{B}^*$ have a biunivocal relationship, in terms of the previous theorem. Thereby, it can be said that coordinates   
 \begin{equation}
 \fua{\vtf{f}_i^{\hat{B}}}{\vto{x}}=\fua{(\vun{u}_i)^*}{\vto{x}}=\vto{x} \cdot \vun{u}_i\,.
 \end{equation}
-Nesse contexto, o produto interno entre dois vetores quaisquer $\vto{u}$ e $\vto{v}$ conduzem às seguintes igualdades:
-\begin{equation}\label{eq:prodIntGen}
-\vto{u}\cdot\vto{v}=\sum_{i=1}^n\sum_{j=1}^n\fua{\vtf{f}_i^{B}}{\vto{u}}\overline{\fua{\vtf{f}_j^{B^\perp}}{\vto{v}}}\,\vto{u}_i\cdot\vto{u}^j=\sum_{i=1}^n\fua{\vtf{f}_i^{B}}{\vto{u}}\overline{\fua{\vtf{f}_i^{B^\perp}}{\vto{v}}}\,.
-\end{equation}
-Se $B$ for ortonormal, então a base $B^\perp=B$. Além disso, se o campo $\mathcal{R}$ for real, tem-se que  $\vto{u}\cdot\vto{v}=\sum_{i=1}^n\fua{\vtf{f}_i^{B}}{\vto{u}}\fua{\vtf{f}_i^{B}}{\vto{v}}$.
 
-Ainda considerando os termos do teorema anterior, a igualdade entre os valores das normas de vetores e de covetores contínuos permite dizer que $U^*_\mathcal{R}$ é também um espaço de Hilbert. Como a propriedade é importante, vamos apresentá-la em termos mais formais, no corolário a seguir.
+Still considering the terms of the previous theorem, the equality between norms of continuous vectors and covectors enables us to state that the dual space $U^*_\mathcal{R}$ is also a Hilbert space. As this feature is very important, we shall present it in a more formal way, through the following corollary.  
 
-\begin{mcoro}{Espaço Dual de Hilbert}{dualHilb}
-Se os funcionais lineares de $U_\mathcal{R}^*$ forem contínuos e o espaço $U_\mathcal{R}$ for de Hilbert, então $U_\mathcal{R}^*$ também será espaço de Hilbert.
+\begin{mcoro}{Hilbert Dual Space}{dualHilb}
+If the linear functionals of $U_\mathcal{R}^*$ are continuous and $U_\mathcal{R}$ is a Hilbert space, then $U_\mathcal{R}^*$ is also a Hilbert space.
 \end{mcoro}
-\hspace{1pt}
+
 {\footnotesize
 \begin{proof}
-O espaço $U_\mathcal{R}^*$ é normado pela definição \eqref{eq:normaFuncao} e métrico produto interno também por  definição (Ver p. \pageref{txt:prodInt}). Resta agora mostrarmos que $U_\mathcal{R}^*$ é completo, condição que fica garantida se a bijeção $\Phi$ for isométrica, nos termos do teorema \ref{teo:isoComp}. A partir da regra de covetores, definida na Representação de Riesz-Fréchet, se $\vto{u}=\vto{v}-\vto{w}$ então
+By the rule \eqref{eq:normaFuncao},  $U_\mathcal{R}^*$ is a normed space that is also defined to be metric inner product (See p. \pageref{txt:prodInt}). Thus, it remains here to verify that $U_\mathcal{R}^*$ is complete. This condition is assured if the bijection $\Phi$ is isometric, according to theorem \ref{teo:isoComp}. From the rule for covectors established by Riesz-Fréchet Representation, if $\vto{u}=\vto{v}-\vto{w}$ then    
 \begin{equation*}
 \fua{(\vto{v}-\vto{w})^*}{\vto{x}}=\vto{x}\cdot(\vto{v}-\vto{w})=\vto{x}\cdot\vto{v}-\vto{x}\cdot\vto{w}=\fua{\vto{v}^*}{\vto{x}}-\fua{\vto{w}^*}{\vto{x}}=\fua{(\vto{v}^*-\vto{w}^*)}{\vto{x}}\,,
 \end{equation*}
-de onde concluímos que $(\vto{v}-\vto{w})^*=(\vto{v}^*-\vto{w}^*)$, ou que $\fua{\Phi}{\vto{v}-\vto{w}}=\fua{\Phi}{\vto{v}}-\fua{\Phi}{\vto{w}}$. Assim, sabendo que $\|\fua{\Phi}{\vto{x}}\|_{U_\mathcal{R}^*}=\|\vto{x}\|_{U_\mathcal{R}}$, temos que a métrica $\fua{\varrho_{U_\mathcal{R}^*}}{\fua{\Phi}{\vto{v}},\fua{\Phi}{\vto{w}}}$ é igual a
+from which we conclude that $(\vto{v}-\vto{w})^*=(\vto{v}^*-\vto{w}^*)$, or that $\fua{\Phi}{\vto{v}-\vto{w}}=\fua{\Phi}{\vto{v}}-\fua{\Phi}{\vto{w}}$. Thereby, knowing that $\|\fua{\Phi}{\vto{x}}\|_{U_\mathcal{R}^*}=\|\vto{x}\|_{U_\mathcal{R}}$, metric  
 \begin{equation*}
-\|\fua{\Phi}{\vto{v}}-\fua{\Phi}{\vto{w}}\|_{U_\mathcal{R}^*}= \|\fua{\Phi}{\vto{v}-\vto{w}}\|_{U_\mathcal{R}^*}= \|\vto{v}-\vto{w}\|_{U_\mathcal{R}}\,,
+\fua{\varrho_{U_\mathcal{R}^*}}{\fua{\Phi}{\vto{v}},\fua{\Phi}{\vto{w}}}=\|\fua{\Phi}{\vto{v}}-\fua{\Phi}{\vto{w}}\|_{U_\mathcal{R}^*}= \|\fua{\Phi}{\vto{v}-\vto{w}}\|_{U_\mathcal{R}^*}= \|\vto{v}-\vto{w}\|_{U_\mathcal{R}}\,.
 \end{equation*}
- de onde concluímos que $\Phi$ é uma isometria.
+Therefore, $\Phi$ is indeed an isometry in this case.
 \end{proof}
 }
 
-Um vetor $\vtf{h}$ do espaço de funções $V^V_\mathcal{R}$ é dito um operador  \textsb{Hermitiano}\index{operador!Hermitiano} ou \textsb{auto-adjunto}\index{operador!auto-adjunto} quando $\vtf{h}=\vtf{h}^\dagger$; mas, se $\vtf{h}=-\vtf{h}^\dagger$, ele é chamado \textsb{anti-Hermitiano}\index{operador!anti-Hermitiano}. Quando o campo $\mathcal{R}$ for real, o operador Hermitiano recebe o nome de \textsb{simétrico}\index{operador!simétrico} enquanto o anti-Hermitiano é denominado \textsb{antissimétrico}\index{operador!antissimétrico}.
-Uma função de $U^V_\mathcal{R}$ é dita \textsb{unitária}\index{função!unitária} quando for uma bijeção linear cuja adjunta é igual à inversa. Dessa definição, dizemos que um operador unitário $\vtf{q}\in V^V_\mathcal{R}$ preserva o produto interno porque, para quaisquer $\vto{u},\vto{v}\in V_\mathcal{R}$, são válidas as igualdades
+A vector $\vtf{h}$ of function space $V^V_\mathcal{R}$ is said to be an \textsb{Hermitian}\index{operator!Hermitian} or \textsb{self-adjoint}\index{operator!self-adjoint} operator when $\vtf{h}=\vtf{h}^\dagger$; but, if $\vtf{h}=-\vtf{h}^\dagger$, it is called  \textsb{anti-Hermitian}\index{operator!anti-Hermitian}. If $\mathcal{R}$ is a real field, the Hermitian operator is also called \textsb{symmetric}\index{operator!symmetric} and the anti-Hermitian, \textsb{antisymmetric}\index{operator!antisymmetric}. A function of $U^V_\mathcal{R}$ is said to be \textsb{unitary}\index{function!unitary} when it is a linear bijection whose inverse equals the adjoint. From this definition, we say that an unitary operator $\vtf{q}\in V^V_\mathcal{R}$ preserves the inner product because, for all $\vto{u},\vto{v}\in V_\mathcal{R}$, the following equalities are valid: 
 \begin{equation}
 \fua{\vtf{q}}{\vto{u}}\cdot\fua{\vtf{q}}{\vto{v}}=\vto{u}\cdot\fua{\vtf{q}^\dagger\circ\vtf{q}}{\vto{v}}=\vto{u}\cdot\fua{\vtf{q}^{-1}\circ\vtf{q}}{\vto{v}}=\vto{u}\cdot\vto{v}\,.
 \end{equation}
-Diante disso, no contexto de espaços de Hilbert, dizemos que \emph{operadores unitários preservam a norma}, pois $\|\fua{\vtf{q}}{\vto{u}}\|^2=\fua{\vtf{q}}{\vto{u}}\cdot\fua{\vtf{q}}{\vto{u}}=\vto{u}\cdot\vto{u}=\|\vto{u}\|^2$.
+Thereby, in the context of Hilbert spaces, we say that \emph{unitary operators preserve the norm}, since 
+$\|\fua{\vtf{q}}{\vto{u}}\|^2=\fua{\vtf{q}}{\vto{u}}\cdot\fua{\vtf{q}}{\vto{u}}=\vto{u}\cdot\vto{u}=\|\vto{u}\|^2$.
+
 
 No capítulo anterior, dissemos que o conjunto de todos os operadores unários inversíveis constitui um grupo na operação de composição. Vejamos agora se o conjunto $O\subset V^V_\mathcal{R}$ de todos os operadores unitários, por serem operadores unários e inversíveis, define o grupo $(\gloref{grOrto},\circ)$, denominado \textsb{grupo unitário}\index{grupo!unitário}. Isso pode ser verificado pelas igualdades
 \begin{equation}
