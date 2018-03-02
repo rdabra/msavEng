@@ -489,7 +489,17 @@ A vector $\vtf{h}$ of function space $V^V_\mathcal{R}$ is said to be an \textsb{
 Thereby, in the context of Hilbert spaces, we say that \emph{unitary operators preserve the norm}, since 
 $\|\fua{\vtf{q}}{\vto{u}}\|^2=\fua{\vtf{q}}{\vto{u}}\cdot\fua{\vtf{q}}{\vto{u}}=\vto{u}\cdot\vto{u}=\|\vto{u}\|^2$.
 
-In the previous chapter, we said that the set of all unary invertible operators constitutes a group on  the operation of composition. Let's verify now if the set $O\subset V^V_\mathcal{R}$ of all unitary operators, since they are unary and invertible, defines the group  $(\gloref{grOrto},\circ)$, called \textsb{unitary group}\index{group!unitary}.
+In the previous chapter, we said that the set of all unary invertible operators constitutes a group on  the operation of composition. Let's verify now if the set $O\subset V^V_\mathcal{R}$ of all unitary operators, since they are unary and invertible, defines the group  $(\gloref{grOrto},\circ)$, called \textsb{unitary group}\index{group!unitary}: the equalities
+\begin{equation}
+\lpa \vtf{q}_1\circ\vtf{q}_2 \rpa^{-1} =
+\vtf{q}_2^{-1}\circ\vtf{q}_1^{-1} = \vtf{q}_2^\dagger\circ\vtf{q}_1^\dagger =
+\lpa \vtf{q}_1\circ\vtf{q}_2 \rpa^{T}
+\end{equation}
+show, for all $\vtf{q}_1,\vtf{q}_2\in O$, that bijection\footnote{See properties on page \pageref{prop:Composicao}.}  $\vtf{q}_1\circ\vtf{q}_2$ belongs to the set $O$. In the context of real fields, groups and linear operators are qualified as orthogonal. There are also linear operators that preserve metrics or distance, when they are called \textsb{isometric operators}\index{operator!isometric}. In more rigorous terms, $\vtf{k}\in V^V_\mathcal{R}$ is an isometric operator if it is a linear bijection where $\varrho\,[\fua{\vtf{k}}{\vto{u}},\fua{\vtf{k}}{\vto{v}}]=\fua{\varrho}{\vto{u},\vto{v}}$, for all $\vto{u},\vto{v}\in V_\mathcal{R}$. Similarly to unitary operators, the set os all isometric operators defines a group $(I,\circ)$ called \textsb{isometry group}\index{group!isometry}, since the composition of isometric operators is also an isometric operator, that is, considering any $\vtf{k},\vtf{g}\in I$, we have
+\begin{equation}
+\varrho\,\lco\fua{\vtf{g}\circ\vtf{k}}{\vto{u}},\fua{\vtf{g}\circ\vtf{k}}{\vto{v}}\rco = \varrho\,\lco{\fua{\vtf{g}}{\vto{u}},\fua{\vtf{g}}{\vto{v}}}\rco=\fua{\varrho}{\vto{u},\vto{v}}
+\end{equation}
+ 
 
 No capítulo anterior, dissemos que o conjunto de todos os operadores unários inversíveis constitui um grupo na operação de composição. Vejamos agora se o conjunto $O\subset V^V_\mathcal{R}$ de todos os operadores unitários, por serem operadores unários e inversíveis, define o grupo $(\gloref{grOrto},\circ)$, denominado \textsb{grupo unitário}\index{grupo!unitário}. Isso pode ser verificado pelas igualdades
 \begin{equation}
