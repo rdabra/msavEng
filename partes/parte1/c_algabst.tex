@@ -515,6 +515,8 @@ An operation $\map{q}{\overline{M}}{\overline{M}}$ is a \textsb{similarity trans
 \end{equation}
 An important example of this transformation is called \textsb{diagonalization}\index{diagonalization}, defined from the concept of \textsb{diagonal matrix}\index{matrix!diagonal}, which is a square matrix whose elements in positions $i\neq j$ are null. Thereby, if there exists a similarity transformation in a square matrix $\mat{A}$ which $\fua{q}{A}$ results diagonal, this transformation is called a diagonalization of $\mat{A}$ or matrix $\mat{A}$ is said to be \textsb{diagonalizable}\index{matrix!diagonalizable}. Finally, it is now possible to understand the diagonalization of normal matrices by unitary.
 
+\pagebreak
+
 \begin{mteo}{Spectral Diagonalization}{decompSpec}
 For any normal matrix $\mat{N}$, there is always an unitary matrix $\mat{U}$ such that
 \begin{equation}
@@ -522,7 +524,7 @@ For any normal matrix $\mat{N}$, there is always an unitary matrix $\mat{U}$ suc
 \end{equation}
 where $\widetilde{\mat{N}}$ is a diagonal matrix whose elements constitute the spectrum of $\mat{N}$.
 \end{mteo}
-\hspace{1pt}
+
 {\footnotesize
 \begin{proof}
 Firstly we must say that, considering any square matrix $\mat{A}$ and a unitary matrix $\mat{U}$, it is always possible to obtain an \textsb{upper triangular matrix}\index{matrix!upper triangular} $\mat{T} = \mat{U}^\dagger\mat{A}\mat{U}$, whose elements in positions $i>j$ are null. This statement is known as \textsb{Schur's Lemma}\index{Schur!Lemma}, whose tedious proof can be seen in \aut{Strang}\cite{strang_2006_4}. Now we need to show that if $\mat{A}$ is normal, $\mat{T}$ is diagonal: if $\mat{A}$ is normal,
