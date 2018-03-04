@@ -536,17 +536,31 @@ de onde se constata $\vtf{k}$ uma isometria. Agora, seja $\vtf{g}\in V^V_\real$ 
 
 
 
-\section{Representações Matriciais}
+\section{Matrix Representations}
 
-Sabemos que um vetor qualquer pode ser identificado por suas coordenadas, representadas por uma ênupla, numa determinada base, de tal sorte que ênuplas distintas nunca implicam vetores iguais: a relação é portanto unívoca. Assim, expressões que envolvem vetores podem ser descritas por elementos coordenados, coligidos convenientemente em matrizes, quando fica disponível todo o arcabouço aritmético-funcional aplicável a esse tipo de coleção, apresentado no capítulo anterior. A relação que se estabelece entre vetores e matrizes também é unívoca e, como ocorre com as ênuplas, dependente de uma base. Na prática, a representação matricial de um vetor ocorre da seguinte forma: seja $\vto{u}$ um elemento qualquer do espaço vetorial  $U_\mathcal{R}$, do qual o subconjunto $B=\{\vto{u}_1,\cdots,\vto{u}_n\}$ é uma base qualquer. Assim, definimos \gloref{repVet} como sendo a \textsb{matriz representativa}\index{matriz!representativa} de $\vto{u}$ na base $B$, cuja dimensão é $n\times 1$ e os elementos $\mav{\vto{u}}{B}_{i1}:=\fua{\vtf{f}^\con{B}_{i}}{\vto{u}}$. Diante disso, fica evidente que a matriz representativa do vetor nulo é sempre nula. Além disso, da linearidade de funcionais coordenados podemos desenvolver
+
+We already know that a vector can be identified through its coordinates, represented by a tuple, on a specific basis, in such a way that distinct tuples never imply equal vectors; this vector-coordinates relationship is thus biunivocal. Thereby, mathematical expressions with vectors may include their coordinate scalars, gathered conveniently in matrices, when all the functional-arithmetic apparatus presented in the previous chapter, applicable to this type of collection, becomes available. The resulting relationship between vectors and matrices is also biunivocal and, as in the case of tuples, basis dependent. In practical terms, the matrix representation of a vector occurs the following way: let $\vto{u}$ be any element of vector space $U_\mathcal{R}$, of which subset $B=\{\vto{u}_1,\cdots,\vto{u}_n\}$ is a basis. Then, we define a $n\times 1$ matrix \gloref{repVet} as being the \textsb{representative matrix}\index{matrix!representative} of $\vto{u}$ on $B$, whose elements $\mav{\vto{u}}{B}_{i1}:=\fua{\vtf{f}^\con{B}_{i}}{\vto{u}}$. This definition makes it obvious that the representative matrix of the zero vector is always the zero matrix, on any basis. Moreover, the linearity of coordinate functionals enables the following development:
 \begin{equation*}
-\alpha\sum_{i=1}^{n}\fua{\vtf{f}^\con{B}_{i}}{\vto{x}}\vto{u}_i+\beta\sum_{i=1}^{n}\fua{\vtf{f}^\con{B}_{i}}{\vto{y}}\vto{u}_i= \sum_{i=1}^{n}\lco\alpha\fua{\vtf{f}^\con{B}_{i}}{\vto{x}}+\beta\fua{\vtf{f}^\con{B}_{i}}{\vto{y}}\rco\vto{u}_i=\sum_{i=1}^{n}\fua{\vtf{f}^\con{B}_{i}}{\alpha\vto{x}+\beta\vto{y}}\vto{u}_i,
+	\alpha\sum_{i=1}^{n}\fua{\vtf{f}^\con{B}_{i}}{\vto{x}}\vto{u}_i+\beta\sum_{i=1}^{n}\fua{\vtf{f}^\con{B}_{i}}{\vto{y}}\vto{u}_i= \sum_{i=1}^{n}\lco\alpha\fua{\vtf{f}^\con{B}_{i}}{\vto{x}}+\beta\fua{\vtf{f}^\con{B}_{i}}{\vto{y}}\rco\vto{u}_i=\sum_{i=1}^{n}\fua{\vtf{f}^\con{B}_{i}}{\alpha\vto{x}+\beta\vto{y}}\vto{u}_i,
 \end{equation*}
-de onde concluímos que
+from where it is possible to conclude that
 \begin{equation}
 \alpha\mav{\vto{x}}{B}+\beta\mav{\vto{y}}{B}=\mav{\alpha\vto{x}+\beta\vto{y}}{B}\,,
 \end{equation}
-onde $\vto{x},\vto{y}\in U_\mathcal{R}$ são vetores quaisquer e $\alpha,\beta\in\mathcal{R}$ escalares quaisquer. No que diz respeito aos vetores da base $B$, se os representamos relativos à própria base $B$, temos $\mav{\vto{u}_j}{B}_{i1}=\fua{\vtf{f}^\con{B}_{i}}{\vto{u}_j}=\delta_{ij}$. Costuma-se adotar tal estratégia para a base natural $O=\{\vun{e}_1,\cdots,\vun{e}_n\}$ de espaços Euclidianos, onde $\mav{\vun{e}_j}{O}_{i1}=\delta_{ij}\,$.
+for all vectors $\vto{x},\vto{y}\in U_\mathcal{R}$ and all scalars $\alpha,\beta\in\mathcal{R}$. Now, concerning the vectors of basis $B$, if we represent them relative to $B$ itself, we have $\mav{\vto{u}_j}{B}_{i1}=\fua{\vtf{f}^\con{B}_{i}}{\vto{u}_j}=\delta_{ij}$. This representation strategy is frequent for the natural basis $O=\{\vun{e}_1,\cdots,\vun{e}_n\}$ of Euclidean spaces, where $\mav{\vun{e}_j}{O}_{i1}=\delta_{ij}\,$. 
+
+
+
+
+
+
+
+
+
+
+        
+
+
 
 Considerando $V_\mathcal{R}$ um espaço vetorial $m$-dimensional, seja $\vtf{g}$ um elemento qualquer de um espaço de funções $\evl{\mathcal{R}}{U}{V}$. No ato de mapear vetores de $U$ para vetores de $V$, a função $\vtf{g}$ termina por relacionar indiretamente duas bases distintas, de tal forma que a representação matricial desse relacionamento precisa evidenciar ambas as bases. Diante disso, se $C=\{\vto{v}_1,\cdots,\vto{v}_m\}$ for uma base de $V_\mathcal{R}$ e $\vto{u}\in U_\mathcal{R}$ um vetor qualquer, temos
 \begin{align*}
