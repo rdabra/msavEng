@@ -281,7 +281,7 @@ Let's verify the uniqueness and existence of reciprocal sets on the context abov
 \section{Linear Functions}\label{sec:FuncLin}
 
 
-The most fundamental relationships studied in Linear Algebra have the feature of preserving the group structures involved, including those defined by fields. Such relationships are expressed by homomorphisms whose main property is to keep vector spaces structures unaltered. Moreover, if these vector spaces are metric, it is required that this additional structure to remain unchanged as well. In practical terms, this means that if the homomorphism domain is a metric vector space, so must be its image. Selected through a criteria of same mapping definition, we study these functions by gathering them in a vector space, where there are additional restrictions concerning the relations to their arguments.       
+The most fundamental relationships studied in Linear Algebra have the feature of preserving group structures involved, including those defined by fields. Such relationships are expressed by homomorphisms whose main property is to keep structures of vector spaces unaltered. Moreover, if these vector spaces are metric, it is required this additional structure to remain unchanged as well. In practical terms, this means that if the homomorphism domain is a metric vector space, so must be its image. Selected through a criteria of defining the same mapping, we study these functions by gathering them in a vector space, where there are additional restrictions concerning the relations to their arguments.       
 
 
 Let's start the study of linear functions considering first an additive group $V^{U}$ constituted of generic functions that define mappings of the type $U\mapsto V$, where $U$ and $V$ are complete spaces with an additive structure. This group is said to define a vector space \gloref{espacFunc}, usually called a \textsb{function space}\index{space!function}, if for any $\vtf{f},\vtf{g}\in V^U_\mathcal{R}$ and $\alpha\in\mathcal{R}$ the following restrictions are observed:
@@ -489,33 +489,21 @@ A vector $\vtf{h}$ of function space $V^V_\mathcal{R}$ is said to be an \textsb{
 Thereby, in the context of Hilbert spaces, we say that \emph{unitary operators preserve the norm}, since 
 $\|\fua{\vtf{q}}{\vto{u}}\|^2=\fua{\vtf{q}}{\vto{u}}\cdot\fua{\vtf{q}}{\vto{u}}=\vto{u}\cdot\vto{u}=\|\vto{u}\|^2$.
 
-In the previous chapter, we said that the set of all unary invertible operators constitutes a group on  the operation of composition. Let's verify now if the set $O\subset V^V_\mathcal{R}$ of all unitary operators, since they are unary and invertible, defines the group  $(\gloref{grOrto},\circ)$, called \textsb{unitary group}\index{group!unitary}: the equalities
+In the previous chapter, we said that the set of all unary invertible operators constitutes a group on  the operation of composition. Let's verify now if the set $O\subset \evl{\mathcal{R}}{V}{V}$ of all unitary operators, since they are unary and invertible, defines the group  $(\gloref{grOrto},\circ)$, called \textsb{unitary group}\index{group!unitary}: the equalities
 \begin{equation}
 \lpa \vtf{q}_1\circ\vtf{q}_2 \rpa^{-1} =
 \vtf{q}_2^{-1}\circ\vtf{q}_1^{-1} = \vtf{q}_2^\dagger\circ\vtf{q}_1^\dagger =
 \lpa \vtf{q}_1\circ\vtf{q}_2 \rpa^{T}
 \end{equation}
-show, for all $\vtf{q}_1,\vtf{q}_2\in O$, that bijection\footnote{See properties on page \pageref{prop:Composicao}.}  $\vtf{q}_1\circ\vtf{q}_2$ belongs to the set $O$. In the context of real fields, groups and linear operators are qualified as orthogonal. There are also linear operators that preserve metrics or distance, when they are called \textsb{isometric operators}\index{operator!isometric}. In more rigorous terms, $\vtf{k}\in V^V_\mathcal{R}$ is an isometric operator if it is a linear bijection where $\varrho\,[\fua{\vtf{k}}{\vto{u}},\fua{\vtf{k}}{\vto{v}}]=\fua{\varrho}{\vto{u},\vto{v}}$, for all $\vto{u},\vto{v}\in V_\mathcal{R}$. Similarly to unitary operators, the set os all isometric operators defines a group $(I,\circ)$ called \textsb{isometry group}\index{group!isometry}, since the composition of isometric operators is also an isometric operator, that is, considering any $\vtf{k},\vtf{g}\in I$, we have
+show, for all $\vtf{q}_1,\vtf{q}_2\in O$, that bijection\footnote{See properties on page \pageref{prop:Composicao}.}  $\vtf{q}_1\circ\vtf{q}_2$ belongs to the set $O$. In the context of real fields, unitary groups and unitary linear operators are qualified as orthogonal. There are also linear operators that preserve metrics or distance, when they are called \textsb{isometric operators}\index{operator!isometric}. In more rigorous terms, $\vtf{k}\in \evl{\mathcal{R}}{V}{V}$ is an isometric operator if it is a bijection where $\varrho\,[\fua{\vtf{k}}{\vto{u}},\fua{\vtf{k}}{\vto{v}}]=\fua{\varrho}{\vto{u},\vto{v}}$, for all $\vto{u},\vto{v}\in V_\mathcal{R}$. Similarly to unitary operators, the set os all isometric operators defines a group $(I,\circ)$ called \textsb{isometry group}\index{group!isometry}, since the composition of isometric operators is also an isometric operator, that is, considering any $\vtf{k},\vtf{g}\in I$, we have
 \begin{equation}
-\varrho\,\lco\fua{\vtf{g}\circ\vtf{k}}{\vto{u}},\fua{\vtf{g}\circ\vtf{k}}{\vto{v}}\rco = \varrho\,\lco{\fua{\vtf{g}}{\vto{u}},\fua{\vtf{g}}{\vto{v}}}\rco=\fua{\varrho}{\vto{u},\vto{v}}
+\varrho\,\lco\fua{\vtf{g}\circ\vtf{k}}{\vto{u}},\fua{\vtf{g}\circ\vtf{k}}{\vto{v}}\rco = \varrho\,\lco{\fua{\vtf{k}}{\vto{u}},\fua{\vtf{k}}{\vto{v}}}\rco=\fua{\varrho}{\vto{u},\vto{v}}
 \end{equation}
- 
-
-No capítulo anterior, dissemos que o conjunto de todos os operadores unários inversíveis constitui um grupo na operação de composição. Vejamos agora se o conjunto $O\subset V^V_\mathcal{R}$ de todos os operadores unitários, por serem operadores unários e inversíveis, define o grupo $(\gloref{grOrto},\circ)$, denominado \textsb{grupo unitário}\index{grupo!unitário}. Isso pode ser verificado pelas igualdades
-\begin{equation}
-\lpa \vtf{q}_1\circ\vtf{q}_2 \rpa^{-1} =
-\vtf{q}_2^{-1}\circ\vtf{q}_1^{-1} = \vtf{q}_2^\dagger\circ\vtf{q}_1^\dagger =
-\lpa \vtf{q}_1\circ\vtf{q}_2 \rpa^{T}
-\end{equation}
-que evidenciam, para quaisquer $\vtf{q}_1,\vtf{q}_2\in O$, a bijeção\footnote{Ver propriedades na página \pageref{prop:Composicao}.} $\vtf{q}_1\circ\vtf{q}_2$ como elemento do conjunto $O$. Grupos e operadores unitários no contexto de campos reais são denominados ortogonais. Além desse tipo de operador linear, há os que preservam a métrica ou a distância, quando são chamados \textsb{operadores isométricos}\index{operador!isométrico}. Em termos mais rigorosos, $\vtf{k}\in V^V_\mathcal{R}$ é um operador isométrico quando for uma bijeção linear onde  $\varrho\,[\fua{\vtf{k}}{\vto{u}},\fua{\vtf{k}}{\vto{v}}]=\fua{\varrho}{\vto{u},\vto{v}}$, para quaisquer $\vto{u},\vto{v}\in V_\mathcal{R}$. De maneira similar aos operadores unitários, o conjunto de todas os operadores isométricos define um grupo $(I,\circ)$, denominado \textsb{grupo isométrico}\index{grupo!isométrico}, porque a composição de operadores isométricos é também uma operador isométrico, ou seja, considerando quaisquer $\vtf{k},\vtf{g}\in I$, tem-se
-\begin{equation}
-\varrho\,\lco\fua{\vtf{g}\circ\vtf{k}}{\vto{u}},\fua{\vtf{g}\circ\vtf{k}}{\vto{v}}\rco = \varrho\,\lco{\fua{\vtf{g}}{\vto{u}},\fua{\vtf{g}}{\vto{v}}}\rco=\fua{\varrho}{\vto{u},\vto{v}}
-\end{equation}
-para quaisquer $\vto{u},\vto{v}\in V_\mathcal{R}$. \emph{No contexto de espaços Euclidianos, um grupo ortogonal é sempre isométrico porque todo operador que preserva produto interno é uma isométrico. Além disso, um grupo isométrico de operadores lineares sempre preserva produto interno.}
+ for all $\vto{u},\vto{v}\in V_\mathcal{R}$. \emph{In the context of Euclidean spaces, an orthogonal group is also an isometry group because any operator that preserves inner product is isometric. Moreover, the operators of an isometry group always preserve inner product.} 
 
 {\footnotesize
 \begin{proof}
-Convém que verifiquemos essas tão categóricas afirmações. Se $V_\real$ for um espaço Euclidiano e se $\vtf{k}\in V^V_\real$ preservar o produto interno, então
+Let's verify these so categorical last statements. If $V_\real$ is an Euclidean space and if a vector $\vtf{k}\in \evl{\real}{V}{V}$ preserves inner product, then
 \begin{align*}
 	\varrho\lco\fua{\vtf{k}}{\vto{u}},\fua{\vtf{k}}{\vto{v}}\rco^2&=\|\fua{\vtf{k}}{\vto{u}}-\fua{\vtf{k}}{\vto{v}}\|^2\\
 	&=\fua{\vtf{k}}{\vto{u}}\cdot\fua{\vtf{k}}{\vto{u}}-2\fua{\vtf{k}}{\vto{u}}\cdot\fua{\vtf{k}}{\vto{v}}+\fua{\vtf{k}}{\vto{v}}\cdot\fua{\vtf{k}}{\vto{v}}\\
@@ -523,11 +511,12 @@ Convém que verifiquemos essas tão categóricas afirmações. Se $V_\real$ for um es
 	&=\|\vto{u}-\vto{v}\|^2 \\
 	&= \fua{\varrho}{\vto{u},\vto{v}}^2\,,
 \end{align*}
-de onde se constata $\vtf{k}$ uma isometria. Agora, seja $\vtf{g}\in V^V_\real$ uma isometria. Elevando os dois lados da igualdade  $\varrho[\fua{\vtf{g}}{\vto{u}},\fua{\vtf{g}}{\vto{v}}]=\fua{\varrho}{\vto{u},\vto{v}}$ ao quadrado, obtemos
+from which we prove that $\vtf{k}$ is an isometry. Now, let $\vtf{g}\in \evl{\real}{V}{V}$ be an isometry. Raising both sides of equality $\varrho[\fua{\vtf{g}}{\vto{u}},\fua{\vtf{g}}{\vto{v}}]=\fua{\varrho}{\vto{u},\vto{v}}$ to the square, we have 
 \begin{align*}
 \fua{\vtf{g}}{\vto{u}}\cdot\fua{\vtf{g}}{\vto{u}}-2\fua{\vtf{g}}{\vto{u}}\cdot\fua{\vtf{g}}{\vto{v}}+\fua{\vtf{g}}{\vto{v}}\cdot\fua{\vtf{g}}{\vto{v}}&={\vto{u}}\cdot{\vto{u}}-2{\vto{u}}\cdot{\vto{v}}+{\vto{v}}\cdot{\vto{v}}\\
 \varrho[\fua{\vtf{g}}{\vto{u}},\vto{0}]^2-2\fua{\vtf{g}}{\vto{u}}\cdot\fua{\vtf{g}}{\vto{v}}+\varrho[\fua{\vtf{g}}{\vto{v}},\vto{0}]^2&=\fua{\varrho}{\vto{u},\vto{0}}^2-2{\vto{u}}\cdot{\vto{v}}+\fua{\varrho}{\vto{v},\vto{0}}^2\\
 \varrho[\fua{\vtf{g}}{\vto{u}},\fua{\vtf{g}}{\vto{0}}]^2-2\fua{\vtf{g}}{\vto{u}}\cdot\fua{\vtf{g}}{\vto{v}}+\varrho[\fua{\vtf{g}}{\vto{v}},\fua{\vtf{g}}{\vto{0}}]^2&=\fua{\varrho}{\vto{u},\vto{0}}^2-2{\vto{u}}\cdot{\vto{v}}+\fua{\varrho}{\vto{v},\vto{0}}^2\\
+\fua{\varrho}{\vto{u},\vto{0}}^2-2\fua{\vtf{g}}{\vto{u}}\cdot\fua{\vtf{g}}{\vto{v}}+\fua{\varrho}{\vto{v},\vto{0}}^2&=\fua{\varrho}{\vto{u},\vto{0}}^2-2{\vto{u}}\cdot{\vto{v}}+\fua{\varrho}{\vto{v},\vto{0}}^2\\
 \fua{\vtf{g}}{\vto{u}}\cdot\fua{\vtf{g}}{\vto{v}}&= {\vto{u}}\cdot{\vto{v}}\,\,.
 \end{align*}
 \end{proof}
@@ -551,14 +540,25 @@ for all vectors $\vto{x},\vto{y}\in U_\mathcal{R}$ and all scalars $\alpha,\beta
 
 
 
+Considering $V_\mathcal{R}$ a $m$-dimensional complete vector space, let $\vtf{g}$ be an element of the function space $\evl{\mathcal{R}}{U}{V}$. If coordinates are considered for vector identification, when mapping elements of $U$ to elements of $V$, the function $\vtf{g}$ ends up defining indirectly a relationship between two distinct basis, in such a way that the matrix representation of this relationship needs to show both bases. Thereby, if $C=\{\vto{v}_1,\cdots,\vto{v}_m\}$ is a basis of   
+$V_\mathcal{R}$ and $\vto{u}\in U_\mathcal{R}$, we have
+\begin{align*}
+\fua{\vtf{g}}{\vto{u}}&= \sum_{i=1}^{m}\fua{\vtf{f}^\con{C}_{i}}{\fua{\vtf{g}}{\vto{u}}}\vto{v}_i\nonumber\\
+\fua{\vtf{g}}{\vto{u}}&=\sum_{i=1}^{m}\vtf{f}^\con{C}_{i}  [ \sum_{j=1}^{n} \fua{\vtf{f}^\con{B}_{j}}{\vto{u}}\fua{\vtf{g}}{\vto{u}_j}]\vto{v}_i\nonumber\\
+\fua{\vtf{g}}{\vto{u}}&=\sum_{i=1}^{m}\sum_{j=1}^{n} \vtf{f}^\con{C}_{i}\lco\fua{\vtf{g}}{\vto{u}_j}  \rco\fua{\vtf{f}^\con{B}_{j}}{\vto{u}}\vto{v}_i\,,\nonumber
+\end{align*}
+when we can state that
+\begin{equation}\label{eq:repMatMape}
+\mav{\fua{\vtf{g}}{\vto{u}}}{C}=\maf{\vtf{g}}{B}{C}\mav{\vto{u}}{B}\,,
+\end{equation}
+where \gloref{repFun} is a $m\times n$ matrix, with elements $\maf{\vtf{g}}{B}{C}_{ij}:=\vtf{f}^\con{C}_{i}\lco\fua{\vtf{g}}{\vto{u}_j}\rco$, that represents the linear function $\vtf{g}\in\evl{\mathcal{R}}{U}{V}$ on bases $B$ and $C$. In other words, for bases $B$ and $C$ with dimensions $n$ and $m$ respectively, the $m\times 1$ representative matrix of vector $\fua{\vtf{g}}{\vto{u}}$ on $C$ results from the $m\times n$ representative matrix of function 
+$\vtf{g}$ on $B$ and $C$ multiplied by the $n\times 1$ representative matrix of vector $\vto{u}$ on $B$. Using a similar development that led to this previous result, given $\vtf{h}\in\evl{\mathcal{R}}{U}{V}$ and $\alpha,\beta\in\mathcal{R}$, we obtain the following equality:
+\begin{equation}
+\mav{[\fua{\alpha\vtf{g}+\beta\vtf{h}]}{\vto{u}}}{C}=\lpa\alpha\maf{\vtf{g}}{B}{C}+\beta\maf{\vtf{h}}{B}{C}\rpa\mav{\vto{u}}{B}\,.
+\end{equation}
 
 
 
-
-
-
-
-        
 
 
 
