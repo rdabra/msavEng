@@ -528,7 +528,7 @@ from which we prove that $\vtf{k}$ is an isometry. Now, let $\vtf{g}\in \evl{\re
 \section{Matrix Representations}
 
 
-We already know that a vector can be identified through its coordinates, represented by a tuple, on a specific basis, in such a way that distinct tuples never imply equal vectors; this vector-coordinates relationship is thus biunivocal. Thereby, mathematical expressions with vectors may include their coordinate scalars, gathered conveniently in matrices, when all the functional-arithmetic apparatus presented in the previous chapter, applicable to this type of collection, becomes available. The resulting relationship between vectors and matrices is also biunivocal and, as in the case of tuples, basis dependent. In practical terms, the matrix representation of a vector occurs the following way: let $\vto{u}$ be any element of vector space $U_\mathcal{R}$, of which subset $B=\{\vto{u}_1,\cdots,\vto{u}_n\}$ is a basis. Then, we define a $n\times 1$ matrix \gloref{repVet} as being the \textsb{representative matrix}\index{matrix!representative} of $\vto{u}$ on $B$, whose elements $\mav{\vto{u}}{B}_{i1}:=\fua{\vtf{f}^\con{B}_{i}}{\vto{u}}$. This definition makes it obvious that the representative matrix of the zero vector is always the zero matrix, on any basis. Moreover, the linearity of coordinate functionals enables the following development:
+We already know that a vector can be identified through its coordinates, represented by a tuple, on a specific basis, in such a way that distinct tuples never imply equal vectors; this vector-coordinates relationship is thus biunivocal. Thereby, mathematical expressions with vectors may include their coordinate scalars, gathered conveniently in matrices, when all the functional-arithmetic apparatus presented in the previous chapter, applicable to this type of collection, becomes available. Given a certain basis, the resulting relationship between vectors and matrices is also biunivocal, as in the case of tuples representing coordinates. In practical terms, the matrix representation of a vector occurs the following way: let $\vto{u}$ be any element of vector space $U_\mathcal{R}$, of which subset $B=\{\vto{u}_1,\cdots,\vto{u}_n\}$ is a basis. Then, we define a $n\times 1$ matrix \gloref{repVet} as being the \textsb{representative matrix}\index{matrix!representative} of $\vto{u}$ on $B$, whose elements $\mav{\vto{u}}{B}_{i1}:=\fua{\vtf{f}^\con{B}_{i}}{\vto{u}}$. This definition makes it obvious that the representative matrix of the zero vector is always the zero matrix, on any basis. Moreover, the linearity of coordinate functionals enables the following development:
 \begin{equation*}
 	\alpha\sum_{i=1}^{n}\fua{\vtf{f}^\con{B}_{i}}{\vto{x}}\vto{u}_i+\beta\sum_{i=1}^{n}\fua{\vtf{f}^\con{B}_{i}}{\vto{y}}\vto{u}_i= \sum_{i=1}^{n}\lco\alpha\fua{\vtf{f}^\con{B}_{i}}{\vto{x}}+\beta\fua{\vtf{f}^\con{B}_{i}}{\vto{y}}\rco\vto{u}_i=\sum_{i=1}^{n}\fua{\vtf{f}^\con{B}_{i}}{\alpha\vto{x}+\beta\vto{y}}\vto{u}_i,
 \end{equation*}
@@ -539,8 +539,7 @@ from where it is possible to conclude that
 for all vectors $\vto{x},\vto{y}\in U_\mathcal{R}$ and all scalars $\alpha,\beta\in\mathcal{R}$. Now, concerning the vectors of basis $B$, if we represent them relative to $B$ itself, we have $\mav{\vto{u}_j}{B}_{i1}=\fua{\vtf{f}^\con{B}_{i}}{\vto{u}_j}=\delta_{ij}$. This representation strategy is frequent for the natural basis $O=\{\vun{e}_1,\cdots,\vun{e}_n\}$ of Euclidean spaces, where $\mav{\vun{e}_j}{O}_{i1}=\delta_{ij}\,$. 
 
 
-
-Considering $V_\mathcal{R}$ a $m$-dimensional complete vector space, let $\vtf{g}$ be an element of the function space $\evl{\mathcal{R}}{U}{V}$. If coordinates are considered for vector identification, when mapping elements of $U$ to elements of $V$, the function $\vtf{g}$ ends up defining indirectly a relationship between two distinct basis, in such a way that the matrix representation of this relationship needs to show both bases. Thereby, if $C=\{\vto{v}_1,\cdots,\vto{v}_m\}$ is a basis of   
+Considering $V_\mathcal{R}$ a $m$-dimensional complete vector space, let $\vtf{g}$ be an element of the function space $\evl{\mathcal{R}}{U}{V}$. If coordinates are considered for vector identification, when mapping elements of $U$ to elements of $V$ the function $\vtf{g}$ ends up defining indirectly a relationship between two distinct basis, in such a way that the matrix representation of this relationship needs to evidence both bases. Thereby, if $C=\{\vto{v}_1,\cdots,\vto{v}_m\}$ is a basis of   
 $V_\mathcal{R}$ and $\vto{u}\in U_\mathcal{R}$, we have
 \begin{align*}
 \fua{\vtf{g}}{\vto{u}}&= \sum_{i=1}^{m}\fua{\vtf{f}^\con{C}_{i}}{\fua{\vtf{g}}{\vto{u}}}\vto{v}_i\nonumber\\
@@ -556,56 +555,38 @@ $\vtf{g}$ on $B$ and $C$ multiplied by the $n\times 1$ representative matrix of 
 \begin{equation}
 \mav{[\fua{\alpha\vtf{g}+\beta\vtf{h}]}{\vto{u}}}{C}=\lpa\alpha\maf{\vtf{g}}{B}{C}+\beta\maf{\vtf{h}}{B}{C}\rpa\mav{\vto{u}}{B}\,.
 \end{equation}
-
-
-
-
-
-
-Considerando $V_\mathcal{R}$ um espaço vetorial $m$-dimensional, seja $\vtf{g}$ um elemento qualquer de um espaço de funções $\evl{\mathcal{R}}{U}{V}$. No ato de mapear vetores de $U$ para vetores de $V$, a função $\vtf{g}$ termina por relacionar indiretamente duas bases distintas, de tal forma que a representação matricial desse relacionamento precisa evidenciar ambas as bases. Diante disso, se $C=\{\vto{v}_1,\cdots,\vto{v}_m\}$ for uma base de $V_\mathcal{R}$ e $\vto{u}\in U_\mathcal{R}$ um vetor qualquer, temos
-\begin{align*}
-\fua{\vtf{g}}{\vto{u}}&= \sum_{i=1}^{m}\fua{\vtf{f}^\con{C}_{i}}{\fua{\vtf{g}}{\vto{u}}}\vto{v}_i\nonumber\\
-\fua{\vtf{g}}{\vto{u}}&=\sum_{i=1}^{m}\vtf{f}^\con{C}_{i}  \lco \sum_{j=1}^{n} \fua{\vtf{f}^\con{B}_{j}}{\vto{u}}\fua{\vtf{g}}{\vto{u}_j}\rco\vto{v}_i\nonumber\\
-\fua{\vtf{g}}{\vto{u}}&=\sum_{i=1}^{m}\sum_{j=1}^{n} \vtf{f}^\con{C}_{i}\lco\fua{\vtf{g}}{\vto{u}_j}  \rco\fua{\vtf{f}^\con{B}_{j}}{\vto{u}}\vto{v}_i\,,\nonumber
-\end{align*}
-quando podemos afirmar que
-\begin{equation}\label{eq:repMatMape}
-\mav{\fua{\vtf{g}}{\vto{u}}}{C}=\maf{\vtf{g}}{B}{C}\mav{\vto{u}}{B}\,,
-\end{equation}
-onde \gloref{repFun} é a matriz $m\times n$ de elementos $\maf{\vtf{g}}{B}{C}_{ij}:=\vtf{f}^\con{C}_{i}\lco\fua{\vtf{g}}{\vto{u}_j}\rco$, representativa nas bases $B$ e $C$ da função linear $\vtf{g}\in\evl{\mathcal{R}}{U}{V}$. Em outras palavras, para bases quaisquer $B$ e $C$ de dimensão $n$ e $m$ respectivamente, a matriz $m\times 1$ representativa em $C$ do valor $\fua{\vtf{g}}{\vto{u}}$ resulta do produto da matriz $m\times n$, representativa em $B$ e $C$ da função $\vtf{g}$, com a matriz $n\times 1$ representativa em $B$ do vetor $\vto{u}$. Do procedimento  que conduziu à esse resultado, dados $\vtf{h}\in\evl{\mathcal{R}}{U}{V}$ e $\alpha,\beta\in\mathcal{R}$, pode-se obter também a igualdade
+It is possible that $U$ equals $V$, when the functions involved result in linear operators. Moreover, bases $B$ and $C$ may also be equal, which enables us to write, for example, $\mav{\fua{\vtf{g}}{\vto{u}}}{B}=\maf{\vtf{g}}{B}{B}\mav{\vto{u}}{B}$, from which $\maf{\vtf{g}}{B}{B}$ is said to be the representative matrix of linear operator $\vtf{g}$ on $B$. Composite linear functions can also be represented in matrix form. Let's see how. Considering $\vtf{l}$ a function in space $\evl{\mathcal{R}}{V}{W}$, set $Z$ a basis of $q$-dimensional complete vector space $W_\mathcal{R}$ and $\vto{v}=\fua{\vtf{g}}{\vto{u}}$ a vector of $V_\mathcal{R}$, we can write that matrix
+$\mav{\fua{\vtf{l}}{\vto{v}}}{Z}=\maf{\vtf{l}}{C}{Z}\mav{\vto{v}}{C}$. From this equality, we obtain
 \begin{equation}
-\mav{[\fua{\alpha\vtf{g}+\beta\vtf{h}]}{\vto{u}}}{C}=\lpa\alpha\maf{\vtf{g}}{B}{C}+\beta\maf{\vtf{h}}{B}{C}\rpa\mav{\vto{u}}{B}\,.
+\mav{\fua{\vtf{l}\circ\vtf{g}}{\vto{u}}}{Z}=\maf{\vtf{l}}{C}{Z}\mav{\fua{\vtf{g}}{\vto{u}}}{C}=\maf{\vtf{l}}{C}{Z}\maf{\vtf{g}}{B}{C}\mav{\vto{u}}{B}\,,
 \end{equation}
-Pode ocorrer que $U$ seja igual a $V$, quando as funções envolvidas resultam operadores lineares. Diante disso, as bases $B$ e $C$ também podem ser iguais, o que nos permite escrever, por exemplo,  $\mav{\fua{\vtf{g}}{\vto{u}}}{B}=\maf{\vtf{g}}{B}{B}\mav{\vto{u}}{B}$, de onde se diz que $\maf{\vtf{g}}{B}{B}$ é a matriz representativa em $B$ do operador linear $\vtf{g}$.
-
-
-As funções lineares compostas também podem ser representadas em termos matriciais. Vejamos como. Considerando $\vtf{l}$ uma função do espaço $\evl{\mathcal{R}}{V}{W}$, o conjunto $Z$ uma base do espaço vetorial $q$-dimensional $W_\mathcal{R}$ e $\vto{v}=\fua{\vtf{g}}{\vto{u}}$ um vetor de $W_\mathcal{R}$, podemos escrever
-$\mav{\fua{\vtf{l}}{\vto{v}}}{Z}=\maf{\vtf{l}}{C}{Z}\mav{\vto{v}}{C}$. Dessa igualdade, resulta que a matriz
-\begin{equation}
-\mav{\fua{\vtf{l}\circ\vtf{g}}{\vto{u}}}{Z}=\maf{\vtf{l}}{C}{Z}\mav{\fua{\vtf{g}}{\vto{u}}}{C}=\maf{\vtf{l}}{C}{Z}\maf{\vtf{g}}{B}{C}\mav{\vto{u}}{B}\,.
-\end{equation}
-Aproveitando esse interessante resultado, se a função linear $\vtf{g}$ for uma bijeção e a dimensão $m=n$, temos então que
+which can be used to write 
 \begin{equation}\label{eq:matRepInv}
-\mav{\vto{u}}{B}=\mav{\fua{\vtf{g}^{-1}\circ\vtf{g}}{\vto{u}}}{B}=\maf{\vtf{g}^{-1}_C}{}{B}\maf{\vtf{g}}{B}{C}\mav{\vto{u}}{B} \implies \maf{\vtf{g}^{-1}_C}{}{B} = {\maf{\vtf{g}}{B}{C}}^{-1}\,.
+\mav{\vto{u}}{B}=\mav{\fua{\vtf{g}^{-1}\circ\vtf{g}}{\vto{u}}}{B}=\maf{\vtf{g}^{-1}_C}{}{B}\maf{\vtf{g}}{B}{C}\mav{\vto{u}}{B} \implies \maf{\vtf{g}^{-1}_C}{}{B} = {\maf{\vtf{g}}{B}{C}}^{-1}
 \end{equation}
-Em termos matriciais, o produto interno dos vetores $\vto{x},\vto{y}\in X_\mathcal{R}$, onde $X_\mathcal{R}$ é um espaço de Hilbert, pode ser descrito por uma das seguintes igualdades:
+if the linear function $\vtf{g}$ is a bijection and dimension $m=n$.
+
+
+The inner product of vectors $\vto{x},\vto{y}\in X_\mathcal{R}$, where $X_\mathcal{R}$ is a Hilbert space, can be represented through the following equalities:
 \begin{equation}
-\vto{x}\cdot\vto{y} = \lpa\mav{\vto{x}}{B}{\mav{\vto{y}}{B^\perp}}^\text{T}\rpa_{11} = \lpa{\mav{\vto{x}}{B}}^\text{T}{\mav{\vto{y}}{B^\perp}}\rpa_{11}\,,
+\vto{x}\cdot\vto{y} = [\mav{\vto{x}}{B}\,{\mav{\vto{y}}{B^\perp}}^{\dagger}]_{11} = [{\mav{\vto{x}}{B}}^\text{T}\,{\overline{\mav{\vto{y}}{B^\perp}}}]_{11}\,,
 \end{equation}
-conforme a igualdade \eqref{eq:prodIntGen}. Se a função $\vtf{g}\in\evl{\mathcal{R}}{X}{Y}$, onde $Y_\mathcal{R}$ também é um espaço de Hilbert, possui um transposta adjunta, a partir dos vetores das bases $B=\{\vto{x}_i,\cdots,\vto{x}_n\}$ de $U_\mathcal{R}$ e $C=\{\vto{y}_i,\cdots,\vto{y}_m\}$ de $Y_\mathcal{R}$, podemos realizar o desenvolvimento a seguir:
+according to equality \eqref{eq:prodIntGen}. The rule \eqref{eq:regraFuncCoord} enables us to obtain an important property involving adjoint functions and conjugate transpose matrices: considering that a function $\vtf{g}\in\evl{\mathcal{R}}{X}{Y}$, where $Y_\mathcal{R}$ is also a Hilbert space, has an adjoint function, from bases $B=\{\vto{x}_i,\cdots,\vto{x}_n\}$ of $X_\mathcal{R}$ and $C=\{\vto{y}_i,\cdots,\vto{y}_m\}$ of $Y_\mathcal{R}$, we have
 \begin{align}\label{eq:matRepTransp}
 \fua{\vtf{g}}{\vto{x}_i}\cdot \vto{y}^j &= \overline{\vtf{g}^\dagger(\vto{y}^j)\cdot\vto{x}_i}\nonumber\\
 \vtf{f}^C_j\lco\fua{\vtf{g}}{\vto{x}_i}\rco &=\overline{\vtf{f}^{B^\perp}_i[\vtf{g}^\dagger(\vto{y}^j)]}\nonumber\\
+\overline{\vtf{f}^C_j\lco\fua{\vtf{g}}{\vto{x}_i}\rco} &=\vtf{f}^{B^\perp}_i[\vtf{g}^\dagger(\vto{y}^j)]\nonumber\\
 {\maf{\vtf{g}}{B}{C}}^\dagger&=[\vtf{g}^\dagger_{C^\perp}]^{B^\perp}\,,
 \end{align}
-onde as matrizes à direita e à esquerda têm dimensão $n\times m$.
+where left and right matrices have dimension $n\times m$. 
 
-Há conceitos que surgem a partir destas representações matriciais de vetores e funções lineares. Um deles, de fundamental importância, denominamos \textsb{mudança de coordenadas}\index{mudança!de coordenadas}. Neste nosso estudo, \emph{mudar as coordenadas de um vetor ou operador linear de uma base $B$ para uma base $C$ significa relacionar univocamente a matriz representativa desse vetor ou operador linear em $B$ com sua respectiva matriz representativa em $C$}. Para fundamentar matematicamente essa ideia, apresentamos o teorema a seguir.
+There are concepts that arise from all these matrix representations of vectors and linear functions. One of them has a fundamental relevance for us and we call it \textsb{change of coordinates}\index{coordinates!change of}. In this study, \emph{to change coordinates of a vector or linear operator from a basis $B$ to a basis $C$ means to relate biunivocaly the representative matrix of this vector or linear operator on $B$ with its representative matrix on $C$}. In order to mathematically substantiate this idea, here is the following theorem. 
 
-\begin{mteo}{Mudança de Coordenadas em Vetores}{mudCoordVec}
-Se $U(B)_\mathcal{R}$ e $U(C)_\mathcal{R}$ são espaços vetoriais constituídos pelas matrizes representativas dos vetores de um espaço vetorial $U_\mathcal{R}$ nas suas  bases $B$ e $C$ respectivamente, há uma única transformação linear bijetora $\map{\Gamma}{U(B)_\mathcal{R}}{U(C)_\mathcal{R}}$, denominada mudança de coordenadas de $B$ para $C$, onde ${\Gamma}({\mav{\vto{x}}{B}})=\mav{\vto{x}}{C}$ para qualquer $\vto{x}\in U_\mathcal{R}$.
+
+\begin{mteo}{Change of Coordinates of Vectors}{mudCoordVec}
+If $U(B)_\mathcal{R}$ and $U(C)_\mathcal{R}$ are vector spaces constituted by representative matrices of the elements of vector space $U_\mathcal{R}$ on its bases $B$ and $C$ respectively, there is only one linear bijective transformation $\map{\Gamma}{U(B)_\mathcal{R}}{U(C)_\mathcal{R}}$, called change of coordinates from $B$ to $C$, where  ${\Gamma}({\mav{\vto{x}}{B}})=\mav{\vto{x}}{C}$ for all $\vto{x}\in U_\mathcal{R}$.    
 \end{mteo}
-
+\hspace{1pt}
 {\footnotesize
 \begin{proof}
 Se $B=\{\vto{x}_1,\vto{x}_2\}$ e $C=\{\alpha_1\vto{x}_1,\alpha_2\vto{x}_2\}$, a existência de $\Gamma$ fica garantida pela regra
