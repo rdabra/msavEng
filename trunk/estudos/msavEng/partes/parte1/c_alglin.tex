@@ -361,13 +361,13 @@ Particularly, if $\mathcal{R}=\real$, the function $\vtf{g}^\dagger$ is called t
 
 {\footnotesize
 \begin{proof}
-Firstly, we need to prove the existence and uniqueness of transpose functions. On equality \eqref{eq:funcaoTransposta}, let's consider $\vto{u}=\vun{u}_k$ and $\vto{v}=\vun{v}_k$, where vectors on the right sides belong to orthonormal bases $\hat{B}_1$ and $\hat{B}_2$ of $n$-dimensional Hilbert spaces $U_\mathcal{R}$ and $V_\mathcal{R}$ respectively. Thereby, we can develop the following:
+Firstly, we need to prove the existence and uniqueness of adjoint functions. On equality \eqref{eq:funcaoTransposta}, let's consider $\vto{u}=\vun{u}_k$ and $\vto{v}=\vun{v}_k$, where vectors on the right sides belong to orthonormal bases $\hat{B}_1$ and $\hat{B}_2$ of $n$-dimensional Hilbert spaces $U_\mathcal{R}$ and $V_\mathcal{R}$ respectively. Thereby, we can develop the following:
 \begin{align*}
 \vun{u}_k\cdot\fua{\vtf{g}^\dagger}{\vun{v}_k}&=\fua{\vtf{g}}{\vun{u}_k}\cdot\vun{v}_k\\
 \vun{u}_k\cdot\sum_{i=1}^n{\vtf{f}_i^{B_2}}[\fua{\vtf{g}^\dagger}{\vun{v}_k}]\vun{u}_i&=\sum_{i=1}^n{\vtf{f}_i^{B_1}}\lco\fua{\vtf{g}}{\vun{u}_k}\rco\vun{v}_i\cdot\vun{v}_k\\
 \overline{{\vtf{f}_k^{B_2}}[\fua{\vtf{g}^\dagger}{\vun{v}_k}]}&={\vtf{f}_k^{B_1}}\lco\fua{\vtf{g}}{\vun{u}_k}\rco\,.
 \end{align*}
-From this result, it can be said that if $\vtf{g}$ exists, so does $\vtf{g}^\dagger$. Now, supposing the existence of two transpose functions $\vtf{g}_1^\dagger$ and $\vtf{g}_2^\dagger$ of $\vtf{g}$, there are two equalities similar to \eqref{eq:funcaoTransposta}. Subtracting one from the other, we obtain $\vto{u}\cdot(\fua{\vtf{g}_1^\dagger}{\vto{v}}-\fua{\vtf{g}_2^\dagger}{\vto{v}})=0$, which is valid for all $\vto{u}$ and $\vto{v}$; thereby, $\vtf{g}_1^\dagger=\vtf{g}_2^\dagger$. Considering the properties now, the first can be verified from  $\fua{\lpa\alpha\vtf{g}\rpa^\dagger}{\vto{u}}\cdot\vto{v}=\vto{u}\cdot\alpha\fua{\vtf{g}}{\vto{v}}$ and from  $\overline{\alpha}\fua{\vtf{g}^\dagger}{\vto{u}}\cdot\vto{v}=\vto{u}\cdot\alpha\fua{\vtf{g}}{\vto{v}}$, which results from the conjugate linearity of the inner product. The second can be proved from $\fua{\vtf{g}\circ\vtf{k}}{\vto{u}}\cdot\vto{v}=\fua{\vtf{k}}{\vto{u}}\cdot\fua{\vtf{g}^\dagger}{\vto{v}}=\vto{u}\cdot\fua{\vtf{k}^\dagger\circ\vtf{g}^\dagger}{\vto{u}}$. Let's verify if the adjoint of a linear function is also linear: given a scalar $\alpha\in\mathcal{R}$,
+From this result, it can be said that if $\vtf{g}$ exists, so does $\vtf{g}^\dagger$. Now, supposing the existence of two adjoint functions $\vtf{g}_1^\dagger$ and $\vtf{g}_2^\dagger$ of $\vtf{g}$, there are two equalities similar to \eqref{eq:funcaoTransposta}. Subtracting one from the other, we obtain $\vto{u}\cdot(\fua{\vtf{g}_1^\dagger}{\vto{v}}-\fua{\vtf{g}_2^\dagger}{\vto{v}})=0$, which is valid for all $\vto{u}$ and $\vto{v}$; thereby, $\vtf{g}_1^\dagger=\vtf{g}_2^\dagger$. Considering the properties now, the first can be verified from  $\fua{\lpa\alpha\vtf{g}\rpa^\dagger}{\vto{u}}\cdot\vto{v}=\vto{u}\cdot\alpha\fua{\vtf{g}}{\vto{v}}$ and from  $\overline{\alpha}\fua{\vtf{g}^\dagger}{\vto{u}}\cdot\vto{v}=\vto{u}\cdot\alpha\fua{\vtf{g}}{\vto{v}}$, which results from the conjugate linearity of the inner product. The second can be proved from $\fua{\vtf{g}\circ\vtf{k}}{\vto{u}}\cdot\vto{v}=\fua{\vtf{k}}{\vto{u}}\cdot\fua{\vtf{g}^\dagger}{\vto{v}}=\vto{u}\cdot\fua{\vtf{k}^\dagger\circ\vtf{g}^\dagger}{\vto{u}}$. Let's verify if the adjoint of a linear function is also linear: given a scalar $\alpha\in\mathcal{R}$,
 \begin{equation*}
 \vto{v}\cdot\fua{\vtf{g}^\dagger}{\ele{a}\vto{u}}=\overline{\alpha}\lco\fua{\vtf{g}}{\vto{v}}\cdot\vto{u}\rco=\overline{\alpha}[\vto{v}\cdot\fua{\vtf{g}^\dagger}{\vto{u}}]=\vto{v}\cdot\alpha\fua{\vtf{g}^\dagger}{\vto{u}}.
 \end{equation*} 
@@ -571,7 +571,7 @@ The inner product of vectors $\vto{x},\vto{y}\in X_\mathcal{R}$, where $X_\mathc
 \begin{equation}
 \vto{x}\cdot\vto{y} = [\mav{\vto{x}}{B}\,{\mav{\vto{y}}{B^\perp}}^{\dagger}]_{11} = [{\mav{\vto{x}}{B}}^\text{T}\,{\overline{\mav{\vto{y}}{B^\perp}}}]_{11}\,,
 \end{equation}
-according to equality \eqref{eq:prodIntGen}. The rule \eqref{eq:regraFuncCoord} enables us to obtain an important property involving adjoint functions and conjugate transpose matrices: considering that a function $\vtf{g}\in\evl{\mathcal{R}}{X}{Y}$, where $Y_\mathcal{R}$ is also a Hilbert space, has an adjoint function, from bases $B=\{\vto{x}_i,\cdots,\vto{x}_n\}$ of $X_\mathcal{R}$ and $C=\{\vto{y}_i,\cdots,\vto{y}_m\}$ of $Y_\mathcal{R}$, we have
+according to equality \eqref{eq:prodIntGen}. The rule \eqref{eq:regraFuncCoord} enables us to obtain an important property involving adjoint functions and conjugate transpose matrices: considering that a function $\vtf{g}\in\evl{\mathcal{R}}{X}{Y}$, where $Y_\mathcal{R}$ is also a Hilbert space, has an adjoint function, from bases $B=\{\vto{x}_i,\cdots,\vto{x}_n\}$ of $X_\mathcal{R}$ and $C=\{\vto{y}_j,\cdots,\vto{y}_m\}$ of $Y_\mathcal{R}$, we have
 \begin{align}\label{eq:matRepTransp}
 \fua{\vtf{g}}{\vto{x}_i}\cdot \vto{y}^j &= \overline{\vtf{g}^\dagger(\vto{y}^j)\cdot\vto{x}_i}\nonumber\\
 \vtf{f}^C_j\lco\fua{\vtf{g}}{\vto{x}_i}\rco &=\overline{\vtf{f}^{B^\perp}_i[\vtf{g}^\dagger(\vto{y}^j)]}\nonumber\\
@@ -580,11 +580,11 @@ according to equality \eqref{eq:prodIntGen}. The rule \eqref{eq:regraFuncCoord} 
 \end{align}
 where left and right matrices have dimension $n\times m$. 
 
-There are concepts that arise from all these matrix representations of vectors and linear functions. One of them has a fundamental relevance for us and we call it \textsb{change of coordinates}\index{coordinates!change of}. In this study, \emph{to change coordinates of a vector or linear operator from a basis $B$ to a basis $C$ means to relate biunivocaly the representative matrix of this vector or linear operator on $B$ with its representative matrix on $C$}. In order to mathematically substantiate this idea, here is the following theorem. 
+There are concepts that arise from all these matrix representations of vectors and linear functions. One of them has a fundamental importance for us and we call it \textsb{change of coordinates}\index{coordinates!change of}. In this study, \emph{to change coordinates of a vector or linear operator from a basis $B$ to a basis $C$ means to relate biunivocaly the representative matrix of this vector or linear operator on $B$ with its representative matrix on $C$}. In order to mathematically substantiate this idea, here is the following theorem. 
 
 
 \begin{mteo}{Change of Coordinates of Vectors}{mudCoordVec}
-If $U(B)_\mathcal{R}$ and $U(C)_\mathcal{R}$ are vector spaces constituted by representative matrices of the elements of vector space $U_\mathcal{R}$ on its bases $B$ and $C$ respectively, there is only one linear bijective transformation $\map{\Gamma}{U(B)_\mathcal{R}}{U(C)_\mathcal{R}}$, called change of coordinates from $B$ to $C$, where  ${\Gamma}({\mav{\vto{x}}{B}})=\mav{\vto{x}}{C}$ for all $\vto{x}\in U_\mathcal{R}$.    
+If $U(B)_\mathcal{R}$ and $U(C)_\mathcal{R}$ are vector spaces constituted by representative matrices of the elements of vector space $U_\mathcal{R}$ on its bases $B$ and $C$ respectively, there is one and only one linear bijective transformation $\map{\Gamma}{U(B)_\mathcal{R}}{U(C)_\mathcal{R}}$, called change of coordinates from $B$ to $C$, where  ${\Gamma}({\mav{\vto{x}}{B}})=\mav{\vto{x}}{C}$ for all $\vto{x}\in U_\mathcal{R}$.    
 \end{mteo}
 \hspace{1pt}
 {\footnotesize
