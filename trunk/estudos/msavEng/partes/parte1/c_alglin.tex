@@ -385,10 +385,10 @@ $\{\vtf{g}_1,\cdots,\vtf{g}_m\}$ of $V^*_\mathcal{R}$ is a \textsb{dual set}\ind
 \begin{equation*}
 \fua{\vtf{g}_i}{\vto{x}}=\vtf{g}_i(\sum_{j=1}^{n}\fua{\vtf{f}^\con{B}_{j}}{\vto{x}}\vto{u}_j)=\sum_{j=1}^{n}\fua{\vtf{f}^\con{B}_{j}}{\vto{x}}\fua{\vtf{g}_i}{\vto{u}_j}=\sum_{j=1}^{n}\fua{\vtf{f}^\con{B}_{j}}{\vto{x}}\delta_{ij}=\fua{\vtf{f}^\con{B}_{i}}{\vto{x}}\,.
 \end{equation*}
-But a set constituted of coordinate functionals, in this case $B^*:=\{\vtf{f}^\con{B}_1,\cdots,\vtf{f}^\con{B}_n\}$, is a basis of its dual space, that is, a dual set $B^*$ of a basis $B$ is itself a basis of the dual space, when we call it a \textsb{dual basis}\index{basis!dual}. Thereby, we can state that a complete vector space and its dual have the same dimension or that $\dim (V_\mathcal{R})=\dim (V_\mathcal{R}^*)$ in the present context. Given any dual vector $\vtf{h}\in V^*_\mathcal{R}$, equalities 
-\begin{equation*}
+But a set constituted of coordinate functionals, in this case $B^*:=\{\vtf{f}^\con{B}_1,\cdots,\vtf{f}^\con{B}_n\}$, is itself a basis of its dual space, that is, a dual set $B^*$ of a basis $B$ is itself a basis of the dual space, when we call it a \textsb{dual basis}\index{basis!dual}. Thereby, we can state that a complete vector space and its dual have the same dimension or that $\dim (V_\mathcal{R})=\dim (V_\mathcal{R}^*)$ in the present context. Given any dual vector $\vtf{h}\in V^*_\mathcal{R}$, equalities 
+\begin{equation}\label{eq:coordVetorDual}
 \fua{\vtf{h}}{\vto{x}}=\vtf{h}[\,{\sum_{i=1}^n\fua{\vtf{f}_i^B}{\vto{x}}\vto{u}_i}\,]=\sum_{i=1}^n\fua{\vtf{h}}{\vto{u}_i}\fua{\vtf{f}_i^B}{\vto{x}}=[\,\sum_{i=1}^n\fua{\vtf{h}}{\vto{u}_i}\vtf{f}_i^B\,] (\vto{x})
-\end{equation*}
+\end{equation}
 enable to conclude that scalars $\fua{\vtf{h}}{\vto{u}_i}$ are the coordinates of $\vtf{h}$ in $B^*$. It is convenient that this strong correspondence between a complete vector space and its dual becomes even stronger, in such a way that vectors and dual vectors are biunivocaly related, when dual vectors are renamed to \textsb{covectors}\index{covector}. By defining a rule similar to \eqref{eq:regraCoord}, the following theorem, extremely relevant for our study, establishes this one-to-one relationship. 
 
 \begin{mteo}{Riesz-Fréchet Representation}{repRiesz}
@@ -539,7 +539,7 @@ from where it is possible to conclude that
 for all vectors $\vto{x},\vto{y}\in U_\mathcal{R}$ and all scalars $\alpha,\beta\in\mathcal{R}$. Now, concerning the vectors of basis $B$, if we represent them relative to $B$ itself, we have $\mav{\vto{u}_j}{B}_{i1}=\fua{\vtf{f}^\con{B}_{i}}{\vto{u}_j}=\delta_{ij}$. This representation strategy is frequent for the natural basis $O=\{\vun{e}_1,\cdots,\vun{e}_n\}$ of Euclidean spaces, where $\mav{\vun{e}_j}{O}_{i1}=\delta_{ij}\,$. 
 
 
-Considering $V_\mathcal{R}$ a $m$-dimensional complete vector space, let $\vtf{g}$ be an element of the function space $\evl{\mathcal{R}}{U}{V}$. If coordinates are considered for vector identification, when mapping elements of $U$ to elements of $V$ the function $\vtf{g}$ ends up defining indirectly a relationship between two distinct basis, in such a way that the matrix representation of this relationship needs to evidence both bases. Thereby, if $C=\{\vto{v}_1,\cdots,\vto{v}_m\}$ is a basis of   
+Considering $V_\mathcal{R}$ a $m$-dimensional complete vector space, let $\vtf{g}$ be an element of the function space $\evl{\mathcal{R}}{U}{V}$. If coordinates are considered for vector identification, when mapping elements of $U$ to elements of $V$ the function $\vtf{g}$ ends up defining indirectly a relationship between two distinct basis, in such a way that the matrix representation of this relationship needs to evidence both bases. Thereby, if $C=\{\vto{v}_1,\cdots,\vto{v}_m\}$   
 $V_\mathcal{R}$ and $\vto{u}\in U_\mathcal{R}$, we have
 \begin{align*}
 \fua{\vtf{g}}{\vto{u}}&= \sum_{i=1}^{m}\fua{\vtf{f}^\con{C}_{i}}{\fua{\vtf{g}}{\vto{u}}}\vto{v}_i\nonumber\\
@@ -553,7 +553,7 @@ when we can state that
 where \gloref{repFun} is a $m\times n$ matrix, with elements $\maf{\vtf{g}}{B}{C}_{ij}:=\vtf{f}^\con{C}_{i}\lco\fua{\vtf{g}}{\vto{u}_j}\rco$, that represents the linear function $\vtf{g}\in\evl{\mathcal{R}}{U}{V}$ on bases $B$ and $C$. In other words, for bases $B$ and $C$ with dimensions $n$ and $m$ respectively, the $m\times 1$ representative matrix of vector $\fua{\vtf{g}}{\vto{u}}$ on $C$ results from the $m\times n$ representative matrix of function 
 $\vtf{g}$ on $B$ and $C$ multiplied by the $n\times 1$ representative matrix of vector $\vto{u}$ on $B$. Using a similar development that led to this previous result, given $\vtf{h}\in\evl{\mathcal{R}}{U}{V}$ and $\alpha,\beta\in\mathcal{R}$, we obtain the following equality:
 \begin{equation}
-\mav{[\fua{\alpha\vtf{g}+\beta\vtf{h}]}{\vto{u}}}{C}=\lpa\alpha\maf{\vtf{g}}{B}{C}+\beta\maf{\vtf{h}}{B}{C}\rpa\mav{\vto{u}}{B}\,.
+\mav{[\fua{\alpha\vtf{g}+\beta\vtf{h}]}{\vto{u}}}{C}=(\alpha\maf{\vtf{g}}{B}{C}+\beta\maf{\vtf{h}}{B}{C})\mav{\vto{u}}{B}\,.
 \end{equation}
 It is possible that $U$ equals $V$, when the functions involved result in linear operators. Moreover, bases $B$ and $C$ may also be equal, which enables us to write, for example, $\mav{\fua{\vtf{g}}{\vto{u}}}{B}=\maf{\vtf{g}}{B}{B}\mav{\vto{u}}{B}$, from which $\maf{\vtf{g}}{B}{B}$ is said to be the representative matrix of linear operator $\vtf{g}$ on $B$. Composite linear functions can also be represented in matrix form. Let's see how. Considering $\vtf{l}$ a function in space $\evl{\mathcal{R}}{V}{W}$, set $Z$ a basis of $q$-dimensional complete vector space $W_\mathcal{R}$ and $\vto{v}=\fua{\vtf{g}}{\vto{u}}$ a vector of $V_\mathcal{R}$, we can write that matrix
 $\mav{\fua{\vtf{l}}{\vto{v}}}{Z}=\maf{\vtf{l}}{C}{Z}\mav{\vto{v}}{C}$. From this equality, we obtain
@@ -589,58 +589,61 @@ If $U(B)_\mathcal{R}$ and $U(C)_\mathcal{R}$ are vector spaces constituted by re
 \hspace{1pt}
 {\footnotesize
 \begin{proof}
-Se $B=\{\vto{x}_1,\vto{x}_2\}$ e $C=\{\alpha_1\vto{x}_1,\alpha_2\vto{x}_2\}$, a existência de $\Gamma$ fica garantida pela regra
+If $B=\{\vto{x}_1,\vto{x}_2\}$ and $C=\{\alpha_1\vto{x}_1,\alpha_2\vto{x}_2\}$, the existence of $\Gamma$ is assured by the rule
 \begin{equation*}
 \fua{\Gamma}{\mat{X}}=\begin{bmatrix}
 1/\alpha_1 & 0\\
 0&1/\alpha_2
 \end{bmatrix} \mat{X}\,.
 \end{equation*}
-A unicidade de $\Gamma$ é resultado trivial da suposição ${\Gamma_1}({\mav{\vto{x}}{B}})=\mav{\vto{x}}{C}$ e ${\Gamma_2}({\mav{\vto{x}}{B}})=\mav{\vto{x}}{C}$. Nas condições do teorema, podemos afirmar também que $\mav{\alpha\vto{u}+\beta\vto{v}}{B}=\alpha\mav{\vto{u}}{B}+\beta\mav{\vto{v}}{B}$ para quaisquer $\vto{u},\vto{v}\in U_\mathcal{R}$ e $\alpha,\beta\in\mathcal{R}$, de onde se conclui a linearidade de $\Gamma$, ou seja,
+The uniqueness of $\Gamma$ is the trivial result from supposing ${\Gamma_1}({\mav{\vto{x}}{B}})=\mav{\vto{x}}{C}$ and ${\Gamma_2}({\mav{\vto{x}}{B}})=\mav{\vto{x}}{C}$. Now, equality \eqref{eq:repMatMape} enables us to write that $\mav{\alpha\vto{u}+\beta\vto{v}}{B}=\alpha\mav{\vto{u}}{B}+\beta\mav{\vto{v}}{B}$
+for all $\vto{u},\vto{v}\in U_\mathcal{R}$ and $\alpha,\beta\in\mathcal{R}$, from which we verify the linearity of $\Gamma$, that is, 
 \begin{align*}
 \Gamma(\alpha\mav{\vto{u}}{B}+\beta\mav{\vto{v}}{B})&=\Gamma(\mav{\alpha\vto{u}+\beta\vto{v}}{B})\\
 &=\mav{\alpha\vto{u}+\beta\vto{v}}{C}\\
 &=\alpha\mav{\vto{u}}{C}+\beta\mav{\vto{v}}{C}\\
 &=\alpha\Gamma(\mav{\vto{u}}{B})+\beta\Gamma(\mav{\vto{v}}{B}).
 \end{align*}
-Como as matrizes que descrevem $\vto{x}\in U_\mathcal{R}$ nas bases $B$ e $C$ são únicas, fica evidente que $\Gamma$ é uma injeção. Aliado a isso, $\Gamma$ resulta uma bijeção porque inexiste matriz em $U(C)_\mathcal{R}$ que não tenha uma correspondente em $U(B)_\mathcal{R}$, pois qualquer vetor de $U_\mathcal{R}$ pode ser descrito em $B$ e $C$.
+As the representative matrices of $\vto{x}\in U_\mathcal{R}$ on $B$ and $C$ are unique, it is evident that $\Gamma$ is an injection. Moreover, $\Gamma$ results a bijection because there is no matrix in    
+$U(C)_\mathcal{R}$ that does not have a correspondent in $U(B)_\mathcal{R}$, since every vector of $U_\mathcal{R}$ can be described in terms of $B$ and $C$.
 \end{proof}
 }
 
-Considerando agora $B=\{\vto{u}_1,\cdots,\vto{u}_n\}$ e $C=\{\vto{v}_1,\cdots,\vto{v}_n\}$ bases distintas do espaço vetorial $U_\mathcal{R}$, ambas viabilizam representações matriciais distintas para qualquer vetor $\vto{u}\in U_\mathcal{R}$. Sendo assim, as igualdades
+Considering now $B=\{\vto{u}_1,\cdots,\vto{u}_n\}$ and $C=\{\vto{v}_1,\cdots,\vto{v}_n\}$ distinct bases 
+of vector space $U_\mathcal{R}$, they enable distinct matrix representations for any vector $\vto{u}\in U_\mathcal{R}$. Thereby, from equalities   
 \begin{equation*}
 \fua{\vtf{f}_i^C}{\vto{u}}=\vtf{f}_i^C[\,{\sum_{j=1}^n\fua{\vtf{f}_j^B}{\vto{u}}\vto{u}_j}\,]=\sum_{j=1}^n\fua{\vtf{f}_i^C}{\vto{u}_j}\fua{\vtf{f}_j^B}{\vto{u}}
 \end{equation*}
-em conjunto com a expressão \eqref{eq:repMatMape} permitem afirmar que
+together with expression \eqref{eq:repMatMape}, we can write that 
 \begin{equation}\label{eq:matrizMudBase}
 \mav{\vto{u}}{C}=\maf{\vtf{i}}{B}{C}\mav{\vto{u}}{B}\,,
 \end{equation}
-onde $\vtf{i}$ é a função identidade em $U_\mathcal{R}$. Assim sendo, nos termos do teorema anterior, podemos dizer de uma regra
+where $[\maf{\vtf{i}}{B}{C}]_{ij}=\fua{\vtf{f}_i^C}{\fua{\vtf{i}}{\vto{u}_j}}$ and $\vtf{i}$ is the identity function of $U_\mathcal{R}$. Therefore, according to the previous theorem, we can write a rule
 \begin{equation}\label{eq:regraMudCoord}
 \fua{\Gamma}{\mat{X}}=\maf{\vtf{i}}{B}{C}\mat{X}
 \end{equation}
-relativa à mudança de coordenadas $\map{\Gamma}{U(B)_\mathcal{R}}{U(C)_\mathcal{R}}$, de onde resulta que a matriz representativa $\fua{\Gamma^{-1}}{\mat{X}}=\maf{\vtf{i}}{C}{B}\mat{X}$. No caso específico de espaços de Hilbert, há uma regra para funcionais coordenados descrita pela igualdade \eqref{eq:regraFuncCoord}, que permite especificar o elemento matricial $\maf{\vtf{i}}{B}{C}_{ij}=\vto{u}_j\cdot\vto{v}^i$.
+describing a change of coordinates $\map{\Gamma}{U(B)_\mathcal{R}}{U(C)_\mathcal{R}}$, from which the representative matrix $\fua{\Gamma^{-1}}{\mat{X}}=\maf{\vtf{i}}{C}{B}\mat{X}$ results. In the particular case of Hilbert spaces, there is a rule for coordinate functionals described by equality \eqref{eq:regraFuncCoord}, which enables us to specify the matrix elements $\maf{\vtf{i}}{B}{C}_{ij}=\vto{u}_j\cdot\vto{v}^i$. 
 
 
-Nas condições da igualdade \eqref{eq:matrizMudBase}, como a matriz $\maf{\vtf{i}}{B}{C}$ é quadrada de ordem $n$ e uma função identidade é igual à sua inversa e à sua transposta adjunta, podemos afirmar, a partir de \eqref{eq:matRepInv} e \eqref{eq:matRepTransp}, que
+According to the conditions of equality \eqref{eq:matrizMudBase}, as $\maf{\vtf{i}}{B}{C}$ is a square matrix of order $n$ and the identity function equals its inverse and its conjugate transpose, we can affirm from \eqref{eq:matRepInv} that 
 \begin{equation}\label{eq:mudaBaseTransp}
 \maf{\vtf{i}}{B}{C}={\maf{\vtf{i}}{C}{B}}^{-1}
 \end{equation}
-e, no caso específico de espaços de Hilbert,
+and from \eqref{eq:matRepTransp}
 \begin{equation}\label{eq:mudaBaseTranspHilbert}
 \maf{\vtf{i}}{B}{C}={\maf{\vtf{i}}{C}{B}}^{-1}={\maf{\vtf{i}}{C^\perp}{B^\perp}}^\dagger\,.
 \end{equation}
-Em outras palavras, a matriz que viabiliza a mudança de coordenadas de $C$ para $B$ tem como inversa a matriz que viabiliza a mudança de coordenadas de $B$ para $C$, cuja transposta conjugada viabiliza a mudança de $C^\perp$ para $B^\perp$.
+In other words, for this last equality, valid for the specific case of Hilbert spaces, the matrix that enables a change of coordinates from $C$ to $B$ has as its inverse the matrix that enables a change of coordinates from $B$ to $C$, whose conjugate transpose enables the change of coordinates from $C^\perp$ to $B^\perp$. 
 
-Sendo $U_\mathcal{R}$ um espaço vetorial qualquer, os vetores da base $C$ podem ser descritos na base $B$ de acordo com as seguintes expressões:
+Considering a vector space $U_\mathcal{R}$, the elements of base $C$ can be written on basis $B$ according to the following expressions:
 \begin{equation}\label{eq:mudaBase}
 \vto{v}_j=\sum_{i=1}^n\vto{u}_i\fua{\vtf{f}_i^B}{\vto{v}_j}=\sum_{i=1}^n\vto{u}_i\maf{\vtf{i}}{C}{B}_{ij}\,,
 \end{equation}
-a partir das quais, dada uma base qualquer $Z$ de $U_\mathcal{R}$, podemos dizer que
+from which, given a basis $Z$ of $U_\mathcal{R}$, we can say that 
 \begin{equation*}
-\fua{\vtf{f}_k^Z}{\vto{v}_j}=\sum_{i=1}^n\fua{\vtf{f}_k^Z}{\vto{u}_i}\maf{\vtf{i}}{C}{B}_{ij}=\sum_{i=1}^n\maf{\vtf{i}}{B}{Z}_{ki}\maf{\vtf{i}}{C}{B}_{ij}\,.
-\end{equation*}
-Assim, reunindo todos os vetores de ambas as bases, temos
+\fua{\vtf{f}_k^Z}{\vto{v}_j}=\sum_{i=1}^n\fua{\vtf{f}_k^Z}{\vto{u}_i}\maf{\vtf{i}}{C}{B}_{ij}\,.
+\end{equation*}%=\sum_{i=1}^n\maf{\vtf{i}}{B}{Z}_{ki}\maf{\vtf{i}}{C}{B}_{ij}
+Gathering the components on $Z$ of all the elements of bases $B$ and $C$, we have
 \begin{equation}
 \begin{bmatrix}
 \mav{\vto{v}_1}{Z}_{11} & \mav{\vto{v}_2}{Z}_{11} & \cdots & \mav{\vto{v}_n}{Z}_{11}  \\
@@ -654,10 +657,29 @@ Assim, reunindo todos os vetores de ambas as bases, temos
 \mav{\vto{u}_1}{Z}_{n1} & \mav{\vto{u}_2}{Z}_{n1} & \cdots & \mav{\vto{u}_n}{Z}_{n1}
 \end{bmatrix} \maf{\vtf{i}}{C}{B}\,,
 \end{equation}
-de onde se conclui que $\maf{\vtf{i}}{C}{B}$ muda a base $B$ para $C$, ou seja, ela viabiliza uma \textsb{mudança de base}\index{mudança!de base}. Nessa mudança, quando a matriz que muda as coordenadas é inversa àquela que muda a base, dizemos que as coordenadas dos vetores de $U_\mathcal{R}$ são \textsb{contravariantes}\index{coordenadas!contravariantes}, pois sofrem uma transformação contrária à da mudança de base, como é o caso dos valores de $\Gamma$ em \eqref{eq:regraMudCoord}. Agora, vejamos o que acontece com mudanças de coordenadas em vetores duais. Se $\vtf{h}\in U^*_\mathcal{R}$ é um vetor dual qualquer, já sabemos que $\mav{\vtf{h}}{B^*}$ é sua matriz representativa na base dual $B^*$. Assim, a partir de \eqref{eq:mudaBase}, temos as igualdades
+from which we can say that $\maf{\vtf{i}}{C}{B}$ changes basis $B$ to basis $C$, that is, this matrix performs a \textsb{change of basis}\index{basis!change of}. Concerning the changes involving generic bases $B$ and $C$, when a matrix that changes coordinates from $B$ to $C$ is the inverse of the matrix that changes basis $B$ to $C$, the coordinates of elements of $U_\mathcal{R}$ are called \textsb{contravariant}\index{coordinates!contravariant}, since these coordinates are submitted to a ``contrary'' transformation relative to the change of basis $B$ to $C$, as is the case of the values of $\Gamma$ in \eqref{eq:regraMudCoord}. Now, let's see what happens when we change coordinates of dual vectors. If $\vtf{h}\in U^*_\mathcal{R}$ is a dual vector, we already know that $\mav{\vtf{h}}{B^*}$ is its representative matrix on dual basis $B^*$. Thereby, equalities \eqref{eq:coordVetorDual} and \eqref{eq:mudaBase} enable the following development:
 \begin{equation}
-\mav{\vtf{h}}{C^*}=\fua{\vtf{h}}{\vto{v}_j}=\sum_{i=1}^n\fua{\vtf{h}}{\vto{u}_i}\maf{\vtf{i}}{C}{B}_{ij}=\sum_{i=1}^n\mav{\vtf{h}}{B^*}_i\maf{\vtf{i}}{C}{B}_{ij}\,,
+\mav{\vtf{h}}{C^*}_j=\fua{\vtf{h}}{\vto{v}_j}=\sum_{i=1}^n\fua{\vtf{h}}{\vto{u}_i}\maf{\vtf{i}}{C}{B}_{ij}=\sum_{i=1}^n\mav{\vtf{h}}{B^*}_i\maf{\vtf{i}}{C}{B}_{ij}\,,
 \end{equation}
+from which we conclude that the change of coordinates of $\vtf{h}$ from $B^*$ to $C^*$ is performed by the same matrix $\maf{\vtf{i}}{C}{B}$ responsible for the change of basis, when the coordinates of dual vectors are then called \textsb{covariant}\index{coordinates!covariant}. Thereby, we can define a change of coordinates $\map{\Gamma^*}{U^*(B^*)_\mathcal{R}}{U^*(C^*)_\mathcal{R}}$ with a rule 
+\begin{equation}
+\fua{\Gamma^*}{\mat{X}}=\mat{X}\,\maf{\vtf{i}}{C}{B}\,.
+\end{equation}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 de onde concluímos que a mudança de coordenadas em $\vtf{h}$ de $B^*$ para $C^*$ é viabilizada pela mesma matriz $\maf{\vtf{i}}{C}{B}$ responsável pela mudança de base, quando dizemos que as coordenadas de vetores duais são \textsb{covariantes}\index{coordenadas!covariantes}. Pode-se definir então uma mudança de coordenadas $\map{\Gamma^*}{U^*(B^*)_\mathcal{R}}{U^*(C^*)_\mathcal{R}}$ onde
 \begin{equation}
 \fua{\Gamma^*}{\mat{X}}=\mat{X}\,\maf{\vtf{i}}{C}{B}\,.
