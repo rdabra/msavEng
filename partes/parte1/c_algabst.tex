@@ -509,7 +509,7 @@ It is important to note that $\mat{A}$ and $\mat{B}$ positions in the equality d
 \begin{equation}
 \det \mat{A} = \det \mat{Q}^{-1}\det\mat{B}\det\mat{Q}=(\det\mat{Q})^{-1}\det\mat{Q}\det\mat{B}=\det\mat{B}.
 \end{equation}
-An operation $\map{q}{\overline{M}}{\overline{M}}$ is a \textsb{similarity transformation}\index{similarity!transformation} if
+A mapping $\map{q}{\overline{M}}{\overline{N}}$ is a \textsb{similarity transformation}\index{similarity!transformation} if
 \begin{equation}
 \fua{q}{\mat{X}} = \mat{Q}^{-1}\mat{X}\mat{Q}.
 \end{equation}
@@ -540,7 +540,7 @@ from where we conclude that $\mat{T}$ is also normal. From the last equality, we
 \sum_{k=1}^n\mat{T}_{ik}\overline{\mat{T}_{jk}} & = \sum_{k=1}^n\overline{\mat{T}_{ki}}\mat{T}_{kj}\,.\nonumber
 \end{align}
 For the element in position $i=j=1$, this last equality results $\sum_{k=1}^n|\mat{T}_{1k}|^2=|\mat{T}_{11}|^2$, from where we can say that $\sum_{k=2}^n|\mat{T}_{1k}|^2=0$.
-Since the terms in this sum are non negative, they can only be null, that is, $|\mat{T}_{1k}|^2=0$ when $k>1$. By induction, when we run through all the positions $i=j$, we verify that not only the elements of $\mat{T}$ in $i>j$ are null but also in $i<j$; which proves $\mat{T}$ diagonal.
+Since the terms in this sum are nonnegative, they can only be null, that is, $|\mat{T}_{1k}|^2=0$ when $k>1$. By induction, when we run through all the positions $i=j$, we verify that not only the elements of $\mat{T}$ in $i>j$ are null but also in $i<j$; which proves $\mat{T}$ diagonal.
 \end{proof}}
 
 Now let's clarify the term ``spectrum'' cited by the theorem above; but before that, we need some important definitions. The function in $\map{\gloref{traco}}{\overline{M}}{\mathcal{R}}$ is called \textsb{trace}\index{matrix!trace of} when its rule is defined by
@@ -619,12 +619,12 @@ valid for polynomials having the same format of \eqref{eq:poliCaracDesen}. Thenc
 \end{equation*}
 \end{proof}}
 
-A matrix $\mat{A}\in\overline{M}$ is said to be \textsb{positive-semidefinite}\index{matrix!positive-semidefinite} or \textsb{non negative}\index{matrix!non negative} if
+A matrix $\mat{A}\in\overline{M}$ is said to be \textsb{positive-semidefinite}\index{matrix!positive-semidefinite} or \textsb{nonnegative}\index{matrix!nonnegative} if
 \begin{equation}
 \gloref{parteReal}\lpa\mat{X}^\dagger\mat{A}\mat{X}\rpa_{11}\geqslant0\,,
 \end{equation}
-where $\mat{X}$ is a non zero $n\times 1$ matrix. When the inequality imposes the left side to be always positive, $\mat{A}$ is called  \textsb{positive-definite}\index{matrix!positive-definite}. A necessary and sufficient condition that ensures positivity of a matrix is that the spectrum of its hermitian part be constituted of non negative elements\footnote{This condition will be verified after the definition of eigenvalue on the next chapter %à p.\pageref{sec:autoPares}
-.}, when this matrix results non negative; similarly, if these same elements are all positive, the matrix is positive-definite. Thereby, from the two equalities of the previous paragraph, it can be concluded that the determinant and trace of a non negative Hermitian matrix are always non negative, while for a positive-definite Hermitian matrix both are positive. Therefore, in the context of Hermitian matrices, the determinant value indicates whether a matrix is non negative or not. From this conclusion, we can state that \emph{every positive-definite hermitian matrix is invertible}. Moreover, when a positive-definite hermitian matrix $\mat{H}$ pre or post multiplies any matrix
+where $\mat{X}$ is a non zero $n\times 1$ matrix. When the inequality imposes the left side to be always positive, $\mat{A}$ is called  \textsb{positive-definite}\index{matrix!positive-definite}. A necessary and sufficient condition that ensures positivity of a matrix is that the spectrum of its hermitian part be constituted of nonnegative elements\footnote{This condition will be verified after the definition of eigenvalue on the next chapter %à p.\pageref{sec:autoPares}
+.}, when this matrix results nonnegative; similarly, if these same elements are all positive, the matrix is positive-definite. Thereby, from the two equalities of the previous paragraph, it can be concluded that the determinant and trace of a nonnegative Hermitian matrix are always nonnegative, while for a positive-definite Hermitian matrix both are positive. Therefore, in the context of Hermitian matrices, the determinant value indicates whether a matrix is nonnegative or not. From this conclusion, we can state that \emph{every positive-definite hermitian matrix is invertible}. Moreover, when a positive-definite hermitian matrix $\mat{H}$ pre or post multiplies any matrix
 $\mat{B}\in\overline{M}$, we have
 \begin{equation}
 \sgn{\det{\lpa\mat{BH}\rpa}}=\sgn{\det{\lpa\mat{HB}\rpa}}=\sgn{\det{\mat{B}}} \sgn{\det{\mat{H}}}=\sgn{\det{\mat{B}}}\,,

@@ -52,7 +52,7 @@ Let's verify if it is true that $\sum_{i=1}^n\alpha_i\vto{v}_i$ is the only line
 Now, let's consider $\con{U}_1=\lch \vto{v}_1,\cdots,\vto{v}_n \rch$ a basis of $V_\mathcal{R}$ and $\con{U}_2=\lch \vto{w}_1,\cdots,\vto{w}_m \rch$ a linear independent set such that $m \geqslant n$. If $U_1$ spans $V_\mathcal{R}$, then the linear dependent set $\{\vto{w}_1\}\cup U_1=\lch \vto{w}_1,\vto{v}_1,\cdots,\vto{v}_{n} \rch$ also spans $V_\mathcal{R}$. When an element $\vto{v}_k$ is removed from $U_1$, the resulting set $(\{\vto{w}_1\}\cup U_1)\setminus \{\vto{v}_k\}$ also spans $V_\mathcal{R}$ because $\vto{w}_1$ is a linear combination of $U_1$. If we proceed including elements of $U_2$ and removing elements of $U_1$, we shall obtain the set $\lch \vto{w}_1,\cdots,\vto{w}_{n} \rch$, which is a basis of $V_\mathcal{R}$. Thereby, linearly independent sets which span the same finite-dimensional vector space have the same number of vectors. From this general statement, we can say that every basis of $V_\mathcal{R}$ has $n$ elements, or that the \textsb{dimension}\index{vector space!dimension of} of $V_\mathcal{R}$ is $n$, written $\gloref{dimen}=n$. Therefore, we can also state that \emph{every subset of $V_\mathcal{R}$ having $n$ linearly independent vectors is a basis of $V_\mathcal{R}$}, from which results the following: if $W_\mathcal{R}\subset V_\mathcal{R}$ then $\dim (W_\mathcal{R}) <  \dim (V_\mathcal{R})$ .
 
 
-There is an important type of vector space whose group is additionally structured by what is called a \textsb{norm}\index{norm}, which assigns to each one of the group elements a non negative real number that enables the concept of vector size or vector intensity. Like the case of structuring by field, structuring by norm also occurs according to some restrictions. Thereby, we say that a \textsb{normed space}\index{space!normed} is defined by the double $(V_\mathcal{R},\eta)$, where $V_\mathcal{R}$ is a vector space and the function in $\map{\eta}{V_\mathcal{R}}{\gloref{realNNeg}}$, called norm, observes the axioms
+There is an important type of vector space whose group is additionally structured by what is called a \textsb{norm}\index{norm}, which assigns to each one of the group elements a nonnegative real number that enables the concept of vector size or vector intensity. Like the case of structuring by field, structuring by norm also occurs according to some restrictions. Thereby, we say that a \textsb{normed space}\index{space!normed} is defined by the double $(V_\mathcal{R},\eta)$, where $V_\mathcal{R}$ is a vector space and the function in $\map{\eta}{V_\mathcal{R}}{\gloref{realNNeg}}$, called norm, observes the axioms
 \begin{itemize}
 	\setlength\itemsep{.1em}
 	\item[i.] Of definition: $\fua{\eta}{\vto{v}}=0 \Leftrightarrow
@@ -82,7 +82,7 @@ We define that two vectors project on each other or have a projective interrelat
 \overline{\alpha_2}\fua{\xi}{\vto{u}_1,\vto{u}_2} + \overline{\alpha_3}\fua{\xi}{\vto{u}_1,\vto{u}_3}\,;
 	\end{equation*}
 \end{itemize}
-where $\vto{u}_1,\vto{u}_2,\vto{u}_3\in U_\mathcal{R}$ and  $\alpha_1,\alpha_2,\alpha_3\in\mathcal{R}$ are any elements of their respective sets. In this context, the function $\xi$ is called a \textsb{positive-definite inner product} because the projection of a vector on itself is a non negative real number, as described by the first axiom. In our study, $\xi$ is simply called an inner product\index{inner product}, and the double $(U_\mathcal{R},\xi)$ an \textsb{inner product space}\index{space!inner product}. From this double, we conclude that $\xi$ structures the group $U$ in such a way that a projective interrelationship of any pair of its elements can be obtained.
+where $\vto{u}_1,\vto{u}_2,\vto{u}_3\in U_\mathcal{R}$ and  $\alpha_1,\alpha_2,\alpha_3\in\mathcal{R}$ are any elements of their respective sets. In this context, the function $\xi$ is called a \textsb{positive-definite inner product} because the projection of a vector on itself is a nonnegative real number, as described by the first axiom. In our study, $\xi$ is simply called an inner product\index{inner product}, and the double $(U_\mathcal{R},\xi)$ an \textsb{inner product space}\index{space!inner product}. From this double, we conclude that $\xi$ structures the group $U$ in such a way that a projective interrelationship of any pair of its elements can be obtained.
 Henceforth, in order to shorten notation, $\gloref{prdint}$ will also be used to represent the inner product $\fua{\xi}{\vto{x},\vto{y}}$.
 
 Considering the inner product space $(U_\mathcal{R},\xi)$, it is now possible to present in more mathematical terms the definition of orthogonality: any vectors $\vto{u}_1,\vto{u}_2\in U_\mathcal{R}$ are said to be orthogonal, or $\vto{u}_1\gloref{perpend}\vto{u}_2$, when $\vto{u}_1\cdot\vto{u}_2=0$. Given the subsets $U_1\subset U_\mathcal{R}$ and $U_2\subset U_\mathcal{R}$, if $\vto{u}\in U_\mathcal{R}$ is orthogonal to any vector of $U_1$, we write $\vto{u}\perp\con{U}_1$, and if any vetor of $\con{U}_1$ is orthogonal to any vector of $\con{U}_2$, we write $\con{U}_1\perp\con{U}_2$. A set $U_3=\{\vto{u}_1,\cdots,\vto{u}_n\}\subset U_\mathcal{R}$ is called orthogonal if $\vto{u}_i\perp\vto{u}_j$, $i\neq j$. Thereby, when the vectors of $U_3$ are non null, the inner product of each side of $\alpha\vto{u}_j=\vto{u}_i$ and $\vto{u}_j$, where $\alpha\in\mathcal{R}$ and $i\neq j$, the result is $\alpha\,(\vto{u}_j\cdot\vto{u}_j)=0$, from where we conclude that $\alpha=0$ or that every orthogonal set is linearly independent. This conclusion permits us to state that in a \emph{$n$-dimensional inner product space, every orthogonal subset of $n$ elements is a basis}.
@@ -629,7 +629,7 @@ According to the conditions of equality \eqref{eq:matrizMudBase}, as $\maf{\vtf{
 \begin{equation}\label{eq:mudaBaseTransp}
 \maf{\vtf{i}}{B}{C}={\maf{\vtf{i}}{C}{B}}^{-1}
 \end{equation}
-and from \eqref{eq:matRepTransp}
+and from \eqref{eq:matRepTransp}, whose context is Hilbert spaces, 
 \begin{equation}\label{eq:mudaBaseTranspHilbert}
 \maf{\vtf{i}}{B}{C}={\maf{\vtf{i}}{C}{B}}^{-1}={\maf{\vtf{i}}{C^\perp}{B^\perp}}^\dagger\,.
 \end{equation}
@@ -665,65 +665,50 @@ from which we conclude that the change of coordinates of $\vtf{h}$ from $B^*$ to
 \begin{equation}
 \fua{\Gamma^*}{\mat{X}}=\mat{X}\,\maf{\vtf{i}}{C}{B}\,.
 \end{equation}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-de onde concluímos que a mudança de coordenadas em $\vtf{h}$ de $B^*$ para $C^*$ é viabilizada pela mesma matriz $\maf{\vtf{i}}{C}{B}$ responsável pela mudança de base, quando dizemos que as coordenadas de vetores duais são \textsb{covariantes}\index{coordenadas!covariantes}. Pode-se definir então uma mudança de coordenadas $\map{\Gamma^*}{U^*(B^*)_\mathcal{R}}{U^*(C^*)_\mathcal{R}}$ onde
-\begin{equation}
-\fua{\Gamma^*}{\mat{X}}=\mat{X}\,\maf{\vtf{i}}{C}{B}\,.
-\end{equation}
-Diante do exposto, se o espaço $U_\mathcal{R}$ for de Hilbert, os escalares $\fua{\vtf{f}_i^B}{\vto{u}}=\vto{u}\cdot\vto{u}^i$ são as coordenadas contravariantes de um vetor $\vto{u}\in U_\mathcal{R}$, cujo covetor
+From these two classifications of coordinates, if $U_\mathcal{R}$ is a Hilbert space, scalars $\fua{\vtf{f}_i^B}{\vto{u}}=\vto{u}\cdot\vto{u}^i$ constitute the contravariant coordinates of vector $\vto{u}\in U_\mathcal{R}$, whose covector
 \begin{equation*}
-\vto{u}^*=\sum_{i=1}^n\fua{\vto{u}^*}{\vto{u}_i} \vtf{f}_i^{B^*}= \sum_{i=1}^n (\vto{u}_i\cdot\vto{u}) (\vto{u}^i)^*\,.
+\vto{u}^*=\sum_{i=1}^n\fua{\vto{u}^*}{\vto{u}_i} \vtf{f}_i^{B}= \sum_{i=1}^n (\vto{u}_i\cdot\vto{u}) (\vto{u}^i)^*\,.
 \end{equation*}
-Embora impreciso, costuma-se considerar os escalares $\vto{u}_i\cdot\vto{u}$ como sendo elementos das coordenadas ``covariantes'' do vetor $\vto{u}$, no contexto de um espaço de Hilbert. Se tal espaço for real, considerando $\hat{B}=\{\vun{u}_1,\cdots,\vun{u}_n\}$ uma base ortonormal de $U_\real$, podemos dizer que as coordenadas contravariantes e covariantes de um vetor $\vto{u}$ qualquer são sempre iguais porque as igualdades $\vun{u}_i=\vun{u}^i$ e a comutatividade do produto interno implicam $\fua{\vto{u}^*}{\vto{u}_i}=\fua{\vtf{f}_i^{\hat{B}}}{\vto{u}}$. Isso também ocorre num espaço Euclidiano tridimensional, quando a base $\{\vun{e}_1,\vun{e}_2,\vun{e}_3\}$  é denominada \textsb{base cartesiana}\index{base!cartesiana} e as combinações lineares de seus elementos são \textsb{vetores cartesianos}\index{vetor!cartesiano}. Agora, \emph{uma consequência importante das igualdades \eqref{eq:mudaBaseTransp} é que a matriz ${\maf{\vtf{i}}{C}{B}}$ resulta unitária se as bases envolvidas forem ortonormais}, pois a recíproca de uma base ortonormal é ela própria. A partir dessa constatação, seja o corolário a seguir, que descreve a relação entre matrizes representativas de operadores lineares.
+Since $\vto{u}$ and $\vto{u}^*$ are biunivocaly related through Riesz-Fréchet Representation, the coordinates $(\vto{u}_1\cdot\vto{u},\cdots,\vto{u}_n\cdot\vto{u})$ of $\vto{u}^*$ on $B^*$ are usually called the covariant coordinates of vector $\vto{u}$ on $B^\perp$. If the Hilbert space in question is real, considering  
+$\hat{B}=\{\vun{u}_1,\cdots,\vun{u}_n\}$ an orthonormal basis of $U_\real$, we can say that covariant and contravariant coordinates of any vector $\vto{u}$ are always equal because expressions $\vun{u}_i=\vun{u}^i$ and the commutativity of inner product imply $\vto{u}\cdot\vto{u}^i=\vto{u}_i\cdot\vto{u}$, that is,   $\fua{\vto{u}^*}{\vto{u}_i}=\fua{\vtf{f}_i^{\hat{B}}}{\vto{u}}$. This also occurs in a tridimensional Euclidean space, when natural basis $\{\vun{e}_1,\vun{e}_2,\vun{e}_3\}$ is called  \textsb{cartesian basis}\index{basis!cartesian} and all the linear combinations of its elements are \textsb{cartesian vectors}\index{vector!cartesian}.
 
-\begin{mcoro}{Mudança de Coordenadas em Operadores Lineares}{mudaBase}
-Se $Y(B)_\mathcal{R}$ e $Y(C)_\mathcal{R}$ são espaços vetoriais constituídos pelas matrizes representativas dos operadores de $\evl{\mathcal{R}}{Y}{Y}$ descritas nas bases $B$ e $C$ do espaço vetorial $Y_\mathcal{R}$ respectivamente, a mudança de coordenadas $\map{\Theta}{Y(B)_\mathcal{R}}{Y(C)_\mathcal{R}}$ é sempre uma transformação de similaridade onde $\fua{\Theta}{\mat{X}}=\maf{\vtf{i}}{B}{C}\mat{X}\,\maf{\vtf{i}}{C}{B}$.
+Now, an interesting consequence of equalities \eqref{eq:mudaBaseTranspHilbert} is that matrix ${\maf{\vtf{i}}{C}{B}}$ results unitary if the bases involved are orthonormal, since they are reciprocal to itself, as we already know. Thereby, we present the following corollary, that describes an important  relationship between representative matrices of linear operators.  
+
+
+\begin{mcoro}{Change of Coordinates of Linear Operators}{mudaBase}
+If $Y(B)_\mathcal{R}$ and $Y(C)_\mathcal{R}$ are vector spaces constituted by the representative matrices of operators that belong to $\evl{\mathcal{R}}{Y}{Y}$, described respectively on bases $B$ and $C$ of vector space $Y_\mathcal{R}$, the change of coordinates $\map{\Theta}{Y(B)_\mathcal{R}}{Y(C)_\mathcal{R}}$ is always a similarity transformation where $\fua{\Theta}{\mat{X}}=\maf{\vtf{i}}{B}{C}\mat{X}\,\maf{\vtf{i}}{C}{B}$.
 \end{mcoro}
 
 {\footnotesize
 \begin{proof}
-Considerando uma função qualquer $\vtf{g}\in\evl{\mathcal{R}}{Y}{Y}$ e um vetor qualquer $\vto{u}\in Y_\mathcal{R}$, a última igualdade do desenvolvimento
+Considering a function $\vtf{g}\in\evl{\mathcal{R}}{Y}{Y}$ and a vector $\vto{u}\in Y_\mathcal{R}$, the last equality of the development 
 \begin{align}
 \mav{\fua{\vtf{g}}{\vto{u}}}{B}&=\maf{\vtf{g}}{B}{B}\mav{\vto{u}}{B}\nonumber\\
 \maf{\vtf{i}}{C}{B}\mav{\fua{\vtf{g}}{\vto{u}}}{C}&=\maf{\vtf{g}}{B}{B}\maf{\vtf{i}}{C}{B}\mav{\vto{u}}{C}\nonumber\\
 \mav{\fua{\vtf{g}}{\vto{u}}}{C}&=\maf{\vtf{i}}{B}{C}\maf{\vtf{g}}{B}{B}\maf{\vtf{i}}{C}{B}\mav{\vto{u}}{C}\nonumber
 \end{align}
-e a igualdade $\mav{\fua{\vtf{g}}{\vto{u}}}{C}=\maf{\vtf{g}}{C}{C}\mav{\vto{u}}{C}$ nos permitem afirmar que
+and equality $\mav{\fua{\vtf{g}}{\vto{u}}}{C}=\maf{\vtf{g}}{C}{C}\mav{\vto{u}}{C}$ enables us to affirm that 
 \begin{equation*}
 \maf{\vtf{g}}{C}{C} = \maf{\vtf{i}}{B}{C}\maf{\vtf{g}}{B}{B}\maf{\vtf{i}}{C}{B}\,.
 \end{equation*}
-Como $\maf{\vtf{i}}{B}{C}={\maf{\vtf{i}}{C}{B}}^{-1}$, concluímos que as matrizes $\maf{\vtf{g}}{C}{C}$ e $\maf{\vtf{g}}{B}{B}$ são similares.
+As $\maf{\vtf{i}}{B}{C}={\maf{\vtf{i}}{C}{B}}^{-1}$, we conclude that matrices $\maf{\vtf{g}}{C}{C}$ e $\maf{\vtf{g}}{B}{B}$ are similar.
 \end{proof}
 }
 
-Neste capítulo, seguiremos então trabalhando com funções lineares que admitem mudança de coordenadas, ou seja, com operadores lineares. Nesse contexto, alguns conceitos típicos de matrizes podem ser aplicados a tais operadores. Vejamos quais. Nas condições do corolário anterior, as matrizes $\fua{\Theta}{\mat{X}}$ e $\mat{X}$ são similares, de onde se pode concluir que \emph{o determinante e o traço de matrizes representativas de operadores lineares são imunes ou indiferentes a mudanças de base}. Diante dessa indiferença, consideramos os escalares $\det\vtf{g}:=\det [\vtf{g}]$ e $\trc\vtf{g}:= \trc{\maf{\vtf{g}}{}{}}$ como sendo respectivamente o \textsb{determinante}\index{determinante!de operador linear} e o \textsb{traço}\index{traço!de operador linear} do operador $\vtf{g}\in\evl{\mathcal{R}}{Y}{Y}$, onde $\maf{\vtf{g}}{}{}$ é a matriz representativa desse operador numa base qualquer de $Y_\mathcal{R}$. Um outro conceito que operadores lineares herdam de matrizes é o de positividade. Considerando $B$ uma base qualquer de $Y_\mathcal{R}$, se o escalar
+Until the end of this chapter, we shall be working with linear functions that admit change of coordinates, that is, linear operators. In this context, some typical concepts of matrices can be applied to such operators. Let's see which and why. Given the conditions of the previous corollary, matrices $\fua{\Theta}{\mat{X}}$ and $\mat{X}$ are similar, from which it can be concluded that  \emph{the trace and determinant of representative matrices of linear operators are immune or indifferent to any change of basis}. Because of this indifference, we consider scalars $\det\vtf{g}:=\det [\vtf{g}]$ and $\trc\vtf{g}:= \trc{\maf{\vtf{g}}{}{}}$ as being respectively the \textsb{determinant}\index{determinant!of linear operator} and the \textsb{trace}\index{trace!of linear operator} of operator $\vtf{g}\in\evl{\mathcal{R}}{Y}{Y}$, where $\maf{\vtf{g}}{}{}$ is the representative matrix of this operator on any basis of $Y_\mathcal{R}$. Another concept that linear operators inherit from matrices is positivity. Considering $B$ a basis of $Y_\mathcal{R}$, if the following condition is observed
 \begin{equation}
-\Re\lpa{\mav{\vto{y}}{B}}^\dagger\maf{\vtf{g}}{B}{B}{\mav{\vto{y}}{B}}\rpa_{11}\geqslant0\,,\,\,\forall\,\vto{y}\in Y_\real\,,
+\Re(\,{\mav{\vto{y}}{B}}^\dagger\maf{\vtf{g}}{B}{B}{\mav{\vto{y}}{B}}\,)_{11}\geqslant0\,,\,\,\forall\,\vto{y}\in Y_\mathcal{R}\,,
 \end{equation}
-a matriz $\maf{\vtf{g}}{B}{B}$ é dita não-negativa, segundo definição apresentada no capítulo anterior. Essa desigualdade continua válida se $B$ for ortonormal, quando se obtém
+for all non zero $\vto{y}\in Y_\mathcal{R}$, matrix $\maf{\vtf{g}}{B}{B}$ is said to be nonnegative, according to the definition presented in the previous chapter. This inequality is still valid if $Y_\mathcal{R}$ is a Hilbert space and $B$ is orthonormal, when it is possible to develop, from \eqref{eq:prodIntGen}, 
 \begin{equation}
-\underbrace{\Re\lpa{\mav{\vto{y}}{B}}^\dagger\mav{\fua{\vtf{g}}{\vto{y}}}{B}\rpa_{11}   }_{\Re(\vto{y}\cdot\fua{\vtf{g}}{\vto{y}})}\geqslant0\,,\,\,\forall\,\vto{y}\in Y_\real\,,
+\Re(\,{\mav{\vto{y}}{B}}^\dagger\maf{\vtf{g}}{B}{B}{\mav{\vto{y}}{B}}\,)_{11}=\Re(\,{\mav{\vto{y}}{B}}^\dagger\mav{\fua{\vtf{g}}{\vto{y}}}{B}\,)_{11}=\Re(\vto{y}\cdot\fua{\vtf{g}}{\vto{y}})\geqslant 0\,,
 \end{equation}
-onde $\vtf{g}$ é dito um \textsb{operador linear não-negativo}\footnote{Ou positivo-semidefinido\index{operador linear!positivo-semidefinido}.}\index{operador linear!não-negativo} ou um \textsb{operador linear positivo-definido}\index{operador linear!positivo-definido} se o produto interno à esquerda for sempre positivo.
-
-Neste ponto, vamos interromper brevemente a evolução do conteúdo teórico para tratarmos de um exemplo: o assunto mudança de coordenadas é demasiado importante para o nosso estudo e convém discorrermos sobre algo menos abstrato.
+ where $\vtf{g}$ is called a \textsb{nonnegative linear operator}\footnote{Or positive-semidefinite positive-semidefinite\index{linear operator!psotive-semi-definite}.}\index{linear operator!nonnegative} or a \textsb{positive-definite linear operator}\index{linear operator!positive-definite} if the real value  $\Re(\vto{y}\cdot\fua{\vtf{g}}{\vto{y}})$ is always positive.
+ 
+At this point, let's briefly interrupt the evolution of the theory in order to work on an example: the subject ``change of coordinates'' is too important for our study and it is now quite convenient that we deal with something less abstract.
 
 \begin{example}
-Eis uma historinha pueril. A professora Bruna, residente à margem de um rio de largura extensa, entrega a um barqueiro, em frente à sua casa, um presente que deve ser transportado até um ponto da outra margem, onde mora o engenheiro Carlos, estimado destinatário da encomenda. Num determinado ponto da travessia, o barqueiro é obrigado a mudar sua velocidade de sorte que tal manobra o impedirá de chegar na hora marcada e no local exato onde Carlos aguarda ansiosamente o presente. Ciente da importância de sua incumbência, o barqueiro, a partir das medições de seus instrumentos, envia uma mensagem de texto para o telefone de Carlos informando o seguinte: \textsl{Carlos, agora são 14:00 e após percorridos 30km rio adentro (perpendicular à margem) e 5km rio acima (contra o sentido da correnteza) em relação à Bruna, eu estava a 49km/h rio adentro e 13,1km/h rio acima quando avistei uma parte muito rasa do leito, sendo obrigado a reduzir em 20\% minha velocidade norte e em 40\% a velocidade leste. Como não me será possível corrigir a rota, peço que me encontre nos novos local e hora em que chegarei à sua margem. Não se esqueça que Bruna está localizada em relação à você 30km rio abaixo e 55km rio adentro.} Embora bastante frustrado, Carlos respirou fundo, manteve a calma e lembrou-se de suas saudosas aulas de Álgebra Linear. Voltou para casa, pegou lápis, papel e calculadora; sentou-se à mesa e raciocinou: ``Em primeiro lugar, vou admitir um espaço Euclidiano bidimensional com a base natural $O=\{\vun{e}_1,\vun{e}_2\}$, onde $\vun{e}_1$ representa o leste e $\vun{e}_2$ o norte. Assim, em relação à essa base, já sei que $\mav{\vto{c}_1}{O}=[-1\;\;0]^\text{T}$ e $\mav{\vto{c}_2}{O}=[-0,42\;\;0,91]^\text{T}$ são as matrizes representativas dos vetores de meu ponto de vista $C=\{\vto{c}_1,\vto{c}_2\}$, onde $\vto{c}_1$ relaciona-se com o sentido rio adentro e $\vto{c}_2$ com rio acima. Por essa mesma lógica, no caso de Bruna, sei que as matrizes $\mav{\vto{b}_1}{O}=[0,87\;\;0,5]^\text{T}$ e $\mav{\vto{b}_2}{O}=[0\;\;1]^\text{T}$ representam os vetores de seu ponto de vista $B=\{\vto{b}_1,\vto{b}_2\}$.  O barqueiro disse que sua velocidade $\vto{v}$ era descrita por $\mav{\vto{v}}{B}=[49\;\;13.1]^\text{T}$ quando precisou fazer uma mudança $\vtf{f}$ representada por
+This is a puerile little story. A professora Bruna, residente à margem de um rio de largura extensa, entrega a um barqueiro, em frente à sua casa, um presente que deve ser transportado até um ponto da outra margem, onde mora o engenheiro Carlos, estimado destinatário da encomenda. Num determinado ponto da travessia, o barqueiro é obrigado a mudar sua velocidade de sorte que tal manobra o impedirá de chegar na hora marcada e no local exato onde Carlos aguarda ansiosamente o presente. Ciente da importância de sua incumbência, o barqueiro, a partir das medições de seus instrumentos, envia uma mensagem de texto para o telefone de Carlos informando o seguinte: \textsl{Carlos, agora são 14:00 e após percorridos 30km rio adentro (perpendicular à margem) e 5km rio acima (contra o sentido da correnteza) em relação à Bruna, eu estava a 49km/h rio adentro e 13,1km/h rio acima quando avistei uma parte muito rasa do leito, sendo obrigado a reduzir em 20\% minha velocidade norte e em 40\% a velocidade leste. Como não me será possível corrigir a rota, peço que me encontre nos novos local e hora em que chegarei à sua margem. Não se esqueça que Bruna está localizada em relação à você 30km rio abaixo e 55km rio adentro.} Embora bastante frustrado, Carlos respirou fundo, manteve a calma e lembrou-se de suas saudosas aulas de Álgebra Linear. Voltou para casa, pegou lápis, papel e calculadora; sentou-se à mesa e raciocinou: ``Em primeiro lugar, vou admitir um espaço Euclidiano bidimensional com a base natural $O=\{\vun{e}_1,\vun{e}_2\}$, onde $\vun{e}_1$ representa o leste e $\vun{e}_2$ o norte. Assim, em relação à essa base, já sei que $\mav{\vto{c}_1}{O}=[-1\;\;0]^\text{T}$ e $\mav{\vto{c}_2}{O}=[-0,42\;\;0,91]^\text{T}$ são as matrizes representativas dos vetores de meu ponto de vista $C=\{\vto{c}_1,\vto{c}_2\}$, onde $\vto{c}_1$ relaciona-se com o sentido rio adentro e $\vto{c}_2$ com rio acima. Por essa mesma lógica, no caso de Bruna, sei que as matrizes $\mav{\vto{b}_1}{O}=[0,87\;\;0,5]^\text{T}$ e $\mav{\vto{b}_2}{O}=[0\;\;1]^\text{T}$ representam os vetores de seu ponto de vista $B=\{\vto{b}_1,\vto{b}_2\}$.  O barqueiro disse que sua velocidade $\vto{v}$ era descrita por $\mav{\vto{v}}{B}=[49\;\;13.1]^\text{T}$ quando precisou fazer uma mudança $\vtf{f}$ representada por
 \begin{equation*}
 \mav{\vtf{f}_O}{O}=\begin{bmatrix}
 0,6      & 0 \\
