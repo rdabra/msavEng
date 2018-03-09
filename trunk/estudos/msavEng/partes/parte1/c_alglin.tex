@@ -708,60 +708,60 @@ for all non zero $\vto{y}\in Y_\mathcal{R}$, matrix $\maf{\vtf{g}}{B}{B}$ is sai
 At this point, let's briefly interrupt the evolution of the theory in order to work on an example: the subject ``change of coordinates'' is too important for our study and it is now quite convenient that we deal with something less abstract.
 
 \begin{example}
-This is a puerile little story. A professora Bruna, residente à margem de um rio de largura extensa, entrega a um barqueiro, em frente à sua casa, um presente que deve ser transportado até um ponto da outra margem, onde mora o engenheiro Carlos, estimado destinatário da encomenda. Num determinado ponto da travessia, o barqueiro é obrigado a mudar sua velocidade de sorte que tal manobra o impedirá de chegar na hora marcada e no local exato onde Carlos aguarda ansiosamente o presente. Ciente da importância de sua incumbência, o barqueiro, a partir das medições de seus instrumentos, envia uma mensagem de texto para o telefone de Carlos informando o seguinte: \textsl{Carlos, agora são 14:00 e após percorridos 30km rio adentro (perpendicular à margem) e 5km rio acima (contra o sentido da correnteza) em relação à Bruna, eu estava a 49km/h rio adentro e 13,1km/h rio acima quando avistei uma parte muito rasa do leito, sendo obrigado a reduzir em 20\% minha velocidade norte e em 40\% a velocidade leste. Como não me será possível corrigir a rota, peço que me encontre nos novos local e hora em que chegarei à sua margem. Não se esqueça que Bruna está localizada em relação à você 30km rio abaixo e 55km rio adentro.} Embora bastante frustrado, Carlos respirou fundo, manteve a calma e lembrou-se de suas saudosas aulas de Álgebra Linear. Voltou para casa, pegou lápis, papel e calculadora; sentou-se à mesa e raciocinou: ``Em primeiro lugar, vou admitir um espaço Euclidiano bidimensional com a base natural $O=\{\vun{e}_1,\vun{e}_2\}$, onde $\vun{e}_1$ representa o leste e $\vun{e}_2$ o norte. Assim, em relação à essa base, já sei que $\mav{\vto{c}_1}{O}=[-1\;\;0]^\text{T}$ e $\mav{\vto{c}_2}{O}=[-0,42\;\;0,91]^\text{T}$ são as matrizes representativas dos vetores de meu ponto de vista $C=\{\vto{c}_1,\vto{c}_2\}$, onde $\vto{c}_1$ relaciona-se com o sentido rio adentro e $\vto{c}_2$ com rio acima. Por essa mesma lógica, no caso de Bruna, sei que as matrizes $\mav{\vto{b}_1}{O}=[0,87\;\;0,5]^\text{T}$ e $\mav{\vto{b}_2}{O}=[0\;\;1]^\text{T}$ representam os vetores de seu ponto de vista $B=\{\vto{b}_1,\vto{b}_2\}$.  O barqueiro disse que sua velocidade $\vto{v}$ era descrita por $\mav{\vto{v}}{B}=[49\;\;13.1]^\text{T}$ quando precisou fazer uma mudança $\vtf{f}$ representada por
+This is a puerile little story. Once upon a time, Brenda, a teacher, living on a bank of a large width river, hands to a boatman a package containing a gift to be delivered at a place on the other bank, where the engineer Calvin, beloved consignee of her order, lives. At a certain point while crossing the river, the boatman sees himself forced to modify his velocity, which will change the exact time and place where Calvin anxiously waits for his gift. Fully aware of his task's relevance, the boatman, after reading his instruments measurements, sends a text message to Calvin's phone with the following information: \textsl{It is now 2:00 p.m. and after crossing, relative to Brenda, 30km inside the river, that is, perpendicular to her bank, and 5km upstream, against the river flow, I was at 49km/h inside the river and at 13.1km/h upstream when I saw a dangerous shallow part of the riverbed, an then was forced to reduce 20\% my north velocity and 40\% my east velocity. As I won't be able to rectify the route, I ask you to meet me at the new time and on the new point of the border where I'll deliver your package. And please, don't forget that Brenda's place, in relation to you, is located 30km downstream and 55km inside the river}. Although extremely frustrated, Calvin took a deep breadth, kept himself calm and remembered his enjoyable and unforgettable classes of Linear Algebra. He came back  home, took pencil, paper and a calculator, sat at his desk and started reasoning to discover the new arrival time and place: ``First of all, I'll use a bidimensional Euclidean space with a natural basis  $O=\{\vun{e}_1,\vun{e}_2\}$, where $\vun{e}_1$ represents the east and $\vun{e}_2$ the north. So, in relation to this basis, I already know that matrices  $\mav{\vto{c}_1}{O}=[-1\;\;0]^\text{T}$ and $\mav{\vto{c}_2}{O}=[-0,42\;\;0,91]^\text{T}$ are representative bases of the elements of my point of view $C=\{\vto{c}_1,\vto{c}_2\}$, where $\vto{c}_1$ represents the `inside the river' direction while $\vto{c}_2$ is related to the upstream direction. Similarly, in the case of Brenda, matrices $\mav{\vto{b}_1}{O}=[0,87\;\;0,5]^\text{T}$ and $\mav{\vto{b}_2}{O}=[0\;\;1]^\text{T}$ represent the elements of her point of view $B=\{\vto{b}_1,\vto{b}_2\}$. From what the Boatman said, $\mav{\vto{v}}{B}=[49\;\;13.1]^\text{T}$ represented his velocity $\vto{v}$ when he needed to make a change $\vtf{f}$, described by  
 \begin{equation*}
 \mav{\vtf{f}_O}{O}=\begin{bmatrix}
-0,6      & 0 \\
-0      & 0,8 \\
+0.6      & 0 \\
+0      & 0.8 \\
 \end{bmatrix}\,.
 \end{equation*}
-Para obter o que preciso, vou descrever $\vto{v}$ e $\vtf{f}$ no meu ponto de vista. Ainda me lembro das igualdades $\mav{\vto{v}}{C}=\maf{\vtf{i}}{B}{C}\mav{\vto{v}}{B}$ e $\mav{\vtf{f}_C}{C}=\maf{\vtf{i}}{O}{C}\mav{\vtf{f}_O}{O}\maf{\vtf{i}}{C}{O}$, onde
+In order to obtain what I need, I'll rewrite $\vto{v}$ and $\vtf{f}$ representations on my point of view. I still remember equalities $\mav{\vto{v}}{C}=\maf{\vtf{i}}{B}{C}\mav{\vto{v}}{B}$ and $\mav{\vtf{f}_C}{C}=\maf{\vtf{i}}{O}{C}\mav{\vtf{f}_O}{O}\maf{\vtf{i}}{C}{O}$, where  
 \begin{alignat*}{3}
-\maf{\vtf{i}}{B}{C}_{ij}=\vto{b}_j\cdot\vto{c}^i & \qquad\text{e} \qquad & \maf{\vtf{i}}{O}{C}_{ij}=\vun{e}_j\cdot\vto{c}^i\,.
+\maf{\vtf{i}}{B}{C}_{ij}=\vto{b}_j\cdot\vto{c}^i & \qquad\text{and} \qquad & \maf{\vtf{i}}{O}{C}_{ij}=\vun{e}_j\cdot\vto{c}^i\,.
 \end{alignat*}
-Diante disso, preciso descobrir minha base recíproca $C^\perp=\{\vto{c}^1,\vto{c}^2\}$, onde o produto interno $\vto{c}_i\cdot\vto{c}^j=\delta_{ij}$. Dessa última igualdade, posso escrever os sistemas
+Now I need to discover my reciprocal basis $C^\perp=\{\vto{c}^1,\vto{c}^2\}$, where  $\vto{c}_i\cdot\vto{c}^j=\delta_{ij}$. Using this last equality to discover $[\vto{c}^1]^{O}=[x_1\;\;y_1]^\text{T}$ and $[\vto{c}^2]^{O}=[x_2\;\;y_2]^\text{T}$, I can write the systems 
 \begin{alignat*}{3}
 \begin{cases}
--x=1\\-0,42x+0,91y=0	
+-x_1=1\\-0.42x_1+0.91y_1=0	
 \end{cases}
-& \qquad\text{e} \qquad &
+& \qquad\text{and} \qquad &
 \begin{cases}
-	-x=0\\-0,42x+0,91y=1	
+-x_2=0\\-0.42x_2+0.91y_2=1	
 \end{cases}\,,
 \end{alignat*}
-cujas soluções conduzem à $[\vto{c}^1]^{O}=[-1\;\;-0,46]^\text{T}$ e $[\vto{c}^2]^{O}=[0\;\;1,1]^\text{T}$, que viabilizam as matrizes
+whose solutions are $[\vto{c}^1]^{O}=[-1\;\;-0.46]^\text{T}$ and $[\vto{c}^2]^{O}=[0\;\;1.1]^\text{T}$, when I arrive at matrices 
 \begin{alignat*}{3}
 \maf{\vtf{i}}{B}{C}=
 \begin{bmatrix}
-	-1,1      & -0,46 \\
-	0,55      & 1,1 \\
+-1.1      & -0.46 \\
+0.55      & 1.1 \\
 \end{bmatrix}
-	& \qquad\text{e} \qquad &
+& \qquad\text{and} \qquad &
 \maf{\vtf{i}}{O}{C}=
 \begin{bmatrix}
-	-1      & 0 \\
-	-0,42     & 0,91 \\
+-1      & 0 \\
+-0.42     & 0.91 \\
 \end{bmatrix}\,.
 \end{alignat*}
-Daí, chego às representações sob minha perspectiva:
+And finally I have the representations on my perspective:
 \begin{alignat*}{3}
-	\mav{\vto{v}}{C}=
-	\begin{bmatrix}
-		-59,93       \\
-		41,36       \\
-	\end{bmatrix}
-	& \qquad\text{e} \qquad &
-	\mav{\vtf{f}_C}{C}=
-	\begin{bmatrix}
-		0,6      & 0,25 \\
-		0,25     & 0,77 \\
-	\end{bmatrix}\,.
+\mav{\vto{v}}{C}=
+\begin{bmatrix}
+-59.93       \\
+41.36       \\
+\end{bmatrix}
+& \qquad\text{and} \qquad &
+\mav{\vtf{f}_C}{C}=
+\begin{bmatrix}
+0.6      & 0.25 \\
+0.25     & 0.77 \\
+\end{bmatrix}\,.
 \end{alignat*}
-Após o desvio, a velocidade $\fua{\vtf{f}}{\vto{v}}$ do barco fica  $\mav{\fua{\vtf{f}}{\vto{v}}}{C}=[-25,62\;\;16,87]^\text{T}$. Bem, no momento do desvio, o deslocamento $\vto{u}$ do barco era $\mav{\vto{u}}{B}=[30\;\;5]^\text{T}$ ou, do meu ponto de vista, $\mav{\vto{u}}{C}=\maf{\vtf{i}}{B}{C}\mav{\vto{u}}{B}=[-35,3\;\;22]^\text{T}$. Como ele informou a posição de Bruna em relação a mim, o barco está percorrendo o deslocamento que lhe resta $\mav{\vto{z}}{C}=[-24,7\;\;8]^\text{T}$ numa velocidade rio adentro de -25,62km/h, o que demandará 0,96h. Nesse tempo, com velocidade de 16,87km/h rio acima, ele vai percorrer 16,2km nesse sentido, que significa 8,2km rio acima de onde estou. Ele chegará nesse ponto por volta das 15:00. Como agora são 14:30, de carro chegarei a tempo.''
+After deviating from original route, boat velocity representative matrix $\mav{\vto{v}}{C}$ becomes $\mav{\fua{\vtf{f}}{\vto{v}}}{C}=[-25.62\;\;16.87]^\text{T}$. At the moment of this deviation,  dislocation $\vto{u}$ of the boat was $\mav{\vto{u}}{B}=[30\;\;5]^\text{T}$, or on my point of view, $\mav{\vto{u}}{C}=\maf{\vtf{i}}{B}{C}\mav{\vto{u}}{B}=[-35.3\;\;22]^\text{T}$. Since he informed  Brenda's position relative to me, the boat is now performing the remaining displacement $\mav{\vto{z}}{C}=[-24.7\;\;8]^\text{T}$ at a 'inside the river' speed of -25.62km/h, which will require 0.96h. During this period, at a speed of 16.87km/h upstream, he will displace 16.2km upstream, which means 8.2km upstream from where I am. He will arrive at this point around 3:00 p.m. Since it is now 2:30 p.m., I'll arrive on time by car.'' 
 \end{example}
 
 
-\section{Autovalores e Autovetores}\label{sec:autoPares}
+\section{Eigenvalues and Eigenvectors}\label{sec:autoPares}
 
 Considerando um espaço de Hilbert $U_\mathcal{R}$ $n$-dimensional, denominamos $\alpha\vto{u}\in U_\mathcal{R}$, onde $\alpha\in\mathcal{R}$, um \textsb{múltiplo escalar}\index{múltiplo escalar} do vetor $\vto{u}$. O escalar $\alpha$, que indica essa multiplicidade, no contexto da norma $\|\alpha\vto{u}\|=|\alpha|\|\vto{u}\|$, promove uma espécie de redimensionamento de $\vto{u}$, ou seja, se $|\alpha|<1$, há uma diminuição de seu tamanho ou intensidade; se $|\alpha|>1$, há um aumento. O vetor $\vto{u}$ é chamado \textsb{autovetor}\index{autovetor} de um operador qualquer $\vtf{l}\in\evl{\mathcal{R}}{U}{U}$ se for não nulo e o valor $\fua{\vtf{l}}{\vto{u}}$ for seu múltiplo escalar, ou seja, se $\fua{\vtf{l}}{\vto{u}}=\alpha\vto{u}$, onde a multiplicidade $\alpha$ é dita o \textsb{autovalor}\index{autovalor} de $\vtf{l}$. Em outras palavras, \emph{um vetor que $\vtf{l}$ redimensione é seu autovetor e o sinal-magnitude desse redimensionamento seu autovalor}.
 
