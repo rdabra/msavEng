@@ -805,78 +805,73 @@ From these equalities, we can state that, in the context of Hermitian operators,
 since $\maf{\vtf{i}}{{\hat{X}}}{{\hat{C}}}$ results a unitary matrix from equalities \eqref{eq:mudaBaseTranspHilbert}. Moreover, as the representative matrix of $\vtf{h}$ on any orthonormal basis is normal, this change of coordinates from $\hat{X}$ to $\hat{C}$ results a \textsb{spectral decomposition}\index{spectral!decomposition}\footnote{In the terms of theorem \ref{teo:decompSpec}, equalities $\widetilde{\mat{N}} = \mat{U}^\dagger\mat{N}\mat{U}$ and $\mat{N}= \mat{U}\widetilde{\mat{N}}\mat{U}^\dagger$ are said to be the spectral diagonalization and the spectral decomposition of $\mat{N}$ respectively.} of $[\vtf{h}_{\hat{C}}]^{\hat{C}}$. Let's consider now that $\vtf{h}$ is a nonnegative operator.
 From the definition presented at the end of the previous section, we can write that  $\Re(\vto{x}_i\cdot\fua{\vtf{h}}{\vto{x}_i})\geqslant 0$.  As the eigenvalues of $\vtf{h}$ are real, we have $\lambda_i(\vto{x}_i\cdot\vto{x}_i)\geqslant 0$, where scalars $\lambda_i$ result nonnegative, since the inner product $\vto{x}_i\cdot\vto{x}_i$ is always positive. Therefore, we can affirm that if $\vtf{h}$ is nonnegative, so are its eigenvalues.  
 
+Before we deal with the theorem that will end this chapter, an additional definition for Hermitian operators needs to be done. In our study, a nonnegative hermitian operator $\vtf{h}$ of $\evl{\mathcal{R}}{U}{U}$ can be decomposed according to equality $\vtf{h}=\vtf{h}^{\nicefrac{1}{2}}\circ\vtf{h}^{\nicefrac{1}{2}}$, where operator $\vtf{h}^{\nicefrac{1}{2}}\in\evl{\mathcal{R}}{U}{U}$, unique and also nonnegative hermitian, is called the \textsb{square root operator}\index{operator!square root of} of $\vtf{h}$. We already know that function composition is expressed, in matrix terms, as the product of the representative matrices of these functions. Thereby, the name ``square root'' is due to equality  $[\vtf{h}]=[\vtf{h}^{\nicefrac{1}{2}}][\vtf{h}^{\nicefrac{1}{2}}]$, which refers to the same concept applied for scalars. 
 
-Antes de tratarmos do teorema que vai finalizar este capítulo, precisamos apresentar uma definição adicional no âmbito dos operadores lineares. Em nosso estudo, um operador hermitiano não-negativo $\vtf{h}$ pode ser decomposto segundo a igualdade $\vtf{h}=\vtf{h}^{\nicefrac{1}{2}}\circ\vtf{h}^{\nicefrac{1}{2}}$, onde o operador $\vtf{h}^{\nicefrac{1}{2}}\in\evl{\mathcal{R}}{U}{U}$, único e hermitiano não-negativo, é denominado \index{operador!raiz quadrada de} \textsb{raiz quadrada} de $\vtf{h}$. Já sabemos  que a composição de funções se expressa, em termos matriciais, como o produto das matrizes representativas dessas funções. Assim, a denominação ``raiz quadrada'' se deve à igualdade $[\vtf{h}]=[\vtf{h}^{\nicefrac{1}{2}}][\vtf{h}^{\nicefrac{1}{2}}]$, que remete ao mesmo conceito aplicado a escalares.
 
 {\footnotesize
-\begin{proof}\footnote{Demonstração adaptada de \aut{Gurtin}\cite{gurtin_1981}, pp. 13-14.}
-Precisamos mostrar que a raiz quadrada existe e é única. Para a última igualdade apresentada, válida para uma base qualquer, vamos escolher a base ortonormal $\hat{X}=\{\vun{x}_1,\cdots,\vun{x}_n\}$ formada a partir dos autovetores de $\vtf{h}$. Assim,
+\begin{proof}
+We need to show that a square root operator exists and is unique. The following proof is adapted from \aut{Gurtin}\cite{gurtin_1981}, pp. 13-14. For equality $[\vtf{h}]=[\vtf{h}^{\nicefrac{1}{2}}][\vtf{h}^{\nicefrac{1}{2}}]$, which is valid for any basis, let's choose an orthonormal basis $\hat{X}=\{\vun{x}_1,\cdots,\vun{x}_n\}$, constituted by the eigenvectors of $\vtf{h}$. Thereby, 
 \begin{equation*}
 \maf{\vtf{h}}{\hat{X}}{\hat{X}}=\maf{\vtf{h}^{\nicefrac{1}{2}}}{\hat{X}}{\hat{X}}\maf{\vtf{h}^{\nicefrac{1}{2}}}{\hat{X}}{\hat{X}},
 \end{equation*}
-e já sabemos que $\maf{\vtf{h}}{\hat{X}}{\hat{X}}_{ij}=\lambda_i\delta_{ij}$, sendo $\lambda_i\geq 0$. Se admitirmos $\maf{\vtf{h}^{\nicefrac{1}{2}}}{\hat{X}}{\hat{X}}_{ij}=\delta_{ij}\sqrt{\lambda_{i}}$, essa matriz resulta não-negativa e hermitiana, de onde se conclui $\vtf{h}^{\nicefrac{1}{2}}$ hermitiano não-negativo por conta das igualdades \eqref{eq:matOpeHermit}. Diante disso, fica constatada a existência de uma raiz quadrada de $\vtf{h}$. Para demonstrar a unicidade de $\vtf{h}^{\nicefrac{1}{2}}$, por hipótese, seja $\vtf{c}^{\nicefrac{1}{2}}\circ\vtf{c}^{\nicefrac{1}{2}}=\vtf{h}$. Adotando uma base qualquer $\con{B}$, um vetor $\vto{u}\in\con{V}$ e a igualdade \eqref{eq:probAutoValor}, pode-se fazer o seguinte
-desenvolvimento:
+and we already know that $\maf{\vtf{h}}{\hat{X}}{\hat{X}}_{ij}=\lambda_i\delta_{ij}$, where $\lambda_i\geq 0$. If we admit $\maf{\vtf{h}^{\nicefrac{1}{2}}}{\hat{X}}{\hat{X}}_{ij}=\delta_{ij}\sqrt{\lambda_{i}}$, matrix $\maf{\vtf{h}^{\nicefrac{1}{2}}}{\hat{X}}{\hat{X}}$ results nonnegative Hermitian, from which it can be concluded that $\vtf{h}^{\nicefrac{1}{2}}$ is also nonnegative Hermitian according to equalities \eqref{eq:matOpeHermit}. Thereby, the existence of a square root for $\vtf{h}$ is verified. Now, in order to prove the uniqueness of $\vtf{h}^{\nicefrac{1}{2}}$, let's suppose that $\vtf{c}^{\nicefrac{1}{2}}\circ\vtf{c}^{\nicefrac{1}{2}}=\vtf{h}$. Adopting a basis $\con{B}$, a vector $\vto{u}\in\con{V}$ and the equality \eqref{eq:probAutoValor}, we can do the following development:   
 \begin{eqnarray}
-0&=&\lpa \mad{\vtf{h}^{\nicefrac{1}{2}}_{\con{B}}}{B}\mad{\vtf{h}^{\nicefrac{1}{2}}_{\con{B}}}{B}-\lambda\mat{I}\rpa \lco \vto{x}_i \rco^{B} \nonumber\\
+0&=&\lpa \mad{\vtf{h}^{\nicefrac{1}{2}}_{\con{B}}}{B}\mad{\vtf{h}^{\nicefrac{1}{2}}_{\con{B}}}{B}-\lambda_i\mat{I}\rpa \lco \vto{x}_i \rco^{B} \nonumber\\
 &=&\lpa\mad{\vtf{h}^{\nicefrac{1}{2}}_{\con{B}}}{B}+\sqrt{\lambda_i}\,\,\mat{I}\rpa\underbrace{\lpa\mad{\vtf{h}^{\nicefrac{1}{2}}_{\con{B}}}{B}-\sqrt{\lambda_i}\,\,\mat{I}\rpa\lco\vto{x}_i \rco^{B}}_{\lco \vto{u} \rco^{B}} \nonumber\,,
 \end{eqnarray}
-de onde se conclui que
+from which we conclude that  
 \begin{equation}
 -\sqrt{\lambda_i}\mav{\vto{u}}{B} =
 \mad{\vtf{h}^{\nicefrac{1}{2}}_{\con{B}}}{B}\mav{\vto{u}}{B}\,.\nonumber
-\end{equation}
-A matriz $\lco \vto{u} \rco^{B}$, que abrevia o termo destacado, é
-nula; caso contrário, ocorreria a situação impossível de um
-autovalor negativo associado ao operador hermitiano
-não-negativo $\vtf{h}^{\nicefrac{1}{2}}$. No caso de $\lambda_i=0$,
-não há restrição para a matriz $\lco \vto{u} \rco^{B}$, podendo
-ser nula, por exemplo. Então, o termo destacado fica assim:
+\end{equation} 
+Matrix $\lco \vto{u} \rco^{B}$, that shortens the highlighted term, has to be zero, otherwise there would be an impossible situation of a negative eigenvalue related to a nonnegative Hermitian operator $\vtf{h}^{\nicefrac{1}{2}}$. In the case of $\lambda_i=0$, there is no restriction for matrix $\lco \vto{u} \rco^{B}$, that can be zero, for example. So, this highlighted term becomes 
 \begin{equation}
 \sqrt{\lambda_i}\lco \vto{x}_i \rco^{B} =
 \mad{\vtf{h}^{\nicefrac{1}{2}}_{\con{B}}}{B}\lco \vto{x}_i
 \rco^{B}\,.\nonumber
 \end{equation}
-Este mesmo procedimento pode ser aplicado ao operador
-$\vtf{c}^{\nicefrac{1}{2}}$, de onde se conclui que
+This same process can be used in the case of operator $\vtf{c}^{\nicefrac{1}{2}}$, from which we conclude that 
 \begin{equation}
 \mad{\vtf{h}^{\nicefrac{1}{2}}_{\con{B}}}{B}\lco \vto{x}_i
 \rco^{B}=\mad{\vtf{c}^{\nicefrac{1}{2}}_{\con{B}}}{B}\lco \vto{x}_i
 \rco^{B}\nonumber
 \end{equation}
-para qualquer um dos autovetores de $\vtf{h}$. Já que eles são não
-nulos, $\vtf{h}^{\nicefrac{1}{2}}$ é único.
+for all eigenvectors of $\vtf{h}$. As they are not zero,  $\vtf{h}^{\nicefrac{1}{2}}$ is unique.
 \end{proof}
 }
 
-
-Um operador do grupo unitário $(O,\circ)$, cujos elementos têm o espaço de Hilbert $U_\mathcal{R}$ como domínio, pode ser representado por uma matriz unitária, se a base utilizada for ortonormal. Em outras palavras, se $\vtf{q}\in O$ e $\hat{B}$ é base ortonormal de $U_\mathcal{R}$, pelas igualdades \eqref{eq:matRepInv} e \eqref{eq:matRepTransp}, a matriz
+An operator of unitary group $(O,\circ)$, whose elements have the Hilbert space $U_\mathcal{R}$ as a domain, can be represented by a unitary matrix if the basis in question is orthonormal. In other words, if $\vtf{q}\in O$ and $\hat{B}$ is an orthonormal basis of $U_\mathcal{R}$, through equalities \eqref{eq:matRepInv} and \eqref{eq:matRepTransp}, matrix 
 \begin{equation}
 {\maf{\vtf{q}}{\hat{B}}{\hat{B}}}^{-1}={\maf{\vtf{q}}{\hat{B}}{\hat{B}}}^\dagger.
 \end{equation}
-Convém recordar que um operador unitário preserva a norma, ou seja, ele não altera o ``tamanho'' ou a ``intensidade'' dos vetores de seu domínio. Para o nosso estudo, seria muito interessante poder discriminar essa característica em operadores lineares quaisquer por meio de uma decomposição, de tal sorte que haja uma parcela unitária e uma não-unitária, responsável exclusivamente por alterações da norma. O teorema a seguir viabiliza essa demanda\footnote{O termo ``polar'' que dá nome ao teorema diz respeito a uma característica similar à forma polar de um número complexo, onde há uma parcela real não-negativa que descreve magnitude e outra de magnitude sempre unitária}.
+It is convenient to recall that a unitary operator preserves norm, that is, it does not alter ``size'' or ``intensity'' of the vectors in its domain. For our study, it is important to discriminate this characteristic in any linear operator through a decomposition, in such a way that there results a unitary part and a non unitary part, which is exclusively responsible for altering norm. The following theorem meets this demand\footnote{The term ``polar'' on the theorem name refers to a feature that is similar to the polar form of a complex number, where there is a nonnegative real part that describes the magnitude and another whose magnitude is one.}.    
 
-\begin{mteo}{Decomposição Polar}{decoPolar}\label{teo:decompPolar}\index{decomposição polar}
-Uma bijeção qualquer $\vtf{g}\in\evl{\mathcal{R}}{U}{U}$, onde $U_\mathcal{R}$ é um espaço de Hilbert, possui uma única decomposição $\vtf{g}=\vtf{q}\circ\vtf{h}^{\nicefrac{1}{2}}\,$, onde $\vtf{q}\in\evl{\mathcal{R}}{U}{U}$ é unitário e $\vtf{h}=\vtf{g}\circ\vtf{g}^\dagger$ hermitiano não-negativo.
+
+\begin{mteo}{Polar Decomposition}{decoPolar}
+Considering $U_\mathcal{R}$ a Hilbert space, a bijection $\vtf{g}\in\evl{\mathcal{R}}{U}{U}$ has one and only one decomposition of the form $\vtf{g}=\vtf{q}\circ\vtf{h}^{\nicefrac{1}{2}}\,$, where $\vtf{q}\in\evl{\mathcal{R}}{U}{U}$ is unitary and $\vtf{h}=\vtf{g}\circ\vtf{g}^\dagger$ is nonnegative Hermitian.
 \end{mteo}
 
 
 {\footnotesize
 \begin{proof}
-Sejam a bijeção $\vtf{g}\in\evl{\mathcal{R}}{U}{U}$ e o operador hermitiano não-negativo $\vtf{h}=\vtf{g}\circ\vtf{g}^{\dagger}$. Sabemos que a decomposição 	$\vtf{h}=\vtf{h}^{\nicefrac{1}{2}}\circ\vtf{h}^{\nicefrac{1}{2}}$ existe, e portanto
+Let $\vtf{g}\in\evl{\mathcal{R}}{U}{U}$ be a bijection and function $\vtf{h}=\vtf{g}\circ\vtf{g}^{\dagger}$ a Hermitian nonnegative operator. We know that decomposition $\vtf{h}=\vtf{h}^{\nicefrac{1}{2}}\circ\vtf{h}^{\nicefrac{1}{2}}$ exists, and therefore 
 \begin{align*}
 \vtf{h}^{\nicefrac{1}{2}}\circ\vtf{h}^{\nicefrac{1}{2}}&=\vtf{g}\circ\vtf{g}^{\dagger}\\
 \vtf{i}&=\underbrace{\vtf{h}^{-\nicefrac{1}{2}}\circ\vtf{g}}_{\vtf{q}}\circ\underbrace{\vtf{g}^{\dagger}\circ\vtf{h}^{-\nicefrac{1}{2}}}_{\vtf{q}^{\dagger}}\,,
-\end{align*}	
-de onde concluímos que o termo destacado $\vtf{q}$ é unitário. Assim, podemos afirmar que a decomposição polar existe pois a bijeção $\vtf{g}=\vtf{q}\circ\vtf{h}^{\nicefrac{1}{2}}$. Como a raiz quadrada $\vtf{h}^{\nicefrac{1}{2}}$ é única para $\vtf{g}\circ\vtf{g}^\dagger$, então o operador unitário $\vtf{q}=\vtf{g}\circ\vtf{h}^{-\nicefrac{1}{2}}$ também é único; o que resulta numa decomposição polar única para $\vtf{g}$.
+\end{align*}
+from which we conclude that the highlighted term is unitary. Thus, we can state that polar decomposition exists since bijection $\vtf{g}=\vtf{q}\circ\vtf{h}^{\nicefrac{1}{2}}$. As the square root  $\vtf{h}^{\nicefrac{1}{2}}$  is unique for 
+$\vtf{g}\circ\vtf{g}^\dagger$, the unitary operator $\vtf{q}=\vtf{g}\circ\vtf{h}^{-\nicefrac{1}{2}}$ is also unique; which results a unique polar decomposition for $\vtf{g}$.
 \end{proof}
 }
 
-\begin{mcoro}{Decomposições Polares à Direita e à Esquerda}{decompPolarEsquerda}\label{teo:decompPolarEsquerda}
-Dada a decomposição polar $\vtf{g}=\vtf{q}\circ\vtf{h}_1^{\nicefrac{1}{2}}$, a igualdade $\vtf{g}=\vtf{h}_2^{\nicefrac{1}{2}}\circ\vtf{q}$, onde $\vtf{h}_2=\vtf{g}^\dagger\circ\vtf{g}$, é única. Por isso, a primeira decomposição denominamos \textsb{decomposição polar à direita}\index{decomposição polar!à direita} e a segunda \textsb{decomposição polar à esquerda}\index{decomposição polar!à esquerda}.
+\begin{mcoro}{Left and Right Polar Decompositions}{decompPolarEsquerda}
+Considering the polar decomposition $\vtf{g}=\vtf{q}\circ\vtf{h}_1^{\nicefrac{1}{2}}$, called \textsb{right polar decomposition}\index{polar decomposition!right}, equality $\vtf{g}=\vtf{h}_2^{\nicefrac{1}{2}}\circ\vtf{q}$, where $\vtf{h}_2=\vtf{g}^\dagger\circ\vtf{g}$, is unique and hence called \textsb{left polar decomposition}\index{polar decomposition!left}.
 \end{mcoro}
 
 {\footnotesize
 \begin{proof}
+The verification of the existence and uniqueness of left polar decomposition follows the same process of the right. Let's prove now that the unitary operators in both decompositions are really the same. 
+
 A demonstração da decomposição polar à esquerda segue o mesmo procedimento da demonstração do teorema anterior. Comprovemos agora que os operadores unitários em ambas as decomposições são iguais. A partir da decomposição polar à esquerda cujo operador unitário é $\vtf{q}_1$, se a parcela $\vtf{c}=\vtf{q}_1^{-1}\circ\vtf{h}_2^{\nicefrac{1}{2}}\circ\vtf{q}_1$ da igualdade $\vtf{g}=\vtf{q}_1\circ\vtf{q}_1^{-1}\circ\vtf{h}_2^{\nicefrac{1}{2}}\circ\vtf{q}_1$ for hermitiana não-negativa,  constata-se uma decomposição polar à direita e portanto $\vtf{q}_1=\vtf{q}$. A comprovação de que $\vtf{c}=\vtf{c}^\dagger$ é trivial. Vamos verificar agora se, dada uma base ortonormal qualquer e um vetor $\vto{x}\in U_\mathcal{R}$, o escalar $\Re([\vto{x}]^\dagger[\vtf{c}][\vto{x}])_{11}$ é não-negativo. Da igualdade $[\vto{x}]^\dagger[\vtf{c}][\vto{x}]=[\vto{x}]^\dagger[\vtf{q}_1]^{-1}[\vtf{h}_2^{\nicefrac{1}{2}}][\vtf{q}_1][\vto{x}]$, podemos concluir que $\Re(\mat{A}^\dagger[\vtf{h}_2^{\nicefrac{1}{2}}]\mat{A})_{11}\geq 0$, onde $\mat{A}=[\vtf{q}_1][\vto{x}]$, pois $\vtf{h}_2^{\nicefrac{1}{2}}$ é não-negativo.
 \end{proof}
 
