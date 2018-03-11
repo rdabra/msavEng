@@ -2,12 +2,12 @@
 \chapter{A Primer on Linear Algebra}
 
 A set is called \textsb{space}\index{space} when it is structured by another set, by an operation or by some relevant property to which all of its elements are subjected.
-In the previous chapter, we created a space with an additive structure, called an additive group, and cumulatively assigned to this space a multiplicative structure, when it became a field. In this chapter, the cumulative structuring of these specific spaces is developed, now using fields, norms, metrics and inner products as structural entities. Firstly, we shall gather the concepts of additive group and field in such a way that, from this interaction, scalars end up assigning certain multiplicative properties to group elements, namely, abbreviation of repetitive additions, positivity and negativity. Regarding the relationships between these spaces, Linear Algebra deals mainly with specific homomorphic functions in which scalars are considered and structures preserved.
+In the previous chapter, we created a space with an additive structure, called an additive group, and cumulatively assigned to this space a multiplicative structure, when it became a field. In this chapter, the cumulative structuring of these specific spaces is developed, now using fields, norms, metrics and inner products as structural entities. Firstly, we shall gather the concepts of additive group and field in such a way that, from this interaction, scalars end up assigning certain multiplicative properties to group elements, namely, abbreviation of repetitive additions, positivity and negativity. Regarding the relationships between these spaces, Linear Algebra deals mainly with specific homomorphic functions in which scalars take part and structures preserved.
 
 
 \section{Structuring by Field}\label{sec:espacoVet}
 
-The group-field space is the fundamental object of Linear Algebra and the interaction between these two sets is subjected to restrictions. In order to present them, let's mathematically describe and complement what we have said so far. Let $V$ be an additive group structured by a field $\mathcal{R}$ through the function $p$ in mapping $\map{p}{\mathcal{R}\times\con{V}}{\con{V}}$. This function, whose values $\fua{p}{\alpha,\gloref{vetor}}$ are represented by $\alpha\vto{x}$ or $\vto{x}\alpha$, must obey the following axioms:
+The group-field space is the fundamental object of Linear Algebra and the interaction between these two sets is subjected to restrictions. In order to present them, we shall mathematically describe and complement what has been said so far. Let $V$ be an additive group structured by a field $\mathcal{R}$ through the function $p$ in mapping $\map{p}{\mathcal{R}\times\con{V}}{\con{V}}$. This function, whose values $\fua{p}{\alpha,\gloref{vetor}}$ are represented by $\alpha\vto{x}$ or $\vto{x}\alpha$, must obey the following axioms:
 \begin{itemize}
 \setlength\itemsep{.1em}
     \item[i.] $\alpha \lpa \vto{x} + \vto{y} \rpa = \alpha\vto{x}+\alpha\vto{y}$;
@@ -16,7 +16,7 @@ The group-field space is the fundamental object of Linear Algebra and the intera
     \item[iv.] $1\vto{x}= \vto{x}$, where 1 is the multiplicative identity of $\mathcal{R}$;
     \item[v.] $ 0\vto{x} = \vto{0}$, where $\vto{0}$ is the null element of $\con{V}$;
 \end{itemize}
-where $\alpha,\beta\in \mathcal{R}$ and $\vto{x}, \vto{y}\in V$ are any elements of their respective sets. Under these conditions, an element of $V$ is named  \textsb{vector}\index{vector} and the triple $(V,\mathcal{R},p)$ is a \textsb{vector space}\index{space!vector} of $V$ in $\mathcal{R}$, whose representation is abbreviated by the symbol $\gloref{espacVet}$, which will be treated from now on as a set, in order to simplify notation. If the field $\mathcal{R}$ is complex, the vector space $V_\complexo$ is said to be \textsb{complex}\index{space!complex vector}, for any group $V$; similarly, $V_\real$ is called a \textsb{real vector space}\index{space!real vector}. From the previous definitions, we can conclude that if a field is group, then $\mathcal{R}_{\mathcal{R}}$ or $\mathcal{R}$ is also a vector space.
+for all $\alpha,\beta\in \mathcal{R}$ and $\vto{x}, \vto{y}\in V$. Under these conditions, an element of $V$ is called  \textsb{vector}\index{vector} and the triple $(V,\mathcal{R},p)$ is a \textsb{vector space}\index{space!vector} of $V$ in $\mathcal{R}$, whose representation is abbreviated by the symbol $\gloref{espacVet}$, which will be treated from now on as a set, in order to simplify notation. If the field $\mathcal{R}$ is complex, vector space $V_\complexo$ is said to be \textsb{complex}\index{space!complex vector}, for any group $V$; similarly, $V_\real$ is called a \textsb{real vector space}\index{space!real vector}. From the previous definitions, we can conclude that if a field is a group, then $\mathcal{R}_{\mathcal{R}}$ or $\mathcal{R}$ is also a vector space.
 
 As a set admits a subset under the conditions already presented, spaces admit subspaces. A \textsb{vector subspace}\index{vector subspace}, structured by the field $\mathcal{R}$, is actually a vector space in $\mathcal{R}$ whose elements also belong to a set that defines a vector space in $\mathcal{R}$. In more precise terms, we say that the vector space $(S,\mathcal{R},\tilde{p})$, where $\map{\tilde{p}}{\mathcal{R}\times S}{S}$, is a vector subspace of $V_\mathcal{R}$ if the set $S\subseteq V$ or, in a detailed notation, if the space $S_\mathcal{R}\subseteq V_\mathcal{R}$. It is important to say that as all vector spaces are defined to have a null element $\vto{0}$, then $\vto{0}$ must belong to any vector subspace.
 
@@ -41,7 +41,7 @@ If $\spn (U)$ is spanned or generated by $U$, then we can also say that $U$ span
 $\alpha\varphi_i\in\mathcal{R}$; which proves the multiplication $\map{p}{\mathcal{R}\times\spn (U)}{\spn (U)}$. From these facts, it is easily verified that $\spn (U)$ observes the five axioms of vectors spaces presented above; which permits us to conclude that the subset spanned by $U$ defines a vector space $\spn{(U)}_\mathcal{R}\subseteq V_\mathcal{R}$. Therefore, we can state generically that every spanned subset defines a \textsb{spanned subspace}\index{subspace!spanned}.
 
 
-Considering the previous conditions in the case where $U$ spans the space $V_\mathcal{R}$ as a whole, we define the following: a) if $U$ is finite, $V_\mathcal{R}$ is said to be a  \textsb{finite-dimensional}\index{vector space!finite-dimensional} vector space; b) if $U$ is linearly independent, it is called a \textsb{basis}\index{vector space!basis of} of $V_\mathcal{R}$. Gathering these two definitions, when $U$ is a basis with $n$ elements that spans a finite-dimensional  $V_\mathcal{R}$, any vector $\vto{w}\in V_\mathcal{R}$ is generated by one and only one linear combination $\sum_{i=1}^n\alpha_i\vto{v}_i$. Therefore, in the context of the basis $U$, there is a biunivocal relationship between the vector $\vto{w}$ and the $n$-tuple $(\alpha_i,\cdots,\alpha_n)$, whose ordering follows the sequence of the basis vectors. This $n$-tuple of scalars that defines vector $\vto{w}$ on the basis $U$ is named the \textsb{coordinates}\index{vector!coordinates of} of $\vto{w}$ on $U$.
+Considering the previous conditions in the case where $U$ spans the space $V_\mathcal{R}$ as a whole, we define the following: a) if $U$ is finite, $V_\mathcal{R}$ is said to be a  \textsb{finite-dimensional}\index{vector space!finite-dimensional} vector space; b) if $U$ is linearly independent, it is called a \textsb{basis}\index{vector space!basis of} of $V_\mathcal{R}$. Gathering these two definitions, when $U$ is a basis with $n$ elements that spans a finite-dimensional  $V_\mathcal{R}$, any vector $\vto{w}\in V_\mathcal{R}$ is generated by one and only one linear combination $\sum_{i=1}^n\alpha_i\vto{v}_i$. Therefore, in the context of the basis $U$, there is a biunivocal relationship between the vector $\vto{w}$ and the $n$-tuple $(\alpha_i,\cdots,\alpha_n)$, whose ordering follows the sequence of the basis vectors. This $n$-tuple of scalars that defines vector $\vto{w}$ on the basis $U$ is called the \textsb{coordinates}\index{vector!coordinates of} of $\vto{w}$ on $U$.
 
 {\footnotesize
 \begin{proof}
@@ -165,7 +165,7 @@ and a \textsb{closure}\index{set!closure of} $\overline{A}_3$ of $A_3$ defined b
 \overline{A}_3=\lch\ele{x}\in\con{A}\,:\, A_3\cap\ele{B}_{\ele{x},\ele{r}}\neq\emptyset\,,\,\forall\,\ele{r}\in\real\rch\,,
 \end{equation}
 such that $\partial A_3:=\overline{A}_3\setminus \widehat{A}_3$ is the
-\textsb{boundary}\index{set!boundary of} of $A_3$. From these definitions, we can conclude that $A_3$ is open when $A_3=\widehat{A}_3$ and closed when $A_3=\overline{A}_3$. An open subset is called closed-open or \textsb{clopen}\index{set!clopen} when its complement is also open. As an example, the sets $W_1={1,\cdots,2}$ e $W_2={3,\cdots,4}$, defined by intervals of real values, are clopen subsets of $W_1\cup W_2$.
+\textsb{boundary}\index{set!boundary of} of $A_3$. From these definitions, we can conclude that $A_3$ is open when $A_3=\widehat{A}_3$ and closed when $A_3=\overline{A}_3$. An open subset is called closed-open or \textsb{clopen}\index{set!clopen} when its complement is also open. As an example, the sets $W_1={1,\cdots,2}$ and $W_2={3,\cdots,4}$, defined by intervals of real values, are clopen subsets of $W_1\cup W_2$.
 \begin{figure}[!h]
 	\centering
 	\begin{center}
@@ -177,7 +177,7 @@ It is important to say that the open set and the set $A$, to which the elements 
 
 {\footnotesize
 \begin{proof}
-Let's prove that $W_1$ and $W_2$ are clopen in $W:=W_1\cup W_2$. Let $(w-1/2,w+1/2)$ be an open interval in $\real$ where $w\in W$. This interval centered in $w=2$ results $(3/2,2)$, which is also open since there are no elements greater than 2 e less than $5/2$. Through this same process, it is always possible to find an open interval centered in any $w\in W_1$; when we conclude that $W_1$ is open in $W$. By this same reasoning, $W_2$ is also open. But $W_1$ and $W_2$ are also closed because they are each other's open complement in $W$.
+Let's prove that $W_1$ and $W_2$ are clopen in $W:=W_1\cup W_2$. Let $(w-1/2,w+1/2)$ be an open interval in $\real$ where $w\in W$. This interval centered in $w=2$ results $(3/2,2)$, which is also open since there are no elements greater than 2 and less than $5/2$. Through this same process, it is always possible to find an open interval centered in any $w\in W_1$; when we conclude that $W_1$ is open in $W$. By this same reasoning, $W_2$ is also open. But $W_1$ and $W_2$ are also closed because they are each other's open complement in $W$.
 \end{proof}}
 
 Still considering the conditions above, the space $(A,\varrho)$ is called \textsb{connected}\index{space!connected} when there is no proper non empty subset that is clopen in $A$; otherwise, the space is said to be \textsb{disconnected}\index{space!disconnected}, as is the case of a metric space defined by $W_1\cup W_2$. In other words, a disconnected space results from the union of disjoint open non empty subsets. Intuitively, we can say that this space is fragmented, constituted by scattered collections of elements.
@@ -239,7 +239,7 @@ a Banach space with an inner product $(V_\mathcal{R},\varrho,\eta,\xi)$, called 
 \end{forest}
 }
 \newline
-\titfigura{Relevant combinations of vector spaces.}
+\titfigura{Notable combinations of vector spaces.}
 \end{figure}
 
 \begin{mteo}{Orthogonal Basis in Hilbert Spaces}{temOrtonormal}
@@ -420,14 +420,14 @@ from which we conclude that the coordinate functionals of $B$ span $U^*_\mathcal
 $\vto{x}$ is zero, then $\sum_{i=1}^{n}\fua{\vtf{f}^\con{B}_{i}}{\vto{x}}\vto{v}_i=\vto{0}$, where 
 equality $\fua{\vtf{f}^\con{B}_{i}}{\vto{x}}=0$ is true for all $\vto{x}$, and therefore $\vtf{f}^\con{B}_{i}=\vtf{0}$. This linear independence assures that the coordinate functionals of $B$ constitute a basis of $V^*_\mathcal{R}$. Now, considering $\vto{u}$ and $\vto{v}$ vectors of $U_\mathcal{R}$, the function $\Phi$ results an homomorphism from the following equalities:
 \begin{equation*}
-\fua{\lco\fua{\Phi}{\vto{u}+\vto{v}}\rco}{\vto{x}}=\fua{\lpa\vto{u}+\vto{v}\rpa^*}{\vto{x}}=\vto{x}\cdot(\vto{u}+\vto{v})=\fua{\vto{u}^*}{\vto{x}}+\fua{\vto{v}^*}{\vto{x}}=\fua{\lco\fua{\Phi}{\vto{u}}+\fua{\Phi}{\vto{v}}\rco}{\vto{x}}\,.
+\fua{\lco\fua{\Phi}{\vto{u}+\vto{v}}\rco}{\vto{x}}=\fua{\lpa\vtf{u}+\vtf{v}\rpa^*}{\vto{x}}=\vto{x}\cdot(\vto{u}+\vto{v})=\fua{\vtf{u}^*}{\vto{x}}+\fua{\vtf{v}^*}{\vto{x}}=\fua{\lco\fua{\Phi}{\vto{u}}+\fua{\Phi}{\vto{v}}\rco}{\vto{x}}\,.
 \end{equation*}
-If $\Phi$ were not an injection, there would be different covectors $\vto{u}^*$ e $\vto{v}^*$ where $\fua{\vto{u}^*}{\vto{x}}=\fua{\vto{v}^*}{\vto{x}}$ or $\vto{x}\cdot\vto{u}=\vto{x}\cdot\vto{v}$. From this supposition, the following equalities result: $\vto{x}\cdot(\vto{u}-\vto{v})=\fua{(\vto{u}-\vto{v})^*}{\vto{x}}=0$, which do not confirm $\vto{u}^*\neq\vto{v}^*$. In order to prove that $\Phi$ is a surjection, we need to obtain for any functional $\vtf{g}\in U_\mathcal{R}^*$ a vector $\vto{u}\in U_\mathcal{R}$ such that $\fua{\Phi}{\vto{u}}=\vtf{g}$. Considering the rule \eqref{eq:regraCoord} and an orthonormal basis $\hat{B}=\{\vun{u}_1,\cdots,\vun{u}_n\}$ of $U_\mathcal{R}$ whose coordinate functionals span $U^*_\mathcal{R}$, we can say that 
+If $\Phi$ were not an injection, there would be different covectors $\vtf{u}^*$ and $\vtf{v}^*$ where $\fua{\vtf{u}^*}{\vto{x}}=\fua{\vtf{v}^*}{\vto{x}}$ or $\vto{x}\cdot\vto{u}=\vto{x}\cdot\vto{v}$. From this supposition, the following equalities result: $\vto{x}\cdot(\vto{u}-\vto{v})=\fua{(\vtf{u}-\vtf{v})^*}{\vto{x}}=0$, which do not confirm $\vtf{u}^*\neq\vtf{v}^*$. In order to prove that $\Phi$ is a surjection, we need to obtain for any functional $\vtf{g}\in U_\mathcal{R}^*$ a vector $\vto{u}\in U_\mathcal{R}$ such that $\fua{\Phi}{\vto{u}}=\vtf{g}$. Considering the rule \eqref{eq:regraCoord} and an orthonormal basis $\hat{B}=\{\vun{u}_1,\cdots,\vun{u}_n\}$ of $U_\mathcal{R}$ whose coordinate functionals span $U^*_\mathcal{R}$, we can say that 
 \begin{equation*}
 \fua{\vtf{g}}{\vto{x}}=\fua{[\sum_{i=1}^n\alpha_i\vtf{f}^{\hat{B}}_i]}{\vto{x}}=\sum_{i=1}^n\alpha_i\fua{\vtf{f}^{\hat{B}}_i}{\vto{x}}=\sum_{i=1}^n\alpha_i\lpa\vto{x}\cdot\vun{u}_i\rpa=\vto{x}	\cdot ( \sum_{i=1}^n\overline{\alpha_i} \vun{u}_i)\,.
 \end{equation*}
-As $\fua{\vtf{g}}{\vto{x}}=\fua{\lco\fua{\Phi}{\vto{u}}\rco}{\vto{x}}=\vto{x}\cdot\vto{u}$, the existence of $\vto{u}=\sum_{i=1}^n\overline{\alpha_i} \vun{u}_i$ is verified. Finally, using definition \eqref{eq:normaFuncao} on the present conditions, leaving space representation on norms implicit, we obtain equality $\|\vto{u}^*\|=\sup\{ |\vto{x}\cdot\vto{u}|/\|\vto{x}\|\}$ for all non zero $\vto{x}$.
-If $\vto{u}$ is zero, it is evident that $\|\vto{u}^*\|=\|\vto{u}\|$; otherwise, $\vto{u}^*$ is non zero and we conclude that $\|\vto{u}^*\|\geqslant |\, \vto{x}\cdot\vto{u}|/\|\vto{x}\|$. Cauchy-Schwarz Inequality states that $|\, \vto{x}\cdot\vto{u}| \leqslant \|\vto{x}\|\,\,\|\vto{u}\|$. Subtracting these two previous inequalities, we arrive at $(\|\vto{u}^*\|-\|\vto{u}\|)\|\vto{x}\|\geqslant 0$, whose left side can be zero for any non zero $\vto{u}^*$, $\vto{u}$ and $\vto{x}$; therefore, $\|\vto{u}^*\|=\|\vto{u}\|$.    
+As $\fua{\vtf{g}}{\vto{x}}=\fua{\lco\fua{\Phi}{\vto{u}}\rco}{\vto{x}}=\vto{x}\cdot\vto{u}$, the existence of $\vto{u}=\sum_{i=1}^n\overline{\alpha_i} \vun{u}_i$ is verified. Finally, using definition \eqref{eq:normaFuncao} on the present conditions, leaving space representation on norms implicit, we obtain equality $\|\vtf{u}^*\|=\sup\{ |\vto{x}\cdot\vto{u}|/\|\vto{x}\|\}$ for all non zero $\vto{x}$.
+If $\vto{u}$ is zero, it is evident that $\|\vtf{u}^*\|=\|\vto{u}\|$; otherwise, $\vtf{u}^*$ is non zero and we conclude that $\|\vtf{u}^*\|\geqslant |\, \vto{x}\cdot\vto{u}|/\|\vto{x}\|$. Cauchy-Schwarz Inequality states that $|\, \vto{x}\cdot\vto{u}| \leqslant \|\vto{x}\|\,\,\|\vto{u}\|$. Subtracting these two previous inequalities, we arrive at $(\|\vtf{u}^*\|-\|\vto{u}\|)\|\vto{x}\|\geqslant 0$, whose left side can be zero for any non zero $\vtf{u}^*$, $\vto{u}$ and $\vto{x}$; therefore, $\|\vtf{u}^*\|=\|\vto{u}\|$.    
 \end{proof}
 }
 
@@ -436,13 +436,13 @@ The Riesz-Fréchet Representation enables us to define a rule for coordinate func
 \fua{\vtf{f}_i^B}{\vto{u}}=\vto{u}\cdot\vto{v_i}=\sum_{j=1}^n\fua{\vtf{f}_j^B}{\vto{u}}\vto{u}_j \cdot \vto{v}_i\,.
 \end{equation*}
 In order to obtain the identity $\fua{\vtf{f}_i^B}{\vto{u}}=\fua{\vtf{f}_i^B}{\vto{u}}$, inner product 
-$\vto{u}_j \cdot \vto{v}_i$ must be $\delta_{ji}$. Thereby, we can say that a subset $\{\vto{v}_1,\cdots,\vto{v}_n\}$, whose elements are biunivocaly related to the vectors of $B^*$, is the reciprocal basis $B^\perp=\{\vto{u}^1,\cdots,\vto{u}^n\}$, that is, covectors $(\vto{u}^i)^*=\vtf{f}_i^B$. The rule for coordinate functionals can be described by    
+$\vto{u}_j \cdot \vto{v}_i$ must be $\delta_{ji}$. Thereby, we can say that a subset $\{\vto{v}_1,\cdots,\vto{v}_n\}$, whose elements are biunivocaly related to the vectors of $B^*$, is the reciprocal basis $B^\perp=\{\vto{u}^1,\cdots,\vto{u}^n\}$, that is, covectors $(\vtf{u}^i)^*=\vtf{f}_i^B$. The rule for coordinate functionals can be described by    
 \begin{equation}\label{eq:regraFuncCoord}
-\fua{\vtf{f}_i^B}{\vto{x}}=\fua{(\vto{u}^i)^*}{\vto{x}}=\vto{x} \cdot \vto{u}^i\,.
+\fua{\vtf{f}_i^B}{\vto{x}}=\fua{(\vtf{u}^i)^*}{\vto{x}}=\vto{x} \cdot \vto{u}^i\,.
 \end{equation}
 If $B^\perp$ is the reciprocal basis of $B$, the inverse is also true; thus, from the previous rule, we can affirm that  
 \begin{equation}
-\fua{\vtf{f}_i^{B^\perp}}{\vto{x}}=\fua{(\vto{u}_i)^*}{\vto{x}}=\vto{x} \cdot \vto{u}_i\,.
+\fua{\vtf{f}_i^{B^\perp}}{\vto{x}}=\fua{(\vtf{u}_i)^*}{\vto{x}}=\vto{x} \cdot \vto{u}_i\,.
 \end{equation}
 In this context, the inner product between any two vectors $\vto{u}$ and $\vto{v}$ leads to the following equalities: 
 \begin{equation}\label{eq:prodIntGen}
@@ -472,9 +472,9 @@ If the linear functionals of $U_\mathcal{R}^*$ are continuous and $U_\mathcal{R}
 \begin{proof}
 By the rule \eqref{eq:normaFuncao},  $U_\mathcal{R}^*$ is a normed space that is also defined to be metric inner product (See p. \pageref{txt:prodInt}). Thus, it remains here to verify that $U_\mathcal{R}^*$ is complete. This condition is assured if the bijection $\Phi$ is isometric, according to theorem \ref{teo:isoComp}. From the rule for covectors established by Riesz-Fréchet Representation, if $\vto{u}=\vto{v}-\vto{w}$ then    
 \begin{equation*}
-\fua{(\vto{v}-\vto{w})^*}{\vto{x}}=\vto{x}\cdot(\vto{v}-\vto{w})=\vto{x}\cdot\vto{v}-\vto{x}\cdot\vto{w}=\fua{\vto{v}^*}{\vto{x}}-\fua{\vto{w}^*}{\vto{x}}=\fua{(\vto{v}^*-\vto{w}^*)}{\vto{x}}\,,
+\fua{(\vto{v}-\vtf{w})^*}{\vto{x}}=\vto{x}\cdot(\vto{v}-\vto{w})=\vto{x}\cdot\vto{v}-\vto{x}\cdot\vto{w}=\fua{\vtf{v}^*}{\vto{x}}-\fua{\vtf{w}^*}{\vto{x}}=\fua{(\vtf{v}^*-\vtf{w}^*)}{\vto{x}}\,,
 \end{equation*}
-from which we conclude that $(\vto{v}-\vto{w})^*=(\vto{v}^*-\vto{w}^*)$, or that $\fua{\Phi}{\vto{v}-\vto{w}}=\fua{\Phi}{\vto{v}}-\fua{\Phi}{\vto{w}}$. Thereby, knowing that $\|\fua{\Phi}{\vto{x}}\|_{U_\mathcal{R}^*}=\|\vto{x}\|_{U_\mathcal{R}}$, metric  
+from which we conclude that $(\vtf{v}-\vtf{w})^*=(\vtf{v}^*-\vtf{w}^*)$, or that $\fua{\Phi}{\vto{v}-\vto{w}}=\fua{\Phi}{\vto{v}}-\fua{\Phi}{\vto{w}}$. Thereby, knowing that $\|\fua{\Phi}{\vto{x}}\|_{U_\mathcal{R}^*}=\|\vto{x}\|_{U_\mathcal{R}}$, metric  
 \begin{equation*}
 \fua{\varrho_{U_\mathcal{R}^*}}{\fua{\Phi}{\vto{v}},\fua{\Phi}{\vto{w}}}=\|\fua{\Phi}{\vto{v}}-\fua{\Phi}{\vto{w}}\|_{U_\mathcal{R}^*}= \|\fua{\Phi}{\vto{v}-\vto{w}}\|_{U_\mathcal{R}^*}= \|\vto{v}-\vto{w}\|_{U_\mathcal{R}}\,.
 \end{equation*}
@@ -667,10 +667,10 @@ from which we conclude that the change of coordinates of $\vtf{h}$ from $B^*$ to
 \end{equation}
 From these two classifications of coordinates, if $U_\mathcal{R}$ is a Hilbert space, scalars $\fua{\vtf{f}_i^B}{\vto{u}}=\vto{u}\cdot\vto{u}^i$ constitute the contravariant coordinates of vector $\vto{u}\in U_\mathcal{R}$, whose covector
 \begin{equation*}
-\vto{u}^*=\sum_{i=1}^n\fua{\vto{u}^*}{\vto{u}_i} \vtf{f}_i^{B}= \sum_{i=1}^n (\vto{u}_i\cdot\vto{u}) (\vto{u}^i)^*\,.
+\vtf{u}^*=\sum_{i=1}^n\fua{\vtf{u}^*}{\vto{u}_i} \vtf{f}_i^{B}= \sum_{i=1}^n (\vto{u}_i\cdot\vto{u}) (\vtf{u}^i)^*\,.
 \end{equation*}
-Since $\vto{u}$ and $\vto{u}^*$ are biunivocaly related through Riesz-Fréchet Representation, the coordinates $(\vto{u}_1\cdot\vto{u},\cdots,\vto{u}_n\cdot\vto{u})$ of $\vto{u}^*$ on $B^*$ are usually called the covariant coordinates of vector $\vto{u}$ on $B^\perp$. If the Hilbert space in question is real, considering  
-$\hat{B}=\{\vun{u}_1,\cdots,\vun{u}_n\}$ an orthonormal basis of $U_\real$, we can say that covariant and contravariant coordinates of any vector $\vto{u}$ are always equal because expressions $\vun{u}_i=\vun{u}^i$ and the commutativity of inner product imply $\vto{u}\cdot\vto{u}^i=\vto{u}_i\cdot\vto{u}$, that is,   $\fua{\vto{u}^*}{\vto{u}_i}=\fua{\vtf{f}_i^{\hat{B}}}{\vto{u}}$. This also occurs in a tridimensional Euclidean space, when natural basis $\{\vun{e}_1,\vun{e}_2,\vun{e}_3\}$ is called  \textsb{cartesian basis}\index{basis!cartesian} and all the linear combinations of its elements are \textsb{cartesian vectors}\index{vector!cartesian}.
+Since $\vto{u}$ and $\vtf{u}^*$ are biunivocaly related through Riesz-Fréchet Representation, the coordinates $(\vto{u}_1\cdot\vto{u},\cdots,\vto{u}_n\cdot\vto{u})$ of $\vtf{u}^*$ on $B^*$ are usually called the covariant coordinates of vector $\vto{u}$ on $B^\perp$. If the Hilbert space in question is real, considering  
+$\hat{B}=\{\vun{u}_1,\cdots,\vun{u}_n\}$ an orthonormal basis of $U_\real$, we can say that covariant and contravariant coordinates of any vector $\vto{u}$ are always equal because expressions $\vun{u}_i=\vun{u}^i$ and the commutativity of inner product imply $\vto{u}\cdot\vto{u}^i=\vto{u}_i\cdot\vto{u}$, that is,   $\fua{\vtf{u}^*}{\vto{u}_i}=\fua{\vtf{f}_i^{\hat{B}}}{\vto{u}}$. This also occurs in a tridimensional Euclidean space, when natural basis $\{\vun{e}_1,\vun{e}_2,\vun{e}_3\}$ is called  \textsb{cartesian basis}\index{basis!cartesian} and all the linear combinations of its elements are \textsb{cartesian vectors}\index{vector!cartesian}.
 
 Now, an interesting consequence of equalities \eqref{eq:mudaBaseTranspHilbert} is that matrix ${\maf{\vtf{i}}{C}{B}}$ results unitary if the bases involved are orthonormal, since they are reciprocal to itself, as we already know. Thereby, we present the following corollary, that describes an important  relationship between representative matrices of linear operators.  
 
@@ -691,7 +691,7 @@ and equality $\mav{\fua{\vtf{g}}{\vto{u}}}{C}=\maf{\vtf{g}}{C}{C}\mav{\vto{u}}{C
 \begin{equation*}
 \maf{\vtf{g}}{C}{C} = \maf{\vtf{i}}{B}{C}\maf{\vtf{g}}{B}{B}\maf{\vtf{i}}{C}{B}\,.
 \end{equation*}
-As $\maf{\vtf{i}}{B}{C}={\maf{\vtf{i}}{C}{B}}^{-1}$, we conclude that matrices $\maf{\vtf{g}}{C}{C}$ e $\maf{\vtf{g}}{B}{B}$ are similar.
+As $\maf{\vtf{i}}{B}{C}={\maf{\vtf{i}}{C}{B}}^{-1}$, we conclude that matrices $\maf{\vtf{g}}{C}{C}$ and $\maf{\vtf{g}}{B}{B}$ are similar.
 \end{proof}
 }
 
@@ -708,7 +708,7 @@ for all non zero $\vto{y}\in Y_\mathcal{R}$, matrix $\maf{\vtf{g}}{B}{B}$ is sai
 At this point, let's briefly interrupt the evolution of the theory in order to work on an example: the subject ``change of coordinates'' is too important for our study and it is now quite convenient that we deal with something less abstract.
 
 \begin{example}
-This is a naive little story. Once upon a time, Brenda, a teacher, living on a bank of a large width river, hands to a boatman a package containing a gift to be delivered at a place on the other bank, where the mechanical engineer Calvin, beloved consignee of her order, lives. At a certain point while crossing the river, the boatman sees himself forced to modify his velocity, which will change the exact time and place where Calvin anxiously waits for his gift. Fully aware of his task's relevance, the boatman, after reading his instruments measurements, sends a text message to Calvin's phone with the following information: \textsl{It is now 2:00 p.m. and after crossing, relative to Brenda, 30km inside the river, that is, perpendicular to her bank, and 5km upstream, against the river flow, I was at 49km/h inside the river and at 13.1km/h upstream when I saw a dangerous shallow part of the riverbed, an then was forced to reduce 20\% my north velocity and 40\% my east velocity. As I won't be able to rectify the route, I ask you to meet me at the new time and on the new point of the border where I'll deliver your package. And please, don't forget that Brenda's place, in relation to yours, is located 30km downstream and 55km inside the river}. Although extremely frustrated after reading this message, Calvin took a deep breadth, kept himself calm and remembered his enjoyable and outstanding classes of Linear Algebra. He came back  home, took pencil, paper and a calculator, sat at his desk and started reasoning to discover the new time and place of arrival: ``First of all, I'll use a bidimensional Euclidean space with a natural basis  $O=\{\vun{e}_1,\vun{e}_2\}$, where $\vun{e}_1$ represents the east and $\vun{e}_2$ the north. So, in relation to this basis, I already know that matrices  $\mav{\vto{c}_1}{O}=[-1\;\;0]^\text{T}$ and $\mav{\vto{c}_2}{O}=[-0,42\;\;0,91]^\text{T}$ are representative bases of the elements of my point of view $C=\{\vto{c}_1,\vto{c}_2\}$, where $\vto{c}_1$ represents the `inside the river' direction while $\vto{c}_2$ is related to the upstream direction. Similarly, in the case of Brenda, matrices $\mav{\vto{b}_1}{O}=[0,87\;\;0,5]^\text{T}$ and $\mav{\vto{b}_2}{O}=[0\;\;1]^\text{T}$ represent the elements of her point of view $B=\{\vto{b}_1,\vto{b}_2\}$. From what the Boatman said, $\mav{\vto{v}}{B}=[49\;\;13.1]^\text{T}$ represented his velocity $\vto{v}$ when he needed to make a change $\vtf{f}$, described by  
+This is a naive little story. Once upon a time, Brenda, a teacher, living on a bank of a large width river, hands to a boatman a package containing a gift to be delivered at a place on the other bank, where the mechanical engineer Calvin, beloved consignee of her order, lives. At a certain point while crossing the river, the boatman sees himself forced to modify his velocity, which will change the exact time and place where Calvin anxiously waits for his gift. Fully aware of his task's relevance, the boatman, after reading his instruments measurements, sends a text message to Calvin's phone with the following information: \textsl{It is now 2:00 p.m. and after crossing, relative to Brenda, 30km inside the river, that is, perpendicular to her bank, and 5km upstream, against the river flow, I was at 49km/h inside the river and at 13.1km/h upstream when I saw a dangerous shallow part of the riverbed, an then was forced to reduce 20\% my north velocity and 40\% my east velocity. As I won't be able to rectify the route, I ask you to meet me at the new time and on the new point of the border where I'll deliver your package. And please, don't forget that Brenda's place, in relation to yours, is located 30km downstream and 55km inside the river}. Although extremely frustrated after reading this complicated message, Calvin took a deep breadth, kept himself calm and remembered his enjoyable and outstanding classes of Linear Algebra. He came back  home, took pencil, paper and a calculator, sat at his desk and started reasoning to discover the new time and place of arrival: ``First of all, I'll use a bidimensional Euclidean space with a natural basis  $O=\{\vun{e}_1,\vun{e}_2\}$, where $\vun{e}_1$ represents the east and $\vun{e}_2$ the north. So, in relation to this basis, I already know that matrices  $\mav{\vto{c}_1}{O}=[-1\;\;0]^\text{T}$ and $\mav{\vto{c}_2}{O}=[-0,42\;\;0,91]^\text{T}$ are representative bases of the elements of my point of view $C=\{\vto{c}_1,\vto{c}_2\}$, where $\vto{c}_1$ represents the `inside the river' direction while $\vto{c}_2$ is related to the upstream direction. Similarly, in the case of Brenda, matrices $\mav{\vto{b}_1}{O}=[0,87\;\;0,5]^\text{T}$ and $\mav{\vto{b}_2}{O}=[0\;\;1]^\text{T}$ represent the elements of her point of view $B=\{\vto{b}_1,\vto{b}_2\}$. From what the Boatman said, $\mav{\vto{v}}{B}=[49\;\;13.1]^\text{T}$ represented his velocity $\vto{v}$ when he needed to make a change $\vtf{f}$, described by  
 \begin{equation*}
 \mav{\vtf{f}_O}{O}=\begin{bmatrix}
 0.6      & 0 \\
@@ -844,7 +844,7 @@ An operator of unitary group $(O,\circ)$, whose elements have the Hilbert space 
 \begin{equation}
 {\maf{\vtf{q}}{\hat{B}}{\hat{B}}}^{-1}={\maf{\vtf{q}}{\hat{B}}{\hat{B}}}^\dagger.
 \end{equation}
-It is convenient to recall that a unitary operator preserves norm, that is, it does not alter ``size'' or ``intensity'' of the vectors in its domain. For our study, it is important to discriminate this characteristic in any linear operator through a decomposition, in such a way that there results a unitary part and a non unitary part, which is exclusively responsible for altering norm. The following theorem meets this demand\footnote{The term ``polar'' on the theorem name refers to a feature that is similar to the polar form of a complex number, where there is a nonnegative real part that describes the magnitude and another whose magnitude is one.}.    
+It is convenient to recall that a unitary operator preserves norm, that is, it does not alter ``size'' or ``intensity'' of the vectors in its domain. For our study, it is important to discriminate this characteristic in any linear operator through a decomposition, in such a way that there results a unitary part and a non unitary part, which is exclusively responsible for altering norm. The following theorem meets this demand\footnote{The term ``polar'' on the theorem name refers to a feature that is similar to the polar form of a complex number, where there is a nonnegative real part that describes the magnitude and another whose magnitude is unitary.}.    
 
 
 \begin{mteo}{Polar Decomposition}{decoPolar}
@@ -859,8 +859,7 @@ Let $\vtf{g}\in\evl{\mathcal{R}}{U}{U}$ be a bijection and function $\vtf{h}=\vt
 \vtf{h}^{\nicefrac{1}{2}}\circ\vtf{h}^{\nicefrac{1}{2}}&=\vtf{g}\circ\vtf{g}^{\dagger}\\
 \vtf{i}&=\underbrace{\vtf{h}^{-\nicefrac{1}{2}}\circ\vtf{g}}_{\vtf{q}}\circ\underbrace{\vtf{g}^{\dagger}\circ\vtf{h}^{-\nicefrac{1}{2}}}_{\vtf{q}^{\dagger}}\,,
 \end{align*}
-from which we conclude that the highlighted term is unitary. Thus, we can state that polar decomposition exists since bijection $\vtf{g}=\vtf{q}\circ\vtf{h}^{\nicefrac{1}{2}}$. As the square root  $\vtf{h}^{\nicefrac{1}{2}}$  is unique for 
-$\vtf{g}\circ\vtf{g}^\dagger$, the unitary operator $\vtf{q}=\vtf{g}\circ\vtf{h}^{-\nicefrac{1}{2}}$ is also unique; which results a unique polar decomposition for $\vtf{g}$.
+from which we can conclude that $\vtf{q}$ is indeed unitary and thus a polar decomposition exists. As the square root  $\vtf{h}^{\nicefrac{1}{2}}$  is unique for $\vtf{h}=\vtf{g}\circ\vtf{g}^\dagger$, the unitary operator $\vtf{q}=\vtf{g}\circ\vtf{h}^{-\nicefrac{1}{2}}$ is also unique; which results a unique polar decomposition of $\vtf{g}$.
 \end{proof}
 }
 
@@ -870,10 +869,63 @@ Considering the polar decomposition $\vtf{g}=\vtf{q}\circ\vtf{h}_1^{\nicefrac{1}
 
 {\footnotesize
 \begin{proof}
-The verification of the existence and uniqueness of left polar decomposition follows the same process of the right. Let's prove now that the unitary operators in both decompositions are really the same. 
-
-A demonstração da decomposição polar à esquerda segue o mesmo procedimento da demonstração do teorema anterior. Comprovemos agora que os operadores unitários em ambas as decomposições são iguais. A partir da decomposição polar à esquerda cujo operador unitário é $\vtf{q}_1$, se a parcela $\vtf{c}=\vtf{q}_1^{-1}\circ\vtf{h}_2^{\nicefrac{1}{2}}\circ\vtf{q}_1$ da igualdade $\vtf{g}=\vtf{q}_1\circ\vtf{q}_1^{-1}\circ\vtf{h}_2^{\nicefrac{1}{2}}\circ\vtf{q}_1$ for hermitiana não-negativa,  constata-se uma decomposição polar à direita e portanto $\vtf{q}_1=\vtf{q}$. A comprovação de que $\vtf{c}=\vtf{c}^\dagger$ é trivial. Vamos verificar agora se, dada uma base ortonormal qualquer e um vetor $\vto{x}\in U_\mathcal{R}$, o escalar $\Re([\vto{x}]^\dagger[\vtf{c}][\vto{x}])_{11}$ é não-negativo. Da igualdade $[\vto{x}]^\dagger[\vtf{c}][\vto{x}]=[\vto{x}]^\dagger[\vtf{q}_1]^{-1}[\vtf{h}_2^{\nicefrac{1}{2}}][\vtf{q}_1][\vto{x}]$, podemos concluir que $\Re(\mat{A}^\dagger[\vtf{h}_2^{\nicefrac{1}{2}}]\mat{A})_{11}\geq 0$, onde $\mat{A}=[\vtf{q}_1][\vto{x}]$, pois $\vtf{h}_2^{\nicefrac{1}{2}}$ é não-negativo.
+The verification of existence and uniqueness of a left polar decomposition follows the same process of the right decomposition. Let's prove now that the unitary operators in both decompositions are really the same. From the left polar decomposition, whose unitary operator is $\vtf{q}_1$, we need to verify that the part $\vtf{c}=\vtf{q}_1^{-1}\circ\vtf{h}_2^{\nicefrac{1}{2}}\circ\vtf{q}_1$ of equality $\vtf{g}=\vtf{q}_1\circ\vtf{q}_1^{-1}\circ\vtf{h}_2^{\nicefrac{1}{2}}\circ\vtf{q}_1$ is nonnegative Hermitian because, if this is true, we'll have a right polar decomposition and thus $\vtf{q}_1=\vtf{q}$. Proving that $\vtf{c}$ is Hermitian, or that $\vtf{c}=\vtf{c}^\dagger$, is trivial. Now, let's verify if, given any orthonormal basis and a vector $\vto{x}\in U_\mathcal{R}$, the scalar $\Re([\vto{x}]^\dagger[\vtf{c}][\vto{x}])_{11}$ is nonnegative. From equality $[\vto{x}]^\dagger[\vtf{c}][\vto{x}]=[\vto{x}]^\dagger[\vtf{q}_1]^{-1}[\vtf{h}_2^{\nicefrac{1}{2}}][\vtf{q}_1][\vto{x}]$, we can conclude that $\Re(\mat{A}^\dagger[\vtf{h}_2^{\nicefrac{1}{2}}]\mat{A})_{11}\geq 0$, where $\mat{A}=[\vtf{q}_1][\vto{x}]$, because $\vtf{h}_2^{\nicefrac{1}{2}}$ is nonnegative.
 \end{proof}
+
+
+%\begin{comment}
+
+
+
+\chapter{Tensor Algebra}
+
+\section{Historical Summary}
+\section{Tensor Spaces}
+\section{Tensor Functions}
+\section{Isotropy and Anti-Isotropy}
+\section{Tensor Fields}
+
+
+\chapter{Topics of Affine Geometry}
+
+\section{Affine Spaces}
+\section{Affinities}
+\section{Metric Affine Spaces}
+
+
+\chapter{Calculus of Tensor Functions}
+
+\section{Differentiation}
+\section{Measure and Integration}
+
+
+\part{Elementary Continuum Mechanics}
+
+\chapter{Continuous Media}
+
+\section{Continuum Hypothesis}
+\section{Mechanics}
+
+
+\chapter{Kinematics of Continua}
+
+\section{Newtonian Space-Time}
+\section{Deformation}
+\section{Motion}
+\section{Lagrangian and Eulerian Descriptions}
+
+\chapter{Dynamics of Continua}
+\section{Mass and Momenta}
+\section{Forces}
+\section{Cauchy Stress}
+\section{Energies}
+
+\chapter{Constitutive Relations}
+\section{General Principles}
+\section{Elasticity Basics}
+
+%\end{comment}
+
 
 % Quando for falar sobre tensores, dizer que um tensor é elemento do espaço dual de um espaço vetorial constituído por enuplas de vetores. Diz-se que o elemento desse espaço vetorial é um vetor de ordem n e o elemento do espaço dual um vetor dual de ordem n ou tensor.
 
