@@ -452,7 +452,7 @@ Now, considering $U_\mathcal{R}$ and $V_\mathcal{R}$ Hilbert spaces, we call $\v
 \fua{\vtf{g}}{\vto{u}}\cdot\vto{v}=\vto{u}\cdot\fua{\vtf{g}^\dagger}{\vto{v}}\,.
 \end{equation}
 Particularly, if $\mathcal{R}=\real$, the function $\vtf{g}^\dagger$ is called the  
-\textsb{transpose}\index{function!transpose} of $\vtf{g}$. From the previous equality, the following properties are valid for all $\alpha\in\mathcal{R}$ and $\vtf{k}\in U^V_\mathcal{R}\,$:
+\textsb{transpose}\index{function!transpose} of $\vtf{g}$. From previous equality, the following properties are valid for all $\alpha\in\mathcal{R}$ and $\vtf{k}\in U^V_\mathcal{R}\,$:
 \begin{itemize}
 	\setlength\itemsep{.1em}
 	\item[i.] $\lpa\alpha\vtf{g}\rpa^\dagger=\overline{\alpha}\vtf{g}^\dagger$;
@@ -482,11 +482,11 @@ In order to prove the equality on the fourth property, we need to know that an i
 \end{proof}
 }
 
-A vector $\vtf{h}$ of function space $V^V_\mathcal{R}$ is said to be an \textsb{Hermitian}\index{operator!Hermitian} or \textsb{self-adjoint}\index{operator!self-adjoint} operator when $\vtf{h}=\vtf{h}^\dagger$; but, if $\vtf{h}=-\vtf{h}^\dagger$, it is called  \textsb{anti-Hermitian}\index{operator!anti-Hermitian}. If $\mathcal{R}$ is a real field, the Hermitian operator is also called \textsb{symmetric}\index{operator!symmetric} and the anti-Hermitian, \textsb{antisymmetric}\index{operator!antisymmetric}. A function of $U^V_\mathcal{R}$ is said to be \textsb{unitary}\index{function!unitary} when it is a linear bijection whose inverse equals the adjoint. From this definition, we say that an unitary operator $\vtf{q}\in V^V_\mathcal{R}$ preserves the inner product because, for all $\vto{u},\vto{v}\in V_\mathcal{R}$, the following equalities are valid: 
+A vector $\vtf{h}$ of function space $V^V_\mathcal{R}$ is said to be a \textsb{Hermitian}\index{operator!Hermitian} or \textsb{self-adjoint}\index{operator!self-adjoint} operator when $\vtf{h}=\vtf{h}^\dagger$; but, if $\vtf{h}=-\vtf{h}^\dagger$, it is called  \textsb{anti-Hermitian}\index{operator!anti-Hermitian}. If $\mathcal{R}$ is a real field, the Hermitian operator is also called \textsb{symmetric}\index{operator!symmetric} and the anti-Hermitian, \textsb{antisymmetric}\index{operator!antisymmetric}. A function of $U^V_\mathcal{R}$ is said to be \textsb{unitary}\index{function!unitary} when it is a linear bijection whose inverse equals the adjoint. From this definition, we say that an unitary operator $\vtf{q}\in V^V_\mathcal{R}$ preserves inner products because, for all $\vto{u},\vto{v}\in V_\mathcal{R}$, the following equalities are valid: 
 \begin{equation}
 \fua{\vtf{q}}{\vto{u}}\cdot\fua{\vtf{q}}{\vto{v}}=\vto{u}\cdot\fua{\vtf{q}^\dagger\circ\vtf{q}}{\vto{v}}=\vto{u}\cdot\fua{\vtf{q}^{-1}\circ\vtf{q}}{\vto{v}}=\vto{u}\cdot\vto{v}\,.
 \end{equation}
-Thereby, in the context of Hilbert spaces, we say that \emph{unitary operators preserve the norm}, since 
+Thereby, in the context of Hilbert spaces, we say that unitary operators also preserve norms, since 
 $\|\fua{\vtf{q}}{\vto{u}}\|^2=\fua{\vtf{q}}{\vto{u}}\cdot\fua{\vtf{q}}{\vto{u}}=\vto{u}\cdot\vto{u}=\|\vto{u}\|^2$.
 
 In the previous chapter, we said that the set of all unary invertible operators constitutes a group on  the operation of composition. Let's verify now if the set $O\subset \evl{\mathcal{R}}{V}{V}$ of all unitary operators, since they are unary and invertible, defines the group  $(\gloref{grOrto},\circ)$, called \textsb{unitary group}\index{group!unitary}: the equalities
@@ -495,7 +495,7 @@ In the previous chapter, we said that the set of all unary invertible operators 
 \vtf{q}_2^{-1}\circ\vtf{q}_1^{-1} = \vtf{q}_2^\dagger\circ\vtf{q}_1^\dagger =
 \lpa \vtf{q}_1\circ\vtf{q}_2 \rpa^\dagger
 \end{equation}
-show, for all $\vtf{q}_1,\vtf{q}_2\in O$, that bijection\footnote{See properties on page \pageref{prop:Composicao}.}  $\vtf{q}_1\circ\vtf{q}_2$ belongs to the set $O$. In the context of real fields, unitary groups and unitary linear operators are qualified as orthogonal. There are also linear operators that preserve metrics or distance, when they are called \textsb{isometric operators}\index{operator!isometric}. In more rigorous terms, $\vtf{k}\in \evl{\mathcal{R}}{V}{V}$ is an isometric operator if it is a bijection where $\varrho\,[\fua{\vtf{k}}{\vto{u}},\fua{\vtf{k}}{\vto{v}}]=\fua{\varrho}{\vto{u},\vto{v}}$, for all $\vto{u},\vto{v}\in V_\mathcal{R}$. Similarly to unitary operators, the set os all isometric operators defines a group $(I,\circ)$ called \textsb{isometry group}\index{group!isometry}, since the composition of isometric operators is also an isometric operator, that is, considering any $\vtf{k},\vtf{g}\in I$, we have
+show, for all $\vtf{q}_1,\vtf{q}_2\in O$, that bijection\footnote{See properties on page \pageref{prop:Composicao}.}  $\vtf{q}_1\circ\vtf{q}_2$ indeed belongs to the set $O$. In the context of real fields, unitary groups and unitary linear operators are qualified as orthogonal. There are also linear operators that preserve metrics or distance, when they are called \textsb{isometric operators}\index{operator!isometric}. In more rigorous terms, $\vtf{k}\in \evl{\mathcal{R}}{V}{V}$ is an isometric operator if it is a bijection where $\varrho\,[\fua{\vtf{k}}{\vto{u}},\fua{\vtf{k}}{\vto{v}}]=\fua{\varrho}{\vto{u},\vto{v}}$, for all $\vto{u},\vto{v}\in V_\mathcal{R}$. Similarly to unitary operators, the set os all isometric operators defines a group $(I,\circ)$ called \textsb{isometry group}\index{group!isometry}, since the composition of isometric operators is also an isometric operator, that is, considering any $\vtf{k},\vtf{g}\in I$, we have
 \begin{equation}
 \varrho\,\lco\fua{\vtf{g}\circ\vtf{k}}{\vto{u}},\fua{\vtf{g}\circ\vtf{k}}{\vto{v}}\rco = \varrho\,\lco{\fua{\vtf{k}}{\vto{u}},\fua{\vtf{k}}{\vto{v}}}\rco=\fua{\varrho}{\vto{u},\vto{v}}
 \end{equation}
@@ -539,7 +539,7 @@ from where it is possible to conclude that
 for all vectors $\vto{x},\vto{y}\in U_\mathcal{R}$ and all scalars $\alpha,\beta\in\mathcal{R}$. Now, concerning the vectors of basis $B$, if we represent them relative to $B$ itself, we have $\mav{\vto{u}_j}{B}_{i1}=\fua{\vtf{f}^\con{B}_{i}}{\vto{u}_j}=\delta_{ij}$. This representation strategy is frequent for the natural basis $O=\{\vun{e}_1,\cdots,\vun{e}_n\}$ of Euclidean spaces, where $\mav{\vun{e}_j}{O}_{i1}=\delta_{ij}\,$. 
 
 
-Considering $V_\mathcal{R}$ a $m$-dimensional complete vector space, let $\vtf{g}$ be an element of the function space $\evl{\mathcal{R}}{U}{V}$. If coordinates are considered for vector identification, when mapping elements of $U$ to elements of $V$ the function $\vtf{g}$ ends up defining indirectly a relationship between two distinct basis, in such a way that the matrix representation of this relationship needs to evidence both bases. Thereby, if $C=\{\vto{v}_1,\cdots,\vto{v}_m\}$   
+Considering $V_\mathcal{R}$ a $m$-dimensional complete vector space, let $\vtf{g}$ be an element of the function space $\evl{\mathcal{R}}{U}{V}$. If coordinates are considered for vector identification, by mapping elements of $U$ to elements of $V$ the function $\vtf{g}$ ends up defining indirectly a relationship between two distinct bases, in such a way that the matrix representation of this relationship needs to evidence them both. Thereby, if $C=\{\vto{v}_1,\cdots,\vto{v}_m\}$ is a basis of   
 $V_\mathcal{R}$ and $\vto{u}\in U_\mathcal{R}$, we have
 \begin{align*}
 \fua{\vtf{g}}{\vto{u}}&= \sum_{i=1}^{m}\fua{\vtf{f}^\con{C}_{i}}{\fua{\vtf{g}}{\vto{u}}}\vto{v}_i\nonumber\\
@@ -564,7 +564,7 @@ which can be used to write
 \begin{equation}\label{eq:matRepInv}
 \mav{\vto{u}}{B}=\mav{\fua{\vtf{g}^{-1}\circ\vtf{g}}{\vto{u}}}{B}=\maf{\vtf{g}^{-1}_C}{}{B}\maf{\vtf{g}}{B}{C}\mav{\vto{u}}{B} \implies \maf{\vtf{g}^{-1}_C}{}{B} = {\maf{\vtf{g}}{B}{C}}^{-1}
 \end{equation}
-if the linear function $\vtf{g}$ is a bijection and dimension $m=n$.
+if linear function $\vtf{g}$ is a bijection and dimension $m=n$.
 
 
 The inner product of vectors $\vto{x},\vto{y}\in X_\mathcal{R}$, where $X_\mathcal{R}$ is a Hilbert space, can be represented through the following equalities:
@@ -575,7 +575,7 @@ according to equality \eqref{eq:prodIntGen}. The rule \eqref{eq:regraFuncCoord} 
 \begin{align}\label{eq:matRepTransp}
 \fua{\vtf{g}}{\vto{x}_i}\cdot \vto{y}^j &= \overline{\vtf{g}^\dagger(\vto{y}^j)\cdot\vto{x}_i}\nonumber\\
 \vtf{f}^C_j\lco\fua{\vtf{g}}{\vto{x}_i}\rco &=\overline{\vtf{f}^{B^\perp}_i[\vtf{g}^\dagger(\vto{y}^j)]}\nonumber\\
-\overline{\vtf{f}^C_j\lco\fua{\vtf{g}}{\vto{x}_i}\rco} &=\vtf{f}^{B^\perp}_i[\vtf{g}^\dagger(\vto{y}^j)]\nonumber\\
+\overline{\vtf{f}^C_i\lco\fua{\vtf{g}}{\vto{x}_j}\rco^\text{T}} &=\vtf{f}^{B^\perp}_i[\vtf{g}^\dagger(\vto{y}^j)]\nonumber\\
 {\maf{\vtf{g}}{B}{C}}^\dagger&=[\vtf{g}^\dagger_{C^\perp}]^{B^\perp}\,,
 \end{align}
 where left and right matrices have dimension $n\times m$. 
@@ -618,11 +618,11 @@ together with expression \eqref{eq:repMatMape}, we can write that
 \begin{equation}\label{eq:matrizMudBase}
 \mav{\vto{u}}{C}=\maf{\vtf{i}}{B}{C}\mav{\vto{u}}{B}\,,
 \end{equation}
-where $[\maf{\vtf{i}}{B}{C}]_{ij}=\fua{\vtf{f}_i^C}{\fua{\vtf{i}}{\vto{u}_j}}$ and $\vtf{i}$ is the identity function of $U_\mathcal{R}$. Therefore, according to the previous theorem, we can write a rule
+where $\maf{\vtf{i}}{B}{C}_{ij}=\fua{\vtf{f}_i^C}{\fua{\vtf{i}}{\vto{u}_j}}$ and $\vtf{i}$ is the identity function of $U_\mathcal{R}$. Therefore, according to the previous theorem, we can write a rule
 \begin{equation}\label{eq:regraMudCoord}
 \fua{\Gamma}{\mat{X}}=\maf{\vtf{i}}{B}{C}\mat{X}
 \end{equation}
-describing a change of coordinates $\map{\Gamma}{U(B)_\mathcal{R}}{U(C)_\mathcal{R}}$, from which the representative matrix $\fua{\Gamma^{-1}}{\mat{X}}=\maf{\vtf{i}}{C}{B}\mat{X}$ results. In the particular case of Hilbert spaces, there is a rule for coordinate functionals described by equality \eqref{eq:regraFuncCoord}, which enables us to specify the matrix elements $\maf{\vtf{i}}{B}{C}_{ij}=\vto{u}_j\cdot\vto{v}^i$. 
+describing a change of coordinates $\map{\Gamma}{U(B)_\mathcal{R}}{U(C)_\mathcal{R}}$, from which the representative matrix $\fua{\Gamma^{-1}}{\mat{X}}=\maf{\vtf{i}}{C}{B}\mat{X}$ results. In the particular case of Hilbert spaces, there is a rule for coordinate functionals, described by equality \eqref{eq:regraFuncCoord}, which enables us to specify matrix elements $\maf{\vtf{i}}{B}{C}_{ij}=\vto{u}_j\cdot\vto{v}^i$. 
 
 
 According to the conditions of equality \eqref{eq:matrizMudBase}, as $\maf{\vtf{i}}{B}{C}$ is a square matrix of order $n$ and the identity function equals its inverse and its conjugate transpose, we can affirm from \eqref{eq:matRepInv} that 
@@ -635,7 +635,7 @@ and from \eqref{eq:matRepTransp}, whose context is Hilbert spaces,
 \end{equation}
 In other words, for this last equality, valid for the specific case of Hilbert spaces, the matrix that enables a change of coordinates from $C$ to $B$ has as its inverse the matrix that enables a change of coordinates from $B$ to $C$, whose conjugate transpose enables the change of coordinates from $C^\perp$ to $B^\perp$. 
 
-Considering a vector space $U_\mathcal{R}$, the elements of base $C$ can be written on basis $B$ according to the following expressions:
+Still considering the vector space $U_\mathcal{R}$, the elements of base $C$ can be written on basis $B$ according to the following expressions:
 \begin{equation}\label{eq:mudaBase}
 \vto{v}_j=\sum_{i=1}^n\vto{u}_i\fua{\vtf{f}_i^B}{\vto{v}_j}=\sum_{i=1}^n\vto{u}_i\maf{\vtf{i}}{C}{B}_{ij}\,,
 \end{equation}
@@ -643,7 +643,7 @@ from which, given a basis $Z$ of $U_\mathcal{R}$, we can say that
 \begin{equation*}
 \fua{\vtf{f}_k^Z}{\vto{v}_j}=\sum_{i=1}^n\fua{\vtf{f}_k^Z}{\vto{u}_i}\maf{\vtf{i}}{C}{B}_{ij}\,.
 \end{equation*}%=\sum_{i=1}^n\maf{\vtf{i}}{B}{Z}_{ki}\maf{\vtf{i}}{C}{B}_{ij}
-Gathering the components on $Z$ of all the elements of bases $B$ and $C$, we have
+Arranging the components on $Z$ of all the elements of bases $B$ and $C$ according to this equality, the following matrix expression results:
 \begin{equation}
 \begin{bmatrix}
 \mav{\vto{v}_1}{Z}_{11} & \mav{\vto{v}_2}{Z}_{11} & \cdots & \mav{\vto{v}_n}{Z}_{11}  \\
@@ -657,7 +657,7 @@ Gathering the components on $Z$ of all the elements of bases $B$ and $C$, we hav
 \mav{\vto{u}_1}{Z}_{n1} & \mav{\vto{u}_2}{Z}_{n1} & \cdots & \mav{\vto{u}_n}{Z}_{n1}
 \end{bmatrix} \maf{\vtf{i}}{C}{B}\,,
 \end{equation}
-from which we can say that $\maf{\vtf{i}}{C}{B}$ changes basis $B$ to basis $C$, that is, this matrix performs a \textsb{change of basis}\index{basis!change of}. Concerning the changes involving generic bases $B$ and $C$, when a matrix that changes coordinates from $B$ to $C$ is the inverse of the matrix that changes basis $B$ to $C$, the coordinates of elements of $U_\mathcal{R}$ are called \textsb{contravariant}\index{coordinates!contravariant}, since these coordinates are submitted to a ``contrary'' transformation relative to the change of basis $B$ to $C$, as is the case of the values of $\Gamma$ in \eqref{eq:regraMudCoord}. Now, let's see what happens when we change coordinates of dual vectors. If $\vtf{h}\in U^*_\mathcal{R}$ is a dual vector, we already know that $\mav{\vtf{h}}{B^*}$ is its representative matrix on dual basis $B^*$. Thereby, equalities \eqref{eq:coordVetorDual} and \eqref{eq:mudaBase} enable the following development:
+from which we say that $\maf{\vtf{i}}{C}{B}$ changes basis $B$ to basis $C$, that is, this matrix performs a \textsb{change of basis}\index{basis!change of}. Concerning the changes involving generic bases $B$ and $C$, when a matrix that changes coordinates from $B$ to $C$ is the inverse of the matrix that changes basis $B$ to $C$, the coordinates of elements of $U_\mathcal{R}$ are called \textsb{contravariant}\index{coordinates!contravariant}, since these coordinates are submitted to a ``contrary'' transformation relative to the change of basis $B$ to $C$, as is the case of the values of $\Gamma$ in \eqref{eq:regraMudCoord}. Now, let's see what happens when we change coordinates of dual vectors. If $\vtf{h}\in U^*_\mathcal{R}$ is a dual vector, we already know that $\mav{\vtf{h}}{B^*}$ is its representative matrix on dual basis $B^*$. Thereby, equalities \eqref{eq:coordVetorDual} and \eqref{eq:mudaBase} enable the following development:
 \begin{equation}
 \mav{\vtf{h}}{C^*}_j=\fua{\vtf{h}}{\vto{v}_j}=\sum_{i=1}^n\fua{\vtf{h}}{\vto{u}_i}\maf{\vtf{i}}{C}{B}_{ij}=\sum_{i=1}^n\mav{\vtf{h}}{B^*}_i\maf{\vtf{i}}{C}{B}_{ij}\,,
 \end{equation}
@@ -672,7 +672,7 @@ From these two classifications of coordinates, if $U_\mathcal{R}$ is a Hilbert s
 Since $\vto{u}$ and $\vtf{u}^*$ are biunivocaly related through Riesz-Fréchet Representation, the coordinates $(\vto{u}_1\cdot\vto{u},\cdots,\vto{u}_n\cdot\vto{u})$ of $\vtf{u}^*$ on $B^*$ are usually called the covariant coordinates of vector $\vto{u}$ on $B^\perp$. If the Hilbert space in question is real, considering  
 $\hat{B}=\{\vun{u}_1,\cdots,\vun{u}_n\}$ an orthonormal basis of $U_\real$, we can say that covariant and contravariant coordinates of any vector $\vto{u}$ are always equal because expressions $\vun{u}_i=\vun{u}^i$ and the commutativity of inner product imply $\vto{u}\cdot\vto{u}^i=\vto{u}_i\cdot\vto{u}$, that is,   $\fua{\vtf{u}^*}{\vto{u}_i}=\fua{\vtf{f}_i^{\hat{B}}}{\vto{u}}$. This also occurs in a tridimensional Euclidean space, when natural basis $\{\vun{e}_1,\vun{e}_2,\vun{e}_3\}$ is called  \textsb{cartesian basis}\index{basis!cartesian} and all the linear combinations of its elements are \textsb{cartesian vectors}\index{vector!cartesian}.
 
-Now, an interesting consequence of equalities \eqref{eq:mudaBaseTranspHilbert} is that matrix ${\maf{\vtf{i}}{C}{B}}$ results unitary if the bases involved are orthonormal, since they are reciprocal to itself, as we already know. Thereby, we present the following corollary, that describes an important  relationship between representative matrices of linear operators.  
+Now, an interesting consequence of equalities \eqref{eq:mudaBaseTranspHilbert} is that matrix ${\maf{\vtf{i}}{C}{B}}$ results unitary if the bases involved are orthonormal, since they are reciprocal to themselves. Thereby, we present the following corollary, that describes an important  relationship between representative matrices of linear operators.  
 
 
 \begin{mcoro}{Change of Coordinates of Linear Operators}{mudaBase}
@@ -681,13 +681,14 @@ If $Y(B)_\mathcal{R}$ and $Y(C)_\mathcal{R}$ are vector spaces constituted by th
 
 {\footnotesize
 \begin{proof}
-Considering a function $\vtf{g}\in\evl{\mathcal{R}}{Y}{Y}$ and a vector $\vto{u}\in Y_\mathcal{R}$, the last equality of the development 
+Considering a function $\vtf{g}\in\evl{\mathcal{R}}{Y}{Y}$ and a vector $\vto{u}\in Y_\mathcal{R}$, the last equality of the following development 
 \begin{align}
 \mav{\fua{\vtf{g}}{\vto{u}}}{B}&=\maf{\vtf{g}}{B}{B}\mav{\vto{u}}{B}\nonumber\\
 \maf{\vtf{i}}{C}{B}\mav{\fua{\vtf{g}}{\vto{u}}}{C}&=\maf{\vtf{g}}{B}{B}\maf{\vtf{i}}{C}{B}\mav{\vto{u}}{C}\nonumber\\
-\mav{\fua{\vtf{g}}{\vto{u}}}{C}&=\maf{\vtf{i}}{B}{C}\maf{\vtf{g}}{B}{B}\maf{\vtf{i}}{C}{B}\mav{\vto{u}}{C}\nonumber
+\mav{\fua{\vtf{g}}{\vto{u}}}{C}&=\maf{\vtf{i}}{B}{C}\maf{\vtf{g}}{B}{B}\maf{\vtf{i}}{C}{B}\mav{\vto{u}}{C}\nonumber\\
+\maf{\vtf{g}}{C}{C}\mav{\vto{u}}{C}&=\maf{\vtf{i}}{B}{C}\maf{\vtf{g}}{B}{B}\maf{\vtf{i}}{C}{B}\mav{\vto{u}}{C}
 \end{align}
-and equality $\mav{\fua{\vtf{g}}{\vto{u}}}{C}=\maf{\vtf{g}}{C}{C}\mav{\vto{u}}{C}$ enables us to affirm that 
+enables us to affirm that 
 \begin{equation*}
 \maf{\vtf{g}}{C}{C} = \maf{\vtf{i}}{B}{C}\maf{\vtf{g}}{B}{B}\maf{\vtf{i}}{C}{B}\,.
 \end{equation*}
@@ -763,17 +764,17 @@ After deviating from original route, boat velocity representative matrix $\mav{\
 
 \section{Eigenvalues and Eigenvectors}\label{sec:autoPares}
 
-Considering a $n$-dimensional Hilbert space $U_\mathcal{R}$, we call $\alpha\vto{u}\in U_\mathcal{R}$, where $\alpha\in\mathcal{R}$, a \textsb{multiple scalar}\index{multiple scalar} of vector $\vto{u}$. The scalar $\alpha$, which specifies this multiplicity, on the context of norm $\|\alpha\vto{u}\|=|\alpha|\|\vto{u}\|$, performs a ``resizing'' of $\vto{u}$, that is, if $|\alpha|<1$, there is a decrease in its size or intensity; conversely, if $|\alpha|>1$, there is an increase. Given a linear operator $\vtf{l}\in\evl{\mathcal{R}}{U}{U}$, vector $\vto{u}$ is called an \textsb{eigenvector}\index{eigenvector} of $\vtf{l}$ if it is non zero and value $\fua{\vtf{l}}{\vto{u}}$ is its multiple scalar, that is, if $\fua{\vtf{l}}{\vto{u}}=\alpha\vto{u}$, where multiplicity $\alpha$ is said to be an \textsb{eigenvalue}\index{eigenvalueo} of $\vtf{l}$. In other words, \emph{a vector resized by a linear operator is its eigenvector and the sign-magnitude of this resizing is its eigenvalue}. 
+Considering a $n$-dimensional Hilbert space $U_\mathcal{R}$, we call $\alpha\vto{u}\in U_\mathcal{R}$, where $\alpha\in\mathcal{R}$, a \textsb{multiple scalar}\index{multiple scalar} of vector $\vto{u}$. The scalar $\alpha$, which specifies this multiplicity, on the context of norm $\|\alpha\vto{u}\|=|\alpha|\|\vto{u}\|$, performs a ``resizing'' of $\vto{u}$, that is, if $|\alpha|<1$, there is a decrease in its size or intensity; conversely, if $|\alpha|>1$, there is an increase. Given a linear operator $\vtf{l}\in\evl{\mathcal{R}}{U}{U}$, a non zero vector $\vto{u}$ is called an \textsb{eigenvector}\index{eigenvector} of $\vtf{l}$ if value $\fua{\vtf{l}}{\vto{u}}$ is its multiple scalar, that is, if $\fua{\vtf{l}}{\vto{u}}=\alpha\vto{u}$, where multiplicity $\alpha$ is said to be an \textsb{eigenvalue}\index{eigenvalueo} of $\vtf{l}$. In other words, \emph{a vector resized by a linear operator is its eigenvector and the sign-magnitude of this resizing is its eigenvalue}. 
 
 Now let's suppose that, for a known operator $\vtf{l}$, we want to discover all of its eigenvalues and eigenvectors from the unknowns of the equation $\fua{\vtf{l}}{\vto{x}}=\lambda\vto{x}$ or rather, from $\lambda$ and $\vto{x}$ in   
 \begin{equation}\label{eq:probAutoValor}
 \fua{(\vtf{l}-\lambda\vtf{i})}{\vto{x}}=\vto{0},
 \end{equation}
-where $\vtf{i}$ is the identity function in $U_\mathcal{R}$. On any basis of this space, matrix $[\vtf{i}]=\mat{I}$ and the matrix representation of previous equation result $([\vtf{l}]-\lambda\mat{I})[\vto{x}]=0$. As we know, matrix $[\vto{x}]$ cannot be zero because there are no zero eigenvectors; a restriction that prevents matrix $([\vtf{l}]-\lambda\mat{I})$ from being invertible, that is, it has to be singular:
+where $\vtf{i}$ is the identity function in $U_\mathcal{R}$. On any basis of this space, matrix $[\vtf{i}]=\mat{I}$ and the matrix representation of previous equation results $([\vtf{l}]-\lambda\mat{I})[\vto{x}]=0$. As we know, matrix $[\vto{x}]$ cannot be zero because there are no zero eigenvectors; a restriction that prevents matrix $([\vtf{l}]-\lambda\mat{I})$ from being invertible, that is, it has to be singular:
 \begin{equation}\label{eq:autoMatricial}
 \det{([\vtf{l}]-\lambda\mat{I})}=0\,.
 \end{equation}
-Recalling our matrix theory in the previous chapter, the left side of this equation is the characteristic polynomial\footnote{See definition on p. \pageref{pg:PolinomioCarac}.} of $[\vtf{l}]$ on variable $\lambda$, whose $n$ characteristic roots solve \eqref{eq:autoMatricial}, that is, there are $n$ eigenvalues of $\vtf{l}$, which are not necessarily distinct. Once we have these eigenvalues, it it possible to determine each correspondent eigenvector from equation $([\vtf{l}]-\lambda\mat{I})[\vto{x}]=0$. As this processes is valid and leads to identical results for any chosen basis, expression $\det(\vtf{l}-\lambda\vtf{i})$ is sometimes called the characteristic polynomial of $\vtf{l}$ also.
+Recalling our matrix theory in the previous chapter, the left side of this equation is the characteristic polynomial\footnote{See definition on p. \pageref{pg:PolinomioCarac}.} of $[\vtf{l}]$ on variable $\lambda$, whose $n$ characteristic roots solve \eqref{eq:autoMatricial}, that is, there are $n$ eigenvalues of $\vtf{l}$, which are not necessarily distinct. Once we have these eigenvalues, it it possible to determine each correspondent eigenvector from equation $([\vtf{l}]-\lambda\mat{I})[\vto{x}]=0$. As this processes is valid and leads to identical results for any chosen basis, expression $\det(\vtf{l}-\lambda\vtf{i})$ is sometimes called the characteristic polynomial of linear operator $\vtf{l}$ also.
 
 Eigenvalues and eigenvectors subsidize the forthcoming Polar Decomposition Theorem in such a way that they reveal three relevant properties of every Hermitian operator: a) \emph{it is always nonnegative the Hermitian operator that results from the composition of an operator with its adjoint}; b) \emph{the eigenvalues of a Hermitian operator are always real}; c) \emph{two distinct eigenvectors of a Hermitian operator are always orthogonal}. This last property implies that the $n$ eigenvectors of a Hermitian operator are distinct from each other and the resulting orthogonal set constituted by them is obviously a basis of $U_\mathcal{R}$. 
 
