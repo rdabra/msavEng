@@ -1,31 +1,35 @@
 \chapter{Tensor Algebra}
 
 
-Continuing our study of Linear Algebra, whose foundations we presented in the previous chapter, let's deal now with something a bit more sophisticated, although extremely useful for describing physical phenomena concerning deformable bodies. The form and content that we shall present about this topic differs from the usual approach available in Continuum Mechanics literature, where the concept of tensor arises suddenly, through simplistic definitions: formally, we shall proceed the same way as we have been doing so far, in a continuous flow of successive interdependent concepts, and present tensors as ordinary elements of a vector space; on the content side, we shall not restrict ourselves to the strictly necessary, typical of pragmatic approaches, since our objective, in this and the next chapter, is to provide the reader with a generous framework of concepts related to tensors, simply because of their mathematical beauty and wide application. 
+Continuing our study of Linear Algebra, whose foundations we presented in the previous chapter, let's deal now with something a bit more sophisticated, although extremely useful for describing physical phenomena concerning deformable bodies. The form and content that we shall present about this topic differs from the usual approach available in Continuum Mechanics literature, where the concept of tensor arises suddenly, through simplistic definitions: formally, we shall proceed the same way as we have been doing so far, in a continuous flow of successively dependent concepts, and present tensors as ordinary elements of a vector space; on the content side, we shall not restrict ourselves to the strictly necessary, typical of pragmatic approaches, since our objective, in this and the next chapter, is to provide the reader with a generous framework of concepts related to tensors, simply because of their mathematical beauty and wide application. 
 
 
-\section{Um Pouco de História}
+\section{A Very Short History of Tensors}
 
-A palavra ``tensor'' foi utilizada pela primeira vez em Matemática, nos idos de 1846, por \aut{Hamilton}\cite{hamilton_1846_1} para designar o módulo de números por ele denominados quatérnios, que são uma extensão dos números complexos. Em 1881, \aut{Gibbs}\cite{gibbs_1881} introduzia a definição de díade como sendo o ``produto indefinido'' de dois vetores, iniciando assim, sem muita clareza, o conceito que hoje denominamos produto tensorial. Uma vez que ``tensor'' deriva etimologicamente do latim \emph{tendere}, que significa estirar, \aut{Voigt}\cite{voigt_1898_1} conferiu ao termo um outro significado, mais próximo da abordagem mecânica atual,  quando o utilizou para designar a combinação de uma grandeza vetorial, representativa das forças ou estiramentos envolvidos, com outra grandeza vetorial, normal à superfície de estudo.
+The word ``tensor'' was used for the first time in Mathematics in 1846 by \aut{Hamilton}\cite{hamilton_1846_1} in order to designate the modulus of numbers that he called quaternions, which are a generalization of complex numbers. In 1881, \aut{Gibbs}\cite{gibbs_1881} introduced the notion of dyad as being an ``undefined product'' of two vectors, starting, in a rather obscure way, the concept that nowadays we understand as tensor product. Since the term ``tensor'' has the latin word \emph{tendere}, which means ``to stretch'', as its etymological origin, \aut{Voigt}\cite{voigt_1898_1} adopted a meaning closer to the current mechanical approach, when he used tensor to designate the combination of a vector measure, representing forces and stretches involved, with another vector measure, normal to the surface in question.        
 
-No final do século XIX, os dez anos de estudo do matemático italiano Gregorio Ricci-Curbastro(1853-1925) no que denominara ``Cálculo Diferencial Absoluto'' culminaram no artigo \emph{Méthodes de Calcul Différentiel Absolu et Leurs Applications}\footnote{Ver \aut{Ricci \& Levi-Civita}\cite{ricci_1900_1} e \aut{Hermann}\cite{hermann_1975}.}, escrito em conjunto com seu pupilo Tullio Levi-Civita(1873-1941) e publicado em 1900. Nesse trabalho, onde surgiram as classificações covariante e contravariante para coordenadas de vetores, os autores estabeleceram as bases do que hoje se conhece por Análise Tensorial. Para eles, tensor ou ``sistema'' é uma grandeza que surge a partir dos coeficientes de polinômios homogêneos do tipo
+
+
+At the end of XIX century, after ten years conceiving his ``Absolute Differential Calculus'', the italian mathematician Gregorio Ricci-Curbastro(1853-1925) published a seminal paper entitled \emph{Méthodes de Calcul Différentiel Absolu et Leurs Applications}\footnote{See \aut{Ricci \& Levi-Civita}\cite{ricci_1900_1} and \aut{Hermann}\cite{hermann_1975}.}, together with his pupil  Tullio Levi-Civita(1873-1941), in which they established the foundations of what is known today as Tensor Analysis. In this work, a tensor or ``system'', as they called, is a measure that arises from the coefficients of polynomials like     
 \begin{equation*}
 \sum_{i_1=1}^n\cdots\sum_{i_m=1}^n\underbrace{{(\alpha_1)}_{i_1}\cdots{(\alpha_m)}_{i_m}}_{\mat{A}_{i_1\cdots i_m}} {(x_1)}_{i_1}\cdots {(x_m)}_{i_m}\,,
 \end{equation*}
-representada numericamente pelo array $\mat{A}$ de dimensão $n\times\cdots \times n$ ($m$ vezes). Além disso, os valores de tais polinômios devem ser imunes a mudanças de variáveis, ou seja,
+where  $n\times\cdots \times n$ ($n$ times) array $\mat{A}$ represents this measure numerically. Moreover, the values of such polynomials must be immune to changes of variables, that is,  
 \begin{equation*}
 \sum_{i_1=1}^n\cdots\sum_{i_m=1}^n\mat{A}_{i_1\cdots i_m} {(x_1)}_{i_1}\cdots {(x_m)}_{i_m}=
 \sum_{i_1=1}^n\cdots\sum_{i_m=1}^n\mat{B}_{i_1\cdots i_m} {(y_1)}_{i_1}\cdots {(y_m)}_{i_m}\,,
 \end{equation*}
-onde é válida a mudança
+where the following is valid:
 \begin{equation*}
-{(y_k)}_{i_k}=\sum_{j_k=1}^n\mat{C}_{i_kj_k} {(x_k)}_{j_k};
+{(y_k)}_{i_k}=\sum_{j_k=1}^n\mat{C}_{i_kj_k} {(x_k)}_{j_k}\,,
 \end{equation*}
-quando resulta a lei de transformação
+from which the transformation law
 \begin{equation*}
-\mat{A}_{i_1\cdots i_m}=\sum_{j_1=1}^n\cdots\sum_{j_m=1}^n\mat{C}_{j_1i_1}\cdots\mat{C}_{j_mi_m}\mat{B}_{j_1\cdots j_m}\,.
+\mat{A}_{i_1\cdots i_m}=\sum_{j_1=1}^n\cdots\sum_{j_m=1}^n\mat{C}_{j_1i_1}\cdots\mat{C}_{j_mi_m}\mat{B}_{j_1\cdots j_m}
 \end{equation*}
-De maneira similar a grandezas vetoriais, o tensor deve possuir um nível de abstração tal que sua definição independa da escolha de variáveis, ou seja, nos termos anteriores, o tensor representado por $\mat{A}$ é o mesmo representado por $\mat{B}$. Diante disso, diz-se genericamente que o tensor surge da interação de diferentes conjuntos de variáveis, arranjadas numa expressão de caráter linear cujo valor é escalar.
+can be obtained. Similarly to vector measures, a tensor must have such an abstraction level that its definition results independent of the choice of variables, that is, in expressions above, the tensor represented by $\mat{A}$ is the same tensor represented by $\mat{B}$. Thereby, in rather generic terms, a tensor was initially seen as an abstract measure that arises from the interaction of different sets of variables, arranged in an expression of linear character whose value is a scalar. 
+
+
 
 O Cálculo Tensorial criado por Ricci foi apresentado pelo matemático húngaro Marcel Grossmann(1878-1936) ao físico alemão Albert Einstein(1879-1955), ambos colegas dos tempos de escola. Quando Einstein desenvolvia a Teoria da Relatividade Geral, Grossmann costumava atualizá-lo sobre as ferramentas matemáticas disponíveis; nesse caso, a geometria não-euclidiana. Durante os trabalhos, verificou-se que não há um referencial prioritário, inercial ou não,  para a descrição de um fenômeno físico, ou seja, mudança de referencial não promove alteração qualitativa na descrição do fenômeno. Diante disso, o tensor, por sua imunidade a mudanças de variáveis, tornou-se a entidade matemática ideal para viabilizar a teoria, num desenvolvimento conciso e elegante. Sobre ela e seus fundamentos matemáticos, \aut{Einstein}\cite{einstein_1915_1} escreveu o seguinte elogio: \emph{O encanto dessa teoria dificilmente escapará a quem compreendê-la de fato; ela significa o verdadeiro triunfo da metodologia do Cálculo Diferencial Absoluto, estabelecida por GAUSS, RIEMANN, CHRISTOFFEL, RICCI e LEVI-CIVITA}\footnote{Traduzido por mim do original \emph{Dem Zauber dieser Theorie wird sich kaum jemand entziehen können, der sie wirklich erfaßt hat; sie bedeutet einen wahren Triumph der durch GAUSS, RIEMANN, CHRISTOFFEL, RICCI und LEVI-CIVITER begründeten Methode des allgemeinen Differentialkalkuls}.}. A partir daí, a Análise Tensorial ganhou notoriedade: aprofundou-se seu desenvolvimento e sua aplicação estendeu-se para outras áreas da Física-Matemática, como por exemplo a Mecânica do Contínuo.
 
