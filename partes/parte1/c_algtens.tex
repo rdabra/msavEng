@@ -8,8 +8,6 @@ Continuing our study of Linear Algebra, whose foundations we presented in the pr
 
 The word ``tensor'' was used for the first time in Mathematics in 1846 by \aut{Hamilton}\cite{hamilton_1846_1} in order to designate the modulus of numbers that he called quaternions, which are a generalization of complex numbers. In 1881, \aut{Gibbs}\cite{gibbs_1881} introduced the notion of dyad as being an ``undefined product'' of two vectors, starting, in a rather obscure way, the concept that nowadays we understand as tensor product. Since the term ``tensor'' has the latin word \emph{tendere}, which means ``to stretch'', as its etymological origin, \aut{Voigt}\cite{voigt_1898_1} adopted a meaning closer to the current mechanical approach, when he used tensor to designate the combination of a vector measure, representing forces and stretches involved, with another vector measure, normal to the surface in question.        
 
-
-
 At the end of XIX century, after ten years conceiving his ``Absolute Differential Calculus'', the italian mathematician Gregorio Ricci-Curbastro(1853-1925) published a seminal paper entitled \emph{Méthodes de Calcul Différentiel Absolu et Leurs Applications}\footnote{See \aut{Ricci \& Levi-Civita}\cite{ricci_1900_1} and \aut{Hermann}\cite{hermann_1975}.}, together with his pupil  Tullio Levi-Civita(1873-1941), in which they established the foundations of what is known today as Tensor Analysis. In this work, a tensor or ``system'', as they called, is a measure that arises from the coefficients of polynomials like     
 \begin{equation*}
 \sum_{i_1=1}^n\cdots\sum_{i_m=1}^n\underbrace{{(\alpha_1)}_{i_1}\cdots{(\alpha_m)}_{i_m}}_{\mat{A}_{i_1\cdots i_m}} {(x_1)}_{i_1}\cdots {(x_m)}_{i_m}\,,
@@ -29,66 +27,61 @@ from which the transformation law
 \end{equation*}
 can be obtained. Similarly to vector measures, a tensor must have such an abstraction level that its definition results independent of the choice of variables, that is, in expressions above, the tensor represented by $\mat{A}$ is the same tensor represented by $\mat{B}$. Thereby, in rather generic terms, a tensor was initially seen as an abstract measure that arises from the interaction of different sets of variables, arranged in an expression of linear character whose value is a scalar. 
 
+Ricci's Tensor Calculus was presented by the hungarian mathematician Marcel Grossman(1878-1936) to his old school fellow Albert Einstein(1879-1955). When Einstein was developing his General Theory of Relativity, Grossman used to update him with the most recent mathematical tools available; in this case, non Euclidean geometry. During his work, Einstein noticed that there is not a preferred reference frame, inertial or not, that describes a certain physical phenomenon more adequately, that is, changes of frame do not promote qualitative modification on the description of phenomena. Since a tensor is immune to changes of variables, its use became a rather convenient mathematical tool for enabling the theory, in a concise and elegant development. About this tool and its mathematical foundations, \aut{Einstein}\cite{einstein_1915_1} wrote the following compliment: \emph{The charm of this theory will hardly scape from anyone who really understands it; it means the real triumph of the methodology of Absolute Differential Calculus, established by GAUSS, RIEMANN, CHRISTOFFEL, RICCI and LEVI-CIVITA}\footnote{Translated by me from the original \emph{Dem Zauber dieser Theorie wird sich kaum jemand entziehen können, der sie wirklich erfaßt hat; sie bedeutet einen wahren Triumph der durch GAUSS, RIEMANN, CHRISTOFFEL, RICCI und LEVI-CIVITER begründeten Methode des allgemeinen Differentialkalkuls}.}. From then on, Tensor Analysis raised to prominence: its development intensified and its application spread out to other branches of Mathematical Physics, of which Continuum Mechanics is the most relevant example.  
 
 
-O Cálculo Tensorial criado por Ricci foi apresentado pelo matemático húngaro Marcel Grossmann(1878-1936) ao físico alemão Albert Einstein(1879-1955), ambos colegas dos tempos de escola. Quando Einstein desenvolvia a Teoria da Relatividade Geral, Grossmann costumava atualizá-lo sobre as ferramentas matemáticas disponíveis; nesse caso, a geometria não-euclidiana. Durante os trabalhos, verificou-se que não há um referencial prioritário, inercial ou não,  para a descrição de um fenômeno físico, ou seja, mudança de referencial não promove alteração qualitativa na descrição do fenômeno. Diante disso, o tensor, por sua imunidade a mudanças de variáveis, tornou-se a entidade matemática ideal para viabilizar a teoria, num desenvolvimento conciso e elegante. Sobre ela e seus fundamentos matemáticos, \aut{Einstein}\cite{einstein_1915_1} escreveu o seguinte elogio: \emph{O encanto dessa teoria dificilmente escapará a quem compreendê-la de fato; ela significa o verdadeiro triunfo da metodologia do Cálculo Diferencial Absoluto, estabelecida por GAUSS, RIEMANN, CHRISTOFFEL, RICCI e LEVI-CIVITA}\footnote{Traduzido por mim do original \emph{Dem Zauber dieser Theorie wird sich kaum jemand entziehen können, der sie wirklich erfaßt hat; sie bedeutet einen wahren Triumph der durch GAUSS, RIEMANN, CHRISTOFFEL, RICCI und LEVI-CIVITER begründeten Methode des allgemeinen Differentialkalkuls}.}. A partir daí, a Análise Tensorial ganhou notoriedade: aprofundou-se seu desenvolvimento e sua aplicação estendeu-se para outras áreas da Física-Matemática, como por exemplo a Mecânica do Contínuo.
+\section{Tensor Spaces}
 
 
+Let's recall vector spaces of functions that have a tuple of vectors as argument, that is, functions whose domain is a cartesian product of many sets, each one defining a vector space. Among these function spaces, we have a particular interest in those constituted by multilinear functions, on the conditions presented in section \ref{sec:FuncLin}. In order to proceed with the theory, based on what was already studied, we chose to adopt an approach that considers tensor spaces as vector spaces of multilinear functionals, called tensors. In more mathematical terms, given a cartesian product $U^{\times m}$ where each set $U_i$ defines a vector space $(U_i)_\mathcal{R}$, a function space $\evl{\mathcal{R}}{U^{\times m}}{\mathcal{R}}$, constituted by multilinear functionals, is said to be a \textsb{tensor space}\index{space!tensor} of \textsb{order}\index{order!of tensor space} $m$, whose representation is here shortened by \gloref{espacoTens}, and each functional $\vtf{t}\in\ete{\mathcal{R}}{U^{\times m}}$ is said to be a \textsb{tensor}\index{tensor} of \textsb{order}\index{order!tensor} $m$, represented by \gloref{tensor}. In the particular case of $m=1$, a tensor space is considered to be a dual space, that is, $\ete{\mathcal{R}}{U}=U^*_\mathcal{R}$, where a tensor is a linear functional. Moreover, it is possible to build particular tensor spaces from catersian powers together with dual spaces: a tensor space $\ete{\mathcal{R}}{V^{p}\times {V^*}^{q}}$, represented by \gloref{espacoTensTipo}, where $V^*_\mathcal{R}$ is the dual space of $V_\mathcal{R}$, is said to have a \textsb{contravariant order}\index{order!contravariant} $p$ and a \textsb{covariant order}\index{order!covariant} $q$ or we can call it a type $(p,q)$ tensor space.   
 
-\section{Espaços Tensoriais}
-
-Recordemos os espaços vetoriais de funções que têm como argumento uma ênupla de vetores, ou seja, funções cujo domínio resulta do produto cartesiano de diversos conjuntos, sendo cada um deles definidor de um espaço vetorial. Dentre esses espaços, interessam-nos em particular aqueles constituídos por funções multilineares, nos termos do que foi apresentado na seção \ref{sec:FuncLin}. Para prosseguir com a teoria a partir do que já foi estudado, optamos por adotar a abordagem que denomina espaço tensorial um espaço vetorial constituído por funcionais multilineares, chamados tensores. Em termos mais matemáticos, dado o produto cartesiano $U^{\times m}$ onde cada conjunto $U_i$ define um espaço vetorial $(U_i)_\mathcal{R}$, dizemos que o espaço vetorial $\evl{\mathcal{R}}{U^{\times m}}{\mathcal{R}}$ constituído por funcionais multilineares é um \textsb{espaço tensorial}\index{espaço!tensorial} de \textsb{ordem}\index{ordem!de espaço tensorial} $m$, representado abreviadamente por \gloref{espacoTens}, e cada funcional $\vtf{t}\in\ete{\mathcal{R}}{U^{\times m}}$ é um \textsb{tensor}\index{tensor} de \textsb{ordem}\index{ordem!de tensor} $m$, representado \gloref{tensor}. No caso de $m=1$, consideramos que um espaço tensorial é simplesmente um espaço dual, ou seja, que $\ete{\mathcal{R}}{U}=U^*_\mathcal{R}$, quando um tensor é um funcional linear. Dessas considerações, podemos construir  espaços tensoriais a partir de potências cartesianas e de espaços vetoriais duais: diz-se que o espaço tensorial $\ete{\mathcal{R}}{V^{p}\times {V^*}^{q}}$, representado \gloref{espacoTensTipo}, onde $V^*_\mathcal{R}$ é o dual de $V_\mathcal{R}$, possui \textsb{ordem contravariante}\index{ordem!contravariante} $p$ e \textsb{ordem covariante}\index{ordem!covariante} $q$ ou que é do tipo $(p,q)$. De agora em diante, definições que envolvam espaços tensoriais gerados a partir de produtos cartesianos do tipo $U^{\times m}$ são válidas também para espaços do tipo $(p,q)$.
-
-Um tensor pode ser definido a partir dos espaços duais de seus espaços vetoriais constituintes, ou seja, um funcional linear em cada espaço vetorial $(U_i^*)_\mathcal{R}$ define um funcional multilinear (tensor) em $\ete{\mathcal{R}}{U^{\times m}}$. Vejamos como isso ocorre. Uma ênupla $(\vtf{g}_1,\cdots,\vtf{g}_m)$, elemento do produto cartesiano $(U^*)^{\times m}=U^*_1\times\cdots\times U^*_m$, especifica um tensor em $\ete{\mathcal{R}}{U^{\times m}}$ se for definida a regra
-
+A tensor can be defined from the dual spaces of its constituent vector spaces, that is, a linear functional in each vector space $(U_i^*)_\mathcal{R}$ defines a multilinear functional (tensor) in $\ete{\mathcal{R}}{U^{\times m}}$. Let's see how this happens. The tuple $(\vtf{g}_1,\cdots,\vtf{g}_m)$, which is an element of cartesian product $(U^*)^{\times m}=U^*_1\times\cdots\times U^*_m$, specifies a tensor in $\ete{\mathcal{R}}{U^{\times m}}$ when the following rule is defined: 
 \begin{equation}
 \fua{\tnr{G}}{\vto{x}_1,\cdots,\vto{x}_m}=\prod_{i=1}^m\fua{\vtf{g}_i}{\vto{x}_i}\,,
 \end{equation}
-quando $\tnr{G}\in\ete{\mathcal{R}}{U^{\times m}}$ é classificado como \textsb{diádico}\index{tensor!diádico} se $m=2$, \textsb{triádico}\index{tensor!triádico} se $m=3$ e \textsb{poliádico}\index{tensor!poliádico} se $m>3$. Nessas condições, cada funcional linear  $\vtf{g}_i$ é denominado \textsb{díade}, \textsb{tríade} e \textsb{políade} respectivamente. A fim de evidenciar e manipular suas políades, um tensor poliádico definido por $(\vtf{g}_1,\cdots,\vtf{g}_m)$ costumamos representar $\vtf{g}_1\otimes\cdots\otimes\vtf{g}_m$, onde o símbolo $\otimes$ é uma função de dois argumentos, definidora de um mapeamento chamado produto tensorial. Em termos formais e genéricos para tensores de qualquer ordem, dados os espaços tensoriais  $\ete{\mathcal{R}}{V^{\times p}}$ e $\ete{\mathcal{R}}{W^{\times q}}$, um mapeamento
-$\map{\otimes}{\ete{\mathcal{R}}{V^{\times p}}\times\ete{\mathcal{R}}{W^{\times q}}}{\ete{\mathcal{R}}{V^{\times p}\times W^{\times q}}}$ é chamado \textsb{produto tensorial}\index{produto!tensorial} se, para quaisquer $\tnr{V}\in\ete{\mathcal{R}}{V^{\times p}}$ e $\tnr{W}\in\ete{\mathcal{R}}{W^{\times q}}$,
+where tensor $\tnr{G}\in\ete{\mathcal{R}}{U^{\times m}}$ is classified dyadic\index{tensor!dyadic} if $m=2$, \textsb{triadic}\index{tensor!triadic} if $m=3$ and \textsb{polyadic}\index{tensor!polyadic} if $m>3$. Under these conditions, each linear functional $\vtf{g}_i$ is called \textsb{dyad}\index{dyad}, \textsb{triad}\index{triad} and \textsb{polyad}\index{polyad} respectively. In order to handle and make its polyads explict, the polyadic tensor that $(\vtf{g}_1,\cdots,\vtf{g}_m)$ defines we represent it by $\vtf{g}_1\otimes\cdots\otimes\vtf{g}_m$, where symbol $\otimes$ is a function of two arguments, definer of a mapping called tensor product. In more formal and generic terms, considering tensor spaces $\ete{\mathcal{R}}{V^{\times p}}$ and $\ete{\mathcal{R}}{W^{\times q}}$, a mapping $\map{\otimes}{\ete{\mathcal{R}}{V^{\times p}}\times\ete{\mathcal{R}}{W^{\times q}}}{\ete{\mathcal{R}}{V^{\times p}\times W^{\times q}}}$ is called a \textsb{tensor product}\index{product!tensor} if, for all $\tnr{V}\in\ete{\mathcal{R}}{V^{\times p}}$ and $\tnr{W}\in\ete{\mathcal{R}}{W^{\times q}}$,
 \begin{equation}\label{eq:prodTens}
 \fua{\tnr{V}\otimes\tnr{W}}{\vto{x}_1,\cdots,\vto{x}_p,\vto{y}_1,\cdots,\vto{y}_q}=\fua{\tnr{V}}{\vto{x}_1,\cdots,\vto{x}_p}\fua{\tnr{W}}{\vto{y}_1,\cdots,\vto{y}_q}\,,
 \end{equation}
-onde o tensor $\tnr{V}\otimes\tnr{W}:=\fua{\otimes}{\tnr{V},\tnr{W}}$ é elemento de $\ete{\mathcal{R}}{V^{\times p}\times W^{\times q}}$. Das quatro propriedades listadas a seguir, a representação do tensor poliádico como uma sucessão de produtos tensoriais resulta da associatividade.
+where tensor $\tnr{V}\otimes\tnr{W}:=\fua{\otimes}{\tnr{V},\tnr{W}}$ belongs to $\ete{\mathcal{R}}{V^{\times p}\times W^{\times q}}$. From the following items, the representation of a polyadic tensor by a succession of tensor products, as is the case of $\vtf{g}_1\otimes\cdots\otimes\vtf{g}_m$ above, results from the associativity property. Items
 \begin{itemize}
-	\setlength\itemsep{.1em}
-	\item[i.] Tensor nulo: $\tnr{U}\otimes\tnr{V}=\tnr{0} \implies\tnr{U}=\tnr{0}$ ou $\tnr{V}=\tnr{0}$,
-	\item[ii.] Multiplicação por escalar: $\alpha\tnr{U}\otimes\beta\tnr{V}=\alpha\beta(\tnr{U}\otimes\tnr{V})=\beta\tnr{U}\otimes\alpha\tnr{V}$,
-	\item[iii.] Associatividade:
-	$\lpa\tnr{U}\otimes\tnr{V}\rpa\otimes\tnr{W}=\tnr{U}\otimes\lpa\tnr{V}\otimes\tnr{W}\rpa$,
-	\item[iv.] Distributividade à esquerda:
-	$\lpa\tnr{U}+\tnr{V}\rpa\otimes\tnr{W}=\tnr{U}\otimes\tnr{W}+\tnr{V}\otimes\tnr{W}\,\,$ e
-	\item[v.] Distributividade à direita:
+\setlength\itemsep{.1em}
+\item[i.] Zero tensor: $\tnr{U}\otimes\tnr{V}=\tnr{0} \implies\tnr{U}=\tnr{0}$ or $\tnr{V}=\tnr{0}$,
+\item[ii.] Multiplication by scalar: $\alpha\tnr{U}\otimes\beta\tnr{V}=\alpha\beta(\tnr{U}\otimes\tnr{V})=\beta\tnr{U}\otimes\alpha\tnr{V}$,
+\item[iii.] Associativity:
+$\lpa\tnr{U}\otimes\tnr{V}\rpa\otimes\tnr{W}=\tnr{U}\otimes\lpa\tnr{V}\otimes\tnr{W}\rpa$,
+\item[iv.] Left distributivity:
+$\lpa\tnr{U}+\tnr{V}\rpa\otimes\tnr{W}=\tnr{U}\otimes\tnr{W}+\tnr{V}\otimes\tnr{W}\,\,$ and
+	\item[v.] Right distributivity:
 	$\tnr{U}\otimes\lpa\tnr{V}+\tnr{W}\rpa=\tnr{U}\otimes\tnr{V}+\tnr{U}\otimes\tnr{W}$
 \end{itemize}
-são todas propriedades válidas para quaisquer $\alpha,\beta\in\mathcal{R}$ e  $\tnr{U},\tnr{V},\tnr{W}\in\ete{\mathcal{R}}{U^{\times m}}$. Além disso,
-de acordo com o próximo teorema, um espaço tensorial pode ser gerado por um conjunto de tensores poliádicos formados pelos funcionais coordenados das bases dos espaços vetoriais constituintes.
+are valid properties for all $\alpha,\beta\in\mathcal{R}$ and  $\tnr{U},\tnr{V},\tnr{W}\in\ete{\mathcal{R}}{U^{\times m}}$. Moreover, the following theorem states that a set of specific polyadic tensors, defined by tuples of coordinate functionals, is able to span a tensor space. 
 
-\begin{mteo}{Base de Tensores Poliádicos}{geraEte}
-Dados o espaço tensorial $\ete{\mathcal{R}}{U^{\times m}}$ e uma base $B_i=\{\vto{u}_1^{(i)},\cdots,\vto{u}_{n_i}^{(i)}\}$ de cada espaço vetorial $(U_i)_\mathcal{R}$, $i=1,\cdots,m\,$, o conjunto $B$ formado por todos os tensores poliádicos com formato $\vtf{f}_{j_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{j_m}^{B_m}$, $j_i=1,\cdots,n_i\,$, é uma base do espaço $\ete{\mathcal{R}}{U^{\times m}}$.
+\begin{mteo}{Basis of Polyadic Tensors}{geraEte}
+Given a tensor space $\ete{\mathcal{R}}{U^{\times m}}$ and a basis $B_i=\{\vto{u}_1^{(i)},\cdots,\vto{u}_{n_i}^{(i)}\}$ of each constituent vector space $(U_i)_\mathcal{R}$, $i=1,\cdots,m\,$, the set $B$ of all polyadic tensors $\vtf{f}_{j_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{j_m}^{B_m}$, $j_i=1,\cdots,n_i\,$, is a basis of $\ete{\mathcal{R}}{U^{\times m}}$. 
 \end{mteo}
 
 {\footnotesize
 \begin{proof}
-Primeiramente, sobre as cinco propriedades de produtos tensoriais a demonstração pode ser feita a partir da definição \eqref{eq:prodTens} e de propriedades multiplicativas triviais de escalares. Sobre o teorema, precisamos demonstrar antes de mais nada que se forem válidas todas as igualdades  $\tnr{T}_1({\vto{u}_{j_1}^{(1)},\cdots,\vto{u}_{j_m}^{(m)}})={\tnr{T}_2}(\vto{u}_{j_1}^{(1)},\cdots,\vto{u}_{j_m}^{(m)})$, onde $\tnr{T}_1,\tnr{T}_2\in\ete{\mathcal{R}}{U^{\times m}}$, resulta que  $\tnr{T}_1=\tnr{T}_2$. Para tal, podemos dizer que
+Firstly, concerning the above properties of tensor products, each one can be verified from the definition \eqref{eq:prodTens} and from trivial multiplicative properties with scalars. About the theorem, we need to prove previously that if equalities $\tnr{T}_1({\vto{u}_{j_1}^{(1)},\cdots,\vto{u}_{j_m}^{(m)}})={\tnr{T}_2}(\vto{u}_{j_1}^{(1)},\cdots,\vto{u}_{j_m}^{(m)})$, where $\tnr{T}_1,\tnr{T}_2\in\ete{\mathcal{R}}{U^{\times m}}$, are valid, it results that $\tnr{T}_1=\tnr{T}_2$. In order to do that, we can say that 
 \begin{align*}
 \tnr{T}_1(\vto{x}_1,\cdots,\vto{x}_m)&=\sum_{{j_1}=1}^{n_1}\cdots\sum_{{j_m}=1}^{n_m}\fua{\vtf{f}^\con{B_1}_{j_1}}{\vto{x}_1}\cdots\fua{\vtf{f}^\con{B_m}_{j_m}}{\vto{x}_m}\tnr{T}_1({\vto{u}_{j_1}^{(1)},\cdots,\vto{u}_{j_m}^{(m)}})\\
 &=\sum_{{j_1}=1}^{n_1}\cdots\sum_{{j_m}=1}^{n_m}\fua{\vtf{f}^\con{B_1}_{j_1}}{\vto{x}_1}\cdots\fua{\vtf{f}^\con{B_m}_{j_m}}{\vto{x}_m}\tnr{T}_2({\vto{u}_{j_1}^{(1)},\cdots,\vto{u}_{j_m}^{(m)}})\\
 &=\tnr{T}_2(\vto{x}_1,\cdots,\vto{x}_m)\,,
 \end{align*}
-de onde concluímos que $\tnr{T}_1=\tnr{T}_2$. Agora, seja um tensor qualquer  $\tnr{T}\in\ete{\mathcal{R}}{U^{\times m}}$ onde os escalares $\beta_{i_1\cdots i_m}=\tnr{T}({\vto{u}_{i_1}^{(1)},\cdots,\vto{u}_{i_m}^{(m)}})$ definem o tensor
+from which we conclude $\tnr{T}_1=\tnr{T}_2$. Now, let $\tnr{T}\in\ete{\mathcal{R}}{U^{\times m}}$ be a tensor where scalars $\beta_{i_1\cdots i_m}=\tnr{T}({\vto{u}_{i_1}^{(1)},\cdots,\vto{u}_{i_m}^{(m)}})$ define a tensor 
 \begin{equation*}
-\tnr{X}=\sum_{{i_1}=1}^{n_1}\cdots\sum_{{i_m}=1}^{n_m}\beta_{i_1\cdots i_m}\vtf{f}_{i_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{i_m}^{B_m}\,,
+\tnr{X}=\sum_{{i_1}=1}^{n_1}\cdots\sum_{{i_m}=1}^{n_m}\beta_{i_1\cdots i_m}\vtf{f}_{i_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{i_m}^{B_m}\,.
 \end{equation*}
-a partir do qual podemos escrever o seguinte:
+Thus we can write the following:
 \begin{equation*}
 \tnr{X}({\vto{u}_{j_1}^{(1)},\cdots,\vto{u}_{j_m}^{(m)}}) = \sum_{{i_1}=1}^{n_1}\cdots\sum_{{i_m}=1}^{n_m}\beta_{i_1\cdots i_m}\prod_{k=1}^m\delta_{i_kj_k}=\beta_{j_1\cdots j_m}=\tnr{T}({\vto{u}_{j_1}^{(1)},\cdots,\vto{u}_{j_m}^{(m)}})\,.
 \end{equation*}
-Já sabemos que tais igualdades permitem concluir que $\tnr{X}=\tnr{T}$, de onde se pode constatar que $\spn{(B)}=\ete{\mathcal{R}}{U^{\times m}}$, uma vez que $\tnr{T}$ é um tensor qualquer. Precisamos verificar agora se $B$ é linearmente independente. Isso é verdade quando forem nulos os coeficientes $\alpha_{i_1\cdots i_m}$ da combinação linear na igualdade
+Such equalities enable us to conclude that $\tnr{X}=\tnr{T}$ and then $\spn{(B)}=\ete{\mathcal{R}}{U^{\times m}}$, since $\tnr{T}$ is an arbitrary tensor of $\ete{\mathcal{R}}{U^{\times m}}$. Now we need to verify that if $B$ is linearly independent. This is true when coefficients $\alpha_{i_1\cdots i_m}$ of the linear combination 
 \begin{equation*}
-\sum_{{i_1}=1}^{n_1}\cdots\sum_{{i_m}=1}^{n_m}\alpha_{i_1\cdots i_m}\vtf{f}_{i_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{i_m}^{B_m}=\tnr{0}\,.
+\sum_{{i_1}=1}^{n_1}\cdots\sum_{{i_m}=1}^{n_m}\alpha_{i_1\cdots i_m}\vtf{f}_{i_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{i_m}^{B_m}=\tnr{0}
 \end{equation*}
-Verifiquemos se tais coeficientes são mesmo nulos através do seguinte desenvolvimento:
+are zero, which can be verified through the following development:  
 \begin{align*}
 \sum_{{i_1}=1}^{n_1}\cdots\sum_{{i_m}=1}^{n_m}\alpha_{i_1\cdots i_m}\vtf{f}_{i_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{i_m}^{B_m}({\vto{u}_{j_1}^{(1)},\cdots,\vto{u}_{j_m}^{(m)}})&=\tnr{0}({\vto{u}_{j_1}^{(1)},\cdots,\vto{u}_{j_m}^{(m)}})\\
 \sum_{{i_1}=1}^{n_1}\cdots\sum_{{i_m}=1}^{n_m}\alpha_{i_1\cdots i_m}\prod_{k=1}^m\delta_{i_kj_k}&=0\\
@@ -97,10 +90,25 @@ Verifiquemos se tais coeficientes são mesmo nulos através do seguinte desenvolvi
 \end{proof}
 }
 
-Nas condições do teorema anterior, observamos que a quantidade de tensores poliádicos $\vtf{f}_{j_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{j_m}^{B_m}$ da base $B$ é dada pelo produto $n_1\cdots n_m$. Além disso, do capítulo anterior, já sabemos que um espaço vetorial e seu dual têm a mesma dimensão, ou seja, $\dim ((U_i)_\mathcal{R})=\dim ((U_i^*)_\mathcal{R})$. Assim, podemos afirmar que a dimensão do espaço tensorial $\ete{\mathcal{R}}{U^{\times m}}$ é o produto das dimensões de cada um dos espaços vetoriais $(U_i)_\mathcal{R}$. Em outras palavras,
-\begin{equation*}
+In the context of the above theorem, it can be noted that the number of polyadic tensors $\vtf{f}_{j_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{j_m}^{B_m}$ of basis $B$ is given by 
+$n_1\cdots n_m$. Moreover, from the previous chapter, we already know that a vector space and its dual have the same dimension, that is, $\dim ((U_i)_\mathcal{R})=\dim ((U_i^*)_\mathcal{R})$. Thereby, we can state that the dimension of tensor space $\ete{\mathcal{R}}{U^{\times m}}$ is the product of dimensions of each of vector spaces $(U_i)_\mathcal{R}$. In other words,
+\begin{equation}
 \dim (\ete{\mathcal{R}}{U^{\times m}}) = \prod_{i=1}^m \dim ((U_i)_\mathcal{R})\,.
+\end{equation}
+Like any other basis of a vector space, each element of basis $B$ of tensor space $\ete{\mathcal{R}}{U^{\times m}}$ also have a related coordinate functional, here represented by $\vtf{f}_{j_1\cdots j_m}^{B}$. Thereby, given an arbitrary tensor $\tnr{T}\in\ete{\mathcal{R}}{U^{\times m}}$, the tuple constituted by scalars $\vtf{f}_{j_1\cdots j_m}^{B}(\tnr{T})$, $j_i=1,\cdots,n_i\,$ is said to be the coordinates of $\tnr{T}$ on $B$. Using this definition, tensor $\tnr{T}$ can be described by expression 
+\begin{equation}
+\tnr{T} = \sum_{k_1=1}^{n_1}\cdots\sum_{k_m=1}^{n_m} \vtf{f}_{k_1\cdots k_m}^{B}(\tnr{T})\,\vtf{f}_{k_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{k_m}^{B_m}\,,
+\end{equation}
+from which the equalities   
+\begin{equation*}
+\fua{\tnr{T}}{\vto{u}_{j_1}^{(1)},\cdots,\vto{u}_{j_m}^{(m)}} = \sum_{k_1=1}^{n_1}\cdots\sum_{k_m=1}^{n_m}\vtf{f}_{k_1\cdots k_m}^{B}(\tnr{T})\,\prod_{i=1}^m \fua{\vtf{f}_{k_i}^{B_i}}{\vto{u}_{j_i}^{(i)}}=\vtf{f}_{j_1\cdots j_m}^{B}(\tnr{T})
 \end{equation*}
+enable to define the following rule for coordinate functionals on basis $B$: 
+\begin{equation}\label{eq:regraCoordTens}
+\vtf{f}_{j_1\cdots j_m}^{B}(\tnr{X})= \fua{\tnr{X}}{\vto{u}_{j_1}^{(1)},\cdots,\vto{u}_{j_m}^{(m)}}\,.
+\end{equation}
+
+
 Ainda nesse contexto, como ocorre com espaços vetoriais, cada elemento da base $B$ do espaço tensorial $\ete{\mathcal{R}}{U^{\times m}}$ também possui um funcional coordenado associado, aqui representado $\vtf{f}_{j_1\cdots j_m}^{B}$. Assim, denominamos coordenadas de um tensor qualquer $\tnr{T}\in\ete{\mathcal{R}}{U^{\times m}}$ à ênupla formada pelos escalares $\vtf{f}_{j_1\cdots j_m}^{B}(\tnr{T})$, $j_i=1,\cdots,n_i\,$. Diante disso, o tensor $\tnr{T}$ pode ser descrito pela expressão
 \begin{equation}
 \tnr{T} = \sum_{j_1=1}^{n_1}\cdots\sum_{j_m=1}^{n_m} \vtf{f}_{j_1\cdots j_m}^{B}(\tnr{T})\,\vtf{f}_{j_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{j_m}^{B_m}\,,
