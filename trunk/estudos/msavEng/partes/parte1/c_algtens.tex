@@ -107,32 +107,26 @@ enable to define the following rule for coordinate functionals on basis $B$:
 \begin{equation}\label{eq:regraCoordTens}
 \vtf{f}_{j_1\cdots j_m}^{B}(\tnr{X})= \fua{\tnr{X}}{\vto{u}_{j_1}^{(1)},\cdots,\vto{u}_{j_m}^{(m)}}\,.
 \end{equation}
-
-
-Ainda nesse contexto, como ocorre com espaços vetoriais, cada elemento da base $B$ do espaço tensorial $\ete{\mathcal{R}}{U^{\times m}}$ também possui um funcional coordenado associado, aqui representado $\vtf{f}_{j_1\cdots j_m}^{B}$. Assim, denominamos coordenadas de um tensor qualquer $\tnr{T}\in\ete{\mathcal{R}}{U^{\times m}}$ à ênupla formada pelos escalares $\vtf{f}_{j_1\cdots j_m}^{B}(\tnr{T})$, $j_i=1,\cdots,n_i\,$. Diante disso, o tensor $\tnr{T}$ pode ser descrito pela expressão
-\begin{equation}
-\tnr{T} = \sum_{j_1=1}^{n_1}\cdots\sum_{j_m=1}^{n_m} \vtf{f}_{j_1\cdots j_m}^{B}(\tnr{T})\,\vtf{f}_{j_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{j_m}^{B_m}\,,
-\end{equation}
-a partir da qual podemos dizer que as igualdades
-\begin{equation*}
-\fua{\tnr{T}}{\vto{u}_{j_1}^{(1)},\cdots,\vto{u}_{j_m}^{(m)}} = \vtf{f}_{j_1\cdots j_m}^{B}(\tnr{T})\,\prod_{i=1}^m \fua{\vtf{f}_{j_i}^{B_i}}{\vto{u}_{j_i}^{(i)}}=\vtf{f}_{j_1\cdots j_m}^{B}(\tnr{T})
-\end{equation*}
-permitem definir a seguinte regra para os funcionais coordenados da base $B$:
-\begin{equation}\label{eq:regraCoordTens}
-\vtf{f}_{j_1\cdots j_m}^{B}(\tnr{X})= \fua{\tnr{X}}{\vto{u}_{j_1}^{(1)},\cdots,\vto{u}_{j_m}^{(m)}}\,.
-\end{equation}
-Em espaços vetoriais do tipo $(p,q)$, os elementos das coordenadas de um tensor $\tnr{V}\in\ete{\mathcal{R}}{V^{(p,q)}}$ costumam ser representados por
+In type $(p,q)$ tensor spaces, the coordinates of a tensor $\tnr{V}\in\ete{\mathcal{R}}{V^{(p,q)}}$ are defined by scalars usually represented by 
 \begin{equation}
 (\vtf{f}^{Z})^{j_1\cdots j_p}_{k_1\cdots k_q}(\tnr{V}),\,\, j_i,k_l=1,\cdots,n\,,
 \end{equation}
-onde $Z$ é uma base de $\ete{\mathcal{R}}{V^{(p,q)}}$, $i=1,\cdots,p$ e $l=1,\cdots,q\,\,$. Os índices sobrescritos $j_i$ referem-se ao espaço $V_\mathcal{R}$ de vetores cujas coordenadas são contravariantes e os subscritos $k_l$ ao espaço ${V}_\mathcal{R}^*$ de vetores com coordenadas covariantes. Tensores são ditos \textsb{covariantes}\index{tensor!covariante} ou \textsb{contravariantes}\index{tensor!contravariante} se possuírem exclusivamente índices covariantes ou contravariantes e denominados \textsb{mistos}\index{tensor!misto} se possuírem ambos os tipos. Nesse caso de espaços tensoriais do tipo $(p,q)$,  a partir de uma base $W=\{\vto{z}_{1},\cdots,\vto{z}_{n}\}$ de $V_\mathcal{R}$, a regra \eqref{eq:regraCoordTens} para funcionais coordenados resulta
+where $Z$ is a basis of $\ete{\mathcal{R}}{V^{(p,q)}}$, $i=1,\cdots,p$ and $l=1,\cdots,q\,\,$. The superscript indexes $j_i$ are related to space $V_\mathcal{R}$ of vectors whose coordinates are contravariant and the subscript indexes $k_l$ related to ${V}_\mathcal{R}^*$ of vectors whose coordinates are covariant. Tensors are called  \textsb{covariant}\index{tensor!covariant} or \textsb{contravariant}\index{tensor!contravariant} when they exclusively have covariant or contravariant indexes respectively and called \textsb{mixed}\index{tensor!mixed} when they have both. For $(p,q)$ tensor spaces, given a basis $W=\{\vto{w}_{1},\cdots,\vto{w}_{n}\}$ of $V_\mathcal{R}$, rule \eqref{eq:regraCoordTens} for coordinate functionals results   
 \begin{equation}
-(\vtf{f}^{Z})^{j_1\cdots j_p}_{k_1\cdots k_q}(\tnr{X})=\fua{\tnr{X}}{\vto{z}_{j_1},\cdots,\vto{z}_{j_p},\vtf{f}_{k_1}^{W},\cdots,\vtf{f}_{k_q}^{W}}\,,
+(\vtf{f}^{Z})^{j_1\cdots j_p}_{k_1\cdots k_q}(\tnr{X})=\fua{\tnr{X}}{\vto{w}_{j_1},\cdots,\vto{w}_{j_p},\vtf{f}_{k_1}^{W},\cdots,\vtf{f}_{k_q}^{W}}\,,
 \end{equation}
-onde as bases $W^*=\{\vtf{f}_{1}^{W},\cdots,\vtf{f}_{n}^{W}\}$ de $V_\mathcal{R}^*$ e  $W^{**}=\{\vtf{f}_{1}^{W^*},\cdots,\vtf{f}_{n}^{W^*}\}$ de $V_\mathcal{R}^{**}$ definem a base $Z$, de tal forma que seus elementos possuem o formato
+where bases  $W^*=\{\vtf{f}_{1}^{W},\cdots,\vtf{f}_{n}^{W}\}$ of $V_\mathcal{R}^*$ and $W^{**}=\{\vtf{f}_{1}^{W^*},\cdots,\vtf{f}_{n}^{W^*}\}$ of $V_\mathcal{R}^{**}$ define basis $Z$, in such a way that its elements have the format
 \begin{equation*}
-\vtf{f}_{j_1}^{W}\otimes\cdots\otimes\vtf{f}_{j_p}^{W}\otimes\vtf{f}_{k_1}^{W^*}\otimes\cdots\otimes\vtf{f}_{k_q}^{W^*}\,.
-\end{equation*}
+\vtf{f}_{j_1}^{W}\otimes\cdots\otimes\vtf{f}_{j_p}^{W}\otimes\vtf{f}_{k_1}^{W^*}\otimes\cdots\otimes\vtf{f}_{k_q}^{W^*}\,,
+\end{equation*} 
+according to theorem \ref{teo:geraEte}.
+
+Since we just learned the rule to obtain the coordinates of a tensor on a certain basis, let's see how these coordinates behave when there is a change of basis. In the context of theorem \ref{teo:geraEte}, let $C_i=\{\vto{v}_1^{(i)},\cdots,\vto{v}_{n_i}^{(i)}\}$ be a basis of each vector space $(U_i)_\mathcal{R}$ and matrix $\maf{\vtf{i}}{C_i}{B_i}$  
+
+
+
+
+     
 
 Uma vez que já sabemos a regra para obtenção das coordenadas de um tensor numa determinada base, vejamos como ocorre a mudança dessas coordenadas quando há uma mudança de base. Nos termos do teorema \ref{teo:geraEte}, sejam o subconjunto $C_i=\{\vto{v}_1^{(i)},\cdots,\vto{v}_{n_i}^{(i)}\}$ base de cada um dos espaços vetoriais $(U_i)_\mathcal{R}$ e a matriz $\maf{\vtf{i}}{C_i}{B_i}$ que viabiliza a mudança de base de $B_i$ para $C_i$. A partir da regra \eqref{eq:regraCoordTens}, dado um tensor qualquer $\tnr{T}\in\ete{\mathcal{R}}{U^{\times m}}$, podemos fazer o seguinte desenvolvimento:
 \begin{align}
