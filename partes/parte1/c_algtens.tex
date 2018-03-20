@@ -6,7 +6,7 @@ Continuing our study of Linear Algebra, whose foundations we presented in the pr
 
 \section{A Very Short History of Tensors}
 
-The word ``tensor'' was used for the first time in Mathematics in 1846 by \aut{Hamilton}\cite{hamilton_1846_1} in order to designate the modulus of numbers that he called quaternions, which are a generalization of complex numbers. In 1881, \aut{Gibbs}\cite{gibbs_1881} introduced the notion of dyad as being an ``undefined product'' of two vectors, starting, in a rather obscure way, the concept that nowadays we understand as tensor product. Since the term ``tensor'' has the latin word \emph{tendere}, which means ``to stretch'', as its etymological origin, \aut{Voigt}\cite{voigt_1898_1} adopted a meaning closer to the current mechanical approach, when he used tensor to designate the combination of a vector measure, representing forces and stretches involved, with another vector measure, normal to the surface in question.        
+The word ``tensor'' was used for the first time in Mathematics in 1846 by \aut{Hamilton}\cite{hamilton_1846_1} in order to designate the modulus of numbers that he called quaternions, which are a generalization of complex numbers. In 1881, \aut{Gibbs}\cite{gibbs_1881} introduced the notion of dyad as being an ``undefined product'' of two vectors, starting, in a rather obscure way, the concept that nowadays we understand as tensor product. Since the term ``tensor'' has the latin word \emph{tendere}, which means ``to stretch'', as its etymological origin, \aut{Voigt}\cite{voigt_1898_1} adopted a meaning closer to the current mechanical approach, when he used tensor to designate the combination of a vector measure, representing the forces and stretches involved, with another vector measure, normal to the surface in question.        
 
 At the end of XIX century, after ten years conceiving his ``Absolute Differential Calculus'', the italian mathematician Gregorio Ricci-Curbastro(1853-1925) published a seminal paper entitled \emph{Méthodes de Calcul Différentiel Absolu et Leurs Applications}\footnote{See \aut{Ricci \& Levi-Civita}\cite{ricci_1900_1} and \aut{Hermann}\cite{hermann_1975}.}, together with his pupil  Tullio Levi-Civita(1873-1941), in which they established the foundations of what is known today as Tensor Analysis. In this work, a tensor or ``system'', as they called, is a measure that arises from the coefficients of polynomials like     
 \begin{equation*}
@@ -25,7 +25,7 @@ from which the transformation law
 \begin{equation*}
 \mat{A}_{i_1\cdots i_m}=\sum_{j_1=1}^n\cdots\sum_{j_m=1}^n\mat{C}_{j_1i_1}\cdots\mat{C}_{j_mi_m}\mat{B}_{j_1\cdots j_m}
 \end{equation*}
-can be obtained. Similarly to vector measures, a tensor must have such an abstraction level that its definition results independent of the choice of variables, that is, in expressions above, the tensor represented by $\mat{A}$ is the same tensor represented by $\mat{B}$. Thereby, in rather generic terms, a tensor was initially seen as an abstract measure that arises from the interaction of different sets of variables, arranged in an expression of linear character whose value is a scalar. 
+can be obtained. Similarly to vector measures, a tensor must have such an abstraction level that its definition results independent of the choice of variables, that is, in expressions above, the tensor represented by $\mat{A}$ is the same tensor represented by $\mat{B}$. Thereby, in rather generic terms, a tensor was initially seen as an abstract measure that arises from the interaction of different sets of variables, arranged in an scalar-valued expression of linear character. 
 
 Ricci's Tensor Calculus was presented by the hungarian mathematician Marcel Grossman(1878-1936) to his old school fellow Albert Einstein(1879-1955). When Einstein was developing his General Theory of Relativity, Grossman used to update him with the most recent mathematical tools available; in this case, non Euclidean geometry. During his work, Einstein noticed that there is not a preferred reference frame, inertial or not, that describes a certain physical phenomenon more adequately, that is, changes of frame do not promote qualitative modification on the description of phenomena. Since a tensor is immune to changes of variables, its use became a rather convenient mathematical tool for enabling the theory, in a concise and elegant development. About this tool and its mathematical foundations, \aut{Einstein}\cite{einstein_1915_1} wrote the following compliment: \emph{The charm of this theory will hardly scape from anyone who really understands it; it means the real triumph of the methodology of Absolute Differential Calculus, established by GAUSS, RIEMANN, CHRISTOFFEL, RICCI and LEVI-CIVITA}\footnote{Translated by me from the original \emph{Dem Zauber dieser Theorie wird sich kaum jemand entziehen können, der sie wirklich erfaßt hat; sie bedeutet einen wahren Triumph der durch GAUSS, RIEMANN, CHRISTOFFEL, RICCI und LEVI-CIVITER begründeten Methode des allgemeinen Differentialkalkuls}.}. From then on, Tensor Analysis raised to prominence: its development intensified and its application spread out to other branches of Mathematical Physics, of which Continuum Mechanics is the most relevant example.  
 
@@ -121,45 +121,44 @@ where bases  $W^*=\{\vtf{f}_{1}^{W},\cdots,\vtf{f}_{n}^{W}\}$ of $V_\mathcal{R}^
 \end{equation*} 
 according to theorem \ref{teo:geraEte}.
 
-Since we just learned the rule to obtain the coordinates of a tensor on a certain basis, let's see how these coordinates behave when there is a change of basis. In the context of theorem \ref{teo:geraEte}, let $C_i=\{\vto{v}_1^{(i)},\cdots,\vto{v}_{n_i}^{(i)}\}$ be a basis of each vector space $(U_i)_\mathcal{R}$ and matrix $\maf{\vtf{i}}{C_i}{B_i}$  
-
-
-
-
-     
-
-Uma vez que já sabemos a regra para obtenção das coordenadas de um tensor numa determinada base, vejamos como ocorre a mudança dessas coordenadas quando há uma mudança de base. Nos termos do teorema \ref{teo:geraEte}, sejam o subconjunto $C_i=\{\vto{v}_1^{(i)},\cdots,\vto{v}_{n_i}^{(i)}\}$ base de cada um dos espaços vetoriais $(U_i)_\mathcal{R}$ e a matriz $\maf{\vtf{i}}{C_i}{B_i}$ que viabiliza a mudança de base de $B_i$ para $C_i$. A partir da regra \eqref{eq:regraCoordTens}, dado um tensor qualquer $\tnr{T}\in\ete{\mathcal{R}}{U^{\times m}}$, podemos fazer o seguinte desenvolvimento:
+Since we just learned the rule to obtain the coordinates of a tensor on a certain basis, let's see how these coordinates behave when there is a change of basis. In the context of theorem \ref{teo:geraEte}, let $C_i=\{\vto{v}_1^{(i)},\cdots,\vto{v}_{n_i}^{(i)}\}$ be a basis of each vector space $(U_i)_\mathcal{R}$ and $\maf{\vtf{i}}{C_i}{B_i}$ a matrix that changes basis $B_i$ to basis $C_i$. From the rule \eqref{eq:regraCoordTens}, given a tensor 
+$\tnr{T}\in\ete{\mathcal{R}}{U^{\times m}}$, we can develop the following:
 \begin{align}
 \fua{\vtf{f}_{j_1\cdots j_m}^{C}}{\tnr{T}}&=\fua{\tnr{T}}{\vto{v}_{j_1}^{(1)},\cdots,\vto{v}_{j_m}^{(m)}}  \nonumber\\
 &=\sum_{k_1=1}^{n_1}\cdots\sum_{k_m=1}^{n_m} \vtf{f}_{k_1\cdots k_m}^{B}(\tnr{T})\,\fua{\vtf{f}_{k_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{k_m}^{B_m}}{\vto{v}_{j_1}^{(1)},\cdots,\vto{v}_{j_m}^{(m)}}\nonumber\\
-&=\sum_{k_1=1}^{n_1}\cdots\sum_{k_m=1}^{n_m} \vtf{f}_{k_1\cdots k_m}^{B}(\tnr{T})\,\prod_{l=1}^m\fua{\vtf{f}_{k_l}^{B_l}}{\vto{v}_{j_l}^{(l)}}\nonumber\\
-&=\sum_{k_1=1}^{n_1}\cdots\sum_{k_m=1}^{n_m} \vtf{f}_{k_1\cdots k_m}^{B}(\tnr{T})\,\prod_{l=1}^m\maf{\vtf{i}}{C_k}{B_k}_{k_lj_l}\,,
+&=\sum_{k_1=1}^{n_1}\cdots\sum_{k_m=1}^{n_m} \vtf{f}_{k_1\cdots k_m}^{B}(\tnr{T})\,\prod_{i=1}^m\fua{\vtf{f}_{k_i}^{B_i}}{\vto{v}_{j_i}^{(i)}}\nonumber\\
+&=\sum_{k_1=1}^{n_1}\cdots\sum_{k_m=1}^{n_m} \vtf{f}_{k_1\cdots k_m}^{B}(\tnr{T})\,\prod_{i=1}^m\maf{\vtf{i}}{C_i}{B_i}_{k_ij_i}\,,
 \end{align}
-de onde concluímos que a última igualdade descreve a mudança de coordenadas do tensor $\tnr{T}$ da base $B$ para a base $C$. Adotando esse mesmo procedimento, é possível encontrar as coordenadas de um tensor do tipo $(p,q)$.
+from which the last equality describes a change of coordinates of tensor $\tnr{T}$ from basis $B$ to basis $C$. Through this same process, it is possible to change the coordinates of a type $(p,q)$ tensor.  
 
-Considerando o espaço tensorial $\ete{\mathcal{R}}{U^{\times m}}$, se os espaços vetoriais $(U_i)_\mathcal{R}$ que o definem forem de Hilbert, podemos lançar mão da relação unívoca existente entre os elementos $\vtf{f}_{j_i}^{B_i}$ de cada base dual $B_i^*$ e os elementos $(\vto{u}^{(i)})^{j_i}$ de cada base recíproca $B^\perp_{i}$, consequência da Representação de Riesz-Fréchet. Nesse caso, se o espaço tensorial possuir ordem unitária, seus tensores serão covetores, ou seja, dado um vetor qualquer $\vto{u}\in U_\mathcal{R}$, seu covetor $\vto{u}^*\in \ete{\mathcal{R}}{U}$. Em resumo, \emph{no contexto dos espaços tensoriais definidos por espaços de Hilbert, covetores são tensores de ordem unitária}. Ainda nesse contexto, costuma-se reescrever os tensores poliádicos de uma base qualquer $B$ no formato
-\begin{equation}
-\vto{u}^{(1)}_{j_1}\otimes\cdots\otimes\vto{u}^{(m)}_{j_m}:=(\vto{u}^{(1)}_{j_1})^*\otimes\cdots\otimes(\vto{u}^{(m)}_{j_m})^*
+
+Considering a tensor space $\ete{\mathcal{R}}{U^{\times m}}$, if its definer vector spaces $(U_i)_\mathcal{R}$ are Hilbert spaces, we can lay hands on the biunivocal relationship between elements $\vtf{f}_{j_i}^{B_i}$ of each dual basis $B_i^*$ and elements $(\vto{u}^{(i)})^{j_i}$ of each reciprocal basis $B^\perp_{i}$, as a consequence of Riesz-Fréchet Representation. Thereby, the polyadic tensors of basis $B$ are represented by 
+\begin{equation}\label{eq:poliadicoHilbert}
+\vto{u}^{(1)}_{j_1}\otimes\cdots\otimes\vto{u}^{(m)}_{j_m}:=((\vto{u}^{(1)})^{j_1})^*\otimes\cdots\otimes((\vto{u}^{(m)})^{j_m})^*
 \end{equation}
-para simplificar a notação. Já sabemos que uma base ortonormal é ortogonal a ela própria, no caso $\hat{B}_i=\hat{B}_i^\perp$, de tal forma que os covetores $(\vto{u}^{(i)}_{j_i})^*$ constituem a base $B^*$ formada pelos funcionais coordenados de $B$. Dado um espaço tensorial $\ete{\real}{E^m}$, onde $E_\real$ é um espaço Euclidiano tridimensional, seja uma base $\hat{B}$ cujos elementos têm formato $\vun{e}_{j_1}\otimes\cdots\otimes\vun{e}_{j_m}$, $j_i=1,2,3$, segundo a definição anterior. Nessas condições, denominamos \textsb{tensores cartesianos}\index{tensor!cartesiano} às combinações lineares dos elementos da base $\hat{B}$.
+in order to simplify notation. If the constituent bases $B_i$ are orthonormal, then $B_i=B_i^\perp$ and  $((\vto{u}^{(i)})^{j_i})^*=(\vto{u}^{(i)}_{j_i})^*$ in the above definition. 
 
-Os tensores de um espaço $\ete{\mathcal{R}}{V^{m}}$ podem ter a posição de seus argumentos alterada, ou seja, dado um tensor de $\ete{\mathcal{R}}{V^{2}}$ por exemplo, um argumento qualquer $(\vto{x},\vto{y})$ pode ser permutado para $(\vto{y},\vto{x})$, onde $\vto{x},\vto{y}\in V_\mathcal{R}$. Diante disso, dizemos que um tensor é a permutação de um outro quando ambos têm o mesmo valor, cada qual atuando sobre um conjunto de argumentos permutados. Em termos mais precisos, dado um mapeamento bijetor $\map{\pi}{\{ 1,\cdots,n \}}{\{1,\cdots,n \}}$ onde os conjuntos envolvidos são compostos por ordinais e $\pi$ é chamado permutação de ordem $m$, seja o escalar
+Still considering Hilbert spaces, if a tensor space has a unitary order, its tensors are covectors, that is, given an arbitrary vector $\vto{u}\in U_\mathcal{R}$, its covector $\vto{u}^*$ is a tensor of order one (linear functional), or $\vto{u}^*\in \ete{\mathcal{R}}{U}$. In other words, \emph{concerning tensor spaces defined by Hilbert spaces, covectors are tensors of unitary order}. Moreover, given a tensor space $\ete{\real}{E^m}$, where $E_\real$ is a three-dimensional Euclidean space, let $\hat{B}$ be a basis whose $3^m$ elements have the format $\vun{e}_{j_1}\otimes\cdots\otimes\vun{e}_{j_m}$, $j_i=1,2,3$, according to definition \eqref{eq:poliadicoHilbert}. In these conditions, we call \textsb{cartesian tensor}\index{tensor!cartesian} any linear combination of the elements of basis $\hat{B}$. 
+
+The tensors of space $\ete{\mathcal{R}}{V^{m}}$, $m>1$, can have the positions of their arguments interchanged, that is, given a tensor of $\ete{\mathcal{R}}{V^{2}}$, for example, arguments in $(\vto{x},\vto{y})$ can be changed to $(\vto{y},\vto{x})$, where $\vto{x},\vto{y}\in V_\mathcal{R}$. In this context, we say that a tensor $\tnr{T}_1$ is a permutation of tensor $\tnr{T}_2$ if $\fua{\tnr{T}_1}{\vto{x},\vto{y}}=\fua{\tnr{T}_2}{\vto{y},\vto{x}}$. In general terms, given a bijective mapping $\map{\pi}{\{ 1,\cdots,n \}}{\{1,\cdots,n \}}$, where the sets involved are constituted by ordinals, and a function $\pi$ called permutation of order $m$, in definition
 \begin{equation}\label{eq:permutacaoTensor}
 \fua{\tnr{T}_\pi}{\vto{v}_1,\cdots,\vto{v}_m}:=\tnr{T}\,(\vto{v}_{\fua{\pi}{1}},\cdots,\vto{v}_{\fua{\pi}{m}})\,,\forall\,
 \vto{v}_i\in {V}_\mathcal{R}\,,
 \end{equation}
-onde o tensor $\tnr{T}_\pi\in\ete{\mathcal{R}}{V^{m}}$ é a \textsb{permutação}\index{tensor!permutação de} $\pi$ de $\tnr{T}\in\tnr{V}^{m}_\mathcal{R}$. A partir dessa definição, podemos obter que a permutação da soma de tensores é a soma da permutação de cada um deles, ou seja, se $\tnr{T}=\tnr{A}+\tnr{B}$ então $(\tnr{A}+\tnr{B})_\pi=\tnr{A}_\pi+\tnr{B}_\pi$; e a permutação da multiplicação por escalar $(\alpha\tnr{T})_\pi=\alpha\tnr{T}_\pi$, $\alpha\in\mathcal{R}$. Agora, se considerarmos a regra específica $\fua{\pi}{x}=a\delta_{xb}+b\delta_{xa}+ x(1-\delta_{xa}-\delta_{xb})$ que transpõe  os índices $a$ e $b$, dizemos que o tensor $\tnr{T}_\pi$ é a \textsb{transposição}\index{tensor!transposição de} $(a,b)$ de $\tnr{T}$, representada por $\tnr{T}_{(a,b)}$.
+the tensor $\tnr{T}_\pi\in\ete{\mathcal{R}}{V^{m}}$ is called the $\pi$ \textsb{permutation}\index{tensor!permutation of} of $\tnr{T}\in\tnr{V}^{m}_\mathcal{R}$. Moreover, it is possible to obtain that the permutation of sum is the sum of permutations, that is, if $\tnr{T}=\tnr{A}+\tnr{B}$ then $(\tnr{A}+\tnr{B})_\pi=\tnr{A}_\pi+\tnr{B}_\pi$; and the permutation $(\alpha\tnr{T})_\pi=\alpha\tnr{T}_\pi$, $\forall\,\alpha\in\mathcal{R}$. Now, if we consider the specific rule $\fua{\pi}{x}=a\delta_{xb}+b\delta_{xa}+x(1-\delta_{xa}-\delta_{xb})$ that interchanges indexes $a$ and $b$, we call $\tnr{T}_\pi$ the $(a,b)$ \textsb{transposition}\index{tensor!transposition of} of $\tnr{T}$, represented by $\tnr{T}_{(a,b)}$.  
+
+
 
 {\footnotesize
 \begin{proof}
-Vamos demonstrar as duas propriedades de permutações de tensores. Como qualquer vetor, um tensor sempre pode ser escrito como resultado de alguma soma; assim, a partir da  definição de permutação de tensor e considerando $\tnr{T}=\tnr{A}+\tnr{B}$, podemos realizar o seguinte desenvolvimento:
+Let's verify the two properties above. As any other vector, a tensor can always be the result of a sum of tensors; thereby, from definition \eqref{eq:permutacaoTensor} and considering $\tnr{T}=\tnr{A}+\tnr{B}$, we have the following development:
 \begin{align*}
 \fua{(\tnr{A}+\tnr{B})_\pi}{\vto{u}_1,\cdots,\vto{u}_m}&=(\tnr{A}+\tnr{B})\,(\vto{u}_{\fua{\pi}{1}},\cdots,\vto{u}_{\fua{\pi}{m}})\nonumber\\
 &=\tnr{A}\,(\vto{u}_{\fua{\pi}{1}},\cdots,\vto{u}_{\fua{\pi}{m}})+\tnr{B}\,(\vto{u}_{\fua{\pi}{1}},\cdots,\vto{u}_{\fua{\pi}{m}})\nonumber\\
 &=\fua{\tnr{A}_\pi}{\vto{u}_1,\cdots,\vto{u}_m}+\fua{\tnr{B}_\pi}{\vto{u}_1,\cdots,\vto{u}_m}\nonumber\\
 &=\fua{(\tnr{A}_\pi+\tnr{B}_\pi)}{\vto{u}_1,\cdots,\vto{u}_m}\,,
 \end{align*}
-de onde concluímos que a permutação da soma é a soma das permutações, ou seja, que o tensor $(\tnr{A}+\tnr{B})_\pi=\tnr{A}_\pi+\tnr{B}_\pi$, para qualquer $\pi$. A demonstração da multiplicação por escalar pode ser obtida por esse mesmo procedimento.
+from which we conclude that the permutation of sum is the sum of permutations. The proof of the second property follows this same process.
 \end{proof}
 }
 
