@@ -145,7 +145,7 @@ The tensors of space $\ete{\mathcal{R}}{V^{m}}$, $m>1$, can have the positions o
 \fua{\tnr{T}_\pi}{\vto{v}_1,\cdots,\vto{v}_m}:=\tnr{T}\,(\vto{v}_{\fua{\pi}{1}},\cdots,\vto{v}_{\fua{\pi}{m}})\,,\forall\,
 \vto{v}_i\in {V}_\mathcal{R}\,,
 \end{equation}
-the tensor $\tnr{T}_\pi\in\ete{\mathcal{R}}{V^{m}}$ is called the $\pi$ \textsb{permutation}\index{tensor!permutation of} of $\tnr{T}\in\tnr{V}^{m}_\mathcal{R}$. Moreover, it is possible to obtain that the permutation of sum is the sum of permutations, that is, if $\tnr{T}=\tnr{A}+\tnr{B}$ then $(\tnr{A}+\tnr{B})_\pi=\tnr{A}_\pi+\tnr{B}_\pi$; and the permutation $(\alpha\tnr{T})_\pi=\alpha\tnr{T}_\pi$, $\forall\,\alpha\in\mathcal{R}$. Now, if we consider the specific rule $\fua{\pi}{x}=a\delta_{xb}+b\delta_{xa}+x(1-\delta_{xa}-\delta_{xb})$ that interchanges indexes $a$ and $b$, we call $\tnr{T}_\pi$ the $(a,b)$ \textsb{transposition}\index{tensor!transposition of} of $\tnr{T}$, represented by $\tnr{T}_{(a,b)}$.  
+the tensor $\tnr{T}_\pi\in\ete{\mathcal{R}}{V^{m}}$ is called the $\pi$ \textsb{permutation}\index{tensor!permutation of} of $\tnr{T}\in\tnr{V}^{m}_\mathcal{R}$. There are two important properties: a) the permutation of sum is the sum of permutations, that is, if $\tnr{T}=\tnr{A}+\tnr{B}$ then $(\tnr{A}+\tnr{B})_\pi=\tnr{A}_\pi+\tnr{B}_\pi$; b) tensor $(\alpha\tnr{T})_\pi=\alpha\tnr{T}_\pi$, $\forall\,\alpha\in\mathcal{R}$. Now, considering the specific rule $\fua{\pi}{x}=a\delta_{xb}+b\delta_{xa}+x(1-\delta_{xa}-\delta_{xb})$ that interchanges indexes $a$ and $b$, we call $\tnr{T}_\pi$ the $(a,b)$ \textsb{transposition}\index{tensor!transposition of} of $\tnr{T}$, represented by $\tnr{T}_{(a,b)}$.  
 
 
 
@@ -162,52 +162,49 @@ from which we conclude that the permutation of sum is the sum of permutations. T
 \end{proof}
 }
 
-O conceito de permutação viabiliza o conceito de simetria da seguinte forma: um tensor $\tnr{S}\in\ete{\mathcal{R}}{V^{m}}$ é dito \textsb{simétrico}\index{tensor!simétrico} se a igualdade $\tnr{S}_\pi=\tnr{S}$ for válida para qualquer permutação $\pi$. Em contrapartida, um tensor $\tnr{P}\in\tnr{V}^{m}_\mathcal{R}$ é \textsb{antissimétrico}\index{tensor!antissimétrico} ou \textsb{alternante}\index{tensor!alternante} se, para qualquer $\pi$, o tensor  $\tnr{P}_\pi=\epsilon_{\fua{\pi}{1}\cdots \fua{\pi}{m}}\,\tnr{P}$. Sendo $\tnr{P}$ antissimétrico, podemos concluir que o escalar
-$\fua{\tnr{P}}{\vto{x}_1,\cdots,\vto{x}_a,\cdots,\vto{x}_b,\cdots,\vto{x}_m}=0$ se $\vto{x}_a=\vto{x}_b$, onde $\vto{x}_i\in V_\mathcal{R}$ e $a,b\in\{1,\cdots,m\}$, cuja consequência é
+The concept of permutation enables the concept of symmetry as follows: a tensor $\tnr{S}\in\ete{\mathcal{R}}{V^{m}}$ is said to be \textsb{symmetric}\index{tensor!symmetric} if equality $\tnr{S}_\pi=\tnr{S}$ is valid for any permutation $\pi$. Conversely, a tensor $\tnr{P}\in\tnr{V}^{m}_\mathcal{R}$ is called \textsb{antisymmetric}\index{tensor!antisymmetric} or \textsb{alternating}\index{tensor!alternating} if tensor $\tnr{P}_\pi=\epsilon_{\fua{\pi}{1}\cdots \fua{\pi}{m}}\,\tnr{P}$ for any $\pi$. Since $\tnr{P}$ is antisymmetric, we can conclude that scalar $\fua{\tnr{P}}{\vto{x}_1,\cdots,\vto{x}_a,\cdots,\vto{x}_b,\cdots,\vto{x}_m}=0$ if $\vto{x}_a=\vto{x}_b$, where $\vto{x}_i\in V_\mathcal{R}$ and $a,b\in\{1,\cdots,m\}$. Thereby, the consequence is  
 \begin{equation}\label{eq:igAntis}
 \fua{\tnr{P}}{\vto{x}_{i_1},\cdots,\vto{x}_{i_m}}=\epsilon_{i_1\cdots i_m}\fua{\tnr{P}}{\vto{x}_1,\cdots,\vto{x}_m}\,.
 \end{equation}
-Além disso, porque a soma de dois tensores (antis)si\-mé\-tri\-cos resulta num tensor (antis)si\-mé\-tri\-co, ocorrendo o mesmo na multiplicação por escalar, o conjunto de todos os tensores (antis)si\-mé\-tri\-cos define um subespaço tensorial de $\ete{\mathcal{R}}{V^{m}}$.
-A partir daí, pode-se constatar que \emph{todo subespaço tensorial definido por tensores antissimétricos é unidimensional.}
+Moreover, since the sum of two (anti)symmetric tensors is an (anti)symmetric tensor and multiplication by scalar also preserves (anti)symmetry, the set of all (anti)symmetric tensors defines a tensor subspace of $\ete{\mathcal{R}}{V^{m}}$. Then, it is possible, and intriguing, to obtain that \emph{every tensor subspace defined by antisymmetric tensors is one-dimensional.}
 
 {\footnotesize
 \begin{proof}
-Vamos provar primeiramente a igualdade \eqref{eq:igAntis}. Se $\vto{x}_a=\vto{x}_b$, então
+First, let's prove \eqref{eq:igAntis}. If $\vto{x}_a=\vto{x}_b$, then 
 \begin{align*}
 \fua{\tnr{P}_\pi}{\vto{x}_1,\cdots,\vto{x}_a,\cdots,\vto{x}_b,\cdots,\vto{x}_m}&=\fua{\tnr{P}_\pi}{\vto{x}_1,\cdots,\vto{x}_b,\cdots,\vto{x}_a,\cdots,\vto{x}_m}\\
 \epsilon_{i_1\cdots i_a\cdots i_b\cdots i_m}\fua{\tnr{P}}{\vto{x}_1,\cdots,\vto{x}_a,\cdots,\vto{x}_b,\cdots,\vto{x}_m}&=\epsilon_{i_1\cdots i_b\cdots i_a\cdots i_m}\fua{\tnr{P}}{\vto{x}_1,\cdots,\vto{x}_b,\cdots,\vto{x}_a,\cdots,\vto{x}_m}\\
 \fua{\tnr{P}}{\vto{x}_1,\cdots,\vto{x}_a,\cdots,\vto{x}_b,\cdots,\vto{x}_m}&=-\fua{\tnr{P}}{\vto{x}_1,\cdots,\vto{x}_b,\cdots,\vto{x}_a,\cdots,\vto{x}_m}\,,
 \end{align*}
-de onde se conclui $\fua{\tnr{P}}{\vto{x}_1,\cdots,\vto{x}_a,\cdots,\vto{x}_b,\cdots,\vto{x}_m}=0$. Desse resultado, se houver algum índice ${i_a}={i_b}$ em \eqref{eq:igAntis}, obtém-se a identidade 0=0. Se todos os índices forem diferentes, podemos definir a regra $\fua{\pi}{x}=i_x$, quando a igualdade resulta na definição de tensor antissimétrico, ou seja, o escalar
+from which we conclude that $\fua{\tnr{P}}{\vto{x}_1,\cdots,\vto{x}_a,\cdots,\vto{x}_b,\cdots,\vto{x}_m}=0$. From this result, if there is some index ${i_a}={i_b}$ in \eqref{eq:igAntis}, we obtain identity $0=0$. If all indexes are different, we can define the rule $\fua{\pi}{x}=i_x$, when equality results in the definition of antisymmetric tensor, that is, scalar
 \begin{align*}
 \tnr{P}({\vto{x}_{\fua{\pi}{1}},\cdots,\vto{x}_{\fua{\pi}{m}}})&=\epsilon_{\fua{\pi}{1}\cdots \fua{\pi}{m}}\fua{\tnr{P}}{\vto{x}_1,\cdots,\vto{x}_m}\\
 \fua{\tnr{P}_\pi}{\vto{x}_1,\cdots,\vto{x}_m}&=\epsilon_{\fua{\pi}{1}\cdots \fua{\pi}{m}}\fua{\tnr{P}}{\vto{x}_1,\cdots,\vto{x}_m}\\
 \tnr{P}_\pi&=\epsilon_{\fua{\pi}{1}\cdots \fua{\pi}{m}}\tnr{P}\,.
 \end{align*}
-Verifiquemos agora se tensores (antis)simétricos geram subespaços vetoriais. Sejam dois tensores simétricos quaisquer $\tnr{A}$ e $\tnr{B}$ de $\ete{\mathcal{R}}{V^{m}}$, onde $\tnr{A}=\tnr{A}_\pi$ e $\tnr{B}=\tnr{B}_\pi$. Somando essas igualdades, obtemos $\tnr{A}+\tnr{B}=\tnr{A}_\pi+\tnr{B}_\pi=(\tnr{A}+\tnr{B})_\pi$, o que evidencia $\tnr{A}+\tnr{B}$ simétrico. O mesmo procedimento pode ser aplicado no caso de multiplicação por escalar. Com isso, fica trivial verificar que um conjunto de tensores simétricos respeita os cinco axiomas da definição de espaço vetorial, apresentados na seção \ref{sec:espacoVet}. Para o caso de tensores antissimétricos $\tnr{C}$ e $\tnr{D}$, tem-se
+Let's verify if (anti)symmetric tensors really define tensor subspaces. Let $\tnr{A}$ and $\tnr{B}$ be symmetric tensors of $\ete{\mathcal{R}}{V^{m}}$, where $\tnr{A}=\tnr{A}_\pi$ and $\tnr{B}=\tnr{B}_\pi$. Adding these equalities, we obtain $\tnr{A}+\tnr{B}=\tnr{A}_\pi+\tnr{B}_\pi=(\tnr{A}+\tnr{B})_\pi$, which shows that $\tnr{A}+\tnr{B}$ simétrico. This same process can be used for multiplication by scalar. Thereby, it is thus trivial to verify that a set of symmetric tensors observes the five definer axioms of vector spaces, presented in section \ref{sec:espacoVet}. In the case of antisymmetric tensors $\tnr{C}$ and $\tnr{D}$, we have
 \begin{equation*}
-\epsilon_{\fua{\pi}{1}\cdots \fua{\pi}{m}}(\tnr{C}+\tnr{D})=\tnr{C}_\pi+\tnr{D}_\pi=(\tnr{C}+\tnr{D})_\pi\,,
+	\epsilon_{\fua{\pi}{1}\cdots \fua{\pi}{m}}(\tnr{C}+\tnr{D})=\tnr{C}_\pi+\tnr{D}_\pi=(\tnr{C}+\tnr{D})_\pi\,,
 \end{equation*}
-o que evidencia $\tnr{C}+\tnr{D}$ antissimétrico. Assim, podemos constatar que um conjunto de tensores antissimétricos também define um espaço tensorial. Agora vamos demonstrar a intrigante unidimensionalidade dos subespaços de tensores antissimétricos, adaptando ao nosso caso a ideia de \aut{Backus}\cite{backus_1997_1}, pp. 15-17. Sejam $\etn{\mathcal{R}}{V^m}\subset\ete{\mathcal{R}}{V^m}$ um subespaço tensorial de tensores antissimétricos, $B=\{\vto{v_1},\cdots,\vto{v}_n\}$ uma base do espaço vetorial $V_\mathcal{R}$ e um tensor $\tnr{H}\in\etn{\mathcal{R}}{V^m}$ tal que
+which shows $\tnr{C}+\tnr{D}$ antisymmetric. Thereby, we can state that a set of antisymmetric tensors also defines a tensor space. Now, we'll verify the curious one-dimensionality of antisymmetric tensors by adapting to our case the idea of \aut{Backus}\cite{backus_1997_1}, pp. 15-17. Let $\etn{\mathcal{R}}{V^m}\subset\ete{\mathcal{R}}{V^m}$ be a tensor subspace of antisymmetric tensors, $B=\{\vto{v_1},\cdots,\vto{v}_n\}$ a basis of vector space $V_\mathcal{R}$ and an antisymmetric tensor  $\tnr{H}\in\etn{\mathcal{R}}{V^m}$ such that 
 \begin{equation*}
 \tnr{H}(\vto{x_1},\cdots,\vto{x}_m)=\sum_{i_1=1}^n\cdots\sum_{i_m=1}^n\fua{\vtf{f}^\con{B}_{i_1}}{\vto{x}_1}\cdots\fua{\vtf{f}^\con{B}_{i_m}}{\vto{x}_m}\epsilon_{i_1\cdots i_m}\,,
 \end{equation*}
-onde $\vto{x_i}\in V_\mathcal{R}$. Verificamos que esse tensor é de fato antissimétrico por meio do seguinte desenvolvimento, onde foram omitidos os termos de índices $i_1$ e $i_m$:
+where $\vto{x_i}\in V_\mathcal{R}$. This tensor $\tnr{H}$ is verified to be antisymmetric through the following development: 
 \begin{align*}
-	\fua{\tnr{H}_{(a,b)}}{\cdots,\vto{x}_a,\cdots,\vto{x}_b,\cdots}&=\cdots
-	\sum_{i_a=1}^n\cdots\sum_{i_b=1}^n\cdots\,\fua{\vtf{f}^\con{B}_{i_a}}{\vto{x}_b}\cdots\,\fua{\vtf{f}^\con{B}_{i_b}}{\vto{x}_a}\cdots \,\epsilon_{\cdots i_a\cdots i_b\cdots}\\
-	&=\cdots
-	\sum_{i_b=1}^n\cdots\sum_{i_a=1}^n\cdots\,\fua{\vtf{f}^\con{B}_{i_b}}{\vto{x}_b}\cdots\,\fua{\vtf{f}^\con{B}_{i_a}}{\vto{x}_a}\cdots \,\epsilon_{\cdots i_b\cdots i_a\cdots}\\
-	&=-\,\,\cdots
+\fua{\tnr{H}_{(a,b)}}{\cdots,\vto{x}_a,\cdots,\vto{x}_b,\cdots}&=\cdots
+\sum_{i_a=1}^n\cdots\sum_{i_b=1}^n\cdots\,\fua{\vtf{f}^\con{B}_{i_a}}{\vto{x}_b}\cdots\,\fua{\vtf{f}^\con{B}_{i_b}}{\vto{x}_a}\cdots \,\epsilon_{\cdots i_a\cdots i_b\cdots}\\
+&=\cdots
+\sum_{i_b=1}^n\cdots\sum_{i_a=1}^n\cdots\,\fua{\vtf{f}^\con{B}_{i_b}}{\vto{x}_b}\cdots\,\fua{\vtf{f}^\con{B}_{i_a}}{\vto{x}_a}\cdots \,\epsilon_{\cdots i_b\cdots i_a\cdots}\\
+&=-\,\,\cdots
 \sum_{i_b=1}^n\cdots\sum_{i_a=1}^n\cdots\,\fua{\vtf{f}^\con{B}_{i_b}}{\vto{x}_b}\cdots\,\fua{\vtf{f}^\con{B}_{i_a}}{\vto{x}_a}\cdots \,\epsilon_{\cdots i_a\cdots i_b\cdots}\\
 &=\epsilon_{1\cdots b\cdots a\cdots m}\,\fua{\tnr{H}}{\cdots,\vto{x}_a,\cdots,\vto{x}_b,\cdots}\,
 \end{align*}
-onde $a,b$ são ordinais quaisquer entre 1 e $m$. Consideremos um tensor qualquer $\tnr{P}\in\etn{\mathcal{R}}{V^m}$, a partir do qual sabemos que
+where terms with indexes $i_1$ and $i_m$ are omitted and $a,b$ are arbitrary ordinals between $1$ and $m$. Considering an arbitrary tensor $\tnr{P}\in\etn{\mathcal{R}}{V^m}$, we know that
 \begin{align*}
-\fua{\tnr{P}}{\vto{x}_1,\cdots,\vto{x}_m}&=\sum_{{i_1}=1}^{n}\cdots\sum_{{i_m}=1}^{n}\fua{\vtf{f}^\con{B}_{i_1}}{\vto{x}_1}\cdots\fua{\vtf{f}^\con{B}_{i_m}}{\vto{x}_m}\tnr{P}({\vto{v}_{i_1},\cdots,\vto{v}_{i_m}})\\
-&=\underbrace{\sum_{{i_1}=1}^{n}\cdots\sum_{{i_m}=1}^{n}\fua{\vtf{f}^\con{B}_{i_1}}{\vto{x}_1}\cdots\fua{\vtf{f}^\con{B}_{i_m}}{\vto{x}_m}\epsilon_{i_1\cdots i_m}}_{\tnr{H}(\vto{x_1},\cdots,\vto{x}_m)}\underbrace{\fua{\tnr{P}}{\vto{v}_1,\cdots,\vto{v}_m}}_{\alpha}
+\fua{\tnr{P}}{\vto{x}_1,\cdots,\vto{x}_m}&=\sum_{{i_1}=1}^{n}\cdots\sum_{{i_m}=1}^{n}\fua{\vtf{f}^\con{B}_{i_1}}{\vto{x}_1}\cdots\fua{\vtf{f}^\con{B}_{i_m}}{\vto{x}_m}\tnr{P}({\vto{v}_{i_1},\cdots,\vto{v}_{i_m}})\\	&=\underbrace{\sum_{{i_1}=1}^{n}\cdots\sum_{{i_m}=1}^{n}\fua{\vtf{f}^\con{B}_{i_1}}{\vto{x}_1}\cdots\fua{\vtf{f}^\con{B}_{i_m}}{\vto{x}_m}\epsilon_{i_1\cdots i_m}}_{\tnr{H}(\vto{x_1},\cdots,\vto{x}_m)}\underbrace{\fua{\tnr{P}}{\vto{v}_1,\cdots,\vto{v}_m}}_{\alpha}
 \end{align*}
-de onde concluímos que $\tnr{P}=\alpha\tnr{H}$, ou seja, que $\{\tnr{H}\}$ é base de $\etn{\mathcal{R}}{V^m}$.
+from which we conclude $\tnr{P}=\alpha\tnr{H}$, that is, $\{\tnr{H}\}$ is a basis of $\etn{\mathcal{R}}{V^m}$.
 \end{proof}
 }
 
