@@ -138,7 +138,7 @@ Considering a tensor space $\ete{\mathcal{R}}{U^{\times m}}$, if its definer vec
 \end{equation}
 in order to simplify notation. If the constituent bases $B_i$ are orthonormal, then $B_i=B_i^\perp$ and  $((\vto{u}^{(i)})^{j_i})^*=(\vto{u}^{(i)}_{j_i})^*$ in the above definition. 
 
-Still considering Hilbert spaces, if a tensor space has a unitary order, its tensors are covectors, that is, given an arbitrary vector $\vto{u}\in U_\mathcal{R}$, its covector $\vto{u}^*$ is a tensor of order one (linear functional), or $\vto{u}^*\in \ete{\mathcal{R}}{U}$. In other words, \emph{concerning tensor spaces defined by Hilbert spaces, covectors are tensors of unitary order}. Moreover, given a tensor space $\ete{\real}{E^m}$, where $E_\real$ is a three-dimensional Euclidean space, let $\hat{B}$ be a basis whose $3^m$ elements have the format $\vun{e}_{j_1}\otimes\cdots\otimes\vun{e}_{j_m}$, $j_i=1,2,3$, according to definition \eqref{eq:poliadicoHilbert}. In these conditions, we call \textsb{cartesian tensor}\index{tensor!cartesian} any linear combination of the elements of basis $\hat{B}$. 
+Still considering Hilbert spaces, if a tensor space has a unitary order, its tensors are covectors, that is, given an arbitrary vector $\vto{u}\in U_\mathcal{R}$, its covector $\vto{u}^*$ is a tensor of first order (linear functional), or $\vto{u}^*\in \ete{\mathcal{R}}{U}$. In other words, \emph{concerning tensor spaces defined by Hilbert spaces, covectors are tensors of unitary order. Moreover, in order to enable generalizations, scalars are defined to be tensors of order zero}. Now, given a tensor space $\ete{\real}{E^m}$, where $E_\real$ is a three-dimensional Euclidean space, let $\hat{B}$ be a basis whose $3^m$ elements have the format $\vun{e}_{j_1}\otimes\cdots\otimes\vun{e}_{j_m}$, $j_i=1,2,3$, according to definition \eqref{eq:poliadicoHilbert}. In these conditions, we call \textsb{cartesian tensor}\index{tensor!cartesian} any linear combination of the elements of basis $\hat{B}$. 
 
 The tensors of space $\ete{\mathcal{R}}{V^{m}}$, $m>1$, can have the positions of their arguments interchanged, that is, given a tensor of $\ete{\mathcal{R}}{V^{2}}$, for example, arguments in $(\vto{x},\vto{y})$ can be changed to $(\vto{y},\vto{x})$, where $\vto{x},\vto{y}\in V_\mathcal{R}$. In this context, we say that a tensor $\tnr{T}_1$ is a permutation of tensor $\tnr{T}_2$ if $\fua{\tnr{T}_1}{\vto{x},\vto{y}}=\fua{\tnr{T}_2}{\vto{y},\vto{x}}$. In general terms, given a bijective mapping $\map{\pi}{\{ 1,\cdots,n \}}{\{1,\cdots,n \}}$, where the sets involved are constituted by ordinals, and a function $\pi$ called permutation of order $m$, in definition
 \begin{equation}\label{eq:permutacaoTensor}
@@ -233,795 +233,84 @@ is an example of identity tensor of second order. From the last expression of th
 
 \section{Tensor Functions}
 
+In simple terms, a tensor function establishes a functional relationship between tensors of any order. Because of this definition, in the context of Hilbert spaces, such functions are of the most general type: as presented in the previous section, tensors of order zero are scalars by definition and tensors of first order are covectors, which are biunivocaly related to vectors, according to the Riesz-Fréchet Representation. This generality of tensor functions relating tensors in Hilbert spaces is very important for our study and that is why we shall be dealing mostly with these spaces hereafter. In this context, it is always possible to relate a tensor and a linear tensor function, which is a fundamental feature to enable uniqueness and existence of the specific linear tensor functions to be presented in this section. The following classic theorem of Multilinear Algebra describes such relationship in a wider sense by establishing a one to one correspondence between a multilinear function and a linear tensor function.
+
+\begin{mteo}{Lifting}{lift}
+Given a tensor space $\ete{\mathcal{R}}{U^{\times m}}$ and a basis $B_i=\{\vto{u}_1^{(i)},\cdots,\vto{u}_{n_i}^{(i)}\}$ of each constituent vector space $(U_i)_\mathcal{R}$, $i=1,\cdots,m\,$, the set $B$ of all polyadic tensors $\vtf{f}_{j_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{j_m}^{B_m}$, $j_i=1,\cdots,n_i\,$, is a basis of $\ete{\mathcal{R}}{U^{\times m}}$. 
+\end{mteo}
+
+
+
+\subsection{Elevação}\index{Elevação}
+A uma função multilinear qualquer $\vtf{g}$, cujos argumentos são
+vetores, é sempre possível associar uma função linear
+$\vtf{g}^\otimes$ que tem um tensor como argumento. Diz-se que
+$\vtf{g}$ é ``elevada'' à $\vtf{g}^\otimes$. Esta
+elevação\rodape{O termo em inglês é ``lifting''.} estabelece uma
+conveniente e importante relação, descrita no teorema a seguir,
+entre uma seqüência qualquer de vetores e um tensor. Fica
+implícito que este teorema fundamenta questões de existência e
+unicidade para os diversos tipos de funções tensoriais lineares a
+serem apresentados nas seções subseqüentes.
+
+\begin{teo}[Elevação]\index{Elevação!Teorema da}\label{teo:Lifting}
+	Sejam os espaços de Hilbert
+	$\ehr{V_1}{\con{F}},\cdots,\ehr{V_p}{\con{F}}$ e o espaço vetorial
+	$\evt{W}{\con{F}}$. Seja o espaço vetorial
+	$\evl{\crt{V}{p}}{W}{\con{F}}$ de funções multilineares que mapeiam uma tupla ordenada de vetores para um vetor de $\con{W}$ e
+	$\evl{\cft{\crt{V}{p}}{\con{F}}}{W}{\con{F}}$ o espaço vetorial
+	das funções lineares que mapeiam um tensor para um vetor de
+	$\con{W}$. Dada uma função qualquer
+	$\vtf{g}\in\cfl{\crt{V}{p}}{W}$ e uma tupla qualquer
+	$(\vto{v}_1,\cdots,\vto{v}_p)\in\crt{V}{p}$, existe uma única
+	função $\vtf{g}^\otimes\in\cfl{\cft{\crt{V}{p}}{\con{F}}}{W}$,
+	chamada função elevada de $\vtf{g}$, onde o vetor
+	\begin{equation}
+	\fua{\vtf{g}}{\vto{v}_1,\cdots,\vto{v}_p}=\fua{\vtf{g}^\otimes}{\vto{v}_1\otimes\cdots\otimes\vto{v}_p}.\nonumber
+	\end{equation}
+\end{teo}
+\begin{prova}\rodape{Adaptada de \aut{Backus}\cite{backus_1997_1}, pp. 43-45.}
+	Seja um tensor qualquer $\tnr{T}\in\cft{\crt{V}{p}}{\con{F}}$ e
+	sua decomposição
+	\begin{equation}
+	\tnr{T}=\sum_{i_1=1}^{n_1}\cdots\sum_{i_p=1}^{n_p}\fua{\vtf{f}_{i_1\cdots
+			i_p}^{\con{T}^{\otimes}_{\crt{V}{p}}}}{\tnr{T}}{\vto{u}_{i_1}}^{(1)}\otimes\cdots\otimes{\vto{u}_{i_p}}^{(p)}\,,
+	\nonumber
+	\end{equation}
+	onde se considera
+	$\con{U}_i=\{{\vto{u}_{1}}^{(i)},\cdots,{\vto{u}_{n_i}}^{(i)}\}$
+	uma base de $\ehr{V_i}{\con{F}}$. A partir da igualdade deste
+	teorema, pode-se dizer que
+	\begin{eqnarray}
+	\fua{\vtf{g}^\otimes}{\tnr{T}}&=&\sum_{i_1=1}^{n_1}\cdots\sum_{i_p=1}^{n_p}\fua{\vtf{f}_{i_1\cdots
+			i_p}^{\con{T}^{\otimes}_{\crt{V}{p}}}}{\tnr{T}}\fua{\vtf{g}^\otimes}{{\vto{u}_{i_1}}^{(1)}\otimes\cdots\otimes{\vto{u}_{i_p}}^{(p)}}\nonumber\\
+	&=&\sum_{i_1=1}^{n_1}\cdots\sum_{i_p=1}^{n_p}\underbrace{\fua{\vtf{f}_{i_1\cdots
+				i_p}^{\con{T}^{\otimes}_{\crt{V}{p}}}}{\tnr{T}}}\underbrace{\fua{\vtf{g}}{{\vto{u}_{i_1}}^{(1)},\cdots,{\vto{u}_{i_p}}^{(p)}}}\,.\nonumber
+	\end{eqnarray}
+	Os termos destacados são unicamente determinados para qualquer
+	tensor $\tnr{T}$, logo $\vtf{g}^\otimes$ existe e fica unicamente
+	determinado. A fim de constatar a igualdade do teorema, seja
+	\begin{equation}
+	\tnr{T}=\vto{v}_1\otimes\cdots\otimes\vto{v}_p\,.\nonumber
+	\end{equation}
+	Do resultado do desenvolvimento anterior, considerando as propriedades de funções multilineares e a
+	proposição \ref{prp:produtorioFuncionais}, tem-se que
+	\begin{eqnarray}
+	\fua{\vtf{g}^\otimes}{\vto{v}_1\otimes\cdots\otimes\vto{v}_p}&=&\sum_{i_1=1}^{n_1}\cdots\sum_{i_p=1}^{n_p}
+	\prod_{k=1}^p \fua{\vtf{f}_{i_k}^{\con{U}_k}}{\vto{v}_k}
+	\fua{\vtf{g}}{{\vto{u}_{i_1}}^{(1)},\cdots,{\vto{u}_{i_p}}^{(p)}}\nonumber\\
+	&=&
+	\fua{\vtf{g}}{\sum_{i_1=1}^{n_1}\fua{\vtf{f}_{i_1}^{\con{U}_1}}{\vto{v}_1}
+		{\vto{u}_{i_1}}^{(1)},\cdots,\sum_{i_p=1}^{n_p}\fua{\vtf{f}_{i_p}^{\con{U}_p}}{\vto{v}_p}{\vto{u}_{i_p}}^{(p)}}\nonumber\nonumber\\
+	&=& \fua{\vtf{g}}{\vto{v}_1,\cdots,\vto{v}_p}\,.\nonumber
+	\end{eqnarray}
+\end{prova}
+
+
+
+ 
 
 \begin{comment}
-Existe um grande número de fenômenos físicos que podem ser
-descritos por quantidades que se relacionam matematicamente de
-maneira linear. Tal relacionamento pode ser representado por uma
-função multilinear cujo domínio inclui as quantidades físicas
-envolvidas. Para alguns problemas estudados, é conveniente que a
-imagem desta função seja formada por escalares. Eles quantificam,
-de uma forma simples, a linearidade entre os elementos do domínio.
-
-A modelagem da característica linear entre variáveis através de
-funcionais multilineares é o principal objetivo do estudo da
-teoria de tensores. Atualmente, existem duas abordagens para a
-apresentação desta teoria, descritas a seguir.
-\begin{itemize}
-  \item[a)] Abordagem baseada em coordenadas: considera um tensor como um array
-multidimensional. As coordenadas do tensor são os escalares deste
-array, obtidos a partir da definição de uma base. Vetores são
-tratados como arrays unidimensionais.
-  \item[b)] Abordagem intrínseca: um tensor é visto simplesmente como uma função multilinear,
-cuja definição independe do estabelecimento de uma base. As
-coordenadas do tensor são os valores definidos por seus funcionais
-coordenados. Neste caso, vetores são tensores que possuem apenas
-um argumento (função linear).
-\end{itemize}
-
-Será utilizada, ao longo do texto, a abordagem intrínseca para o
-estudo de tensores. Consideramos que tal abordagem facilita o
-entendimento por serem mais mais simples seus conceitos e mais
-agradável sua manipulação.
-
-\section{Vetores e Funcionais Lineares}
-
-\subsection{Espaço Dual}\index{espaço!dual}
-Seja um espaço de Hilbert $\ehr{V}{F}$. O espaço vetorial de
-funcionais lineares $\evl{V}{F}{F}$ é denominado espaço dual de
-$\ehr{V}{F}$, representado por $\edu{V}{F}$, onde
-$V^*:=\cfl{V}{F}$. Na presença de um espaço dual, os vetores dos
-conjuntos $\con{V}$ e $\con{V^*}$ são chamados
-\emph{contravariantes}\index{vetor!contravariante} e
-\emph{covariantes}\index{vetor!covariante} respectivamente.
-
-Considerando o espaço de Hilbert dimensionalmente finito,  seja
-$\con{U}=\lch \vto{v}_1,\cdots,\vto{v}_n\rch$ uma base de
-$\ehr{V}{F}$. Seja um funcional qualquer $\vtf{g}$ de $V^*$ e um
-vetor qualquer $\vto{v}\in\con{V}$. O desenvolvimento a seguir
-mostra que o espaço dual é também $n$-dimensional:
-\begin{eqnarray}\label{eq:baseDual}
-\fua{\vtf{g}}{\vto{v}} & = &
-\fua{\vtf{g}}{\sum_{i=1}^{n}\fua{\vtf{f}^\con{U}_{i}}{\vto{v}}\vto{v}_i}\nonumber\\
-\fua{\vtf{g}}{\vto{v}} & = &
-\lco\sum_{i=1}^{n}\fua{\vtf{g}}{\vto{v}_i}\vtf{f}^\con{U}_{i}\rco\lpa\vto{v}\rpa\nonumber\\
-\vtf{g} & = &
-\sum_{i=1}^{n}\fua{\vtf{g}}{\vto{v}_i}\vtf{f}^\con{U}_{i}\,.
-\end{eqnarray}
-Observa-se que os funcionais coordenados $\vtf{f}^\con{U}_{i}$
-constituem uma base em $\edu{V}{F}$.
-
-\subsection{A Relação Vetor e Funcional Linear}
-Seja um espaço de Hilbert $\ehr{V}{F}$ e seu espaço dual
-$\edu{V}{F}$. Existe uma relação linear bijetora, descrita no teorema
-apresentado a seguir, entre os vetores de $\con{V}$ e os
-funcionais de $\con{V^*}$, de tal forma que, dado um vetor
-qualquer $\vto{u}\in\con{V}$ e seu funcional linear correspondente
-$\vtf{u}\in\con{V^*}$, é possível definir
-\begin{equation}\label{eq:VetorFuncional}
-\fua{\vto{u}}{\vto{v}}=\fua{\vtf{u}}{\vto{v}}\,,\forall\,\vto{v}\in\con{V}.
-\end{equation}
-
-\begin{teo}[Representação de Riesz]\index{Representação de Riesz!Teorema da}\label{teo:RepresentacaoRiesz}
-Seja um espaço de Hilbert $\ehr{V}{F}$ e seu espaço dual
-$\edu{V}{F}$. Considerando um vetor qualquer $\vto{v}\in\con{V}$,
-seja uma transformação linear
-$\map{\vartheta_{\vto{v}}}{\con{V}}{F}$ onde o funcional
-$\vartheta_{\vto{v}}\in\con{V^*}$ é descrito pela regra
-\begin{equation}
-\fua{\vartheta_{\vto{v}}}{\vto{x}}=\vto{v}\cdot\vto{x}\,.\nonumber
-\end{equation}
-Desta forma, o mapeamento $\map{\Theta}{\con{V}}{\con{V^*}}$ é
-sempre uma transformação linear bijetora se
-$\fua{\Theta}{\vto{v}}=\vartheta_{\vto{v}}$.
-\end{teo}
-\begin{prova}
-Primeiramente, vamos mostrar que $\Theta$ é uma função linear.
-Dados os vetores quaisquer $\vto{v}$, $\vto{u}$, $\vto{x}$ de
-$\con{V}$ e os escalares quaisquer $\alpha,\beta\in\con{F}$, a
-transformação linear é constatada a partir do seguinte
-desenvolvimento:
-\begin{eqnarray}
-\fua{\vartheta_{\alpha\vto{u}+\beta\vto{v}}}{\vto{x}}&=
-&\lpa\alpha\vto{u}+\beta\vto{v}\rpa\cdot\vto{x}\nonumber\\
-&=&\alpha\lpa\vto{u}\cdot\vto{x}\rpa+\beta\lpa\vto{v}\cdot\vto{x}\rpa\nonumber\\
-&=&\alpha\fua{\vartheta_\vto{u}}{\vto{x}}+\beta\fua{\vartheta_\vto{v}}{\vto{x}}\nonumber\\
-&=&\fua{\lco\alpha\vartheta_\vto{u}
-+\beta\vartheta_\vto{v}\rco}{\vto{x}}\nonumber\\
-\vartheta_{\alpha\vto{u}+\beta\vto{v}}&=&\alpha\vartheta_\vto{u}
-+\beta\vartheta_\vto{v}\nonumber\\
-\fua{\Theta}{\alpha\vto{u}+\beta\vto{v}}&=&\alpha\fua{\Theta}{\vto{u}}+\beta\fua{\Theta}{\vto{v}}\,.\nonumber
-\end{eqnarray}
-Agora, para mostrar que $\Theta$ define um mapeamento injetor, se
-\begin{eqnarray}
-\lco\fua{\Theta}{\vto{u}}\rco\lpa\vto{x}\rpa&=&\lco\fua{\Theta}{\vto{v}}\rco\lpa\vto{x}\rpa\nonumber\\
-\vto{u}\cdot\vto{x}&=&\vto{v}\cdot\vto{x}\,,\nonumber
-\end{eqnarray}
-logo $\lpa\vto{u}-\vto{v}\rpa\cdot\vto{x}=0$. Como esta igualdade
-deve ser válida para qualquer $\vto{x}$, se $\vto{x}\neq\vto{0}$,
-então $\vto{u}=\vto{v}$. Para provar que o mapeamento de $\Theta$
-é sobrejetor, consideremos uma base
-$\con{U}=\lch\vto{v}_1,\cdots,\vto{v}_n\rch$ de $\ehr{V}{F}$, sua
-base recíproca $\con{W}=\lch\vto{w}_1,\cdots,\vto{w}_n\rch$ e um
-funcional qualquer $\vartheta\in\con{V^*}$. Dado um vetor
-$\vto{v}\in\con{V}$ definido por
-$\vto{v}=\sum_{i=1}^{n}\fua{\vartheta}{\vto{v}_i}\vto{w}_i$ e um
-vetor qualquer $\vto{x}=\sum_{i=1}^{n}\alpha_i\vto{v}_i$, tem-se o
-desenvolvimento a seguir:
-\begin{eqnarray}
-\fua{\vartheta_{\vto{v}}}{\vto{x}}&=&\vto{v}\cdot\vto{x}\nonumber\\
-&=&\lpa\sum_{i=1}^{n}\fua{\vartheta}{\vto{v}_i}\vto{w}_i\rpa\cdot\lpa\sum_{j=1}^{n}\alpha_j\vto{v}_j\rpa\nonumber\\
-&=&\sum_{i=1}^{n}\sum_{j=1}^{n}\fua{\vartheta}{\vto{v}_i}\alpha_j\delta_{ij}\nonumber\\
-&=&\sum_{i=1}^{n}\alpha_i\fua{\vartheta}{\vto{v}_i}\nonumber\\
-&=&\fua{\vartheta}{\sum_{i=1}^{n}\alpha_i\vto{v}_i}\nonumber\\
-&=&\fua{\vartheta}{\vto{x}}\,.\nonumber
-\end{eqnarray}
-Desta forma, tem-se que $\vartheta_{\vto{v}}=\vartheta$, de onde
-se conclui que o funcional $\vartheta$ é definido por
-$\fua{\Theta}{\vto{v}}$.
-\end{prova}
-
-
-
-\subsection{Coordenadas de Vetores}\index{coordenadas! de vetores}\label{subsec:funcionaisVetores}
-Seja um espaço de Hilbert $\ehr{V}{F}$ e $\edu{V}{F}$ seu espaço
-dual. Seja $\con{U}=\lch\vto{v}_1,\cdots,\vto{v}_n\rch$ uma base
-de $\ehr{V}{F}$ e
-$\vtf{f}_1^\con{U},\cdots,\vtf{f}_n^\con{U}\in\con{V^*}$ os
-funcionais coordenados por ela definidos. A partir do teorema
-\ref{teo:RepresentacaoRiesz}, sejam os vetores
-$\vtf{f}_1,\cdots,\vtf{f}_n\in\con{V}$ respectivamente associados
-aos funcionais $\vtf{f}_1^\con{U},\cdots,\vtf{f}_n^\con{U}$. Desta
-forma, dado um vetor qualquer $\vto{v}\in\con{V}$, tem-se que
-\begin{equation}
-\vto{v}=\sum_{i=1}^n \fua{\vtf{f}_i^\con{U}}{\vto{v}}\vto{v}_i =
-\sum_{i=1}^n \fua{\vartheta_{\vtf{f}_i}}{\vto{v}}\vto{v}_i =
-\sum_{i=1}^n \lpa \vtf{f}_i \cdot \vto{v} \rpa\vto{v}_i\,.
-\end{equation}
-Apesar da conclusão desta igualdade, a regra para os funcionais
-coordenados $\vtf{f}_i^\con{U}$ fica indeterminada já que os
-vetores $\vtf{f}_i$ são desconhecidos. Para resolver o problema de
-uma forma simples, pode-se definir que
-$\lch\vtf{f}_1,\cdots,\vtf{f}_n\rch$ e $\con{U}$ são conjuntos
-recíprocos, ou seja, que
-\begin{equation}
-\vtf{f}_i\cdot\vto{v}_j = \delta_{ij}\,.
-\end{equation}
-
-Como o par de conjuntos recíprocos $\con{U}$ e
-$\lch\vtf{f}_1,\cdots,\vtf{f}_n\rch$ é único\rodape{Ver seção
-\ref{sec:conjuntosReciprocos}.}, o conjunto ordenado
-$\lch\vtf{f}_1,\cdots,\vtf{f}_n\rch$ pode ser representado por
-$\con{U}_*=\lch \vto{v}_1^*,\cdots,\vto{v}_n^* \rch$ e a regra
-para os funcionais coordenados na base $\con{U}$ resulta na
-igualdade
-\begin{equation}\label{eq:regraGeralVetor}
-\fua{\vtf{f}_i^\con{U}}{\vto{x}}=\vto{v}_i^*\cdot\vto{x}\,.
-\end{equation}
-A unicidade no par de bases recíprocas torna
-$\lch\vtf{f}_1,\cdots,\vtf{f}_n\rch$ uma base e permite dizer
-também que $\lpa\con{U}_*\rpa_*=\con{U}$. Desta forma, os
-funcionais coordenados na base $\con{U}_*$ possuem a regra
-\begin{equation}\label{eq:regraGeralVetorCovariante}
-\fua{\vtf{f}_i^\con{U_*}}{\vto{x}}=\vto{v}_i\cdot\vto{x}\,.
-\end{equation}
-Os valores $\fua{\vtf{f}_i^\con{U_*}}{\vto{x}}$ e $\fua{\vtf{f}_i^\con{U}}{\vto{x}}$ são denominados as
-coordenadas covariantes e contravariantes do vetor $\vto{x}$
-respectivamente. Para que estas coordenadas sejam determinadas
-relativas somente à base $\con{U}$, considera-se que
-\begin{equation}
-\vtf{f}_i^{{}_*\con{U}}:=\vtf{f}_i^\con{U_*}\,.
-\end{equation}
-
-\subsubsection{Produto Interno}
-
-Considerando as condições anteriores, dados dois vetores quaisquer
-$\vto{v},\vto{w}\in\con{V}$, pode-se realizar o seguinte
-desenvolvimento:
-\begin{eqnarray}\label{eq:coordenadasProdutoInterno}
-\vto{v}\cdot\vto{w}&=&\sum_{i=1}^{n}\fua{\vtf{f}_i^\con{U}}{\vto{v}}\vto{v}_i\cdot
-\sum_{j=1}^{n}\fua{\vtf{f}_j^{{}_*\con{U}}}{\vto{w}}\vto{v}_j^*\nonumber\\
-&=&\sum_{i=1}^{n}\sum_{j=1}^{n}\fua{\vtf{f}_i^\con{U}}{\vto{v}}
-\fua{\vtf{f}_j^{{}_*\con{U}}}{\vto{w}}\delta_{ij}\nonumber\\
-&=&\sum_{i=1}^{n}\fua{\vtf{f}_i^\con{U}}{\vto{v}}
-\fua{\vtf{f}_i^{{}_*\con{U}}}{\vto{w}}\,.
-\end{eqnarray}
-É interessante observar que se o espaço de Hilbert $\ehr{V}{F}$
-for Euclidiano e $\con{U}$ base ortonormal\rodape{Toda base ortonormal é recíproca a ela própria, segundo a seção \ref{sec:conjuntosReciprocos}.}, obtém-se
-(\ref{eq:funcionalProdutoInterno}).
-
-\section{Tensores}
-
-\subsection{Espaço Tensorial}\index{espaço!tensorial}
-Sejam os espaços de Hilbert $\ehr{V_1}{F},\cdots,\ehr{V_n}{F}$. O
-espaço vetorial de funcionais multilineares
-$\evl{\crt{V}{n}}{F}{F}$ é denominado espaço tensorial,
-representado por $\ete{\crt{V}{n}}{F}$. Um funcional $\vtf{t}$ do
-conjunto $\cfl{\crt{V}{n}}{F}$, agora representado\rodape{Alguns
-autores costumam denominar o conjunto $\cfl{\crt{V}{n}}{\con{F}}$
-de \emph{produto tensorial}\index{produto!tensorial} entre os
-conjuntos $\con{V}_1,\cdots,\con{V}_n$ e representá-lo por
-$\con{V}_1\otimes\cdots\otimes\con{V}_n$.} por
-$\cft{\crt{V}{n}}{F}$, é dito um \emph{tensor}\index{tensor} de
-ordem $n$, cuja notação é alterada para $\tnr{T}$. Em particular,
-dado o conjunto $\con{V}$, diz-se que
-$\tnr{T}\in\cft{\con{V}^n}{F}$ é um tensor de ordem $n$ em
-$\con{V}$.
-
-\begin{prp}\label{prp:DualTensorial}
-O espaço tensorial $\ete{\con{V}}{F}$ é o espaço dual
-$\edu{V}{F}$.
-\end{prp}
-\begin{prova}
-No teorema \ref{teo:RepresentacaoRiesz}, a transformação linear
-bijetora provoca $\cft{\con{V}}{F}=\con{V}^*$.
-\end{prova}
-
-
-\subsubsection{Tipos}\index{espaço!tensorial!tipos de} Seja o conjunto $\con{V}^{(p,q)}:=\con{V}^p\times\lpa\con{V^*}\rpa^q$.
- Todo espaço tensorial de ordem $p+q$ na forma
-$\ete{\con{V}^{(p,q)}}{F}$ é classificado como sendo do tipo $\lpa
-p,q\rpa$ em $\con{V}$. Tais espaços são ditos possuir \emph{ordem
-contravariante}\index{ordem!contravariante} $p$ e \emph{ordem
-covariante}\index{ordem!covariante} $q$.
-
-Agora, seja um espaço tensorial $\ete{\con{U}^{(p,q)}}{F}$. Se
-este espaço for do tipo $\lpa 0,0\rpa$, os tensores do conjunto
-$\cft{\con{U}^{(0,0)}}{F}$ são, por definição, escalares. Caso o
-espaço tensorial for do tipo $\lpa 1,0\rpa$, segundo a igualdade
-(\ref{eq:VetorFuncional}) e a proposição \ref{prp:DualTensorial},
-pode-se considerar que os tensores em questão são os vetores de
-$\con{U}$. A partir desta consideração, um conjunto
-$\con{V}^{(p,q)}$, cuja tupla ordenada contem um misto de $p$
-vetores e $q$ funcionais lineares, pode ser convenientemente
-interpretado como um conjunto $\con{V}^{p+q}$, dotado com tuplas
-de $p$ vetores \emph{contravariantes} e $q$ vetores
-\emph{covariantes}.
-
-\subsection{Permutação de Tensor}\index{permutação!de tensor}
-A bijeção que define $\map{\pi}{\{ 1,\cdots,n \}}{\{
-1,\cdots,n \}}$ é denominada \emph{permutação de
-ordem}\index{permutação!de tensor!ordem de} $n$. Seja o espaço
-tensorial $\ete{\con{V}^n}{F}$. Define-se que a permutação de um
-tensor qualquer $\tnr{T}\in\cft{\con{V}^n}{F}$ é o tensor
-$\tnr{T}_\pi\in\cft{\con{V}^n}{F}$, onde
-\begin{equation}\label{eq:permutacaoTensor}
-\fua{\tnr{T}_\pi}{\vto{v}_1,\cdots,\vto{v}_n}=
-\fua{\tnr{T}}{\vto{v}_{\fua{\pi}{1}},\cdots,\vto{v}_{\fua{\pi}{n}}}\,,\forall\,
-\vto{v}_i\in\con{V}\,.
-\end{equation}
-
-\subsubsection{Transposição de Tensor}\index{transposição!de tensor}
-Um caso particular da permutação considerada anteriormente é a
-transposição de tensor, onde, para qualquer $\vto{v}_i\in\con{V}$,
-\begin{eqnarray}\label{eq:transposicaoTensor}
-  \lefteqn{\fua{\tnr{T}_{(\alpha,\beta)}}{\vto{v}_1,\cdots,\vto{v}_{\alpha-1},\vto{v}_\alpha,\vto{v}_{\alpha+1}
-\cdots,\vto{v}_{\beta-1},\vto{v}_\beta,\vto{v}_{\beta+1},\cdots,\vto{v}_n}
-=} & & \nonumber\\
-  &
-&\fua{\tnr{T}}{\vto{v}_1,\cdots,\vto{v}_{\alpha-1},\vto{v}_\beta,\vto{v}_{\alpha+1}
-\cdots,\vto{v}_{\beta-1},\vto{v}_\alpha,\vto{v}_{\beta+1},\cdots,\vto{v}_n}\,.
-\end{eqnarray}
-No caso de $p\leqslant n$ transposições sucessivas do tensor
-$\tnr{T}$, utiliza-se
-\begin{equation}\label{eq:transposicaoSucessiva}
-\tnr{T}_{(\alpha_1,\beta_1)(\alpha_p,\beta_p)}:=\lco\cdots\lco\tnr{T}_{(\alpha_1,\beta_1)}\rco_{(\alpha_2,\beta_2)}\cdots\rco_{(\alpha_p,\beta_p)}\,.
-\end{equation}
-
-
-\subsubsection{Simetria de Tensor}\index{simetria!de tensor}
-Seja $\con{R}_n$ o conjunto de todas as permutações de ordem $n$.
-Considerando o espaço tensorial $\ete{\con{V}^n}{F}$, um tensor
-$\tnr{S}\in\cft{\con{V}^n}{F}$ é
-\emph{simétrico}\index{tensor!simétrico} se
-\begin{equation}
-\tnr{S}_\pi= \tnr{S}\,,\forall\, \pi\in\con{R}_n\,.
-\end{equation}
-Um tensor $\tnr{P}\in\cft{\con{V}^n}{F}$ é \emph{alternante}\index{tensor!alternante} ou
-\emph{anti-simétrico}\index{tensor!anti-simétrico} se
-\begin{equation}\label{eq:tensorAlternante}
-\tnr{P}_\pi=\epsilon_{\fua{\pi}{1}\cdots\fua{\pi}{n}}\tnr{P}\,,\forall\,
-\pi\in\con{R}_n\,.
-\end{equation}
-Pode-se obter que os subconjuntos $\cfs{\con{V}^n}{F}$ e $\cfa{\con{V}^n}{F}$ de
-$\cft{\con{V}^n}{F}$, formados por todos os tensores simétricos e todos os
-anti-simétricos respectivamente, definem os subespaços tensoriais $\ets{\con{V}^n}{F}$ e
-$\etn{\con{V}^n}{F}$ de $\ete{\con{V}^n}{F}$.
-
-\begin{prp}\label{teo:dimensaoEspacoAlternante}
-Seja um espaço tensorial $\ete{\con{V}^n}{F}$ e seu subespaço de tensores anti-simétricos
-$\etn{\con{V}^n}{F}$. Neste contexto, sempre é válido que
-\begin{equation*}
-\dmq{\etn{\con{V}^n}{F}} = 1\,.
-\end{equation*}
-\end{prp}
-\begin{prova}\rodape{Adaptada de \aut{Backus}\cite{backus_1997_1}, pp. 15-17. }
-Primeiramente, seja um tensor $\tnr{A}\in\cft{\con{V}^n}{F}$ e
-$\con{U}=\lch\vto{u}_1,\cdots,\vto{u}_n\rch$ uma base qualquer de $\ehr{V}{F}$ tais que
-\begin{equation*}
-\fua{\tnr{A}}{\vto{x}_1,\cdots,\vto{x}_n}=\sum_{i_1=1}^n\cdots\sum_{i_n=1}^n\lpa\vto{x}_1\cdot\vto{u}_{i_1}^*\rpa\cdots\lpa\vto{x}_n\cdot\vto{u}_{i_n}^*\rpa\epsilon_{i_1\cdots
-i_n}\,\,,\forall\, \vto{x}_i\in\con{V}\,.
-\end{equation*}
-Com base nesta regra, pode-se realizar o seguinte desenvolvimento:
-\begin{eqnarray*}
-\fua{\tnr{A}_{(\alpha,\beta)}}{\vto{x}_1,\cdots,\vto{x}_\alpha,\cdots,\vto{x}_\beta,\cdots,\vto{x}_n}=
-\sum_{i_1=1}^n\cdots\sum_{i_n=1}^n\lpa\vto{x}_1\cdot\vto{u}_{i_1}^*\rpa\cdots
-\lpa\vto{x}_\beta\cdot\vto{u}_{i_\alpha}^*\rpa\cdots &&\\
-\cdots(\vto{x}_\alpha\cdot\vto{u}_{i_\beta}^*)
-\cdots\lpa\vto{x}_n\cdot\vto{u}_{i_n}^*\rpa\epsilon_{i_1\cdots i_\alpha\cdots
-i_\beta\cdots i_n}&&\\
-=\sum_{i_1=1}^n\cdots\sum_{i_n=1}^n\lpa\vto{x}_1\cdot\vto{u}_{i_1}^*\rpa\cdots
-(\vto{x}_\beta\cdot\vto{u}_{i_\beta}^*)\cdots && \\
-\cdots(\vto{x}_\alpha\cdot\vto{u}_{i_\alpha}^*)
-\cdots\lpa\vto{x}_n\cdot\vto{u}_{i_n}^*\rpa\epsilon_{i_1\cdots i_\beta\cdots
-i_\alpha\cdots i_n}&&\\
-=-\sum_{i_1=1}^n\cdots\sum_{i_n=1}^n\lpa\vto{x}_1\cdot\vto{u}_{i_1}^*\rpa\cdots
-(\vto{x}_\beta\cdot\vto{u}_{i_\beta}^*)\cdots && \\
-\cdots(\vto{x}_\alpha\cdot\vto{u}_{i_\alpha}^*)
-\cdots\lpa\vto{x}_n\cdot\vto{u}_{i_n}^*\rpa\epsilon_{i_1\cdots i_\alpha\cdots
-i_\beta\cdots i_n}\\
-=-\fua{\tnr{A}}{\vto{x}_1,\cdots,\vto{x}_\alpha,\cdots,\vto{x}_\beta,\cdots,\vto{x}_n}\,,\,\forall\,
-\alpha,\beta\in\lch1,\cdots,n\rch\,,&&
-\end{eqnarray*}
-de onde se conclui que $\tnr{A}\in\cfa{\con{V}^n}{F}\,$. Consideremos agora um outro
-tensor anti-simétrico $\tnr{P}\in\cfa{\con{V}^n}{F}$, a partir do qual o desenvolvimento
-a seguir é realizado.
-\begin{eqnarray*}
-\fua{\tnr{P}}{\vto{x}_1,\cdots,\vto{x}_n}&=&\fua{\tnr{P}}{\sum_{i_1=1}^n\fua{\vtf{f}_{i_1}^\con{U_*}}{\vto{x}_1}\vto{u}_{i_1},\cdots,
-\sum_{i_n=1}^n\fua{\vtf{f}_{i_n}^\con{U_*}}{\vto{x}_n}\vto{u}_{i_n}}\\
-\fua{\tnr{P}}{\vto{x}_1,\cdots,\vto{x}_n}&=&\sum_{i_1=1}^n\cdots\sum_{i_n=1}^n\fua{\vtf{f}_{i_1}^\con{U_*}}{\vto{x}_1}\cdots
-\fua{\vtf{f}_{i_n}^\con{U_*}}{\vto{x}_n}\fua{\tnr{P}}{\vto{u}_{i_1},\cdots,\vto{u}_{i_n}}\,.
-\end{eqnarray*}
-De acordo com (\ref{eq:transposicaoTensor}) e (\ref{eq:tensorAlternante}), podemos
-continuar da seguinte forma:
-\begin{eqnarray*}
-\fua{\tnr{P}}{\vto{x}_1,\cdots,\vto{x}_n}&=&\sum_{i_1=1}^n\cdots\sum_{i_n=1}^n
-\fua{\vtf{f}_{i_1}^\con{U_*}}{\vto{x}_1}\cdots\fua{\vtf{f}_{i_n}^\con{U_*}}{\vto{x}_n}
-\fua{\tnr{P}_\pi}{\vto{u}_{1},\cdots,
-\vto{u}_{n}}\\
-&=&\sum_{i_1=1}^n\cdots\sum_{i_n=1}^n
-\fua{\vtf{f}_{i_1}^\con{U_*}}{\vto{x}_1}\cdots\fua{\vtf{f}_{i_n}^\con{U_*}}{\vto{x}_n}
-\epsilon_{i_{i_1}\cdots i_{i_n}}\fua{\tnr{P}}{\vto{u}_{1},\cdots, \vto{u}_{n}}\\
-&=&\fua{\tnr{P}}{\vto{u}_{1},\cdots, \vto{u}_{n}}\sum_{i_1=1}^n\cdots\sum_{i_n=1}^n
-\lpa\vto{x}_1\cdot\vto{u}_{i_1}^*\rpa\cdots\lpa\vto{x}_n\cdot\vto{u}_{i_n}^*\rpa\epsilon_{i_1\cdots
-i_n}\\
-&=&\underbrace{\fua{\tnr{P}}{\vto{u}_{1},\cdots, \vto{u}_{n}}}_{\in\,
-\con{F}}\fua{\tnr{A}}{\vto{x}_1,\cdots,\vto{x}_n}\,,\,\forall\,
-\tnr{P}\in\cfa{\con{V}^n}{F}.
-\end{eqnarray*}
-Podemos concluir da última igualdade que o conjunto de tensores anti-simétricos
-$\cfa{\con{V}^n}{F}=sp\lch\tnr{A}\rch$\,.
-\end{prova}
-
-\paragraph{Espaço Orientado de Hilbert.}
-Sejam um espaço de Hilbert $\ehr{V}{F}$ $n$-dimensional e um espaço tensorial
-$\ete{\con{V}^n}{F}$. Sejam $\hat{\con{U}}=\lch\vun{u}_1,\cdots,\vun{u}_n\rch$ uma base
-ortonormal qualquer de $\ehr{V}{F}$ e um tensor anti-simétrico qualquer
-$\hat{\tnr{P}}\in\cfa{\con{V}^n}{F}$ tal que
-\begin{equation}\label{eq:HilbertOrientado}
-\fua{\hat{\tnr{P}}}{\vun{u}_1,\cdots,\vun{u}_n}=\pm 1\,.
-\end{equation}
-Neste contexto, o par ordenado $(\ehr{V}{F},\hat{\tnr{P}})$ é dito um espaço orientado de Hilbert. Se o resultado da igualdade anterior seja positivo, diz-se que a base
-$\hat{\con{U}}$ está \emph{positivamente orientada}\index{base!positivamente orientada},
-caso contrário ela está \emph{negativamente orientada}\index{base!negativamente
-orientada}.
-
-\subsection{Produto Tensorial}\index{produto!tensorial}
-
-Sejam os espaços tensoriais $\ete{\crt{V}{p}}{\con{F}}$ ,
-$\ete{\crt{U}{q}}{\con{F}}$ e $\ete{\crt{V}{p}\times\crt{U}{q}}{\con{F}}$. Um dado mapeamento
-$\map{\otimes}{\cft{\crt{V}{p}}{\con{F}}\times\cft{\crt{U}{q}}{\con{F}}}
-{\cft{\crt{V}{p}\times\crt{U}{q}}{\con{F}}}$ é denominado produto
-tensorial se, a partir dos tensores quaisquer
-$\tnr{V}\in\cft{\crt{V}{p}}{\con{F}}$ e
-$\tnr{U}\in\cft{\crt{U}{q}}{\con{F}}$, for válida, para qualquer
-$\lpa\vto{v}_1,\cdots,\vto{v}_p,\vto{u}_1,\cdots,\vto{u}_q\rpa\in\crt{V}{p}\times\crt{U}{q}$,
-a seguinte igualdade:
-\begin{equation}\label{eq:produtoTensorial}
-\fua{\tnr{V}\otimes\tnr{U}}{\vto{v}_1,\cdots,\vto{v}_p,\vto{u}_1,\cdots,\vto{u}_q}=
-\fua{\tnr{V}}{\vto{v}_1,\cdots,\vto{v}_p}\fua{\tnr{U}}{\vto{u}_1,\cdots,\vto{u}_q}\,.
-\end{equation}
-Fica evidente que um produto tensorial gera um tensor cuja ordem é
-a soma das ordens dos tensores que o definem. Caso $\tnr{V}$ e
-$\tnr{U}$ sejam tensores do tipo $\lpa p,m \rpa$ e $\lpa q,n \rpa$
-respectivamente, então $\tnr{V}\otimes\tnr{U}$ é do tipo $\lpa
-p+q,m+n \rpa$.
-
-A partir da igualdade (\ref{eq:produtoTensorial}), as propriedades
-a seguir podem ser facilmente obtidas para quaisquer
-$\tnr{V}_1,\tnr{V}_2\in\cft{\crt{V}{p}}{\con{F}}$,
-$\tnr{U}\in\cft{\crt{U}{q}}{\con{F}}$ e
-$\tnr{W}\in\cft{\crt{W}{r}}{\con{F}}$:
-\begin{itemize}
-  \item[i.] $\tnr{U}\otimes\tnr{W}=\negmath{0} \implies\tnr{U}=\negmath{0}$ ou $\tnr{W}=\negmath{0}$ ;
-  \item[ii.] Associatividade:
-$\lpa\tnr{V}_1\otimes\tnr{U}\rpa\otimes\tnr{W}=\tnr{V}_1\otimes\lpa\tnr{U}\otimes\tnr{W}\rpa$;
-\item[iii.] Distributividade à direita:
-$\lpa\tnr{V}_1+\tnr{V}_2\rpa\otimes\tnr{U}=\tnr{V}_1\otimes\tnr{U}+\tnr{V}_2\otimes\tnr{U}$
-; \item[iv.] Distributividade à esquerda:
-$\tnr{U}\otimes\lpa\tnr{V}_1+\tnr{V}_2\rpa=\tnr{U}\otimes\tnr{V}_1+\tnr{U}\otimes\tnr{V}_2$
-.
-\end{itemize}
-
-\subsection{Tensor Poliádico}\index{tensor!poliádico}
-
-Considerando os espaços tensoriais
-$\ete{\con{V}_1}{\con{F}},\cdots,\ete{\con{V}_n}{\con{F}}$, um
-tensor
-$\vto{v}_1\otimes\cdots\otimes\vto{v}_n\in\cft{\crt{V}{n}}{\con{F}}$,
-onde $\vto{v}_i$ é um vetor qualquer de $\con{V}_i$, é qualificado
-como poliádico de ordem $n$. Se $n=2$, o tensor é
-\emph{diádico}\index{tensor!diádico}; para $n=3$, o tensor é
-\emph{triádico}\index{tensor!triádico} e assim por diante. Cada
-vetor que compõe o tensor poliádico é uma
-\emph{políade}\index{políade}. Os vetores de um tensor diádico são
-\emph{díades}\index{díade}; os do tensor triádico são
-\emph{tríades}\index{tríade}, etc... A partir do teorema
-\ref{teo:RepresentacaoRiesz} e utilizando
-(\ref{eq:produtoTensorial}), tem-se para qualquer $\lpa
-\vto{x}_1,\cdots,\vto{x}_n\rpa\in\crt{V}{n}$ que
-\begin{equation}\label{eq:produtorioPoliadico}
-\fua{\vto{v}_1\otimes\cdots\otimes\vto{v}_n}{\vto{x}_1,\cdots,\vto{x}_n}=\prod_{i=1}^{n}
-\vto{v}_i\cdot\vto{x}_i\,.
-\end{equation}
-
-\begin{prp}\label{prp:igualdadeTensorial}
-Sejam os espaços de Hilbert
-$\ehr{V_1}{\con{F}},\cdots,\ehr{V_p}{\con{F}}$ dimensionalmente
-finitos e o conjunto genérico $\con{U}_i=\{ {\vto{v}_1}^{(i)}
-,\cdots, {\vto{v}_{n_i}}^{(i)}\}$, $1\leqslant i\leqslant p\,$, representando uma base ordenada
-qualquer de um destes espaços. Considerando tensores quaisquer
-$\tnr{T}_1,\tnr{T}_2\in\cft{\crt{V}{p}}{\con{F}}$ e uma tupla
-qualquer $\lpa \vto{x}_1,\cdots,\vto{x}_p\rpa\in\crt{V}{p}$,
-tem-se o seguinte:
-\begin{itemize}
-  \item[i.]É sempre válido que
-\begin{eqnarray}
-  \lefteqn{\fua{\tnr{T}_1}{
-\vto{x}_1,\cdots,\vto{x}_p}
-=} & & \nonumber \\
-  &
-&\sum_{j_1=1}^{n_1}\cdots\sum_{j_p=1}^{n_p}
-\fua{\vtf{f}_{j_1}^{\con{U}_1}}{\vto{x}_1}\cdots
-\fua{\vtf{f}_{j_p}^{\con{U}_p}}{\vto{x}_p}\fua{\tnr{T}_1}{
-{\vto{v}_{j_1}}^{(1)},\cdots,{\vto{v}_{j_p}}^{(p)}}\nonumber\,.
-\end{eqnarray}
-  \item[ii.]Se as igualdades
-\begin{equation}
-\fua{\tnr{T}_1}{
-{\vto{v}_{j_1}}^{(1)},\cdots,{\vto{v}_{j_p}}^{(p)}}=\fua{\tnr{T}_2}{
-{\vto{v}_{j_1}}^{(1)},\cdots,{\vto{v}_{j_p}}^{(p)}}\nonumber
-\end{equation}
-forem verificadas, então $\tnr{T}_1=\tnr{T}_2$.
-\end{itemize}
-\end{prp}
-\begin{prova}
-A verificação da igualdade no ítem i. depende fundamentalmente das
-propriedades de multilinearidade. Daí, seja o seguinte
-desenvolvimento:
-\begin{eqnarray}
- & \fua{\tnr{T}_1}{
-\vto{x}_1,\cdots,\vto{x}_p}
-  & \nonumber\\
-  &
-=\fua{\tnr{T}_1}{
-\sum_{j_1=1}^{n_1}\fua{\vtf{f}_{j_1}^{\con{U}_1}}{\vto{x}_1}{\vto{v}_{j_1}}^{(1)},
-\cdots,\sum_{j_p=1}^{n_p}\fua{\vtf{f}_{j_p}^{\con{U}_p}}{\vto{x}_p}{\vto{v}_{j_p}}^{(p)}}
-& \nonumber \\
-&=\sum_{j_1=1}^{n_1}\fua{\vtf{f}_{j_1}^{\con{U}_1}}{\vto{x}_1}\fua{\tnr{T}_1}{
-{\vto{v}_{j_1}}^{(1)},
-\cdots,\sum_{j_p=1}^{n_p}\fua{\vtf{f}_{j_p}^{\con{U}_p}}{\vto{x}_p}{\vto{v}_{j_p}}^{(p)}}
-& \nonumber\\
-&=\sum_{j_1=1}^{n_1}\fua{\vtf{f}_{j_1}^{\con{U}_1}}{\vto{x}_1}\sum_{j_2=1}^{n_2}\fua{\vtf{f}_{j_2}^{\con{U}_2}}{\vto{x}_2}\fua{\tnr{T}_1}{
-{\vto{v}_{j_1}}^{(1)},{\vto{v}_{j_2}}^{(2)},
-\cdots,\sum_{j_p=1}^{n_p}\fua{\vtf{f}_{j_p}^{\con{U}_p}}{\vto{x}_p}{\vto{v}_{j_p}}^{(p)}}\,,
-& \nonumber
-\end{eqnarray}
-e assim sucessivamente. No caso do ítem ii. se
-\begin{equation}
-\fua{\tnr{T}_1}{
-{\vto{v}_{j_1}}^{(1)},\cdots,{\vto{v}_{j_p}}^{(p)}}=\fua{\tnr{T}_2}{
-{\vto{v}_{j_1}}^{(1)},\cdots,{\vto{v}_{j_p}}^{(p)}}, \nonumber
-\end{equation} é óbvio que
-\begin{eqnarray}
-  & \fua{\tnr{T}_1}{
-\vto{x}_1,\cdots,\vto{x}_p}
-  & \nonumber\\
-&=\sum_{j_1=1}^{n_1}\cdots\sum_{j_p=1}^{n_p}
-\fua{\vtf{f}_{j_1}^{\con{U}_1}}{\vto{x}_1}\cdots
-\fua{\vtf{f}_{j_p}^{\con{U}_p}}{\vto{x}_p}\fua{\tnr{T}_2}{
-{\vto{v}_{j_1}}^{(1)},\cdots,{\vto{v}_{j_p}}^{(p)}} & \nonumber\\
-&=\fua{\tnr{T}_2}{ \vto{x}_1,\cdots,\vto{x}_p}\,. & \nonumber
-\end{eqnarray}
-\end{prova}
-
-\begin{teo}\label{teo:BasesPoliadicas}
-Sejam os espaços de Hilbert
-$\ehr{V_1}{\con{F}},\cdots,\ehr{V_p}{\con{F}}$ dimensionalmente
-finitos e o conjunto genérico $\{ {\vto{v}_1}^{(i)} ,\cdots,
-{\vto{v}_{n_i}}^{(i)}\} \subset \con{V}_i$ representando uma base
-ordenada qualquer de um destes espaços. O conjunto
-$\con{T}^{\otimes}_{\crt{V}{p}}\subset\cft{\crt{V}{p}}{\con{F}}$
-formado por todos os tensores poliádicos de ordem p construídos na
-forma
-${\vto{v}_{j_1}}^{(1)}\otimes{\vto{v}_{j_2}}^{(2)}\otimes\cdots\otimes{\vto{v}_{j_p}}^{(p)}$,
-onde $j_i=1,\cdots,n_i$ , é uma base do espaço tensorial
-$\ete{\crt{V}{p}}{\con{F}}$.
-\end{teo}
-\begin{prova}
-Em primeiro lugar, devemos verificar se os tensores
-${\vto{v}_{j_1}}^{(1)}\otimes\cdots\otimes{\vto{v}_{j_p}}^{(p)}$
-são linearmente independentes. Para tal, seja um tensor
-\begin{equation}
-\tnr{T}:=\sum_{j_1=1}^{n_1}\cdots\sum_{j_p=1}^{n_p}\alpha_{j_1\cdots
-j_p}{\vto{v}_{j_1}}^{(1)}\otimes\cdots\otimes{\vto{v}_{j_p}}^{(p)},\nonumber
-\end{equation}
-onde $\alpha_{j_1\cdots j_p}\in\con{F}$. Para que os tensores
-poliádicos sejam linearmente independentes, se $\tnr{T}=\negmath{0}$,
-então $\alpha_{j_1\cdots j_p}=0$. Isto é comprovado da seguinte
-forma: seja $(\vto{x}_1,\cdots,\vto{x}_p)$ uma tupla ordenada
-qualquer de $\crt{V}{p}$. Para $\tnr{T}=\negmath{0}$, tem-se que cada
-um dos termos
-\begin{eqnarray}
-\fua{\alpha_{j_1\cdots
-j_p}{\vto{v}_{j_1}}^{(1)}\otimes\cdots\otimes{\vto{v}_{j_p}}^{(p)}}{\vto{x}_1,\cdots,\vto{x}_p}&=&0\nonumber\\
-\alpha_{j_1\cdots j_p} \prod_{k=1}^{p}
-{\vto{v}_{j_k}}^{(k)}\cdot\vto{x}_k&=&0\,.\nonumber
-\end{eqnarray}
-Em particular, caso os vetores de $(\vto{x}_1,\cdots,\vto{x}_p)$
-sejam não nulos, então
-\begin{eqnarray}
-\alpha_{j_1\cdots j_p} \prod_{k=1}^{p} \underbrace{\overbrace{{\vto{v}_{j_k}}^{(k)}}^{\neq\vto{0}}\cdot\overbrace{\vto{x}_k}^{\neq\vto{0}}}_{\neq 0}&=&0\nonumber\\
-\alpha_{j_1\cdots j_p} &=&0\,.\nonumber
-\end{eqnarray}
-Em segundo lugar, devemos mostrar que os tensores poliádicos geram
-$\cft{\crt{V}{p}}{\con{F}}$. Para tal, seja um tensor qualquer
-$\tnr{T}_1\in\cft{\crt{V}{p}}{\con{F}}$ onde
-\begin{equation}
-\beta_{j_1\cdots
-j_p}:=\fua{\tnr{T}_1}{{\vto{v}_{j_1}}^{(1)},\cdots,{\vto{v}_{j_p}}^{(p)}}\nonumber
-\end{equation}
-e um tensor
-\begin{equation}
-\tnr{T}_2:=\sum_{j_1=1}^{n_1}\cdots\sum_{j_p=1}^{n_p}\beta_{j_1\cdots
-j_p}{\vto{v}_{j_1}}^{(1)}\otimes\cdots\otimes{\vto{v}_{j_p}}^{(p)}\,.\nonumber
-\end{equation}
-Seja, agora, o seguinte desenvolvimento:
-\begin{eqnarray}
-\fua{\tnr{T}_2}{{\vto{v}_{j_1}}^{(1)},\cdots,{\vto{v}_{j_p}}^{(p)}}&=&\beta_{j_1\cdots
-j_p}\underbrace{\prod_{k=1}^{p}
-{\vto{v}_{j_k}}^{(k)}\cdot{\vto{v}_{j_k}}^{(k)}}_{\gamma_{j_1\cdots j_p}}\nonumber\\
-&=&\fua{\tnr{T}_1}{{\vto{v}_{j_1}}^{(1)},\cdots,{\vto{v}_{j_p}}^{(p)}}\gamma_{j_1\cdots
-j_p}\nonumber\,,
-\end{eqnarray}
-de onde, a partir do ítem ii. da proposição
-\ref{prp:igualdadeTensorial}, tem-se
-\begin{equation}
-\tnr{T}_1=
-\sum_{j_1=1}^{n_1}\cdots\sum_{j_p=1}^{n_p}\frac{\beta_{j_1\cdots
-j_p}}{\gamma_{j_1\cdots
-j_p}}{\vto{v}_{j_1}}^{(1)}\otimes\cdots\otimes{\vto{v}_{j_p}}^{(p)}\,.\nonumber
-\end{equation}
-Conclui-se que o tensor qualquer $\tnr{T}_1$ é uma combinação
-linear dos tensores poliádicos em questão.
-\end{prova}
-
-
-\begin{prp}\label{prp:dimensaoTensorial}
-Sejam os espaços de Hilbert
-$\ehr{V_1}{\con{F}},\cdots,\ehr{V_p}{\con{F}}$ dimensionalmente
-finitos e um espaço tensorial $\ete{\crt{V}{p}}{\con{F}}$. Sempre
-é válido que
-\begin{equation}
-\dim\lpa\ete{\crt{V}{p}}{\con{F}}\rpa=\prod_{i=1}^{p}
-\dim\lpa\ehr{V_i}{\con{F}}\rpa\,.\nonumber
-\end{equation}
-\end{prp}
-\begin{prova}
-A construção da base de tensores poliádicos descrita no teorema
-\ref{teo:BasesPoliadicas} permite constatar que existem
-$n_1n_2\cdots n_p$ tensores na forma
-${\vto{v}_{j_1}}^{(1)}\otimes\cdots\otimes{\vto{v}_{j_p}}^{(p)}$,
-onde $j_i=1,\cdots,n_i$ e cujos vetores pertencem à
-$\{{\vto{v}_1}^{(i)} ,\cdots, {\vto{v}_{n_i}}^{(i)}\}$, base de
-$\ehr{V_i}{\con{F}}$.
-\end{prova}
-
-
-
-\subsection{Coordenadas de Tensores}\index{coordenadas!de tensor}
-
-Seja o espaço tensorial dimensionalmente finito
-$\ete{\crt{V}{p}}{\con{F}}$, o conjunto
-$\con{T}^{\otimes}_{\crt{V}{p}}$ sua base de tensores poliádicos
-construída a partir do subconjunto genérico $\con{U}_i=\{
-{\vto{v}_1}^{(i)} ,\cdots, {\vto{v}_{n_i}}^{(i)}\}$, base de
-$\ehr{V_i}{\con{F}}$. Segundo o teorema \ref{teo:BasesPoliadicas},
-um tensor qualquer $\tnr{T}\in\cft{\crt{V}{p}}{\con{F}}$ pode ser
-decomposto da seguinte forma:
-\begin{equation}
-\tnr{T}=\sum_{i_1=1}^{n_1}\cdots\sum_{i_p=1}^{n_p}\beta_{i_1\cdots
-i_p}{\vto{v}_{i_1}}^{(1)}\otimes\cdots\otimes{\vto{v}_{i_p}}^{(p)}\,,
-\end{equation}
-onde $\beta_{i_1\cdots i_p}\in\con{F}$ são as coordenadas de
-$\tnr{T}$ na base $\con{T}^{\otimes}_{\crt{V}{p}}$. Como ocorre no
-caso de vetores, a partir de transformações lineares do tipo
-\begin{equation}
-\map{\vtf{f}_{i_1\cdots
-i_p}^{\con{T}^{\otimes}_{\crt{V}{p}}}}{\cft{\crt{V}{p}}{\con{F}}}{\con{F}}\,,
-\end{equation}
-pode-se considerar que os escalares
-\begin{equation}
-\beta_{i_1\cdots i_p}:=\fua{\vtf{f}_{i_1\cdots
-i_p}^{\con{T}^{\otimes}_{\crt{V}{p}}}}{\tnr{T}}\,,
-\end{equation}
-onde cada função é o funcional coordenado de $\tnr{T}$ na base
-$\con{T}^{\otimes}_{\crt{V}{p}}$. A regra de cada um destes
-funcionais é definida por
-\begin{equation}\label{eq:contravarianteTensor}
-\fua{\vtf{f}_{i_1\cdots
-i_p}^{\con{T}^{\otimes}_{\crt{V}{p}}}}{\tnr{X}}=\fua{\tnr{X}}
-{{\vto{v}_{i_1}^*}^{(1)},\cdots,{\vto{v}_{i_p}^*}^{(p)}}\,,
-\end{equation}
-cujos valores são as coordenadas contravariantes de $\tnr{X}$ na
-base $\con{T}^{\otimes}_{\crt{V}{p}}$. Nesta mesma base, suas
-coordenadas covariantes são os valores
-\begin{equation}\label{eq:covarianteTensor}
-\fua{\vtf{f}_{i_1\cdots
-i_p}^{{}_*\con{T}^{\otimes}_{\crt{V}{p}}}}{\tnr{X}}:=\fua{\tnr{X}}
-{{\vto{v}_{i_1}}^{(1)},\cdots,{\vto{v}_{i_p}}^{(p)}}\,.
-\end{equation}
-Caso $p=1$, as regras destes funcionais abrangem o caso de
-funcionais coordenados para vetores (\ref{eq:regraGeralVetor}) e
-(\ref{eq:regraGeralVetorCovariante}).
-
-Conclui-se, então, que dada uma base de tensores poliádicos, um
-tensor qualquer $\tnr{X}$ de $\cft{\crt{V}{p}}{\con{F}}$ pode ser
-caracterizado por dois arrays de dimensão $n_1\times\cdots\times
-n_p$, onde $n_i=\dim\lpa\ehr{V_i}{\con{F}}\rpa$, representados por
-\begin{eqnarray}
-\lco\tnr{X}\rco^{\con{T}^{\otimes}_{\crt{V}{p}}}&\mathrm{e}&
-\lco\tnr{X}\rco^{{}_*\con{T}^{\otimes}_{\crt{V}{p}}}\,.
-\end{eqnarray}
-
-
-\subsubsection{Transformação de Coordenadas}\index{transformação!de coordenadas!de tensor}
-Com base nas condições anteriores, seja o conjunto $W_i=\{
-{\vto{w}_1}^{(i)} ,\cdots, {\vto{w}_{n_i}}^{(i)}\}$ uma outra base
-qualquer de $\ehr{V_i}{\con{F}}$, a partir da qual constrói-se a
-base de tensores poliádicos
-$\tilde{\con{T}}^{\otimes}_{\crt{V}{p}}$. Nos termos do teorema
-\ref{teo:temUnicaFuncaoBase}, seja o espaço vetorial
-${\evl{V_i}{W_i}{\con{F}}}$, $1\leqslant i\leqslant p\,$, e a bijeção linear
-$\vtf{q}^{(i)}\in\cfl{V_i}{W_i}$ promotora da mudança de base
-\begin{equation}
-\fua{\vtf{q}^{(i)}}{\vto{v}_j^{(i)}}=\vto{w}_{j}^{(i)},
-j=1,\cdots,n_i\,.
-\end{equation}
-
-Admitindo conhecidas as coordenadas do tensor $\tnr{T}$ na base
-$\con{T}^{\otimes}_{\crt{V}{p}}$, utilizando
-(\ref{eq:FuncaoLinearMatriz}) e (\ref{eq:regraGeralVetor}) , pode-se realizar o seguinte
-desenvolvimento:
-\begin{eqnarray}\label{eq:transformacaoTensor}
-\fua{\vtf{f}_{i_1\cdots
-i_p}^{\tilde{\con{T}}^{\otimes}_{\crt{V}{p}}}}{\tnr{T}}&=&\fua{\tnr{T}}
-{{\vto{w}_{i_1}^*}^{(1)},\cdots,{\vto{w}_{i_p}^*}^{(p)}}\nonumber\\
-&=&\fua{\sum_{j_1=1}^{n_1}\cdots\sum_{j_p=1}^{n_p}\fua{\vtf{f}_{j_1\cdots
-j_p}^{\con{T}^{\otimes}_{\crt{V}{p}}}}{\tnr{T}}{\vto{v}_{j_1}}^{(1)}
-\otimes\cdots\otimes{\vto{v}_{j_p}}^{(p)}}{{\vto{w}_{i_1}^*}^{(1)},\cdots,{\vto{w}_{i_p}^*}^{(p)}}\nonumber\\
-&=&\sum_{j_1=1}^{n_1}\cdots\sum_{j_p=1}^{n_p}\fua{\vtf{f}_{j_1\cdots
-j_p}^{\con{T}^{\otimes}_{\crt{V}{p}}}}{\tnr{T}}\prod_{k=1}^p
-{\vto{v}_{j_k}}^{(k)}\cdot{\vto{w}_{i_k}^*}^{(k)}\nonumber\\
-&=&\sum_{j_1=1}^{n_1}\cdots\sum_{j_p=1}^{n_p}\fua{\vtf{f}_{j_1\cdots
-j_p}^{\con{T}^{\otimes}_{\crt{V}{p}}}}{\tnr{T}}\prod_{k=1}^p
-\fua{\vtf{f}_{i_k}^\con{W_k}}{\vto{v}_{j_k}^{(k)}}\nonumber\\
-&=&\sum_{j_1=1}^{n_1}\cdots\sum_{j_p=1}^{n_p}\fua{\vtf{f}_{j_1\cdots
-j_p}^{\con{T}^{\otimes}_{\crt{V}{p}}}}{\tnr{T}}\prod_{k=1}^p
-\mad{\vtf{i}_\con{U_k}}{W_k}_{i_kj_k}\,.
-\end{eqnarray}
-Pode-se observar que a última igualdade revela uma transformação
-nas coordenadas de $\tnr{T}$ da base
-$\con{T}^{\otimes}_{\crt{V}{p}}$ para a base
-$\tilde{\con{T}}^{\otimes}_{\crt{V}{p}}\,$. Em termos gerais,
-conhecendo-se, a priori, as coordenadas de um dado tensor
-descritas em uma determinada base, é possível obtê-las descritas
-em qualquer outra.
-
-\begin{prp}\label{prp:somaPoliadicos}
-Dado um espaço tensorial $\ete{\crt{V}{p}}{\con{F}}$
-dimensionalmente finito, um tensor qualquer
-$\tnr{T}\in\cft{\crt{V}{p}}{\con{F}}$ pode sempre ser decomposto
-numa soma de tensores poliádicos, ou seja,
-\begin{equation}
-\tnr{T}=\sum_{k=1}^m\vto{v}_{1k}\otimes\cdots\otimes\vto{v}_{pk}\,,\,
-m\geq 1,\nonumber
-\end{equation}
-onde $\vto{v}_{ik}\in\con{V}_i$ é a $i$-ésima políade do $k$-ésimo
-tensor poliádico.
-\end{prp}
-\begin{prova}
-Segundo o teorema \ref{teo:BasesPoliadicas}, considerando uma base
-$\{{\vto{v}_{1}}^{(i)},\cdots,{\vto{v}_{n_i}}^{(i)}\}$ de
-$\ehr{V_i}{\con{F}}$, um tensor qualquer
-\begin{eqnarray}
-\tnr{T}&=&\sum_{i_1=1}^{n_1}\cdots\sum_{i_q=1}^{n_q}\cdots\sum_{i_p=1}^{n_p}\beta_{i_1\cdots
-i_p}{\vto{v}_{i_1}}^{(1)}\otimes\cdots\otimes{\vto{v}_{i_q}}^{(q)}\otimes\cdots\otimes{\vto{v}_{i_p}}^{(p)}\nonumber\\
-&=&\sum_{i_1=1}^{n_1}\cdots\sum_{i_q=1}^{n_q}\cdots\sum_{i_p=1}^{n_p}{\vto{v}_{i_1}}^{(1)}
-\otimes\cdots\otimes\underbrace{\lpa\beta_{i_1\cdots
-i_p}\rpa{\vto{v}_{i_q}}^{(q)}}_{\vto{u}_{i_1\cdots
-i_p}}\otimes\cdots\otimes{\vto{v}_{i_p}}^{(p)}\nonumber\,,
-\end{eqnarray}
-onde o vetor destacado define $\tnr{T}$ como uma soma de
-$n_1\cdots n_q \cdots n_p$ tensores poliádicos, cada um com $p$
-políades.
-\end{prova}
-
-
-\begin{prp}\label{prp:produtorioFuncionais}
-Seja um espaço tensorial $\ete{\crt{V}{p}}{\con{F}}$ e $\con{U}_i$
-uma base de $\ehr{V_i}{\con{F}}$. Dado que
-$\con{T}^{\otimes}_{\crt{V}{p}}$ é construído a partir dos vetores
-de $\con{U}_1,\cdots,\con{U}_p$, considerando os vetores quaisquer
-$\vto{v}_i\in\con{V_i}$, as coordenadas
-\begin{equation}
-\fua{\vtf{f}_{j_1\cdots
-j_p}^{\con{T}^{\otimes}_{\crt{V}{p}}}}{\vto{v}_1\otimes\cdots\otimes\vto{v}_p}=\prod_{k=1}^p
-\fua{\vtf{f}_{j_k}^{\con{U}_k}}{\vto{v}_k}\nonumber
-\end{equation}
-e
-\begin{equation}
-\fua{\vtf{f}_{j_1\cdots
-j_p}^{{}_*\con{T}^{\otimes}_{\crt{V}{p}}}}{\vto{v}_1\otimes\cdots\otimes\vto{v}_p}=\prod_{k=1}^p
-\fua{\vtf{f}_{j_k}^{{}_*\con{U}_k}}{\vto{v}_k}\nonumber\,.
-\end{equation}
-\end{prp}
-\begin{prova}
-Tomando  (\ref{eq:contravarianteTensor}) e
-(\ref{eq:covarianteTensor}), as igualdades são conseqüências de (\ref{eq:regraGeralVetor}),
-(\ref{eq:regraGeralVetorCovariante}),
-(\ref{eq:produtorioPoliadico}).
-\end{prova}
-
-
-\subsection{Tensor Identidade}\index{tensor!identidade}
-Seja o espaço tensorial
-$\ete{\crt{V}{p}\times\crt{V}{p}}{\con{F}}$. Um tensor
-$\tnr{I}\in\cft{\crt{V}{p}\times\crt{V}{p}}{\con{F}}$ é dito
-identidade se
-\begin{equation}\label{eq:tensorIdentidade}
-\fua{\tnr{I}}{\vto{x}_1,\cdots,\vto{x}_p,\vto{y}_1,\cdots,\vto{y}_p}=
-\prod_{i=1}^{p}\vto{x}_i\cdot\vto{y}_i\,,\,\forall\,
-\vto{x}_i,\vto{y}_i\in\con{V}_i.
-\end{equation}
-Considerando $\con{U}_i=\{ {\vto{u}_1}^{(i)} ,\cdots,
-{\vto{u}_{n_i}}^{(i)}\}$ uma base de $\ehr{V_i}{\con{F}}$, a
-partir de (\ref{eq:coordenadasProdutoInterno}), a igualdade
-(\ref{eq:tensorIdentidade}) pode ser reescrita na forma
-\begin{equation}
-\fua{\tnr{I}}{\vto{x}_1,\cdots,\vto{x}_p,\vto{y}_1,\cdots,\vto{y}_p}=
-\prod_{i=1}^{p}\sum_{j_i}^{n_i}\fua{\vtf{f}_{j_i}^{\con{U}_i}}{\vto{x}_i}
-\fua{\vtf{f}_{j_i}^{{}_*\con{U}_i}}{\vto{y}_i}
-\end{equation}
-ou na forma
-\begin{equation}
-\fua{\tnr{I}}{\vto{x}_1,\cdots,\vto{x}_p,\vto{y}_1,\cdots,\vto{y}_p}=
-\prod_{i=1}^{p}\sum_{j_i}^{n_i}\fua{\vtf{f}_{j_i}^{{}_*\con{U}_i}}{\vto{x}_i}
-\fua{\vtf{f}_{j_i}^{\con{U}_i}}{\vto{y}_i}\,.
-\end{equation}
-Nestas circunstâncias, a fim de obter as igualdades anteriores respectivas, o
-tensor
-\begin{equation}\label{eq:TensorIdentidadeExplicito1}
-\tnr{I} =
-\sum_{j_1=1}^{n_1}\cdots\sum_{j_p=1}^{n_p}{\vto{u}_{j_1}^*}^{(1)}\otimes\cdots\otimes
-{\vto{u}_{j_p}^*}^{(p)}\otimes{\vto{u}_{j_1}}^{(1)}\otimes\cdots\otimes{\vto{u}_{j_p}}^{(p)}
-\end{equation}
-ou
-\begin{equation}\label{eq:TensorIdentidadeExplicito2}
-\tnr{I} =
-\sum_{j_1=1}^{n_1}\cdots\sum_{j_p=1}^{n_p}{\vto{u}_{j_1}}^{(1)}\otimes\cdots\otimes
-{\vto{u}_{j_p}}^{(p)}\otimes{\vto{u}_{j_1}^*}^{(1)}\otimes\cdots\otimes{\vto{u}_{j_p}^*}^{(p)}\,.
-\end{equation}
 
 
 \section{Funções Tensoriais}\index{função!tensorial}
