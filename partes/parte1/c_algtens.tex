@@ -1,7 +1,7 @@
 \chapter{Tensor Algebra}
 
 
-Continuing our study of Linear Algebra, whose foundations we presented in the previous chapter, let's deal now with something a bit more sophisticated, although extremely useful for describing physical phenomena concerning deformable bodies. The form and content that we shall present about this topic differs from the usual approach available in Continuum Mechanics literature, where the concept of tensor arises suddenly, through simplistic definitions: formally, we shall proceed the same way as we have been doing so far, in a continuous flow of successively dependent concepts, and present tensors as ordinary elements of a vector space; on the content side, we shall not restrict ourselves to the strictly necessary, typical of pragmatic approaches, since our objective, in this and the next chapter, is to provide the reader with a generous framework of concepts related to tensors, simply because of their mathematical beauty and wide application. 
+Continuing our study of Linear Algebra, whose foundations we presented in the previous chapter, let's deal now with something a bit more sophisticated, although extremely useful for describing physical phenomena concerning deformable bodies. The form and the content which we shall present about this topic differs from the usual approach available in Continuum Mechanics literature, where the concept of tensor arises suddenly, out of nowhere, and through simplistic definitions. Formally, we shall proceed the same way as we have been doing so far, in a continuous flow of successively dependent concepts, and present tensors as ordinary elements of a vector space; on the content realm, we shall not restrict ourselves to the strictly necessary, typical of pragmatic approaches, since our objective, in this and the next chapter, is to provide the reader with a generous framework of concepts related to tensors, mainly because of their mathematical beauty and also because of their wide application. 
 
 
 \section{A Very Short History of Tensors}
@@ -162,7 +162,7 @@ from which we conclude that the permutation of sum is the sum of permutations. T
 \end{proof}
 }
 
-The concept of permutation enables the concept of symmetry as follows: a tensor $\tnr{S}\in\ete{\mathcal{R}}{V^{m}}$ is said to be \textsb{symmetric}\index{tensor!symmetric} if equality $\tnr{S}_\pi=\tnr{S}$ is valid for any permutation $\pi$. Conversely, a tensor $\tnr{P}\in\tnr{V}^{m}_\mathcal{R}$ is called \textsb{antisymmetric}\index{tensor!antisymmetric} or \textsb{alternating}\index{tensor!alternating} if tensor $\tnr{P}_\pi=\epsilon_{\fua{\pi}{1}\cdots \fua{\pi}{m}}\,\tnr{P}$ for any $\pi$. Since $\tnr{P}$ is antisymmetric, we can conclude that scalar $\fua{\tnr{P}}{\vto{x}_1,\cdots,\vto{x}_a,\cdots,\vto{x}_b,\cdots,\vto{x}_m}=0$ if $\vto{x}_a=\vto{x}_b$, where $\vto{x}_i\in V_\mathcal{R}$ and $a,b\in\{1,\cdots,m\}$. Thereby, the consequence is  
+The concept of permutation enables the concept of symmetry as follows: a tensor $\tnr{S}\in\ete{\mathcal{R}}{V^{m}}$ is said to be \textsb{symmetric}\index{tensor!symmetric} if equality $\tnr{S}_\pi=\tnr{S}$ is valid for an arbitrary permutation $\pi$. Conversely, a tensor $\tnr{P}\in\tnr{V}^{m}_\mathcal{R}$ is called \textsb{antisymmetric}\index{tensor!antisymmetric} or \textsb{alternating}\index{tensor!alternating} if tensor $\tnr{P}_\pi=\epsilon_{\fua{\pi}{1}\cdots \fua{\pi}{m}}\,\tnr{P}$ for any $\pi$. Since $\tnr{P}$ is antisymmetric, we can conclude that scalar $\fua{\tnr{P}}{\vto{x}_1,\cdots,\vto{x}_a,\cdots,\vto{x}_b,\cdots,\vto{x}_m}=0$ if $\vto{x}_a=\vto{x}_b$, where $\vto{x}_i\in V_\mathcal{R}$ and $a,b\in\{1,\cdots,m\}$. Thereby, the consequence is  
 \begin{equation}\label{eq:igAntis}
 \fua{\tnr{P}}{\vto{x}_{i_1},\cdots,\vto{x}_{i_m}}=\epsilon_{i_1\cdots i_m}\fua{\tnr{P}}{\vto{x}_1,\cdots,\vto{x}_m}\,.
 \end{equation}
@@ -208,29 +208,30 @@ from which we conclude $\tnr{P}=\alpha\tnr{H}$, that is, $\{\tnr{H}\}$ is a basi
 \end{proof}
 }
 
-Além dos tensores simétricos e antissimétricos, há um outro tensor notável que vai subsidiar conceitos muito relevantes para o nosso estudo, como os de isotropia e anti isotropia: refiro-me ao tensor identidade, definido a partir de espaços tensoriais de ordem par. Dizemos que \gloref{tensorI}$\,\in\ete{\mathcal{R}}{V^{\times p}\times V^{\times p}}$ é um \textsb{tensor identidade}\index{tensor!identidade} de ordem $2p$ se, dado    $B_i=\{\vto{v}_1^{(i)},\cdots,\vto{v}_{n_i}^{(i)}\}$ uma base qualquer de $(V_\mathcal{R})_i$, os escalares
-\begin{equation}
-\fua{\tnr{I}}{\vto{v}_{i_1}^{(1)},\cdots,\vto{v}_{i_p}^{(p)},\vto{v}_{j_1}^{(1)},\cdots,\vto{v}_{j_p}^{(p)}}=\prod_{k=1}^p \delta_{i_kj_k}\,.
-\end{equation}
-Dessa definição, considerando $\vto{x}_i$ e $\vto{y}_i$ vetores quaisquer de $(V_\mathcal{R})_i$, podemos desenvolver o escalar $\fua{\tnr{I}}{\vto{x}_1,\cdots,\vto{x}_p,\vto{y}_1,\cdots,\vto{y}_p}$ na forma
+Additionally to symmetric and antisymmetric, there is another notable tensor that will enable very important concepts for our study, like isotropy and anti-isotropy for example: I'm referring to the identity tensor, which is defined in tensor spaces of even order. We call \gloref{tensorI}$\,\in\ete{\mathcal{R}}{V^{\times p}\times V^{\times p}}$ an \textsb{identity tensor}\index{tensor!identity} of order $2p$ if, given  a basis $B_i=\{\vto{v}_1^{(i)},\cdots,\vto{v}_{n_i}^{(i)}\}$ of $(V_\mathcal{R})_i$, scalars       
+ \begin{equation}
+ \fua{\tnr{I}}{\vto{v}_{i_1}^{(1)},\cdots,\vto{v}_{i_p}^{(p)},\vto{v}_{j_1}^{(1)},\cdots,\vto{v}_{j_p}^{(p)}}=\prod_{k=1}^p \delta_{i_kj_k}\,.
+ \end{equation}
+From this definition, considering $\vto{x}_i$ and $\vto{y}_i$ arbitrary vectors of $(V_\mathcal{R})_i$, we can write scalar $\fua{\tnr{I}}{\vto{x}_1,\cdots,\vto{x}_p,\vto{y}_1,\cdots,\vto{y}_p}$ in the format 
 \begin{equation*}
 \sum_{{i_1,j_1}=1}^{n_1}\cdots\sum_{{i_p,j_p}=1}^{n_p}\fua{\vtf{f}^\con{B_1}_{i_1}}{\vto{x}_1}\fua{\vtf{f}^\con{B_1}_{j_1}}{\vto{y}_1}\cdots\fua{\vtf{f}^\con{B_p}_{i_p}}{\vto{x}_p}\fua{\vtf{f}^\con{B_p}_{j_p}}{\vto{y}_p}\prod_{k=1}^p \delta_{i_kj_k}\,,
 \end{equation*}
-de onde concluímos que 
+from which we conclude that 
 \begin{equation}\label{eq:identidade}
 \fua{\tnr{I}}{\vto{x}_1,\cdots,\vto{x}_p,\vto{y}_1,\cdots,\vto{y}_p}=\sum_{{i_1}=1}^{n_1}\cdots\sum_{{i_p}=1}^{n_p}\,\prod_{k=1}^p\fua{\vtf{f}^\con{B_k}_{i_k}}{\vto{x}_k}\fua{\vtf{f}^\con{B_k}_{i_k}}{\vto{y}_k}\,.
 \end{equation}
-Desse resultado, pode-se considerar 
+This result enables us to consider
 \begin{equation}
 \tnr{I}=\sum_{{i_1}=1}^{n_1}\cdots\sum_{{i_p}=1}^{n_p}\vtf{f}_{i_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{i_p}^{B_p}\otimes\vtf{f}_{i_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{i_p}^{B_p}
 \end{equation}
-como um exemplo de tensor identidade. Além disso, no âmbito de espaços tensoriais $\ete{\mathcal{R}}{V^2}$, onde $p=1$, definidos a partir de espaços Euclidianos, já sabemos que, se a base $B_1$ for ortonormal, a igualdade $\sum_{{i_1}=1}^{n_1}\fua{\vtf{f}^\con{B_1}_{i_1}}{\vto{x}_1}\fua{\vtf{f}^\con{B_1}_{i_1}}{\vto{y}_1}=\vto{x}_1\cdot\vto{y}_1$ é válida, ou seja, a expressão \eqref{eq:identidade} resulta $\fua{\tnr{I}}{\vto{x}_1,\vto{y}_1}=\vto{x}_1\cdot\vto{y}_1$ e 
+as an example of identity tensor. Moreover, in the context of tensor spaces $\ete{\mathcal{R}}{V^2}$, where $p=1$, defined by Euclidean spaces, we already know that, if basis $B_1$ is orthonormal, equality $\sum_{{i_1}=1}^{n_1}\fua{\vtf{f}^\con{B_1}_{i_1}}{\vto{x}_1}\fua{\vtf{f}^\con{B_1}_{i_1}}{\vto{y}_1}=\vto{x}_1\cdot\vto{y}_1$ is valid, that is, expression \eqref{eq:identidade} results $\fua{\tnr{I}}{\vto{x}_1,\vto{y}_1}=\vto{x}_1\cdot\vto{y}_1$ and  
 \begin{equation}
 \tnr{I}=\sum_{{i_1}=1}^{n_1}\vun{v}_{i_1}\otimes\vun{v}_{i_1}=\sum_{{i_1}=1}^{n_1}\sum_{{j_1}=1}^{n_1}\delta_{i_1j_1}\vun{v}_{i_1}\otimes\vun{v}_{j_1}
 \end{equation}
-é um exemplo de tensor identidade de segunda ordem. Da última expressão dessas igualdades, tem-se que as coordenadas de $\tnr{I}$ podem ser arranjadas numa matriz identidade.
+is an example of identity tensor of second order. From the last expression of these equalities, the coordinates of $\tnr{I}$ can be arranged in an identity matrix.  
 
-\section{Funções Tensoriais}
+
+\section{Tensor Functions}
 
 
 \begin{comment}
