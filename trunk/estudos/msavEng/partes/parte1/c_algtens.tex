@@ -233,14 +233,18 @@ is an example of identity tensor of second order. From the last expression of th
 
 \section{Tensor Functions}
 
-In simple terms, a tensor function establishes a functional relationship between tensors of any order. Because of this definition, in the context of Hilbert spaces, such functions are of the most general type: as presented in the previous section, tensors of order zero are scalars by definition and tensors of first order are covectors, which are biunivocaly related to vectors, according to the Riesz-Fréchet Representation. This generality of tensor functions relating tensors in Hilbert spaces is very important for our study and that is why we shall be dealing mostly with these spaces hereafter. In this context, it is always possible to relate a tensor and a linear tensor function, which is a fundamental feature to enable uniqueness and existence of the specific linear tensor functions to be presented in this section. The following classic theorem of Multilinear Algebra describes such relationship in a wider sense by establishing a one to one correspondence between a multilinear function and a linear tensor function.
+For the purposes of our study, a tensor function establishes a functional relationship between tensors of any order. Because of this definition, in the context of Hilbert spaces, such functions are of the most general type: as presented in the previous section, tensors of order zero are scalars by definition and tensors of first order are covectors, which are biunivocaly related to vectors, according to the Riesz-Fréchet Representation Theorem. In the context of Hilbert spaces, this generality of tensor functions is particularly  important for us and that is why we shall be dealing mostly with these spaces hereafter. So, considering Hilbert spaces, it is always possible to relate a tensor and a linear tensor function, which is a fundamental feature to enable uniqueness and existence of the specific linear tensor functions to be presented in this section. The following theorem\footnote{As presented by \aut{Bakcus}\cite{backus_1997_1} after adapting and generalizing a property from  \aut{Marcus}\cite{marcus_1973_1}, p.14.}, borrowed from the realm of Multilinear Algebra, describes such feature in a wider sense by establishing a one to one correspondence between a multilinear function and a linear tensor function. From this biunivocal relationship, the multilinear function is usually said to be ``lifted'' to a tensor function. More specifically, when the images involved are constituted by scalars, we have a tensor, instead of a generic multilinear function, being lifted to a tensor function.
 
-\begin{mteo}{Lifting}{lift}
-Given the function spaces $\evl{\mathcal{R}}{U^{\times m}}{V}$ and $\evl{\mathcal{R}}{\ete{\mathcal{R}}{U^{\times m}}}{V}$, for every linear function $\vtf{g}\in$
-
- and a basis $B_i=\{\vto{u}_1^{(i)},\cdots,\vto{u}_{n_i}^{(i)}\}$ of each constituent vector space $(U_i)_\mathcal{R}$, $i=1,\cdots,m\,$, the set $B$ of all polyadic tensors $\vtf{f}_{j_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{j_m}^{B_m}$, $j_i=1,\cdots,n_i\,$, is a basis of $\ete{\mathcal{R}}{U^{\times m}}$. 
+\begin{mteo}{Lifting of Multilinear Functions}{lift}
+Considering the function spaces $\evl{\mathcal{R}}{U^{\times m}}{V}$ and $\evl{\mathcal{R}}{\ete{\mathcal{R}}{U^{\times m}}}{V}$, for every multilinear function $\vtf{g}\in\evl{\mathcal{R}}{U^{\times m}}{V}$ there is one and only one 
+linear tensor function $\vtf{g}^\otimes\in\evl{\mathcal{R}}{\ete{\mathcal{R}}{U^{\times m}}}{V}$ such that $\fua{\vtf{g}}{\vto{x}_1,\cdots,\vto{x}_m}=\fua{\vtf{g}^\otimes}{\vto{x}_1\otimes\cdots\otimes\vto{x}_m}$ for all $\vto{x}_i\in U_i$.
 \end{mteo}
 
+{\footnotesize
+\begin{proof}
+The following proof is adapted from \aut{Bakcus}\cite{backus_1997_1}, pp. 43-45. 
+\end{proof}
+}
 
 
 \subsection{Elevação}\index{Elevação}
