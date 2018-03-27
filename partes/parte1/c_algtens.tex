@@ -33,7 +33,7 @@ Ricci's Tensor Calculus was presented by the hungarian mathematician Marcel Gros
 \section{Tensor Spaces}
 
 
-Let's recall vector spaces of functions that have a tuple of vectors as argument, that is, functions whose domain is a cartesian product of many sets, each one defining a vector space. Among these function spaces, we have a particular interest in those constituted by multilinear functions, on the conditions presented in section \ref{sec:FuncLin}. In order to proceed with the theory, based on what was already studied, we chose to adopt an approach that considers tensor spaces as vector spaces of multilinear functionals, called tensors. In more mathematical terms, given a cartesian product $U^{\times m}$ where each set $U_i$ defines a vector space $(U_i)_\mathcal{R}$, a function space $\evl{\mathcal{R}}{U^{\times m}}{\mathcal{R}}$, constituted by multilinear functionals, is said to be a \textsb{tensor space}\index{space!tensor} of \textsb{order}\index{order!of tensor space} $m$, whose representation is here shortened by \gloref{espacoTens}, and each functional $\vtf{t}\in\ete{\mathcal{R}}{U^{\times m}}$ is said to be a \textsb{tensor}\index{tensor} of \textsb{order}\index{order!tensor} $m$, represented by \gloref{tensor}. In the particular case of $m=1$, a tensor space is considered to be a dual space, that is, $\ete{\mathcal{R}}{U}=U^*_\mathcal{R}$, where a tensor is a linear functional. Moreover, it is possible to build particular tensor spaces from catersian powers together with dual spaces: a tensor space $\ete{\mathcal{R}}{V^{p}\times {V^*}^{q}}$, represented by \gloref{espacoTensTipo}, where $V^*_\mathcal{R}$ is the dual space of $V_\mathcal{R}$, is said to have a \textsb{contravariant order}\index{order!contravariant} $p$ and a \textsb{covariant order}\index{order!covariant} $q$ or we can call it a type $(p,q)$ tensor space.   
+Let's recall vector spaces of functions that have a tuple of vectors as argument, that is, functions whose domain is a cartesian product of many sets, each one defining a vector space. Among these function spaces, we have a particular interest in those constituted by multilinear functions, on the conditions presented in section \ref{sec:FuncLin}. In order to proceed with the theory, based on the framework already studied, we chose to adopt an approach that takes tensor spaces as vector spaces of multilinear functionals, called tensors. In more mathematical terms, given a cartesian product $U^{\times m}$ where each set $U_i$ defines a vector space $(U_i)_\mathcal{R}$, a function space $\evl{\mathcal{R}}{U^{\times m}}{\mathcal{R}}$, constituted by multilinear functionals, is said to be a \textsb{tensor space}\index{space!tensor} of \textsb{order}\index{order!of tensor space} $m$, whose representation is here shortened by \gloref{espacoTens}, and each functional $\vtf{t}\in\ete{\mathcal{R}}{U^{\times m}}$ is said to be a \textsb{tensor}\index{tensor} of \textsb{order}\index{order!tensor} $m$, represented by \gloref{tensor}. In the particular case of $m=1$, a tensor space is considered to be a dual space, that is, $\ete{\mathcal{R}}{U}=U^*_\mathcal{R}$, where a tensor is a linear functional. Moreover, it is possible to build particular tensor spaces from catersian powers together with dual spaces: a tensor space $\ete{\mathcal{R}}{V^{p}\times {V^*}^{q}}$, represented by \gloref{espacoTensTipo}, where $V^*_\mathcal{R}$ is the dual space of $V_\mathcal{R}$, is said to have a \textsb{contravariant order}\index{order!contravariant} $p$ and a \textsb{covariant order}\index{order!covariant} $q$ or we can call it a type $(p,q)$ tensor space.   
 
 A tensor can be defined from the dual spaces of its constituent vector spaces, that is, a linear functional in each vector space $(U_i^*)_\mathcal{R}$ defines a multilinear functional (tensor) in $\ete{\mathcal{R}}{U^{\times m}}$. Let's see how this happens. The tuple $(\vtf{g}_1,\cdots,\vtf{g}_m)$, which is an element of cartesian product $(U^*)^{\times m}=U^*_1\times\cdots\times U^*_m$, specifies a tensor in $\ete{\mathcal{R}}{U^{\times m}}$ when the following rule is defined: 
 \begin{equation}
@@ -233,86 +233,67 @@ is an example of identity tensor of second order. From the last expression of th
 
 \section{Tensor Functions}
 
-For the purposes of our study, a tensor function establishes a functional relationship between tensors of any order. Because of this definition, in the context of Hilbert spaces, such functions are of the most general type: as presented in the previous section, tensors of order zero are scalars by definition and tensors of first order are covectors, which are biunivocaly related to vectors, according to the Riesz-Fréchet Representation Theorem. In the context of Hilbert spaces, this generality of tensor functions is particularly  important for us and that is why we shall be dealing mostly with these spaces hereafter. So, considering Hilbert spaces, it is always possible to relate a tensor and a linear tensor function, which is a fundamental feature to enable uniqueness and existence of the specific linear tensor functions to be presented in this section. The following theorem\footnote{As presented by \aut{Bakcus}\cite{backus_1997_1} after adapting and generalizing a property from  \aut{Marcus}\cite{marcus_1973_1}, p.14.}, borrowed from the realm of Multilinear Algebra, describes such feature in a wider sense by establishing a one to one correspondence between a multilinear function and a linear tensor function. From this biunivocal relationship, the multilinear function is usually said to be ``lifted'' to a tensor function. More specifically, when the images involved are constituted by scalars, we have a tensor, instead of a generic multilinear function, being lifted to a tensor function.
+For the purposes of our study, a tensor function establishes a functional relationship between tensors of any order. Because of this definition, in the context of Hilbert spaces, such functions are of the most general type: as presented in the previous section, tensors of order zero are scalars by definition and tensors of first order are covectors, which are biunivocaly related to vectors, according to the Riesz-Fréchet Representation Theorem. In the context of Hilbert spaces, this generality of tensor functions is particularly  important for us and that is why we shall be dealing mostly with these spaces hereafter. So, considering Hilbert spaces, it is always possible to relate a tensor and a linear tensor function, which is a fundamental feature to enable uniqueness and existence of the specific linear tensor functions to be presented in this section. The following theorem\footnote{As presented by \aut{Backus}\cite{backus_1997_1} after adapting and generalizing a property from  \aut{Marcus}\cite{marcus_1973_1}, p.14.}, borrowed from the realm of Multilinear Algebra, describes such feature in a wider sense by establishing a one to one correspondence between a multilinear function and a linear tensor function. From this biunivocal relationship, the multilinear function is usually said to be ``lifted'' to a tensor function. More specifically, when the images involved are constituted by scalars, we have a tensor, instead of a generic multilinear function, being lifted to a tensor function.
 
 \begin{mteo}{Lifting of Multilinear Functions}{lift}
-Considering the function spaces $\evl{\mathcal{R}}{U^{\times m}}{V}$ and $\evl{\mathcal{R}}{\ete{\mathcal{R}}{U^{\times m}}}{V}$, for every multilinear function $\vtf{g}\in\evl{\mathcal{R}}{U^{\times m}}{V}$ there is one and only one 
+Considering the function spaces $\evl{\mathcal{R}}{U^{\times m}}{V}$ and $\evl{\mathcal{R}}{\ete{\mathcal{R}}{U^{\times m}}}{V}$, where sets $U_i$ define Hilbert spaces and $V$ define a vector space, for every function $\vtf{g}\in\evl{\mathcal{R}}{U^{\times m}}{V}$ there is one and only one 
 linear tensor function $\vtf{g}^\otimes\in\evl{\mathcal{R}}{\ete{\mathcal{R}}{U^{\times m}}}{V}$ such that $\fua{\vtf{g}}{\vto{x}_1,\cdots,\vto{x}_m}=\fua{\vtf{g}^\otimes}{\vto{x}_1\otimes\cdots\otimes\vto{x}_m}$ for all $\vto{x}_i\in U_i$.
 \end{mteo}
 
 {\footnotesize
 \begin{proof}
-The following proof is adapted from \aut{Bakcus}\cite{backus_1997_1}, pp. 43-45. 
+The following proof is adapted from \aut{Backus}\cite{backus_1997_1}, pp. 43-45. According to definition \eqref{eq:poliadicoHilbert}, let $\tnr{T}\in\ete{\mathcal{R}}{U^{\times m}}$ be an arbitrary tensor described by 
+\begin{equation}
+\tnr{T}=\sum_{i_1=1}^{n_1}\cdots\sum_{i_p=1}^{n_m}\fua{\vtf{f}_{i_1\cdots
+i_p}^{B}}{\tnr{T}}\vto{u}_{i_1}^{(1)}\otimes\cdots\otimes\vto{u}_{i_m}^{(m)}\,,
+\nonumber
+\end{equation}
+where $B$ is a basis of $\ete{\mathcal{R}}{U^{\times m}}$ defined by arbitrary bases  $\con{B}_i=\{\vto{u}_{1}^{(i)},\cdots,\vto{u}_{n_i}^{(i)}\}$ of $U_i$. If we define that $\fua{\vtf{g}^\otimes}{\vto{u}_{i_1}^{(1)}\otimes\cdots\otimes\vto{u}_{i_m}^{(m)}}=\fua{\vtf{g}}{\vto{u}_{i_1}^{(1)},\cdots,\vto{u}_{i_m}^{(m)}}$, since $\tnr{T}$ and $\vtf{g}$ and $\con{B}_i$ exist, the development
+\begin{eqnarray}
+\fua{\vtf{g}^\otimes}{\tnr{T}}&=&\sum_{i_1=1}^{n_1}\cdots\sum_{i_m=1}^{n_m}\fua{\vtf{f}_{i_1\cdots
+i_m}^{B}}{\tnr{T}}\fua{\vtf{g}^\otimes}{\vto{u}_{i_1}^{(1)}\otimes\cdots\otimes\vto{u}_{i_m}^{(m)}}\nonumber\\
+&=&\sum_{i_1=1}^{n_1}\cdots\sum_{i_m=1}^{n_m}\fua{\vtf{f}_{i_1\cdots
+i_m}^{B}}{\tnr{T}}\fua{\vtf{g}}{\vto{u}_{i_1}^{(1)},\cdots,\vto{u}_{i_m}^{(m)}}\nonumber
+\end{eqnarray}
+shows that $\vtf{g}^\otimes$ also exists and it is uniquely determined by $\vtf{g}$ because $\tnr{T}$ and $B_i$ are arbitrary. Therefore, our previous definition relating the functions in question results valid and if we consider $\tnr{T}=\vto{x}_1\otimes\cdots\otimes\vto{x}_m$, through the rule \eqref{eq:regraCoordTens}, development can proceed as follows:
+\begin{eqnarray}
+\fua{\vtf{g}^\otimes}{\vto{x}_1\otimes\cdots\otimes\vto{x}_m}&=&\sum_{i_1=1}^{n_1}\cdots\sum_{i_m=1}^{n_m}\fua{\vtf{f}_{i_1\cdots
+i_m}^{B}}{\tnr{T}}\fua{\vtf{g}}{\vto{u}_{i_1}^{(1)},\cdots,\vto{u}_{i_m}^{(m)}}\nonumber\\
+&=&
+\sum_{i_1=1}^{n_1}\cdots\sum_{i_m=1}^{n_m}\fua{\tnr{T}}{\vto{u}_{i_1}^{(1)},\cdots,\vto{u}_{i_m}^{(m)}}\fua{\vtf{g}}{\vto{u}_{i_1}^{(1)},\cdots,\vto{u}_{i_m}^{(m)}}\nonumber\\
+&=&
+\sum_{i_1=1}^{n_1}\cdots\sum_{i_m=1}^{n_m}\prod_{k=1}^m \fua{\vtf{f}_{i_k}^{\con{U}_k}}{\vto{x}_k}\fua{\vtf{g}}{\vto{u}_{i_1}^{(1)},\cdots,\vto{u}_{i_m}^{(m)}}\nonumber\\
+&=&
+\fua{\vtf{g}}{\sum_{i_1=1}^{n_1}\fua{\vtf{f}_{i_1}^{\con{U}_1}}{\vto{x}_1}
+	\vto{u}_{i_1}^{(1)},\cdots,\sum_{i_m=1}^{n_m}\fua{\vtf{f}_{i_m}^{\con{U}_m}}{\vto{x}_m}\vto{u}_{i_m}^{(m)}}\nonumber\nonumber\\
+&=& \fua{\vtf{g}}{\vto{x}_1,\cdots,\vto{x}_m}\,,\nonumber
+\end{eqnarray}
+which proves the generic equality of the theorem.
 \end{proof}
 }
 
-
-\subsection{Elevação}\index{Elevação}
-A uma função multilinear qualquer $\vtf{g}$, cujos argumentos são
-vetores, é sempre possível associar uma função linear
-$\vtf{g}^\otimes$ que tem um tensor como argumento. Diz-se que
-$\vtf{g}$ é ``elevada'' à $\vtf{g}^\otimes$. Esta
-elevação\rodape{O termo em inglês é ``lifting''.} estabelece uma
-conveniente e importante relação, descrita no teorema a seguir,
-entre uma seqüência qualquer de vetores e um tensor. Fica
-implícito que este teorema fundamenta questões de existência e
-unicidade para os diversos tipos de funções tensoriais lineares a
-serem apresentados nas seções subseqüentes.
-
-\begin{teo}[Elevação]\index{Elevação!Teorema da}\label{teo:Lifting}
-	Sejam os espaços de Hilbert
-	$\ehr{V_1}{\con{F}},\cdots,\ehr{V_p}{\con{F}}$ e o espaço vetorial
-	$\evt{W}{\con{F}}$. Seja o espaço vetorial
-	$\evl{\crt{V}{p}}{W}{\con{F}}$ de funções multilineares que mapeiam uma tupla ordenada de vetores para um vetor de $\con{W}$ e
-	$\evl{\cft{\crt{V}{p}}{\con{F}}}{W}{\con{F}}$ o espaço vetorial
-	das funções lineares que mapeiam um tensor para um vetor de
-	$\con{W}$. Dada uma função qualquer
-	$\vtf{g}\in\cfl{\crt{V}{p}}{W}$ e uma tupla qualquer
-	$(\vto{v}_1,\cdots,\vto{v}_p)\in\crt{V}{p}$, existe uma única
-	função $\vtf{g}^\otimes\in\cfl{\cft{\crt{V}{p}}{\con{F}}}{W}$,
-	chamada função elevada de $\vtf{g}$, onde o vetor
-	\begin{equation}
-	\fua{\vtf{g}}{\vto{v}_1,\cdots,\vto{v}_p}=\fua{\vtf{g}^\otimes}{\vto{v}_1\otimes\cdots\otimes\vto{v}_p}.\nonumber
-	\end{equation}
-\end{teo}
-\begin{prova}\rodape{Adaptada de \aut{Backus}\cite{backus_1997_1}, pp. 43-45.}
-	Seja um tensor qualquer $\tnr{T}\in\cft{\crt{V}{p}}{\con{F}}$ e
-	sua decomposição
-	\begin{equation}
-	\tnr{T}=\sum_{i_1=1}^{n_1}\cdots\sum_{i_p=1}^{n_p}\fua{\vtf{f}_{i_1\cdots
-			i_p}^{\con{T}^{\otimes}_{\crt{V}{p}}}}{\tnr{T}}{\vto{u}_{i_1}}^{(1)}\otimes\cdots\otimes{\vto{u}_{i_p}}^{(p)}\,,
-	\nonumber
-	\end{equation}
-	onde se considera
-	$\con{U}_i=\{{\vto{u}_{1}}^{(i)},\cdots,{\vto{u}_{n_i}}^{(i)}\}$
-	uma base de $\ehr{V_i}{\con{F}}$. A partir da igualdade deste
-	teorema, pode-se dizer que
-	\begin{eqnarray}
-	\fua{\vtf{g}^\otimes}{\tnr{T}}&=&\sum_{i_1=1}^{n_1}\cdots\sum_{i_p=1}^{n_p}\fua{\vtf{f}_{i_1\cdots
-			i_p}^{\con{T}^{\otimes}_{\crt{V}{p}}}}{\tnr{T}}\fua{\vtf{g}^\otimes}{{\vto{u}_{i_1}}^{(1)}\otimes\cdots\otimes{\vto{u}_{i_p}}^{(p)}}\nonumber\\
-	&=&\sum_{i_1=1}^{n_1}\cdots\sum_{i_p=1}^{n_p}\underbrace{\fua{\vtf{f}_{i_1\cdots
-				i_p}^{\con{T}^{\otimes}_{\crt{V}{p}}}}{\tnr{T}}}\underbrace{\fua{\vtf{g}}{{\vto{u}_{i_1}}^{(1)},\cdots,{\vto{u}_{i_p}}^{(p)}}}\,.\nonumber
-	\end{eqnarray}
-	Os termos destacados são unicamente determinados para qualquer
-	tensor $\tnr{T}$, logo $\vtf{g}^\otimes$ existe e fica unicamente
-	determinado. A fim de constatar a igualdade do teorema, seja
-	\begin{equation}
-	\tnr{T}=\vto{v}_1\otimes\cdots\otimes\vto{v}_p\,.\nonumber
-	\end{equation}
-	Do resultado do desenvolvimento anterior, considerando as propriedades de funções multilineares e a
-	proposição \ref{prp:produtorioFuncionais}, tem-se que
-	\begin{eqnarray}
-	\fua{\vtf{g}^\otimes}{\vto{v}_1\otimes\cdots\otimes\vto{v}_p}&=&\sum_{i_1=1}^{n_1}\cdots\sum_{i_p=1}^{n_p}
-	\prod_{k=1}^p \fua{\vtf{f}_{i_k}^{\con{U}_k}}{\vto{v}_k}
-	\fua{\vtf{g}}{{\vto{u}_{i_1}}^{(1)},\cdots,{\vto{u}_{i_p}}^{(p)}}\nonumber\\
-	&=&
-	\fua{\vtf{g}}{\sum_{i_1=1}^{n_1}\fua{\vtf{f}_{i_1}^{\con{U}_1}}{\vto{v}_1}
-		{\vto{u}_{i_1}}^{(1)},\cdots,\sum_{i_p=1}^{n_p}\fua{\vtf{f}_{i_p}^{\con{U}_p}}{\vto{v}_p}{\vto{u}_{i_p}}^{(p)}}\nonumber\nonumber\\
-	&=& \fua{\vtf{g}}{\vto{v}_1,\cdots,\vto{v}_p}\,.\nonumber
-	\end{eqnarray}
-\end{prova}
-
-
+\subsection{Contração}\index{contração}
+Seja um espaço tensorial $\ete{\con{V}_{(p)}}{\con{F}}$, onde
+$\con{V}_{(p)}:=\crt{V}{p}$, e o conjunto $\con{V}_{(p-n)}$,
+formado a partir da retirada de $n$ conjuntos quaisquer de
+$\con{V}_{(p)}$. Considerando o espaço tensorial
+$\ete{\con{V}_{(p-n)}}{\con{F}}$ e o espaço vetorial
+$\evl{\con{V}_{(p)}}{\cft{\con{V}_{(p-n)}}{\con{F}}}{\con{F}}$, a
+função elevada de
+$\vtf{c}_n\in\cfl{\con{V}_{(p)}}{\cft{\con{V}_{(p-n)}}{\con{F}}}$,
+representada $\vtf{c}_n^{\otimes}$, é uma função tensorial linear
+denominada contração de ordem $n$. A partir do teorema
+\ref{teo:Lifting}, dado um tensor qualquer
+$\tnr{T}\in\cft{\con{V}_{(p)}}{\con{F}}$ com decomposição
+\begin{equation}\label{eq:decomposicaoTensor}
+\tnr{T}=\sum_{k=1}^m\vto{v}_{1k}\otimes\cdots\otimes\vto{v}_{pk}\,,\,
+m\geq 1,
+\end{equation}
+tem-se que o tensor
+\begin{equation}\label{eq:elevadaTensor}
+\fua{\vtf{c}_n^\otimes}{\tnr{T}}=\sum_{k=1}^m\fua{\vtf{c}_n}{\vto{v}_{1k},\cdots,\vto{v}_{pk}}
+\end{equation}
+e sua ordem é $p-n$.
 
  
 
