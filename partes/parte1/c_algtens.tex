@@ -107,6 +107,7 @@ enable to define the following rule for coordinate functionals on basis $B$:
 \begin{equation}\label{eq:regraCoordTens}
 \vtf{f}_{j_1\cdots j_m}^{B}(\tnr{X})= \fua{\tnr{X}}{\vto{u}_{j_1}^{(1)},\cdots,\vto{u}_{j_m}^{(m)}}\,.
 \end{equation}
+
 In type $(p,q)$ tensor spaces, the coordinates of a tensor $\tnr{V}\in\ete{\mathcal{R}}{V^{(p,q)}}$ are defined by scalars usually represented by 
 \begin{equation}
 (\vtf{f}^{Z})^{j_1\cdots j_p}_{k_1\cdots k_q}(\tnr{V}),\,\, j_i,k_l=1,\cdots,n\,,
@@ -116,10 +117,14 @@ where $Z$ is a basis of $\ete{\mathcal{R}}{V^{(p,q)}}$, $i=1,\cdots,p$ and $l=1,
 (\vtf{f}^{Z})^{j_1\cdots j_p}_{k_1\cdots k_q}(\tnr{X})=\fua{\tnr{X}}{\vto{w}_{j_1},\cdots,\vto{w}_{j_p},\vtf{f}_{k_1}^{W},\cdots,\vtf{f}_{k_q}^{W}}\,,
 \end{equation}
 where bases  $W^*=\{\vtf{f}_{1}^{W},\cdots,\vtf{f}_{n}^{W}\}$ of $V_\mathcal{R}^*$ and $W^{**}=\{\vtf{f}_{1}^{W^*},\cdots,\vtf{f}_{n}^{W^*}\}$ of $V_\mathcal{R}^{**}$ define basis $Z$, in such a way that its elements have the format
-\begin{equation*}
+\begin{equation}
 \vtf{f}_{j_1}^{W}\otimes\cdots\otimes\vtf{f}_{j_p}^{W}\otimes\vtf{f}_{k_1}^{W^*}\otimes\cdots\otimes\vtf{f}_{k_q}^{W^*}\,,
-\end{equation*} 
-according to theorem \ref{teo:geraEte}.
+\end{equation} 
+according to theorem \ref{teo:geraEte}. In the context of Hilbert spaces, from the schematic figure \ref{fg:espacoDual}, we can affirm that $\vtf{f}_{j_i}^{W}=(\vto{w}^{j_i})^*$ and $\vtf{f}_{k_i}^{W^*}=(\vtf{f}^{W})^{k_i}=\vtf{f}_{k_i}^{W^\perp}=\vto{w}_{k_i}^*$. Thereby, the elements of $Z$ in this case have the classic format
+\begin{equation}
+(\vto{w}^{j_1})^*\otimes\cdots\otimes(\vto{w}^{j_p})^*\otimes\vto{w}_{k_1}^*\otimes\cdots\otimes\vto{w}_{k_q}^*\,.
+\end{equation} 
+
 
 Since we just learned the rule to obtain the coordinates of a tensor on a certain basis, let's see how these coordinates behave when there is a change of basis. In the context of theorem \ref{teo:geraEte}, let $C_i=\{\vto{v}_1^{(i)},\cdots,\vto{v}_{n_i}^{(i)}\}$ be a basis of each vector space $(U_i)_\mathcal{R}$ and $\maf{\vtf{i}}{C_i}{B_i}$ a matrix that changes basis $B_i$ to basis $C_i$. From the rule \eqref{eq:regraCoordTens}, given a tensor 
 $\tnr{T}\in\ete{\mathcal{R}}{U^{\times m}}$, we can develop the following:
@@ -131,14 +136,16 @@ $\tnr{T}\in\ete{\mathcal{R}}{U^{\times m}}$, we can develop the following:
 \end{align}
 from which the last equality describes a change of coordinates of tensor $\tnr{T}$ from basis $B$ to basis $C$. Through this same process, it is possible to change the coordinates of a type $(p,q)$ tensor.  
 
-
+\begin{comment}
 Considering a tensor space $\ete{\mathcal{R}}{U^{\times m}}$, if its definer vector spaces $(U_i)_\mathcal{R}$ are Hilbert spaces, we can lay hands on the biunivocal relationship between elements $\vtf{f}_{j_i}^{B_i}$ of each dual basis $B_i^*$ and elements $(\vto{u}^{(i)})^{j_i}$ of each reciprocal basis $B^\perp_{i}$, as a consequence of Riesz-Fréchet Representation. Thereby, the polyadic tensors of basis $B$ are represented by 
 \begin{equation}\label{eq:poliadicoHilbert}
 \vto{u}^{(1)}_{j_1}\otimes\cdots\otimes\vto{u}^{(m)}_{j_m}:=((\vto{u}^{(1)})^{j_1})^*\otimes\cdots\otimes((\vto{u}^{(m)})^{j_m})^*
 \end{equation}
 in order to simplify notation. If the constituent bases $B_i$ are orthonormal, then $B_i=B_i^\perp$ and  $((\vto{u}^{(i)})^{j_i})^*=(\vto{u}^{(i)}_{j_i})^*$ in the above definition. 
+\end{comment}
 
-Still considering Hilbert spaces, if a tensor space has a unitary order, its tensors are covectors, that is, given an arbitrary vector $\vto{u}\in U_\mathcal{R}$, its covector $\vto{u}^*$ is a tensor of first order (linear functional), or $\vto{u}^*\in \ete{\mathcal{R}}{U}$. In other words, \emph{concerning tensor spaces defined by Hilbert spaces, covectors are tensors of unitary order. Moreover, in order to enable generalizations, scalars are defined to be tensors of order zero}. Now, given a tensor space $\ete{\real}{E^m}$, where $E_\real$ is a three-dimensional Euclidean space, let $\hat{B}$ be a basis whose $3^m$ elements have the format $\vun{e}_{j_1}\otimes\cdots\otimes\vun{e}_{j_m}$, $j_i=1,2,3$, according to definition \eqref{eq:poliadicoHilbert}. In these conditions, we call \textsb{cartesian tensor}\index{tensor!cartesian} any linear combination of the elements of basis $\hat{B}$. 
+
+In the context of Hilbert spaces, if a tensor space has a unitary order, its tensors are covectors, that is, given an arbitrary vector $\vto{u}\in U_\mathcal{R}$, its covector $\vto{u}^*$ is a tensor of first order (linear functional), or $\vto{u}^*\in \ete{\mathcal{R}}{U}$. In other words, \emph{concerning tensor spaces defined by Hilbert spaces, covectors are tensors of unitary order}\footnote{Since scalar values are vectors, as we have seen in the previous chapter, their covectors are linear functionals or first order tensors, not tensors of order zero, as some simplistic approaches assume.}. Now, given a tensor space $\ete{\real}{E^m}$, where $E_\real$ is a three-dimensional Euclidean space, let $\hat{B}$ be a basis whose $3^m$ elements have the format $\vun{e}_{j_1}^*\otimes\cdots\otimes\vun{e}_{j_m}^*$, $j_i=1,2,3$. Thereby, we call \textsb{cartesian tensor}\index{tensor!cartesian} any linear combination of the elements of $\hat{B}$. 
 
 The tensors of space $\ete{\mathcal{R}}{V^{m}}$, $m>1$, can have the positions of their arguments interchanged, that is, given a tensor of $\ete{\mathcal{R}}{V^{2}}$, for example, arguments in $(\vto{x},\vto{y})$ can be changed to $(\vto{y},\vto{x})$, where $\vto{x},\vto{y}\in V_\mathcal{R}$. In this context, we say that a tensor $\tnr{T}_1$ is a permutation of tensor $\tnr{T}_2$ if $\fua{\tnr{T}_1}{\vto{x},\vto{y}}=\fua{\tnr{T}_2}{\vto{y},\vto{x}}$. In general terms, given a bijective mapping $\map{\pi}{\{ 1,\cdots,n \}}{\{1,\cdots,n \}}$, where the sets involved are constituted by ordinals, and a function $\pi$ called permutation of order $m$, in definition
 \begin{equation}\label{eq:permutacaoTensor}
@@ -233,42 +240,43 @@ is an example of identity tensor of second order. From the last expression of th
 
 \section{Tensor Functions}
 
-For the purposes of our study, a tensor function establishes a functional relationship between tensors of any order. Because of this definition, in the context of Hilbert spaces, such functions are of the most general type: as presented in the previous section, tensors of order zero are scalars by definition and tensors of first order are covectors, which are biunivocaly related to vectors, according to the Riesz-Fréchet Representation Theorem. In the context of Hilbert spaces, this generality of tensor functions is particularly  important for us and that is why we shall be dealing mostly with these spaces hereafter. So, considering Hilbert spaces, it is always possible to relate a tensor and a linear tensor function, which is a fundamental feature to enable uniqueness and existence of the specific linear tensor functions to be presented in this section. The following theorem\footnote{As presented by \aut{Backus}\cite{backus_1997_1} after adapting and generalizing a property from  \aut{Marcus}\cite{marcus_1973_1}, p.14.}, borrowed from the realm of Multilinear Algebra, describes such feature in a wider sense by establishing a one to one correspondence between a multilinear function and a linear tensor function. From this biunivocal relationship, the multilinear function is usually said to be ``lifted'' to a tensor function. More specifically, when the images involved are constituted by scalars, we have a tensor, instead of a generic multilinear function, being lifted to a tensor function.
+For the purposes of our study, a tensor function establishes a functional relationship between tensors of any order. Because of this definition such functions in Hilbert spaces are of the most general type: as presented in the previous section, tensors of order zero are scalars by definition and tensors of first order are covectors, which are biunivocaly related to vectors, according to the Riesz-Fréchet Representation Theorem. In the context of Hilbert spaces, this generality of tensor functions is particularly  important for us and that is why we shall be dealing mostly with these spaces hereafter, betaking all their particularities. Therefore, considering these spaces, it is always possible to relate a tensor and a linear tensor function, which is a fundamental feature to enable uniqueness and existence of the specific linear tensor functions to be presented in this section. The following theorem\footnote{Adapted from \aut{Backus}\cite{backus_1997_1} after generalizing a property from  \aut{Marcus}\cite{marcus_1973_1}, p.14.}, borrowed from the realm of Multilinear Algebra, describes such feature by establishing a one to one correspondence between a tensor and a linear tensor function. From this biunivocal relationship, the tensor is usually said to be ``lifted'' to a tensor function. 
 
-\begin{mteo}{Lifting of Multilinear Functions}{lift}
-Considering the function spaces $\evl{\mathcal{R}}{U^{\times m}}{V}$ and $\evl{\mathcal{R}}{\ete{\mathcal{R}}{U^{\times m}}}{V}$, where sets $U_i$ define Hilbert spaces and $V$ define a vector space, for every function $\vtf{g}\in\evl{\mathcal{R}}{U^{\times m}}{V}$ there is one and only one 
-linear tensor function $\vtf{g}^\otimes\in\evl{\mathcal{R}}{\ete{\mathcal{R}}{U^{\times m}}}{V}$ such that $\fua{\vtf{g}}{\vto{x}_1,\cdots,\vto{x}_m}=\fua{\vtf{g}^\otimes}{\vto{x}_1\otimes\cdots\otimes\vto{x}_m}$ for all $\vto{x}_i\in U_i$.
+\begin{mteo}{Lifting of Tensors}{lift}
+Considering the tensor space $\ete{\mathcal{R}}{U^{\times m}}$ and the function space $\evl{\mathcal{R}}{\ete{\mathcal{R}}{U^{\times m}}}{\mathcal{R}}$, where sets $U_i$ define Hilbert spaces, for every tensor $\tnr{T}\in\ete{\mathcal{R}}{U^{\times m}}$ there is one and only one linear tensor function $\vtf{t}^\otimes\in\evl{\mathcal{R}}{\ete{\mathcal{R}}{U^{\times m}}}{\mathcal{R}}$ such that 
+\begin{equation*}
+\fua{\vtf{t}^\otimes}{\vto{x}_1^*\otimes\cdots\otimes\vto{x}_m^*}=\overline{\fua{\tnr{T}}{\vto{x}_1,\cdots,\vto{x}_m}}\,,\,\,\forall\,\vto{x}_i\in U_i.
+\end{equation*}
 \end{mteo}
-
+\hspace{1pt}
 {\footnotesize
 \begin{proof}
-The following proof is adapted from \aut{Backus}\cite{backus_1997_1}, pp. 43-45. According to definition \eqref{eq:poliadicoHilbert}, let $\tnr{T}\in\ete{\mathcal{R}}{U^{\times m}}$ be an arbitrary tensor described by 
+The following proof is adapted from \aut{Backus}\cite{backus_1997_1}, pp. 43-45. According to theorem \ref{teo:geraEte}, let $\tnr{X}\in\ete{\mathcal{R}}{U^{\times m}}$ be an arbitrary tensor described by 
 \begin{equation}
-\tnr{T}=\sum_{i_1=1}^{n_1}\cdots\sum_{i_p=1}^{n_m}\fua{\vtf{f}_{i_1\cdots
-i_p}^{B}}{\tnr{T}}\vto{u}_{i_1}^{(1)}\otimes\cdots\otimes\vto{u}_{i_m}^{(m)}\,,
+\tnr{X}=\sum_{i_1=1}^{n_1}\cdots\sum_{i_p=1}^{n_m}\fua{\vtf{f}_{i_1\cdots
+i_p}^{B}}{\tnr{X}}\vtf{f}_{i_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{i_m}^{B_m}\,,
 \nonumber
 \end{equation}
-where $B$ is a basis of $\ete{\mathcal{R}}{U^{\times m}}$ defined by arbitrary bases  $\con{B}_i=\{\vto{u}_{1}^{(i)},\cdots,\vto{u}_{n_i}^{(i)}\}$ of $U_i$. If we define that $\fua{\vtf{g}^\otimes}{\vto{u}_{i_1}^{(1)}\otimes\cdots\otimes\vto{u}_{i_m}^{(m)}}=\fua{\vtf{g}}{\vto{u}_{i_1}^{(1)},\cdots,\vto{u}_{i_m}^{(m)}}$, since $\tnr{T}$ and $\vtf{g}$ and $\con{B}_i$ exist, the development
+where $B$ is a basis of $\ete{\mathcal{R}}{U^{\times m}}$ defined by orthonormal bases  $\con{B}_i=\{\vun{u}_{1}^{(i)},\cdots,\vun{u}_{n_i}^{(i)}\}$ of $U_i$. According to rule \eqref{eq:regraOrtonmFunc}, the function $\vtf{t}^\otimes$ that observes $\fua{\vtf{t}^\otimes}{\vto{x}_1^*\otimes\cdots\otimes\vto{x}_m^*}=\fua{\tnr{T}}{\vto{x}_1,\cdots,\vto{x}_m}$ really exists and is uniquely determined by $\tnr{T}$, as can be verified in  
 \begin{eqnarray}
-\fua{\vtf{g}^\otimes}{\tnr{T}}&=&\sum_{i_1=1}^{n_1}\cdots\sum_{i_m=1}^{n_m}\fua{\vtf{f}_{i_1\cdots
-i_m}^{B}}{\tnr{T}}\fua{\vtf{g}^\otimes}{\vto{u}_{i_1}^{(1)}\otimes\cdots\otimes\vto{u}_{i_m}^{(m)}}\nonumber\\
+\fua{\vtf{t}^\otimes}{\tnr{X}}&=&\sum_{i_1=1}^{n_1}\cdots\sum_{i_m=1}^{n_m}\fua{\vtf{f}_{i_1\cdots
+i_m}^{B}}{\tnr{X}}\fua{\vtf{t}^\otimes}{\vtf{f}_{i_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{i_m}^{B_m}}\nonumber\\
 &=&\sum_{i_1=1}^{n_1}\cdots\sum_{i_m=1}^{n_m}\fua{\vtf{f}_{i_1\cdots
-i_m}^{B}}{\tnr{T}}\fua{\vtf{g}}{\vto{u}_{i_1}^{(1)},\cdots,\vto{u}_{i_m}^{(m)}}\nonumber
+i_m}^{B}}{\tnr{X}}\overline{\fua{\tnr{T}}{\vun{u}_{i_1}^{(1)},\cdots,\vun{u}_{i_m}^{(m)}}}\,,\nonumber
 \end{eqnarray}
-shows that $\vtf{g}^\otimes$ also exists and it is uniquely determined by $\vtf{g}$ because $\tnr{T}$ and $B_i$ are arbitrary. Therefore, our previous definition relating the functions in question results valid and if we consider $\tnr{T}=\vto{x}_1\otimes\cdots\otimes\vto{x}_m$, through the rule \eqref{eq:regraCoordTens}, development can proceed as follows:
+because the last equality results a rule for $\vtf{t}^\otimes$ since $\tnr{X}$ is arbitrary. Now, let's verify if equality $\fua{\vtf{t}^\otimes}{\vto{x}_1^*\otimes\cdots\otimes\vto{x}_m^*}=\overline{\fua{\tnr{T}}{\vto{x}_1,\cdots,\vto{x}_m}}$ is valid. Considering $\tnr{X}=\vto{x}_1^*\otimes\cdots\otimes\vto{x}_m^*$, the properties of complex conjugates and rule \eqref{eq:regraCoordTens}, the previous development can proceed as follows:  
 \begin{eqnarray}
-\fua{\vtf{g}^\otimes}{\vto{x}_1\otimes\cdots\otimes\vto{x}_m}&=&\sum_{i_1=1}^{n_1}\cdots\sum_{i_m=1}^{n_m}\fua{\vtf{f}_{i_1\cdots
-i_m}^{B}}{\tnr{T}}\fua{\vtf{g}}{\vto{u}_{i_1}^{(1)},\cdots,\vto{u}_{i_m}^{(m)}}\nonumber\\
+\fua{\vtf{t}^\otimes}{\vto{x}_1^*\otimes\cdots\otimes\vto{x}_m^*}&=&\sum_{i_1=1}^{n_1}\cdots\sum_{i_m=1}^{n_m}\fua{\vtf{f}_{i_1\cdots
+i_m}^{B}}{\tnr{X}}\overline{\fua{\tnr{T}}{\vun{u}_{i_1}^{(1)},\cdots,\vun{u}_{i_m}^{(m)}}}\nonumber\\
 &=&
-\sum_{i_1=1}^{n_1}\cdots\sum_{i_m=1}^{n_m}\fua{\tnr{T}}{\vto{u}_{i_1}^{(1)},\cdots,\vto{u}_{i_m}^{(m)}}\fua{\vtf{g}}{\vto{u}_{i_1}^{(1)},\cdots,\vto{u}_{i_m}^{(m)}}\nonumber\\
+\sum_{i_1=1}^{n_1}\cdots\sum_{i_m=1}^{n_m}\fua{\tnr{X}}{\vun{u}_{i_1}^{(1)},\cdots,\vun{u}_{i_m}^{(m)}}\overline{\fua{\tnr{T}}{\vun{u}_{i_1}^{(1)},\cdots,\vun{u}_{i_m}^{(m)}}}\nonumber\\
 &=&
-\sum_{i_1=1}^{n_1}\cdots\sum_{i_m=1}^{n_m}\prod_{k=1}^m \fua{\vtf{f}_{i_k}^{\con{U}_k}}{\vto{x}_k}\fua{\vtf{g}}{\vto{u}_{i_1}^{(1)},\cdots,\vto{u}_{i_m}^{(m)}}\nonumber\\
+\sum_{i_1=1}^{n_1}\cdots\sum_{i_m=1}^{n_m}\prod_{k=1}^m \overline{\fua{\vtf{f}_{i_k}^{\con{B}_k}}{\vto{x}_k}}\,\,\overline{\fua{\tnr{T}}{\vun{u}_{i_1}^{(1)},\cdots,\vun{u}_{i_m}^{(m)}}}\nonumber\\
 &=&
-\fua{\vtf{g}}{\sum_{i_1=1}^{n_1}\fua{\vtf{f}_{i_1}^{\con{U}_1}}{\vto{x}_1}
-	\vto{u}_{i_1}^{(1)},\cdots,\sum_{i_m=1}^{n_m}\fua{\vtf{f}_{i_m}^{\con{U}_m}}{\vto{x}_m}\vto{u}_{i_m}^{(m)}}\nonumber\nonumber\\
-&=& \fua{\vtf{g}}{\vto{x}_1,\cdots,\vto{x}_m}\,,\nonumber
+\overline{\fua{\tnr{T}}{\sum_{i_1=1}^{n_1}\fua{\vtf{f}_{i_1}^{\con{B}_1}}{\vto{x}_1}
+\vun{u}_{i_1}^{(1)},\cdots,\sum_{i_m=1}^{n_m}\fua{\vtf{f}_{i_m}^{\con{B}_m}}{\vun{x}_m}\vun{u}_{i_m}^{(m)}}}\nonumber\\
+&=& \overline{\fua{\tnr{T}}{\vto{x}_1,\cdots,\vto{x}_m}}\,.\nonumber
 \end{eqnarray}
-which proves the generic equality of the theorem.
 \end{proof}
 }
 
