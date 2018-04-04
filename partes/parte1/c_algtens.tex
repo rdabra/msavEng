@@ -47,7 +47,7 @@ where tensor $\tnr{V}\otimes\tnr{W}:=\fua{\otimes}{\tnr{V},\tnr{W}}$ belongs to 
 \begin{itemize}
 \setlength\itemsep{.1em}
 \item[i.] Zero tensor: $\tnr{U}\otimes\tnr{V}=\tnr{0} \implies\tnr{U}=\tnr{0}$ or $\tnr{V}=\tnr{0}$,
-\item[ii.] Multiplication by scalar: $\alpha\tnr{U}\otimes\beta\tnr{V}=\alpha\beta(\tnr{U}\otimes\tnr{V})=\beta\tnr{U}\otimes\alpha\tnr{V}$,
+\item[ii.] Multiplication by scalar:\label{prop:TensMultScalar} $\alpha\tnr{U}\otimes\beta\tnr{V}=\alpha\beta(\tnr{U}\otimes\tnr{V})=\beta\tnr{U}\otimes\alpha\tnr{V}$,
 \item[iii.] Associativity:
 $\lpa\tnr{U}\otimes\tnr{V}\rpa\otimes\tnr{W}=\tnr{U}\otimes\lpa\tnr{V}\otimes\tnr{W}\rpa$,
 \item[iv.] Left distributivity:
@@ -143,8 +143,8 @@ Considering a tensor space $\ete{\mathcal{R}}{U^{\times m}}$, if its definer vec
 in order to simplify notation. If the constituent bases $B_i$ are orthonormal, then $B_i=B_i^\perp$ and  $((\vto{u}^{(i)})^{j_i})^*=(\vto{u}^{(i)}_{j_i})^*$ in the above definition. 
 \end{comment}
 
-A consequence of describing an arbitrary tensor $\tnr{T}$ as a linear combination of polyadic tensor elements of a certain basis is the possibility to arrange its coordinates in such a way that $\tnr{T}$ results an additive decomposition of polyadic tensors. In order to obtain this, let's betake the property of multiplication by scalars of tensor products and ``move'', during the $k_i$-th sum in \eqref{eq:tensCoord}, the coordinates $\vtf{f}_{k_1\cdots k_i\cdots k_m}^{B}(\tnr{T})$ to multiply the coordinate functional $\vtf{f}_{k_i}^{B_i}$ of the $i$-th polyadic basis tensor, resulting in       
-\begin{equation}
+A consequence of describing an arbitrary tensor $\tnr{T}$ as a linear combination of polyadic tensor elements of a certain basis is the possibility to arrange its coordinates in such a way that $\tnr{T}$ results an additive decomposition of polyadic tensors. In order to obtain this, let's betake the property of multiplication by scalars of tensor products\footnote{See p. \pageref{prop:TensMultScalar}.} and ``move'', during the $k_i$-th sum in \eqref{eq:tensCoord}, the coordinates $\vtf{f}_{k_1\cdots k_i\cdots k_m}^{B}(\tnr{T})$ to multiply the coordinate functional $\vtf{f}_{k_i}^{B_i}$ of the $i$-th polyadic basis tensor, resulting in       
+\begin{equation}\label{eq:decompAditTens}
 \tnr{T} = \sum_{i=1}^{m}\underbrace{\sum_{k_i=1}^{n_i} \vtf{f}_{k_1}^{B_1}\otimes\cdots\otimes(\vtf{f}_{k_1\cdots k_i\cdots k_m}^{B}(\tnr{T})\vtf{f}_{k_i}^{B_i})\otimes\cdots\otimes\vtf{f}_{k_m}^{B_m}}_{(\vtf{t}_1)_i\otimes\cdots\otimes(\vtf{t}_m)_i}\,,
 \end{equation}
 where linear functional $(\vtf{t}_j)_i\in(U_j)_\mathcal{R}^*$ is the $j$-th polyad of the $i$-th polyadic tensor member of the additive decomposition of $\tnr{T}$.
@@ -244,12 +244,12 @@ is an example of identity tensor of second order. From the last expression of th
 
 \section{Tensor Functions}
 
-For the purposes of our study, a tensor function establishes a functional relationship between tensors of any order. Because of this definition such functions in Hilbert spaces are of the most general type: as presented in the previous section, tensors of order zero are scalars by definition and tensors of first order are covectors, which are biunivocaly related to vectors, according to the Riesz-Fréchet Representation Theorem. In the context of Hilbert spaces, this generality of tensor functions is particularly  important for us and that is why we shall be dealing mostly with these spaces hereafter, betaking all their particularities. Therefore, considering these spaces, it is always possible to relate a tensor and a linear tensor function, which is a fundamental feature to enable uniqueness and existence of the specific linear tensor functions to be presented in this section. The following theorem\footnote{Adapted from \aut{Backus}\cite{backus_1997_1} after generalizing a property from  \aut{Marcus}\cite{marcus_1973_1}, p.14.}, borrowed from the realm of Multilinear Algebra, describes such feature by establishing a one to one correspondence between a tensor and a linear tensor function. From this biunivocal relationship, the tensor is usually said to be ``lifted'' to a tensor function. Hereafter, in order to alleviate notational representation, we shall consider the scalar $\fua{\overline{\tnr{T}}}{\vto{x}_1,\cdots,\vto{x}_m}:=\overline{\fua{\tnr{T}}{\vto{x}_1,\cdots,\vto{x}_m}}$, where $\tnr{T}$ is an arbitrary tensor of order $m$ that uniquely determines $\overline{\tnr{T}}$ because $\vto{x}_i$ is arbitrary.     
+For the purposes of our study, a tensor function establishes a functional relationship between tensors of any order. Because of this definition such functions in Hilbert spaces are of the most general type: as presented in the previous section, tensors of order zero are scalars by definition and tensors of first order are covectors, which are biunivocaly related to vectors, according to the Riesz-Fréchet Representation Theorem. In the context of Hilbert spaces, this generality of tensor functions is particularly  important for us and that is why we shall be dealing mostly with these spaces hereafter, betaking all their particularities. Therefore, considering these spaces, it is always possible to relate a multilinear function and a linear tensor function, which is a fundamental feature to enable uniqueness and existence of the specific linear tensor function to be presented in this section. The following theorem\footnote{Adapted from \aut{Backus}\cite{backus_1997_1} after generalizing a property from  \aut{Marcus}\cite{marcus_1973_1}, p.14.}, borrowed from the realm of Multilinear Algebra, describes such feature by establishing a one to one correspondence between a multilinear function and a linear tensor function. From this biunivocal relationship, the multilinear function is usually said to be ``lifted'' to a tensor function. Hereafter, in order to alleviate notational representation, we shall consider the value $\fua{\overline{\vtf{t}}}{\vto{x}_1,\cdots,\vto{x}_m}:=\overline{\fua{\vtf{t}}{\vto{x}_1,\cdots,\vto{x}_m}}$, where $\vtf{t}$ is an arbitrary multilinear linear function that uniquely determines $\overline{\vtf{t}}$ since $\vto{x}_i$ is arbitrary.     
 
 \begin{mteo}{Lifting of Tensors}{lift}
-Considering the tensor space $\ete{\mathcal{R}}{U^{\times m}}$ and the function space $\evl{\mathcal{R}}{\ete{\mathcal{R}}{U^{\times m}}}{\mathcal{R}}$, where sets $U_i$ define Hilbert spaces, for every tensor $\tnr{T}\in\ete{\mathcal{R}}{U^{\times m}}$ there is one and only one linear tensor function $\vtf{t}^\otimes\in\evl{\mathcal{R}}{\ete{\mathcal{R}}{U^{\times m}}}{\mathcal{R}}$ such that 
+Considering the function spaces $\evl{\mathcal{R}}{U^{\times m}}{V}$ and  $\evl{\mathcal{R}}{\ete{\mathcal{R}}{U^{\times m}}}{V}$, where sets $U_i$ and $V$ define Hilbert spaces, for every tensor $\vtf{t}\in\ete{\mathcal{R}}{U^{\times m}}$ there is one and only one linear tensor function $\vtf{t}^\otimes\in\evl{\mathcal{R}}{\ete{\mathcal{R}}{U^{\times m}}}{V}$ such that 
 \begin{equation*}
-\fua{\vtf{t}^\otimes}{\vto{x}_1^*\otimes\cdots\otimes\vto{x}_m^*}=\fua{\overline{\tnr{T}}}{\vto{x}_1,\cdots,\vto{x}_m}\,,\,\,\forall\,\vto{x}_i\in U_i.
+\fua{\vtf{t}^\otimes}{\vto{x}_1^*\otimes\cdots\otimes\vto{x}_m^*}=\fua{\overline{\vtf{t}}}{\vto{x}_1,\cdots,\vto{x}_m}\,,\,\,\forall\,\vto{x}_i\in U_i.
 \end{equation*}
 \end{mteo}
 \hspace{1pt}
@@ -261,28 +261,42 @@ The following proof is adapted from \aut{Backus}\cite{backus_1997_1}, pp. 43-45.
 i_p}^{B}}{\tnr{X}}\vtf{f}_{i_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{i_m}^{B_m}\,,
 \nonumber
 \end{equation}
-where $B$ is a basis of $\ete{\mathcal{R}}{U^{\times m}}$ defined by orthonormal bases  $\con{B}_i=\{\vun{u}_{1}^{(i)},\cdots,\vun{u}_{n_i}^{(i)}\}$ of $U_i$. According to rule \eqref{eq:regraOrtonmFunc}, the function $\vtf{t}^\otimes$ that observes $\fua{\vtf{t}^\otimes}{\vto{x}_1^*\otimes\cdots\otimes\vto{x}_m^*}=\fua{\overline{\tnr{T}}}{\vto{x}_1,\cdots,\vto{x}_m}$ really exists and is uniquely determined by $\tnr{T}$, as can be verified in  
+where $B$ is a basis of $\ete{\mathcal{R}}{U^{\times m}}$ defined by orthonormal bases  $\con{B}_i=\{\vun{u}_{1}^{(i)},\cdots,\vun{u}_{n_i}^{(i)}\}$ of $U_i$. According to rule \eqref{eq:regraOrtonmFunc}, the function $\vtf{t}^\otimes$ that observes $\fua{\vtf{t}^\otimes}{\vto{x}_1^*\otimes\cdots\otimes\vto{x}_m^*}=\fua{\overline{\vtf{t}}}{\vto{x}_1,\cdots,\vto{x}_m}$ really exists and is uniquely determined by $\vtf{t}$, as can be verified in  
 \begin{eqnarray}
 \fua{\vtf{t}^\otimes}{\tnr{X}}&=&\sum_{i_1=1}^{n_1}\cdots\sum_{i_m=1}^{n_m}\fua{\vtf{f}_{i_1\cdots
 i_m}^{B}}{\tnr{X}}\fua{\vtf{t}^\otimes}{\vtf{f}_{i_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{i_m}^{B_m}}\nonumber\\
 &=&\sum_{i_1=1}^{n_1}\cdots\sum_{i_m=1}^{n_m}\fua{\vtf{f}_{i_1\cdots
-i_m}^{B}}{\tnr{X}}\fua{\overline{\tnr{T}}}{\vun{u}_{i_1}^{(1)},\cdots,\vun{u}_{i_m}^{(m)}}\,,\nonumber
+i_m}^{B}}{\tnr{X}}\fua{\overline{\vtf{t}}}{\vun{u}_{i_1}^{(1)},\cdots,\vun{u}_{i_m}^{(m)}}\,,\nonumber
 \end{eqnarray}
-because the last equality results a rule for $\vtf{t}^\otimes$ since $\tnr{X}$ is arbitrary. Now, let's verify if equality $\fua{\vtf{t}^\otimes}{\vto{x}_1^*\otimes\cdots\otimes\vto{x}_m^*}=\fua{\overline{\tnr{T}}}{\vto{x}_1,\cdots,\vto{x}_m}$ is valid. Considering $\tnr{X}=\vto{x}_1^*\otimes\cdots\otimes\vto{x}_m^*$, the properties of complex conjugates and rule \eqref{eq:regraCoordTens}, the previous development can proceed as follows:  
+because the last equality results a rule for $\vtf{t}^\otimes$ since $\tnr{X}$ is arbitrary. Now, let's verify if equality $\fua{\vtf{t}^\otimes}{\vto{x}_1^*\otimes\cdots\otimes\vto{x}_m^*}=\fua{\overline{\vtf{t}}}{\vto{x}_1,\cdots,\vto{x}_m}$ is valid. Considering $\tnr{X}=\vto{x}_1^*\otimes\cdots\otimes\vto{x}_m^*$, the properties of complex conjugates and rule \eqref{eq:regraCoordTens}, the previous development can proceed as follows:  
 \begin{eqnarray}
 \fua{\vtf{t}^\otimes}{\vto{x}_1^*\otimes\cdots\otimes\vto{x}_m^*}&=&\sum_{i_1=1}^{n_1}\cdots\sum_{i_m=1}^{n_m}\fua{\vtf{f}_{i_1\cdots
-i_m}^{B}}{\tnr{X}}\fua{\overline{\tnr{T}}}{\vun{u}_{i_1}^{(1)},\cdots,\vun{u}_{i_m}^{(m)}}\nonumber\\
+i_m}^{B}}{\tnr{X}}\fua{\overline{\vtf{t}}}{\vun{u}_{i_1}^{(1)},\cdots,\vun{u}_{i_m}^{(m)}}\nonumber\\
 &=&
-\sum_{i_1=1}^{n_1}\cdots\sum_{i_m=1}^{n_m}\fua{\tnr{X}}{\vun{u}_{i_1}^{(1)},\cdots,\vun{u}_{i_m}^{(m)}}\fua{\overline{\tnr{T}}}{\vun{u}_{i_1}^{(1)},\cdots,\vun{u}_{i_m}^{(m)}}\nonumber\\
+\sum_{i_1=1}^{n_1}\cdots\sum_{i_m=1}^{n_m}\fua{\tnr{X}}{\vun{u}_{i_1}^{(1)},\cdots,\vun{u}_{i_m}^{(m)}}\fua{\overline{\vtf{t}}}{\vun{u}_{i_1}^{(1)},\cdots,\vun{u}_{i_m}^{(m)}}\nonumber\\
 &=&
-\sum_{i_1=1}^{n_1}\cdots\sum_{i_m=1}^{n_m}\prod_{k=1}^m \overline{\fua{\vtf{f}_{i_k}^{\con{B}_k}}{\vto{x}_k}}\,\,\fua{\overline{\tnr{T}}}{\vun{u}_{i_1}^{(1)},\cdots,\vun{u}_{i_m}^{(m)}}\nonumber\\
+\sum_{i_1=1}^{n_1}\cdots\sum_{i_m=1}^{n_m}\prod_{k=1}^m \overline{\fua{\vtf{f}_{i_k}^{\con{B}_k}}{\vto{x}_k}}\,\,\fua{\overline{\vtf{t}}}{\vun{u}_{i_1}^{(1)},\cdots,\vun{u}_{i_m}^{(m)}}\nonumber\\
 &=&
-\fua{\overline{\tnr{T}}}{\sum_{i_1=1}^{n_1}\fua{\vtf{f}_{i_1}^{\con{B}_1}}{\vto{x}_1}
+\fua{\overline{\vtf{t}}}{\sum_{i_1=1}^{n_1}\fua{\vtf{f}_{i_1}^{\con{B}_1}}{\vto{x}_1}
 \vun{u}_{i_1}^{(1)},\cdots,\sum_{i_m=1}^{n_m}\fua{\vtf{f}_{i_m}^{\con{B}_m}}{\vun{x}_m}\vun{u}_{i_m}^{(m)}}\nonumber\\
-&=& \fua{\overline{\tnr{T}}}{\vto{x}_1,\cdots,\vto{x}_m}\,.\nonumber
+&=& \fua{\overline{\vtf{t}}}{\vto{x}_1,\cdots,\vto{x}_m}\,.\nonumber
 \end{eqnarray}
 \end{proof}
 }
+
+One of the special linear tensor functions mentioned in the previous paragraph, whose existence and uniqueness is assured by lifting multilinear functions, is called contraction. In simple words, this function relates a tensor of order $m$ and a tensor of order $m-p$, when we say that it ``contracts'' the order of its argument. Mathematically, the tensor function $\vtf{c}_p^\otimes\in\evl{\mathcal{R}}{\ete{\mathcal{R}}{U^{\times m}}}{\ete{\mathcal{R}}{U^{\times m-p}}}$ is said to be a contraction of order $p$ if it is lifted from $\tnr{c}_p\in\evl{\mathcal{R}}{U^{\times m}}{\ete{\mathcal{R}}{U^{\times m-p}}}$ in such a way that the $(m-p)$-th order tensor
+\begin{equation}
+\fua{\vtf{c}_p^\otimes}{\tnr{X}}=\sum_{i=1}^m\fua{\overline{\vtf{c}}_p}{(\vtf{x}_1)_i,\cdots,(\vtf{x}_m)_i}\,,
+\end{equation}
+where, according to decomposition \eqref{eq:decompAditTens}, 
+\begin{equation}
+\tnr{X}=\sum_{i=1}^m (\vtf{x}_1^*)_i\otimes\cdots\otimes(\vtf{x}_m^*)_i
+\end{equation}
+is an arbitrary tensor of $\ete{\mathcal{R}}{U^{\times m}}$.
+
+
+
+
 
 \subsection{Contração}\index{contração}
 Seja um espaço tensorial $\ete{\con{V}_{(p)}}{\con{F}}$, onde
