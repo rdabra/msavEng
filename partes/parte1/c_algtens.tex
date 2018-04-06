@@ -248,10 +248,10 @@ is an example of identity tensor of second order. From the last expression of th
 
 \section{Tensor Functions}
 
-For the purposes of our study, a tensor function establishes a functional relationship between tensors of any order. Because of this definition such functions in Hilbert spaces are of the most general type: as presented in the previous section, tensors of order zero are scalars by definition and tensors of first order are covectors, which are biunivocaly related to vectors, according to the Riesz-Fréchet Representation Theorem. In the context of Hilbert spaces, this generality of tensor functions is particularly  important for us and that is why we shall be dealing mostly with these spaces hereafter, betaking all their particularities. Therefore, considering these spaces, it is always possible to relate a multilinear function and a linear tensor function, which is a fundamental feature to enable uniqueness and existence of the specific linear tensor function to be presented in this section. The following theorem\footnote{Adapted from \aut{Backus}\cite{backus_1997_1} after generalizing a property from  \aut{Marcus}\cite{marcus_1973_1}, p.14.}, borrowed from the realm of Multilinear Algebra, describes such feature by establishing a one to one correspondence between a multilinear function and a linear tensor function. From this biunivocal relationship, the multilinear function is usually said to be ``lifted'' to a tensor function. Hereafter, in order to alleviate notational representation, we shall consider the value $\fua{\overline{\vtf{t}}}{\vto{x}_1,\cdots,\vto{x}_m}:=\overline{\fua{\vtf{t}}{\vto{x}_1,\cdots,\vto{x}_m}}$, where $\vtf{t}$ is an arbitrary multilinear linear function that uniquely determines $\overline{\vtf{t}}$ since $\vto{x}_i$ is arbitrary.     
+For the purposes of our study, a tensor function establishes a functional relationship between tensors of any order. Because of this definition such functions in Hilbert spaces are of the most general type: as presented in the previous section, tensors of order zero are scalars by definition and tensors of first order are covectors, which are biunivocaly related to vectors, according to the Riesz-Fréchet Representation Theorem. In the context of Hilbert spaces, this generality of tensor functions is particularly  important for us and that is why we shall be dealing mostly with these spaces hereafter, betaking all their particularities. Therefore, considering these spaces, it is always possible to relate a multilinear function and a linear tensor function, which is a fundamental feature to enable uniqueness and existence of the specific linear tensor function to be presented in this section. The following theorem\footnote{Adapted from \aut{Backus}\cite{backus_1997_1} after generalizing a property from  \aut{Marcus}\cite{marcus_1973_1}, p.14.}, borrowed from the realm of Multilinear Algebra, describes such feature by establishing a one to one correspondence between a multilinear function and a linear tensor function. From this biunivocal relationship, the multilinear function is usually said to be ``lifted'' to a tensor function.   
 
-\begin{mteo}{Lifting of Tensors}{lift}
-Considering the function spaces $\evl{\mathcal{R}}{U^{\times m}}{V}$ and  $\evl{\mathcal{R}}{\ete{\mathcal{R}}{U^{\times m}}}{V}$, where sets $U_i$ and $V$ define Hilbert spaces, for every tensor $\vtf{t}\in\ete{\mathcal{R}}{U^{\times m}}$ there is one and only one linear tensor function $\vtf{t}^\otimes\in\evl{\mathcal{R}}{\ete{\mathcal{R}}{U^{\times m}}}{V}$ such that 
+\begin{mteo}{Lifting of Multilinear Functions}{lift}
+Considering function spaces $\evl{\mathcal{R}}{U^{\times m}}{V}$ and  $\evl{\mathcal{R}}{\ete{\mathcal{R}}{U^{\times m}}}{V}$, where sets $U_i$ and $V$ define Hilbert spaces, for every multilinear function  $\vtf{t}\in\evl{\mathcal{R}}{U^{\times m}}{V}$ there is one and only one linear tensor function $\vtf{t}^\otimes\in\evl{\mathcal{R}}{\ete{\mathcal{R}}{U^{\times m}}}{V}$ such that 
 \begin{equation*}
 \fua{\vtf{t}^\otimes}{\vto{x}_1^*\otimes\cdots\otimes\vto{x}_m^*}=\fua{\overline{\vtf{t}}}{\vto{x}_1,\cdots,\vto{x}_m}\,,\,\,\forall\,\vto{x}_i\in U_i.
 \end{equation*}
@@ -272,7 +272,7 @@ i_m}^{B}}{\tnr{X}}\fua{\vtf{t}^\otimes}{\vtf{f}_{i_1}^{B_1}\otimes\cdots\otimes\
 &=&\sum_{i_1=1}^{n_1}\cdots\sum_{i_m=1}^{n_m}\fua{\vtf{f}_{i_1\cdots
 i_m}^{B}}{\tnr{X}}\fua{\overline{\vtf{t}}}{\vun{u}_{i_1}^{(1)},\cdots,\vun{u}_{i_m}^{(m)}}\,,\nonumber
 \end{eqnarray}
-because the last equality results a rule for $\vtf{t}^\otimes$ since $\tnr{X}$ is arbitrary. Now, let's verify if equality $\fua{\vtf{t}^\otimes}{\vto{x}_1^*\otimes\cdots\otimes\vto{x}_m^*}=\fua{\overline{\vtf{t}}}{\vto{x}_1,\cdots,\vto{x}_m}$ is valid. Considering $\tnr{X}=\vto{x}_1^*\otimes\cdots\otimes\vto{x}_m^*$, the properties of complex conjugates and rule \eqref{eq:regraCoordTens}, the previous development can proceed as follows:  
+because the last equality results a rule for $\vtf{t}^\otimes$ since $\tnr{X}$ is arbitrary. Now, let's verify if equality $\fua{\vtf{t}^\otimes}{\vto{x}_1^*\otimes\cdots\otimes\vto{x}_m^*}=\fua{\overline{\vtf{t}}}{\vto{x}_1,\cdots,\vto{x}_m}$ is valid. Considering $\tnr{X}=\vto{x}_1^*\otimes\cdots\otimes\vto{x}_m^*$, equality \eqref{eq:conjMultFun}, the properties of complex conjugates and rule \eqref{eq:regraCoordTens}, the previous development can proceed as follows:  
 \begin{eqnarray}
 \fua{\vtf{t}^\otimes}{\vto{x}_1^*\otimes\cdots\otimes\vto{x}_m^*}&=&\sum_{i_1=1}^{n_1}\cdots\sum_{i_m=1}^{n_m}\fua{\vtf{f}_{i_1\cdots
 i_m}^{B}}{\tnr{X}}\fua{\overline{\vtf{t}}}{\vun{u}_{i_1}^{(1)},\cdots,\vun{u}_{i_m}^{(m)}}\nonumber\\
@@ -292,13 +292,9 @@ One of the special linear tensor functions mentioned in the previous paragraph, 
 \begin{equation}
 \fua{\vtf{c}_p^\otimes}{\tnr{X}}=\fua{\overline{\vtf{c}}_p}{\vtf{x}_1,\cdots,\vtf{x}_m}\,,
 \end{equation}
-where, according to equalities \eqref{eq:TensPoliadic}, 
-\begin{equation}
-\tnr{X}= \vtf{x}_1^*\otimes\cdots\otimes\vtf{x}_m^*
-\end{equation}
-is an arbitrary tensor of $\ete{\mathcal{R}}{U^{\times m}}$. 
+where $\tnr{X}$ is an arbitrary element of $\ete{\mathcal{R}}{U^{\times m}}$ that can be described as a polyadic tensor $\vtf{x}_1^*\otimes\cdots\otimes\vtf{x}_m^*$, according to equalities \eqref{eq:TensPoliadic}. 
 
-In our study, we deal with three different types of contraction, expressed by three different rules for $\overline{\vtf{c}}_p$. The first type is called trace of tensor, valid for tensor spaces of order greater than one and defined as follows. Still considering the above conditions, if $U^{\times m}=U_1\times\cdots\times U_{k_1}\times\cdots\times U_{k_2}\times\cdots\times U_m$ where $U_{k_1}=U_{k_2}$, the tensor $\fua{\vtf{c}_2^\otimes}{\tnr{X}}$ of order $m-2$ is called the $k_1,k_2$ trace of $\tnr{X}$, represented by $\trt{k_1}{k_2} \tnr{X}$, when 
+In our study, we deal with three different types of contraction, expressed by three different rules for $\overline{\vtf{c}}_p$. The first type is called trace of tensor, valid for tensor spaces of order greater than one and defined as follows. Still considering the above conditions, if $U^{\times m}=U_1\times\cdots\times U_{k_1}\times\cdots\times U_{k_2}\times\cdots\times U_m$ where $U_{k_1}=U_{k_2}$, the tensor $\fua{\vtf{c}_2^\otimes}{\tnr{X}}$ of order $m-2$ is a contraction called the $k_1,k_2$ trace of $\tnr{X}$, represented by $\trt{k_1}{k_2} \tnr{X}$, when 
 \begin{eqnarray}
 \lefteqn{\fua{\vtf{c}_2}{\vto{x}_1,\cdots,\vto{x}_m}:=} & & \nonumber\\
 &
@@ -307,7 +303,7 @@ In our study, we deal with three different types of contraction, expressed by th
 \otimes\cdots\otimes\vto{u}_{s-1}\otimes\vto{u}_{s+1}\otimes\cdots\otimes\vto{u}_p\\
 \end{eqnarray}
 
-% \label{eq:TensPoliadic} 
+ 
 
 
 
