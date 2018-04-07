@@ -248,12 +248,12 @@ is an example of identity tensor of second order. From the last expression of th
 
 \section{Tensor Functions}
 
-For the purposes of our study, a tensor function establishes a functional relationship between tensors of any order. Because of this definition such functions in Hilbert spaces are of the most general type: as presented in the previous section, tensors of order zero are scalars by definition and tensors of first order are covectors, which are biunivocaly related to vectors, according to the Riesz-Fréchet Representation Theorem. In the context of Hilbert spaces, this generality of tensor functions is particularly  important for us and that is why we shall be dealing mostly with these spaces hereafter, betaking all their particularities. Therefore, considering these spaces, it is always possible to relate a multilinear function and a linear tensor function, which is a fundamental feature to enable uniqueness and existence of the specific linear tensor function to be presented in this section. The following theorem\footnote{Adapted from \aut{Backus}\cite{backus_1997_1} after generalizing a property from  \aut{Marcus}\cite{marcus_1973_1}, p.14.}, borrowed from the realm of Multilinear Algebra, describes such feature by establishing a one to one correspondence between a multilinear function and a linear tensor function. From this biunivocal relationship, the multilinear function is usually said to be ``lifted'' to a tensor function.   
+For the purposes of our study, a tensor function establishes a functional relationship between tensors of any order. Defined on Hilbert spaces, such functions are of the most general type: as presented in the previous section, tensors of order zero are scalars by definition and first order tensors are covectors, which are biunivocaly related to vectors, according to the Riesz-Fréchet Representation Theorem. This generality of a tensor function is particularly  important for us and that is why we shall be dealing mostly with Hilbert spaces hereafter, betaking all their particularities. Therefore, considering these spaces, it is always possible to relate a multiantilinear function and a linear tensor function, which is a fundamental feature to enable uniqueness and existence of the fundamental linear tensor function to be presented in this section, which we call contraction. The following theorem\footnote{Adapted from \aut{Backus}\cite{backus_1997_1} after generalizing a property from  \aut{Marcus}\cite{marcus_1973_1}, p.14.}, borrowed from the realm of Multilinear Algebra, describes such feature by establishing a one to one correspondence between a multiantilinear function and a linear tensor function. From this biunivocal relationship, the multiantilinear function is usually said to be ``lifted'' to a tensor function.   
 
-\begin{mteo}{Lifting of Multilinear Functions}{lift}
-Considering function spaces $\evl{\mathcal{R}}{U^{\times m}}{V}$ and  $\evl{\mathcal{R}}{\ete{\mathcal{R}}{U^{\times m}}}{V}$, where sets $U_i$ and $V$ define Hilbert spaces, for every multilinear function  $\vtf{t}\in\evl{\mathcal{R}}{U^{\times m}}{V}$ there is one and only one linear tensor function $\vtf{t}^\otimes\in\evl{\mathcal{R}}{\ete{\mathcal{R}}{U^{\times m}}}{V}$ such that 
+\begin{mteo}{Lifting of Multiantilinear Functions}{lift}
+Considering function spaces $V^{U^{\times m}}_\mathcal{R}$ and  $\evl{\mathcal{R}}{\ete{\mathcal{R}}{U^{\times m}}}{V}$, where sets $U_i$ and $V$ define Hilbert spaces, for every multiantilinear function $\vtf{c}\in V^{U^{\times m}}_\mathcal{R}$ there is one and only one linear tensor function  \gloref{elevC}$\in\evl{\mathcal{R}}{\ete{\mathcal{R}}{U^{\times m}}}{V}$ such that 
 \begin{equation*}
-\fua{\vtf{t}^\otimes}{\vto{x}_1^*\otimes\cdots\otimes\vto{x}_m^*}=\fua{\overline{\vtf{t}}}{\vto{x}_1,\cdots,\vto{x}_m}\,,\,\,\forall\,\vto{x}_i\in U_i.
+\fua{\vtf{c}^\otimes}{\vto{x}_1^*\otimes\cdots\otimes\vto{x}_m^*}=\fua{{\vtf{c}}}{\vto{x}_1,\cdots,\vto{x}_m}\,,\,\,\forall\,\vto{x}_i\in U_i.
 \end{equation*}
 \end{mteo}
 \hspace{1pt}
@@ -265,77 +265,46 @@ The following proof is adapted from \aut{Backus}\cite{backus_1997_1}, pp. 43-45.
 i_p}^{B}}{\tnr{X}}\vtf{f}_{i_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{i_m}^{B_m}\,,
 \nonumber
 \end{equation}
-where $B$ is a basis of $\ete{\mathcal{R}}{U^{\times m}}$ defined by orthonormal bases  $\con{B}_i=\{\vun{u}_{1}^{(i)},\cdots,\vun{u}_{n_i}^{(i)}\}$ of $U_i$. According to rule \eqref{eq:regraOrtonmFunc}, the function $\vtf{t}^\otimes$ that observes $\fua{\vtf{t}^\otimes}{\vto{x}_1^*\otimes\cdots\otimes\vto{x}_m^*}=\fua{\overline{\vtf{t}}}{\vto{x}_1,\cdots,\vto{x}_m}$ really exists and is uniquely determined by $\vtf{t}$, as can be verified in  
+where $B$ is a basis of $\ete{\mathcal{R}}{U^{\times m}}$ defined by orthonormal bases  $\con{B}_i=\{\vun{u}_{1}^{(i)},\cdots,\vun{u}_{n_i}^{(i)}\}$ of $U_i$. According to rule \eqref{eq:regraOrtonmFunc}, the function $\vtf{c}^\otimes$ that observes $\fua{\vtf{c}^\otimes}{\vto{x}_1^*\otimes\cdots\otimes\vto{x}_m^*}=\fua{{\vtf{c}}}{\vto{x}_1,\cdots,\vto{x}_m}$ really exists and is uniquely determined by $\vtf{c}$, as can be verified in  
 \begin{eqnarray}
-\fua{\vtf{t}^\otimes}{\tnr{X}}&=&\sum_{i_1=1}^{n_1}\cdots\sum_{i_m=1}^{n_m}\fua{\vtf{f}_{i_1\cdots
-i_m}^{B}}{\tnr{X}}\fua{\vtf{t}^\otimes}{\vtf{f}_{i_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{i_m}^{B_m}}\nonumber\\
+\fua{\vtf{c}^\otimes}{\tnr{X}}&=&\sum_{i_1=1}^{n_1}\cdots\sum_{i_m=1}^{n_m}\fua{\vtf{f}_{i_1\cdots
+i_m}^{B}}{\tnr{X}}\fua{\vtf{c}^\otimes}{\vtf{f}_{i_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{i_m}^{B_m}}\nonumber\\
 &=&\sum_{i_1=1}^{n_1}\cdots\sum_{i_m=1}^{n_m}\fua{\vtf{f}_{i_1\cdots
-i_m}^{B}}{\tnr{X}}\fua{\overline{\vtf{t}}}{\vun{u}_{i_1}^{(1)},\cdots,\vun{u}_{i_m}^{(m)}}\,,\nonumber
+i_m}^{B}}{\tnr{X}}\fua{{\vtf{c}}}{\vun{u}_{i_1}^{(1)},\cdots,\vun{u}_{i_m}^{(m)}}\,,\nonumber
 \end{eqnarray}
-because the last equality results a rule for $\vtf{t}^\otimes$ since $\tnr{X}$ is arbitrary. Now, let's verify if equality $\fua{\vtf{t}^\otimes}{\vto{x}_1^*\otimes\cdots\otimes\vto{x}_m^*}=\fua{\overline{\vtf{t}}}{\vto{x}_1,\cdots,\vto{x}_m}$ is valid. Considering $\tnr{X}=\vto{x}_1^*\otimes\cdots\otimes\vto{x}_m^*$, equality \eqref{eq:conjMultFun}, the properties of complex conjugates and rule \eqref{eq:regraCoordTens}, the previous development can proceed as follows:  
+because the last equality results a rule for $\vtf{c}^\otimes$ since $\tnr{X}$ is arbitrary. Now, let's verify if equality $\fua{\vtf{c}^\otimes}{\vto{x}_1^*\otimes\cdots\otimes\vto{x}_m^*}=\fua{{\vtf{c}}}{\vto{x}_1,\cdots,\vto{x}_m}$ is valid. Considering $\tnr{X}=\vto{x}_1^*\otimes\cdots\otimes\vto{x}_m^*$, equality \eqref{eq:conjMultFun}, the properties of complex conjugates and rule \eqref{eq:regraCoordTens}, the previous development can proceed as follows:  
 \begin{eqnarray}
-\fua{\vtf{t}^\otimes}{\vto{x}_1^*\otimes\cdots\otimes\vto{x}_m^*}&=&\sum_{i_1=1}^{n_1}\cdots\sum_{i_m=1}^{n_m}\fua{\vtf{f}_{i_1\cdots
-i_m}^{B}}{\tnr{X}}\fua{\overline{\vtf{t}}}{\vun{u}_{i_1}^{(1)},\cdots,\vun{u}_{i_m}^{(m)}}\nonumber\\
+\fua{\vtf{c}^\otimes}{\vto{x}_1^*\otimes\cdots\otimes\vto{x}_m^*}&=&\sum_{i_1=1}^{n_1}\cdots\sum_{i_m=1}^{n_m}\fua{\vtf{f}_{i_1\cdots
+i_m}^{B}}{\tnr{X}}\fua{{\vtf{c}}}{\vun{u}_{i_1}^{(1)},\cdots,\vun{u}_{i_m}^{(m)}}\nonumber\\
 &=&
-\sum_{i_1=1}^{n_1}\cdots\sum_{i_m=1}^{n_m}\fua{\tnr{X}}{\vun{u}_{i_1}^{(1)},\cdots,\vun{u}_{i_m}^{(m)}}\fua{\overline{\vtf{t}}}{\vun{u}_{i_1}^{(1)},\cdots,\vun{u}_{i_m}^{(m)}}\nonumber\\
+\sum_{i_1=1}^{n_1}\cdots\sum_{i_m=1}^{n_m}\fua{\tnr{X}}{\vun{u}_{i_1}^{(1)},\cdots,\vun{u}_{i_m}^{(m)}}\fua{{\vtf{c}}}{\vun{u}_{i_1}^{(1)},\cdots,\vun{u}_{i_m}^{(m)}}\nonumber\\
 &=&
-\sum_{i_1=1}^{n_1}\cdots\sum_{i_m=1}^{n_m}\prod_{k=1}^m \overline{\fua{\vtf{f}_{i_k}^{\con{B}_k}}{\vto{x}_k}}\,\,\fua{\overline{\vtf{t}}}{\vun{u}_{i_1}^{(1)},\cdots,\vun{u}_{i_m}^{(m)}}\nonumber\\
+\sum_{i_1=1}^{n_1}\cdots\sum_{i_m=1}^{n_m}\prod_{k=1}^m \overline{\fua{\vtf{f}_{i_k}^{\con{B}_k}}{\vto{x}_k}}\,\,\fua{{\vtf{c}}}{\vun{u}_{i_1}^{(1)},\cdots,\vun{u}_{i_m}^{(m)}}\nonumber\\
 &=&
-\fua{\overline{\vtf{t}}}{\sum_{i_1=1}^{n_1}\fua{\vtf{f}_{i_1}^{\con{B}_1}}{\vto{x}_1}
+\fua{{\vtf{c}}}{\sum_{i_1=1}^{n_1}\fua{\vtf{f}_{i_1}^{\con{B}_1}}{\vto{x}_1}
 \vun{u}_{i_1}^{(1)},\cdots,\sum_{i_m=1}^{n_m}\fua{\vtf{f}_{i_m}^{\con{B}_m}}{\vun{x}_m}\vun{u}_{i_m}^{(m)}}\nonumber\\
-&=& \fua{\overline{\vtf{t}}}{\vto{x}_1,\cdots,\vto{x}_m}\,.\nonumber
+&=& \fua{{\vtf{c}}}{\vto{x}_1,\cdots,\vto{x}_m}\,.\nonumber
 \end{eqnarray}
 \end{proof}
 }
 
-One of the special linear tensor functions mentioned in the previous paragraph, whose existence and uniqueness is assured by lifting multilinear functions, is called contraction. In simple words, this function relates a tensor of order $m$ and a tensor of order $m-p$, when we say that it ``contracts'' the order of its argument. Mathematically, in the context of the previous theorem, the tensor function $\vtf{c}_p^\otimes\in\evl{\mathcal{R}}{\ete{\mathcal{R}}{U^{\times m}}}{\ete{\mathcal{R}}{U^{\times m-p}}}$ is said to be a \textsb{contraction}\index{contraction} of order $p$ if it is lifted from $\tnr{c}_p\in\evl{\mathcal{R}}{U^{\times m}}{\ete{\mathcal{R}}{U^{\times m-p}}}$ in such a way that the $(m-p)$-th order tensor
+One of the special linear tensor functions mentioned in the previous paragraph, whose existence and uniqueness is assured by lifting multiantilinear functions, is called contraction. In simple words, this function relates a tensor of order $m\geq p$ and a tensor of order $m-p$, when we say that it ``contracts'' the order of its argument. Mathematically, in the context of the previous theorem, the tensor function \gloref{contrac}$\in\evl{\mathcal{R}}{\ete{\mathcal{R}}{U^{\times m}}}{\ete{\mathcal{R}}{U^{\times m-p}}}$ is said to be a \textsb{contraction}\index{contraction} of order $p$ if it is lifted from the antilinear function in $\map{\tnr{c}_p}{U^{\times m}_\mathcal{R}}{\ete{\mathcal{R}}{U^{\times m-p}}}$ in such a way that the $(m-p)$-th order tensor
 \begin{equation}
-\fua{\vtf{c}_p^\otimes}{\tnr{X}}=\fua{\overline{\vtf{c}}_p}{\vtf{x}_1,\cdots,\vtf{x}_m}\,,
+\fua{\vtf{c}_p^\otimes}{\tnr{X}}=\fua{{\vtf{c}}_p}{\vtf{x}_1,\cdots,\vtf{x}_m}\,,
 \end{equation}
 where $\tnr{X}$ is an arbitrary element of $\ete{\mathcal{R}}{U^{\times m}}$ that can be described as a polyadic tensor $\vtf{x}_1^*\otimes\cdots\otimes\vtf{x}_m^*$, according to equalities \eqref{eq:TensPoliadic}. 
 
-In our study, we deal with three different types of contraction, expressed by three different rules for $\overline{\vtf{c}}_p$. The first type is called trace of tensor, valid for tensor spaces of order greater than one and defined as follows. Still considering the above conditions, if $U^{\times m}=U_1\times\cdots\times U_{k_1}\times\cdots\times U_{k_2}\times\cdots\times U_m$ where $U_{k_1}=U_{k_2}$, the tensor $\fua{\vtf{c}_2^\otimes}{\tnr{X}}$ of order $m-2$ is a contraction called the $k_1,k_2$ trace of $\tnr{X}$, represented by $\trt{k_1}{k_2} \tnr{X}$, when 
-\begin{eqnarray}
-\lefteqn{\fua{\vtf{c}_2}{\vto{x}_1,\cdots,\vto{x}_m}:=} & & \nonumber\\
-&
-&\lpa
-\vto{u}_r\cdot\vto{u}_s\rpa\vto{u}_1\otimes\cdots\otimes\vto{u}_{r-1}\otimes\vto{u}_{r+1}
-\otimes\cdots\otimes\vto{u}_{s-1}\otimes\vto{u}_{s+1}\otimes\cdots\otimes\vto{u}_p\\
-\end{eqnarray}
-
- 
-
-
-
-\subsubsection{Traço de Tensor}\index{traço!de tensor}
-Seja o conjunto $\con{V}_{(p)}:=\crt{V}{p}$, onde $p\geq 2$, cujo
-produto cartesiano contem pelo menos um par de conjuntos iguais.
-Dado que $\con{V}_r=\con{V}_s$, $1\leq r < s \leq p$, seja o
-conjunto
+In our study, we deal with three different types of contraction, expressed by three different rules for ${\vtf{c}}_p$. The first type is called trace of tensor, valid for tensor spaces of order greater than one and defined as follows. Still considering the above conditions, if $U^{\times m}=U_1\times\cdots\times U_{r}\times\cdots\times U_{s}\times\cdots\times U_m$ where $U_{r}=U_{s}$, the tensor $\fua{\vtf{c}_2^\otimes}{\tnr{X}}$ of order $m-2$ is a contraction called the $r,s$ trace of $\tnr{X}$, represented by \gloref{tracoRS}$\tnr{X}$, when 
+\begin{equation*}
+\fua{{\vtf{c}}_2}{\vto{x}_1,\cdots,\vto{x}_m}:=\overline{\fua{\tnr{I}}{\vto{x}_{r},\vto{x}_{s}}}\,\vto{x}_1^*\otimes\cdots\otimes\vto{x}_{r-1}^*\otimes\vto{x}_{r+1}^*
+\otimes\cdots\otimes\vto{x}_{s-1}^*\otimes\vto{x}_{s+1}^*\otimes\cdots\otimes\vto{x}_m^*\,,
+\end{equation*}
+where $\tnr{I}$ is the second order identity tensor of $\ete{\mathcal{R}}{U_r\times U_s}$. In other words, the lifting of this function $\vtf{c}_2$ results the $r,s$ trace function and thus
 \begin{equation}
-\con{V}_{(p-2)}:=\con{V}_1\times\cdots\times\con{V}_{r-1}\times\con{V}_{r+1}
-\times\cdots\times\con{V}_{s-1}\times\con{V}_{s+1}\times\cdots\times\con{V}_p\,.
+\trt{r}{s} \tnr{X}=\overline{\fua{\tnr{I}}{\vto{x}_{r},\vto{x}_{s}}}\,\vto{x}_1^*\otimes\cdots\otimes\vto{x}_{r-1}^*\otimes\vto{x}_{r+1}^*
+\otimes\cdots\otimes\vto{x}_{s-1}^*\otimes\vto{x}_{s+1}^*\otimes\cdots\otimes\vto{x}_m^*\,.
 \end{equation}
-Com base nos espaços $\ete{\con{V}_{(p)}}{\con{F}}$,
-$\ete{\con{V}_{(p-2)}}{\con{F}}$ e
-$\evl{\con{V}_{(p)}}{\cft{\con{V}_{(p-2)}}{\con{F}}}{\con{F}}$,
-diz-se que a contração $\vtf{c}_2^\otimes$, cujo valor
-\begin{eqnarray}
-\lefteqn{\fua{\vtf{c}_2}{\vto{u}_1,\cdots,\vto{u}_p}:=} & & \nonumber\\
-&
-&\lpa
-\vto{u}_r\cdot\vto{u}_s\rpa\vto{u}_1\otimes\cdots\otimes\vto{u}_{r-1}\otimes\vto{u}_{r+1}
-\otimes\cdots\otimes\vto{u}_{s-1}\otimes\vto{u}_{s+1}\otimes\cdots\otimes\vto{u}_p\,,\,\forall\,\vto{u}_i\in\con{V}_i\,,\nonumber\\
-\end{eqnarray}
-é o traço em $r,s$, representada $\trt{r}{s}$. Nas condições da
-igualdade (\ref{eq:elevadaTensor}), tem-se que
-\begin{eqnarray}\label{eq:tracoTensor}
-\lefteqn{\fua{\trt{r}{s}}{\tnr{T}}=} & & \nonumber\\
-&
-&\sum_{k=1}^m\lpa
-\vto{v}_{rk}\cdot\vto{v}_{sk}\rpa\vto{v}_{1k}\otimes\cdots\otimes\vto{v}_{r-1k}\otimes\vto{v}_{r+1k}
-\otimes\cdots\otimes\vto{v}_{s-1k}\otimes\vto{v}_{s+1k}\otimes\cdots\otimes\vto{v}_{pk}\,.\nonumber\\
-\end{eqnarray}
+It is important to observe that in the context of Euclidean spaces, from equalities \eqref{eq:prodIntGen} and \eqref{eq:identidade}, we can write that $\overline{\fua{\tnr{I}}{\vto{x}_{r},\vto{x}_{s}}}=\vto{x}_{r}\cdot\vto{x}_{s}\,$. 
 
 
 

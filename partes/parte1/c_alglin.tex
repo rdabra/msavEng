@@ -317,12 +317,12 @@ for all $\alpha,\beta\in\mathcal{R},\,\vto{u}_1,\vto{u}_2\in U$. Thereby, we cal
 \lefteqn{\fua{\vtf{k}}{\vto{w}_1,\cdots,\alpha\vto{w}_i+ \beta\vto{w},\cdots,\vto{w}_q}=} & & \nonumber\\
 & &\alpha\fua{\vtf{k}}{\vto{w}_1,\cdots,\vto{w}_i,\cdots,\vto{w}_q}+\beta\fua{\vtf{k}}{\vto{w}_1,\cdots,\vto{w},\cdots,\vto{w}_q}\,,
 \end{align}
-for all $\alpha,\beta\in\mathcal{R}$ and $\vto{w},\vto{w}_i\in W_i$. In this context, when domain $U_\mathcal{R}=V_\mathcal{R}^q$, the vectors of $V^{V^q}_\mathcal{R}$ are called \textsb{multilinear operators}\index{operator!multilinear} and the mappings they define are \textsb{multilinear operations}\index{operation!multilinear}. Moreover, for the purposes of our study, it is useful to define a ``kind of'' multilinear function $\overline{\vtf{k}}\in\evl{\mathcal{R}}{W^{\times q}}{V}$, called \textsb{conjugate multilinear function}\index{function!conjugate multilinear}, where 
+for all $\alpha,\beta\in\mathcal{R}$ and $\vto{w},\vto{w}_i\in W_i$. In this context, when domain $U_\mathcal{R}=V_\mathcal{R}^q$, the vectors of $V^{V^q}_\mathcal{R}$ are called \textsb{multilinear operators}\index{operator!multilinear} and the mappings they define are \textsb{multilinear operations}\index{operation!multilinear}. Moreover, for the purposes of our study, it is useful to define a ``kind of'' multilinear function $\vtf{c}\in V^{W^{\times q}}_\mathcal{R}$, called \textsb{conjugate multilinear}\index{function!conjugate multilinear} or \textsb{multiantilinear}\index{function!multiantilinear} function, where 
 \begin{align}\label{eq:conjMultFun}
-\lefteqn{\fua{\overline{\vtf{k}}}{\vto{w}_1,\cdots,\alpha\vto{w}_i+ \beta\vto{w},\cdots,\vto{w}_q}=} & & \nonumber\\
-& &\overline{\alpha}\,\fua{\overline{\vtf{k}}}{\vto{w}_1,\cdots,\vto{w}_i,\cdots,\vto{w}_q}+\overline{\beta}\,\fua{\overline{\vtf{k}}}{\vto{w}_1,\cdots,\vto{w},\cdots,\vto{w}_q}\,,
+\lefteqn{\fua{\vtf{c}}{\vto{w}_1,\cdots,\alpha\vto{w}_i+ \beta\vto{w},\cdots,\vto{w}_q}=} & & \nonumber\\
+& &\overline{\alpha}\,\fua{\vtf{c}}{\vto{w}_1,\cdots,\vto{w}_i,\cdots,\vto{w}_q}+\overline{\beta}\,\fua{\vtf{c}}{\vto{w}_1,\cdots,\vto{w},\cdots,\vto{w}_q}\,,
 \end{align}
-for all $\alpha,\beta\in\mathcal{R}$ and $\vto{w},\vto{w}_i\in W_i$. In practice, we say that $\overline{\vtf{k}}$ is the conjugate correspondent of multilinear function $\vtf{k}$.
+for all $\alpha,\beta\in\mathcal{R}$ and $\vto{w},\vto{w}_i\in W_i$. In the context of vector spaces defined in real fields, a multiantilinear function results multilinear.   
 
 Linear functions, as we presented, can also be continuous and constitute a normed function space if a norm is defined. In our study, given $Y_\mathcal{R}$ and $Z_\mathcal{R}$ Banach spaces, we define that \emph{a vector space $\evl{\mathcal{R}}{Z}{Y}$ of continuous linear functions is not only normed but also metric inner product where the norm and the inner product\label{txt:prodInt} are related through $\|\vtf{h}\|=\sqrt{\vtf{h}\cdot\vtf{h}}$ and the distance $\fua{\varrho}{\vtf{h},\vtf{g}} := \|\vtf{h}-\vtf{g}\|$ for all $\vtf{h},\vtf{g}\in Y_\mathcal{R}^Z$}. Thereby, for any linear function $\vtf{h}$ in $Y_\mathcal{R}^Z$ to be continuous, a necessary and sufficient condition requires that it is \textsb{bounded}\index{function!bounded}, namely, that there exists a number $\nu\in\real^+$ where 
 \begin{equation}\label{eq:funcaoLimitada}
@@ -369,7 +369,7 @@ $U^*_\mathcal{R}$ its dual space. If for every $\vto{u}\in U_\mathcal{R}$, a cov
 \begin{equation}
 \fua{\vtf{u}^*}{\vto{x}}=\vto{x}\cdot\vto{u}\,,
 \end{equation}
-then $\Phi$ results an isomorphism. Moreover, if $\vtf{u}^*$ is continuous,  $\|\vtf{u}^*\|_{U^*_\mathcal{R}}=\|\vto{u}\|_{U_\mathcal{R}}$.
+then $\Phi$ results an antilinear bijection. When $\vtf{u}^*$ is continuous,  $\|\vtf{u}^*\|_{U^*_\mathcal{R}}=\|\vto{u}\|_{U_\mathcal{R}}$.
 \end{mteo}
 
 {\footnotesize
@@ -390,9 +390,9 @@ Given a dual vector $\vtf{g}\in V^*_\mathcal{R}$, a vector $\vto{x}\in V_\mathca
 \end{eqnarray}
 from which we conclude that the coordinate functionals of $B$ span $U^*_\mathcal{R}$. Moreover, if 
 $\vto{x}$ is zero, then $\sum_{i=1}^{n}\fua{\vtf{f}^\con{B}_{i}}{\vto{x}}\vto{v}_i=\vto{0}$, where 
-equality $\fua{\vtf{f}^\con{B}_{i}}{\vto{x}}=0$ is true for all $\vto{x}$, and therefore $\vtf{f}^\con{B}_{i}=\vtf{0}$. This linear independence assures that the coordinate functionals of $B$ constitute a basis of $V^*_\mathcal{R}$. Now, considering $\vto{u}$ and $\vto{v}$ vectors of $U_\mathcal{R}$, the function $\Phi$ results an homomorphism from the following equalities:
+equality $\fua{\vtf{f}^\con{B}_{i}}{\vto{x}}=0$ is true for all $\vto{x}$, and therefore $\vtf{f}^\con{B}_{i}=\vtf{0}$. This linear independence assures that the coordinate functionals of $B$ constitute a basis of $V^*_\mathcal{R}$. Now, considering $\vto{u}$ and $\vto{v}$ vectors of $U_\mathcal{R}$, function $\Phi$ is antilinear from the following equalities:
 \begin{equation*}
-\fua{\lco\fua{\Phi}{\vto{u}+\vto{v}}\rco}{\vto{x}}=\fua{\lpa\vtf{u}+\vtf{v}\rpa^*}{\vto{x}}=\vto{x}\cdot(\vto{u}+\vto{v})=\fua{\vtf{u}^*}{\vto{x}}+\fua{\vtf{v}^*}{\vto{x}}=\fua{\lco\fua{\Phi}{\vto{u}}+\fua{\Phi}{\vto{v}}\rco}{\vto{x}}\,.
+\fua{\lco\fua{\Phi}{\alpha\vto{u}+\beta\vto{v}}\rco}{\vto{x}}=\vto{x}\cdot(\alpha\vto{u}+\beta\vto{v})=\overline{\alpha}\vto{u}^*(\vto{x})+\overline{\beta}\vto{v}^*(\vto{x})=\fua{\lco\overline{\alpha\beta}\fua{\Phi}{\vto{u}+\vto{v}}\rco}{\vto{x}}\,.
 \end{equation*}
 If $\Phi$ were not an injection, there would be different covectors $\vtf{u}^*$ and $\vtf{v}^*$ where $\fua{\vtf{u}^*}{\vto{x}}=\fua{\vtf{v}^*}{\vto{x}}$ or $\vto{x}\cdot\vto{u}=\vto{x}\cdot\vto{v}$. From this supposition, the following equalities result: $\vto{x}\cdot(\vto{u}-\vto{v})=\fua{(\vtf{u}-\vtf{v})^*}{\vto{x}}=0$, which do not confirm $\vtf{u}^*\neq\vtf{v}^*$. In order to prove that $\Phi$ is a surjection, we need to obtain for an arbitrary functional $\vtf{g}\in U_\mathcal{R}^*$ a vector $\vto{u}\in U_\mathcal{R}$ such that $\fua{\Phi}{\vto{u}}=\vtf{g}$. Considering the rule \eqref{eq:regraCoord} and an orthonormal basis $\hat{B}=\{\vun{u}_1,\cdots,\vun{u}_n\}$ of $U_\mathcal{R}$ whose coordinate functionals span $U^*_\mathcal{R}$, we can say that 
 \begin{equation*}
