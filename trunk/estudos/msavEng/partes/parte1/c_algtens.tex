@@ -294,7 +294,7 @@ One of the special linear tensor functions mentioned in the previous paragraph, 
 \end{equation}
 where $\tnr{X}$ is an arbitrary element of $\ete{\mathcal{R}}{U^{\times m}}$ that can be described as a polyadic tensor $\vtf{x}_1^*\otimes\cdots\otimes\vtf{x}_m^*$, according to equalities \eqref{eq:TensPoliadic}. 
 
-In our study, we deal with three different types of contraction, expressed by three different rules for ${\vtf{c}}_p$. The first type is called trace of tensor, valid for tensor spaces of order greater than one and defined as follows. Still considering the above conditions, if $U^{\times m}=U_1\times\cdots\times U_{r}\times\cdots\times U_{s}\times\cdots\times U_m$ where $U_{r}=U_{s}$, the tensor $\fua{\vtf{c}_2^\otimes}{\tnr{X}}$ of order $m-2$ is a contraction called the $r,s$ trace of $\tnr{X}$, represented by \gloref{tracoRS}$\tnr{X}$, when 
+In our study, we deal with three different types of contraction, expressed by three different rules for ${\vtf{c}}_p$. The first type is called trace of tensor, valid for tensor spaces of order greater than one and defined as follows. Still considering the above conditions, if $U^{\times m}=U_1\times\cdots\times U_{r}\times\cdots\times U_{s}\times\cdots\times U_m$ where $U_{r}=U_{s}$ and $m\geq 2$, the tensor $\fua{\vtf{c}_2^\otimes}{\tnr{X}}$ of order $m-2$ is a contraction called the $r,s$ trace of $\tnr{X}$, represented by \gloref{tracoRS}$\tnr{X}$, when 
 \begin{equation*}
 \fua{{\vtf{c}}_2}{\vto{x}_1,\cdots,\vto{x}_m}:=\overline{\fua{\tnr{I}}{\vto{x}_{r},\vto{x}_{s}}}\,\vto{x}_1^*\otimes\cdots\otimes\vto{x}_{r-1}^*\otimes\vto{x}_{r+1}^*
 \otimes\cdots\otimes\vto{x}_{s-1}^*\otimes\vto{x}_{s+1}^*\otimes\cdots\otimes\vto{x}_m^*\,,
@@ -306,9 +306,19 @@ where $\tnr{I}$ is the second order identity tensor of $\ete{\mathcal{R}}{U_r\ti
 \end{equation}
 It is important to observe that in the context of Euclidean spaces, from equalities \eqref{eq:prodIntGen} and \eqref{eq:identidade}, we can write that $\overline{\fua{\tnr{I}}{\vto{x}_{r},\vto{x}_{s}}}=\vto{x}_{r}\cdot\vto{x}_{s}\,$. 
 
+For the purposes of our study, the contraction that follows is more important than the $r,s$ trace because it generalizes the concept of inner product. In order to define it using the above conditions, let's consider firstly that       
+\begin{equation*}
+U^{\times m}=\underbrace{U_1\times\cdots\times U_{q}\times W_1\times\cdots\times W_{p}}_{A^{\times q+p}}\times \underbrace{W_1\times\cdots\times W_{p}\times Z_{1}\times\cdots\times Z_{n}}_{B^{\times p+n}}\,,
+\end{equation*}
+where $m=p+2p+n$, and secondly that    
+\begin{equation*}
+\fua{{\vtf{c}}_2}{\tnr{A}\otimes\tnr{B}}:=\overline{\fua{\tnr{I}}{\vto{x}_{r},\vto{x}_{s}}}\,\vto{x}_1^*\otimes\cdots\otimes\vto{x}_{r-1}^*\otimes\vto{x}_{r+1}^*\otimes\cdots\otimes\vto{x}_{s-1}^*\otimes\vto{x}_{s+1}^*\otimes\cdots\otimes\vto{x}_m^*\,,
+\end{equation*} 
 
-
- 
+\begin{align}
+\lefteqn{\fua{{\vtf{c}}_2}{\vto{x}_1,\cdots,\vto{x}_m}:=} & & \nonumber\\
+	& &\overline{\fua{\tnr{I}}{\vto{x}_{r},\vto{x}_{s}}}\,\vto{x}_1^*\otimes\cdots\otimes\vto{x}_{r-1}^*\otimes\vto{x}_{r+1}^*\otimes\cdots\otimes\vto{x}_{s-1}^*\otimes\vto{x}_{s+1}^*\otimes\cdots\otimes\vto{x}_m^*\,,
+\end{align}
 
 \begin{comment}
 
