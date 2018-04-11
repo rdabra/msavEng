@@ -306,19 +306,20 @@ where $\tnr{I}$ is the second order identity tensor of $\ete{\mathcal{R}}{U_r\ti
 \end{equation}
 It is important to observe that in the context of Euclidean spaces, from equalities \eqref{eq:prodIntGen} and \eqref{eq:identidade}, we can write that $\overline{\fua{\tnr{I}}{\vto{x}_{r},\vto{x}_{s}}}=\vto{x}_{r}\cdot\vto{x}_{s}\,$. 
 
-For the purposes of our study, the contraction that follows is more important than the $r,s$ trace because it generalizes the concept of inner product. In order to define it using the above conditions, let's consider firstly that       
+For the purposes of our study, the contraction that follows is more relevant than the $r,s$ trace because it generalizes the concept of inner product. In order to define it using the above conditions, let's consider that       
 \begin{equation*}
-U^{\times m}=\underbrace{U_1\times\cdots\times U_{q}\times W_1\times\cdots\times W_{p}}_{A^{\times q+p}}\times \underbrace{W_1\times\cdots\times W_{p}\times Z_{1}\times\cdots\times Z_{n}}_{B^{\times p+n}}\,,
+U^{\times m}=\underbrace{A_1\times\cdots\times A_{q}\times W^{\times p}}_{A^{\times q+p}}\times \underbrace{W^{\times p}\times B_{1}\times\cdots\times B_{n}}_{B^{\times p+n}}\,,
 \end{equation*}
-where $m=p+2p+n$, and secondly that    
-\begin{equation*}
-\fua{{\vtf{c}}_2}{\tnr{A}\otimes\tnr{B}}:=\overline{\fua{\tnr{I}}{\vto{x}_{r},\vto{x}_{s}}}\,\vto{x}_1^*\otimes\cdots\otimes\vto{x}_{r-1}^*\otimes\vto{x}_{r+1}^*\otimes\cdots\otimes\vto{x}_{s-1}^*\otimes\vto{x}_{s+1}^*\otimes\cdots\otimes\vto{x}_m^*\,,
-\end{equation*} 
+where $m=p+2p+n$, tensor $\tnr{A}:=\vto{a}_1^*\otimes\cdots\otimes\vto{a}_{q}^*\otimes\vto{x}_1^*\otimes\cdots\otimes\vto{x}_{p}^*$ belongs to $\ete{\mathcal{R}}{A^{\times q+p}}$ and tensor $\tnr{B}:=\vto{y}_1^*\otimes\cdots\otimes\vto{y}_{p}^*\otimes\vto{b}_1^*\otimes\cdots\otimes\vto{b}_{n}^*$ belongs to $\ete{\mathcal{R}}{B^{\times p+n}}$. In the case of 
+\begin{align*}
+\fua{{\vtf{c}}_{2p}}{\vto{a}_1,\cdots,\vto{a}_q,&\vto{x}_1,\cdots,\vto{x}_p,\vto{y}_1,\cdots,\vto{y}_p,\vto{b}_1,\cdots,\vto{b}_n}:=
+\\&\overline{\fua{\tnr{I}}{\vto{x}_{1},\cdots,\vto{x}_{p},\vto{y}_1,\cdots,\vto{y}_p}}\,\vto{a}_1^*\otimes\cdots\otimes\vto{a}_{q}^*\otimes\vto{b}_{1}^*\otimes\cdots\otimes\vto{b}_n^*\,,
+\end{align*} 
+we call tensor $\fua{{\vtf{c}}_{2p}^\otimes}{\tnr{A}\otimes\tnr{B}}$ the $p$-th order contractive product of $\tnr{A}$ and $\tnr{B}$, represented by $\tnr{A}\odot_p\tnr{B}$. Thereby, we can write in more simple terms that   
+\begin{equation}
+\tnr{A}\odot_p\tnr{B}=\overline{\fua{\tnr{I}}{\vto{x}_{1},\cdots,\vto{x}_{p},\vto{y}_1,\cdots,\vto{y}_p}}\vto{a}_1^*\otimes\cdots\otimes\vto{a}_{q}^*\otimes\vto{b}_{1}^*\otimes\cdots\otimes\vto{b}_n^*.
+\end{equation}
 
-\begin{align}
-\lefteqn{\fua{{\vtf{c}}_2}{\vto{x}_1,\cdots,\vto{x}_m}:=} & & \nonumber\\
-	& &\overline{\fua{\tnr{I}}{\vto{x}_{r},\vto{x}_{s}}}\,\vto{x}_1^*\otimes\cdots\otimes\vto{x}_{r-1}^*\otimes\vto{x}_{r+1}^*\otimes\cdots\otimes\vto{x}_{s-1}^*\otimes\vto{x}_{s+1}^*\otimes\cdots\otimes\vto{x}_m^*\,,
-\end{align}
 
 \begin{comment}
 
