@@ -7,41 +7,45 @@ In the previous chapter, we created a space with an additive structure, called a
 
 \section{Structuring by Field}\label{sec:espacoVet}
 
-The group-field space is the fundamental object of Linear Algebra and the interaction between these two sets is subjected to restrictions. In order to present them, we shall mathematically describe and complement what has been said so far. Let $V$ be an additive group structured by a field $\mathcal{R}$ through the function $p$ in mapping $\map{p}{\mathcal{R}\times\con{V}}{\con{V}}$. This function, whose values $\fua{p}{\alpha,\gloref{vetor}}$ are represented by $\alpha\vto{x}$ or $\vto{x}\alpha$, must obey the following axioms:
+The group-field space is the fundamental object of Linear Algebra and the interaction between these two sets is subjected to restrictions. In order to present them, we shall mathematically describe and complement what has been said so far. Let $V$ be an additive group structured by a field $\cam{F}$ through the function $p$ in mapping $\map{p}{\cam{F}\times\con{V}}{\con{V}}$. This function, whose values $\fua{p}{\alpha,\gloref{vetor}}$ are represented by $\alpha\vto{x}$ or $\vto{x}\alpha$, must obey the following axioms:
 \begin{itemize}
 \setlength\itemsep{.1em}
     \item[i.] $\alpha \lpa \vto{x} + \vto{y} \rpa = \alpha\vto{x}+\alpha\vto{y}$;
     \item[ii.] $\lpa \alpha + \beta\rpa  \vto{x} = \alpha\vto{x}+\beta\vto{x}$;
     \item[iii.] $\lpa \alpha\beta\rpa  \vto{x} = \alpha\lpa\beta\vto{x}\rpa$;
-    \item[iv.] $1\vto{x}= \vto{x}$, where 1 is the multiplicative identity of $\mathcal{R}$;
+    \item[iv.] $1\vto{x}= \vto{x}$, where 1 is the multiplicative identity of $\cam{F}$;
     \item[v.] $ 0\vto{x} = \vto{0}$, where $\vto{0}$ is the null element of $\con{V}$;
 \end{itemize}
-for all $\alpha,\beta\in \mathcal{R}$ and $\vto{x}, \vto{y}\in V$. Under these conditions, an element of $V$ is called  \textsb{vector}\index{vector} and the triple $(V,\mathcal{R},p)$ is a \textsb{vector space}\index{space!vector} of $V$ in $\mathcal{R}$, whose representation is abbreviated by the symbol $\gloref{espacVet}$, which will be treated from now on as a set, in order to simplify notation. If the field $\mathcal{R}$ is complex, vector space $V_\complexo$ is said to be \textsb{complex}\index{space!complex vector}, for an arbitrary group $V$; similarly, $V_\real$ is called a \textsb{real vector space}\index{space!real vector}. From the previous definitions, we can conclude that if a field is a group, then $\mathcal{R}_{\mathcal{R}}$ or $\mathcal{R}$ is also a vector space.
-
-As a set admits a subset under the conditions already presented, spaces admit subspaces. A \textsb{vector subspace}\index{vector subspace}, structured by the field $\mathcal{R}$, is actually a vector space in $\mathcal{R}$ whose elements also belong to a set that defines a vector space in $\mathcal{R}$. In more precise terms, we say that the vector space $(S,\mathcal{R},\tilde{p})$, where $\map{\tilde{p}}{\mathcal{R}\times S}{S}$, is a vector subspace of $V_\mathcal{R}$ if the set $S\subseteq V$ or, in a detailed notation, if the space $S_\mathcal{R}\subseteq V_\mathcal{R}$. It is important to say that as all vector spaces are defined to have a null element $\vto{0}$, then $\vto{0}$ must belong to any vector subspace.
+for all $\alpha,\beta\in \cam{F}$ and $\vto{x}, \vto{y}\in V$. Under these conditions, an element of $V$ is called  \textsb{vector}\index{vector} and the triple $(V,\cam{F},p)$ is a \textsb{vector space}\index{space!vector} of $V$ in $\cam{F}$, whose representation is abbreviated by the symbol $\gloref{espacVet}$, which will be treated from now on as a set, in order to simplify notation. Moreover, if the field $\cam{F}$ is complex, vector space $V_\complexo$ is said to be \textsb{complex}\index{space!complex vector}, for an arbitrary group $V$; similarly, $V_\real$ is called a \textsb{real vector space}\index{space!real vector}. From the previous definitions, we can conclude that if a field is a group, then $\cam{F}_{\cam{F}}$ or $\cam{F}$ is also a vector space. Now, if we consider a mapping $\map{\overline{p}}{\cam{F}\times\con{V}}{\con{V}}$, where $\fua{\overline{p}}{\alpha,\vto{x}}=\fua{p}{\overline{\alpha},\vto{x}}=\overline{\alpha}\vto{x}$, the vector space $(V,\cam{F},\overline{p})$, represented by $\gloref{espacVetConj}$, is called the \textsb{conjugate vector space}\index{vector space!conjugate} of $V_\cam{F}$. It is interesting to note that a vector space differs from its conjugate only in the rule of multiplication by scalar; both being defined by the same additive group and field, that is, they have the same elements which can be multiplied by the same scalars. In order to avoid confusions       
 
 
-The possibility of multiplication by scalars, according to the mapping defined by $p$, enables us to combine the vectors of  $\con{\tilde{U}}=\lch \vto{v}_1,\vto{v}_2,\cdots,\vto{v}_n \rch\subset V_\mathcal{R}$ as in
+
+Therefore, we can affirm that vectors $\alpha\vto{x}\in\overline{V_\cam{F}}$ and  $\overline{\alpha}\vto{x}\in V_\cam{F}$ are identical. Moreover, an element $\overline{\vto{v}}\in\overline{V_\cam{F}}$ is said to be the \textsb{conjugate vector} of $\vto{v}\in V_\cam{F}$. 
+
+As a set admits a subset under the conditions already presented, spaces admit subspaces. A \textsb{vector subspace}\index{vector subspace}, structured by the field $\cam{F}$, is actually a vector space in $\cam{F}$ whose elements also belong to a set that defines a vector space in $\cam{F}$. In more precise terms, we say that the vector space $(S,\cam{F},\tilde{p})$, where $\map{\tilde{p}}{\cam{F}\times S}{S}$, is a vector subspace of $V_\cam{F}$ if the set $S\subseteq V$ or, in a detailed notation, if the space $S_\cam{F}\subseteq V_\cam{F}$. It is important to say that as all vector spaces are defined to have a null element $\vto{0}$, then $\vto{0}$ must belong to any vector subspace.
+
+
+The possibility of multiplication by scalars, according to the mapping defined by $p$, enables us to combine the vectors of  $\con{\tilde{U}}=\lch \vto{v}_1,\vto{v}_2,\cdots,\vto{v}_n \rch\subset V_\cam{F}$ as in
 \begin{equation}
 \alpha_1\vto{v}_1+\alpha_2\vto{v}_2+\cdots+\alpha_n\vto{v}_n\,,
 \end{equation}
-where $\alpha_i$ are arbitrary scalars of $\mathcal{R}$. Thereby, this expression is called \emph{the} \textsb{linear combination}\index{vector!linear combination of} of $\con{\tilde{U}}$ in $\mathcal{R}$ and, when the scalars are given, the vector $\sum_{i=1}^n \alpha_i\vto{v}_i$ is said to be \emph{a} linear combination of $\con{\tilde{U}}$ in $\mathcal{R}$. Considering $n>1$, if the zero vector is a linear combination of $\con{\tilde{U}}$ when at least one of the scalars $\alpha_1,\cdots,\alpha_n$ is not null, then we classify $\con{\tilde{U}}$ as \textsb{linearly dependent}\index{linear dependence}. In this case, admitting that $\alpha _1\neq 0$, from the equality $\sum_{i=1}^n \alpha_i\vto{v}_i=\vto{0}$, we can write that $\vto{v}_1=\sum_{i=2}^n (\alpha_i/a_1)\vto{v}_i$, where $\vto{v}_1$ is said to be a linear combination of the other vectors. However, this linear combination of vectors can not be written when a sequence of null scalars is the only possible sequence to make an arbitrary linear combination of $\con{\tilde{U}}$ equals the zero vector. In this context, if the vectors of $\con{\tilde{U}}$ are not zero, this set is called \textsb{linearly independent}\index{linear independence}.
+where $\alpha_i$ are arbitrary scalars of $\cam{F}$. Thereby, this expression is called \emph{the} \textsb{linear combination}\index{vector!linear combination of} of $\con{\tilde{U}}$ in $\cam{F}$ and, when the scalars are given, the vector $\sum_{i=1}^n \alpha_i\vto{v}_i$ is said to be \emph{a} linear combination of $\con{\tilde{U}}$ in $\cam{F}$. Considering $n>1$, if the zero vector is a linear combination of $\con{\tilde{U}}$ when at least one of the scalars $\alpha_1,\cdots,\alpha_n$ is not null, then we classify $\con{\tilde{U}}$ as \textsb{linearly dependent}\index{linear dependence}. In this case, admitting that $\alpha _1\neq 0$, from the equality $\sum_{i=1}^n \alpha_i\vto{v}_i=\vto{0}$, we can write that $\vto{v}_1=\sum_{i=2}^n (\alpha_i/a_1)\vto{v}_i$, where $\vto{v}_1$ is said to be a linear combination of the other vectors. However, this linear combination of vectors can not be written when a sequence of null scalars is the only possible sequence to make an arbitrary linear combination of $\con{\tilde{U}}$ equals the zero vector. In this context, if the vectors of $\con{\tilde{U}}$ are not zero, this set is called \textsb{linearly independent}\index{linear independence}.
 
 
 
-Recalling our definition of vector space, it is important to observe that the multiplication by scalar defined in mapping $\map{p}{\mathcal{R}\times V}{V}$ together with the operation $\map{+}{V^2}{V}$, typical of additive groups, assure that every linear combination of arbitrary vectors of $V_\mathcal{R}$ is also a vector of $V_\mathcal{R}$; that is, if $n$ vectors $\vto{v}_i\in V_\mathcal{R}$, then the vector $\sum_{i=1}^n\alpha_i\vto{v}_i\in V_\mathcal{R}$. In this context, let $U$ be a non empty subset of $V_\mathcal{R}$, described the following way:
+Recalling our definition of vector space, it is important to observe that the multiplication by scalar defined in mapping $\map{p}{\cam{F}\times V}{V}$ together with the operation $\map{+}{V^2}{V}$, typical of additive groups, assure that every linear combination of arbitrary vectors of $V_\cam{F}$ is also a vector of $V_\cam{F}$; that is, if $n$ vectors $\vto{v}_i\in V_\cam{F}$, then the vector $\sum_{i=1}^n\alpha_i\vto{v}_i\in V_\cam{F}$. In this context, let $U$ be a non empty subset of $V_\cam{F}$, described the following way:
 \begin{equation}
 U=\bigcup_{i=1}^\infty \tilde{U}_i\,,
 \end{equation}
-where each set $\tilde{U}_i\subset U$ is finite. Thereby, the subset of $V_\mathcal{R}$ constituted by all linear combinations of the subsets $\tilde{U}_i$ is called a \textsb{span}\index{set!span of} of $U$, whose representation is  $\gloref{sconjGer}$. In other words,
+where each set $\tilde{U}_i\subset U$ is finite. Thereby, the subset of $V_\cam{F}$ constituted by all linear combinations of the subsets $\tilde{U}_i$ is called a \textsb{span}\index{set!span of} of $U$, whose representation is  $\gloref{sconjGer}$. In other words,
 \begin{equation}
-\spn (U) := \lch \sum_{i=1}^n \alpha_i\vto{v}_i \,:\, \forall n\in \mathbb{N}\,,\,\,\forall \alpha_i \in \mathcal{R},\,\,\forall \vto{v}_i \in U \rch\,.
+\spn (U) := \lch \sum_{i=1}^n \alpha_i\vto{v}_i \,:\, \forall n\in \mathbb{N}\,,\,\,\forall \alpha_i \in \cam{F},\,\,\forall \vto{v}_i \in U \rch\,.
 \end{equation}
-If $\spn (U)$ is spanned or generated by $U$, then we can also say that $U$ spans or generates $\spn (U)$. Now, let's take two arbitrary elements of the subset spanned by $U$, namely the vectors $\vto{x}=\sum_{i=1}^n \varphi_i\vto{v}_i$ and $\vto{y}=\sum_{i=1}^n \beta_i\vto{v}_i$, where $\varphi_i,\beta_i\in\mathcal{R}$. Adding these two vectors results the vector $\vto{x}+\vto{y}=\sum_{i=1}^n (\varphi_i+\ele{\beta}_i)\vto{v}_i$, which is also an element of $\spn (U)$, since $\varphi_i+\beta_i\in\mathcal{R}$ and $\vto{v}_i\in U$; that is, the operation of addition can be defined by the mapping  $\map{+}{\spn (U)^2}{\spn (U)}$. Moreover, the product of an arbitrary scalar $\alpha\in\mathcal{R}$ and $\vto{x}$ results $\alpha\vto{x}=\sum_{i=1}^n \alpha\varphi_i\vto{v}_i\in\spn{(U)}$, since
-$\alpha\varphi_i\in\mathcal{R}$; which proves the multiplication $\map{p}{\mathcal{R}\times\spn (U)}{\spn (U)}$. From these facts, it is easily verified that $\spn (U)$ observes the five axioms of vectors spaces presented above; which permits us to conclude that the subset spanned by $U$ defines a vector space $\spn{(U)}_\mathcal{R}\subseteq V_\mathcal{R}$. Therefore, we can state generically that every spanned subset defines a \textsb{spanned subspace}\index{subspace!spanned}.
+If $\spn (U)$ is spanned or generated by $U$, then we can also say that $U$ spans or generates $\spn (U)$. Now, let's take two arbitrary elements of the subset spanned by $U$, namely the vectors $\vto{x}=\sum_{i=1}^n \varphi_i\vto{v}_i$ and $\vto{y}=\sum_{i=1}^n \beta_i\vto{v}_i$, where $\varphi_i,\beta_i\in\cam{F}$. Adding these two vectors results the vector $\vto{x}+\vto{y}=\sum_{i=1}^n (\varphi_i+\ele{\beta}_i)\vto{v}_i$, which is also an element of $\spn (U)$, since $\varphi_i+\beta_i\in\cam{F}$ and $\vto{v}_i\in U$; that is, the operation of addition can be defined by the mapping  $\map{+}{\spn (U)^2}{\spn (U)}$. Moreover, the product of an arbitrary scalar $\alpha\in\cam{F}$ and $\vto{x}$ results $\alpha\vto{x}=\sum_{i=1}^n \alpha\varphi_i\vto{v}_i\in\spn{(U)}$, since
+$\alpha\varphi_i\in\cam{F}$; which proves the multiplication $\map{p}{\cam{F}\times\spn (U)}{\spn (U)}$. From these facts, it is easily verified that $\spn (U)$ observes the five axioms of vectors spaces presented above; which permits us to conclude that the subset spanned by $U$ defines a vector space $\spn{(U)}_\cam{F}\subseteq V_\cam{F}$. Therefore, we can state generically that every spanned subset defines a \textsb{spanned subspace}\index{subspace!spanned}.
 
 
-Considering the previous conditions in the case where $U$ spans the space $V_\mathcal{R}$ as a whole, we define the following: a) if $U$ is finite, $V_\mathcal{R}$ is said to be a  \textsb{finite-dimensional}\index{vector space!finite-dimensional} vector space; b) if $U$ is linearly independent, it is called a \textsb{basis}\index{vector space!basis of} of $V_\mathcal{R}$. Gathering these two definitions, when $U$ is a basis with $n$ elements that spans a finite-dimensional  $V_\mathcal{R}$, an arbitrary vector $\vto{w}\in V_\mathcal{R}$ is generated by one and only one linear combination $\sum_{i=1}^n\alpha_i\vto{v}_i$. Therefore, in the context of the basis $U$, there is a biunivocal relationship between the vector $\vto{w}$ and the $n$-tuple $(\alpha_i,\cdots,\alpha_n)$, whose ordering follows the sequence of the basis vectors. This $n$-tuple of scalars that defines vector $\vto{w}$ on the basis $U$ is called the \textsb{coordinates}\index{vector!coordinates of} of $\vto{w}$ on $U$.
+Considering the previous conditions in the case where $U$ spans the space $V_\cam{F}$ as a whole, we define the following: a) if $U$ is finite, $V_\cam{F}$ is said to be a  \textsb{finite-dimensional}\index{vector space!finite-dimensional} vector space; b) if $U$ is linearly independent, it is called a \textsb{basis}\index{vector space!basis of} of $V_\cam{F}$. Gathering these two definitions, when $U$ is a basis with $n$ elements that spans a finite-dimensional  $V_\cam{F}$, an arbitrary vector $\vto{w}\in V_\cam{F}$ is generated by one and only one linear combination $\sum_{i=1}^n\alpha_i\vto{v}_i$. Therefore, in the context of the basis $U$, there is a biunivocal relationship between the vector $\vto{w}$ and the $n$-tuple $(\alpha_i,\cdots,\alpha_n)$, whose ordering follows the sequence of the basis vectors. This $n$-tuple of scalars that defines vector $\vto{w}$ on the basis $U$ is called the \textsb{coordinates}\index{vector!coordinates of} of $\vto{w}$ on $U$.
 
 {\footnotesize
 \begin{proof}
@@ -49,10 +53,10 @@ Let's verify if it is true that $\sum_{i=1}^n\alpha_i\vto{v}_i$ is the only line
 \end{proof}}
 
 
-Now, let's consider $\con{U}_1=\lch \vto{v}_1,\cdots,\vto{v}_n \rch$ a basis of $V_\mathcal{R}$ and $\con{U}_2=\lch \vto{w}_1,\cdots,\vto{w}_m \rch$ a linearly independent set such that $m \geqslant n$. If $U_1$ spans $V_\mathcal{R}$, then the linearly dependent set $\{\vto{w}_1\}\cup U_1=\lch \vto{w}_1,\vto{v}_1,\cdots,\vto{v}_{n} \rch$ also spans $V_\mathcal{R}$. When an element $\vto{v}_k$ is removed from $U_1$, the resulting set $(\{\vto{w}_1\}\cup U_1)\setminus \{\vto{v}_k\}$ also spans $V_\mathcal{R}$ because $\vto{w}_1$ is a linear combination of $U_1$. If we proceed including elements of $U_2$ and removing elements of $U_1$, we shall obtain the set $\lch \vto{w}_1,\cdots,\vto{w}_{n} \rch$, which is a basis of $V_\mathcal{R}$. Thereby, linearly independent sets which span the same finite-dimensional vector space have the same number of vectors. From this general statement, we can say that every basis of $V_\mathcal{R}$ has $n$ elements, or that the \textsb{dimension}\index{vector space!dimension of} of $V_\mathcal{R}$ is $n$, written $\gloref{dimen}=n$. Therefore, we can also state that \emph{every subset of $V_\mathcal{R}$ having $n$ linearly independent vectors is a basis of $V_\mathcal{R}$}, from which results the following: if $W_\mathcal{R}\subset V_\mathcal{R}$ then $\dim (W_\mathcal{R}) <  \dim (V_\mathcal{R})$ .
+Now, let's consider $\con{U}_1=\lch \vto{v}_1,\cdots,\vto{v}_n \rch$ a basis of $V_\cam{F}$ and $\con{U}_2=\lch \vto{w}_1,\cdots,\vto{w}_m \rch$ a linearly independent set such that $m \geqslant n$. If $U_1$ spans $V_\cam{F}$, then the linearly dependent set $\{\vto{w}_1\}\cup U_1=\lch \vto{w}_1,\vto{v}_1,\cdots,\vto{v}_{n} \rch$ also spans $V_\cam{F}$. When an element $\vto{v}_k$ is removed from $U_1$, the resulting set $(\{\vto{w}_1\}\cup U_1)\setminus \{\vto{v}_k\}$ also spans $V_\cam{F}$ because $\vto{w}_1$ is a linear combination of $U_1$. If we proceed including elements of $U_2$ and removing elements of $U_1$, we shall obtain the set $\lch \vto{w}_1,\cdots,\vto{w}_{n} \rch$, which is a basis of $V_\cam{F}$. Thereby, linearly independent sets which span the same finite-dimensional vector space have the same number of vectors. From this general statement, we can say that every basis of $V_\cam{F}$ has $n$ elements, or that the \textsb{dimension}\index{vector space!dimension of} of $V_\cam{F}$ is $n$, written $\gloref{dimen}=n$. Therefore, we can also state that \emph{every subset of $V_\cam{F}$ having $n$ linearly independent vectors is a basis of $V_\cam{F}$}, from which results the following: if $W_\cam{F}\subset V_\cam{F}$ then $\dim (W_\cam{F}) <  \dim (V_\cam{F})$ .
 
 
-There is an important type of vector space whose group is additionally structured by what is called a \textsb{norm}\index{norm}, which assigns to each one of the group elements a nonnegative real number that enables the concept of vector size or vector intensity. Like the case of structuring by field, structuring by norm also occurs according to some restrictions. Thereby, we say that a \textsb{normed space}\index{space!normed} is defined by the double $(V_\mathcal{R},\eta)$, where $V_\mathcal{R}$ is a vector space and the function in $\map{\eta}{V_\mathcal{R}}{\gloref{realNNeg}}$, called norm, observes the axioms
+There is an important type of vector space whose group is additionally structured by what is called a \textsb{norm}\index{norm}, which assigns to each one of the group elements a nonnegative real number that enables the concept of vector size or vector intensity. Like the case of structuring by field, structuring by norm also occurs according to some restrictions. Thereby, we say that a \textsb{normed space}\index{space!normed} is defined by the double $(V_\cam{F},\eta)$, where $V_\cam{F}$ is a vector space and the function in $\map{\eta}{V_\cam{F}}{\gloref{realNNeg}}$, called norm, observes the axioms
 \begin{itemize}
 	\setlength\itemsep{.1em}
 	\item[i.] Of definition: $\fua{\eta}{\vto{v}}=0 \Leftrightarrow
@@ -62,9 +66,9 @@ $\fua{\eta}{\alpha\vto{x}}=|\alpha|\fua{\eta}{\vto{x}}\text{ }$ and
 	\item[iii.] Of triangular inequality\index{inequality!triangular}: $\fua{\eta}{\vto{x}+\vto{y}}\leq
 \fua{\eta}{\vto{x}}+\fua{\eta}{\vto{y}}$;
 \end{itemize}
-where $\alpha\in\mathcal{R}$ and $\vto{x},\vto{y}\in V_\mathcal{R}$ are arbitrary elements of their respective sets. On the last item, the triangular inequality axiom imposes that the size of a vector sum is never greater than the sum of vector sizes. In notational terms, as the use of $\eta$ is not very common, $\gloref{norma}$ is also written to represent the value $\fua{\eta}{\vto{x}}$.
+where $\alpha\in\cam{F}$ and $\vto{x},\vto{y}\in V_\cam{F}$ are arbitrary elements of their respective sets. On the last item, the triangular inequality axiom imposes that the size of a vector sum is never greater than the sum of vector sizes. In notational terms, as the use of $\eta$ is not very common, $\gloref{norma}$ is also written to represent the value $\fua{\eta}{\vto{x}}$.
 
-We define that two vectors project on each other or have a projective interrelationship when it is possible to describe one in terms of the other. In more precise terms, given the non zero vectors $\vto{u},\vto{v}\in U_\mathcal{R}$, it is said that $\vto{u}$ projects on $\vto{v}$ if there is a vector multiple of $\vto{v}$ and function of $\vto{u}$, that is, if there is a mapping $\map{f}{U_\mathcal{R}}{U_\mathcal{R}}$ where the vetor $\fua{f}{\vto{u}}=\alpha\vto{v}$, $\alpha\in\mathcal{R}$. As a unary operator, $f$ is a bijection and then a projection results commutative: if $\vto{u}$ projects on $\vto{v}$, $\vto{v}$ projects on $\vto{u}$. The projective interrelationship of two vectors is usually expressed by scalar values, where zero value means that there is no projection between these vectors or that they are \textsb{orthogonal}\index{vectors!orthogonal}.  Let the function in $\map{\xi}{U_\mathcal{R}\times U_\mathcal{R}}{\mathcal{R}}$ express a projective relationship between any pair of vectors of $U_\mathcal{R}$, observing the axioms
+We define that two vectors project on each other or have a projective interrelationship when it is possible to describe one in terms of the other. In more precise terms, given the non zero vectors $\vto{u},\vto{v}\in U_\cam{F}$, it is said that $\vto{u}$ projects on $\vto{v}$ if there is a vector multiple of $\vto{v}$ and function of $\vto{u}$, that is, if there is a mapping $\map{f}{U_\cam{F}}{U_\cam{F}}$ where the vetor $\fua{f}{\vto{u}}=\alpha\vto{v}$, $\alpha\in\cam{F}$. As a unary operator, $f$ is a bijection and then a projection results commutative: if $\vto{u}$ projects on $\vto{v}$, $\vto{v}$ projects on $\vto{u}$. The projective interrelationship of two vectors is usually expressed by real or complex values, where zero value means that there is no projection between these vectors or that they are \textsb{orthogonal}\index{vectors!orthogonal}. Let the function in $\map{\xi}{U_\cam{F}\times U_\cam{F}}{\cam{F}}$ express a projective relationship between any pair of vectors of $U_\cam{F}$, observing the axioms
 \begin{itemize}\label{prop:produtoInterno}
 	\setlength\itemsep{.1em}
 	\item[i.] Of positivity: $\fua{\xi}{\vto{u},\vto{u}}\in \real^+$;
@@ -76,25 +80,25 @@ We define that two vectors project on each other or have a projective interrelat
 		\vto{u}_3} =
 	\alpha_1\fua{\xi}{\vto{u}_1,\vto{u}_3} + \alpha_2\fua{\xi}{\vto{u}_2,\vto{u}_3}\text{ and }
 	\end{equation*}
-	\item[v.] Of conjugate linearity in the second argument:\begin{equation*}
+	\item[v.] Of antilinearity or conjugate linearity in the second argument:\begin{equation*}
 \fua{\xi}{\vto{u}_1,\alpha_2\vto{u}_2+
 	\alpha_3\vto{u}_3} =
 \overline{\alpha_2}\fua{\xi}{\vto{u}_1,\vto{u}_2} + \overline{\alpha_3}\fua{\xi}{\vto{u}_1,\vto{u}_3}\,;
 	\end{equation*}
 \end{itemize}
-where $\vto{u}_1,\vto{u}_2,\vto{u}_3\in U_\mathcal{R}$ and  $\alpha_1,\alpha_2,\alpha_3\in\mathcal{R}$ are arbitrary elements of their respective sets. In this context, function $\xi$ is called a \textsb{positive-definite inner product} because the projection of a vector on itself is a nonnegative real number, as described by the first axiom. In our study, $\xi$ is simply called an inner product\index{inner product}, and the double $(U_\mathcal{R},\xi)$ an \textsb{inner product space}\index{space!inner product}. From this double, we conclude that $\xi$ structures the group $U$ in such a way that a projective interrelationship of any pair of its elements can be obtained.
+where $\vto{u}_1,\vto{u}_2,\vto{u}_3\in U_\cam{F}$ and  $\alpha_1,\alpha_2,\alpha_3\in\cam{F}$ are arbitrary elements of their respective sets. In this context, function $\xi$ is called a \textsb{positive-definite inner product} because the projection of a vector on itself is a nonnegative real number, as described by the first axiom. In our study, $\xi$ is simply called an inner product\index{inner product}, and the double $(U_\cam{F},\xi)$ an \textsb{inner product space}\index{space!inner product}. From this double, we conclude that $\xi$ structures the group $U$ in such a way that a projective interrelationship of any pair of its elements can be obtained.
 Henceforth, in order to shorten notation, $\gloref{prdint}$ will also be used to represent the inner product $\fua{\xi}{\vto{x},\vto{y}}$.
 
-Considering the inner product space $(U_\mathcal{R},\xi)$, it is now possible to present in more mathematical terms the definition of orthogonality: arbitrary vectors $\vto{u}_1,\vto{u}_2\in U_\mathcal{R}$ are said to be orthogonal, or $\vto{u}_1\gloref{perpend}\vto{u}_2$, when $\vto{u}_1\cdot\vto{u}_2=0$. Given the subsets $U_1\subset U_\mathcal{R}$ and $U_2\subset U_\mathcal{R}$, if $\vto{u}\in U_\mathcal{R}$ is orthogonal to an arbitrary vector of $U_1$, we write $\vto{u}\perp\con{U}_1$, and if an arbitrary vector of $\con{U}_1$ is orthogonal to an arbitrary vector of $\con{U}_2$, we write $\con{U}_1\perp\con{U}_2$. A set $U_3=\{\vto{u}_1,\cdots,\vto{u}_n\}\subset U_\mathcal{R}$ is called orthogonal if $\vto{u}_i\perp\vto{u}_j$, $i\neq j$. Thereby, when the vectors of $U_3$ are non zero, the inner product of each side of $\alpha\vto{u}_j=\vto{u}_i$ and $\vto{u}_j$, where $\alpha\in\mathcal{R}$ and $i\neq j$, results $\alpha\,(\vto{u}_j\cdot\vto{u}_j)=0$, from where we conclude that $\alpha=0$ or that every orthogonal set is linearly independent. This conclusion permits us to state that in a \emph{$n$-dimensional inner product space, every orthogonal subset of $n$ elements is a basis}.
+Considering the inner product space $(U_\cam{F},\xi)$, it is now possible to present in more mathematical terms the definition of orthogonality: arbitrary vectors $\vto{u}_1,\vto{u}_2\in U_\cam{F}$ are said to be orthogonal, or $\vto{u}_1\gloref{perpend}\vto{u}_2$, when $\vto{u}_1\cdot\vto{u}_2=0$. Given the subsets $U_1\subset U_\cam{F}$ and $U_2\subset U_\cam{F}$, if $\vto{u}\in U_\cam{F}$ is orthogonal to an arbitrary vector of $U_1$, we write $\vto{u}\perp\con{U}_1$, and if an arbitrary vector of $\con{U}_1$ is orthogonal to an arbitrary vector of $\con{U}_2$, we write $\con{U}_1\perp\con{U}_2$. A set $U_3=\{\vto{u}_1,\cdots,\vto{u}_n\}\subset U_\cam{F}$ is called orthogonal if $\vto{u}_i\perp\vto{u}_j$, $i\neq j$. Thereby, when the vectors of $U_3$ are non zero, the inner product of each side of $\alpha\vto{u}_j=\vto{u}_i$ and $\vto{u}_j$, where $\alpha\in\cam{F}$ and $i\neq j$, results $\alpha\,(\vto{u}_j\cdot\vto{u}_j)=0$, from where we conclude that $\alpha=0$ or that every orthogonal set is linearly independent. This conclusion permits us to state that in a \emph{$n$-dimensional inner product space, every orthogonal subset of $n$ elements is a basis}.
 
-From a cumulative structuring of a set $V_\mathcal{R}$ by norm and inner product, it is possible to define a triple $(V_\mathcal{R},\eta,\xi)$, called a \textsb{normed inner product space}\index{space!normed inner product}. In these spaces, the projective interrelationship of vectors, expressed by the inner product, can be used to define a norm according to the generic rule
+From a cumulative structuring of a set $V_\cam{F}$ by norm and inner product, it is possible to define a triple $(V_\cam{F},\eta,\xi)$, called a \textsb{normed inner product space}\index{space!normed inner product}. In these spaces, the projective interrelationship of vectors, expressed by the inner product, can be used to define a norm according to the generic rule
 \begin{equation}
  \fua{\eta}{\vto{x}} = \fua{g\circ\xi}{\vto{x},\vto{x}},
 \end{equation}
 where the function in $\map{g}{\real^+}{\real^+}$ enables us to say that \emph{the norm is induced by the inner product}\footnote{When the inner product induces the norm, some authors consider the inner product space involved as implicitly being a normed space.}. A very important property, called \textsb{Cauchy-Schwarz Inequality}\index{inequality!Cauchy-Schwarz}, valid for every normed inner product space whose inner product induces the norm through $\fua{g}{x}=\sqrt{x}$, assures that the value of a projection of two vectors is never greater than the product of these vector sizes, that is,
 \begin{equation}
 |\, \vto{v}_1\cdot\vto{v}_2| \leqslant
-\|\vto{v}_1\|\,\,\|\vto{v}_2\|\,,\,\forall\,\vto{v}_1,\vto{v}_2\in\con{V}_\mathcal{R}\,.
+\|\vto{v}_1\|\,\,\|\vto{v}_2\|\,,\,\forall\,\vto{v}_1,\vto{v}_2\in\con{V}_\cam{F}\,.
 \end{equation}
 {\footnotesize
 \begin{proof} If one of the vectors is zero, the equality is straightforward. Now, let $\vto{v}=\vto{v}_1-\lambda\vto{v}_2$ be a vector where $\vto{v}_2\neq \vto{0}$ and $\lambda=(\vto{v}_1\cdot\vto{v}_2)/\|\vto{v}_2\|^2$. From the conjugate symmetry property of the inner product and knowing that the conjugate of the product is the product of the conjugates,
@@ -109,7 +113,7 @@ where the function in $\map{g}{\real^+}{\real^+}$ enables us to say that \emph{t
 \end{proof}
 }
 
-Any two vectors $\gloref{unita}$ and $\vun{u}_2$ of $(V_\mathcal{R},\eta,\xi)$ are said to be orthonormal if they are orthogonal and each one is \textsb{unitary}\index{vector!unitary}, where $\|\vun{u}_i\|=1$. Thereby, if the vector space $V_\mathcal{R}$ is $n$-dimensional, a subset $\hat{U}=\{\vun{u}_1,\vun{u}_2,\cdots,\vun{u}_n\}$ of orthonormal vectors is called an \textsb{orthonormal basis}\index{basis!orthonormal} of $V_\mathcal{R}$. It is important to note that to every orthogonal basis $\{\vto{u}_1,\vto{u}_2,\cdots,\vto{u}_n\}$, there is always an orthonormal basis $\{\vun{u}_1,\vun{u}_2,\cdots,\vun{u}_n\}$ where each $\vun{u}_i:=\vto{u}_i/\|\vto{u}_i\|$, when we say that the orthonormal basis results from \textsb{normalizing}\index{basis!normalization of} the orthogonal basis.
+Any two vectors $\gloref{unita}$ and $\vun{u}_2$ of $(V_\cam{F},\eta,\xi)$ are said to be orthonormal if they are orthogonal and each one is \textsb{unitary}\index{vector!unitary}, where $\|\vun{u}_i\|=1$. Thereby, if the vector space $V_\cam{F}$ is $n$-dimensional, a subset $\hat{U}=\{\vun{u}_1,\vun{u}_2,\cdots,\vun{u}_n\}$ of orthonormal vectors is called an \textsb{orthonormal basis}\index{basis!orthonormal} of $V_\cam{F}$. It is important to note that to every orthogonal basis $\{\vto{u}_1,\vto{u}_2,\cdots,\vto{u}_n\}$, there is always an orthonormal basis $\{\vun{u}_1,\vun{u}_2,\cdots,\vun{u}_n\}$ where each $\vun{u}_i:=\vto{u}_i/\|\vto{u}_i\|$, when we say that the orthonormal basis results from \textsb{normalizing}\index{basis!normalization of} the orthogonal basis.
 
 
 \section{Structuring by Metrics}
@@ -213,25 +217,25 @@ show that every Cauchy Sequence in $\con{R}_{f}$ is convergent.
 \end{proof}}
 
 
-Now, let's bring the concept of distance to the realm of vector spaces, which are the most fundamental constructs of Linear Algebra. A vector space $V_\mathcal{R}$ that is structured by a metric $\varrho$ is defined to be a \textsb{metric vetor space}\index{vector space!metric} $(V_\mathcal{R},\varrho)$. From this definition, specific types of metric and vector spaces already presented can be combined, and then three important spaces arise: a normed complete space or, more briefly, a
-\textsb{Banach space}\index{space!Banach}\index{Banach space}, represented by  $(V_\mathcal{R},\varrho,\eta)$, where
+Now, let's bring the concept of distance to the realm of vector spaces, which are the most fundamental constructs of Linear Algebra. A vector space $V_\cam{F}$ that is structured by a metric $\varrho$ is defined to be a \textsb{metric vetor space}\index{vector space!metric} $(V_\cam{F},\varrho)$. From this definition, specific types of metric and vector spaces already presented can be combined, and then three important spaces arise: a normed complete space or, more briefly, a
+\textsb{Banach space}\index{space!Banach}\index{Banach space}, represented by  $(V_\cam{F},\varrho,\eta)$, where
 \begin{equation}
 \fua{\varrho}{\vto{v}_1,\vto{v}_2} := \fua{\eta}{\vto{v}_1-\vto{v}_2}
 ,\,\forall
-\,\vto{v}_1,\vto{v}_2\in\con{V}_\mathcal{R}\,;
+\,\vto{v}_1,\vto{v}_2\in\con{V}_\cam{F}\,;
 \end{equation}
-a Banach space with an inner product $(V_\mathcal{R},\varrho,\eta,\xi)$, called a \textsb{Hilbert space}\index{space!Hilbert}\index{Hilbert space}, whose inner product induces the norm through $\fua{\eta}{\vto{x}}=\sqrt{\fua{\xi}{\vto{x},\vto{x}}}$; and a real $n$-dimensional Hilbert space $(V_\real,\varrho,\eta,\xi)$, called \textsb{Euclidean space}\index{space!Euclidean}. In order to avoid notational abuse, all metric vector spaces will henceforth be identified only by the definer vector space: for example, the quadruple $(V_\mathcal{R},\varrho,\eta,\xi)$ will be described by ``the Hilbert space $V_\mathcal{R}$'', where the functions are implied.
+a Banach space with an inner product $(V_\cam{F},\varrho,\eta,\xi)$, called a \textsb{Hilbert space}\index{space!Hilbert}\index{Hilbert space}, whose inner product induces the norm through $\fua{\eta}{\vto{x}}=\sqrt{\fua{\xi}{\vto{x},\vto{x}}}$; and a real $n$-dimensional Hilbert space $(V_\real,\varrho,\eta,\xi)$, called \textsb{Euclidean space}\index{space!Euclidean}. In order to avoid notational abuse, all metric vector spaces will henceforth be identified only by the definer vector space: for example, the quadruple $(V_\cam{F},\varrho,\eta,\xi)$ will be described by ``the Hilbert space $V_\cam{F}$'', where the functions are implied.
 
 \begin{figure}[ht]
 \centering
 {\small
 \begin{forest}
 	for tree={align=center,parent anchor=south, child anchor=north}
-	[Vector\\$U_\mathcal{R}$
-	[Inner Product\\$(U_\mathcal{R}{,}\xi)$ [Normed Inner Product\\$(U_\mathcal{R}{,}\eta{,}\xi)$,name=normProdInt ] ]
-	[Normed\\$(U_\mathcal{R}{,}\eta)$,name=normd]
-	[Complete Vector\\$(U_\mathcal{R}{,}\varrho)$
-	[Banach\\$(U_\mathcal{R}{,}\varrho{,}\eta)$,name=bana [Hilbert\\$(U_\mathcal{R}{,}\varrho{,}\eta{,}\xi)$,name=hilb [Euclidean\\$(U_\real{,}\varrho{,}\eta{,}\xi)$]]]] ]
+	[Vector\\$U_\cam{F}$
+	[Inner Product\\$(U_\cam{F}{,}\xi)$ [Normed Inner Product\\$(U_\cam{F}{,}\eta{,}\xi)$,name=normProdInt ] ]
+	[Normed\\$(U_\cam{F}{,}\eta)$,name=normd]
+	[Complete Vector\\$(U_\cam{F}{,}\varrho)$
+	[Banach\\$(U_\cam{F}{,}\varrho{,}\eta)$,name=bana [Hilbert\\$(U_\cam{F}{,}\varrho{,}\eta{,}\xi)$,name=hilb [Euclidean\\$(U_\real{,}\varrho{,}\eta{,}\xi)$]]]] ]
 	]
 	\draw (normProdInt)--(normd);
 	\draw (bana)--(normd);
@@ -262,11 +266,11 @@ where $(\alpha_1,\cdots,\alpha_n)$ and $(\beta_1,\cdots,\beta_n)$ are the coordi
 
 
 The presence of \textsb{reciprocal sets}\index{sets!reciprocal} is another consequence of the existence of orthogonal sets in Hilbert spaces. We say that $\con{U}=\lch \vto{u}_1,\cdots,\vto{u}_n
-\rch$ and $\con{W}=\lch \vto{w}_1,\cdots,\vto{w}_n \rch$, subsets of the Hilbert space $V_\mathcal{R}$, are reciprocal or \textsb{biorthogonal}\index{sets!biorthogonal} if their vectors are non zero and $\vto{u}_i\cdot\vto{w}_j = \delta_{ij}$. As the pair of reciprocal sets is unique, notations relative to one of these sets are usually defined: for instance, a set $U^\perp:=W$ and vectors $\vto{u}^i:=\vto{w}_i$. It is interesting to note that if the subset $U$ is orthonormal, its reciprocal set $U^\perp=U$. Now, considering $B$ a basis of $V_\mathcal{R}$ and $\con{B}^\perp$ its reciprocal set, let $\vto{u}=\sum_{i=1}^n\gamma_i\vto{u}^i$. If this vector $\vto{u}$ is zero, then     
+\rch$ and $\con{W}=\lch \vto{w}_1,\cdots,\vto{w}_n \rch$, subsets of the Hilbert space $V_\cam{F}$, are reciprocal or \textsb{biorthogonal}\index{sets!biorthogonal} if their vectors are non zero and $\vto{u}_i\cdot\vto{w}_j = \delta_{ij}$. As the pair of reciprocal sets is unique, notations relative to one of these sets are usually defined: for instance, a set $U^\perp:=W$ and vectors $\vto{u}^i:=\vto{w}_i$. It is interesting to note that if the subset $U$ is orthonormal, its reciprocal set $U^\perp=U$. Now, considering $B$ a basis of $V_\cam{F}$ and $\con{B}^\perp$ its reciprocal set, let $\vto{u}=\sum_{i=1}^n\gamma_i\vto{u}^i$. If this vector $\vto{u}$ is zero, then     
 \begin{equation}
 (\sum_{j=1}^n\gamma_j\vto{u}^j)\cdot\vto{u}_i\,=\,\sum_{j=1}^n\gamma_j\delta_{ij}\,=\,\gamma_i\,=\,0\,.
 \end{equation}
-This result shows that $B^\perp$ is linearly independent since the scalars $\gamma_i$ are zero when $\vto{u}=0$. Moreover, as both reciprocal sets have the same number of elements, we can conclude that if one of them is a basis of $V_\mathcal{R}$, so is the other. Thereby, if $(\alpha_1,\cdots,\alpha_n)$ are the coordinates of a vector on basis $B$, we usually use $(\alpha^1,\cdots,\alpha^n)$ to represent the coordinates of this same vector on basis $B^\perp$. 
+This result shows that $B^\perp$ is linearly independent since the scalars $\gamma_i$ are zero when $\vto{u}=0$. Moreover, as both reciprocal sets have the same number of elements, we can conclude that if one of them is a basis of $V_\cam{F}$, so is the other. Thereby, if $(\alpha_1,\cdots,\alpha_n)$ are the coordinates of a vector on basis $B$, we usually use $(\alpha^1,\cdots,\alpha^n)$ to represent the coordinates of this same vector on basis $B^\perp$. 
 
 
 
@@ -285,7 +289,7 @@ Let's verify the uniqueness and existence of reciprocal sets on the context abov
 The most fundamental relationships studied in Linear Algebra have the feature of preserving group structures involved, including those defined by fields. Such relationships are expressed by homomorphisms whose main property is to keep structures of vector spaces unaltered. Moreover, if these vector spaces are metric, it is required this additional structure to remain unchanged as well. In practical terms, this means that if the homomorphism domain is a metric vector space, so must be its image. Selected through a criteria of defining the same mapping, we study these functions by gathering them in a vector space, where there are additional restrictions concerning the relations to their arguments.       
 
 
-Let's start the study of linear functions considering first an additive group $V^{U}$ constituted of generic functions that define mappings of the type $U\mapsto V$, where $U$ and $V$ are complete spaces with an additive structure. This group is said to define a vector space \gloref{espacFunc}, usually called a \textsb{function space}\index{space!function}, if for arbitrary $\vtf{f},\vtf{g}\in V^U_\mathcal{R}$ and $\alpha\in\mathcal{R}$ the following restrictions are observed:
+Let's start the study of linear functions considering first an additive group $V^{U}$ constituted of generic functions that define mappings of the type $U\mapsto V$, where $U$ and $V$ are complete spaces with an additive structure. This group is said to define a vector space \gloref{espacFunc}, usually called a \textsb{function space}\index{space!function}, if for arbitrary $\vtf{f},\vtf{g}\in V^U_\cam{F}$ and $\alpha\in\cam{F}$ the following restrictions are observed:
 \begin{itemize}
 	\setlength\itemsep{.1em}
 	\item[i.] $\fua{\vtf{0}}{x}=0$;
@@ -309,42 +313,42 @@ There is also a particular type of function continuity that has a stronger restr
 From this definition we can conclude that every Lipschitz continuous function is also continuous, with the additional property of presenting upper limited distance ratios relative to every element $u$ of its domain. 
 
 
-Now, considering that $U$ and $V$ define complete vector spaces on $\mathcal{R}$, let a function $\vto{h}\in V^U_\mathcal{R}$ be a homomorphism that keeps the additive structure of $U$ unaltered. To our purposes, this function must also preserve the structure created by the field $\mathcal{R}$ in such a way that
+Now, considering that $U$ and $V$ define complete vector spaces on $\cam{F}$, let a function $\vto{h}\in V^U_\cam{F}$ be a homomorphism that keeps the additive structure of $U$ unaltered. To our purposes, this function must also preserve the structure created by the field $\cam{F}$ in such a way that
 \begin{equation}
 \fua{\vtf{h}}{\alpha\vto{u}_1+\beta\vto{u}_2}=\alpha\fua{\vtf{h}}{\vto{u}_1}+\beta\fua{\vtf{h}}{\vto{u}_2}\,,
 \end{equation}
-for all $\alpha,\beta\in\mathcal{R},\,\vto{u}_1,\vto{u}_2\in U$. Thereby, we call $\vtf{h}$ a \textsb{linear function}\index{function!linear}\label{def:linear} and the corresponding mapping a \textsb{linear transformation}\index{transformation!linear}. If the function space $V^U_\mathcal{R}$ has only linear functions, its usual representation is $\gloref{evl}$. In certain cases where domain $U_\mathcal{R}=W^{\times q}_\mathcal{R}$, a function $\vtf{k}$ is said to be \textsb{multilinear}\index{function!multilinear}, or \textsb{bilinear}\index{function!bilinear} if $q=2$, when 
+for all $\alpha,\beta\in\cam{F},\,\vto{u}_1,\vto{u}_2\in U$. Thereby, we call $\vtf{h}$ a \textsb{linear function}\index{function!linear}\label{def:linear} and the corresponding mapping a \textsb{linear transformation}\index{transformation!linear}. If the function space $V^U_\cam{F}$ has only linear functions, its usual representation is $\gloref{evl}$. In certain cases where domain $U_\cam{F}=W^{\times q}_\cam{F}$, a function $\vtf{k}$ is said to be \textsb{multilinear}\index{function!multilinear}, or \textsb{bilinear}\index{function!bilinear} if $q=2$, when 
 \begin{align}
 \lefteqn{\fua{\vtf{k}}{\vto{w}_1,\cdots,\alpha\vto{w}_i+ \beta\vto{w},\cdots,\vto{w}_q}=} & & \nonumber\\
 & &\alpha\fua{\vtf{k}}{\vto{w}_1,\cdots,\vto{w}_i,\cdots,\vto{w}_q}+\beta\fua{\vtf{k}}{\vto{w}_1,\cdots,\vto{w},\cdots,\vto{w}_q}\,,
 \end{align}
-for all $\alpha,\beta\in\mathcal{R}$ and $\vto{w},\vto{w}_i\in W_i$. In this context, when domain $U_\mathcal{R}=V_\mathcal{R}^q$, the vectors of $V^{V^q}_\mathcal{R}$ are called \textsb{multilinear operators}\index{operator!multilinear} and the mappings they define are \textsb{multilinear operations}\index{operation!multilinear}. Moreover, for the purposes of our study, it is useful to define a ``kind of'' multilinear function $\vtf{c}\in V^{W^{\times q}}_\mathcal{R}$, called \textsb{conjugate multilinear}\index{function!conjugate multilinear} or \textsb{multiantilinear}\index{function!multiantilinear} function, where 
+for all $\alpha,\beta\in\cam{F}$ and $\vto{w},\vto{w}_i\in W_i$. In this context, when domain $U_\cam{F}=V_\cam{F}^q$, the vectors of $V^{V^q}_\cam{F}$ are called \textsb{multilinear operators}\index{operator!multilinear} and the mappings they define are \textsb{multilinear operations}\index{operation!multilinear}. Moreover, for the purposes of our study, it is useful to define a ``kind of'' multilinear function $\vtf{c}\in V^{W^{\times q}}_\cam{F}$, called \textsb{conjugate multilinear}\index{function!conjugate multilinear} or \textsb{multiantilinear}\index{function!multiantilinear} function, where 
 \begin{align}\label{eq:conjMultFun}
 \lefteqn{\fua{\vtf{c}}{\vto{w}_1,\cdots,\alpha\vto{w}_i+ \beta\vto{w},\cdots,\vto{w}_q}=} & & \nonumber\\
 & &\overline{\alpha}\,\fua{\vtf{c}}{\vto{w}_1,\cdots,\vto{w}_i,\cdots,\vto{w}_q}+\overline{\beta}\,\fua{\vtf{c}}{\vto{w}_1,\cdots,\vto{w},\cdots,\vto{w}_q}\,,
 \end{align}
-for all $\alpha,\beta\in\mathcal{R}$ and $\vto{w},\vto{w}_i\in W_i$. In the context of vector spaces defined in real fields, a multiantilinear function results multilinear.   
+for all $\alpha,\beta\in\cam{F}$ and $\vto{w},\vto{w}_i\in W_i$. In the context of vector spaces defined in real fields, a multiantilinear function results multilinear.   
 
-Linear functions, as we presented, can also be continuous and constitute a normed function space if a norm is defined. In our study, given $Y_\mathcal{R}$ and $Z_\mathcal{R}$ Banach spaces, we define that \emph{a vector space $\evl{\mathcal{R}}{Z}{Y}$ of continuous linear functions is not only normed but also metric inner product where the norm and the inner product\label{txt:prodInt} are related through $\|\vtf{h}\|=\sqrt{\vtf{h}\cdot\vtf{h}}$ and the distance $\fua{\varrho}{\vtf{h},\vtf{g}} := \|\vtf{h}-\vtf{g}\|$ for all $\vtf{h},\vtf{g}\in Y_\mathcal{R}^Z$}. Thereby, for any linear function $\vtf{h}$ in $Y_\mathcal{R}^Z$ to be continuous, a necessary and sufficient condition requires that it is \textsb{bounded}\index{function!bounded}, namely, that there exists a number $\nu\in\real^+$ where 
+Linear functions, as we presented, can also be continuous and constitute a normed function space if a norm is defined. In our study, given $Y_\cam{F}$ and $Z_\cam{F}$ Banach spaces, we define that \emph{a vector space $\evl{\cam{F}}{Z}{Y}$ of continuous linear functions is not only normed but also metric inner product where the norm and the inner product\label{txt:prodInt} are related through $\|\vtf{h}\|=\sqrt{\vtf{h}\cdot\vtf{h}}$ and the distance $\fua{\varrho}{\vtf{h},\vtf{g}} := \|\vtf{h}-\vtf{g}\|$ for all $\vtf{h},\vtf{g}\in Y_\cam{F}^Z$}. Thereby, for any linear function $\vtf{h}$ in $Y_\cam{F}^Z$ to be continuous, a necessary and sufficient condition requires that it is \textsb{bounded}\index{function!bounded}, namely, that there exists a number $\nu\in\real^+$ where 
 \begin{equation}\label{eq:funcaoLimitada}
-\nu\geqslant \|\fua{\vtf{h}}{\vto{z}}\|/\|\vto{z}\| \,,\forall\, \vto{z}\in \{Z_\mathcal{R}\setminus\{\vto{0}\}\}\,.
+\nu\geqslant \|\fua{\vtf{h}}{\vto{z}}\|/\|\vto{z}\| \,,\forall\, \vto{z}\in \{Z_\cam{F}\setminus\{\vto{0}\}\}\,.
 \end{equation}
 Here, we consider the minimum of all these values $\nu$ to be the norm of $\vtf{h}$. In more precise terms, the following rule is defined: 
 \begin{equation}\label{eq:normaFuncao}
-\fua{\eta}{\vtf{x}}=\sup\lch \|\fua{\vtf{x}}{\vto{z}}\|/\|\vto{z}\| \,,\forall\, \vto{z}\in \{Z_\mathcal{R}\setminus\{\vto{0}\}\} \rch\,.
+\fua{\eta}{\vtf{x}}=\sup\lch \|\fua{\vtf{x}}{\vto{z}}\|/\|\vto{z}\| \,,\forall\, \vto{z}\in \{Z_\cam{F}\setminus\{\vto{0}\}\} \rch\,.
 \end{equation}
 
-As any field $\mathcal{R}$ is also a vector space, we call a \textsb{functional}\index{functional} an element of the function space $\mathcal{R}^{U_\mathcal{R}}_\mathcal{R}$ or simply $\mathcal{R}^{U_\mathcal{R}}$, whose domain and codomain are complete vector spaces. Therefore, it can be stated that \emph{a mapping defined by a functional maps a complete vector space to its structuring field}. By gathering the concepts of functional and linear function, the coordinates of a vector on a certain basis can be obtained from a sequence of values of linear functionals whose argument is the vector in question. In this sense, given a basis $B=\{\vto{u}_1,\cdots,\vto{u}_n\}$ of the complete vector space $U_\mathcal{R}$, the elements of the $n$-tuple $(\vtf{f}_1^{B},\cdots,\vtf{f}_n^{B})$ are called \textsb{coordinate functionals}\index{coordinate functionals} of basis $B$ if each \gloref{funcCoord} belongs to $\evl{\mathcal{R}}{U}{\mathcal{R}}$ and           
+As any field $\cam{F}$ is also a vector space, we call a \textsb{functional}\index{functional} an element of the function space $\cam{F}^{U_\cam{F}}_\cam{F}$ or simply $\cam{F}^{U_\cam{F}}$, whose domain and codomain are complete vector spaces. Therefore, it can be stated that \emph{a mapping defined by a functional maps a complete vector space to its structuring field}. By gathering the concepts of functional and linear function, the coordinates of a vector on a certain basis can be obtained from a sequence of values of linear functionals whose argument is the vector in question. In this sense, given a basis $B=\{\vto{u}_1,\cdots,\vto{u}_n\}$ of the complete vector space $U_\cam{F}$, the elements of the $n$-tuple $(\vtf{f}_1^{B},\cdots,\vtf{f}_n^{B})$ are called \textsb{coordinate functionals}\index{coordinate functionals} of basis $B$ if each \gloref{funcCoord} belongs to $\evl{\cam{F}}{U}{\cam{F}}$ and           
 \begin{equation}
-\vto{u}=\sum_{i=1}^{n}\fua{\vtf{f}^\con{B}_{i}}{\vto{u}}\vto{u}_i\,,\,\forall\,\, \vto{u}\in U_\mathcal{R}\,,
+\vto{u}=\sum_{i=1}^{n}\fua{\vtf{f}^\con{B}_{i}}{\vto{u}}\vto{u}_i\,,\,\forall\,\, \vto{u}\in U_\cam{F}\,,
 \end{equation}
 where $(\fua{\vtf{f}^\con{B}_{1}}{\vto{u}},\cdots,\fua{\vtf{f}^\con{B}_{n}}{\vto{u}})$ are the coordinates of $\vto{u}$ on basis $B$. Therefore, as an arbitrary basis vector 
 \begin{equation}
 \vto{u}_i=\sum_{j=1}^{n}\fua{\vtf{f}^\con{B}_{j}}{\vto{u}_i}\vto{u}_j\,,
 \end{equation}
-it results that $\fua{\vtf{f}^{B}_j}{\vto{u}_i}=\delta_{ij}$. Moreover, considering the set $\hat{B}=\{\vun{u}_1,\cdots,\vun{u}_n\}$ an orthonormal basis of the Hilbert space $U_\mathcal{R}$, we can say that 
+it results that $\fua{\vtf{f}^{B}_j}{\vto{u}_i}=\delta_{ij}$. Moreover, considering the set $\hat{B}=\{\vun{u}_1,\cdots,\vun{u}_n\}$ an orthonormal basis of the Hilbert space $U_\cam{F}$, we can say that 
 \begin{equation}
-\vto{x}\cdot\vun{u}_i=\sum_{j=1}^{n}\fua{\vtf{f}^\con{\hat{B}}_{j}}{\vto{x}}\vun{u}_j\cdot\vun{u}_i=\sum_{j=1}^{n}\fua{\vtf{f}^\con{\hat{B}}_{j}}{\vto{x}}\delta_{ji}=\fua{\vtf{f}^\con{\hat{B}}_{i}}{\vto{x}}\,,\,\forall\, \vto{x}\in U_\mathcal{R}\,,
+\vto{x}\cdot\vun{u}_i=\sum_{j=1}^{n}\fua{\vtf{f}^\con{\hat{B}}_{j}}{\vto{x}}\vun{u}_j\cdot\vun{u}_i=\sum_{j=1}^{n}\fua{\vtf{f}^\con{\hat{B}}_{j}}{\vto{x}}\delta_{ji}=\fua{\vtf{f}^\con{\hat{B}}_{i}}{\vto{x}}\,,\,\forall\, \vto{x}\in U_\cam{F}\,,
 \end{equation}
 from which we obtain the following rule that assures the existence of coordinate functionals:
 \begin{equation}\label{eq:regraCoord}
@@ -353,30 +357,30 @@ from which we obtain the following rule that assures the existence of coordinate
 
 
 
-Considering a complete vector space $V_\mathcal{R}$, the linear function space $\evl{\mathcal{R}}{V}{\mathcal{R}}$ is said to be the \textsb{dual space}\index{space!dual} of $V_\mathcal{R}$, represented by $V^*_\mathcal{R}$, whose elements are called \textsb{dual vectors}\index{vector!dual}. Intuitively, a dual vector is a scalar measure of vectors that keeps the structure of its domain unaltered; a feature that the norm, being a scalar measure, does not assure, since it is a non linear functional. The coordinate functional $\vtf{f}^\con{B}_{i}$, in turn, is indeed a dual vector and, in a certain way, ``measures'' its argument in relation to the $i$-th vector of basis $B$, when we call the value of this measure a coordinate. As already presented, in the context of orthonormal bases, the measurement of a coordinate functional is expressed through the projective interrelationship between its argument and a basis vector, that is, the inner product of both. A subset 
-$\{\vtf{g}_1,\cdots,\vtf{g}_m\}$ of $V^*_\mathcal{R}$ is a \textsb{dual set}\index{set!dual} of $\{\vto{w}_1,\cdots,\vto{w}_m\}\subset V_\mathcal{R}$ if $\fua{\vtf{g}_i}{\vto{w}_j}=\delta_{ij}$. When such a subset is dual of a basis $B=\{\vto{u}_1,\cdots,\vto{u}_n\}$ of $V_\mathcal{R}$, its elements will be the coordinate functionals of $B$, as can be verified by the following development:
+Considering a complete vector space $V_\cam{F}$, the linear function space $\evl{\cam{F}}{V}{\cam{F}}$ is said to be the \textsb{dual space}\index{space!dual} of $V_\cam{F}$, represented by $V^*_\cam{F}$, whose elements are called \textsb{dual vectors}\index{vector!dual}. Intuitively, a dual vector is a scalar measure of vectors that keeps the structure of its domain unaltered; a feature that the norm, being a scalar measure, does not assure, since it is a non linear functional. The coordinate functional $\vtf{f}^\con{B}_{i}$, in turn, is indeed a dual vector and, in a certain way, ``measures'' its argument in relation to the $i$-th vector of basis $B$, when we call the value of this measure a coordinate. As already presented, in the context of orthonormal bases, the measurement of a coordinate functional is expressed through the projective interrelationship between its argument and a basis vector, that is, the inner product of both. A subset 
+$\{\vtf{g}_1,\cdots,\vtf{g}_m\}$ of $V^*_\cam{F}$ is a \textsb{dual set}\index{set!dual} of $\{\vto{w}_1,\cdots,\vto{w}_m\}\subset V_\cam{F}$ if $\fua{\vtf{g}_i}{\vto{w}_j}=\delta_{ij}$. When such a subset is dual of a basis $B=\{\vto{u}_1,\cdots,\vto{u}_n\}$ of $V_\cam{F}$, its elements will be the coordinate functionals of $B$, as can be verified by the following development:
 \begin{equation*}
 \fua{\vtf{g}_i}{\vto{x}}=\vtf{g}_i(\sum_{j=1}^{n}\fua{\vtf{f}^\con{B}_{j}}{\vto{x}}\vto{u}_j)=\sum_{j=1}^{n}\fua{\vtf{f}^\con{B}_{j}}{\vto{x}}\fua{\vtf{g}_i}{\vto{u}_j}=\sum_{j=1}^{n}\fua{\vtf{f}^\con{B}_{j}}{\vto{x}}\delta_{ij}=\fua{\vtf{f}^\con{B}_{i}}{\vto{x}}\,.
 \end{equation*}
-But a set constituted of coordinate functionals, in this case $B^*:=\{\vtf{f}^\con{B}_1,\cdots,\vtf{f}^\con{B}_n\}$, is itself a basis of its dual space, that is, a dual set $B^*$ of a basis $B$ is itself a basis of the dual space, when we call it a \textsb{dual basis}\index{basis!dual}. Thereby, we can state that a complete vector space and its dual have the same dimension or that $\dim (V_\mathcal{R})=\dim (V_\mathcal{R}^*)$ in the present context. Given an arbitrary dual vector $\vtf{h}\in V^*_\mathcal{R}$, equalities 
+But a set constituted of coordinate functionals, in this case $B^*:=\{\vtf{f}^\con{B}_1,\cdots,\vtf{f}^\con{B}_n\}$, is itself a basis of its dual space, that is, a dual set $B^*$ of a basis $B$ is itself a basis of the dual space, when we call it a \textsb{dual basis}\index{basis!dual}. Thereby, we can state that a complete vector space and its dual have the same dimension or that $\dim (V_\cam{F})=\dim (V_\cam{F}^*)$ in the present context. Given an arbitrary dual vector $\vtf{h}\in V^*_\cam{F}$, equalities 
 \begin{equation}\label{eq:coordVetorDual}
 \fua{\vtf{h}}{\vto{x}}=\vtf{h}[\,{\sum_{i=1}^n\fua{\vtf{f}_i^B}{\vto{x}}\vto{u}_i}\,]=\sum_{i=1}^n\fua{\vtf{h}}{\vto{u}_i}\fua{\vtf{f}_i^B}{\vto{x}}=[\,\sum_{i=1}^n\fua{\vtf{h}}{\vto{u}_i}\vtf{f}_i^B\,] (\vto{x})
 \end{equation}
 enable us to conclude that scalars $\fua{\vtf{h}}{\vto{u}_i}$ are the coordinates of $\vtf{h}$ in $B^*$. It is convenient that this strong correspondence between a complete vector space and its dual becomes even stronger, in such a way that vectors and dual vectors are biunivocaly related, when dual vectors are renamed to \textsb{covectors}\index{covector}. By defining a rule similar to \eqref{eq:regraCoord}, the following theorem, extremely relevant for our study, establishes this one-to-one relationship. 
 
 \begin{mteo}{Riesz-Fréchet Representation}{repRiesz}
-Let $\map{\Phi}{U_\mathcal{R}}{U^*_\mathcal{R}}$ be a mapping where $U_\mathcal{R}$ is a Hilbert space and 
-$U^*_\mathcal{R}$ its dual space. If for every $\vto{u}\in U_\mathcal{R}$, a covector  \gloref{covetor}$:=\fua{\Phi}{\vto{u}}$ is described by the rule  
+Let $\map{\Phi}{U_\cam{F}}{U^*_\cam{F}}$ be a mapping where $U_\cam{F}$ is a Hilbert space and 
+$U^*_\cam{F}$ its dual space. If for every $\vto{u}\in U_\cam{F}$, a covector  \gloref{covetor}$:=\fua{\Phi}{\vto{u}}$ is described by the rule  
 \begin{equation}
 \fua{\vtf{u}^*}{\vto{x}}=\vto{x}\cdot\vto{u}\,,
 \end{equation}
-then $\Phi$ results an antilinear bijection. When $\vtf{u}^*$ is continuous,  $\|\vtf{u}^*\|_{U^*_\mathcal{R}}=\|\vto{u}\|_{U_\mathcal{R}}$.
+then $\Phi$ results an antilinear bijection. When $\vtf{u}^*$ is continuous,  $\|\vtf{u}^*\|_{U^*_\cam{F}}=\|\vto{u}\|_{U_\cam{F}}$.
 \end{mteo}
 
 {\footnotesize
 \begin{proof}
 Let's verify first if a subset of coordinate functionals is really a basis of its dual space. 
-Given a dual vector $\vtf{g}\in V^*_\mathcal{R}$, a vector $\vto{x}\in V_\mathcal{R}$ and a basis $B=\{\vto{v}_1,\cdots,\vto{v}_n\}$ of $V_\mathcal{R}$, we have the following:
+Given a dual vector $\vtf{g}\in V^*_\cam{F}$, a vector $\vto{x}\in V_\cam{F}$ and a basis $B=\{\vto{v}_1,\cdots,\vto{v}_n\}$ of $V_\cam{F}$, we have the following:
 \begin{eqnarray}
 \fua{\vtf{g}}{\vto{x}} & = &
 \vtf{g}(\sum_{i=1}^{n}\fua{\vtf{f}^\con{B}_{i}}{\vto{x}}\vto{v}_i)\nonumber\\
@@ -389,13 +393,13 @@ Given a dual vector $\vtf{g}\in V^*_\mathcal{R}$, a vector $\vto{x}\in V_\mathca
 \vtf{g} & = &
 \sum_{i=1}^{n}\fua{\vtf{g}}{\vto{v}_i}\vtf{f}^\con{B}_{i}\nonumber\,,
 \end{eqnarray}
-from which we conclude that the coordinate functionals of $B$ span $U^*_\mathcal{R}$. Moreover, if 
+from which we conclude that the coordinate functionals of $B$ span $U^*_\cam{F}$. Moreover, if 
 $\vto{x}$ is zero, then $\sum_{i=1}^{n}\fua{\vtf{f}^\con{B}_{i}}{\vto{x}}\vto{v}_i=\vto{0}$, where 
-equality $\fua{\vtf{f}^\con{B}_{i}}{\vto{x}}=0$ is true for all $\vto{x}$, and therefore $\vtf{f}^\con{B}_{i}=\vtf{0}$. This linear independence assures that the coordinate functionals of $B$ constitute a basis of $V^*_\mathcal{R}$. Now, considering $\vto{u}$ and $\vto{v}$ vectors of $U_\mathcal{R}$, function $\Phi$ is antilinear from the following equalities:
+equality $\fua{\vtf{f}^\con{B}_{i}}{\vto{x}}=0$ is true for all $\vto{x}$, and therefore $\vtf{f}^\con{B}_{i}=\vtf{0}$. This linear independence assures that the coordinate functionals of $B$ constitute a basis of $V^*_\cam{F}$. Now, considering $\vto{u}$ and $\vto{v}$ vectors of $U_\cam{F}$, function $\Phi$ is antilinear from the following equalities:
 \begin{equation*}
 \fua{\lco\fua{\Phi}{\alpha\vto{u}+\beta\vto{v}}\rco}{\vto{x}}=\vto{x}\cdot(\alpha\vto{u}+\beta\vto{v})=\overline{\alpha}\vto{u}^*(\vto{x})+\overline{\beta}\vto{v}^*(\vto{x})=\fua{\lco\overline{\alpha\beta}\fua{\Phi}{\vto{u}+\vto{v}}\rco}{\vto{x}}\,.
 \end{equation*}
-If $\Phi$ were not an injection, there would be different covectors $\vtf{u}^*$ and $\vtf{v}^*$ where $\fua{\vtf{u}^*}{\vto{x}}=\fua{\vtf{v}^*}{\vto{x}}$ or $\vto{x}\cdot\vto{u}=\vto{x}\cdot\vto{v}$. From this supposition, the following equalities result: $\vto{x}\cdot(\vto{u}-\vto{v})=\fua{(\vtf{u}-\vtf{v})^*}{\vto{x}}=0$, which do not confirm $\vtf{u}^*\neq\vtf{v}^*$. In order to prove that $\Phi$ is a surjection, we need to obtain for an arbitrary functional $\vtf{g}\in U_\mathcal{R}^*$ a vector $\vto{u}\in U_\mathcal{R}$ such that $\fua{\Phi}{\vto{u}}=\vtf{g}$. Considering the rule \eqref{eq:regraCoord} and an orthonormal basis $\hat{B}=\{\vun{u}_1,\cdots,\vun{u}_n\}$ of $U_\mathcal{R}$ whose coordinate functionals span $U^*_\mathcal{R}$, we can say that 
+If $\Phi$ were not an injection, there would be different covectors $\vtf{u}^*$ and $\vtf{v}^*$ where $\fua{\vtf{u}^*}{\vto{x}}=\fua{\vtf{v}^*}{\vto{x}}$ or $\vto{x}\cdot\vto{u}=\vto{x}\cdot\vto{v}$. From this supposition, the following equalities result: $\vto{x}\cdot(\vto{u}-\vto{v})=\fua{(\vtf{u}-\vtf{v})^*}{\vto{x}}=0$, which do not confirm $\vtf{u}^*\neq\vtf{v}^*$. In order to prove that $\Phi$ is a surjection, we need to obtain for an arbitrary functional $\vtf{g}\in U_\cam{F}^*$ a vector $\vto{u}\in U_\cam{F}$ such that $\fua{\Phi}{\vto{u}}=\vtf{g}$. Considering the rule \eqref{eq:regraCoord} and an orthonormal basis $\hat{B}=\{\vun{u}_1,\cdots,\vun{u}_n\}$ of $U_\cam{F}$ whose coordinate functionals span $U^*_\cam{F}$, we can say that 
 \begin{equation*}
 \fua{\vtf{g}}{\vto{x}}=\fua{[\sum_{i=1}^n\alpha_i\vtf{f}^{\hat{B}}_i]}{\vto{x}}=\sum_{i=1}^n\alpha_i\fua{\vtf{f}^{\hat{B}}_i}{\vto{x}}=\sum_{i=1}^n\alpha_i\lpa\vto{x}\cdot\vun{u}_i\rpa=\vto{x}	\cdot ( \sum_{i=1}^n\overline{\alpha_i} \vun{u}_i)\,.
 \end{equation*}
@@ -404,7 +408,7 @@ If $\vto{u}$ is zero, it is evident that $\|\vtf{u}^*\|=\|\vto{u}\|$; otherwise,
 \end{proof}
 }
 
-The Riesz-Fréchet Representation enables us to define a rule for coordinate functionals of bases not necessarily orthogonal. Then, let's see how this happens. Considering the conditions of the theorem, let $B=\{\vto{u}_1,\cdots,\vto{u}_n\}$ be a basis of $U_\mathcal{R}$ and $B^*=\{\vtf{f}_1^B,\cdots,\vtf{f}_n^B\}$ its dual correspondent. In this context, functionals $\vtf{f}_i^B\in U_\mathcal{R}^*$ are biunivocaly related to $\vto{v}_i\in U_\mathcal{R}$ in such a way that, given a vector $\vto{u}\in U_\mathcal{R}$, the following equalities are valid:
+The Riesz-Fréchet Representation enables us to define a rule for coordinate functionals of bases not necessarily orthogonal. Then, let's see how this happens. Considering the conditions of the theorem, let $B=\{\vto{u}_1,\cdots,\vto{u}_n\}$ be a basis of $U_\cam{F}$ and $B^*=\{\vtf{f}_1^B,\cdots,\vtf{f}_n^B\}$ its dual correspondent. In this context, functionals $\vtf{f}_i^B\in U_\cam{F}^*$ are biunivocaly related to $\vto{v}_i\in U_\cam{F}$ in such a way that, given a vector $\vto{u}\in U_\cam{F}$, the following equalities are valid:
 \begin{equation*}
 \fua{\vtf{f}_i^B}{\vto{u}}=\vto{u}\cdot\vto{v_i}=\sum_{j=1}^n\fua{\vtf{f}_j^B}{\vto{u}}\vto{u}_j \cdot \vto{v}_i\,.
 \end{equation*}
@@ -421,7 +425,7 @@ In this context, the inner product between two arbitrary vectors $\vto{u}$ and $
 \begin{equation}\label{eq:prodIntGen}
 \vto{u}\cdot\vto{v}=\sum_{i=1}^n\sum_{j=1}^n\fua{\vtf{f}_i^{B}}{\vto{u}}\overline{\fua{\vtf{f}_j^{B^\perp}}{\vto{v}}}\,\vto{u}_i\cdot\vto{u}^j=\sum_{i=1}^n\fua{\vtf{f}_i^{B}}{\vto{u}}\overline{\fua{\vtf{f}_i^{B^\perp}}{\vto{v}}}\,.
 \end{equation}
-If $B$ is orthonormal, then basis $B^\perp=B$. Moreover, if the field $\mathcal{R}$ is real, we have $\vto{u}\cdot\vto{v}=\sum_{i=1}^n\fua{\vtf{f}_i^{B}}{\vto{u}}\fua{\vtf{f}_i^{B}}{\vto{v}}$. Figure \ref{fg:espacoDual} summarizes the relationships between basis $B$ and the reciprocal bases it induces.  
+If $B$ is orthonormal, then basis $B^\perp=B$. Moreover, if the field $\cam{F}$ is real, we have $\vto{u}\cdot\vto{v}=\sum_{i=1}^n\fua{\vtf{f}_i^{B}}{\vto{u}}\fua{\vtf{f}_i^{B}}{\vto{v}}$. Figure \ref{fg:espacoDual} summarizes the relationships between basis $B$ and the reciprocal bases it induces.  
 \begin{figure}[!ht]
 \centering
 \begin{center}
@@ -435,32 +439,32 @@ In the particular case of an orthonormal basis $\hat{B}$ vectors $\vun{u}_i=\vun
 \fua{\vtf{f}_i^{\hat{B}}}{\vto{x}}=\fua{(\vun{u}_i)^*}{\vto{x}}=\vto{x} \cdot \vun{u}_i\,.
 \end{equation}
 
-Still considering the terms of the previous theorem, the equality between norms of continuous vectors and covectors enables us to state that the dual space $U^*_\mathcal{R}$ is also a Hilbert space. As this feature is very important, we shall present it in a more formal way, through the following corollary.  
+Still considering the terms of the previous theorem, the equality between norms of continuous vectors and covectors enables us to state that the dual space $U^*_\cam{F}$ is also a Hilbert space. As this feature is very important, we shall present it in a more formal way, through the following corollary.  
 
 \begin{mcoro}{Hilbert Dual Space}{dualHilb}
-If the linear functionals of $U_\mathcal{R}^*$ are continuous and $U_\mathcal{R}$ is a Hilbert space, then $U_\mathcal{R}^*$ is also a Hilbert space.
+If the linear functionals of $U_\cam{F}^*$ are continuous and $U_\cam{F}$ is a Hilbert space, then $U_\cam{F}^*$ is also a Hilbert space.
 \end{mcoro}
 
 {\footnotesize
 \begin{proof}
-By the rule \eqref{eq:normaFuncao},  $U_\mathcal{R}^*$ is a normed space that is also defined to be metric inner product (See p. \pageref{txt:prodInt}). Thus, it remains here to verify that $U_\mathcal{R}^*$ is complete. This condition is assured if the bijection $\Phi$ is isometric, according to theorem \ref{teo:isoComp}. From the rule for covectors established by Riesz-Fréchet Representation, if $\vto{u}=\vto{v}-\vto{w}$ then    
+By the rule \eqref{eq:normaFuncao},  $U_\cam{F}^*$ is a normed space that is also defined to be metric inner product (See p. \pageref{txt:prodInt}). Thus, it remains here to verify that $U_\cam{F}^*$ is complete. This condition is assured if the bijection $\Phi$ is isometric, according to theorem \ref{teo:isoComp}. From the rule for covectors established by Riesz-Fréchet Representation, if $\vto{u}=\vto{v}-\vto{w}$ then    
 \begin{equation*}
 \fua{(\vto{v}-\vtf{w})^*}{\vto{x}}=\vto{x}\cdot(\vto{v}-\vto{w})=\vto{x}\cdot\vto{v}-\vto{x}\cdot\vto{w}=\fua{\vtf{v}^*}{\vto{x}}-\fua{\vtf{w}^*}{\vto{x}}=\fua{(\vtf{v}^*-\vtf{w}^*)}{\vto{x}}\,,
 \end{equation*}
-from which we conclude that $(\vtf{v}-\vtf{w})^*=(\vtf{v}^*-\vtf{w}^*)$, or that $\fua{\Phi}{\vto{v}-\vto{w}}=\fua{\Phi}{\vto{v}}-\fua{\Phi}{\vto{w}}$. Thereby, knowing that $\|\fua{\Phi}{\vto{x}}\|_{U_\mathcal{R}^*}=\|\vto{x}\|_{U_\mathcal{R}}$, metric  
+from which we conclude that $(\vtf{v}-\vtf{w})^*=(\vtf{v}^*-\vtf{w}^*)$, or that $\fua{\Phi}{\vto{v}-\vto{w}}=\fua{\Phi}{\vto{v}}-\fua{\Phi}{\vto{w}}$. Thereby, knowing that $\|\fua{\Phi}{\vto{x}}\|_{U_\cam{F}^*}=\|\vto{x}\|_{U_\cam{F}}$, metric  
 \begin{equation*}
-\fua{\varrho_{U_\mathcal{R}^*}}{\fua{\Phi}{\vto{v}},\fua{\Phi}{\vto{w}}}=\|\fua{\Phi}{\vto{v}}-\fua{\Phi}{\vto{w}}\|_{U_\mathcal{R}^*}= \|\fua{\Phi}{\vto{v}-\vto{w}}\|_{U_\mathcal{R}^*}= \|\vto{v}-\vto{w}\|_{U_\mathcal{R}}\,.
+\fua{\varrho_{U_\cam{F}^*}}{\fua{\Phi}{\vto{v}},\fua{\Phi}{\vto{w}}}=\|\fua{\Phi}{\vto{v}}-\fua{\Phi}{\vto{w}}\|_{U_\cam{F}^*}= \|\fua{\Phi}{\vto{v}-\vto{w}}\|_{U_\cam{F}^*}= \|\vto{v}-\vto{w}\|_{U_\cam{F}}\,.
 \end{equation*}
 Therefore, $\Phi$ is indeed an isometry in this case.
 \end{proof}
 }
 
-Now, considering $U_\mathcal{R}$ and $V_\mathcal{R}$ Hilbert spaces, we call $\vtf{g}^\dagger\in U^V_\mathcal{R}$ the \textsb{adjoint function}\index{function!ajoint} of $\vtf{g}\in V^U_\mathcal{R}$ when, given arbitrary vectors $\vto{u}\in U_\mathcal{R}$ and $\vto{v}\in V_\mathcal{R}$,
+Now, considering $U_\cam{F}$ and $V_\cam{F}$ Hilbert spaces, we call $\vtf{g}^\dagger\in U^V_\cam{F}$ the \textsb{adjoint function}\index{function!ajoint} of $\vtf{g}\in V^U_\cam{F}$ when, given arbitrary vectors $\vto{u}\in U_\cam{F}$ and $\vto{v}\in V_\cam{F}$,
 \begin{equation}\label{eq:funcaoTransposta}
 \fua{\vtf{g}}{\vto{u}}\cdot\vto{v}=\vto{u}\cdot\fua{\vtf{g}^\dagger}{\vto{v}}\,.
 \end{equation}
-Particularly, if $\mathcal{R}=\real$, the function $\vtf{g}^\dagger$ is called the  
-\textsb{transpose}\index{function!transpose} of $\vtf{g}$. From previous equality, the following properties are valid for all $\alpha\in\mathcal{R}$ and $\vtf{k}\in U^V_\mathcal{R}\,$:
+Particularly, if $\cam{F}=\real$, the function $\vtf{g}^\dagger$ is called the  
+\textsb{transpose}\index{function!transpose} of $\vtf{g}$. From previous equality, the following properties are valid for all $\alpha\in\cam{F}$ and $\vtf{k}\in U^V_\cam{F}\,$:
 \begin{itemize}
 	\setlength\itemsep{.1em}
 	\item[i.] $\lpa\alpha\vtf{g}\rpa^\dagger=\overline{\alpha}\vtf{g}^\dagger$;
@@ -472,17 +476,17 @@ Particularly, if $\mathcal{R}=\real$, the function $\vtf{g}^\dagger$ is called t
 
 {\footnotesize
 \begin{proof}
-Firstly, we need to prove the existence and uniqueness of adjoint functions. On equality \eqref{eq:funcaoTransposta}, let's consider $\vto{u}=\vun{u}_k$ and $\vto{v}=\vun{v}_k$, where vectors on the right sides belong to orthonormal bases $\hat{B}_1$ and $\hat{B}_2$ of $n$-dimensional Hilbert spaces $U_\mathcal{R}$ and $V_\mathcal{R}$ respectively. Thereby, we can develop the following:
+Firstly, we need to prove the existence and uniqueness of adjoint functions. On equality \eqref{eq:funcaoTransposta}, let's consider $\vto{u}=\vun{u}_k$ and $\vto{v}=\vun{v}_k$, where vectors on the right sides belong to orthonormal bases $\hat{B}_1$ and $\hat{B}_2$ of $n$-dimensional Hilbert spaces $U_\cam{F}$ and $V_\cam{F}$ respectively. Thereby, we can develop the following:
 \begin{align*}
 \vun{u}_k\cdot\fua{\vtf{g}^\dagger}{\vun{v}_k}&=\fua{\vtf{g}}{\vun{u}_k}\cdot\vun{v}_k\\
 \vun{u}_k\cdot\sum_{i=1}^n{\vtf{f}_i^{\hat{B}_1}}[\fua{\vtf{g}^\dagger}{\vun{v}_k}]\vun{u}_i&=\sum_{i=1}^n{\vtf{f}_i^{\hat{B}_2}}\lco\fua{\vtf{g}}{\vun{u}_k}\rco\vun{v}_i\cdot\vun{v}_k\\
 \overline{{\vtf{f}_k^{\hat{B}_1}}[\fua{\vtf{g}^\dagger}{\vun{v}_k}]}&={\vtf{f}_k^{\hat{B}_2}}\lco\fua{\vtf{g}}{\vun{u}_k}\rco\,.
 \end{align*}
-From this result, it can be said that if $\vtf{g}$ exists, so does $\vtf{g}^\dagger$. Now, supposing the existence of two adjoint functions $\vtf{g}_1^\dagger$ and $\vtf{g}_2^\dagger$ of $\vtf{g}$, there are two equalities similar to \eqref{eq:funcaoTransposta}. Subtracting one from the other, we obtain $\vto{u}\cdot(\fua{\vtf{g}_1^\dagger}{\vto{v}}-\fua{\vtf{g}_2^\dagger}{\vto{v}})=0$, which is valid for all $\vto{u}$ and $\vto{v}$; thereby, $\vtf{g}_1^\dagger=\vtf{g}_2^\dagger$. Considering the properties now, the first can be verified from  $\fua{\lpa\alpha\vtf{g}\rpa^\dagger}{\vto{u}}\cdot\vto{v}=\vto{u}\cdot\alpha\fua{\vtf{g}}{\vto{v}}$ and from  $\overline{\alpha}\fua{\vtf{g}^\dagger}{\vto{u}}\cdot\vto{v}=\vto{u}\cdot\alpha\fua{\vtf{g}}{\vto{v}}$, which results from the conjugate linearity of the inner product. The second can be proved from $\fua{\vtf{g}\circ\vtf{k}}{\vto{u}}\cdot\vto{v}=\fua{\vtf{k}}{\vto{u}}\cdot\fua{\vtf{g}^\dagger}{\vto{v}}=\vto{u}\cdot\fua{\vtf{k}^\dagger\circ\vtf{g}^\dagger}{\vto{u}}$. Let's verify if the adjoint of a linear function is also linear: given a scalar $\alpha\in\mathcal{R}$,
+From this result, it can be said that if $\vtf{g}$ exists, so does $\vtf{g}^\dagger$. Now, supposing the existence of two adjoint functions $\vtf{g}_1^\dagger$ and $\vtf{g}_2^\dagger$ of $\vtf{g}$, there are two equalities similar to \eqref{eq:funcaoTransposta}. Subtracting one from the other, we obtain $\vto{u}\cdot(\fua{\vtf{g}_1^\dagger}{\vto{v}}-\fua{\vtf{g}_2^\dagger}{\vto{v}})=0$, which is valid for all $\vto{u}$ and $\vto{v}$; thereby, $\vtf{g}_1^\dagger=\vtf{g}_2^\dagger$. Considering the properties now, the first can be verified from  $\fua{\lpa\alpha\vtf{g}\rpa^\dagger}{\vto{u}}\cdot\vto{v}=\vto{u}\cdot\alpha\fua{\vtf{g}}{\vto{v}}$ and from  $\overline{\alpha}\fua{\vtf{g}^\dagger}{\vto{u}}\cdot\vto{v}=\vto{u}\cdot\alpha\fua{\vtf{g}}{\vto{v}}$, which results from the antilinearity of the inner product. The second can be proved from $\fua{\vtf{g}\circ\vtf{k}}{\vto{u}}\cdot\vto{v}=\fua{\vtf{k}}{\vto{u}}\cdot\fua{\vtf{g}^\dagger}{\vto{v}}=\vto{u}\cdot\fua{\vtf{k}^\dagger\circ\vtf{g}^\dagger}{\vto{u}}$. Let's verify if the adjoint of a linear function is also linear: given a scalar $\alpha\in\cam{F}$,
 \begin{equation*}
 \vto{v}\cdot\fua{\vtf{g}^\dagger}{\ele{a}\vto{u}}=\overline{\alpha}\lco\fua{\vtf{g}}{\vto{v}}\cdot\vto{u}\rco=\overline{\alpha}[\vto{v}\cdot\fua{\vtf{g}^\dagger}{\vto{u}}]=\vto{v}\cdot\alpha\fua{\vtf{g}^\dagger}{\vto{u}}.
 \end{equation*} 
-Considering $\vto{u}_1,\vto{u}_2\in U^V_\mathcal{R}$, we have
+Considering $\vto{u}_1,\vto{u}_2\in U^V_\cam{F}$, we have
 \begin{equation*}
 \vto{v}\cdot\fua{\vtf{g}^\dagger}{\vto{u}_1+\vto{u}_2}=\fua{\vtf{g}}{\vto{v}}\cdot\lpa\vto{u}_1+\vto{u}_2\rpa=\vto{v}\cdot[\fua{\vtf{g}^\dagger}{\vto{u}_1}+\fua{\vtf{g}^\dagger}{\vto{u}_2}].
 \end{equation*}
@@ -490,24 +494,24 @@ In order to prove the equality on the fourth property, we need to know that an i
 \end{proof}
 }
 
-A vector $\vtf{h}$ of function space $V^V_\mathcal{R}$ is said to be a \textsb{Hermitian}\index{operator!Hermitian} or \textsb{self-adjoint}\index{operator!self-adjoint} operator when $\vtf{h}=\vtf{h}^\dagger$; but, if $\vtf{h}=-\vtf{h}^\dagger$, it is called  \textsb{anti-Hermitian}\index{operator!anti-Hermitian}. If $\mathcal{R}$ is a real field, the Hermitian operator is also called \textsb{symmetric}\index{operator!symmetric} and the anti-Hermitian, \textsb{antisymmetric}\index{operator!antisymmetric}. A function of $U^V_\mathcal{R}$ is said to be \textsb{unitary}\index{function!unitary} when it is a linear bijection whose inverse equals the adjoint. From this definition, we say that an unitary operator $\vtf{q}\in V^V_\mathcal{R}$ preserves inner products because, for all $\vto{u},\vto{v}\in V_\mathcal{R}$, the following equalities are valid: 
+A vector $\vtf{h}$ of function space $V^V_\cam{F}$ is said to be a \textsb{Hermitian}\index{operator!Hermitian} or \textsb{self-adjoint}\index{operator!self-adjoint} operator when $\vtf{h}=\vtf{h}^\dagger$; but, if $\vtf{h}=-\vtf{h}^\dagger$, it is called  \textsb{anti-Hermitian}\index{operator!anti-Hermitian}. If $\cam{F}$ is a real field, the Hermitian operator is also called \textsb{symmetric}\index{operator!symmetric} and the anti-Hermitian, \textsb{antisymmetric}\index{operator!antisymmetric}. A function of $U^V_\cam{F}$ is said to be \textsb{unitary}\index{function!unitary} when it is a linear bijection whose inverse equals the adjoint. From this definition, we say that an unitary operator $\vtf{q}\in V^V_\cam{F}$ preserves inner products because, for all $\vto{u},\vto{v}\in V_\cam{F}$, the following equalities are valid: 
 \begin{equation}
 \fua{\vtf{q}}{\vto{u}}\cdot\fua{\vtf{q}}{\vto{v}}=\vto{u}\cdot\fua{\vtf{q}^\dagger\circ\vtf{q}}{\vto{v}}=\vto{u}\cdot\fua{\vtf{q}^{-1}\circ\vtf{q}}{\vto{v}}=\vto{u}\cdot\vto{v}\,.
 \end{equation}
 Thereby, in the context of Hilbert spaces, we say that unitary operators also preserve norms, since 
 $\|\fua{\vtf{q}}{\vto{u}}\|^2=\fua{\vtf{q}}{\vto{u}}\cdot\fua{\vtf{q}}{\vto{u}}=\vto{u}\cdot\vto{u}=\|\vto{u}\|^2$.
 
-In the previous chapter, we said that the set of all unary invertible operators constitutes a group on  the operation of composition. Let's verify now if the set $O\subset \evl{\mathcal{R}}{V}{V}$ of all unitary operators, since they are unary and invertible, defines the group  $(\gloref{grOrto},\circ)$, called \textsb{unitary group}\index{group!unitary}: the equalities
+In the previous chapter, we said that the set of all unary invertible operators constitutes a group on  the operation of composition. Let's verify now if the set $O\subset \evl{\cam{F}}{V}{V}$ of all unitary operators, since they are unary and invertible, defines the group  $(\gloref{grOrto},\circ)$, called \textsb{unitary group}\index{group!unitary}: the equalities
 \begin{equation}
 \lpa \vtf{q}_1\circ\vtf{q}_2 \rpa^{-1} =
 \vtf{q}_2^{-1}\circ\vtf{q}_1^{-1} = \vtf{q}_2^\dagger\circ\vtf{q}_1^\dagger =
 \lpa \vtf{q}_1\circ\vtf{q}_2 \rpa^\dagger
 \end{equation}
-show, for all $\vtf{q}_1,\vtf{q}_2\in O$, that bijection\footnote{See properties on page \pageref{prop:Composicao}.}  $\vtf{q}_1\circ\vtf{q}_2$ indeed belongs to the set $O$. In the context of real fields, unitary groups and unitary linear operators are qualified as orthogonal. There are also linear operators that preserve metrics or distance, when they are called \textsb{isometric operators}\index{operator!isometric}. In more rigorous terms, $\vtf{k}\in \evl{\mathcal{R}}{V}{V}$ is an isometric operator if it is a bijection where $\varrho\,[\fua{\vtf{k}}{\vto{u}},\fua{\vtf{k}}{\vto{v}}]=\fua{\varrho}{\vto{u},\vto{v}}$, for all $\vto{u},\vto{v}\in V_\mathcal{R}$. Similarly to unitary operators, the set os all isometric operators defines a group $(I,\circ)$ called \textsb{isometry group}\index{group!isometry}, since the composition of isometric operators is also an isometric operator, that is, considering any $\vtf{k},\vtf{g}\in I$, we have
+show, for all $\vtf{q}_1,\vtf{q}_2\in O$, that bijection\footnote{See properties on page \pageref{prop:Composicao}.}  $\vtf{q}_1\circ\vtf{q}_2$ indeed belongs to the set $O$. In the context of real fields, unitary groups and unitary linear operators are qualified as orthogonal. There are also linear operators that preserve metrics or distance, when they are called \textsb{isometric operators}\index{operator!isometric}. In more rigorous terms, $\vtf{k}\in \evl{\cam{F}}{V}{V}$ is an isometric operator if it is a bijection where $\varrho\,[\fua{\vtf{k}}{\vto{u}},\fua{\vtf{k}}{\vto{v}}]=\fua{\varrho}{\vto{u},\vto{v}}$, for all $\vto{u},\vto{v}\in V_\cam{F}$. Similarly to unitary operators, the set os all isometric operators defines a group $(I,\circ)$ called \textsb{isometry group}\index{group!isometry}, since the composition of isometric operators is also an isometric operator, that is, considering any $\vtf{k},\vtf{g}\in I$, we have
 \begin{equation}
 \varrho\,\lco\fua{\vtf{g}\circ\vtf{k}}{\vto{u}},\fua{\vtf{g}\circ\vtf{k}}{\vto{v}}\rco = \varrho\,\lco{\fua{\vtf{k}}{\vto{u}},\fua{\vtf{k}}{\vto{v}}}\rco=\fua{\varrho}{\vto{u},\vto{v}}
 \end{equation}
- for all $\vto{u},\vto{v}\in V_\mathcal{R}$. \emph{In the context of Euclidean spaces, an orthogonal group is also an isometry group because any operator that preserves inner product is isometric. Moreover, the operators of an isometry group always preserve inner product.} 
+ for all $\vto{u},\vto{v}\in V_\cam{F}$. \emph{In the context of Euclidean spaces, an orthogonal group is also an isometry group because any operator that preserves inner product is isometric. Moreover, the operators of an isometry group always preserve inner product.} 
 
 {\footnotesize
 \begin{proof}
@@ -536,7 +540,7 @@ from which we prove that $\vtf{k}$ is an isometry. Now, let $\vtf{g}\in \evl{\re
 \section{Matrix Representations}
 
 
-We already know that a vector can be identified through its coordinates, represented by a tuple, on a specific basis, in such a way that distinct tuples never imply equal vectors; this vector-coordinates relationship is thus biunivocal. Thereby, mathematical expressions with vectors may include their coordinate scalars, gathered conveniently in matrices, when all the functional-arithmetic apparatus presented in the previous chapter, applicable to this type of collection, becomes available. Given a certain basis, the resulting relationship between vectors and matrices is also biunivocal, as in the case of tuples representing coordinates. In practical terms, the matrix representation of a vector occurs the following way: let $\vto{u}$ be an arbitrary element of vector space $U_\mathcal{R}$, of which subset $B=\{\vto{u}_1,\cdots,\vto{u}_n\}$ is a basis. Then, we define a $n\times 1$ matrix \gloref{repVet} as being the \textsb{representative matrix}\index{matrix!representative} of $\vto{u}$ on $B$, whose elements $\mav{\vto{u}}{B}_{i1}:=\fua{\vtf{f}^\con{B}_{i}}{\vto{u}}$. This definition makes it obvious that the representative matrix of the zero vector is always the zero matrix, on any basis. Moreover, the linearity of coordinate functionals enables the following development:
+We already know that a vector can be identified through its coordinates, represented by a tuple, on a specific basis, in such a way that distinct tuples never imply equal vectors; this vector-coordinates relationship is thus biunivocal. Thereby, mathematical expressions with vectors may include their coordinate scalars, gathered conveniently in matrices, when all the functional-arithmetic apparatus presented in the previous chapter, applicable to this type of collection, becomes available. Given a certain basis, the resulting relationship between vectors and matrices is also biunivocal, as in the case of tuples representing coordinates. In practical terms, the matrix representation of a vector occurs the following way: let $\vto{u}$ be an arbitrary element of vector space $U_\cam{F}$, of which subset $B=\{\vto{u}_1,\cdots,\vto{u}_n\}$ is a basis. Then, we define a $n\times 1$ matrix \gloref{repVet} as being the \textsb{representative matrix}\index{matrix!representative} of $\vto{u}$ on $B$, whose elements $\mav{\vto{u}}{B}_{i1}:=\fua{\vtf{f}^\con{B}_{i}}{\vto{u}}$. This definition makes it obvious that the representative matrix of the zero vector is always the zero matrix, on any basis. Moreover, the linearity of coordinate functionals enables the following development:
 \begin{equation*}
 	\alpha\sum_{i=1}^{n}\fua{\vtf{f}^\con{B}_{i}}{\vto{x}}\vto{u}_i+\beta\sum_{i=1}^{n}\fua{\vtf{f}^\con{B}_{i}}{\vto{y}}\vto{u}_i= \sum_{i=1}^{n}\lco\alpha\fua{\vtf{f}^\con{B}_{i}}{\vto{x}}+\beta\fua{\vtf{f}^\con{B}_{i}}{\vto{y}}\rco\vto{u}_i=\sum_{i=1}^{n}\fua{\vtf{f}^\con{B}_{i}}{\alpha\vto{x}+\beta\vto{y}}\vto{u}_i,
 \end{equation*}
@@ -544,11 +548,11 @@ from where it is possible to conclude that
 \begin{equation}
 \alpha\mav{\vto{x}}{B}+\beta\mav{\vto{y}}{B}=\mav{\alpha\vto{x}+\beta\vto{y}}{B}\,,
 \end{equation}
-for all vectors $\vto{x},\vto{y}\in U_\mathcal{R}$ and all scalars $\alpha,\beta\in\mathcal{R}$. Now, concerning the vectors of basis $B$, if we represent them relative to $B$ itself, we have $\mav{\vto{u}_j}{B}_{i1}=\fua{\vtf{f}^\con{B}_{i}}{\vto{u}_j}=\delta_{ij}$. This representation strategy is frequent for the natural basis $O=\{\vun{e}_1,\cdots,\vun{e}_n\}$ of Euclidean spaces, where $\mav{\vun{e}_j}{O}_{i1}=\delta_{ij}\,$. 
+for all vectors $\vto{x},\vto{y}\in U_\cam{F}$ and all scalars $\alpha,\beta\in\cam{F}$. Now, concerning the vectors of basis $B$, if we represent them relative to $B$ itself, we have $\mav{\vto{u}_j}{B}_{i1}=\fua{\vtf{f}^\con{B}_{i}}{\vto{u}_j}=\delta_{ij}$. This representation strategy is frequent for the natural basis $O=\{\vun{e}_1,\cdots,\vun{e}_n\}$ of Euclidean spaces, where $\mav{\vun{e}_j}{O}_{i1}=\delta_{ij}\,$. 
 
 
-Considering $V_\mathcal{R}$ a $m$-dimensional complete vector space, let $\vtf{g}$ be an element of the function space $\evl{\mathcal{R}}{U}{V}$. If coordinates are considered for vector identification, by mapping elements of $U$ to elements of $V$ the function $\vtf{g}$ ends up defining indirectly a relationship between two distinct bases, in such a way that the matrix representation of this relationship needs to evidence them both. Thereby, if $C=\{\vto{v}_1,\cdots,\vto{v}_m\}$ is a basis of   
-$V_\mathcal{R}$ and $\vto{u}\in U_\mathcal{R}$, we have
+Considering $V_\cam{F}$ a $m$-dimensional complete vector space, let $\vtf{g}$ be an element of the function space $\evl{\cam{F}}{U}{V}$. If coordinates are considered for vector identification, by mapping elements of $U$ to elements of $V$ the function $\vtf{g}$ ends up defining indirectly a relationship between two distinct bases, in such a way that the matrix representation of this relationship needs to evidence them both. Thereby, if $C=\{\vto{v}_1,\cdots,\vto{v}_m\}$ is a basis of   
+$V_\cam{F}$ and $\vto{u}\in U_\cam{F}$, we have
 \begin{align*}
 \fua{\vtf{g}}{\vto{u}}&= \sum_{i=1}^{m}\fua{\vtf{f}^\con{C}_{i}}{\fua{\vtf{g}}{\vto{u}}}\vto{v}_i\nonumber\\
 \fua{\vtf{g}}{\vto{u}}&=\sum_{i=1}^{m}\vtf{f}^\con{C}_{i}  [ \sum_{j=1}^{n} \fua{\vtf{f}^\con{B}_{j}}{\vto{u}}\fua{\vtf{g}}{\vto{u}_j}]\vto{v}_i\nonumber\\
@@ -558,12 +562,12 @@ when we can state that
 \begin{equation}\label{eq:repMatMape}
 \mav{\fua{\vtf{g}}{\vto{u}}}{C}=\maf{\vtf{g}}{B}{C}\mav{\vto{u}}{B}\,,
 \end{equation}
-where \gloref{repFun} is a $m\times n$ matrix, with elements $\maf{\vtf{g}}{B}{C}_{ij}:=\vtf{f}^\con{C}_{i}\lco\fua{\vtf{g}}{\vto{u}_j}\rco$, that represents the linear function $\vtf{g}\in\evl{\mathcal{R}}{U}{V}$ on bases $B$ and $C$. In other words, for bases $B$ and $C$ with dimensions $n$ and $m$ respectively, the $m\times 1$ representative matrix of vector $\fua{\vtf{g}}{\vto{u}}$ on $C$ results from the $m\times n$ representative matrix of function 
-$\vtf{g}$ on $B$ and $C$ multiplied by the $n\times 1$ representative matrix of vector $\vto{u}$ on $B$. Using a similar development that led to this previous result, given $\vtf{h}\in\evl{\mathcal{R}}{U}{V}$ and $\alpha,\beta\in\mathcal{R}$, we obtain the following equality:
+where \gloref{repFun} is a $m\times n$ matrix, with elements $\maf{\vtf{g}}{B}{C}_{ij}:=\vtf{f}^\con{C}_{i}\lco\fua{\vtf{g}}{\vto{u}_j}\rco$, that represents the linear function $\vtf{g}\in\evl{\cam{F}}{U}{V}$ on bases $B$ and $C$. In other words, for bases $B$ and $C$ with dimensions $n$ and $m$ respectively, the $m\times 1$ representative matrix of vector $\fua{\vtf{g}}{\vto{u}}$ on $C$ results from the $m\times n$ representative matrix of function 
+$\vtf{g}$ on $B$ and $C$ multiplied by the $n\times 1$ representative matrix of vector $\vto{u}$ on $B$. Using a similar development that led to this previous result, given $\vtf{h}\in\evl{\cam{F}}{U}{V}$ and $\alpha,\beta\in\cam{F}$, we obtain the following equality:
 \begin{equation}
 \mav{[\fua{\alpha\vtf{g}+\beta\vtf{h}]}{\vto{u}}}{C}=(\alpha\maf{\vtf{g}}{B}{C}+\beta\maf{\vtf{h}}{B}{C})\mav{\vto{u}}{B}\,.
 \end{equation}
-It is possible that $U$ equals $V$, when the functions involved result in linear operators. Moreover, bases $B$ and $C$ may also be equal, which enables us to write, for example, $\mav{\fua{\vtf{g}}{\vto{u}}}{B}=\maf{\vtf{g}}{B}{B}\mav{\vto{u}}{B}$, from which $\maf{\vtf{g}}{B}{B}$ is said to be the representative matrix of linear operator $\vtf{g}$ on $B$. Composite linear functions can also be represented in matrix form. Let's see how. Considering $\vtf{l}$ a function in space $\evl{\mathcal{R}}{V}{W}$, set $Z$ a basis of $q$-dimensional complete vector space $W_\mathcal{R}$ and $\vto{v}=\fua{\vtf{g}}{\vto{u}}$ a vector of $V_\mathcal{R}$, we can write that matrix
+It is possible that $U$ equals $V$, when the functions involved result in linear operators. Moreover, bases $B$ and $C$ may also be equal, which enables us to write, for example, $\mav{\fua{\vtf{g}}{\vto{u}}}{B}=\maf{\vtf{g}}{B}{B}\mav{\vto{u}}{B}$, from which $\maf{\vtf{g}}{B}{B}$ is said to be the representative matrix of linear operator $\vtf{g}$ on $B$. Composite linear functions can also be represented in matrix form. Let's see how. Considering $\vtf{l}$ a function in space $\evl{\cam{F}}{V}{W}$, set $Z$ a basis of $q$-dimensional complete vector space $W_\cam{F}$ and $\vto{v}=\fua{\vtf{g}}{\vto{u}}$ a vector of $V_\cam{F}$, we can write that matrix
 $\mav{\fua{\vtf{l}}{\vto{v}}}{Z}=\maf{\vtf{l}}{C}{Z}\mav{\vto{v}}{C}$. From this equality, we obtain
 \begin{equation}
 \mav{\fua{\vtf{l}\circ\vtf{g}}{\vto{u}}}{Z}=\maf{\vtf{l}}{C}{Z}\mav{\fua{\vtf{g}}{\vto{u}}}{C}=\maf{\vtf{l}}{C}{Z}\maf{\vtf{g}}{B}{C}\mav{\vto{u}}{B}\,,
@@ -575,11 +579,11 @@ which can be used to write
 if linear function $\vtf{g}$ is a bijection and dimension $m=n$.
 
 
-The inner product of vectors $\vto{x},\vto{y}\in X_\mathcal{R}$, where $X_\mathcal{R}$ is a Hilbert space, can be represented through the following equalities:
+The inner product of vectors $\vto{x},\vto{y}\in X_\cam{F}$, where $X_\cam{F}$ is a Hilbert space, can be represented through the following equalities:
 \begin{equation}
 \vto{x}\cdot\vto{y} = [\mav{\vto{x}}{B}\,{\mav{\vto{y}}{B^\perp}}^{\dagger}]_{11} = [{\mav{\vto{x}}{B}}^\text{T}\,{\overline{\mav{\vto{y}}{B^\perp}}}]_{11}\,,
 \end{equation}
-according to equality \eqref{eq:prodIntGen}. The rule \eqref{eq:regraFuncCoord} enables us to obtain an important property involving adjoint functions and conjugate transpose matrices: considering that a function $\vtf{g}\in\evl{\mathcal{R}}{X}{Y}$, where $Y_\mathcal{R}$ is also a Hilbert space, has an adjoint function, from bases $B=\{\vto{x}_i,\cdots,\vto{x}_n\}$ of $X_\mathcal{R}$ and $C=\{\vto{y}_j,\cdots,\vto{y}_m\}$ of $Y_\mathcal{R}$, we have
+according to equality \eqref{eq:prodIntGen}. The rule \eqref{eq:regraFuncCoord} enables us to obtain an important property involving adjoint functions and conjugate transpose matrices: considering that a function $\vtf{g}\in\evl{\cam{F}}{X}{Y}$, where $Y_\cam{F}$ is also a Hilbert space, has an adjoint function, from bases $B=\{\vto{x}_i,\cdots,\vto{x}_n\}$ of $X_\cam{F}$ and $C=\{\vto{y}_j,\cdots,\vto{y}_m\}$ of $Y_\cam{F}$, we have
 \begin{align}\label{eq:matRepTransp}
 \fua{\vtf{g}}{\vto{x}_i}\cdot \vto{y}^j &= \overline{\vtf{g}^\dagger(\vto{y}^j)\cdot\vto{x}_i}\nonumber\\
 \vtf{f}^C_j\lco\fua{\vtf{g}}{\vto{x}_i}\rco &=\overline{\vtf{f}^{B^\perp}_i[\vtf{g}^\dagger(\vto{y}^j)]}\nonumber\\
@@ -592,7 +596,7 @@ There are concepts that arise from all these matrix representations of vectors a
 
 
 \begin{mteo}{Change of Coordinates of Vectors}{mudCoordVec}
-If $U(B)_\mathcal{R}$ and $U(C)_\mathcal{R}$ are vector spaces constituted by representative matrices of the elements of vector space $U_\mathcal{R}$ on its bases $B$ and $C$ respectively, there is one and only one linear bijective transformation $\map{\Gamma}{U(B)_\mathcal{R}}{U(C)_\mathcal{R}}$, called change of coordinates from $B$ to $C$, where  ${\Gamma}({\mav{\vto{x}}{B}})=\mav{\vto{x}}{C}$ for all $\vto{x}\in U_\mathcal{R}$.    
+If $U(B)_\cam{F}$ and $U(C)_\cam{F}$ are vector spaces constituted by representative matrices of the elements of vector space $U_\cam{F}$ on its bases $B$ and $C$ respectively, there is one and only one linear bijective transformation $\map{\Gamma}{U(B)_\cam{F}}{U(C)_\cam{F}}$, called change of coordinates from $B$ to $C$, where  ${\Gamma}({\mav{\vto{x}}{B}})=\mav{\vto{x}}{C}$ for all $\vto{x}\in U_\cam{F}$.    
 \end{mteo}
 \hspace{1pt}
 {\footnotesize
@@ -605,20 +609,20 @@ If $B=\{\vto{x}_1,\vto{x}_2\}$ and $C=\{\alpha_1\vto{x}_1,\alpha_2\vto{x}_2\}$, 
 \end{bmatrix} \mat{X}\,.
 \end{equation*}
 The uniqueness of $\Gamma$ is the trivial result from supposing ${\Gamma_1}({\mav{\vto{x}}{B}})=\mav{\vto{x}}{C}$ and ${\Gamma_2}({\mav{\vto{x}}{B}})=\mav{\vto{x}}{C}$. Now, equality \eqref{eq:repMatMape} enables us to write that $\mav{\alpha\vto{u}+\beta\vto{v}}{B}=\alpha\mav{\vto{u}}{B}+\beta\mav{\vto{v}}{B}$
-for all $\vto{u},\vto{v}\in U_\mathcal{R}$ and $\alpha,\beta\in\mathcal{R}$, from which we verify the linearity of $\Gamma$, that is, 
+for all $\vto{u},\vto{v}\in U_\cam{F}$ and $\alpha,\beta\in\cam{F}$, from which we verify the linearity of $\Gamma$, that is, 
 \begin{align*}
 \Gamma(\alpha\mav{\vto{u}}{B}+\beta\mav{\vto{v}}{B})&=\Gamma(\mav{\alpha\vto{u}+\beta\vto{v}}{B})\\
 &=\mav{\alpha\vto{u}+\beta\vto{v}}{C}\\
 &=\alpha\mav{\vto{u}}{C}+\beta\mav{\vto{v}}{C}\\
 &=\alpha\Gamma(\mav{\vto{u}}{B})+\beta\Gamma(\mav{\vto{v}}{B}).
 \end{align*}
-As the representative matrices of $\vto{x}\in U_\mathcal{R}$ on $B$ and $C$ are unique, it is evident that $\Gamma$ is an injection. Moreover, $\Gamma$ results a bijection because there is no matrix in    
-$U(C)_\mathcal{R}$ that does not have a correspondent in $U(B)_\mathcal{R}$, since every vector of $U_\mathcal{R}$ can be described in terms of $B$ and $C$.
+As the representative matrices of $\vto{x}\in U_\cam{F}$ on $B$ and $C$ are unique, it is evident that $\Gamma$ is an injection. Moreover, $\Gamma$ results a bijection because there is no matrix in    
+$U(C)_\cam{F}$ that does not have a correspondent in $U(B)_\cam{F}$, since every vector of $U_\cam{F}$ can be described in terms of $B$ and $C$.
 \end{proof}
 }
 
 Considering now $B=\{\vto{u}_1,\cdots,\vto{u}_n\}$ and $C=\{\vto{v}_1,\cdots,\vto{v}_n\}$ distinct bases 
-of vector space $U_\mathcal{R}$, they enable distinct matrix representations for an arbitrary vector $\vto{u}\in U_\mathcal{R}$. Thereby, from equalities   
+of vector space $U_\cam{F}$, they enable distinct matrix representations for an arbitrary vector $\vto{u}\in U_\cam{F}$. Thereby, from equalities   
 \begin{equation*}
 \fua{\vtf{f}_i^C}{\vto{u}}=\vtf{f}_i^C[\,{\sum_{j=1}^n\fua{\vtf{f}_j^B}{\vto{u}}\vto{u}_j}\,]=\sum_{j=1}^n\fua{\vtf{f}_i^C}{\vto{u}_j}\fua{\vtf{f}_j^B}{\vto{u}}
 \end{equation*}
@@ -626,11 +630,11 @@ together with expression \eqref{eq:repMatMape}, we can write that
 \begin{equation}\label{eq:matrizMudBase}
 \mav{\vto{u}}{C}=\maf{\vtf{i}}{B}{C}\mav{\vto{u}}{B}\,,
 \end{equation}
-where $\maf{\vtf{i}}{B}{C}_{ij}=\fua{\vtf{f}_i^C}{\fua{\vtf{i}}{\vto{u}_j}}$ and $\vtf{i}$ is the identity function of $U_\mathcal{R}$. Therefore, according to the previous theorem, we can write a rule
+where $\maf{\vtf{i}}{B}{C}_{ij}=\fua{\vtf{f}_i^C}{\fua{\vtf{i}}{\vto{u}_j}}$ and $\vtf{i}$ is the identity function of $U_\cam{F}$. Therefore, according to the previous theorem, we can write a rule
 \begin{equation}\label{eq:regraMudCoord}
 \fua{\Gamma}{\mat{X}}=\maf{\vtf{i}}{B}{C}\mat{X}
 \end{equation}
-describing a change of coordinates $\map{\Gamma}{U(B)_\mathcal{R}}{U(C)_\mathcal{R}}$, from which the representative matrix $\fua{\Gamma^{-1}}{\mat{X}}=\maf{\vtf{i}}{C}{B}\mat{X}$ results. In the particular case of Hilbert spaces, there is a rule for coordinate functionals, described by equality \eqref{eq:regraFuncCoord}, which enables us to specify matrix elements $\maf{\vtf{i}}{B}{C}_{ij}=\vto{u}_j\cdot\vto{v}^i$. 
+describing a change of coordinates $\map{\Gamma}{U(B)_\cam{F}}{U(C)_\cam{F}}$, from which the representative matrix $\fua{\Gamma^{-1}}{\mat{X}}=\maf{\vtf{i}}{C}{B}\mat{X}$ results. In the particular case of Hilbert spaces, there is a rule for coordinate functionals, described by equality \eqref{eq:regraFuncCoord}, which enables us to specify matrix elements $\maf{\vtf{i}}{B}{C}_{ij}=\vto{u}_j\cdot\vto{v}^i$. 
 
 
 According to the conditions of equality \eqref{eq:matrizMudBase}, as $\maf{\vtf{i}}{B}{C}$ is a square matrix of order $n$ and the identity function equals its inverse and its conjugate transpose, we can affirm from \eqref{eq:matRepInv} that 
@@ -643,11 +647,11 @@ and from \eqref{eq:matRepTransp}, whose context is Hilbert spaces,
 \end{equation}
 In other words, for this last equality, valid for the specific case of Hilbert spaces, the matrix that enables a change of coordinates from $C$ to $B$ has as its inverse the matrix that enables a change of coordinates from $B$ to $C$, whose conjugate transpose enables the change of coordinates from $C^\perp$ to $B^\perp$. 
 
-Still considering the vector space $U_\mathcal{R}$, the elements of base $C$ can be written on basis $B$ according to the following expressions:
+Still considering the vector space $U_\cam{F}$, the elements of base $C$ can be written on basis $B$ according to the following expressions:
 \begin{equation}\label{eq:mudaBase}
 \vto{v}_j=\sum_{i=1}^n\vto{u}_i\fua{\vtf{f}_i^B}{\vto{v}_j}=\sum_{i=1}^n\vto{u}_i\maf{\vtf{i}}{C}{B}_{ij}\,,
 \end{equation}
-from which, given a basis $Z$ of $U_\mathcal{R}$, we can say that 
+from which, given a basis $Z$ of $U_\cam{F}$, we can say that 
 \begin{equation*}
 \fua{\vtf{f}_k^Z}{\vto{v}_j}=\sum_{i=1}^n\fua{\vtf{f}_k^Z}{\vto{u}_i}\maf{\vtf{i}}{C}{B}_{ij}\,.
 \end{equation*}%=\sum_{i=1}^n\maf{\vtf{i}}{B}{Z}_{ki}\maf{\vtf{i}}{C}{B}_{ij}
@@ -665,15 +669,15 @@ Arranging the components on $Z$ of all the elements of bases $B$ and $C$ accordi
 \mav{\vto{u}_1}{Z}_{n1} & \mav{\vto{u}_2}{Z}_{n1} & \cdots & \mav{\vto{u}_n}{Z}_{n1}
 \end{bmatrix} \maf{\vtf{i}}{C}{B}\,,
 \end{equation}
-from which we say that $\maf{\vtf{i}}{C}{B}$ changes basis $B$ to basis $C$, that is, this matrix performs a \textsb{change of basis}\index{basis!change of}. Concerning the changes involving generic bases $B$ and $C$, when a matrix that changes coordinates from $B$ to $C$ is the inverse of the matrix that changes basis $B$ to $C$, the coordinates of elements of $U_\mathcal{R}$ are called \textsb{contravariant}\index{coordinates!contravariant}, since these coordinates are submitted to a ``contrary'' transformation relative to the change of basis $B$ to $C$, as is the case of the values of $\Gamma$ in \eqref{eq:regraMudCoord}. Now, let's see what happens when we change coordinates of dual vectors. If $\vtf{h}\in U^*_\mathcal{R}$ is a dual vector, we already know that $\mav{\vtf{h}}{B^*}$ is its representative matrix on dual basis $B^*$. Thereby, equalities \eqref{eq:coordVetorDual} and \eqref{eq:mudaBase} enable the following development:
+from which we say that $\maf{\vtf{i}}{C}{B}$ changes basis $B$ to basis $C$, that is, this matrix performs a \textsb{change of basis}\index{basis!change of}. Concerning the changes involving generic bases $B$ and $C$, when a matrix that changes coordinates from $B$ to $C$ is the inverse of the matrix that changes basis $B$ to $C$, the coordinates of elements of $U_\cam{F}$ are called \textsb{contravariant}\index{coordinates!contravariant}, since these coordinates are submitted to a ``contrary'' transformation relative to the change of basis $B$ to $C$, as is the case of the values of $\Gamma$ in \eqref{eq:regraMudCoord}. Now, let's see what happens when we change coordinates of dual vectors. If $\vtf{h}\in U^*_\cam{F}$ is a dual vector, we already know that $\mav{\vtf{h}}{B^*}$ is its representative matrix on dual basis $B^*$. Thereby, equalities \eqref{eq:coordVetorDual} and \eqref{eq:mudaBase} enable the following development:
 \begin{equation}
 \mav{\vtf{h}}{C^*}_j=\fua{\vtf{h}}{\vto{v}_j}=\sum_{i=1}^n\fua{\vtf{h}}{\vto{u}_i}\maf{\vtf{i}}{C}{B}_{ij}=\sum_{i=1}^n\mav{\vtf{h}}{B^*}_i\maf{\vtf{i}}{C}{B}_{ij}\,,
 \end{equation}
-from which we conclude that the change of coordinates of $\vtf{h}$ from $B^*$ to $C^*$ is performed by the same matrix $\maf{\vtf{i}}{C}{B}$ responsible for the change of basis, when the coordinates of dual vectors are then called \textsb{covariant}\index{coordinates!covariant}. Thereby, we can define a change of coordinates $\map{\Gamma^*}{U^*(B^*)_\mathcal{R}}{U^*(C^*)_\mathcal{R}}$ with a rule 
+from which we conclude that the change of coordinates of $\vtf{h}$ from $B^*$ to $C^*$ is performed by the same matrix $\maf{\vtf{i}}{C}{B}$ responsible for the change of basis, when the coordinates of dual vectors are then called \textsb{covariant}\index{coordinates!covariant}. Thereby, we can define a change of coordinates $\map{\Gamma^*}{U^*(B^*)_\cam{F}}{U^*(C^*)_\cam{F}}$ with a rule 
 \begin{equation}
 \fua{\Gamma^*}{\mat{X}}=\mat{X}\,\maf{\vtf{i}}{C}{B}\,.
 \end{equation}
-From these two classifications of coordinates, if $U_\mathcal{R}$ is a Hilbert space, scalars $\fua{\vtf{f}_i^B}{\vto{u}}=\vto{u}\cdot\vto{u}^i$ constitute the contravariant coordinates of vector $\vto{u}\in U_\mathcal{R}$, whose covector
+From these two classifications of coordinates, if $U_\cam{F}$ is a Hilbert space, scalars $\fua{\vtf{f}_i^B}{\vto{u}}=\vto{u}\cdot\vto{u}^i$ constitute the contravariant coordinates of vector $\vto{u}\in U_\cam{F}$, whose covector
 \begin{equation*}
 \vtf{u}^*=\sum_{i=1}^n\fua{\vtf{u}^*}{\vto{u}_i} \vtf{f}_i^{B}= \sum_{i=1}^n (\vto{u}_i\cdot\vto{u}) (\vtf{u}^i)^*\,.
 \end{equation*}
@@ -684,12 +688,12 @@ Now, an interesting consequence of equalities \eqref{eq:mudaBaseTranspHilbert} i
 
 
 \begin{mcoro}{Change of Coordinates of Linear Operators}{mudaBase}
-If $Y(B)_\mathcal{R}$ and $Y(C)_\mathcal{R}$ are vector spaces constituted by the representative matrices of operators that belong to $\evl{\mathcal{R}}{Y}{Y}$, described respectively on bases $B$ and $C$ of vector space $Y_\mathcal{R}$, the change of coordinates $\map{\Theta}{Y(B)_\mathcal{R}}{Y(C)_\mathcal{R}}$ is always a similarity transformation where $\fua{\Theta}{\mat{X}}=\maf{\vtf{i}}{B}{C}\mat{X}\,\maf{\vtf{i}}{C}{B}$.
+If $Y(B)_\cam{F}$ and $Y(C)_\cam{F}$ are vector spaces constituted by the representative matrices of operators that belong to $\evl{\cam{F}}{Y}{Y}$, described respectively on bases $B$ and $C$ of vector space $Y_\cam{F}$, the change of coordinates $\map{\Theta}{Y(B)_\cam{F}}{Y(C)_\cam{F}}$ is always a similarity transformation where $\fua{\Theta}{\mat{X}}=\maf{\vtf{i}}{B}{C}\mat{X}\,\maf{\vtf{i}}{C}{B}$.
 \end{mcoro}
 
 {\footnotesize
 \begin{proof}
-Considering a function $\vtf{g}\in\evl{\mathcal{R}}{Y}{Y}$ and a vector $\vto{u}\in Y_\mathcal{R}$, the last equality of the following development 
+Considering a function $\vtf{g}\in\evl{\cam{F}}{Y}{Y}$ and a vector $\vto{u}\in Y_\cam{F}$, the last equality of the following development 
 \begin{align}
 \mav{\fua{\vtf{g}}{\vto{u}}}{B}&=\maf{\vtf{g}}{B}{B}\mav{\vto{u}}{B}\nonumber\\
 \maf{\vtf{i}}{C}{B}\mav{\fua{\vtf{g}}{\vto{u}}}{C}&=\maf{\vtf{g}}{B}{B}\maf{\vtf{i}}{C}{B}\mav{\vto{u}}{C}\nonumber\\
@@ -704,11 +708,11 @@ As $\maf{\vtf{i}}{B}{C}={\maf{\vtf{i}}{C}{B}}^{-1}$, we conclude that matrices $
 \end{proof}
 }
 
-Until the end of this chapter, we shall be working with linear functions that admit change of coordinates, that is, linear operators. In this context, some typical concepts of matrices can be applied to such operators. Let's see which and why. Given the conditions of the previous corollary, matrices $\fua{\Theta}{\mat{X}}$ and $\mat{X}$ are similar, from which it can be concluded that  \emph{the trace and determinant of representative matrices of linear operators are immune or indifferent to any change of basis}. Because of this indifference, we consider scalars $\det\vtf{g}:=\det [\vtf{g}]$ and $\trc\vtf{g}:= \trc{\maf{\vtf{g}}{}{}}$ as being respectively the \textsb{determinant}\index{determinant!of linear operator} and the \textsb{trace}\index{trace!of linear operator} of operator $\vtf{g}\in\evl{\mathcal{R}}{Y}{Y}$, where $\maf{\vtf{g}}{}{}$ is the representative matrix of this operator on any basis of $Y_\mathcal{R}$. Another concept that linear operators inherit from matrices is positivity. Considering $B$ a basis of $Y_\mathcal{R}$, if the following condition is observed
+Until the end of this chapter, we shall be working with linear functions that admit change of coordinates, that is, linear operators. In this context, some typical concepts of matrices can be applied to such operators. Let's see which and why. Given the conditions of the previous corollary, matrices $\fua{\Theta}{\mat{X}}$ and $\mat{X}$ are similar, from which it can be concluded that  \emph{the trace and determinant of representative matrices of linear operators are immune or indifferent to any change of basis}. Because of this indifference, we consider scalars $\det\vtf{g}:=\det [\vtf{g}]$ and $\trc\vtf{g}:= \trc{\maf{\vtf{g}}{}{}}$ as being respectively the \textsb{determinant}\index{determinant!of linear operator} and the \textsb{trace}\index{trace!of linear operator} of operator $\vtf{g}\in\evl{\cam{F}}{Y}{Y}$, where $\maf{\vtf{g}}{}{}$ is the representative matrix of this operator on any basis of $Y_\cam{F}$. Another concept that linear operators inherit from matrices is positivity. Considering $B$ a basis of $Y_\cam{F}$, if the following condition is observed
 \begin{equation}
-\Re(\,{\mav{\vto{y}}{B}}^\dagger\maf{\vtf{g}}{B}{B}{\mav{\vto{y}}{B}}\,)_{11}\geqslant0\,,\,\,\forall\,\vto{y}\in Y_\mathcal{R}\,,
+\Re(\,{\mav{\vto{y}}{B}}^\dagger\maf{\vtf{g}}{B}{B}{\mav{\vto{y}}{B}}\,)_{11}\geqslant0\,,\,\,\forall\,\vto{y}\in Y_\cam{F}\,,
 \end{equation}
-for all non zero $\vto{y}\in Y_\mathcal{R}$, matrix $\maf{\vtf{g}}{B}{B}$ is said to be nonnegative, according to the definition presented in the previous chapter. This inequality is still valid if $Y_\mathcal{R}$ is a Hilbert space and $B$ is orthonormal, when it is possible to develop, from \eqref{eq:prodIntGen}, 
+for all non zero $\vto{y}\in Y_\cam{F}$, matrix $\maf{\vtf{g}}{B}{B}$ is said to be nonnegative, according to the definition presented in the previous chapter. This inequality is still valid if $Y_\cam{F}$ is a Hilbert space and $B$ is orthonormal, when it is possible to develop, from \eqref{eq:prodIntGen}, 
 \begin{equation}
 \Re(\,{\mav{\vto{y}}{B}}^\dagger\maf{\vtf{g}}{B}{B}{\mav{\vto{y}}{B}}\,)_{11}=\Re(\,{\mav{\vto{y}}{B}}^\dagger\mav{\fua{\vtf{g}}{\vto{y}}}{B}\,)_{11}=\Re(\vto{y}\cdot\fua{\vtf{g}}{\vto{y}})\geqslant 0\,,
 \end{equation}
@@ -770,24 +774,24 @@ After deviating from original route, boat velocity representative matrix $\mav{\
 
 \section{Eigenvalues and Eigenvectors}\label{sec:autoPares}
 
-Considering a $n$-dimensional Hilbert space $U_\mathcal{R}$, we call $\alpha\vto{u}\in U_\mathcal{R}$, where $\alpha\in\mathcal{R}$, a \textsb{multiple scalar}\index{multiple scalar} of vector $\vto{u}$. The scalar $\alpha$, which specifies this multiplicity, on the context of norm $\|\alpha\vto{u}\|=|\alpha|\|\vto{u}\|$, performs a ``resizing'' of $\vto{u}$, that is, if $|\alpha|<1$, there is a decrease in its size or intensity; conversely, if $|\alpha|>1$, there is an increase. Given a linear operator $\vtf{l}\in\evl{\mathcal{R}}{U}{U}$, a non zero vector $\vto{u}$ is called an \textsb{eigenvector}\index{eigenvector} of $\vtf{l}$ if value $\fua{\vtf{l}}{\vto{u}}$ is its multiple scalar, that is, if $\fua{\vtf{l}}{\vto{u}}=\alpha\vto{u}$, where multiplicity $\alpha$ is said to be an \textsb{eigenvalue}\index{eigenvalueo} of $\vtf{l}$. In other words, \emph{a vector resized by a linear operator is its eigenvector and the sign-magnitude of this resizing is its eigenvalue}. 
+Considering a $n$-dimensional Hilbert space $U_\cam{F}$, we call $\alpha\vto{u}\in U_\cam{F}$, where $\alpha\in\cam{F}$, a \textsb{multiple scalar}\index{multiple scalar} of vector $\vto{u}$. The scalar $\alpha$, which specifies this multiplicity, on the context of norm $\|\alpha\vto{u}\|=|\alpha|\|\vto{u}\|$, performs a ``resizing'' of $\vto{u}$, that is, if $|\alpha|<1$, there is a decrease in its size or intensity; conversely, if $|\alpha|>1$, there is an increase. Given a linear operator $\vtf{l}\in\evl{\cam{F}}{U}{U}$, a non zero vector $\vto{u}$ is called an \textsb{eigenvector}\index{eigenvector} of $\vtf{l}$ if value $\fua{\vtf{l}}{\vto{u}}$ is its multiple scalar, that is, if $\fua{\vtf{l}}{\vto{u}}=\alpha\vto{u}$, where multiplicity $\alpha$ is said to be an \textsb{eigenvalue}\index{eigenvalueo} of $\vtf{l}$. In other words, \emph{a vector resized by a linear operator is its eigenvector and the sign-magnitude of this resizing is its eigenvalue}. 
 
 Now let's suppose that, for a known operator $\vtf{l}$, we want to discover all of its eigenvalues and eigenvectors from the unknowns of the equation $\fua{\vtf{l}}{\vto{x}}=\lambda\vto{x}$ or rather, from $\lambda$ and $\vto{x}$ in   
 \begin{equation}\label{eq:probAutoValor}
 \fua{(\vtf{l}-\lambda\vtf{i})}{\vto{x}}=\vto{0},
 \end{equation}
-where $\vtf{i}$ is the identity function in $U_\mathcal{R}$. On an arbitrary basis of this space, matrix $[\vtf{i}]=\mat{I}$ and the matrix representation of previous equation results $([\vtf{l}]-\lambda\mat{I})[\vto{x}]=0$. As we know, matrix $[\vto{x}]$ cannot be zero because there are no zero eigenvectors; a restriction that prevents matrix $([\vtf{l}]-\lambda\mat{I})$ from being invertible, that is, it has to be singular:
+where $\vtf{i}$ is the identity function in $U_\cam{F}$. On an arbitrary basis of this space, matrix $[\vtf{i}]=\mat{I}$ and the matrix representation of previous equation results $([\vtf{l}]-\lambda\mat{I})[\vto{x}]=0$. As we know, matrix $[\vto{x}]$ cannot be zero because there are no zero eigenvectors; a restriction that prevents matrix $([\vtf{l}]-\lambda\mat{I})$ from being invertible, that is, it has to be singular:
 \begin{equation}\label{eq:autoMatricial}
 \det{([\vtf{l}]-\lambda\mat{I})}=0\,.
 \end{equation}
 Recalling our matrix theory in the previous chapter, the left side of this equation is the characteristic polynomial\footnote{See definition on p. \pageref{pg:PolinomioCarac}.} of $[\vtf{l}]$ on variable $\lambda$, whose $n$ characteristic roots solve \eqref{eq:autoMatricial}, that is, there are $n$ eigenvalues of $\vtf{l}$, which are not necessarily distinct. Once we have these eigenvalues, it it possible to determine each correspondent eigenvector from equation $([\vtf{l}]-\lambda\mat{I})[\vto{x}]=0$. As this processes is valid and leads to identical results for any chosen basis, expression $\det(\vtf{l}-\lambda\vtf{i})$ is sometimes called the characteristic polynomial of linear operator $\vtf{l}$ also.
 
-Eigenvalues and eigenvectors subsidize the forthcoming Polar Decomposition Theorem in such a way that they reveal three relevant properties of every Hermitian operator: a) \emph{it is always nonnegative the Hermitian operator that results from the composition of an operator with its adjoint}; b) \emph{the eigenvalues of a Hermitian operator are always real}; c) \emph{two distinct eigenvectors of a Hermitian operator are always orthogonal}. This last property implies that the $n$ eigenvectors of a Hermitian operator are distinct from each other and the resulting orthogonal set constituted by them is obviously a basis of $U_\mathcal{R}$. 
+Eigenvalues and eigenvectors subsidize the forthcoming Polar Decomposition Theorem in such a way that they reveal three relevant properties of every Hermitian operator: a) \emph{it is always nonnegative the Hermitian operator that results from the composition of an operator with its adjoint}; b) \emph{the eigenvalues of a Hermitian operator are always real}; c) \emph{two distinct eigenvectors of a Hermitian operator are always orthogonal}. This last property implies that the $n$ eigenvectors of a Hermitian operator are distinct from each other and the resulting orthogonal set constituted by them is obviously a basis of $U_\cam{F}$. 
 
 
 {\footnotesize
 \begin{proof}
-For the first property, let $\vtf{g}\circ\vtf{g}^\dagger$ be an Hermitian operator where $\vtf{g}\in\evl{\mathcal{R}}{U}{U}$. We need to show that it is nonnegative the real number $\Re([\vtf{y}]^\dagger[\vtf{g}][\vtf{g}]^\dagger[\vtf{y}])_{11}$, whose matrices are described on any orthonormal basis. If a matrix $\mat{A}:=[\vtf{g}]^\dagger[\vtf{y}]$, the previous real number becomes $\Re(\mat{A}^\dagger \mat{A})_{11}$, which is always nonnegative because $(\mat{A}^\dagger \mat{A})_{11}=\sum_{i=1}^{n}\overline{\mat{A}_{i1}}\mat{A}_{i1}=\sum_{i=1}^{n}|\mat{A}_{i1}|^2$. Now, let $\vtf{h}\in\evl{\mathcal{R}}{U}{U}$ be a Hermitian operator with eigenvalues $\lambda_i$ and eigenvectors $\vto{x}_i$, from which we can write  $\fua{\vtf{h}}{\vto{x}_i}=\lambda_i\vto{x}_i$. Performing the inner product of an eigenvector $\vto{x}_j$ and each side of the previous equality, we obtain $\vto{x}_j\cdot\fua{\vtf{h}}{\vto{x}_i}=\vto{x}_j\cdot\lambda_i\vto{x}_i$ (*). Similarly, the inner product of $\fua{\vtf{h}}{\vto{x}_j}=\lambda_i\vto{x}_j$ and $\vto{x}_i$ results $\fua{\vtf{h}}{\vto{x}_j}\cdot\vto{x}_i=\lambda_j\vto{x}_j\cdot\vto{x}_i$ (**). Since $\vtf{h}$ is Hermitian, if we subtract (**) from (*),	
+For the first property, let $\vtf{g}\circ\vtf{g}^\dagger$ be an Hermitian operator where $\vtf{g}\in\evl{\cam{F}}{U}{U}$. We need to show that it is nonnegative the real number $\Re([\vtf{y}]^\dagger[\vtf{g}][\vtf{g}]^\dagger[\vtf{y}])_{11}$, whose matrices are described on any orthonormal basis. If a matrix $\mat{A}:=[\vtf{g}]^\dagger[\vtf{y}]$, the previous real number becomes $\Re(\mat{A}^\dagger \mat{A})_{11}$, which is always nonnegative because $(\mat{A}^\dagger \mat{A})_{11}=\sum_{i=1}^{n}\overline{\mat{A}_{i1}}\mat{A}_{i1}=\sum_{i=1}^{n}|\mat{A}_{i1}|^2$. Now, let $\vtf{h}\in\evl{\cam{F}}{U}{U}$ be a Hermitian operator with eigenvalues $\lambda_i$ and eigenvectors $\vto{x}_i$, from which we can write  $\fua{\vtf{h}}{\vto{x}_i}=\lambda_i\vto{x}_i$. Performing the inner product of an eigenvector $\vto{x}_j$ and each side of the previous equality, we obtain $\vto{x}_j\cdot\fua{\vtf{h}}{\vto{x}_i}=\vto{x}_j\cdot\lambda_i\vto{x}_i$ (*). Similarly, the inner product of $\fua{\vtf{h}}{\vto{x}_j}=\lambda_i\vto{x}_j$ and $\vto{x}_i$ results $\fua{\vtf{h}}{\vto{x}_j}\cdot\vto{x}_i=\lambda_j\vto{x}_j\cdot\vto{x}_i$ (**). Since $\vtf{h}$ is Hermitian, if we subtract (**) from (*),	
 \begin{align*}
 	\vto{x}_j\cdot\fua{\vtf{h}}{\vto{x}_i}-\fua{\vtf{h}}{\vto{x}_j}\cdot\vto{x}_i&=\vto{x}_j\cdot\lambda_i\vto{x}_i-\lambda_j\vto{x}_j\cdot\vto{x}_i\\
 	0&=(\overline{\lambda_i}-\lambda_j)\vto{x}_j\cdot\vto{x}_i\,.
@@ -797,7 +801,7 @@ As the last equality is valid for an arbitrary pair $(i,j)$, when  $i=j$ the sca
 }
 
 
-In addition to properties above, an arbitrary Hermitian operator $\vtf{h}\in\evl{\mathcal{R}}{U}{U}$, where $U_\mathcal{R}$ is a Hilbert space, has a Hermitian representative matrix because, for any orthonormal basis $\hat{B}$ of $U_\mathcal{R}$, equality \eqref{eq:matRepTransp} enables us to write 
+In addition to properties above, an arbitrary Hermitian operator $\vtf{h}\in\evl{\cam{F}}{U}{U}$, where $U_\cam{F}$ is a Hilbert space, has a Hermitian representative matrix because, for any orthonormal basis $\hat{B}$ of $U_\cam{F}$, equality \eqref{eq:matRepTransp} enables us to write 
 \begin{equation}\label{eq:matOpeHermit}
 {\maf{\vtf{h}}{\hat{B}}{\hat{B}}}^\dagger=[\vtf{h}^\dagger_{\hat{B}}]^{\hat{B}}=[\vtf{h}_{\hat{B}}]^{\hat{B}}\,.
 \end{equation}
@@ -805,14 +809,14 @@ Since they are Hermitian, such representative matrices are normal, that is, they
 \begin{equation}
 \widetilde{\mat{H}}_{ij}=\lambda_{j}\delta_{ij}=\lambda_{j}\hat{\vto{x}}_j\cdot\hat{\vto{x}}^i=\lambda_{j}\fua{\vtf{f}_i^{\hat{X}}}{\hat{\vto{x}}_j}=\fua{\vtf{f}_i^{\hat{X}}}{\lambda_{j}\hat{\vto{x}}_j}=\fua{\vtf{f}_i^{\hat{X}}}{\fua{\vtf{h}}{\hat{\vto{x}}_j}}=[\vtf{h}_{\hat{X}}]^{\hat{X}}_{ij}\,.
 \end{equation}
-From these equalities, we can state that, in the context of Hermitian operators, the result of the spectral diagonalization of a representative matrix $[\vtf{h}_{\hat{B}}]^{\hat{B}}$ on any orthonormal basis is the representative matrix $[\vtf{h}_{\hat{X}}]^{\hat{X}}$ on the normalized basis of eigenvectors. This resultant matrix is usually called  the \textsb{spectral representation}\index{operator!spectral representation of} of operator $\vtf{h}$. In this context, we now want to change the coordinates of $\vtf{h}$ from basis ${\hat{X}}$ of its eigenvectors to any orthonormal basis $\hat{C}$ of $U_\mathcal{R}$. From corollary \ref{cor:mudaBase}, we can write the following:   
+From these equalities, we can state that, in the context of Hermitian operators, the result of the spectral diagonalization of a representative matrix $[\vtf{h}_{\hat{B}}]^{\hat{B}}$ on any orthonormal basis is the representative matrix $[\vtf{h}_{\hat{X}}]^{\hat{X}}$ on the normalized basis of eigenvectors. This resultant matrix is usually called  the \textsb{spectral representation}\index{operator!spectral representation of} of operator $\vtf{h}$. In this context, we now want to change the coordinates of $\vtf{h}$ from basis ${\hat{X}}$ of its eigenvectors to any orthonormal basis $\hat{C}$ of $U_\cam{F}$. From corollary \ref{cor:mudaBase}, we can write the following:   
 \begin{equation}
 [\vtf{h}_{\hat{C}}]^{\hat{C}}=\maf{\vtf{i}}{{\hat{X}}}{{\hat{C}}}\mav{\vtf{h}_{\hat{X}}}{{\hat{X}}}{\maf{\vtf{i}}{{\hat{C}}}{{\hat{X}}}}=\maf{\vtf{i}}{{\hat{X}}}{{\hat{C}}}\mav{\vtf{h}_{\hat{X}}}{{\hat{X}}}{\maf{\vtf{i}}{{\hat{X}}}{{\hat{C}}}}^\dagger\,,
 \end{equation}
 since $\maf{\vtf{i}}{{\hat{X}}}{{\hat{C}}}$ results a unitary matrix from equalities \eqref{eq:mudaBaseTranspHilbert}. Moreover, as the representative matrix of $\vtf{h}$ on any orthonormal basis is normal, this change of coordinates from $\hat{X}$ to $\hat{C}$ results a \textsb{spectral decomposition}\index{spectral!decomposition}\footnote{In the terms of theorem \ref{teo:decompSpec}, equalities $\widetilde{\mat{N}} = \mat{U}^\dagger\mat{N}\mat{U}$ and $\mat{N}= \mat{U}\widetilde{\mat{N}}\mat{U}^\dagger$ are said to be the spectral diagonalization and the spectral decomposition of $\mat{N}$ respectively.} of $[\vtf{h}_{\hat{C}}]^{\hat{C}}$. Let's consider now that $\vtf{h}$ is a nonnegative operator.
 From the definition presented at the end of the previous section, we can write that  $\Re(\vto{x}_i\cdot\fua{\vtf{h}}{\vto{x}_i})\geqslant 0$.  As the eigenvalues of $\vtf{h}$ are real, we have $\lambda_i(\vto{x}_i\cdot\vto{x}_i)\geqslant 0$, where scalars $\lambda_i$ result nonnegative, since the inner product $\vto{x}_i\cdot\vto{x}_i$ is always positive. Therefore, we can affirm that if $\vtf{h}$ is nonnegative, so are its eigenvalues.  
 
-Before we deal with the theorem that will end this chapter, an additional definition for Hermitian operators needs to be done. In our study, a nonnegative hermitian operator $\vtf{h}$ of $\evl{\mathcal{R}}{U}{U}$ can be decomposed according to equality $\vtf{h}=\vtf{h}^{\nicefrac{1}{2}}\circ\vtf{h}^{\nicefrac{1}{2}}$, where operator $\vtf{h}^{\nicefrac{1}{2}}\in\evl{\mathcal{R}}{U}{U}$, unique and also nonnegative hermitian, is called the \textsb{square root operator}\index{operator!square root of} of $\vtf{h}$. We already know that function composition is expressed, in matrix terms, as the product of the representative matrices of these functions. Thereby, the name ``square root'' is due to equality  $[\vtf{h}]=[\vtf{h}^{\nicefrac{1}{2}}][\vtf{h}^{\nicefrac{1}{2}}]$, which refers to the same concept applied for scalars. 
+Before we deal with the theorem that will end this chapter, an additional definition for Hermitian operators needs to be done. In our study, a nonnegative hermitian operator $\vtf{h}$ of $\evl{\cam{F}}{U}{U}$ can be decomposed according to equality $\vtf{h}=\vtf{h}^{\nicefrac{1}{2}}\circ\vtf{h}^{\nicefrac{1}{2}}$, where operator $\vtf{h}^{\nicefrac{1}{2}}\in\evl{\cam{F}}{U}{U}$, unique and also nonnegative hermitian, is called the \textsb{square root operator}\index{operator!square root of} of $\vtf{h}$. We already know that function composition is expressed, in matrix terms, as the product of the representative matrices of these functions. Thereby, the name ``square root'' is due to equality  $[\vtf{h}]=[\vtf{h}^{\nicefrac{1}{2}}][\vtf{h}^{\nicefrac{1}{2}}]$, which refers to the same concept applied for scalars. 
 
 
 {\footnotesize
@@ -847,7 +851,7 @@ for all eigenvectors of $\vtf{h}$. As they are not zero,  $\vtf{h}^{\nicefrac{1}
 \end{proof}
 }
 
-An operator of unitary group $(O,\circ)$, whose elements have the Hilbert space $U_\mathcal{R}$ as a domain, can be represented by a unitary matrix if the basis in question is orthonormal. In other words, if $\vtf{q}\in O$ and $\hat{B}$ is an orthonormal basis of $U_\mathcal{R}$, through equalities \eqref{eq:matRepInv} and \eqref{eq:matRepTransp}, matrix 
+An operator of unitary group $(O,\circ)$, whose elements have the Hilbert space $U_\cam{F}$ as a domain, can be represented by a unitary matrix if the basis in question is orthonormal. In other words, if $\vtf{q}\in O$ and $\hat{B}$ is an orthonormal basis of $U_\cam{F}$, through equalities \eqref{eq:matRepInv} and \eqref{eq:matRepTransp}, matrix 
 \begin{equation}
 {\maf{\vtf{q}}{\hat{B}}{\hat{B}}}^{-1}={\maf{\vtf{q}}{\hat{B}}{\hat{B}}}^\dagger.
 \end{equation}
@@ -855,13 +859,13 @@ It is convenient to recall that a unitary operator preserves norm, that is, it d
 
 
 \begin{mteo}{Polar Decomposition}{decoPolar}
-Considering $U_\mathcal{R}$ a Hilbert space, a bijection $\vtf{g}\in\evl{\mathcal{R}}{U}{U}$ has one and only one decomposition of the form $\vtf{g}=\vtf{q}\circ\vtf{h}^{\nicefrac{1}{2}}\,$, where $\vtf{q}\in\evl{\mathcal{R}}{U}{U}$ is unitary and $\vtf{h}=\vtf{g}\circ\vtf{g}^\dagger$ is nonnegative Hermitian.
+Considering $U_\cam{F}$ a Hilbert space, a bijection $\vtf{g}\in\evl{\cam{F}}{U}{U}$ has one and only one decomposition of the form $\vtf{g}=\vtf{q}\circ\vtf{h}^{\nicefrac{1}{2}}\,$, where $\vtf{q}\in\evl{\cam{F}}{U}{U}$ is unitary and $\vtf{h}=\vtf{g}\circ\vtf{g}^\dagger$ is nonnegative Hermitian.
 \end{mteo}
 
 
 {\footnotesize
 \begin{proof}
-Let $\vtf{g}\in\evl{\mathcal{R}}{U}{U}$ be a bijection and function $\vtf{h}=\vtf{g}\circ\vtf{g}^{\dagger}$ a Hermitian nonnegative operator. We know that decomposition $\vtf{h}=\vtf{h}^{\nicefrac{1}{2}}\circ\vtf{h}^{\nicefrac{1}{2}}$ exists, and therefore 
+Let $\vtf{g}\in\evl{\cam{F}}{U}{U}$ be a bijection and function $\vtf{h}=\vtf{g}\circ\vtf{g}^{\dagger}$ a Hermitian nonnegative operator. We know that decomposition $\vtf{h}=\vtf{h}^{\nicefrac{1}{2}}\circ\vtf{h}^{\nicefrac{1}{2}}$ exists, and therefore 
 \begin{align*}
 \vtf{h}^{\nicefrac{1}{2}}\circ\vtf{h}^{\nicefrac{1}{2}}&=\vtf{g}\circ\vtf{g}^{\dagger}\\
 \vtf{i}&=\underbrace{\vtf{h}^{-\nicefrac{1}{2}}\circ\vtf{g}}_{\vtf{q}}\circ\underbrace{\vtf{g}^{\dagger}\circ\vtf{h}^{-\nicefrac{1}{2}}}_{\vtf{q}^{\dagger}}\,,
@@ -876,7 +880,7 @@ Considering the polar decomposition $\vtf{g}=\vtf{q}\circ\vtf{h}_1^{\nicefrac{1}
 
 {\footnotesize
 \begin{proof}
-Existence and uniqueness of right and left polar decomposition follows are verified similarly. Let's prove now that the unitary operators in both decompositions are really the same. From the left polar decomposition, whose unitary operator is $\vtf{q}_1$, we need to verify that the part $\vtf{c}=\vtf{q}_1^{-1}\circ\vtf{h}_2^{\nicefrac{1}{2}}\circ\vtf{q}_1$ of equality $\vtf{g}=\vtf{q}_1\circ\vtf{q}_1^{-1}\circ\vtf{h}_2^{\nicefrac{1}{2}}\circ\vtf{q}_1$ is nonnegative Hermitian because, if this is true, we'll have a right polar decomposition and thus $\vtf{q}_1=\vtf{q}$. Proving that $\vtf{c}$ is Hermitian, or that $\vtf{c}=\vtf{c}^\dagger$, is trivial. Now, let's verify if, given an arbitrary orthonormal basis and a vector $\vto{x}\in U_\mathcal{R}$, the scalar $\Re([\vto{x}]^\dagger[\vtf{c}][\vto{x}])_{11}$ is nonnegative. From equality $[\vto{x}]^\dagger[\vtf{c}][\vto{x}]=[\vto{x}]^\dagger[\vtf{q}_1]^{-1}[\vtf{h}_2^{\nicefrac{1}{2}}][\vtf{q}_1][\vto{x}]$, we can conclude that $\Re(\mat{A}^\dagger[\vtf{h}_2^{\nicefrac{1}{2}}]\mat{A})_{11}\geq 0$, where $\mat{A}=[\vtf{q}_1][\vto{x}]$, because $\vtf{h}_2^{\nicefrac{1}{2}}$ is nonnegative.
+Existence and uniqueness of right and left polar decomposition follows are verified similarly. Let's prove now that the unitary operators in both decompositions are really the same. From the left polar decomposition, whose unitary operator is $\vtf{q}_1$, we need to verify that the part $\vtf{c}=\vtf{q}_1^{-1}\circ\vtf{h}_2^{\nicefrac{1}{2}}\circ\vtf{q}_1$ of equality $\vtf{g}=\vtf{q}_1\circ\vtf{q}_1^{-1}\circ\vtf{h}_2^{\nicefrac{1}{2}}\circ\vtf{q}_1$ is nonnegative Hermitian because, if this is true, we'll have a right polar decomposition and thus $\vtf{q}_1=\vtf{q}$. Proving that $\vtf{c}$ is Hermitian, or that $\vtf{c}=\vtf{c}^\dagger$, is trivial. Now, let's verify if, given an arbitrary orthonormal basis and a vector $\vto{x}\in U_\cam{F}$, the scalar $\Re([\vto{x}]^\dagger[\vtf{c}][\vto{x}])_{11}$ is nonnegative. From equality $[\vto{x}]^\dagger[\vtf{c}][\vto{x}]=[\vto{x}]^\dagger[\vtf{q}_1]^{-1}[\vtf{h}_2^{\nicefrac{1}{2}}][\vtf{q}_1][\vto{x}]$, we can conclude that $\Re(\mat{A}^\dagger[\vtf{h}_2^{\nicefrac{1}{2}}]\mat{A})_{11}\geq 0$, where $\mat{A}=[\vtf{q}_1][\vto{x}]$, because $\vtf{h}_2^{\nicefrac{1}{2}}$ is nonnegative.
 \end{proof}
 
 

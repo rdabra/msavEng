@@ -314,20 +314,20 @@ When $\varphi$ observe these axioms, the structure of $B$ is preserved, now call
 From these definition, we conclude that \emph{in a simply transitive group action, when we fix an element of $B$ in the domain, there is a biunivocal correspondence between the elements of the group and of the codomain.}
 
 
-There can be an abelian group $R$ that is simultaneously additive and multiplicative, on which the multiplication of additions results the addition of multiplications, or in other words, on which the following distributivity is valid:
+There can be an abelian group $F$ that is simultaneously additive and multiplicative, on which the multiplication of additions results the addition of multiplications, or in other words, on which the following distributivity is valid:
 \begin{equation}
-\ele{r}\cdot\gloref{sum}r_i
-=\sum_{i=1}^{n}r\cdot r_i\,\, , \forall \,
-\ele{r},\ele{r}_i \in
-    \con{R}\,\text{ and } n\in\gloref{inteirosPosNNulo}.
+\alpha\cdot\gloref{sum}\alpha_i
+=\sum_{i=1}^{n}\alpha\cdot \alpha_i\,\, , \forall \,
+\alpha,\alpha_i \in
+    \con{F}\,\text{ and } n\in\gloref{inteirosPosNNulo}.
 \end{equation}
-In these circumstances, the triple $\lpa R, +, \cdot \rpa$ is called a \textsb{field}\index{field}, abbreviated by $\gloref{campo}$. When it is convenient, in order to simply notation, $\mathcal{R}$ will represent the defining set $R$. An element of $\mathcal{R}$ is named a \textsb{scalar}\index{scalar}, of which $x\in\real$ and $c\in\gloref{complexo}$ are examples.
+In these circumstances, the triple $\lpa F, +, \cdot \rpa$ is called a \textsb{field}\index{field}, abbreviated by $\gloref{campo}$. When it is convenient, in order to simplify notation, $\cam{F}$ will represent the definer set $F$. An element of $\cam{F}$ is named a \textsb{scalar}\index{scalar}, of which $\beta\in\real$ and $\gamma\in\gloref{complexo}$ are examples. Henceforth, for the purposes of our study, an arbitrary field $\cam{F}$ will always refer to either a complex field $\complexo$ or a real field $\real$, that is, $\cam{F}\in\{\real,\complexo\}$. In this sense, where the real field will not be considered  a subset of the complex field, when $\cam{F}$ is $\real$, we must define that the conjugate $\overline{\alpha}=\alpha$, the real part $\gloref{parteReal}(\alpha)=\alpha$ and imaginary part $\gloref{parteImag}(\alpha)=0$, for all $\alpha\in \cam{F}$.  
 
 
 \section{Arrays}\index{array}
 
 
-We already learned that sequences are collections of ordered elements; or, more precisely, elements arranged in a queue, where each one has a position labeled by an index. Generalizing this idea, we shall build collections whose elements are arranged in a higher number of perspectives, like a table (bidimensional) arrangement, for instance. Thereby, let $H$ be a collection of scalars, arranged by the mapping $\map{\fun{h}}{\crt{N}{q}}{\mathcal{R}}$, where the function $h$ is called \textsb{addressing}\index{array!addressing of} and each $N_i = \lch 1,2,\cdots,n_i \rch$ is a finite subset of $\mathbb{N}^*$ whose elements are ordinals. In this context, we call the collection $H$ an array, represented by $\gloref{array}$, whose scalars $\fua{\fun{h}}{( i_1,\cdots,i_q)}$ are notated by $\gloref{elArray1}$, where the subscript indices show explicitly the element position. The description of perspectives or \textsb{dimension}\index{array!dimension of} of an array is given by the $n$-tuple $(n_1 , \cdots , n_q)$ or, more usually, $n_1\times\cdots\times n_q\,$.
+We already learned that sequences are collections of ordered elements; or, more precisely, elements arranged in a queue, where each one has a position labeled by an index. Generalizing this idea, we shall build collections whose elements are arranged in a higher number of perspectives, like a table (bidimensional) arrangement, for instance. Thereby, let $H$ be a collection of scalars, arranged by the mapping $\map{\fun{h}}{\crt{N}{q}}{\cam{F}}$, where the function $h$ is called \textsb{addressing}\index{array!addressing of} and each $N_i = \lch 1,2,\cdots,n_i \rch$ is a finite subset of $\mathbb{N}^*$ whose elements are ordinals. In this context, we call the collection $H$ an array, represented by $\gloref{array}$, whose scalars $\fua{\fun{h}}{( i_1,\cdots,i_q)}$ are notated by $\gloref{elArray1}$, where the subscript indices show explicitly the element position. The description of perspectives or \textsb{dimension}\index{array!dimension of} of an array is given by the $n$-tuple $(n_1 , \cdots , n_q)$ or, more usually, $n_1\times\cdots\times n_q\,$.
 
 Arrays can be added and multiplied. If an array  $\mat{A+B}$ is the sum of $\mat{A}$ and $\mat{B}$, these three arrays have equal dimension $n_1\times\cdots\times n_q\,$ and each element
 \begin{equation}\label{eq:adicaoArray}
@@ -402,7 +402,7 @@ where $\mat{A}$ is a $n\times\cdots\times n$ array, with $n$ repeated $q$ times.
 At this point, it is convenient to say that every $n_1\times n_2$ array, whose elements are arranged in a tabular format, is called a \textsb{matrix}\index{matrix}. The elements of a matrix are addressed by lines and columns: the escalar with $ij$ position is located on the line $i$ and column $j$. If $n_1=n_2=n$, we have a \textsb{square matrix}\index{matrix!square} of order $n$. Henceforth, recalling the additive group $Y$ of arrays, we will consider
 $M\subset Y$ a set of matrices and  $\overline{M}\subset M$ a set of square matrices with order $n$. For example, the set $\overline{M}$ has the $n\times n$ Kronecker Delta, represented in \eqref{eq:matrizIdentidade}, as an element, which we usually call \textsb{identity matrix}\index{matrix!identity} $\mat{I}$ because $\mat{A}\mat{I} = \mat{I}\mat{A} = \mat{A}$, for an arbitrary $\mat{A}\in\overline{M}$.
 
-If there exists a matrix $\mat{B}\in\overline{M}$ such that $\mat{A}\mat{B} = \mat{I}$, we call it the \textsb{inverse}\index{matrix!inverse} of $\mat{A}$, notated by $\mat{A}^{-1}$. The condition of invertibility of a matrix depends on the value of a function called \textsb{determinant}\index{determinant}, which defines a mapping $\map{\gloref{determ}}{\overline{M}}{\mathcal{R}}$ where $\mathcal{R}$ is a real or complex field and $\det$ is described by the equality
+If there exists a matrix $\mat{B}\in\overline{M}$ such that $\mat{A}\mat{B} = \mat{I}$, we call it the \textsb{inverse}\index{matrix!inverse} of $\mat{A}$, notated by $\mat{A}^{-1}$. The condition of invertibility of a matrix depends on the value of a function called \textsb{determinant}\index{determinant}, which defines a mapping $\map{\gloref{determ}}{\overline{M}}{\cam{F}}$ where $\cam{F}$ is a real or complex field and $\det$ is described by the equality
 \begin{equation}\label{eq:Determinante}
 \det\mat{X} = \frac{1}{n!}\sum_{i_1=1}^n\cdots\sum_{i_n=1}^n
 \sum_{j_1=1}^n\cdots\sum_{j_n=1}^n\epsilon_{i_1\cdots
@@ -543,7 +543,7 @@ For the element in position $i=j=1$, this last equality results $\sum_{k=1}^n|\m
 Since the terms in this sum are nonnegative, they can only be null, that is, $|\mat{T}_{1k}|^2=0$ when $k>1$. By induction, when we run through all the positions $i=j$, we verify that not only the elements of $\mat{T}$ in $i>j$ are null but also in $i<j$; which proves $\mat{T}$ diagonal.
 \end{proof}}
 
-Now let's clarify the term ``spectrum'' cited by the theorem above; but before that, we need some important definitions. The function in $\map{\gloref{traco}}{\overline{M}}{\mathcal{R}}$ is called \textsb{trace}\index{matrix!trace of} when its rule is defined by
+Now let's clarify the term ``spectrum'' cited by the theorem above; but before that, we need some important definitions. The function in $\map{\gloref{traco}}{\overline{M}}{\cam{F}}$ is called \textsb{trace}\index{matrix!trace of} when its rule is defined by
 \begin{equation}
 \trc{\mat{X}} = \sum_{i=1}^{n}\mat{X}_{ii}\,,
 \end{equation}
@@ -553,7 +553,7 @@ that is, the trace of a matrix is the sum of its diagonal elements. Considering 
 \end{equation}
 and then we can state generically that all similar matrices have the same trace.
 
-Among other benefits, the trace function is a convenient tool to present what is known by \textsb{characteristic polynomial}\index{matrix!characteristic polynomial of}\label{pg:PolinomioCarac} of matrix: it is the function in operation $\map{g}{\mathcal{R}}{\mathcal{R}}$, whose rule is
+Among other benefits, the trace function is a convenient tool to present what is known by \textsb{characteristic polynomial}\index{matrix!characteristic polynomial of}\label{pg:PolinomioCarac} of matrix: it is the function in operation $\map{g}{\cam{F}}{\cam{F}}$, whose rule is
 \begin{equation}
 \fua{g}{x}=\det \lpa \mat{H} - x\mat{I} \rpa  \,,
 \end{equation}
@@ -568,7 +568,7 @@ a_2 & = -\dfrac{1}{2}\lco a_{1}\trc{\mat{H}}+\lpa-1\rpa^n\trc{\mat{H}^2}\rco\,;\
 &\cdots\nonumber\\
 a_n & = -\dfrac{1}{n}\lco a_{n-1}\trc{\mat{H}}+a_{n-2}\trc{\mat{H}^2}+\cdots+a_1\trc{\mat{H}^{n-1}}+\lpa-1\rpa^n\trc{\mat{H}^n}\rco\,.
 \end{align}
-Any scalar $\lambda\in\mathcal{R}$ that is root of this polynomial is called a \textsb{characteristic root}\index{matrix!characteristic root of} of $\mat{H}$. The set
+Any scalar $\lambda\in\cam{F}$ that is root of this polynomial is called a \textsb{characteristic root}\index{matrix!characteristic root of} of $\mat{H}$. The set
 $\lch\lambda_1,\cdots,\lambda_n\rch$ of characteristic roots of $\mat{H}$ is called the \textsb{spectrum}\index{matrix!spectrum of} of $\mat{H}$. In the case of a normal matrix $\mat{N}$ submitted to spectral diagonalization, its spectrum is the set of scalars that constitute the diagonal matrix $\widetilde{\mat{N}}$, which results from the diagonalization of $\mat{N}$ by unitary matrix. At this point, it is convenient to say that matrices involved in similarity transformations, like $\widetilde{\mat{N}}$ and $\mat{N}$, always have the same spectrum and that is why they are called \textsb{isospectral}\index{matrices!isospectral}.
 
 
@@ -605,7 +605,7 @@ from where the following equality results:
 \begin{equation*}
 \det{(\mat{A}-x\mat{I})}=\lpa \lambda_n-x\rpa\lpa \lambda_{n-1}-x\rpa\cdots\lpa \lambda_2-x\rpa\lpa \lambda_1-x\rpa\,,
 \end{equation*}
-valid for all $x\in\mathcal{R}$. Thus, if $x=0$, we have
+valid for all $x\in\cam{F}$. Thus, if $x=0$, we have
 \begin{equation*}
 \det{\mat{A}}=\lambda_n\lambda_{n-1}\cdots\lambda_2\lambda_1\,.
 \end{equation*}
@@ -621,7 +621,7 @@ valid for polynomials having the same format of \eqref{eq:poliCaracDesen}. Thenc
 
 A matrix $\mat{A}\in\overline{M}$ is said to be \textsb{nonnegative}\index{matrix!nonnegative} or \textsb{positive-semidefinite}\index{matrix!positive-semidefinite} if
 \begin{equation}
-\gloref{parteReal}\lpa\mat{X}^\dagger\mat{A}\mat{X}\rpa_{11}\geqslant0\,,
+\Re\lpa\mat{X}^\dagger\mat{A}\mat{X}\rpa_{11}\geqslant0\,,
 \end{equation}
 where $\mat{X}$ is a non zero $n\times 1$ matrix. When the inequality imposes the left side to be always positive, $\mat{A}$ is called  \textsb{positive-definite}\index{matrix!positive-definite}. A necessary and sufficient condition that ensures positivity of a matrix is that the spectrum of its hermitian part be constituted of nonnegative elements\footnote{This condition will be verified after the definition of eigenvalue on the next chapter %à p.\pageref{sec:autoPares}
 .}, when this matrix results nonnegative; similarly, if these same elements are all positive, the matrix is positive-definite. Thereby, from the two equalities of the previous paragraph, it can be concluded that the determinant and trace of a nonnegative Hermitian matrix are always nonnegative, while for a positive-definite Hermitian matrix both are positive. Therefore, in the context of Hermitian matrices, the determinant value indicates whether a matrix is nonnegative or not. From this conclusion, we can state that \emph{every positive-definite hermitian matrix is invertible}. Moreover, when a positive-definite hermitian matrix $\mat{H}$ pre or post multiplies an arbitrary matrix
