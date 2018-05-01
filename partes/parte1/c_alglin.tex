@@ -92,7 +92,7 @@ We define that two vectors project on each other or have a projective interrelat
 	\end{equation*}
 \end{itemize}
 where $\vto{u}_1,\vto{u}_2,\vto{u}_3\in U_\cam{F}$ and  $\alpha_1,\alpha_2,\alpha_3\in\cam{F}$ are arbitrary elements of their respective sets. In this context, function $\xi$ is called a \textsb{positive-definite inner product} because the projection of a vector on itself is a nonnegative real number, as described by the first axiom. In our study, $\xi$ is simply called an \textsb{inner product}\index{inner product}, and the double $(U_\cam{F},\xi)$ an \textsb{inner product space}\index{space!inner product}. From this double, we conclude that $\xi$ structures the group $U$ in such a way that a projective interrelationship of any pair of its elements can be obtained.
-Henceforth, in order to shorten notation, $\gloref{prdint}$ will also be used to represent the inner product $\fua{\xi}{\vto{x},\vto{y}}$. Alternatively, if we had considered the function in $\map{\xi^c}{U_\cam{F}\times \overline{U_\cam{F}}}{\cam{F}}$ to be the inner product, it would have to follow the axioms
+Henceforth, in order to shorten notation, $\gloref{prdint}$ will also be used to represent the inner product $\fua{\xi}{\vto{x},\vto{y}}$. Alternatively, if we had considered the function in $\map{\xi^c}{U_\cam{F}\times \overline{U_\cam{F}}}{\cam{F}}$ to be the inner product, where $\fua{\xi^c}{\vto{u}_1,\vto{u}_2^c}=\fua{\xi}{\vto{u}_1,\vto{u}_2}$, it would have to observe the axioms
 \begin{itemize}\label{prop:produtoInternoConj}
 	\setlength\itemsep{.1em}
 	\item[i.] Of positivity: $\fua{\xi^c}{\vto{u},\vto{u}^c}\in \real^+$;
@@ -105,7 +105,20 @@ Henceforth, in order to shorten notation, $\gloref{prdint}$ will also be used to
 	\end{align*}
 \end{itemize}
  
-
+{\footnotesize
+\begin{proof}
+Let's verify if these four requirements correctly define $\xi^c$ as an inner product. From equality $\fua{\xi^c}{\vto{x},\vto{y}^c}=\fua{\xi}{\vto{x},\vto{y}}$, it is trivial to prove the the first three requirements on $\xi^c$ lead to the corresponding first three axioms that $\xi$ must observe. Moreover, taking the left hand side of equality in item iv, we can write that
+\begin{align*}
+\lefteqn{\fua{\xi^c}{\alpha_1\vto{u}_1+\alpha_2\vto{u}_2,\alpha_3\vto{u}_3^c+\alpha_4\vto{u}_4^c}=} & & \\
+& &\fua{\xi^c}{\alpha_1\vto{u}_1+\alpha_2\vto{u}_2,(\overline{\alpha_3}\vto{u}_3+\overline{\alpha_4}\vto{u}_4)^c}=\fua{\xi}{\alpha_1\vto{u}_1+\alpha_2\vto{u}_2,\overline{\alpha_3}\vto{u}_3+\overline{\alpha_4}\vto{u}_4}\,,	
+\end{align*}
+and taking the right hand side, we have
+\begin{align*}
+	\lefteqn{\alpha_1\alpha_3\fua{\xi^c}{\vto{u}_1,\vto{u}_3^c} + \alpha_1\alpha_4\fua{\xi^c}{\vto{u}_1,\vto{u}_4^c} + \alpha_2\alpha_3\fua{\xi^c}{\vto{u}_2,\vto{u}_3^c} + \alpha_2\alpha_4\fua{\xi^c}{\vto{u}_2,\vto{u}_4^c}=} & & \\
+	& &\alpha_1\alpha_3\fua{\xi}{\vto{u}_1,\vto{u}_3} + \alpha_1\alpha_4\fua{\xi}{\vto{u}_1,\vto{u}_4} + \alpha_2\alpha_3\fua{\xi}{\vto{u}_2,\vto{u}_3} + \alpha_2\alpha_4\fua{\xi}{\vto{u}_2,\vto{u}_4}\,.
+\end{align*}	 
+These two independent developments lead to a resultant equality that ends up requiring linearity in the first argument of $\xi$ and antilinearity in its second argument. Therefore, from the bilinearity requirement on $\xi^c$ we arrived at the linearity-antilinearity axioms that $\xi$ must observe.    
+\end{proof}}
 
 Considering the inner product space $(U_\cam{F},\xi)$, it is now possible to present in more mathematical terms the definition of orthogonality: arbitrary vectors $\vto{u}_1,\vto{u}_2\in U_\cam{F}$ are said to be orthogonal, or $\vto{u}_1\gloref{perpend}\vto{u}_2$, when $\vto{u}_1\cdot\vto{u}_2=0$. Given the subsets $U_1\subset U_\cam{F}$ and $U_2\subset U_\cam{F}$, if $\vto{u}\in U_\cam{F}$ is orthogonal to an arbitrary vector of $U_1$, we write $\vto{u}\perp\con{U}_1$, and if an arbitrary vector of $\con{U}_1$ is orthogonal to an arbitrary vector of $\con{U}_2$, we write $\con{U}_1\perp\con{U}_2$. A set $U_3=\{\vto{u}_1,\cdots,\vto{u}_n\}\subset U_\cam{F}$ is called orthogonal if $\vto{u}_i\perp\vto{u}_j$, $i\neq j$. Thereby, when the vectors of $U_3$ are non zero, the inner product of each side of $\alpha\vto{u}_j=\vto{u}_i$ and $\vto{u}_j$, where $\alpha\in\cam{F}$ and $i\neq j$, results $\alpha\,(\vto{u}_j\cdot\vto{u}_j)=0$, from where we conclude that $\alpha=0$ or that every orthogonal set is linearly independent. This conclusion permits us to state that in a \emph{$n$-dimensional inner product space, every orthogonal subset of $n$ elements is a basis}.
 
@@ -130,6 +143,8 @@ where the function in $\map{g}{\real^+}{\real^+}$ enables us to say that \emph{t
 \end{align*}
 \end{proof}
 }
+
+
 
 Any two vectors $\gloref{unita}$ and $\vun{u}_2$ of $(V_\cam{F},\eta,\xi)$ are said to be orthonormal if they are orthogonal and each one is \textsb{unitary}\index{vector!unitary}, where $\|\vun{u}_i\|=1$. Thereby, if the vector space $V_\cam{F}$ is $n$-dimensional, a subset $\hat{U}=\{\vun{u}_1,\vun{u}_2,\cdots,\vun{u}_n\}$ of orthonormal vectors is called an \textsb{orthonormal basis}\index{basis!orthonormal} of $V_\cam{F}$. It is important to note that to every orthogonal basis $\{\vto{u}_1,\vto{u}_2,\cdots,\vto{u}_n\}$, there is always an orthonormal basis $\{\vun{u}_1,\vun{u}_2,\cdots,\vun{u}_n\}$ where each $\vun{u}_i:=\vto{u}_i/\|\vto{u}_i\|$, when we say that the orthonormal basis results from \textsb{normalizing}\index{basis!normalization of} the orthogonal basis.
 
