@@ -33,12 +33,7 @@ Ricci's Tensor Calculus was presented by the hungarian mathematician Marcel Gros
 \section{Tensor Spaces}
 
 
-Let's recall vector spaces of functions that have a tuple of vectors as argument, that is, functions whose domain is a cartesian product of many sets, each one defining a vector space. Among these function spaces, we have a particular interest in those constituted by multilinear functions, on the conditions presented in section \ref{sec:FuncLin}. In order to proceed with the theory, based on the framework already studied, we chose to adopt an approach that takes tensor spaces as vector spaces of multilinear functionals, called tensors. In more mathematical terms, given a cartesian product $U^{\times m}$ where each set $U_i$ defines a finite dimensional vector space $(U_i)_\cam{F}$, a function space $\evl{\cam{F}}{U^{\times m}}{\cam{F}}$, constituted by multilinear functionals, is said to be a \textsb{tensor space}\index{space!tensor} of \textsb{order}\index{order!of tensor space} $m$, whose representation is here shortened by \gloref{espacoTens}, and each functional $\vtf{t}\in\ete{\cam{F}}{U^{\times m}}$ is said to be a \textsb{tensor}\index{tensor} of \textsb{order}\index{order!tensor} $m$, represented by \gloref{tensor}. In the particular case of $m=1$, a tensor space is considered to be a dual space, that is, $\ete{\cam{F}}{U}=U^*_\cam{F}$, where a tensor is a linear functional. 
-
-% Abaixo Errado!!!
-When the tensor space is defined by conjugate vector spaces $\overline{(U_i)_\cam{F}}$, we represent it $\ete{\cam{F}}{\overline{U^{\times m}}}$, whose arbitrary element \gloref{tensorConj} is called the \textsb{conjugate tensor}\index{tensor!conjugate} of $\tnr{T}\in\ete{\cam{F}}{U^{\times m}}$.
-%O certo começa aqui...
-As any other vector space, a tensor space have its conjugate, ..........  
+Let's recall vector spaces of functions that have a tuple of vectors as argument, that is, functions whose domain is a cartesian product of many sets, each one defining a vector space. Among these function spaces, we have a particular interest in those constituted by multilinear functions, on the conditions presented in section \ref{sec:FuncLin}. In order to proceed with the theory, based on the framework already studied, we chose to adopt an approach that takes tensor spaces as vector spaces of multilinear functionals, called tensors. In more mathematical terms, given a cartesian product $U^{\times m}$ where each set $U_i$ defines a finite dimensional vector space $(U_i)_\cam{F}$, a function space $\evl{\cam{F}}{U^{\times m}}{\cam{F}}$, constituted by multilinear functionals, is said to be a \textsb{tensor space}\index{space!tensor} of \textsb{order}\index{order!of tensor space} $m$, whose representation is here shortened by \gloref{espacoTens}, and each functional $\vtf{t}\in\ete{\cam{F}}{U^{\times m}}$ is said to be a \textsb{tensor}\index{tensor} of \textsb{order}\index{order!tensor} $m$, represented by \gloref{tensor}. In the particular case of $m=1$, a tensor space is considered to be a dual space, that is, $\ete{\cam{F}}{U}=U^*_\cam{F}$, where a tensor is a linear functional. Moreover, as any other vector space, a tensor space $\ete{\cam{F}}{U^{\times m}}$ has its \textsb{conjugate tensor space}\index{tensor space!conjugate} \gloref{espacoTensConj}, whose arbitrary element is represented by \gloref{tensorConj} where $\alpha\tnr{T}^c=\overline{\alpha}\tnr{T}$ for all $\alpha\in\cam{F}$ according to what was presented in section \ref{sec:espacoVet} for vector spaces. 
 
 It is possible to build particular tensor spaces from catersian powers together with dual spaces: a tensor space $\ete{\cam{F}}{V^{p}\times {V^*}^{q}}$, represented by \gloref{espacoTensTipo}, where $V^*_\cam{F}$ is the dual space of $V_\cam{F}$, is said to have a \textsb{contravariant order}\index{order!contravariant} $p$ and a \textsb{covariant order}\index{order!covariant} $q$ or we can call it a type $(p,q)$ tensor space. Moreover, a tensor can be defined from the dual spaces of its constituent vector spaces, that is, a linear functional in each vector space $(U_i^*)_\cam{F}$ defines a multilinear functional (tensor) in $\ete{\cam{F}}{U^{\times m}}$. Let's see how this happens. The tuple $(\vtf{g}_1,\cdots,\vtf{g}_m)$, which is an element of cartesian product $(U^*)^{\times m}=U^*_1\times\cdots\times U^*_m$, specifies a tensor in $\ete{\cam{F}}{U^{\times m}}$ when the following rule is defined: 
 \begin{equation}
@@ -56,9 +51,11 @@ where tensor $\tnr{V}\otimes\tnr{W}:=\fua{\otimes}{\tnr{V},\tnr{W}}$ belongs to 
 \item[iii.] Associativity:
 $\lpa\tnr{U}\otimes\tnr{V}\rpa\otimes\tnr{W}=\tnr{U}\otimes\lpa\tnr{V}\otimes\tnr{W}\rpa$,
 \item[iv.] Left distributivity:
-$\lpa\tnr{U}+\tnr{V}\rpa\otimes\tnr{W}=\tnr{U}\otimes\tnr{W}+\tnr{V}\otimes\tnr{W}\,\,$ and
-	\item[v.] Right distributivity:
-	$\tnr{U}\otimes\lpa\tnr{V}+\tnr{W}\rpa=\tnr{U}\otimes\tnr{V}+\tnr{U}\otimes\tnr{W}$
+$\lpa\tnr{U}+\tnr{V}\rpa\otimes\tnr{W}=\tnr{U}\otimes\tnr{W}+\tnr{V}\otimes\tnr{W}\,\,$,
+\item[v.] Right distributivity:
+$\tnr{U}\otimes\lpa\tnr{V}+\tnr{W}\rpa=\tnr{U}\otimes\tnr{V}+\tnr{U}\otimes\tnr{W}$ and
+\item[vi.] Conjugacy:
+$(\tnr{U}\otimes\tnr{V})^c=\tnr{U}^c\otimes\tnr{V}=\tnr{U}\otimes\tnr{V}^c$
 \end{itemize}
 are valid properties for all $\alpha,\beta\in\cam{F}$ and  $\tnr{U},\tnr{V},\tnr{W}\in\ete{\cam{F}}{U^{\times m}}$. Moreover, the following theorem states that a set of specific polyadic tensors, defined by tuples of coordinate functionals, is able to span a tensor space. 
 
@@ -68,7 +65,7 @@ Given a tensor space $\ete{\cam{F}}{U^{\times m}}$ and a basis $B_i=\{\vto{u}_1^
 
 {\footnotesize
 \begin{proof}
-Firstly, concerning the above properties of tensor products, each one can be verified from the definition \eqref{eq:prodTens} and from trivial multiplicative properties with scalars. About the theorem, we need to prove previously that if equalities $\tnr{T}_1({\vto{u}_{j_1}^{(1)},\cdots,\vto{u}_{j_m}^{(m)}})={\tnr{T}_2}(\vto{u}_{j_1}^{(1)},\cdots,\vto{u}_{j_m}^{(m)})$, where $\tnr{T}_1,\tnr{T}_2\in\ete{\cam{F}}{U^{\times m}}$, are valid, it results that $\tnr{T}_1=\tnr{T}_2$. In order to do that, we can say that 
+Firstly, concerning the above properties of tensor products, the first five can be verified from the definition \eqref{eq:prodTens} and from trivial multiplicative properties by scalars. The last property is actually a corollary of the second: if we consider that $\tnr{T}=\tnr{U}\otimes\tnr{V}$ in equality $\alpha\tnr{T}^c=\overline{\alpha}\tnr{T}$, we can write that $\alpha(\tnr{U}\otimes\tnr{V})^c=\overline{\alpha}\tnr{U}\otimes\tnr{V}=\alpha\tnr{U}^c\otimes\tnr{V}$ or that $\alpha(\tnr{U}\otimes\tnr{V})^c=\tnr{U}\otimes(\overline{\alpha}\tnr{V})=\alpha\tnr{U}\otimes\tnr{V}^c$. Concerning the theorem, we need to prove previously that if equalities $\tnr{T}_1({\vto{u}_{j_1}^{(1)},\cdots,\vto{u}_{j_m}^{(m)}})={\tnr{T}_2}(\vto{u}_{j_1}^{(1)},\cdots,\vto{u}_{j_m}^{(m)})$, where $\tnr{T}_1,\tnr{T}_2\in\ete{\cam{F}}{U^{\times m}}$, are valid, it results that $\tnr{T}_1=\tnr{T}_2$. In order to do that, we can say that 
 \begin{align*}
 \tnr{T}_1(\vto{x}_1,\cdots,\vto{x}_m)&=\sum_{{j_1}=1}^{n_1}\cdots\sum_{{j_m}=1}^{n_m}\fua{\vtf{f}^\con{B_1}_{j_1}}{\vto{x}_1}\cdots\fua{\vtf{f}^\con{B_m}_{j_m}}{\vto{x}_m}\tnr{T}_1({\vto{u}_{j_1}^{(1)},\cdots,\vto{u}_{j_m}^{(m)}})\\
 &=\sum_{{j_1}=1}^{n_1}\cdots\sum_{{j_m}=1}^{n_m}\fua{\vtf{f}^\con{B_1}_{j_1}}{\vto{x}_1}\cdots\fua{\vtf{f}^\con{B_m}_{j_m}}{\vto{x}_m}\tnr{T}_2({\vto{u}_{j_1}^{(1)},\cdots,\vto{u}_{j_m}^{(m)}})\\
@@ -277,12 +274,14 @@ i_m}^{B}}{\tnr{X}}\fua{\vtf{c}^\otimes}{\vtf{f}_{i_1}^{B_1}\otimes\cdots\otimes\
 &=&\sum_{i_1=1}^{n_1}\cdots\sum_{i_m=1}^{n_m}\fua{\vtf{f}_{i_1\cdots
 i_m}^{B}}{\tnr{X}}\fua{{\vtf{c}}}{\vun{u}_{i_1}^{(1)},\cdots,\vun{u}_{i_m}^{(m)}}\,,\nonumber
 \end{eqnarray}
-because the last equality results a rule for $\vtf{c}^\otimes$ since $\tnr{X}$ is arbitrary. Now, let's verify if equality $\fua{\vtf{c}^\otimes}{\vto{x}_1^*\otimes\cdots\otimes\vto{x}_m^*}=\fua{{\vtf{c}}}{\vto{x}_1,\cdots,\vto{x}_m}$ is valid. Considering $\tnr{X}=\vto{x}_1^*\otimes\cdots\otimes\vto{x}_m^*$, equality \eqref{eq:conjMultFun}, the properties of complex conjugates and rule \eqref{eq:regraCoordTens}, the previous development can proceed as follows:  
+because the last equality results a rule for $\vtf{c}^\otimes$ since $\tnr{X}$ is arbitrary. Now, let's verify if equality $\fua{\vtf{c}^\otimes}{\vto{x}_1^*\otimes\cdots\otimes\vto{x}_m^*}=\fua{{\vtf{c}}}{\vto{x}_1,\cdots,\vto{x}_m}$ is valid. Considering $\tnr{X}=\vto{x}_1^*\otimes\cdots\otimes\vto{x}_m^*$, equality \eqref{eq:conjMultFun}, the properties of complex conjugates, the conjugate property of the inner product, rule \eqref{eq:regraCoord} and rule \eqref{eq:regraCoordTens}, the previous development can proceed as follows:  
 \begin{eqnarray}
 \fua{\vtf{c}^\otimes}{\vto{x}_1^*\otimes\cdots\otimes\vto{x}_m^*}&=&\sum_{i_1=1}^{n_1}\cdots\sum_{i_m=1}^{n_m}\fua{\vtf{f}_{i_1\cdots
 i_m}^{B}}{\tnr{X}}\fua{{\vtf{c}}}{\vun{u}_{i_1}^{(1)},\cdots,\vun{u}_{i_m}^{(m)}}\nonumber\\
 &=&
 \sum_{i_1=1}^{n_1}\cdots\sum_{i_m=1}^{n_m}\fua{\tnr{X}}{\vun{u}_{i_1}^{(1)},\cdots,\vun{u}_{i_m}^{(m)}}\fua{{\vtf{c}}}{\vun{u}_{i_1}^{(1)},\cdots,\vun{u}_{i_m}^{(m)}}\nonumber\\
+&=&
+\sum_{i_1=1}^{n_1}\cdots\sum_{i_m=1}^{n_m}\prod_{k=1}^m\fua{\vto{x}_k^*}{\vun{u}_{i_k}^{(k)}} \,\,\fua{{\vtf{c}}}{\vun{u}_{i_1}^{(1)},\cdots,\vun{u}_{i_m}^{(m)}}\nonumber\\
 &=&
 \sum_{i_1=1}^{n_1}\cdots\sum_{i_m=1}^{n_m}\prod_{k=1}^m \overline{\fua{\vtf{f}_{i_k}^{\con{B}_k}}{\vto{x}_k}}\,\,\fua{{\vtf{c}}}{\vun{u}_{i_1}^{(1)},\cdots,\vun{u}_{i_m}^{(m)}}\nonumber\\
 &=&
@@ -328,7 +327,12 @@ For the sake of generality when manipulating contractive products algebraically,
 where $\tnr{C}\in\ete{\cam{F}}{W^{\times p}\times C^{\times n}\times Z^{\times r}}$ and $\tnr{D}\in\ete{\cam{F}}{Z^{\times r}\times D^{\times s}}$. 
 
 
-When the order of a contractive product equals the order of its terms, resulting a scalar, the order of the contractive product representation is not made explicit: for arbitrary tensors $\tnr{A},\tnr{B}\in\ete{\cam{F}}{U^{\times m}}$, we define $\tnr{A}\odot\tnr{B}=\tnr{A}\odot_m\tnr{B}$. Now, we can consider that there exists a  multiantilinear functional $\overline{\tnr{B}}$ where
+When the order of a contractive product equals the order of its terms, resulting a scalar, the order of the contractive product representation is omitted: for arbitrary tensors $\tnr{A},\tnr{B}\in\ete{\cam{F}}{U^{\times m}}$, we define $\tnr{A}\odot\tnr{B}=\tnr{A}\odot_m\tnr{B}$. Since a vector space and its conjugate are constituted by the same elements,   
+
+
+
+
+Now, we can consider that there exists a  multiantilinear functional $\overline{\tnr{B}}$ where
 \begin{equation}
 \fua{\overline{\tnr{B}}}{\vto{u}_1,\cdots,\vto{u}_m}=\overline{\fua{\tnr{B}}{\vto{u}_1,\cdots,\vto{u}_m}}\,,
 \end{equation}
