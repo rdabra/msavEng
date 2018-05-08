@@ -262,36 +262,35 @@ Considering function spaces $V^{U}_\cam{F}$ and  $\evl{\cam{F}}{\ete{\cam{F}}{U}
 \end{mteo}
 \hspace{1pt}
 {\footnotesize
-	\begin{proof}
-		The following proof is adapted from \aut{Backus}\cite{backus_1997_1}, pp. 43-45. According to theorem \ref{teo:geraEte}, let $\tnr{X}\in\ete{\cam{F}}{U}$ be an arbitrary tensor described by 
-		\begin{equation}
-		\tnr{X}=\sum_{i_1=1}^{n_1}\cdots\sum_{i_m=1}^{n_m}\fua{\vtf{f}_{i_1\cdots
-				i_p}^{B}}{\tnr{X}}\vtf{f}_{i_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{i_m}^{B_m}\,,
-		\nonumber
-		\end{equation}
-		where $B$ is a basis of $\ete{\cam{F}}{U}$ defined by orthonormal bases  $\con{B}_i=\{\vun{u}_{1}^{(i)},\cdots,\vun{u}_{n_i}^{(i)}\}$ of $X_i$. According to rule \eqref{eq:regraOrtonmFunc}, the function $\vtf{c}^\otimes$ that observes $\fua{\vtf{c}^\otimes}{\vto{x}_1^*\otimes\cdots\otimes\vto{x}_m^*}=\fua{{\vtf{c}}}{\vto{x}_1,\cdots,\vto{x}_m}$ really exists and is uniquely determined by $\vtf{c}$, as can be verified in  
-		\begin{eqnarray}
-		\fua{\vtf{c}^\otimes}{\tnr{X}}&=&\sum_{i_1=1}^{n_1}\cdots\sum_{i_m=1}^{n_m}\fua{\vtf{f}_{i_1\cdots
-				i_m}^{B}}{\tnr{X}}\fua{\vtf{c}^\otimes}{\vtf{f}_{i_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{i_m}^{B_m}}\nonumber\\
-		&=&\sum_{i_1=1}^{n_1}\cdots\sum_{i_m=1}^{n_m}\fua{\vtf{f}_{i_1\cdots
-				i_m}^{B}}{\tnr{X}}\fua{{\vtf{c}}}{\vun{u}_{i_1}^{(1)},\cdots,\vun{u}_{i_m}^{(m)}}\,,\nonumber
-		\end{eqnarray}
-		because the last equality results a rule for $\vtf{c}^\otimes$ since $\tnr{X}$ is arbitrary. Now, let's verify if equality $\fua{\vtf{c}^\otimes}{\vto{x}_1^*\otimes\cdots\otimes\vto{x}_m^*}=\fua{{\vtf{c}}}{\vto{x}_1,\cdots,\vto{x}_m}$ is valid. Considering $\tnr{X}=\vto{x}_1^*\otimes\cdots\otimes\vto{x}_m^*$, equality \eqref{eq:conjMultFun}, the properties of complex conjugates, the conjugate property of the inner product, rule \eqref{eq:regraCoord} and rule \eqref{eq:regraCoordTens}, the previous development can proceed as follows:  
-		\begin{eqnarray}
-		\fua{\vtf{c}^\otimes}{\vto{x}_1^*\otimes\cdots\otimes\vto{x}_m^*}&=&\sum_{i_1=1}^{n_1}\cdots\sum_{i_m=1}^{n_m}\fua{\vtf{f}_{i_1\cdots
-				i_m}^{B}}{\tnr{X}}\fua{{\vtf{c}}}{\vun{u}_{i_1}^{(1)},\cdots,\vun{u}_{i_m}^{(m)}}\nonumber\\
-		&=&
-		\sum_{i_1=1}^{n_1}\cdots\sum_{i_m=1}^{n_m}\fua{\tnr{X}}{\vun{u}_{i_1}^{(1)},\cdots,\vun{u}_{i_m}^{(m)}}\fua{{\vtf{c}}}{\vun{u}_{i_1}^{(1)},\cdots,\vun{u}_{i_m}^{(m)}}\nonumber\\
-		&=&
-		\sum_{i_1=1}^{n_1}\cdots\sum_{i_m=1}^{n_m}\prod_{k=1}^m\fua{\vto{x}_k^*}{\vun{u}_{i_k}^{(k)}} \,\,\fua{{\vtf{c}}}{\vun{u}_{i_1}^{(1)},\cdots,\vun{u}_{i_m}^{(m)}}\nonumber\\
-		&=&
-		\sum_{i_1=1}^{n_1}\cdots\sum_{i_m=1}^{n_m}\prod_{k=1}^m \overline{\fua{\vtf{f}_{i_k}^{\con{B}_k}}{\vto{x}_k}}\,\,\fua{{\vtf{c}}}{\vun{u}_{i_1}^{(1)},\cdots,\vun{u}_{i_m}^{(m)}}\nonumber\\
-		&=&
-		\fua{{\vtf{c}}}{\sum_{i_1=1}^{n_1}\fua{\vtf{f}_{i_1}^{\con{B}_1}}{\vto{x}_1}
-			\vun{u}_{i_1}^{(1)},\cdots,\sum_{i_m=1}^{n_m}\fua{\vtf{f}_{i_m}^{\con{B}_m}}{\vun{x}_m}\vun{u}_{i_m}^{(m)}}\nonumber\\
-		&=& \fua{{\vtf{c}}}{\vto{x}_1,\cdots,\vto{x}_m}\,.\nonumber
-		\end{eqnarray}
-	\end{proof}
+\begin{proof}
+The following proof is adapted from \aut{Backus}\cite{backus_1997_1}, pp. 43-45. According to theorem \ref{teo:geraEte}, let $\tnr{X}\in\ete{\cam{F}}{U}$ be an arbitrary tensor described by 
+\begin{equation}
+\tnr{X}=\sum_{i_1=1}^{n_1}\cdots\sum_{i_m=1}^{n_m}\fua{\vtf{f}_{i_1\cdots i_p}^{B}}{\tnr{X}}\vtf{f}_{i_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{i_m}^{B_m}\,,
+\nonumber
+\end{equation}
+where $B$ is a basis of $\ete{\cam{F}}{U}$ defined by orthonormal bases  $\con{B}_i=\{\vun{v}_{1}^{(i)},\cdots,\vun{v}_{n_i}^{(i)}\}$ of $X_i$. According to rule \eqref{eq:regraOrtonmFunc}, the function $\vtf{c}^\otimes$ that observes $\fua{\vtf{c}^\otimes}{\vto{x}_1^*\otimes\cdots\otimes\vto{x}_m^*}=\fua{{\vtf{c}}}{\vto{x}_1,\cdots,\vto{x}_m}$ really exists and is uniquely determined by $\vtf{c}$, as can be verified in  
+\begin{eqnarray}
+\fua{\vtf{c}^\otimes}{\tnr{X}}&=&\sum_{i_1=1}^{n_1}\cdots\sum_{i_m=1}^{n_m}\fua{\vtf{f}_{i_1\cdots
+i_m}^{B}}{\tnr{X}}\fua{\vtf{c}^\otimes}{\vtf{f}_{i_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{i_m}^{B_m}}\nonumber\\
+&=&\sum_{i_1=1}^{n_1}\cdots\sum_{i_m=1}^{n_m}\fua{\vtf{f}_{i_1\cdots
+i_m}^{B}}{\tnr{X}}\fua{{\vtf{c}}}{\vun{v}_{i_1}^{(1)},\cdots,\vun{v}_{i_m}^{(m)}}\,,\nonumber
+\end{eqnarray}
+because the last equality results a rule for $\vtf{c}^\otimes$ since $\tnr{X}$ is arbitrary. Now, let's verify if equality $\fua{\vtf{c}^\otimes}{\vto{x}_1^*\otimes\cdots\otimes\vto{x}_m^*}=\fua{{\vtf{c}}}{\vto{x}_1,\cdots,\vto{x}_m}$ is valid. Considering $\tnr{X}=\vto{x}_1^*\otimes\cdots\otimes\vto{x}_m^*$, equality \eqref{eq:conjMultFun}, the properties of complex conjugates, the conjugate property of the inner product, rule \eqref{eq:regraCoord} and rule \eqref{eq:regraCoordTens}, the previous development can proceed as follows:  
+\begin{eqnarray}
+\fua{\vtf{c}^\otimes}{\vto{x}_1^*\otimes\cdots\otimes\vto{x}_m^*}&=&\sum_{i_1=1}^{n_1}\cdots\sum_{i_m=1}^{n_m}\fua{\vtf{f}_{i_1\cdots
+		i_m}^{B}}{\tnr{X}}\fua{{\vtf{c}}}{\vun{v}_{i_1}^{(1)},\cdots,\vun{v}_{i_m}^{(m)}}\nonumber\\
+&=&
+\sum_{i_1=1}^{n_1}\cdots\sum_{i_m=1}^{n_m}\fua{\tnr{X}}{\vun{v}_{i_1}^{(1)},\cdots,\vun{v}_{i_m}^{(m)}}\fua{{\vtf{c}}}{\vun{v}_{i_1}^{(1)},\cdots,\vun{v}_{i_m}^{(m)}}\nonumber\\
+&=&
+\sum_{i_1=1}^{n_1}\cdots\sum_{i_m=1}^{n_m}\prod_{k=1}^m\fua{\vto{x}_k^*}{\vun{v}_{i_k}^{(k)}} \,\,\fua{{\vtf{c}}}{\vun{v}_{i_1}^{(1)},\cdots,\vun{v}_{i_m}^{(m)}}\nonumber\\
+&=&
+\sum_{i_1=1}^{n_1}\cdots\sum_{i_m=1}^{n_m}\prod_{k=1}^m \overline{\fua{\vtf{f}_{i_k}^{\con{B}_k}}{\vto{x}_k}}\,\,\fua{{\vtf{c}}}{\vun{v}_{i_1}^{(1)},\cdots,\vun{v}_{i_m}^{(m)}}\nonumber\\
+&=&
+\fua{{\vtf{c}}}{\sum_{i_1=1}^{n_1}\fua{\vtf{f}_{i_1}^{\con{B}_1}}{\vto{x}_1}
+\vun{v}_{i_1}^{(1)},\cdots,\sum_{i_m=1}^{n_m}\fua{\vtf{f}_{i_m}^{\con{B}_m}}{\vun{x}_m}\vun{v}_{i_m}^{(m)}}\nonumber\\
+&=& \fua{{\vtf{c}}}{\vto{x}_1,\cdots,\vto{x}_m}\,.\nonumber
+\end{eqnarray}
+\end{proof}
 }
 
 
@@ -330,24 +329,13 @@ For the sake of generality when manipulating contractive products algebraically,
 where $\tnr{C}\in\ete{\cam{F}}{W^{\times p}\times C^{\times n}\times Z^{\times r}}$ and $\tnr{D}\in\ete{\cam{F}}{Z^{\times r}\times D^{\times s}}$. 
 
 
-When the order of a contractive product equals the order of its terms, resulting a scalar, the order of the contractive product representation is omitted: for arbitrary tensors $\tnr{A},\tnr{B}\in\ete{\cam{F}}{U^{\times m}}$, we define $\tnr{A}\odot\tnr{B}=\tnr{A}\odot_m\tnr{B}$. Since a vector space and its conjugate are constituted by the same elements,   
-
-
-
-
-Now, we can consider that there exists a  multiantilinear functional $\overline{\tnr{B}}$ where
+When the order of a contractive product equals the order of its terms, resulting a scalar, the order of the contractive product representation is omitted: for arbitrary tensors $\tnr{A},\tnr{B}\in\ete{\cam{F}}{U^{\times m}}$, we define $\tnr{A}\odot\tnr{B}=\tnr{A}\odot_m\tnr{B}$. In this context, the scalar 
 \begin{equation}
-\fua{\overline{\tnr{B}}}{\vto{u}_1,\cdots,\vto{u}_m}=\overline{\fua{\tnr{B}}{\vto{u}_1,\cdots,\vto{u}_m}}\,,
+\tnr{A}\cdot\tnr{B}:=\tnr{A}\odot\tnr{B}^c
 \end{equation}
-for all $u_i\in (U_i)_\cam{F}$. 
+is called the inner product of $\tnr{A}$ and $\tnr{B}$ because it observes the axioms of inner product spaces on page \pageref{prop:produtoInterno}. 
 
-
-
-In particular, the scalar values in equality \eqref{eq:ProdTens} are always real when only Euclidean spaces are considered and then, from \eqref{eq:identidade}, these real values can be arranged in such a way that 
-\begin{equation*}
-\overline{\fua{\tnr{I}}{\vto{x}_{1},\cdots,\vto{x}_{p},\vto{y}_1,\cdots,\vto{y}_p}}=\prod_{i=1}^{p}\vto{x}_{i}\cdot\vto{y}_{i}\,.
-\end{equation*}
-From this result, we can state that the contractive product $\tnr{W}_1\odot\tnr{W}_2$, where both tensors belong to $\ete{\real}{W^{\times p}}$, results a real number and thus \emph{generalizes the concept of inner product in Euclidean spaces}\footnote{Also in the context of Euclidean spaces, it is not unusual to see a first order contractive product of a dyadic tensor and a covector being used to define the so called ``tensor product of vectors'' (See \aut{Gurtin}\cite{gurtin_1981}, p.4; \aut{Truesdell \& Noll}\cite{truesdell_1992}, p.15; \aut{Ogden}\cite{ogden_1997}, p.16). Although we shall not use this rather obscure concept, its frequent use by renowned authors forces us to clarify it in terms of our rigorous approach as follows. First, since vectors and covectors have a one to one correspondence, these authors inadvertently use the term ``vector'' either as an element of a vector space or as a covector, depending on the context: in $\vto{u}(\vto{v})=\vto{v}\cdot\vto{u}$, for example, $\vto{u}$ is a covector on the left side and a vector on the right. Thereby, they get rid of the burden of defining a covector and all of its preliminary concepts. In this sense, our representation of a dyadic tensor $\vto{u}^*\otimes\vto{v}^*$ is subverted to $\vto{u}\otimes\vto{v}$ and the contractive product operator is suppressed from the precise representation $(\vto{u}^*\otimes\vto{v}^*)\odot_1 \vto{x}^*=(\vto{v}\cdot\vto{x})\vto{u}^*$ in order to avoid defining a contraction and its supporting concepts. Finally, they define the ``tensor product'' $\vto{u}\otimes\vto{v}$ through its effects, that is, as a ``tensor'' which causes $(\vto{u}\otimes\vto{v})\vto{x}=(\vto{v}\cdot\vto{x})\vto{u}$, where vector $\vto{x}$ is arbitrary.}. Since this generalized inner product observes the axioms of inner products on page \pageref{prop:produtoInterno}, tensor space $\ete{\real}{W^{\times p}}$ is naturally an inner product space. 
+In particular, the scalar values in equality \eqref{eq:ProdTens} are always real when only Euclidean spaces are considered. Thereby, we can state that the contractive product $\tnr{W}_1\odot\tnr{W}_2$, where both tensors belong to $\ete{\real}{W^{\times p}}$, results a real number and thus \emph{ends up generalizing the concept of inner product in Euclidean spaces}\footnote{Also in the context of Euclidean spaces, it is not unusual to see a first order contractive product of a dyadic tensor and a covector being used to define the so called ``tensor product of vectors'' (See \aut{Gurtin}\cite{gurtin_1981}, p.4; \aut{Truesdell \& Noll}\cite{truesdell_1992}, p.15; \aut{Ogden}\cite{ogden_1997}, p.16). Although we shall not use this rather obscure concept, its frequent use by renowned authors forces us to clarify it in terms of our rigorous approach as follows. First, since vectors and covectors have a one to one correspondence, these authors inadvertently use the term ``vector'' either as an element of a vector space or as a covector, depending on the context: in $\vto{u}(\vto{v})=\vto{v}\cdot\vto{u}$, for example, $\vto{u}$ is a covector on the left side and a vector on the right. Thereby, they get rid of the burden of defining a covector and all of its preliminary concepts. In this sense, our representation of a dyadic tensor $\vto{u}^*\otimes\vto{v}^*$ is subverted to $\vto{u}\otimes\vto{v}$ and the contractive product operator is suppressed from the precise representation $(\vto{u}^*\otimes\vto{v}^*)\odot_1 \vto{x}^*=(\vto{v}\cdot\vto{x})\vto{u}^*$ in order to avoid defining a contraction and its supporting concepts. Finally, they define the ``tensor product'' $\vto{u}\otimes\vto{v}$ through its effects, that is, as a ``tensor'' which causes $(\vto{u}\otimes\vto{v})\vto{x}=(\vto{v}\cdot\vto{x})\vto{u}$, where vector $\vto{x}$ is arbitrary.}. Since this generalized inner product observes the axioms of inner products on page \pageref{prop:produtoInterno}, tensor space $\ete{\real}{W^{\times p}}$ is naturally an inner product space. 
 
 
 If a tensor space can be structured as any other ordinary vector space, it is possible to consider  
