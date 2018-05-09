@@ -302,25 +302,25 @@ where $\tnr{X}$ is an arbitrary element of $\ete{\cam{F}}{U}$ that can be descri
 
 In our study, we deal with two different types of contraction, expressed by two different rules for ${\vtf{c}}_p$. The first type is called trace of tensor, valid for tensor spaces of order greater than one and defined as follows. Still considering the above conditions, if $U=X_1\times\cdots\times X_{r}\times\cdots\times X_{s}\times\cdots\times X_m$ where $X_{r}=X_{s}$ and $m\geq 2$, the tensor $\fua{\vtf{c}_2^\otimes}{\tnr{X}}$ of order $m-2$ is a contraction called the $r,s$ trace of $\tnr{X}$, represented by \gloref{tracoRS}$\tnr{X}$, when 
 \begin{equation*}
-\fua{{\vtf{c}}_2}{\vto{x}_1,\cdots,\vto{x}_m}:=(\vto{x}_{r}^c\cdot\vto{x}_{s})\,\vto{x}_1^*\otimes\cdots\otimes\vto{x}_{r-1}^*\otimes\vto{x}_{r+1}^*
+\fua{{\vtf{c}}_2}{\vto{x}_1,\cdots,\vto{x}_m}:=(\vto{x}_{s}^c\cdot\vto{x}_{r})\,\vto{x}_1^*\otimes\cdots\otimes\vto{x}_{r-1}^*\otimes\vto{x}_{r+1}^*
 \otimes\cdots\otimes\vto{x}_{s-1}^*\otimes\vto{x}_{s+1}^*\otimes\cdots\otimes\vto{x}_m^*\,,
 \end{equation*}
 where $\vto{x}_{r}^c$ belongs to $\overline{{X_r}_\cam{F}}$. In other words, the lifting of this function $\vtf{c}_2$ results the $r,s$ trace function and thus
 \begin{equation}
-\trt{r}{s} \tnr{X}=(\vto{x}_{r}^c\cdot\vto{x}_{s})\,\vto{x}_1^*\otimes\cdots\otimes\vto{x}_{r-1}^*\otimes\vto{x}_{r+1}^*
+\trt{r}{s} \tnr{X}=(\vto{x}_{s}^c\cdot\vto{x}_{r})\,\vto{x}_1^*\otimes\cdots\otimes\vto{x}_{r-1}^*\otimes\vto{x}_{r+1}^*
 \otimes\cdots\otimes\vto{x}_{s-1}^*\otimes\vto{x}_{s+1}^*\otimes\cdots\otimes\vto{x}_m^*\,.
 \end{equation}
-It is important to observe that the product $\vto{x}_{r}^c\cdot\vto{x}_{s}$ is antilinear also on the left term since  $\vtf{c}_2$ has $\vto{x}_{r}$ as one of its arguments\footnote{See property \eqref{eq:antiLinConjVect}.}. Moreover, in the context of Euclidean spaces, from equalities \eqref{eq:prodIntGen} and \eqref{eq:identidade}, we can write that $\vto{x}_{r}^c\cdot\vto{x}_{s}=\vto{x}_{r}\cdot\vto{x}_{s}\,$. 
+It is important to observe that the product $\vto{x}_{r}^c\cdot\vto{x}_{s}$ is antilinear also on the left term since  $\vtf{c}_2$ has $\vto{x}_{r}$ as one of its arguments\footnote{See property \eqref{eq:antiLinConjVect}.}. Moreover, in the context of Euclidean spaces, from equalities \eqref{eq:prodIntGen} and \eqref{eq:identidade}, we can write that $\vto{x}_{s}^c\cdot\vto{x}_{r}=\vto{x}_{s}\cdot\vto{x}_{r}\,$. 
 
 Since the contraction that follows will take part in the majority of forthcoming definitions in this chapter, it is more relevant than the $r,s$ trace for the purposes of our study. In order to define this important contraction using conditions above, let's consider that $X^{\times m}=A^{\times q}\times W^{\times p}\times W^{\times p}\times B^{\times n}$,
 where $m=q+2p+n$, tensor $\tnr{A}:=\vto{a}_1^*\otimes\cdots\otimes\vto{a}_{q}^*\otimes\vto{x}_1^*\otimes\cdots\otimes\vto{x}_{p}^*$ belongs to tensor space $\ete{\cam{F}}{A^{\times q}\times W^{\times p}}$ and tensor $\tnr{B}:=\vto{y}_1^*\otimes\cdots\otimes\vto{y}_{p}^*\otimes\vto{b}_1^*\otimes\cdots\otimes\vto{b}_{n}^*$ belongs to $\ete{\cam{F}}{W^{\times p}\times B^{\times n}}$. When 
 \begin{align*}
 \fua{{\vtf{c}}_{2p}}{\vto{a}_1,\cdots,\vto{a}_q,&\vto{x}_1,\cdots,\vto{x}_p,\vto{y}_1,\cdots,\vto{y}_p,\vto{b}_1,\cdots,\vto{b}_n}:=
-\\&(\prod_{i=1}^p\vto{x}_i^c\cdot\vto{y}_i)\,\vto{a}_1^*\otimes\cdots\otimes\vto{a}_{q}^*\otimes\vto{b}_{1}^*\otimes\cdots\otimes\vto{b}_n^*\,,
+\\&(\prod_{i=1}^p\vto{y}_i^c\cdot\vto{x}_i)\,\vto{a}_1^*\otimes\cdots\otimes\vto{a}_{q}^*\otimes\vto{b}_{1}^*\otimes\cdots\otimes\vto{b}_n^*\,,
 \end{align*} 
 we call tensor $\fua{{\vtf{c}}_{2p}^\otimes}{\tnr{A}\otimes\tnr{B}}$ the $p$-th order \textsb{contractive product}\index{contractive!product} of $\tnr{A}$ and $\tnr{B}$, represented by $\tnr{A}\odot_p\tnr{B}$. Thereby, we can write in simpler terms that   
 \begin{equation}\label{eq:ProdTens}
-\tnr{A}\odot_p\tnr{B}=(\prod_{i=1}^p\vto{x}_i^c\cdot\vto{y}_i)\vto{a}_1^*\otimes\cdots\otimes\vto{a}_{q}^*\otimes\vto{b}_{1}^*\otimes\cdots\otimes\vto{b}_n^*.
+\tnr{A}\odot_p\tnr{B}=(\prod_{i=1}^p\vto{y}_i^c\cdot\vto{x}_i)\vto{a}_1^*\otimes\cdots\otimes\vto{a}_{q}^*\otimes\vto{b}_{1}^*\otimes\cdots\otimes\vto{b}_n^*.
 \end{equation}
 For the sake of generality when manipulating contractive products algebraically, we consider that $\tnr{A}\odot_0\tnr{B}:=\tnr{A}\otimes\tnr{B}$. Moreover, it is trivial to obtain that these type of products are also associative:
 \begin{equation}
@@ -329,11 +329,14 @@ For the sake of generality when manipulating contractive products algebraically,
 where $\tnr{C}\in\ete{\cam{F}}{W^{\times p}\times C^{\times n}\times Z^{\times r}}$ and $\tnr{D}\in\ete{\cam{F}}{Z^{\times r}\times D^{\times s}}$. 
 
 
-When the order of a contractive product equals the order of its terms, resulting a scalar, the order of the contractive product representation is omitted: for arbitrary tensors $\tnr{A},\tnr{B}\in\ete{\cam{F}}{U^{\times m}}$, we define $\tnr{A}\odot\tnr{B}=\tnr{A}\odot_m\tnr{B}$. In this context, the scalar 
+When the order of a contractive product equals the order of its terms, the result is a scalar. In this context, considering arbitrary tensors $\tnr{A},\tnr{B}\in\ete{\cam{F}}{U^{\times m}}$, the scalar
 \begin{equation}
-\tnr{A}\cdot\tnr{B}:=\tnr{A}\odot\tnr{B}^c
+\tnr{A}\cdot\tnr{B}:=\tnr{B}\odot_m\tnr{A}^c
 \end{equation}
-is called the inner product of $\tnr{A}$ and $\tnr{B}$ because it observes the axioms of inner product spaces on page \pageref{prop:produtoInterno}. 
+is called the \textsb{inner product of tensors}\index{inner product!of tensors} $\tnr{A}$ and $\tnr{B}$ because it observes the axioms of ordinary inner products\footnote{See p.\pageref{prop:produtoInterno}.}. From this definition, if $\ete{\cam{F}}{U^{\times m}}$ is a first order tensor space, where $\tnr{A}=\vto{x}^*$ and $\tnr{B}=\vto{y}^*$, we have equalities
+\begin{equation}
+\vto{x}^*\cdot\vto{y}^*=\vto{y}^*\odot_1(\vto{x}^*)^c=
+\end{equation}     
 
 In particular, the scalar values in equality \eqref{eq:ProdTens} are always real when only Euclidean spaces are considered. Thereby, we can state that the contractive product $\tnr{W}_1\odot\tnr{W}_2$, where both tensors belong to $\ete{\real}{W^{\times p}}$, results a real number and thus \emph{ends up generalizing the concept of inner product in Euclidean spaces}\footnote{Also in the context of Euclidean spaces, it is not unusual to see a first order contractive product of a dyadic tensor and a covector being used to define the so called ``tensor product of vectors'' (See \aut{Gurtin}\cite{gurtin_1981}, p.4; \aut{Truesdell \& Noll}\cite{truesdell_1992}, p.15; \aut{Ogden}\cite{ogden_1997}, p.16). Although we shall not use this rather obscure concept, its frequent use by renowned authors forces us to clarify it in terms of our rigorous approach as follows. First, since vectors and covectors have a one to one correspondence, these authors inadvertently use the term ``vector'' either as an element of a vector space or as a covector, depending on the context: in $\vto{u}(\vto{v})=\vto{v}\cdot\vto{u}$, for example, $\vto{u}$ is a covector on the left side and a vector on the right. Thereby, they get rid of the burden of defining a covector and all of its preliminary concepts. In this sense, our representation of a dyadic tensor $\vto{u}^*\otimes\vto{v}^*$ is subverted to $\vto{u}\otimes\vto{v}$ and the contractive product operator is suppressed from the precise representation $(\vto{u}^*\otimes\vto{v}^*)\odot_1 \vto{x}^*=(\vto{v}\cdot\vto{x})\vto{u}^*$ in order to avoid defining a contraction and its supporting concepts. Finally, they define the ``tensor product'' $\vto{u}\otimes\vto{v}$ through its effects, that is, as a ``tensor'' which causes $(\vto{u}\otimes\vto{v})\vto{x}=(\vto{v}\cdot\vto{x})\vto{u}$, where vector $\vto{x}$ is arbitrary.}. Since this generalized inner product observes the axioms of inner products on page \pageref{prop:produtoInterno}, tensor space $\ete{\real}{W^{\times p}}$ is naturally an inner product space. 
 
