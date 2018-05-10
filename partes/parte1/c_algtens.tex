@@ -50,14 +50,16 @@ where tensor $\tnr{V}\otimes\tnr{W}:=\fua{\otimes}{\tnr{V},\tnr{W}}$ belongs to 
 \item[ii.] Multiplication by scalar:\label{prop:TensMultScalar} $\alpha\tnr{U}\otimes\beta\tnr{V}=\alpha\beta(\tnr{U}\otimes\tnr{V})=\beta\tnr{U}\otimes\alpha\tnr{V}$,
 \item[iii.] Associativity:
 $\lpa\tnr{U}\otimes\tnr{V}\rpa\otimes\tnr{W}=\tnr{U}\otimes\lpa\tnr{V}\otimes\tnr{W}\rpa$,
-\item[iv.] Left distributivity:
+\item[iv.] Transposition:
+if $\tnr{U}\otimes\tnr{V}=\tnr{U}_1\otimes\tnr{U}_2+\tnr{V}_1\otimes\tnr{V}_2$ then $\tnr{V}\otimes\tnr{U}=\tnr{U}_2\otimes\tnr{U}_1+\tnr{V}_2\otimes\tnr{V}_1$,
+\item[v.] Left distributivity:
 $\lpa\tnr{U}+\tnr{V}\rpa\otimes\tnr{W}=\tnr{U}\otimes\tnr{W}+\tnr{V}\otimes\tnr{W}\,\,$,
-\item[v.] Right distributivity:
+\item[vi.] Right distributivity:
 $\tnr{U}\otimes\lpa\tnr{V}+\tnr{W}\rpa=\tnr{U}\otimes\tnr{V}+\tnr{U}\otimes\tnr{W}$ and
-\item[vi.] Conjugacy:
+\item[vii.] Conjugacy:
 $(\tnr{U}\otimes\tnr{V})^c=\tnr{U}^c\otimes\tnr{V}=\tnr{U}\otimes\tnr{V}^c$
 \end{itemize}
-are valid properties for all $\alpha,\beta\in\cam{F}$ and  $\tnr{U},\tnr{V},\tnr{W}\in\ete{\cam{F}}{U^{\times m}}$. Moreover, the following theorem states that a set of specific polyadic tensors, defined by tuples of coordinate functionals, is able to span a tensor space. 
+are valid properties for all $\alpha,\beta\in\cam{F}$ and  $\tnr{U},\tnr{U}_i,\tnr{V},\tnr{V}_i,\tnr{W}\in\ete{\cam{F}}{U^{\times m}}$. Moreover, the following theorem states that a set of specific polyadic tensors, defined by tuples of coordinate functionals, is able to span a tensor space. 
 
 \begin{mteo}{Basis of Polyadic Tensors}{geraEte}
 Given a tensor space $\ete{\cam{F}}{U^{\times m}}$ and a basis $B_i=\{\vto{u}_1^{(i)},\cdots,\vto{u}_{n_i}^{(i)}\}$ of each constituent vector space $(U_i)_\cam{F}$, $i=1,\cdots,m\,$, the set $B$ of all polyadic tensors $\vtf{f}_{j_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{j_m}^{B_m}$ is a basis of $\ete{\cam{F}}{U^{\times m}}$, where coordinate functionals $\vtf{f}_{j_i}^{B_i}\in (U_i)_\cam{F}^*$, $j_i=1,\cdots,n_i\,$. 
@@ -65,7 +67,7 @@ Given a tensor space $\ete{\cam{F}}{U^{\times m}}$ and a basis $B_i=\{\vto{u}_1^
 
 {\footnotesize
 \begin{proof}
-Firstly, concerning the above properties of tensor products, the first five can be verified from the definition \eqref{eq:prodTens} and from trivial multiplicative properties by scalars. The last property is actually a corollary of the second: if we consider that $\tnr{T}=\tnr{U}\otimes\tnr{V}$ in equality $\alpha\tnr{T}^c=\overline{\alpha}\tnr{T}$, we can write that $\alpha(\tnr{U}\otimes\tnr{V})^c=\overline{\alpha}\tnr{U}\otimes\tnr{V}=\alpha\tnr{U}^c\otimes\tnr{V}$ or that $\alpha(\tnr{U}\otimes\tnr{V})^c=\tnr{U}\otimes(\overline{\alpha}\tnr{V})=\alpha\tnr{U}\otimes\tnr{V}^c$. Concerning the theorem, we need to prove previously that if equalities $\tnr{T}_1({\vto{u}_{j_1}^{(1)},\cdots,\vto{u}_{j_m}^{(m)}})={\tnr{T}_2}(\vto{u}_{j_1}^{(1)},\cdots,\vto{u}_{j_m}^{(m)})$, where $\tnr{T}_1,\tnr{T}_2\in\ete{\cam{F}}{U^{\times m}}$, are valid, it results that $\tnr{T}_1=\tnr{T}_2$. In order to do that, we can say that 
+Firstly, concerning the above properties of tensor products, the first six can be verified from the definition \eqref{eq:prodTens} and from trivial addition and scalar multiplication properties. The last property is actually a corollary of the second: if we consider that $\tnr{T}=\tnr{U}\otimes\tnr{V}$ in equality $\alpha\tnr{T}^c=\overline{\alpha}\tnr{T}$, we can write that $\alpha(\tnr{U}\otimes\tnr{V})^c=\overline{\alpha}\tnr{U}\otimes\tnr{V}=\alpha\tnr{U}^c\otimes\tnr{V}$ or that $\alpha(\tnr{U}\otimes\tnr{V})^c=\tnr{U}\otimes(\overline{\alpha}\tnr{V})=\alpha\tnr{U}\otimes\tnr{V}^c$. Concerning the theorem, we need to prove previously that if equalities $\tnr{T}_1({\vto{u}_{j_1}^{(1)},\cdots,\vto{u}_{j_m}^{(m)}})={\tnr{T}_2}(\vto{u}_{j_1}^{(1)},\cdots,\vto{u}_{j_m}^{(m)})$, where $\tnr{T}_1,\tnr{T}_2\in\ete{\cam{F}}{U^{\times m}}$, are valid, it results that $\tnr{T}_1=\tnr{T}_2$. In order to do that, we can say that 
 \begin{align*}
 \tnr{T}_1(\vto{x}_1,\cdots,\vto{x}_m)&=\sum_{{j_1}=1}^{n_1}\cdots\sum_{{j_m}=1}^{n_m}\fua{\vtf{f}^\con{B_1}_{j_1}}{\vto{x}_1}\cdots\fua{\vtf{f}^\con{B_m}_{j_m}}{\vto{x}_m}\tnr{T}_1({\vto{u}_{j_1}^{(1)},\cdots,\vto{u}_{j_m}^{(m)}})\\
 &=\sum_{{j_1}=1}^{n_1}\cdots\sum_{{j_m}=1}^{n_m}\fua{\vtf{f}^\con{B_1}_{j_1}}{\vto{x}_1}\cdots\fua{\vtf{f}^\con{B_m}_{j_m}}{\vto{x}_m}\tnr{T}_2({\vto{u}_{j_1}^{(1)},\cdots,\vto{u}_{j_m}^{(m)}})\\
@@ -325,11 +327,29 @@ we call tensor $\fua{{\vtf{c}}_{2p}^\otimes}{\tnr{A}\otimes\tnr{B}}$ the $p$-th 
 
 {\footnotesize
 \begin{proof}
-Let's prove that the $r,s$ trace and the contractive product are indeed linear. According to property ii on page \pageref{prop:tensorProd}, verification of equalities $\trt{r}{s} \alpha\tnr{ X}=\alpha\trt{r}{s}\tnr{X}$ and $(\alpha\tnr{A})\odot_p(\beta\tnr{B})=\alpha\beta\tnr{A}\odot_p\tnr{B}$ is straightforward.   
+Let's prove that the $r,s$ trace and the contractive product are indeed linear. From property ii on page \pageref{prop:tensorProd}, verification of equalities $\trt{r}{s} \alpha\tnr{ X}=\alpha\trt{r}{s}\tnr{X}$ and $(\alpha\tnr{A})\odot_p(\beta\tnr{B})=\alpha\beta\tnr{A}\odot_p\tnr{B}$ is straightforward. Thereafter, in order to shorten expression sizes, we shall consider that a contractive product always results a scalar, that is, the order of the contractive product equals the order of its terms. Firstly, let's verify the additive property of linear functions for a first order contractive product, that is, set $X^{\times 2}=W\times W$ and $\tnr{A},\tnr{B},\tnr{W}\in\ete{\cam{F}}{W}$. Since $\vto{x}_1^*+\vto{y}_1^*=(\vto{x}_1+\vto{y}_1)^*$, equalities
+\begin{equation*}
+(\tnr{A}+\tnr{B})\odot_1\tnr{W} = (\vto{x}_1+\vto{y}_1)^*\odot_1\vto{w}_1^*=\vto{w}^c_1\cdot(\vto{x}_1+\vto{y}_1)= \vto{w}^c_1\cdot\vto{x}_1+\vto{w}^c_1\cdot\vto{y}_1=\tnr{A}\odot_1\tnr{W}+\tnr{B}\odot_1\tnr{W}
+\end{equation*}
+assure linearity of first order contractive products. Now, we shall consider a second order contractive product where $\tnr{A},\tnr{B},\tnr{W}\in\ete{\cam{F}}{W^{\times 2}}$. From the linearity of first order contractive products and property iv on page \pageref{prop:tensorProd}, we have the following development: 
+\begin{align*}
+\tnr{A}\odot_2\tnr{W} + \tnr{B}\odot_2\tnr{W}  & = (\vto{x}_1^*\otimes\vto{x}_2^*) \odot_2(\vto{w}_1^*\otimes\vto{w}_2^*)+(\vto{y}_1^*\otimes\vto{y}_2^*) \odot_2(\vto{w}_1^*\otimes\vto{w}_2^*)\\
+& = (\vto{w}_1^c\cdot\vto{x}_1)(\vto{w}_2^c\cdot\vto{x}_2) + (\vto{w}_1^c\cdot\vto{y}_1)(\vto{w}_2^c\cdot\vto{y}_2)\\
+& = \vto{w}_2^c\cdot(\vto{x}_1\cdot\vto{w}_1^c)\vto{x}_2 + \vto{w}_2^c\cdot(\vto{y}_1\cdot\vto{w}_1^c)\vto{y}_2\\
+& = \vto{w}_2^c\cdot[(\vto{x}_1\cdot\vto{w}_1^c)\vto{x}_2 + (\vto{y}_1\cdot\vto{w}_1^c)\vto{y}_2]\\
+& = [(\vto{x}_1\cdot\vto{w}_1^c)\vto{x}_2 + (\vto{y}_1\cdot\vto{w}_1^c)\vto{y}_2]^*\odot_1\vto{w}_2^*\\
+& = [(\vto{x}_1\cdot\vto{w}_1^c)\vto{x}_2^* + (\vto{y}_1\cdot\vto{w}_1^c)\vto{y}_2^*]\odot_1\vto{w}_2^*\\
+& = [(\vto{x}_2^*\otimes\vto{x}_1^*)\odot_1\vto{w}_1^* + (\vto{y}_2^*\otimes\vto{y}_1^*)\odot_1\vto{w}_1^*]\odot_1\vto{w}_2^*\\
+& = [(\vto{x}_2^*\otimes\vto{x}_1^*) + (\vto{y}_2^*\otimes\vto{y}_1^*)]\odot_1\vto{w}_1^*\odot_1\vto{w}_2^*\\
+& = \tnr{T}\otimes\tnr{Z}\odot_1\vto{w}_1^*\odot_1\vto{w}_2^*\\
+& = \tnr{Z}\otimes\tnr{T}\odot_2\vto{w}_1^*\otimes\vto{w}_2^* \\
+& = [(\vto{x}_1^*\otimes\vto{x}_2^*) + (\vto{y}_1^*\otimes\vto{y}_2^*)]\odot_2\vto{w}_1^*\otimes\vto{w}_2^*\\
+& = (\tnr{A} + \tnr{B})\odot_2\tnr{W}\,,
+\end{align*}
+where $\tnr{T}\otimes\tnr{Z}:=(\vto{x}_2^*\otimes\vto{x}_1^*) + (\vto{y}_2^*\otimes\vto{y}_1^*)$. 
+Applying the same strategy of this development, we can find that $\tnr{W}\odot_2\tnr{A} + \tnr{W}\odot_2\tnr{B}=\tnr{W}\odot_2(\tnr{A} + \tnr{B})$. Therefore, second  order contractive products are also linear. In the case of arbitrary tensors $\tnr{A},\tnr{B},\tnr{W}\in\ete{\cam{F}}{W^{\times p}}$, for any $p>2$, this procedure can also be applied, leading to linearity for a contractive product of any order.  
 \end{proof}
 }
-
-
 
 For the sake of generality when manipulating contractive products algebraically, we consider that $\tnr{A}\odot_0\tnr{B}:=\tnr{A}\otimes\tnr{B}$. Moreover, it is trivial to obtain that these type of products are also associative:
 \begin{equation}
