@@ -252,7 +252,7 @@ is an example of identity tensor of second order. From the last expression of th
 
 \section{Tensor Functions}
 
-Henceforth, we shall be dealing only with tensors defined by Hilbert spaces, since it is not our purpose to work with first order tensors which are not covectors. In this scope of study, a function which enables a relationship between tensors of any order we call it a tensor function, which, unless otherwise stated, we shall represent it with bold greek letters: the function in $\map{\vtf{\psi}}{\ete{\cam{F}}{U^{\times m}}}{\ete{\cam{F}}{V^{\times p}}}$ is then a tensor function. It is important to say that, when conditions described at the beginning of section \ref{sec:FuncLin} are considered, tensor functions can constitute function spaces, which may be structured to follow the same nomenclature presented in figure \ref{fig:esquemaEspacos}. Moreover, this context of tensors on Hilbert spaces enables us to always relate a multiantilinear function and a linear tensor function, which is a fundamental feature to ensure uniqueness and existence of a fundamental linear tensor function to be presented in this section, which we call contraction. The following theorem\footnote{Adapted from \aut{Backus}\cite{backus_1997_1} after generalizing a property from  \aut{Marcus}\cite{marcus_1973_1}, p.14.}, borrowed from the realm of Multilinear Algebra, describes such feature by establishing a one to one correspondence between a multilinear function and a linear tensor function. From this biunivocal relationship, the multiantilinear function is usually said to be ``lifted'' to a tensor function.   
+Henceforth, we shall be dealing only with tensors defined by Hilbert spaces, since it is not our purpose to work with first order tensors which are not covectors. In this scope of study, a function which enables a relationship between tensors of any order we call it a tensor function, which, unless otherwise stated, we shall represent it with bold greek letters: the function in $\map{\vtf{\psi}}{\ete{\cam{F}}{U^{\times m}}}{\ete{\cam{F}}{V^{\times p}}}$ is then a tensor function. It is important to say that, when conditions described at the beginning of section \ref{sec:FuncLin} are considered, tensor functions can constitute function spaces, which may be structured to follow the same nomenclature presented in figure \ref{fig:esquemaEspacos}. Moreover, this context of tensors on Hilbert spaces enables us to always relate a multiantilinear function and a linear tensor function, which is a fundamental feature to ensure uniqueness and existence of a fundamental linear tensor function to be presented in this section, which we call contraction. The following theorem\footnote{Adapted from \aut{Backus}\cite{backus_1997_1} after generalizing a property from  \aut{Marcus}\cite{marcus_1973_1}, p.14.}, borrowed from the realm of Multilinear Algebra, describes such feature by establishing a one to one correspondence between a multiantilinear function and a linear tensor function. From this biunivocal relationship, the multiantilinear function is usually said to be ``lifted'' to a linear tensor function.   
 
 
 
@@ -327,7 +327,7 @@ we call tensor $\fua{{\vtf{c}}_{2p}^\otimes}{\tnr{A}\otimes\tnr{B}}$ the $p$-th 
 
 {\footnotesize
 \begin{proof}
-Let's prove that the $r,s$ trace and the contractive product are indeed linear. From property ii on page \pageref{prop:tensorProd}, verification of equalities $\trt{r}{s} \alpha\tnr{ X}=\alpha\trt{r}{s}\tnr{X}$ and $(\alpha\tnr{A})\odot_p(\beta\tnr{B})=\alpha\beta\tnr{A}\odot_p\tnr{B}$ is straightforward. Thereafter, in order to shorten expression sizes, we shall consider that a contractive product always results a scalar, that is, the order of the contractive product equals the order of its terms. Firstly, let's verify the additive property of linear functions for a first order contractive product, that is, set $X^{\times 2}=W\times W$ and $\tnr{A},\tnr{B},\tnr{W}\in\ete{\cam{F}}{W}$. Since $\vto{x}_1^*+\vto{y}_1^*=(\vto{x}_1+\vto{y}_1)^*$, equalities
+Let's prove that the $r,s$ trace and the contractive product are indeed linear. From property ii on page \pageref{prop:tensorProd}, verification of equalities $\trt{r}{s} \alpha\tnr{ X}=\alpha\trt{r}{s}\tnr{X}$ and $(\alpha\tnr{A})\odot_p(\beta\tnr{B})=\alpha\beta\tnr{A}\odot_p\tnr{B}$ is straightforward. Henceforth, in order to shorten expression sizes, without losing generality, we shall consider that a contractive product always results a scalar, that is, the order of the contractive product equals the order of its terms. Considering the above conditions, let's verify the additive property of linear functions for a first order contractive product, that is, set $X^{\times 2}=W\times W$ and tensors $\tnr{A},\tnr{B},\tnr{W}\in\ete{\cam{F}}{W}$. Since $\vto{x}_1^*+\vto{y}_1^*=(\vto{x}_1+\vto{y}_1)^*$, equalities
 \begin{equation*}
 (\tnr{A}+\tnr{B})\odot_1\tnr{W} = (\vto{x}_1+\vto{y}_1)^*\odot_1\vto{w}_1^*=\vto{w}^c_1\cdot(\vto{x}_1+\vto{y}_1)= \vto{w}^c_1\cdot\vto{x}_1+\vto{w}^c_1\cdot\vto{y}_1=\tnr{A}\odot_1\tnr{W}+\tnr{B}\odot_1\tnr{W}
 \end{equation*}
@@ -338,24 +338,22 @@ assure linearity of first order contractive products. Now, we shall consider a s
 & = \vto{w}_2^c\cdot(\vto{x}_1\cdot\vto{w}_1^c)\vto{x}_2 + \vto{w}_2^c\cdot(\vto{y}_1\cdot\vto{w}_1^c)\vto{y}_2\\
 & = \vto{w}_2^c\cdot[(\vto{x}_1\cdot\vto{w}_1^c)\vto{x}_2 + (\vto{y}_1\cdot\vto{w}_1^c)\vto{y}_2]\\
 & = [(\vto{x}_1\cdot\vto{w}_1^c)\vto{x}_2 + (\vto{y}_1\cdot\vto{w}_1^c)\vto{y}_2]^*\odot_1\vto{w}_2^*\\
-& = [(\vto{x}_1\cdot\vto{w}_1^c)\vto{x}_2^* + (\vto{y}_1\cdot\vto{w}_1^c)\vto{y}_2^*]\odot_1\vto{w}_2^*\\
+& = [(\vto{w}_1^c\cdot\vto{x}_1)\vto{x}_2^* + (\vto{w}_1^c\cdot\vto{y}_1)\vto{y}_2^*]\odot_1\vto{w}_2^*\\
 & = [(\vto{x}_2^*\otimes\vto{x}_1^*)\odot_1\vto{w}_1^* + (\vto{y}_2^*\otimes\vto{y}_1^*)\odot_1\vto{w}_1^*]\odot_1\vto{w}_2^*\\
-& = [(\vto{x}_2^*\otimes\vto{x}_1^*) + (\vto{y}_2^*\otimes\vto{y}_1^*)]\odot_1\vto{w}_1^*\odot_1\vto{w}_2^*\\
-& = \tnr{T}\otimes\tnr{Z}\odot_1\vto{w}_1^*\odot_1\vto{w}_2^*\\
-& = \tnr{Z}\otimes\tnr{T}\odot_2\vto{w}_1^*\otimes\vto{w}_2^* \\
+& = \underbrace{[(\vto{x}_2^*\otimes\vto{x}_1^*) + (\vto{y}_2^*\otimes\vto{y}_1^*)]}_{\vto{u}^*\otimes\vto{v}^*}\odot_1\vto{w}_1^*\odot_1\vto{w}_2^*\\
+& = \vto{v}^*\otimes\vto{u}^*\odot_2\vto{w}_1^*\otimes\vto{w}_2^* \\
 & = [(\vto{x}_1^*\otimes\vto{x}_2^*) + (\vto{y}_1^*\otimes\vto{y}_2^*)]\odot_2\vto{w}_1^*\otimes\vto{w}_2^*\\
-& = (\tnr{A} + \tnr{B})\odot_2\tnr{W}\,,
+& = (\tnr{A} + \tnr{B})\odot_2\tnr{W}\,.
 \end{align*}
-where $\tnr{T}\otimes\tnr{Z}:=(\vto{x}_2^*\otimes\vto{x}_1^*) + (\vto{y}_2^*\otimes\vto{y}_1^*)$. 
-Applying the same strategy of this development, we can find that $\tnr{W}\odot_2\tnr{A} + \tnr{W}\odot_2\tnr{B}=\tnr{W}\odot_2(\tnr{A} + \tnr{B})$. Therefore, second  order contractive products are also linear. In the case of arbitrary tensors $\tnr{A},\tnr{B},\tnr{W}\in\ete{\cam{F}}{W^{\times p}}$, for any $p>2$, this procedure can also be applied, leading to linearity for a contractive product of any order.  
+By the same strategy of this development, we can find $\tnr{W}\odot_2\tnr{A} + \tnr{W}\odot_2\tnr{B}=\tnr{W}\odot_2(\tnr{A} + \tnr{B})$. Therefore, it results that second  order contractive products are also linear. In the case of arbitrary tensors $\tnr{A},\tnr{B},\tnr{W}\in\ete{\cam{F}}{W^{\times p}}$, for any $p>2$, this procedure can also be applied, leading to linearity for higher order contractive products. Linearity for $r,s$ trace can be verified by this procedure as well.  
 \end{proof}
 }
 
-For the sake of generality when manipulating contractive products algebraically, we consider that $\tnr{A}\odot_0\tnr{B}:=\tnr{A}\otimes\tnr{B}$. Moreover, it is trivial to obtain that these type of products are also associative:
+For the sake of generality, when manipulating contractive products we consider that $\tnr{A}\odot_0\tnr{B}:=\tnr{A}\otimes\tnr{B}$. Moreover, it is trivial to obtain that these type of products are also associative:
 \begin{equation}
 \tnr{A}\odot_p(\tnr{C}\odot_r\tnr{D}) = (\tnr{A}\odot_p\tnr{C})\odot_r\tnr{D}\,,
 \end{equation}
-where $\tnr{C}\in\ete{\cam{F}}{W^{\times p}\times C^{\times n}\times Z^{\times r}}$ and $\tnr{D}\in\ete{\cam{F}}{Z^{\times r}\times D^{\times s}}$. In the context of Euclidean spaces, it is not unusual to see a first order contractive product of a dyadic tensor and a covector being used to define the so called ``tensor product of vectors'' \footnote{See \aut{Gurtin}\cite{gurtin_1981}, p.4; \aut{Truesdell \& Noll}\cite{truesdell_1992}, p.15; \aut{Ogden}\cite{ogden_1997}, p.16.}. Although we shall not adopt this rather obscure concept, its frequent use by renowned authors forces us to clarify it in terms of our rigorous approach as follows. Firstly, since vectors and covectors have a one to one correspondence, these authors inadvertently use the term ``vector'' either as an element of a vector space or as a covector, depending on the context: in $\vto{u}(\vto{v})=\vto{v}\cdot\vto{u}$, for example, $\vto{u}$ is a covector on the left-hand side and a vector on the right. Thereby, they get rid of the burden of defining a covector and all of its preliminary concepts. In this sense, our representation of a dyadic tensor $\vto{u}^*\otimes\vto{v}^*$ is subverted to $\vto{u}\otimes\vto{v}$ and the contractive product operator is suppressed from the precise representation $(\vto{u}^*\otimes\vto{v}^*)\odot_1 \vto{x}^*=(\vto{v}\cdot\vto{x})\vto{u}^*$ in order to avoid defining a contraction and its supporting concepts. Finally, they define the ``tensor product'' $\vto{u}\otimes\vto{v}$ through its effects, that is, as a ``tensor'' which causes $(\vto{u}\otimes\vto{v})\vto{x}=(\vto{v}\cdot\vto{x})\vto{u}$, for an arbitrary $\vto{x}$. Again,  \emph{this pragmatic approach of taking vectors as first order tensors and all of its consequences will not be adopted in this text}. 
+where $\tnr{C}\in\ete{\cam{F}}{W^{\times p}\times C^{\times n}\times Z^{\times r}}$ and $\tnr{D}\in\ete{\cam{F}}{Z^{\times r}\times D^{\times s}}$. In the context of Euclidean spaces, it is not unusual to see a first order contractive product of a dyadic tensor and a covector being used to define the so called ``tensor product of vectors''\footnote{See \aut{Gurtin}\cite{gurtin_1981}, p.4; \aut{Truesdell \& Noll}\cite{truesdell_1992}, p.15; \aut{Ogden}\cite{ogden_1997}, p.16.}. Although we shall not adopt this rather obscure concept, its frequent use by renowned authors forces us to clarify it in terms of our rigorous approach as follows. Firstly, since vectors and covectors have a one to one correspondence, these authors inadvertently use the term ``vector'' either as an element of a vector space or as a covector, depending on the context: in $\vto{u}(\vto{v})=\vto{v}\cdot\vto{u}$, for example, $\vto{u}$ is a covector on the left-hand side and a vector on the right. Thereby, they get rid of the burden of defining a covector and all of its preliminary concepts. In this sense, our representation of a dyadic tensor $\vto{u}^*\otimes\vto{v}^*$ is subverted to $\vto{u}\otimes\vto{v}$ and the contractive product operator is suppressed from the precise representation $(\vto{u}^*\otimes\vto{v}^*)\odot_1 \vto{x}^*=(\vto{v}\cdot\vto{x})\vto{u}^*$ in order to avoid defining a contraction and its supporting concepts. Finally, they define the ``tensor product'' $\vto{u}\otimes\vto{v}$ through its effects, that is, as a ``tensor'' which causes $(\vto{u}\otimes\vto{v})\vto{x}=(\vto{v}\cdot\vto{x})\vto{u}$, for an arbitrary $\vto{x}$. Again,  \emph{this pragmatic approach of taking vectors as first order tensors and all of its consequences will not be adopted in this text}. 
 
 
 When the order of a contractive product and the order of its terms are equal, the result is a scalar. In this context, considering arbitrary tensors $\tnr{A},\tnr{B}\in\ete{\cam{F}}{U^{\times m}}$, where $\tnr{A}=\vto{a}^*_1\otimes\cdots\otimes\vto{a}^*_m$ and $\tnr{B}=\vto{b}^*_1\otimes\cdots\otimes\vto{b}^*_m$, the scalar
@@ -366,21 +364,30 @@ is called the \textsb{inner product of tensors}\index{inner product!of tensors} 
 \begin{equation*}
 \tnr{A}\cdot \tnr{B}=\vto{a}^*_1\cdot\vto{b}^*_1=\vto{b}^*_1\odot_1(\vto{a}^c_1)^*=\vto{a}_1\cdot\vto{b}_1\,, 
 \end{equation*}     
-from which we conclude that the inner product of covectors, as defined by \eqref{eq:prodIntTens}, equals the inner product of the corresponding vectors. Moreover, if an inner product can be defined on the elements of $\ete{\cam{F}}{U^{\times m}}$, then it an inner product tensor space.
+from which we conclude that the inner product of covectors, as defined by \eqref{eq:prodIntTens}, equals the inner product of the corresponding vectors. Moreover, if an inner product can be defined on the elements of $\ete{\cam{F}}{U^{\times m}}$, then this space results an inner product tensor space.
 
 {\footnotesize
 \begin{proof}
-Let's verify if definition \eqref{eq:prodIntTens} really observes the axioms of inner products (see p. \pageref{prop:produtoInterno}). We do not compromise generality if we assume $\tnr{A},\tnr{B}\in\ete{\cam{F}}{U^{\times 2}}$ in order to shorten expression sizes. Equality $\tnr{A}\cdot\tnr{A}=(\vto{a}_1\cdot\vto{a}_1)(\vto{a}_2\cdot\vto{a}_2)$ assures nonnegativity for the left-hand side since each inner product on the right-hand side is nonnegative. Now, let's say that $(\vto{a}_1\cdot\vto{a}_1)(\vto{a}_2\cdot\vto{a}_2)=0$. If this is true, one of the the inner products on the right-hand side has to be zero. Therefore, according to the axiom of definition of ordinary inner products, vector $\vto{a}_1=\vto{0}$ or vector $\vto{a}_2=\vto{0}$ and as a consequence, $\tnr{A}=\tnr{0}$, according to property i on page \pageref{prop:tensorProd}. Equalities $\tnr{A}\cdot\tnr{B}=(\vto{a}_1\cdot\vto{b}_1)(\vto{a}_2\cdot\vto{b}_2)=\overline{(\vto{b}_1\cdot\vto{a}_1)(\vto{b}_2\cdot\vto{a}_2)}=\overline{\tnr{B}\cdot\tnr{A}}$ show that the inner product of tensors is conjugate symmetric. Finally, according to property ii on page \pageref{prop:tensorProd},  equalities
+Let's verify if definition \eqref{eq:prodIntTens} really observes the axioms of inner products (see p. \pageref{prop:produtoInterno}). We do not compromise generality if we assume $\tnr{A},\tnr{B}\in\ete{\cam{F}}{U^{\times 2}}$ in order to shorten expression sizes. Equality $\tnr{A}\cdot\tnr{A}=(\vto{a}_1\cdot\vto{a}_1)(\vto{a}_2\cdot\vto{a}_2)$ assures nonnegativity for the left-hand side since each inner product on the right-hand side is nonnegative. Now, let's say that $(\vto{a}_1\cdot\vto{a}_1)(\vto{a}_2\cdot\vto{a}_2)=0$. If this is true, one of the the inner products on the left-hand side has to be zero. Therefore, according to the axiom of definition of ordinary inner products, vector $\vto{a}_1=\vto{0}$ or vector $\vto{a}_2=\vto{0}$ and as a consequence, $\tnr{A}=\tnr{0}$, according to property i on page \pageref{prop:tensorProd}. Equalities $\tnr{A}\cdot\tnr{B}=(\vto{a}_1\cdot\vto{b}_1)(\vto{a}_2\cdot\vto{b}_2)=\overline{(\vto{b}_1\cdot\vto{a}_1)(\vto{b}_2\cdot\vto{a}_2)}=\overline{\tnr{B}\cdot\tnr{A}}$ show that the inner product of tensors is conjugate symmetric. Finally, according to property ii on page \pageref{prop:tensorProd},  we have equalities
 \begin{equation*}
 (\alpha\tnr{A})\cdot(\beta\tnr{B})=((\alpha\vto{a}_1)\cdot(\beta\vto{b}_1))(\vto{a}_2\cdot\vto{b}_2)=\alpha\overline{\beta}(\vto{a}_1\cdot\vto{b}_1)(\vto{a}_2\cdot\vto{b}_2)=\alpha\overline{\beta}\tnr{A}\cdot\tnr{B}
 \end{equation*}
-and equalities 
-\begin{equation*}
-(\alpha\tnr{A})\cdot(\beta\tnr{B})=((\alpha\vto{a}_1)\cdot(\beta\vto{b}_1))(\vto{a}_2\cdot\vto{b}_2)=\alpha\overline{\beta}(\vto{a}_1\cdot\vto{b}_1)(\vto{a}_2\cdot\vto{b}_2)=\alpha\overline{\beta}\tnr{A}\cdot\tnr{B}
-\end{equation*}
-assure the observation of linearity-antilinearity axioms.
+and  development
+\begin{align*}
+\tnr{A}\cdot\tnr{W} + \tnr{B}\cdot\tnr{W}  & = (\vto{a}_1^*\otimes\vto{a}_2^*) \cdot(\vto{w}_1^*\otimes\vto{w}_2^*)+(\vto{b}_1^*\otimes\vto{b}_2^*) \cdot(\vto{w}_1^*\otimes\vto{w}_2^*)\\
+& = (\vto{a}_1\cdot\vto{w}_1)(\vto{a}_2\cdot\vto{w}_2) + (\vto{b}_1\cdot\vto{w}_1)(\vto{b}_2\cdot\vto{w}_2)\\
+& = (\vto{a}_2\cdot\vto{w}_2)\vto{a}_1\cdot\vto{w}_1 + (\vto{b}_2\cdot\vto{w}_2)\vto{b}_1\cdot\vto{w}_1\\
+& = [(\vto{a}_2\cdot\vto{w}_2)\vto{a}_1+(\vto{b}_2\cdot\vto{w}_2)\vto{b}_1]\cdot\vto{w}_1\\
+& = [(\vto{a}_1^*\otimes\vto{a}_2^*)\odot_1(\vto{w}^c_2)^*+(\vto{b}_1^*\otimes\vto{b}_2^*)\odot_1(\vto{w}^c_2)^*]\cdot\vto{w}_1\\
+& =[(\vto{a}_1^*\otimes\vto{a}_2^*)+(\vto{b}_1^*\otimes\vto{b}_2^*)]\odot_1(\vto{w}^c_2)^*\}\cdot\vto{w}_1\\
+& =(\vto{w}_1^c)^*\odot_1(\tnr{A}+\tnr{B})\odot_1(\vto{w}^c_2)^*\\
+& =(\tnr{A}+\tnr{B})\odot_2(\vto{w}^c_1)^*\otimes(\vto{w}^c_2)^*\\
+& = (\tnr{A} + \tnr{B})\cdot\tnr{W}\,,
+\end{align*}
+whose strategy can also prove that $\tnr{W}\cdot\tnr{A} + \tnr{W}\cdot\tnr{B}=\tnr{W}\cdot(\tnr{A}+\tnr{B})$. Therefore, the inner product of tensors also observes linearity-antilinearity axioms.
 \end{proof}
 }
+
 
 
 If a tensor space can be structured as any other ordinary vector space, it is possible to consider  
