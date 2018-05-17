@@ -400,16 +400,16 @@ from which we obtain the following rule that assures the existence of coordinate
 
 
 
-Considering a complete vector space $V_\cam{F}$, the linear function space $\evl{\cam{F}}{V}{\cam{F}}$ is said to be the \textsb{dual space}\index{space!dual} of $V_\cam{F}$, represented by $V^*_\cam{F}$, whose elements are called \textsb{dual vectors}\index{vector!dual}. Intuitively, a dual vector is a scalar measure of vectors that keeps the structure of its domain unaltered; a feature that the norm, being a scalar measure, does not assure, since it is a non linear functional. The coordinate functional $\vtf{f}^\con{B}_{i}$, in turn, is indeed a dual vector and, in a certain way, ``measures'' its argument in relation to the $i$-th vector of basis $B$, when we call the value of this measure a coordinate. As already presented, in the context of orthonormal bases, the measurement of a coordinate functional is expressed through the projective interrelationship between its argument and a basis vector, that is, the inner product of both. A subset 
+Considering a complete vector space $V_\cam{F}$, the linear function space $\evl{\cam{F}}{V}{\cam{F}}$ is said to be the \textsb{dual space}\index{space!dual} of $V_\cam{F}$, represented by $V^*_\cam{F}$, whose elements are called the \textsb{dual vectors}\index{vector!dual} of $V_\cam{F}$. Intuitively, a dual vector is a scalar measure of vectors that keeps the structure of its domain unaltered; a feature that the norm, being a scalar measure, does not assure, since it is a non linear functional. The coordinate functional $\vtf{f}^\con{B}_{i}$, in turn, is indeed a dual vector and, in a certain way, ``measures'' its argument in relation to the $i$-th vector of basis $B$, when we call the value of this measure a coordinate. As already presented, in the context of orthonormal bases, the measurement of a coordinate functional is expressed through the projective interrelationship between its argument and a basis vector, that is, the inner product of both. A subset 
 $\{\vtf{g}_1,\cdots,\vtf{g}_m\}$ of $V^*_\cam{F}$ is a \textsb{dual set}\index{set!dual} of $\{\vto{w}_1,\cdots,\vto{w}_m\}\subset V_\cam{F}$ if $\fua{\vtf{g}_i}{\vto{w}_j}=\delta_{ij}$. When such a subset is dual of a basis $B=\{\vto{u}_1,\cdots,\vto{u}_n\}$ of $V_\cam{F}$, its elements will be the coordinate functionals of $B$, as can be verified by the following development:
 \begin{equation*}
 \fua{\vtf{g}_i}{\vto{x}}=\vtf{g}_i(\sum_{j=1}^{n}\fua{\vtf{f}^\con{B}_{j}}{\vto{x}}\vto{u}_j)=\sum_{j=1}^{n}\fua{\vtf{f}^\con{B}_{j}}{\vto{x}}\fua{\vtf{g}_i}{\vto{u}_j}=\sum_{j=1}^{n}\fua{\vtf{f}^\con{B}_{j}}{\vto{x}}\delta_{ij}=\fua{\vtf{f}^\con{B}_{i}}{\vto{x}}\,.
 \end{equation*}
-But a set constituted of coordinate functionals, in this case $B^*:=\{\vtf{f}^\con{B}_1,\cdots,\vtf{f}^\con{B}_n\}$, is itself a basis of its dual space, that is, a dual set $B^*$ of a basis $B$ is itself a basis of the dual space, when we call it a \textsb{dual basis}\index{basis!dual}. Thereby, we can state that a complete vector space and its dual have the same dimension or that $\dim (V_\cam{F})=\dim (V_\cam{F}^*)$ in the present context. Given an arbitrary dual vector $\vtf{h}\in V^*_\cam{F}$, equalities 
+But a set constituted of coordinate functionals, in this case $B^*:=\{\vtf{f}^\con{B}_1,\cdots,\vtf{f}^\con{B}_n\}$, is itself a basis of its dual space, that is, a dual set $B^*$ of a basis $B$ is itself a basis of the dual space, when we call it a \textsb{dual basis}\index{basis!dual} of $V_\cam{F}$. Let's verify if this is true: given an arbitrary dual vector $\vtf{h}\in V^*_\cam{F}$, equalities 
 \begin{equation}\label{eq:coordVetorDual}
 \fua{\vtf{h}}{\vto{x}}=\vtf{h}[\,{\sum_{i=1}^n\fua{\vtf{f}_i^B}{\vto{x}}\vto{u}_i}\,]=\sum_{i=1}^n\fua{\vtf{h}}{\vto{u}_i}\fua{\vtf{f}_i^B}{\vto{x}}=[\,\sum_{i=1}^n\fua{\vtf{h}}{\vto{u}_i}\vtf{f}_i^B\,] (\vto{x})
 \end{equation}
-enable us to conclude that scalars $\fua{\vtf{h}}{\vto{u}_i}$ are the coordinates of $\vtf{h}$ in $B^*$. It is convenient that this strong correspondence between a complete vector space and its dual becomes even stronger, in such a way that vectors and dual vectors are biunivocaly related, when dual vectors are renamed to \textsb{covectors}\index{covector}. By defining a rule similar to \eqref{eq:regraCoord}, the following theorem, extremely relevant for our study, establishes this one-to-one relationship. 
+enable us to conclude that $\vtf{f}_i^B$ spans $V_\cam{F}^*$ and if $\vtf{h}=\vtf{0}$, then functions $\vtf{f}_i^B$ result zero, which proves that $B^*$ is linearly independent. Therefore, we can state that scalars $\fua{\vtf{h}}{\vto{u}_i}$ result the coordinates of $\vtf{h}$ in $B^*$ and a complete vector space have the same dimension of its dual or that $\dim (V_\cam{F})=\dim (V_\cam{F}^*)$ in the present context. It is convenient that this strong correspondence between a complete vector space and its dual becomes even stronger, in such a way that vectors and dual vectors are biunivocaly related, when dual vectors are renamed to \textsb{covectors}\index{covector}. By defining a rule similar to \eqref{eq:regraCoord}, the following theorem, extremely relevant for our study, establishes this one-to-one relationship. 
 
 \begin{mteo}{Riesz-Fréchet Representation}{repRiesz}
 Let $\map{\Phi}{U_\cam{F}}{U^*_\cam{F}}$ be a mapping where $U_\cam{F}$ is a Hilbert space and 
@@ -422,23 +422,7 @@ then $\Phi$ results an antilinear bijection. When $\vtf{u}^*$ is continuous,  $\
 
 {\footnotesize
 \begin{proof}
-Let's verify first if a subset of coordinate functionals is really a basis of its dual space. 
-Given a dual vector $\vtf{g}\in V^*_\cam{F}$, a vector $\vto{x}\in V_\cam{F}$ and a basis $B=\{\vto{v}_1,\cdots,\vto{v}_n\}$ of $V_\cam{F}$, we have the following:
-\begin{eqnarray}
-\fua{\vtf{g}}{\vto{x}} & = &
-\vtf{g}(\sum_{i=1}^{n}\fua{\vtf{f}^\con{B}_{i}}{\vto{x}}\vto{v}_i)\nonumber\\
-\fua{\vtf{g}}{\vto{x}} & = &
-\sum_{i=1}^{n}\fua{\vtf{g}}{\vto{v}_i}\fua{\vtf{f}^\con{B}_{i}}{\vto{x}}\nonumber\\
-\fua{\vtf{g}}{\vto{x}} & = &
-\sum_{i=1}^{n}[\fua{\vtf{g}}{\vto{v}_i}\vtf{f}^\con{B}_{i}]\lpa\vto{x}\rpa\nonumber\\
-\fua{\vtf{g}}{\vto{x}} & = &
-[\sum_{i=1}^{n}\fua{\vtf{g}}{\vto{v}_i}\vtf{f}^\con{B}_{i}]\lpa\vto{x}\rpa\nonumber\\
-\vtf{g} & = &
-\sum_{i=1}^{n}\fua{\vtf{g}}{\vto{v}_i}\vtf{f}^\con{B}_{i}\nonumber\,,
-\end{eqnarray}
-from which we conclude that the coordinate functionals of $B$ span $U^*_\cam{F}$. Moreover, if 
-$\vto{x}$ is zero, then $\sum_{i=1}^{n}\fua{\vtf{f}^\con{B}_{i}}{\vto{x}}\vto{v}_i=\vto{0}$, where 
-equality $\fua{\vtf{f}^\con{B}_{i}}{\vto{x}}=0$ is true for all $\vto{x}$, and therefore $\vtf{f}^\con{B}_{i}=\vtf{0}$. This linear independence assures that the coordinate functionals of $B$ constitute a basis of $V^*_\cam{F}$. Now, considering $\vto{u}$ and $\vto{v}$ vectors of $U_\cam{F}$, function $\Phi$ is antilinear from the following equalities:
+Considering $\vto{u}$ and $\vto{v}$ vectors of $U_\cam{F}$, function $\Phi$ is antilinear from the following equalities:
 \begin{equation*}
 \fua{\lco\fua{\Phi}{\alpha\vto{u}+\beta\vto{v}}\rco}{\vto{x}}=\vto{x}\cdot(\alpha\vto{u}+\beta\vto{v})=\overline{\alpha}\vto{u}^*(\vto{x})+\overline{\beta}\vto{v}^*(\vto{x})=\fua{\lco\overline{\alpha\beta}\fua{\Phi}{\vto{u}+\vto{v}}\rco}{\vto{x}}\,.
 \end{equation*}
