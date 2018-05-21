@@ -257,10 +257,10 @@ Henceforth, we shall be dealing only with tensors defined by Hilbert spaces, sin
 \fua{\vtf{f}_{j_1\cdots j_m}^{B}}{\vtf{f}_{k_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{k_m}^{B_m}}=\fua{\vtf{f}_{k_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{k_m}^{B_m}}{\vto{u}_{j_1}^{(1)},\cdots,\vto{u}_{j_m}^{(m)}} = \prod_{i=1}^m\delta_{k_ij_i}\,,
 \end{equation*}
 and it is also a basis of $\eted{\cam{F}}{X^{\times m}}$. Let's see if this last statement is true: given an arbitrary dual tensor $\vtf{\psi}\in\eted{\cam{F}}{X^{\times m}}$, development  
-\begin{align*}
-\fua{\vtf{\psi}}{\tnr{X}}&=\sum_{i_1=1}^{n_1}\cdots\sum_{i_m=1}^{n_m}\fua{\vtf{\psi}}{\vtf{f}_{i_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{i_m}^{B_m}}\,\fua{\vtf{f}_{i_1\cdots i_m}^{B}}{\tnr{X}}\\
-&=[\sum_{i_1=1}^{n_1}\cdots\sum_{i_m=1}^{n_m}\underbrace{\fua{\vtf{\psi}}{\vtf{f}_{i_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{i_m}^{B_m}}}_{\alpha_{i_1\cdots i_m}}\,\vtf{f}_{i_1\cdots i_m}^{B}]\,(\tnr{X}) 
-\end{align*}
+\begin{align}
+\fua{\vtf{\psi}}{\tnr{X}}&=\sum_{i_1=1}^{n_1}\cdots\sum_{i_m=1}^{n_m}\fua{\vtf{\psi}}{\vtf{f}_{i_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{i_m}^{B_m}}\,\fua{\vtf{f}_{i_1\cdots i_m}^{B}}{\tnr{X}}\nonumber\\
+&=[\sum_{i_1=1}^{n_1}\cdots\sum_{i_m=1}^{n_m}\underbrace{\fua{\vtf{\psi}}{\vtf{f}_{i_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{i_m}^{B_m}}}_{\alpha_{i_1\cdots i_m}}\,\vtf{f}_{i_1\cdots i_m}^{B}]\,(\tnr{X})\label{eq:coordTensor} 
+\end{align}
 shows that the elements of $B^*$ span $\eted{\cam{F}}{X^{\times m}}$. Moreover, if $\vtf{\psi}$ is a zero dual tensor, then functions $\vtf{f}_{i_1\cdots i_m}^{B}$ result zero, which proves that $B^*$ is a linearly independent set. From this verification, we can affirm that scalars  $\alpha_{i_1\cdots i_m}$ are the coordinates of $\vtf{\psi}$ on $B^*$ and that $\dim (\eted{\cam{F}}{X^{\times m}}) = \dim (\ete{\cam{F}}{X^{\times m}})$.
 
 This context of tensors defined by Hilbert spaces enables us to always relate a multiantilinear function and a linear tensor function, which is a fundamental feature to ensure uniqueness and existence of an important linear tensor function called contraction. The following theorem\footnote{Adapted from \aut{Backus}\cite{backus_1997_1} after generalizing a property from  \aut{Marcus}\cite{marcus_1973_1}, p.14.}, borrowed from the realm of Multilinear Algebra and generalized in order to attain our purposes, describes such feature by establishing a one to one correspondence between a multiantilinear function and a linear tensor function. From this biunivocal relationship, the multiantilinear function is  said to be ``lifted'' to a linear tensor function. 
@@ -403,13 +403,41 @@ Fundamentally speaking, the concept of tensor function, up to now, has enabled u
 
 
 \begin{mteo}{Riesz-Fréchet Representation of Tensors}{repRieszTensor}
-Let $\map{\tnr{\Phi}}{U_\cam{F}}{U^*_\cam{F}}$ be a mapping where $U_\cam{F}$ is a Hilbert space and 
-$U^*_\cam{F}$ its dual space. If for every $\vto{u}\in U_\cam{F}$, a covector  \gloref{covetor}$:=\fua{\Phi}{\vto{u}}$ is described by the rule  
-\begin{equation}
-\fua{\vtf{u}^*}{\vto{x}}=\vto{x}\cdot\vto{u}\,,
-\end{equation}
-then $\Phi$ results an antilinear bijection. When $\vtf{u}^*$ is continuous,  $\|\vtf{u}^*\|_{U^*_\cam{F}}=\|\vto{u}\|_{U_\cam{F}}$.
+Let $\map{\tnr{\Phi}}{\ete{\cam{F}}{U^{\times m}}}{\eted{\cam{F}}{U^{\times m}}}$ be a mapping where $\ete{\cam{F}}{U^{\times m}}$ is a Hilbert tensor space and 
+$\eted{\cam{F}}{U^{\times m}}$ its dual space. If for every $\tnr{T}\in \ete{\cam{F}}{U^{\times m}}$, a cotensor  $\tnr{T}^*:=\fua{\tnr{\Phi}}{\tnr{T}}$ is described by the rule  
+\begin{equation*}
+\fua{\vtf{T}^*}{\tnr{X}}=\tnr{T}\cdot\tnr{X}\,,
+\end{equation*}
+then $\tnr{\Phi}$ results a linear bijection. 
 \end{mteo}
+
+{\footnotesize
+\begin{proof}
+Considering $\tnr{A},\tnr{B}\in\ete{\cam{F}}{U^{\times m}}$, function $\tnr{\Phi}$ is linear from the following equalities:
+\begin{equation*}
+\fua{\lco\fua{\tnr{\Phi}}{\alpha\tnr{A}+\beta\tnr{B}}\rco}{\tnr{X}}=(\alpha\tnr{A}+\beta\tnr{B})\cdot\tnr{X}=\alpha\tnr{A}^*(\tnr{X})+\beta\tnr{B}^*(\tnr{X})=\fua{\lco\alpha\fua{\tnr{\Phi}}{\tnr{A}}+\beta\fua{\tnr{\Phi}}{\tnr{B}}\rco}{\tnr{X}}\,.
+\end{equation*}
+If $\tnr{\Phi}$ were not an injection, there would be different cotensors $\tnr{A}^*$ and $\tnr{B}^*$ where $\fua{\tnr{A}^*}{\tnr{X}}=\fua{\tnr{B}^*}{\tnr{X}}$ or $\tnr{X}\cdot\tnr{A}=\tnr{X}\cdot\tnr{B}$. From this supposition, the following equalities $(\tnr{A}-\tnr{B})\cdot\tnr{X}=\fua{(\tnr{A}-\tnr{B})^*}{\tnr{X}}=0$ do not confirm $\tnr{A}^*\neq\tnr{B}^*$ since $(\tnr{A}-\tnr{B})^*=\tnr{A}^*-\tnr{B}^*$. In order to prove that $\tnr{\Phi}$ is a surjection, we need to obtain for an arbitrary functional $\vtf{\psi}\in \eted{\cam{F}}{U^{\times m}}$ a tensor $\vto{A}\in \ete{\cam{F}}{U^{\times m}}$ such that $\fua{\tnr{\Phi}}{\tnr{A}}=\vtf{\psi}$.
+Considering the same conditions of equality \eqref{eq:coordTensor}, we can say that
+
+\begin{align*}
+\fua{\vtf{\psi}}{\tnr{X}}&=\fua{[\sum_{i_1=1}^{n_1}\cdots\sum_{i_m=1}^{n_m}\alpha_{i_1\cdots i_m}\vtf{f}_{i_1\cdots i_m}^{B}]}{\tnr{X}}\\
+&=\sum_{i_1=1}^{n_1}\cdots\sum_{i_m=1}^{n_m}\alpha_{i_1\cdots i_m}\fua{\vtf{f}_{i_1\cdots i_m}^{B}}{\tnr{X}}\\
+&=\sum_{i_1=1}^{n_1}\cdots\sum_{i_m=1}^{n_m}\alpha_{i_1\cdots i_m}\fua{\tnr{X}}{\vto{u}_{i_1}^{(1)},\cdots,\vto{u}_{i_m}^{(m)}}
+\end{align*}
+
+
+
+
+
+In order to prove that $\Phi$ is a surjection, we need to obtain for an arbitrary functional $\vtf{g}\in U_\cam{F}^*$ a vector $\vto{u}\in U_\cam{F}$ such that $\fua{\Phi}{\vto{u}}=\vtf{g}$. Considering the rule \eqref{eq:regraCoord} and an orthonormal basis $\hat{B}=\{\vun{u}_1,\cdots,\vun{u}_n\}$ of $U_\cam{F}$ whose coordinate functionals span $U^*_\cam{F}$, we can say that 
+\begin{equation*}
+\fua{\vtf{g}}{\vto{x}}=\fua{[\sum_{i=1}^n\alpha_i\vtf{f}^{\hat{B}}_i]}{\vto{x}}=\sum_{i=1}^n\alpha_i\fua{\vtf{f}^{\hat{B}}_i}{\vto{x}}=\sum_{i=1}^n\alpha_i\lpa\vto{x}\cdot\vun{u}_i\rpa=\vto{x}	\cdot ( \sum_{i=1}^n\overline{\alpha_i} \vun{u}_i)\,.
+\end{equation*}
+As $\fua{\vtf{g}}{\vto{x}}=\fua{\lco\fua{\Phi}{\vto{u}}\rco}{\vto{x}}=\vto{x}\cdot\vto{u}$, the existence of $\vto{u}=\sum_{i=1}^n\overline{\alpha_i} \vun{u}_i$ is verified. Finally, using definition \eqref{eq:normaFuncao} on the present conditions, leaving space representation on norms implicit, we obtain equality $\|\vtf{u}^*\|=\sup\{ |\vto{x}\cdot\vto{u}|/\|\vto{x}\|\}$ for all non zero $\vto{x}$.
+If $\vto{u}$ is zero, it is evident that $\|\vtf{u}^*\|=\|\vto{u}\|$; otherwise, $\vtf{u}^*$ is non zero and we conclude that $\|\vtf{u}^*\|\geqslant |\, \vto{x}\cdot\vto{u}|/\|\vto{x}\|$. Cauchy-Schwarz Inequality states that $|\, \vto{x}\cdot\vto{u}| \leqslant \|\vto{x}\|\,\,\|\vto{u}\|$. Subtracting these two previous inequalities, we arrive at $(\|\vtf{u}^*\|-\|\vto{u}\|)\|\vto{x}\|\geqslant 0$, whose left side can be zero for arbitrary non zero $\vtf{u}^*$, $\vto{u}$ and $\vto{x}$; therefore, $\|\vtf{u}^*\|=\|\vto{u}\|$.    
+\end{proof}
+}
 
 
 
