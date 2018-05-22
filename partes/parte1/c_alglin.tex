@@ -343,14 +343,14 @@ The domain $U$ may eventually be a cartesian product $W^{\times q}$, where an ar
 
 An important example of function space is the space constituted by continuous functions. In order to define these type of functions, we need to say firstly that a set $S\subset U$ is called a \textsb{neighborhood}\index{neighborhood} of an element $u\in S$, represented by $\viz{u}$, when there is a real number $r>0$ that defines an open ball $B_{u,r}\subset S$. In this context, the function in $\map{\vtf{g}}{U}{V}$ is said to be 
 \textsb{continuous}\index{function!continuous} on an element $u\in S$ if for any neighborhood $\viz{\fua{\vtf{g}}{u}}$ in the codomain there is a neighborhood $\viz{u}$ in the domain where every element $x\in\viz{u}$ is related to a value $\fua{\vtf{g}}{x}\in \viz{\fua{\vtf{g}}{u}}$. In more direct terms, $\vtf{g}$ is continuous on $u$ when      
-\begin{equation}
+\begin{equation}\label{eq:continuity}
 \lim_{x\to u}\fua{\vtf{g}}{x}=\fua{\vtf{g}}{u},\,\, \forall\, x\in U\,,
 \end{equation}
 that is, $x\to u$ implies $\fua{\vtf{g}}{x}\to\fua{\vtf{g}}{u}$. In the case of a function that is continuous on every element of the domain, it is called continuous on the domain or simply continuous. Moreover, if a bijection and its inverse function are continuous on their respective domains, each one is called a  \textsb{homeomorphism}\index{homeomorphism}\footnote{Not to be confused with homomorphism, without ``e''.}.
 
 
 There is also a particular type of function continuity that has a stronger restriction than that presented above: a function $\vtf{g}$ is said to be \textsb{Lipschitz continuous}\index{function!Lipschitz continuous} on $u$ if there exists a non zero number $\vartheta\in\real^+$, called \textsb{Lipschitz constant}\index{Lipschitz!constant}, where
-\begin{equation}
+\begin{equation}\label{eq:Lipscontinuity}
 \vartheta \geqslant\dfrac{ \fua{\varrho}{\fua{\vtf{g}}{x},\fua{\vtf{g}}{u}}}{\fua{\varrho}{x,u}}\,,\forall\, x\in \{U\setminus \{u\}\}\,.
 \end{equation}
 From this definition we can conclude that every Lipschitz continuous function is also continuous, with the additional property of presenting upper limited distance ratios relative to every element $u$ of its domain. 
@@ -372,7 +372,7 @@ for all $\alpha,\beta\in\cam{F}$ and $\vto{w},\vto{w}_i\in W_i$. In this context
 \end{align}
 for all $\alpha,\beta\in\cam{F}$ and $\vto{w},\vto{w}_i\in W_i$. In the context of vector spaces defined in real fields, a multiantilinear function results multilinear.   
 
-Linear functions, as we presented, can also be continuous and constitute a normed function space if a norm is defined. In our study, given $Y_\cam{F}$ and $Z_\cam{F}$ Banach spaces, we define that \emph{a vector space $\evl{\cam{F}}{Z}{Y}$ of continuous linear functions is not only normed but also metric inner product where the norm and the inner product\label{txt:prodInt} are related through $\|\vtf{h}\|=\sqrt{\vtf{h}\cdot\vtf{h}}$ and the distance $\fua{\varrho}{\vtf{h},\vtf{g}} := \|\vtf{h}-\vtf{g}\|$ for all $\vtf{h},\vtf{g}\in Y_\cam{F}^Z$}. Thereby, for any linear function $\vtf{h}$ in $Y_\cam{F}^Z$ to be continuous, a necessary and sufficient condition requires that it is \textsb{bounded}\index{function!bounded}, namely, that there exists a number $\nu\in\real^+$ where 
+Linear functions, as we presented, can also be continuous and constitute a normed function space if a norm is defined. In our study, given $Y_\cam{F}$ and $Z_\cam{F}$ Banach spaces, we define that \emph{a vector space $\evl{\cam{F}}{Z}{Y}$ of continuous linear functions is not only normed but also metric inner product where the norm and the inner product\label{txt:prodInt} are related through $\|\vtf{g}\|=\sqrt{\vtf{g}\cdot\vtf{g}}$ and the distance $\fua{\varrho}{\vtf{g},\vtf{f}} := \|\vtf{g}-\vtf{f}\|$ for all $\vtf{g},\vtf{f}\in \evl{\cam{F}}{Z}{Y}$}. Thereby, for any linear function $\vtf{h}$ in $Y_\cam{F}^Z$ to be continuous, a necessary and sufficient condition requires that it is \textsb{bounded}\index{function!bounded}, namely, that there exists a number $\nu\in\real^+$ where 
 \begin{equation}\label{eq:funcaoLimitada}
 \nu\geqslant \|\fua{\vtf{h}}{\vto{z}}\|/\|\vto{z}\| \,,\forall\, \vto{z}\in \{Z_\cam{F}\setminus\{\vto{0}\}\}\,.
 \end{equation}
