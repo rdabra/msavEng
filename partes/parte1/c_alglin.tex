@@ -372,7 +372,7 @@ for all $\alpha,\beta\in\cam{F}$ and $\vto{w},\vto{w}_i\in W_i$. In this context
 \end{align}
 for all $\alpha,\beta\in\cam{F}$ and $\vto{w},\vto{w}_i\in W_i$. In the context of vector spaces defined in real fields, a multiantilinear function results multilinear.   
 
-Linear functions, as we presented, can also be continuous and constitute a normed function space if a norm is defined. In our study, given $Y_\cam{F}$ and $Z_\cam{F}$ Banach spaces, we define that \emph{a vector space $\evl{\cam{F}}{Z}{Y}$ of continuous linear functions is not only normed but also metric inner product where the norm and the inner product\label{txt:prodInt} are related through $\|\vtf{g}\|=\sqrt{\vtf{g}\cdot\vtf{g}}$ and the distance $\fua{\varrho}{\vtf{g},\vtf{f}} := \|\vtf{g}-\vtf{f}\|$ for all $\vtf{g},\vtf{f}\in \evl{\cam{F}}{Z}{Y}$}. Thereby, for any linear function $\vtf{h}$ in $Y_\cam{F}^Z$ to be continuous, a necessary and sufficient condition requires that it is \textsb{bounded}\index{function!bounded}, namely, that there exists a number $\nu\in\real^+$ where 
+Linear functions, as we presented, can also be continuous and constitute a normed function space if a norm is defined. In our study, given $Y_\cam{F}$ and $Z_\cam{F}$ Banach spaces, we define that \emph{a vector space $\evl{\cam{F}}{Z}{Y}$ of continuous linear functions is not only normed but also metric inner product where the norm and the inner product\label{txt:prodInt} are related through $\|\vtf{g}\|=\sqrt{\vtf{g}\cdot\vtf{g}}$ and the distance $\fua{\varrho}{\vtf{g},\vtf{f}} := \|\vtf{g}-\vtf{f}\|$ for all $\vtf{g},\vtf{f}\in \evl{\cam{F}}{Z}{Y}$}. Thereby, for any linear function $\vtf{h}$ in $Y_\cam{F}^Z$ to be continuous, a necessary and sufficient condition requires that it is \textsb{bounded}\index{function!bounded}\footnote{See theorem on \aut{Kreyszig}\cite{kreyszig_1978_1}, p.97.}, namely, that there exists a number $\nu\in\real^+$ where 
 \begin{equation}\label{eq:funcaoLimitada}
 \nu\geqslant \|\fua{\vtf{h}}{\vto{z}}\|/\|\vto{z}\| \,,\forall\, \vto{z}\in \{Z_\cam{F}\setminus\{\vto{0}\}\}\,.
 \end{equation}
@@ -415,9 +415,9 @@ enable us to conclude that $\vtf{f}_i^B$ spans $V_\cam{F}^*$ and if $\vtf{h}=\vt
 Let $\map{\Phi}{U_\cam{F}}{U^*_\cam{F}}$ be a mapping where $U_\cam{F}$ is a Hilbert space and 
 $U^*_\cam{F}$ its dual space. If for every $\vto{u}\in U_\cam{F}$, a covector  \gloref{covetor}$:=\fua{\Phi}{\vto{u}}$ is described by the rule  
 \begin{equation*}
-\fua{\vtf{u}^*}{\vto{x}}=\vto{x}\cdot\vto{u}\,,
+\fua{\vto{u}^*}{\vto{x}}=\vto{x}\cdot\vto{u}\,,
 \end{equation*}
-then $\Phi$ results an antilinear bijection. When $\vtf{u}^*$ is continuous,  $\|\vtf{u}^*\|_{U^*_\cam{F}}=\|\vto{u}\|_{U_\cam{F}}$.
+then $\Phi$ results an antilinear bijection. When $\vto{u}^*$ is continuous,  $\|\vto{u}^*\|_{U^*_\cam{F}}=\|\vto{u}\|_{U_\cam{F}}$.
 \end{mteo}
 
 {\footnotesize
@@ -426,12 +426,12 @@ Considering $\vto{u}$ and $\vto{v}$ vectors of $U_\cam{F}$, function $\Phi$ is a
 \begin{equation*}
 \fua{\lco\fua{\Phi}{\alpha\vto{u}+\beta\vto{v}}\rco}{\vto{x}}=\vto{x}\cdot(\alpha\vto{u}+\beta\vto{v})=\overline{\alpha}\vto{u}^*(\vto{x})+\overline{\beta}\vto{v}^*(\vto{x})=\fua{\lco\overline{\alpha}\fua{\Phi}{\vto{u}}+\overline{\beta}\fua{\Phi}{\vto{v}}\rco}{\vto{x}}\,.
 \end{equation*}
-If $\Phi$ were not an injection, there would be different covectors $\vtf{u}^*$ and $\vtf{v}^*$ where $\fua{\vtf{u}^*}{\vto{x}}=\fua{\vtf{v}^*}{\vto{x}}$ or $\vto{x}\cdot\vto{u}=\vto{x}\cdot\vto{v}$. From this supposition, the following equalities $\vto{x}\cdot(\vto{u}-\vto{v})=\fua{(\vtf{u}-\vtf{v})^*}{\vto{x}}=0$ do not confirm $\vtf{u}^*\neq\vtf{v}^*$ since $(\vtf{u}-\vtf{v})^*=\vtf{u}^*-\vtf{v}^*$. In order to prove that $\Phi$ is a surjection, we need to obtain for an arbitrary functional $\vtf{g}\in U_\cam{F}^*$ a vector $\vto{u}\in U_\cam{F}$ such that $\fua{\Phi}{\vto{u}}=\vtf{g}$. Considering the rule \eqref{eq:regraCoord} and an orthonormal basis $\hat{B}=\{\vun{u}_1,\cdots,\vun{u}_n\}$ of $U_\cam{F}$ whose coordinate functionals span $U^*_\cam{F}$, we can say that 
+If $\Phi$ were not an injection, there would be different covectors $\vto{u}^*$ and $\vto{v}^*$ where $\fua{\vto{u}^*}{\vto{x}}=\fua{\vto{v}^*}{\vto{x}}$ or $\vto{x}\cdot\vto{u}=\vto{x}\cdot\vto{v}$. From this supposition, the following equalities $\vto{x}\cdot(\vto{u}-\vto{v})=\fua{(\vtf{u}-\vtf{v})^*}{\vto{x}}=0$ do not confirm $\vto{u}^*\neq\vto{v}^*$ since $(\vtf{u}-\vtf{v})^*=\vto{u}^*-\vto{v}^*$. In order to prove that $\Phi$ is a surjection, we need to obtain for an arbitrary functional $\vtf{g}\in U_\cam{F}^*$ a vector $\vto{u}\in U_\cam{F}$ such that $\fua{\Phi}{\vto{u}}=\vtf{g}$. Considering the rule \eqref{eq:regraCoord} and an orthonormal basis $\hat{B}=\{\vun{u}_1,\cdots,\vun{u}_n\}$ of $U_\cam{F}$ whose coordinate functionals span $U^*_\cam{F}$, we can say that 
 \begin{equation*}
 \fua{\vtf{g}}{\vto{x}}=\fua{[\sum_{i=1}^n\alpha_i\vtf{f}^{\hat{B}}_i]}{\vto{x}}=\sum_{i=1}^n\alpha_i\fua{\vtf{f}^{\hat{B}}_i}{\vto{x}}=\sum_{i=1}^n\alpha_i\lpa\vto{x}\cdot\vun{u}_i\rpa=\vto{x}	\cdot ( \sum_{i=1}^n\overline{\alpha_i} \vun{u}_i)\,.
 \end{equation*}
-As $\fua{\vtf{g}}{\vto{x}}=\fua{\lco\fua{\Phi}{\vto{u}}\rco}{\vto{x}}=\vto{x}\cdot\vto{u}$, the existence of $\vto{u}=\sum_{i=1}^n\overline{\alpha_i} \vun{u}_i$ is verified. Finally, using definition \eqref{eq:normaFuncao} on the present conditions, leaving space representation on norms implicit, we obtain equality $\|\vtf{u}^*\|=\sup\{ |\vto{x}\cdot\vto{u}|/\|\vto{x}\|\}$ for all non zero $\vto{x}$.
-If $\vto{u}$ is zero, it is evident that $\|\vtf{u}^*\|=\|\vto{u}\|$; otherwise, $\vtf{u}^*$ is non zero and we conclude that $\|\vtf{u}^*\|\geqslant |\, \vto{x}\cdot\vto{u}|/\|\vto{x}\|$. Cauchy-Schwarz Inequality states that $|\, \vto{x}\cdot\vto{u}| \leqslant \|\vto{x}\|\,\,\|\vto{u}\|$. Subtracting these two previous inequalities, we arrive at $(\|\vtf{u}^*\|-\|\vto{u}\|)\|\vto{x}\|\geqslant 0$, whose left side can be zero for arbitrary non zero $\vtf{u}^*$, $\vto{u}$ and $\vto{x}$; therefore, $\|\vtf{u}^*\|=\|\vto{u}\|$.    
+As $\fua{\vtf{g}}{\vto{x}}=\fua{\lco\fua{\Phi}{\vto{u}}\rco}{\vto{x}}=\vto{x}\cdot\vto{u}$, the existence of $\vto{u}=\sum_{i=1}^n\overline{\alpha_i} \vun{u}_i$ is verified. Finally, using definition \eqref{eq:normaFuncao} on the present conditions, leaving space representation on norms implicit, we obtain equality $\|\vto{u}^*\|=\sup\{ |\vto{x}\cdot\vto{u}|/\|\vto{x}\|\}$ for all non zero $\vto{x}$.
+If $\vto{u}$ is zero, it is evident that $\|\vto{u}^*\|=\|\vto{u}\|$; otherwise, $\vto{u}^*$ is non zero and we conclude that $\|\vto{u}^*\|\geqslant |\, \vto{x}\cdot\vto{u}|/\|\vto{x}\|$. Cauchy-Schwarz Inequality states that $|\, \vto{x}\cdot\vto{u}| \leqslant \|\vto{x}\|\,\,\|\vto{u}\|$. Subtracting these two previous inequalities, we arrive at $(\|\vto{u}^*\|-\|\vto{u}\|)\|\vto{x}\|\geqslant 0$, whose left side can be zero for arbitrary non zero $\vto{u}^*$, $\vto{u}$ and $\vto{x}$; therefore, $\|\vto{u}^*\|=\|\vto{u}\|$.    
 \end{proof}
 }
 
@@ -477,9 +477,9 @@ If the linear functionals of $U_\cam{F}^*$ are continuous and $U_\cam{F}$ is a H
 \begin{proof}
 By the rule \eqref{eq:normaFuncao},  $U_\cam{F}^*$ is a normed space that is also defined to be metric inner product (See p. \pageref{txt:prodInt}). Thus, it remains here to verify that $U_\cam{F}^*$ is complete. This condition is assured if the bijection $\Phi$ is isometric, according to theorem \ref{teo:isoComp}. From the rule for covectors established by Riesz-Fréchet Representation, if $\vto{u}=\vto{v}-\vto{w}$ then    
 \begin{equation*}
-\fua{(\vto{v}-\vtf{w})^*}{\vto{x}}=\vto{x}\cdot(\vto{v}-\vto{w})=\vto{x}\cdot\vto{v}-\vto{x}\cdot\vto{w}=\fua{\vtf{v}^*}{\vto{x}}-\fua{\vtf{w}^*}{\vto{x}}=\fua{(\vtf{v}^*-\vtf{w}^*)}{\vto{x}}\,,
+\fua{(\vto{v}-\vtf{w})^*}{\vto{x}}=\vto{x}\cdot(\vto{v}-\vto{w})=\vto{x}\cdot\vto{v}-\vto{x}\cdot\vto{w}=\fua{\vto{v}^*}{\vto{x}}-\fua{\vtf{w}^*}{\vto{x}}=\fua{(\vto{v}^*-\vtf{w}^*)}{\vto{x}}\,,
 \end{equation*}
-from which we conclude that $(\vtf{v}-\vtf{w})^*=(\vtf{v}^*-\vtf{w}^*)$, or that $\fua{\Phi}{\vto{v}-\vto{w}}=\fua{\Phi}{\vto{v}}-\fua{\Phi}{\vto{w}}$. Thereby, knowing that $\|\fua{\Phi}{\vto{x}}\|_{U_\cam{F}^*}=\|\vto{x}\|_{U_\cam{F}}$, metric  
+from which we conclude that $(\vtf{v}-\vtf{w})^*=(\vto{v}^*-\vtf{w}^*)$, or that $\fua{\Phi}{\vto{v}-\vto{w}}=\fua{\Phi}{\vto{v}}-\fua{\Phi}{\vto{w}}$. Thereby, knowing that $\|\fua{\Phi}{\vto{x}}\|_{U_\cam{F}^*}=\|\vto{x}\|_{U_\cam{F}}$, metric  
 \begin{equation*}
 \fua{\varrho_{U_\cam{F}^*}}{\fua{\Phi}{\vto{v}},\fua{\Phi}{\vto{w}}}=\|\fua{\Phi}{\vto{v}}-\fua{\Phi}{\vto{w}}\|_{U_\cam{F}^*}= \|\fua{\Phi}{\vto{v}-\vto{w}}\|_{U_\cam{F}^*}= \|\vto{v}-\vto{w}\|_{U_\cam{F}}\,.
 \end{equation*}
@@ -707,10 +707,10 @@ from which we conclude that the change of coordinates of $\vtf{h}$ from $B^*$ to
 \end{equation}
 From these two classifications of coordinates, if $U_\cam{F}$ is a Hilbert space, scalars $\fua{\vtf{f}_i^B}{\vto{u}}=\vto{u}\cdot\vto{u}^i$ constitute the contravariant coordinates of vector $\vto{u}\in U_\cam{F}$, whose covector
 \begin{equation*}
-\vtf{u}^*=\sum_{i=1}^n\fua{\vtf{u}^*}{\vto{u}_i} \vtf{f}_i^{B}= \sum_{i=1}^n (\vto{u}_i\cdot\vto{u}) (\vtf{u}^i)^*\,.
+\vto{u}^*=\sum_{i=1}^n\fua{\vto{u}^*}{\vto{u}_i} \vtf{f}_i^{B}= \sum_{i=1}^n (\vto{u}_i\cdot\vto{u}) (\vtf{u}^i)^*\,.
 \end{equation*}
-Since $\vto{u}$ and $\vtf{u}^*$ are biunivocaly related through Riesz-Fréchet Representation, the coordinates $(\vto{u}_1\cdot\vto{u},\cdots,\vto{u}_n\cdot\vto{u})$ of $\vtf{u}^*$ on $B^*$ are usually called the covariant coordinates of vector $\vto{u}$ on $B^\perp$. If the Hilbert space in question is real, considering  
-$\hat{B}=\{\vun{u}_1,\cdots,\vun{u}_n\}$ an orthonormal basis of $U_\real$, we can say that covariant and contravariant coordinates of an arbitrary vector $\vto{u}$ are always equal because expressions $\vun{u}_i=\vun{u}^i$ and the commutativity of inner product imply $\vto{u}\cdot\vto{u}^i=\vto{u}_i\cdot\vto{u}$, that is,   $\fua{\vtf{u}^*}{\vto{u}_i}=\fua{\vtf{f}_i^{\hat{B}}}{\vto{u}}$. This also occurs in a tridimensional Euclidean space, when natural basis $\{\vun{e}_1,\vun{e}_2,\vun{e}_3\}$ is called  \textsb{cartesian basis}\index{basis!cartesian} and all the linear combinations of its elements are \textsb{cartesian vectors}\index{vector!cartesian}.
+Since $\vto{u}$ and $\vto{u}^*$ are biunivocaly related through Riesz-Fréchet Representation, the coordinates $(\vto{u}_1\cdot\vto{u},\cdots,\vto{u}_n\cdot\vto{u})$ of $\vto{u}^*$ on $B^*$ are usually called the covariant coordinates of vector $\vto{u}$ on $B^\perp$. If the Hilbert space in question is real, considering  
+$\hat{B}=\{\vun{u}_1,\cdots,\vun{u}_n\}$ an orthonormal basis of $U_\real$, we can say that covariant and contravariant coordinates of an arbitrary vector $\vto{u}$ are always equal because expressions $\vun{u}_i=\vun{u}^i$ and the commutativity of inner product imply $\vto{u}\cdot\vto{u}^i=\vto{u}_i\cdot\vto{u}$, that is,   $\fua{\vto{u}^*}{\vto{u}_i}=\fua{\vtf{f}_i^{\hat{B}}}{\vto{u}}$. This also occurs in a tridimensional Euclidean space, when natural basis $\{\vun{e}_1,\vun{e}_2,\vun{e}_3\}$ is called  \textsb{cartesian basis}\index{basis!cartesian} and all the linear combinations of its elements are \textsb{cartesian vectors}\index{vector!cartesian}.
 
 Now, an interesting consequence of equalities \eqref{eq:mudaBaseTranspHilbert} is that matrix ${\maf{\vtf{i}}{C}{B}}$ results unitary if the bases involved are orthonormal, since they are reciprocal to themselves. Thereby, we present the following corollary, that describes an important  relationship between representative matrices of linear operators.  
 

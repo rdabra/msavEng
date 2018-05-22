@@ -94,7 +94,7 @@ are zero, which can be verified through the following development:
 \end{proof}
 }
 
-In the context of the above theorem, it can be noted that the number of polyadic tensors $\vtf{f}_{j_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{j_m}^{B_m}$ of basis $B$ is given by 
+In the context of the above theorem, it can be noted that the number of poly\-adic tensors $\vtf{f}_{j_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{j_m}^{B_m}$ of basis $B$ is given by 
 $n_1\cdots n_m$. Moreover, from the previous chapter, we already know that a vector space and its dual have the same dimension, that is, $\dim ((U_i)_\cam{F})=\dim ((U_i^*)_\cam{F})$. Thereby, we can state that the dimension of tensor space $\ete{\cam{F}}{U^{\times m}}$ is the product of dimensions of each of vector spaces $(U_i)_\cam{F}$. In other words,
 \begin{equation}
 \dim (\ete{\cam{F}}{U^{\times m}}) = \prod_{i=1}^m \dim ((U_i)_\cam{F})\,.
@@ -256,10 +256,10 @@ Henceforth, we shall be dealing only with tensors defined by Hilbert spaces, sin
 \begin{equation}\label{eq:normaFuncaoTens}
 \fua{\eta}{\vtf{\psi}}:=\sup\lch \|\fua{\vtf{\psi}}{\tnr{X}}\|/\|\tnr{X}\| \,,\forall\, \tnr{X}\in \{Z_\cam{F}\setminus\{\tnr{0}\}\} \rch\,,
 \end{equation}
-for arbitrary continuous linear tensor functions $\vtf{\psi},\vtf{\phi}\in Y_\cam{F}^Z$. It is important to say that the concepts of continuity and Lipschitz continuity as described by \eqref{eq:continuity} and \eqref{eq:Lipscontinuity} are also valid for the case of tensor functions.   
+for arbitrary continuous linear tensor functions $\vtf{\psi},\vtf{\phi}\in Y_\cam{F}^Z$. It is important to say that the concepts of continuity and Lipschitz continuity as described by \eqref{eq:continuity} and \eqref{eq:Lipscontinuity} respectively are also valid for the present case of tensor functions.   
 
 
-It is still possible to consider $V_\cam{F}=\cam{F}_\cam{F}$, when the elements of $V^U_\cam{F}$ are called tensor functionals. In the terms of Theorem \ref{teo:geraEte}, if $B$ is basis of $\ete{\cam{F}}{X^{\times m}}$, coordinate functionals $\vtf{f}_{j_1\cdots j_m}^{B}$, since they are linear according to definition \eqref{eq:regraCoordTens}, result elements of the function space $\evl{\cam{F}}{\ete{\cam{F}}{X^{\times m}}}{\cam{F}}$, represented by $\eted{\cam{F}}{X^{\times m}}$ because it is the dual space of $\ete{\cam{F}}{X^{\times m}}$. Again, similarly to vector function spaces, every linear tensor functional that belongs to this dual space is then called a \textsb{dual tensor}\index{dual!tensor} of $\ete{\cam{F}}{X^{\times m}}$. Moreover, the finite set $B^*\subset\eted{\cam{F}}{X^{\times m}}$ constituted by the coordinate functionals on $B$ is the dual set of this basis because
+It is still possible to consider $V_\cam{F}=\cam{F}_\cam{F}$, when the elements of tensor function space $V^U_\cam{F}$ are called tensor functionals. In the terms of Theorem \ref{teo:geraEte}, if $B$ is a basis of $\ete{\cam{F}}{X^{\times m}}$, coordinate functionals $\vtf{f}_{j_1\cdots j_m}^{B}$, since they are linear according to definition \eqref{eq:regraCoordTens}, result elements of the function space $\evl{\cam{F}}{\ete{\cam{F}}{X^{\times m}}}{\cam{F}}$, represented by $\eted{\cam{F}}{X^{\times m}}$ because it is the dual space of $\ete{\cam{F}}{X^{\times m}}$. Again, similarly to vector function spaces, every linear tensor functional that belongs to this dual space is then called a \textsb{dual tensor}\index{dual!tensor} of $\ete{\cam{F}}{X^{\times m}}$. Moreover, the finite set $B^*\subset\eted{\cam{F}}{X^{\times m}}$ constituted by the coordinate functionals on $B$ is the dual set of this basis because
 \begin{equation*}
 \fua{\vtf{f}_{j_1\cdots j_m}^{B}}{\vtf{f}_{k_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{k_m}^{B_m}}=\fua{\vtf{f}_{k_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{k_m}^{B_m}}{\vto{u}_{j_1}^{(1)},\cdots,\vto{u}_{j_m}^{(m)}} = \prod_{i=1}^m\delta_{k_ij_i}\,,
 \end{equation*}
@@ -379,11 +379,12 @@ When the order of a contractive product and the order of its terms are equal, th
 \begin{equation}\label{eq:prodIntTens}
 \tnr{A}\cdot\tnr{B}:=\vto{b}^*_1\otimes\cdots\otimes\vto{b}^*_m\,\,\odot_m\,\,(\vto{a}^c_1)^*\otimes\cdots\otimes(\vto{a}^c_m)^*=\prod_{i=1}^m\vto{a}_i\cdot\vto{b}_i
 \end{equation}
-is called the \textsb{inner product of tensors}\index{inner product!of tensors} $\tnr{A}$ and $\tnr{B}$ because it observes the axioms of ordinary inner products. From this definition, if $\ete{\cam{F}}{U^{\times m}}$ is a first order tensor space, we have equalities
-\begin{equation*}
-\tnr{A}\cdot \tnr{B}=\vto{a}^*_1\cdot\vto{b}^*_1=\vto{b}^*_1\odot_1(\vto{a}^c_1)^*=\vto{a}_1\cdot\vto{b}_1\,, 
-\end{equation*}     
-from which we conclude that the inner product of covectors, as defined by \eqref{eq:prodIntTens}, equals the inner product of the corresponding vectors. Moreover, if an inner product can be defined on the elements of $\ete{\cam{F}}{U^{\times m}}$, then this space results an inner product tensor space.  
+is called the \textsb{inner product of tensors}\index{inner product!of tensors} $\tnr{A}$ and $\tnr{B}$ because it observes the axioms of ordinary inner products. From this definition, the following interesting equalities are valid:
+\begin{equation}
+\tnr{A}\cdot \tnr{B}=\prod_{i=1}^m\fua{\vto{b}_i^*}{\vto{a}_i}=\fua{\tnr{B}}{\vto{a}_1,\cdots,\vto{a}_m}\,.
+\end{equation}     
+Now, when $\ete{\cam{F}}{U^{\times m}}$ is a first order tensor space, we have $\tnr{A}\cdot \tnr{B}=\vto{a}_1\cdot\vto{b}_1$,
+from which we conclude that the inner product of covectors equals the inner product of the corresponding vectors. If an inner product can be defined on the elements of $\ete{\cam{F}}{U^{\times m}}$, then this space results an inner product tensor space.  
 
 
 {\footnotesize
@@ -429,15 +430,12 @@ Considering $\tnr{A},\tnr{B}\in\ete{\cam{F}}{U^{\times m}}$, function $\tnr{\Phi
 If $\tnr{\Phi}$ were not an injection, there would be different cotensors $\tnr{A}^*$ and $\tnr{B}^*$ where $\fua{\tnr{A}^*}{\tnr{X}}=\fua{\tnr{B}^*}{\tnr{X}}$ or $\tnr{X}\cdot\tnr{A}=\tnr{X}\cdot\tnr{B}$. From this supposition, the following equalities $(\tnr{A}-\tnr{B})\cdot\tnr{X}=\fua{(\tnr{A}-\tnr{B})^*}{\tnr{X}}=0$ do not confirm $\tnr{A}^*\neq\tnr{B}^*$ since $(\tnr{A}-\tnr{B})^*=\tnr{A}^*-\tnr{B}^*$. In order to prove that $\tnr{\Phi}$ is a surjection, we need to obtain for an arbitrary functional $\vtf{\psi}\in \eted{\cam{F}}{U^{\times m}}$ a tensor $\vto{A}\in \ete{\cam{F}}{U^{\times m}}$ such that $\fua{\tnr{\Phi}}{\tnr{A}}=\vtf{\psi}$.
 Considering the same conditions of equality \eqref{eq:coordTensor} and definition \eqref{eq:prodIntTens}, we can say that
 \begin{align*}
-\fua{\vtf{\psi}}{\tnr{X}}&=\fua{[\sum_{i_1=1}^{n_1}\cdots\sum_{i_m=1}^{n_m}\alpha_{i_1\cdots i_m}\vtf{f}_{i_1\cdots i_m}^{B}]}{\tnr{X}}\\
-&=\sum_{i_1=1}^{n_1}\cdots\sum_{i_m=1}^{n_m}\alpha_{i_1\cdots i_m}\fua{\tnr{X}}{\vto{u}_{i_1}^{(1)},\cdots,\vto{u}_{i_m}^{(m)}}\\
-&=\sum_{i_1=1}^{n_1}\cdots\sum_{i_m=1}^{n_m}\alpha_{i_1\cdots i_m}\prod_{k=1}^m\fua{\vto{x}_k^*}{\vto{u}_{i_k}^{(k)}}\\
-&=\sum_{i_1=1}^{n_1}\cdots\sum_{i_m=1}^{n_m}\alpha_{i_1\cdots i_m}\prod_{k=1}^m\vto{u}_{i_k}^{(k)}\cdot\vto{x}_k\\
-&=\sum_{i_1=1}^{n_1}\cdots\sum_{i_m=1}^{n_m}\alpha_{i_1\cdots i_m}(\vtf{f}_{i_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{i_m}^{B_m})\cdot\tnr{X}\\
-&=\underbrace{(\sum_{i_1=1}^{n_1}\cdots\sum_{i_m=1}^{n_m}\alpha_{i_1\cdots i_m}\vtf{f}_{i_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{i_m}^{B_m})}_{\tnr{A}}\cdot\tnr{X}=[\fua{\tnr{\Phi}}{\tnr{A}}](\tnr{X})
+\fua{\vtf{\psi}}{\tnr{X}}&=\fua{[\sum_{i_1=1}^{n_1}\cdots\sum_{i_m=1}^{n_m}\alpha_{i_1\cdots i_m}\vtf{f}_{i_1\cdots i_m}^{B}]}{\tnr{X}}=\sum_{i_1=1}^{n_1}\cdots\sum_{i_m=1}^{n_m}\alpha_{i_1\cdots i_m}\fua{\tnr{X}}{\vto{u}_{i_1}^{(1)},\cdots,\vto{u}_{i_m}^{(m)}}=\\
+&\sum_{i_1=1}^{n_1}\cdots\sum_{i_m=1}^{n_m}\alpha_{i_1\cdots i_m}\prod_{k=1}^m\fua{\vto{x}_k^*}{\vto{u}_{i_k}^{(k)}}=\sum_{i_1=1}^{n_1}\cdots\sum_{i_m=1}^{n_m}\alpha_{i_1\cdots i_m}\prod_{k=1}^m\vto{u}_{i_k}^{(k)}\cdot\vto{x}_k=\\
+&\sum_{i_1=1}^{n_1}\cdots\sum_{i_m=1}^{n_m}\alpha_{i_1\cdots i_m}(\vtf{f}_{i_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{i_m}^{B_m})\cdot\tnr{X}=\\
+&\underbrace{(\sum_{i_1=1}^{n_1}\cdots\sum_{i_m=1}^{n_m}\alpha_{i_1\cdots i_m}\vtf{f}_{i_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{i_m}^{B_m})}_{\tnr{A}}\cdot\tnr{X}=[\fua{\tnr{\Phi}}{\tnr{A}}](\tnr{X})\,.
 \end{align*}
-Finally, using definition \eqref{eq:normaFuncao} on the present conditions, leaving space representation on norms implicit, we obtain equality $\|\vtf{u}^*\|=\sup\{ |\vto{x}\cdot\vto{u}|/\|\vto{x}\|\}$ for all non zero $\vto{x}$.
-If $\vto{u}$ is zero, it is evident that $\|\vtf{u}^*\|=\|\vto{u}\|$; otherwise, $\vtf{u}^*$ is non zero and we conclude that $\|\vtf{u}^*\|\geqslant |\, \vto{x}\cdot\vto{u}|/\|\vto{x}\|$. Cauchy-Schwarz Inequality states that $|\, \vto{x}\cdot\vto{u}| \leqslant \|\vto{x}\|\,\,\|\vto{u}\|$. Subtracting these two previous inequalities, we arrive at $(\|\vtf{u}^*\|-\|\vto{u}\|)\|\vto{x}\|\geqslant 0$, whose left side can be zero for arbitrary non zero $\vtf{u}^*$, $\vto{u}$ and $\vto{x}$; therefore, $\|\vtf{u}^*\|=\|\vto{u}\|$.    
+Using definition \eqref{eq:normaFuncaoTens} on the present conditions, leaving space representation on norms implicit, we obtain equality $\|\tnr{A}^*\|=\sup\{ |\tnr{A}\cdot\tnr{X}|/\|\tnr{X}\|\}$ for all non zero $\tnr{X}$. If $\tnr{A}$ is zero, it is evident that $\|\tnr{A}^*\|=\|\tnr{A}\|$; otherwise, $\tnr{A}^*$ is non zero and we conclude that $\|\tnr{A}^*\|\geqslant |\, \tnr{A}\cdot\tnr{X}|/\|\tnr{X}\|$. Cauchy-Schwarz Inequality states that $|\, \tnr{A}\cdot\tnr{X}| \leqslant \|\tnr{A}\|\,\,\|\tnr{X}\|$. Subtracting these two previous inequalities, we arrive at $(\|\tnr{A}^*\|-\|\tnr{A}\|)\|\tnr{X}\|\geqslant 0$, whose left side can be zero for arbitrary non zero $\tnr{A}^*$, $\tnr{A}$ and $\tnr{X}$; therefore, $\|\tnr{A}^*\|=\|\tnr{A}\|$.    
 \end{proof}
 }
 
