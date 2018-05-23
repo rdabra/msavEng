@@ -377,31 +377,30 @@ where $\tnr{C}\in\ete{\cam{F}}{W^{\times p}\times C^{\times n}\times Z^{\times r
 
 When the order of a contractive product and the order of its terms are equal, the result is a scalar. In this context, considering arbitrary tensors $\tnr{A},\tnr{B}\in\ete{\cam{F}}{U^{\times m}}$, where $\tnr{A}=\vto{a}^*_1\otimes\cdots\otimes\vto{a}^*_m$ and $\tnr{B}=\vto{b}^*_1\otimes\cdots\otimes\vto{b}^*_m$, the scalar
 \begin{equation}\label{eq:prodIntTens}
-\tnr{A}\cdot\tnr{B}:=\vto{b}^*_1\otimes\cdots\otimes\vto{b}^*_m\,\,\odot_m\,\,(\vto{a}^c_1)^*\otimes\cdots\otimes(\vto{a}^c_m)^*=\prod_{i=1}^m\vto{a}_i\cdot\vto{b}_i
+\tnr{A}\cdot\tnr{B}:=\vto{a}^*_1\otimes\cdots\otimes\vto{a}^*_m\,\,\odot_m\,\,(\vto{b}^c_1)^*\otimes\cdots\otimes(\vto{b}^c_m)^*=\prod_{i=1}^m\vto{b}_i\cdot\vto{a}_i
 \end{equation}
-is called the \textsb{inner product of tensors}\index{inner product!of tensors} $\tnr{A}$ and $\tnr{B}$ because it observes the axioms of ordinary inner products. From this definition, the following interesting equalities are valid:
-\begin{equation}
-\tnr{A}\cdot \tnr{B}=\prod_{i=1}^m\fua{\vto{b}_i^*}{\vto{a}_i}=\fua{\tnr{B}}{\vto{a}_1,\cdots,\vto{a}_m}\,.
+is called the \textsb{inner product of tensors}\index{inner product!of tensors} $\tnr{A}$ and $\tnr{B}$ because it observes the axioms of ordinary inner products. If an inner product can be defined on the elements of $\ete{\cam{F}}{U^{\times m}}$, then this space results an inner product tensor space. From the above definition, the following interesting equalities are valid:
+\begin{equation}\label{eq:propProdIndTens}
+\tnr{A}\cdot \tnr{B}=\prod_{i=1}^m\fua{\vto{a}_i^*}{\vto{b}_i}=\fua{\tnr{A}}{\vto{b}_1,\cdots,\vto{b}_m}\,.
 \end{equation}     
-Now, when $\ete{\cam{F}}{U^{\times m}}$ is a first order tensor space, we have $\tnr{A}\cdot \tnr{B}=\vto{a}_1\cdot\vto{b}_1$,
-from which we conclude that the inner product of covectors equals the inner product of the corresponding vectors. If an inner product can be defined on the elements of $\ete{\cam{F}}{U^{\times m}}$, then this space results an inner product tensor space.  
-
+  
 
 {\footnotesize
 \begin{proof}
-Let's verify if definition \eqref{eq:prodIntTens} really observes the axioms of inner products (see p. \pageref{prop:produtoInterno}). We do not compromise generality if we assume $\tnr{A},\tnr{B}\in\ete{\cam{F}}{U^{\times 2}}$ in order to shorten expression sizes. Equality $\tnr{A}\cdot\tnr{A}=(\vto{a}_1\cdot\vto{a}_1)(\vto{a}_2\cdot\vto{a}_2)$ assures nonnegativity for the left-hand side since each inner product on the right-hand side is nonnegative. Now, let's say that $(\vto{a}_1\cdot\vto{a}_1)(\vto{a}_2\cdot\vto{a}_2)=0$. If this is true, one of the the inner products on the left-hand side has to be zero. Therefore, according to the axiom of definition of ordinary inner products, vector $\vto{a}_1=\vto{0}$ or vector $\vto{a}_2=\vto{0}$ and as a consequence, $\tnr{A}=\tnr{0}$, according to property i on page \pageref{prop:tensorProd}. Equalities $\tnr{A}\cdot\tnr{B}=(\vto{a}_1\cdot\vto{b}_1)(\vto{a}_2\cdot\vto{b}_2)=\overline{(\vto{b}_1\cdot\vto{a}_1)(\vto{b}_2\cdot\vto{a}_2)}=\overline{\tnr{B}\cdot\tnr{A}}$ show that the inner product of tensors is conjugate symmetric. Finally, according to property ii on page \pageref{prop:tensorProd},  we have equalities
-\begin{equation*}
-(\alpha\tnr{A})\cdot(\beta\tnr{B})=((\alpha\vto{a}_1)\cdot(\beta\vto{b}_1))(\vto{a}_2\cdot\vto{b}_2)=\alpha\overline{\beta}(\vto{a}_1\cdot\vto{b}_1)(\vto{a}_2\cdot\vto{b}_2)=\alpha\overline{\beta}\tnr{A}\cdot\tnr{B}
-\end{equation*}
+Let's verify if definition \eqref{eq:prodIntTens} really observes the axioms of inner products (see p. \pageref{prop:produtoInterno}). We do not compromise generality if we assume $\tnr{A},\tnr{B}\in\ete{\cam{F}}{U^{\times 2}}$ in order to shorten expression sizes. Equality $\tnr{A}\cdot\tnr{A}=(\vto{a}_1\cdot\vto{a}_1)(\vto{a}_2\cdot\vto{a}_2)$ assures nonnegativity for the left-hand side since each inner product on the right-hand side is nonnegative. Now, let's say that $(\vto{a}_1\cdot\vto{a}_1)(\vto{a}_2\cdot\vto{a}_2)=0$. If this is true, one of the the inner products on the left-hand side has to be zero. Therefore, according to the axiom of definition of ordinary inner products, vector $\vto{a}_1=\vto{0}$ or vector $\vto{a}_2=\vto{0}$ and as a consequence, $\tnr{A}=\tnr{0}$, according to property i on page \pageref{prop:tensorProd}. Equalities $\tnr{A}\cdot\tnr{B}=(\vto{b}_1\cdot\vto{a}_1)(\vto{b}_2\cdot\vto{a}_2)=\overline{(\vto{a}_1\cdot\vto{b}_1)(\vto{a}_2\cdot\vto{b}_2)}=\overline{\tnr{B}\cdot\tnr{A}}$ show that the inner product of tensors is conjugate symmetric. Finally, according to property ii on page \pageref{prop:tensorProd},  we have equalities
+\begin{align*}
+(\alpha\tnr{A})\cdot(\beta\tnr{B})=&(\overline{\alpha}\vto{a}_1)^*\otimes\vto{a}_2^*\cdot(\overline{\beta}\vto{b}_1)^*\otimes\vto{b}_2^*=\\
+&((\overline{\beta}\vto{b}_1)\cdot(\overline{\alpha}\vto{a}_1))(\vto{b}_2\cdot\vto{a}_2)=\alpha\overline{\beta}(\vto{b}_1\cdot\vto{a}_1)(\vto{b}_2\cdot\vto{a}_2)=\alpha\overline{\beta}\tnr{A}\cdot\tnr{B}
+\end{align*}
 and  development
 \begin{align*}
 \tnr{A}\cdot\tnr{W} + \tnr{B}\cdot\tnr{W}  & = (\vto{a}_1^*\otimes\vto{a}_2^*) \cdot(\vto{w}_1^*\otimes\vto{w}_2^*)+(\vto{b}_1^*\otimes\vto{b}_2^*) \cdot(\vto{w}_1^*\otimes\vto{w}_2^*)\\
-& = (\vto{a}_1\cdot\vto{w}_1)(\vto{a}_2\cdot\vto{w}_2) + (\vto{b}_1\cdot\vto{w}_1)(\vto{b}_2\cdot\vto{w}_2)\\
-& = (\vto{a}_2\cdot\vto{w}_2)\vto{a}_1\cdot\vto{w}_1 + (\vto{b}_2\cdot\vto{w}_2)\vto{b}_1\cdot\vto{w}_1\\
-& = [(\vto{a}_2\cdot\vto{w}_2)\vto{a}_1+(\vto{b}_2\cdot\vto{w}_2)\vto{b}_1]\cdot\vto{w}_1\\
-& = [(\vto{a}_1^*\otimes\vto{a}_2^*)\odot_1(\vto{w}^c_2)^*+(\vto{b}_1^*\otimes\vto{b}_2^*)\odot_1(\vto{w}^c_2)^*]\cdot\vto{w}_1\\
-& =[(\vto{a}_1^*\otimes\vto{a}_2^*)+(\vto{b}_1^*\otimes\vto{b}_2^*)]\odot_1(\vto{w}^c_2)^*\}\cdot\vto{w}_1\\
-& =(\vto{w}_1^c)^*\odot_1(\tnr{A}+\tnr{B})\odot_1(\vto{w}^c_2)^*\\
+& = (\vto{w}_1\cdot\vto{a}_1)(\vto{w}_2\cdot\vto{a}_2) + (\vto{w}_1\cdot\vto{b}_1)(\vto{w}_2\cdot\vto{b}_2)\\
+& = \vto{w}_1\cdot(\vto{a}_2\cdot\vto{w}_2)\vto{a}_1 + \vto{w}_1\cdot(\vto{b}_2\cdot\vto{w}_2)\vto{b}_1\\
+& = \vto{w}_1\cdot[(\vto{a}_2\cdot\vto{w}_2)\vto{a}_1+(\vto{b}_2\cdot\vto{w}_2)\vto{b}_1]\\
+& = \vto{w}_1\cdot[(\vto{a}_1^*\otimes\vto{a}_2^*)\odot_1(\vto{w}^c_2)^*+(\vto{b}_1^*\otimes\vto{b}_2^*)\odot_1(\vto{w}^c_2)^*]\\
+& =\vto{w}_1\cdot\{[(\vto{a}_1^*\otimes\vto{a}_2^*)+(\vto{b}_1^*\otimes\vto{b}_2^*)]\odot_1(\vto{w}^c_2)^*\}\\
+& =(\tnr{A}+\tnr{B})\odot_1(\vto{w}^c_2)^*\odot_1(\vto{w}_1^c)^*\\
 & =(\tnr{A}+\tnr{B})\odot_2(\vto{w}^c_1)^*\otimes(\vto{w}^c_2)^*\\
 & = (\tnr{A} + \tnr{B})\cdot\tnr{W}\,,
 \end{align*}
@@ -409,33 +408,32 @@ whose strategy can also prove that $\tnr{W}\cdot\tnr{A} + \tnr{W}\cdot\tnr{B}=\t
 \end{proof}
 }
 
-Fundamentally speaking, the concept of tensor function, up to now, has enabled us to arrive at dual and inner product tensor spaces from the definitions of linear tensor functional and contractive product respectively. In comparative terms, we are now in a similar situation to that which preceded the essential Riesz-Fréchet Theorem in section \ref{sec:FuncLin}. Then, a very interesting question naturally arises: ``Since a Hilbert tensor space can now be defined, is it possible for each of its tensors to have a corresponding cotensor just like a vector in Hilbert spaces has a covector?'' An affirmative answer to this question would be quite convenient for our purposes because we could properly replace the study of tensors, which are multilinear functionals, with the simpler study of the so called cotensors, defined as linear functionals. In practice, if $\tnr{T}^*$ were the cotensor of tensor $\tnr{T}$, we could have a scalar value $\fua{\tnr{T}^*}{\tnr{X}}=\fua{\tnr{T}}{\vto{x}_1,\cdots,\vto{x}_m}$, for an arbitrary tensor $\tnr{X}$, and then be able to approach Tensor Calculus by working with single variable tensor functions instead of tensors themselves, inherently multivariable. The remaining text of this section show that the concept of \textsb{cotensor}\index{cotensor} is indeed feasible and a future chapter will deal  with the Calculus of single variable tensor functions.
+Fundamentally speaking, the concept of tensor function, up to now, has enabled us to arrive at dual and inner product tensor spaces from the definitions of linear tensor functional and contractive product respectively. In comparative terms, we are now in a similar situation to that which preceded the essential Riesz-Fréchet Theorem in section \ref{sec:FuncLin}. Then, a very interesting question naturally arises: ``Since a Hilbert tensor space can now be defined, is it possible for each of its tensors to have a corresponding cotensor just like a vector in Hilbert spaces has a covector?'' An affirmative answer to this question would be quite convenient for our purposes because we could properly replace the study of tensors, which are multilinear functionals, with the simpler study of the so called cotensors, defined as linear functionals. In practice, if $\tnr{T}^*$ were the cotensor of tensor $\tnr{T}$, a linear tensor functional $\tnr{\varphi}$ could be defined in such a way that $\fua{\tnr{\varphi}}{\tnr{X}}=\fua{}$ and then be able to approach Tensor Calculus by working with single variable tensor functions instead of tensors themselves, inherently multivariable. The remaining text of this section show that the concept of \textsb{cotensor}\index{cotensor} is indeed feasible and a future chapter will deal  with the Calculus of single variable tensor functions.
 
 
 \begin{mteo}{Riesz-Fréchet Representation of Tensors}{repRieszTensor}
 Let $\map{\tnr{\Phi}}{\ete{\cam{F}}{U^{\times m}}}{\eted{\cam{F}}{U^{\times m}}}$ be a mapping where $\ete{\cam{F}}{U^{\times m}}$ is a Hilbert tensor space and 
 $\eted{\cam{F}}{U^{\times m}}$ its dual space. If for every $\tnr{T}\in \ete{\cam{F}}{U^{\times m}}$, a cotensor  $\tnr{T}^*:=\fua{\tnr{\Phi}}{\tnr{T}}$ is described by the rule  
 \begin{equation*}
-\fua{\vtf{T}^*}{\tnr{X}}=\tnr{T}\cdot\tnr{X}\,,
+\fua{\vtf{T}^*}{\tnr{X}}=\tnr{X}\cdot\tnr{T}\,,
 \end{equation*}
-then $\tnr{\Phi}$ results a linear bijection. If $\tnr{T}^*$ is continuous,  $\|\tnr{T}^*\|_{\eted{\cam{F}}{U^{\times m}}}=\|\tnr{T}\|_{\ete{\cam{F}}{U^{\times m}}}$.
+then $\tnr{\Phi}$ is an antilinear bijection. If $\tnr{T}^*$ is continuous,  $\|\tnr{T}^*\|_{\eted{\cam{F}}{U^{\times m}}}=\|\tnr{T}\|_{\ete{\cam{F}}{U^{\times m}}}$.
 \end{mteo}
 
 {\footnotesize
 \begin{proof}
-Considering $\tnr{A},\tnr{B}\in\ete{\cam{F}}{U^{\times m}}$, function $\tnr{\Phi}$ is linear from the following equalities:
+Considering $\tnr{A},\tnr{B}\in\ete{\cam{F}}{U^{\times m}}$, function $\tnr{\Phi}$ is antilinear from the following equalities:
 \begin{equation*}
-\fua{\lco\fua{\tnr{\Phi}}{\alpha\tnr{A}+\beta\tnr{B}}\rco}{\tnr{X}}=(\alpha\tnr{A}+\beta\tnr{B})\cdot\tnr{X}=\alpha\tnr{A}^*(\tnr{X})+\beta\tnr{B}^*(\tnr{X})=\fua{\lco\alpha\fua{\tnr{\Phi}}{\tnr{A}}+\beta\fua{\tnr{\Phi}}{\tnr{B}}\rco}{\tnr{X}}\,.
+\fua{\lco\fua{\tnr{\Phi}}{\alpha\tnr{A}+\beta\tnr{B}}\rco}{\tnr{X}}=\tnr{X}\cdot(\alpha\tnr{A}+\beta\tnr{B})\cdot=\overline{\alpha}\tnr{A}^*(\tnr{X})+\overline{\beta}\tnr{B}^*(\tnr{X})=\fua{\lco\overline{\alpha}\fua{\tnr{\Phi}}{\tnr{A}}+\overline{\beta}\fua{\tnr{\Phi}}{\tnr{B}}\rco}{\tnr{X}}\,.
 \end{equation*}
 If $\tnr{\Phi}$ were not an injection, there would be different cotensors $\tnr{A}^*$ and $\tnr{B}^*$ where $\fua{\tnr{A}^*}{\tnr{X}}=\fua{\tnr{B}^*}{\tnr{X}}$ or $\tnr{X}\cdot\tnr{A}=\tnr{X}\cdot\tnr{B}$. From this supposition, the following equalities $(\tnr{A}-\tnr{B})\cdot\tnr{X}=\fua{(\tnr{A}-\tnr{B})^*}{\tnr{X}}=0$ do not confirm $\tnr{A}^*\neq\tnr{B}^*$ since $(\tnr{A}-\tnr{B})^*=\tnr{A}^*-\tnr{B}^*$. In order to prove that $\tnr{\Phi}$ is a surjection, we need to obtain for an arbitrary functional $\vtf{\psi}\in \eted{\cam{F}}{U^{\times m}}$ a tensor $\vto{A}\in \ete{\cam{F}}{U^{\times m}}$ such that $\fua{\tnr{\Phi}}{\tnr{A}}=\vtf{\psi}$.
-Considering the same conditions of equality \eqref{eq:coordTensor} and definition \eqref{eq:prodIntTens}, we can say that
+Considering the same conditions of equality \eqref{eq:coordTensor} and equalities \eqref{eq:propProdIndTens}, we can say that
 \begin{align*}
-\fua{\vtf{\psi}}{\tnr{X}}&=\fua{[\sum_{i_1=1}^{n_1}\cdots\sum_{i_m=1}^{n_m}\alpha_{i_1\cdots i_m}\vtf{f}_{i_1\cdots i_m}^{B}]}{\tnr{X}}=\sum_{i_1=1}^{n_1}\cdots\sum_{i_m=1}^{n_m}\alpha_{i_1\cdots i_m}\fua{\tnr{X}}{\vto{u}_{i_1}^{(1)},\cdots,\vto{u}_{i_m}^{(m)}}=\\
-&\sum_{i_1=1}^{n_1}\cdots\sum_{i_m=1}^{n_m}\alpha_{i_1\cdots i_m}\prod_{k=1}^m\fua{\vto{x}_k^*}{\vto{u}_{i_k}^{(k)}}=\sum_{i_1=1}^{n_1}\cdots\sum_{i_m=1}^{n_m}\alpha_{i_1\cdots i_m}\prod_{k=1}^m\vto{u}_{i_k}^{(k)}\cdot\vto{x}_k=\\
-&\sum_{i_1=1}^{n_1}\cdots\sum_{i_m=1}^{n_m}\alpha_{i_1\cdots i_m}(\vtf{f}_{i_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{i_m}^{B_m})\cdot\tnr{X}=\\
-&\underbrace{(\sum_{i_1=1}^{n_1}\cdots\sum_{i_m=1}^{n_m}\alpha_{i_1\cdots i_m}\vtf{f}_{i_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{i_m}^{B_m})}_{\tnr{A}}\cdot\tnr{X}=[\fua{\tnr{\Phi}}{\tnr{A}}](\tnr{X})\,.
+\fua{\vtf{\psi}}{\tnr{X}}&=\fua{[\sum_{i_1=1}^{n_1}\cdots\sum_{i_m=1}^{n_m}\alpha_{i_1\cdots i_m}\vtf{f}_{i_1\cdots i_m}^{B}]}{\tnr{X}}\\&=\sum_{i_1=1}^{n_1}\cdots\sum_{i_m=1}^{n_m}\alpha_{i_1\cdots i_m}\fua{\tnr{X}}{\vto{u}_{i_1}^{(1)},\cdots,\vto{u}_{i_m}^{(m)}}\\
+&=\sum_{i_1=1}^{n_1}\cdots\sum_{i_m=1}^{n_m}\alpha_{i_1\cdots i_m}\tnr{X}\cdot(\vtf{f}_{i_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{i_m}^{B_m})\\
+&=\tnr{X}\cdot\underbrace{(\sum_{i_1=1}^{n_1}\cdots\sum_{i_m=1}^{n_m}\overline{\alpha_{i_1\cdots i_m}}\vtf{f}_{i_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{i_m}^{B_m})}_{\tnr{A}}\\&=[\fua{\tnr{\Phi}}{\tnr{A}}](\tnr{X})\,.
 \end{align*}
-Using definition \eqref{eq:normaFuncaoTens} on the present conditions, leaving space representation on norms implicit, we obtain equality $\|\tnr{A}^*\|=\sup\{ |\tnr{A}\cdot\tnr{X}|/\|\tnr{X}\|\}$ for all non zero $\tnr{X}$. If $\tnr{A}$ is zero, it is evident that $\|\tnr{A}^*\|=\|\tnr{A}\|$; otherwise, $\tnr{A}^*$ is non zero and we conclude that $\|\tnr{A}^*\|\geqslant |\, \tnr{A}\cdot\tnr{X}|/\|\tnr{X}\|$. Cauchy-Schwarz Inequality states that $|\, \tnr{A}\cdot\tnr{X}| \leqslant \|\tnr{A}\|\,\,\|\tnr{X}\|$. Subtracting these two previous inequalities, we arrive at $(\|\tnr{A}^*\|-\|\tnr{A}\|)\|\tnr{X}\|\geqslant 0$, whose left side can be zero for arbitrary non zero $\tnr{A}^*$, $\tnr{A}$ and $\tnr{X}$; therefore, $\|\tnr{A}^*\|=\|\tnr{A}\|$.    
+Using definition \eqref{eq:normaFuncaoTens} on the present conditions, leaving space representation on norms implicit, we obtain equality $\|\tnr{A}^*\|=\sup\{ |\tnr{X}\cdot\tnr{A}|/\|\tnr{X}\|\}$ for all non zero $\tnr{X}$. If $\tnr{A}$ is zero, it is evident that $\|\tnr{A}^*\|=\|\tnr{A}\|$; otherwise, $\tnr{A}^*$ is non zero and we conclude that $\|\tnr{A}^*\|\geqslant |\, \tnr{X}\cdot\tnr{A}|/\|\tnr{X}\|$. Cauchy-Schwarz Inequality states that $|\, \tnr{X}\cdot\tnr{A}| \leqslant \|\tnr{X}\|\,\,\|\tnr{A}\|$. Subtracting these two previous inequalities, we arrive at $(\|\tnr{A}^*\|-\|\tnr{A}\|)\|\tnr{X}\|\geqslant 0$, whose left side can be zero for arbitrary non zero $\tnr{A}^*$, $\tnr{A}$ and $\tnr{X}$; therefore, $\|\tnr{A}^*\|=\|\tnr{A}\|$.    
 \end{proof}
 }
 
