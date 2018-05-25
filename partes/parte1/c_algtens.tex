@@ -339,45 +339,53 @@ where $m=q+2p+n$, tensor $\tnr{A}:=\vto{a}_1^*\otimes\cdots\otimes\vto{a}_{q}^*\
 \fua{{\vtf{c}}_{2p}}{\vto{a}_1,\cdots,\vto{a}_q,&\vto{x}_1,\cdots,\vto{x}_p,\vto{y}_1,\cdots,\vto{y}_p,\vto{b}_1,\cdots,\vto{b}_n}:=
 \\&(\prod_{i=1}^p\vto{y}_i^c\cdot\vto{x}_i)\,\vto{a}_1^*\otimes\cdots\otimes\vto{a}_{q}^*\otimes\vto{b}_{1}^*\otimes\cdots\otimes\vto{b}_n^*\,,
 \end{align*} 
-we call tensor $\fua{{\vtf{c}}_{2p}^\otimes}{\tnr{A}\otimes\tnr{B}}$ the $p$-th order \textsb{contractive product}\index{contractive!product} of $\tnr{A}$ and $\tnr{B}$, represented by $\tnr{A}\odot_p\tnr{B}$. Thereby, we can write in simpler terms that   
+we call tensor $\fua{{\vtf{c}}_{2p}^\otimes}{\tnr{A}\otimes\tnr{B}}$ the $p$-th order \textsb{contractive product}\index{contractive!product} of $\tnr{A}$ and $\tnr{B}$, represented by $\tnr{A}\diamond_p\tnr{B}$. Thereby, we can write in simpler terms that   
 \begin{equation}\label{eq:ProdTens}
-\tnr{A}\odot_p\tnr{B}=(\prod_{i=1}^p\vto{y}_i^c\cdot\vto{x}_i)\vto{a}_1^*\otimes\cdots\otimes\vto{a}_{q}^*\otimes\vto{b}_{1}^*\otimes\cdots\otimes\vto{b}_n^*.
+\tnr{A}\diamond_p\tnr{B}=(\prod_{i=1}^p\vto{y}_i^c\cdot\vto{x}_i)\vto{a}_1^*\otimes\cdots\otimes\vto{a}_{q}^*\otimes\vto{b}_{1}^*\otimes\cdots\otimes\vto{b}_n^*.
 \end{equation}
+For the sake of generality, when manipulating contractive products we consider that $\tnr{A}\diamond_0\tnr{B}:=\tnr{A}\otimes\tnr{B}$. Moreover, it is trivial to obtain that these type of products are also associative:
+\begin{equation}
+\tnr{A}\diamond_p(\tnr{C}\diamond_r\tnr{D}) = (\tnr{A}\diamond_p\tnr{C})\diamond_r\tnr{D}\,,
+\end{equation}
+where $\tnr{C}\in\ete{\cam{F}}{W^{\times p}\times C^{\times n}\times Z^{\times r}}$ and $\tnr{D}\in\ete{\cam{F}}{Z^{\times r}\times D^{\times s}}$. 
 
 {\footnotesize
 \begin{proof}
-Let's prove that the $r,s$ trace and the contractive product are indeed linear. From property ii on page \pageref{prop:tensorProd}, verification of equalities $\trt{r}{s} \alpha\tnr{ X}=\alpha\trt{r}{s}\tnr{X}$ and $(\alpha\tnr{A})\odot_p(\beta\tnr{B})=\alpha\beta\tnr{A}\odot_p\tnr{B}$ is straightforward. Henceforth, in order to shorten expression sizes, without losing generality, we shall consider that a contractive product always results a scalar, that is, the order of the contractive product equals the order of its terms. Considering the above conditions, let's verify the additive property of linear functions for a first order contractive product, that is, set $X^{\times 2}=W\times W$ and tensors $\tnr{A},\tnr{B},\tnr{W}\in\ete{\cam{F}}{W}$. Since $\vto{x}_1^*+\vto{y}_1^*=(\vto{x}_1+\vto{y}_1)^*$, equalities
+Let's prove that the $r,s$ trace and the contractive product are indeed linear. From property ii on page \pageref{prop:tensorProd}, verification of equalities $\trt{r}{s} \alpha\tnr{ X}=\alpha\trt{r}{s}\tnr{X}$ and $(\alpha\tnr{A})\diamond_p(\beta\tnr{B})=\alpha\beta\tnr{A}\diamond_p\tnr{B}$ is straightforward. Henceforth, in order to shorten expression sizes, without losing generality, we shall consider that a contractive product always results a scalar, that is, the order of the contractive product equals the order of its terms. Considering the above conditions, let's verify the additive property of linear functions for a first order contractive product, that is, set $X^{\times 2}=W\times W$ and tensors $\tnr{A},\tnr{B},\tnr{W}\in\ete{\cam{F}}{W}$. Since $\vto{x}_1^*+\vto{y}_1^*=(\vto{x}_1+\vto{y}_1)^*$, equalities
 \begin{equation*}
-(\tnr{A}+\tnr{B})\odot_1\tnr{W} = (\vto{x}_1+\vto{y}_1)^*\odot_1\vto{w}_1^*=\vto{w}^c_1\cdot(\vto{x}_1+\vto{y}_1)= \vto{w}^c_1\cdot\vto{x}_1+\vto{w}^c_1\cdot\vto{y}_1=\tnr{A}\odot_1\tnr{W}+\tnr{B}\odot_1\tnr{W}
+(\tnr{A}+\tnr{B})\diamond_1\tnr{W} = (\vto{x}_1+\vto{y}_1)^*\diamond_1\vto{w}_1^*=\vto{w}^c_1\cdot(\vto{x}_1+\vto{y}_1)= \vto{w}^c_1\cdot\vto{x}_1+\vto{w}^c_1\cdot\vto{y}_1=\tnr{A}\diamond_1\tnr{W}+\tnr{B}\diamond_1\tnr{W}
 \end{equation*}
 assure linearity of first order contractive products. Now, we shall consider a second order contractive product where $\tnr{A},\tnr{B},\tnr{W}\in\ete{\cam{F}}{W^{\times 2}}$. From the linearity of first order contractive products and property iv on page \pageref{prop:tensorProd}, we have the following development: 
 \begin{align*}
-\tnr{A}\odot_2\tnr{W} + \tnr{B}\odot_2\tnr{W}  & = (\vto{x}_1^*\otimes\vto{x}_2^*) \odot_2(\vto{w}_1^*\otimes\vto{w}_2^*)+(\vto{y}_1^*\otimes\vto{y}_2^*) \odot_2(\vto{w}_1^*\otimes\vto{w}_2^*)\\
+\tnr{A}\diamond_2\tnr{W} + \tnr{B}\diamond_2\tnr{W}  & = (\vto{x}_1^*\otimes\vto{x}_2^*) \diamond_2(\vto{w}_1^*\otimes\vto{w}_2^*)+(\vto{y}_1^*\otimes\vto{y}_2^*) \diamond_2(\vto{w}_1^*\otimes\vto{w}_2^*)\\
 & = (\vto{w}_1^c\cdot\vto{x}_1)(\vto{w}_2^c\cdot\vto{x}_2) + (\vto{w}_1^c\cdot\vto{y}_1)(\vto{w}_2^c\cdot\vto{y}_2)\\
 & = \vto{w}_2^c\cdot(\vto{x}_1\cdot\vto{w}_1^c)\vto{x}_2 + \vto{w}_2^c\cdot(\vto{y}_1\cdot\vto{w}_1^c)\vto{y}_2\\
 & = \vto{w}_2^c\cdot[(\vto{x}_1\cdot\vto{w}_1^c)\vto{x}_2 + (\vto{y}_1\cdot\vto{w}_1^c)\vto{y}_2]\\
-& = [(\vto{x}_1\cdot\vto{w}_1^c)\vto{x}_2 + (\vto{y}_1\cdot\vto{w}_1^c)\vto{y}_2]^*\odot_1\vto{w}_2^*\\
-& = [(\vto{w}_1^c\cdot\vto{x}_1)\vto{x}_2^* + (\vto{w}_1^c\cdot\vto{y}_1)\vto{y}_2^*]\odot_1\vto{w}_2^*\\
-& = [(\vto{x}_2^*\otimes\vto{x}_1^*)\odot_1\vto{w}_1^* + (\vto{y}_2^*\otimes\vto{y}_1^*)\odot_1\vto{w}_1^*]\odot_1\vto{w}_2^*\\
-& = \underbrace{[(\vto{x}_2^*\otimes\vto{x}_1^*) + (\vto{y}_2^*\otimes\vto{y}_1^*)]}_{\vto{u}^*\otimes\vto{v}^*}\odot_1\vto{w}_1^*\odot_1\vto{w}_2^*\\
-& = \vto{v}^*\otimes\vto{u}^*\odot_2\vto{w}_1^*\otimes\vto{w}_2^* \\
-& = [(\vto{x}_1^*\otimes\vto{x}_2^*) + (\vto{y}_1^*\otimes\vto{y}_2^*)]\odot_2\vto{w}_1^*\otimes\vto{w}_2^*\\
-& = (\tnr{A} + \tnr{B})\odot_2\tnr{W}\,.
+& = [(\vto{x}_1\cdot\vto{w}_1^c)\vto{x}_2 + (\vto{y}_1\cdot\vto{w}_1^c)\vto{y}_2]^*\diamond_1\vto{w}_2^*\\
+& = [(\vto{w}_1^c\cdot\vto{x}_1)\vto{x}_2^* + (\vto{w}_1^c\cdot\vto{y}_1)\vto{y}_2^*]\diamond_1\vto{w}_2^*\\
+& = [(\vto{x}_2^*\otimes\vto{x}_1^*)\diamond_1\vto{w}_1^* + (\vto{y}_2^*\otimes\vto{y}_1^*)\diamond_1\vto{w}_1^*]\diamond_1\vto{w}_2^*\\
+& = \underbrace{[(\vto{x}_2^*\otimes\vto{x}_1^*) + (\vto{y}_2^*\otimes\vto{y}_1^*)]}_{\vto{u}^*\otimes\vto{v}^*}\diamond_1\vto{w}_1^*\diamond_1\vto{w}_2^*\\
+& = \vto{v}^*\otimes\vto{u}^*\diamond_2\vto{w}_1^*\otimes\vto{w}_2^* \\
+& = [(\vto{x}_1^*\otimes\vto{x}_2^*) + (\vto{y}_1^*\otimes\vto{y}_2^*)]\diamond_2\vto{w}_1^*\otimes\vto{w}_2^*\\
+& = (\tnr{A} + \tnr{B})\diamond_2\tnr{W}\,.
 \end{align*}
-By the same strategy of this development, we can find $\tnr{W}\odot_2\tnr{A} + \tnr{W}\odot_2\tnr{B}=\tnr{W}\odot_2(\tnr{A} + \tnr{B})$. Therefore, it results that second  order contractive products are also linear. In the case of arbitrary tensors $\tnr{A},\tnr{B},\tnr{W}\in\ete{\cam{F}}{W^{\times p}}$, for any $p>2$, this procedure can also be applied, leading to linearity for higher order contractive products. Linearity for $r,s$ trace can be verified by this procedure as well.  
+By the same strategy of this development, we can find $\tnr{W}\diamond_2\tnr{A} + \tnr{W}\diamond_2\tnr{B}=\tnr{W}\diamond_2(\tnr{A} + \tnr{B})$. Therefore, it results that second  order contractive products are also linear. In the case of arbitrary tensors $\tnr{A},\tnr{B},\tnr{W}\in\ete{\cam{F}}{W^{\times p}}$, for any $p>2$, this procedure can also be applied, leading to linearity for higher order contractive products. Linearity for $r,s$ trace can be verified by this procedure as well.  
 \end{proof}
 }
 
-For the sake of generality, when manipulating contractive products we consider that $\tnr{A}\odot_0\tnr{B}:=\tnr{A}\otimes\tnr{B}$. Moreover, it is trivial to obtain that these type of products are also associative:
-\begin{equation}
-\tnr{A}\odot_p(\tnr{C}\odot_r\tnr{D}) = (\tnr{A}\odot_p\tnr{C})\odot_r\tnr{D}\,,
+From this concept of contractive product, it is now convenient to define a new product that is linear on the first argument and antilinear on the second with an obvious purpose of generalizing the inner product. In order to do this, let's consider the same conditions that led to definition \eqref{eq:ProdTens} and state that the tensor 
+\begin{equation}\label{eq:prodInGen}
+\tnr{A}\odot_p\tnr{B}:=\tnr{A}\diamond_p ((\vto{y}_1^c)^*\otimes\cdots\otimes(\vto{y}_{p}^c)^*\otimes(\vto{b}_1^c)^*\otimes\cdots\otimes(\vto{b}_{n}^c)^*)
 \end{equation}
-where $\tnr{C}\in\ete{\cam{F}}{W^{\times p}\times C^{\times n}\times Z^{\times r}}$ and $\tnr{D}\in\ete{\cam{F}}{Z^{\times r}\times D^{\times s}}$. In the context of Euclidean spaces, it is not unusual to see a first order contractive product of a dyadic tensor and a covector being used to define the so called ``tensor product of vectors''\footnote{See \aut{Gurtin}\cite{gurtin_1981}, p.4; \aut{Truesdell \& Noll}\cite{truesdell_1992}, p.15; \aut{Ogden}\cite{ogden_1997}, p.16.}. Although we shall not adopt this rather obscure concept, its frequent use by renowned authors forces us to clarify it in terms of our rigorous approach as follows. Firstly, since vectors and covectors have a one to one correspondence, these authors inadvertently use the term ``vector'' either as an element of a vector space or as a covector, depending on the context: in $\vto{u}(\vto{v})=\vto{v}\cdot\vto{u}$, for example, $\vto{u}$ is a covector on the left-hand side and a vector on the right. Thereby, they get rid of the burden of defining a covector and all of its preliminary concepts. In this sense, our representation of a dyadic tensor $\vto{u}^*\otimes\vto{v}^*$ is subverted to $\vto{u}\otimes\vto{v}$ and the contractive product operator is suppressed from the precise representation $(\vto{u}^*\otimes\vto{v}^*)\odot_1 \vto{x}^*=(\vto{v}\cdot\vto{x})\vto{u}^*$ in order to avoid defining a contraction and its supporting concepts. Finally, they define the ``tensor product'' $\vto{u}\otimes\vto{v}$ through its effects, that is, as a ``tensor'' which causes $(\vto{u}\otimes\vto{v})\vto{x}=(\vto{v}\cdot\vto{x})\vto{u}$, for an arbitrary $\vto{x}$. Again,  \emph{this pragmatic approach of taking vectors as first order tensors and all of its consequences will not be adopted in this text}. 
+is called the $p$-th order \textsb{generalized inner product} of $\tnr{A}$ and $\tnr{B}$, which is antilinear on the second argument through $\vto{y}_i^*$ and $\vto{b}_i^*$. Thereby, we have
+\begin{equation}
+\tnr{A}\odot_p\tnr{B}=(\prod_{i=1}^p\vto{y}_i\cdot\vto{x}_i)\vto{a}_1^*\otimes\cdots\otimes\vto{a}_{q}^*\otimes(\vto{b}_{1}^c)^*\otimes\cdots\otimes(\vto{b}_n^c)^*\,.
+\end{equation}
+In the context of Euclidean spaces, it is not unusual to see a first order generalized inner product of a dyadic tensor and a covector being used to define the so called ``tensor product of vectors''\footnote{See \aut{Gurtin}\cite{gurtin_1981}, p.4; \aut{Truesdell \& Noll}\cite{truesdell_1992}, p.15; \aut{Ogden}\cite{ogden_1997}, p.16.}. Although we shall not adopt this rather obscure concept, its frequent use by renowned authors forces us to clarify it in terms of our rigorous approach as follows. Firstly, since vectors and covectors have a one to one correspondence, these authors inadvertently use the term ``vector'' either as an element of a vector space or as a covector, depending on the context: in $\vto{u}(\vto{v})=\vto{v}\cdot\vto{u}$, for example, $\vto{u}$ is a covector on the left-hand side and a vector on the right. Thereby, they get rid of the burden of defining a covector and all of its preliminary concepts. In this sense, our representation of a dyadic tensor $\vto{u}^*\otimes\vto{v}^*$ is subverted to $\vto{u}\otimes\vto{v}$ and the contractive product operator is suppressed from our precise representation $(\vto{u}^*\otimes\vto{v}^*)\diamond_1 \vto{x}^*=(\vto{v}\cdot\vto{x})\vto{u}^*$ in order to avoid defining a contraction and its supporting concepts. Finally, they define the ``tensor product'' $\vto{u}\otimes\vto{v}$ through its effects, that is, as a ``tensor'' which causes $(\vto{u}\otimes\vto{v})\vto{x}=(\vto{v}\cdot\vto{x})\vto{u}$, for an arbitrary $\vto{x}$. Again,  \emph{this pragmatic approach of taking vectors as first order tensors and all of its consequences will not be adopted in this text}. 
 
-
-When the order of a contractive product and the order of its terms are equal, the result is a scalar. In this context, considering arbitrary tensors $\tnr{A},\tnr{B}\in\ete{\cam{F}}{U^{\times m}}$, where $\tnr{A}=\vto{a}^*_1\otimes\cdots\otimes\vto{a}^*_m$ and $\tnr{B}=\vto{b}^*_1\otimes\cdots\otimes\vto{b}^*_m$, the scalar
+When the order of a generalized inner product equals the order of its terms, the result is a scalar. In this context, considering arbitrary tensors $\tnr{A},\tnr{B}\in\ete{\cam{F}}{U^{\times m}}$, where $\tnr{A}=\vto{a}^*_1\otimes\cdots\otimes\vto{a}^*_m$ and $\tnr{B}=\vto{b}^*_1\otimes\cdots\otimes\vto{b}^*_m$, the scalar
 \begin{equation}\label{eq:prodIntTens}
-\tnr{A}\cdot\tnr{B}:=\vto{a}^*_1\otimes\cdots\otimes\vto{a}^*_m\,\,\odot_m\,\,(\vto{b}^c_1)^*\otimes\cdots\otimes(\vto{b}^c_m)^*=\prod_{i=1}^m\vto{b}_i\cdot\vto{a}_i
+\tnr{A}\cdot\tnr{B}:=\tnr{A}\odot_m\tnr{B}=\prod_{i=1}^m\vto{b}_i\cdot\vto{a}_i
 \end{equation}
 is called the \textsb{inner product of tensors}\index{inner product!of tensors} $\tnr{A}$ and $\tnr{B}$ because it observes the axioms of ordinary inner products. If an inner product can be defined on the elements of $\ete{\cam{F}}{U^{\times m}}$, then this space results an inner product tensor space. From the above definition, the following interesting equalities are valid:
 \begin{equation}\label{eq:propProdIndTens}
@@ -387,26 +395,37 @@ is called the \textsb{inner product of tensors}\index{inner product!of tensors} 
 
 {\footnotesize
 \begin{proof}
-Let's verify if definition \eqref{eq:prodIntTens} really observes the axioms of inner products (see p. \pageref{prop:produtoInterno}). We do not compromise generality if we assume $\tnr{A},\tnr{B}\in\ete{\cam{F}}{U^{\times 2}}$ in order to shorten expression sizes. Equality $\tnr{A}\cdot\tnr{A}=(\vto{a}_1\cdot\vto{a}_1)(\vto{a}_2\cdot\vto{a}_2)$ assures nonnegativity for the left-hand side since each inner product on the right-hand side is nonnegative. Now, let's say that $(\vto{a}_1\cdot\vto{a}_1)(\vto{a}_2\cdot\vto{a}_2)=0$. If this is true, one of the the inner products on the left-hand side has to be zero. Therefore, according to the axiom of definition of ordinary inner products, vector $\vto{a}_1=\vto{0}$ or vector $\vto{a}_2=\vto{0}$ and as a consequence, $\tnr{A}=\tnr{0}$, according to property i on page \pageref{prop:tensorProd}. Equalities $\tnr{A}\cdot\tnr{B}=(\vto{b}_1\cdot\vto{a}_1)(\vto{b}_2\cdot\vto{a}_2)=\overline{(\vto{a}_1\cdot\vto{b}_1)(\vto{a}_2\cdot\vto{b}_2)}=\overline{\tnr{B}\cdot\tnr{A}}$ show that the inner product of tensors is conjugate symmetric. Finally, according to property ii on page \pageref{prop:tensorProd},  we have equalities
+First we prove that the generalized inner product is indeed antilinear on the second argument through the following equalities:
+\begin{align*}
+\tnr{A}\odot_p\alpha\beta\tnr{B} &=\tnr{A}\,\odot_p\,(\overline{\alpha}\vto{y}_{1})^*\otimes\cdots\otimes(\vto{y}_{p})^*\otimes (\overline{\beta}\vto{b}_1)^*\otimes\cdots\otimes(\vto{b}_{n})^*\\
+&=\tnr{A}\,\diamond_p\,((\overline{\alpha}\vto{y}_{1})^c)^*\otimes\cdots\otimes(\vto{y}_{p}^c)^*\otimes ((\overline{\beta}\vto{b}_1)^c)^*\otimes\cdots\otimes(\vto{b}_{n}^c)^*\\
+&=\tnr{A}\,\diamond_p\,\overline{\alpha}(\vto{y}_{1}^c)^*\otimes\cdots\otimes(\vto{y}_{p}^c)^*\otimes \overline{\beta}(\vto{b}_1^c)^*\otimes\cdots\otimes(\vto{b}_{n}^c)^*\\
+&=\overline{\alpha\beta}(\tnr{A}\odot_p\tnr{B})\,.
+\end{align*}
+Now, let's verify if definition \eqref{eq:prodIntTens} really observes the axioms of inner products (see p. \pageref{prop:produtoInterno}). We do not compromise generality if we assume $\tnr{A},\tnr{B}\in\ete{\cam{F}}{U^{\times 2}}$ in order to shorten expression sizes. Equality $\tnr{A}\cdot\tnr{A}=(\vto{a}_1\cdot\vto{a}_1)(\vto{a}_2\cdot\vto{a}_2)$ assures nonnegativity for the left-hand side since each inner product on the right-hand side is nonnegative. Now, let's say that $(\vto{a}_1\cdot\vto{a}_1)(\vto{a}_2\cdot\vto{a}_2)=0$. If this is true, one of the the inner products on the left-hand side has to be zero. Therefore, according to the axiom of definition of ordinary inner products, vector $\vto{a}_1=\vto{0}$ or vector $\vto{a}_2=\vto{0}$ and as a consequence, $\tnr{A}=\tnr{0}$, according to property i on page \pageref{prop:tensorProd}. Equalities $\tnr{A}\cdot\tnr{B}=(\vto{b}_1\cdot\vto{a}_1)(\vto{b}_2\cdot\vto{a}_2)=\overline{(\vto{a}_1\cdot\vto{b}_1)(\vto{a}_2\cdot\vto{b}_2)}=\overline{\tnr{B}\cdot\tnr{A}}$ show that the inner product of tensors is conjugate symmetric. Finally, according to property ii on page \pageref{prop:tensorProd},  we have equalities
 \begin{align*}
 (\alpha\tnr{A})\cdot(\beta\tnr{B})=&(\overline{\alpha}\vto{a}_1)^*\otimes\vto{a}_2^*\cdot(\overline{\beta}\vto{b}_1)^*\otimes\vto{b}_2^*=\\
 &((\overline{\beta}\vto{b}_1)\cdot(\overline{\alpha}\vto{a}_1))(\vto{b}_2\cdot\vto{a}_2)=\alpha\overline{\beta}(\vto{b}_1\cdot\vto{a}_1)(\vto{b}_2\cdot\vto{a}_2)=\alpha\overline{\beta}\tnr{A}\cdot\tnr{B}
 \end{align*}
-and  development
+and development
 \begin{align*}
 \tnr{A}\cdot\tnr{W} + \tnr{B}\cdot\tnr{W}  & = (\vto{a}_1^*\otimes\vto{a}_2^*) \cdot(\vto{w}_1^*\otimes\vto{w}_2^*)+(\vto{b}_1^*\otimes\vto{b}_2^*) \cdot(\vto{w}_1^*\otimes\vto{w}_2^*)\\
 & = (\vto{w}_1\cdot\vto{a}_1)(\vto{w}_2\cdot\vto{a}_2) + (\vto{w}_1\cdot\vto{b}_1)(\vto{w}_2\cdot\vto{b}_2)\\
 & = \vto{w}_1\cdot(\vto{a}_2\cdot\vto{w}_2)\vto{a}_1 + \vto{w}_1\cdot(\vto{b}_2\cdot\vto{w}_2)\vto{b}_1\\
 & = \vto{w}_1\cdot[(\vto{a}_2\cdot\vto{w}_2)\vto{a}_1+(\vto{b}_2\cdot\vto{w}_2)\vto{b}_1]\\
-& = \vto{w}_1\cdot[(\vto{a}_1^*\otimes\vto{a}_2^*)\odot_1(\vto{w}^c_2)^*+(\vto{b}_1^*\otimes\vto{b}_2^*)\odot_1(\vto{w}^c_2)^*]\\
-& =\vto{w}_1\cdot\{[(\vto{a}_1^*\otimes\vto{a}_2^*)+(\vto{b}_1^*\otimes\vto{b}_2^*)]\odot_1(\vto{w}^c_2)^*\}\\
-& =(\tnr{A}+\tnr{B})\odot_1(\vto{w}^c_2)^*\odot_1(\vto{w}_1^c)^*\\
-& =(\tnr{A}+\tnr{B})\odot_2(\vto{w}^c_1)^*\otimes(\vto{w}^c_2)^*\\
+& = \vto{w}_1\cdot[(\vto{a}_1^*\otimes\vto{a}_2^*)\diamond_1(\vto{w}^c_2)^*+(\vto{b}_1^*\otimes\vto{b}_2^*)\diamond_1(\vto{w}^c_2)^*]\\
+& =\vto{w}_1\cdot\{[(\vto{a}_1^*\otimes\vto{a}_2^*)+(\vto{b}_1^*\otimes\vto{b}_2^*)]\diamond_1(\vto{w}^c_2)^*\}\\
+& =(\tnr{A}+\tnr{B})\diamond_1(\vto{w}^c_2)^*\diamond_1(\vto{w}_1^c)^*\\
+& =(\tnr{A}+\tnr{B})\diamond_2(\vto{w}^c_1)^*\otimes(\vto{w}^c_2)^*\\
 & = (\tnr{A} + \tnr{B})\cdot\tnr{W}\,,
 \end{align*}
 whose strategy can also prove that $\tnr{W}\cdot\tnr{A} + \tnr{W}\cdot\tnr{B}=\tnr{W}\cdot(\tnr{A}+\tnr{B})$. Therefore, the inner product of tensors also observes linearity-antilinearity axioms.
 \end{proof}
 }
+
+
+DESENVOLVER FUNCOES TENSORIAIS INCLUINDO O CONCEITO DE PRODUTO INTERNO GENERALIZADO.
+
 
 Fundamentally speaking, the concept of tensor function, up to now, has enabled us to arrive at dual and inner product tensor spaces from the definitions of linear tensor functional and contractive product respectively. In comparative terms, we are now in a similar situation to that which preceded the essential Riesz-Fréchet Theorem in section \ref{sec:FuncLin}. Then, a very interesting question naturally arises: ``Since a Hilbert tensor space can now be defined, is it possible for each of its tensors to have a corresponding cotensor just like a vector in Hilbert spaces has a covector?'' An affirmative answer to this question would be quite convenient for our purposes because we could properly replace the study of tensors, which are multilinear functionals, with the simpler study of the so called cotensors, defined as linear functionals. In practice, considering a suitable relationship between the values of tensor and cotensor, we could be able to approach Tensor Calculus by working with single variable tensor functions instead of tensors themselves, inherently multivariable. The remaining text of this section shows that the concept of \textsb{cotensor}\index{cotensor} is indeed feasible and a future chapter will deal  with the Calculus of single variable tensor functions.
 
