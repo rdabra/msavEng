@@ -439,65 +439,51 @@ Fundamentally speaking, the concept of tensor function, up to now, has enabled u
 \begin{mteo}{Riesz-Fréchet Representation of Tensors}{repRieszTensor}
 Let 
 \begin{equation*}
-\map{\tnr{\Phi}}{\ete{\cam{F}}{W^{\times p}\times B^{\times n}}}{\evl{\cam{F}}{\ete{\cam{F}}{A^{\times q}\times W^{\times p}}}{\ete{\cam{F}}{A^{\times q}\times B^{\times n}}}}
+\map{\tnr{\Phi}}{\ete{\cam{F}}{W^{\times p}\times A^{\times q}}}{\evl{\cam{F}}{\ete{\cam{F}}{ W^{\times p}}}{\ete{\cam{F}}{A^{\times q}}}}
 \end{equation*}
-be a mapping where the tensor spaces involved are Hilbert spaces. If for every tensor $\tnr{T}\in \ete{\cam{F}}{W^{\times p}\times B^{\times n}}$, a $p$-cotensor  $\tnr{T}^*_p:=\fua{\tnr{\Phi}}{\tnr{T}}$ is described by the rule  
+be a mapping where the tensor spaces involved are Hilbert spaces. If for every tensor $\tnr{T}\in \ete{\cam{F}}{W^{\times p}\times A^{\times q}}$, a $p$-cotensor  $\tnr{T}^*_p:=\fua{\tnr{\Phi}}{\tnr{T}}$ is described by the rule  
 \begin{equation*}
 \fua{\vtf{T}^*_p}{\tnr{X}}=\tnr{X}\odot_p\tnr{T}\,,
 \end{equation*}
-then $\tnr{\Phi}$ is an antilinear bijection. If $\tnr{T}^*_p$ is continuous,  $\|\tnr{T}^*_p\|=\|\tnr{T}\|$.
+then $\tnr{\Phi}$ is an antilinear bijection.
 \end{mteo}
 
 {\footnotesize
 \begin{proof}
-Considering $\tnr{A},\tnr{B}\in\ete{\cam{F}}{W^{\times p}\times B^{\times n}}$, function $\tnr{\Phi}$ is antilinear from the following:
+Considering $\tnr{A},\tnr{B}\in\ete{\cam{F}}{W^{\times p}\times A^{\times q}}$, function $\tnr{\Phi}$ is antilinear from the following:
 \begin{equation*}
 \fua{\lco\fua{\tnr{\Phi}}{\alpha\tnr{A}+\beta\tnr{B}}\rco}{\tnr{X}}=\tnr{X}\odot_p(\alpha\tnr{A}+\beta\tnr{B})=\overline{\alpha}\tnr{A}^*_p(\tnr{X})+\overline{\beta}\tnr{B}^*_p(\tnr{X})=\fua{\lco\overline{\alpha}\fua{\tnr{\Phi}}{\tnr{A}}+\overline{\beta}\fua{\tnr{\Phi}}{\tnr{B}}\rco}{\tnr{X}}\,.
 \end{equation*}
-If $\tnr{\Phi}$ were not an injection, there would be different $p$-cotensors $\tnr{A}^*_p$ and $\tnr{B}^*_p$ where $\tnr{X}\odot_p\tnr{A}=\tnr{X}\odot_p\tnr{B}$. From this supposition, equality $\tnr{X}\odot_p(\tnr{A}-\tnr{B})=\tnr{0}$ do not confirm $\tnr{A}^*_p\neq\tnr{B}^*_p$ because it is valid for arbitrary $\tnr{X}$. In order to prove that $\tnr{\Phi}$ is a surjection, we need to obtain for an arbitrary tensor function $\vtf{\psi}$ a tensor $\vto{A}\in \ete{\cam{F}}{W^{\times p}\times B^{\times n}}$ such that $\fua{\tnr{\Phi}}{\tnr{A}}=\vtf{\psi}$. Considering the same conditions of equality \eqref{eq:coordTensor} and equalities \eqref{eq:propProdIndTens} and betaking what we could call mathematical sagacity, 
+If $\tnr{\Phi}$ were not an injection, there would be different $p$-cotensors $\tnr{A}^*_p$ and $\tnr{B}^*_p$ where $\tnr{X}\odot_p\tnr{A}=\tnr{X}\odot_p\tnr{B}$. From this supposition, equality $\tnr{X}\odot_p(\tnr{A}-\tnr{B})=\tnr{0}$ do not confirm $\tnr{A}^*_p\neq\tnr{B}^*_p$ because it is valid for arbitrary $\tnr{X}$. In order to prove that $\tnr{\Phi}$ is a surjection, we need to obtain for an arbitrary tensor function $\vtf{\psi}\in\evl{\cam{F}}{\ete{\cam{F}}{ W^{\times p}}}{\ete{\cam{F}}{A^{\times q}}}$ a tensor $\vto{A}\in \ete{\cam{F}}{W^{\times p}\times A^{\times q}}$ such that $\fua{\tnr{\Phi}}{\tnr{A}}=\vtf{\psi}$. Betaking a strategy that we could call mathematical sagacity, let's consider a tensor 
+\begin{equation*}
+\tnr{A}=\sum_{i_1=1}^{n_1}\cdots\sum_{i_p=1}^{n_p}\vtf{f}_{i_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{i_p}^{B_p}\otimes\fua{\vtf{\psi}}{\vtf{f}_{i_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{i_p}^{B_p}}
+\end{equation*}
+where polyadic tensors are defined by orthonormal bases according to theorem \ref{teo:geraEte}. Thereby, we can write the following development:
 \begin{align*}
-\fua{\vtf{\psi}}{\tnr{X}}&=\fua{[\sum_{i_1=1}^{n_1}\cdots\sum_{i_m=1}^{n_m}\alpha_{i_1\cdots i_m}\vtf{f}_{i_1\cdots i_m}^{B}]}{\tnr{X}}\\&=\sum_{i_1=1}^{n_1}\cdots\sum_{i_m=1}^{n_m}\alpha_{i_1\cdots i_m}\fua{\tnr{X}}{\vto{u}_{i_1}^{(1)},\cdots,\vto{u}_{i_m}^{(m)}}\\
-&=\sum_{i_1=1}^{n_1}\cdots\sum_{i_m=1}^{n_m}\alpha_{i_1\cdots i_m}\tnr{X}\cdot(\vtf{f}_{i_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{i_m}^{B_m})\\
-&=\tnr{X}\cdot\underbrace{(\sum_{i_1=1}^{n_1}\cdots\sum_{i_m=1}^{n_m}\overline{\alpha_{i_1\cdots i_m}}\vtf{f}_{i_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{i_m}^{B_m})}_{\tnr{A}}\\
-&=\tnr{X}\odot_{q+p}\tnr{A}\\
-\\&=[\fua{\tnr{\Phi}}{\tnr{A}}](\tnr{X})\,.
+[\fua{\tnr{\Phi}}{\tnr{A}}](\tnr{X})&=\tnr{X}\odot_p\tnr{A}\\
+&=(\sum_{j_1=1}^{n_1}\cdots\sum_{j_p=1}^{n_p}\vtf{f}_{j_1\cdots j_p}^{B}(\tnr{X})\vtf{f}_{j_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{j_p}^{B_p})\odot_p\tnr{A}\\
+&=\sum_{j_1=1}^{n_1}\cdots\sum_{j_p=1}^{n_p}\sum_{i_1=1}^{n_1}\cdots\sum_{i_p=1}^{n_p}\vtf{f}_{j_1\cdots j_p}^{B}(\tnr{X})\prod_{k=1}^p\underbrace{\vun{u}_{i_k}^{(k)}\cdot\vun{u}_{j_k}^{(k)}}_{\delta_{i_kj_k}}\fua{\vtf{\psi}}{\vtf{f}_{i_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{i_p}^{B_p}}\\
+&=\sum_{j_1=1}^{n_1}\cdots\sum_{j_p=1}^{n_p}\vtf{f}_{j_1\cdots j_p}^{B}(\tnr{X})\fua{\vtf{\psi}}{\vtf{f}_{j_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{j_p}^{B_p}}\\
+&=\tnr{\psi}(\sum_{j_1=1}^{n_1}\cdots\sum_{j_p=1}^{n_p}\vtf{f}_{j_1\cdots j_p}^{B}(\tnr{X})\vtf{f}_{j_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{j_p}^{B_p})=\fua{\vtf{\psi}}{\tnr{X}}\,.
 \end{align*}
-Using definition \eqref{eq:normaFuncaoTens} on the present conditions, leaving space representation on norms implicit, we obtain equality $\|\tnr{A}^*\|=\sup\{ |\tnr{X}\cdot\tnr{A}|/\|\tnr{X}\|\}$ for all non zero $\tnr{X}$. If $\tnr{A}$ is zero, it is evident that $\|\tnr{A}^*\|=\|\tnr{A}\|$; otherwise, $\tnr{A}^*$ is non zero and we conclude that $\|\tnr{A}^*\|\geqslant |\, \tnr{X}\cdot\tnr{A}|/\|\tnr{X}\|$. Cauchy-Schwarz Inequality states that $|\, \tnr{X}\cdot\tnr{A}| \leqslant \|\tnr{X}\|\,\,\|\tnr{A}\|$. Subtracting these two previous inequalities, we arrive at $(\|\tnr{A}^*\|-\|\tnr{A}\|)\|\tnr{X}\|\geqslant 0$, whose left side can be zero for arbitrary non zero $\tnr{A}^*$, $\tnr{A}$ and $\tnr{X}$; therefore, $\|\tnr{A}^*\|=\|\tnr{A}\|$.    
-	\end{proof}
+\end{proof}
 }
 
-
-
-%---------------------------------------------
-
-
-\begin{mteo}{Riesz-Fréchet Representation of Tensors}{repRieszTensor}
-Let $\map{\tnr{\Phi}}{\ete{\cam{F}}{A^{\times q}\times W^{\times p}}}{\eted{\cam{F}}{U^{\times m}}}$ be a mapping where $\ete{\cam{F}}{U^{\times m}}$ is a Hilbert tensor space and $\eted{\cam{F}}{U^{\times m}}$ its dual space. If for every $\tnr{T}\in \ete{\cam{F}}{U^{\times m}}$, a cotensor  $\tnr{T}^*:=\fua{\tnr{\Phi}}{\tnr{T}}$ is described by the rule  
+\begin{mcoro}{Cotensors}{eqNorm}
+If mapping $\map{\tnr{\Phi}}{\ete{\cam{F}}{W^{\times p}}}{\eted{\cam{F}}{W^{\times p}}}$ is considered, the rule of tensor functional $\tnr{T}^*:=\tnr{T}^*_p$, called the cotensor of $\tnr{T}$, results
 \begin{equation*}
 \fua{\vtf{T}^*}{\tnr{X}}=\tnr{X}\cdot\tnr{T}\,,
 \end{equation*}
-then $\tnr{\Phi}$ is an antilinear bijection. If $\tnr{T}^*$ is continuous,  $\|\tnr{T}^*\|_{\eted{\cam{F}}{U^{\times m}}}=\|\tnr{T}\|_{\ete{\cam{F}}{U^{\times m}}}$.
-\end{mteo}
-
+and when $\tnr{T}^*$ is continuous, $\|\tnr{T}^*\|_{\eted{\cam{F}}{W^{\times p}}}=\|\tnr{T}\|_{\ete{\cam{F}}{W^{\times p}}}$.
+\end{mcoro}
 {\footnotesize
 \begin{proof}
-Considering $\tnr{A},\tnr{B}\in\ete{\cam{F}}{U^{\times m}}$, function $\tnr{\Phi}$ is antilinear from the following equalities:
-\begin{equation*}
-\fua{\lco\fua{\tnr{\Phi}}{\alpha\tnr{A}+\beta\tnr{B}}\rco}{\tnr{X}}=\tnr{X}\cdot(\alpha\tnr{A}+\beta\tnr{B})\cdot=\overline{\alpha}\tnr{A}^*(\tnr{X})+\overline{\beta}\tnr{B}^*(\tnr{X})=\fua{\lco\overline{\alpha}\fua{\tnr{\Phi}}{\tnr{A}}+\overline{\beta}\fua{\tnr{\Phi}}{\tnr{B}}\rco}{\tnr{X}}\,.
-\end{equation*}
-If $\tnr{\Phi}$ were not an injection, there would be different cotensors $\tnr{A}^*$ and $\tnr{B}^*$ where $\fua{\tnr{A}^*}{\tnr{X}}=\fua{\tnr{B}^*}{\tnr{X}}$ or $\tnr{X}\cdot\tnr{A}=\tnr{X}\cdot\tnr{B}$. From this supposition, the following equalities $(\tnr{A}-\tnr{B})\cdot\tnr{X}=\fua{(\tnr{A}-\tnr{B})^*}{\tnr{X}}=0$ do not confirm $\tnr{A}^*\neq\tnr{B}^*$ since $(\tnr{A}-\tnr{B})^*=\tnr{A}^*-\tnr{B}^*$. In order to prove that $\tnr{\Phi}$ is a surjection, we need to obtain for an arbitrary functional $\vtf{\psi}\in \eted{\cam{F}}{U^{\times m}}$ a tensor $\vto{A}\in \ete{\cam{F}}{U^{\times m}}$ such that $\fua{\tnr{\Phi}}{\tnr{A}}=\vtf{\psi}$.
-Considering the same conditions of equality \eqref{eq:coordTensor} and equalities \eqref{eq:propProdIndTens}, we can say that
-\begin{align*}
-\fua{\vtf{\psi}}{\tnr{X}}&=\fua{[\sum_{i_1=1}^{n_1}\cdots\sum_{i_m=1}^{n_m}\alpha_{i_1\cdots i_m}\vtf{f}_{i_1\cdots i_m}^{B}]}{\tnr{X}}\\&=\sum_{i_1=1}^{n_1}\cdots\sum_{i_m=1}^{n_m}\alpha_{i_1\cdots i_m}\fua{\tnr{X}}{\vto{u}_{i_1}^{(1)},\cdots,\vto{u}_{i_m}^{(m)}}\\
-&=\sum_{i_1=1}^{n_1}\cdots\sum_{i_m=1}^{n_m}\alpha_{i_1\cdots i_m}\tnr{X}\cdot(\vtf{f}_{i_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{i_m}^{B_m})\\
-&=\tnr{X}\cdot\underbrace{(\sum_{i_1=1}^{n_1}\cdots\sum_{i_m=1}^{n_m}\overline{\alpha_{i_1\cdots i_m}}\vtf{f}_{i_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{i_m}^{B_m})}_{\tnr{A}}\\&=[\fua{\tnr{\Phi}}{\tnr{A}}](\tnr{X})\,.
-\end{align*}
-Using definition \eqref{eq:normaFuncaoTens} on the present conditions, leaving space representation on norms implicit, we obtain equality $\|\tnr{A}^*\|=\sup\{ |\tnr{X}\cdot\tnr{A}|/\|\tnr{X}\|\}$ for all non zero $\tnr{X}$. If $\tnr{A}$ is zero, it is evident that $\|\tnr{A}^*\|=\|\tnr{A}\|$; otherwise, $\tnr{A}^*$ is non zero and we conclude that $\|\tnr{A}^*\|\geqslant |\, \tnr{X}\cdot\tnr{A}|/\|\tnr{X}\|$. Cauchy-Schwarz Inequality states that $|\, \tnr{X}\cdot\tnr{A}| \leqslant \|\tnr{X}\|\,\,\|\tnr{A}\|$. Subtracting these two previous inequalities, we arrive at $(\|\tnr{A}^*\|-\|\tnr{A}\|)\|\tnr{X}\|\geqslant 0$, whose left side can be zero for arbitrary non zero $\tnr{A}^*$, $\tnr{A}$ and $\tnr{X}$; therefore, $\|\tnr{A}^*\|=\|\tnr{A}\|$.    
+The verification of previous theorem is not compromised by the conditions of this corollary. Now, let`s prove the equality of norms. Using definition \eqref{eq:normaFuncaoTens} on the present conditions, leaving space representation on norms implicit, we obtain equality $\|\tnr{A}^*\|=\sup\{ |\tnr{X}\cdot\tnr{A}|/\|\tnr{X}\|\}$ for all non zero $\tnr{X}$. If $\tnr{A}$ is zero, it is evident that $\|\tnr{A}^*\|=\|\tnr{A}\|$; otherwise, $\tnr{A}^*$ is non zero and we conclude that $\|\tnr{A}^*\|\geqslant |\, \tnr{X}\cdot\tnr{A}|/\|\tnr{X}\|$. Cauchy-Schwarz Inequality states that $|\, \tnr{X}\cdot\tnr{A}| \leqslant \|\tnr{X}\|\,\,\|\tnr{A}\|$. Subtracting these two previous inequalities, we arrive at $(\|\tnr{A}^*\|-\|\tnr{A}\|)\|\tnr{X}\|\geqslant 0$, whose left side can be zero for arbitrary non zero $\tnr{A}^*$, $\tnr{A}$ and $\tnr{X}$; therefore, $\|\tnr{A}^*\|=\|\tnr{A}\|$.    
 \end{proof}
 }
 
 
-Considering the conditions of this Riesz-Fréchet Representation of Tensors and a function space $\cam{F}^V_\cam{F}$, where the set $V=\ete{\cam{F}}{U^{\times m}}$, let $\frt{T}\in \cam{F}^V_\cam{F}$ be an antilinear tensor functional described by the rule  
+Considering the conditions of this last corollary and a function space $\cam{F}^V_\cam{F}$, where the set $V=\ete{\cam{F}}{U^{\times m}}$, let $\frt{T}\in \cam{F}^V_\cam{F}$ be an antilinear tensor functional described by the rule  
 \begin{equation}
 \fua{\frt{T}}{\tnr{X}} = \overline{\fua{\vtf{T}^*}{\tnr{X}}}=\tnr{T}\cdot\tnr{X}\,,
 \end{equation}
@@ -505,7 +491,7 @@ whose existence and uniqueness are straightforward consequences of the theorem i
 \begin{equation*}
 \fua{\frt{T}}{\vto{x}_1^*\otimes\cdots\otimes\vto{x}_m^*} = \tnr{T}\cdot(\vto{x}_1^*\otimes\cdots\otimes\vto{x}_m^*)=\fua{\tnr{T}}{\vto{x}_1,\cdots,\vto{x}_m}\,,
 \end{equation*}
-where $\frt{T}$ results a \emph{substitute function} of tensor $\tnr{T}$ since their values are the same when variables $\vto{x}_i\in (U_i)_\cam{F}$ are arranged as above. Now, it is possible to study tensors through their conjugate cotensors, which substitute them numerically.
+where $\frt{T}$ results a \textsb{substitute function}\index{function!substitute} of tensor $\tnr{T}$ since their values are the same when variables $\vto{x}_i\in (U_i)_\cam{F}$ are arranged as above. Now, it is possible to study tensors through their conjugate cotensors, which substitute them numerically.
 
 
 
