@@ -227,11 +227,26 @@ from which we conclude $\tnr{P}=\alpha\tnr{H}$, that is, $\{\tnr{H}\}$ is a basi
 \end{proof}
 }
 
-Additionally to symmetric and antisymmetric, there is another notable tensor that will enable very important concepts for our study, like isotropy and anti-isotropy for example: I'm referring to the identity tensor, which is defined in tensor spaces of even order. We call \gloref{tensorI}$\,\in\ete{\cam{F}}{V^{\times p}\times V^{\times p}}$ an \textsb{identity tensor}\index{tensor!identity} of order $2p$ if, given  a basis $B_i=\{\vto{v}_1^{(i)},\cdots,\vto{v}_{n_i}^{(i)}\}$ of $(V_\cam{F})_i$, scalars       
+Additionally to symmetric and antisymmetric, there is another notable tensor that will enable very important concepts for our study, like isotropy and anti-isotropy for example: I'm referring to the identity tensor, which is defined in tensor spaces of even order. We call \gloref{tensorI}$\,\in\ete{\cam{F}}{V^{\times p}\times V^{\times p}}$ an \textsb{identity tensor}\index{tensor!identity} of order $2p$ if, considering $\vto{x}_i$ and $\vto{y}_i$ arbitrary vectors of Hilbert spaces $(V_\cam{F})_i$, scalars 
  \begin{equation}
- \fua{\tnr{I}}{\vto{v}_{i_1}^{(1)},\cdots,\vto{v}_{i_p}^{(p)},\vto{v}_{j_1}^{(1)},\cdots,\vto{v}_{j_p}^{(p)}}=\prod_{k=1}^p \delta_{i_kj_k}\,.
+ \fua{\tnr{I}}{\vto{x}_{1},\cdots,\vto{x}_{p},\vto{y}_{1},\cdots,\vto{y}_{p}}=\prod_{k=1}^p \vto{x}_k\cdot\vto{y}_k\,.
  \end{equation}
-From this definition, considering $\vto{x}_i$ and $\vto{y}_i$ arbitrary vectors of $(V_\cam{F})_i$, we can write scalar $\fua{\tnr{I}}{\vto{x}_1,\cdots,\vto{x}_p,\vto{y}_1,\cdots,\vto{y}_p}$ in the format 
+From this definition, given bases $B_i=\{\vto{v}_1^{(i)},\cdots,\vto{v}_{n_i}^{(i)}\}$ of $(V_\cam{F})_i$, 
+\begin{equation}\label{eq:identidade}
+\fua{\tnr{I}}{\vto{x}_1,\cdots,\vto{x}_p,\vto{y}_1,\cdots,\vto{y}_p}=\sum_{{i_1}=1}^{n_1}\cdots\sum_{{i_p}=1}^{n_p}\,\prod_{k=1}^p\fua{\vtf{f}^\con{B_k}_{i_k}}{\vto{x}_k}\overline{\fua{\vtf{f}^\con{B^\perp_k}_{i_k}}{\vto{y}_k}}\,,
+\end{equation}
+according to \eqref{eq:prodIntGen}. From the definition of tensor product, we can consider 
+\begin{equation}
+\tnr{I}=\sum_{{i_1}=1}^{n_1}\cdots\sum_{{i_p}=1}^{n_p}\vtf{f}_{i_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{i_p}^{B_p}\otimes\overline{\vtf{f}_{i_1}^{B^\perp_1}}\otimes\cdots\otimes\overline{\vtf{f}_{i_p}^{B^\perp_p}}
+\end{equation}
+as an example of identity tensor. Moreover, in the context of tensor spaces $\ete{\cam{F}}{V^2}$, where $p=1$, defined by Euclidean spaces, we already know that, if basis $B_1$ is orthonormal, equality $\sum_{{i_1}=1}^{n_1}\fua{\vtf{f}^\con{B_1}_{i_1}}{\vto{x}_1}\fua{\vtf{f}^\con{B_1}_{i_1}}{\vto{y}_1}=\vto{x}_1\cdot\vto{y}_1$ is valid, that is, expression \eqref{eq:identidade} results $\fua{\tnr{I}}{\vto{x}_1,\vto{y}_1}=\vto{x}_1\cdot\vto{y}_1$ and  
+\begin{equation}
+\tnr{I}=\sum_{{i_1}=1}^{n_1}\vun{v}_{i_1}\otimes\vun{v}_{i_1}=\sum_{{i_1}=1}^{n_1}\sum_{{j_1}=1}^{n_1}\delta_{i_1j_1}\vun{v}_{i_1}\otimes\vun{v}_{j_1}
+\end{equation}
+is an example of identity tensor of second order. From the last expression of these equalities, the coordinates of $\tnr{I}$ can be arranged in an identity matrix. 
+
+
+considering $\vto{x}_i$ and $\vto{y}_i$ arbitrary vectors of $(V_\cam{F})_i$, we can write scalar $\fua{\tnr{I}}{\vto{x}_1,\cdots,\vto{x}_p,\vto{y}_1,\cdots,\vto{y}_p}$ in the format 
 \begin{equation*}
 \sum_{{i_1,j_1}=1}^{n_1}\cdots\sum_{{i_p,j_p}=1}^{n_p}\fua{\vtf{f}^\con{B_1}_{i_1}}{\vto{x}_1}\fua{\vtf{f}^\con{B_1}_{j_1}}{\vto{y}_1}\cdots\fua{\vtf{f}^\con{B_p}_{i_p}}{\vto{x}_p}\fua{\vtf{f}^\con{B_p}_{j_p}}{\vto{y}_p}\prod_{k=1}^p \delta_{i_kj_k}\,,
 \end{equation*}
