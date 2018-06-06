@@ -228,16 +228,18 @@ from which we conclude $\tnr{P}=\alpha\tnr{H}$, that is, $\{\tnr{H}\}$ is a basi
 }
 
 Additionally to symmetric and antisymmetric, there is another notable tensor that will enable very important concepts for our study, like isotropy and anti-isotropy for example: I'm referring to the identity tensor, which is defined in tensor spaces of even order. We call \gloref{tensorI}$\,\in\ete{\cam{F}}{V^{\times p}\times V^{\times p}}$ an \textsb{identity tensor}\index{tensor!identity} of order $2p$ if, considering $\vto{x}_i$ and $\vto{y}_i$ arbitrary vectors of  $(V_\cam{F})_i$, scalar 
- \begin{equation}
- \fua{\tnr{I}}{\vto{x}_{1},\cdots,\vto{x}_{p},\vto{y}_{1},\cdots,\vto{y}_{p}}:=\prod_{k=1}^p \vto{x}_k\cdot\vto{y}_k^c\,.
- \end{equation}
-From this definition, if $(V_\cam{F})_i$ is a Hilbert space and $B_i=\{\vto{v}_1^{(i)},\cdots,\vto{v}_{n_i}^{(i)}\}$ one of its basis, the following is valid: 
 \begin{equation}\label{eq:identidade}
-\fua{\tnr{I}}{\vto{x}_1,\cdots,\vto{x}_p,\vto{y}_1,\cdots,\vto{y}_p}=\sum_{{i_1}=1}^{n_1}\cdots\sum_{{i_p}=1}^{n_p}\,\prod_{k=1}^p\fua{\vtf{f}^\con{B_k}_{i_k}}{\vto{x}_k}\fua{\overline{\vtf{f}^\con{B^\perp_k}_{i_k}}}{\vto{y}_k}\,,
+\fua{\tnr{I}}{\vto{x}_{1},\cdots,\vto{x}_{p},\vto{y}_{1}^c,\cdots,\vto{y}_{p}^c}=\prod_{k=1}^p \vto{x}_k\cdot\vto{y}_k\,.
 \end{equation}
-according to \eqref{eq:prodIntGen}. From the definition of tensor product, we can consider 
+From this definition, if $(V_\cam{F})_i$ is a Hilbert space and $B_i=\{\vun{v}_1^{(i)},\cdots,\vun{v}_{n_i}^{(i)}\}$ one of its orthonormal bases, the following is valid for $\alpha=\fua{\tnr{I}}{\vto{x}_1,\cdots,\vto{x}_p,\vto{y}_1,\cdots,\vto{y}_p}$: 
+\begin{align*}
+\alpha&=\sum_{{i_1}=1}^{n_1}\cdots\sum_{{i_p}=1}^{n_p}\sum_{{j_1}=1}^{n_1}\cdots\sum_{{j_p}=1}^{n_p}\prod_{k=1}^p\fua{\vtf{f}^\con{B_k}_{i_k}}{\vto{x}_k}\fua{\overline{\vtf{f}^\con{B_k}_{j_k}}}{\vto{y}_k}\fua{\tnr{I}}{\vun{v}_{i_1}^{(1)},\cdots,\vun{v}_{i_p}^{(p)},{{\vun{v}_{j_1}}}^{c(1)},\cdots,\vun{v}_{j_p}^{c(p)}}\\
+&=\sum_{{i_1}=1}^{n_1}\cdots\sum_{{i_p}=1}^{n_p}\sum_{{j_1}=1}^{n_1}\cdots\sum_{{j_p}=1}^{n_p}\prod_{k=1}^p\fua{\vtf{f}^\con{B_k}_{i_k}}{\vto{x}_k}\fua{\overline{\vtf{f}^\con{B_k}_{j_k}}}{\vto{y}_k}\delta_{i_1j_1}\cdots\delta_{i_pj_p}\\
+&=\sum_{{i_1}=1}^{n_1}\cdots\sum_{{i_p}=1}^{n_p}\prod_{k=1}^p\fua{\vtf{f}^\con{B_k}_{i_k}}{\vto{x}_k}\fua{\overline{\vtf{f}^\con{B_k}_{i_k}}}{\vto{y}_k}\,,
+\end{align*}
+considering equalities \eqref{eq:decompVectConj}. Thereby, from the definition of tensor product, we can consider tensor 
 \begin{equation}
-\tnr{I}=\sum_{{i_1}=1}^{n_1}\cdots\sum_{{i_p}=1}^{n_p}\vtf{f}_{i_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{i_p}^{B_p}\otimes\overline{\vtf{f}_{i_1}^{B^\perp_1}}\otimes\cdots\otimes\overline{\vtf{f}_{i_p}^{B^\perp_p}}
+\tnr{I}=\sum_{{i_1}=1}^{n_1}\cdots\sum_{{i_p}=1}^{n_p}\vtf{f}_{i_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{i_p}^{B_p}\otimes\overline{\vtf{f}_{i_1}^{B_1}}\otimes\cdots\otimes\overline{\vtf{f}_{i_p}^{B_p}}
 \end{equation}
 as an example of identity tensor. Moreover, in the context of tensor spaces $\ete{\cam{F}}{V^2}$, where $p=1$, defined by Euclidean spaces, we already know that, if basis $B_1$ is orthonormal, equality $\sum_{{i_1}=1}^{n_1}\fua{\vtf{f}^\con{B_1}_{i_1}}{\vto{x}_1}\fua{\vtf{f}^\con{B_1}_{i_1}}{\vto{y}_1}=\vto{x}_1\cdot\vto{y}_1$ is valid, that is, expression \eqref{eq:identidade} results $\fua{\tnr{I}}{\vto{x}_1,\vto{y}_1}=\vto{x}_1\cdot\vto{y}_1$ and  
 \begin{equation}
@@ -328,7 +330,7 @@ where $\vto{x}_{r}^c$ belongs to $\overline{{X_r}_\cam{F}}$. In other words, the
 \trt{r}{s} \tnr{X}=(\vto{x}_{s}^c\cdot\vto{x}_{r})\,\vto{x}_1^*\otimes\cdots\otimes\vto{x}_{r-1}^*\otimes\vto{x}_{r+1}^*
 \otimes\cdots\otimes\vto{x}_{s-1}^*\otimes\vto{x}_{s+1}^*\otimes\cdots\otimes\vto{x}_m^*\,.
 \end{equation}
-It is important to observe that the product $\vto{x}_{r}^c\cdot\vto{x}_{s}$ is antilinear also on the left term since  $\vtf{c}_2$ has $\vto{x}_{r}$ as one of its arguments\footnote{See property \eqref{eq:antiLinConjVect}.}. Moreover, in the context of Euclidean spaces, from equalities \eqref{eq:prodIntGen} and \eqref{eq:identidade}, we can write that $\vto{x}_{s}^c\cdot\vto{x}_{r}=\vto{x}_{s}\cdot\vto{x}_{r}\,$. 
+It is important to observe that the product $\vto{x}_{r}^c\cdot\vto{x}_{s}$ is antilinear also on the left term since  $\vtf{c}_2$ has $\vto{x}_{r}$ as one of its arguments\footnote{See property \eqref{eq:antiLinConjVect}.}. Moreover, in the context of Euclidean spaces, from equality \eqref{eq:prodIntGen}, we can write that $\vto{x}_{s}^c\cdot\vto{x}_{r}=\vto{x}_{s}\cdot\vto{x}_{r}\,$. 
 
 Since the contraction that follows will take part in the majority of forthcoming definitions in this chapter, it is more relevant than the $r,s$ trace for the purposes of our study. In order to define this important contraction using conditions above, let's consider that $X^{\times m}=A^{\times q}\times W^{\times p}\times W^{\times p}\times B^{\times n}$,
 where $m=q+2p+n$, tensor $\tnr{A}:=\vto{a}_1^*\otimes\cdots\otimes\vto{a}_{q}^*\otimes\vto{x}_1^*\otimes\cdots\otimes\vto{x}_{p}^*$ belongs to tensor space $\ete{\cam{F}}{A^{\times q}\times W^{\times p}}$ and tensor $\tnr{B}:=\vto{y}_1^*\otimes\cdots\otimes\vto{y}_{p}^*\otimes\vto{b}_1^*\otimes\cdots\otimes\vto{b}_{n}^*$ belongs to $\ete{\cam{F}}{W^{\times p}\times B^{\times n}}$. When 
@@ -388,11 +390,11 @@ is called the \textsb{inner product of tensors}\index{inner product!of tensors} 
 \begin{equation}\label{eq:propProdIndTens}
 \tnr{A}\cdot \tnr{B}=\prod_{i=1}^m\fua{\vto{a}_i^*}{\vto{b}_i}=\fua{\tnr{A}}{\vto{b}_1,\cdots,\vto{b}_m}\,.
 \end{equation}     
-Moreover, if the tensor space in question has an even order $m=2q$, we can write  
+Moreover, if the tensor space in question $\ete{\cam{F}}{U^{\times m}}=\ete{\cam{F}}{V^{\times q}\otimes V^{\times q}}$, the product
 \begin{equation}
-\tnr{I}\cdot \tnr{B}=\fua{\tnr{I}}{\vto{b}_1,\cdots,\vto{b}_m}= \prod_{i=1}^q\vto{b}_i\cdot\vto{b}_{i+q}\,.
+\tnr{I}\cdot \tnr{B}=\fua{\tnr{I}}{\vto{b}_1,\cdots,\vto{b}_m}= \prod_{i=1}^q\vto{b}_i\cdot\vto{b}_{i+q}^c\,,
 \end{equation}   
-
+according to \eqref{eq:identidade}.
 {\footnotesize
 \begin{proof}
 First we prove that the generalized inner product is indeed antilinear on the second argument through the following equalities:
