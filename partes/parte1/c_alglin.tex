@@ -401,7 +401,15 @@ from which we obtain the following rule that assures the existence of coordinate
 \begin{equation}\label{eq:regraCoord}
 \fua{\vtf{f}^{\hat{B}}_i}{\vto{x}}=\vto{x}\cdot\vun{u}_i\,.
 \end{equation}
-
+Still in this context, for orthonormal basis vectors, it is important to point out that 
+\begin{equation}\label{eq:orthoConju}
+\vun{u}_j^c\cdot\vun{u}_i^c=\vun{u}_j\cdot\vun{u}_i^c=\delta_{ji}\,.
+\end{equation}
+{\footnotesize
+\begin{proof}
+We'll prove only the second equality of this expression. Multiplying $\vun{u}_j\cdot\vun{u}_i=\delta_{ji}$ by $\alpha$ we have $\vun{u}_j\cdot\overline{\alpha}\vun{u}_i=\vun{u}_j\cdot\alpha\vun{u}_i^c=\overline{\alpha}\vun{u}_j\cdot\vun{u}_i^c=\alpha\delta_{ji}$ and by $\overline{\alpha}$ we arrive at $\alpha\vun{u}_j\cdot\vun{u}_i^c=\overline{\alpha}\delta_{ji}$. When $j\neq i$, it is obvious that $\alpha$ cannot be zero. If $j=i$, we obtain that $\vun{u}_j\cdot\vun{u}_i^c=\alpha/ \overline{\alpha}=\overline{\alpha}/\alpha$, and then $\alpha=\overline{\alpha}$.  
+\end{proof}
+}
 
 
 Considering a complete vector space $V_\cam{F}$, the linear function space $\evl{\cam{F}}{V}{\cam{F}}$ is said to be the \textsb{dual space}\index{space!dual} of $V_\cam{F}$, represented by $V^*_\cam{F}$, whose elements are called the \textsb{dual vectors}\index{vector!dual} of $V_\cam{F}$. Intuitively, a dual vector is a scalar measure of vectors that keeps the structure of its domain unaltered; a feature that the norm, being a scalar measure, does not assure, since it is a non linear functional. The coordinate functional $\vtf{f}^\con{B}_{i}$, in turn, is indeed a dual vector and, in a certain way, ``measures'' its argument in relation to the $i$-th vector of basis $B$, when we call the value of this measure a coordinate. As already presented, in the context of orthonormal bases, the measurement of a coordinate functional is expressed through the projective interrelationship between its argument and a basis vector, that is, the inner product of both. A subset 
@@ -423,7 +431,7 @@ $U^*_\cam{F}$ its dual space. If for every $\vto{u}\in U_\cam{F}$, a covector  \
 \end{equation*}
 then $\Phi$ results an antilinear bijection. When $\vto{u}^*$ is continuous,  $\|\vto{u}^*\|_{U^*_\cam{F}}=\|\vto{u}\|_{U_\cam{F}}$.
 \end{mteo}
-
+\hspace{1pt}
 {\footnotesize
 \begin{proof}
 Considering $\vto{u}$ and $\vto{v}$ vectors of $U_\cam{F}$, function $\Phi$ is antilinear from the following equalities:
