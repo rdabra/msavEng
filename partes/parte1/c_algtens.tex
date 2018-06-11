@@ -1,18 +1,18 @@
 \chapter{Tensor Algebra}
 
 
-Continuing our study of Linear Algebra, whose foundations we presented in the previous chapter, let's deal now with something a bit more sophisticated, although extremely useful for describing physical phenomena concerning deformable bodies. The form and the content which we shall present about this topic differs from the usual approach available in the literature of Continuum Mechanics, where the concept of tensor arises suddenly, out of nowhere, and through simplistic definitions. Formally, we shall proceed the same way as we have been doing so far, in a continuous flow of successively dependent concepts, and present tensors as ordinary elements of a vector space; on the content realm, we shall not restrict ourselves to the strictly necessary, typical of pragmatic approaches, since our objective, in this and the next chapter, is to provide the reader with a generous framework of concepts related to tensors, mainly because of their mathematical beauty and also because of their wide application. 
+Continuing our study of Linear Algebra, whose foundations we presented in the previous chapter, let's deal now with something a bit more sophisticated, although extremely useful for describing physical phenomena concerning deformable bodies. The form and the content which we shall present about this topic differs from the usual approach available in the literature of Continuum Mechanics, where the concept of tensor arises suddenly, out of nowhere, and through simplistic definitions. Formally, we shall proceed the same way as we have been doing so far, in a continuous flow of successively dependent concepts, and present tensors as ordinary elements of a vector space; on the content realm, we shall not restrict ourselves to the strictly necessary, typical of pragmatic approaches, since our objective, in this and the next chapter, is to provide the reader with a generous framework of concepts related to tensors, mainly because of their mathematical beauty and also because of their wide application.
 
 
 \section{A Very Short History of Tensors}
 
-The word ``tensor'' was used for the first time in Mathematics in 1846 by \aut{Hamilton}\cite{hamilton_1846_1} in order to designate the modulus of numbers that he called quaternions, which are a generalization of complex numbers. In 1881, \aut{Gibbs}\cite{gibbs_1881} introduced the notion of dyad as being an ``undefined product'' of two vectors, starting, in a rather obscure way, the concept that nowadays we understand as tensor product. Since the term ``tensor'' has the latin word \emph{tendere}, which means ``to stretch'', as its etymological origin, \aut{Voigt}\cite{voigt_1898_1} adopted a meaning closer to the current mechanical approach, when he used tensor to designate the combination of a vector measure, representing the forces and stretches involved, with another vector measure, normal to the surface in question.        
+The word ``tensor'' was used for the first time in Mathematics in 1846 by \aut{Hamilton}\cite{hamilton_1846_1} in order to designate the modulus of numbers that he called quaternions, which are a generalization of complex numbers. In 1881, \aut{Gibbs}\cite{gibbs_1881} introduced the notion of dyad as being an ``undefined product'' of two vectors, starting, in a rather obscure way, the concept that nowadays we understand as tensor product. Since the term ``tensor'' has the latin word \emph{tendere}, which means ``to stretch'', as its etymological origin, \aut{Voigt}\cite{voigt_1898_1} adopted a meaning closer to the current mechanical approach, when he used tensor to designate the combination of a vector measure, representing the forces and stretches involved, with another vector measure, normal to the surface in question.
 
-At the end of XIX century, after ten years conceiving his ``Absolute Differential Calculus'', the italian mathematician Gregorio Ricci-Curbastro(1853-1925) published a seminal paper entitled \emph{Méthodes de Calcul Différentiel Absolu et Leurs Applications}\footnote{See \aut{Ricci \& Levi-Civita}\cite{ricci_1900_1} and \aut{Hermann}\cite{hermann_1975}.}, together with his pupil  Tullio Levi-Civita(1873-1941), in which they established the foundations of what is known today as Tensor Analysis. In this work, a tensor or ``system'', as they called, is a measure that arises from the coefficients of polynomials like     
+At the end of XIX century, after ten years conceiving his ``Absolute Differential Calculus'', the italian mathematician Gregorio Ricci-Curbastro(1853-1925) published a seminal paper entitled \emph{Méthodes de Calcul Différentiel Absolu et Leurs Applications}\footnote{See \aut{Ricci \& Levi-Civita}\cite{ricci_1900_1} and \aut{Hermann}\cite{hermann_1975}.}, together with his pupil  Tullio Levi-Civita(1873-1941), in which they established the foundations of what is known today as Tensor Analysis. In this work, a tensor or ``system'', as they called, is a measure that arises from the coefficients of polynomials like
 \begin{equation*}
 \sum_{i_1=1}^n\cdots\sum_{i_m=1}^n\underbrace{{(\alpha_1)}_{i_1}\cdots{(\alpha_m)}_{i_m}}_{\mat{A}_{i_1\cdots i_m}} {(x_1)}_{i_1}\cdots {(x_m)}_{i_m}\,,
 \end{equation*}
-where  $n\times\cdots \times n$ ($n$ times) array $\mat{A}$ represents this measure numerically. Moreover, the values of such polynomials must be immune to changes of variables, that is,  
+where  $n\times\cdots \times n$ ($n$ times) array $\mat{A}$ represents this measure numerically. Moreover, the values of such polynomials must be immune to changes of variables, that is,
 \begin{equation*}
 \sum_{i_1=1}^n\cdots\sum_{i_m=1}^n\mat{A}_{i_1\cdots i_m} {(x_1)}_{i_1}\cdots {(x_m)}_{i_m}=
 \sum_{i_1=1}^n\cdots\sum_{i_m=1}^n\mat{B}_{i_1\cdots i_m} {(y_1)}_{i_1}\cdots {(y_m)}_{i_m}\,,
@@ -25,17 +25,17 @@ from which the transformation law
 \begin{equation*}
 \mat{A}_{i_1\cdots i_m}=\sum_{j_1=1}^n\cdots\sum_{j_m=1}^n\mat{C}_{j_1i_1}\cdots\mat{C}_{j_mi_m}\mat{B}_{j_1\cdots j_m}
 \end{equation*}
-can be obtained. Similarly to vector measures, a tensor must have such an abstraction level that its definition results independent of the choice of variables, that is, in expressions above, the tensor represented by $\mat{A}$ is the same tensor represented by $\mat{B}$. Thereby, in rather generic terms, a tensor was initially seen as an abstract measure that arises from the interaction of different sets of variables, arranged in an scalar-valued expression of linear character. 
+can be obtained. Similarly to vector measures, a tensor must have such an abstraction level that its definition results independent of the choice of variables, that is, in expressions above, the tensor represented by $\mat{A}$ is the same tensor represented by $\mat{B}$. Thereby, in rather generic terms, a tensor was initially seen as an abstract measure that arises from the interaction of different sets of variables, arranged in an scalar-valued expression of linear character.
 
-Ricci's Tensor Calculus was presented by the hungarian mathematician Marcel Grossman(1878-1936) to his old school fellow Albert Einstein(1879-1955). When Einstein was developing his General Theory of Relativity, Grossman used to update him with the most recent mathematical tools available; in this case, non Euclidean geometry. During his work, Einstein noticed that there is not a preferred reference frame, inertial or not, that describes a certain physical phenomenon more adequately, that is, changes of frame do not promote qualitative modification on the description of phenomena. Since a tensor is immune to changes of variables, its use became a rather convenient mathematical tool for enabling the theory, in a concise and elegant development. About this tool and its mathematical foundations, \aut{Einstein}\cite{einstein_1915_1} wrote the following compliment: \emph{The charm of this theory will hardly scape from anyone who really understands it; it means the real triumph of the methodology of Absolute Differential Calculus, established by GAUSS, RIEMANN, CHRISTOFFEL, RICCI and LEVI-CIVITA}\footnote{Translated by me from the original \emph{Dem Zauber dieser Theorie wird sich kaum jemand entziehen können, der sie wirklich erfaßt hat; sie bedeutet einen wahren Triumph der durch GAUSS, RIEMANN, CHRISTOFFEL, RICCI und LEVI-CIVITER begründeten Methode des allgemeinen Differentialkalkuls}.}. From then on, Tensor Analysis raised to prominence: its development intensified and its application spread out to other branches of Mathematical Physics, of which Continuum Mechanics is the most relevant example.  
+Ricci's Tensor Calculus was presented by the hungarian mathematician Marcel Grossman(1878-1936) to his old school fellow Albert Einstein(1879-1955). When Einstein was developing his General Theory of Relativity, Grossman used to update him with the most recent mathematical tools available; in this case, non Euclidean geometry. During his work, Einstein noticed that there is not a preferred reference frame, inertial or not, that describes a certain physical phenomenon more adequately, that is, changes of frame do not promote qualitative modification on the description of phenomena. Since a tensor is immune to changes of variables, its use became a rather convenient mathematical tool for enabling the theory, in a concise and elegant development. About this tool and its mathematical foundations, \aut{Einstein}\cite{einstein_1915_1} wrote the following compliment: \emph{The charm of this theory will hardly scape from anyone who really understands it; it means the real triumph of the methodology of Absolute Differential Calculus, established by GAUSS, RIEMANN, CHRISTOFFEL, RICCI and LEVI-CIVITA}\footnote{Translated by me from the original \emph{Dem Zauber dieser Theorie wird sich kaum jemand entziehen können, der sie wirklich erfaßt hat; sie bedeutet einen wahren Triumph der durch GAUSS, RIEMANN, CHRISTOFFEL, RICCI und LEVI-CIVITER begründeten Methode des allgemeinen Differentialkalkuls}.}. From then on, Tensor Analysis raised to prominence: its development intensified and its application spread out to other branches of Mathematical Physics, of which Continuum Mechanics is the most relevant example.
 
 
 \section{Tensor Spaces}
 
 
-Let's recall vector spaces of functions that have a tuple of vectors as argument, that is, functions whose domain is a cartesian product of many sets, each one defining a vector space. Among these function spaces, we have a particular interest in those constituted by multilinear functions, on the conditions presented in section \ref{sec:FuncLin}. In order to proceed with the theory, based on the framework already studied, we chose to adopt an approach that takes tensor spaces as vector spaces of multilinear functionals, called tensors. In more mathematical terms, given a cartesian product $U^{\times m}$ where each set $U_i$ defines a finite dimensional vector space $(U_i)_\cam{F}$, a function space $\evl{\cam{F}}{U^{\times m}}{\cam{F}}$, constituted by multilinear functionals, is said to be a \textsb{tensor space}\index{space!tensor} of \textsb{order}\index{order!of tensor space} $m$, whose representation is here shortened by \gloref{espacoTens}, and each functional $\vtf{t}\in\ete{\cam{F}}{U^{\times m}}$ is said to be a \textsb{tensor}\index{tensor} of \textsb{order}\index{order!tensor} $m$, represented by \gloref{tensor}. In the particular case of $m=1$, a tensor space is considered to be a dual space, that is, $\ete{\cam{F}}{U}=U^*_\cam{F}$, where a tensor is a linear functional. Moreover, as any other vector space, a tensor space $\ete{\cam{F}}{U^{\times m}}$ has its \textsb{conjugate tensor space}\index{tensor space!conjugate} \gloref{espacoTensConj}, whose arbitrary element is represented by \gloref{tensorConj} where $\alpha\tnr{T}^c=\overline{\alpha}\tnr{T}$ for all $\alpha\in\cam{F}$ according to what was presented in section \ref{sec:espacoVet} for vector spaces. 
+Let's recall vector spaces of functions that have a tuple of vectors as argument, that is, functions whose domain is a cartesian product of many sets, each one defining a vector space. Among these function spaces, we have a particular interest in those constituted by multilinear functions, on the conditions presented in section \ref{sec:FuncLin}. In order to proceed with the theory, based on the framework already studied, we chose to adopt an approach that takes tensor spaces as vector spaces of multilinear functionals, called tensors. In more mathematical terms, given a cartesian product $U^{\times m}$ where each set $U_i$ defines a finite dimensional vector space $(U_i)_\cam{F}$, a function space $\evl{\cam{F}}{U^{\times m}}{\cam{F}}$, constituted by multilinear functionals, is said to be a \textsb{tensor space}\index{space!tensor} of \textsb{order}\index{order!of tensor space} $m$, whose representation is here shortened by \gloref{espacoTens}, and each functional $\vtf{t}\in\ete{\cam{F}}{U^{\times m}}$ is said to be a \textsb{tensor}\index{tensor} of \textsb{order}\index{order!tensor} $m$, represented by \gloref{tensor}. In the particular case of $m=1$, a tensor space is considered to be a dual space, that is, $\ete{\cam{F}}{U}=U^*_\cam{F}$, where a tensor is a linear functional. Moreover, as any other vector space, a tensor space $\ete{\cam{F}}{U^{\times m}}$ has its \textsb{conjugate tensor space}\index{tensor space!conjugate} \gloref{espacoTensConj}, whose arbitrary element is represented by \gloref{tensorConj} where $\alpha\tnr{T}^c=\overline{\alpha}\tnr{T}$ for all $\alpha\in\cam{F}$ according to what was presented in section \ref{sec:espacoVet} for vector spaces.
 
-It is possible to build particular tensor spaces from catersian powers together with dual spaces: a tensor space $\ete{\cam{F}}{V^{p}\times {V^*}^{q}}$, represented by \gloref{espacoTensTipo}, where $V^*_\cam{F}$ is the dual space of $V_\cam{F}$, is said to have a \textsb{contravariant order}\index{order!contravariant} $p$ and a \textsb{covariant order}\index{order!covariant} $q$ or we can call it a type $(p,q)$ tensor space. Moreover, a tensor can be defined from the dual spaces of its constituent vector spaces, that is, a linear functional in each vector space $(U_i^*)_\cam{F}$ defines a multilinear functional (tensor) in $\ete{\cam{F}}{U^{\times m}}$. Let's see how this happens. The tuple $(\vtf{g}_1,\cdots,\vtf{g}_m)$, which is an element of cartesian product $(U^*)^{\times m}=U^*_1\times\cdots\times U^*_m$, specifies a tensor in $\ete{\cam{F}}{U^{\times m}}$ when the following rule is defined: 
+It is possible to build particular tensor spaces from catersian powers together with dual spaces: a tensor space $\ete{\cam{F}}{V^{p}\times {V^*}^{q}}$, represented by \gloref{espacoTensTipo}, where $V^*_\cam{F}$ is the dual space of $V_\cam{F}$, is said to have a \textsb{contravariant order}\index{order!contravariant} $p$ and a \textsb{covariant order}\index{order!covariant} $q$ or we can call it a type $(p,q)$ tensor space. Moreover, a tensor can be defined from the dual spaces of its constituent vector spaces, that is, a linear functional in each vector space $(U_i^*)_\cam{F}$ defines a multilinear functional (tensor) in $\ete{\cam{F}}{U^{\times m}}$. Let's see how this happens. The tuple $(\vtf{g}_1,\cdots,\vtf{g}_m)$, which is an element of cartesian product $(U^*)^{\times m}=U^*_1\times\cdots\times U^*_m$, specifies a tensor in $\ete{\cam{F}}{U^{\times m}}$ when the following rule is defined:
 \begin{equation}
 \fua{\tnr{G}}{\vto{x}_1,\cdots,\vto{x}_m}=\prod_{i=1}^m\fua{\vtf{g}_i}{\vto{x}_i}\,,
 \end{equation}
@@ -59,21 +59,21 @@ $\tnr{U}\otimes\lpa\tnr{V}+\tnr{W}\rpa=\tnr{U}\otimes\tnr{V}+\tnr{U}\otimes\tnr{
 \item[vii.] Conjugacy:
 $(\tnr{U}\otimes\tnr{V})^c=\tnr{U}^c\otimes\tnr{V}=\tnr{U}\otimes\tnr{V}^c$
 \end{itemize}
-are valid properties for all $\alpha,\beta\in\cam{F}$ and  $\tnr{U},\tnr{U}_i,\tnr{V},\tnr{V}_i,\tnr{W}\in\ete{\cam{F}}{U^{\times m}}$. Moreover, the following theorem states that a set of specific polyadic tensors, defined by tuples of coordinate functionals, is able to span a tensor space. 
+are valid properties for all $\alpha,\beta\in\cam{F}$ and  $\tnr{U},\tnr{U}_i,\tnr{V},\tnr{V}_i,\tnr{W}\in\ete{\cam{F}}{U^{\times m}}$. Moreover, the following theorem states that a set of specific polyadic tensors, defined by tuples of coordinate functionals, is able to span a tensor space.
 
 \begin{mteo}{Basis of Polyadic Tensors}{geraEte}
-Given a tensor space $\ete{\cam{F}}{U^{\times m}}$ and a basis $B_i=\{\vto{u}_1^{(i)},\cdots,\vto{u}_{n_i}^{(i)}\}$ of each constituent vector space $(U_i)_\cam{F}$, $i=1,\cdots,m\,$, the set $B$ of all polyadic tensors $\vtf{f}_{j_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{j_m}^{B_m}$ is a basis of $\ete{\cam{F}}{U^{\times m}}$, where coordinate functionals $\vtf{f}_{j_i}^{B_i}\in (U_i)_\cam{F}^*$, $j_i=1,\cdots,n_i\,$. 
+Given a tensor space $\ete{\cam{F}}{U^{\times m}}$ and a basis $B_i=\{\vto{u}_1^{(i)},\cdots,\vto{u}_{n_i}^{(i)}\}$ of each constituent vector space $(U_i)_\cam{F}$, $i=1,\cdots,m\,$, the set $B$ of all polyadic tensors $\vtf{f}_{j_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{j_m}^{B_m}$ is a basis of $\ete{\cam{F}}{U^{\times m}}$, where coordinate functionals $\vtf{f}_{j_i}^{B_i}\in (U_i)_\cam{F}^*$, $j_i=1,\cdots,n_i\,$.
 \end{mteo}
 
 {\footnotesize
 \begin{proof}
-Firstly, concerning the above properties of tensor products, the first six can be verified from the definition \eqref{eq:prodTens} and from trivial addition and scalar multiplication properties. The last property is actually a corollary of the second: if we consider that $\tnr{T}=\tnr{U}\otimes\tnr{V}$ in equality $\alpha\tnr{T}^c=\overline{\alpha}\tnr{T}$, we can write that $\alpha(\tnr{U}\otimes\tnr{V})^c=\overline{\alpha}\tnr{U}\otimes\tnr{V}=\alpha\tnr{U}^c\otimes\tnr{V}$ or that $\alpha(\tnr{U}\otimes\tnr{V})^c=\tnr{U}\otimes(\overline{\alpha}\tnr{V})=\alpha\tnr{U}\otimes\tnr{V}^c$. Concerning the theorem, we need to prove previously that if equalities $\tnr{T}_1({\vto{u}_{j_1}^{(1)},\cdots,\vto{u}_{j_m}^{(m)}})={\tnr{T}_2}(\vto{u}_{j_1}^{(1)},\cdots,\vto{u}_{j_m}^{(m)})$, where $\tnr{T}_1,\tnr{T}_2\in\ete{\cam{F}}{U^{\times m}}$, are valid, it results that $\tnr{T}_1=\tnr{T}_2$. In order to do that, we can say that 
+Firstly, concerning the above properties of tensor products, the first six can be verified from the definition \eqref{eq:prodTens} and from trivial addition and scalar multiplication properties. The last property is actually a corollary of the second: if we consider that $\tnr{T}=\tnr{U}\otimes\tnr{V}$ in equality $\alpha\tnr{T}^c=\overline{\alpha}\tnr{T}$, we can write that $\alpha(\tnr{U}\otimes\tnr{V})^c=\overline{\alpha}\tnr{U}\otimes\tnr{V}=\alpha\tnr{U}^c\otimes\tnr{V}$ or that $\alpha(\tnr{U}\otimes\tnr{V})^c=\tnr{U}\otimes(\overline{\alpha}\tnr{V})=\alpha\tnr{U}\otimes\tnr{V}^c$. Concerning the theorem, we need to prove previously that if equalities $\tnr{T}_1({\vto{u}_{j_1}^{(1)},\cdots,\vto{u}_{j_m}^{(m)}})={\tnr{T}_2}(\vto{u}_{j_1}^{(1)},\cdots,\vto{u}_{j_m}^{(m)})$, where $\tnr{T}_1,\tnr{T}_2\in\ete{\cam{F}}{U^{\times m}}$, are valid, it results that $\tnr{T}_1=\tnr{T}_2$. In order to do that, we can say that
 \begin{align*}
 \tnr{T}_1(\vto{x}_1,\cdots,\vto{x}_m)&=\sum_{{j_1}=1}^{n_1}\cdots\sum_{{j_m}=1}^{n_m}\fua{\vtf{f}^\con{B_1}_{j_1}}{\vto{x}_1}\cdots\fua{\vtf{f}^\con{B_m}_{j_m}}{\vto{x}_m}\tnr{T}_1({\vto{u}_{j_1}^{(1)},\cdots,\vto{u}_{j_m}^{(m)}})\\
 &=\sum_{{j_1}=1}^{n_1}\cdots\sum_{{j_m}=1}^{n_m}\fua{\vtf{f}^\con{B_1}_{j_1}}{\vto{x}_1}\cdots\fua{\vtf{f}^\con{B_m}_{j_m}}{\vto{x}_m}\tnr{T}_2({\vto{u}_{j_1}^{(1)},\cdots,\vto{u}_{j_m}^{(m)}})\\
 &=\tnr{T}_2(\vto{x}_1,\cdots,\vto{x}_m)\,,
 \end{align*}
-from which we conclude $\tnr{T}_1=\tnr{T}_2$. Now, let $\tnr{T}\in\ete{\cam{F}}{U^{\times m}}$ be a tensor where scalars $\beta_{i_1\cdots i_m}=\tnr{T}({\vto{u}_{i_1}^{(1)},\cdots,\vto{u}_{i_m}^{(m)}})$ define a tensor 
+from which we conclude $\tnr{T}_1=\tnr{T}_2$. Now, let $\tnr{T}\in\ete{\cam{F}}{U^{\times m}}$ be a tensor where scalars $\beta_{i_1\cdots i_m}=\tnr{T}({\vto{u}_{i_1}^{(1)},\cdots,\vto{u}_{i_m}^{(m)}})$ define a tensor
 \begin{equation*}
 \tnr{X}=\sum_{{i_1}=1}^{n_1}\cdots\sum_{{i_m}=1}^{n_m}\beta_{i_1\cdots i_m}\vtf{f}_{i_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{i_m}^{B_m}\,.
 \end{equation*}
@@ -81,11 +81,11 @@ Thus we can write the following:
 \begin{equation*}
 \tnr{X}({\vto{u}_{j_1}^{(1)},\cdots,\vto{u}_{j_m}^{(m)}}) = \sum_{{i_1}=1}^{n_1}\cdots\sum_{{i_m}=1}^{n_m}\beta_{i_1\cdots i_m}\prod_{k=1}^m\delta_{i_kj_k}=\beta_{j_1\cdots j_m}=\tnr{T}({\vto{u}_{j_1}^{(1)},\cdots,\vto{u}_{j_m}^{(m)}})\,.
 \end{equation*}
-Such equalities enable us to conclude that $\tnr{X}=\tnr{T}$ and then $\spn{(B)}=\ete{\cam{F}}{U^{\times m}}$, since $\tnr{T}$ is an arbitrary tensor of $\ete{\cam{F}}{U^{\times m}}$. Now we need to verify that if $B$ is linearly independent. This is true when coefficients $\alpha_{i_1\cdots i_m}$ of the linear combination 
+Such equalities enable us to conclude that $\tnr{X}=\tnr{T}$ and then $\spn{(B)}=\ete{\cam{F}}{U^{\times m}}$, since $\tnr{T}$ is an arbitrary tensor of $\ete{\cam{F}}{U^{\times m}}$. Now we need to verify that if $B$ is linearly independent. This is true when coefficients $\alpha_{i_1\cdots i_m}$ of the linear combination
 \begin{equation*}
 \sum_{{i_1}=1}^{n_1}\cdots\sum_{{i_m}=1}^{n_m}\alpha_{i_1\cdots i_m}\vtf{f}_{i_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{i_m}^{B_m}=\tnr{0}
 \end{equation*}
-are zero, which can be verified through the following development:  
+are zero, which can be verified through the following development:
 \begin{align*}
 \sum_{{i_1}=1}^{n_1}\cdots\sum_{{i_m}=1}^{n_m}\alpha_{i_1\cdots i_m}\vtf{f}_{i_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{i_m}^{B_m}({\vto{u}_{j_1}^{(1)},\cdots,\vto{u}_{j_m}^{(m)}})&=\tnr{0}({\vto{u}_{j_1}^{(1)},\cdots,\vto{u}_{j_m}^{(m)}})\\
 \sum_{{i_1}=1}^{n_1}\cdots\sum_{{i_m}=1}^{n_m}\alpha_{i_1\cdots i_m}\prod_{k=1}^m\delta_{i_kj_k}&=0\\
@@ -94,42 +94,42 @@ are zero, which can be verified through the following development:
 \end{proof}
 }
 
-In the context of the above theorem, it can be noted that the number of poly\-adic tensors $\vtf{f}_{j_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{j_m}^{B_m}$ of basis $B$ is given by 
+In the context of the above theorem, it can be noted that the number of poly\-adic tensors $\vtf{f}_{j_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{j_m}^{B_m}$ of basis $B$ is given by
 $n_1\cdots n_m$. Moreover, from the previous chapter, we already know that a vector space and its dual have the same dimension, that is, $\dim ((U_i)_\cam{F})=\dim ((U_i^*)_\cam{F})$. Thereby, we can state that the dimension of tensor space $\ete{\cam{F}}{U^{\times m}}$ is the product of dimensions of each of vector spaces $(U_i)_\cam{F}$. In other words,
 \begin{equation}
 \dim (\ete{\cam{F}}{U^{\times m}}) = \prod_{i=1}^m \dim ((U_i)_\cam{F})\,.
 \end{equation}
-Like any other basis of a vector space, each element of basis $B$ of tensor space $\ete{\cam{F}}{U^{\times m}}$ also have a related coordinate functional, here represented by $\vtf{f}_{j_1\cdots j_m}^{B}$. Thereby, given an arbitrary tensor $\tnr{T}\in\ete{\cam{F}}{U^{\times m}}$, the tuple constituted by scalars $\vtf{f}_{j_1\cdots j_m}^{B}(\tnr{T})$, $j_i=1,\cdots,n_i\,$ is said to be the coordinates of $\tnr{T}$ on $B$. Using this definition, tensor $\tnr{T}$ can be described by expression 
+Like any other basis of a vector space, each element of basis $B$ of tensor space $\ete{\cam{F}}{U^{\times m}}$ also have a related coordinate functional, here represented by $\vtf{f}_{j_1\cdots j_m}^{B}$. Thereby, given an arbitrary tensor $\tnr{T}\in\ete{\cam{F}}{U^{\times m}}$, the tuple constituted by scalars $\vtf{f}_{j_1\cdots j_m}^{B}(\tnr{T})$, $j_i=1,\cdots,n_i\,$ is said to be the coordinates of $\tnr{T}$ on $B$. Using this definition, tensor $\tnr{T}$ can be described by expression
 \begin{equation}\label{eq:tensCoord}
 \tnr{T} = \sum_{k_1=1}^{n_1}\cdots\sum_{k_m=1}^{n_m} \vtf{f}_{k_1\cdots k_m}^{B}(\tnr{T})\,\vtf{f}_{k_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{k_m}^{B_m}\,,
 \end{equation}
-from which the equalities   
+from which the equalities
 \begin{equation*}
 \fua{\tnr{T}}{\vto{u}_{j_1}^{(1)},\cdots,\vto{u}_{j_m}^{(m)}} = \sum_{k_1=1}^{n_1}\cdots\sum_{k_m=1}^{n_m}\vtf{f}_{k_1\cdots k_m}^{B}(\tnr{T})\,\prod_{i=1}^m \fua{\vtf{f}_{k_i}^{B_i}}{\vto{u}_{j_i}^{(i)}}=\vtf{f}_{j_1\cdots j_m}^{B}(\tnr{T})
 \end{equation*}
-enable to define the following rule for coordinate functionals on basis $B$: 
+enable to define the following rule for coordinate functionals on basis $B$:
 \begin{equation}\label{eq:regraCoordTens}
 \vtf{f}_{j_1\cdots j_m}^{B}(\tnr{X})= \fua{\tnr{X}}{\vto{u}_{j_1}^{(1)},\cdots,\vto{u}_{j_m}^{(m)}}\,.
 \end{equation}
-In type $(p,q)$ tensor spaces, the coordinates of a tensor $\tnr{V}\in\ete{\cam{F}}{V^{(p,q)}}$ are defined by scalars usually represented by 
+In type $(p,q)$ tensor spaces, the coordinates of a tensor $\tnr{V}\in\ete{\cam{F}}{V^{(p,q)}}$ are defined by scalars usually represented by
 \begin{equation}
 (\vtf{f}^{Z})^{j_1\cdots j_p}_{k_1\cdots k_q}(\tnr{V}),\,\, j_i,k_l=1,\cdots,n\,,
 \end{equation}
-where $Z$ is a basis of $\ete{\cam{F}}{V^{(p,q)}}$, $i=1,\cdots,p$ and $l=1,\cdots,q\,\,$. The superscript indexes $j_i$ are related to space $V_\cam{F}$ of vectors whose coordinates are contravariant and the subscript indexes $k_l$ related to ${V}_\cam{F}^*$ of vectors whose coordinates are covariant. Tensors are called  \textsb{covariant}\index{tensor!covariant} or \textsb{contravariant}\index{tensor!contravariant} when they exclusively have covariant or contravariant indexes respectively and called \textsb{mixed}\index{tensor!mixed} when they have both. For $(p,q)$ tensor spaces, given a basis $W=\{\vto{w}_{1},\cdots,\vto{w}_{n}\}$ of $V_\cam{F}$, rule \eqref{eq:regraCoordTens} for coordinate functionals results   
+where $Z$ is a basis of $\ete{\cam{F}}{V^{(p,q)}}$, $i=1,\cdots,p$ and $l=1,\cdots,q\,\,$. The superscript indexes $j_i$ are related to space $V_\cam{F}$ of vectors whose coordinates are contravariant and the subscript indexes $k_l$ related to ${V}_\cam{F}^*$ of vectors whose coordinates are covariant. Tensors are called  \textsb{covariant}\index{tensor!covariant} or \textsb{contravariant}\index{tensor!contravariant} when they exclusively have covariant or contravariant indexes respectively and called \textsb{mixed}\index{tensor!mixed} when they have both. For $(p,q)$ tensor spaces, given a basis $W=\{\vto{w}_{1},\cdots,\vto{w}_{n}\}$ of $V_\cam{F}$, rule \eqref{eq:regraCoordTens} for coordinate functionals results
 \begin{equation}
 (\vtf{f}^{Z})^{j_1\cdots j_p}_{k_1\cdots k_q}(\tnr{X})=\fua{\tnr{X}}{\vto{w}_{j_1},\cdots,\vto{w}_{j_p},\vtf{f}_{k_1}^{W},\cdots,\vtf{f}_{k_q}^{W}}\,,
 \end{equation}
 where bases  $W^*=\{\vtf{f}_{1}^{W},\cdots,\vtf{f}_{n}^{W}\}$ of $V_\cam{F}^*$ and $W^{**}=\{\vtf{f}_{1}^{W^*},\cdots,\vtf{f}_{n}^{W^*}\}$ of $V_\cam{F}^{**}$ define basis $Z$, in such a way that its elements have the format
 \begin{equation}
 \vtf{f}_{j_1}^{W}\otimes\cdots\otimes\vtf{f}_{j_p}^{W}\otimes\vtf{f}_{k_1}^{W^*}\otimes\cdots\otimes\vtf{f}_{k_q}^{W^*}\,,
-\end{equation} 
+\end{equation}
 according to theorem \ref{teo:geraEte}. In the context of Hilbert spaces, from the schematic figure \ref{fg:espacoDual}, we can affirm that $\vtf{f}_{j_i}^{W}=(\vto{w}^{j_i})^*$ and $\vtf{f}_{k_i}^{W^*}=(\vtf{f}^{W})^{k_i}=\vtf{f}_{k_i}^{W^\perp}=\vto{w}_{k_i}^*$. Thereby, the elements of $Z$ in this case have the classic format
 \begin{equation}
 (\vto{w}^{j_1})^*\otimes\cdots\otimes(\vto{w}^{j_p})^*\otimes\vto{w}_{k_1}^*\otimes\cdots\otimes\vto{w}_{k_q}^*\,.
-\end{equation} 
+\end{equation}
 
 
-Since we just learned the rule to obtain the coordinates of a tensor on a certain basis, let's see how these coordinates behave when there is a change of basis. In the context of theorem \ref{teo:geraEte}, let $C_i=\{\vto{v}_1^{(i)},\cdots,\vto{v}_{n_i}^{(i)}\}$ be a basis of each vector space $(U_i)_\cam{F}$ and $\maf{\vtf{i}}{C_i}{B_i}$ a matrix that changes basis $B_i$ to basis $C_i$. From the rule \eqref{eq:regraCoordTens}, given a tensor 
+Since we just learned the rule to obtain the coordinates of a tensor on a certain basis, let's see how these coordinates behave when there is a change of basis. In the context of theorem \ref{teo:geraEte}, let $C_i=\{\vto{v}_1^{(i)},\cdots,\vto{v}_{n_i}^{(i)}\}$ be a basis of each vector space $(U_i)_\cam{F}$ and $\maf{\vtf{i}}{C_i}{B_i}$ a matrix that changes basis $B_i$ to basis $C_i$. From the rule \eqref{eq:regraCoordTens}, given a tensor
 $\tnr{T}\in\ete{\cam{F}}{U^{\times m}}$, we can develop the following:
 \begin{align}
 \fua{\vtf{f}_{j_1\cdots j_m}^{C}}{\tnr{T}}&=\fua{\tnr{T}}{\vto{v}_{j_1}^{(1)},\cdots,\vto{v}_{j_m}^{(m)}}  \nonumber\\
@@ -137,34 +137,34 @@ $\tnr{T}\in\ete{\cam{F}}{U^{\times m}}$, we can develop the following:
 &=\sum_{k_1=1}^{n_1}\cdots\sum_{k_m=1}^{n_m} \vtf{f}_{k_1\cdots k_m}^{B}(\tnr{T})\,\prod_{i=1}^m\fua{\vtf{f}_{k_i}^{B_i}}{\vto{v}_{j_i}^{(i)}}\nonumber\\
 &=\sum_{k_1=1}^{n_1}\cdots\sum_{k_m=1}^{n_m} \vtf{f}_{k_1\cdots k_m}^{B}(\tnr{T})\,\prod_{i=1}^m\maf{\vtf{i}}{C_i}{B_i}_{k_ij_i}\,,
 \end{align}
-from which the last equality describes a change of coordinates of tensor $\tnr{T}$ from basis $B$ to basis $C$. Through this same process, it is possible to change the coordinates of a type $(p,q)$ tensor.  
+from which the last equality describes a change of coordinates of tensor $\tnr{T}$ from basis $B$ to basis $C$. Through this same process, it is possible to change the coordinates of a type $(p,q)$ tensor.
 
 \begin{comment}
-Considering a tensor space $\ete{\cam{F}}{U^{\times m}}$, if its definer vector spaces $(U_i)_\cam{F}$ are Hilbert spaces, we can lay hands on the biunivocal relationship between elements $\vtf{f}_{j_i}^{B_i}$ of each dual basis $B_i^*$ and elements $(\vto{u}^{(i)})^{j_i}$ of each reciprocal basis $B^\perp_{i}$, as a consequence of Riesz-Fréchet Representation. Thereby, the polyadic tensors of basis $B$ are represented by 
+Considering a tensor space $\ete{\cam{F}}{U^{\times m}}$, if its definer vector spaces $(U_i)_\cam{F}$ are Hilbert spaces, we can lay hands on the biunivocal relationship between elements $\vtf{f}_{j_i}^{B_i}$ of each dual basis $B_i^*$ and elements $(\vto{u}^{(i)})^{j_i}$ of each reciprocal basis $B^\perp_{i}$, as a consequence of Riesz-Fréchet Representation. Thereby, the polyadic tensors of basis $B$ are represented by
 \begin{equation}\label{eq:poliadicoHilbert}
 \vto{u}^{(1)}_{j_1}\otimes\cdots\otimes\vto{u}^{(m)}_{j_m}:=((\vto{u}^{(1)})^{j_1})^*\otimes\cdots\otimes((\vto{u}^{(m)})^{j_m})^*
 \end{equation}
-in order to simplify notation. If the constituent bases $B_i$ are orthonormal, then $B_i=B_i^\perp$ and  $((\vto{u}^{(i)})^{j_i})^*=(\vto{u}^{(i)}_{j_i})^*$ in the above definition. 
+in order to simplify notation. If the constituent bases $B_i$ are orthonormal, then $B_i=B_i^\perp$ and  $((\vto{u}^{(i)})^{j_i})^*=(\vto{u}^{(i)}_{j_i})^*$ in the above definition.
 \end{comment}
 
-A consequence of describing an arbitrary tensor $\tnr{T}$ as a linear combination of polyadic tensor elements of a certain basis is the possibility to arrange its coordinates in such a way that $\tnr{T}$ results an additive decomposition of polyadic tensors. In order to obtain this, let's betake the property of multiplication by scalars of tensor products\footnote{See p. \pageref{prop:TensMultScalar}.} and ``move'', during the $k_i$-th sum in \eqref{eq:tensCoord}, the coordinates $\vtf{f}_{k_1\cdots k_i\cdots k_m}^{B}(\tnr{T})$ to multiply the coordinate functional $\vtf{f}_{k_i}^{B_i}$ of the $i$-th polyadic basis tensor, resulting in       
+A consequence of describing an arbitrary tensor $\tnr{T}$ as a linear combination of polyadic tensor elements of a certain basis is the possibility to arrange its coordinates in such a way that $\tnr{T}$ results an additive decomposition of polyadic tensors. In order to obtain this, let's betake the property of multiplication by scalars of tensor products\footnote{See p. \pageref{prop:TensMultScalar}.} and ``move'', during the $k_i$-th sum in \eqref{eq:tensCoord}, the coordinates $\vtf{f}_{k_1\cdots k_i\cdots k_m}^{B}(\tnr{T})$ to multiply the coordinate functional $\vtf{f}_{k_i}^{B_i}$ of the $i$-th polyadic basis tensor, resulting in
 \begin{equation}\label{eq:decompAditTens}
 \tnr{T} = \sum_{i=1}^{m}\underbrace{\sum_{k_i=1}^{n_i} \vtf{f}_{k_1}^{B_1}\otimes\cdots\otimes(\vtf{f}_{k_1\cdots k_i\cdots k_m}^{B}(\tnr{T})\vtf{f}_{k_i}^{B_i})\otimes\cdots\otimes\vtf{f}_{k_m}^{B_m}}_{(\vtf{t}_1)_i\otimes\cdots\otimes(\vtf{t}_m)_i}\,,
 \end{equation}
-where linear functional $(\vtf{t}_j)_i\in(U_j)_\cam{F}^*$ is the $j$-th polyad of the $i$-th polyadic tensor member of the additive decomposition of $\tnr{T}$. Moreover, if an arbitrary tensor can be decomposed as a sum of polyadic tensors and a sum of polyadic tensors  results in a polyadic tensor, since every tensor is a vector, we can state that \emph{every tensor can be described as a polyadic tensor}. For the previous case, 
+where linear functional $(\vtf{t}_j)_i\in(U_j)_\cam{F}^*$ is the $j$-th polyad of the $i$-th polyadic tensor member of the additive decomposition of $\tnr{T}$. Moreover, if an arbitrary tensor can be decomposed as a sum of polyadic tensors and a sum of polyadic tensors  results in a polyadic tensor, since every tensor is a vector, we can state that \emph{every tensor can be described as a polyadic tensor}. For the previous case,
 \begin{equation}\label{eq:TensPoliadic}
 \tnr{T}=\sum_{i=1}^m(\vtf{t}_1)_i\otimes\cdots\otimes(\vtf{t}_m)_i=\tnr{t}_1\otimes\cdots\otimes\tnr{t}_m \,.
-\end{equation} 
+\end{equation}
 
 
-In the context of Hilbert spaces, if a tensor space has a unitary order, its tensors are covectors because every linear functional whose domain is a Hilbert space is biunivocaly related to a vector, as described by the Riesz-Fréchet Representation. Therefore, given an arbitrary vector $\vto{u}\in U_\cam{F}$, its covector $\vto{u}^*$ is a first order tensor, or $\vto{u}^*\in \ete{\cam{F}}{U}$. Moreover, if a scalar $\alpha$ belongs to a Hilbert space $\cam{F}_\cam{F}$, then covector $\alpha^*$ is defined to be a tensor of order zero where $\fua{\alpha^*}{x}=\alpha x$. In other words, \emph{concerning tensor spaces defined by Hilbert spaces, covectors with a vector domain are first order tensors and covectors with a scalar domain are defined to be zeroth order tensors}. Now, given a tensor space $\ete{\real}{E^m}$, where $E_\real$ is a three-dimensional Euclidean space, let $\hat{B}$ be a basis whose $3^m$ elements have the format $\vun{e}_{j_1}^*\otimes\cdots\otimes\vun{e}_{j_m}^*$, $j_i=1,2,3$. Thereby, we call \textsb{cartesian tensor}\index{tensor!cartesian} any linear combination of the elements of $\hat{B}$. 
+In the context of Hilbert spaces, if a tensor space has a unitary order, its tensors are covectors because every linear functional whose domain is a Hilbert space is biunivocaly related to a vector, as described by the Riesz-Fréchet Representation. Therefore, given an arbitrary vector $\vto{u}\in U_\cam{F}$, its covector $\vto{u}^*$ is a first order tensor, or $\vto{u}^*\in \ete{\cam{F}}{U}$. Moreover, if a scalar $\alpha$ belongs to a Hilbert space $\cam{F}_\cam{F}$, then covector $\alpha^*$ is defined to be a tensor of order zero where $\fua{\alpha^*}{x}=\alpha x$. In other words, \emph{concerning tensor spaces defined by Hilbert spaces, covectors with a vector domain are first order tensors and covectors with a scalar domain are defined to be zeroth order tensors}. Now, given a tensor space $\ete{\real}{E^m}$, where $E_\real$ is a three-dimensional Euclidean space, let $\hat{B}$ be a basis whose $3^m$ elements have the format $\vun{e}_{j_1}^*\otimes\cdots\otimes\vun{e}_{j_m}^*$, $j_i=1,2,3$. Thereby, we call \textsb{cartesian tensor}\index{tensor!cartesian} any linear combination of the elements of $\hat{B}$.
 
 The tensors of space $\ete{\cam{F}}{V^{m}}$, $m>1$, can have the positions of their arguments interchanged, that is, given a tensor of $\ete{\cam{F}}{V^{2}}$, for example, arguments in $(\vto{x},\vto{y})$ can be changed to $(\vto{y},\vto{x})$, where $\vto{x},\vto{y}\in V_\cam{F}$. In this context, we say that a tensor $\tnr{T}_1$ is a permutation of tensor $\tnr{T}_2$ if $\fua{\tnr{T}_1}{\vto{x},\vto{y}}=\fua{\tnr{T}_2}{\vto{y},\vto{x}}$. In general terms, given a bijective mapping $\map{\pi}{\{ 1,\cdots,n \}}{\{1,\cdots,n \}}$, where the sets involved are constituted by ordinals, and a function $\pi$ called permutation of order $m$, in definition
 \begin{equation}\label{eq:permutacaoTensor}
 \fua{\tnr{T}_\pi}{\vto{v}_1,\cdots,\vto{v}_m}:=\tnr{T}\,(\vto{v}_{\fua{\pi}{1}},\cdots,\vto{v}_{\fua{\pi}{m}})\,,\forall\,
 \vto{v}_i\in {V}_\cam{F}\,,
 \end{equation}
-the tensor $\tnr{T}_\pi\in\ete{\cam{F}}{V^{m}}$ is called the $\pi$ \textsb{permutation}\index{tensor!permutation of} of $\tnr{T}\in\tnr{V}^{m}_\cam{F}$. There are two important properties: a) the permutation of sum is the sum of permutations, that is, if $\tnr{T}=\tnr{A}+\tnr{B}$ then $(\tnr{A}+\tnr{B})_\pi=\tnr{A}_\pi+\tnr{B}_\pi$; b) tensor $(\alpha\tnr{T})_\pi=\alpha\tnr{T}_\pi$, $\forall\,\alpha\in\cam{F}$. Now, considering the specific rule $\fua{\pi}{x}=a\delta_{xb}+b\delta_{xa}+x(1-\delta_{xa}-\delta_{xb})$ that interchanges indexes $a$ and $b$, we call $\tnr{T}_\pi$ the $(a,b)$ \textsb{transposition}\index{tensor!transposition of} of $\tnr{T}$, represented by $\tnr{T}_{(a,b)}$.  
+the tensor $\tnr{T}_\pi\in\ete{\cam{F}}{V^{m}}$ is called the $\pi$ \textsb{permutation}\index{tensor!permutation of} of $\tnr{T}\in\tnr{V}^{m}_\cam{F}$. There are two important properties: a) the permutation of sum is the sum of permutations, that is, if $\tnr{T}=\tnr{A}+\tnr{B}$ then $(\tnr{A}+\tnr{B})_\pi=\tnr{A}_\pi+\tnr{B}_\pi$; b) tensor $(\alpha\tnr{T})_\pi=\alpha\tnr{T}_\pi$, $\forall\,\alpha\in\cam{F}$. Now, considering the specific rule $\fua{\pi}{x}=a\delta_{xb}+b\delta_{xa}+x(1-\delta_{xa}-\delta_{xb})$ that interchanges indexes $a$ and $b$, we call $\tnr{T}_\pi$ the $(a,b)$ \textsb{transposition}\index{tensor!transposition of} of $\tnr{T}$, represented by $\tnr{T}_{(a,b)}$.
 
 
 
@@ -181,7 +181,7 @@ from which we conclude that the permutation of sum is the sum of permutations. T
 \end{proof}
 }
 
-The concept of permutation enables the concept of symmetry as follows: a tensor $\tnr{S}\in\ete{\cam{F}}{V^{m}}$ is said to be \textsb{symmetric}\index{tensor!symmetric} if equality $\tnr{S}_\pi=\tnr{S}$ is valid for an arbitrary permutation $\pi$. Conversely, a tensor $\tnr{P}\in\tnr{V}^{m}_\cam{F}$ is called \textsb{antisymmetric}\index{tensor!antisymmetric} or \textsb{alternating}\index{tensor!alternating} if tensor $\tnr{P}_\pi=\epsilon_{\fua{\pi}{1}\cdots \fua{\pi}{m}}\,\tnr{P}$ for any $\pi$. Since $\tnr{P}$ is antisymmetric, we can conclude that scalar $\fua{\tnr{P}}{\vto{x}_1,\cdots,\vto{x}_a,\cdots,\vto{x}_b,\cdots,\vto{x}_m}=0$ if $\vto{x}_a=\vto{x}_b$, where $\vto{x}_i\in V_\cam{F}$ and $a,b\in\{1,\cdots,m\}$. Thereby, the consequence is  
+The concept of permutation enables the concept of symmetry as follows: a tensor $\tnr{S}\in\ete{\cam{F}}{V^{m}}$ is said to be \textsb{symmetric}\index{tensor!symmetric} if equality $\tnr{S}_\pi=\tnr{S}$ is valid for an arbitrary permutation $\pi$. Conversely, a tensor $\tnr{P}\in\tnr{V}^{m}_\cam{F}$ is called \textsb{antisymmetric}\index{tensor!antisymmetric} or \textsb{alternating}\index{tensor!alternating} if tensor $\tnr{P}_\pi=\epsilon_{\fua{\pi}{1}\cdots \fua{\pi}{m}}\,\tnr{P}$ for any $\pi$. Since $\tnr{P}$ is antisymmetric, we can conclude that scalar $\fua{\tnr{P}}{\vto{x}_1,\cdots,\vto{x}_a,\cdots,\vto{x}_b,\cdots,\vto{x}_m}=0$ if $\vto{x}_a=\vto{x}_b$, where $\vto{x}_i\in V_\cam{F}$ and $a,b\in\{1,\cdots,m\}$. Thereby, the consequence is
 \begin{equation}\label{eq:igAntis}
 \fua{\tnr{P}}{\vto{x}_{i_1},\cdots,\vto{x}_{i_m}}=\epsilon_{i_1\cdots i_m}\fua{\tnr{P}}{\vto{x}_1,\cdots,\vto{x}_m}\,.
 \end{equation}
@@ -189,7 +189,7 @@ Moreover, since the sum of two (anti)symmetric tensors is an (anti)symmetric ten
 
 {\footnotesize
 \begin{proof}
-First, let's prove \eqref{eq:igAntis}. If $\vto{x}_a=\vto{x}_b$, then 
+First, let's prove \eqref{eq:igAntis}. If $\vto{x}_a=\vto{x}_b$, then
 \begin{align*}
 \fua{\tnr{P}_\pi}{\vto{x}_1,\cdots,\vto{x}_a,\cdots,\vto{x}_b,\cdots,\vto{x}_m}&=\fua{\tnr{P}_\pi}{\vto{x}_1,\cdots,\vto{x}_b,\cdots,\vto{x}_a,\cdots,\vto{x}_m}\\
 \epsilon_{i_1\cdots i_a\cdots i_b\cdots i_m}\fua{\tnr{P}}{\vto{x}_1,\cdots,\vto{x}_a,\cdots,\vto{x}_b,\cdots,\vto{x}_m}&=\epsilon_{i_1\cdots i_b\cdots i_a\cdots i_m}\fua{\tnr{P}}{\vto{x}_1,\cdots,\vto{x}_b,\cdots,\vto{x}_a,\cdots,\vto{x}_m}\\
@@ -205,11 +205,11 @@ Let's verify if (anti)symmetric tensors really define tensor subspaces. Let $\tn
 \begin{equation*}
 	\epsilon_{\fua{\pi}{1}\cdots \fua{\pi}{m}}(\tnr{C}+\tnr{D})=\tnr{C}_\pi+\tnr{D}_\pi=(\tnr{C}+\tnr{D})_\pi\,,
 \end{equation*}
-which shows $\tnr{C}+\tnr{D}$ antisymmetric. Thereby, we can state that a set of antisymmetric tensors also defines a tensor space. Now, we'll verify the curious one-dimensionality of antisymmetric tensors by adapting to our case the idea of \aut{Backus}\cite{backus_1997_1}, pp. 15-17. Let $\etn{\cam{F}}{V^m}\subset\ete{\cam{F}}{V^m}$ be a tensor subspace of antisymmetric tensors, $B=\{\vto{v_1},\cdots,\vto{v}_n\}$ a basis of vector space $V_\cam{F}$ and an antisymmetric tensor  $\tnr{H}\in\etn{\cam{F}}{V^m}$ such that 
+which shows $\tnr{C}+\tnr{D}$ antisymmetric. Thereby, we can state that a set of antisymmetric tensors also defines a tensor space. Now, we'll verify the curious one-dimensionality of antisymmetric tensors by adapting to our case the idea of \aut{Backus}\cite{backus_1997_1}, pp. 15-17. Let $\etn{\cam{F}}{V^m}\subset\ete{\cam{F}}{V^m}$ be a tensor subspace of antisymmetric tensors, $B=\{\vto{v_1},\cdots,\vto{v}_n\}$ a basis of vector space $V_\cam{F}$ and an antisymmetric tensor  $\tnr{H}\in\etn{\cam{F}}{V^m}$ such that
 \begin{equation*}
 \tnr{H}(\vto{x_1},\cdots,\vto{x}_m)=\sum_{i_1=1}^n\cdots\sum_{i_m=1}^n\fua{\vtf{f}^\con{B}_{i_1}}{\vto{x}_1}\cdots\fua{\vtf{f}^\con{B}_{i_m}}{\vto{x}_m}\epsilon_{i_1\cdots i_m}\,,
 \end{equation*}
-where $\vto{x_i}\in V_\cam{F}$. This tensor $\tnr{H}$ is verified to be antisymmetric through the following development: 
+where $\vto{x_i}\in V_\cam{F}$. This tensor $\tnr{H}$ is verified to be antisymmetric through the following development:
 \begin{align*}
 \fua{\tnr{H}_{(a,b)}}{\cdots,\vto{x}_a,\cdots,\vto{x}_b,\cdots}&=\cdots
 \sum_{i_a=1}^n\cdots\sum_{i_b=1}^n\cdots\,\fua{\vtf{f}^\con{B}_{i_a}}{\vto{x}_b}\cdots\,\fua{\vtf{f}^\con{B}_{i_b}}{\vto{x}_a}\cdots \,\epsilon_{\cdots i_a\cdots i_b\cdots}\\
@@ -227,17 +227,17 @@ from which we conclude $\tnr{P}=\alpha\tnr{H}$, that is, $\{\tnr{H}\}$ is a basi
 \end{proof}
 }
 
-Additionally to symmetric and antisymmetric, there is another notable tensor that will enable very important concepts for our study, like isotropy and anti-isotropy for example: I'm referring to the identity tensor, which is defined in tensor spaces of even order. We call \gloref{tensorI}$\,\in\ete{\cam{F}}{V^{\times p}\times V^{\times p}}$ an \textsb{identity tensor}\index{tensor!identity} of order $2p$ if, considering $\vto{x}_i$ and $\vto{y}_i$ arbitrary vectors of  $(V_\cam{F})_i$, scalar 
+Additionally to symmetric and antisymmetric, there is another notable tensor that will enable very important concepts for our study, like isotropy and anti-isotropy for example: I'm referring to the identity tensor, which is defined in tensor spaces of even order. We call \gloref{tensorI}$\,\in\ete{\cam{F}}{V^{\times p}\times V^{\times p}}$ an \textsb{identity tensor}\index{tensor!identity} of order $2p$ if, considering $\vto{x}_i$ and $\vto{y}_i$ arbitrary vectors of  $(V_\cam{F})_i$, scalar
 \begin{equation}\label{eq:identidade}
 \fua{\tnr{I}}{\vto{x}_{1},\cdots,\vto{x}_{p},\vto{y}_{1},\cdots,\vto{y}_{p}}=\prod_{k=1}^p \vto{x}_k\cdot\vto{y}_k^c\,.
 \end{equation}
-From this definition, if $(V_\cam{F})_i$ is a Hilbert space and $B_i=\{\vun{v}_1^{(i)},\cdots,\vun{v}_{n_i}^{(i)}\}$ one of its orthonormal bases, the following is valid for $\alpha=\fua{\tnr{I}}{\vto{x}_1,\cdots,\vto{x}_p,\vto{y}_1,\cdots,\vto{y}_p}$: 
+From this definition, if $(V_\cam{F})_i$ is a Hilbert space and $B_i=\{\vun{v}_1^{(i)},\cdots,\vun{v}_{n_i}^{(i)}\}$ one of its orthonormal bases, the following is valid for $\alpha=\fua{\tnr{I}}{\vto{x}_1,\cdots,\vto{x}_p,\vto{y}_1,\cdots,\vto{y}_p}$:
 \begin{align*}
 \alpha&=\sum_{{i_1}=1}^{n_1}\cdots\sum_{{i_p}=1}^{n_p}\sum_{{j_1}=1}^{n_1}\cdots\sum_{{j_p}=1}^{n_p}\prod_{k=1}^p\fua{\vtf{f}^\con{B_k}_{i_k}}{\vto{x}_k}\fua{\vtf{f}^\con{B_k}_{j_k}}{\vto{y}_k}\fua{\tnr{I}}{\vun{v}_{i_1}^{(1)},\cdots,\vun{v}_{i_p}^{(p)},{{\vun{v}_{j_1}}}^{(1)},\cdots,\vun{v}_{j_p}^{(p)}}\\
 &=\sum_{{i_1}=1}^{n_1}\cdots\sum_{{i_p}=1}^{n_p}\sum_{{j_1}=1}^{n_1}\cdots\sum_{{j_p}=1}^{n_p}\prod_{k=1}^p\fua{\vtf{f}^\con{B_k}_{i_k}}{\vto{x}_k}\fua{\vtf{f}^\con{B_k}_{j_k}}{\vto{y}_k}\delta_{i_1j_1}\cdots\delta_{i_pj_p}\\
 &=\sum_{{i_1}=1}^{n_1}\cdots\sum_{{i_p}=1}^{n_p}\prod_{k=1}^p\fua{\vtf{f}^\con{B_k}_{i_k}}{\vto{x}_k}\fua{\vtf{f}^\con{B_k}_{i_k}}{\vto{y}_k}\,,
 \end{align*}
-considering equalities \eqref{eq:decompVectConj} and \eqref{eq:orthoConju}. Thereby, from the definition of tensor product, we can write that tensor 
+considering equalities \eqref{eq:decompVectConj} and \eqref{eq:orthoConju}. Thereby, from the definition of tensor product, we can write that tensor
 \begin{equation}\label{eq:poliadIdentidade}
 \tnr{I}=\sum_{{i_1}=1}^{n_1}\cdots\sum_{{i_p}=1}^{n_p}\vtf{f}_{i_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{i_p}^{B_p}\otimes\vtf{f}_{i_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{i_p}^{B_p}\,.
 \end{equation}
@@ -245,11 +245,11 @@ If a suitable basis $B$ is built from bases $B_i$, the previous equality and \eq
 \begin{equation}
 \vtf{f}_{j_1\cdots j_m}^{B}(\tnr{I})= \fua{\tnr{I}}{\vun{v}_{j_1}^{(1)},\cdots,\vun{v}_{j_p}^{(p)},\vun{v}_{j_1}^{(1)},\cdots,\vun{v}_{j_p}^{(p)}}=\prod_{k=1}^p\fua{\vtf{f}_{i_k}^{B_k}}{\vun{v}_{j_k}^{(k)}}=\prod_{k=1}^p\delta_{i_kj_k}\,.
 \end{equation}
-Now, considering the context of tensor spaces $\ete{\cam{F}}{V^2}$, where $p=1$, defined by Euclidean spaces, we already know that, if basis $B_1$ is orthonormal, equality $\sum_{{i_1}=1}^{n_1}\fua{\vtf{f}^\con{B_1}_{i_1}}{\vto{x}_1}\fua{\vtf{f}^\con{B_1}_{i_1}}{\vto{y}_1}=\vto{x}_1\cdot\vto{y}_1$ is valid, that is, definition \eqref{eq:identidade} takes the form $\fua{\tnr{I}}{\vto{x}_1,\vto{y}_1}=\vto{x}_1\cdot\vto{y}_1$ and  
+Now, considering the context of tensor spaces $\ete{\cam{F}}{V^2}$, where $p=1$, defined by Euclidean spaces, we already know that, if basis $B_1$ is orthonormal, equality $\sum_{{i_1}=1}^{n_1}\fua{\vtf{f}^\con{B_1}_{i_1}}{\vto{x}_1}\fua{\vtf{f}^\con{B_1}_{i_1}}{\vto{y}_1}=\vto{x}_1\cdot\vto{y}_1$ is valid, that is, definition \eqref{eq:identidade} takes the form $\fua{\tnr{I}}{\vto{x}_1,\vto{y}_1}=\vto{x}_1\cdot\vto{y}_1$ and
 \begin{equation}
 \tnr{I}=\sum_{{i_1}=1}^{n_1}\vun{v}_{i_1}^*\otimes\vun{v}_{i_1}^*=\sum_{{i_1}=1}^{n_1}\sum_{{j_1}=1}^{n_1}\delta_{i_1j_1}\vun{v}_{i_1}^*\otimes\vun{v}_{j_1}^*
 \end{equation}
-is an identity tensor of second order. 
+is an identity tensor of second order.
 
 
 \section{Tensor Functions}
@@ -258,27 +258,27 @@ Henceforth, we shall be dealing only with tensors defined by Hilbert spaces, sin
 \begin{equation}\label{eq:normaFuncaoTens}
 \fua{\eta}{\vtf{\psi}}:=\sup\lch \|\fua{\vtf{\psi}}{\tnr{X}}\|/\|\tnr{X}\| \,,\forall\, \tnr{X}\in \{Z_\cam{F}\setminus\{\tnr{0}\}\} \rch\,,
 \end{equation}
-for arbitrary continuous linear tensor functions $\vtf{\psi},\vtf{\phi}\in Y_\cam{F}^Z$. It is important to say that the concepts of continuity and Lipschitz continuity as described by \eqref{eq:continuity} and \eqref{eq:Lipscontinuity} respectively are also valid for the present case of tensor functions.   
+for arbitrary continuous linear tensor functions $\vtf{\psi},\vtf{\phi}\in Y_\cam{F}^Z$. It is important to say that the concepts of continuity and Lipschitz continuity as described by \eqref{eq:continuity} and \eqref{eq:Lipscontinuity} respectively are also valid for the present case of tensor functions.
 
 
 It is still possible to consider $V_\cam{F}=\cam{F}_\cam{F}$, when the elements of tensor function space $V^U_\cam{F}$ are called tensor functionals. In the terms of Theorem \ref{teo:geraEte}, if $B$ is a basis of $\ete{\cam{F}}{X^{\times m}}$, coordinate functionals $\vtf{f}_{j_1\cdots j_m}^{B}$, since they are linear according to definition \eqref{eq:regraCoordTens}, result elements of the function space $\evl{\cam{F}}{\ete{\cam{F}}{X^{\times m}}}{\cam{F}}$, represented by $\eted{\cam{F}}{X^{\times m}}$ because it is the dual space of $\ete{\cam{F}}{X^{\times m}}$. Again, similarly to vector function spaces, every linear tensor functional that belongs to this dual space is then called a \textsb{dual tensor}\index{dual!tensor} of $\ete{\cam{F}}{X^{\times m}}$. Moreover, the finite set $B^*\subset\eted{\cam{F}}{X^{\times m}}$ constituted by the coordinate functionals on $B$ is the dual set of this basis because
 \begin{equation*}
 \fua{\vtf{f}_{j_1\cdots j_m}^{B}}{\vtf{f}_{k_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{k_m}^{B_m}}=\fua{\vtf{f}_{k_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{k_m}^{B_m}}{\vto{u}_{j_1}^{(1)},\cdots,\vto{u}_{j_m}^{(m)}} = \prod_{i=1}^m\delta_{k_ij_i}\,,
 \end{equation*}
-and it is also a basis of $\eted{\cam{F}}{X^{\times m}}$. Let's see if this last statement is true: given an arbitrary dual tensor $\vtf{\psi}\in\eted{\cam{F}}{X^{\times m}}$, development  
+and it is also a basis of $\eted{\cam{F}}{X^{\times m}}$. Let's see if this last statement is true: given an arbitrary dual tensor $\vtf{\psi}\in\eted{\cam{F}}{X^{\times m}}$, development
 \begin{align}
 \fua{\vtf{\psi}}{\tnr{X}}&=\sum_{i_1=1}^{n_1}\cdots\sum_{i_m=1}^{n_m}\fua{\vtf{\psi}}{\vtf{f}_{i_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{i_m}^{B_m}}\,\fua{\vtf{f}_{i_1\cdots i_m}^{B}}{\tnr{X}}\nonumber\\
-&=[\sum_{i_1=1}^{n_1}\cdots\sum_{i_m=1}^{n_m}\underbrace{\fua{\vtf{\psi}}{\vtf{f}_{i_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{i_m}^{B_m}}}_{\alpha_{i_1\cdots i_m}}\,\vtf{f}_{i_1\cdots i_m}^{B}]\,(\tnr{X})\label{eq:coordTensor} 
+&=[\sum_{i_1=1}^{n_1}\cdots\sum_{i_m=1}^{n_m}\underbrace{\fua{\vtf{\psi}}{\vtf{f}_{i_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{i_m}^{B_m}}}_{\alpha_{i_1\cdots i_m}}\,\vtf{f}_{i_1\cdots i_m}^{B}]\,(\tnr{X})\label{eq:coordTensor}
 \end{align}
-shows that the elements of $B^*$ span $\eted{\cam{F}}{X^{\times m}}$. Moreover, if $\vtf{\psi}$ is a zero dual tensor, then functions $\vtf{f}_{i_1\cdots i_m}^{B}$ result zero, which proves that $B^*$ is a linearly independent set. From this verification, we can affirm that scalars  $\alpha_{i_1\cdots i_m}$ are the coordinates of $\vtf{\psi}$ on $B^*$ and that $\dim (\eted{\cam{F}}{X^{\times m}}) = \dim (\ete{\cam{F}}{X^{\times m}})$. 
+shows that the elements of $B^*$ span $\eted{\cam{F}}{X^{\times m}}$. Moreover, if $\vtf{\psi}$ is a zero dual tensor, then functions $\vtf{f}_{i_1\cdots i_m}^{B}$ result zero, which proves that $B^*$ is a linearly independent set. From this verification, we can affirm that scalars  $\alpha_{i_1\cdots i_m}$ are the coordinates of $\vtf{\psi}$ on $B^*$ and that $\dim (\eted{\cam{F}}{X^{\times m}}) = \dim (\ete{\cam{F}}{X^{\times m}})$.
 
 
-This context of tensors defined by Hilbert spaces enables us to always relate a multiantilinear function and a linear tensor function, which is a fundamental feature to ensure uniqueness and existence of an important linear tensor function called contraction. The following theorem\footnote{Adapted from \aut{Backus}\cite{backus_1997_1} after generalizing a property from  \aut{Marcus}\cite{marcus_1973_1}, p.14.}, borrowed from the realm of Multilinear Algebra and generalized in order to attain our purposes, describes such feature by establishing a one to one correspondence between a multiantilinear function and a linear tensor function. From this biunivocal relationship, the multiantilinear function is  said to be ``lifted'' to a linear tensor function. 
+This context of tensors defined by Hilbert spaces enables us to always relate a multiantilinear function and a linear tensor function, which is a fundamental feature to ensure uniqueness and existence of an important linear tensor function called contraction. The following theorem\footnote{Adapted from \aut{Backus}\cite{backus_1997_1} after generalizing a property from  \aut{Marcus}\cite{marcus_1973_1}, p.14.}, borrowed from the realm of Multilinear Algebra and generalized in order to attain our purposes, describes such feature by establishing a one to one correspondence between a multiantilinear function and a linear tensor function. From this biunivocal relationship, the multiantilinear function is  said to be ``lifted'' to a linear tensor function.
 
 
 
 \begin{mteo}{Lifting of Multiantilinear Functions}{lift}
-Considering function spaces $V^{U}_\cam{F}$ and  $\evl{\cam{F}}{\ete{\cam{F}}{U}}{V_\cam{F}}$, where  $V_\cam{F}$ and $U_\cam{F}=X^{\times m}_\cam{F}$ are Hilbert spaces, for every multiantilinear function $\vtf{c}\in V^{U}_\cam{F}$ there is a unique linear tensor function  \gloref{elevC}$\in\evl{\cam{F}}{\ete{\cam{F}}{U}}{V}$ such that 
+Considering function spaces $V^{U}_\cam{F}$ and  $\evl{\cam{F}}{\ete{\cam{F}}{U}}{V_\cam{F}}$, where  $V_\cam{F}$ and $U_\cam{F}=X^{\times m}_\cam{F}$ are Hilbert spaces, for every multiantilinear function $\vtf{c}\in V^{U}_\cam{F}$ there is a unique linear tensor function  \gloref{elevC}$\in\evl{\cam{F}}{\ete{\cam{F}}{U}}{V}$ such that
 \begin{equation*}
 \fua{\vtf{c}^\otimes}{\vto{x}_1^*\otimes\cdots\otimes\vto{x}_m^*}=\fua{{\vtf{c}}}{\vto{x}_1,\cdots,\vto{x}_m}\,,\,\,\forall\,\vto{x}_i\in X_i.
 \end{equation*}
@@ -286,19 +286,19 @@ Considering function spaces $V^{U}_\cam{F}$ and  $\evl{\cam{F}}{\ete{\cam{F}}{U}
 \hspace{1pt}
 {\footnotesize
 \begin{proof}
-The following proof is adapted from \aut{Backus}\cite{backus_1997_1}, pp. 43-45. According to theorem \ref{teo:geraEte}, let $\tnr{X}\in\ete{\cam{F}}{U}$ be an arbitrary tensor described by 
+The following proof is adapted from \aut{Backus}\cite{backus_1997_1}, pp. 43-45. According to theorem \ref{teo:geraEte}, let $\tnr{X}\in\ete{\cam{F}}{U}$ be an arbitrary tensor described by
 \begin{equation}
 \tnr{X}=\sum_{i_1=1}^{n_1}\cdots\sum_{i_m=1}^{n_m}\fua{\vtf{f}_{i_1\cdots i_m}^{B}}{\tnr{X}}\vtf{f}_{i_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{i_m}^{B_m}\,,
 \nonumber
 \end{equation}
-where $B$ is a basis of $\ete{\cam{F}}{U}$ defined by orthonormal bases  $\con{B}_i=\{\vun{v}_{1}^{(i)},\cdots,\vun{v}_{n_i}^{(i)}\}$ of $X_i$. According to rule \eqref{eq:regraOrtonmFunc}, the function $\vtf{c}^\otimes$ that observes $\fua{\vtf{c}^\otimes}{\vto{x}_1^*\otimes\cdots\otimes\vto{x}_m^*}=\fua{{\vtf{c}}}{\vto{x}_1,\cdots,\vto{x}_m}$ really exists and is uniquely determined by $\vtf{c}$, as can be verified in  
+where $B$ is a basis of $\ete{\cam{F}}{U}$ defined by orthonormal bases  $\con{B}_i=\{\vun{v}_{1}^{(i)},\cdots,\vun{v}_{n_i}^{(i)}\}$ of $X_i$. According to rule \eqref{eq:regraOrtonmFunc}, the function $\vtf{c}^\otimes$ that observes $\fua{\vtf{c}^\otimes}{\vto{x}_1^*\otimes\cdots\otimes\vto{x}_m^*}=\fua{{\vtf{c}}}{\vto{x}_1,\cdots,\vto{x}_m}$ really exists and is uniquely determined by $\vtf{c}$, as can be verified in
 \begin{eqnarray}
 \fua{\vtf{c}^\otimes}{\tnr{X}}&=&\sum_{i_1=1}^{n_1}\cdots\sum_{i_m=1}^{n_m}\fua{\vtf{f}_{i_1\cdots
 i_m}^{B}}{\tnr{X}}\fua{\vtf{c}^\otimes}{\vtf{f}_{i_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{i_m}^{B_m}}\nonumber\\
 &=&\sum_{i_1=1}^{n_1}\cdots\sum_{i_m=1}^{n_m}\fua{\vtf{f}_{i_1\cdots
 i_m}^{B}}{\tnr{X}}\fua{{\vtf{c}}}{\vun{v}_{i_1}^{(1)},\cdots,\vun{v}_{i_m}^{(m)}}\,,\nonumber
 \end{eqnarray}
-because the last equality results a rule for $\vtf{c}^\otimes$ since $\tnr{X}$ is arbitrary. Now, let's verify if equality $\fua{\vtf{c}^\otimes}{\vto{x}_1^*\otimes\cdots\otimes\vto{x}_m^*}=\fua{{\vtf{c}}}{\vto{x}_1,\cdots,\vto{x}_m}$ is valid. Considering $\tnr{X}=\vto{x}_1^*\otimes\cdots\otimes\vto{x}_m^*$, equality \eqref{eq:conjMultFun}, the properties of complex conjugates, the conjugate property of the inner product, rule \eqref{eq:regraCoord} and rule \eqref{eq:regraCoordTens}, the previous development can proceed as follows:  
+because the last equality results a rule for $\vtf{c}^\otimes$ since $\tnr{X}$ is arbitrary. Now, let's verify if equality $\fua{\vtf{c}^\otimes}{\vto{x}_1^*\otimes\cdots\otimes\vto{x}_m^*}=\fua{{\vtf{c}}}{\vto{x}_1,\cdots,\vto{x}_m}$ is valid. Considering $\tnr{X}=\vto{x}_1^*\otimes\cdots\otimes\vto{x}_m^*$, equality \eqref{eq:conjMultFun}, the properties of complex conjugates, the conjugate property of the inner product, rule \eqref{eq:regraCoord} and rule \eqref{eq:regraCoordTens}, the previous development can proceed as follows:
 \begin{eqnarray}
 \fua{\vtf{c}^\otimes}{\vto{x}_1^*\otimes\cdots\otimes\vto{x}_m^*}&=&\sum_{i_1=1}^{n_1}\cdots\sum_{i_m=1}^{n_m}\fua{\vtf{f}_{i_1\cdots
 		i_m}^{B}}{\tnr{X}}\fua{{\vtf{c}}}{\vun{v}_{i_1}^{(1)},\cdots,\vun{v}_{i_m}^{(m)}}\nonumber\\
@@ -321,9 +321,9 @@ As we mentioned in the previous paragraph, a special linear tensor function whos
 \begin{equation}
 \fua{\vtf{c}_p^\otimes}{\tnr{X}}=\fua{{\vtf{c}}_p}{\vtf{x}_1,\cdots,\vtf{x}_m}\,,
 \end{equation}
-where $\tnr{X}$ is an arbitrary element of $\ete{\cam{F}}{U}$ that can be described as a polyadic tensor $\vtf{x}_1^*\otimes\cdots\otimes\vtf{x}_m^*$, according to equalities \eqref{eq:TensPoliadic}. 
+where $\tnr{X}$ is an arbitrary element of $\ete{\cam{F}}{U}$ that can be described as a polyadic tensor $\vtf{x}_1^*\otimes\cdots\otimes\vtf{x}_m^*$, according to equalities \eqref{eq:TensPoliadic}.
 
-In our study, we deal with two different types of contraction, expressed by two different rules for ${\vtf{c}}_p$. The first type is called trace of tensor, valid for tensor spaces of order greater than one and defined as follows. Still considering the above conditions, if $U=X_1\times\cdots\times X_{r}\times\cdots\times X_{s}\times\cdots\times X_m$ where $X_{r}=X_{s}$ and $m\geq 2$, the tensor $\fua{\vtf{c}_2^\otimes}{\tnr{X}}$ of order $m-2$ is a contraction called the $r,s$-\textsb{trace}\index{tensor!$r,s$-trace of} of $\tnr{X}$, represented by \gloref{tracoRS}$\tnr{X}$, when 
+In our study, we deal with two different types of contraction, expressed by two different rules for ${\vtf{c}}_p$. The first type is called trace of tensor, valid for tensor spaces of order greater than one and defined as follows. Still considering the above conditions, if $U=X_1\times\cdots\times X_{r}\times\cdots\times X_{s}\times\cdots\times X_m$ where $X_{r}=X_{s}$ and $m\geq 2$, the tensor $\fua{\vtf{c}_2^\otimes}{\tnr{X}}$ of order $m-2$ is a contraction called the $r,s$-\textsb{trace}\index{tensor!$r,s$-trace of} of $\tnr{X}$, represented by \gloref{tracoRS}$\tnr{X}$, when
 \begin{equation*}
 \fua{{\vtf{c}}_2}{\vto{x}_1,\cdots,\vto{x}_m}:=(\vto{x}_{s}^c\cdot\vto{x}_{r})\,\vto{x}_1^*\otimes\cdots\otimes\vto{x}_{r-1}^*\otimes\vto{x}_{r+1}^*
 \otimes\cdots\otimes\vto{x}_{s-1}^*\otimes\vto{x}_{s+1}^*\otimes\cdots\otimes\vto{x}_m^*\,,
@@ -333,19 +333,19 @@ where $\vto{x}_{r}^c$ belongs to $\overline{{X_r}_\cam{F}}$. In other words, the
 \trt{r}{s} \tnr{X}=(\vto{x}_{s}^c\cdot\vto{x}_{r})\,\vto{x}_1^*\otimes\cdots\otimes\vto{x}_{r-1}^*\otimes\vto{x}_{r+1}^*
 \otimes\cdots\otimes\vto{x}_{s-1}^*\otimes\vto{x}_{s+1}^*\otimes\cdots\otimes\vto{x}_m^*\,.
 \end{equation}
-It is important to observe that the product $\vto{x}_{r}^c\cdot\vto{x}_{s}$ is antilinear also on the left term since  $\vtf{c}_2$ has $\vto{x}_{r}$ as one of its arguments\footnote{See property \eqref{eq:antiLinConjVect}.}. Moreover, in the context of Euclidean spaces, from equality \eqref{eq:prodIntGen}, we can write that $\vto{x}_{s}^c\cdot\vto{x}_{r}=\vto{x}_{s}\cdot\vto{x}_{r}\,$. Now, considering the set $U=X^{\times q}\times X^{\times q}$, if we happen to properly compose $q$ successive $r,s$-trace functions where $s=r+q$, the resulting scalar 
+It is important to observe that the product $\vto{x}_{r}^c\cdot\vto{x}_{s}$ is antilinear also on the left term since  $\vtf{c}_2$ has $\vto{x}_{r}$ as one of its arguments\footnote{See property \eqref{eq:antiLinConjVect}.}. Moreover, in the context of Euclidean spaces, from equality \eqref{eq:prodIntGen}, we can write that $\vto{x}_{s}^c\cdot\vto{x}_{r}=\vto{x}_{s}\cdot\vto{x}_{r}\,$. Now, considering the set $U=X^{\times q}\times X^{\times q}$, if we happen to properly compose $q$ successive $r,s$-trace functions where $s=r+q$, the resulting scalar
 \begin{equation}\label{eq:tracoTensor}
 \trc\tnr{X}:=\fua{\underbrace{\trt{r}{s}\circ\cdots\circ\trt{r}{s}}_{q \text{ times}}}{\tnr{X}}=\prod_{k=1}^q\vto{x}_{k+q}^c\cdot\vto{x}_k
 \end{equation}
-is said to be the \textsb{trace}\index{tensor!trace of} of tensor $\tnr{X}$.  
+is said to be the \textsb{trace}\index{tensor!trace of} of tensor $\tnr{X}$.
 
 Since the contraction that follows will take part in the majority of forthcoming definitions in this chapter, it is more relevant than the $r,s$ trace for the purposes of our study. In order to define this important contraction using conditions above, let's consider that $X^{\times m}=A^{\times q}\times W^{\times p}\times W^{\times p}\times B^{\times n}$,
-where $m=q+2p+n$, tensor $\tnr{A}:=\vto{a}_1^*\otimes\cdots\otimes\vto{a}_{q}^*\otimes\vto{x}_1^*\otimes\cdots\otimes\vto{x}_{p}^*$ belongs to tensor space $\ete{\cam{F}}{A^{\times q}\times W^{\times p}}$ and tensor $\tnr{B}:=\vto{y}_1^*\otimes\cdots\otimes\vto{y}_{p}^*\otimes\vto{b}_1^*\otimes\cdots\otimes\vto{b}_{n}^*$ belongs to $\ete{\cam{F}}{W^{\times p}\times B^{\times n}}$. When 
+where $m=q+2p+n$, tensor $\tnr{A}:=\vto{a}_1^*\otimes\cdots\otimes\vto{a}_{q}^*\otimes\vto{x}_1^*\otimes\cdots\otimes\vto{x}_{p}^*$ belongs to tensor space $\ete{\cam{F}}{A^{\times q}\times W^{\times p}}$ and tensor $\tnr{B}:=\vto{y}_1^*\otimes\cdots\otimes\vto{y}_{p}^*\otimes\vto{b}_1^*\otimes\cdots\otimes\vto{b}_{n}^*$ belongs to $\ete{\cam{F}}{W^{\times p}\times B^{\times n}}$. When
 \begin{align*}
 \fua{{\vtf{c}}_{2p}}{\vto{a}_1,\cdots,\vto{a}_q,&\vto{x}_1,\cdots,\vto{x}_p,\vto{y}_1,\cdots,\vto{y}_p,\vto{b}_1,\cdots,\vto{b}_n}:=
 \\&(\prod_{i=1}^p\vto{y}_i^c\cdot\vto{x}_i)\,\vto{a}_1^*\otimes\cdots\otimes\vto{a}_{q}^*\otimes\vto{b}_{1}^*\otimes\cdots\otimes\vto{b}_n^*\,,
-\end{align*} 
-we call tensor $\fua{{\vtf{c}}_{2p}^\otimes}{\tnr{A}\otimes\tnr{B}}$ the $p$-th order \textsb{contractive product}\index{contractive product} of $\tnr{A}$ and $\tnr{B}$, represented by $\tnr{A}\diamond_p\tnr{B}$. Thereby, we can write in simpler terms that   
+\end{align*}
+we call tensor $\fua{{\vtf{c}}_{2p}^\otimes}{\tnr{A}\otimes\tnr{B}}$ the $p$-th order \textsb{contractive product}\index{contractive product} of $\tnr{A}$ and $\tnr{B}$, represented by \gloref{contracProd}. Thereby, we can write in simpler terms that
 \begin{equation}\label{eq:ProdTens}
 \tnr{A}\diamond_p\tnr{B}=(\prod_{i=1}^p\vto{y}_i^c\cdot\vto{x}_i)\vto{a}_1^*\otimes\cdots\otimes\vto{a}_{q}^*\otimes\vto{b}_{1}^*\otimes\cdots\otimes\vto{b}_n^*.
 \end{equation}
@@ -353,7 +353,14 @@ For the sake of generality, when manipulating contractive products we consider t
 \begin{equation}
 \tnr{A}\diamond_p(\tnr{C}\diamond_r\tnr{D}) = (\tnr{A}\diamond_p\tnr{C})\diamond_r\tnr{D}\,,
 \end{equation}
-where $\tnr{C}\in\ete{\cam{F}}{W^{\times p}\times C^{\times n}\times Z^{\times r}}$ and $\tnr{D}\in\ete{\cam{F}}{Z^{\times r}\times D^{\times s}}$. It is also important to say that if both tensors $\tnr{A}$ and $\tnr{B}$ belong to $\ete{\cam{F}}{W^{\times p}}$, the scalar $\tnr{A}\diamond\tnr{B}:=\tnr{A}\diamond_p\tnr{B}$ is called simply the contractive product of the tensors in question. DESENVOLVER O PRODUTO CONTRATIVO COMPLETO EM TERMOS DE COORDENADAS PARA TERMINAR A ÚLTIMA EXPRESSÃO.
+where $\tnr{C}\in\ete{\cam{F}}{W^{\times p}\times C^{\times n}\times Z^{\times r}}$ and $\tnr{D}\in\ete{\cam{F}}{Z^{\times r}\times D^{\times s}}$. It is also important to say that if both tensors $\tnr{A}$ and $\tnr{B}$ belong to $\ete{\cam{F}}{W^{\times p}}$, scalar \gloref{comContracProd}$:=\tnr{A}\diamond_p\tnr{B}$ is called simply the contractive product of the tensors in question. Thereby, if $\alpha_{i_1\cdots i_p}$ and $\beta_{j_1\cdots j_p}$ are the coordinates of $\tnr{A}$ and $\tnr{B}$ on a basis $B$ suitably build from bases $B_i=\{\vun{u}_1^{(i)},\cdots,\vun{u}_{n_i}^{(i)}\}$, we can develop the following:
+\begin{align}\label{eq:prodContrCoord}
+\tnr{A}\diamond\tnr{B} & = \sum_{{i_1}=1}^{n_1}\cdots\sum_{{i_p}=1}^{n_p}\sum_{{j_1}=1}^{n_1}\cdots\sum_{{j_p}=1}^{n_p}\alpha_{i_1\cdots i_p}\beta_{j_1\cdots j_p}(\vtf{f}_{i_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{i_p}^{B_p})\diamond(\vtf{f}_{j_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{j_p}^{B_p})\nonumber\\
+& = \sum_{{i_1}=1}^{n_1}\cdots\sum_{{i_p}=1}^{n_p}\sum_{{j_1}=1}^{n_1}\cdots\sum_{{j_p}=1}^{n_p}\alpha_{i_1\cdots i_p}\beta_{j_1\cdots j_p}\prod_{k=1}^{p}\vun{u}_{j_k}^{c(k)}\cdot\vun{u}_{i_k}^{(k)}\nonumber\\
+& = \sum_{{i_1}=1}^{n_1}\cdots\sum_{{i_p}=1}^{n_p}\alpha_{i_1\cdots i_p}\beta_{i_1\cdots i_p}\,,
+\end{align}
+where equality \eqref{eq:orthoConju} was considered.
+
 
 {\footnotesize
 \begin{proof}
@@ -361,7 +368,7 @@ Let's prove that the $r,s$ trace and the contractive product are indeed linear. 
 \begin{equation*}
 (\tnr{A}+\tnr{B})\diamond_1\tnr{W} = (\vto{x}_1+\vto{y}_1)^*\diamond_1\vto{w}_1^*=\vto{w}^c_1\cdot(\vto{x}_1+\vto{y}_1)= \vto{w}^c_1\cdot\vto{x}_1+\vto{w}^c_1\cdot\vto{y}_1=\tnr{A}\diamond_1\tnr{W}+\tnr{B}\diamond_1\tnr{W}
 \end{equation*}
-assure linearity of first order contractive products. Now, we shall consider a second order contractive product where $\tnr{A},\tnr{B},\tnr{W}\in\ete{\cam{F}}{W^{\times 2}}$. From the linearity of first order contractive products and property iv on page \pageref{prop:tensorProd}, we have the following development: 
+assure linearity of first order contractive products. Now, we shall consider a second order contractive product where $\tnr{A},\tnr{B},\tnr{W}\in\ete{\cam{F}}{W^{\times 2}}$. From the linearity of first order contractive products and property iv on page \pageref{prop:tensorProd}, we have the following development:
 \begin{align*}
 \tnr{A}\diamond_2\tnr{W} + \tnr{B}\diamond_2\tnr{W}  & = (\vto{x}_1^*\otimes\vto{x}_2^*) \diamond_2(\vto{w}_1^*\otimes\vto{w}_2^*)+(\vto{y}_1^*\otimes\vto{y}_2^*) \diamond_2(\vto{w}_1^*\otimes\vto{w}_2^*)\\
 & = (\vto{w}_1^c\cdot\vto{x}_1)(\vto{w}_2^c\cdot\vto{x}_2) + (\vto{w}_1^c\cdot\vto{y}_1)(\vto{w}_2^c\cdot\vto{y}_2)\\
@@ -375,19 +382,19 @@ assure linearity of first order contractive products. Now, we shall consider a s
 & = [(\vto{x}_1^*\otimes\vto{x}_2^*) + (\vto{y}_1^*\otimes\vto{y}_2^*)]\diamond_2\vto{w}_1^*\otimes\vto{w}_2^*\\
 & = (\tnr{A} + \tnr{B})\diamond_2\tnr{W}\,.
 \end{align*}
-By the same strategy of this development, we can find $\tnr{W}\diamond_2\tnr{A} + \tnr{W}\diamond_2\tnr{B}=\tnr{W}\diamond_2(\tnr{A} + \tnr{B})$. Therefore, it results that second  order contractive products are also linear. In the case of arbitrary tensors $\tnr{A},\tnr{B},\tnr{W}\in\ete{\cam{F}}{W^{\times p}}$, for any $p>2$, this procedure can also be applied, leading to linearity for higher order contractive products. Linearity for $r,s$ trace can be verified by this procedure as well.  
+By the same strategy of this development, we can find $\tnr{W}\diamond_2\tnr{A} + \tnr{W}\diamond_2\tnr{B}=\tnr{W}\diamond_2(\tnr{A} + \tnr{B})$. Therefore, it results that second  order contractive products are also linear. In the case of arbitrary tensors $\tnr{A},\tnr{B},\tnr{W}\in\ete{\cam{F}}{W^{\times p}}$, for any $p>2$, this procedure can also be applied, leading to linearity for higher order contractive products. Linearity for $r,s$ trace can be verified by this procedure as well.
 \end{proof}
 }
 
-From this concept of contractive product, it is now convenient to define a new product that is linear on the first argument and antilinear on the second with an obvious purpose of generalizing the inner product. In order to do this, let's consider the same conditions that led to definition \eqref{eq:ProdTens} and state that the tensor 
+From this concept of contractive product, it is now convenient to define a new product that is linear on the first argument and antilinear on the second with an obvious purpose of generalizing the inner product. In order to do this, let's consider the same conditions that led to definition \eqref{eq:ProdTens} and state that the tensor
 \begin{equation}\label{eq:prodInGen}
-\tnr{A}\odot_p\tnr{B}:=\tnr{A}\diamond_p ((\vto{y}_1^c)^*\otimes\cdots\otimes(\vto{y}_{p}^c)^*\otimes(\vto{b}_1^c)^*\otimes\cdots\otimes(\vto{b}_{n}^c)^*)
+\gloref{genInnerProd}:=\tnr{A}\diamond_p ((\vto{y}_1^c)^*\otimes\cdots\otimes(\vto{y}_{p}^c)^*\otimes(\vto{b}_1^c)^*\otimes\cdots\otimes(\vto{b}_{n}^c)^*)
 \end{equation}
 is called the $p$-th order \textsb{generalized inner product} of $\tnr{A}$ and $\tnr{B}$, which is antilinear on the second argument through $\vto{y}_i^*$ and $\vto{b}_i^*$. Thereby, we have
 \begin{equation}
 \tnr{A}\odot_p\tnr{B}=(\prod_{i=1}^p\vto{y}_i\cdot\vto{x}_i)\vto{a}_1^*\otimes\cdots\otimes\vto{a}_{q}^*\otimes(\vto{b}_{1}^c)^*\otimes\cdots\otimes(\vto{b}_n^c)^*\,.
 \end{equation}
-In the context of Euclidean spaces, it is not unusual to see a first order generalized inner product of a dyadic tensor and a covector being used to define the so called ``tensor product of vectors''\footnote{See \aut{Gurtin}\cite{gurtin_1981}, p.4; \aut{Truesdell \& Noll}\cite{truesdell_1992}, p.15; \aut{Ogden}\cite{ogden_1997}, p.16.}. Although we shall not adopt this rather obscure concept, its frequent use by renowned authors forces us to clarify it in terms of our rigorous approach as follows. Firstly, since vectors and covectors have a one to one correspondence, these authors inadvertently use the term ``vector'' either as an element of a vector space or as a covector, depending on the context: in $\vto{u}(\vto{v})=\vto{v}\cdot\vto{u}$, for example, $\vto{u}$ is a covector on the left-hand side and a vector on the right. Thereby, they get rid of the burden of defining a covector and all of its preliminary concepts. In this sense, our representation of a dyadic tensor $\vto{u}^*\otimes\vto{v}^*$ is subverted to $\vto{u}\otimes\vto{v}$ and the contractive product operator is suppressed from our precise representation $(\vto{u}^*\otimes\vto{v}^*)\odot_1 \vto{x}^*=(\vto{x}\cdot\vto{v})\vto{u}^*$ in order to avoid defining a contraction and its supporting concepts. Finally, they define the ``tensor product'' $\vto{u}\otimes\vto{v}$ through its effects, that is, as a ``tensor'' which causes $(\vto{u}\otimes\vto{v})\vto{x}=(\vto{v}\cdot\vto{x})\vto{u}$, for an arbitrary $\vto{x}$. Again,  \emph{this pragmatic approach of taking vectors as first order tensors and all of its consequences will not be adopted in this text}. 
+In the context of Euclidean spaces, it is not unusual to see a first order generalized inner product of a dyadic tensor and a covector being used to define the so called ``tensor product of vectors''\footnote{See \aut{Gurtin}\cite{gurtin_1981}, p.4; \aut{Truesdell \& Noll}\cite{truesdell_1992}, p.15; \aut{Ogden}\cite{ogden_1997}, p.16.}. Although we shall not adopt this rather obscure concept, its frequent use by renowned authors forces us to clarify it in terms of our rigorous approach as follows. Firstly, since vectors and covectors have a one to one correspondence, these authors inadvertently use the term ``vector'' either as an element of a vector space or as a covector, depending on the context: in $\vto{u}(\vto{v})=\vto{v}\cdot\vto{u}$, for example, $\vto{u}$ is a covector on the left-hand side and a vector on the right. Thereby, they get rid of the burden of defining a covector and all of its preliminary concepts. In this sense, our representation of a dyadic tensor $\vto{u}^*\otimes\vto{v}^*$ is subverted to $\vto{u}\otimes\vto{v}$ and the contractive product operator is suppressed from our precise representation $(\vto{u}^*\otimes\vto{v}^*)\odot_1 \vto{x}^*=(\vto{x}\cdot\vto{v})\vto{u}^*$ in order to avoid defining a contraction and its supporting concepts. Finally, they define the ``tensor product'' $\vto{u}\otimes\vto{v}$ through its effects, that is, as a ``tensor'' which causes $(\vto{u}\otimes\vto{v})\vto{x}=(\vto{v}\cdot\vto{x})\vto{u}$, for an arbitrary $\vto{x}$. Again,  \emph{this pragmatic approach of taking vectors as first order tensors and all of its consequences will not be adopted in this text}.
 
 When the order of a generalized inner product equals the order of its terms, the result is a scalar. In this context, considering arbitrary tensors $\tnr{A},\tnr{B}\in\ete{\cam{F}}{U^{\times m}}$, where $\tnr{A}=\vto{a}^*_1\otimes\cdots\otimes\vto{a}^*_m$ and $\tnr{B}=\vto{b}^*_1\otimes\cdots\otimes\vto{b}^*_m$, the scalar
 \begin{equation}\label{eq:prodIntTens}
@@ -396,22 +403,22 @@ When the order of a generalized inner product equals the order of its terms, the
 is called the \textsb{inner product of tensors}\index{inner product!of tensors} $\tnr{A}$ and $\tnr{B}$ because it observes the axioms of ordinary inner products. If an inner product can be defined on the elements of $\ete{\cam{F}}{U^{\times m}}$, then this space results an inner product tensor space. From the above definition, the following interesting equalities are valid:
 \begin{equation}\label{eq:propProdIndTens}
 \tnr{A}\cdot \tnr{B}=\prod_{i=1}^m\fua{\vto{a}_i^*}{\vto{b}_i}=\fua{\tnr{A}}{\vto{b}_1,\cdots,\vto{b}_m}\,.
-\end{equation}     
-Thereby, if $B$ is a basis constructed from the bases $B_i=\{\vun{u}_1^{(i)},\cdots,\vun{u}_{n_i}^{(i)}\}$, considering scalars $\alpha_{i_1\cdots i_m}$ and $\beta_{j_1\cdots j_m}$ the coordinates of $\tnr{A}$ and $\tnr{B}$ on $B$ respectively, we can develop the following: 
+\end{equation}
+Thereby, if $B$ is a basis constructed from the bases $B_i=\{\vun{u}_1^{(i)},\cdots,\vun{u}_{n_i}^{(i)}\}$, considering scalars $\alpha_{i_1\cdots i_m}$ and $\beta_{j_1\cdots j_m}$ the coordinates of $\tnr{A}$ and $\tnr{B}$ on $B$ respectively, we can develop the following:
 \begin{align}
 \tnr{A}\cdot \tnr{B}&= \sum_{i_1=1}^{n_1}\cdots\sum_{i_m=1}^{n_m}\sum_{j_1=1}^{n_1}\cdots\sum_{j_m=1}^{n_m} \alpha_{i_1\cdots i_m}\overline{\beta_{j_1\cdots j_m}}(\vtf{f}_{i_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{i_m}^{B_m})\cdot(\vtf{f}_{j_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{j_m}^{B_m})\nonumber\\
 &= \sum_{i_1=1}^{n_1}\cdots\sum_{i_m=1}^{n_m}\sum_{j_1=1}^{n_1}\cdots\sum_{j_m=1}^{n_m} \alpha_{i_1\cdots i_m}\overline{\beta_{j_1\cdots j_m}}\prod_{k=1}^m\fua{\vtf{f}_{i_k}^{B_k}}{\vun{u}_{j_k}^{(k)}}\nonumber\\
 &= \sum_{i_1=1}^{n_1}\cdots\sum_{i_m=1}^{n_m} \alpha_{i_1\cdots i_m}\overline{\beta_{i_1\cdots i_m}}\,,
-\end{align} 
+\end{align}
 which is a similar result to \eqref{eq:prodIntGen}. Given arbitrary tensors $\tnr{C},\tnr{D}\in\ete{\cam{F}}{V^{\times p}}$, it is straightforward to see that
 \begin{equation}
 (\tnr{A}\otimes \tnr{C}) \cdot (\tnr{B}\otimes \tnr{D})=(\tnr{A}\cdot \tnr{B})(\tnr{C}\cdot \tnr{D})\,.
-\end{equation} 
-If tensor $\tnr{X}=\vto{x}^*_1\otimes\cdots\otimes\vto{x}^*_m\otimes\vto{y}^*_1\otimes\cdots\otimes\vto{y}^*_m$ belongs to  $\ete{\cam{F}}{U^{\times m}\otimes U^{\times m}}$, 
+\end{equation}
+Moreover, if tensor $\tnr{X}=\vto{x}^*_1\otimes\cdots\otimes\vto{x}^*_m\otimes\vto{y}^*_1\otimes\cdots\otimes\vto{y}^*_m$ belongs to  $\ete{\cam{F}}{U^{\times m}\otimes U^{\times m}}$,
 \begin{equation}\label{eq:identProdInt}
 \tnr{I}\cdot \tnr{X}=\fua{\tnr{I}}{\vto{x}_1,\cdots,\vto{x}_m,\vto{y}_1,\cdots,\vto{y}_m}= \prod_{i=1}^m\vto{x}_i\cdot\vto{y}_{i}^c=\overline{\mathrm{tr}}\,\tnr{X}\,,
-\end{equation}   
-according to definitions \eqref{eq:identidade} and \eqref{eq:tracoTensor}. 
+\end{equation}
+according to definitions \eqref{eq:identidade} and \eqref{eq:tracoTensor}.
 {\footnotesize
 \begin{proof}
 First we prove that the generalized inner product is indeed antilinear on the second argument through the following equalities:
@@ -443,11 +450,11 @@ whose strategy can also prove that $\tnr{W}\cdot\tnr{A} + \tnr{W}\cdot\tnr{B}=\t
 }
 
 
-In this study, a tensor function is treated like an ordinary function, on which the same functional definitions and nomenclature already presented can be applied properly. For instance, it is possible to consider a tensor function that is the composition of other tensor functions and consequently to define an inverse tensor function. Moreover, if we consider a  mapping $\map{\tnr{\psi}}{\ete{\cam{F}}{U^{\times p}}}{\ete{\cam{F}}{V^{\times q}}}$, the existence of inner product of tensors enables us to write, for arbitrary tensors $\tnr{U}\in\ete{\cam{F}}{U^{\times p}}$ and $\tnr{V}\in\ete{\cam{F}}{V^{\times p}}$, equality 
+In this study, a tensor function is treated like an ordinary function, on which the same functional definitions and nomenclature already presented can be applied properly. For instance, it is possible to consider a tensor function that is the composition of other tensor functions and consequently to define an inverse tensor function. Moreover, if we consider a  mapping $\map{\tnr{\psi}}{\ete{\cam{F}}{U^{\times p}}}{\ete{\cam{F}}{V^{\times q}}}$, the existence of inner product of tensors enables us to write, for arbitrary tensors $\tnr{U}\in\ete{\cam{F}}{U^{\times p}}$ and $\tnr{V}\in\ete{\cam{F}}{V^{\times p}}$, equality
 \begin{equation}
 \fua{\tnr{\psi}}{\tnr{U}}\cdot\vto{V}=\tnr{U}\cdot\fua{\tnr{\psi}^\dagger}{\tnr{V}}\,,
 \end{equation}
-where the function in $\map{\tnr{\psi}^\dagger}{\ete{\cam{F}}{V^{\times q}}}{\ete{\cam{F}}{U^{\times p}}}$ is called the adjoint tensor function of $\tnr{\psi}$, as defined on section \ref{sec:FuncLin}. In this context, all properties of ordinary adjoint functions presented on page \pageref{eq:propAdj} are also valid and for the particular case of an operation $\map{\tnr{\varphi}}{\ete{\cam{F}}{U^{\times p}}}{\ete{\cam{F}}{U^{\times p}}}$, operator $\tnr{\varphi}$ is said to be Hermitian when  $\tnr{\varphi}=\tnr{\varphi}^\dagger$ and anti-Hermitian when $\tnr{\varphi}=-\tnr{\varphi}^\dagger$. If tensor function $\tnr{\psi}$, as defined previously, is a linear bijection whose inverse equals the adjoint, it is called unitary. Similarly to ordinary unitary operators, the set $O$ of all unitary tensor operators on a certain tensor space defines a group $(O,\circ)$ called unitary group of tensors. A linear operator $\tnr{\kappa}$ defined on a Hilbert tensor space $\ete{\cam{F}}{W^{\times m}}$ is called isometric if the distance $\varrho\,[\fua{\tnr{\kappa}}{\tnr{W}_1},\fua{\tnr{\kappa}}{\tnr{W}_2}]=\fua{\varrho}{\tnr{W}_1,\tnr{W}_2}$, where tensors $\tnr{W}_1$ and $\tnr{W}_2$ are arbitrary. Again, the set $I$ of all isometric tensor operators can define an isometry group $(I,\circ)$ of tensors. In the context of Euclidean tensor spaces, adjoint functions are called transpose, Hermitian functions are said to be symmetric, unitary functions are orthogonal and an isometry group is also an unitary group whose elements preserve the inner product. 
+where the function in $\map{\tnr{\psi}^\dagger}{\ete{\cam{F}}{V^{\times q}}}{\ete{\cam{F}}{U^{\times p}}}$ is called the adjoint tensor function of $\tnr{\psi}$, as defined on section \ref{sec:FuncLin}. In this context, all properties of ordinary adjoint functions presented on page \pageref{eq:propAdj} are also valid and for the particular case of an operation $\map{\tnr{\varphi}}{\ete{\cam{F}}{U^{\times p}}}{\ete{\cam{F}}{U^{\times p}}}$, operator $\tnr{\varphi}$ is said to be Hermitian when  $\tnr{\varphi}=\tnr{\varphi}^\dagger$ and anti-Hermitian when $\tnr{\varphi}=-\tnr{\varphi}^\dagger$. If tensor function $\tnr{\psi}$, as defined previously, is a linear bijection whose inverse equals the adjoint, it is called unitary. Similarly to ordinary unitary operators, the set $O$ of all unitary tensor operators on a certain tensor space defines a group $(O,\circ)$ called unitary group of tensors. A linear operator $\tnr{\kappa}$ defined on a Hilbert tensor space $\ete{\cam{F}}{W^{\times m}}$ is called isometric if the distance $\varrho\,[\fua{\tnr{\kappa}}{\tnr{W}_1},\fua{\tnr{\kappa}}{\tnr{W}_2}]=\fua{\varrho}{\tnr{W}_1,\tnr{W}_2}$, where tensors $\tnr{W}_1$ and $\tnr{W}_2$ are arbitrary. Again, the set $I$ of all isometric tensor operators can define an isometry group $(I,\circ)$ of tensors. In the context of Euclidean tensor spaces, adjoint functions are called transpose, Hermitian functions are said to be symmetric, unitary functions are orthogonal and an isometry group is also an unitary group whose elements preserve the inner product.
 
 
 Fundamentally speaking, the concept of tensor function, up to now, has enabled us to arrive at dual and inner product tensor spaces from the definitions of linear tensor functional and contractive product respectively. In comparative terms, we are now in a similar situation to that which preceded the essential Riesz-Fréchet Theorem in section \ref{sec:FuncLin}. Then, a very interesting question naturally arises: ``Considering a Hilbert tensor space, is it possible for each of its tensors to have a corresponding `cotensor' just like a vector in Hilbert spaces has a covector?'' An affirmative answer to this question would be quite convenient for our purposes because we could properly replace in some convenient cases the study of tensors, which are multilinear functionals, with the simpler study of the so called cotensors. In practice, considering a suitable relationship between the values of tensor and cotensor, we could be able to approach Tensor Differentiation by working with single variable tensor functions instead of tensors themselves, inherently multivariable. The remaining text of this section shows that the concept of \textsb{cotensor}\index{cotensor} is indeed feasible and a future chapter will deal  with the differentiation of single variable tensor functions and their relation to tensor differentiation.
@@ -456,11 +463,11 @@ Fundamentally speaking, the concept of tensor function, up to now, has enabled u
 
 
 \begin{mteo}{Riesz-Fréchet Representation of Tensors}{repRieszTensor}
-Let 
+Let
 \begin{equation*}
 \map{\tnr{\Phi}}{\ete{\cam{F}}{W^{\times p}\times A^{\times q}}}{\evl{\cam{F}}{\ete{\cam{F}}{ W^{\times p}}}{\ete{\cam{F}}{A^{\times q}}}}
 \end{equation*}
-be a mapping where the tensor spaces involved are Hilbert spaces. If for every tensor $\tnr{T}\in \ete{\cam{F}}{W^{\times p}\times A^{\times q}}$, a $p$-cotensor  $\tnr{T}^*_p:=\fua{\tnr{\Phi}}{\tnr{T}}$ is described by the rule  
+be a mapping where the tensor spaces involved are Hilbert spaces. If for every tensor $\tnr{T}\in \ete{\cam{F}}{W^{\times p}\times A^{\times q}}$, a $p$-cotensor  \gloref{pCotensor}$:=\fua{\tnr{\Phi}}{\tnr{T}}$ is described by the rule
 \begin{equation*}
 \fua{\vtf{T}^*_p}{\tnr{X}}=\tnr{X}\odot_p\tnr{T}\,,
 \end{equation*}
@@ -473,7 +480,7 @@ Considering $\tnr{A},\tnr{B}\in\ete{\cam{F}}{W^{\times p}\times A^{\times q}}$, 
 \begin{equation*}
 \fua{\lco\fua{\tnr{\Phi}}{\alpha\tnr{A}+\beta\tnr{B}}\rco}{\tnr{X}}=\tnr{X}\odot_p(\alpha\tnr{A}+\beta\tnr{B})=\overline{\alpha}\tnr{A}^*_p(\tnr{X})+\overline{\beta}\tnr{B}^*_p(\tnr{X})=\fua{\lco\overline{\alpha}\fua{\tnr{\Phi}}{\tnr{A}}+\overline{\beta}\fua{\tnr{\Phi}}{\tnr{B}}\rco}{\tnr{X}}\,.
 \end{equation*}
-If $\tnr{\Phi}$ were not an injection, there would be different $p$-cotensors $\tnr{A}^*_p$ and $\tnr{B}^*_p$ where $\tnr{X}\odot_p\tnr{A}=\tnr{X}\odot_p\tnr{B}$. From this supposition, equality $\tnr{X}\odot_p(\tnr{A}-\tnr{B})=\tnr{0}$ do not confirm $\tnr{A}^*_p\neq\tnr{B}^*_p$ because it is valid for arbitrary $\tnr{X}$. In order to prove that $\tnr{\Phi}$ is a surjection, we need to obtain for an arbitrary tensor function $\vtf{\psi}\in\evl{\cam{F}}{\ete{\cam{F}}{ W^{\times p}}}{\ete{\cam{F}}{A^{\times q}}}$ a tensor $\vto{A}\in \ete{\cam{F}}{W^{\times p}\times A^{\times q}}$ such that $\fua{\tnr{\Phi}}{\tnr{A}}=\vtf{\psi}$. Betaking a strategy that we could call mathematical sagacity, let's consider a tensor 
+If $\tnr{\Phi}$ were not an injection, there would be different $p$-cotensors $\tnr{A}^*_p$ and $\tnr{B}^*_p$ where $\tnr{X}\odot_p\tnr{A}=\tnr{X}\odot_p\tnr{B}$. From this supposition, equality $\tnr{X}\odot_p(\tnr{A}-\tnr{B})=\tnr{0}$ do not confirm $\tnr{A}^*_p\neq\tnr{B}^*_p$ because it is valid for arbitrary $\tnr{X}$. In order to prove that $\tnr{\Phi}$ is a surjection, we need to obtain for an arbitrary tensor function $\vtf{\psi}\in\evl{\cam{F}}{\ete{\cam{F}}{ W^{\times p}}}{\ete{\cam{F}}{A^{\times q}}}$ a tensor $\vto{A}\in \ete{\cam{F}}{W^{\times p}\times A^{\times q}}$ such that $\fua{\tnr{\Phi}}{\tnr{A}}=\vtf{\psi}$. Betaking a strategy that we could call mathematical sagacity, let's consider a tensor
 \begin{equation*}
 \tnr{A}=\sum_{i_1=1}^{n_1}\cdots\sum_{i_p=1}^{n_p}\vtf{f}_{i_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{i_p}^{B_p}\otimes\fua{\vtf{\psi}}{\vtf{f}_{i_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{i_p}^{B_p}}
 \end{equation*}
@@ -490,11 +497,8 @@ where polyadic tensors are defined by orthonormal bases according to theorem \re
 
 
 
-% seguir a sequencia que está no livro velho
-
-
 \begin{mcoro}{Cotensors}{eqNorm}
-If mapping $\map{\tnr{\Phi}}{\ete{\cam{F}}{W^{\times p}}}{\eted{\cam{F}}{W^{\times p}}}$ is considered, the rule of tensor functional $\tnr{T}^*:=\tnr{T}^*_p$, called the cotensor of $\tnr{T}$, results
+If mapping $\map{\tnr{\Phi}}{\ete{\cam{F}}{W^{\times p}}}{\eted{\cam{F}}{W^{\times p}}}$ is considered, the rule of tensor functional \gloref{cotensor}$:=\tnr{T}^*_p$, called the cotensor of $\tnr{T}$, results
 \begin{equation*}
 \fua{\vtf{T}^*}{\tnr{X}}=\tnr{X}\cdot\tnr{T}\,,
 \end{equation*}
@@ -502,28 +506,28 @@ and when $\tnr{T}^*$ is continuous, $\|\tnr{T}^*\|_{\eted{\cam{F}}{W^{\times p}}
 \end{mcoro}
 {\footnotesize
 \begin{proof}
-The verification of previous theorem is not compromised by the conditions of this corollary. Now, let`s prove the equality of norms. Using definition \eqref{eq:normaFuncaoTens} on the present conditions, leaving space representation on norms implicit, we obtain equality $\|\tnr{A}^*\|=\sup\{ |\tnr{X}\cdot\tnr{A}|/\|\tnr{X}\|\}$ for all non zero $\tnr{X}$. If $\tnr{A}$ is zero, it is evident that $\|\tnr{A}^*\|=\|\tnr{A}\|$; otherwise, $\tnr{A}^*$ is non zero and we conclude that $\|\tnr{A}^*\|\geqslant |\, \tnr{X}\cdot\tnr{A}|/\|\tnr{X}\|$. Cauchy-Schwarz Inequality states that $|\, \tnr{X}\cdot\tnr{A}| \leqslant \|\tnr{X}\|\,\,\|\tnr{A}\|$. Subtracting these two previous inequalities, we arrive at $(\|\tnr{A}^*\|-\|\tnr{A}\|)\|\tnr{X}\|\geqslant 0$, whose left side can be zero for arbitrary non zero $\tnr{A}^*$, $\tnr{A}$ and $\tnr{X}$; therefore, $\|\tnr{A}^*\|=\|\tnr{A}\|$.    
+The verification of previous theorem is not compromised by the conditions of this corollary. Now, let`s prove the equality of norms. Using definition \eqref{eq:normaFuncaoTens} on the present conditions, leaving space representation on norms implicit, we obtain equality $\|\tnr{A}^*\|=\sup\{ |\tnr{X}\cdot\tnr{A}|/\|\tnr{X}\|\}$ for all non zero $\tnr{X}$. If $\tnr{A}$ is zero, it is evident that $\|\tnr{A}^*\|=\|\tnr{A}\|$; otherwise, $\tnr{A}^*$ is non zero and we conclude that $\|\tnr{A}^*\|\geqslant |\, \tnr{X}\cdot\tnr{A}|/\|\tnr{X}\|$. Cauchy-Schwarz Inequality states that $|\, \tnr{X}\cdot\tnr{A}| \leqslant \|\tnr{X}\|\,\,\|\tnr{A}\|$. Subtracting these two previous inequalities, we arrive at $(\|\tnr{A}^*\|-\|\tnr{A}\|)\|\tnr{X}\|\geqslant 0$, whose left side can be zero for arbitrary non zero $\tnr{A}^*$, $\tnr{A}$ and $\tnr{X}$; therefore, $\|\tnr{A}^*\|=\|\tnr{A}\|$.
 \end{proof}
 }
 
-Considering the conditions of this last corollary and a function space $\cam{F}^V_\cam{F}$, where the set $V=\ete{\cam{F}}{U^{\times m}}$, let $\frt{T}\in \cam{F}^V_\cam{F}$ be an antilinear tensor functional described by the rule  
+Considering the conditions of this last corollary and a function space $\cam{F}^V_\cam{F}$, where the set $V=\ete{\cam{F}}{U^{\times m}}$, let $\frt{T}\in \cam{F}^V_\cam{F}$ be an antilinear tensor functional described by the rule
 \begin{equation}
 \fua{\frt{T}}{\tnr{X}} = \fua{\overline{\vtf{T}^*}}{\tnr{X}}=\tnr{T}\cdot\tnr{X}\,,
 \end{equation}
-whose existence and uniqueness are straightforward consequences of the theorem in question. Therefore, every tensor $\tnr{T}$ has not only a correspondent cotensor $\tnr{T}^*$ but also a correspondent \textsb{conjugate cotensor}\index{cotensor!conjugate} $\frt{T}$. A function space, subset of $\cam{F}^V_\cam{F}$, that is constituted by all of these conjugate cotensors is called the \textsb{conjugate dual space}\index{dual space!conjugate} of $\ete{\cam{F}}{U^{\times m}}$, represented by $\etec{\cam{F}}{U^{\times m}}$. It is important to observe that if the variable $\tnr{X}$ is expressed in its polyadic form $\vto{x}_1^*\otimes\cdots\otimes\vto{x}_m^*$, the conjugate cotensor is linear on each variable $\vto{x}_i$. In this context, from the above definition and equalities \eqref{eq:propProdIndTens}, we can write that scalar 
-\begin{equation*}
-\fua{\frt{T}}{\vto{x}_1^*\otimes\cdots\otimes\vto{x}_m^*} = \tnr{T}\cdot(\vto{x}_1^*\otimes\cdots\otimes\vto{x}_m^*)=\fua{\tnr{T}}{\vto{x}_1,\cdots,\vto{x}_m}\,,
-\end{equation*}
-where $\frt{T}$ results a \textsb{representative function}\index{function!representative} of tensor $\tnr{T}$ since their values are the same when variables $\vto{x}_i\in (U_i)_\cam{F}$ are arranged as above. Now, it is possible to study tensors through their conjugate cotensors, which substitute them numerically. If we consider the context of expression  \eqref{eq:identProdInt}, \emph{equalities   
-$\fua{\frt{I}}{\tnr{X}} = \tnr{I}\cdot \tnr{X} = \overline{\mathrm{tr}}\,\tnr{X}$ show that the conjugate trace represents the identity tensor}. Moreover, if the identity tensor described by \eqref{eq:poliadIdentidade} is the argument of a representative function $(\tnr{A}\otimes\tnr{B})^\circledast$ where $\tnr{A},\tnr{B}\in\ete{\cam{F}}{V^{\times p}}$, we have the following: 
+whose existence and uniqueness are straightforward consequences of the theorem in question. Therefore, every tensor $\tnr{T}$ has not only a correspondent cotensor $\tnr{T}^*$ but also a correspondent \textsb{conjugate cotensor}\index{cotensor!conjugate} $\frt{T}$. A function space, subset of $\cam{F}^V_\cam{F}$, that is constituted by all of these conjugate cotensors is called the \textsb{conjugate dual space}\index{dual space!conjugate} of $\ete{\cam{F}}{U^{\times m}}$, represented by $\etec{\cam{F}}{U^{\times m}}$. It is important to observe that if the variable $\tnr{X}$ is expressed in its polyadic form $\vto{x}_1^*\otimes\cdots\otimes\vto{x}_m^*$, the conjugate cotensor is linear on each variable $\vto{x}_i$. In this context, from the above definition and equalities \eqref{eq:propProdIndTens}, we can write that scalar
+\begin{equation}
+\fua{\gloref{substFunc}}{\vto{x}_1^*\otimes\cdots\otimes\vto{x}_m^*} = \tnr{T}\cdot(\vto{x}_1^*\otimes\cdots\otimes\vto{x}_m^*)=\fua{\tnr{T}}{\vto{x}_1,\cdots,\vto{x}_m}\,,
+\end{equation}
+where $\frt{T}$ results a \textsb{representative function}\index{function!representative} of tensor $\tnr{T}$ since their values are the same when variables $\vto{x}_i\in (U_i)_\cam{F}$ are arranged as above. Now, it is possible to study tensors through their conjugate cotensors, which substitute them numerically. If we consider the context of expression  \eqref{eq:identProdInt}, \emph{equalities
+$\fua{\frt{I}}{\tnr{X}} = \tnr{I}\cdot \tnr{X} = \overline{\mathrm{tr}}\,\tnr{X}$ show that the conjugate trace represents the identity tensor}. Moreover, if the identity tensor described by \eqref{eq:poliadIdentidade} is the argument of a representative function $(\tnr{A}\otimes\tnr{B})^\circledast$ where $\tnr{A},\tnr{B}\in\ete{\cam{F}}{V^{\times p}}$, we have the following:
 \begin{align}
 \fua{(\tnr{A}\otimes\tnr{B})^\circledast}{\tnr{I}} &= \sum_{{i_1}=1}^{n_1}\cdots\sum_{{i_p}=1}^{n_p}\fua{(\tnr{A}\otimes\tnr{B})^\circledast}{\vtf{f}_{i_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{i_p}^{B_p}\otimes\vtf{f}_{i_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{i_p}^{B_p}}\nonumber\\
 &=\sum_{{i_1}=1}^{n_1}\cdots\sum_{{i_p}=1}^{n_p}\fua{\tnr{A}\otimes\tnr{B}}{\vun{v}_{i_1}^{(1)},\cdots,\vun{v}_{i_p}^{(p)},\vun{v}_{i_1}^{(1)},\cdots,\vun{v}_{i_p}^{(p)}}\nonumber\\
 &=\sum_{{i_1}=1}^{n_1}\cdots\sum_{{i_p}=1}^{n_p}\fua{\tnr{A}}{\vun{v}_{i_1}^{(1)},\cdots,\vun{v}_{i_p}^{(p)}}\fua{\tnr{B}}{\vun{v}_{i_1}^{(1)},\cdots,\vun{v}_{i_p}^{(p)}}\nonumber\\
 &=\sum_{{i_1}=1}^{n_1}\cdots\sum_{{i_p}=1}^{n_p}\fua{\vtf{f}_{i_1\cdots i_p}}{\tnr{A}}\fua{\vtf{f}_{i_1\cdots i_p}}{\tnr{B}}\nonumber\\
-&=????????\,.
+&=\tnr{A}\diamond\tnr{B}\,,
 \end{align}
-
+where equality \eqref{eq:prodContrCoord} was considered.
 
 \begin{comment}
 
