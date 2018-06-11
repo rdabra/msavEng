@@ -238,15 +238,18 @@ From this definition, if $(V_\cam{F})_i$ is a Hilbert space and $B_i=\{\vun{v}_1
 &=\sum_{{i_1}=1}^{n_1}\cdots\sum_{{i_p}=1}^{n_p}\prod_{k=1}^p\fua{\vtf{f}^\con{B_k}_{i_k}}{\vto{x}_k}\fua{\vtf{f}^\con{B_k}_{i_k}}{\vto{y}_k}\,,
 \end{align*}
 considering equalities \eqref{eq:decompVectConj} and \eqref{eq:orthoConju}. Thereby, from the definition of tensor product, we can write that tensor 
-\begin{equation}
-\tnr{I}=\sum_{{i_1}=1}^{n_1}\cdots\sum_{{i_p}=1}^{n_p}\vtf{f}_{i_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{i_p}^{B_p}\otimes\vtf{f}_{i_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{i_p}^{B_p}
+\begin{equation}\label{eq:poliadIdentidade}
+\tnr{I}=\sum_{{i_1}=1}^{n_1}\cdots\sum_{{i_p}=1}^{n_p}\vtf{f}_{i_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{i_p}^{B_p}\otimes\vtf{f}_{i_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{i_p}^{B_p}\,.
 \end{equation}
-as an example of identity tensor. Moreover, in the context of tensor spaces $\ete{\cam{F}}{V^2}$, where $p=1$, defined by Euclidean spaces, we already know that, if basis $B_1$ is orthonormal, equality $\sum_{{i_1}=1}^{n_1}\fua{\vtf{f}^\con{B_1}_{i_1}}{\vto{x}_1}\fua{\vtf{f}^\con{B_1}_{i_1}}{\vto{y}_1}=\vto{x}_1\cdot\vto{y}_1$ is valid, that is, expression \eqref{eq:identidade} results $\fua{\tnr{I}}{\vto{x}_1,\vto{y}_1}=\vto{x}_1\cdot\vto{y}_1$ and  
+If a suitable basis $B$ is built from bases $B_i$, the previous equality and \eqref{eq:regraCoordTens} enable us to write that the coordinates
+\begin{equation}
+\vtf{f}_{j_1\cdots j_m}^{B}(\tnr{I})= \fua{\tnr{I}}{\vun{v}_{j_1}^{(1)},\cdots,\vun{v}_{j_p}^{(p)},\vun{v}_{j_1}^{(1)},\cdots,\vun{v}_{j_p}^{(p)}}=\prod_{k=1}^p\fua{\vtf{f}_{i_k}^{B_k}}{\vun{v}_{j_k}^{(k)}}=\prod_{k=1}^p\delta_{i_kj_k}\,.
+\end{equation}
+Now, considering the context of tensor spaces $\ete{\cam{F}}{V^2}$, where $p=1$, defined by Euclidean spaces, we already know that, if basis $B_1$ is orthonormal, equality $\sum_{{i_1}=1}^{n_1}\fua{\vtf{f}^\con{B_1}_{i_1}}{\vto{x}_1}\fua{\vtf{f}^\con{B_1}_{i_1}}{\vto{y}_1}=\vto{x}_1\cdot\vto{y}_1$ is valid, that is, definition \eqref{eq:identidade} takes the form $\fua{\tnr{I}}{\vto{x}_1,\vto{y}_1}=\vto{x}_1\cdot\vto{y}_1$ and  
 \begin{equation}
 \tnr{I}=\sum_{{i_1}=1}^{n_1}\vun{v}_{i_1}^*\otimes\vun{v}_{i_1}^*=\sum_{{i_1}=1}^{n_1}\sum_{{j_1}=1}^{n_1}\delta_{i_1j_1}\vun{v}_{i_1}^*\otimes\vun{v}_{j_1}^*
 \end{equation}
-is an example of identity tensor of second order. From the last expression of these equalities, the coordinates of $\tnr{I}$ can be arranged in an identity matrix. 
-
+is an identity tensor of second order. 
 
 
 \section{Tensor Functions}
@@ -342,7 +345,7 @@ where $m=q+2p+n$, tensor $\tnr{A}:=\vto{a}_1^*\otimes\cdots\otimes\vto{a}_{q}^*\
 \fua{{\vtf{c}}_{2p}}{\vto{a}_1,\cdots,\vto{a}_q,&\vto{x}_1,\cdots,\vto{x}_p,\vto{y}_1,\cdots,\vto{y}_p,\vto{b}_1,\cdots,\vto{b}_n}:=
 \\&(\prod_{i=1}^p\vto{y}_i^c\cdot\vto{x}_i)\,\vto{a}_1^*\otimes\cdots\otimes\vto{a}_{q}^*\otimes\vto{b}_{1}^*\otimes\cdots\otimes\vto{b}_n^*\,,
 \end{align*} 
-we call tensor $\fua{{\vtf{c}}_{2p}^\otimes}{\tnr{A}\otimes\tnr{B}}$ the $p$-th order \textsb{contractive product}\index{contractive!product} of $\tnr{A}$ and $\tnr{B}$, represented by $\tnr{A}\diamond_p\tnr{B}$. Thereby, we can write in simpler terms that   
+we call tensor $\fua{{\vtf{c}}_{2p}^\otimes}{\tnr{A}\otimes\tnr{B}}$ the $p$-th order \textsb{contractive product}\index{contractive product} of $\tnr{A}$ and $\tnr{B}$, represented by $\tnr{A}\diamond_p\tnr{B}$. Thereby, we can write in simpler terms that   
 \begin{equation}\label{eq:ProdTens}
 \tnr{A}\diamond_p\tnr{B}=(\prod_{i=1}^p\vto{y}_i^c\cdot\vto{x}_i)\vto{a}_1^*\otimes\cdots\otimes\vto{a}_{q}^*\otimes\vto{b}_{1}^*\otimes\cdots\otimes\vto{b}_n^*.
 \end{equation}
@@ -350,7 +353,7 @@ For the sake of generality, when manipulating contractive products we consider t
 \begin{equation}
 \tnr{A}\diamond_p(\tnr{C}\diamond_r\tnr{D}) = (\tnr{A}\diamond_p\tnr{C})\diamond_r\tnr{D}\,,
 \end{equation}
-where $\tnr{C}\in\ete{\cam{F}}{W^{\times p}\times C^{\times n}\times Z^{\times r}}$ and $\tnr{D}\in\ete{\cam{F}}{Z^{\times r}\times D^{\times s}}$. 
+where $\tnr{C}\in\ete{\cam{F}}{W^{\times p}\times C^{\times n}\times Z^{\times r}}$ and $\tnr{D}\in\ete{\cam{F}}{Z^{\times r}\times D^{\times s}}$. It is also important to say that if both tensors $\tnr{A}$ and $\tnr{B}$ belong to $\ete{\cam{F}}{W^{\times p}}$, the scalar $\tnr{A}\diamond\tnr{B}:=\tnr{A}\diamond_p\tnr{B}$ is called simply the contractive product of the tensors in question. DESENVOLVER O PRODUTO CONTRATIVO COMPLETO EM TERMOS DE COORDENADAS PARA TERMINAR A ÚLTIMA EXPRESSÃO.
 
 {\footnotesize
 \begin{proof}
@@ -394,13 +397,19 @@ is called the \textsb{inner product of tensors}\index{inner product!of tensors} 
 \begin{equation}\label{eq:propProdIndTens}
 \tnr{A}\cdot \tnr{B}=\prod_{i=1}^m\fua{\vto{a}_i^*}{\vto{b}_i}=\fua{\tnr{A}}{\vto{b}_1,\cdots,\vto{b}_m}\,.
 \end{equation}     
-Moreover, if tensors $\tnr{C},\tnr{D}\in\ete{\cam{F}}{V^{\times p}}$, it is straightforward to see that
+Thereby, if $B$ is a basis constructed from the bases $B_i=\{\vun{u}_1^{(i)},\cdots,\vun{u}_{n_i}^{(i)}\}$, considering scalars $\alpha_{i_1\cdots i_m}$ and $\beta_{j_1\cdots j_m}$ the coordinates of $\tnr{A}$ and $\tnr{B}$ on $B$ respectively, we can develop the following: 
+\begin{align}
+\tnr{A}\cdot \tnr{B}&= \sum_{i_1=1}^{n_1}\cdots\sum_{i_m=1}^{n_m}\sum_{j_1=1}^{n_1}\cdots\sum_{j_m=1}^{n_m} \alpha_{i_1\cdots i_m}\overline{\beta_{j_1\cdots j_m}}(\vtf{f}_{i_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{i_m}^{B_m})\cdot(\vtf{f}_{j_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{j_m}^{B_m})\nonumber\\
+&= \sum_{i_1=1}^{n_1}\cdots\sum_{i_m=1}^{n_m}\sum_{j_1=1}^{n_1}\cdots\sum_{j_m=1}^{n_m} \alpha_{i_1\cdots i_m}\overline{\beta_{j_1\cdots j_m}}\prod_{k=1}^m\fua{\vtf{f}_{i_k}^{B_k}}{\vun{u}_{j_k}^{(k)}}\nonumber\\
+&= \sum_{i_1=1}^{n_1}\cdots\sum_{i_m=1}^{n_m} \alpha_{i_1\cdots i_m}\overline{\beta_{i_1\cdots i_m}}\,,
+\end{align} 
+which is a similar result to \eqref{eq:prodIntGen}. Given arbitrary tensors $\tnr{C},\tnr{D}\in\ete{\cam{F}}{V^{\times p}}$, it is straightforward to see that
 \begin{equation}
 (\tnr{A}\otimes \tnr{C}) \cdot (\tnr{B}\otimes \tnr{D})=(\tnr{A}\cdot \tnr{B})(\tnr{C}\cdot \tnr{D})\,.
 \end{equation} 
-If a tensor $\tnr{B}=\vto{x}^*_1\otimes\cdots\otimes\vto{x}^*_q\otimes\vto{y}^*_1\otimes\cdots\otimes\vto{y}^*_q$ belongs to  $\ete{\cam{F}}{U^{\times m}}=\ete{\cam{F}}{V^{\times q}\otimes V^{\times q}}$, 
-\begin{equation}
-\tnr{I}\cdot \tnr{B}=\fua{\tnr{I}}{\vto{x}_1,\cdots,\vto{x}_q,\vto{y}_1,\cdots,\vto{y}_q}= \prod_{i=1}^q\vto{x}_i\cdot\vto{y}_{i}^c=\overline{\mathrm{tr}}\,\tnr{B}\,,
+If tensor $\tnr{X}=\vto{x}^*_1\otimes\cdots\otimes\vto{x}^*_m\otimes\vto{y}^*_1\otimes\cdots\otimes\vto{y}^*_m$ belongs to  $\ete{\cam{F}}{U^{\times m}\otimes U^{\times m}}$, 
+\begin{equation}\label{eq:identProdInt}
+\tnr{I}\cdot \tnr{X}=\fua{\tnr{I}}{\vto{x}_1,\cdots,\vto{x}_m,\vto{y}_1,\cdots,\vto{y}_m}= \prod_{i=1}^m\vto{x}_i\cdot\vto{y}_{i}^c=\overline{\mathrm{tr}}\,\tnr{X}\,,
 \end{equation}   
 according to definitions \eqref{eq:identidade} and \eqref{eq:tracoTensor}. 
 {\footnotesize
@@ -505,9 +514,15 @@ whose existence and uniqueness are straightforward consequences of the theorem i
 \begin{equation*}
 \fua{\frt{T}}{\vto{x}_1^*\otimes\cdots\otimes\vto{x}_m^*} = \tnr{T}\cdot(\vto{x}_1^*\otimes\cdots\otimes\vto{x}_m^*)=\fua{\tnr{T}}{\vto{x}_1,\cdots,\vto{x}_m}\,,
 \end{equation*}
-where $\frt{T}$ results a \textsb{representative function}\index{function!representative} of tensor $\tnr{T}$ since their values are the same when variables $\vto{x}_i\in (U_i)_\cam{F}$ are arranged as above. Now, it is possible to study tensors through their conjugate cotensors, which substitute them numerically.
-
-
+where $\frt{T}$ results a \textsb{representative function}\index{function!representative} of tensor $\tnr{T}$ since their values are the same when variables $\vto{x}_i\in (U_i)_\cam{F}$ are arranged as above. Now, it is possible to study tensors through their conjugate cotensors, which substitute them numerically. If we consider the context of expression  \eqref{eq:identProdInt}, \emph{equalities   
+$\fua{\frt{I}}{\tnr{X}} = \tnr{I}\cdot \tnr{X} = \overline{\mathrm{tr}}\,\tnr{X}$ show that the conjugate trace represents the identity tensor}. Moreover, if the identity tensor described by \eqref{eq:poliadIdentidade} is the argument of a representative function $(\tnr{A}\otimes\tnr{B})^\circledast$ where $\tnr{A},\tnr{B}\in\ete{\cam{F}}{V^{\times p}}$, we have the following: 
+\begin{align}
+\fua{(\tnr{A}\otimes\tnr{B})^\circledast}{\tnr{I}} &= \sum_{{i_1}=1}^{n_1}\cdots\sum_{{i_p}=1}^{n_p}\fua{(\tnr{A}\otimes\tnr{B})^\circledast}{\vtf{f}_{i_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{i_p}^{B_p}\otimes\vtf{f}_{i_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{i_p}^{B_p}}\nonumber\\
+&=\sum_{{i_1}=1}^{n_1}\cdots\sum_{{i_p}=1}^{n_p}\fua{\tnr{A}\otimes\tnr{B}}{\vun{v}_{i_1}^{(1)},\cdots,\vun{v}_{i_p}^{(p)},\vun{v}_{i_1}^{(1)},\cdots,\vun{v}_{i_p}^{(p)}}\nonumber\\
+&=\sum_{{i_1}=1}^{n_1}\cdots\sum_{{i_p}=1}^{n_p}\fua{\tnr{A}}{\vun{v}_{i_1}^{(1)},\cdots,\vun{v}_{i_p}^{(p)}}\fua{\tnr{B}}{\vun{v}_{i_1}^{(1)},\cdots,\vun{v}_{i_p}^{(p)}}\nonumber\\
+&=\sum_{{i_1}=1}^{n_1}\cdots\sum_{{i_p}=1}^{n_p}\fua{\vtf{f}_{i_1\cdots i_p}}{\tnr{A}}\fua{\vtf{f}_{i_1\cdots i_p}}{\tnr{B}}\nonumber\\
+&=????????\,.
+\end{align}
 
 
 \begin{comment}
