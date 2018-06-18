@@ -536,10 +536,75 @@ $\fua{\frt{I}}{\tnr{X}} = \tnr{I}\cdot \tnr{X} = \overline{\mathrm{tr}}\,\tnr{X}
 \fua{(\tnr{A}\otimes\tnr{B})^\circledast}{\tnr{I}} &= \sum_{{i_1}=1}^{n_1}\cdots\sum_{{i_p}=1}^{n_p}\fua{(\tnr{A}\otimes\tnr{B})^\circledast}{\vtf{f}_{i_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{i_p}^{B_p}\otimes\vtf{f}_{i_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{i_p}^{B_p}}\nonumber\\
 &=\sum_{{i_1}=1}^{n_1}\cdots\sum_{{i_p}=1}^{n_p}\fua{\tnr{A}\otimes\tnr{B}}{\vun{v}_{i_1}^{(1)},\cdots,\vun{v}_{i_p}^{(p)},\vun{v}_{i_1}^{(1)},\cdots,\vun{v}_{i_p}^{(p)}}\nonumber\\
 &=\sum_{{i_1}=1}^{n_1}\cdots\sum_{{i_p}=1}^{n_p}\fua{\tnr{A}}{\vun{v}_{i_1}^{(1)},\cdots,\vun{v}_{i_p}^{(p)}}\fua{\tnr{B}}{\vun{v}_{i_1}^{(1)},\cdots,\vun{v}_{i_p}^{(p)}}\nonumber\\
-&=\sum_{{i_1}=1}^{n_1}\cdots\sum_{{i_p}=1}^{n_p}\fua{\vtf{f}_{i_1\cdots i_p}}{\tnr{A}}\fua{\vtf{f}_{i_1\cdots i_p}}{\tnr{B}}\nonumber\\
-&=\tnr{A}\diamond\tnr{B}\,,
+&=\sum_{{i_1}=1}^{n_1}\cdots\sum_{{i_p}=1}^{n_p}\fua{\vtf{f}_{i_1\cdots i_p}}{\tnr{A}}\fua{\vtf{f}_{i_1\cdots i_p}}{\tnr{B}}=\tnr{A}\diamond\tnr{B}\,,
 \end{align}
 where equality \eqref{eq:prodContrCoord} was considered.
+
+
+\section{Invariance of Tensors}
+
+The notion of invariance is of paramount importance in Physics since the fundamental description of mechanical phenomena must be not only qualitatively immune to arbitrary changes of reference frame but also quantitatively indifferent when such changes are of unitary type. From a constitutive viewpoint, materials have their invariance too, when some or all of their inherent mechanical properties present themselves indistinctly on certain directions, that is, the overall mechanical behavior of a portion of matter in study is the same when this portion is subjected to specific motions. A tensor, as an algebraic entity that suitably embodies a physical magnitude, can be used to describe accordingly a mechanical measurement or a constitutive material property, including their eventual invariance requirements. Thereby, it is the purpose of this section to briefly develop in mathematical terms this intuitive notion of invariance applied to tensors.
+
+
+
+
+
+\section{Isotropia e Anti-Isotropia}\index{isotropia}
+O conceito de isotropia possui estreita relação com o de
+invariância. A grosso modo, diz-se que uma quantidade ou medida é
+isotrópica se seu valor independe do efeito de qualquer função
+ortogonal que eventualmente aja no seu domínio de atuação. Se esta
+independência se restringir somente a funções ortogonais próprias,
+a medida é anti-isotrópica\index{anti-isotropia}. Medidas que não
+apresentam nenhuma destas características são chamadas
+\emph{anisotrópicas}\index{anisotróprica!medida}.
+
+Considerando um espaço vetorial Euclidiano, medidas isotrópicas,
+representadas por grandezas de segunda ordem (matrizes), por
+exemplo, são \emph{indiferentes} a rotações e reflexões. Ocorrendo
+reflexões, medidas an\-ti-iso\-tró\-pi\-cas podem sofrer
+alteração.
+
+\subsection{Tensores Invariantes}\index{tensor!invariante}
+Seja o espaço tensorial $\ete{\crt{V}{p}}{\con{F}}$ e o grupo de
+operadores tensoriais $\gqq{\cft{\crt{V}{p}}{\con{F}}}{}$.
+Considerando que o conjunto
+$\con{\tilde{P}}_{\cft{\crt{V}{p}}{\con{F}}}\subseteq
+\con{P}_{\cft{\crt{V}{p}}{\con{F}}}$ define o grupo de operadores
+$\gqq{\cft{\crt{V}{p}}{\con{F}}}{\backsim}$, um tensor
+$\tnr{T}\in\cft{\crt{V}{p}}{\con{F}}$ é invariante à atuação do
+grupo $\gqq{\cft{\crt{V}{p}}{\con{F}}}{\backsim}$ se
+\begin{equation}
+\fua{\psi}{\tnr{T}}=\tnr{T}\,,\,\forall\,\psi\in\con{\tilde{P}}_{\cft{\crt{V}{p}}{\con{F}}}\,.
+\end{equation}
+Caso a igualdade anterior seja válida para qualquer tensor
+$\tnr{T}$ de $\cft{\crt{V}{p}}{\con{F}}$, diz-se que o espaço
+tensorial $\ete{\crt{V}{p}}{\con{F}}$ é invariante ao grupo
+$\gqq{\cft{\crt{V}{p}}{\con{F}}}{\backsim}$. Como exemplo, pode-se
+observar que $\ete{\crt{V}{p}}{\con{F}}$ é invariante ao grupo
+definido pelo conjunto $\{ \vtf{i}_{\crt{V}{p}} \}$.
+
+\subsubsection{Tensor Isotrópico}\index{tensor!isotrópico} Um tensor é dito isotrópico se
+ele for invariante ao grupo ortogonal como um todo. Em outras
+palavras, se o grupo de operadores tensoriais considerado for
+$\gro{\cft{\crt{V}{p}}{\con{F}}}$, um tensor
+$\tnr{T}\in\cft{\crt{V}{p}}{\con{F}}$ é isotrópico se
+\begin{equation}
+\fua{\psi}{\tnr{T}}=\tnr{T}\,,\,\forall\,\psi\in\con{O}_{\cft{\crt{V}{p}}{\con{F}}}\,.
+\end{equation}
+
+\subsubsection{Tensor Anti-Isotrópico}\index{tensor!anti-isotrópico} Um tensor é anti-isotrópico
+se ele for invariante ao grupo ortogonal próprio. Desta forma, com
+base no conjunto $\con{O}^+_{\cft{\crt{V}{p}}{\con{F}}}$ formado
+por operadores ortogonais próprios, para um tensor anti-isotrópico
+$\tnr{T}\in\cft{\crt{V}{p}}{\con{F}}$ ,
+\begin{equation}
+\fua{\psi}{\tnr{T}}=\tnr{T}\,,\,\forall\,\psi\in\con{O}^+_{\cft{\crt{V}{p}}{\con{F}}}\,,
+\end{equation}
+onde o conjunto considerado define o grupo ortogonal
+$\grr{\cft{\crt{V}{p}}{\con{F}}}$. Com isso, conclui-se que um
+tensor isotrópico é sempre anti-isotrópico.
+
 
 \begin{comment}
 
