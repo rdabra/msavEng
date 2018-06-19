@@ -433,7 +433,7 @@ where $\kappa\in\real$ is obtained from the $r$ line actions on $\mat{B}$. We ca
 Therefore, we conclude that $\det{\mat{AB}}=\det{\mat{A}}\det{\mat{B}}$. Now, considering $\mat{A}$ singular, it is clear that $\det{\mat{A}}\det{\mat{B}}=0$. If the matrix $\mat{AB}$ is invertible, then there exists a square matrix $C$ where $\mat{ABC}=\mat{I}$. But, saying this means saying also that matrix $\mat{BC}$ is an inverse of $\mat{A}$, which is inconsistent since $\mat{A}$ is singular. Therefore, $\mat{AB}$ is also singular, and then $\det{\mat{AB}}=0$. In this case, we have also $\det{\mat{AB}}=\det{\mat{A}}\det{\mat{B}}$.
 \end{proof}}
 
-If $\mat{A},\mat{B}\in M$ are $n_1\times n_2$ and $n_2\times n_1$ matrices respectively in such a way that $\mat{A}_{ij}=\mat{B}_{ji}$, we call them \textsb{transpose} or that one is the transpose\index{matrix!transpose} of the other, from which we adopt the representation $\gloref{mTransp}$ to $\mat{B}$ and $\mat{B}^\text{T}$ to $\mat{A}$. In particular, the matrix $\mat{S}\in\overline{M}$ is said to be \textsb{symmetric}\index{matrix!symmetric} when it is identical to its transpose and \textsb{antisymmetric}\index{matrix!antisymmetric} if $\mat{S}=-\mat{S}^\text{T}$. From the definition of transpose, we have the following properties:
+If $\mat{A},\mat{B}\in M$ are $n_1\times n_2$ and $n_2\times n_1$ matrices respectively in such a way that $\mat{A}_{ij}=\mat{B}_{ji}$, we call them \textsb{transpose} or that one is the transpose\index{matrix!transpose} of the other, from which we adopt the representation $\gloref{mTransp}$ to $\mat{B}$ and $\mat{B}^\text{T}$ to $\mat{A}$. In particular, the matrix $\mat{S}\in\overline{M}$ is said to be \textsb{symmetric}\index{matrix!symmetric} when it is identical to its transpose and \textsb{antisymmetric}\index{matrix!antisymmetric} if $\mat{S}=-\mat{S}^\text{T}$. From the definition of transpose, we have the following:
 \begin{itemize}
 \setlength\itemsep{.1em}
 	\item[i.] $(\mat{A}^\text{T})^\text{T} =
@@ -445,6 +445,11 @@ If $\mat{A},\mat{B}\in M$ are $n_1\times n_2$ and $n_2\times n_1$ matrices respe
 	\item[iv.] $\lpa\mat{A}^{-1}\rpa^\text{T} =
 \lpa\mat{A}^\text{T}\rpa^{-1}$, if $\mat{A}$ is invertible\,.
 \end{itemize}
+Additionally, if $\mat{A}$ is invertible and $\mat{A}^{-1}=\mat{A}^\text{T}$, it is classified as \textsb{orthogonal}\index{matrix!orthogonal}. In this context, the property $\det{\mat{A}}^\text{T}=\det{\mat{A}}$ enables us to write 
+\begin{equation}
+1=\det{\mat{AA}^{-1}}=\det{\mat{AA}^\text{T}}= \det{\mat{A}}\det\mat{A} = (\det{\mat{A}}) ^2\,,
+\end{equation}
+which means that $\det{\mat{A}}=\pm 1$. Considering this result, matrix $\mat{A}$ is called a \textsb{proper orthogonal matrix}\index{matrix!proper orthogonal} when it has a positive determinant or an \textsb{improper orthogonal matrix}\index{matrix!improper orthogonal} when its determinant is negative. 
 
 {\footnotesize
 \begin{proof}
@@ -488,8 +493,7 @@ In the context of invertible matrices, a matrix whose inverse equals its conjuga
 \begin{equation}
 1=\det{\mat{UU}^{-1}}=\det{\mat{UU}^\dagger}= \det{\mat{U}}\overline{\det\mat{U}} = | \det{\mat{U}} |^2\,,
 \end{equation}
-from where we can conclude that $\det{\mat{U}}=\pm 1$. Thereby, given a matrix $\mat{A}\in\overline{M}$, the determinant $\det{\mat{U}\mat{A}}=\pm\det{\mat{A}}$; which reveals, except for an eventual sign, the \emph{neutrality} of the unitary matrix in the determinant of matrix products. If the unitary matrix elements are reals, it is classified as \textsb{orthogonal}\index{matrix!orthogonal}. More specifically, a \textsb{proper orthogonal matrix}\index{matrix!proper orthogonal} has a positive determinant
-while an \textsb{improper orthogonal matrix}\index{matrix!improper orthogonal} has a negative determinant. Moreover, for any invertible matrix $\mat{A}$, the determinant of the inverse is the inverse of the determinant, according to the following expression:
+from where we can conclude that $\det{\mat{U}}=\pm 1$. Thereby, given a matrix $\mat{A}\in\overline{M}$, the determinant $\det{\mat{U}\mat{A}}=\pm\det{\mat{A}}$; which reveals, except for an eventual sign, the \emph{neutrality} of the unitary matrix in the determinant of matrix products. If the unitary matrix elements are reals, it results that $\mat{U}^\dagger=\mat{U}^\text{T}=\mat{U}^{-1}$, or that it is orthogonal. Moreover, for any invertible matrix $\mat{A}$, the determinant of the inverse is the inverse of the determinant, according to the following expression:
 \begin{equation}
 1=\det{\mat{A}\mat{A}^{-1}}=\det{\mat{A}}\cdot\det{\mat{A}^{-1}}\implies \det{\mat{A}^{-1}}= \lpa\det{\mat{A}}\rpa^{-1}\,.
 \end{equation}
@@ -514,8 +518,6 @@ A mapping $\map{q}{\overline{M}}{\overline{N}}$ is a \textsb{similarity transfor
 \fua{q}{\mat{X}} = \mat{Q}^{-1}\mat{X}\mat{Q}.
 \end{equation}
 An important example of this transformation is called \textsb{diagonalization}\index{diagonalization}, defined from the concept of \textsb{diagonal matrix}\index{matrix!diagonal}, which is a square matrix whose elements in positions $i\neq j$ are null. Thereby, if there exists a similarity transformation in a square matrix $\mat{A}$ which $\fua{q}{A}$ results diagonal, this transformation is called a diagonalization of $\mat{A}$ or matrix $\mat{A}$ is said to be \textsb{diagonalizable}\index{matrix!diagonalizable}. Finally, it is now possible to understand the diagonalization of normal matrices by unitary.
-
-\pagebreak
 
 \begin{mteo}{Spectral Diagonalization}{decompSpec}
 For any normal matrix $\mat{N}$, there is always an unitary matrix $\mat{U}$ such that
