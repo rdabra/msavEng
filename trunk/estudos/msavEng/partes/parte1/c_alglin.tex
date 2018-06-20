@@ -510,7 +510,7 @@ From these equalities, it is clear that $\vtf{g}^\dagger=\vtf{g}^\text{T}$ for r
 	\item[ii.] $\lpa\vtf{g}\circ\vtf{k}\rpa^\dagger=\vtf{k}^\dagger\circ\vtf{g}^\dagger$;
 	\item[iii.] If $\vtf{g}$ is a bijection, there is a function $\vtf{g}^{-\dagger}:=\lpa\vtf{g}^{-1}\rpa^\dagger=\lpa\vtf{g}^\dagger\rpa^{-1}$.
 \end{itemize}
-It is import to point out that these three properties are also valid for the case of transpose functions, being the first one slightly different, where $\lpa\alpha\vtf{g}\rpa^\text{T}=\alpha\vtf{g}^\text{T}$.
+It is important to point out that these three properties are also valid for the case of transpose functions, the first property being slightly different: $\lpa\alpha\vtf{g}\rpa^\text{T}=\alpha\vtf{g}^\text{T}$.
 
 {\footnotesize
 \begin{proof}
@@ -525,20 +525,22 @@ In order to prove the equality on the third property, we need to know that an id
 \end{proof}
 }
 
-A vector $\vtf{h}$ of function space $\evl{\cam{F}}{V}{V}$ is said to be a \textsb{Hermitian}\index{operator!Hermitian} or \textsb{self-adjoint}\index{operator!self-adjoint} operator when $\vtf{h}=\vtf{h}^\dagger$; but, if $\vtf{h}=-\vtf{h}^\dagger$, it is called  \textsb{anti-Hermitian}\index{operator!anti-Hermitian}. Moreover, operator $\vtf{h}$ is \textsb{symmetric}\index{operator!symmetric} if $\vtf{h}=\vtf{h}^\text{T}$ and \textsb{antisymmetric}\index{operator!antisymmetric} if $\vtf{h}=-\vtf{h}^\text{T}$. In the context of real fields, we already know that $\vtf{h}^\dagger=\vtf{h}^\text{T}$ and then (anti-)Hermitian and (anti)symmetric operators are equal. An element of the linear function space $\evl{\cam{F}}{V}{U}$ is said to be \textsb{unitary}\index{function!unitary} when it is a bijection whose inverse equals the adjoint. From this definition, we say that an unitary operator $\vtf{q}\in \evl{\cam{F}}{V}{V}$ preserves inner products because, for all $\vto{u},\vto{v}\in V_\cam{F}$, the following equalities are valid:
+A vector $\vtf{h}$ of function space $\evl{\cam{F}}{V}{V}$ is said to be a \textsb{Hermitian}\index{operator!Hermitian} or \textsb{self-adjoint}\index{operator!self-adjoint} operator when $\vtf{h}=\vtf{h}^\dagger$; but, if $\vtf{h}=-\vtf{h}^\dagger$, it is called  \textsb{anti-Hermitian}\index{operator!anti-Hermitian}. Moreover, operator $\vtf{h}$ is \textsb{symmetric}\index{operator!symmetric} if $\vtf{h}=\vtf{h}^\text{T}$ and \textsb{antisymmetric}\index{operator!antisymmetric} if $\vtf{h}=-\vtf{h}^\text{T}$. In the context of real fields, we already know that $\vtf{h}^\dagger=\vtf{h}^\text{T}$ and then (anti-)Hermitian and (anti)symmetric operators are equal. An element of the function space $\evl{\cam{F}}{V}{U}$ constituted by invertible functions is said to be \textsb{unitary}\index{function!unitary} when it is a bijection whose inverse equals the adjoint or called \textsb{orthogonal}\index{function!orthogonal} if its inverse equals the transpose. Thereby, we can say that an unitary operator $\vtf{q}\in \evl{\cam{F}}{V}{V}$ preserves inner products because, for all $\vto{u},\vto{v}\in V_\cam{F}$, equalities 
 \begin{equation}
-\fua{\vtf{q}}{\vto{u}}\cdot\fua{\vtf{q}}{\vto{v}}=\vto{u}\cdot\fua{\vtf{q}^\dagger\circ\vtf{q}}{\vto{v}}=\vto{u}\cdot\fua{\vtf{q}^{-1}\circ\vtf{q}}{\vto{v}}=\vto{u}\cdot\vto{v}\,.
+\fua{\vtf{q}}{\vto{u}}\cdot\fua{\vtf{q}}{\vto{v}}=\vto{u}\cdot\fua{\vtf{q}^\dagger\circ\vtf{q}}{\vto{v}}=\vto{u}\cdot\fua{\vtf{q}^{-1}\circ\vtf{q}}{\vto{v}}=\vto{u}\cdot\vto{v}
 \end{equation}
-Thereby, in the context of Hilbert spaces, we say that unitary operators also preserve norms, since
-$\|\fua{\vtf{q}}{\vto{u}}\|^2=\fua{\vtf{q}}{\vto{u}}\cdot\fua{\vtf{q}}{\vto{u}}=\vto{u}\cdot\vto{u}=\|\vto{u}\|^2$.
+are valid; and not only for the case of unitary but also of orthogonal operators.
+In this context, we can state that unitary or orthogonal operators also preserve norms, since
+$\|\fua{\vtf{q}}{\vto{u}}\|^2=\fua{\vtf{q}}{\vto{u}}\cdot\fua{\vtf{q}}{\vto{u}}=\vto{u}\cdot\vto{u}=\|\vto{u}\|^2$. We already know that unary invertible operators are bijections and then, if only real fields are considered, every orthogonal operator results unitary and vice-versa.
 
-In the previous chapter we said that the set of all unary invertible operators constitutes a group on the operation of composition. We shall verify now if the set $X\subset \evl{\cam{F}}{V}{V}$ of all unitary linear operators on $V$, since they are unary and invertible, constitutes the group  $\gloref{grUni}:=(X,\circ)$ where $n=\dim{V}$, called \textsb{unitary group}\index{group!unitary}. Equalities
+In the previous chapter we said that the set of all unary invertible operators defines a group on the operation of composition. We shall verify now if the set $X\subset \evl{\cam{F}}{V}{V}$ of all unitary operators on $V$, since they are unary and invertible, constitutes the group  $\gloref{grUni}:=(X,\circ)$ where $n=\dim{V}$, called \textsb{unitary group}\index{group!unitary}. Equalities
 \begin{equation}
 \lpa \vtf{q}_1\circ\vtf{q}_2 \rpa^{-1} =
 \vtf{q}_2^{-1}\circ\vtf{q}_1^{-1} = \vtf{q}_2^\dagger\circ\vtf{q}_1^\dagger =
 \lpa \vtf{q}_1\circ\vtf{q}_2 \rpa^\dagger
 \end{equation}
-show, for all $\vtf{q}_1,\vtf{q}_2\in X$, that bijection\footnote{See properties on page \pageref{prop:Composicao}.}  $\vtf{q}_1\circ\vtf{q}_2$ indeed belongs to the set $X$. In the context of real fields, unitary groups and unitary linear operators are qualified as orthogonal. There are also linear operators that preserve metrics or distance, when they are called \textsb{isometric operators}\index{operator!isometric}. In more rigorous terms, $\vtf{k}\in \evl{\cam{F}}{V}{V}$ is an isometric operator if it is a bijection where $\varrho\,[\fua{\vtf{k}}{\vto{u}},\fua{\vtf{k}}{\vto{v}}]=\fua{\varrho}{\vto{u},\vto{v}}$, for all $\vto{u},\vto{v}\in V_\cam{F}$. Similarly to unitary operators, the set os all isometric operators defines a group $(I,\circ)$ called \textsb{isometry group}\index{group!isometry}, since the composition of isometric operators is also an isometric operator, that is, considering any $\vtf{k},\vtf{g}\in I$, we have
+show, for all $\vtf{q}_1,\vtf{q}_2\in X$, that bijection\footnote{See properties on page \pageref{prop:Composicao}.}  $\vtf{q}_1\circ\vtf{q}_2$ indeed belongs to the set $X$. 
+By these same arguments, a group  $\gloref{grOrto}$ of orthogonal operators can also be defined and then, in the context of real fields, we have $\grc{U}{n}=\grc{O}{n}$. Moreover, there are linear operators which preserve metrics or distance, being called \textsb{isometric operators}\index{operator!isometric}. In more rigorous mathematical terms, $\vtf{k}\in \evl{\cam{F}}{V}{V}$ is an isometric operator if it is an injection where $\varrho\,[\fua{\vtf{k}}{\vto{u}},\fua{\vtf{k}}{\vto{v}}]=\fua{\varrho}{\vto{u},\vto{v}}$, for all $\vto{u},\vto{v}\in V_\cam{F}$. Similarly to unitary operators, the set of all isometric operators defines a group $\gloref{grIsom}$ called \textsb{isometry group}\index{group!isometry}, since the composition of isometric operators is also an isometric operator, that is, considering any $\vtf{k},\vtf{g}\in \grc{I}{n}$, we have
 \begin{equation}
 \varrho\,\lco\fua{\vtf{g}\circ\vtf{k}}{\vto{u}},\fua{\vtf{g}\circ\vtf{k}}{\vto{v}}\rco = \varrho\,\lco{\fua{\vtf{k}}{\vto{u}},\fua{\vtf{k}}{\vto{v}}}\rco=\fua{\varrho}{\vto{u},\vto{v}}
 \end{equation}
@@ -546,7 +548,7 @@ show, for all $\vtf{q}_1,\vtf{q}_2\in X$, that bijection\footnote{See properties
 
 {\footnotesize
 \begin{proof}
-Let's verify these so categorical last statements. If $V_\real$ is an Euclidean space and if a vector $\vtf{k}\in \evl{\real}{V}{V}$ preserves inner product, then
+Let's verify these so categorical last statements. If $V_\real$ is an Euclidean space and if an operator $\vtf{k}\in \evl{\real}{V}{V}$ preserves inner product, then
 \begin{align*}
 	\varrho\lco\fua{\vtf{k}}{\vto{u}},\fua{\vtf{k}}{\vto{v}}\rco^2&=\|\fua{\vtf{k}}{\vto{u}}-\fua{\vtf{k}}{\vto{v}}\|^2\\
 	&=\fua{\vtf{k}}{\vto{u}}\cdot\fua{\vtf{k}}{\vto{u}}-2\fua{\vtf{k}}{\vto{u}}\cdot\fua{\vtf{k}}{\vto{v}}+\fua{\vtf{k}}{\vto{v}}\cdot\fua{\vtf{k}}{\vto{v}}\\
