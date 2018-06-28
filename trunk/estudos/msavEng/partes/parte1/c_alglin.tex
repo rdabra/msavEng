@@ -95,8 +95,11 @@ We define that two vectors project on each other or have a projective interrelat
 \overline{\alpha_2}\fua{\xi}{\vto{u}_1,\vto{u}_2} + \overline{\alpha_3}\fua{\xi}{\vto{u}_1,\vto{u}_3}\,;
 	\end{equation*}
 \end{itemize}
-where $\vto{u}_1,\vto{u}_2,\vto{u}_3\in U_\cam{F}$ and  $\alpha_1,\alpha_2,\alpha_3\in\cam{F}$ are arbitrary elements of their respective sets. In this context, function $\xi$ is called a \textsb{positive-definite inner product} because the projection of a vector on itself is a nonnegative real number, as described by the first axiom. In our study, $\xi$ is simply called an \textsb{inner product}\index{inner product}, and the double $(U_\cam{F},\xi)$ an \textsb{inner product space}\index{space!inner product}. From this double, we conclude that $\xi$ structures the group $U$ in such a way that a projective interrelationship of any pair of its elements can be obtained.
-Henceforth, in order to shorten notation, $\gloref{prdint}$ will also be used to represent the inner product $\fua{\xi}{\vto{x},\vto{y}}$. Alternatively, if we had considered the function in $\map{\xi^c}{U_\cam{F}\times \overline{U_\cam{F}}}{\cam{F}}$ to be the inner product, where $\fua{\xi^c}{\vto{u}_1,\vto{u}_2^c}=\fua{\xi}{\vto{u}_1,\vto{u}_2}$, it would have to observe the axioms
+where $\vto{u}_1,\vto{u}_2,\vto{u}_3\in U_\cam{F}$ and  $\alpha_1,\alpha_2,\alpha_3\in\cam{F}$ are arbitrary elements of their respective sets. In this context, function $\xi$ is called a \textsb{positive-definite inner product} because the projection of a vector on itself is a nonnegative real number, as described by the first axiom. In our study, $\xi$ is simply called an \textsb{inner product}\index{inner product!of vectors}, and the double $(U_\cam{F},\xi)$ an \textsb{inner product space}\index{space!inner product}. From this double, we conclude that $\xi$ structures the group $U$ in such a way that a projective interrelationship of any pair of its elements can be obtained.
+Henceforth, in order to shorten notation, $\gloref{prdint}$ will also be used to represent the inner product $\fua{\xi}{\vto{x},\vto{y}}$. 
+
+\begin{comment}
+Alternatively, if we had considered the function in $\map{\xi^c}{U_\cam{F}\times \overline{U_\cam{F}}}{\cam{F}}$ to be the inner product, where $\fua{\xi^c}{\vto{u}_1,\vto{u}_2^c}=\fua{\xi}{\vto{u}_1,\vto{u}_2}$, it would have to observe the axioms
 \begin{itemize}\label{prop:produtoInternoConj}
 	\setlength\itemsep{.1em}
 	\item[i.] Of nonnegativity: $\fua{\xi^c}{\vto{u},\vto{u}^c}\in \real^+$;
@@ -129,6 +132,7 @@ These two independent developments lead to the resultant equality
 \end{align*}
 that ends up requiring linearity in the first argument of $\xi$ and antilinearity in its second argument. Therefore, from the bilinearity requirement on $\xi^c$ we arrived at the linearity-antilinearity axioms that $\xi$ must observe.
 \end{proof}}
+\end{}
 
 Considering the inner product space $(U_\cam{F},\xi)$, it is now possible to present in more mathematical terms the definition of orthogonality: arbitrary vectors $\vto{u}_1,\vto{u}_2\in U_\cam{F}$ are said to be orthogonal, or $\vto{u}_1\gloref{perpend}\vto{u}_2$, when $\vto{u}_1\cdot\vto{u}_2=0$. Given the subsets $U_1\subset U_\cam{F}$ and $U_2\subset U_\cam{F}$, if $\vto{u}\in U_\cam{F}$ is orthogonal to an arbitrary vector of $U_1$, we write $\vto{u}\perp\con{U}_1$, and if an arbitrary vector of $\con{U}_1$ is orthogonal to an arbitrary vector of $\con{U}_2$, we write $\con{U}_1\perp\con{U}_2$. A set $U_3=\{\vto{u}_1,\cdots,\vto{u}_n\}\subset U_\cam{F}$ is called orthogonal if $\vto{u}_i\perp\vto{u}_j$, $i\neq j$. Thereby, when the vectors of $U_3$ are non zero, the inner product of each side of $\alpha\vto{u}_j=\vto{u}_i$ and $\vto{u}_j$, where $\alpha\in\cam{F}$ and $i\neq j$, results $\alpha\,(\vto{u}_j\cdot\vto{u}_j)=0$, from where we conclude that $\alpha=0$ or that every orthogonal set is linearly independent. This conclusion permits us to state that in a \emph{$n$-dimensional inner product space, every orthogonal subset of $n$ elements is a basis}.
 
@@ -153,7 +157,7 @@ where the function in $\map{g}{\real^+}{\real^+}$ enables us to say that \emph{t
 \end{align*}
 \end{proof}
 }
-
+\end{comment}
 
 
 Any two vectors $\gloref{unita}$ and $\vun{u}_2$ of $(V_\cam{F},\eta,\xi)$ are said to be orthonormal if they are orthogonal and each one is \textsb{unitary}\index{vector!unitary}, where $\|\vun{u}_i\|=1$. Thereby, if the vector space $V_\cam{F}$ is $n$-dimensional, a subset $\hat{U}=\{\vun{u}_1,\vun{u}_2,\cdots,\vun{u}_n\}$ of orthonormal vectors is called an \textsb{orthonormal basis}\index{basis!orthonormal} of $V_\cam{F}$. It is important to note that to every orthogonal basis $\{\vto{u}_1,\vto{u}_2,\cdots,\vto{u}_n\}$, there is always an orthonormal basis $\{\vun{u}_1,\vun{u}_2,\cdots,\vun{u}_n\}$ where each $\vun{u}_i:=\vto{u}_i/\|\vto{u}_i\|$, when we say that the orthonormal basis results from \textsb{normalizing}\index{basis!normalization of} the orthogonal basis.
@@ -315,8 +319,6 @@ The presence of \textsb{reciprocal sets}\index{sets!reciprocal} is another conse
 \end{equation}
 This result shows that $B^\perp$ is linearly independent since the scalars $\gamma_i$ are zero when $\vto{u}=0$. Moreover, as both reciprocal sets have the same number of elements, we can conclude that if one of them is a basis of $V_\cam{F}$, so is the other. Thereby, if $(\alpha_1,\cdots,\alpha_n)$ are the coordinates of a vector on basis $B$, we usually use $(\alpha^1,\cdots,\alpha^n)$ to represent the coordinates of this same vector on basis $B^\perp$.
 
-
-
 {\footnotesize
 \begin{proof}
 Let's verify the uniqueness and existence of reciprocal sets on the context above. From theorem \ref{teo:temOrtonormal}, we can admit an orthogonal subset $Z=\{\vto{z}_1,\cdots,\vto{z}_n\}$. Thereby, let $\{\vto{\tilde{z}}_1,\cdots,\vto{\tilde{z}}_n\}$ be a subset where $\vto{\tilde{z}}_i:=\vto{z}_i/\|\vto{z}_i\|^2$. Therefore, $\vto{z}_i\cdot\vto{\tilde{z}}_j=(\vto{z}_i\cdot\vto{z}_j)/\|\vto{z}_j\|^2=\delta_{ij}$, which proves the existence. Now, supposing that there exists another subset $\{\vto{x}_1,\cdots,\vto{x}_n\}$ reciprocal to $Z$, we can say that $\vto{z}_i\cdot(\vto{\tilde{z}}_j-\vto{x}_j)=0$. As vectors $\vto{z}_i$, $\vto{\tilde{z}}_j$ and $\vto{x}_j$ can not be zero, then $\vto{\tilde{z}}_j=\vto{x}_j$, which proves the uniqueness.
@@ -325,12 +327,9 @@ Let's verify the uniqueness and existence of reciprocal sets on the context abov
 
 
 
-
 \section{Linear Functions}\label{sec:FuncLin}
 
-
 The most fundamental relationships studied in Linear Algebra have the feature of preserving group structures involved, including those defined by fields. Such relationships are expressed by homomorphisms whose main property is to keep structures of vector spaces unaltered. Moreover, if these vector spaces are metric, it is required this additional structure to remain unchanged as well. In practical terms, this means that if the homomorphism domain is a metric vector space, so must be its image. Selected through a criteria of defining the same mapping, we study these functions by gathering them in a vector space, where there are additional restrictions concerning the relations to their arguments.
-
 
 Let's start the study of linear functions considering first an additive group $V^{U}$ constituted of generic functions that define mappings of the type $U\mapsto V$, where $U$ and $V$ are complete spaces with an additive structure. This group is said to define a vector space \gloref{espacFunc}, usually called a \textsb{function space}\index{space!function}, if for arbitrary $\vtf{f},\vtf{g}\in V^U_\cam{F}$ and $\alpha\in\cam{F}$ the following restrictions are observed:
 \begin{itemize}
@@ -501,9 +500,9 @@ Therefore, $\Phi$ is indeed an isometry in this case.
 
 Now, if $U_\cam{F}$ and $V_\cam{F}$ are Hilbert spaces, we call $\vtf{g}^\dagger\in \evl{\cam{F}}{V}{U}$ and $\vtf{g}^\text{T}\in \evl{\cam{F}}{V}{U}$ the \textsb{adjoint }\index{function!adjoint} and \textsb{transpose}\index{function!transpose} functions of $\vtf{g}\in \evl{\cam{F}}{U}{V}$ respectively when, given arbitrary vectors $\vto{u}\in U_\cam{F}$ and $\vto{v}\in V_\cam{F}$,
 \begin{alignat}{3}\label{eq:funcaoTransposta}
-\fua{\vtf{g}^\dagger}{\vto{u}}\cdot\vto{v}=\vto{u}\cdot\fua{\vtf{g}}{\vto{v}}&\qquad \text{and}\qquad & \fua{\vtf{g}^\text{T}}{\vto{u}}\cdot\vto{v}^c=\vto{u}\cdot(\fua{\vtf{g}}{\vto{v}})^c\,.
+\fua{\vtf{g}^\dagger}{\vto{u}}\cdot\vto{v}=\vto{u}\cdot\fua{\vtf{g}}{\vto{v}}&\qquad \text{and}\qquad & \fua{\vtf{g}^\text{T}}{\vto{u}}\diamond\vto{v}=\vto{u}\diamond\fua{\vtf{g}}{\vto{v}}\,,
 \end{alignat}
-From these equalities, it is clear that $\vtf{g}^\dagger=\vtf{g}^\text{T}$ for real fields. In the case of adjoint functions, the following properties are valid for all $\alpha\in\cam{F}$ and $\vtf{k}\in \evl{\cam{F}}{V}{U}\,$:
+where $\vto{x}\diamond\vto{y}:=\vto{x}\cdot\vto{y}^c$ is called the \textsb{contractive product}\index{contractive product!of vectors} of vectors $\vto{x}$ and $\vto{y}$, which is clearly bilinear. From these equalities, it is clear that $\vtf{g}^\dagger=\vtf{g}^\text{T}$ for real fields. In the case of adjoint functions, the following properties are valid for all $\alpha\in\cam{F}$ and $\vtf{k}\in \evl{\cam{F}}{V}{U}\,$:
 \begin{itemize}\label{eq:propAdj}
 	\setlength\itemsep{.1em}
 	\item[i.] $\lpa\alpha\vtf{g}\rpa^\dagger=\overline{\alpha}\vtf{g}^\dagger$;
