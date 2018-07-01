@@ -16,20 +16,36 @@ The group-field space is the fundamental object of Linear Algebra and the intera
     \item[iv.] $1\vto{x}= \vto{x}$, where 1 is the multiplicative identity of $\cam{F}$;
     \item[v.] $ 0\vto{x} = \vto{0}$, where $\vto{0}$ is the null element of $\con{V}$;
 \end{itemize}
-for all $\alpha,\beta\in \cam{F}$ and $\vto{x}, \vto{y}\in V$. Under these conditions, an element of $V$ is called  \textsb{vector}\index{vector} and the triple $(V,\cam{F},p)$ is a \textsb{vector space}\index{space!vector} of $V$ in $\cam{F}$, whose representation is abbreviated by the symbol $\gloref{espacVet}$, which will be treated from now on as a set, in order to simplify notation. Moreover, if the field $\cam{F}$ is complex, vector space $V_\complexo$ is said to be \textsb{complex}\index{space!complex vector}, for an arbitrary group $V$; similarly, $V_\real$ is called a \textsb{real vector space}\index{space!real vector}. From the previous definitions, we can conclude that if a field is a group, then $\cam{F}_{\cam{F}}$ or $\cam{F}$ is also a vector space. Now, when we consider a mapping $\map{\overline{p}}{\cam{F}\times\con{V}}{\con{V}}$, where $\fua{\overline{p}}{\alpha,\vto{x}}=\fua{p}{\overline{\alpha},\vto{x}}=\overline{\alpha}\vto{x}$, vector space $(V,\cam{F},\overline{p})$, represented by $\gloref{espacVetConj}$, is called the \textsb{conjugate vector space}\index{vector space!conjugate} of $V_\cam{F}$. It is interesting to note that only the rule of multiplication by scalar distinguishes a vector space from its conjugate; both being defined by the same additive group and field, that is, they have the same elements which can be multiplied by the same scalars. Since the definer group and field are the same, in order to avoid any dubieties on which vector space is being considered, an arbitrary vector $\vto{v}\in V_\cam{F}$ is represented by \gloref{vetorConj} when $V$ defines $\overline{V_\cam{F}}$, that is, $\vto{v}\in V_\cam{F}$ and $\vto{v}^c\in \overline{V_\cam{F}}$ are representations of the same vector, which are related through $\alpha\vto{v}^c=\overline{\alpha}\vto{v}$ for all $\alpha\in\cam{F}$. From this equality, we can obtain that
+for all $\alpha,\beta\in \cam{F}$ and $\vto{x}, \vto{y}\in V$. Under these conditions, an element of $V$ is called  \textsb{vector}\index{vector} and the triple $(V,\cam{F},p)$ is a \textsb{vector space}\index{space!vector} of $V$ in $\cam{F}$, whose representation is abbreviated by the symbol $\gloref{espacVet}$, which will be treated from now on as a set, in order to simplify notation. Moreover, if the field $\cam{F}$ is complex, vector space $V_\complexo$ is said to be \textsb{complex}\index{space!complex vector}, for an arbitrary group $V$; similarly, $V_\real$ is called a \textsb{real vector space}\index{space!real vector}. From the previous definitions, we can conclude that if a field is a group, then $\cam{F}_{\cam{F}}$ or $\cam{F}$ is also a vector space. Now, when we consider a mapping $\map{\overline{p}}{\cam{F}\times\con{V}}{\con{V}}$, where $\fua{\overline{p}}{\alpha,\vto{x}}=\fua{p}{\overline{\alpha},\vto{x}}=\overline{\alpha}\vto{x}$, vector space $(V,\cam{F},\overline{p})$, represented by $\gloref{espacVetConj}$, is called the \textsb{conjugate vector space}\index{vector space!conjugate} of $V_\cam{F}$. It is interesting to note that only the rule of multiplication by scalar distinguishes a vector space from its conjugate; both being defined by the same additive group and field, that is, they have the same elements which can be multiplied by the same scalars. Since the definer group and field are the same, in order to avoid any dubieties on which vector space is being considered, an arbitrary vector $\vto{v}\in V_\cam{F}$ is represented by \gloref{vetorConj} when $V$ defines $\overline{V_\cam{F}}$, that is, $\vto{v}\in V_\cam{F}$ and $\vto{v}^c\in \overline{V_\cam{F}}$ are representations of the same vector. Moreover, we can state that functions which enable $V_\cam{F}\times\overline{V_\cam{F}}\mapsto V$ or ${\overline{V_\cam{F}}\times V_\cam{F}}\mapsto {V}$ are binary operators, in the terms of section \ref{sec:mapping}, because the domain is ultimately $V^2$.
+
+
+
+
+
+
+Under these conditions, an element of $V$ is called  \textsb{vector}\index{vector} and the triple $(V,\cam{F},p)$ is a \textsb{vector space}\index{space!vector} of $V$ in $\cam{F}$, whose representation is abbreviated by the symbol $\gloref{espacVet}$, which will be treated from now on as a set, in order to simplify notation. Moreover, if the field $\cam{F}$ is complex, vector space $V_\complexo$ is said to be \textsb{complex}\index{space!complex vector}, for an arbitrary group $V$; similarly, $V_\real$ is called a \textsb{real vector space}\index{space!real vector}. From the previous definitions, we can conclude that if a field is a group, then $\cam{F}_{\cam{F}}$ or $\cam{F}$ is also a vector space. Now, when we consider a mapping $\map{\overline{p}}{\cam{F}\times\con{V}}{\con{V}}$ whose function rule is $\fua{\overline{p}}{\alpha,\vto{x}}=\fua{p}{\overline{\alpha},\vto{x}}=\overline{\alpha}\vto{x}$, vector space $(V,\cam{F},\overline{p})$, represented by $\gloref{espacVetConj}$, is called the \textsb{conjugate vector space}\index{vector space!conjugate} of $V_\cam{F}$. It is interesting to note that only the rule of multiplication by scalar distinguishes a vector space from its conjugate; both being defined by the same additive group and field, that is, they have the same elements which can be multiplied by the same scalars. Since the definer group and field are the same, in order to avoid any dubieties on which vector space is being considered, an arbitrary vector $\vto{v}\in V_\cam{F}$ is represented by \gloref{vetorConj} when $V$ defines $\overline{V_\cam{F}}$, that is, $\vto{v}\in V_\cam{F}$ and $\vto{v}^c\in \overline{V_\cam{F}}$ are representations of the same vector, which are related through  
+\begin{equation}
+\alpha\vto{v}^c=
+\begin{dcases}
+\alpha\vto{v}& \text{if } \Im(\alpha)=0\\
+\overline{\alpha}\vto{v}& \text{if } \Im(\alpha)\neq 0
+\end{dcases}\,,
+\end{equation}
+for all $\alpha\in\cam{F}$. Note that when field $\cam{F}=\real$, arbitrary vector $\vto{v}$ is always equal to $\vto{v}^c$ and then $\overline{V_\cam{F}}=V_\cam{F}$. From previous equality, we can obtain the following property
 \begin{equation}\label{eq:antiLinConjVect}
 (\beta_1\vto{x}+\beta_2\vto{y})^c=\overline{\beta_1}\vto{x}^c+\overline{\beta_2}\vto{y}^c
 \end{equation}
 for all $\beta_1,\beta_2\in\cam{F}$. Moreover, we can state that functions which enable $V_\cam{F}\times\overline{V_\cam{F}}\mapsto V$ or ${\overline{V_\cam{F}}\times V_\cam{F}}\mapsto {V}$ are binary operators, in the terms of section \ref{sec:mapping}, because the domain is ultimately $V^2$.
 
- {\footnotesize
+{\footnotesize
 \begin{proof}
-Let's verify the last equality. If we assume that $\vto{v}=\alpha_1\vto{x}+\alpha_2\vto{y}$ in $\alpha\vto{v}^c=\overline{\alpha}\vto{v}$, then
+Let's verify the last equality. If we assume that $\vto{v}=\beta_1\vto{x}+\beta_2\vto{y}$ in $\alpha\vto{v}^c=\overline{\alpha}\vto{v}$, then
 \begin{equation*}
 \alpha (\beta_1\vto{x}+\beta_2\vto{y})^c = \overline{\alpha}(\beta_1\vto{x}+\beta_2\vto{y}) = \overline{\alpha}\beta_1\vto{x}+ \overline{\alpha}\beta_2\vto{y} = \alpha\overline{\beta_1}\vto{x}^c+ \alpha\overline{\beta_2}\vto{y}^c=\alpha(\overline{\beta_1}\vto{x}^c+ \overline{\beta_2}\vto{y}^c) \,,
 \end{equation*}
-which proves $(\beta_1\vto{x}+\beta_2\vto{y})^c=\overline{\beta_1}\vto{x}^c+ \overline{\beta_2}\vto{y}^c$.
+which proves $(\beta_1\vto{x}+\beta_2\vto{y})^c=\overline{\beta_1}\vto{x}^c+ \overline{\beta_2}\vto{y}^c$ for non zero imaginary parts $\Im(\beta_1)$ and $\Im(\beta_2)$. When they are zero, verification is trivial.
 \end{proof}}
+
 
 As a set admits a subset under the conditions already presented, spaces admit subspaces. A \textsb{vector subspace}\index{vector subspace}, structured by the field $\cam{F}$, is actually a vector space in $\cam{F}$ whose elements also belong to a set that defines a vector space in $\cam{F}$. In more precise terms, we say that the vector space $(S,\cam{F},\tilde{p})$, where $\map{\tilde{p}}{\cam{F}\times S}{S}$, is a vector subspace of $V_\cam{F}$ if the set $S\subseteq V$ or, in a detailed notation, if the space $S_\cam{F}\subseteq V_\cam{F}$. It is important to say that as all vector spaces are defined to have a null element $\vto{0}$, then $\vto{0}$ must belong to any vector subspace.
 
@@ -369,7 +385,7 @@ for all $\alpha,\beta\in\cam{F}$ and $\vto{w},\vto{w}_i\in W_i$. In this context
 \lefteqn{\fua{\vtf{c}}{\vto{w}_1,\cdots,\alpha\vto{w}_i+ \beta\vto{w},\cdots,\vto{w}_q}=} & & \nonumber\\
 & &\overline{\alpha}\,\fua{\vtf{c}}{\vto{w}_1,\cdots,\vto{w}_i,\cdots,\vto{w}_q}+\overline{\beta}\,\fua{\vtf{c}}{\vto{w}_1,\cdots,\vto{w},\cdots,\vto{w}_q}\,,
 \end{align}
-for all $\alpha,\beta\in\cam{F}$ and $\vto{w},\vto{w}_i\in W_i$. In the context of vector spaces defined in real fields, a multiantilinear function results multilinear.
+for all $\alpha,\beta\in\cam{F}$ and $\vto{w},\vto{w}_i\in W_i$. In the context of vector spaces defined in real fields, a multiantilinear function results multilinear. If $q=1$ or $q=2$, $\vtf{c}$ is called antilinear or biantilinear respectively. 
 
 Linear functions, as we presented, can also be continuous and constitute a normed function space if a norm is defined. In our study, given $Y_\cam{F}$ and $Z_\cam{F}$ Banach spaces, we define that \emph{a vector space $\evl{\cam{F}}{Z}{Y}$ of continuous linear functions is not only normed but also metric inner product where the norm and the inner product\label{txt:prodInt} are related through $\|\vtf{g}\|=\sqrt{\vtf{g}\cdot\vtf{g}}$ and the distance $\fua{\varrho}{\vtf{g},\vtf{f}} := \|\vtf{g}-\vtf{f}\|$ for all $\vtf{g},\vtf{f}\in \evl{\cam{F}}{Z}{Y}$}. Thereby, for any linear function $\vtf{h}$ in $Y_\cam{F}^Z$ to be continuous, a necessary and sufficient condition requires that it is \textsb{bounded}\index{function!bounded}\footnote{See theorem on \aut{Kreyszig}\cite{kreyszig_1978_1}, p.97.}, namely, that there exists a number $\nu\in\real^+$ where
 \begin{equation}\label{eq:funcaoLimitada}
@@ -388,7 +404,8 @@ where $(\fua{\vtf{f}^\con{B}_{1}}{\vto{u}},\cdots,\fua{\vtf{f}^\con{B}_{n}}{\vto
 \begin{equation}\label{eq:decompVectConj}
 \vto{u}^c=(\sum_{i=1}^{n}\fua{\vtf{f}^\con{B}_{i}}{\vto{u}}\vto{u}_i)^c=\sum_{i=1}^{n}\fua{\overline{\vtf{f}^\con{B}_{i}}}{\vto{u}}\vto{u}_i^c\implies\fua{\overline{\vtf{f}^\con{B}_{i}}}{\vto{u}}=\fua{\vtf{f}^\con{B^c}_{i}}{\vto{u}^c}\,.
 \end{equation}
-where $B^c:=\{\vto{u}_1^c,\cdots,\vto{u}_n^c\}$ is a basis of $\overline{U_\cam{F}}$. As an arbitrary basis vector
+where $B^c:=\{\vto{u}_1^c,\cdots,\vto{u}_n^c\}$ is a basis of $\overline{U_\cam{F}}$. 
+As an arbitrary basis vector
 \begin{equation}
 \vto{u}_i=\sum_{j=1}^{n}\fua{\vtf{f}^\con{B}_{j}}{\vto{u}_i}\vto{u}_j\,,
 \end{equation}
