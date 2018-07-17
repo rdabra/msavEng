@@ -333,7 +333,7 @@ Arrays can be added and multiplied. If an array  $\mat{A+B}$ is the sum of $\mat
 \begin{equation}\label{eq:adicaoArray}
 \mat{(A+B)}_{i_1\cdots i_q}=\mat{A}_{i_1\cdots i_q}+\mat{B}_{i_1\cdots i_q}\,.
 \end{equation}
-In its turn, the multiplication $\mat{AB}$ requires that the last $q$ elements of the dimension of $A$ and the first $q$ elements of the dimension of $B$ are equal; in other words, if $m_1\times\cdots\times m_p\times n_1\times\cdots\times n_q$ is the dimension of $\mat{A}$, then $n_1\times\cdots\times n_q\times l_1\times\cdots\times l_s$ must be the dimension of $\mat{B}$. Thereby, the resulting dimension of array $\mat{AB}$ is $m_1\times\cdots\times m_p\times l_1\times\cdots\times l_s$ and each element
+On the other hand, the multiplication $\mat{AB}$ requires that the last $q$ elements of the dimension of $A$ and the first $q$ elements of the dimension of $B$ are equal; in other words, if array $\mat{A}$ has dimension $m_1\times\cdots\times m_p\times n_1\times\cdots\times n_q$, then $\mat{B}$ must have dimension $n_1\times\cdots\times n_q\times l_1\times\cdots\times l_s$. Thereby, the resulting dimension of array $\mat{AB}$ is $m_1\times\cdots\times m_p\times l_1\times\cdots\times l_s$ and each element
 \begin{equation}
 \lpa\mat{AB}\rpa_{i_1\cdots i_pj_1\cdots j_s} =
 \sum_{k_1=1}^{n_1}\cdots\sum_{k_q=1}^{n_q} \mat{A}_{i_1\cdots
@@ -345,8 +345,10 @@ It is also possible to multiply a scalar $\alpha$ and an array $\mat{C}$ with di
 	i_q}\,.
 \end{equation}
 This definition of multiplication by scalars in the case of $\alpha=-1$, from which we can establish the additive inverse $-\mat{C}$, together with the addition described
-in \eqref{eq:adicaoArray}, allow us to state that the set $Y$ of all $n_1\times\cdots\times n_q$ arrays defines an additive group considering the existence of the null array\index{array!null} $\mat{0}\in Y$, whose elements are all zero. Conversely, since it is not possible to obtain a multiplicative inverse for every element of $Y$, this set can not define a group.
-
+in \eqref{eq:adicaoArray}, allow us to state that the set $Y$ of all $n_1\times\cdots\times n_q$ arrays defines an additive group considering the existence of the null array\index{array!null} $\mat{0}\in Y$, whose elements are all zero. Conversely, since it is not possible to obtain a multiplicative inverse for every element of $Y$, this set can not define a group. Additionally, it is of fundamental importance for upcoming concepts to define $l_1\times\cdots \times l_q\times n_1\times\cdots\times n_q$ arrays $\mat{A}^\text{T}$ and $\mat{A}^\dagger$, which we call here the \textsb{transpose}\index{array!transpose} and the \textsb{conjugate transpose}\index{array!conjugate transpose} of array $A$ respectively, whose elements
+\begin{alignat} {3}
+\mat{A}^\text{T}_{i_1\cdots i_q j_1\cdots j_q}:=\mat{A}_{j_1\cdots j_q i_1\cdots i_q}&\qquad \text{ and } \qquad&\mat{A}^\dagger_{i_1\cdots i_q j_1\cdots j_q}:=\overline{\mat{A}_{j_1\cdots j_q i_1\cdots i_q}}\,.
+\end{alignat}
 
 An example of array that is widely used to accomplish indicial notation of complex quantities and operations is called \textsb{Levi-Civita Symbol}\index{Levi-Civita!Symbol} or \textsb{Permutation Symbol}\index{Permutation!Symbol}, notated by the letter $\epsilon$, whose scalars are defined the following way:
 \begin{equation}
@@ -367,7 +369,6 @@ Because of its definition, the Levi-Civita Symbol is a $n\times\cdots\times n$ a
     -1 & 0
 \end{bmatrix}\,.
 \end{equation}
-
 There is another special array $\delta$, also widely used in indicial notations, called \textsb{Kronecker Delta}\index{Kronecker Delta}, whose elements
 \begin{equation}
     \delta_{i_1\cdots i_{q}j_1\cdots j_{q}}:=
@@ -473,7 +474,7 @@ we equal the left sides of these two expressions, arriving at the equality $\mat
 
 
 A more generic case of matrix transposition involves complex scalars and their conjugates. Thus, let's consider $\mat{H}$ and $\mat{F}$ matrices with dimensions $n_1\times n_2$ and $n_2\times n_1$ respectively, whose elements are complex numbers. We say that these matrices are \textsb{conjugate transpose}, or that one is the conjugate transpose
-\index{matrix!conjugate transpose} of the other if $\mat{H}_{ij}=\gloref{compConj}$. In other words, $\mat{F}$ is the conjugate transpose \gloref{transpConj} of matrix  $\mat{H}$ if it is the transpose of the complex conjugates of the elements of $\mat{H}$. For example, if
+\index{matrix!conjugate transpose} of the other if $\mat{H}_{ij}=\gloref{compConj}$. In other words, $\mat{F}$ is the conjugate transpose \gloref{transpConj} of matrix  $\mat{H}$ if it is the transpose of the complex conjugates of the elements of $\mat{H}$. For example, if matrix
 \begin{alignat*} {3}
 \mat{H}=
 \begin{bmatrix}
