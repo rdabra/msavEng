@@ -625,23 +625,23 @@ if linear function $\vtf{g}$ is invertible and dimension $m=n$. Moreover, as we 
 \maf{(\vtf{l}\circ \vtf{g})}{B}{Z}=\maf{\vtf{l}}{C}{Z}\maf{\vtf{g}}{B}{C}\,.
 \end{equation}
 
-The inner product of vectors $\vto{x},\vto{y}\in X_\cam{F}$, where $X_\cam{F}$ is a Hilbert space, can be represented through the following equalities:
+The inner product of vectors $\vto{x},\vto{y}\in X_\cam{F}$, where $X_\cam{F}$ is a Hilbert space, can be represented through the following equality:
 \begin{equation}
-\vto{x}\cdot\vto{y} = [\mav{\vto{x}}{B}\,{\mav{\vto{y}}{B^\perp}}^{\dagger}]_{11} = [{\mav{\vto{x}}{B}}^\text{T}\,{\overline{\mav{\vto{y}}{B^\perp}}}]_{11}\,,
+\vto{x}\cdot\vto{y}  = {\mav{\vto{x}}{B}}:\,\mav{\vto{y}}{B^\perp}\,,
 \end{equation}
-according to equality \eqref{eq:prodIntGen}. The rule \eqref{eq:regraFuncCoord} enables us to obtain an important property involving Hilbert-adjoint functions and conjugate transpose matrices: considering that a function $\vtf{g}\in\evlc{\cam{F}}{X}{Y}$, where $Y_\cam{F}$ is also a Hilbert space, has an Hilbert-adjoint counterpart, from orthonormal bases $B=\{\vun{x}_i,\cdots,\vun{x}_n\}$ of $X_\cam{F}$ and $K=\{\vun{y}_j,\cdots,\vun{y}_m\}$ of $Y_\cam{F}$, we have
+according to \eqref{eq:prodIntGen}. The rule \eqref{eq:regraFuncCoord} enables us to obtain an important property involving Hilbert-adjoint functions and conjugate transpose matrices: considering that a function $\vtf{g}\in\evlc{\cam{F}}{X}{Y}$, where $Y_\cam{F}$ is also a Hilbert space, has an Hilbert-adjoint counterpart, from orthonormal bases $B=\{\vun{x}_i,\cdots,\vun{x}_n\}$ of $X_\cam{F}$ and $D=\{\vun{y}_j,\cdots,\vun{y}_m\}$ of $Y_\cam{F}$, we have
 \begin{align}\label{eq:matRepTransp}
 \fua{\vtf{g}}{\vun{x}_i}\cdot \vun{y}_j &= \overline{\vtf{g}^\dagger(\vun{y}_j)\cdot\vun{x}_i}\nonumber\\
-\vtf{f}^K_j\lco\fua{\vtf{g}}{\vun{x}_i}\rco &=\overline{\vtf{f}^{B}_i[\vtf{g}^\dagger(\vun{y}_j)]}\nonumber\\
-\overline{\vtf{f}^K_i[\fua{\vtf{g}}{\vun{x}_j}]^\text{T}} &=\vtf{f}^{B}_i[\vtf{g}^\dagger(\vun{y}_j)]\nonumber\\
-{\maf{\vtf{g}}{B}{K}}^\dagger&=[\vtf{g}^\dagger_{K}]^{B}\,,
+\vtf{f}^D_j\lco\fua{\vtf{g}}{\vun{x}_i}\rco &=\overline{\vtf{f}^{B}_i[\vtf{g}^\dagger(\vun{y}_j)]}\nonumber\\
+\overline{\vtf{f}^D_i[\fua{\vtf{g}}{\vun{x}_j}]^\text{T}} &=\vtf{f}^{B}_i[\vtf{g}^\dagger(\vun{y}_j)]\nonumber\\
+{\maf{\vtf{g}}{B}{D}}^\dagger&=[\vtf{g}^\dagger_{D}]^{B}\,,
 \end{align}
 where left and right matrices have dimension $n\times m$. Moreover, if $\vtf{g}$ has a transpose function, a similar development can also be performed:
 \begin{align}\label{eq:matRepTranspT}
 \fua{\vtf{g}}{\vun{x}_i}\cdot \vun{y}_j^c &= \overline{\vtf{g}^\text{T}(\vun{y}_j)\cdot\vun{x}_i^c}\nonumber\\
 (\fua{\vtf{g}}{\vun{x}_i})^c\cdot \vun{y}_j &= \vtf{g}^\text{T}(\vun{y}_j)\cdot\vun{x}_i^c\nonumber\\
-\vtf{f}^{K}_i[\fua{\vtf{g}}{\vun{x}_j^c}]^\text{T} &=\vtf{f}^{B^c}_i[\vtf{g}^\text{T}(\vun{y}_j)]\nonumber\\
-{\maf{\vtf{g}}{B^c}{K}}^\text{T}&=[\vtf{g}^\text{T}_{K}]^{B^c}\,.
+\vtf{f}^{D}_i[\fua{\vtf{g}}{\vun{x}_j^c}]^\text{T} &=\vtf{f}^{B^c}_i[\vtf{g}^\text{T}(\vun{y}_j)]\nonumber\\
+{\maf{\vtf{g}}{B^c}{D}}^\text{T}&=[\vtf{g}^\text{T}_{D}]^{B^c}\,.
 \end{align}
 When we consider an operator $\vtf{h}\in\evlc{\cam{F}}{X}{X}$ and only one orthogonal basis $B$, equalities \eqref{eq:matRepTransp} and \eqref{eq:matRepTranspT} enable us to affirm that the matrix representations of operators $\vtf{h}^\dagger$ and $\vtf{h}^\text{T}$ are respectively the conjugate transpose and the transpose of the representation matrix of $\vtf{h}$.    
 
@@ -742,7 +742,7 @@ Now, an interesting consequence of equalities \eqref{eq:mudaBaseTranspHilbert} i
 
 
 \begin{mcoro}{Change of Coordinates of Linear Operators}{mudaBase}
-If $Y(B)_\cam{F}$ and $Y(C)_\cam{F}$ are vector spaces constituted by the representative matrices of operators that belong to $\evl{\cam{F}}{Y}{Y}$, described respectively on bases $B$ and $C$ of vector space $Y_\cam{F}$, the change of coordinates $\map{\Theta}{Y(B)_\cam{F}}{Y(C)_\cam{F}}$ is always a similarity transformation where $\fua{\Theta}{\mat{X}}=\maf{\vtf{i}}{B}{C}\mat{X}\,\maf{\vtf{i}}{C}{B}$.
+If $Y(B)_\cam{F}$ and $Y(C)_\cam{F}$ are vector spaces constituted by the representative matrices of linear operators that belong to $\evl{\cam{F}}{Y}{Y}$, described respectively on bases $B$ and $C$ of vector space $Y_\cam{F}$, the change of coordinates $\map{\Theta}{Y(B)_\cam{F}}{Y(C)_\cam{F}}$ is always a similarity transformation where $\fua{\Theta}{\mat{X}}=\maf{\vtf{i}}{B}{C}\mat{X}\,\maf{\vtf{i}}{C}{B}$.
 \end{mcoro}
 
 {\footnotesize
@@ -762,15 +762,15 @@ As $\maf{\vtf{i}}{B}{C}={\maf{\vtf{i}}{C}{B}}^{-1}$, we conclude that matrices $
 \end{proof}
 }
 
-Until the end of this chapter, we shall be working with linear functions that admit change of coordinates, that is, linear operators. In this context, some typical concepts of matrices can be applied to such operators. Let's see which and why. Given the conditions of the previous corollary, matrices $\fua{\Theta}{\mat{X}}$ and $\mat{X}$ are similar, from which it can be concluded that  \emph{the trace and determinant of representative matrices of linear operators are immune or indifferent to any change of basis}. Because of this indifference, we consider scalars $\det\vtf{g}:=\det [\vtf{g}]$ and $\trc\vtf{g}:= \trc{\maf{\vtf{g}}{}{}}$ as being respectively the \textsb{determinant}\index{determinant!of linear operator} and the \textsb{trace}\index{trace!of linear operator} of operator $\vtf{g}\in\evl{\cam{F}}{Y}{Y}$, where $\maf{\vtf{g}}{}{}$ is the representative matrix of this operator on any basis of $Y_\cam{F}$. Considering this definition and the linear groups presented in the previous section, it is now possible to define a \textsb{proper orthogonal group}\index{group!proper orthogonal} $\grc{O^{+}}{\cam{F}}{Y}\subset\grc{O}{\cam{F}}{Y}$ constituted by invertible linear operators $\vtf{h}$ whose determinant is positive, that is, $\det\vtf{h}=1$, according to \eqref{eq:detMatOrtog}. Another concept that linear operators inherit from matrices is positivity. Considering $B$ a basis of $Y_\cam{F}$, if the following condition is observed
+Until the end of this chapter, we shall be working with linear functions that admit change of coordinates, that is, linear operators. In this context, some typical concepts of matrices can be applied to such operators. Let's see which and why. Given the conditions of the previous corollary, matrices $\fua{\Theta}{\mat{X}}$ and $\mat{X}$ are similar, from which it can be concluded that  \emph{the trace and determinant of any representative matrix of any linear operator are immune or indifferent to any change of basis}. Because of this indifference, we consider scalars $\det\vtf{g}:=\det [\vtf{g}]$ and $\trc\vtf{g}:= \trc{\maf{\vtf{g}}{}{}}$ as being respectively the \textsb{determinant}\index{determinant!of linear operator} and the \textsb{trace}\index{trace!of linear operator} of operator $\vtf{g}\in\evl{\cam{F}}{Y}{Y}$, where $\maf{\vtf{g}}{}{}$ is the representative matrix of this operator on any basis of $Y_\cam{F}$. Considering this definition and the linear groups presented in the previous section, it is now possible to define a \textsb{proper orthogonal group}\index{group!proper orthogonal} $\grc{O^{+}}{\cam{F}}{Y}\subset\grc{O}{\cam{F}}{Y}$ constituted by invertible linear operators $\vtf{h}$ whose determinant is positive, that is, $\det\vtf{h}=1$, according to \eqref{eq:detMatOrtog}. Another concept that linear operators inherit from matrices is positivity. Considering $B$ a basis of $Y_\cam{F}$, if the following condition is observed
 \begin{equation}
-\Re(\,{\mav{\vto{y}}{B}}^\dagger\maf{\vtf{g}}{B}{B}{\mav{\vto{y}}{B}}\,)_{11}\geqslant0\,,\,\,\forall\,\vto{y}\in Y_\cam{F}\,,
+\Re(\,{\maf{\vtf{g}}{B}{B}{\mav{\vto{y}}{B}}:\mav{\vto{y}}{B}}\,)\geqslant0\,,\,\,\forall\,\vto{y}\in Y_\cam{F}\,,
 \end{equation}
 for all non zero $\vto{y}\in Y_\cam{F}$, matrix $\maf{\vtf{g}}{B}{B}$ is said to be nonnegative, according to the definition presented in the previous chapter. This inequality is still valid if $Y_\cam{F}$ is a Hilbert space and $B$ is orthonormal, when it is possible to develop, from \eqref{eq:prodIntGen},
 \begin{equation}
-\Re(\,{\mav{\vto{y}}{B}}^\dagger\maf{\vtf{g}}{B}{B}{\mav{\vto{y}}{B}}\,)_{11}=\Re(\,{\mav{\vto{y}}{B}}^\dagger\mav{\fua{\vtf{g}}{\vto{y}}}{B}\,)_{11}=\Re(\vto{y}\cdot\fua{\vtf{g}}{\vto{y}})\geqslant 0\,,
+\Re(\,{\maf{\vtf{g}}{B}{B}{\mav{\vto{y}}{B}}:\mav{\vto{y}}{B}}\,)=\Re(\,\mav{\fua{\vtf{g}}{\vto{y}}}{B}:\mav{\vto{y}}{B}\,)=\Re(\fua{\vtf{g}}{\vto{y}}\cdot\vto{y})\geqslant 0\,,
 \end{equation}
- where $\vtf{g}$ is called a \textsb{nonnegative linear operator}\footnote{Or positive-semidefinite\index{linear operator!psotive-semi-definite}.}\index{linear operator!nonnegative} or a \textsb{positive-definite linear operator}\index{linear operator!positive-definite} if the real value  $\Re(\vto{y}\cdot\fua{\vtf{g}}{\vto{y}})$ is always positive.
+ where $\vtf{g}$ is called a \textsb{nonnegative linear operator}\footnote{Or positive-semidefinite\index{linear operator!psotive-semi-definite}.}\index{linear operator!nonnegative} or a \textsb{positive-definite linear operator}\index{linear operator!positive-definite} if the real value  $\Re(\fua{\vtf{g}}{\vto{y}}\cdot\vto{y})$ is always positive.
 
 \begin{example}
  The subject ``change of coordinates'' is too important for our study and it is convenient to finish this section dealing with something less abstract. What follows is a naive little story. Once upon a time, Brenda, a teacher, living on a bank of a large width river, hands over to a boatman a package containing a gift to be delivered at a place on the other bank, where the mechanical engineer Calvin, beloved consignee of her order, lives. At a certain point while crossing the river, the boatman sees himself forced to modify his velocity, which will change the exact time and place where Calvin anxiously waits for his gift. Fully aware of his task's relevance, the boatman, after reading his instruments measurements, sends a text message to Calvin's phone with the following information: \textsl{It is now 2:00 p.m. and after crossing, relative to Brenda, 30km inside the river, that is, perpendicular to her bank, and 5km upstream, against the river flow, I was at 49km/h inside the river and at 13.1km/h upstream when I saw a dangerous shallow part of the riverbed, an then was forced to reduce 20\% my north velocity and 40\% my east velocity. As I won't be able to rectify the route, I ask you to meet me at the new time and on the new point of the border where I'll deliver your package. And please, don't forget that Brenda's place, in relation to yours, is located 30km downstream and 55km inside the river}. Although extremely frustrated after reading this complicated message, Calvin took a deep breadth, kept himself calm and remembered his enjoyable and outstanding classes of Linear Algebra. He came back  home, took pencil, paper and a calculator, sat at his desk and started reasoning to discover the new time and place of arrival: ``First of all, I'll use a bidimensional Euclidean space with a natural basis  $O=\{\vun{e}_1,\vun{e}_2\}$, where $\vun{e}_1$ represents the east and $\vun{e}_2$ the north. So, in relation to this basis, I already know that matrices  $\mav{\vto{c}_1}{O}=[-1\;\;0]^\text{T}$ and $\mav{\vto{c}_2}{O}=[-0,42\;\;0,91]^\text{T}$ are representative bases of the elements of my point of view $C=\{\vto{c}_1,\vto{c}_2\}$, where $\vto{c}_1$ represents the `inside the river' direction while $\vto{c}_2$ is related to the upstream direction. Similarly, in the case of Brenda, matrices $\mav{\vto{b}_1}{O}=[0,87\;\;0,5]^\text{T}$ and $\mav{\vto{b}_2}{O}=[0\;\;1]^\text{T}$ represent the elements of her point of view $B=\{\vto{b}_1,\vto{b}_2\}$. From what the Boatman said, $\mav{\vto{v}}{B}=[49\;\;13.1]^\text{T}$ represented his velocity $\vto{v}$ when he needed to make a change $\vtf{f}$, described by

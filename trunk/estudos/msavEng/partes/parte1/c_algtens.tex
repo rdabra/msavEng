@@ -534,7 +534,7 @@ where equality \eqref{eq:prodContrCoord} was considered.
 
 \section{Array Representations}
 
-Vectors and linear functions are adequately represented by matrices, whose elements are defined from coordinates on given bases, as we already studied in section \ref{sec:Matrix}. Tensor and linear tensor functions, on the other hand, are entities of arbitrary order and then require for their arithmetic manipulation arrays of arbitrary order, also on given bases. Let's see now how this representation occurs by following the same steps we have followed previously for matrix representations. Considering the context of Theorem \ref{teo:geraEte}, an element $\tnr{T}$ of a tensor space $\ete{\cam{F}}{U^{\times m}}$ and a set $B$ one of its basis, an array $\mav{\tnr{T}}{B}$ of dimension $n_1\times\cdots\times n_m$ whose elements $\mav{\tnr{T}}{B}_{i_1\cdots i_m}:=\vtf{f}_{i_1\cdots i_m}^{B}(\tnr{T})$ is called the representative array of $\tnr{T}$ on $B$. Linearity of coordinate functionals leads straightforwardly to 
+Vectors and linear functions are adequately represented by matrices, whose elements are defined from coordinates on given bases, as we already studied in section \ref{sec:Matrix}. Tensor and linear tensor functions, on the other hand, are entities of arbitrary order and then require for their arithmetic manipulation arrays of arbitrary order, also on given bases. Let's see now how this representation occurs by following the same steps we have followed previously for matrix representations. Considering the context of Theorem \ref{teo:geraEte}, an element $\tnr{T}$ of a tensor space $\ete{\cam{F}}{U^{\times m}}$ and a set $B$ one of its basis, an array $\mav{\tnr{T}}{B}$ of dimension $n_1\times\cdots\times n_m\times 1$ whose elements $\mav{\tnr{T}}{B}_{i_1\cdots i_m1}:=\vtf{f}_{i_1\cdots i_m}^{B}(\tnr{T})$ is called the representative array of $\tnr{T}$ on $B$. Linearity of coordinate functionals leads straightforwardly to 
 \begin{equation}
 \alpha\mav{\vto{X}}{B}+\beta\mav{\vto{Y}}{B}=\mav{\alpha\vto{X}+\beta\vto{Y}}{B}\,,
 \end{equation}
@@ -561,11 +561,21 @@ As array $\mav{\fua{\tnr{\gamma}\circ\tnr{\psi}}{\tnr{X}}}{D}=\maf{(\tnr{\gamma}
 \maf{(\tnr{\gamma}\circ\tnr{\psi})}{B}{D}=\maf{\tnr{\gamma}}{C}{D}\maf{\tnr{\psi}}{B}{C}\,.
 \end{equation}
 
-In the previous section, equalities \eqref{eq:prodContrCoord} and \eqref{eq:prodIntCoord}, which are respectively the  contractive and inner product of tensors expressed in terms of coordinates, can be rewritten as follows:
+In the previous section, equalities \eqref{eq:prodContrCoord} and \eqref{eq:prodIntCoord}, which are respectively the  contractive and inner products of tensors expressed in terms of coordinates, can be rewritten here as follows:
 \begin{alignat}{3}
-\tnr{A}\diamond\tnr{B} = \mav{\tnr{A}}{B}{\mav{\tnr{B}}{B}}^\text{T}&\qquad\text{ and }\qquad&\tnr{A}\cdot\tnr{B} = \mav{\tnr{A}}{B}{\mav{\tnr{B}}{B}}^\dagger
+\tnr{A}\diamond\tnr{B} = \mav{\tnr{A}}{B}:\overline{\mav{\tnr{B}}{B}}&\qquad\text{ and }\qquad&\tnr{A}\cdot\tnr{B} = \mav{\tnr{A}}{B}:{\mav{\tnr{B}}{B}}\,.
 \end{alignat}
-  
+Now, we shall verify if it is possible to establish a relation between a Hilbert-adjoint tensor function and a conjugate transpose array and also between a transpose function and a transpose array. If a function $\tnr{\psi}\in\evl{\cam{F}}{\ete{\cam{F}}{U^{\times p}}}{\ete{\cam{F}}{V^{\times p}}}$ has a Hilbert-adjoint, sets $B$ and $D$ are bases of $\ete{\cam{F}}{U^{\times p}}$ and $\ete{\cam{F}}{V^{\times p}}$ respectively, then, from the definition of Hilbert-adjoint tensor function, 
+\begin{align}
+\fua{\tnr{\psi}}{\vtf{f}_{i_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{i_p}^{B_p}}\cdot \vtf{f}_{j_1}^{D_1}\otimes\cdots\otimes\vtf{f}_{j_p}^{D_p} &= \overline{\tnr{\psi}^\dagger(\vtf{f}_{j_1}^{D_1}\otimes\cdots\otimes\vtf{f}_{j_p}^{D_p})\cdot\vtf{f}_{i_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{i_p}^{B_p}}\nonumber\\
+\vtf{f}^D_{j_1\cdots j_p}[\fua{\tnr{\psi}}{\vtf{f}_{i_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{i_p}^{B_p}}] &=\overline{\vtf{f}^B_{i_1\cdots i_p}[\fua{\tnr{\psi}^\dagger}{\vtf{f}_{j_1}^{D_1}\otimes\cdots\otimes\vtf{f}_{j_p}^{D_p}}]}\nonumber\\
+\overline{\vtf{f}^D_{i_1\cdots i_p}[\fua{\tnr{\psi}}{\vtf{f}_{j_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{j_p}^{B_p}}]^\text{T}} &=\vtf{f}^B_{i_1\cdots i_p}[\fua{\tnr{\psi}^\dagger}{\vtf{f}_{j_1}^{D_1}\otimes\cdots\otimes\vtf{f}_{j_p}^{D_p}}]\nonumber\\
+{\maf{\tnr{\psi}}{B}{D}}^\dagger&=[\tnr{\psi}^\dagger_{D}]^{B}\,,
+\end{align}
+where equalities \eqref{eq:regraCoordTens} and \eqref{eq:propProdIndTens} were considered. Similarly to the development that led to \eqref{eq:matRepTranspT}, if there is a transpose function $\tnr{\psi}^\text{T}$, it is possible to arrive at     
+\begin{equation}
+{\maf{\tnr{\psi}}{B^c}{D}}^\text{T}=[\tnr{\psi}^\text{T}_{D}]^{B^c}\,.
+\end{equation}  
 
 \section{Invariance of Tensors}
 
