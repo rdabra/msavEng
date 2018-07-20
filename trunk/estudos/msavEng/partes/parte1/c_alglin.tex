@@ -541,8 +541,7 @@ A vector $\vtf{h}$ of function space $\evlc{\cam{F}}{V}{V}$ is said to be a \tex
 \begin{equation}
 \fua{\vtf{q}}{\vto{u}}\cdot\fua{\vtf{q}}{\vto{v}}=\vto{u}\cdot\fua{\vtf{q}^\dagger\circ\vtf{q}}{\vto{v}}=\vto{u}\cdot\fua{\vtf{q}^{-1}\circ\vtf{q}}{\vto{v}}=\vto{u}\cdot\vto{v}
 \end{equation}
-are valid; and not only for the case of unitary but also of orthogonal operators.
-In this context, we can state that unitary or orthogonal operators also preserve norms, since
+are valid. Conversely, if a linear operator $\vtf{g}\in\evlc{\cam{F}}{V}{V}$ preserves inner product, that is, $\fua{\vtf{g}}{\vto{u}}\cdot\fua{\vtf{g}}{\vto{v}}=\vto{u}\cdot\vto{v}$, then from the definition of Hilbert-adjoint function on \eqref{eq:funcaoTransposta}, it is possible to affirm that every operator which preserves inner product is unitary. In this context, we can state that unitary operators also preserve norms, since
 $\|\fua{\vtf{q}}{\vto{u}}\|^2=\fua{\vtf{q}}{\vto{u}}\cdot\fua{\vtf{q}}{\vto{u}}=\vto{u}\cdot\vto{u}=\|\vto{u}\|^2$. We already know that unary invertible operators are bijections and then, if only real fields are considered, every orthogonal operator results unitary and vice-versa.
 
 In the previous chapter we said that the set of all unary invertible operators defines a group on the operation of composition. Thereby, let's define a group $\gloref{grGene}:=(\evlc{\cam{F}}{V}{V},\circ)$ constituted by all invertible continuous linear operators on $V_\cam{F}$. We shall verify now if the set $X\subset \grc{G}{\cam{F}}{V}$ of all unitary operators on $V_\cam{F}$, since they are unary and invertible, constitutes the group  $\gloref{grUni}:=(X,\circ)$ called \textsb{unitary group}\index{group!unitary} on $V_\cam{F}$. Equalities
@@ -691,7 +690,7 @@ where $\maf{\vtf{i}}{B}{C}_{ij}=\fua{\vtf{f}_i^C}{\fua{\vtf{i}}{\vto{u}_j}}$ and
 describing a change of coordinates $\map{\Gamma}{U(B)_\cam{F}}{U(C)_\cam{F}}$, from which the representative matrix $\fua{\Gamma^{-1}}{\mat{X}}=\maf{\vtf{i}}{C}{B}\mat{X}$ results. In the particular case of Hilbert spaces, there is a rule for coordinate functionals, described by equality \eqref{eq:regraFuncCoord}, which enables us to specify matrix elements $\maf{\vtf{i}}{B}{C}_{ij}=\vto{u}_j\cdot\vto{v}^i$.
 
 
-According to the conditions of equality \eqref{eq:matrizMudBase}, as $\maf{\vtf{i}}{B}{C}$ is a square matrix of order $n$ and the identity function equals its inverse and its conjugate transpose, we can affirm from \eqref{eq:matRepInv} that
+According to the conditions of equality \eqref{eq:matrizMudBase}, as $\maf{\vtf{i}}{B}{C}$ is a square matrix of size $n$ and the identity function equals its inverse and its conjugate transpose, we can affirm from \eqref{eq:matRepInv} that
 \begin{equation}\label{eq:mudaBaseTransp}
 \maf{\vtf{i}}{B}{C}={\maf{\vtf{i}}{C}{B}}^{-1}
 \end{equation}
