@@ -546,19 +546,19 @@ where $\alpha,\beta\in\cam{F}$ and $\vto{X},\vto{Y}\in\ete{\cam{F}}{U^{\times m}
 \end{align*}
 leads to
 \begin{equation}
-\mav{\fua{\tnr{\psi}}{\tnr{X}}}{C}=\maf{\tnr{\psi}}{B}{C}\mav{\tnr{X}}{B}\,,
+\mav{\fua{\tnr{\psi}}{\tnr{X}}}{C}=\maf{\tnr{\psi}}{B}{C}\mat{*_m\,}\mav{\tnr{X}}{B}\,,
 \end{equation}
 where $\maf{\tnr{\psi}}{B}{C}$ is a $(p+m)$-th order array. If arbitrary scalars $\alpha,\beta\in\cam{F}$ and tensor function $\tnr{\varphi}\in\evl{\cam{F}}{\ete{\cam{F}}{U^{\times m}}}{\ete{\cam{F}}{V^{\times p}}}$ are also considered, from previous equality, it is straightforward to obtain that  
 \begin{equation}
-\mav{[\fua{\alpha\tnr{\psi}+\beta\tnr{\varphi}]}{\tnr{X}}}{C}=(\alpha\maf{\tnr{\psi}}{B}{C}+\beta\maf{\tnr{\varphi}}{B}{C})\mav{\tnr{X}}{B}\,.
+\mav{[\fua{\alpha\tnr{\psi}+\beta\tnr{\varphi}]}{\tnr{X}}}{C}=(\alpha\maf{\tnr{\psi}}{B}{C}+\beta\maf{\tnr{\varphi}}{B}{C})\mat{*_m}\mav{\tnr{X}}{B}\,.
 \end{equation}
 Given an element $\tnr{\gamma}$ and a basis $D$ of a tensor space $\evl{\cam{F}}{\ete{\cam{F}}{V^{\times p}}}{\ete{\cam{F}}{W^{\times q}}}$, it is possible to define a composite function $\tnr{\gamma}\circ\tnr{\psi}\in\evl{\cam{F}}{\ete{\cam{F}}{U^{\times m}}}{\ete{\cam{F}}{W^{\times q}}}$ where
 \begin{equation}
-\mav{\tnr{\gamma}\circ\tnr{\psi}(\tnr{X})}{D}=\maf{\tnr{\gamma}}{C}{D}\mav{\fua{\tnr{\psi}}{\tnr{X}}}{C}=\maf{\tnr{\gamma}}{C}{D}\maf{\tnr{\psi}}{B}{C}\mav{\tnr{X}}{B}\,.
+\mav{\tnr{\gamma}\circ\tnr{\psi}(\tnr{X})}{D}=\maf{\tnr{\gamma}}{C}{D}\mat{*_p\,}\mav{\fua{\tnr{\psi}}{\tnr{X}}}{C}=\maf{\tnr{\gamma}}{C}{D}\mat{*_p\,}\maf{\tnr{\psi}}{B}{C}\mat{*_m\,}\mav{\tnr{X}}{B}\,.
 \end{equation}
 As array $\mav{\fua{\tnr{\gamma}\circ\tnr{\psi}}{\tnr{X}}}{D}=\maf{(\tnr{\gamma}\circ\tnr{\psi})}{B}{D}\mav{\vto{u}}{B}$, we can state that
 \begin{equation}
-\maf{(\tnr{\gamma}\circ\tnr{\psi})}{B}{D}=\maf{\tnr{\gamma}}{C}{D}\maf{\tnr{\psi}}{B}{C}\,.
+\maf{(\tnr{\gamma}\circ\tnr{\psi})}{B}{D}=\maf{\tnr{\gamma}}{C}{D}\mat{*_p\,}\maf{\tnr{\psi}}{B}{C}\,.
 \end{equation}
 
 In the previous section, equalities \eqref{eq:prodContrCoord} and \eqref{eq:prodIntCoord}, which are respectively the  contractive and inner products of tensors expressed in terms of coordinates, can be rewritten here as follows:
@@ -576,6 +576,9 @@ where equalities \eqref{eq:regraCoordTens} and \eqref{eq:propProdIndTens} were c
 \begin{equation}
 {\maf{\tnr{\psi}}{B^c}{D}}^\text{T}=[\tnr{\psi}^\text{T}_{D}]^{B^c}\,.
 \end{equation}  
+
+FALAR SOBRE MUDANCA DE COORDENADAS
+
 
 \section{Invariance of Tensors}
 

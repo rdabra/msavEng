@@ -327,23 +327,23 @@ In these circumstances, the triple $\lpa F, +, \cdot \rpa$ is called a \textsb{f
 \section{Arrays}\index{array}
 
 
-We already learned that sequences are collections of ordered elements; or, more precisely, elements arranged in a queue, where each one has a position labeled by an index. Generalizing this idea, we shall build collections whose elements are arranged in a higher number of perspectives, like a table (bidimensional) arrangement, for instance. Thereby, let $H$ be a collection of scalars, arranged by the mapping $\map{\fun{h}}{\crt{N}{q}}{\cam{F}}$, where the function $h$ is called \textsb{addressing}\index{array!addressing of} and each $N_i = \lch 1,2,\cdots,n_i \rch$ is a finite subset of $\mathbb{N}^*$ whose elements are ordinals. In this context, we call the collection $H$ an array, represented by $\gloref{array}$, whose scalars $\fua{\fun{h}}{( i_1,\cdots,i_q)}$ are notated by $\gloref{elArray1}$, where the subscript show explicitly the element position. The description of perspectives or \textsb{size}\index{array!size of} of an array is given by the $n$-tuple $(n_1 , \cdots , n_q)$ or, more usually, $n_1\times\cdots\times n_q\,$, where the number of perspectives $q$ expresses the \textsb{order}\index{array!order of} of the array and $n_i$ the \textsb{dimension}\index{array!dimension of} of each perspective.
+We already learned that sequences are collections of ordered elements; or, more precisely, elements arranged in a queue, where each one has a position labeled by an index. Generalizing this idea, we shall build collections whose elements are arranged in a higher number of perspectives, like a table arrangement, for instance. Thereby, let $H$ be a collection of scalars, arranged by the mapping $\map{\fun{h}}{\crt{N}{q}}{\cam{F}}$, where the function $h$ is called \textsb{addressing}\index{array!addressing of} and each $N_i = \lch 1,2,\cdots,n_i \rch$ is a finite subset of $\mathbb{N}^*$ whose elements are ordinals. In this context, we call the collection $H$ an array, represented by $\gloref{array}$, whose scalars $\fua{\fun{h}}{( i_1,\cdots,i_q)}$ are notated by $\gloref{elArray1}$, where the subscript show explicitly the element position. The description of perspectives or \textsb{dimension}\index{array!dimension of} of an array is given by the $n$-tuple $(n_1 , \cdots , n_q)$ or, more usually, $n_1\times\cdots\times n_q\,$, where the number of perspectives $q$ expresses the \textsb{order}\index{array!order of} of the array and $n_i$ the \textsb{size}\index{array!size of} of each perspective.
 
-Arrays can be added and multiplied. If an array  $\mat{A+B}$ is the sum of $\mat{A}$ and $\mat{B}$, these three arrays have equal size $n_1\times\cdots\times n_q\,$ and each element
+Arrays can be added and multiplied. If an array  $\mat{A+B}$ is the sum of $\mat{A}$ and $\mat{B}$, these three arrays have equal dimension $n_1\times\cdots\times n_q\,$ and each element
 \begin{equation}\label{eq:adicaoArray}
 \mat{(A+B)}_{i_1\cdots i_q}=\mat{A}_{i_1\cdots i_q}+\mat{B}_{i_1\cdots i_q}\,.
 \end{equation}
-On the other hand, the multiplication $\mat{AB}$ requires that the last $q$ elements of the size of $A$ and the first $q$ elements of the size of $B$ are equal; in other words, if array $\mat{A}$ has size $m_1\times\cdots\times m_p\times n_1\times\cdots\times n_q $, then $\mat{B}$ must have size $n_1\times\cdots\times n_q\times l_1\times\cdots\times l_s$. Thereby, the resulting size of array $\mat{AB}$ is $m_1\times\cdots\times m_p\times l_1\times\cdots\times l_s$ and each element
+On the other hand, the multiplication \gloref{prodArr} requires that the last $q$ elements of the dimension of $\mat{A}$ and the first $q$ elements of the dimension of $\mat{B}$ are equal; in other words, if array $\mat{A}$ has dimension $m_1\times\cdots\times m_p\times n_1\times\cdots\times n_q $, then $\mat{B}$ must have dimension $n_1\times\cdots\times n_q\times l_1\times\cdots\times l_s$. Thereby, the resulting dimension of array $\mat{A*_qB}$ is $m_1\times\cdots\times m_p\times l_1\times\cdots\times l_s$ and each element
 \begin{equation}
-\lpa\mat{AB}\rpa_{i_1\cdots i_pj_1\cdots j_s} =
+\lpa\mat{A*_qB}\rpa_{i_1\cdots i_pj_1\cdots j_s} =
 \sum_{k_1=1}^{n_1}\cdots\sum_{k_q=1}^{n_q} \mat{A}_{i_1\cdots
 	i_pk_1\cdots k_q}\,\mat{B}_{k_1\cdots k_qj_1\cdots j_s}\,.
 \end{equation}
-It is also very important for our study to present the so called the \textsb{scalar product}\index{matrix!scalar product of} or \textsb{Frobenius product} of arrays: given two arrays $\mat{A}$ and $\mat{B}$ with the same size $m_1\times\cdots\times m_p$, the scalar product 
+From now on, we shall adopt that $\mat{AB}:=\mat{A*_1B}$. It is also very important for our study to present the so called the \textsb{scalar product}\index{matrix!scalar product of} or \textsb{Frobenius product} of arrays: given two arrays $\mat{A}$ and $\mat{B}$ with the same dimension $m_1\times\cdots\times m_p$, the scalar product 
 \begin{equation}
 \gloref{scalP}:=\sum_{i_1}^{m_1}\cdots\sum_{i_p}^{m_p}\mat{A}_{i_1\cdots i_p}\overline{\mat{B}_{i_1\cdots i_p}}\,.
 \end{equation}
-Speaking of scalars, it is also possible to multiply a scalar $\alpha$ and an array $\mat{C}$ with size $n_1\times\cdots\times n_q$ according to
+Speaking of scalars, it is also possible to multiply a scalar $\alpha$ and an array $\mat{C}$ with dimension $n_1\times\cdots\times n_q$ according to
 \begin{equation}
 \lpa\alpha\mat{C}\rpa_{i_1\cdots i_q} := \alpha \cdot \mat{C}_{i_1\cdots
 	i_q}\,.
@@ -364,8 +364,8 @@ i_1,\cdots,i_n\rpa\\\
 \fua{p}{1,\cdots,n }=\lpa i_1,\cdots,i_n\rpa
 \end{dcases}\,,
 \end{equation}
-where function $p$ permutates the $n$-tuple elements $(1,\cdots,n)$. In this array, the addressing domain is $N^n$, where the set of ordinals $N = \lch 1,2,\cdots,n \rch$. The term $\fua{\alpha_p}{ 1,\cdots,n }$ means the number of transpositions made on $\lpa 1,\cdots,n \rpa$, after which the resulting $n$-tuple is $\fua{p}{1,\cdots,n }$.
-Because of its definition, the Levi-Civita Symbol is an array of order $n$ whose size is $n\times\cdots\times n$. Arrays having the same dimension $n$ in each perspective, like the Levi-Civita Symbol, are usually called \textsb{hypercubic}\index{array!hypercubic} of dimension $n$. Therefore, $\epsilon$ is a hypercubic array of order $n$ and dimension $n$. For instance, the Levi-Civita Symbol of order two and dimension two results in a tabular arrangement; more precisely,
+where function $p$ permutes the $n$-tuple elements $(1,\cdots,n)$. In this array, the addressing domain is $N^n$, where the set of ordinals $N = \lch 1,2,\cdots,n \rch$. The term $\fua{\alpha_p}{ 1,\cdots,n }$ means the number of transpositions made on $\lpa 1,\cdots,n \rpa$, after which the resulting $n$-tuple is $\fua{p}{1,\cdots,n }$.
+Because of its definition, the Levi-Civita Symbol is an array of order $n$ whose dimension is $n\times\cdots\times n$. Arrays having the same size $n$ in each perspective, like the Levi-Civita Symbol, are usually called \textsb{hypercubic}\index{array!hypercubic} of size $n$. Therefore, $\epsilon$ is a hypercubic array of order $n$ and size $n$. For instance, when the order and size are $2$, $\epsilon$ can be represented in a  tabular arrangement; more precisely,
 \begin{equation}
 \epsilon=
 \begin{bmatrix}
@@ -373,6 +373,15 @@ Because of its definition, the Levi-Civita Symbol is an array of order $n$ whose
     -1 & 0
 \end{bmatrix}\,.
 \end{equation}
+The Levi-Civita symbol enables us to define a notable mapping $\map{\text{Det}}{\bar{A}}{\cam{F}}$, where $\bar{A}$ is the set of all $q$-th order hypercubic arrays of size $n$, $\cam{F}$ is a real or complex field and function $\text{Det}$ is called \textsb{hyperdeterminant}\index{array!hyperdeterminant of}, whose rule is
+\begin{equation}\label{eq:Hiperdeterminante}
+\hdet{\mat{X}} = \frac{1}{n!}\sum_{i_1^{(1)}=1}^n\cdots\sum_{i_n^{(1)}=1}^n\cdots
+\sum_{i_1^{(q)}=1}^n\cdots\sum_{i_n^{(q)}=1}^n\epsilon_{i_1^{(1)}\cdots
+	i_n^{(1)}}\cdots\epsilon_{i_1^{(q)}\cdots i_n^{(q)}}
+\prod_{k=1}^{n}\mat{X}_{i_k^{(1)}\cdots i_k^{(q)}}
+\end{equation}
+when the order $q$ is even and $\hdet{\mat{X}}=0$ when it is odd. Although this definition lacks an adequate justification at this point, it will support future concepts that will have their own intuitive meaning.   
+
 There is another special array $\delta$, also widely used in indicial notations, called \textsb{Kronecker Delta}\index{Kronecker Delta}, whose elements
 \begin{equation}
     \delta_{i_1\cdots i_{q}j_1\cdots j_{q}}:=
@@ -406,17 +415,18 @@ where $\mat{A}$ is a $n\times\cdots\times n$ array, with $n$ repeated $q$ times.
 
 
 
-At this point, it is convenient to say that every $n_1\times n_2$ array, whose elements are arranged in a tabular format, is called a \textsb{matrix}\index{matrix}. The elements of a matrix are addressed by lines and columns: the escalar with $ij$ position is located on the line $i$ and column $j$. If $n_1=n_2=n$, we have a hypercubic matrix, called \textsb{square matrix}\index{matrix!square}, whose dimension is $n$. Henceforth, recalling the additive group $Y$ of arrays, we will consider
-$\bar{Y}\subset Y$ a set of hypercubic arrays of dimension $n$, $M\subset Y$ a set of matrices and  $\bar{M}\subset \bar{Y}$ a set of square matrices with dimension $n$. For example, the set $\bar{M}$ has the $n\times n$ Kronecker Delta, represented in \eqref{eq:matrizIdentidade}, as an element, which we usually call \textsb{identity matrix}\index{matrix!identity} $\mat{I}$ because $\mat{A}\mat{I} = \mat{I}\mat{A} = \mat{A}$, for an arbitrary $\mat{A}\in\bar{M}$.
+At this point, it is convenient to say that every $n_1\times n_2$ array, whose elements are arranged in a tabular format, is called a \textsb{matrix}\index{matrix}. The elements of a matrix are addressed by lines and columns: the escalar with $ij$ position is located on the line $i$ and column $j$. If $n_1=n_2=n$, we have a hypercubic matrix, called \textsb{square matrix}\index{matrix!square}, whose size is $n$. Henceforth, recalling the additive group $Y$ of arrays, we will consider
+$\bar{Y}\subset Y$ the set of hypercubic arrays of size $n$, $M\subset Y$ the set of matrices and  $\bar{M}\subset \bar{Y}$ the set of square matrices with size $n$. For example, the set $\bar{M}$ has the $n\times n$ Kronecker Delta, represented in \eqref{eq:matrizIdentidade}, as an element, which we usually call \textsb{identity matrix}\index{matrix!identity} $\mat{I}$ because $\mat{A}\mat{I} = \mat{I}\mat{A} = \mat{A}$, for an arbitrary $\mat{A}\in\bar{M}$.
 
-If there exists a matrix $\mat{B}\in\bar{M}$ such that $\mat{A}\mat{B} = \mat{I}$, we call it the \textsb{inverse}\index{matrix!inverse} of $\mat{A}$, notated by $\mat{A}^{-1}$. The condition of invertibility of a matrix depends on the value of a function called \textsb{determinant}\index{determinant}, which defines a mapping $\map{\gloref{determ}}{\bar{M}}{\cam{F}}$ where $\cam{F}$ is a real or complex field and $\det$ is described by the equality
+If there exists a matrix $\mat{B}\in\bar{M}$ such that $\mat{A}\mat{B} = \mat{I}$, we call it the \textsb{inverse}\index{matrix!inverse} of $\mat{A}$, notated by $\mat{A}^{-1}$. The condition of invertibility of a matrix depends on the value of its hyperdeterminant. In the context of matrices, the hyperdeterminant function is called \textsb{determinant}\index{determinant}, which defines a mapping $\map{\gloref{determ}}{\bar{M}}{\cam{F}}$ where $\text{det}$ is described by the rule called \textsb{Leibniz formula}\index{Leibniz!formula}, namely
 \begin{equation}\label{eq:Determinante}
-\det\mat{X} = \frac{1}{n!}\sum_{i_1=1}^n\cdots\sum_{i_n=1}^n
+\dete{\mat{X}} = \frac{1}{n!}\sum_{i_1=1}^n\cdots\sum_{i_n=1}^n
 \sum_{j_1=1}^n\cdots\sum_{j_n=1}^n\epsilon_{i_1\cdots
 	i_n}\epsilon_{j_1\cdots j_n}
 \prod_{k=1}^{n}\mat{X}_{i_kj_k}\,,
 \end{equation}
-which we call \textsb{Leibniz formula}\index{Leibniz!formula}. When $\det\mat{X}=0$, matrix $\mat{X}$ is said to be \textsb{singular}\index{matrix!singular} or \textsb{non-invertible}\index{matrix!non-invertible}; otherwise, it is called \textsb{non-singular}\index{matrix!non-singular} or \textsb{invertible}\index{matrix!invertible}. From the above definition, we can obtain a zero value determinant when its argument is the zero matrix and a unitary value for the identity matrix. Moreover, the main property of determinants of square matrices is to preserve multiplications, that is, the determinant of the product is the product of determinants; in other words $\det{\mat{AB}}=\det{\mat{A}}\cdot\det{\mat{B}}$. Recalling our classification of groups, we can say that a subset of $\bar{M}$ whose matrices are all invertible defines, together with the operation of multiplication, a non-abelian group.
+which is actually equality \eqref{eq:Hiperdeterminante} applied to square matrices of size $n$. When $\dete{\mat{X}}=0$, matrix $\mat{X}$ is said to be \textsb{singular}\index{matrix!singular} or \textsb{non-invertible}\index{matrix!non-invertible}; otherwise, it is called \textsb{non-singular}\index{matrix!non-singular} or \textsb{invertible}\index{matrix!invertible}. From the above definition, we can obtain a zero value determinant when its argument is the zero matrix and a unitary value for the identity matrix. Moreover, the main property of determinants of square matrices is to preserve multiplications, that is, the determinant of the product is the product of determinants; in other words $\dete{\mat{AB}}=\dete{\mat{A}}\cdot\dete{\mat{B}}$. Recalling our classification of groups, we can say that a subset of $\bar{M}$ whose matrices are all invertible defines, together with the operation of multiplication, a non-abelian group.
+
 
 
 {\footnotesize
@@ -429,15 +439,15 @@ where matrices $\mat{E}_i$ are elementary. Thus, the equality
 \begin{equation*}
 \mat{A}=\mat{E}_{1}^{-1}\mat{E}_{2}^{-1}\cdots\mat{E}_{r-1}^{-1}\mat{E}_r^{-1}
 \end{equation*}
-is a decomposition of $\mat{A}$ in elementary matrices, since the inverse of an elementary matrix is also elementary. The determinant of a matrix $\mat{A}'$ that results from a line action on the matrix $\mat{A}$ is given by $\det{\mat{A}'}=\alpha\det{\mat{A}}$, onde $\alpha\in\real$. Therefore, we can state that $\det{\mat{E}}=\beta\det{\mat{I}}=\beta$, where $\beta\in\real$. Considering what has been defined so far, we can say that
+is a decomposition of $\mat{A}$ in elementary matrices, since the inverse of an elementary matrix is also elementary. The determinant of a matrix $\mat{A}'$ that results from a line action on the matrix $\mat{A}$ is given by $\dete{\mat{A}'}=\alpha\dete{\mat{A}}$, onde $\alpha\in\real$. Therefore, we can state that $\dete{\mat{E}}=\beta\dete{\mat{I}}=\beta$, where $\beta\in\real$. Considering what has been defined so far, we can say that
 \begin{equation*}
-\det{\mat{AB}}=\det{\mat{E}_{1}^{-1}\mat{E}_{2}^{-1}\cdots\mat{E}_{r-1}^{-1}\mat{E}_r^{-1}\mat{B}}=\kappa\det{\mat{B}}\,,
+\dete{\mat{AB}}=\dete{\mat{E}_{1}^{-1}\mat{E}_{2}^{-1}\cdots\mat{E}_{r-1}^{-1}\mat{E}_r^{-1}\mat{B}}=\kappa\dete{\mat{B}}\,,
 \end{equation*}
 where $\kappa\in\real$ is obtained from the $r$ line actions on $\mat{B}$. We can also state that
 \begin{equation*}
-\det{\mat{E}_{1}^{-1}\mat{E}_{2}^{-1}\cdots\mat{E}_{r-1}^{-1}\mat{E}_r^{-1}\mat{I}}=\kappa\det{\mat{I}}=\kappa\,.
+\dete{\mat{E}_{1}^{-1}\mat{E}_{2}^{-1}\cdots\mat{E}_{r-1}^{-1}\mat{E}_r^{-1}\mat{I}}=\kappa\dete{\mat{I}}=\kappa\,.
 \end{equation*}
-Therefore, we conclude that $\det{\mat{AB}}=\det{\mat{A}}\det{\mat{B}}$. Now, considering $\mat{A}$ singular, it is clear that $\det{\mat{A}}\det{\mat{B}}=0$. If the matrix $\mat{AB}$ is invertible, then there exists a square matrix $C$ where $\mat{ABC}=\mat{I}$. But, saying this means saying also that matrix $\mat{BC}$ is an inverse of $\mat{A}$, which is inconsistent since $\mat{A}$ is singular. Therefore, $\mat{AB}$ is also singular, and then $\det{\mat{AB}}=0$. In this case, we have also $\det{\mat{AB}}=\det{\mat{A}}\det{\mat{B}}$.
+Therefore, we conclude that $\dete{\mat{AB}}=\dete{\mat{A}}\dete{\mat{B}}$. Now, considering $\mat{A}$ singular, it is clear that $\dete{\mat{A}}\dete{\mat{B}}=0$. If the matrix $\mat{AB}$ is invertible, then there exists a square matrix $C$ where $\mat{ABC}=\mat{I}$. But, saying this means saying also that matrix $\mat{BC}$ is an inverse of $\mat{A}$, which is inconsistent since $\mat{A}$ is singular. Therefore, $\mat{AB}$ is also singular, and then $\dete{\mat{AB}}=0$. In this case, we have also $\dete{\mat{AB}}=\dete{\mat{A}}\dete{\mat{B}}$.
 \end{proof}}
 
 If $\mat{A},\mat{B}\in M$ are $n_1\times n_2$ and $n_2\times n_1$ matrices respectively in such a way that $\mat{A}_{ij}=\mat{B}_{ji}$, we call them \textsb{transpose} or that one is the transpose\index{matrix!transpose} of the other, from which we adopt the representation $\gloref{mTransp}$ to $\mat{B}$ and $\mat{B}^\text{T}$ to $\mat{A}$. In particular, the matrix $\mat{S}\in\bar{M}$ is said to be \textsb{symmetric}\index{matrix!symmetric} when it is identical to its transpose and \textsb{antisymmetric}\index{matrix!antisymmetric} if $\mat{S}=-\mat{S}^\text{T}$. From the definition of transpose, we have the following:
@@ -452,11 +462,11 @@ If $\mat{A},\mat{B}\in M$ are $n_1\times n_2$ and $n_2\times n_1$ matrices respe
 	\item[iv.] $\lpa\mat{A}^{-1}\rpa^\text{T} =
 \lpa\mat{A}^\text{T}\rpa^{-1}$, if $\mat{A}$ is invertible\,.
 \end{itemize}
-Additionally, if $\mat{A}$ is invertible and $\mat{A}^{-1}=\mat{A}^\text{T}$, it is classified as \textsb{orthogonal}\index{matrix!orthogonal}. In this context, the property $\det{\mat{A}}^\text{T}=\det{\mat{A}}$ enables us to write 
+Additionally, if $\mat{A}$ is invertible and $\mat{A}^{-1}=\mat{A}^\text{T}$, it is classified as \textsb{orthogonal}\index{matrix!orthogonal}. In this context, the property $\dete{\mat{A}}^\text{T}=\dete{\mat{A}}$ enables us to write 
 \begin{equation}\label{eq:detMatOrtog}
-1=\det{\mat{AA}^{-1}}=\det{\mat{AA}^\text{T}}= \det{\mat{A}}\det\mat{A} = (\det{\mat{A}}) ^2\,,
+1=\dete{\mat{AA}^{-1}}=\dete{\mat{AA}^\text{T}}= \dete{\mat{A}}\dete{\mat{A}} = (\dete{\mat{A}}) ^2\,,
 \end{equation}
-which means that $\det{\mat{A}}=\pm 1$. Considering this result, matrix $\mat{A}$ is called a \textsb{proper orthogonal matrix}\index{matrix!proper orthogonal} when it has a positive determinant or an \textsb{improper orthogonal matrix}\index{matrix!improper orthogonal} when its determinant is negative. 
+which means that $\dete{\mat{A}}=\pm 1$. Considering this result, matrix $\mat{A}$ is called a \textsb{proper orthogonal matrix}\index{matrix!proper orthogonal} when it has a positive determinant or an \textsb{improper orthogonal matrix}\index{matrix!improper orthogonal} when its determinant is negative. 
 
 {\footnotesize
 \begin{proof}
@@ -479,7 +489,7 @@ we equal the left sides of these two expressions, arriving at the equality $\mat
 \end{proof}}
 
 
-A more generic case of matrix transposition involves complex scalars and their conjugates. Thus, let's consider $\mat{H}$ and $\mat{F}$ matrices with sizes $n_1\times n_2$ and $n_2\times n_1$ respectively, whose elements are complex numbers. We say that these matrices are \textsb{conjugate transpose}, or that one is the conjugate transpose
+A more generic case of matrix transposition involves complex scalars and their conjugates. Thus, let's consider $\mat{H}$ and $\mat{F}$ matrices with dimensions $n_1\times n_2$ and $n_2\times n_1$ respectively, whose elements are complex numbers. We say that these matrices are \textsb{conjugate transpose}, or that one is the conjugate transpose
 \index{matrix!conjugate transpose} of the other if $\mat{H}_{ij}=\gloref{compConj}$. In other words, $\mat{F}$ is the conjugate transpose \gloref{transpConj} of matrix  $\mat{H}$ if it is the transpose of the complex conjugates of the elements of $\mat{H}$. For example, if matrix
 \begin{alignat*} {3}
 \mat{H}=
@@ -496,13 +506,13 @@ A more generic case of matrix transposition involves complex scalars and their c
 When the elements involved are all real scalars, we have the equality $\mat{H}^\dagger=\mat{H}^\text{T}$. Moreover, it is convenient to say that the four properties presented above for transpose matrices are also valid for conjugate transposes, namely, $(\mat{H}_1^\dagger)^\dagger =\mat{H}_1$,  $(\mat{H}_1+\mat{H}_2)^\dagger = \mat{H}_1^\dagger+\mat{H}_2^\dagger$, $(\mat{H}_1\mat{H}_2)^\dagger =\mat{H}_2^\dagger\mat{H}_1^\dagger$ and $(\mat{H}_1^\dagger)^{-1}=(\mat{H}_1^{-1})^\dagger$, if $\mat{H}_1$ is invertible, where matrices $\mat{H}_1,\mat{H}_2\in M$.
 
 
-In the context of invertible matrices, a matrix whose inverse equals its conjugate transpose, that is, when  $\mat{U}^{-1}=\mat{U}^\dagger$ where $\mat{U}\in\bar{M}$, is called  \textsb{unitary}\index{matrix!unitary}. Considering the property $\det{\mat{H}}^\dagger=\overline{\det{\mat{H}}}$, we have
+In the context of invertible matrices, a matrix whose inverse equals its conjugate transpose, that is, when  $\mat{U}^{-1}=\mat{U}^\dagger$ where $\mat{U}\in\bar{M}$, is called  \textsb{unitary}\index{matrix!unitary}. Considering the property $\dete{\mat{H}}^\dagger=\overline{\dete{\mat{H}}}$, we have
 \begin{equation}
-1=\det{\mat{UU}^{-1}}=\det{\mat{UU}^\dagger}= \det{\mat{U}}\overline{\det\mat{U}} = | \det{\mat{U}} |^2\,,
+1=\dete{\mat{UU}^{-1}}=\dete{\mat{UU}^\dagger}= \dete{\mat{U}}\overline{\dete{\mat{U}}} = | \dete{\mat{U}} |^2\,,
 \end{equation}
-from where we can conclude that $\det{\mat{U}}=\pm 1$. Thereby, given a matrix $\mat{A}\in\bar{M}$, the determinant $\det{\mat{U}\mat{A}}=\pm\det{\mat{A}}$; which reveals, except for an eventual sign, the \emph{neutrality} of the unitary matrix in the determinant of matrix products. If the unitary matrix elements are reals, it results that $\mat{U}^\dagger=\mat{U}^\text{T}=\mat{U}^{-1}$, or that it is orthogonal. Moreover, for any invertible matrix $\mat{A}$, the determinant of the inverse is the inverse of the determinant, according to the following expression:
+from where we can conclude that $\dete{\mat{U}}=\pm 1$. Thereby, given a matrix $\mat{A}\in\bar{M}$, the determinant $\dete{\mat{U}\mat{A}}=\pm\dete{\mat{A}}$; which reveals, except for an eventual sign, the \emph{neutrality} of the unitary matrix in the determinant of matrix products. If the unitary matrix elements are reals, it results that $\mat{U}^\dagger=\mat{U}^\text{T}=\mat{U}^{-1}$, or that it is orthogonal. Moreover, for any invertible matrix $\mat{A}$, the determinant of the inverse is the inverse of the determinant, according to the following expression:
 \begin{equation}
-1=\det{\mat{A}\mat{A}^{-1}}=\det{\mat{A}}\cdot\det{\mat{A}^{-1}}\implies \det{\mat{A}^{-1}}= \lpa\det{\mat{A}}\rpa^{-1}\,.
+1=\dete{\mat{A}\mat{A}^{-1}}=\dete{\mat{A}}\cdot\dete{\mat{A}^{-1}}\implies \dete{\mat{A}^{-1}}= \lpa\dete{\mat{A}}\rpa^{-1}\,.
 \end{equation}
 
 A given square matrix $\mat{A}$ that equals its conjugate transpose $\mat{A}^\dagger$ is called \textsb{Hermitian}\index{matrix!Hermitian}. Real symmetric matrices are examples of Hermitian matrices: if the elements of the square matrix  $\mat{S}$ are real, then $\mat{S}^\dagger=\mat{S}^\text{T}$, and since $\mat{S}$ is symmetric, $\mat{S}^\dagger=\mat{S}$. Similarly to antisymmetric matrices, an \textsb{anti-Hermitian}\index{matrix!anti-Hermitian} matrix $\mat{A}$ equals the negative of its conjugate transpose, that is, $\mat{A}=-\mat{A}^\dagger$. Thus, let $\mat{B}\in\bar{M}$ be a matrix from which we write the following development:
@@ -518,7 +528,7 @@ Any square matrix $\mat{N}$ is called \textsb{normal}\index{matrix!normal}\label
 \end{equation}
 It is important to note that $\mat{A}$ and $\mat{B}$ positions in the equality do not affect the definition, since by adopting $\mat{P}:=\mat{Q}^{-1}$, we arrive at $\mat{B} = \mat{P}^{-1}\mat{A}\mat{P}$, where the concept of similarity is maintained. Moreover, similar matrices have the same determinant value as can be verified in the following equalities:
 \begin{equation}
-\det \mat{A} = \det \mat{Q}^{-1}\det\mat{B}\det\mat{Q}=(\det\mat{Q})^{-1}\det\mat{Q}\det\mat{B}=\det\mat{B}.
+\dete {\mat{A}} = \dete {\mat{Q}^{-1}}\dete{\mat{B}}\dete{\mat{Q}}=(\dete{\mat{Q}})^{-1}\dete{\mat{Q}}\dete{\mat{B}}=\dete{\mat{B}}.
 \end{equation}
 A mapping $\map{q}{\bar{M}}{\bar{N}}$ is a \textsb{similarity transformation}\index{similarity!transformation} if
 \begin{equation}
@@ -556,7 +566,7 @@ Now let's clarify the term ``spectrum'' cited by the theorem above; but before t
 \begin{equation}
 \trc{\mat{X}} = \sum_{i=1}^{n}\mat{X}_{ii}\,,
 \end{equation}
-that is, the trace of a matrix is the sum of its diagonal elements. Considering the matrices $\mat{A,B}\in\bar{M}$, it is clear that $\trc{(\mat{A+B})}=\trc{\mat{A}}+\trc{\mat{B}}$, where sum is preserved; thereby, the trace function results a group homomorphism on $\bar{M}\subset Y$ because $Y$ is an additive group. Moreover, since the respective diagonal elements of $\mat{AB}$ and $\mat{BA}$ are identical, it is true that $\trc{\mat{AB}}=\trc{\mat{BA}}$. Thence, if $\mat{A}$ and $\mat{B}$ are similar,
+that is, the trace of a matrix is the sum of its diagonal elements. Considering the matrices $\mat{A,B}\in\bar{M}$, it is clear that $\trc{\mat{A+B}}=\trc{\mat{A}}+\trc{\mat{B}}$, where sum is preserved; thereby, the trace function results a group homomorphism on $\bar{M}\subset Y$ because $Y$ is an additive group. Moreover, since the respective diagonal elements of $\mat{AB}$ and $\mat{BA}$ are identical, it is true that $\trc{\mat{AB}}=\trc{\mat{BA}}$. Thence, if $\mat{A}$ and $\mat{B}$ are similar,
 \begin{equation}
 \trc{\mat{A}}=\trc{\mat{Q}^{-1}\mat{B}\mat{Q}}=\trc{\mat{Q}\mat{Q}^{-1}\mat{B}}=\trc{\mat{B}}\,,
 \end{equation}
@@ -564,7 +574,7 @@ and then we can state generically that all similar matrices have the same trace.
 
 Among other benefits, the trace function is a convenient tool to present what is known by \textsb{characteristic polynomial}\index{matrix!characteristic polynomial of}\label{pg:PolinomioCarac} of matrix: it is the function in operation $\map{g}{\cam{F}}{\cam{F}}$, whose rule is
 \begin{equation}
-\fua{g}{x}=\det \lpa \mat{H} - x\mat{I} \rpa  \,,
+\fua{g}{x}=\dete {\mat{H} - x\mat{I}}  \,,
 \end{equation}
 where $\mat{H}$ is a square matrix. By developing the right term, we arrive at
 \begin{equation}\label{eq:poliCaracDesen}
@@ -583,16 +593,16 @@ $\lch\lambda_1,\cdots,\lambda_n\rch$ of characteristic roots of $\mat{H}$ is cal
 
 {\footnotesize
 \begin{proof}
-Let's prove this last statement. We already know that the determinant of the inverse is the inverse of the determinant. Let $\mat{A}$ an $\mat{B}$ be similar matrices through invertible matrix $\mat{Q}$. Then, it can be said that the characteristic polynomial $\det (\mat{A} - x\mat{I})=\det (\mat{Q}^{-1}\mat{B}\mat{Q} - x\mat{I})$. From the following equalities
+Let's prove this last statement. We already know that the determinant of the inverse is the inverse of the determinant. Let $\mat{A}$ an $\mat{B}$ be similar matrices through invertible matrix $\mat{Q}$. Then, it can be said that the characteristic polynomial $\dete{\mat{A} - x\mat{I}}=\dete {\mat{Q}^{-1}\mat{B}\mat{Q} - x\mat{I}}$. From the following equalities
 \begin{equation*}
 \mat{Q}^{-1}x\mat{I}\mat{Q}=x\mat{Q}^{-1}\mat{I}\mat{Q}=x\mat{Q}^{-1}\mat{Q}=x\mat{I}\,,
 \end{equation*}
 it is possible to say that
 \begin{align*}
-\det \lpa\mat{A} - x\mat{I}\rpa&=\det \lpa\mat{Q}^{-1}\mat{B}\mat{Q} - \mat{Q}^{-1}x\mat{I}\mat{Q}\rpa\\
-&=\det \lco\mat{Q}^{-1}\lpa\mat{B} - x\mat{I}\rpa\mat{Q}\rco\\
-&=\lpa\det\mat{Q}\rpa^{-1} \det \lpa\mat{B} - x\mat{I}\rpa \det\mat{Q}\\
-&=\det \lpa\mat{B} - x\mat{I}\rpa\,,
+\dete{\mat{A} - x\mat{I}}&=\dete{\mat{Q}^{-1}\mat{B}\mat{Q} - \mat{Q}^{-1}x\mat{I}\mat{Q}}\\
+&=\dete {\mat{Q}^{-1}\lpa\mat{B} - x\mat{I}\rpa\mat{Q}}\\
+&=\lpa\dete{\mat{Q}}\rpa^{-1} \dete{\mat{B} - x\mat{I}} \dete{\mat{Q}}\\
+&=\dete{\mat{B} - x\mat{I}}\,,
 \end{align*}
 from where we conclude $\mat{A}$ and $\mat{B}$ isospectral.
 \end{proof}}
@@ -600,7 +610,7 @@ from where we conclude $\mat{A}$ and $\mat{B}$ isospectral.
 The spectrum of a matrix has a close relation with determinant and trace functions, which \emph{respectively preserve the operations of multiplication and addition}. If
 $\lch\lambda_1,\cdots,\lambda_n\rch$ is the spectrum of $\mat{A}$, this close relation is expressed through the following equalities:
 \begin{alignat}{3}
-\det{\mat{A}}  = \prod_{i=1}^n  \lambda_i & \qquad\text{and} \qquad & \trc{\mat{A}} & = \sum_{i=1}^n  \lambda_i \,.
+\dete{\mat{A}}  = \prod_{i=1}^n  \lambda_i & \qquad\text{and} \qquad & \trc{\mat{A}} & = \sum_{i=1}^n  \lambda_i \,.
 \end{alignat}
 When two matrices have the same pair of determinant and trace, we can say that these matrices have a kind of equivalence if we interpret the two functions as scalar measures whose absolute values express a quantitative aspect and whose signs express a qualitative aspect of the matrix in question. Therefore, isospectral matrices are said to be equivalent in this sense; \emph{something that, in a certain way, confers a metric feature on the spectrum of matrices}.
 
@@ -612,11 +622,11 @@ Let's verify the two equalities above. For the first one, let the rule of the ch
 \end{equation*}
 from where the following equality results:
 \begin{equation*}
-\det{(\mat{A}-x\mat{I})}=\lpa \lambda_n-x\rpa\lpa \lambda_{n-1}-x\rpa\cdots\lpa \lambda_2-x\rpa\lpa \lambda_1-x\rpa\,,
+\dete{(\mat{A}-x\mat{I})}=\lpa \lambda_n-x\rpa\lpa \lambda_{n-1}-x\rpa\cdots\lpa \lambda_2-x\rpa\lpa \lambda_1-x\rpa\,,
 \end{equation*}
 valid for all $x\in\cam{F}$. Thus, if $x=0$, we have
 \begin{equation*}
-\det{\mat{A}}=\lambda_n\lambda_{n-1}\cdots\lambda_2\lambda_1\,.
+\dete{\mat{A}}=\lambda_n\lambda_{n-1}\cdots\lambda_2\lambda_1\,.
 \end{equation*}
 In order to prove the second equality, one of the so called Viète Formulae, according to \aut{Vinberg}\cite{vinberg_2003_1}, states that
 \begin{equation*}
@@ -636,7 +646,7 @@ where $\mat{X}$ is a non zero $n\times 1$ matrix. When the inequality imposes th
 .}, when this matrix results nonnegative; similarly, if these same elements are all positive, the matrix is positive-definite. Thereby, from the two equalities of the previous paragraph, it can be concluded that the determinant and trace of a nonnegative Hermitian matrix are always nonnegative, while for a positive-definite Hermitian matrix both are positive. Therefore, in the context of Hermitian matrices, the determinant value indicates whether a matrix is nonnegative or not. From this conclusion, we can state that \emph{every positive-definite hermitian matrix is invertible}. Moreover, when a positive-definite hermitian matrix $\mat{H}$ pre or post multiplies an arbitrary matrix
 $\mat{B}\in\bar{M}$, we have
 \begin{equation}
-\sgn{\det{\lpa\mat{BH}\rpa}}=\sgn{\det{\lpa\mat{HB}\rpa}}=\sgn{\det{\mat{B}}} \sgn{\det{\mat{H}}}=\sgn{\det{\mat{B}}}\,,
+\sgn{\dete{\mat{BH}}}=\sgn{\dete{\mat{HB}}}=\sgn{\dete{\mat{B}}} \sgn{\dete{\mat{H}}}=\sgn{\dete{\mat{B}}}\,,
 \end{equation}
 where the sign ``\gloref{signum}'' of the determinant of $\mat{B}$ defines the sign of the product of the determinants, making the concept of matrix positivity similar to  scalar positivity, in which the sign of a product is not defined by an eventual positive number.
 
@@ -655,9 +665,9 @@ If the coefficients on this rule equal the coefficients of the characteristic po
 \begin{proof}
 In order to verify this theorem, we need to present some preliminary definitions. There is an algorithm \footnote{After \aut{Knuth}\cite{knuth_1997_1}, the word ``algorithm'' has the same etymological source of ``algebra''.}, called \textsb{Laplace Expansion}\index{Expansion!Laplace} or \textsb{Cofactorial Expansion}\index{Expansion!Cofactorial}, that is used in certain cases to find determinants. Here it is: given a square matrix $\mat{A}$, we can obtain for an arbitrary line $i$ that
 \begin{equation*}
-\det{\mat{A}} = \sum_{j=1}^{n}\mat{A}_{ij} \underbrace{\lpa-1\rpa^{i+j}\det{\mat{M}_{(ij)}}}_{\mat{C}_{ij}}\,,
+\dete{\mat{A}} = \sum_{j=1}^{n}\mat{A}_{ij} \underbrace{\lpa-1\rpa^{i+j}\dete{\mat{M}_{(ij)}}}_{\mat{C}_{ij}}\,,
 \end{equation*}
-where $\mat{C}$ is called \textsb{cofactor matrix}\index{matrix!cofactor} of $\mat{A}$ and $\mat{M}_{(ij)}$ is a square matrix of dimension $n-1$ which results from removing the line $i$ and the column $j$ from $\mat{A}$. The matrix $\mat{C}^{T}$ is called the \textsb{adjugate matrix}\index{matrix!adjugate} of $\mat{A}$, represented by $\gloref{adju}{\mat{A}}$. Now, considering $\mat{A}=\mat{H}-x\mat{I}$ and the property $\adj{\mat{X}}\mat{X}=(\det\mat{X})\mat{I}$, we have that
+where $\mat{C}$ is called \textsb{cofactor matrix}\index{matrix!cofactor} of $\mat{A}$ and $\mat{M}_{(ij)}$ is a square matrix of dimension $n-1$ which results from removing the line $i$ and the column $j$ from $\mat{A}$. The matrix $\mat{C}^{T}$ is called the \textsb{adjugate matrix}\index{matrix!adjugate} of $\mat{A}$, represented by $\gloref{adju}{\mat{A}}$. Now, considering $\mat{A}=\mat{H}-x\mat{I}$ and the property $\adj{\mat{X}}\mat{X}=(\dete\mat{X})\mat{I}$, we have that
 \begin{equation*}
 \adj{\mat{A}}(\mat{H}-x\mat{I})=\fua{g}{x}\mat{I}=\mat{I}(-1)^nx^n+\mat{I}a_1x^{n-1}+\cdots+\mat{I}a_{n-1}x+\mat{I}a_n\,.
 \end{equation*}
