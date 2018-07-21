@@ -231,9 +231,9 @@ Additionally to symmetric and antisymmetric, there is another notable tensor tha
 \begin{equation}\label{eq:identidade}
 \fua{\tnr{I}}{\vto{x}_{1},\cdots,\vto{x}_{p},\vto{y}_{1},\cdots,\vto{y}_{p}}=\prod_{k=1}^p \vto{x}_k\cdot\vto{y}_k^c\,.
 \end{equation}
-From this definition, if $(V_\cam{F})_i$ is a Hilbert space and $B_i=\{\vun{v}_1^{(i)},\cdots,\vun{v}_{n_i}^{(i)}\}$ one of its orthonormal bases, the following is valid for $\alpha=\fua{\tnr{I}}{\vto{x}_1,\cdots,\vto{x}_p,\vto{y}_1,\cdots,\vto{y}_p}$:
+From this definition, if $(V_\cam{F})_i$ is a Hilbert space and $B_i=\{\vun{u}_1^{(i)},\cdots,\vun{u}_{n_i}^{(i)}\}$ one of its orthonormal bases, the following is valid for $\alpha=\fua{\tnr{I}}{\vto{x}_1,\cdots,\vto{x}_p,\vto{y}_1,\cdots,\vto{y}_p}$:
 \begin{align*}
-\alpha&=\sum_{{i_1}=1}^{n_1}\cdots\sum_{{i_p}=1}^{n_p}\sum_{{j_1}=1}^{n_1}\cdots\sum_{{j_p}=1}^{n_p}\prod_{k=1}^p\fua{\vtf{f}^\con{B_k}_{i_k}}{\vto{x}_k}\fua{\vtf{f}^\con{B_k}_{j_k}}{\vto{y}_k}\fua{\tnr{I}}{\vun{v}_{i_1}^{(1)},\cdots,\vun{v}_{i_p}^{(p)},{{\vun{v}_{j_1}}}^{(1)},\cdots,\vun{v}_{j_p}^{(p)}}\\
+\alpha&=\sum_{{i_1}=1}^{n_1}\cdots\sum_{{i_p}=1}^{n_p}\sum_{{j_1}=1}^{n_1}\cdots\sum_{{j_p}=1}^{n_p}\prod_{k=1}^p\fua{\vtf{f}^\con{B_k}_{i_k}}{\vto{x}_k}\fua{\vtf{f}^\con{B_k}_{j_k}}{\vto{y}_k}\fua{\tnr{I}}{\vun{u}_{i_1}^{(1)},\cdots,\vun{u}_{i_p}^{(p)},{{\vun{u}_{j_1}}}^{(1)},\cdots,\vun{u}_{j_p}^{(p)}}\\
 &=\sum_{{i_1}=1}^{n_1}\cdots\sum_{{i_p}=1}^{n_p}\sum_{{j_1}=1}^{n_1}\cdots\sum_{{j_p}=1}^{n_p}\prod_{k=1}^p\fua{\vtf{f}^\con{B_k}_{i_k}}{\vto{x}_k}\fua{\vtf{f}^\con{B_k}_{j_k}}{\vto{y}_k}\delta_{i_1j_1}\cdots\delta_{i_pj_p}\\
 &=\sum_{{i_1}=1}^{n_1}\cdots\sum_{{i_p}=1}^{n_p}\prod_{k=1}^p\fua{\vtf{f}^\con{B_k}_{i_k}}{\vto{x}_k}\fua{\vtf{f}^\con{B_k}_{i_k}}{\vto{y}_k}\,,
 \end{align*}
@@ -243,11 +243,11 @@ considering equalities \eqref{eq:decompVectConj} and \eqref{eq:orthoConju}. Ther
 \end{equation}
 If a suitable basis $B$ is built from bases $B_i$, the previous equality and \eqref{eq:regraCoordTens} enable us to write that the coordinates
 \begin{equation}
-\vtf{f}_{j_1\cdots j_m}^{B}(\tnr{I})= \fua{\tnr{I}}{\vun{v}_{j_1}^{(1)},\cdots,\vun{v}_{j_p}^{(p)},\vun{v}_{j_1}^{(1)},\cdots,\vun{v}_{j_p}^{(p)}}=\prod_{k=1}^p\fua{\vtf{f}_{i_k}^{B_k}}{\vun{v}_{j_k}^{(k)}}=\prod_{k=1}^p\delta_{i_kj_k}\,.
+\vtf{f}_{j_1\cdots j_m}^{B}(\tnr{I})= \fua{\tnr{I}}{\vun{u}_{j_1}^{(1)},\cdots,\vun{u}_{j_p}^{(p)},\vun{u}_{j_1}^{(1)},\cdots,\vun{u}_{j_p}^{(p)}}=\prod_{k=1}^p\fua{\vtf{f}_{i_k}^{B_k}}{\vun{u}_{j_k}^{(k)}}=\prod_{k=1}^p\delta_{i_kj_k}\,.
 \end{equation}
 Now, considering the context of tensor spaces $\ete{\cam{F}}{V^2}$, where $p=1$, defined by Euclidean spaces, we already know that, if basis $B_1$ is orthonormal, equality $\sum_{{i_1}=1}^{n_1}\fua{\vtf{f}^\con{B_1}_{i_1}}{\vto{x}_1}\fua{\vtf{f}^\con{B_1}_{i_1}}{\vto{y}_1}=\vto{x}_1\cdot\vto{y}_1$ is valid, that is, definition \eqref{eq:identidade} takes the form $\fua{\tnr{I}}{\vto{x}_1,\vto{y}_1}=\vto{x}_1\cdot\vto{y}_1$ and
 \begin{equation}
-\tnr{I}=\sum_{{i_1}=1}^{n_1}\vun{v}_{i_1}^*\otimes\vun{v}_{i_1}^*=\sum_{{i_1}=1}^{n_1}\sum_{{j_1}=1}^{n_1}\delta_{i_1j_1}\vun{v}_{i_1}^*\otimes\vun{v}_{j_1}^*
+\tnr{I}=\sum_{{i_1}=1}^{n_1}\vun{u}_{i_1}^*\otimes\vun{u}_{i_1}^*=\sum_{{i_1}=1}^{n_1}\sum_{{j_1}=1}^{n_1}\delta_{i_1j_1}\vun{u}_{i_1}^*\otimes\vun{u}_{j_1}^*
 \end{equation}
 is an identity tensor of second order.
 
@@ -291,26 +291,26 @@ The following proof is adapted from \aut{Backus}\cite{backus_1997_1}, pp. 43-45.
 \tnr{X}=\sum_{i_1=1}^{n_1}\cdots\sum_{i_m=1}^{n_m}\fua{\vtf{f}_{i_1\cdots i_m}^{B}}{\tnr{X}}\vtf{f}_{i_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{i_m}^{B_m}\,,
 \nonumber
 \end{equation}
-where $B$ is a basis of $\ete{\cam{F}}{U}$ defined by orthonormal bases  $\con{B}_i=\{\vun{v}_{1}^{(i)},\cdots,\vun{v}_{n_i}^{(i)}\}$ of $X_i$. According to rule \eqref{eq:regraOrtonmFunc}, the function $\vtf{c}^\otimes$ that observes $\fua{\vtf{c}^\otimes}{\vto{x}_1^*\otimes\cdots\otimes\vto{x}_m^*}=\fua{{\vtf{c}}}{\vto{x}_1,\cdots,\vto{x}_m}$ really exists and is uniquely determined by $\vtf{c}$, as can be verified in
+where $B$ is a basis of $\ete{\cam{F}}{U}$ defined by orthonormal bases  $\con{B}_i=\{\vun{u}_{1}^{(i)},\cdots,\vun{u}_{n_i}^{(i)}\}$ of $X_i$. According to rule \eqref{eq:regraOrtonmFunc}, the function $\vtf{c}^\otimes$ that observes $\fua{\vtf{c}^\otimes}{\vto{x}_1^*\otimes\cdots\otimes\vto{x}_m^*}=\fua{{\vtf{c}}}{\vto{x}_1,\cdots,\vto{x}_m}$ really exists and is uniquely determined by $\vtf{c}$, as can be verified in
 \begin{eqnarray}
 \fua{\vtf{c}^\otimes}{\tnr{X}}&=&\sum_{i_1=1}^{n_1}\cdots\sum_{i_m=1}^{n_m}\fua{\vtf{f}_{i_1\cdots
 i_m}^{B}}{\tnr{X}}\fua{\vtf{c}^\otimes}{\vtf{f}_{i_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{i_m}^{B_m}}\nonumber\\
 &=&\sum_{i_1=1}^{n_1}\cdots\sum_{i_m=1}^{n_m}\fua{\vtf{f}_{i_1\cdots
-i_m}^{B}}{\tnr{X}}\fua{{\vtf{c}}}{\vun{v}_{i_1}^{(1)},\cdots,\vun{v}_{i_m}^{(m)}}\,,\nonumber
+i_m}^{B}}{\tnr{X}}\fua{{\vtf{c}}}{\vun{u}_{i_1}^{(1)},\cdots,\vun{u}_{i_m}^{(m)}}\,,\nonumber
 \end{eqnarray}
 because the last equality results a rule for $\vtf{c}^\otimes$ since $\tnr{X}$ is arbitrary. Now, let's verify if equality $\fua{\vtf{c}^\otimes}{\vto{x}_1^*\otimes\cdots\otimes\vto{x}_m^*}=\fua{{\vtf{c}}}{\vto{x}_1,\cdots,\vto{x}_m}$ is valid. Considering $\tnr{X}=\vto{x}_1^*\otimes\cdots\otimes\vto{x}_m^*$, equality \eqref{eq:conjMultFun}, the properties of complex conjugates, the conjugate property of the inner product, rule \eqref{eq:regraCoord} and rule \eqref{eq:regraCoordTens}, the previous development can proceed as follows:
 \begin{eqnarray}
 \fua{\vtf{c}^\otimes}{\vto{x}_1^*\otimes\cdots\otimes\vto{x}_m^*}&=&\sum_{i_1=1}^{n_1}\cdots\sum_{i_m=1}^{n_m}\fua{\vtf{f}_{i_1\cdots
-		i_m}^{B}}{\tnr{X}}\fua{{\vtf{c}}}{\vun{v}_{i_1}^{(1)},\cdots,\vun{v}_{i_m}^{(m)}}\nonumber\\
+		i_m}^{B}}{\tnr{X}}\fua{{\vtf{c}}}{\vun{u}_{i_1}^{(1)},\cdots,\vun{u}_{i_m}^{(m)}}\nonumber\\
 &=&
-\sum_{i_1=1}^{n_1}\cdots\sum_{i_m=1}^{n_m}\fua{\tnr{X}}{\vun{v}_{i_1}^{(1)},\cdots,\vun{v}_{i_m}^{(m)}}\fua{{\vtf{c}}}{\vun{v}_{i_1}^{(1)},\cdots,\vun{v}_{i_m}^{(m)}}\nonumber\\
+\sum_{i_1=1}^{n_1}\cdots\sum_{i_m=1}^{n_m}\fua{\tnr{X}}{\vun{u}_{i_1}^{(1)},\cdots,\vun{u}_{i_m}^{(m)}}\fua{{\vtf{c}}}{\vun{u}_{i_1}^{(1)},\cdots,\vun{u}_{i_m}^{(m)}}\nonumber\\
 &=&
-\sum_{i_1=1}^{n_1}\cdots\sum_{i_m=1}^{n_m}\prod_{k=1}^m\fua{\vto{x}_k^*}{\vun{v}_{i_k}^{(k)}} \,\,\fua{{\vtf{c}}}{\vun{v}_{i_1}^{(1)},\cdots,\vun{v}_{i_m}^{(m)}}\nonumber\\
+\sum_{i_1=1}^{n_1}\cdots\sum_{i_m=1}^{n_m}\prod_{k=1}^m\fua{\vto{x}_k^*}{\vun{u}_{i_k}^{(k)}} \,\,\fua{{\vtf{c}}}{\vun{u}_{i_1}^{(1)},\cdots,\vun{u}_{i_m}^{(m)}}\nonumber\\
 &=&
-\sum_{i_1=1}^{n_1}\cdots\sum_{i_m=1}^{n_m}\prod_{k=1}^m \overline{\fua{\vtf{f}_{i_k}^{\con{B}_k}}{\vto{x}_k}}\,\,\fua{{\vtf{c}}}{\vun{v}_{i_1}^{(1)},\cdots,\vun{v}_{i_m}^{(m)}}\nonumber\\
+\sum_{i_1=1}^{n_1}\cdots\sum_{i_m=1}^{n_m}\prod_{k=1}^m \overline{\fua{\vtf{f}_{i_k}^{\con{B}_k}}{\vto{x}_k}}\,\,\fua{{\vtf{c}}}{\vun{u}_{i_1}^{(1)},\cdots,\vun{u}_{i_m}^{(m)}}\nonumber\\
 &=&
 \fua{{\vtf{c}}}{\sum_{i_1=1}^{n_1}\fua{\vtf{f}_{i_1}^{\con{B}_1}}{\vto{x}_1}
-\vun{v}_{i_1}^{(1)},\cdots,\sum_{i_m=1}^{n_m}\fua{\vtf{f}_{i_m}^{\con{B}_m}}{\vun{x}_m}\vun{v}_{i_m}^{(m)}}\nonumber\\
+\vun{u}_{i_1}^{(1)},\cdots,\sum_{i_m=1}^{n_m}\fua{\vtf{f}_{i_m}^{\con{B}_m}}{\vun{x}_m}\vun{u}_{i_m}^{(m)}}\nonumber\\
 &=& \fua{{\vtf{c}}}{\vto{x}_1,\cdots,\vto{x}_m}\,.\nonumber
 \end{eqnarray}
 \end{proof}
@@ -335,7 +335,7 @@ where $\vto{x}_{r}^c$ belongs to $\overline{{X_r}_\cam{F}}$. In other words, the
 \end{equation}
 It is important to observe that the product $\vto{x}_{r}^c\cdot\vto{x}_{s}$ is antilinear also on the left term since  $\vtf{c}_2$ has $\vto{x}_{r}$ as one of its arguments\footnote{See property \eqref{eq:antiLinConjVect}.}. Moreover, in the context of Euclidean spaces, from equality \eqref{eq:prodIntGen}, we can write that $\vto{x}_{s}^c\cdot\vto{x}_{r}=\vto{x}_{s}\cdot\vto{x}_{r}\,$. Now, considering the set $U=X^{\times q}\times X^{\times q}$, if we happen to properly compose $q$ successive $r,s$-trace functions where $s=r+q$, the resulting scalar
 \begin{equation}\label{eq:tracoTensor}
-\trc\tnr{X}:=\fua{\underbrace{\trt{r}{s}\circ\cdots\circ\trt{r}{s}}_{q \text{ times}}}{\tnr{X}}=\prod_{k=1}^q\vto{x}_{k+q}^c\cdot\vto{x}_k
+\trc{\tnr{X}}:=\fua{\underbrace{\trt{r}{s}\circ\cdots\circ\trt{r}{s}}_{q \text{ times}}}{\tnr{X}}=\prod_{k=1}^q\vto{x}_{k+q}^c\cdot\vto{x}_k
 \end{equation}
 is said to be the \textsb{trace}\index{tensor!trace of} of tensor $\tnr{X}$.
 
@@ -493,8 +493,8 @@ where polyadic tensors are defined by orthonormal bases according to theorem \re
 Considering the above conditions, let's see what is the $p$-cotensor of identity tensor $\tnr{I}\in\ete{\cam{F}}{W^{\times p}\times W^{\times p}}$. If equality \eqref{eq:poliadIdentidade} and its definer conditions are considered, development
 \begin{align}
 \fua{\vtf{I}^*_p}{\tnr{X}}&=\tnr{X}\odot_p\tnr{I}\nonumber\\
-&=\sum_{{i_1}=1}^{n_1}\cdots\sum_{{i_p}=1}^{n_p}\prod_{k=1}^p\vun{v}_{i_k}\cdot\vto{x}_k\vun{v}_{i_1}^*\otimes\cdots\otimes\vun{v}_{i_p}^*\nonumber\\
-&=(\sum_{{i_1}=1}^{n_1}\fua{\vtf{f}_{i_1}^{B_1}}{\vto{x}_1}\vun{v}_{i_1})^*\otimes\cdots\otimes(\sum_{{i_p}=1}^{n_1}\fua{\vtf{f}_{i_p}^{B_p}}{\vto{x}_p}\vun{v}_{i_p})^*\nonumber\nonumber\\
+&=\sum_{{i_1}=1}^{n_1}\cdots\sum_{{i_p}=1}^{n_p}\prod_{k=1}^p\vun{u}_{i_k}\cdot\vto{x}_k\vun{u}_{i_1}^*\otimes\cdots\otimes\vun{u}_{i_p}^*\nonumber\\
+&=(\sum_{{i_1}=1}^{n_1}\fua{\vtf{f}_{i_1}^{B_1}}{\vto{x}_1}\vun{u}_{i_1})^*\otimes\cdots\otimes(\sum_{{i_p}=1}^{n_1}\fua{\vtf{f}_{i_p}^{B_p}}{\vto{x}_p}\vun{u}_{i_p})^*\nonumber\nonumber\\
 &=\vto{x}_1^*\otimes\cdots\otimes\vto{x}_p^*\nonumber\\
 &=\fua{\vtf{i}}{\tnr{X}}
 \end{align}
@@ -525,8 +525,8 @@ where $\frt{T}$ results a \textsb{representative function}\index{function!repres
 $\fua{\frt{I}}{\tnr{X}} = \tnr{I}\cdot \tnr{X} = \overline{\mathrm{tr}}\,\tnr{X}$ show that the conjugate trace represents the identity tensor}. Moreover, if the identity tensor described by \eqref{eq:poliadIdentidade} is the argument of a representative function $(\tnr{A}\otimes\tnr{B})^\circledast$ where $\tnr{A},\tnr{B}\in\ete{\cam{F}}{V^{\times p}}$, we have the following:
 \begin{align}
 \fua{(\tnr{A}\otimes\tnr{B})^\circledast}{\tnr{I}} &= \sum_{{i_1}=1}^{n_1}\cdots\sum_{{i_p}=1}^{n_p}\fua{(\tnr{A}\otimes\tnr{B})^\circledast}{\vtf{f}_{i_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{i_p}^{B_p}\otimes\vtf{f}_{i_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{i_p}^{B_p}}\nonumber\\
-&=\sum_{{i_1}=1}^{n_1}\cdots\sum_{{i_p}=1}^{n_p}\fua{\tnr{A}\otimes\tnr{B}}{\vun{v}_{i_1}^{(1)},\cdots,\vun{v}_{i_p}^{(p)},\vun{v}_{i_1}^{(1)},\cdots,\vun{v}_{i_p}^{(p)}}\nonumber\\
-&=\sum_{{i_1}=1}^{n_1}\cdots\sum_{{i_p}=1}^{n_p}\fua{\tnr{A}}{\vun{v}_{i_1}^{(1)},\cdots,\vun{v}_{i_p}^{(p)}}\fua{\tnr{B}}{\vun{v}_{i_1}^{(1)},\cdots,\vun{v}_{i_p}^{(p)}}\nonumber\\
+&=\sum_{{i_1}=1}^{n_1}\cdots\sum_{{i_p}=1}^{n_p}\fua{\tnr{A}\otimes\tnr{B}}{\vun{u}_{i_1}^{(1)},\cdots,\vun{u}_{i_p}^{(p)},\vun{u}_{i_1}^{(1)},\cdots,\vun{u}_{i_p}^{(p)}}\nonumber\\
+&=\sum_{{i_1}=1}^{n_1}\cdots\sum_{{i_p}=1}^{n_p}\fua{\tnr{A}}{\vun{u}_{i_1}^{(1)},\cdots,\vun{u}_{i_p}^{(p)}}\fua{\tnr{B}}{\vun{u}_{i_1}^{(1)},\cdots,\vun{u}_{i_p}^{(p)}}\nonumber\\
 &=\sum_{{i_1}=1}^{n_1}\cdots\sum_{{i_p}=1}^{n_p}\fua{\vtf{f}_{i_1\cdots i_p}}{\tnr{A}}\fua{\vtf{f}_{i_1\cdots i_p}}{\tnr{B}}=\tnr{A}\diamond\tnr{B}\,,
 \end{align}
 where equality \eqref{eq:prodContrCoord} was considered.
@@ -540,12 +540,12 @@ Vectors and linear functions are adequately represented by matrices, whose eleme
 \end{equation}
 where $\alpha,\beta\in\cam{F}$ and $\vto{X},\vto{Y}\in\ete{\cam{F}}{U^{\times m}}$ are arbitrary. For the case of a linear tensor function $\tnr{\psi}\in\evl{\cam{F}}{\ete{\cam{F}}{U^{\times m}}}{\ete{\cam{F}}{V^{\times p}}}$ and a basis $C$ of $\ete{\cam{F}}{V^{\times p}}$, the development
 \begin{align*}
-\fua{\vtf{\psi}}{\tnr{X}}&=\sum_{i_1=1}^{n_1}\cdots\sum_{i_p=1}^{n_p} \vtf{f}_{i_1\cdots i_p}^{C}(\fua{\vtf{\psi}}{\tnr{X}})\,\vtf{f}_{i_1}^{C_1}\otimes\cdots\otimes\vtf{f}_{i_p}^{C_p}\nonumber\\
-&=\sum_{i_1=1}^{n_1}\cdots\sum_{i_p=1}^{n_p}\sum_{j_1=1}^{l_1}\cdots\sum_{j_m=1}^{l_m}\vtf{f}_{i_1\cdots i_p}^{C}(\fua{\vtf{\psi}}{\tnr{X}})\,\vtf{f}_{i_1}^{C_1}\otimes\cdots\otimes\vtf{f}_{i_p}^{C_p}\nonumber\\
-&=\sum_{i_1=1}^{n_1}\cdots\sum_{i_p=1}^{n_p}\sum_{j_1=1}^{l_1}\cdots\sum_{j_m=1}^{l_m}\underbrace{\vtf{f}_{i_1\cdots i_p}^{C}(\fua{\vtf{\psi}}{\vtf{f}_{j_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{j_m}^{B_m}})}_{{\maf{\tnr{\psi}}{B}{C}}_{i_1\cdots i_p j_1\cdots j_m}}\vtf{f}_{j_1\cdots j_m}^{B}(\tnr{X})\,\vtf{f}_{i_1}^{C_1}\otimes\cdots\otimes\vtf{f}_{i_p}^{C_p}\,,\nonumber
+\fua{\tnr{\psi}}{\tnr{X}}&=\sum_{i_1=1}^{n_1}\cdots\sum_{i_p=1}^{n_p} \vtf{f}_{i_1\cdots i_p}^{C}(\fua{\tnr{\psi}}{\tnr{X}})\,\vtf{f}_{i_1}^{C_1}\otimes\cdots\otimes\vtf{f}_{i_p}^{C_p}\nonumber\\
+&=\sum_{i_1=1}^{n_1}\cdots\sum_{i_p=1}^{n_p}\sum_{j_1=1}^{l_1}\cdots\sum_{j_m=1}^{l_m}\vtf{f}_{i_1\cdots i_p}^{C}(\fua{\tnr{\psi}}{\tnr{X}})\,\vtf{f}_{i_1}^{C_1}\otimes\cdots\otimes\vtf{f}_{i_p}^{C_p}\nonumber\\
+&=\sum_{i_1=1}^{n_1}\cdots\sum_{i_p=1}^{n_p}\sum_{j_1=1}^{l_1}\cdots\sum_{j_m=1}^{l_m}\underbrace{\vtf{f}_{i_1\cdots i_p}^{C}(\fua{\tnr{\psi}}{\vtf{f}_{j_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{j_m}^{B_m}})}_{{\maf{\tnr{\psi}}{B}{C}}_{i_1\cdots i_p j_1\cdots j_m}}\vtf{f}_{j_1\cdots j_m}^{B}(\tnr{X})\,\vtf{f}_{i_1}^{C_1}\otimes\cdots\otimes\vtf{f}_{i_p}^{C_p}\nonumber
 \end{align*}
 leads to
-\begin{equation}
+\begin{equation}\label{eq:repArrayTensF}
 \mav{\fua{\tnr{\psi}}{\tnr{X}}}{C}=\maf{\tnr{\psi}}{B}{C}\mat{*_m\,}\mav{\tnr{X}}{B}\,,
 \end{equation}
 where $\maf{\tnr{\psi}}{B}{C}$ is a $(p+m)$-th order array. If arbitrary scalars $\alpha,\beta\in\cam{F}$ and tensor function $\tnr{\varphi}\in\evl{\cam{F}}{\ete{\cam{F}}{U^{\times m}}}{\ete{\cam{F}}{V^{\times p}}}$ are also considered, from previous equality, it is straightforward to obtain that  
@@ -565,11 +565,11 @@ In the previous section, equalities \eqref{eq:prodContrCoord} and \eqref{eq:prod
 \begin{alignat}{3}
 \tnr{A}\diamond\tnr{B} = \mav{\tnr{A}}{B}:\overline{\mav{\tnr{B}}{B}}&\qquad\text{ and }\qquad&\tnr{A}\cdot\tnr{B} = \mav{\tnr{A}}{B}:{\mav{\tnr{B}}{B}}\,.
 \end{alignat}
-Now, we shall verify if it is possible to establish a relation between a Hilbert-adjoint tensor function and a conjugate transpose array and also between a transpose function and a transpose array. If a function $\tnr{\psi}\in\evl{\cam{F}}{\ete{\cam{F}}{U^{\times p}}}{\ete{\cam{F}}{V^{\times p}}}$ has a Hilbert-adjoint, sets $B$ and $D$ are bases of $\ete{\cam{F}}{U^{\times p}}$ and $\ete{\cam{F}}{V^{\times p}}$ respectively, then, from the definition of Hilbert-adjoint tensor function, 
+Now, we shall verify if it is possible to establish a relation between a Hilbert-adjoint tensor function and a conjugate transpose array and also between a transpose function and a transpose array. If a function $\tnr{\psi}\in\evl{\cam{F}}{\ete{\cam{F}}{U^{\times m}}}{\ete{\cam{F}}{V^{\times m}}}$ has a Hilbert-adjoint, sets $B$ and $D$ are bases of $\ete{\cam{F}}{U^{\times m}}$ and $\ete{\cam{F}}{V^{\times m}}$ respectively, then, from the definition of Hilbert-adjoint tensor function, 
 \begin{align}
-\fua{\tnr{\psi}}{\vtf{f}_{i_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{i_p}^{B_p}}\cdot \vtf{f}_{j_1}^{D_1}\otimes\cdots\otimes\vtf{f}_{j_p}^{D_p} &= \overline{\tnr{\psi}^\dagger(\vtf{f}_{j_1}^{D_1}\otimes\cdots\otimes\vtf{f}_{j_p}^{D_p})\cdot\vtf{f}_{i_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{i_p}^{B_p}}\nonumber\\
-\vtf{f}^D_{j_1\cdots j_p}[\fua{\tnr{\psi}}{\vtf{f}_{i_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{i_p}^{B_p}}] &=\overline{\vtf{f}^B_{i_1\cdots i_p}[\fua{\tnr{\psi}^\dagger}{\vtf{f}_{j_1}^{D_1}\otimes\cdots\otimes\vtf{f}_{j_p}^{D_p}}]}\nonumber\\
-\overline{\vtf{f}^D_{i_1\cdots i_p}[\fua{\tnr{\psi}}{\vtf{f}_{j_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{j_p}^{B_p}}]^\text{T}} &=\vtf{f}^B_{i_1\cdots i_p}[\fua{\tnr{\psi}^\dagger}{\vtf{f}_{j_1}^{D_1}\otimes\cdots\otimes\vtf{f}_{j_p}^{D_p}}]\nonumber\\
+\fua{\tnr{\psi}}{\vtf{f}_{i_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{i_p}^{B_m}}\cdot \vtf{f}_{j_1}^{D_1}\otimes\cdots\otimes\vtf{f}_{j_m}^{D_m} &= \overline{\tnr{\psi}^\dagger(\vtf{f}_{j_1}^{D_1}\otimes\cdots\otimes\vtf{f}_{j_m}^{D_m})\cdot\vtf{f}_{i_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{i_m}^{B_m}}\nonumber\\
+\vtf{f}^D_{j_1\cdots j_m}[\fua{\tnr{\psi}}{\vtf{f}_{i_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{i_m}^{B_m}}] &=\overline{\vtf{f}^B_{i_1\cdots i_m}[\fua{\tnr{\psi}^\dagger}{\vtf{f}_{j_1}^{D_1}\otimes\cdots\otimes\vtf{f}_{j_m}^{D_m}}]}\nonumber\\
+\overline{\vtf{f}^D_{i_1\cdots i_m}[\fua{\tnr{\psi}}{\vtf{f}_{j_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{j_m}^{B_m}}]^\text{T}} &=\vtf{f}^B_{i_1\cdots i_m}[\fua{\tnr{\psi}^\dagger}{\vtf{f}_{j_1}^{D_1}\otimes\cdots\otimes\vtf{f}_{j_m}^{D_m}}]\nonumber\\
 {\maf{\tnr{\psi}}{B}{D}}^\dagger&=[\tnr{\psi}^\dagger_{D}]^{B}\,,
 \end{align}
 where equalities \eqref{eq:regraCoordTens} and \eqref{eq:propProdIndTens} were considered. Similarly to the development that led to \eqref{eq:matRepTranspT}, if there is a transpose function $\tnr{\psi}^\text{T}$, it is possible to arrive at     
@@ -577,9 +577,28 @@ where equalities \eqref{eq:regraCoordTens} and \eqref{eq:propProdIndTens} were c
 {\maf{\tnr{\psi}}{B^c}{D}}^\text{T}=[\tnr{\psi}^\text{T}_{D}]^{B^c}\,.
 \end{equation}  
 
-FALAR SOBRE MUDANCA DE COORDENADAS
+In this context of array representations of tensors and linear tensor functions, it is also possible to develop change of coordinates and change of basis in a similar way already presented for vector and linear functions in section \ref{sec:Matrix}. For the sake of clarity and rigor we shall reproduce here both theorem \ref{teo:mudCoordVec} and its corollary \ref{cor:mudaBase} with minor changes in order to adapt them for the current case.    
 
+\begin{mteo}{Change of Coordinates of Tensors}{mudCoordTens}
+If $U^{\times m}(B)_\cam{F}$ and $U^{\times m}(C)_\cam{F}$ are vector spaces constituted by representative arrays of the elements of tensor space $\ete{\cam{F}}{U^{\times m}}$ on its bases $B$ and $C$ respectively, there is one and only one linear bijective transformation $\map{\tnr{\Gamma}}{U^{\times m}(B)_\cam{F}}{U^{\times m}(C)_\cam{F}}$, called change of coordinates from $B$ to $C$, where  ${\tnr{\Gamma}}({\mav{\tnr{X}}{B}})=\mav{\tnr{X}}{C}$ for all $\tnr{X}\in \ete{\cam{F}}{U^{\times p}}$.
+\end{mteo}
+\hspace{1pt}
+{\footnotesize
+\begin{proof}
+Adaptation of theorem \ref{teo:mudCoordVec}'s proof to this case is trivial.
+\end{proof}
+}
 
+An arbitrary tensor $\tnr{X}\in\ete{\cam{F}}{U^{\times m}}$ can be distinctly represented by arrays on distinct bases $B$ and $C$ according to theorem \ref{teo:geraEte}. From these two representations, it is possible to obtain the rule for $\tnr{\Gamma}$, as described in the above theorem \ref{teo:mudCoordTens}, by considering $\tnr{\psi}=\tnr{i}$ on equality \eqref{eq:repArrayTensF}, which leads to $\mav{\tnr{X}}{C}=\maf{\tnr{i}}{B}{C}\mat{*_m\,}\mav{\tnr{X}}{B}$. Thereby, the rule for change of coordinates from $B$ to $C$ is
+\begin{equation}
+\fua{\tnr{\Gamma}}{\mat{X}} = \maf{\tnr{i}}{B}{C}\mat{*_m\,}\mat{X}
+\end{equation}
+From equalities \eqref{eq:regraOrtonmFunc} and \eqref{eq:regraCoordTens}, given the orthonormal bases  $B_i=\{\vun{u}_{1}^{(i)},\cdots,\vun{u}_{n_i}^{(i)}\}$ and $C_i=\{\vun{v}_{1}^{(i)},\cdots,\vun{v}_{n_i}^{(i)}\}$ , we can write that the elements
+\begin{equation}
+\maf{\tnr{i}}{B}{C}_{i_1\cdots i_m j_1\cdots j_m}= \vtf{f}_{j_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{j_m}^{B_m}(\vun{v}_{i_1}^{(1)},\cdots,\vun{v}_{i_m}^{(m)})=\prod_{k=1}^m\vun{v}_{i_k}^{(k)}	\cdot \vun{u}_{j_k}^{(k)}\,.
+\end{equation}
+ 
+ 
 \section{Invariance of Tensors}
 
 The notion of invariance is of paramount importance in Physics because the fundamental description of mechanical phenomena must be not only qualitatively immune to arbitrary changes of reference frame but also quantitatively indifferent when such changes are of orthogonal type. From a constitutive viewpoint, materials have their invariance too, when some or all of their inherent mechanical properties present themselves indistinctly on certain directions, that is, the overall mechanical behavior of a portion of matter in study is the same when this portion is subjected to specific motions. A tensor, as an algebraic entity that suitably embodies a physical magnitude, can be used to describe accordingly a mechanical measurement or a constitutive material property, including their eventual invariance requirements which we referred to. Thereby, it is the purpose of this section to briefly develop in mathematical terms this intuitive concept of invariance applied to tensors.
