@@ -429,7 +429,7 @@ But a set constituted of coordinate functionals, in this case $B^*:=\{\vtf{f}^\c
 \begin{equation}\label{eq:coordVetorDual}
 \fua{\vtf{h}}{\vto{x}}=\vtf{h}[\,{\sum_{i=1}^n\fua{\vtf{f}_i^B}{\vto{x}}\vto{u}_i}\,]=\sum_{i=1}^n\fua{\vtf{h}}{\vto{u}_i}\fua{\vtf{f}_i^B}{\vto{x}}=[\,\sum_{i=1}^n\fua{\vtf{h}}{\vto{u}_i}\vtf{f}_i^B\,] (\vto{x})
 \end{equation}
-enable us to conclude that $\vtf{f}_i^B$ spans $V_\cam{F}^*$ and if $\vtf{h}=\vtf{0}$, then functions $\vtf{f}_i^B$ result zero, which proves that $B^*$ is linearly independent. Therefore, we can state that scalars $\fua{\vtf{h}}{\vto{u}_i}$ result the coordinates of $\vtf{h}$ in $B^*$ and a complete vector space have the same dimension of its dual or that $\dim (V_\cam{F})=\dim (V_\cam{F}^*)$ in the present context. It is convenient that this strong correspondence between a complete vector space and its dual becomes even stronger, in such a way that vectors and dual vectors are biunivocaly related, when dual vectors are renamed to \textsb{covectors}\index{covector}. By defining a rule similar to \eqref{eq:regraCoord}, the following theorem, extremely relevant for our study, establishes this one-to-one relationship.
+enable us to conclude that $\vtf{f}_i^B$ spans $V_\cam{F}^*$ and if $\vtf{h}=\vtf{0}$, then functions $\vtf{f}_i^B$ result zero, which proves that $B^*$ is linearly independent. Therefore, we can state that scalars $\fua{\vtf{h}}{\vto{u}_i}$ result the coordinates of $\vtf{h}$ in $B^*$ and a complete vector space have the same dimension of its dual or that $\dim (V_\cam{F})=\dim (V_\cam{F}^*)$ in the present context. It is convenient that this strong correspondence between a complete vector space and its dual becomes even stronger, in such a way that vectors and dual vectors are biunivocaly related, when dual vectors are renamed to \textsb{covectors}\index{covector}. By defining a rule similar to \eqref{eq:regraCoord}, the following theorem, the most important of our study, establishes this one-to-one relationship.
 
 \begin{mteo}{Riesz-Fréchet Representation}{repRiesz}
 Let $\map{\Phi}{U_\cam{F}}{U^*_\cam{F}}$ be a mapping where $U_\cam{F}$ is a Hilbert space and
@@ -683,11 +683,11 @@ together with expression \eqref{eq:repMatMape}, we can write that
 \begin{equation}\label{eq:matrizMudBase}
 \mav{\vto{u}}{C}=\maf{\vtf{i}}{B}{C}\mav{\vto{u}}{B}\,,
 \end{equation}
-where $\maf{\vtf{i}}{B}{C}_{ij}=\fua{\vtf{f}_i^C}{\fua{\vtf{i}}{\vto{u}_j}}$ and $\vtf{i}$ is the identity function of $U_\cam{F}$. Therefore, according to the previous theorem, we can write a rule
+where $\maf{\vtf{i}}{B}{C}_{ij}=\fua{\vtf{f}_i^C}{\fua{\vtf{i}}{\vto{u}_j}}$ and $\vtf{i}$ is the identity function of $U_\cam{F}$. Therefore, according to the previous theorem, we can write the rule
 \begin{equation}\label{eq:regraMudCoord}
 \fua{\Gamma}{\mat{X}}=\maf{\vtf{i}}{B}{C}\mat{X}
 \end{equation}
-describing a change of coordinates $\map{\Gamma}{U(B)_\cam{F}}{U(C)_\cam{F}}$, from which the representative matrix $\fua{\Gamma^{-1}}{\mat{X}}=\maf{\vtf{i}}{C}{B}\mat{X}$ results. In the particular case of Hilbert spaces, there is a rule for coordinate functionals, described by equality \eqref{eq:regraFuncCoord}, which enables us to specify matrix elements $\maf{\vtf{i}}{B}{C}_{ij}=\vto{u}_j\cdot\vto{v}^i$.
+for the change of coordinates $\map{\Gamma}{U(B)_\cam{F}}{U(C)_\cam{F}}$ and the rule  $\fua{\Gamma^{-1}}{\mat{X}}=\maf{\vtf{i}}{C}{B}\mat{X}$ for the inverse mapping. In the particular case of Hilbert spaces, there is a rule for coordinate functionals, described by equality \eqref{eq:regraFuncCoord}, which enables us to specify matrix elements $\maf{\vtf{i}}{B}{C}_{ij}=\vto{u}_j\cdot\vto{v}^i$.
 
 
 According to the conditions of equality \eqref{eq:matrizMudBase}, as $\maf{\vtf{i}}{B}{C}$ is a square matrix of size $n$ and the identity function equals its inverse and its conjugate transpose, we can affirm from \eqref{eq:matRepInv} that
@@ -704,11 +704,11 @@ Still considering the vector space $U_\cam{F}$, the elements of base $C$ can be 
 \begin{equation}\label{eq:mudaBase}
 \vto{v}_j=\sum_{i=1}^n\vto{u}_i\fua{\vtf{f}_i^B}{\vto{v}_j}=\sum_{i=1}^n\vto{u}_i\maf{\vtf{i}}{C}{B}_{ij}\,,
 \end{equation}
-from which, given a basis $Z$ of $U_\cam{F}$, we can say that
+from which, given an arbitrary basis $Z$ of $U_\cam{F}$ used to describe numerically the elements of bases $B$ and $C$, we can say that
 \begin{equation*}
 \fua{\vtf{f}_k^Z}{\vto{v}_j}=\sum_{i=1}^n\fua{\vtf{f}_k^Z}{\vto{u}_i}\maf{\vtf{i}}{C}{B}_{ij}\,.
 \end{equation*}%=\sum_{i=1}^n\maf{\vtf{i}}{B}{Z}_{ki}\maf{\vtf{i}}{C}{B}_{ij}
-Arranging the components on $Z$ of all the elements of bases $B$ and $C$ according to this equality, the following matrix expression results:
+Arranging the components on $Z$ all the elements of bases $B$ and $C$ according to this equality, the following matrix expression results:
 \begin{equation}
 \begin{bmatrix}
 \mav{\vto{v}_1}{Z}_{11} & \mav{\vto{v}_2}{Z}_{11} & \cdots & \mav{\vto{v}_n}{Z}_{11}  \\
