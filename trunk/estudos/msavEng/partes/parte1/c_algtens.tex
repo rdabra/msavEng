@@ -607,10 +607,30 @@ where bases $B_i=\{\vun{u}_{1}^{(i)},\cdots,\vun{u}_{n_i}^{(i)}\}$ and $C_i=\{\v
 \end{align}  
 where $\maf{\tnr{i}}{C}{B}$ performs a change of basis from $B$ to $C$ when the coordinates of the elements of bases $B$ and $C$ on an arbitrary basis $Z$ are arranged according to arrays $\mat{B}$ and $\mat{C}$ defined in the development. Therefore, we can say that the coordinates of tensors are contravariant because if a change of coordinates is enabled by an array $\maf{\tnr{i}}{B}{C}$, the correspondent change of basis is performed by $\maf{\tnr{i}}{C}{B}$.   
 
+\begin{mcoro}{Change of Coordinates of Linear Tensor Operators}{mudaBaseTens}
+If $V^{\times m}(B)_\cam{F}$ and $V^{\times m}(C)_\cam{F}$ are vector spaces constituted by the representative arrays of linear tensor operators that belong to $\evl{\cam{F}}{\ete{\cam{F}}{V^{\times m}}}{\ete{\cam{F}}{V^{\times m}}}$, described respectively on bases $B$ and $C$ of tensor space $\ete{\cam{F}}{V^{\times m}}$, the change of coordinates $\map{\tnr{\Theta}}{V^{\times m}(B)_\cam{F}}{V^{\times m}(C)_\cam{F}}$ is described by $\fua{\tnr{\Theta}}{\mat{X}}=\maf{\vtf{i}}{B}{C}\,\mat{*_m}\,\mat{X}\,\mat{*_m}\,\maf{\vtf{i}}{C}{B}$.
+\end{mcoro}
+
+{\footnotesize
+\begin{proof}
+Considering a function $\tnr{\psi}\in\evl{\cam{F}}{\ete{\cam{F}}{V^{\times m}}}{\ete{\cam{F}}{V^{\times m}}}$ and a tensor $\vto{T}\in \ete{\cam{F}}{V^{\times m}}$, the last equality of the following development
+\begin{align*}
+\mav{\fua{\tnr{\psi}}{\tnr{T}}}{B}&=\maf{\tnr{\psi}}{B}{B}\mat{*_m}\mav{\tnr{T}}{B}\nonumber\\
+\maf{\vtf{i}}{C}{B}\mat{*_m}\mav{\fua{\tnr{\psi}}{\tnr{T}}}{C}&=\maf{\tnr{\psi}}{B}{B}\mat{*_m}\maf{\vtf{i}}{C}{B}\mat{*_m}\mav{\tnr{T}}{C}\nonumber\\
+\maf{\vtf{i}}{B}{C}\mat{*_m}\maf{\vtf{i}}{C}{B}\mat{*_m}\mav{\fua{\tnr{\psi}}{\tnr{T}}}{C}&=\maf{\vtf{i}}{B}{C}\mat{*_m}\maf{\tnr{\psi}}{B}{B}\mat{*_m}\maf{\vtf{i}}{C}{B}\mat{*_m}\mav{\tnr{T}}{C}\nonumber\\
+\maf{\tnr{\psi}}{C}{C}\mat{*_m}\mav{\tnr{T}}{C}&=\maf{\vtf{i}}{B}{C}\mat{*_m}\maf{\tnr{\psi}}{B}{B}\mat{*_m}\maf{\vtf{i}}{C}{B}\mat{*_m}\mav{\tnr{T}}{C}
+\end{align*}
+enables us to affirm that
+\begin{equation*}
+\maf{\tnr{\psi}}{C}{C} = \maf{\vtf{i}}{B}{C}\mat{*_m}\maf{\tnr{\psi}}{B}{B}\mat{*_m}\maf{\vtf{i}}{C}{B}\,.
+\end{equation*}
+\end{proof}
+}
+
  
 \section{Invariance of Tensors}
 
-The notion of invariance is of paramount importance in Physics because the fundamental description of mechanical phenomena must be not only qualitatively immune to arbitrary changes of reference frame but also quantitatively indifferent when such changes are of orthogonal type. From a constitutive viewpoint, materials have their invariance too, when some or all of their inherent mechanical properties present themselves indistinctly on certain directions, that is, the overall mechanical behavior of a portion of matter in study is the same when this portion is subjected to specific motions. A tensor, as an algebraic entity that suitably embodies a physical magnitude, can be used to describe accordingly a mechanical measurement or a constitutive material property, including their eventual invariance requirements which we referred to. Thereby, it is the purpose of this section to briefly develop in mathematical terms this intuitive concept of invariance applied to tensors.
+The notion of invariance is of paramount importance in Classical Physics because the fundamental description of mechanical phenomena must be not only qualitatively immune to arbitrary changes of reference frame but also quantitatively indifferent when such changes are of orthogonal type. From a constitutive viewpoint, materials have their invariance too, when some or all of their inherent mechanical properties present themselves indistinctly on certain directions, that is, the overall mechanical behavior of a portion of matter in study is the same when this portion is subjected to specific motions. A tensor, as an algebraic entity that suitably embodies a physical magnitude, can be used to accordingly describe a mechanical measurement or a constitutive material property, including their eventual invariance requirements which we referred to. Thereby, it is the purpose of this section to briefly develop in mathematical terms this intuitive concept of invariance applied to tensors.
 
 Let $\tnr{\psi}$ be an arbitrary element of a group $\grt{G}{\cam{F}}{U^{\times p}}$ of invertible linear tensor operators whose domain is Hilbert tensor space $\ete{\cam{F}}{U^{\times p}}$. A tensor $\tnr{T}\in\ete{\cam{F}}{U^{\times p}}$ is said to be \textsb{invariant}\index{tensor!invariant} on group $\grt{G}{\cam{F}}{U^{\times p}}$ if tensor $\fua{\tnr{\psi}}{\tnr{T}}=\tnr{T}$. When this equality is valid for arbitrary $\tnr{T}$, the whole tensor space $\ete{\cam{F}}{U^{\times p}}$ is considered invariant on $\grt{G}{\cam{F}}{U^{\times p}}$. Moreover, if group $\grt{G}{\cam{F}}{U^{\times p}}$ is orthogonal, that is, $\grt{G}{\cam{F}}{U^{\times p}}=\grt{O}{\cam{F}}{U^{\times p}}$, tensor $\tnr{T}$ is said to be \textsb{isotropic}\index{tensor!isotropic} on this group. In the case of arbitrary $\tnr{T}$, space $\ete{\cam{F}}{U^{\times p}}$ is called isotropic on $\grt{O}{\cam{F}}{U^{\times p}}$.
 
