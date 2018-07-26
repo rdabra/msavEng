@@ -643,13 +643,13 @@ where $\tnr{P}^{\tnr{\psi}}$ is clearly antisymmetric, that is, $\tnr{P}^{\tnr{\
 &=\beta\fua{\alpha\tnr{P}}{\tnr{X}_1,\cdots,\tnr{X}_p}\\
 &=\alpha\fua{\tnr{K}}{\tnr{X}_1,\cdots,\tnr{X}_p}
 \end{align*}  
-leads to equality $\tnr{K}^{\tnr{\psi}}=\alpha\tnr{K}$. Therefore, it is possible to conclude that the coordinate of any tensor $\tnr{K}^{\tnr{\psi}}$ is always $\alpha$, which is then related only to function $\tnr{\psi}$. Because of this exclusivity, scalar $\alpha$ is defined to be the \textsb{determinant of operator}\index{tensor operator!determinant of} $\tnr{\psi}$ when, from definition \eqref{eq:defDetPsi}, the function in $\map{\text{Det}}{\evl{\cam{F}}{\ete{\cam{F}}{A}}{\ete{\cam{F}}{A}}}{\cam{F}}$ has the rule
+leads to equality $\tnr{K}^{\tnr{\psi}}=\alpha\tnr{K}$. Therefore, it is possible to conclude that the coordinate of any tensor $\tnr{K}^{\tnr{\psi}}$ is always $\alpha$, which is then related only to function $\tnr{\psi}$. Because of this exclusivity, scalar $\alpha$ is defined to be the \textsb{determinant of operator}\index{tensor operator!determinant of} $\tnr{\psi}$ and then, from definition \eqref{eq:defDetPsi}, equality 
 \begin{equation}\label{eq:detFunDef}
-\hdet{\tnr{\psi}}=\dfrac{\fua{\tnr{P}}{\fua{\tnr{\psi}}{\tnr{Y}_1},\cdots,{\fua{\tnr{\psi}}{\tnr{Y}_p}}}}{\fua{\tnr{P}}{\tnr{Y}_1,\cdots,\tnr{Y}_p}}\,,
+\fua{\tnr{P}}{\fua{\tnr{\psi}}{\tnr{X}_1},\cdots,{\fua{\tnr{\psi}}{\tnr{X}_p}}}=\hdet{\tnr{\psi}}{\fua{\tnr{P}}{\tnr{X}_1,\cdots,\tnr{X}_p}}\,,
 \end{equation}  
-for all $\tnr{P}\in\{\etn{\cam{F}}{A^p}\setminus \tnr{0}\}$, where set $\{\tnr{Y}_1,\cdots,\tnr{Y}_p\}\subset\ete{\cam{F}}{A}$ is linearly independent. According to theorem \ref{teo:repRieszTensor}, in the particular case where operator $\tnr{\psi}$ is a $m$-cotensor of $\tnr{T}\in \ete{\cam{F}}{A^2}$, that is, $\tnr{T}_m^*=\tnr{\psi}$, it is possible to state that $\hdet{\tnr{T}}:=\hdet{\tnr{\psi}}$ and  
+is valid for all $\tnr{P}\in\{\etn{\cam{F}}{A^p}\setminus \tnr{0}\}$ and all $\tnr{X}_i\in\ete{\cam{F}}{A}$. According to theorem \ref{teo:repRieszTensor}, in the particular case where operator $\tnr{\psi}$ is a $m$-cotensor of $\tnr{T}\in \ete{\cam{F}}{A^2}$, that is, $\tnr{T}_m^*=\tnr{\psi}$, it is possible to state that $\hdet{\tnr{T}}:=\hdet{\tnr{\psi}}$ and  
 \begin{equation}
-\hdet{\tnr{T}}=\dfrac{\fua{\tnr{P}}{\fua{\tnr{T}_m^*}{\tnr{Y}_1},{\fua{\tnr{T}_m^*}{\tnr{Y}_2}}}}{\fua{\tnr{P}}{\tnr{Y}_1,\tnr{Y}_2}}\,.
+\fua{\tnr{P}}{\fua{\tnr{T}_m^*}{\tnr{X}_1},{\fua{\tnr{T}_m^*}{\tnr{X}_2}}}=\hdet{\tnr{T}}{\fua{\tnr{P}}{\tnr{X}_1,\tnr{X}_2}}\,.
 \end{equation}  
 Now, considering arbitrary functions $\tnr{\psi},\tnr{\varphi}\in\evl{\cam{F}}{\ete{\cam{F}}{A}}{\ete{\cam{F}}{A}}$, the following properties of determinant of tensor operators are valid:
 \begin{itemize}
@@ -666,9 +666,11 @@ Now, considering arbitrary functions $\tnr{\psi},\tnr{\varphi}\in\evl{\cam{F}}{\
 {\footnotesize
 \begin{proof}
 Verification of item i is a straightforward consequence of considering $\tnr{\psi}=\tnr{i}$ in \eqref{eq:detFunDef}. In order to shorten expression sizes, we will admit thereafter $p=2$, since generality is not compromised. The second item is proved through the following equalities:
-\begin{equation*}
-\hdet{\tnr{\psi}\circ\tnr{\varphi}}=\dfrac{\fua{\tnr{P}}{\tnr{\psi}[\fua{\tnr{\varphi}}{\tnr{Y}_1}],\tnr{\psi}[\fua{\tnr{\varphi}}{\tnr{Y}_2}]}}{\fua{\tnr{P}}{\tnr{Y}_1,\tnr{Y}_2}}=\dfrac{\hdet{\tnr{\psi}}\fua{\tnr{P}}{\fua{\tnr{\varphi}}{\tnr{Y}_1},\fua{\tnr{\varphi}}{\tnr{Y}_2}}}{\fua{\tnr{P}}{\tnr{Y}_1,\tnr{Y}_2}}=\hdet{\tnr{\psi}}\,\hdet{\tnr{\phi}}\,.
-\end{equation*}  
+\begin{align*}
+\hdet{\tnr{\psi}\circ\tnr{\varphi}}\fua{\tnr{P}}{\tnr{X}_1,\tnr{X}_2}&=\fua{\tnr{P}}{\tnr{\psi}[\fua{\tnr{\varphi}}{\tnr{X}_1}],\tnr{\psi}[\fua{\tnr{\varphi}}{\tnr{X}_2}]}\\
+&=\hdet{\tnr{\psi}}\fua{\tnr{P}}{\fua{\tnr{\varphi}}{\tnr{X}_1},\fua{\tnr{\varphi}}{\tnr{X}_2}}\\
+&=\hdet{\tnr{\psi}}\hdet{\tnr{\varphi}}\fua{\tnr{P}}{\tnr{X}_1,\tnr{X}_2}\,.
+\end{align*}  
 Equalities $1=\hdet{\tnr{\psi}^{-1}\circ\tnr{\psi}}=\hdet{\tnr{\psi}^{-1}}\,\hdet{\tnr{\psi}}$ prove the third item. 
 \end{proof}
 }
