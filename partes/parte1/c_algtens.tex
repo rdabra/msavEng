@@ -643,14 +643,35 @@ where $\tnr{P}^{\tnr{\psi}}$ is clearly antisymmetric, that is, $\tnr{P}^{\tnr{\
 &=\beta\fua{\alpha\tnr{P}}{\tnr{X}_1,\cdots,\tnr{X}_p}\\
 &=\alpha\fua{\tnr{K}}{\tnr{X}_1,\cdots,\tnr{X}_p}
 \end{align*}  
-leads to equality $\tnr{K}^{\tnr{\psi}}=\alpha\tnr{K}$. Therefore, it is possible to conclude that the coordinate of any tensor $\tnr{K}^{\tnr{\psi}}$ is always $\alpha$, which is then related only to function $\tnr{\psi}$. Because of this exclusivity, scalar $\alpha$ is defined to be the \textsb{determinant of operator}\index{tensor operator!determinant of} $\tnr{\psi}$ and, from definition \eqref{eq:defDetPsi}, the function in $\map{\text{Det}}{\evl{\cam{F}}{\ete{\cam{F}}{A}}{\ete{\cam{F}}{A}}}{\cam{F}}$ has the rule
-\begin{equation}
-\hdet{\tnr{\psi}}=\dfrac{\fua{\tnr{P}}{\fua{\tnr{\psi}}{\tnr{X}_1},\cdots,{\fua{\tnr{\psi}}{\tnr{X}_p}}}}{\fua{\tnr{P}}{\tnr{X}_1,\cdots,\tnr{X}_p}}\,,
+leads to equality $\tnr{K}^{\tnr{\psi}}=\alpha\tnr{K}$. Therefore, it is possible to conclude that the coordinate of any tensor $\tnr{K}^{\tnr{\psi}}$ is always $\alpha$, which is then related only to function $\tnr{\psi}$. Because of this exclusivity, scalar $\alpha$ is defined to be the \textsb{determinant of operator}\index{tensor operator!determinant of} $\tnr{\psi}$ when, from definition \eqref{eq:defDetPsi}, the function in $\map{\text{Det}}{\evl{\cam{F}}{\ete{\cam{F}}{A}}{\ete{\cam{F}}{A}}}{\cam{F}}$ has the rule
+\begin{equation}\label{eq:detFunDef}
+\hdet{\tnr{\psi}}=\dfrac{\fua{\tnr{P}}{\fua{\tnr{\psi}}{\tnr{Y}_1},\cdots,{\fua{\tnr{\psi}}{\tnr{Y}_p}}}}{\fua{\tnr{P}}{\tnr{Y}_1,\cdots,\tnr{Y}_p}}\,,
 \end{equation}  
-for all $\tnr{P}\in\{\etn{\cam{F}}{A^p}\setminus \tnr{0}\}$ and $\tnr{X}_i\in\ete{\cam{F}}{A}$. According to theorem \ref{teo:repRieszTensor}, in the particular case where operator $\tnr{\psi}$ is a $m$-cotensor of $\tnr{T}\in \ete{\cam{F}}{A^2}$, that is, $\tnr{T}_m^*=\tnr{\psi}$, it is possible to state that $\hdet{\tnr{T}}:=\hdet{\tnr{\psi}}$ and then 
+for all $\tnr{P}\in\{\etn{\cam{F}}{A^p}\setminus \tnr{0}\}$, where set $\{\tnr{Y}_1,\cdots,\tnr{Y}_p\}\subset\ete{\cam{F}}{A}$ is linearly independent. According to theorem \ref{teo:repRieszTensor}, in the particular case where operator $\tnr{\psi}$ is a $m$-cotensor of $\tnr{T}\in \ete{\cam{F}}{A^2}$, that is, $\tnr{T}_m^*=\tnr{\psi}$, it is possible to state that $\hdet{\tnr{T}}:=\hdet{\tnr{\psi}}$ and  
 \begin{equation}
-\hdet{\tnr{T}}=\dfrac{\fua{\tnr{P}}{\fua{\tnr{T}_m^*}{\tnr{X}_1},{\fua{\tnr{T}_m^*}{\tnr{X}_2}}}}{\fua{\tnr{P}}{\tnr{X}_1,\tnr{X}_2}}\,.
+\hdet{\tnr{T}}=\dfrac{\fua{\tnr{P}}{\fua{\tnr{T}_m^*}{\tnr{Y}_1},{\fua{\tnr{T}_m^*}{\tnr{Y}_2}}}}{\fua{\tnr{P}}{\tnr{Y}_1,\tnr{Y}_2}}\,.
 \end{equation}  
+Now, considering arbitrary functions $\tnr{\psi},\tnr{\varphi}\in\evl{\cam{F}}{\ete{\cam{F}}{A}}{\ete{\cam{F}}{A}}$, the following properties of determinant of tensor operators are valid:
+\begin{itemize}
+\setlength\itemsep{.1em}
+\item[i.] $\hdet{\tnr{i}} =  1$;
+\item[ii.] $\hdet{\tnr{\psi}\circ\tnr{\varphi}} =  \hdet{\tnr{\psi}}\,\hdet{\tnr{\varphi}}$;
+\item[iii.] If $\tnr{\psi}$ is a bijection, then $\hdet{\tnr{\psi}^{-1}} =  (\hdet{\tnr{\psi}})^{-1}$;
+\item[iv.] If $\hdet{\tnr{\psi}}\neq 0$, then $\tnr{\psi}$ is a bijection;
+\item[v.] If $B$ and $C$ are bases of $\ete{\cam{F}}{A}$, then $\hdet{\tnr{\psi}}=\hdet{\maf{\tnr{\psi}}{B}{C}}$;
+\item[vi.] If $\cam{F}=\real$, then $\hdet{\tnr{\psi}^\text{T}}=\hdet{\tnr{\psi}}$;
+\item[vii.] If $\tnr{\psi}$ is orthogonal and $\cam{F}=\real$, then $\hdet{\tnr{\psi}}=\pm 1$. 
+\end{itemize}
+
+{\footnotesize
+\begin{proof}
+Verification of item i is a straightforward consequence of considering $\tnr{\psi}=\tnr{i}$ in \eqref{eq:detFunDef}. In order to shorten expression sizes, we will admit thereafter $p=2$, since generality is not compromised. The second item is proved through the following equalities:
+\begin{equation*}
+\hdet{\tnr{\psi}\circ\tnr{\varphi}}=\dfrac{\fua{\tnr{P}}{\tnr{\psi}[\fua{\tnr{\varphi}}{\tnr{Y}_1}],\tnr{\psi}[\fua{\tnr{\varphi}}{\tnr{Y}_2}]}}{\fua{\tnr{P}}{\tnr{Y}_1,\tnr{Y}_2}}=\dfrac{\hdet{\tnr{\psi}}\fua{\tnr{P}}{\fua{\tnr{\varphi}}{\tnr{Y}_1},\fua{\tnr{\varphi}}{\tnr{Y}_2}}}{\fua{\tnr{P}}{\tnr{Y}_1,\tnr{Y}_2}}=\hdet{\tnr{\psi}}\,\hdet{\tnr{\phi}}\,.
+\end{equation*}  
+Equalities $1=\hdet{\tnr{\psi}^{-1}\circ\tnr{\psi}}=\hdet{\tnr{\psi}^{-1}}\,\hdet{\tnr{\psi}}$ prove the third item. 
+\end{proof}
+}
 
 
 Let $\tnr{\psi}$ be an arbitrary element of a group $\grt{G}{\cam{F}}{U^{\times p}}$ of invertible linear tensor operators whose domain is Hilbert tensor space $\ete{\cam{F}}{U^{\times p}}$. A tensor $\tnr{T}\in\ete{\cam{F}}{U^{\times p}}$ is said to be \textsb{invariant}\index{tensor!invariant} on group $\grt{G}{\cam{F}}{U^{\times p}}$ if tensor $\fua{\tnr{\psi}}{\tnr{T}}=\tnr{T}$. When this equality is valid for arbitrary $\tnr{T}$, the whole tensor space $\ete{\cam{F}}{U^{\times p}}$ is considered invariant on $\grt{G}{\cam{F}}{U^{\times p}}$. Moreover, if group $\grt{G}{\cam{F}}{U^{\times p}}$ is orthogonal, that is, $\grt{G}{\cam{F}}{U^{\times p}}=\grt{O}{\cam{F}}{U^{\times p}}$, tensor $\tnr{T}$ is said to be \textsb{isotropic}\index{tensor!isotropic} on this group. In the case of arbitrary $\tnr{T}$, space $\ete{\cam{F}}{U^{\times p}}$ is called isotropic on $\grt{O}{\cam{F}}{U^{\times p}}$.
