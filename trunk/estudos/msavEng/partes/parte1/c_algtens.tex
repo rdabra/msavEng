@@ -185,7 +185,7 @@ The concept of permutation enables the concept of symmetry as follows: a tensor 
 \begin{equation}\label{eq:igAntis}
 \fua{\tnr{P}}{\vto{x}_{i_1},\cdots,\vto{x}_{i_m}}=\epsilon_{i_1\cdots i_m}\fua{\tnr{P}}{\vto{x}_1,\cdots,\vto{x}_m}\,.
 \end{equation}
-Moreover, since the sum of two (anti)symmetric tensors is an (anti)symmetric tensor and multiplication by scalar also preserves (anti)symmetry, the set of all (anti)symmetric tensors defines a tensor subspace of $\ete{\cam{F}}{V^{m}}$: if this subspace is constituted by all symmetric tensors, it is represented by $\gloref{eteS}$; if it is constituted by antisymmetric tensors, we have $\gloref{eteN}$. Then, it is possible, and intriguing, to obtain that \emph{every tensor subspace defined by antisymmetric tensors is one-dimensional.}
+Moreover, since the sum of two (anti)symmetric tensors is an (anti)symmetric tensor and multiplication by scalar also preserves (anti)symmetry, the set of all (anti)symmetric tensors defines a tensor subspace of $\ete{\cam{F}}{V^{m}}$: if this subspace is constituted by all symmetric tensors, it is represented by $\gloref{eteS}$; if it is constituted by antisymmetric tensors, we have $\gloref{eteN}$. Then, it is possible, and intriguing, to obtain that \emph{every tensor subspace $\etn{\cam{F}}{V^m}$ defined by antisymmetric tensors is one-dimensional if $\dim{(V)_\cam{F}}=m$.}
 
 {\footnotesize
 \begin{proof}
@@ -205,23 +205,23 @@ Let's verify if (anti)symmetric tensors really define tensor subspaces. Let $\tn
 \begin{equation*}
 	\epsilon_{\fua{\pi}{1}\cdots \fua{\pi}{m}}(\tnr{C}+\tnr{D})=\tnr{C}_\pi+\tnr{D}_\pi=(\tnr{C}+\tnr{D})_\pi\,,
 \end{equation*}
-which shows $\tnr{C}+\tnr{D}$ antisymmetric. Thereby, we can state that a set of antisymmetric tensors also defines a tensor space. Now, we'll verify the curious one-dimensionality of antisymmetric tensors by adapting to our case the idea of \aut{Backus}\cite{backus_1997_1}, pp. 15-17. Let $\etn{\cam{F}}{V^m}\subset\ete{\cam{F}}{V^m}$ be a tensor subspace of antisymmetric tensors, $B=\{\vto{v_1},\cdots,\vto{v}_n\}$ a basis of vector space $V_\cam{F}$ and an antisymmetric tensor  $\tnr{H}\in\etn{\cam{F}}{V^m}$ such that
+which shows $\tnr{C}+\tnr{D}$ antisymmetric. Thereby, we can state that a set of antisymmetric tensors also defines a tensor space. Now, we'll verify the curious one-dimensionality of antisymmetric tensors by adapting to our case the idea of \aut{Backus}\cite{backus_1997_1}, pp. 15-17. Let $\etn{\cam{F}}{V^m}\subset\ete{\cam{F}}{V^m}$ be a tensor subspace of antisymmetric tensors, $B=\{\vto{v}_1,\cdots,\vto{v}_m\}$ a basis of vector space $V_\cam{F}$ and an antisymmetric tensor  $\tnr{H}\in\etn{\cam{F}}{V^m}$ such that
 \begin{equation*}
-\tnr{H}(\vto{x_1},\cdots,\vto{x}_m)=\sum_{i_1=1}^n\cdots\sum_{i_m=1}^n\fua{\vtf{f}^\con{B}_{i_1}}{\vto{x}_1}\cdots\fua{\vtf{f}^\con{B}_{i_m}}{\vto{x}_m}\epsilon_{i_1\cdots i_m}\,,
+\tnr{H}(\vto{x}_1,\cdots,\vto{x}_m)=\sum_{i_1=1}^m\cdots\sum_{i_m=1}^m\fua{\vtf{f}^\con{B}_{i_1}}{\vto{x}_1}\cdots\fua{\vtf{f}^\con{B}_{i_m}}{\vto{x}_m}\epsilon_{i_1\cdots i_m}\,,
 \end{equation*}
 where $\vto{x_i}\in V_\cam{F}$. This tensor $\tnr{H}$ is verified to be antisymmetric through the following development:
 \begin{align*}
 \fua{\tnr{H}_{(a,b)}}{\cdots,\vto{x}_a,\cdots,\vto{x}_b,\cdots}&=\cdots
-\sum_{i_a=1}^n\cdots\sum_{i_b=1}^n\cdots\,\fua{\vtf{f}^\con{B}_{i_a}}{\vto{x}_b}\cdots\,\fua{\vtf{f}^\con{B}_{i_b}}{\vto{x}_a}\cdots \,\epsilon_{\cdots i_a\cdots i_b\cdots}\\
+\sum_{i_a=1}^m\cdots\sum_{i_b=1}^m\cdots\,\fua{\vtf{f}^\con{B}_{i_a}}{\vto{x}_b}\cdots\,\fua{\vtf{f}^\con{B}_{i_b}}{\vto{x}_a}\cdots \,\epsilon_{\cdots i_a\cdots i_b\cdots}\\
 &=\cdots
-\sum_{i_b=1}^n\cdots\sum_{i_a=1}^n\cdots\,\fua{\vtf{f}^\con{B}_{i_b}}{\vto{x}_b}\cdots\,\fua{\vtf{f}^\con{B}_{i_a}}{\vto{x}_a}\cdots \,\epsilon_{\cdots i_b\cdots i_a\cdots}\\
+\sum_{i_b=1}^m\cdots\sum_{i_a=1}^m\cdots\,\fua{\vtf{f}^\con{B}_{i_b}}{\vto{x}_b}\cdots\,\fua{\vtf{f}^\con{B}_{i_a}}{\vto{x}_a}\cdots \,\epsilon_{\cdots i_b\cdots i_a\cdots}\\
 &=-\,\,\cdots
-\sum_{i_b=1}^n\cdots\sum_{i_a=1}^n\cdots\,\fua{\vtf{f}^\con{B}_{i_b}}{\vto{x}_b}\cdots\,\fua{\vtf{f}^\con{B}_{i_a}}{\vto{x}_a}\cdots \,\epsilon_{\cdots i_a\cdots i_b\cdots}\\
+\sum_{i_b=1}^m\cdots\sum_{i_a=1}^m\cdots\,\fua{\vtf{f}^\con{B}_{i_b}}{\vto{x}_b}\cdots\,\fua{\vtf{f}^\con{B}_{i_a}}{\vto{x}_a}\cdots \,\epsilon_{\cdots i_a\cdots i_b\cdots}\\
 &=\epsilon_{1\cdots b\cdots a\cdots m}\,\fua{\tnr{H}}{\cdots,\vto{x}_a,\cdots,\vto{x}_b,\cdots}\,
 \end{align*}
 where terms with indexes $i_1$ and $i_m$ are omitted and $a,b$ are arbitrary ordinals between $1$ and $m$. Considering an arbitrary tensor $\tnr{P}\in\etn{\cam{F}}{V^m}$, we know that
 \begin{align*}
-\fua{\tnr{P}}{\vto{x}_1,\cdots,\vto{x}_m}&=\sum_{{i_1}=1}^{n}\cdots\sum_{{i_m}=1}^{n}\fua{\vtf{f}^\con{B}_{i_1}}{\vto{x}_1}\cdots\fua{\vtf{f}^\con{B}_{i_m}}{\vto{x}_m}\tnr{P}({\vto{v}_{i_1},\cdots,\vto{v}_{i_m}})\\	&=\underbrace{\sum_{{i_1}=1}^{n}\cdots\sum_{{i_m}=1}^{n}\fua{\vtf{f}^\con{B}_{i_1}}{\vto{x}_1}\cdots\fua{\vtf{f}^\con{B}_{i_m}}{\vto{x}_m}\epsilon_{i_1\cdots i_m}}_{\tnr{H}(\vto{x_1},\cdots,\vto{x}_m)}\underbrace{\fua{\tnr{P}}{\vto{v}_1,\cdots,\vto{v}_m}}_{\alpha}
+\fua{\tnr{P}}{\vto{x}_1,\cdots,\vto{x}_m}&=\sum_{{i_1}=1}^{m}\cdots\sum_{{i_m}=1}^{m}\fua{\vtf{f}^\con{B}_{i_1}}{\vto{x}_1}\cdots\fua{\vtf{f}^\con{B}_{i_m}}{\vto{x}_m}\tnr{P}({\vto{v}_{i_1},\cdots,\vto{v}_{i_m}})\\	&=\underbrace{\sum_{{i_1}=1}^{m}\cdots\sum_{{i_m}=1}^{m}\fua{\vtf{f}^\con{B}_{i_1}}{\vto{x}_1}\cdots\fua{\vtf{f}^\con{B}_{i_m}}{\vto{x}_m}\epsilon_{i_1\cdots i_m}}_{\tnr{H}(\vto{x}_1,\cdots,\vto{x}_m)}\underbrace{\fua{\tnr{P}}{\vto{v}_1,\cdots,\vto{v}_m}}_{\alpha}
 \end{align*}
 from which we conclude $\tnr{P}=\alpha\tnr{H}$, that is, $\{\tnr{H}\}$ is a basis of $\etn{\cam{F}}{V^m}$.
 \end{proof}
@@ -632,7 +632,7 @@ enables us to affirm that
 
 The notion of invariance is of paramount importance in Classical Physics because the fundamental description of mechanical phenomena must be not only qualitatively immune to arbitrary changes of reference frame but also quantitatively indifferent when such changes are of orthogonal type. From a constitutive viewpoint, materials have their invariance too, when some or all of their inherent mechanical properties present themselves indistinctly on certain directions, that is, the overall mechanical behavior of a portion of matter in study is the same when this portion is subjected to specific motions. A tensor, as an algebraic entity that suitably embodies a physical magnitude, can be used to accordingly describe a mechanical measurement or a constitutive material property, including their eventual invariance requirements which we referred to. Thereby, it is the purpose of this section to briefly develop in mathematical terms this intuitive concept of invariance applied to tensors.
 
-Before we develop mathematically this notion of tensor invariance, there is a preliminary definition that needs to be addressed. The feature of proper orthogonality -- to which anti-isotropic tensors are invariant -- is also valid for tensor operators. As presented in section \ref{sec:Matrix}, an orthogonal operator is called proper if its determinant is $1$, but we still don't know what a determinant of a tensor operator is. In order to present this unusual definition as concisely as possible, we shall sacrifice self-containedness and tacitly accept the approach of \aut{Spivak}\cite{spivak_1965_1}\footnote{See also \aut{Bishop \& Goldberg}\cite{bishop_1980_1}, pp.97-100, and \aut{Backus}\cite{backus_1997_1}, pp.17-21.}, adapting to our case his theorem 4-6, p.82. Firstly, let's consider $\tnr{P}\in\etn{\cam{F}}{A^p}$ an arbitrary non-zero antisymmetric tensor where the set $A=V^{\times m}$, a function $\tnr{\psi}\in\evl{\cam{F}}{\ete{\cam{F}}{A}}{\ete{\cam{F}}{A}}$ and the tensor $\tnr{P}^{\tnr{\psi}}\in\ete{\cam{F}}{A^p}$ such that
+Before we develop mathematically this notion of tensor invariance, there is a preliminary definition that needs to be addressed. The feature of proper orthogonality -- to which anti-isotropic tensors are invariant -- is also valid for tensor operators. As presented in section \ref{sec:Matrix}, an orthogonal operator is called proper if its determinant is $1$, but we still don't know what a determinant of a tensor operator is. In order to present this unusual definition as concisely as possible, we shall sacrifice self-containedness and tacitly accept the approach of \aut{Spivak}\cite{spivak_1965_1}\footnote{See also \aut{Bishop \& Goldberg}\cite{bishop_1980_1}, pp.97-100, and \aut{Backus}\cite{backus_1997_1}, pp.17-21.}, adapting to our case his theorem 4-6, p.82. Firstly, let's consider $\tnr{P}\in\etn{\cam{F}}{A^p}$ an arbitrary non-zero antisymmetric tensor where the set $A=V^{\times m}$, $\dim{(V_i)_\cam{F}}=n$ and $p=n^m$. Let $\tnr{\psi}\in\evl{\cam{F}}{\ete{\cam{F}}{A}}{\ete{\cam{F}}{A}}$ and   $\tnr{P}^{\tnr{\psi}}\in\ete{\cam{F}}{A^p}$ such that
 \begin{equation}\label{eq:defDetPsi}
 \fua{\tnr{P}^{\tnr{\psi}}}{\tnr{X}_1,\cdots,\tnr{X}_p}:=\fua{\tnr{P}}{\fua{\tnr{\psi}}{\tnr{X}_1},\cdots,{\fua{\tnr{\psi}}{\tnr{X}_p}}}\,,\,\forall\,\tnr{X}_i\in\ete{\cam{F}}{A}\,,
 \end{equation}  
@@ -649,7 +649,7 @@ leads to equality $\tnr{K}^{\tnr{\psi}}=\alpha\tnr{K}$. Therefore, it is possibl
 \end{equation}  
 is valid for all $\tnr{P}\in\{\etn{\cam{F}}{A^p}\setminus \tnr{0}\}$ and all $\tnr{X}_i\in\ete{\cam{F}}{A}$. According to theorem \ref{teo:repRieszTensor}, in the particular case where operator $\tnr{\psi}$ is a $m$-cotensor of $\tnr{T}\in \ete{\cam{F}}{A^2}$, that is, $\tnr{T}_m^*=\tnr{\psi}$, it is possible to state that $\hdet{\tnr{T}}:=\hdet{\tnr{\psi}}$ and  
 \begin{equation}
-\fua{\tnr{P}}{\fua{\tnr{T}_m^*}{\tnr{X}_1},{\fua{\tnr{T}_m^*}{\tnr{X}_2}}}=\hdet{\tnr{T}}{\fua{\tnr{P}}{\tnr{X}_1,\tnr{X}_2}}\,.
+\fua{\tnr{P}}{\fua{\tnr{T}_m^*}{\tnr{X}_1},\cdots,{\fua{\tnr{T}_m^*}{\tnr{X}_p}}}=\hdet{\tnr{T}}{\fua{\tnr{P}}{\tnr{X}_1,\cdots,\tnr{X}_p}}\,.
 \end{equation}  
 Now, considering arbitrary functions $\tnr{\psi},\tnr{\varphi}\in\evl{\cam{F}}{\ete{\cam{F}}{A}}{\ete{\cam{F}}{A}}$, the following properties of determinant of tensor operators are valid:
 \begin{itemize}
@@ -665,33 +665,41 @@ Now, considering arbitrary functions $\tnr{\psi},\tnr{\varphi}\in\evl{\cam{F}}{\
 
 {\footnotesize
 \begin{proof}
-Verification of item i is a straightforward consequence of considering $\tnr{\psi}=\tnr{i}$ in \eqref{eq:detFunDef}. In order to shorten expression sizes, we will admit hereafter that $p=2$, since generality is not compromised. The second item is proved through the following equalities:
+Verification of item i is a straightforward consequence of considering $\tnr{\psi}=\tnr{i}$ in \eqref{eq:detFunDef}. The second item is proved through the following equalities:
 \begin{align*}
-\hdet{\tnr{\psi}\circ\tnr{\varphi}}\fua{\tnr{P}}{\tnr{X}_1,\tnr{X}_2}&=\fua{\tnr{P}}{\tnr{\psi}[\fua{\tnr{\varphi}}{\tnr{X}_1}],\tnr{\psi}[\fua{\tnr{\varphi}}{\tnr{X}_2}]}\\
-&=\hdet{\tnr{\psi}}\fua{\tnr{P}}{\fua{\tnr{\varphi}}{\tnr{X}_1},\fua{\tnr{\varphi}}{\tnr{X}_2}}\\
-&=\hdet{\tnr{\psi}}\hdet{\tnr{\varphi}}\fua{\tnr{P}}{\tnr{X}_1,\tnr{X}_2}\,.
+\hdet{\tnr{\psi}\circ\tnr{\varphi}}\fua{\tnr{P}}{\tnr{X}_1,\cdots,\tnr{X}_p}&=\fua{\tnr{P}}{\tnr{\psi}[\fua{\tnr{\varphi}}{\tnr{X}_1}],\cdots,\tnr{\psi}[\fua{\tnr{\varphi}}{\tnr{X}_p}]}\\
+&=\hdet{\tnr{\psi}}\fua{\tnr{P}}{\fua{\tnr{\varphi}}{\tnr{X}_1},\cdots,\fua{\tnr{\varphi}}{\tnr{X}_p}}\\
+&=\hdet{\tnr{\psi}}\hdet{\tnr{\varphi}}\fua{\tnr{P}}{\tnr{X}_1,\cdots,\tnr{X}_p}\,.
 \end{align*}  
-Equalities $1=\hdet{\tnr{\psi}^{-1}\circ\tnr{\psi}}=\hdet{\tnr{\psi}^{-1}}\,\hdet{\tnr{\psi}}$ prove the third item. For the item iv, let's consider  $\hdet{\tnr{\psi}}\neq 0$ and as equality $\eqref{eq:detFunDef}$ is valid for any $\tnr{X}_i\in\ete{\cam{F}}{A}$, let's choose a linearly independent set $\{\tnr{X}_1,\tnr{X}_2\}$, which causes $\fua{\tnr{P}}{\tnr{X}_1,\tnr{X}_2}\neq 0$. These conditions imply inequality $\fua{\tnr{P}}{\fua{\tnr{\psi}}{\tnr{X}_1},{\fua{\tnr{\psi}}{\tnr{X}_2}}}\neq 0$, from which we conclude that $\fua{\tnr{\psi}}{\tnr{X}_1}\neq\gamma\fua{\tnr{\psi}}{\tnr{X}_2}$ or $\fua{\tnr{\psi}}{\tnr{X}_1}\neq\fua{\tnr{\psi}}{\gamma\tnr{X}_2}$, where $\gamma\in\cam{F}$. As $\{\tnr{X}_1,\tnr{X}_2\}$ is linearly independent, then $\tnr{\psi}$ must be an injection and consequently a bijection since it is an unary operator. Considering the development that leads to \eqref{eq:repArrayTensF} in order to verify item v, let's say that $\vtf{f}_{i_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{i_m}^{B_m}$ and $\vtf{f}_{j_1}^{C_1}\otimes\cdots\otimes\vtf{f}_{j_m}^{C_m}$ are arbitrary elements of bases $B$ and $C$ of $\ete{\cam{F}}{A}$. Thereby, 
+Equalities $1=\hdet{\tnr{\psi}^{-1}\circ\tnr{\psi}}=\hdet{\tnr{\psi}^{-1}}\,\hdet{\tnr{\psi}}$ prove the third item. For the item iv, let's consider  $\hdet{\tnr{\psi}}\neq 0$ and as equality $\eqref{eq:detFunDef}$ is valid for any $\tnr{X}_i\in\ete{\cam{F}}{A}$, let's choose a linearly independent set $\{\tnr{X}_1,\cdots,\tnr{X}_p\}$, which causes $\fua{\tnr{P}}{\tnr{X}_1,\cdots,\tnr{X}_p}\neq 0$ since $\tnr{P}$ is antisymmetric. These conditions imply inequality $\fua{\tnr{P}}{\fua{\tnr{\psi}}{\tnr{X}_1},\cdots,{\fua{\tnr{\psi}}{\tnr{X}_p}}}\neq 0$, from which we conclude that 
+$\{\fua{\tnr{\psi}}{\tnr{X}_1},\cdots,{\fua{\tnr{\psi}}{\tnr{X}_p}}\}$ is also linearly independent. Therefore, $\tnr{\psi}$ must be an injection and consequently a bijection since it is an unary operator. Considering the development that leads to \eqref{eq:repArrayTensF} in order to verify item v, let's say that $\vtf{f}_{j_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{j_m}^{B_m}$ and $\vtf{f}_{i_1}^{C_1}\otimes\cdots\otimes\vtf{f}_{i_m}^{C_m}$ are arbitrary elements of bases $B$ and $C$ of $\ete{\cam{F}}{A}$. Thereby, 
+\begin{align*}
+\fua{\tnr{\psi}}{\vtf{f}_{j_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{j_m}^{B_m}} &= \sum_{i_1=1}^{n}\cdots\sum_{i_m=1}^{n}{\maf{\tnr{\psi}}{B}{C}}_{i_1\cdots i_m j_1\cdots j_m}
+\vtf{f}_{i_1}^{C_1}\otimes\cdots\otimes\vtf{f}_{i_m}^{C_m}\\
+&=\sum_{i_1=1}^{n}\cdots\sum_{i_m=1}^{n}{\maf{\tnr{\psi}}{B}{C}}_{i_1\cdots i_m j_1\cdots j_m}\sum_{k_1=1}^{n}\cdots\sum_{k_m=1}^{n}\,,
+\end{align*}
+
+
 \begin{multline*}
-\fua{\tnr{P}}{\fua{\tnr{\psi}}{\vtf{f}_{k_1^{(1)}}^{B_1}\otimes\cdots\otimes\vtf{f}_{k_m^{(1)}}^{B_m}},\fua{\tnr{\psi}}{\vtf{f}_{k_1^{(2)}}^{B_1}\otimes\cdots\otimes\vtf{f}_{k_m^{(2)}}^{B_m}}} = \sum_{i_1^{(1)}=1}^{n_1}\cdots\sum_{i_m^{(1)}=1}^{n_m}\sum_{j_1^{(1)}=1}^{n_1}\cdots\sum_{j_m^{(1)}=1}^{n_m}\sum_{i_1^{(2)}=1}^{n_1}\cdots\sum_{i_m^{(2)}=1}^{n_m}\\
-\sum_{j_1^{(2)}=1}^{n_1}\cdots\sum_{j_m^{(2)}=1}^{n_m}{\maf{\tnr{\psi}}{B}{C}}_{i_1^{(1)}\cdots i_m^{(1)} j_1^{(1)}\cdots j_m^{(1)}}\,{\maf{\tnr{\psi}}{B}{C}}_{i_1^{(2)}\cdots i_m^{(2)} j_1^{(2)}\cdots j_m^{(2)}}\delta_{k_1^{(1)}j_1^{(1)}}\cdots\delta_{k_m^{(1)}j_m^{(1)}}\\
+\fua{\tnr{P}}{\cdots,\fua{\tnr{\psi}}{\vtf{f}_{k_1^{(2)}}^{B_1}\otimes\cdots\otimes\vtf{f}_{k_m^{(2)}}^{B_m}},\cdots} = \sum_{i_1^{(1)}=1}^{n}\cdots\sum_{i_m^{(1)}=1}^{n}\sum_{j_1^{(1)}=1}^{n}\cdots\sum_{j_m^{(1)}=1}^{n}\sum_{i_1^{(2)}=1}^{n}\cdots\sum_{i_m^{(2)}=1}^{n}\\
+\sum_{j_1^{(2)}=1}^{n}\cdots\sum_{j_m^{(2)}=1}^{n}{\maf{\tnr{\psi}}{B}{C}}_{i_1^{(1)}\cdots i_m^{(1)} j_1^{(1)}\cdots j_m^{(1)}}\,{\maf{\tnr{\psi}}{B}{C}}_{i_1^{(2)}\cdots i_m^{(2)} j_1^{(2)}\cdots j_m^{(2)}}\delta_{k_1^{(1)}j_1^{(1)}}\cdots\delta_{k_m^{(1)}j_m^{(1)}}\\
 \delta_{k_1^{(2)}j_1^{(2)}}\cdots\delta_{k_m^{(2)}j_m^{(2)}}\fua{\tnr{P}}{\vtf{f}_{i_1^{(1)}}^{C_1}\otimes\cdots\otimes\vtf{f}_{i_m^{(1)}}^{C_m},\vtf{f}_{i_1^{(2)}}^{C_1}\otimes\cdots\otimes\vtf{f}_{i_m^{(2)}}^{C_m}}\,,
 \end{multline*}
 and then
 \begin{multline*}
-\fua{\tnr{P}}{\fua{\tnr{\psi}}{\vtf{f}_{k_1^{(1)}}^{B_1}\otimes\cdots\otimes\vtf{f}_{k_m^{(1)}}^{B_m}},\fua{\tnr{\psi}}{\vtf{f}_{k_1^{(2)}}^{B_1}\otimes\cdots\otimes\vtf{f}_{k_m^{(2)}}^{B_m}}} = \sum_{i_1^{(1)}=1}^{n_1}\cdots\sum_{i_m^{(1)}=1}^{n_m}\sum_{i_1^{(2)}=1}^{n_1}\cdots\sum_{i_m^{(2)}=1}^{n_m}\\
+\fua{\tnr{P}}{\fua{\tnr{\psi}}{\vtf{f}_{k_1^{(1)}}^{B_1}\otimes\cdots\otimes\vtf{f}_{k_m^{(1)}}^{B_m}},\fua{\tnr{\psi}}{\vtf{f}_{k_1^{(2)}}^{B_1}\otimes\cdots\otimes\vtf{f}_{k_m^{(2)}}^{B_m}}} = \sum_{i_1^{(1)}=1}^{n}\cdots\sum_{i_m^{(1)}=1}^{n}\sum_{i_1^{(2)}=1}^{n}\cdots\sum_{i_m^{(2)}=1}^{n}\\
 {\maf{\tnr{\psi}}{B}{C}}_{i_1^{(1)}\cdots i_m^{(1)} k_1^{(1)}\cdots k_m^{(1)}}\,{\maf{\tnr{\psi}}{B}{C}}_{i_1^{(2)}\cdots i_m^{(2)} k_1^{(2)}\cdots k_m^{(2)}}
 \fua{\tnr{P}}{\vtf{f}_{i_1^{(1)}}^{C_1}\otimes\cdots\otimes\vtf{f}_{i_m^{(1)}}^{C_m},\vtf{f}_{i_1^{(2)}}^{C_1}\otimes\cdots\otimes\vtf{f}_{i_m^{(2)}}^{C_m}}\,.
 \end{multline*}
 From \eqref{eq:elemChangeCoord} and the development that leads to \eqref{eq:changeBasisTens}, we can write that the left hand side of the previous equality equals
 \begin{multline*}
-\sum_{i_1^{(1)}=1}^{n_1}\cdots\sum_{i_m^{(1)}=1}^{n_m}\sum_{i_1^{(2)}=1}^{n_1}\cdots\sum_{i_m^{(2)}=1}^{n_m}
+\sum_{i_1^{(1)}=1}^{n}\cdots\sum_{i_m^{(1)}=1}^{n}\sum_{i_1^{(2)}=1}^{n}\cdots\sum_{i_m^{(2)}=1}^{n}
 {\maf{\tnr{\psi}}{B}{C}}_{i_1^{(1)}\cdots i_m^{(1)} k_1^{(1)}\cdots k_m^{(1)}}\,{\maf{\tnr{\psi}}{B}{C}}_{i_1^{(2)}\cdots i_m^{(2)} k_1^{(2)}\cdots k_m^{(2)}}
-\\\sum_{j_1^{(1)}=1}^{n_1}\cdots\sum_{j_m^{(1)}=1}^{n_m}\sum_{j_1^{(2)}=1}^{n_1}\cdots\sum_{j_m^{(2)}=1}^{n_m}\maf{\tnr{i}}{C}{B}_{j_1^{(1)}\cdots j_m^{(1)} i_1^{(1)}\cdots i_m^{(1)}}\maf{\tnr{i}}{C}{B}_{j_1^{(2)}\cdots j_m^{(2)} i_1^{(2)}\cdots i_m^{(2)}}\\\fua{\tnr{P}}{\vtf{f}_{j_1^{(1)}}^{B_1}\otimes\cdots\otimes\vtf{f}_{j_m^{(1)}}^{B_m},\vtf{f}_{j_1^{(2)}}^{B_1}\otimes\cdots\otimes\vtf{f}_{j_m^{(2)}}^{B_m}}\,,
+\\\sum_{j_1^{(1)}=1}^{n}\cdots\sum_{j_m^{(1)}=1}^{n}\sum_{j_1^{(2)}=1}^{n}\cdots\sum_{j_m^{(2)}=1}^{n}\maf{\tnr{i}}{C}{B}_{j_1^{(1)}\cdots j_m^{(1)} i_1^{(1)}\cdots i_m^{(1)}}\maf{\tnr{i}}{C}{B}_{j_1^{(2)}\cdots j_m^{(2)} i_1^{(2)}\cdots i_m^{(2)}}\\\fua{\tnr{P}}{\vtf{f}_{j_1^{(1)}}^{B_1}\otimes\cdots\otimes\vtf{f}_{j_m^{(1)}}^{B_m},\vtf{f}_{j_1^{(2)}}^{B_1}\otimes\cdots\otimes\vtf{f}_{j_m^{(2)}}^{B_m}}\,,
 \end{multline*}
 and from \eqref{eq:compTensFunct} this expression results
 \begin{multline*}
-\sum_{j_1^{(1)}=1}^{n_1}\cdots\sum_{j_m^{(1)}=1}^{n_m}\sum_{j_1^{(2)}=1}^{n_1}\cdots\sum_{j_m^{(2)}=1}^{n_m}
+\sum_{j_1^{(1)}=1}^{n}\cdots\sum_{j_m^{(1)}=1}^{n}\sum_{j_1^{(2)}=1}^{n}\cdots\sum_{j_m^{(2)}=1}^{n}
 {\maf{\tnr{\psi}}{B}{B}}_{j_1^{(1)}\cdots j_m^{(1)} k_1^{(1)}\cdots k_m^{(1)}}\,{\maf{\tnr{\psi}}{B}{B}}_{j_1^{(2)}\cdots j_m^{(2)} k_1^{(2)}\cdots k_m^{(2)}}
 \\\fua{\tnr{P}}{\vtf{f}_{j_1^{(1)}}^{B_1}\otimes\cdots\otimes\vtf{f}_{j_m^{(1)}}^{B_m},\vtf{f}_{j_1^{(2)}}^{B_1}\otimes\cdots\otimes\vtf{f}_{j_m^{(2)}}^{B_m}}\,.
 \end{multline*}
