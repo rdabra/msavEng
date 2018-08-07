@@ -425,7 +425,12 @@ If there exists a matrix $\mat{B}\in\bar{M}$ such that $\mat{A}\mat{B} = \mat{I}
 	i_n}\epsilon_{j_1\cdots j_n}
 \prod_{k=1}^{n}\mat{X}_{i_kj_k}\,,
 \end{equation}
-which is actually equality \eqref{eq:Hiperdeterminante} applied to square matrices of size $n$. When $\dete{\mat{X}}=0$, matrix $\mat{X}$ is said to be \textsb{singular}\index{matrix!singular} or \textsb{non-invertible}\index{matrix!non-invertible}; otherwise, it is called \textsb{non-singular}\index{matrix!non-singular} or \textsb{invertible}\index{matrix!invertible}. From the above definition, we can obtain a zero value determinant when its argument is the zero matrix and a unitary value for the identity matrix. Moreover, the main property of determinants of square matrices is to preserve multiplications, that is, the determinant of the product is the product of determinants; in other words $\dete{\mat{AB}}=\dete{\mat{A}}\cdot\dete{\mat{B}}$. Recalling our classification of groups, we can say that a subset of $\bar{M}$ whose matrices are all invertible defines, together with the operation of multiplication, a non-abelian group.
+which is actually equality \eqref{eq:Hiperdeterminante} applied to square matrices of size $n$. This equality can be simplified by considering $j_k=k$, from which it can be obtained that
+\begin{equation}\label{eq:DeterminanteSimplificado}
+\dete{\mat{X}} = \sum_{i_1=1}^n\cdots\sum_{i_n=1}^n
+\epsilon_{i_1\cdots i_n}\prod_{k=1}^{n}\mat{X}_{i_kk}\,.
+\end{equation}
+When $\dete{\mat{X}}=0$, matrix $\mat{X}$ is said to be \textsb{singular}\index{matrix!singular} or \textsb{non-invertible}\index{matrix!non-invertible}; otherwise, it is called \textsb{non-singular}\index{matrix!non-singular} or \textsb{invertible}\index{matrix!invertible}. From the above definition, we can obtain a zero value determinant when its argument is the zero matrix and a unitary value for the identity matrix. Moreover, the main property of determinants of square matrices is to preserve multiplications, that is, the determinant of the product is the product of determinants; in other words $\dete{\mat{AB}}=\dete{\mat{A}}\cdot\dete{\mat{B}}$. Recalling our classification of groups, we can say that a subset of $\bar{M}$ whose matrices are all invertible defines, together with the operation of multiplication, a non-abelian group.
 
 
 
