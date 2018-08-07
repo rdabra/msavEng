@@ -380,7 +380,14 @@ The Levi-Civita symbol enables us to define a notable mapping $\map{\text{Det}}{
 	i_n^{(1)}}\cdots\epsilon_{i_1^{(q)}\cdots i_n^{(q)}}
 \prod_{k=1}^{n}\mat{X}_{i_k^{(1)}\cdots i_k^{(q)}}
 \end{equation}
-when the order $q$ is even and $\hdet{\mat{X}}=0$ when it is odd. Although this definition lacks an adequate justification at this point, it will support future concepts that will have their own intuitive meaning.   
+when the order $q$ is even and $\hdet{\mat{X}}=0$ when it is odd. Although this definition lacks an adequate justification at this point, it will support future concepts that will have their own intuitive meaning. The term $1/n!$ is justified by the property    
+\begin{equation}\label{eq:productProp}
+\sum_{i_1^{(1)}=1}^n\cdots\sum_{i_n^{(1)}=1}^n\cdots
+\sum_{i_1^{(q)}=1}^n\cdots\sum_{i_n^{(q)}=1}^n\epsilon_{i_1^{(1)}\cdots
+	i_n^{(1)}}\cdots\epsilon_{i_1^{(q)}\cdots i_n^{(q)}}=n!\,,
+\end{equation}
+since $n!$ must be eliminated from the calculation of the hyperdeterminant.  
+
 
 There is another special array $\delta$, also widely used in indicial notations, called \textsb{Kronecker Delta}\index{Kronecker Delta}, whose elements
 \begin{equation}
@@ -403,7 +410,6 @@ where the addressing domain is $N^{2q}$ and the set $N = \lch 1,2,\cdots,n \rch$
 	0      & \cdots  & 0      & 1
 \end{bmatrix}\,.
 \end{equation}
-
 Along this text, the following important property of the Kronecker Delta will be used to handle indices in various proofs and expression developments:
 \begin{equation}
 \sum_{i_q=1}^{n}\mat{A}_{i_1\cdots i_q}\delta_{i_qj}=\mat{A}_{i_1\cdots i_{q-1}j}\,,
@@ -412,8 +418,6 @@ where $\mat{A}$ is a $n\times\cdots\times n$ array, with $n$ repeated $q$ times.
 \begin{equation}
 \sum_{i_1=1}^{n}\delta_{ji_1}\mat{A}_{i_1\cdots i_q}=\mat{A}_{ji_2\cdots i_q}\,.
 \end{equation}
-
-
 
 At this point, it is convenient to say that every $n_1\times n_2$ array, whose elements are arranged in a tabular format, is called a \textsb{matrix}\index{matrix}. The elements of a matrix are addressed by lines and columns: the escalar with $ij$ position is located on the line $i$ and column $j$. If $n_1=n_2=n$, we have a hypercubic matrix, called \textsb{square matrix}\index{matrix!square}, whose size is $n$. Henceforth, recalling the additive group $Y$ of arrays, we will consider
 $\bar{Y}\subset Y$ the set of hypercubic arrays of size $n$, $M\subset Y$ the set of matrices and  $\bar{M}\subset \bar{Y}$ the set of square matrices with size $n$. For example, the set $\bar{M}$ has the $n\times n$ Kronecker Delta, represented in \eqref{eq:matrizIdentidade}, as an element, which we usually call \textsb{identity matrix}\index{matrix!identity} $\mat{I}$ because $\mat{A}\mat{I} = \mat{I}\mat{A} = \mat{A}$, for an arbitrary $\mat{A}\in\bar{M}$.
@@ -428,9 +432,9 @@ If there exists a matrix $\mat{B}\in\bar{M}$ such that $\mat{A}\mat{B} = \mat{I}
 which is actually equality \eqref{eq:Hiperdeterminante} applied to square matrices of size $n$. This equality can be simplified by considering $j_k=k$, from which it can be obtained that
 \begin{equation}\label{eq:DeterminanteSimplificado}
 \dete{\mat{X}} = \sum_{i_1=1}^n\cdots\sum_{i_n=1}^n
-\epsilon_{i_1\cdots i_n}\prod_{k=1}^{n}\mat{X}_{i_kk}\,.
+\epsilon_{i_1\cdots i_n}\prod_{k=1}^{n}\mat{X}_{i_kk}\,,
 \end{equation}
-When $\dete{\mat{X}}=0$, matrix $\mat{X}$ is said to be \textsb{singular}\index{matrix!singular} or \textsb{non-invertible}\index{matrix!non-invertible}; otherwise, it is called \textsb{non-singular}\index{matrix!non-singular} or \textsb{invertible}\index{matrix!invertible}. From the above definition, we can obtain a zero value determinant when its argument is the zero matrix and a unitary value for the identity matrix. Moreover, the main property of determinants of square matrices is to preserve multiplications, that is, the determinant of the product is the product of determinants; in other words $\dete{\mat{AB}}=\dete{\mat{A}}\cdot\dete{\mat{B}}$. Recalling our classification of groups, we can say that a subset of $\bar{M}$ whose matrices are all invertible defines, together with the operation of multiplication, a non-abelian group.
+where $1/n!$ is no longer necessary because equality \eqref{eq:productProp} does not occur. When $\dete{\mat{X}}=0$, matrix $\mat{X}$ is said to be \textsb{singular}\index{matrix!singular} or \textsb{non-invertible}\index{matrix!non-invertible}; otherwise, it is called \textsb{non-singular}\index{matrix!non-singular} or \textsb{invertible}\index{matrix!invertible}. From the above definition, we can obtain a zero value determinant when its argument is the zero matrix and a unitary value for the identity matrix. Moreover, the main property of determinants of square matrices is to preserve multiplications, that is, the determinant of the product is the product of determinants; in other words $\dete{\mat{AB}}=\dete{\mat{A}}\cdot\dete{\mat{B}}$. Recalling our classification of groups, we can say that a subset of $\bar{M}$ whose matrices are all invertible defines, together with the operation of multiplication, a non-abelian group.
 
 
 
