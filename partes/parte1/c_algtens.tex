@@ -239,11 +239,15 @@ From this definition, if $(V_\cam{F})_i$ is a Hilbert space and $B_i=\{\vun{u}_1
 \end{align*}
 considering equalities \eqref{eq:decompVectConj} and \eqref{eq:orthoConju}. Thereby, from the definition of tensor product, we can write that tensor
 \begin{equation}\label{eq:poliadIdentidade}
-\tnr{I}=\sum_{{i_1}=1}^{n_1}\cdots\sum_{{i_p}=1}^{n_p}\vtf{f}_{i_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{i_p}^{B_p}\otimes\vtf{f}_{i_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{i_p}^{B_p}\,.
+\tnr{I}=\sum_{{i_1}=1}^{n_1}\cdots\sum_{{i_p}=1}^{n_p}\vtf{f}_{i_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{i_p}^{B_p}\otimes\vtf{f}_{i_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{i_p}^{B_p}
 \end{equation}
-If a suitable basis $B$ is built from bases $B_i$, the previous equality and \eqref{eq:regraCoordTens} enable us to write that the coordinates
+or, more completely, 
 \begin{equation}
-\vtf{f}_{j_1\cdots j_m}^{B}(\tnr{I})= \fua{\tnr{I}}{\vun{u}_{j_1}^{(1)},\cdots,\vun{u}_{j_p}^{(p)},\vun{u}_{j_1}^{(1)},\cdots,\vun{u}_{j_p}^{(p)}}=\prod_{k=1}^p\fua{\vtf{f}_{i_k}^{B_k}}{\vun{u}_{j_k}^{(k)}}=\prod_{k=1}^p\delta_{i_kj_k}\,.
+\tnr{I}=\sum_{{i_1}=1}^{n_1}\cdots\sum_{{i_p}=1}^{n_p}\sum_{{j_1}=1}^{n_1}\cdots\sum_{{j_p}=1}^{n_p}\delta_{i_1j_1}\cdots\delta_{i_pj_p}\vtf{f}_{i_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{i_p}^{B_p}\otimes\vtf{f}_{j_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{j_p}^{B_p}\,,
+\end{equation}
+from which we conclude that
+\begin{equation}
+\vtf{f}_{i_1\cdots i_pj_1\cdots j_p}^{B}(\tnr{I})=\prod_{k=1}^p \delta_{i_kj_k}\,.
 \end{equation}
 Now, considering the context of tensor spaces $\ete{\cam{F}}{V^2}$, where $p=1$, defined by Euclidean spaces, we already know that, if basis $B_1$ is orthonormal, equality $\sum_{{i_1}=1}^{n_1}\fua{\vtf{f}^\con{B_1}_{i_1}}{\vto{x}_1}\fua{\vtf{f}^\con{B_1}_{i_1}}{\vto{y}_1}=\vto{x}_1\cdot\vto{y}_1$ is valid, that is, definition \eqref{eq:identidade} takes the form $\fua{\tnr{I}}{\vto{x}_1,\vto{y}_1}=\vto{x}_1\cdot\vto{y}_1$ and
 \begin{equation}
