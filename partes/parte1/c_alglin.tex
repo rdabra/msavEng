@@ -415,7 +415,7 @@ Still in this context, for orthonormal basis vectors, it is important to point o
 \end{equation}
 {\footnotesize
 \begin{proof}
-Multiplying $\vun{u}_j\cdot\vun{u}_i=\delta_{ji}$ by a non zero scalar $\alpha$ we have $\vun{u}_j\cdot\overline{\alpha}\vun{u}_i=\vun{u}_j\cdot\alpha\vun{u}_i^c=\overline{\alpha}\vun{u}_j\cdot\vun{u}_i^c=\alpha\delta_{ji}$ and by $\overline{\alpha}$ we arrive at $\alpha\vun{u}_j\cdot\vun{u}_i^c=\overline{\alpha}\delta_{ji}$. When $j\neq i$, it is obvious that $\vun{u}_j\cdot\vun{u}_i^c$ is zero. If $j=i$, we obtain that $\vun{u}_j\cdot\vun{u}_i^c=\alpha/ \overline{\alpha}=\overline{\alpha}/\alpha$ resulting $\alpha^2=\overline{\alpha}^2$. From this equality, if $\alpha=a+b\mathrm{i}$, we arrive at $b=-b$, which means that $\alpha$ is a real value and $\vun{u}_j\cdot\vun{u}_i^c=1$.
+Multiplying $\vun{u}_j\cdot\vun{u}_i=\delta_{ji}$ by a non zero scalar $\alpha$ we have $\vun{u}_j\cdot\overline{\alpha}\vun{u}_i=\vun{u}_j\cdot\alpha\vun{u}_i^c=\overline{\alpha}\vun{u}_j\cdot\vun{u}_i^c=\alpha\delta_{ji}$ and by $\overline{\alpha}$ we arrive at $\alpha\vun{u}_j\cdot\vun{u}_i^c=\overline{\alpha}\delta_{ji}$. When $j\neq i$, it is obvious that $\vun{u}_j\cdot\vun{u}_i^c$ is zero. If $j=i$, we obtain that $\vun{u}_j\cdot\vun{u}_i^c=\alpha/ \overline{\alpha}=\overline{\alpha}/\alpha$ resulting $\alpha^2=\overline{\alpha}^2$. From this equality, if $\alpha=a+b\mathrm{i}$, we arrive at $b=-b$, which means that $\alpha$ is a real value and thus $\vun{u}_j\cdot\vun{u}_i^c=1$.
 \end{proof}
 }
 
@@ -538,11 +538,18 @@ In order to prove the equality on the third property, we need to know that an id
 }
 
 A vector $\vtf{h}$ of function space $\evlc{\cam{F}}{V}{V}$ is said to be a \textsb{Hermitian}\index{operator!Hermitian} or \textsb{self-adjoint}\index{operator!self-adjoint} operator when $\vtf{h}=\vtf{h}^\dagger$; but, if $\vtf{h}=-\vtf{h}^\dagger$, it is called  \textsb{anti-Hermitian}\index{operator!anti-Hermitian}. Moreover, operator $\vtf{h}$ is \textsb{symmetric}\index{operator!symmetric} if $\vtf{h}=\vtf{h}^\text{T}$ and \textsb{antisymmetric}\index{operator!antisymmetric} if $\vtf{h}=-\vtf{h}^\text{T}$. In the context of real fields, we already know that $\vtf{h}^\dagger=\vtf{h}^\text{T}$ and then (anti-)Hermitian and (anti)symmetric operators are equal. An element of the function space $\evlc{\cam{F}}{V}{U}$ constituted by invertible functions is said to be \textsb{unitary}\index{function!unitary} when it is a bijection whose inverse equals the Hilbert-adjoint or called \textsb{orthogonal}\index{function!orthogonal} if its inverse equals the transpose. Thereby, we can say that an unitary operator $\vtf{q}\in \evlc{\cam{F}}{V}{V}$ preserves inner products because, for all $\vto{u},\vto{v}\in V_\cam{F}$, equalities 
-\begin{equation}
+\begin{equation}\label{eq:unitPreservInner}
 \fua{\vtf{q}}{\vto{u}}\cdot\fua{\vtf{q}}{\vto{v}}=\vto{u}\cdot\fua{\vtf{q}^\dagger\circ\vtf{q}}{\vto{v}}=\vto{u}\cdot\fua{\vtf{q}^{-1}\circ\vtf{q}}{\vto{v}}=\vto{u}\cdot\vto{v}
 \end{equation}
 are valid. Conversely, if a linear operator $\vtf{g}\in\evlc{\cam{F}}{V}{V}$ preserves inner product, that is, $\fua{\vtf{g}}{\vto{u}}\cdot\fua{\vtf{g}}{\vto{v}}=\vto{u}\cdot\vto{v}$, then from the definition of Hilbert-adjoint function on \eqref{eq:funcaoTransposta}, it is possible to affirm that every operator which preserves inner product is unitary. In this context, we can state that unitary operators also preserve norms, since
-$\|\fua{\vtf{q}}{\vto{u}}\|^2=\fua{\vtf{q}}{\vto{u}}\cdot\fua{\vtf{q}}{\vto{u}}=\vto{u}\cdot\vto{u}=\|\vto{u}\|^2$. We already know that unary invertible operators are bijections and then, if only real fields are considered, every orthogonal operator results unitary and vice-versa.
+$\|\fua{\vtf{q}}{\vto{u}}\|^2=\fua{\vtf{q}}{\vto{u}}\cdot\fua{\vtf{q}}{\vto{u}}=\vto{u}\cdot\vto{u}=\|\vto{u}\|^2$. Another consequence of $\vtf{q}$ preserving inner products is the following: if $\{\vun{u}_1,\cdots,\vun{u}_n\}$ is an orthonormal basis of $V_\cam{F}$, then $\{\fua{\vtf{q}}{\vun{u}_1},\cdots,\fua{\vtf{q}}{\vun{u}_n}\}$ is also an orthonormal basis of $V_\cam{F}$. A development similar to equalities \eqref{eq:unitPreservInner} enable us to state that any orthogonal operator $\vtf{h}\in\evlc{\cam{F}}{V}{V}$ preserves the contractive product, that is, $\fua{\vtf{h}}{\vto{u}}\diamond\fua{\vtf{h}}{\vto{v}}=\vto{u}\diamond\vto{v}$. If only real fields are considered, every orthogonal operator $\vtf{h}$ is unitary since $\vtf{h}^{-1}=\vtf{h}^\text{T}=\vtf{h}^\dagger$.
+
+{\footnotesize
+\begin{proof}
+Let's prove that $\{\fua{\vtf{q}}{\vun{u}_1},\cdots,\fua{\vtf{q}}{\vun{u}_n}\}$ is an orthonormal basis. 
+\end{proof}
+}
+
 
 In the previous chapter we said that the set of all unary invertible operators defines a group on the operation of composition. Thereby, let's define a group $\gloref{grGene}:=(\evlc{\cam{F}}{V}{V},\circ)$ constituted by all invertible continuous linear operators on $V_\cam{F}$. We shall verify now if the set $X\subset \grc{G}{\cam{F}}{V}$ of all unitary operators on $V_\cam{F}$, since they are unary and invertible, constitutes the group  $\gloref{grUni}:=(X,\circ)$ called \textsb{unitary group}\index{group!unitary} on $V_\cam{F}$. Equalities
 \begin{equation}
