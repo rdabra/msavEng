@@ -168,7 +168,7 @@ where the function in $\map{g}{\real^+}{\real^+}$ enables us to say that \emph{t
 \end{comment}
 
 
-Any two vectors $\gloref{unita}$ and $\vun{u}_2$ of $(V_\cam{F},\eta,\xi)$ are said to be orthonormal if they are orthogonal and each one is \textsb{unitary}\index{vector!unitary}, where $\|\vun{u}_i\|=1$. Thereby, if the vector space $V_\cam{F}$ is $n$-dimensional, a subset $\hat{U}=\{\vun{u}_1,\vun{u}_2,\cdots,\vun{u}_n\}$ of orthonormal vectors is called an \textsb{orthonormal basis}\index{basis!orthonormal} of $V_\cam{F}$. It is important to note that to every orthogonal basis $\{\vto{u}_1,\vto{u}_2,\cdots,\vto{u}_n\}$, there is always an orthonormal basis $\{\vun{u}_1,\vun{u}_2,\cdots,\vun{u}_n\}$ where each $\vun{u}_i:=\vto{u}_i/\|\vto{u}_i\|$, when we say that the orthonormal basis results from \textsb{normalizing}\index{basis!normalization of} the orthogonal basis.
+Any two vectors $\gloref{unita}$ and $\vun{u}_2$ of $(V_\cam{F},\eta,\xi)$ are said to be orthonormal if they are orthogonal and each one is \textsb{unitary}\index{vector!unitary}, where $\|\vun{u}_i\|=1$. Thereby, if the vector space $V_\cam{F}$ is $n$-dimensional, a subset $\hat{U}=\{\vun{u}_1,\vun{u}_2,\cdots,\vun{u}_n\}$ of orthonormal vectors is called an \textsb{orthonormal basis}\index{basis!orthonormal} of $V_\cam{F}$. It is important to note that to every orthogonal basis $\{\vto{u}_1,\vto{u}_2,\cdots,\vto{u}_n\}$, where $\vto{u}_i\cdot\vto{u}_j=0$ when $i\neq j$, there is always an orthonormal basis $\{\vun{u}_1,\vun{u}_2,\cdots,\vun{u}_n\}$ where each $\vun{u}_i:=\vto{u}_i/\|\vto{u}_i\|$ and then $\|\vun{u}_i\|=\|\vto{u}_i/\|\vto{u}_i\|\|=\|\vto{u}_i\|/\|\vto{u}_i\|=1$, when we say that the orthonormal basis results from \textsb{normalizing}\index{basis!normalization of} the orthogonal basis.  
 
 
 \section{Structuring by Metrics}
@@ -313,7 +313,7 @@ Through a long and tedious proof, starting from the so called \textsb{Zorn's Lem
 \end{proof}
 }
 
-The theorem above also assures the existence of orthonormal bases because they can be obtained from normalization of orthogonal bases. Thereby, let  $\vto{x}$ and $\vto{y}$ be arbitrary vectors of Euclidean space $E_\real$, of which $\hat{B}=\{\vun{v}_1,\cdots,\vun{v}_n\}$ is an orthonormal basis. Then, we can say that
+The theorem above also assures the existence of orthonormal bases because they can be obtained from normalization of orthogonal bases. Thereby, for an arbitrary orthonormal basis $\{\vun{u}_1,\cdots,\vun{u}_n\}$ of a Hilbert space, it is clear that inner products $\vto{u}_i\cdot\vto{u}_j/\|\vto{u}_i\|\overline{\|\vto{u}_j\|}=\delta_{ij}$ since $\|\vto{x}\|^2=\vto{x}\cdot\vto{x}$ and $\|\vto{x}\|=\overline{\|\vto{x}\|}$. Now, let $\vto{x}$ and $\vto{y}$ be arbitrary vectors of Euclidean space $E_\real$, of which $\hat{B}=\{\vun{v}_1,\cdots,\vun{v}_n\}$ is an orthonormal basis. Then, we can say that
 \begin{equation}
 	\vto{x}\cdot\vto{y}=\sum_{i=1}^{n}\sum_{j=1}^{n}\alpha_i\beta_j\vun{v}_i\cdot\vun{v}_j=\sum_{i=1}^{n}\sum_{j=1}^{n}\alpha_i\beta_j\delta_{ij}=\sum_{i=1}^{n}\alpha_i\beta_i\,,
 \end{equation}
@@ -546,7 +546,7 @@ $\|\fua{\vtf{q}}{\vto{u}}\|^2=\fua{\vtf{q}}{\vto{u}}\cdot\fua{\vtf{q}}{\vto{u}}=
 
 {\footnotesize
 \begin{proof}
-Let's prove that $\{\fua{\vtf{q}}{\vun{u}_1},\cdots,\fua{\vtf{q}}{\vun{u}_n}\}$ is an orthonormal basis. 
+Let's prove that $C=\{\fua{\vtf{q}}{\vun{u}_1},\cdots,\fua{\vtf{q}}{\vun{u}_n}\}$ is an orthonormal basis. As operator $\vtf{q}$ preserves inner product, $C$ is clearly orthonormal since $\fua{\vtf{q}}{\vun{u}_i}\cdot\fua{\vtf{q}}{\vun{u}_j}=\vun{u}_i\cdot\vun{u}_j=\delta_{ij}$. For an arbitrary vector $\vto{u}\in V_\cam{F}$ there is always a $\vto{v}\in V_\cam{F}$ such that $\vto{u}=\fua{\vtf{q}}{\vto{v}}$ because $\vtf{q}$ is a bijection. Thereby, equality $\vto{u}=\sum_{i=1}^n\fua{\vtf{f}_i^C}{\vto{v}}\fua{\vtf{q}}{\vun{u}_i}$ prove that  $V_\cam{F}=\spn C$.
 \end{proof}
 }
 
