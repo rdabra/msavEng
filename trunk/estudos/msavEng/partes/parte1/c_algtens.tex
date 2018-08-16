@@ -231,7 +231,7 @@ Additionally to symmetric and antisymmetric, there is another notable tensor tha
 \begin{equation}\label{eq:identidade}
 \fua{\tnr{I}}{\vto{x}_{1},\cdots,\vto{x}_{p},\vto{y}_{1},\cdots,\vto{y}_{p}}=\prod_{k=1}^p \vto{x}_k\cdot\vto{y}_k^c\,.
 \end{equation}
-From this definition, if $(V_\cam{F})_i$ is a Hilbert space and $B_i=\{\vun{u}_1^{(i)},\cdots,\vun{u}_{n_i}^{(i)}\}$ one of its orthonormal bases, the following is valid for $\alpha=\fua{\tnr{I}}{\vto{x}_1,\cdots,\vto{x}_p,\vto{y}_1,\cdots,\vto{y}_p}$:
+From this definition, if $(V_\cam{F})_i$ is a Hilbert space and $B_i=\{\vun{u}_1^{(i)},\cdots,\vun{u}_{n_i}^{(i)}\}$ any of its orthonormal bases, the following is valid for $\alpha=\fua{\tnr{I}}{\vto{x}_1,\cdots,\vto{x}_p,\vto{y}_1,\cdots,\vto{y}_p}$:
 \begin{align*}
 \alpha&=\sum_{{i_1}=1}^{n_1}\cdots\sum_{{i_p}=1}^{n_p}\sum_{{j_1}=1}^{n_1}\cdots\sum_{{j_p}=1}^{n_p}\prod_{k=1}^p\fua{\vtf{f}^\con{B_k}_{i_k}}{\vto{x}_k}\fua{\vtf{f}^\con{B_k}_{j_k}}{\vto{y}_k}\fua{\tnr{I}}{\vun{u}_{i_1}^{(1)},\cdots,\vun{u}_{i_p}^{(p)},{{\vun{u}_{j_1}}}^{(1)},\cdots,\vun{u}_{j_p}^{(p)}}\\
 &=\sum_{{i_1}=1}^{n_1}\cdots\sum_{{i_p}=1}^{n_p}\sum_{{j_1}=1}^{n_1}\cdots\sum_{{j_p}=1}^{n_p}\prod_{k=1}^p\fua{\vtf{f}^\con{B_k}_{i_k}}{\vto{x}_k}\fua{\vtf{f}^\con{B_k}_{j_k}}{\vto{y}_k}\delta_{i_1j_1}\cdots\delta_{i_pj_p}\\
@@ -245,9 +245,9 @@ or, more completely,
 \begin{equation}
 \tnr{I}=\sum_{{i_1}=1}^{n_1}\cdots\sum_{{i_p}=1}^{n_p}\sum_{{j_1}=1}^{n_1}\cdots\sum_{{j_p}=1}^{n_p}\delta_{i_1j_1}\cdots\delta_{i_pj_p}\vtf{f}_{i_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{i_p}^{B_p}\otimes\vtf{f}_{j_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{j_p}^{B_p}\,,
 \end{equation}
-from which we conclude that
-\begin{equation}
-\vtf{f}_{i_1\cdots i_pj_1\cdots j_p}^{B}(\tnr{I})=\prod_{k=1}^p \delta_{i_kj_k}\,.
+from which we conclude for an arbitrary basis $B$ of $\ete{\cam{F}}{V^{\times p}\times V^{\times p}}$ that
+\begin{equation}\label{eq:coordIdent}
+\vtf{f}_{i_1\cdots i_pj_1\cdots j_p}^{B}(\tnr{I})=\prod_{k=1}^p \delta_{i_kj_k}
 \end{equation}
 
 
@@ -575,6 +575,10 @@ As array $\mav{\fua{\tnr{\gamma}\circ\tnr{\psi}}{\tnr{X}}}{D}=\maf{(\tnr{\gamma}
 \begin{equation}\label{eq:compTensFunct}
 \maf{(\tnr{\gamma}\circ\tnr{\psi})}{B}{D}=\maf{\tnr{\gamma}}{C}{D}\mat{*_p\,}\maf{\tnr{\psi}}{B}{C}\,.
 \end{equation}
+Under conditions suitable for defining identity tensors, we already know that equality \eqref{eq:coordIdent} is valid for any basis. Therefore, we consider
+\begin{equation}
+\mav{\tnr{I}}{}_{i_1\cdots i_mj_1\cdots j_m 1}:=\prod_{k=1}^m \delta_{i_kj_k}\,.
+\end{equation} 
 
 In the previous section, equalities \eqref{eq:prodContrCoord} and \eqref{eq:prodIntCoord}, which are respectively the  contractive and inner products of tensors expressed in terms of coordinates, can be rewritten here as follows:
 \begin{alignat}{3}
@@ -718,7 +722,7 @@ since an equality similar to \eqref{eq:DeterminanteSimplificado} can be obtained
 \end{proof}
 }
 
-Now that we know the determinant of linear tensor operators and its properties, let $\eteg{n}{\cam{F}}{U^{\times m}}$ be a Hilbert tensor space and function $\tnr{\varphi}$ be an arbitrary element of a group $\grt{G}{\cam{F}}{U^{\times m}}$ of invertible continuous linear tensor operators whose domain is $\eteg{n}{\cam{F}}{U^{\times m}}$. A tensor $\tnr{T}\in\eteg{n}{\cam{F}}{U^{\times m}}$ is said to be \textsb{invariant}\index{tensor!invariant} on group $\grt{G}{\cam{F}}{U^{\times m}}$ if $\fua{\tnr{\varphi}}{\tnr{T}}=\tnr{T}$. This equality and the linearity of $\tnr{\varphi}$ enable us to affirm that a set $V$ constituted by all tensors of $\eteg{n}{\cam{F}}{U^{\times m}}$ that are invariant on group $\grt{G}{\cam{F}}{U^{\times m}}$ is a tensor subspace of $\eteg{n}{\cam{F}}{U^{\times m}}$, when $V$ is represented by the invariant tensor space $\eti{\cam{F}}{U^{\times m}}$ on group $\grt{G}{\cam{F}}{U^{\times m}}$. This group is represented by $\grt{V}{\cam{F}}{U^{\times m}}$ and called the \textsb{invariance group}\index{group!invariant} of $\eti{\cam{F}}{U^{\times m}}$ if it is constituted by all the invertible continuous linear tensor operators on which every element of $\eti{\cam{F}}{U^{\times m}}$ is invariant. Thus, it is evident that operator $\tnr{i}\in\grt{V}{\cam{F}}{U^{\times m}}$. The unitary group $\grt{U}{\cam{F}}{U^{\times m}}\subseteq\grt{V}{\cam{F}}{U^{\times m}}$ is the invariance group of the invariant tensor space $\eto{\cam{F}}{U^{\times m}}$, whose tensors are said to be \textsb{isotropic}\index{tensor!isotropic}\footnote{\aut{Appleby et al}\cite{appleby_1987} define an isotropic tensor relative to certain changes of bases as the tensor whose coordinates are preserved under these changes, which is assured in our approach by unitary operators.} relative to $\grt{U}{\cam{F}}{U^{\times m}}$, and then $\eti{\cam{F}}{U^{\times m}}\subseteq\eto{\cam{F}}{U^{\times m}}$. Moreover, the unitary group $\tnr{\mathcal{U}}^+_{\cam{F}}({U^{\times m}})\subset\grt{U}{\cam{F}}{U^{\times m}}$, where $\hdet{\tnr{\varphi}}=1$  $\forall\,\tnr{\varphi}\in\tnr{\mathcal{U}}^+_{\cam{F}}({U^{\times m}})$, is the invariance group of $\etom{\cam{F}}{U^{\times m}}$, whose tensors are called \textsb{anti isotropic}\index{tensor!anti isotropic} relative to $\tnr{\mathcal{U}}^+_{\cam{F}}({U^{\times m}})$ and tensor space $\eto{\cam{F}}{U^{\times m}}\subset\etom{\cam{F}}{U^{\times m}}$. Then, we can say that every isotropic tensor is also anti isotropic. Tensors that are not isotropic are called \textsb{anisotropic}\index{tensor!anisotropic}. From definitions \eqref{eq:HilbAdj}, in the context of Euclidean spaces, we can conclude that (anti) isotropic tensors are defined by (proper) orthogonal groups.  
+Now that we know the determinant of linear tensor operators and its properties, let $\eteg{n}{\cam{F}}{U^{\times m}}$ be a Hilbert tensor space and function $\tnr{\varphi}$ be an arbitrary element of a group $\grt{G}{\cam{F}}{U^{\times m}}$ of invertible continuous linear tensor operators whose domain is $\eteg{n}{\cam{F}}{U^{\times m}}$. A tensor $\tnr{T}\in\eteg{n}{\cam{F}}{U^{\times m}}$ is said to be \textsb{invariant}\index{tensor!invariant} on group $\grt{G}{\cam{F}}{U^{\times m}}$ if $\fua{\tnr{\varphi}}{\tnr{T}}=\tnr{T}$. This equality and the linearity of $\tnr{\varphi}$ enable us to affirm that a set $V$ constituted by all tensors of $\eteg{n}{\cam{F}}{U^{\times m}}$ that are invariant on group $\grt{G}{\cam{F}}{U^{\times m}}$ is a tensor subspace of $\eteg{n}{\cam{F}}{U^{\times m}}$, when $V$ is represented by the invariant tensor space $\eti{\cam{F}}{U^{\times m}}$ on group $\grt{G}{\cam{F}}{U^{\times m}}$. This group is represented by $\grt{V}{\cam{F}}{U^{\times m}}$ and called the \textsb{invariance group}\index{group!invariant} of $\eti{\cam{F}}{U^{\times m}}$ if it is constituted by all the invertible continuous linear tensor operators on which every element of $\eti{\cam{F}}{U^{\times m}}$ is invariant. Thus, it is evident that operator $\tnr{i}\in\grt{V}{\cam{F}}{U^{\times m}}$. The unitary group $\grt{U}{\cam{F}}{U^{\times m}}\subseteq\grt{V}{\cam{F}}{U^{\times m}}$ is the invariance group of the invariant tensor space $\eto{\cam{F}}{U^{\times m}}$, whose tensors are said to be \textsb{isotropic}\index{tensor!isotropic}\footnote{\aut{Appleby et al}\cite{appleby_1987} define an isotropic tensor relative to certain changes of bases as the tensor whose coordinates are preserved under these changes, which is assured in our approach by unitary operators.} relative to $\grt{U}{\cam{F}}{U^{\times m}}$, and then $\eti{\cam{F}}{U^{\times m}}\subseteq\eto{\cam{F}}{U^{\times m}}$. Moreover, the unitary group $\tnr{\mathcal{U}}^+_{\cam{F}}({U^{\times m}})\subset\grt{U}{\cam{F}}{U^{\times m}}$, where $\hdet{\tnr{\varphi}}=1$  $\forall\,\tnr{\varphi}\in\tnr{\mathcal{U}}^+_{\cam{F}}({U^{\times m}})$, is the invariance group of $\etom{\cam{F}}{U^{\times m}}$, whose tensors are called \textsb{anti isotropic}\index{tensor!anti isotropic} relative to $\tnr{\mathcal{U}}^+_{\cam{F}}({U^{\times m}})$ and tensor space $\eto{\cam{F}}{U^{\times m}}\subset\etom{\cam{F}}{U^{\times m}}$. Then, we can say that every isotropic tensor is also anti isotropic. Tensors that are not isotropic are called \textsb{anisotropic}\index{tensor!anisotropic}. From definitions \eqref{eq:HilbAdj}, in the context of Euclidean spaces, we can say that (anti) isotropic tensors are defined by (proper) orthogonal groups.  
 
 
 {\footnotesize
@@ -741,62 +745,9 @@ enable us to verify that coordinates $\fua{\tnr{f}_{i}^B}{\tnr{X}}=\fua{\tnr{f}_
 \end{proof}
 }
 
+Admitting a tensor space $\eteg{n}{\cam{F}}{U^{\times m}\times U^{\times m}}$ and a group $\etom{\cam{F}}{U^{\times m}\times U^{\times m}}$, by equality \eqref{eq:coordIdent} we know that the coordinates of identity tensor $\tnr{I}\in\eteg{n}{\cam{F}}{U^{\times m}\times U^{\times m}}$ are the same for any chosen basis. Therefore, from theorem above, it is clear that $\tnr{I}$ is anti isotropic, that is, $\tnr{I}\in\etom{\cam{F}}{U^{\times m}\times U^{\times m}}$.
 
-\section{Isotropia e Anti-Isotropia}\index{isotropia}
-O conceito de isotropia possui estreita relação com o de
-invariância. A grosso modo, diz-se que uma quantidade ou medida é
-isotrópica se seu valor independe do efeito de qualquer função
-ortogonal que eventualmente aja no seu domínio de atuação. Se esta
-independência se restringir somente a funções ortogonais próprias,
-a medida é anti-isotrópica\index{anti-isotropia}. Medidas que não
-apresentam nenhuma destas características são chamadas
-\emph{anisotrópicas}\index{anisotróprica!medida}.
 
-Considerando um espaço vetorial Euclidiano, medidas isotrópicas,
-representadas por grandezas de segunda ordem (matrizes), por
-exemplo, são \emph{indiferentes} a rotações e reflexões. Ocorrendo
-reflexões, medidas an\-ti-iso\-tró\-pi\-cas podem sofrer
-alteração.
-
-\subsection{Tensores Invariantes}\index{tensor!invariante}
-Seja o espaço tensorial $\ete{\crt{V}{p}}{\con{F}}$ e o grupo de
-operadores tensoriais $\gqq{\cft{\crt{V}{p}}{\con{F}}}{}$.
-Considerando que o conjunto
-$\con{\tilde{P}}_{\cft{\crt{V}{p}}{\con{F}}}\subseteq
-\con{P}_{\cft{\crt{V}{p}}{\con{F}}}$ define o grupo de operadores
-$\gqq{\cft{\crt{V}{p}}{\con{F}}}{\backsim}$, um tensor
-$\tnr{T}\in\cft{\crt{V}{p}}{\con{F}}$ é invariante à atuação do
-grupo $\gqq{\cft{\crt{V}{p}}{\con{F}}}{\backsim}$ se
-\begin{equation}
-\fua{\psi}{\tnr{T}}=\tnr{T}\,,\,\forall\,\psi\in\con{\tilde{P}}_{\cft{\crt{V}{p}}{\con{F}}}\,.
-\end{equation}
-Caso a igualdade anterior seja válida para qualquer tensor
-$\tnr{T}$ de $\cft{\crt{V}{p}}{\con{F}}$, diz-se que o espaço
-tensorial $\ete{\crt{V}{p}}{\con{F}}$ é invariante ao grupo
-$\gqq{\cft{\crt{V}{p}}{\con{F}}}{\backsim}$. Como exemplo, pode-se
-observar que $\ete{\crt{V}{p}}{\con{F}}$ é invariante ao grupo
-definido pelo conjunto $\{ \vtf{i}_{\crt{V}{p}} \}$.
-
-\subsubsection{Tensor Isotrópico}\index{tensor!isotrópico} Um tensor é dito isotrópico se
-ele for invariante ao grupo ortogonal como um todo. Em outras
-palavras, se o grupo de operadores tensoriais considerado for
-$\gro{\cft{\crt{V}{p}}{\con{F}}}$, um tensor
-$\tnr{T}\in\cft{\crt{V}{p}}{\con{F}}$ é isotrópico se
-\begin{equation}
-\fua{\psi}{\tnr{T}}=\tnr{T}\,,\,\forall\,\psi\in\con{O}_{\cft{\crt{V}{p}}{\con{F}}}\,.
-\end{equation}
-
-\subsubsection{Tensor Anti-Isotrópico}\index{tensor!anti-isotrópico} Um tensor é anti-isotrópico
-se ele for invariante ao grupo ortogonal próprio. Desta forma, com
-base no conjunto $\con{O}^+_{\cft{\crt{V}{p}}{\con{F}}}$ formado
-por operadores ortogonais próprios, para um tensor anti-isotrópico
-$\tnr{T}\in\cft{\crt{V}{p}}{\con{F}}$ ,
-\begin{equation}
-\fua{\psi}{\tnr{T}}=\tnr{T}\,,\,\forall\,\psi\in\con{O}^+_{\cft{\crt{V}{p}}{\con{F}}}\,,
-\end{equation}
-onde o conjunto considerado define o grupo ortogonal
-$\grr{\cft{\crt{V}{p}}{\con{F}}}$. Com isso, conclui-se que um
-tensor isotrópico é sempre anti-isotrópico.
 
 
 \begin{comment}
