@@ -604,7 +604,7 @@ and then define $\mav{\tnr{T}}{B}_{i1}:=\fua{\vtf{f}_i^{B}}{\tnr{T}}$, similarly
 
 In this context of array representation, it is also possible to develop change of coordinates and change of basis as we did for vector and linear functions. For the sake of clarity and rigor we shall reproduce here both theorem \ref{teo:mudCoordVec} and its corollary \ref{cor:mudaBase} with minor changes in order to adapt them for the current case.    
 
-\begin{mteo}{Change of Coordinates of Tensors}{mudCoordTens}
+\begin{mteo}{Change of Tensor Coordinates}{mudCoordTens}
 If $U^{\times m}(B)_\cam{F}$ and $U^{\times m}(C)_\cam{F}$ are vector spaces constituted by representative arrays of the elements of tensor space $\ete{\cam{F}}{U^{\times m}}$ on its bases $B$ and $C$ respectively, there is one and only one linear bijective transformation $\map{\tnr{\Gamma}}{U^{\times m}(B)_\cam{F}}{U^{\times m}(C)_\cam{F}}$, called change of coordinates from $B$ to $C$, where  ${\tnr{\Gamma}}({\mav{\tnr{X}}{B}})=\mav{\tnr{X}}{C}$ for all $\tnr{X}\in \ete{\cam{F}}{U^{\times p}}$.
 \end{mteo}
 \hspace{1pt}
@@ -632,7 +632,7 @@ where bases $B_i=\{\vun{u}_{1}^{(i)},\cdots,\vun{u}_{n_i}^{(i)}\}$ and $C_i=\{\v
 \end{align}  
 where $\maf{\tnr{i}}{C}{B}$ performs a change of basis from $B$ to $C$ when the coordinates of the elements of bases $B$ and $C$ on an arbitrary basis $Z$ are arranged according to arrays $\mat{B}$ and $\mat{C}$ defined in the development. Therefore, we can say that the coordinates of tensors are contravariant because if a change of coordinates is enabled by an array $\maf{\tnr{i}}{B}{C}$, the correspondent change of basis is performed by $\maf{\tnr{i}}{C}{B}$.   
 
-\begin{mcoro}{Change of Coordinates of Linear Tensor Operators}{mudaBaseTens}
+\begin{mcoro}{Change of Linear Tensor Operator Coordinates}{mudaBaseTens}
 If $V^{\times m}(B)_\cam{F}$ and $V^{\times m}(C)_\cam{F}$ are vector spaces constituted by the representative arrays of linear tensor operators that belong to $\evl{\cam{F}}{\ete{\cam{F}}{V^{\times m}}}{\ete{\cam{F}}{V^{\times m}}}$, described respectively on bases $B$ and $C$ of tensor space $\ete{\cam{F}}{V^{\times m}}$, the change of coordinates $\map{\tnr{\Theta}}{V^{\times m}(B)_\cam{F}}{V^{\times m}(C)_\cam{F}}$ is described by $\fua{\tnr{\Theta}}{\mat{X}}=\maf{\vtf{i}}{B}{C}\,\mat{*_m}\,\mat{X}\,\mat{*_m}\,\maf{\vtf{i}}{C}{B}$.
 \end{mcoro}
 \hspace{1pt}
