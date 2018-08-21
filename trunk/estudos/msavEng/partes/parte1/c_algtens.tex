@@ -249,7 +249,7 @@ from which we conclude for an arbitrary basis $B$ of $\ete{\cam{F}}{V^{\times p}
 \begin{equation}\label{eq:coordIdent}
 \vtf{f}_{i_1\cdots i_pj_1\cdots j_p}^{B}(\tnr{I})=\prod_{k=1}^p \delta_{i_kj_k}
 \end{equation}
-
+It is important to say that the previous results obtained for an identity tensor of order $2p$ are also valid for identity tensors of order $\alpha p$, where $\alpha$ is even.
 
 
 \section{Tensor Functions}
@@ -684,8 +684,8 @@ Now, considering arbitrary functions $\tnr{\psi},\tnr{\varphi}\in\evl{\cam{F}}{\
 \item[iii.] If $\tnr{\psi}$ is a bijection, then $\hdet{\tnr{\psi}^{-1}} =  (\hdet{\tnr{\psi}})^{-1}$;
 \item[iv.] If $\hdet{\tnr{\psi}}\neq 0$, then $\tnr{\psi}$ is a bijection;
 \item[v.] If $B$ and $C$ are bases of $\eteg{n}{\cam{F}}{A}$, then $\hdet{\tnr{\psi}}=\hdet{\maf{\tnr{\psi}}{B}{C}}$;
-\item[vi.] If $\cam{F}=\real$, then $\hdet{\tnr{\psi}^\text{T}}=\hdet{\tnr{\psi}}$;
-\item[vii.] If $\tnr{\psi}$ is orthogonal and $\cam{F}=\real$, then $\hdet{\tnr{\psi}}=\pm 1$. 
+\item[vi.] $\hdet{\tnr{\psi}^\dagger}=\overline{\hdet{\tnr{\psi}}}$;
+\item[vii.] If $\tnr{\psi}$ is unitary, then $\hdet{\tnr{\psi}}=\pm 1$. 
 \end{itemize}
 
 {\footnotesize
@@ -707,18 +707,18 @@ assure that the use of only one basis $B$ to represent $\tnr{\psi}$ is valid for
 &=\sum_{i_1=1}^{p}\cdots\sum_{i_p=1}^{p}{\maf{\tnr{\psi}}{B}{B}}_{i_11}\cdots{\maf{\tnr{\psi}}{B}{B}}_{i_pp}\epsilon_{i_1\cdots i_p}\fua{\tnr{P}}{{\tnr{B}_{1}},\cdots,{\tnr{B}_{p}}}\\
 &=\dete{\maf{\tnr{\psi}}{B}{B}}\fua{\tnr{P}}{{\tnr{B}_{1}},\cdots,{\tnr{B}_{p}}}\,,
 \end{align*}
-according to \eqref{eq:igAntis} and \eqref{eq:DeterminanteSimplificado}. Thus, from \eqref{eq:detFunDef}, we have $\hdet{\tnr{\psi}}=\dete{\maf{\tnr{\psi}}{B}{B}}=\hdet{\maf{\tnr{\psi}}{B}{B}}$. For the item vi verification, let's consider the previous development and equality \eqref{eq:transpDefTens} in the context of $\cam{F}=\real$, when we have 
+according to \eqref{eq:igAntis} and \eqref{eq:DeterminanteSimplificado}. Thus, from \eqref{eq:detFunDef}, we have $\hdet{\tnr{\psi}}=\dete{\maf{\tnr{\psi}}{B}{B}}=\hdet{\maf{\tnr{\psi}}{B}{B}}$. For the item vi verification, let's consider the previous development and equality \eqref{eq:propHilbAjd}, when we have 
 \begin{equation*}
-\fua{\tnr{\psi}^\text{T}}{\tnr{B}_l}=\sum_{k=1}^{p}{\maf{\tnr{\psi}^\text{T}}{B}{B}}_{kl}\tnr{B}_k=\sum_{k=1}^{p}{\maf{\tnr{\psi}}{B}{B}}^\text{T}_{kl}\tnr{B}_k=\sum_{k=1}^{p}{\maf{\tnr{\psi}}{B}{B}}_{lk}\tnr{B}_k
+\fua{\tnr{\psi}^\dagger}{\tnr{B}_l}=\sum_{k=1}^{p}{\maf{\tnr{\psi}^\dagger}{B}{B}}_{kl}\tnr{B}_k=\sum_{k=1}^{p}{\maf{\tnr{\psi}}{B}{B}}^\dagger_{kl}\tnr{B}_k=\sum_{k=1}^{p}\overline{{\maf{\tnr{\psi}}{B}{B}}_{lk}}\tnr{B}_k
 \end{equation*}
 and consequently
 \begin{align*}
-\fua{\tnr{P}}{\fua{\tnr{\psi}^\text{T}}{\tnr{B}_1},\cdots,\fua{\tnr{\psi}^\text{T}}{\tnr{B}_p}}
-&=\sum_{i_1=1}^{p}\cdots\sum_{i_p=1}^{p}{\maf{\tnr{\psi}}{B}{B}}_{1i_1}\cdots{\maf{\tnr{\psi}}{B}{B}}_{pi_p}\epsilon_{i_1\cdots i_p}\fua{\tnr{P}}{{\tnr{B}_{1}},\cdots,{\tnr{B}_{p}}}\\
-&=\dete{\maf{\tnr{\psi}}{B}{B}}\fua{\tnr{P}}{{\tnr{B}_{1}},\cdots,{\tnr{B}_{p}}}\\
-&=\hdet{\tnr{\psi}}\fua{\tnr{P}}{{\tnr{B}_{1}},\cdots,{\tnr{B}_{p}}}\,,
+\fua{\tnr{P}}{\fua{\tnr{\psi}^\dagger}{\tnr{B}_1},\cdots,\fua{\tnr{\psi}^\dagger}{\tnr{B}_p}}
+&=\sum_{i_1=1}^{p}\cdots\sum_{i_p=1}^{p}\overline{{\maf{\tnr{\psi}}{B}{B}}_{1i_1}\cdots{\maf{\tnr{\psi}}{B}{B}}_{pi_p}}\epsilon_{i_1\cdots i_p}\fua{\tnr{P}}{{\tnr{B}_{1}},\cdots,{\tnr{B}_{p}}}\\
+&=\overline{\dete{\maf{\tnr{\psi}}{B}{B}}}\fua{\tnr{P}}{{\tnr{B}_{1}},\cdots,{\tnr{B}_{p}}}\\
+&=\overline{\hdet{\tnr{\psi}}}\fua{\tnr{P}}{{\tnr{B}_{1}},\cdots,{\tnr{B}_{p}}}\,,
 \end{align*}
-since an equality similar to \eqref{eq:DeterminanteSimplificado} can be obtained by considering $i_k=k$ on \eqref{eq:Determinante}. Now, equalities $1=\hdet{\tnr{i}}=\hdet{\tnr{\psi}\circ\tnr{\psi}^\text{T}} =  \hdet{\tnr{\psi}}\,\hdet{\tnr{\psi}^\text{T}}=\hdet{\tnr{\psi}}^2$ prove item vii.  
+since an equality similar to \eqref{eq:DeterminanteSimplificado} can be obtained by considering $i_k=k$ on \eqref{eq:Determinante}. Now, equalities $1=\hdet{\tnr{i}}=\hdet{\tnr{\psi}\circ\tnr{\psi}^\dagger} =  \hdet{\tnr{\psi}}\,\hdet{\tnr{\psi}^\dagger}=|\hdet{\tnr{\psi}}|^2$ prove item vii.  
 \end{proof}
 }
 
@@ -745,7 +745,7 @@ enable us to verify that coordinates $\fua{\tnr{f}_{i}^B}{\tnr{X}}=\fua{\tnr{f}_
 \end{proof}
 }
 
-Admitting a tensor space $\eteg{n}{\cam{F}}{U^{\times m}\times U^{\times m}}$ and a group $\grt{U}{\cam{F}}{U^{\times m}\times U^{\times m}}$, by equality \eqref{eq:coordIdent} we know that the coordinates of identity tensor $\tnr{I}\in\eteg{n}{\cam{F}}{U^{\times m}\times U^{\times m}}$ are the same for any chosen basis. Therefore, from theorem above, it is clear that $\tnr{I}$ is isotropic, that is, $\tnr{I}\in\eto{\cam{F}}{U^{\times m}\times U^{\times m}}$.
+Admitting a tensor space $\eteg{n}{\cam{F}}{A^p}$ and a group $\grt{U}{\cam{F}}{A^p}$, where $A=U^{\times m}$ and $p$ is even, by equality \eqref{eq:coordIdent} we know that the coordinates of identity tensor $\tnr{I}\in\eteg{n}{\cam{F}}{A}$ are the same for any chosen basis. Therefore, from theorem above, it is clear that $\tnr{I}$ is isotropic, that is, $\tnr{I}\in\eto{\cam{F}}{A}$. In this context, again by equality \eqref{eq:coordIdent}, it is straightforward to see that the coordinates of an arbitrary tensor belonging to $\spn (\{\tnr{I}\})$ are the same for any chosen basis of $\eteg{n}{\cam{F}}{A}$. This fact enables us to affirm that \emph{any linear combination of an identity tensor is isotropic}.
 
 
 
