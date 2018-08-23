@@ -164,7 +164,7 @@ The tensors of space $\ete{\cam{F}}{V^{m}}$, $m>1$, can have the positions of th
 \fua{\tnr{T}_\pi}{\vto{v}_1,\cdots,\vto{v}_m}:=\tnr{T}\,(\vto{v}_{\fua{\pi}{1}},\cdots,\vto{v}_{\fua{\pi}{m}})\,,\forall\,
 \vto{v}_i\in {V}_\cam{F}\,,
 \end{equation}
-the tensor $\tnr{T}_\pi\in\ete{\cam{F}}{V^{m}}$ is called the $\pi$ \textsb{permutation}\index{tensor!permutation of} of $\tnr{T}\in\ete{\cam{F}}{V^{m}}$. There are two important properties: a) the permutation of sum is the sum of permutations, that is, if $\tnr{T}=\tnr{A}+\tnr{B}$ then $(\tnr{A}+\tnr{B})_\pi=\tnr{A}_\pi+\tnr{B}_\pi$; b) tensor $(\alpha\tnr{T})_\pi=\alpha\tnr{T}_\pi$, $\forall\,\alpha\in\cam{F}$. Now, considering the specific rule $\fua{\pi}{x}=a\delta_{xb}+b\delta_{xa}+x(1-\delta_{xa}-\delta_{xb})$ that interchanges indexes $a$ and $b$, we call $\tnr{T}_\pi$ the $(a,b)$ \textsb{transposition}\index{tensor!transposition of} of $\tnr{T}$, represented by $\tnr{T}_{(a,b)}$.
+the tensor $\tnr{T}_\pi\in\ete{\cam{F}}{V^{m}}$ is called the $\pi$ \textsb{permutation}\index{tensor!permutation of} of $\tnr{T}\in\ete{\cam{F}}{V^{m}}$. There are two important properties: a) the permutation of sum is the sum of permutations, that is, if $\tnr{T}=\tnr{A}+\tnr{B}$ then $(\tnr{A}+\tnr{B})_\pi=\tnr{A}_\pi+\tnr{B}_\pi$; b) tensor $(\alpha\tnr{T})_\pi=\alpha\tnr{T}_\pi$, $\forall\,\alpha\in\cam{F}$. Now, considering the specific rule $\fua{\pi}{x}=a\delta_{xb}+b\delta_{xa}+x(1-\delta_{xa}-\delta_{xb})$ that interchanges indexes $a$ and $b$, we call $\tnr{T}_\pi$ the $(a,b)$ \textsb{transposition}\index{tensor!transposition of} of $\tnr{T}$, represented by $\tnr{T}_{(a,b)}$, where $a\neq b$.
 
 
 
@@ -181,11 +181,22 @@ from which we conclude that the permutation of sum is the sum of permutations. T
 \end{proof}
 }
 
-The concept of permutation enables the concept of symmetry as follows: a tensor $\tnr{S}\in\ete{\cam{F}}{V^{m}}$ is said to be \textsb{symmetric}\index{tensor!symmetric} if equality $\tnr{S}_\pi=\tnr{S}$ is valid for an arbitrary permutation $\pi$. Conversely, a tensor $\tnr{P}\in\ete{\cam{F}}{V^{m}}$ is called \textsb{antisymmetric}\index{tensor!antisymmetric} or \textsb{alternating}\index{tensor!alternating} if tensor $\tnr{P}_\pi=\epsilon_{\fua{\pi}{1}\cdots \fua{\pi}{m}}\,\tnr{P}$ for any $\pi$. Since $\tnr{P}$ is antisymmetric, we can conclude that scalar $\fua{\tnr{P}}{\vto{x}_1,\cdots,\vto{x}_a,\cdots,\vto{x}_b,\cdots,\vto{x}_m}=0$ if $\vto{x}_a=\vto{x}_b$, where $\vto{x}_i\in V_\cam{F}$ and $a,b\in\{1,\cdots,m\}$. Thereby, the consequence is
+The concept of permutation enables the concept of symmetry as follows: a tensor $\tnr{S}\in\ete{\cam{F}}{V^{m}}$ is said to be \textsb{symmetric}\index{tensor!symmetric} if equality $\tnr{S}_\pi=\tnr{S}$ is valid for an arbitrary permutation $\pi$. In contrast, an element $\tnr{P}\in\ete{\cam{F}}{V^{m}}$ is said to be  \textsb{antisymmetric}\index{tensor!antisymmetric} if a tensor $\tnr{P}_\pi=\epsilon_{\fua{\pi}{1}\cdots \fua{\pi}{m}}\,\tnr{P}$ for any $\pi$. An antisymmetric tensor is usually called \textsb{alternating}\index{tensor!alternating} when $m=\dim(V_\cam{F})$, that is, the order of tensor space equals the dimension of its definer vector space. If tensor $\tnr{P}$ is antisymmetric, we can conclude that scalar $\fua{\tnr{P}}{\vto{x}_1,\cdots,\vto{x}_a,\cdots,\vto{x}_b,\cdots,\vto{x}_m}=0$ if $\vto{x}_a=\vto{x}_b$, where $\vto{x}_i\in V_\cam{F}$ and $a,b\in\{1,\cdots,m\}$. Thereby, 
 \begin{equation}\label{eq:igAntis}
 \fua{\tnr{P}}{\vto{x}_{i_1},\cdots,\vto{x}_{i_m}}=\epsilon_{i_1\cdots i_m}\fua{\tnr{P}}{\vto{x}_1,\cdots,\vto{x}_m}\,.
 \end{equation}
-Moreover, since the sum of two (anti)symmetric tensors is an (anti)symmetric tensor and multiplication by scalar also preserves (anti)symmetry, the set of all (anti)symmetric tensors defines a tensor subspace of $\ete{\cam{F}}{V^{m}}$: if this subspace is constituted by all symmetric tensors, it is represented by $\gloref{eteS}$; if it is constituted by antisymmetric tensors, we have $\gloref{eteN}$. Then, it is possible, and intriguing, to obtain that \emph{every tensor subspace $\etn{\cam{F}}{V^m}$ defined by antisymmetric tensors is one-dimensional if $\dim{(V)_\cam{F}}=m$.}
+Moreover, since the sum of two (anti)symmetric tensors is an (anti)symmetric tensor and multiplication by scalar also preserves (anti)symmetry, the set of all (anti)symmetric tensors defines a tensor subspace of $\ete{\cam{F}}{V^{m}}$: if this subspace is constituted by all symmetric tensors, it is represented by $\gloref{eteS}$; if it is constituted by antisymmetric tensors, we have $\gloref{eteN}$. Then, it is possible, and intriguing, to obtain that \emph{every tensor subspace $\etng{m}{\cam{F}}{V^m}$ defined by alternating tensors is one-dimensional}. Less intriguing and quite convenient for future uses are the following properties.  
+
+\begin{itemize}
+\setlength\itemsep{.1em}
+\item[i.] A set $\{\tnr{A}_B\}$ is a basis of alternating tensor space $\etng{m}{\cam{F}}{V^m}$ where 
+\begin{equation}
+\tnr{A}_B(\vto{x}_1,\cdots,\vto{x}_m):=\sum_{i_1=1}^m\cdots\sum_{i_m=1}^m\fua{\vtf{f}^\con{B}_{i_1}}{\vto{x}_1}\cdots\fua{\vtf{f}^\con{B}_{i_m}}{\vto{x}_m}\epsilon_{i_1\cdots i_m}\,.
+\end{equation}
+\item[ii.] If basis $B=\{\vto{u}_1,\cdots,\vto{u}_m\}$, then ${\tnr{A}_B}_{(r,s)}=-\tnr{A}_B$ and $\fua{\tnr{A}_B}{\vto{u}_1,\cdots,\vto{u}_m}=1$. 
+\item[iii.] If $\fua{\tnr{A}}{\vto{v}_1,\cdots,\vto{v}_m}=0$, for arbitrary non-zero $\tnr{A}\in\etng{m}{\cam{F}}{V^m}$, then $\{\vto{v}_1,\cdots,\vto{v}_m\}\subset V_\cam{F}$ is linearly dependent. 
+\end{itemize}
+
 
 {\footnotesize
 \begin{proof}
@@ -201,31 +212,42 @@ from which we conclude that $\fua{\tnr{P}}{\vto{x}_1,\cdots,\vto{x}_a,\cdots,\vt
 \fua{\tnr{P}_\pi}{\vto{x}_1,\cdots,\vto{x}_m}&=\epsilon_{\fua{\pi}{1}\cdots \fua{\pi}{m}}\fua{\tnr{P}}{\vto{x}_1,\cdots,\vto{x}_m}\\
 \tnr{P}_\pi&=\epsilon_{\fua{\pi}{1}\cdots \fua{\pi}{m}}\tnr{P}\,.
 \end{align*}
-Let's verify if (anti)symmetric tensors really define tensor subspaces. Let $\tnr{A}$ and $\tnr{B}$ be symmetric tensors of $\ete{\cam{F}}{V^{m}}$, where $\tnr{A}=\tnr{A}_\pi$ and $\tnr{B}=\tnr{B}_\pi$. Adding these equalities, we obtain $\tnr{A}+\tnr{B}=\tnr{A}_\pi+\tnr{B}_\pi=(\tnr{A}+\tnr{B})_\pi$, which shows that $\tnr{A}+\tnr{B}$ simétrico. This same process can be used for multiplication by scalar. Thereby, it is thus trivial to verify that a set of symmetric tensors observes the five definer axioms of vector spaces, presented in section \ref{sec:espacoVet}. In the case of antisymmetric tensors $\tnr{C}$ and $\tnr{D}$, we have
+Let's verify if (anti)symmetric tensors really define tensor subspaces. Let $\tnr{X}$ and $\tnr{Y}$ be symmetric tensors of $\ete{\cam{F}}{V^{m}}$, where $\tnr{X}=\tnr{X}_\pi$ and $\tnr{Y}=\tnr{Y}_\pi$. Adding these equalities, we obtain $\tnr{X}+\tnr{Y}=\tnr{X}_\pi+\tnr{Y}_\pi=(\tnr{X}+\tnr{Y})_\pi$, which shows that $\tnr{X}+\tnr{Y}$ is symmetric. This same process can be used for multiplication by scalar. Thereby, it is thus trivial to verify that a set of symmetric tensors observes the five definer axioms of vector spaces, presented in section \ref{sec:espacoVet}. In the case of antisymmetric tensors $\tnr{Z}$ and $\tnr{W}$, we have
 \begin{equation*}
-	\epsilon_{\fua{\pi}{1}\cdots \fua{\pi}{m}}(\tnr{C}+\tnr{D})=\tnr{C}_\pi+\tnr{D}_\pi=(\tnr{C}+\tnr{D})_\pi\,,
+	\epsilon_{\fua{\pi}{1}\cdots \fua{\pi}{m}}(\tnr{Z}+\tnr{W})=\tnr{Z}_\pi+\tnr{W}_\pi=(\tnr{Z}+\tnr{W})_\pi\,,
 \end{equation*}
-which shows $\tnr{C}+\tnr{D}$ antisymmetric. Thereby, we can state that a set of antisymmetric tensors also defines a tensor space. Now, we'll verify the curious one-dimensionality of antisymmetric tensors by adapting to our case the idea of \aut{Backus}\cite{backus_1997_1}, pp. 15-17. Let $\etn{\cam{F}}{V^m}\subset\ete{\cam{F}}{V^m}$ be a tensor subspace of antisymmetric tensors, $B=\{\vto{v}_1,\cdots,\vto{v}_m\}$ a basis of vector space $V_\cam{F}$ and an antisymmetric tensor  $\tnr{H}\in\etn{\cam{F}}{V^m}$ such that
+which shows $\tnr{Z}+\tnr{W}$ antisymmetric. Thereby, we can state that a set of antisymmetric tensors also defines a tensor space. Now, we'll verify the curious one-dimensionality of alternating tensors by adapting to our case the idea of \aut{Backus}\cite{backus_1997_1}, pp. 15-17. Let $\etng{m}{\cam{F}}{V^m}\subset\eteg{m}{\cam{F}}{V^m}$ be a tensor subspace of alternating tensors, $B=\{\vto{u}_1,\cdots,\vto{u}_m\}$ a basis of vector space $V_\cam{F}$ and an alternating tensor  $\tnr{A}_B\in\etng{m}{\cam{F}}{V^m}$ such that
 \begin{equation*}
-\tnr{H}(\vto{x}_1,\cdots,\vto{x}_m)=\sum_{i_1=1}^m\cdots\sum_{i_m=1}^m\fua{\vtf{f}^\con{B}_{i_1}}{\vto{x}_1}\cdots\fua{\vtf{f}^\con{B}_{i_m}}{\vto{x}_m}\epsilon_{i_1\cdots i_m}\,,
+\tnr{A}_B(\vto{x}_1,\cdots,\vto{x}_m)=\sum_{i_1=1}^m\cdots\sum_{i_m=1}^m\fua{\vtf{f}^\con{B}_{i_1}}{\vto{x}_1}\cdots\fua{\vtf{f}^\con{B}_{i_m}}{\vto{x}_m}\epsilon_{i_1\cdots i_m}\,,
 \end{equation*}
 where $\vto{x_i}\in V_\cam{F}$. This tensor $\tnr{H}$ is verified to be antisymmetric through the following development:
 \begin{align*}
-\fua{\tnr{H}_{(a,b)}}{\cdots,\vto{x}_a,\cdots,\vto{x}_b,\cdots}&=\cdots
+\fua{{\tnr{A}_B}_{(a,b)}}{\cdots,\vto{x}_a,\cdots,\vto{x}_b,\cdots}&=\cdots
 \sum_{i_a=1}^m\cdots\sum_{i_b=1}^m\cdots\,\fua{\vtf{f}^\con{B}_{i_a}}{\vto{x}_b}\cdots\,\fua{\vtf{f}^\con{B}_{i_b}}{\vto{x}_a}\cdots \,\epsilon_{\cdots i_a\cdots i_b\cdots}\\
 &=\cdots
 \sum_{i_b=1}^m\cdots\sum_{i_a=1}^m\cdots\,\fua{\vtf{f}^\con{B}_{i_b}}{\vto{x}_b}\cdots\,\fua{\vtf{f}^\con{B}_{i_a}}{\vto{x}_a}\cdots \,\epsilon_{\cdots i_b\cdots i_a\cdots}\\
 &=-\,\,\cdots
 \sum_{i_b=1}^m\cdots\sum_{i_a=1}^m\cdots\,\fua{\vtf{f}^\con{B}_{i_b}}{\vto{x}_b}\cdots\,\fua{\vtf{f}^\con{B}_{i_a}}{\vto{x}_a}\cdots \,\epsilon_{\cdots i_a\cdots i_b\cdots}\\
-&=\epsilon_{1\cdots b\cdots a\cdots m}\,\fua{\tnr{H}}{\cdots,\vto{x}_a,\cdots,\vto{x}_b,\cdots}\,
+&=\epsilon_{1\cdots b\cdots a\cdots m}\,\fua{\tnr{A}_B}{\cdots,\vto{x}_a,\cdots,\vto{x}_b,\cdots}\,
 \end{align*}
-where terms with indexes $i_1$ and $i_m$ are omitted and $a,b$ are arbitrary ordinals between $1$ and $m$. Considering an arbitrary tensor $\tnr{P}\in\etn{\cam{F}}{V^m}$, we know that
+where terms with indexes $i_1$ and $i_m$ are omitted and $a,b$ are arbitrary ordinals between $1$ and $m$. Considering an arbitrary tensor $\tnr{P}\in\etng{m}{\cam{F}}{V^m}$, we know that
 \begin{align*}
-\fua{\tnr{P}}{\vto{x}_1,\cdots,\vto{x}_m}&=\sum_{{i_1}=1}^{m}\cdots\sum_{{i_m}=1}^{m}\fua{\vtf{f}^\con{B}_{i_1}}{\vto{x}_1}\cdots\fua{\vtf{f}^\con{B}_{i_m}}{\vto{x}_m}\tnr{P}({\vto{v}_{i_1},\cdots,\vto{v}_{i_m}})\\	&=\underbrace{\sum_{{i_1}=1}^{m}\cdots\sum_{{i_m}=1}^{m}\fua{\vtf{f}^\con{B}_{i_1}}{\vto{x}_1}\cdots\fua{\vtf{f}^\con{B}_{i_m}}{\vto{x}_m}\epsilon_{i_1\cdots i_m}}_{\tnr{H}(\vto{x}_1,\cdots,\vto{x}_m)}\underbrace{\fua{\tnr{P}}{\vto{v}_1,\cdots,\vto{v}_m}}_{\alpha}
+\fua{\tnr{P}}{\vto{x}_1,\cdots,\vto{x}_m}&=\sum_{{i_1}=1}^{m}\cdots\sum_{{i_m}=1}^{m}\fua{\vtf{f}^\con{B}_{i_1}}{\vto{x}_1}\cdots\fua{\vtf{f}^\con{B}_{i_m}}{\vto{x}_m}\tnr{P}({\vto{u}_{i_1},\cdots,\vto{u}_{i_m}})\\	&=\underbrace{\sum_{{i_1}=1}^{m}\cdots\sum_{{i_m}=1}^{m}\fua{\vtf{f}^\con{B}_{i_1}}{\vto{x}_1}\cdots\fua{\vtf{f}^\con{B}_{i_m}}{\vto{x}_m}\epsilon_{i_1\cdots i_m}}_{\tnr{A}_B(\vto{x}_1,\cdots,\vto{x}_m)}\underbrace{\fua{\tnr{P}}{\vto{u}_1,\cdots,\vto{u}_m}}_{\alpha}
 \end{align*}
-from which we conclude $\tnr{P}=\alpha\tnr{H}$, that is, $\{\tnr{H}\}$ is a basis of $\etn{\cam{F}}{V^m}$.
+from which we conclude $\tnr{P}=\alpha\tnr{A}_B$, that is, $\{\tnr{A}_B\}$ is a basis of one-dimensional $\etng{m}{\cam{F}}{V^m}$ and then property i is proved. Let's verify now items ii and iii. From the definition of $\tnr{A}_B$ it is clear that 
+\begin{align*}
+{\tnr{A}_B}_{(a,b)}(\cdots,\vto{x}_a,\cdots,\vto{x}_b,\cdots)=\tnr{A}_B(\cdots,\vto{x}_b,\cdots,\vto{x}_a,\cdots)=-\tnr{A}_B(\cdots,\vto{x}_a,\cdots,\vto{x}_b,\cdots)\,
+\end{align*}
+and from \eqref{eq:regraFuncCoord}, we have
+\begin{align*}
+\tnr{A}_B(\vto{u}_1,\cdots,\vto{u}_m)&=\sum_{{i_1}=1}^{m}\cdots\sum_{{i_m}=1}^{m}\delta_{1i_1}\cdots\delta_{mi_m}\epsilon_{i_1\cdots i_m}=\epsilon_{1\cdots m}=1\,.\\
+\end{align*}
+From property ii, scalar $\tnr{A}_B(\vto{u}_1,\cdots,\vto{u}_m)$ can never be zero and so scalar $\tnr{A}(\vto{u}_1,\cdots,\vto{u}_m)$ when tensor $\tnr{A}\in\etng{m}{\cam{F}}{V^m}$ is non-zero, since $\tnr{A}=\alpha\tnr{A}_B$. Thereby, if $C=\{\vto{v}_1,\cdots,\vto{v}_m\}$ were linearly independent, it would be a basis of $V_\cam{F}$ and then from \eqref{eq:regraCoordTens}, tensor $\tnr{A}=\tnr{A}(\vto{v}_1,\cdots,\vto{v}_m)\tnr{A}_C$. Since $\tnr{A}$ and $\tnr{A}_C$ are non zero, then 
 \end{proof}
 }
+
+
+
 
 Additionally to symmetric and antisymmetric, there is another notable tensor that will enable very important concepts for our study, like isotropy and anti-isotropy for example: I'm referring to the identity tensor, which is defined in tensor spaces of even order. We call \gloref{tensorI}$\,\in\ete{\cam{F}}{V^{\times p}\times V^{\times p}}$ an \textsb{identity tensor}\index{tensor!identity} of order $2p$ if, considering $\vto{x}_i$ and $\vto{y}_i$ arbitrary vectors of  $(V_\cam{F})_i$, scalar
 \begin{equation}\label{eq:identidade}
@@ -745,7 +767,7 @@ enable us to verify that coordinates $\fua{\tnr{f}_{i}^B}{\tnr{X}}=\fua{\tnr{f}_
 \end{proof}
 }
 
-Admitting a tensor space $\eteg{n}{\cam{F}}{A^p}$ and a group $\grt{U}{\cam{F}}{A^p}$, where $A=U^{\times m}$ and $p$ is even, by equality \eqref{eq:coordIdent} we know that the coordinates of identity tensor $\tnr{I}\in\eteg{n}{\cam{F}}{A}$ are the same for any chosen basis. Therefore, from theorem above, it is clear that $\tnr{I}$ is isotropic, that is, $\tnr{I}\in\eto{\cam{F}}{A}$. In this context, again by equality \eqref{eq:coordIdent}, it is straightforward to see that the coordinates of an arbitrary tensor belonging to $\spn (\{\tnr{I}\})$ are the same for any chosen basis of $\eteg{n}{\cam{F}}{A}$. This fact enables us to affirm that \emph{any linear combination of an identity tensor is isotropic}.
+Admitting a tensor space $\ete{\cam{F}}{A^p}$ and a group $\grt{U}{\cam{F}}{A^p}$, where $A=U^{m}$ and $p$ is even, by equality \eqref{eq:coordIdent} we know that the coordinates of identity tensor $\tnr{I}\in\ete{\cam{F}}{A}$ are the same for any chosen basis. Therefore, from theorem above, it is clear that $\tnr{I}$ is isotropic, that is, $\tnr{I}\in\eto{\cam{F}}{A}$. In this context, again by equality \eqref{eq:coordIdent}, it is straightforward to see that the coordinates of an arbitrary tensor belonging to $\spn (\{\tnr{I}\})$ are the same for any chosen basis of $\ete{\cam{F}}{A}$. In this context, it is possible to affirm that \emph{any linear combination of an identity tensor is isotropic}.
 
 
 
