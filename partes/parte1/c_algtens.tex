@@ -190,7 +190,7 @@ Moreover, since the sum of two (anti)symmetric tensors is an (anti)symmetric ten
 \begin{itemize}
 \setlength\itemsep{.1em}
 \item[i.] A set $\{\tnr{A}_B\}$ is a basis of alternating tensor space $\etng{m}{\cam{F}}{V^m}$ where 
-\begin{equation}
+\begin{equation}\label{eq:basisAltern}
 \tnr{A}_B(\vto{x}_1,\cdots,\vto{x}_m):=\sum_{i_1=1}^m\cdots\sum_{i_m=1}^m\fua{\vtf{f}^\con{B}_{i_1}}{\vto{x}_1}\cdots\fua{\vtf{f}^\con{B}_{i_m}}{\vto{x}_m}\epsilon_{i_1\cdots i_m}\,.
 \end{equation}
 \item[ii.] If basis $B=\{\vto{u}_1,\cdots,\vto{u}_m\}$, then ${\tnr{A}_B}_{(a,b)}=-\tnr{A}_B$ and $\fua{\tnr{A}_B}{\vto{u}_1,\cdots,\vto{u}_m}=1$. 
@@ -253,6 +253,25 @@ Theses equalities are valid only if $\epsilon_{i_1\cdots i_m}$ is zero. This is 
 is obviously equal to zero since $\epsilon_{i_ji_2\cdots i_m}=0$ because $i_j\in\{i_2,\cdots,i_m\}$.  
 \end{proof}
 }
+
+A tensor $\tnr{H}\in\etng{m}{\cam{F}}{U^m}$, where $U_\cam{F}$ is a Hilbert space, is called \textsb{unimodular}\index{tensor!unimodular} if scalar $|\fua{\tnr{H}}{\vun{u}_1,\cdots,\vun{u}_m}|=1$ for every orthonormal basis $\{\vun{u}_1,\cdots,\vun{u}_m\}$. If tensors $\tnr{X}$ and $\tnr{H}$ are unimodular, we have $|\fua{\tnr{X}}{\vun{u}_1,\cdots,\vun{u}_m}|=|\fua{\tnr{H}}{\vun{u}_1,\cdots,\vun{u}_m}|$ and then $\tnr{X}=\pm\tnr{H}$. Thereby, we can affirm that if tensor $\tnr{H}$ is unimodular, so is $-\tnr{H}$. In this context, we can obtain that the basis tensor $\tnr{A}_B$ of $\etng{m}{\cam{F}}{U^m}$ is unimodular. Blabla....  
+
+{\footnotesize
+\begin{proof}
+Lets verify $\tnr{A}_B$ is indeed unimodular. Given $B=\{\vun{u}_1,\cdots,\vun{u}_m\}$ and $C=\{\vun{v}_1,\cdots,\vun{v}_m\}$ arbitrary orthonormal bases of $U_\cam{F}$,  we know that there is always a unitary operator $\vtf{g}\in\grc{U}{\cam{F}}{U}$ defined by \eqref{eq:unitOrthon} where $\fua{\vtf{g}}{\vun{u}_i}=\vun{v}_i$. Therefore, from property ii above, we have USAR A DEIFINCAÇÃO DA BASE AB 
+\begin{align*} 
+\tnr{A}_B(\vun{v}_1,\cdots,\vun{v}_m)&=\tnr{A}_B(\fua{\vtf{g}}{\vun{u}_1},\cdots,\fua{\vtf{g}}{\vun{u}_m})\\
+&=\sum_{i_1=1}^m\cdots\sum_{i_m=1}^m\fua{\vtf{f}^B_{i_1}}{\vun{u}_{1}}\cdots\fua{\vtf{f}^B_{i_m}}{\vun{u}_{m}}\tnr{A}_B(\vun{u}_{i_1},\cdots,\vun{u}_{i_m})\\
+&=\sum_{i_1=1}^m\cdots\sum_{i_m=1}^m\delta_{i_11}\cdots\delta_{i_mm}\tnr{A}_B(\vun{u}_{i_1},\cdots,\vun{u}_{i_m})\\
+\end{align*} 
+\end{proof}
+}
+
+
+
+
+
+
 
 
 Additionally to symmetric and antisymmetric, there is another notable tensor that will enable very important concepts for our study, like isotropy and anti-isotropy for example: I'm referring to the identity tensor, which is defined in tensor spaces of even order. We call \gloref{tensorI}$\,\in\ete{\cam{F}}{V^{\times p}\times V^{\times p}}$ an \textsb{identity tensor}\index{tensor!identity} of order $2p$ if, considering $\vto{x}_i$ and $\vto{y}_i$ arbitrary vectors of  $(V_\cam{F})_i$, scalar
