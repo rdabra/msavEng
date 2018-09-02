@@ -147,7 +147,7 @@ Considering a tensor space $\ete{\cam{F}}{U^{\times m}}$, if its definer vector 
 in order to simplify notation. If the constituent bases $B_i$ are orthonormal, then $B_i=B_i^\perp$ and  $((\vto{u}^{(i)})^{j_i})^*=(\vto{u}^{(i)}_{j_i})^*$ in the above definition.
 \end{comment}
 
-A consequence of describing an arbitrary tensor $\tnr{T}$ as a linear combination of polyadic tensor elements of a certain basis is the possibility to arrange its coordinates in such a way that $\tnr{T}$ results an additive decomposition of polyadic tensors. In order to obtain this, let's betake the property of multiplication by scalars of tensor products\footnote{See p. \pageref{prop:TensMultScalar}.} and ``move'', during the $k_i$-th sum in \eqref{eq:tensCoord}, the coordinates $\vtf{f}_{k_1\cdots k_i\cdots k_m}^{B}(\tnr{T})$ to multiply the coordinate functional $\vtf{f}_{k_i}^{B_i}$ of the $i$-th polyadic basis tensor, resulting in
+A consequence of describing an arbitrary tensor $\tnr{T}$ as a linear combination of po\-lya\-dic tensor elements of a certain basis is the possibility to arrange its coordinates in such a way that $\tnr{T}$ results an additive decomposition of polyadic tensors. In order to obtain this, let's betake the property of multiplication by scalars of tensor products\footnote{See p. \pageref{prop:TensMultScalar}.} and ``move'', during the $k_i$-th sum in \eqref{eq:tensCoord}, the coordinates $\vtf{f}_{k_1\cdots k_i\cdots k_m}^{B}(\tnr{T})$ to multiply the coordinate functional $\vtf{f}_{k_i}^{B_i}$ of the $i$-th polyadic basis tensor, resulting in
 \begin{equation}\label{eq:decompAditTens}
 \tnr{T} = \sum_{i=1}^{m}\underbrace{\sum_{k_i=1}^{n_i} \vtf{f}_{k_1}^{B_1}\otimes\cdots\otimes(\vtf{f}_{k_1\cdots k_i\cdots k_m}^{B}(\tnr{T})\vtf{f}_{k_i}^{B_i})\otimes\cdots\otimes\vtf{f}_{k_m}^{B_m}}_{(\vtf{t}_1)_i\otimes\cdots\otimes(\vtf{t}_m)_i}\,,
 \end{equation}
@@ -194,7 +194,11 @@ Moreover, since the sum of two (anti)symmetric tensors is an (anti)symmetric ten
 \tnr{A}_B(\vto{x}_1,\cdots,\vto{x}_m):=\sum_{i_1=1}^m\cdots\sum_{i_m=1}^m\fua{\vtf{f}^\con{B}_{i_1}}{\vto{x}_1}\cdots\fua{\vtf{f}^\con{B}_{i_m}}{\vto{x}_m}\epsilon_{i_1\cdots i_m}\,.
 \end{equation}
 \item[ii.] If basis $B=\{\vto{u}_1,\cdots,\vto{u}_m\}$, then ${\tnr{A}_B}_{(a,b)}=-\tnr{A}_B$ and $\fua{\tnr{A}_B}{\vto{u}_1,\cdots,\vto{u}_m}=1$. 
-\item[iii.] If $\fua{\tnr{A}}{\vto{v}_1,\cdots,\vto{v}_m}=0$, for all non-zero $\tnr{A}\in\etng{m}{\cam{F}}{V^m}$, then $\{\vto{v}_1,\cdots,\vto{v}_m\}\subset V_\cam{F}$ is linearly dependent. 
+\item[iii.] If $\fua{\tnr{A}}{\vto{v}_1,\cdots,\vto{v}_m}=0$, for all non-zero $\tnr{A}\in\etng{m}{\cam{F}}{V^m}$, then $\{\vto{v}_1,\cdots,\vto{v}_m\}\subset V_\cam{F}$ is linearly dependent.
+\item[iv.] Given an arbitrary operator $\vtf{g}\in\grc{U}{\cam{F}}{V}$, an alternating tensor $\tnr{A}\in\etng{m}{\cam{F}}{V^m}$ and a basis $B=\{\vto{u}_1,\cdots,\vto{u}_m\}$ of $V_\cam{F}$, then
+\begin{equation}
+|\fua{\tnr{A}}{\fua{\vtf{g}}{\vto{u}_1},\cdots,\fua{\vtf{g}}{\vto{u}_m}}|=\fua{\tnr{A}}{\vto{u}_1,\cdots,\vto{u}_m}\,.
+\end{equation}
 \end{itemize}
 
 
@@ -250,9 +254,17 @@ Theses equalities are valid only if $\epsilon_{i_1\cdots i_m}$ is zero. This is 
 \begin{equation*}
 \alpha\sum_{j=2}^m\beta_j\tnr{A}_B(\vto{v}_j,\vto{v}_2,\cdots,\vto{v}_m)=\alpha\sum_{j=2}^m\beta_j\sum_{i_j=1}^m\cdots\sum_{i_m=1}^m\fua{\vtf{f}^\con{B}_{i_j}}{\vto{v}_j}\fua{\vtf{f}^\con{B}_{i_2}}{\vto{v}_2}\cdots\fua{\vtf{f}^\con{B}_{i_m}}{\vto{v}_m}\epsilon_{i_ji_2\cdots i_m}
 \end{equation*}
-is obviously equal to zero since $\epsilon_{i_ji_2\cdots i_m}=0$ because $i_j\in\{i_2,\cdots,i_m\}$.  
+is obviously equal to zero since $\epsilon_{i_ji_2\cdots i_m}=0$ because $i_j\in\{i_2,\cdots,i_m\}$. Now, in order to verify item iv, from \eqref{eq:igAntis} and \eqref{eq:DeterminanteSimplificado}, we develop as follows 
+\begin{align*}
+\fua{\tnr{A}}{\fua{\vtf{g}}{\vto{u}_1},\cdots,\fua{\vtf{g}}{\vto{u}_m}}&=\sum_{{i_1}=1}^m\cdots\sum_{{i_m}=1}^m\fua{\vtf{f}_{i_1}^B}{\fua{\vtf{g}}{\vto{u}_1}}\cdots\fua{\vtf{f}_{i_m}^B}{\fua{\vtf{g}}{\vto{u}_m}}\fua{\tnr{A}}{\vto{u}_{i_1},\cdots,\vto{u}_{i_m}}\\
+&=\sum_{{i_1}=1}^m\cdots\sum_{{i_m}=1}^m\maf{\vtf{g}}{B}{B}_{i_11}\cdots\maf{\vtf{g}}{B}{B}_{i_mm}\fua{\tnr{A}}{\vto{u}_{i_1},\cdots,\vto{u}_{i_m}}\\
+&=\sum_{{i_1}=1}^m\cdots\sum_{{i_m}=1}^m \epsilon_{i_1\cdots i_n}\prod_{k=1}^m\maf{\vtf{g}}{B}{B}_{i_kk}\fua{\tnr{A}}{\vto{u}_{1},\cdots,\vto{u}_{m}}\\
+&=\dete{\vtf{g}}\fua{\tnr{A}}{\vto{u}_{1},\cdots,\vto{u}_{m}}=\pm\fua{\tnr{A}}{\vto{u}_{1},\cdots,\vto{u}_{m}}\,,
+\end{align*} 
+since $\vtf{g}$ is unitary.
 \end{proof}
 }
+
 
 A tensor $\tnr{H}\in\etng{m}{\cam{F}}{U^m}$, where $U_\cam{F}$ is a Hilbert space, is called \textsb{unimodular}\index{tensor!unimodular} if scalar $|\fua{\tnr{H}}{\vun{u}_1,\cdots,\vun{u}_m}|=1$ for every orthonormal basis $\{\vun{u}_1,\cdots,\vun{u}_m\}$. If tensors $\tnr{X}$ and $\tnr{H}$ are unimodular, we have $|\fua{\tnr{X}}{\vun{u}_1,\cdots,\vun{u}_m}|=|\fua{\tnr{H}}{\vun{u}_1,\cdots,\vun{u}_m}|$ and then $\tnr{X}=\pm\tnr{H}$. Thereby, we can affirm that if tensor $\tnr{H}$ is unimodular, so is $-\tnr{H}$. In this context, we can obtain that the basis tensor $\tnr{A}_B$ of $\etng{m}{\cam{F}}{U^m}$ is unimodular and then since any other vector in this alternating tensor space can be expressed as $\alpha\tnr{A}_B$, there are only two unimodular tensors in $\etng{m}{\cam{F}}{U^m}$ relative to basis $B$, namely, $\tnr{A}_B$ and $-\tnr{A}_B$. In this sense, considering $\tnr{A}\in\etng{m}{\cam{F}}{U^m}$ unimodular and $B=\{\vun{u}_1,\cdots,\vun{u}_m\}$ an arbitrary orthonormal basis of $U_\cam{F}$, the double $(U_\cam{F},\tnr{A})$ is said to be an \textsb{oriented vector space}\index{vector space!oriented}, where basis $B$ is called \textsb{positively}\index{basis!positively oriented} or \textsb{negatively oriented}\index{basis!negatively oriented} if scalar $\fua{\tnr{A}}{\vun{u}_1,\cdots,\vun{u}_m}$ is $+1$ or $-1$ respectively. Note that a basis $B$ is always positively oriented when $\tnr{A}=\tnr{A}_B$.
 
@@ -582,7 +594,7 @@ Considering the conditions of this last corollary and a function space $\cam{F}^
 \fua{\frt{T}}{\tnr{X}} = \fua{\overline{\vtf{T}^*}}{\tnr{X}}=\tnr{T}\cdot\tnr{X}\,,
 \end{equation}
 whose existence and uniqueness are straightforward consequences of the theorem in question. Therefore, every tensor $\tnr{T}$ has not only a correspondent cotensor $\tnr{T}^*$ but also a correspondent \textsb{conjugate cotensor}\index{cotensor!conjugate} $\frt{T}$. A function space, subset of $\cam{F}^V_\cam{F}$, that is constituted by all of these conjugate cotensors is called the \textsb{conjugate dual space}\index{dual space!conjugate} of $\ete{\cam{F}}{U^{\times m}}$, represented by $\etec{\cam{F}}{U^{\times m}}$. It is important to observe that if the variable $\tnr{X}$ is expressed in its polyadic form $\vto{x}_1^*\otimes\cdots\otimes\vto{x}_m^*$, the conjugate cotensor is linear on each variable $\vto{x}_i$. In this context, from the above definition and equalities \eqref{eq:propProdIndTens}, we can write that scalar
-\begin{equation}
+\begin{equation}\label{eq:polyRepre}
 \fua{\gloref{substFunc}}{\vto{x}_1^*\otimes\cdots\otimes\vto{x}_m^*} = \tnr{T}\cdot(\vto{x}_1^*\otimes\cdots\otimes\vto{x}_m^*)=\fua{\tnr{T}}{\vto{x}_1,\cdots,\vto{x}_m}\,,
 \end{equation}
 where $\frt{T}$ results a \textsb{representative function}\index{function!representative} of tensor $\tnr{T}$ since their values are the same when variables $\vto{x}_i\in (U_i)_\cam{F}$ are arranged as above. Now, it is possible to study tensors through their conjugate cotensors, which substitute them numerically. If we consider the context of expression  \eqref{eq:identProdInt}, \emph{equalities
@@ -646,9 +658,9 @@ where equalities \eqref{eq:regraCoordTens} and \eqref{eq:propProdIndTens} were c
 
 Tensors and linear tensor operators can be represented in a higher aggregate form through the use of matrices. The strategy consists in considering each polyadic tensor of a given basis as an ordinary basis vector of its tensor space, which is actually a vector space of linear functionals, as we already know. In general terms, the labeling scheme changes from the basis vectors of $(U_\cam{F})_i$ to the basis tensors of $\ete{\cam{F}}{U^{\times m}}$. Thereby, it is implicit in labeling an arbitrary basis $\tnr{B}_i:=\{\vtf{f}_{i_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{i_m}^{B_m}\}$ of $\ete{\cam{F}}{U^{\times m}}$ the definition of a bijective mapping $\map{\nu}{(\cam{N}^+)^m}{\cam{N}^+}$, where integers involved are ordinals and $\fua{\nu}{i_1,\cdots,i_m}=i$. The dimension $p=n_1n_2\cdots n_m$ of $\ete{\cam{F}}{U^{\times m}}$ clearly leads to $i=1,\cdots,p$. In this context, we can write that tensor
 \begin{equation}\label{eq:tensMatrix}
-\tnr{\tnr{T}}=\sum_{i=1}^p \fua{\vtf{f}_i^{B}}{\tnr{T}}\tnr{B}_i
+\tnr{\tnr{T}}=\sum_{i=1}^p \fua{\vtf{f}_i^{B}}{\tnr{T}}\tnr{B}_i\,,
 \end{equation}
-and then define $\mav{\tnr{T}}{B}_{i1}:=\fua{\vtf{f}_i^{B}}{\tnr{T}}$, similarly to the case of vectors. Now, considering $C$ a basis of $\ete{\cam{F}}{(U^{\times m})^*}$ whose elements are also labeled by bijection $\nu$, a tensor operator $\tnr{\psi}\in\evl{\cam{F}}{\ete{\cam{F}}{U^{\times m}}}{\ete{\cam{F}}{U^{\times m}}}$ can be represented by a matrix on basis $B$ and $C$ through definition $\maf{\tnr{\psi}}{B}{C}_{ij}=\vtf{f}^\con{C}_{i}[\fua{\tnr{\psi}}{\tnr{B}_j}]$, which results from the same development that led to \eqref{eq:repMatMape}. These two fundamental definitions enable matrix representation of tensors and linear tensor operators, that is performed the same way as for the case of vectors and linear functions, already presented in section \ref{sec:Matrix}. Because of this similarity, we shall not proceed here with these matrix representations.
+where $\fua{\vtf{f}_i^{B}}{\tnr{T}}=\fua{\frt{T}}{\tnr{B}_i}$, according to \eqref{eq:regraCoordTens} and \eqref{eq:polyRepre}, and then define $\mav{\tnr{T}}{B}_{i1}:=\fua{\vtf{f}_i^{B}}{\tnr{T}}$, similarly to the case of vectors. Now, considering $C$ a basis of $\ete{\cam{F}}{(U^{\times m})^*}$ whose elements are also labeled by bijection $\nu$, a tensor operator $\tnr{\psi}\in\evl{\cam{F}}{\ete{\cam{F}}{U^{\times m}}}{\ete{\cam{F}}{U^{\times m}}}$ can be represented by a matrix on basis $B$ and $C$ through definition $\maf{\tnr{\psi}}{B}{C}_{ij}=\vtf{f}^\con{C}_{i}[\fua{\tnr{\psi}}{\tnr{B}_j}]$, which results from the same development that led to \eqref{eq:repMatMape}. These two fundamental definitions enable matrix representation of tensors and linear tensor operators, that is performed the same way as for the case of vectors and linear functions, already presented in section \ref{sec:Matrix}. Because of this similarity, we shall not proceed here with these matrix representations.
 
 In this context of array representation, it is also possible to develop change of coordinates and change of basis as we did for vector and linear functions. For the sake of clarity and rigor we shall reproduce here both theorem \ref{teo:mudCoordVec} and its corollary \ref{cor:mudaBase} with minor changes in order to adapt them for the current case.    
 
@@ -773,19 +785,13 @@ since an equality similar to \eqref{eq:DeterminanteSimplificado} can be obtained
 Now that we know the determinant of linear tensor operators and its properties, let $\eteg{n}{\cam{F}}{U^{\times m}}$ be a Hilbert tensor space and function $\tnr{\varphi}$ be an arbitrary element of a group $\grt{G}{\cam{F}}{U^{\times m}}$ of invertible continuous linear tensor operators whose domain is $\eteg{n}{\cam{F}}{U^{\times m}}$. A tensor $\tnr{T}\in\eteg{n}{\cam{F}}{U^{\times m}}$ is said to be \textsb{invariant}\index{tensor!invariant} on group $\grt{G}{\cam{F}}{U^{\times m}}$ if $\fua{\tnr{\varphi}}{\tnr{T}}=\tnr{T}$. This equality and the linearity of $\tnr{\varphi}$ enable us to affirm that a set $V$ constituted by all tensors of $\eteg{n}{\cam{F}}{U^{\times m}}$ that are invariant on group $\grt{G}{\cam{F}}{U^{\times m}}$ is a tensor subspace of $\eteg{n}{\cam{F}}{U^{\times m}}$, when $V$ is represented by the invariant tensor space $\eti{\cam{F}}{U^{\times m}}$ on group $\grt{G}{\cam{F}}{U^{\times m}}$. This group is represented by $\grt{V}{\cam{F}}{U^{\times m}}$ and called the \textsb{invariance group}\index{group!invariant} of $\eti{\cam{F}}{U^{\times m}}$ if it is constituted by all the invertible continuous linear tensor operators on which every element of $\eti{\cam{F}}{U^{\times m}}$ is invariant. Thus, it is evident that operator $\tnr{i}\in\grt{V}{\cam{F}}{U^{\times m}}$. The unitary group $\grt{U}{\cam{F}}{U^{\times m}}\subseteq\grt{V}{\cam{F}}{U^{\times m}}$ is the invariance group of the invariant tensor space $\eto{\cam{F}}{U^{\times m}}$, whose tensors are said to be \textsb{isotropic}\index{tensor!isotropic}\footnote{\aut{Appleby et al}\cite{appleby_1987} define an isotropic tensor relative to certain changes of bases as the tensor whose coordinates are preserved under these changes, which is assured in our approach by all unitary operators.} relative to $\grt{U}{\cam{F}}{U^{\times m}}$, and then $\eti{\cam{F}}{U^{\times m}}\subseteq\eto{\cam{F}}{U^{\times m}}$. Moreover, the unitary group $\tnr{\mathcal{U}}^+_{\cam{F}}({U^{\times m}})\subset\grt{U}{\cam{F}}{U^{\times m}}$, where $\hdet{\tnr{\varphi}}=1$  $\forall\,\tnr{\varphi}\in\tnr{\mathcal{U}}^+_{\cam{F}}({U^{\times m}})$, is the invariance group of $\etom{\cam{F}}{U^{\times m}}$, whose tensors are called \textsb{anti isotropic}\index{tensor!anti isotropic} relative to $\tnr{\mathcal{U}}^+_{\cam{F}}({U^{\times m}})$ and tensor space $\eto{\cam{F}}{U^{\times m}}\subset\etom{\cam{F}}{U^{\times m}}$. Then, we can say that every isotropic tensor is also anti isotropic. Tensors that are not isotropic are called \textsb{anisotropic}\index{tensor!anisotropic}. From definitions \eqref{eq:HilbAdj}, in the context of Euclidean spaces, we can say that (anti) isotropic tensors are defined by (proper) orthogonal groups.  
 
 
-{\footnotesize
-\begin{proof}
-Let's verify if set $V$ is indeed a vector space of invariant tensors on $\grt{G}{\cam{F}}{U^{\times m}}$. Considering operator $\tnr{\varphi}\in\grt{G}{\cam{F}}{U^{\times m}}$, $\alpha,\beta\in\cam{F}$ and $\tnr{A},\tnr{B}\in V$ arbitrary elements of their respective sets, the following equalities $\alpha\tnr{A}+\beta\tnr{B}=\fua{\alpha\tnr{\varphi}}{\tnr{A}}+\beta\fua{\tnr{\varphi}}{\tnr{B}}=\fua{\tnr{\varphi}}{\alpha\tnr{A}+\beta\tnr{B}}$ prove that sum and multiplication by scalar of invariant tensors result in an invariant tensor, since $\tnr{\varphi}$ is linear. This condition also justifies that $\tnr{0}\in V$ because $\fua{\tnr{\varphi}}{\tnr{0}}=\tnr{0}$. The verification of other axioms of vector spaces is trivial. 
-\end{proof}
-}
-
 \begin{mteo}{Coordinate Invariance of Isotropic Tensors}{coordIsot}
-Considering  an arbitrary unitary operator $\tnr{\psi}\in\grt{U}{\cam{F}}{U^{\times m}}$, tensor bases $B=\{\tnr{B}_1,\cdots,\tnr{B}_p\}$ and  $C=\{\fua{\tnr{\psi}}{\tnr{B}_1},\cdots,\fua{\tnr{\psi}}{\tnr{B}_p}\}$ of $\eto{\cam{F}}{U^{\times m}}$, where $p=n^m$, equalities $\fua{\tnr{f}_{i}^B}{\tnr{X}}=\fua{\tnr{f}_{i}^C}{\tnr{X}}$ are valid for arbitrary $\tnr{X}\in\eto{\cam{F}}{U^{\times m}}$. Moreover, if $\fua{\tnr{f}_{i}^B}{\tnr{T}}=\fua{\tnr{f}_{i}^C}{\tnr{T}}$ for a certain tensor $\tnr{T}\in\eteg{n}{\cam{F}}{U^{\times m}}$, then $\tnr{T}$ also belongs to $\eto{\cam{F}}{U^{\times m}}$.
+Considering  an arbitrary unitary operator $\tnr{\psi}\in\grt{U}{\cam{F}}{U^{\times m}}$ where $\dim{({U_\cam{F}})_i=n}$, tensor bases $B=\{\tnr{B}_1,\cdots,\tnr{B}_p\}$ and  $C=\{\fua{\tnr{\psi}}{\tnr{B}_1},\cdots,\fua{\tnr{\psi}}{\tnr{B}_p}\}$ of $\eto{\cam{F}}{U^{\times m}}$, where $p=n^m$, equalities $\fua{\tnr{f}_{i}^B}{\tnr{X}}=\fua{\tnr{f}_{i}^C}{\tnr{X}}$ are valid for arbitrary $\tnr{X}\in\eto{\cam{F}}{U^{\times m}}$. Moreover, if $\fua{\tnr{f}_{i}^B}{\tnr{T}}=\fua{\tnr{f}_{i}^C}{\tnr{T}}$ for a certain tensor $\tnr{T}\in\eteg{n}{\cam{F}}{U^{\times m}}$, then $\tnr{T}$ also belongs to $\eto{\cam{F}}{U^{\times m}}$.
 \end{mteo}
 
 {\footnotesize
 \begin{proof}
-From theorem \ref{teo:basesUnit}, we know that set $C$ is indeed a basis of $\eto{\cam{F}}{U^{\times m}}$. As $\fua{\tnr{\psi}}{\tnr{X}}=\tnr{X}$, equalities
+First, let's verify if set $V$ is indeed a vector space of invariant tensors on $\grt{G}{\cam{F}}{U^{\times m}}$. Considering operator $\tnr{\varphi}\in\grt{G}{\cam{F}}{U^{\times m}}$, $\alpha,\beta\in\cam{F}$ and $\tnr{A},\tnr{B}\in V$ arbitrary elements of their respective sets, the following equalities $\alpha\tnr{A}+\beta\tnr{B}=\fua{\alpha\tnr{\varphi}}{\tnr{A}}+\beta\fua{\tnr{\varphi}}{\tnr{B}}=\fua{\tnr{\varphi}}{\alpha\tnr{A}+\beta\tnr{B}}$ prove that sum and multiplication by scalar of invariant tensors result in an invariant tensor, since $\tnr{\varphi}$ is linear. This condition also justifies that $\tnr{0}\in V$ because $\fua{\tnr{\varphi}}{\tnr{0}}=\tnr{0}$. The verification of other axioms of vector spaces is trivial. Now, let's prove the theorem above. From theorem \ref{teo:basesUnit}, we know that set $C=\{\fua{\tnr{\psi}}{\tnr{B}_1},\cdots,\fua{\tnr{\psi}}{\tnr{B}_p}\}$ is indeed a basis of $\eto{\cam{F}}{U^{\times m}}$. As $\fua{\tnr{\psi}}{\tnr{X}}=\tnr{X}$, equalities
 \begin{alignat*}{3}
 \fua{\tnr{\psi}}{\tnr{X}}=\sum_{{i}=1}^p\fua{\tnr{f}_{i}^B}{\tnr{X}} \fua{\tnr{\psi}}{\tnr{B}_i} &\qquad \text{and}\qquad& \tnr{X}=\sum_{{i}=1}^p\fua{\tnr{f}_{i}^C}{\tnr{X}} \fua{\tnr{\psi}}{\tnr{B}_i}
 \end{alignat*}
@@ -793,7 +799,27 @@ enable us to verify that coordinates $\fua{\tnr{f}_{i}^B}{\tnr{X}}=\fua{\tnr{f}_
 \end{proof}
 }
 
-Admitting a tensor space $\ete{\cam{F}}{A^p}$ and a group $\grt{U}{\cam{F}}{A^p}$, where $A=U^{m}$ and $p$ is even, by equality \eqref{eq:coordIdent} we know that the coordinates of identity tensor $\tnr{I}\in\ete{\cam{F}}{A^p}$ are the same for any chosen basis. Therefore, from theorem above, it is clear that $\tnr{I}$ is isotropic, that is, $\tnr{I}\in\eto{\cam{F}}{A^p}$. In this context, again by equality \eqref{eq:coordIdent}, it is straightforward to see that the coordinates of an arbitrary tensor belonging to $\spn(\{\tnr{I}\})$ are the same for any chosen basis of $\ete{\cam{F}}{A^p}$. In this context, it is possible to affirm that \emph{any linear combination of an identity tensor is isotropic}.
+Admitting a tensor space $\ete{\cam{F}}{A^p}$ and a group $\grt{U}{\cam{F}}{A^p}$, where $A=U^{m}$ and $p$ is even, by equality \eqref{eq:coordIdent} we know that the coordinates of identity tensor $\tnr{I}\in\ete{\cam{F}}{A^p}$ are the same for any chosen basis. Therefore, from theorem above, it is clear that $\tnr{I}$ is isotropic, that is, $\tnr{I}\in\eto{\cam{F}}{A^p}$. In this context, again by equality \eqref{eq:coordIdent}, it is straightforward to see that the coordinates of an arbitrary tensor belonging to $\spn(\{\tnr{I}\})$ are the same for any chosen basis of $\ete{\cam{F}}{A^p}$. In this context, it is possible to affirm that \emph{any linear combination of an identity tensor is isotropic}. Now, given an arbitrary unimodular tensor $\tnr{H}\in\etng{m}{\cam{F}}{U^m}$, considering $B_i$ an orthonormal basis in the context of theorem \ref{teo:geraEte}, polyadic tensors $\vtf{f}_{j_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{j_m}^{B_m}$ and $\fua{\tnr{\varphi}}{\vtf{f}_{j_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{j_m}^{B_m}}$ elements of bases $B$ and $C$ of $\etng{m}{\cam{F}}{U^m}$ respectively, where $\tnr{\varphi}\in\tnr{\mathcal{U}}^+_{\cam{F}}({U^{m}})$, from equalities 
+\begin{equation*}
+\fua{\tnr{\varphi}}{\tnr{H}}=\sum_{{i_1}=1}^m\cdots\sum_{{i_m}=1}^m\fua{\tnr{f}_{i_1\cdots i_m}^B}{\tnr{H}}\fua{\tnr{\varphi}}{\vtf{f}_{j_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{j_m}^{B_m}}
+\end{equation*}
+and 
+\begin{equation*}
+\tnr{H}=\sum_{{i_1}=1}^m\cdots\sum_{{i_m}=1}^m\fua{\tnr{f}_{i_1\cdots i_m}^C}{\tnr{H}}\fua{\tnr{\varphi}}{\vtf{f}_{j_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{j_m}^{B_m}}
+\end{equation*}
+
+
+
+
+\begin{align*}
+\fua{\tnr{\varphi}}{\tnr{H}}&=\sum_{{i_1}=1}^m\cdots\sum_{{i_m}=1}^m\fua{\tnr{f}_{i_1\cdots i_m}^B}{\tnr{H}}\fua{\tnr{\varphi}}{\vtf{f}_{j_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{j_m}^{B_m}}\\
+&=\sum_{{i_1}=1}^m\cdots\sum_{{i_m}=1}^m\fua{\tnr{H}}{\vun{u}_{i_1}^{(1)},\cdots,\vun{u}_{i_m}^{(m)}}
+\end{align*}
+we conclude that $\tnr{H}$ is anti isotropic.
+
+
+
+Moreover, a unimodular tensor $\tnr{H}\in\etng{m}{\cam{F}}{U^m}$,  is a very important example of anti isotropic tensor. Let's see if this is true.   
 
 
 
