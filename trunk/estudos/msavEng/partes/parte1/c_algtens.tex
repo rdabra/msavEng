@@ -196,8 +196,8 @@ Moreover, since the sum of two (anti)symmetric tensors is an (anti)symmetric ten
 \item[ii.] If basis $B=\{\vto{u}_1,\cdots,\vto{u}_m\}$, then ${\tnr{A}_B}_{(a,b)}=-\tnr{A}_B$ and $\fua{\tnr{A}_B}{\vto{u}_1,\cdots,\vto{u}_m}=1$. 
 \item[iii.] If $\fua{\tnr{A}}{\vto{v}_1,\cdots,\vto{v}_m}=0$, for all non-zero $\tnr{A}\in\etng{m}{\cam{F}}{V^m}$, then $\{\vto{v}_1,\cdots,\vto{v}_m\}\subset V_\cam{F}$ is linearly dependent.
 \item[iv.] Given an arbitrary operator $\vtf{g}\in\grc{U}{\cam{F}}{V}$, an alternating tensor $\tnr{A}\in\etng{m}{\cam{F}}{V^m}$ and a basis $B=\{\vto{u}_1,\cdots,\vto{u}_m\}$ of $V_\cam{F}$, then
-\begin{equation}
-|\fua{\tnr{A}}{\fua{\vtf{g}}{\vto{u}_1},\cdots,\fua{\vtf{g}}{\vto{u}_m}}|=\fua{\tnr{A}}{\vto{u}_1,\cdots,\vto{u}_m}\,.
+\begin{equation}\label{eq:alternDete}
+\fua{\tnr{A}}{\fua{\vtf{g}}{\vto{u}_1},\cdots,\fua{\vtf{g}}{\vto{u}_m}}=\dete{\vtf{g}}\fua{\tnr{A}}{\vto{u}_1,\cdots,\vto{u}_m}=\pm\fua{\tnr{A}}{\vto{u}_1,\cdots,\vto{u}_m}\,.
 \end{equation}
 \end{itemize}
 
@@ -266,7 +266,7 @@ since $\vtf{g}$ is unitary.
 }
 
 
-A tensor $\tnr{H}\in\etng{m}{\cam{F}}{U^m}$, where $U_\cam{F}$ is a Hilbert space, is called \textsb{unimodular}\index{tensor!unimodular} if scalar $|\fua{\tnr{H}}{\vun{u}_1,\cdots,\vun{u}_m}|=1$ for every orthonormal basis $\{\vun{u}_1,\cdots,\vun{u}_m\}$. If tensors $\tnr{X}$ and $\tnr{H}$ are unimodular, we have $|\fua{\tnr{X}}{\vun{u}_1,\cdots,\vun{u}_m}|=|\fua{\tnr{H}}{\vun{u}_1,\cdots,\vun{u}_m}|$ and then $\tnr{X}=\pm\tnr{H}$. Thereby, we can affirm that if tensor $\tnr{H}$ is unimodular, so is $-\tnr{H}$. In this context, we can obtain that the basis tensor $\tnr{A}_B$ of $\etng{m}{\cam{F}}{U^m}$ is unimodular and then since any other vector in this alternating tensor space can be expressed as $\alpha\tnr{A}_B$, there are only two unimodular tensors in $\etng{m}{\cam{F}}{U^m}$ relative to basis $B$, namely, $\tnr{A}_B$ and $-\tnr{A}_B$. In this sense, considering $\tnr{A}\in\etng{m}{\cam{F}}{U^m}$ unimodular and $B=\{\vun{u}_1,\cdots,\vun{u}_m\}$ an arbitrary orthonormal basis of $U_\cam{F}$, the double $(U_\cam{F},\tnr{A})$ is said to be an \textsb{oriented vector space}\index{vector space!oriented}, where basis $B$ is called \textsb{positively}\index{basis!positively oriented} or \textsb{negatively oriented}\index{basis!negatively oriented} if scalar $\fua{\tnr{A}}{\vun{u}_1,\cdots,\vun{u}_m}$ is $+1$ or $-1$ respectively. Note that a basis $B$ is always positively oriented when $\tnr{A}=\tnr{A}_B$.
+A tensor $\tnr{H}\in\etng{m}{\cam{F}}{U^m}$, where $U_\cam{F}$ is a Hilbert space, is called \textsb{unimodular}\index{tensor!unimodular} if scalar $|\fua{\tnr{H}}{\vun{u}_1,\cdots,\vun{u}_m}|=1$ for every orthonormal basis $\{\vun{u}_1,\cdots,\vun{u}_m\}$. If tensors $\tnr{X}$ and $\tnr{H}$ are unimodular, we have $|\fua{\tnr{X}}{\vun{u}_1,\cdots,\vun{u}_m}|=|\fua{\tnr{H}}{\vun{u}_1,\cdots,\vun{u}_m}|$ and then $\tnr{X}=\pm\tnr{H}$. Thereby, we can affirm that if tensor $\tnr{H}$ is unimodular, so is $-\tnr{H}$. In this context, we can obtain that the basis tensor $\tnr{A}_B$ of $\etng{m}{\cam{F}}{U^m}$ is unimodular and then since any other vector in this alternating tensor space can be expressed as $\alpha\tnr{A}_B$, there are only two unimodular tensors in $\etng{m}{\cam{F}}{U^m}$ relative to basis $B$, namely, $\tnr{A}_B$ and $-\tnr{A}_B$. In this sense, considering $\tnr{A}\in\etng{m}{\cam{F}}{U^m}$ unimodular and $B=\{\vun{u}_1,\cdots,\vun{u}_m\}$ an arbitrary orthonormal basis of $U_\cam{F}$, the double $(U_\cam{F},\tnr{A})$ is said to be an \textsb{oriented vector space}\index{vector space!oriented}, where basis $B$ is called \textsb{positively}\index{basis!positively oriented} or \textsb{negatively oriented}\index{basis!negatively oriented} if scalar $\fua{\tnr{A}}{\vun{u}_1,\cdots,\vun{u}_m}$ is $+1$ or $-1$ respectively. Note that basis $B$ of $(U_\cam{F},\tnr{A}_B)$ is always positively oriented. In this context, we obtain that a basis $\{\fua{\vtf{h}}{\vun{u}_1},\cdots,\fua{\vtf{h}}{\vun{u}_m}\}$, for all $\vtf{h}\in\grc{U^+}{\cam{F}}{V}$, is positively oriented. Moreover, if basis $\{\vun{v}_1,\cdots,\vun{v}_m\}$ is negatively oriented, so is $\{\fua{\vtf{h}}{\vun{v}_1},\cdots,\fua{\vtf{h}}{\vun{v}_m}\}$. In other words, \emph{basis orientation is immune to proper unitary operators}. 
 
 {\footnotesize
 \begin{proof}
@@ -276,7 +276,8 @@ Lets verify $\tnr{A}_B$ is indeed unimodular. Given $B=\{\vun{u}_1,\cdots,\vun{u
 &=\sum_{i_1=1}^m\cdots\sum_{i_m=1}^m\epsilon_{i_1\cdots i_m} \prod_{k=1}^m\maf{\vtf{g}}{B}{B}_{i_kk}\\
 &=\dete{\vtf{g}}\\
 &=\pm 1\,.
-\end{align*} 
+\end{align*}
+Now we prove that proper unitary operators do not change basis orientation. From equalities \eqref{eq:alternDete}, we obtain for the present case that $\fua{\tnr{A}_B}{\fua{\vtf{h}}{\vun{u}_1},\cdots,\fua{\vtf{h}}{\vun{u}_m}}=\fua{\tnr{A}_B}{\vun{u}_1,\cdots,\vun{u}_m}=1$. Similarly, $\fua{\tnr{A}_B}{\fua{\vtf{h}}{\vun{v}_1},\cdots,\fua{\vtf{h}}{\vun{v}_m}}=\fua{\tnr{A}_B}{\vun{v}_1,\cdots,\vun{v}_m}=-1$.   
 \end{proof}
 }
 
