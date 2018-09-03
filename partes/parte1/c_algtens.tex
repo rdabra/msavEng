@@ -265,8 +265,13 @@ since $\vtf{g}$ is unitary.
 \end{proof}
 }
 
+A tensor $\tnr{H}\in\etng{m}{\cam{F}}{U^m}$, where $U_\cam{F}$ is a Hilbert space, is called \textsb{unimodular}\index{tensor!unimodular} if scalar $|\fua{\tnr{H}}{\vun{u}_1,\cdots,\vun{u}_m}|=1$ for every orthonormal basis $\{\vun{u}_1,\cdots,\vun{u}_m\}$. If tensors $\tnr{X}$ and $\tnr{H}$ are unimodular, we have $|\fua{\tnr{X}}{\vun{u}_1,\cdots,\vun{u}_m}|=|\fua{\tnr{H}}{\vun{u}_1,\cdots,\vun{u}_m}|$ and then $\tnr{X}=\pm\tnr{H}$. Thereby, we can affirm that if tensor $\tnr{H}$ is unimodular, so is $-\tnr{H}$. In this context, we can obtain that the basis tensor $\tnr{A}_B$ of $\etng{m}{\cam{F}}{U^m}$ is unimodular and then since any other vector in this alternating tensor space can be expressed as $\alpha\tnr{A}_B$, there are only two unimodular tensors in $\etng{m}{\cam{F}}{U^m}$ relative to basis $B$, namely, $\tnr{A}_B$ and $-\tnr{A}_B$. In this sense, considering $\tnr{A}\in\etng{m}{\cam{F}}{U^m}$ unimodular and $B=\{\vun{u}_1,\cdots,\vun{u}_m\}$ an arbitrary orthonormal basis of $U_\cam{F}$, the double $(U_\cam{F},\tnr{A})$ is said to be an \textsb{oriented vector space}\index{vector space!oriented}, where basis $B$ is called \textsb{positively}\index{basis!positively oriented} or \textsb{negatively oriented}\index{basis!negatively oriented} if scalar $\fua{\tnr{A}}{\vun{u}_1,\cdots,\vun{u}_m}$ is $+1$ or $-1$ respectively. Note that basis $B$ of $(U_\cam{F},\tnr{A}_B)$ is always positively oriented. In this context, we obtain that a basis $\{\fua{\vtf{h}}{\vun{u}_1},\cdots,\fua{\vtf{h}}{\vun{u}_m}\}$, for all $\vtf{h}\in\grc{U^+}{\cam{F}}{V}$, is positively oriented. Moreover, if basis $\{\vun{v}_1,\cdots,\vun{v}_m\}$ is negatively oriented, so is $\{\fua{\vtf{h}}{\vun{v}_1},\cdots,\fua{\vtf{h}}{\vun{v}_m}\}$; and then we can say that \emph{basis orientation is immune to proper unitary operators}. Now, since $\tnr{A}_B$ is unimodular, given an arbitrary alternating tensor $\tnr{P}\in\etng{m}{\cam{F}}{U^m}$, its coordinate elements
+\begin{equation*}
+\vtf{f}_{i_1\cdots i_m}^{X}(\tnr{P})= \fua{\tnr{P}}{\vun{x}_{i_1},\cdots,\vun{x}_{i_m}}=
+\fua{\alpha\tnr{A}_B}{\vun{x}_{i_1},\cdots,\vun{x}_{i_m}}=\alpha\epsilon_{i_1\cdots i_m}\fua{\tnr{A}_B}{\vun{x}_{1},\cdots,\vun{x}_{m}}
+\end{equation*}
+equal to $\alpha\epsilon_{i_1\cdots i_m}$ or $-\alpha\epsilon_{i_1\cdots i_m}$ when basis $\{\vun{x}_{1},\cdots,\vun{x}_{m}\}$ of $(U_\cam{F},\tnr{A}_B)$ is positively or negatively oriented respectively. In other words, the coordinates of an alternating tensor are identical for any positively (negatively) oriented basis. 
 
-A tensor $\tnr{H}\in\etng{m}{\cam{F}}{U^m}$, where $U_\cam{F}$ is a Hilbert space, is called \textsb{unimodular}\index{tensor!unimodular} if scalar $|\fua{\tnr{H}}{\vun{u}_1,\cdots,\vun{u}_m}|=1$ for every orthonormal basis $\{\vun{u}_1,\cdots,\vun{u}_m\}$. If tensors $\tnr{X}$ and $\tnr{H}$ are unimodular, we have $|\fua{\tnr{X}}{\vun{u}_1,\cdots,\vun{u}_m}|=|\fua{\tnr{H}}{\vun{u}_1,\cdots,\vun{u}_m}|$ and then $\tnr{X}=\pm\tnr{H}$. Thereby, we can affirm that if tensor $\tnr{H}$ is unimodular, so is $-\tnr{H}$. In this context, we can obtain that the basis tensor $\tnr{A}_B$ of $\etng{m}{\cam{F}}{U^m}$ is unimodular and then since any other vector in this alternating tensor space can be expressed as $\alpha\tnr{A}_B$, there are only two unimodular tensors in $\etng{m}{\cam{F}}{U^m}$ relative to basis $B$, namely, $\tnr{A}_B$ and $-\tnr{A}_B$. In this sense, considering $\tnr{A}\in\etng{m}{\cam{F}}{U^m}$ unimodular and $B=\{\vun{u}_1,\cdots,\vun{u}_m\}$ an arbitrary orthonormal basis of $U_\cam{F}$, the double $(U_\cam{F},\tnr{A})$ is said to be an \textsb{oriented vector space}\index{vector space!oriented}, where basis $B$ is called \textsb{positively}\index{basis!positively oriented} or \textsb{negatively oriented}\index{basis!negatively oriented} if scalar $\fua{\tnr{A}}{\vun{u}_1,\cdots,\vun{u}_m}$ is $+1$ or $-1$ respectively. Note that basis $B$ of $(U_\cam{F},\tnr{A}_B)$ is always positively oriented. In this context, we obtain that a basis $\{\fua{\vtf{h}}{\vun{u}_1},\cdots,\fua{\vtf{h}}{\vun{u}_m}\}$, for all $\vtf{h}\in\grc{U^+}{\cam{F}}{V}$, is positively oriented. Moreover, if basis $\{\vun{v}_1,\cdots,\vun{v}_m\}$ is negatively oriented, so is $\{\fua{\vtf{h}}{\vun{v}_1},\cdots,\fua{\vtf{h}}{\vun{v}_m}\}$. In other words, \emph{basis orientation is immune to proper unitary operators}. 
 
 {\footnotesize
 \begin{proof}
@@ -280,13 +285,6 @@ Lets verify $\tnr{A}_B$ is indeed unimodular. Given $B=\{\vun{u}_1,\cdots,\vun{u
 Now we prove that proper unitary operators do not change basis orientation. From equalities \eqref{eq:alternDete}, we obtain for the present case that $\fua{\tnr{A}_B}{\fua{\vtf{h}}{\vun{u}_1},\cdots,\fua{\vtf{h}}{\vun{u}_m}}=\fua{\tnr{A}_B}{\vun{u}_1,\cdots,\vun{u}_m}=1$. Similarly, $\fua{\tnr{A}_B}{\fua{\vtf{h}}{\vun{v}_1},\cdots,\fua{\vtf{h}}{\vun{v}_m}}=\fua{\tnr{A}_B}{\vun{v}_1,\cdots,\vun{v}_m}=-1$.   
 \end{proof}
 }
-
-
-
-
-
-
-
 
 Additionally to symmetric and antisymmetric, there is another notable tensor that will enable very important concepts for our study, like isotropy and anti-isotropy for example: I'm referring to the identity tensor, which is defined in tensor spaces of even order. We call \gloref{tensorI}$\,\in\ete{\cam{F}}{V^{\times p}\times V^{\times p}}$ an \textsb{identity tensor}\index{tensor!identity} of order $2p$ if, considering $\vto{x}_i$ and $\vto{y}_i$ arbitrary vectors of  $(V_\cam{F})_i$, scalar
 \begin{equation}\label{eq:identidade}
@@ -517,7 +515,7 @@ In this study, a tensor function is treated like an ordinary function, on which 
 \end{alignat}
 where functions $\tnr{\psi}^\dagger,\tnr{\psi}^\text{T}\in\evlc{\cam{F}}{\ete{\cam{F}}{V^{\times q}}}{\ete{\cam{F}}{U^{\times p}}}$ are called the Hilbert-adjoint and transpose tensor functions of $\tnr{\psi}$ respectively, as defined on section \ref{sec:FuncLin}. In this context, all properties of ordinary adjoint or transpose functions presented on page \pageref{eq:propAdj} are also valid and for an operator $\tnr{\varphi}\in\evlc{\cam{F}}{\ete{\cam{F}}{U^{\times p}}}{\ete{\cam{F}}{U^{\times p}}}$, it is said to be Hermitian when  $\tnr{\varphi}=\tnr{\varphi}^\dagger$ and anti-Hermitian when $\tnr{\varphi}=-\tnr{\varphi}^\dagger$. Moreover, operator $\tnr{\varphi}$ is called symmetric if $\tnr{\varphi}=\tnr{\varphi}^\text{T}$ and antisymmetric when $\tnr{\varphi}=-\tnr{\varphi}^\text{T}$. As defined previously, if tensor function $\tnr{\psi}$ is an injection whose inverse equals the adjoint, it is called unitary; or if injection $\tnr{\psi}$ has its inverse equal to its transpose, it is called orthogonal. Similarly to ordinary unitary and orthogonal operators, the set of all unitary tensor operators on domain $\ete{\cam{F}}{U^{\times p}}$ defines a unitary group of tensors $\grt{U}{\cam{F}}{U^{\times p}}\subset\grt{G}{\cam{F}}{U^{\times p}}$ on this same domain and the set of all orthogonal tensor operators on $\ete{\cam{F}}{U^{\times p}}$ defines an orthogonal group  $\grt{O}{\cam{F}}{U^{\times p}}\subset\grt{G}{\cam{F}}{U^{\times p}}$. Again, like ordinary unitary operators, unitary tensor operators clearly preserve inner product. An operator $\tnr{\kappa}\in\evl{\cam{F}}{\ete{\cam{F}}{U^{\times p}}}{\ete{\cam{F}}{U^{\times p}}}$ is called isometric if  $\varrho\,[\fua{\tnr{\kappa}}{\tnr{U}_1},\fua{\tnr{\kappa}}{\tnr{U}_2}]=\fua{\varrho}{\tnr{U}_1,\tnr{U}_2}$, where tensors $\tnr{U}_1$ and $\tnr{U}_2$ are arbitrary. Thereby, the set of all isometric tensor operators defines an isometry group $\grt{I}{\cam{F}}{U^{\times p}}$. For Euclidean tensor spaces, an isometry group is also an unitary group whose elements preserve inner product; it is also true that adjoint, (anti-)Hermitian and unitary functions equal respectively to transpose, (anti)symmetric and orthogonal functions.
 
-\begin{mteo}{Bases And Unitary Tensor Operators}{basesUnit}
+\begin{mteo}{Bases and Unitary Tensor Operators}{basesUnit}
 Considering $\tnr{\psi}\in\grt{U}{\cam{F}}{U^{\times p}}$ an arbitrary operator and $\vtf{f}_{i_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{i_p}^{B_p}$ an arbitrary element of a basis of $\ete{\cam{F}}{U^{\times p}}$, then $\fua{\tnr{\psi}}{\vtf{f}_{i_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{i_p}^{B_p}}$ is also an element of a basis of  $\ete{\cam{F}}{U^{\times p}}$.
 \end{mteo}
 
@@ -532,6 +530,22 @@ prove that a set $C$ built from all $\fua{\tnr{\psi}}{\vtf{f}_{i_1}^{B_1}\otimes
 \tnr{X} = \fua{\tnr{\psi}}{\tnr{T}} = \sum_{{i_1}=1}^{n_1}\cdots\sum_{{i_p}=1}^{n_p}\underbrace{\fua{\vtf{f}^{B}_{i_1\cdots i_p}}{\tnr{T}}}_{\fua{\vtf{f}^{C}_{i_1\cdots i_p}}{\tnr{X}}}\fua{\tnr{\psi}}{\vtf{f}_{i_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{i_p}^{B_p}}
 \end{equation*}
 from which we conclude that $C$ spans $\ete{\cam{F}}{U^{\times p}}$ and then $\fua{\vtf{f}^{B}_{i_1\cdots i_p}}{\tnr{T}}=\fua{\vtf{f}^{C}_{i_1\cdots i_p}}{\tnr{X}}$.
+\end{proof}
+}
+
+\begin{mcoro}{Orthonormal Bases and Unitary Tensor Operators}{orthobasesUnit}
+Given $\vtf{f}_{i_1}^{C_1}\otimes\cdots\otimes\vtf{f}_{i_p}^{C_p}:=\fua{\tnr{\psi}}{\vtf{f}_{i_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{i_p}^{B_p}}$, if basis $B_i$ of $(U_\cam{F})_i$ is orthonormal, so is $C_i$.
+\end{mcoro}
+
+{\footnotesize  
+\begin{proof}
+As $\tnr{\psi}$ preserves inner product, the following development prove the theorem.
+\begin{align*}
+\prod_{k=1}^p\delta_{i_kj_k}&=\vtf{f}_{i_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{i_p}^{B_p}\cdot\vtf{f}_{j_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{j_p}^{B_p}\\
+&=\fua{\tnr{\psi}}{\vtf{f}_{i_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{i_p}^{B_p}}\cdot\fua{\tnr{\psi}}{\vtf{f}_{j_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{j_p}^{B_p}}\\
+&=\vtf{f}_{i_1}^{C_1}\otimes\cdots\otimes\vtf{f}_{i_p}^{C_p}\cdot\vtf{f}_{j_1}^{C_1}\otimes\cdots\otimes\vtf{f}_{j_p}^{C_p}\,.
+\end{align*}
+
 \end{proof}
 }
 
@@ -716,7 +730,7 @@ enables us to affirm that
  
 \section{Invariance of Tensors}
 
-The notion of invariance is of paramount importance in Classical Physics because the fundamental description of mechanical phenomena must be not only qualitatively immune to arbitrary changes of reference frame but also quantitatively indifferent when such changes are of orthogonal type. From a constitutive viewpoint, materials have their invariance too, when some or all of their inherent mechanical properties present themselves indistinctly on certain directions, that is, the overall mechanical behavior of a portion of matter in study is the same when this portion is subjected to specific motions. A tensor, as an algebraic entity that suitably embodies a physical magnitude, can be used to accordingly describe a mechanical measurement or a constitutive material property, including their eventual invariance requirements which we referred to. Thereby, it is the purpose of this section to briefly develop in mathematical terms this intuitive concept of invariance applied to tensors.
+The notion of invariance is of paramount importance in Classical Physics because the fundamental description of mechanical phenomena must be not only qualitatively immune to arbitrary changes of reference frame but also quantitatively indifferent when such changes are of unitary type. From a constitutive viewpoint, materials have their invariance too, when some or all of their inherent mechanical properties present themselves indistinctly on certain directions, that is, the overall mechanical behavior of a portion of matter in study is the same when this portion is subjected to specific motions. A tensor, as an algebraic entity that suitably embodies a physical magnitude, can be used to accordingly describe a mechanical measurement or a constitutive material property, including their eventual invariance requirements which we referred to. Thereby, it is the purpose of this section to briefly develop in mathematical terms this intuitive concept of invariance applied to tensors.
 
 Before we develop mathematically this notion of tensor invariance, there is a preliminary definition that needs to be addressed. The feature of proper orthogonality -- to which anti-isotropic tensors are invariant -- is also valid for tensor operators. As presented in section \ref{sec:Matrix}, an orthogonal operator is called proper if its determinant is $1$, but we still don't know what a determinant of a tensor operator is. In order to present this unusual definition as concisely as possible, we shall sacrifice self-containedness and tacitly accept the approach of \aut{Spivak}\cite{spivak_1965_1}\footnote{See also \aut{Bishop \& Goldberg}\cite{bishop_1980_1}, pp.97-100, and \aut{Backus}\cite{backus_1997_1}, pp.17-21.}, adapting to our case his theorem 4-6. Firstly, let's consider $\tnr{P}\in\etng{n}{\cam{F}}{A^p}$ an arbitrary non-zero antisymmetric tensor where set $A=U^{\times m}$ and $p=n^m$. Let $\tnr{\psi}\in\evl{\cam{F}}{\eteg{n}{\cam{F}}{A}}{\eteg{n}{\cam{F}}{A}}$ and   $\tnr{P}^{\tnr{\psi}}\in\ete{\cam{F}}{A^p}$ such that
 \begin{equation}\label{eq:defDetPsi}
