@@ -545,9 +545,14 @@ As $\tnr{\psi}$ preserves inner product, the following development prove the the
 &=\fua{\tnr{\psi}}{\vtf{f}_{i_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{i_p}^{B_p}}\cdot\fua{\tnr{\psi}}{\vtf{f}_{j_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{j_p}^{B_p}}\\
 &=\vtf{f}_{i_1}^{C_1}\otimes\cdots\otimes\vtf{f}_{i_p}^{C_p}\cdot\vtf{f}_{j_1}^{C_1}\otimes\cdots\otimes\vtf{f}_{j_p}^{C_p}\,.
 \end{align*}
-
 \end{proof}
 }
+
+Considering the context of previous corollary for a tensor space $\eteg{n}{\cam{F}}{U^{p}}$, we have $\vtf{f}_{i_1}^{C}\otimes\cdots\otimes\vtf{f}_{i_p}^{C}:=\fua{\tnr{\psi}}{\vtf{f}_{i_1}^{B}\otimes\cdots\otimes\vtf{f}_{i_p}^{B}}$. As we already know, the pair of bases $B$ and $C$ can be related through a unitary operator $\vtf{g}\in\grc{U}{\cam{F}}{U}$, that is, if $B=\{\vun{u}_1,\cdots,\vun{u}_n\}$ then basis  $C=\{\fua{\vtf{g}}{\vun{u}_1},\cdots,\fua{\vtf{g}}{\vun{u}_n}\}$. Thereby, it is possible to write that 
+\begin{equation}
+\fua{\vtf{g}}{\vun{u}_{i_1}}^*\otimes\cdots\otimes\fua{\vtf{g}}{\vun{u}_{i_p}}^*:=\fua{\tnr{\psi}}{\vun{u}_{i_1}^*\otimes\cdots\otimes\vun{u}_{i_p}^*}\,,
+\end{equation}
+where an arbitrary unitary tensor operator is always related to a unitary operator. TENHO QUE PROVAR QUE O DET DE PSI É IGUAL AO DET DE G 
 
 The concept of tensor function, up to now, has enabled us to arrive at dual and inner product tensor spaces from the definitions of linear tensor functional and contractive product respectively. In comparative terms, we are now in a similar situation to that which preceded the essential Riesz-Fréchet Theorem in section \ref{sec:FuncLin}. Then, an interesting question naturally arises: ``Considering a Hilbert tensor space, is it possible for each of its tensors to have a corresponding `cotensor' just like a vector in Hilbert spaces has a covector?'' An affirmative answer to this question would be convenient for our purposes because we could properly replace in suitable cases the multilinearity of tensors by the linearity of the so called cotensors. In practice, considering a proper relationship between the values of tensor and cotensor, we could be able to approach tensor differentiation by working with single variable tensor functions instead of tensors themselves, inherently multivariable. The remaining text of this section shows that the concept of \textsb{cotensor}\index{cotensor} is indeed feasible.
 
@@ -559,7 +564,7 @@ Let
 \end{equation*}
 be a mapping where the tensor spaces involved are Hilbert spaces. If for every tensor $\tnr{T}$ of $\ete{\cam{F}}{W^{\times p}\times A^{\times q}}$, a $p$-cotensor  \gloref{pCotensor}$:=\fua{\tnr{\Phi}}{\tnr{T}}$ is described by the rule $\fua{\vtf{T}^*_p}{\tnr{X}}=\tnr{X}\odot_p\tnr{T}$ then $\tnr{\Phi}$ is an antilinear bijection.
 \end{mteo}
-
+\hspace{1pt}
 {\footnotesize
 \begin{proof}
 Considering $\tnr{A},\tnr{B}\in\ete{\cam{F}}{W^{\times p}\times A^{\times q}}$, function $\tnr{\Phi}$ is antilinear from the following:
