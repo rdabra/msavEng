@@ -549,10 +549,10 @@ As $\tnr{\psi}$ preserves inner product, the following development prove the the
 }
 
 Considering the context of previous corollary for a tensor space $\eteg{n}{\cam{F}}{U^{p}}$, we have $\vtf{f}_{i_1}^{C}\otimes\cdots\otimes\vtf{f}_{i_p}^{C}:=\fua{\tnr{\psi}}{\vtf{f}_{i_1}^{B}\otimes\cdots\otimes\vtf{f}_{i_p}^{B}}$. As we already know, the pair of bases $B$ and $C$ can be related through a unitary operator $\vtf{g}\in\grc{U}{\cam{F}}{U}$, that is, if $B=\{\vun{u}_1,\cdots,\vun{u}_n\}$ then basis  $C=\{\fua{\vtf{g}}{\vun{u}_1},\cdots,\fua{\vtf{g}}{\vun{u}_n}\}$. Thereby, it is possible to write that 
-\begin{equation}
+\begin{equation}\label{eq:opeTensOrdin}
 \fua{\vtf{g}}{\vun{u}_{i_1}}^*\otimes\cdots\otimes\fua{\vtf{g}}{\vun{u}_{i_p}}^*:=\fua{\tnr{\psi}}{\vun{u}_{i_1}^*\otimes\cdots\otimes\vun{u}_{i_p}^*}\,,
 \end{equation}
-where an arbitrary unitary tensor operator is always related to a unitary operator. TENHO QUE PROVAR QUE O DET DE PSI É IGUAL AO DET DE G 
+where an arbitrary unitary tensor operator is always related to a unitary operator. 
 
 The concept of tensor function, up to now, has enabled us to arrive at dual and inner product tensor spaces from the definitions of linear tensor functional and contractive product respectively. In comparative terms, we are now in a similar situation to that which preceded the essential Riesz-Fréchet Theorem in section \ref{sec:FuncLin}. Then, an interesting question naturally arises: ``Considering a Hilbert tensor space, is it possible for each of its tensors to have a corresponding `cotensor' just like a vector in Hilbert spaces has a covector?'' An affirmative answer to this question would be convenient for our purposes because we could properly replace in suitable cases the multilinearity of tensors by the linearity of the so called cotensors. In practice, considering a proper relationship between the values of tensor and cotensor, we could be able to approach tensor differentiation by working with single variable tensor functions instead of tensors themselves, inherently multivariable. The remaining text of this section shows that the concept of \textsb{cotensor}\index{cotensor} is indeed feasible.
 
@@ -755,7 +755,7 @@ leads to equality $\tnr{K}^{\tnr{\psi}}=\alpha\tnr{K}$. Therefore, it is possibl
 is valid for all $\tnr{P}\in\{\etn{\cam{F}}{A^p}\setminus \tnr{0}\}$ and all $\tnr{X}_i\in\eteg{n}{\cam{F}}{A}$. According to theorem \ref{teo:repRieszTensor}, in the particular case where operator $\tnr{\psi}$ is a $m$-cotensor of $\tnr{T}\in \ete{\cam{F}}{A^2}$, that is, $\tnr{T}_m^*=\tnr{\psi}$, it is possible to state that $\hdet{\tnr{T}}:=\hdet{\tnr{\psi}}$ and  
 \begin{equation}
 \fua{\tnr{P}}{\fua{\tnr{T}_m^*}{\tnr{X}_1},\cdots,{\fua{\tnr{T}_m^*}{\tnr{X}_p}}}=\hdet{\tnr{T}}{\fua{\tnr{P}}{\tnr{X}_1,\cdots,\tnr{X}_p}}\,.
-\end{equation}  
+\end{equation}
 Now, considering arbitrary functions $\tnr{\psi},\tnr{\varphi}\in\evl{\cam{F}}{\eteg{n}{\cam{F}}{A}}{\eteg{n}{\cam{F}}{A}}$, the following properties of determinant of tensor operators are valid:
 \begin{itemize}
 \setlength\itemsep{.1em}
@@ -799,6 +799,26 @@ and consequently
 &=\overline{\hdet{\tnr{\psi}}}\fua{\tnr{P}}{{\tnr{B}_{1}},\cdots,{\tnr{B}_{p}}}\,,
 \end{align*}
 since an equality similar to \eqref{eq:DeterminanteSimplificado} can be obtained by considering $i_k=k$ on \eqref{eq:Determinante}. Now, equalities $1=\hdet{\tnr{i}}=\hdet{\tnr{\psi}\circ\tnr{\psi}^\dagger} =  \hdet{\tnr{\psi}}\,\hdet{\tnr{\psi}^\dagger}=|\hdet{\tnr{\psi}}|^2$ prove item vii.  
+\end{proof}
+}
+
+This theory of determinant presented so far is obviously valid for the context of order $m=1$, that is, the context of an alternating tensor space $\etng{n}{\cam{F}}{U^n}$. Equalities \eqref{eq:alternDete} is an example of this 
+The following theorem considers the result obtained by equality \eqref{eq:opeTensOrdin}, where a unitary tensor operator is always related to an ordinary unitary operator. 
+
+\begin{mteo}{Related Unitary Operators and Alternating Tensors}{orthogAltern}
+Considering a tensor $\tnr{A}\in\etng{n}{\cam{F}}{U^n}$, a unitary tensor operator $\tnr{\psi}\in\grt{U}{\cam{F}}{U^{n}}$ related to a unitary operator $\vtf{g}\in\grc{U}{\cam{F}}{U}$ through $\fua{\vtf{g}}{\vun{u}_{i_1}}^*\otimes\cdots\otimes\fua{\vtf{g}}{\vun{u}_{i_n}}^*=\fua{\tnr{\psi}}{\vun{u}_{i_1}^*\otimes\cdots\otimes\vun{u}_{i_n}^*}$, where  set $B=\{\vun{u}_1,\cdots,\vun{u}_n\}$ is an orthonormal basis of $U_\cam{F}$, tensor $\tnr{A}=\dete{\vtf{g}}\fua{\tnr{\psi}}{\tnr{A}}$.
+\end{mteo}
+{\footnotesize
+\begin{proof}
+As unitary operators preserve inner product, from \eqref{eq:igAntis}, \eqref{eq:propProdIndTens} and \eqref{eq:detFunDef}, we can write 
+\begin{align*}
+\fua{\tnr{A}}{\fua{\vtf{g}}{{\vun{u}_{i_1}}},\cdots,\fua{\vtf{g}}{\vun{u}_{i_n}}}&=\dete{\vtf{g}}\,\fua{\tnr{A}}{\vun{u}_{i_1},\cdots,\vun{u}_{i_n}}\\
+\epsilon_{i_1\cdots i_n} \tnr{A} \cdot (\fua{\vtf{g}}{{\vun{u}_{1}}}^*\otimes\cdots\otimes\fua{\vtf{g}}{\vun{u}_{n}}^*)&=\epsilon_{i_1\cdots i_n}\dete{\vtf{g}}\, \tnr{A} \cdot (\vun{u}_{1}^*\otimes\cdots\otimes\vun{u}_{n}^*)\\
+\tnr{A} \cdot \fua{\tnr{\psi}}{\vun{u}_{1}^*\otimes\cdots\otimes\vun{u}_{n}^*} &= \dete{\vtf{g}}\, \tnr{A} \cdot (\vun{u}_{1}^*\otimes\cdots\otimes\vun{u}_{n}^*)\\
+\fua{\tnr{\psi}\circ\tnr{\psi}^{-1}}{\tnr{A}} \cdot \fua{\tnr{\psi}}{\vun{u}_{1}^*\otimes\cdots\otimes\vun{u}_{n}^*}&=\dete{\vtf{g}}\, \tnr{A} \cdot (\vun{u}_{1}^*\otimes\cdots\otimes\vun{u}_{n}^*)\\
+\fua{\tnr{\psi}^{-1}}{\tnr{A}} \cdot (\vun{u}_{1}^*\otimes\cdots\otimes\vun{u}_{n}^*)&=\dete{\vtf{g}}\, \tnr{A} \cdot (\vun{u}_{1}^*\otimes\cdots\otimes\vun{u}_{n}^*)\\
+\tnr{A} &= \dete{\vtf{g}}\, \fua{\tnr{\psi}}{\tnr{A}}\,.
+\end{align*} 
 \end{proof}
 }
 
