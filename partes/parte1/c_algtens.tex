@@ -818,12 +818,12 @@ since an equality similar to \eqref{eq:DeterminanteSimplificado} can be obtained
 
 This theory of determinant presented so far is obviously valid for the context of order $m=1$, that is, the context of a tensor space $\etng{n}{\cam{F}}{U^n}$. Equalities \eqref{eq:alternDete} consist a specific example of the validity of \eqref{eq:detFunDef} for alternating tensors. The following theorem considers the result obtained by equality \eqref{eq:opeTensOrdin}, where a unitary tensor operator is always related to an ordinary unitary operator. 
 
-\begin{mteo}{Related Unitary Operators and Alternating Tensors}{unimodAltern}
-Given a tensor $\tnr{A}\in\etng{n}{\cam{F}}{U^n}$, a unitary tensor operator $\tnr{\psi}\in\grt{U}{\cam{F}}{U^{n}}$ related to a unitary operator $\vtf{g}\in\grc{U}{\cam{F}}{U}$ by $\fua{\vtf{g}}{\vto{x}_{1}}^*\otimes\cdots\otimes\fua{\vtf{g}}{\vto{x}_{n}}^*=\fua{\tnr{\psi}}{\vto{x}_{1}^*\otimes\cdots\otimes\vto{x}_{n}^*}$, tensor $\tnr{A}=\dete{\vtf{g}}\fua{\tnr{\psi}}{\tnr{A}}$.
+\begin{mteo}{Unitary Tensor Operators and Alternating Tensors}{unimodAltern}
+Considering an arbitrary alternating tensor $\tnr{A}\in\etng{n}{\cam{F}}{U^n}$ and an arbitrary unitary tensor operator $\tnr{\psi}\in\grt{U}{\cam{F}}{U^{n}}$, it is valid that $\tnr{A}=\hdet{\tnr{\psi}}\,\fua{\tnr{\psi}}{\tnr{A}}$.
 \end{mteo}
 {\footnotesize
 \begin{proof}
-As unitary operators preserve inner product, from \eqref{eq:igAntis}, \eqref{eq:propProdIndTens} and \eqref{eq:detFunDef}, we can write 
+From \eqref{eq:opeTensOrdin}, we know that a unitary tensor operator $\tnr{\psi}\in\grt{U}{\cam{F}}{U^{n}}$ is always related to a unitary operator $\vtf{g}\in\grc{U}{\cam{F}}{U}$. As unitary operators preserve inner product, from \eqref{eq:igAntis}, \eqref{eq:propProdIndTens} and \eqref{eq:detFunDef}, 
 \begin{align*}
 \fua{\tnr{A}}{\fua{\vtf{g}}{{\vto{x}_{1}}},\cdots,\fua{\vtf{g}}{\vto{x}_{n}}}&=\dete{\vtf{g}}\,\fua{\tnr{A}}{\vto{x}_{1},\cdots,\vto{x}_{n}}\\
  \tnr{A} \cdot (\fua{\vtf{g}}{{\vto{x}_{1}}}^*\otimes\cdots\otimes\fua{\vtf{g}}{\vto{x}_{n}}^*)&=\dete{\vtf{g}}\, \tnr{A} \cdot (\vto{x}_{1}^*\otimes\cdots\otimes\vto{x}_{n}^*)\\
@@ -832,15 +832,7 @@ As unitary operators preserve inner product, from \eqref{eq:igAntis}, \eqref{eq:
 \fua{\tnr{\psi}^{-1}}{\tnr{A}} \cdot (\vto{x}_{1}^*\otimes\cdots\otimes\vto{x}_{n}^*)&=\dete{\vtf{g}}\, \tnr{A} \cdot (\vto{x}_{1}^*\otimes\cdots\otimes\vto{x}_{n}^*)\\
 \tnr{A} &= \dete{\vtf{g}}\, \fua{\tnr{\psi}}{\tnr{A}}\,.
 \end{align*} 
-\end{proof}
-}
-
-\begin{mcoro}{Determinant of Related Unitary Operators}{deterUnita}
-If unitary tensor operator $\tnr{\psi}$ is related to unitary operator $\vtf{g}$ then $\dete{\vtf{g}}=\hdet{\tnr{\psi}}$.
-\end{mcoro}
-{\footnotesize
-\begin{proof}
-Considering a unimodular tensor $\tnr{A}_B$, where $B=\{\vun{u}_1,\cdots,\vun{u}_n\}$ is a basis of $U_\cam{F}$, from the previous theorem we know that $\tnr{A}_B=\dete{\vtf{g}}\fua{\tnr{\psi}}{\tnr{A}_B}$. As $\tnr{A}_B$ is a basis, so is $\tnr{A}_C:=\fua{\tnr{\tnr{\psi}}}{\tnr{A}_B}$, according to theorem \ref{teo:basesUnit}, and then if $\dete{\vtf{g}}=1$,  these bases obviously have the same orientation since $\tnr{A}_B=\tnr{A}_C$, that is, $\hdet{\tnr{\psi}}=1$. Conversely, if $\dete{\vtf{g}}=-1$, they don't have the same orientation or $\hdet{\tnr{\psi}}=-1$.
+Now, given a unimodular tensor $\tnr{A}_B$, where $B$ is an orthonormal basis of $U_\cam{F}$, we know that tensor $\tnr{A}_B=\dete{\vtf{g}}\fua{\tnr{\psi}}{\tnr{A}_B}$. As $\tnr{A}_B$ is a basis, so is $\tnr{A}_C:=\fua{\tnr{\tnr{\psi}}}{\tnr{A}_B}$, according to theorem \ref{teo:basesUnit}, and then if $\dete{\vtf{g}}=1$,  these bases obviously have the same orientation since $\tnr{A}_B=\tnr{A}_C$, that is, $\hdet{\tnr{\psi}}=1$. Conversely, if $\dete{\vtf{g}}=-1$, they don't have the same orientation or $\hdet{\tnr{\psi}}=-1$. Then, $\dete{\vtf{g}}=\hdet{\tnr{\psi}}$.
 \end{proof}
 }
 
@@ -861,28 +853,7 @@ enable us to verify that coordinates $\fua{\tnr{f}_{i}^B}{\tnr{X}}=\fua{\tnr{f}_
 \end{proof}
 }
 
-Admitting a tensor space $\ete{\cam{F}}{A^p}$ and a group $\grt{U}{\cam{F}}{A^p}$, where $A=U^{m}$ and $p$ is even, by equality \eqref{eq:coordIdent} we know that the coordinates of identity tensor $\tnr{I}\in\ete{\cam{F}}{A^p}$ are the same for any chosen basis. Therefore, from theorem above, it is clear that $\tnr{I}$ is isotropic, that is, $\tnr{I}\in\eto{\cam{F}}{A^p}$. In this context, again by equality \eqref{eq:coordIdent}, it is straightforward to see that the coordinates of an arbitrary tensor belonging to $\spn(\{\tnr{I}\})$ are the same for any chosen basis of $\ete{\cam{F}}{A^p}$. Therefore, it is possible to affirm that \emph{any linear combination of an identity tensor is isotropic}. Now, given an arbitrary unimodular tensor $\tnr{H}\in\etng{m}{\cam{F}}{U^m}$, considering $B_i$ an orthonormal basis in the context of theorem \ref{teo:geraEte}, polyadic tensors $\vtf{f}_{j_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{j_m}^{B_m}$ and $\fua{\tnr{\varphi}}{\vtf{f}_{j_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{j_m}^{B_m}}$ elements of bases $B$ and $C$ of $\etng{m}{\cam{F}}{U^m}$ respectively, where $\tnr{\varphi}\in\tnr{\mathcal{U}}^+_{\cam{F}}({U^{m}})$, from equalities 
-\begin{equation*}
-\fua{\tnr{\varphi}}{\tnr{H}}=\sum_{{i_1}=1}^m\cdots\sum_{{i_m}=1}^m\fua{\tnr{f}_{i_1\cdots i_m}^B}{\tnr{H}}\fua{\tnr{\varphi}}{\vtf{f}_{j_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{j_m}^{B_m}}
-\end{equation*}
-and 
-\begin{equation*}
-\tnr{H}=\sum_{{i_1}=1}^m\cdots\sum_{{i_m}=1}^m\fua{\tnr{f}_{i_1\cdots i_m}^C}{\tnr{H}}\fua{\tnr{\varphi}}{\vtf{f}_{j_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{j_m}^{B_m}}
-\end{equation*}
-
-
-
-
-\begin{align*}
-\fua{\tnr{\varphi}}{\tnr{H}}&=\sum_{{i_1}=1}^m\cdots\sum_{{i_m}=1}^m\fua{\tnr{f}_{i_1\cdots i_m}^B}{\tnr{H}}\fua{\tnr{\varphi}}{\vtf{f}_{j_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{j_m}^{B_m}}\\
-&=\sum_{{i_1}=1}^m\cdots\sum_{{i_m}=1}^m\fua{\tnr{H}}{\vun{u}_{i_1}^{(1)},\cdots,\vun{u}_{i_m}^{(m)}}
-\end{align*}
-we conclude that $\tnr{H}$ is anti isotropic.
-
-
-
-Moreover, a unimodular tensor $\tnr{H}\in\etng{m}{\cam{F}}{U^m}$,  is a very important example of anti isotropic tensor. Let's see if this is true.   
-
+Admitting a tensor space $\ete{\cam{F}}{A^p}$ and a group $\grt{U}{\cam{F}}{A^p}$, where $A=U^{m}$ and $p$ is even, by equality \eqref{eq:coordIdent} we know that the coordinates of identity tensor $\tnr{I}\in\ete{\cam{F}}{A^p}$ are the same for any chosen basis. Therefore, from theorem above, it is clear that $\tnr{I}$ is isotropic, that is, $\tnr{I}\in\eto{\cam{F}}{A^p}$. In this context, again by equality \eqref{eq:coordIdent}, it is straightforward to see that the coordinates of an arbitrary tensor belonging to $\spn(\{\tnr{I}\})$ are the same for any chosen basis of $\ete{\cam{F}}{A^p}$. Therefore, it is possible to affirm that \emph{any linear combination of an identity tensor is isotropic}. Now, from the context of theorem \ref{teo:unimodAltern}, it is straightforward to conclude that an arbitrary alternating tensor $\tnr{A}\in\etng{m}{\cam{F}}{U^m}$ is anti isotropic, that is, equality $\tnr{A}=\fua{\tnr{\psi}}{\tnr{A}}$ is valid only when $\hdet{\tnr{\psi}}=1$.
 
 
 
