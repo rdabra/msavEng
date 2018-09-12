@@ -853,20 +853,112 @@ enable us to verify that coordinates $\fua{\tnr{f}_{i}^B}{\tnr{Q}}=\fua{\tnr{f}_
 \end{proof}
 }
 
-Admitting a tensor space $\ete{\cam{F}}{A^p}$ and a group $\grt{U}{\cam{F}}{A^p}$, where $A=U^{m}$ and $p$ is even, by equality \eqref{eq:coordIdent} we know that the coordinates of identity tensor $\tnr{I}\in\ete{\cam{F}}{A^p}$ are the same for any chosen basis. Therefore, from theorem above, it is clear that $\tnr{I}$ is isotropic, that is, $\tnr{I}\in\eto{\cam{F}}{A^p}$. In this context, again by equality \eqref{eq:coordIdent}, it is straightforward to see that the coordinates of an arbitrary tensor belonging to $\spn(\{\tnr{I}\})$ are the same for any chosen basis of $\ete{\cam{F}}{A^p}$. Therefore, it is possible to affirm that \emph{any linear combination of an identity tensor is isotropic}. Now, from the context of theorem \ref{teo:unimodAltern}, it is straightforward to conclude that an arbitrary alternating tensor $\tnr{A}\in\etng{m}{\cam{F}}{U^m}$ is anti isotropic, that is, equality $\tnr{A}=\fua{\tnr{\psi}}{\tnr{A}}$ is valid only when $\hdet{\tnr{\psi}}=1$. Moreover, we can say that \emph{any linear combination of alternating tensors is anti isotropic}. Finally, it can be obtained that \emph{every permutation of an (anti) isotropic tensor and a linear combination of such permutations are also (anti) isotropic}. BLA BLA BLA
-
+Admitting a tensor space $\ete{\cam{F}}{A^p}$ and a group $\grt{U}{\cam{F}}{A^p}$, where $A=U^{m}$ and $p$ is even, by equality \eqref{eq:coordIdent} we know that the coordinates of identity tensor $\tnr{I}\in\ete{\cam{F}}{A^p}$ are the same for any chosen basis. Therefore, from theorem above, it is clear that $\tnr{I}$ is isotropic, that is, $\tnr{I}\in\eto{\cam{F}}{A^p}$. In this context, again by equality \eqref{eq:coordIdent}, it is straightforward to see that the coordinates of an arbitrary tensor belonging to $\spn(\{\tnr{I}\})$ are the same for any chosen basis of $\ete{\cam{F}}{A^p}$. Therefore, it is possible to affirm that \emph{any linear combination of an identity tensor is isotropic}. Now, from the context of theorem \ref{teo:unimodAltern}, it is straightforward to conclude that an arbitrary alternating tensor $\tnr{A}\in\etng{m}{\cam{F}}{U^m}$ is anti isotropic, that is, equality $\tnr{A}=\fua{\tnr{\psi}}{\tnr{A}}$ is valid only when $\hdet{\tnr{\psi}}=1$. Moreover, we can say that \emph{any linear combination of alternating tensors is anti isotropic}. Finally, it can be obtained that \emph{every permutation of an (anti) isotropic tensor and a linear combination of such permutations are also (anti) isotropic}. It is important to say also that tensor products preserve (anti) isotropy the following way:
+\begin{itemize}
+\setlength\itemsep{.1em}
+\item[i.] If $\tnr{Q}_1,\tnr{Q}_2\in\eto{\cam{F}}{U^{m}}$ then $\tnr{Q}_1\otimes\tnr{Q}_2\in\eto{\cam{F}}{U^{m}\times U^{m}}$;
+\item[ii.] If $\tnr{Q}_1\in\eto{\cam{F}}{U^{m}}$ and $\tnr{Q}_2\in\etom{\cam{F}}{U^{m}}$ then $\tnr{Q}_1\otimes\tnr{Q}_2,\tnr{Q}_2\otimes\tnr{Q}_1\in\etom{\cam{F}}{U^{m}\times U^{m}}$.
+\end{itemize}
 
 {\footnotesize
 \begin{proof}
-Let's verify the (anti) isotropy of permutation of tensors. Considering the context of equality \eqref{eq:opeTensOrdin}, where unitary operators $\tnr{\psi}^{-1}$ and $\vtf{g}$ are related, for an arbitrary isotropic tensor $\tnr{Q}\in\eto{\cam{F}}{U^{m}}$, we can write that
+First, let's verify the (anti) isotropy of permutation of tensors. Considering equality \eqref{eq:opeTensOrdin}, in the context where unitary operators $\tnr{\psi}^{-1}$ and $\vtf{h}$ are related, for an arbitrary isotropic tensor $\tnr{Q}\in\eto{\cam{F}}{U^{m}}$, the following development proves that $\tnr{Q}_\pi=\fua{\tnr{\psi}}{\tnr{Q}_\pi}$:
 \begin{align*}
 \fua{\tnr{Q}_\pi}{\vto{x}_1,\cdots,\vto{x}_m}&=\fua{\fua{\tnr{\psi}}{\tnr{Q}}}{\vto{x}_{\fua{\pi}{1}},\cdots,\vto{x}_{\fua{\pi}{m}}}\\
 &=\fua{\tnr{\psi}}{\tnr{Q}}\cdot(\vto{x}_{\fua{\pi}{1}}\otimes\cdots\otimes\vto{x}_{\fua{\pi}{m}})\\
 &=\tnr{Q}\cdot\fua{\tnr{\psi}^{-1}}{\vto{x}_{\fua{\pi}{1}}\otimes\cdots\otimes\vto{x}_{\fua{\pi}{m}}}\\
-&=\tnr{Q}\cdot\fua{\tnr{\psi}^{-1}}{\vto{x}_{\fua{\pi}{1}}\otimes\cdots\otimes\vto{x}_{\fua{\pi}{m}}}\\
-&=\tnr{Q}\cdot(\fua{\vtf{g}}{\vto{x}_{\fua{\pi}{1}}}\otimes\cdots\otimes\fua{\vtf{g}}{\vto{x}_{\fua{\pi}{m}}})\\
+&=\tnr{Q}\cdot(\fua{\vtf{h}}{\vto{x}_{\fua{\pi}{1}}}\otimes\cdots\otimes\fua{\vtf{h}}{\vto{x}_{\fua{\pi}{m}}})\\
+&=\fua{\tnr{Q}_\pi}{\fua{\vtf{h}}{\vto{x}_{1}},\cdots,\fua{\vtf{h}}{\vto{x}_{m}}}\\
+&=\tnr{Q}_\pi\cdot\fua{\tnr{\psi}^{-1}}{\vto{x}_{1}\otimes\cdots\otimes\vto{x}_{m}}\\
+&=\fua{\fua{\tnr{\psi}}{\tnr{Q}_\pi}}{\vto{x}_{1},\cdots,\vto{x}_{m}}\,.
 \end{align*}
+By this same process, it is then trivial to prove that a linear combination of transposition of tensors is also (anti) isotropic. Now we verify the properties above. From the context of equality \eqref{eq:opeTensOrdin}, development
+\begin{align*}
+\fua{\tnr{Q}_1\otimes\tnr{Q}_2}{\vto{x}_1,\cdots,\vto{x}_m,\vto{y}_1,\cdots,\vto{y}_m}&=\fua{\fua{\tnr{\psi}}{\tnr{Q}_1}}{\vto{x}_1,\cdots,\vto{x}_m}\,\fua{\fua{\tnr{\psi}}{\tnr{Q}_2}}{\vto{y}_1,\cdots,\vto{y}_m}\\
+&=\fua{\tnr{Q}_1}{\fua{\vtf{g}}{\vto{x}_1},\cdots,\fua{\vtf{g}}{\vto{x}_m}}\,\fua{\tnr{Q}_2}{\fua{\vtf{g}}{\vto{y}_1},\cdots,\fua{\vtf{g}}{\vto{y}_m}}\\
+&=\fua{\tnr{Q}_1\otimes\tnr{Q}_2}{\fua{\vtf{g}}{\vto{x}_1},\cdots,\fua{\vtf{g}}{\vto{x}_m},\fua{\vtf{g}}{\vto{y}_1},\cdots,\fua{\vtf{g}}{\vto{y}_m}}\\
+&=\fua{\fua{\tnr{\phi}}{\tnr{Q}_1\otimes\tnr{Q}_2}}{\vto{x}_1,\cdots,\vto{x}_m,\vto{y}_1,\cdots,\vto{y}_m}\,
+\end{align*}
+where $\tnr{\phi}\in\grt{U}{\cam{F}}{U^{m}\times U^{m}}$, proves the first property. The second property is proved by this same development, which is valid only if $\tnr{\psi}\in\tnr{\mathcal{U}}^+_{\cam{F}}({U^{m}})$ since $\tnr{Q}_2$ is anti isotropic. 
 \end{proof}
+}
+
+At this point, we sacrifice once again self-containednes and humbly stand upon the shoulders of a giant. By proving his Theorem 2.9.A, \aut{Weyl}\cite{weil_1939_1}\footnote{See also \aut{Backus}\cite{backus_1997_1}, p. 80.} shows that identity tensor $\tnr{I}\in\eto{\cam{F}}{A^p}$, where $A=U^{m}$ and $p$ is even, its transpositions and their linear combinations constitute the isotropy group, that is,
+\begin{equation}
+\grt{U}{\cam{F}}{A^p}= \spn(\{\tnr{I}\})\,\cup\,\spn(\{\tnr{I}_\pi\})\,. 
+\end{equation}
+For the case of anti isotropic tensors, he arrives at
+\begin{equation}
+\tnr{\mathcal{U}}^+_{\cam{F}}(A^p\times A^q)= \spn(\{\tnr{I}\otimes\tnr{A}\})\,\cup\,\spn(\{(\tnr{I}\otimes\tnr{A})_\pi\})\,, 
+\end{equation}
+where $\tnr{A}\in\etng{m}{\cam{F}}{A^q}$. Compiling the results obtained by \aut{Backus}\cite{backus_1997_1}, pp. 80-88, for tensor spaces of order from 0 to 4, we build table XXX.
+
+
+\begin{table}[!htt]
+\centering
+\scriptsize{
+\begin{tabular}{|c|c|c|c|c|}
+	\hline
+	% after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+	\textbf{Ordem de}    & \textbf{Valor de}     & \textbf{Conjunto}    & \textbf{Conjunto}         & \textbf{Elementos de}  \\
+	$\ete{\con{V}^p}{\con{F}}$ & $\mathrm{dim}(\ehr{\con{V}}{\con{F}})$  & $\cts{\con{V}^{p}}{\con{F}}$  & $\ctt{\con{V}^{p}}{\con{F}}$  & \textbf{Pós-condição} \\
+	\hline
+	& & & & \\
+	$p=0$ & $>0$ & $\con{F}$ & $\con{F}$ & - \\
+	& & & & \\
+	\hline
+	& & & & \\
+	$p=1$ & $\geqslant 2$ & $\{ \vto{0} \}$ & $\{ \vto{0} \}$ & - \\
+	& & & & \\
+	\hline
+	& & & & \\
+	$p=2$ & $>0$ & $sp\{ \tnr{I} \}$ & $\emptyset$ & $ \tnr{I}\in\cft{\con{V}^p}{\con{F}},$ \\
+	& & & & \\
+	\cline{2-2}\cline{4-4}
+	& & & & \\
+	& $= 2$ &  & $sp\{ \tnr{I} , \tnr{A} \}$ & $\forall \tnr{A}\neq \negmath{0}, $ \\
+	& & & & \\
+	\cline{2-2}\cline{4-4}
+	& & & & \\
+	& $\geqslant 3$ &  & $sp\{ \tnr{I} \}$ & $\tnr{A}\in\cfa{\con{V}^p}{\con{F}}$ \\
+	& & & & \\
+	\cline{1-4}
+	& & & & \\
+	$p=3$ & $>0$ & $\{ \negmath{0} \}$ & $\emptyset$ &  \\
+	& & & & \\
+	\cline{2-2}\cline{4-4}
+	& & & & \\
+	& $= 3$ &  & $sp\{ \tnr{A} \}$ &  \\
+	& & & & \\
+	\cline{2-2}\cline{4-4}
+	& & & & \\
+	& $\neq 3$ &  & $\{ \negmath{0} \}$ &  \\
+	& & & & \\
+	\cline{1-4}
+	& & & & \\
+	$p=4$ & $>0$ & $sp\{ \tnr{I},\tnr{I}_{(2,3)} , \tnr{I}_{(2,4)} \}$ & $\emptyset$ &  \\
+	& & & & \\
+	\cline{2-2}\cline{4-4}
+	& & & & \\
+	& $\in \{ 2, 4 \}$ &  & $sp\{ \tnr{I},\tnr{I}_{(2,3)} , \tnr{I}_{(2,4)} \}$ &  \\
+	& & & & \\
+	\cline{2-2}\cline{4-4}
+	& & & & \\
+	& $= 4$ &  & $sp\{ \tnr{I},\tnr{I}_{(2,3)} , \tnr{I}_{(2,4)}, \tnr{A} \}$ &  \\
+	& & & & \\
+	\cline{2-5}
+	& & & & \\
+	& $=2$ & $sp\{ \tnr{I}\otimes\tnr{I},(\tnr{I}\otimes\tnr{I})_{(2,3)}, $ & $sp\{ \tnr{I}\otimes\tnr{I},(\tnr{I}\otimes\tnr{I})_{(2,3)},(\tnr{I}\otimes\tnr{I})_{(2,4)}, $ & $ \tnr{I}\in\cft{\con{V}^2}{\con{F}},$ \\
+	&  & $(\tnr{I}\otimes\tnr{I})_{(2,4)}\}$ & $ \tnr{I}\otimes\tnr{A},(\tnr{I}\otimes\tnr{A})_{(2,3)},(\tnr{I}\otimes\tnr{A})_{(2,4)},$ & $\forall \tnr{A}\neq \negmath{0}, $ \\
+	&  &  & $ \tnr{A}\otimes\tnr{I},(\tnr{A}\otimes\tnr{I})_{(2,3)},(\tnr{A}\otimes\tnr{I})_{(2,4)}\}$ & $\tnr{A}\in\cfa{\con{V}^2}{\con{F}}$ \\
+	
+	& & & & \\
+	\hline
+\end{tabular}
+}  
+
+\titfigura{Tensores Isotrópicos e Anti-Isotrópicos em $\ete{\con{V}^p}{\con{F}}$. Fonte: \aut{Backus}\cite{backus_1997_1}.}\label{tb:Isotropicos}
+\end{table}
 
 
 
