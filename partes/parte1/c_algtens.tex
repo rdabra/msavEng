@@ -306,9 +306,9 @@ or, more completely,
 \end{equation}
 from which we conclude for an arbitrary basis $B$ of $\ete{\cam{F}}{V^{\times p}\times V^{\times p}}$ that
 \begin{equation}\label{eq:coordIdent}
-\vtf{f}_{i_1\cdots i_pj_1\cdots j_p}^{B}(\tnr{I})=\prod_{k=1}^p \delta_{i_kj_k}
+\vtf{f}_{i_1\cdots i_pj_1\cdots j_p}^{B}(\tnr{I})=\prod_{k=1}^p \delta_{i_kj_k}.
 \end{equation}
-It is important to say that the previous results obtained for an identity tensor of order $2p$ are also valid for identity tensors of order $\alpha p$, where $\alpha$ is even.
+
 
 
 \section{Tensor Functions}
@@ -853,7 +853,7 @@ enable us to verify that coordinates $\fua{\tnr{f}_{i}^B}{\tnr{Q}}=\fua{\tnr{f}_
 \end{proof}
 }
 
-Admitting a tensor space $\eteg{m}{\cam{F}}{U^p}$ and a group $\grt{U}{\cam{F}}{U^p}$, where $p$ is even, by equality \eqref{eq:coordIdent} we know that the coordinates of identity tensor $\tnr{I}\in\eteg{m}{\cam{F}}{U^p}$ are the same for any chosen basis. Therefore, from theorem above, it is clear that $\tnr{I}$ is isotropic, that is, $\tnr{I}\in\eto{\cam{F}}{U^p}$. In this context, again by equality \eqref{eq:coordIdent}, it is straightforward to see that the coordinates of an arbitrary tensor belonging to $\spn(\{\tnr{I}\})$ are the same for any chosen basis of $\ete{\cam{F}}{U^p}$. Therefore, it is possible to affirm that \emph{any linear combination of an identity tensor is isotropic}. Now, from the context of theorem \ref{teo:unimodAltern}, it is straightforward to conclude that an arbitrary alternating tensor $\tnr{A}\in\etng{m}{\cam{F}}{U^m}$ is anti isotropic, that is, equality $\tnr{A}=\fua{\tnr{\psi}}{\tnr{A}}$ is valid only when $\hdet{\tnr{\psi}}=1$. Moreover, we can say that \emph{any linear combination of alternating tensors is anti isotropic}. Finally, it can be obtained that \emph{every permutation of an (anti) isotropic tensor and a linear combination of such permutations are also (anti) isotropic}. It is important to say also that tensor products preserve (anti) isotropy the following way:
+Admitting a tensor space $\eteg{m}{\cam{F}}{U^p}$ and a group $\grt{U}{\cam{F}}{U^p}$, where $p$ is even, by equality \eqref{eq:coordIdent} we know that the coordinates of identity tensor $\tnr{I}\in\eteg{m}{\cam{F}}{U^p}$ are the same for any chosen basis. Therefore, from theorem above, it is clear that $\tnr{I}$ is isotropic, that is, $\tnr{I}\in\eto{\cam{F}}{U^p}$. In this context, again by equality \eqref{eq:coordIdent}, it is straightforward to see that the coordinates of an arbitrary tensor belonging to $\spn(\{\tnr{I}\})$ are the same for any chosen basis of $\eteg{m}{\cam{F}}{U^p}$. Therefore, it is possible to affirm that \emph{any linear combination of an identity tensor is isotropic}. Now, from the context of theorem \ref{teo:unimodAltern}, it is straightforward to conclude that an arbitrary alternating tensor $\tnr{A}\in\etng{m}{\cam{F}}{U^m}$ is anti isotropic, that is, equality $\tnr{A}=\fua{\tnr{\psi}}{\tnr{A}}$ is valid only when $\hdet{\tnr{\psi}}=1$. Moreover, we can say that \emph{any linear combination of alternating tensors is anti isotropic}. Finally, it can be obtained that \emph{every permutation of an (anti) isotropic tensor and a linear combination of such permutations are also (anti) isotropic}. It is important to say also that tensor products preserve (anti) isotropy the following way:
 \begin{itemize}
 \setlength\itemsep{.1em}
 \item[i.] If $\tnr{Q}_1,\tnr{Q}_2\in\eto{\cam{F}}{U^{m}}$ then $\tnr{Q}_1\otimes\tnr{Q}_2\in\eto{\cam{F}}{U^{m}\times U^{m}}$;
@@ -883,15 +883,15 @@ where $\tnr{\phi}\in\grt{U}{\cam{F}}{U^{m}\times U^{m}}$, proves the first prope
 \end{proof}
 }
 
-At this point, we sacrifice once again self-containednes and humbly stand upon the shoulders of a giant. By proving his Theorem 2.9.A, \aut{Weyl}\cite{weil_1953_2}\footnote{See also \aut{Backus}\cite{backus_1997_1}, p. 80.} shows that identity tensor $\tnr{I}\in\eto{\cam{F}}{A^p}$, where $A=U^{m}$ and $p$ is even, its transpositions and their linear combinations constitute the isotropy group, that is,
+At this point, we sacrifice once again self-containednes and humbly stand upon the shoulders of a giant: Hermann Weyl(1885-1955). By proving his Theorem 2.9.A, \aut{Weyl}\cite{weil_1953_2} shows that identity tensor $\tnr{I}\in\eto{\cam{F}}{U^p}$, where $p$ is even, its transpositions and their linear combinations constitute the isotropy group, that is,
 \begin{equation}
-\grt{U}{\cam{F}}{A^p}= \spn(\{\tnr{I}\})\,\cup\,\spn(\{\tnr{I}_\pi\})\,. 
+\grt{U}{\cam{F}}{U^p}= \spn(\{\tnr{I}\})\,\cup\,\spn(\{\tnr{I}_\pi\})\,. 
 \end{equation}
 For the case of anti isotropic tensors, he arrives at
 \begin{equation}
-\tnr{\mathcal{U}}^+_{\cam{F}}(A^p\times A^q)= \spn(\{\tnr{I}\otimes\tnr{A}\})\,\cup\,\spn(\{(\tnr{I}\otimes\tnr{A})_\pi\})\,, 
+\tnr{\mathcal{U}}^+_{\cam{F}}(U^p\times U^m)= \spn(\{\tnr{I}\otimes\tnr{A}\})\,\cup\,\spn(\{(\tnr{I}\otimes\tnr{A})_\pi\})\,, 
 \end{equation}
-where $\tnr{A}\in\etng{m}{\cam{F}}{A^q}$. Compiling the results obtained by \aut{Backus}\cite{backus_1997_1}, pp. 80-88, for tensor spaces of order from 0 to 4, we build table XXX.
+where $\tnr{A}\in\etng{m}{\cam{F}}{U^m}$. Compiling the results obtained by \aut{Backus}\cite{backus_1997_1}, pp. 80-88, for tensor spaces of order from 0 to 4, we build table XXX.
 
 
 \begin{table}[!htt]
