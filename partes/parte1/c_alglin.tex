@@ -450,8 +450,8 @@ If $\Phi$ were not an injection, there would be different covectors $\vto{u}^*$ 
 \begin{equation*}
 \fua{\vtf{g}}{\vto{x}}=\fua{[\sum_{i=1}^n\alpha_i\vtf{f}^{\hat{B}}_i]}{\vto{x}}=\sum_{i=1}^n\alpha_i\fua{\vtf{f}^{\hat{B}}_i}{\vto{x}}=\sum_{i=1}^n\alpha_i\lpa\vto{x}\cdot\vun{u}_i\rpa=\vto{x}	\cdot ( \sum_{i=1}^n\overline{\alpha_i} \vun{u}_i)\,.
 \end{equation*}
-As $\fua{\vtf{g}}{\vto{x}}=\fua{\lco\fua{\Phi}{\vto{u}}\rco}{\vto{x}}=\vto{x}\cdot\vto{u}$, the existence of $\vto{u}=\sum_{i=1}^n\overline{\alpha_i} \vun{u}_i$ is verified. Finally, using definition \eqref{eq:normaFuncao} on the present conditions, leaving space representation on norms implicit, we obtain equality $\|\vto{u}^*\|=\sup\{ |\vto{x}\cdot\vto{u}|/\|\vto{x}\|\}$ for all non zero $\vto{x}$.
-If $\vto{u}$ is zero, it is evident that $\|\vto{u}^*\|=\|\vto{u}\|$; otherwise, $\vto{u}^*$ is non zero and we conclude that $\|\vto{u}^*\|\geqslant |\, \vto{x}\cdot\vto{u}|/\|\vto{x}\|$. Cauchy-Schwarz Inequality states that $|\, \vto{x}\cdot\vto{u}| \leqslant \|\vto{x}\|\,\,\|\vto{u}\|$. Subtracting these two previous inequalities, we arrive at $(\|\vto{u}^*\|-\|\vto{u}\|)\|\vto{x}\|\geqslant 0$, whose left side can be zero for arbitrary non zero $\vto{u}^*$, $\vto{u}$ and $\vto{x}$; therefore, $\|\vto{u}^*\|=\|\vto{u}\|$.
+As $\fua{\vtf{g}}{\vto{x}}=\fua{\lco\fua{\Phi}{\vto{u}}\rco}{\vto{x}}=\vto{x}\cdot\vto{u}$, the existence of $\vto{u}=\sum_{i=1}^n\overline{\alpha_i} \vun{u}_i$ is verified. Finally, using definition \eqref{eq:normaFuncao} on the present conditions, leaving space representation on norms implicit, we obtain equality ${\|\vto{u}^*\|=\sup\{ |\vto{x}\cdot\vto{u}|/\|\vto{x}\|\}}$ for all non zero $\vto{x}$.
+If $\vto{u}$ is zero, it is evident that ${\|\vto{u}^*\|=\|\vto{u}\|}$; otherwise, $\vto{u}^*$ is non zero and we conclude that ${\|\vto{u}^*\|\geqslant |\, \vto{x}\cdot\vto{u}|/\|\vto{x}\|}$. Cauchy-Schwarz Inequality states that ${|\, \vto{x}\cdot\vto{u}| \leqslant \|\vto{x}\|\,\,\|\vto{u}\|}$. Subtracting these two previous inequalities, we arrive at ${(\|\vto{u}^*\|-\|\vto{u}\|)\|\vto{x}\|\geqslant 0}$, whose left side can be zero for arbitrary non zero $\vto{u}^*$, $\vto{u}$ and $\vto{x}$; therefore, ${\|\vto{u}^*\|=\|\vto{u}\|}$.
 \end{proof}
 }
 
@@ -479,7 +479,7 @@ In this context, the inner product between two arbitrary vectors $\vto{u}$ and $
 	\end{center}
 	\titfigura{Relationships between bases induced by $B$ in terms of theorem \ref{teo:repRiesz}.}\label{fg:espacoDual}
 \end{figure}
-If $B$ is orthonormal, then basis $B^\perp=B$. Moreover, if the field $\cam{F}$ is real, we have $\vto{u}\cdot\vto{v}=\sum_{i=1}^n\fua{\vtf{f}_i^{B}}{\vto{u}}\fua{\vtf{f}_i^{B}}{\vto{v}}$. Figure \ref{fg:espacoDual} summarizes the relationships between basis $B$ and the reciprocal bases it induces.
+If $B$ is orthonormal, then basis $B^\perp=B$. Moreover, if the field $\cam{F}$ is real, we have ${\vto{u}\cdot\vto{v}=\sum_{i=1}^n\fua{\vtf{f}_i^{B}}{\vto{u}}\fua{\vtf{f}_i^{B}}{\vto{v}}}$. Figure \ref{fg:espacoDual} summarizes the relationships between basis $B$ and the reciprocal bases it induces.
 
 
 In the particular case of an orthonormal basis $\hat{B}$ vectors $\vun{u}_i=\vun{u}^i$, from which we conclude that the vectors of $\hat{B}$ and of $\hat{B}^*$ have a biunivocal relationship, in terms of the previous theorem. Thereby, it can be said that coordinates
@@ -532,8 +532,8 @@ Firstly, we need to prove the existence and uniqueness of Hilbert-adjoint functi
 \vun{u}_k\cdot\sum_{i=1}^n{\vtf{f}_i^{\hat{B}_1}}[\fua{\vtf{g}^\dagger}{\vun{v}_k}]\vun{u}_i&=\sum_{i=1}^n{\vtf{f}_i^{\hat{B}_2}}\lco\fua{\vtf{g}}{\vun{u}_k}\rco\vun{v}_i\cdot\vun{v}_k\\
 \overline{{\vtf{f}_k^{\hat{B}_1}}[\fua{\vtf{g}^\dagger}{\vun{v}_k}]}&={\vtf{f}_k^{\hat{B}_2}}\lco\fua{\vtf{g}}{\vun{u}_k}\rco\,.
 \end{align*}
-From this result, it can be said that if $\vtf{g}$ exists, so does $\vtf{g}^\dagger$. Now, supposing the existence of two Hilbert-adjoint functions $\vtf{g}_1^\dagger$ and $\vtf{g}_2^\dagger$ of $\vtf{g}$, there are two equalities similar to \eqref{eq:funcaoTransposta}. Subtracting one from the other, we obtain $\vto{u}\cdot(\fua{\vtf{g}_1^\dagger}{\vto{v}}-\fua{\vtf{g}_2^\dagger}{\vto{v}})=0$, which is valid for all $\vto{u}$ and $\vto{v}$; thereby, $\vtf{g}_1^\dagger=\vtf{g}_2^\dagger$. Considering the properties now, the first can be verified from  $\fua{\lpa\alpha\vtf{g}\rpa^\dagger}{\vto{u}}\cdot\vto{v}=\vto{u}\cdot\alpha\fua{\vtf{g}}{\vto{v}}$ and from  $\overline{\alpha}\fua{\vtf{g}^\dagger}{\vto{u}}\cdot\vto{v}=\vto{u}\cdot\alpha\fua{\vtf{g}}{\vto{v}}$, which results from the antilinearity of the inner product. The second can be proved from $\fua{\vtf{g}\circ\vtf{k}}{\vto{u}}\cdot\vto{v}=\fua{\vtf{k}}{\vto{u}}\cdot\fua{\vtf{g}^\dagger}{\vto{v}}=\vto{u}\cdot\fua{\vtf{k}^\dagger\circ\vtf{g}^\dagger}{\vto{u}}$. 
-In order to prove the equality on the third property, we need to know that an identity operator always equals its transpose; which is not difficult to verify. Thereby, ``adjoiting''  both sides of equality $\vtf{i}_V=\vtf{g}\circ\vtf{g}^{-1}$, the result is that identity function $\vtf{i}_V=(\vtf{g}^{-1})^\dagger\circ\vtf{g}^\dagger$, from the second property. We also know that $(\vtf{g}^\dagger)^{-1}\circ\vtf{g}^\dagger=\vtf{i}_V$, which proves $(\vtf{g}^{-1})^\dagger=(\vtf{g}^\dagger)^{-1}$.
+From this result, it can be said that if $\vtf{g}$ exists, so does $\vtf{g}^\dagger$. Now, supposing the existence of two Hilbert-adjoint functions $\vtf{g}_1^\dagger$ and $\vtf{g}_2^\dagger$ of $\vtf{g}$, there are two equalities similar to \eqref{eq:funcaoTransposta}. Subtracting one from the other, we obtain ${\vto{u}\cdot(\fua{\vtf{g}_1^\dagger}{\vto{v}}-\fua{\vtf{g}_2^\dagger}{\vto{v}})=0}$, which is valid for all $\vto{u}$ and $\vto{v}$; thereby, ${\vtf{g}_1^\dagger=\vtf{g}_2^\dagger}$. Considering the properties now, the first can be verified from  ${\fua{\lpa\alpha\vtf{g}\rpa^\dagger}{\vto{u}}\cdot\vto{v}=\vto{u}\cdot\alpha\fua{\vtf{g}}{\vto{v}}}$ and from  ${\overline{\alpha}\fua{\vtf{g}^\dagger}{\vto{u}}\cdot\vto{v}=\vto{u}\cdot\alpha\fua{\vtf{g}}{\vto{v}}}$, which results from the antilinearity of the inner product. The second can be proved from ${\fua{\vtf{g}\circ\vtf{k}}{\vto{u}}\cdot\vto{v}=\fua{\vtf{k}}{\vto{u}}\cdot\fua{\vtf{g}^\dagger}{\vto{v}}=\vto{u}\cdot\fua{\vtf{k}^\dagger\circ\vtf{g}^\dagger}{\vto{u}}}$. 
+In order to prove the equality on the third property, we need to know that an identity operator always equals its transpose; which is not difficult to verify. Thereby, ``adjoiting''  both sides of equality ${\vtf{i}_V=\vtf{g}\circ\vtf{g}^{-1}}$, the result is that identity function ${\vtf{i}_V=(\vtf{g}^{-1})^\dagger\circ\vtf{g}^\dagger}$, from the second property. We also know that ${(\vtf{g}^\dagger)^{-1}\circ\vtf{g}^\dagger=\vtf{i}_V}$, which proves ${(\vtf{g}^{-1})^\dagger=(\vtf{g}^\dagger)^{-1}}$.
 \end{proof}
 }
 
@@ -541,8 +541,11 @@ A vector $\vtf{h}$ of function space $\evlc{\cam{F}}{V}{V}$ is said to be a \tex
 \begin{equation}\label{eq:unitPreservInner}
 \fua{\vtf{q}}{\vto{u}}\cdot\fua{\vtf{q}}{\vto{v}}=\vto{u}\cdot\fua{\vtf{q}^\dagger\circ\vtf{q}}{\vto{v}}=\vto{u}\cdot\fua{\vtf{q}^{-1}\circ\vtf{q}}{\vto{v}}=\vto{u}\cdot\vto{v}
 \end{equation}
-are valid. Conversely, if a linear operator $\vtf{g}\in\evlc{\cam{F}}{V}{V}$ preserves inner product, that is, $\fua{\vtf{g}}{\vto{u}}\cdot\fua{\vtf{g}}{\vto{v}}=\vto{u}\cdot\vto{v}$, then from the definition of Hilbert-adjoint function on \eqref{eq:funcaoTransposta}, it is possible to affirm that every operator which preserves inner product is unitary. In this context, we can state that unitary operators also preserve norms, since
-$\|\fua{\vtf{q}}{\vto{u}}\|^2=\fua{\vtf{q}}{\vto{u}}\cdot\fua{\vtf{q}}{\vto{u}}=\vto{u}\cdot\vto{u}=\|\vto{u}\|^2$. Another consequence of $\vtf{q}$ preserving inner products is the following: if $\{\vun{u}_1,\cdots,\vun{u}_n\}$ is an orthonormal basis of $V_\cam{F}$, then $\{\fua{\vtf{q}}{\vun{u}_1},\cdots,\fua{\vtf{q}}{\vun{u}_n}\}$ is also an orthonormal basis of $V_\cam{F}$. Still about this relation between bases and unitary operators, considering $B=\{\vun{u}_1,\cdots,\vun{u}_n\}$ and $C=\{\vun{v}_1,\cdots,\vun{v}_n\}$ arbitrary orthonormal bases of $V_\cam{F}$, an operator $\vtf{g}\in\evlc{\cam{F}}{V}{V}$ defined by 
+are valid. Conversely, if a linear operator $\vtf{g}\in\evlc{\cam{F}}{V}{V}$ preserves inner product, that is, ${\fua{\vtf{g}}{\vto{u}}\cdot\fua{\vtf{g}}{\vto{v}}=\vto{u}\cdot\vto{v}}$, then from the definition of Hilbert-adjoint function on \eqref{eq:funcaoTransposta}, it is possible to affirm that every operator which preserves inner product is unitary. In this context, we can state that unitary operators also preserve norms, since
+\begin{equation*}
+{\|\fua{\vtf{q}}{\vto{u}}\|^2=\fua{\vtf{q}}{\vto{u}}\cdot\fua{\vtf{q}}{\vto{u}}=\vto{u}\cdot\vto{u}=\|\vto{u}\|^2}\,.
+\end{equation*}
+Another consequence of $\vtf{q}$ preserving inner products is the following: if $\{\vun{u}_1,\cdots,\vun{u}_n\}$ is an orthonormal basis of $V_\cam{F}$, then ${\{\fua{\vtf{q}}{\vun{u}_1},\cdots,\fua{\vtf{q}}{\vun{u}_n}\}}$ is also an orthonormal basis of $V_\cam{F}$. Still about this relation between bases and unitary operators, given ${B=\{\vun{u}_1,\cdots,\vun{u}_n\}}$ and ${C=\{\vun{v}_1,\cdots,\vun{v}_n\}}$ arbitrary orthonormal bases of $V_\cam{F}$, an operator ${\vtf{g}\in\evlc{\cam{F}}{V}{V}}$ defined by 
 \begin{equation}\label{eq:unitOrthon}
 \fua{\vtf{g}}{\vto{x}}=\sum_{j=1}^m\fua{\vtf{f}^B_j}{\vto{x}}\vun{v}_j
 \end{equation}
@@ -565,7 +568,7 @@ Now, we prove that $\vtf{g}^\dagger=\vtf{g}^{-1}$ because the following developm
 }
 
 
-In the previous chapter we said that the set of all unary invertible operators defines a group on the operation of composition. Thereby, let's define a group $\gloref{grGene}:=(\evlc{\cam{F}}{V}{V},\circ)$ constituted by all invertible continuous linear operators on $V_\cam{F}$. We shall verify now if the set $X\subset \grc{G}{\cam{F}}{V}$ of all unitary operators on $V_\cam{F}$, since they are unary and invertible, constitutes the group  $\gloref{grUni}:=(X,\circ)$ called \textsb{unitary group}\index{group!unitary} on $V_\cam{F}$. Equalities
+In the previous chapter we said that the set of all unary invertible operators defines a group on the operation of composition. Thereby, let ${\gloref{grGene}:=(\evlc{\cam{F}}{V}{V},\circ)}$ be a group  constituted by all invertible continuous linear operators on $V_\cam{F}$. We shall verify now if the set $X\subset \grc{G}{\cam{F}}{V}$ of all unitary operators on $V_\cam{F}$, since they are unary and invertible, constitutes the group  $\gloref{grUni}:=(X,\circ)$ called \textsb{unitary group}\index{group!unitary} on $V_\cam{F}$. Equalities
 \begin{equation}
 \lpa \vtf{q}_1\circ\vtf{q}_2 \rpa^{-1} =
 \vtf{q}_2^{-1}\circ\vtf{q}_1^{-1} = \vtf{q}_2^\dagger\circ\vtf{q}_1^\dagger =
@@ -670,7 +673,7 @@ There are concepts that arise from all these matrix representations of vectors a
 
 
 \begin{mteo}{Change of Vector Coordinates}{mudCoordVec}
-If $U(B)_\cam{F}$ and $U(C)_\cam{F}$ are vector spaces constituted by representative matrices of the elements of vector space $U_\cam{F}$ on its bases $B$ and $C$ respectively, there is one and only one linear bijective transformation $\map{\Gamma}{U(B)_\cam{F}}{U(C)_\cam{F}}$, called change of coordinates from $B$ to $C$, where  ${\Gamma}({\mav{\vto{x}}{B}})=\mav{\vto{x}}{C}$ for all $\vto{x}\in U_\cam{F}$.
+If $U(B)_\cam{F}$ and $U(C)_\cam{F}$ are vector spaces constituted by representative matrices of the elements of vector space $U_\cam{F}$ on its bases $B$ and $C$ respectively, there is one and only one linear bijective transformation ${\map{\Gamma}{U(B)_\cam{F}}{U(C)_\cam{F}}}$, called change of coordinates from $B$ to $C$, where  ${{\Gamma}({\mav{\vto{x}}{B}})=\mav{\vto{x}}{C}}$ for all $\vto{x}\in U_\cam{F}$.
 \end{mteo}
 \hspace{1pt}
 {\footnotesize
@@ -751,7 +754,7 @@ from which we conclude that the change of coordinates of $\vtf{h}$ from $B^*$ to
 \begin{equation}
 \fua{\Gamma^*}{\mat{X}}=\mat{X}\,\maf{\vtf{i}}{C}{B}\,.
 \end{equation}
-From these two classifications of coordinates, if $U_\cam{F}$ is a Hilbert space, scalars $\fua{\vtf{f}_i^B}{\vto{u}}=\vto{u}\cdot\vto{u}^i$ constitute the contravariant coordinates of vector $\vto{u}\in U_\cam{F}$, whose covector
+From these two classifications of coordinates, considering $U_\cam{F}$ a Hilbert space, the scalars ${\fua{\vtf{f}_i^B}{\vto{u}}=\vto{u}\cdot\vto{u}^i}$ constitute the contravariant coordinates of vector $\vto{u}\in U_\cam{F}$, whose covector
 \begin{equation*}
 \vto{u}^*=\sum_{i=1}^n\fua{\vto{u}^*}{\vto{u}_i} \vtf{f}_i^{B}= \sum_{i=1}^n (\vto{u}_i\cdot\vto{u}) (\vtf{u}^i)^*\,.
 \end{equation*}
@@ -865,7 +868,7 @@ Eigenvalues and eigenvectors subsidize the forthcoming Polar Decomposition Theor
 
 {\footnotesize
 \begin{proof}
-For the first property, let $\vtf{g}\circ\vtf{g}^\dagger$ be an Hermitian operator where $\vtf{g}\in\evl{\cam{F}}{U}{U}$. We need to show that it is nonnegative the real number $\Re([\vtf{y}]^\dagger[\vtf{g}][\vtf{g}]^\dagger[\vtf{y}])_{11}$, whose matrices are described on any orthonormal basis. If a matrix $\mat{A}:=[\vtf{g}]^\dagger[\vtf{y}]$, the previous real number becomes $\Re(\mat{A}^\dagger \mat{A})_{11}$, which is always nonnegative because $(\mat{A}^\dagger \mat{A})_{11}=\sum_{i=1}^{n}\overline{\mat{A}_{i1}}\mat{A}_{i1}=\sum_{i=1}^{n}|\mat{A}_{i1}|^2$. Now, let $\vtf{h}\in\evl{\cam{F}}{U}{U}$ be a Hermitian operator with eigenvalues $\lambda_i$ and eigenvectors $\vto{x}_i$, from which we can write  $\fua{\vtf{h}}{\vto{x}_i}=\lambda_i\vto{x}_i$. Performing the inner product of an eigenvector $\vto{x}_j$ and each side of the previous equality, we obtain $\vto{x}_j\cdot\fua{\vtf{h}}{\vto{x}_i}=\vto{x}_j\cdot\lambda_i\vto{x}_i$ (*). Similarly, the inner product of $\fua{\vtf{h}}{\vto{x}_j}=\lambda_i\vto{x}_j$ and $\vto{x}_i$ results $\fua{\vtf{h}}{\vto{x}_j}\cdot\vto{x}_i=\lambda_j\vto{x}_j\cdot\vto{x}_i$ (**). Since $\vtf{h}$ is Hermitian, if we subtract (**) from (*),	
+For the first property, let $\vtf{g}\circ\vtf{g}^\dagger$ be an Hermitian operator where $\vtf{g}\in\evl{\cam{F}}{U}{U}$. We need to show that it is nonnegative the real number ${\Re([\vtf{y}]^\dagger[\vtf{g}][\vtf{g}]^\dagger[\vtf{y}])_{11}}$, whose matrices are described on any orthonormal basis. If a matrix $\mat{A}:=[\vtf{g}]^\dagger[\vtf{y}]$, the previous real number becomes $\Re(\mat{A}^\dagger \mat{A})_{11}$, which is always nonnegative because ${(\mat{A}^\dagger \mat{A})_{11}=\sum_{i=1}^{n}\overline{\mat{A}_{i1}}\mat{A}_{i1}=\sum_{i=1}^{n}|\mat{A}_{i1}|^2}$. Now, let $\vtf{h}\in\evl{\cam{F}}{U}{U}$ be a Hermitian operator with eigenvalues $\lambda_i$ and eigenvectors $\vto{x}_i$, from which we can write  ${\fua{\vtf{h}}{\vto{x}_i}=\lambda_i\vto{x}_i}$. Performing the inner product of an eigenvector $\vto{x}_j$ and each side of the previous equality, we obtain ${\vto{x}_j\cdot\fua{\vtf{h}}{\vto{x}_i}=\vto{x}_j\cdot\lambda_i\vto{x}_i}$ (*). Similarly, the inner product of $\fua{\vtf{h}}{\vto{x}_j}=\lambda_i\vto{x}_j$ and $\vto{x}_i$ results ${\fua{\vtf{h}}{\vto{x}_j}\cdot\vto{x}_i=\lambda_j\vto{x}_j\cdot\vto{x}_i}$ (**). Since $\vtf{h}$ is Hermitian, if we subtract (**) from (*),	
 \begin{align*}
 	\vto{x}_j\cdot\fua{\vtf{h}}{\vto{x}_i}-\fua{\vtf{h}}{\vto{x}_j}\cdot\vto{x}_i&=\vto{x}_j\cdot\lambda_i\vto{x}_i-\lambda_j\vto{x}_j\cdot\vto{x}_i\\
 	0&=(\overline{\lambda_i}-\lambda_j)\vto{x}_j\cdot\vto{x}_i\,.

@@ -193,11 +193,11 @@ When all the values of the invertible function $f$ define an image $\con{R}_f$, 
 \begin{eqnarray}\label{eq:Inversa}
 \con{D}_\fun{f^{-1}}=\con{R}_f&\text{and}&\fua{f^{-1}}{\fua{f}{d}}=d\,,\,\,\forall d\in D_f\,.
 \end{eqnarray}
-As a consequence, we can state that $f^{-1}$ is also invertible. Therefore, considering  $g:=f^{-1}$ and its image $R_g$, there exists a function $g^{-1}$ where, according to the previous definition,
+As a consequence, we can state that $f^{-1}$ is also invertible. Therefore, considering function $g:=f^{-1}$ and its image $R_g$, there exists a function $g^{-1}$ where, according to the previous definition,
 \begin{equation}
 \fua{f}{d}=\fua{g^{-1}}{\fua{g}{\fua{f}{d}}}=\fua{g^{-1}}{\fua{f^{-1}}{\fua{f}{d}}}=\fua{g^{-1}}{d}\,,
 \end{equation}
-for an arbitrary element $d\in D_f$. Thereby, we state that $f$ is the inverse function of $f^{-1}$ and then both are the inverse of each other. The superposition of a function and its inverse results in a special function, whose values equals the arguments, called the \textsb{identity}\index{function!identity} function, represented by $i$. Thereby, since  $\fua{i}{\ele{d}}=\ele{d}, \forall\, \ele{d}\in\con{D}_i$, the image $R_i=D_i$, and then we conclude that $i=i^{-1}$ because $i$ is obviously invertible.
+for an arbitrary element $d\in D_f$. Thereby, we state that $f$ is the inverse function of $f^{-1}$ and then both are the inverse of each other. The superposition of a function and its inverse results in a special function, whose values equals the arguments, called the \textsb{identity}\index{function!identity} function, represented by $i$. Thereby, since  $\fua{i}{\ele{d}}=\ele{d}, \forall\, \ele{d}\in\con{D}_i$, image $R_i=D_i$, and then we conclude that $i=i^{-1}$ because $i$ is obviously invertible.
 
 
 \section{Mappings}\index{mapping}\label{sec:mapping}
@@ -298,7 +298,7 @@ and also
 Similarly, $\con{k}$ is considered an isomorphism if it is a bijection-homomorphism.
 
 
-In our study, we shall need to establish a relation between an algebraic set that defines a group, whose elements can be operated, and a geometrical set, where sizes, forms and positions can be observed. A strategy to consistently accomplish this algebraic-geometrical relation is to use a function called \textsb{group action}\index{group!action}. Thus, let $\map{\varphi}{\con{G}\times\con{B}}{\con{B}}$ be a mapping where $G$ is a group and $B$ is a non empty set, geometrical or not. The function $\varphi$ is said to be a group action\footnote{In more precise terms, $\varphi$ in this case is called a \textsb{left group action}\index{group!action!left} in contrast to a \textsb{right group action}\index{group!action!right} $\tilde{\varphi}$ where $\map{\tilde{\varphi}}{\con{B}\times\con{G}}{\con{B}}$. Here, we'll always use the left action.} of the set $G$ on $B$ if the following axioms are valid:
+In our study, we shall need to establish a relation between an algebraic set that defines a group, whose elements can be operated, and a geometrical set, where sizes, forms and positions can be observed. A strategy to consistently accomplish this al\-ge\-braic-geometrical relation is to use a function called \textsb{group action}\index{group!action}. Thereby, let $\map{\varphi}{\con{G}\times\con{B}}{\con{B}}$ be a mapping where $G$ is a group and $B$ is a non empty set, geometrical or not. The function $\varphi$ is said to be a group action\footnote{In more precise terms, $\varphi$ in this case is called a \textsb{left group action}\index{group!action!left} in contrast to a \textsb{right group action}\index{group!action!right} $\tilde{\varphi}$ where $\map{\tilde{\varphi}}{\con{B}\times\con{G}}{\con{B}}$. Here, we'll always use the left action.} of the set $G$ on $B$ if the following axioms are valid:
 \begin{itemize}
 \setlength\itemsep{.1em}
     \item[i.]  Identity element, $ \fua{\varphi}{\ele{e},\ele{b}}=\ele{b}\,,
@@ -333,7 +333,7 @@ Arrays can be added and multiplied. If an array  $\mat{A+B}$ is the sum of $\mat
 \begin{equation}\label{eq:adicaoArray}
 \mat{(A+B)}_{i_1\cdots i_q}=\mat{A}_{i_1\cdots i_q}+\mat{B}_{i_1\cdots i_q}\,.
 \end{equation}
-On the other hand, the multiplication \gloref{prodArr} requires that the last $q$ elements of the dimension of $\mat{A}$ and the first $q$ elements of the dimension of $\mat{B}$ are equal; in other words, if array $\mat{A}$ has dimension $m_1\times\cdots\times m_p\times n_1\times\cdots\times n_q $, then $\mat{B}$ must have dimension $n_1\times\cdots\times n_q\times l_1\times\cdots\times l_s$. Thereby, the resulting dimension of array $\mat{A*_qB}$ is $m_1\times\cdots\times m_p\times l_1\times\cdots\times l_s$ and each element
+On the other hand, the multiplication \gloref{prodArr} requires that the last $q$ elements of the dimension of $\mat{A}$ and the first $q$ elements of the dimension of $\mat{B}$ are equal; in other words, if array $\mat{A}$ has dimension $m_1\times\cdots\times m_p\times n_1\times\cdots\times n_q $, then $\mat{B}$ must have dimension $n_1\times\cdots\times n_q\times l_1\times\cdots\times l_s$. Thereby, $m_1\times\cdots\times m_p\times l_1\times\cdots\times l_s$ is the resulting dimension of array $\mat{A*_qB}$ and each element
 \begin{equation}
 \lpa\mat{A*_qB}\rpa_{i_1\cdots i_pj_1\cdots j_s} =
 \sum_{k_1=1}^{n_1}\cdots\sum_{k_q=1}^{n_q} \mat{A}_{i_1\cdots
@@ -581,7 +581,7 @@ that is, the trace of a matrix is the sum of its diagonal elements. Considering 
 \end{equation}
 and then we can state generically that all similar matrices have the same trace.
 
-Among other benefits, the trace function is a convenient tool to present what is known by \textsb{characteristic polynomial}\index{matrix!characteristic polynomial of}\label{pg:PolinomioCarac} of matrix: it is the function in operation $\map{g}{\cam{F}}{\cam{F}}$, whose rule is
+Among other benefits, the trace function is a convenient tool to develop what is known by \textsb{characteristic polynomial}\index{matrix!characteristic polynomial of}\label{pg:PolinomioCarac} of a matrix: it is the function in operation $\map{g}{\cam{F}}{\cam{F}}$, whose rule is
 \begin{equation}
 \fua{g}{x}=\dete {\mat{H} - x\mat{I}}  \,,
 \end{equation}
