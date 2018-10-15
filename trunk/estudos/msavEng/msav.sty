@@ -30,6 +30,7 @@
 \usepackage{pstricks}
 \usepackage[most]{tcolorbox}
 \usepackage{forest}
+\usepackage{harpoon}
 
 
 
@@ -299,6 +300,8 @@
 \newcommand {\cam}[1]{\mathbb{#1}}
 %Vetor
 \newcommand {\vto}[1]{\negmath{#1}}
+%Vetor
+\newcommand {\vtp}[1]{\overrightharp{#1}}
 %Vetor Unitario
 \newcommand {\vun}[1]{\negmath{\hat{#1}}}
 %Espaço Vetorial
@@ -459,8 +462,12 @@
 \newcommand {\grt}[3]{\fua{\negmath{\tnr{\mathcal{#1}}}_{#2}}{#3}}
 %Hiperdeterminnat
 \newcommand {\hdet}[1]{\fua{\textnormal{Det}}{#1}}
+% Point space
+\newcommand {\epu}[1]{\mathcal{#1}}
+% espaço afim
+\newcommand {\eam}[2]{{\mathcal{#1}}_{\cam{#2}}}
 
-
+\usepackage[e]{esvect}
 
 
 % TITLE PAGE
