@@ -1,16 +1,19 @@
 
 \chapter{Topics of Affine Geometry}
 
-Although vector spaces are building blocks of the several important concepts presented so far on the two previous chapters, it is still not possible to recognize shapes in their definer sets. However, the study of mathematical shapes does not belong to Linear Algebra, but to the realms of Geometry, whose non empty sets are said to be constituted by ``shape'' elements called \textsb{points}\index{points}, considered here its most fundamental objects. If a given set of such points is conveniently related to a vector space by a group action, other shapes can be obtained and thereby further morphological concepts can be developed, when we say that a certain geometry is defined. As physical spaces are abstracted by geometric sets, for  future purposes, we can not prescind from studying at least the basic topics of the so called Affine Geometry, which includes the well known Euclidean Geometry and is sufficiently governed by the concept of parallelism.
+Although vector spaces are building blocks of the several important concepts presented so far on the two previous chapters, it is still not possible to recognize shapes in their definer sets. However, the study of mathematical shapes does not belong to Linear Algebra, but to the realms of Geometry, whose non empty sets we shall consider here to be constituted by ``shape'' elements called \textsb{points}\index{points}, which are geometric objects of primitive notion, devoid of dimensional features in order to morphologically represent physical locations. If a given set of such points is conveniently related to a vector space by a group action, other shapes can be obtained and thereby further morphological concepts can be developed, when we say that a certain geometry is defined. As physical spaces are usually abstracted by geometric sets, we can not prescind from studying at least the basic topics of the so called Affine Geometry, which includes the well known Euclidean Geometry and is sufficiently governed by the concept of parallelism.
 
 
-\section{Affine Spaces}
+\section{Affine Spaces}\index{space!affine}
 
-Recalling the concept of group action presented on chapter \ref{ch:Collect}, let the set of points $A$ be the $G$-set of a vector space $U_\cam{F}$ through a simply transitive group action $\oplus$. If we represent this function $\oplus$
-
- or, in other words,  where we represent  
-
-$\oplus$ be a simply transitive group action of the vector space $U_\cam{F}$ on a set of points $A$, where   
+Recalling the concept of group action presented on chapter \ref{ch:Collect}, let the set of points $\epu{U}$ be the $G$-set of a vector space $U_\cam{F}$ through a simply transitive group action $\oplus$. Given two arbitrary points $a$ and $b$ of this $G$-set $\epu{U}$, now called a \textsb{point space}\index{space!point}, and a vector $\vto{u}\in U_\cam{F}$ where point $\fua{\oplus}{\vto{u}, a}=b$ or, representing like a binary operation, $\vto{u}\oplus a=b$, the axioms of simply transitive group actions can be rewritten the following way:
+\begin{itemize}
+\setlength\itemsep{.1em}
+\item[i.]  $\vto{0}\oplus a=a\,,\forall \, \ele{a} \in \epu{U}$;
+\item[ii.] $\vto{u}\oplus(\vto{v}\oplus a)=(\vto{u}+\vto{v})\oplus a, \forall \, \ele{a}\in \epu{U},\,\forall\, \vto{u},\vto{v}\in U_\cam{F}$;
+\item[iii.]  $\exists !\,\, \vto{u}\in U_\cam{F}\textrm{ such that } \vto{u}\oplus a=b$.	
+\end{itemize} 
+In this context, the triple $(U_\cam{F},\epu{U},\oplus)$ is called an affine space, henceforth represented by $\eam{U}{F}$, which will also be used to refer to the point space $\epu{U}$, as we adopted similarly for other cases in order to simplify notation. From axiom iii above, every double of points uniquely identifies a certain vector: if $\vto{u}\oplus a=b$, we define that double $(a,b)$ identifies vector $\vto{u}$, when this vector is represented by $\vv{ab}$. Now, considering point $\vto{v}\oplus a=c$, from axioms i and ii, we conclude that $-\vto{v}\oplus c=a$, and then vector $\vto{v}=\vv{ac}=-\vv{ca}$.     
 
 \begin{comment}
 \chapter{Tópicos de Geometria Afim}\label{subsec:geometriaAfim}
