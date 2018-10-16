@@ -4,7 +4,7 @@
 Although vector spaces are building blocks of the several important concepts presented so far on the two previous chapters, it is still not possible to recognize shapes in their definer sets. However, the study of mathematical shapes does not belong to Linear Algebra, but to the realms of Geometry, whose non empty sets we shall consider here to be constituted by ``shape'' elements called \textsb{points}\index{points}, which are geometric objects of primitive notion, devoid of dimensional features in order to morphologically represent physical locations. If a given set of such points is conveniently related to a vector space by a group action, other shapes can be obtained and thereby further morphological concepts can be developed, when we say that a certain geometry is defined. As physical spaces are usually abstracted by geometric sets, we can not prescind from studying at least the basic topics of the so called Affine Geometry, which includes the well known Euclidean Geometry and is sufficiently governed by the concept of parallelism.
 
 
-\section{Affine Spaces}\index{space!affine}
+\section{Affine Spaces}\index{affine!space}\index{space!affine}
 
 Recalling the concept of group action presented on chapter \ref{ch:Collect}, let the set of points $\epu{U}$ be the $G$-set of a vector space $U_\cam{F}$ through a simply transitive group action $\oplus$. Given two arbitrary points $a$ and $b$ of this $G$-set $\epu{U}$, now called a \textsb{point space}\index{space!point}, and a vector $\vto{u}\in U_\cam{F}$ where point $\fua{\oplus}{\vto{u}, a}=b$ or, representing like a binary operation, $\vto{u}\oplus a=b$, the axioms of simply transitive group actions can be rewritten the following way:
 \begin{itemize}
@@ -13,7 +13,21 @@ Recalling the concept of group action presented on chapter \ref{ch:Collect}, let
 \item[ii.] $\vto{u}\oplus(\vto{v}\oplus a)=(\vto{u}+\vto{v})\oplus a, \forall \, \ele{a}\in \epu{U},\,\forall\, \vto{u},\vto{v}\in U_\cam{F}$;
 \item[iii.]  $\exists !\,\, \vto{u}\in U_\cam{F}\textrm{ such that } \vto{u}\oplus a=b$.	
 \end{itemize} 
-In this context, the triple $(U_\cam{F},\epu{U},\oplus)$ is called an affine space, henceforth represented by $\eam{U}{F}$, which will also be used to refer to the point space $\epu{U}$, as we adopted similarly for other cases in order to simplify notation. From axiom iii above, every double of points uniquely identifies a certain vector: if $\vto{u}\oplus a=b$, we define that double $(a,b)$ identifies vector $\vto{u}$, when this vector is represented by $\vv{ab}$. Now, considering point $\vto{v}\oplus a=c$, from axioms i and ii, we conclude that $-\vto{v}\oplus c=a$, and then vector $\vto{v}=\vv{ac}=-\vv{ca}$.     
+In this context, the triple $(U_\cam{F},\epu{U},\oplus)$ is called an affine space, henceforth represented by $\eam{U}{F}$, which will also be used to refer to the point space $\epu{U}$, as we adopted similarly for other cases in order to simplify notation. From axiom iii above, every double of points uniquely identifies a certain vector: if $\vto{u}\oplus a=b$, we define that double $(a,b)$ identifies vector $\vto{u}$, when this vector is represented by $\vv{ab}$. Now, from axioms i and ii, considering point $\vto{v}\oplus a=c$, we conclude that $-\vto{v}\oplus c=a$, and then vector $\vto{v}=\vv{ac}=-\vv{ca}$. From this characteristic relationship between points and vectors, the classical pictorial representation of a vector, identified by a double $(a,b)$, as an arrow whose tail starts on $a$ and head points to $b$ arises naturally (figure XX). 
+
+
+% FIGURA DE VETOR DEFINIDO POR DOIS PONTOS
+
+Considering previous conditions, given an arbitrary point $a\in \eam{U}{F}$ and a vector subspace $S_\cam{F}\subset U_\cam{F}$, the triple $(S_\cam{F},\epu{S}_a,\oplus)$ is called an \textsb{affine subspace}\index{affine!subspace} of $\eam{U}{F}$, represented by $\eams{S}{F}{a}$, if point space $\epu{S}_a:=\{\vto{x}\oplus a:\forall \vto{x}\in V_\cam{F}\}$, to which point $a$ also belongs since vector $\vto{0}\in V_\cam{F}$. In the case of a $n$-dimensional vector subspace its affine subspace constitutes another fundamental geometric object -- other than points -- when it is called a \textsb{hyperplane}\index{hyperplane}: we specifically call the hyperplane $\eams{S}{F}{a}$ a \textsb{line}\index{line} or a \textsb{plane}\index{plane} when $S_\cam{F}$ is one or two-dimensional respectively. Since it is the vector space which bears a dimensional feature, it is defined that $\dim{(\eams{S}{F}{a})}=\dim{(S_\cam{F})}=n$ and then we use $\eamsd{S}{F}{a}{n}$ to represent a $n$-dimensional affine subspace. Now, given a point $o\in\eams{S}{F}{a}$ where $\vto{w}\oplus o=a$ and a basis $B=\{\vto{v}_1,\cdots,\vto{v}_n\}$ of $S_\cam{F}$, we call double $(o,B)$ an \textsb{affine coordinate system}\index{affine!coordinate system} of $\eams{S}{F}{a}$ since point space $\epu{S}_a$ can be obtained from $o$ and $B$ the following way:
+\begin{equation}
+\epu{S}_a=\{\vto{x}\oplus a:\forall \vto{x}\in V_\cam{F}\}= \{(\vto{x}+\vto{w})\oplus o:\forall \vto{x}\in \spn{(B)}\}\,.
+\end{equation}
+In this context, point $o$ is called the \textsb{origin}\index{origin} of the coordinate system and the coordinates of an arbitrary vector $\vto{v}\in S_\cam{F}$ on $B$ are considered to be the coordinates of point $v:=\vto{v}\oplus o$ on $(o,B)$. Thereby, it is trivial to obtain that the coordinates of point $\vto{u}\oplus v$ are the coordinates of vector $\vto{u}+\vto{v}$. Moreover, each line $((\mathcal{S}_i)_o)^1_\cam{F}$ defined by vector space $(S_i)_\cam{F}=\spn{(\{\vto{v}_i\})}$ is called an \textsb{axis}\index{axis} of $(o,B)$.
+
+
+
+
+
 
 \begin{comment}
 \chapter{Tópicos de Geometria Afim}\label{subsec:geometriaAfim}

@@ -30,7 +30,7 @@
 \usepackage{pstricks}
 \usepackage[most]{tcolorbox}
 \usepackage{forest}
-\usepackage{harpoon}
+\usepackage[e]{esvect}
 
 
 
@@ -466,8 +466,10 @@
 \newcommand {\epu}[1]{\mathcal{#1}}
 % espaço afim
 \newcommand {\eam}[2]{{\mathcal{#1}}_{\cam{#2}}}
-
-\usepackage[e]{esvect}
+% subespaço afim
+\newcommand {\eams}[3]{{(\mathcal{#1}_{#3})}_{\cam{#2}}}
+% subespaço afimd
+\newcommand {\eamsd}[4]{{(\mathcal{#1}_{#3})}^{#4}_{\cam{#2}}}
 
 
 % TITLE PAGE
