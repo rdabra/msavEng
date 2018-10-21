@@ -1,0 +1,31 @@
+#FIG 3.2
+# Created by WinFIG version 7.1
+# METADATA <version>1.0</version>
+Portrait
+Flush left
+Metric
+A4
+100.00
+Single
+-2
+1200 2
+# METADATA <id>3</id>
+4 0 0 50 0 0 12 0.0000 6 198 1230 1929 7250 $\\\partial A_3$\001
+# METADATA <id>13</id>
+4 0 0 51 0 0 12 0.0000 6 198 1485 4719 7250 $\\\overline{A}_3$\001
+# METADATA <id>14</id>
+4 0 0 51 0 0 12 0.0000 6 198 1485 7504 7250 $\\\widehat{A}_3$\001
+# METADATA <id>15</id>
+4 0 0 50 0 0 12 0.0000 6 198 360 3394 7197 $=$\001
+# METADATA <id>16</id>
+4 0 0 50 0 0 12 0.0000 6 198 1065 6247 7250 $\\\setminus$\001
+# METADATA <id>17</id>
+2 5 0 0 0 7 50 0 -1 0.000 0 0 0 0 0 5
+	0 C:/myWork/msav/partes/parte1/figs/c_algabst/contorno.eps
+	 975 4860 975 6885 8820 6885 8820 4860 975 4860
+# METADATA <id>20</id>
+4 0 0 50 0 0 12 0.0000 6 198 345 1055 5127 $A$\001
+# METADATA <id>21</id>
+4 0 0 50 0 0 12 0.0000 6 198 345 3841 5127 $A$\001
+# METADATA <id>22</id>
+4 0 0 50 0 0 12 0.0000 6 198 345 6593 5127 $A$\001

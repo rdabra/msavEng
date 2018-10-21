@@ -1,0 +1,130 @@
+33 Patch Control
+
+0
+0
+1
+msav.tex
+36
+9
+6
+
+msav.sty
+TeX:STY:UNIX
+1159154 0 190 67 19 28 78 78 1502 610 0 0 241 323 -1 -1 0 0 22 0 0 22 1 0 28 19  0 0 0
+partes\parte1\parte1.tex
+TeX:UNIX
+1159163 0 -1 0 -1 0 26 26 1450 558 0 1 43 0 -1 -1 0 0 23 -1 -1 23 1 0 0 -1  0 -1 0
+partes\parte1\c_algabst.tex
+TeX:UNIX
+17936379 1 -1 15290 -1 15491 52 52 1476 584 0 1 151 475 -1 -1 0 0 39 -1 -1 39 1 0 15491 -1  0 -1 0
+partes\parte1\bibCh1.tex
+TeX:UNIX
+1159163 2 -1 5632 -1 5624 156 156 1606 682 0 1 124 437 -1 -1 0 0 28 -1 -1 28 1 0 5624 -1  0 -1 0
+gloss.tex
+TeX:UNIX
+1159163 1 -1 8617 -1 8608 130 130 1580 656 0 1 178 760 -1 -1 0 0 0 -1 -1 0 1 0 8608 -1  0 0 0
+partes\parte1\c_alglin.tex
+TeX:UNIX
+1159163 0 -1 63318 -1 63265 104 104 1554 630 0 1 214 418 -1 -1 0 0 0 -1 -1 0 1 0 63265 -1  0 -1 0
+partes\parte1\c_geoafim.tex
+TeX
+269496315 0 -1 5849 -1 5864 208 208 1546 740 0 1 295 304 -1 -1 0 0 -1 -1 -1 -1 1 0 5864 -1  0 -1 0
+msav.tex
+TeX:UNIX
+135376891 0 -1 4367 -1 3997 182 182 1606 714 0 1 43 152 -1 -1 0 0 73 -1 -1 73 1 0 3997 -1  0 -1 0
+partes\parte1\c_algtens.tex
+TeX:UNIX
+1159163 0 -1 71638 -1 52902 182 182 1606 719 1 1 808 285 -1 -1 0 0 24 -1 -1 24 2 0 52902 -1 1 74813 -1  0 -1 0
+:\Users\roberto\AppData\Roaming\WinEdt Team\WinEdt 10\Upgrade20180507.log
+DATA
+307233010 0 0 1 0 1 208 208 1494 854 1 0 79 0 -1 -1 0 0 -1 -1 -1 -1 1 0 1 0  0 0 0
+partes\parte1\figs\c_algabst\conjunto.pstex_t
+DATA:UNIX
+273776882 8 2 1 1 1 78 78 1502 610 1 0 79 19 -1 -1 0 0 -1 -1 -1 -1 1 0 1 1  0 0 0
+:\myWork\msav\msav.tex
+TeX:UNIX
+420589563 1 -1 2944 -1 2953 78 78 811 597 0 1 241 418 -1 -1 0 0 64 -1 -1 64 1 0 2953 -1  0 -1 0
+:\myWork\msav\partes\parte1\c_alglin.tex
+TeX:UNIX
+269594619 0 -1 43799 -1 43800 78 78 1543 606 0 1 196 190 -1 -1 0 0 0 -1 -1 0 1 0 43800 -1  0 -1 0
+:\myWork\msav\partes\parte1\c_algtens.tex
+TeX:UNIX
+1159163 0 -1 20283 -1 22136 44 153 1535 620 0 1 88 494 -1 -1 0 0 27 -1 -1 27 1 0 22136 -1  0 -1 0
+:\myWork\msav\gloss.tex
+TeX:UNIX
+1159163 0 -1 6943 -1 6933 78 78 1543 606 0 1 934 589 -1 -1 0 0 0 -1 -1 0 1 0 6933 -1  0 0 0
+:\myWork\msav\partes\parte1\c_algabst.tex
+TeX:UNIX
+17936379 0 -1 6196 -1 545 104 104 837 623 1 0 241 114 -1 -1 0 0 29 -1 -1 29 1 0 545 -1  0 0 0
+:\myWork\msav\msav.sty
+TeX:STY:UNIX
+1159154 1 19 48 19 1 130 130 1595 658 0 0 25 342 -1 -1 0 0 22 0 0 22 1 0 1 19  0 0 0
+:\myWork\msav\partes\parte1\c_geoafim.tex
+TeX
+269496315 1 -1 19621 -1 19420 208 208 1673 736 0 1 43 399 -1 -1 0 0 0 -1 -1 0 1 0 19420 -1  0 -1 0
+:\myWork\msav\partes\parte1\c_oqueAlgebra.tex
+TeX:UNIX
+1159163 0 -1 3042 -1 2256 52 52 1517 580 1 1 520 418 -1 -1 0 0 26 -1 -1 26 1 0 2256 -1  0 -1 0
+:\Users\roberto\AppData\Roaming\MiKTeX\2.9\tex\latex\footmisc\footmisc.sty
+TeX:UNIX
+17936379 0 -1 0 -1 0 130 130 1595 658 0 1 43 0 -1 -1 0 0 2 -1 -1 2 1 0 0 -1  0 0 0
+:\myWork\msav\partes\parte1\c_alglin.aux
+TeX:AUX
+269496306 0 0 1 0 1 156 156 1621 684 0 0 25 0 -1 -1 0 0 7 0 0 7 1 0 1 0  0 0 0
+:\myWork\traducoes\tales\tales.tex
+TeX:UNIX
+1159163 0 -1 407 -1 407 156 156 1621 684 0 1 43 722 -1 -1 0 0 -1 -1 -1 -1 1 0 407 -1  0 -1 0
+:\myWork\traducoes\tales\cabecalho.sty
+TeX:STY:UNIX
+1159154 0 68 26 69 18 182 182 1647 710 0 0 178 323 -1 -1 0 0 22 0 0 22 1 0 18 69  0 0 0
+:\myWork\traducoes\milton\shakespeare.tex
+TeX:UNIX
+269594619 0 -1 1900 -1 1900 130 130 1595 658 0 1 268 551 -1 -1 0 0 -1 -1 -1 -1 1 0 1900 -1  0 -1 0
+:\myWork\traducoes\shakespeare\cabecalho.sty
+TeX:STY
+269496306 0 86 16 86 15 104 104 1569 632 0 0 151 589 -1 -1 0 0 -1 -1 -1 -1 1 0 15 86  0 0 0
+:\myWork\traducoes\shakespeare\ricardo.tex
+TeX:UNIX
+269594619 4 -1 80 -1 79 130 130 1595 658 0 1 142 38 -1 -1 0 0 44 -1 -1 44 1 0 79 -1  0 -1 0
+:\myWork\traducoes\sanders\jesus.tex
+TeX:UNIX
+1159163 0 -1 0 -1 129 234 234 1699 762 0 1 43 209 -1 -1 0 0 -1 -1 -1 -1 1 0 129 -1  0 -1 0
+:\myWork\traducoes\listening\escutar.tex
+TeX:UNIX
+1159163 0 -1 0 -1 846 26 26 1491 554 0 1 43 380 -1 -1 0 0 -1 -1 -1 -1 1 0 846 -1  0 -1 0
+:\myWork\traducoes\listening\cabecalho.sty
+TeX:STY:UNIX
+1159154 0 55 9 25 2 52 52 1517 580 0 0 34 475 -1 -1 0 0 -1 -1 -1 -1 1 0 2 25  0 0 0
+:\myWork\traducoes\sanders\cabecalho.sty
+TeX:STY:UNIX
+1159154 0 71 16 71 15 0 0 1465 528 0 0 151 665 -1 -1 0 0 -1 -1 -1 -1 1 0 15 71  0 0 0
+:\myWork\traducoes\bion\intro.tex
+TeX
+269496315 0 -1 0 -1 0 182 182 1647 710 0 1 43 0 -1 -1 0 0 -1 -1 -1 -1 1 0 0 -1  0 -1 0
+:\myWork\traducoes\bion\aprender.tex
+TeX
+269496315 0 -1 0 -1 445 208 208 1673 736 0 1 106 418 -1 -1 0 0 -1 -1 -1 -1 1 0 445 -1  0 -1 0
+:\myWork\traducoes\shakespeare\ato1.tex
+TeX
+1060859 0 -1 368 -1 1006 156 156 1621 684 0 1 403 513 -1 -1 0 0 -1 -1 -1 -1 1 0 1006 -1  0 -1 0
+:\myWork\msav\partes\parte1\parte1.tex
+TeX:UNIX
+269594619 0 -1 0 -1 0 156 156 1621 684 0 1 43 0 -1 -1 0 0 23 -1 -1 23 1 0 0 -1  0 0 0
+:\myWork\msav\msav.gls
+TeX:AUX:UNIX
+269594610 8 48 1 47 1 52 52 1517 580 0 0 25 380 -1 -1 0 0 -1 -1 -1 -1 1 0 1 47  0 0 0
+:\Users\roberto\Downloads\InstallDict.edt
+ASCII:EDT
+269494138 0 0 1 0 1 0 0 1312 642 1 0 73 0 -1 -1 0 0 -1 -1 -1 -1 1 0 1 0  0 0 0
+
+*msav.tex
+>
+*gloss
+*summary
+*partes/parte1/parte1
+*partes/parte1/c_algabst
+*partes/parte1/c_alglin
+*partes/parte1/c_algtens
+*partes/parte1/c_geoafim
+*partes/parte1/bibCh1
+<

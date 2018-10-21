@@ -66,7 +66,7 @@ In conceptual terms, the least restricted algebraic collection is called set\ind
 \begin{figure}[!ht]
 	\centering
 	\begin{center}
-		\scalebox{.85}{\input{partes/parte1/figs/c_algabst/conjunto.pstex_t}}
+		\scalebox{.85}{\input{partes/figs/conjunto.pstex_t}}
 	\end{center}
 	\titfigura{If the selection criteria was ``\texttt{triangular plates with heights between 5cm and 15cm}'', then $\varDelta$ is a mathematical collection if equality is based only on the feature ``number of sides''; additionally, if it is based on ``height'', $\varDelta$ is still a collection; but, if it is based also on ``fill color'', then $\varDelta$ is a mathematical set.}\label{fg:conjunto}
 \end{figure}
@@ -93,7 +93,7 @@ When a set $\con{A}_1\cap\con{A}_2$ is empty, we say that $\con{A}_1$ and $\con{
 \begin{figure}[!ht]
 \centering
 \begin{center}
-\scalebox{.72}{\input{partes/parte1/figs/c_algabst/interseccao.pstex_t}}
+\scalebox{.72}{\input{partes/figs/interseccao.pstex_t}}
 \end{center}
 \titfigura{Intersection is distributive in union.}\label{fg:interDistrib}
 \end{figure}
@@ -210,7 +210,7 @@ If the image $R_f$ equals codomain $V$, the mapping $\map{f}{\con{U}}{\con{V}}$ 
 \begin{figure}[!ht]
 \centering
 \begin{center}
-\scalebox{.70}{\input{partes/parte1/figs/c_algabst/mapeamentos.pstex_t}}
+\scalebox{.70}{\input{partes/figs/mapeamentos.pstex_t}}
 \end{center}
 \titfigura{Functions $f$ and $g$ map $U$ to $V$, where $f$ is an injection and $g$ a surjection. If image $R_f$ were equal to the codomain $V$, $f$ would be a bijection.}\label{fg:mapeamentos}
 \end{figure}
@@ -321,7 +321,7 @@ There can be an abelian group $F$ that is simultaneously additive and multiplica
 \alpha,\alpha_i \in
     \con{F}\,\text{ and } n\in\gloref{inteirosPosNNulo}.
 \end{equation}
-In these circumstances, the triple $\lpa F, +, \cdot \rpa$ is called a \textsb{field}\index{field}, abbreviated by $\gloref{campo}$. When it is convenient, in order to simplify notation, $\cam{F}$ will represent the definer set $F$. An element of $\cam{F}$ is named a \textsb{scalar}\index{scalar}, of which $\beta\in\real$ and $\gamma\in\gloref{complexo}$ are examples. Henceforth, for the purposes of our study, an arbitrary field $\cam{F}$ will always refer to either a complex field $\complexo$ or a real field $\real$, that is, $\cam{F}\in\{\real,\complexo\}$. In this sense, where the real field will not be considered  a subset of the complex field, when $\cam{F}$ is $\real$, we must define that the conjugate $\overline{\alpha}=\alpha$, the real part $\gloref{parteReal}(\alpha)=\alpha$ and imaginary part $\gloref{parteImag}(\alpha)=0$, for all $\alpha\in \cam{F}$. Moreover, considering $f$ an arbitrary scalar valued function and $\fua{\overline{f}}{x}:=\overline{\fua{f}{x}}$, we have $\overline{f}=f$ in the case of $\cam{F}=\cam{R}$.   
+In these circumstances, the triple $\lpa F, +, \cdot \rpa$ is called a \textsb{field}\index{field}, abbreviated by $\gloref{campo}$. When it is convenient, in order to simplify notation, $\cam{F}$ will represent the definer set $F$. An element of $\cam{F}$ is named a \textsb{scalar}\index{scalar}, of which $\beta\in\real$ and $\gamma\in\gloref{complexo}$ are examples. Henceforth, for the purposes of our study, an arbitrary field $\cam{F}$ will always refer to either a complex field $\complexo$ or a real field $\real$, that is, $\cam{F}\in\{\real,\complexo\}$. In this sense, where the real field will not be considered  a subset of the complex field, when $\cam{F}$ is $\real$, we must define that the conjugate $\overline{\alpha}=\alpha$, the real part $\gloref{parteReal}(\alpha)=\alpha$ and imaginary part $\gloref{parteImag}(\alpha)=0$, for all $\alpha\in \cam{F}$. Moreover, considering $f$ an arbitrary scalar valued function and $\fua{\overline{f}}{x}:=\overline{\fua{f}{x}}$, we have $\overline{f}=f$ in the case of $\cam{F}=\cam{R}$.
 
 
 \section{Arrays}\index{array}
@@ -339,7 +339,7 @@ On the other hand, the multiplication \gloref{prodArr} requires that the last $q
 \sum_{k_1=1}^{n_1}\cdots\sum_{k_q=1}^{n_q} \mat{A}_{i_1\cdots
 	i_pk_1\cdots k_q}\,\mat{B}_{k_1\cdots k_qj_1\cdots j_s}\,.
 \end{equation}
-From now on, we shall adopt that $\mat{AB}:=\mat{A*_1B}$. It is also very important for our study to present the so called the \textsb{scalar product}\index{matrix!scalar product of} or \textsb{Frobenius product} of arrays: given two arrays $\mat{A}$ and $\mat{B}$ with the same dimension $m_1\times\cdots\times m_p$, the scalar product 
+From now on, we shall adopt that $\mat{AB}:=\mat{A*_1B}$. It is also very important for our study to present the so called the \textsb{scalar product}\index{matrix!scalar product of} or \textsb{Frobenius product} of arrays: given two arrays $\mat{A}$ and $\mat{B}$ with the same dimension $m_1\times\cdots\times m_p$, the scalar product
 \begin{equation}
 \gloref{scalP}:=\sum_{i_1}^{m_1}\cdots\sum_{i_p}^{m_p}\mat{A}_{i_1\cdots i_p}\overline{\mat{B}_{i_1\cdots i_p}}\,.
 \end{equation}
@@ -380,13 +380,13 @@ The Levi-Civita symbol enables us to define a notable mapping $\map{\text{Det}}{
 	i_n^{(1)}}\cdots\epsilon_{i_1^{(q)}\cdots i_n^{(q)}}
 \prod_{k=1}^{n}\mat{X}_{i_k^{(1)}\cdots i_k^{(q)}}
 \end{equation}
-when the order $q$ is even and $\hdet{\mat{X}}=0$ when it is odd. Although this definition lacks an adequate justification at this point, it will support future concepts that will have their own intuitive meaning. The term $1/n!$ is justified by the property    
+when the order $q$ is even and $\hdet{\mat{X}}=0$ when it is odd. Although this definition lacks an adequate justification at this point, it will support future concepts that will have their own intuitive meaning. The term $1/n!$ is justified by the property
 \begin{equation}\label{eq:productProp}
 \sum_{i_1^{(1)}=1}^n\cdots\sum_{i_n^{(1)}=1}^n\cdots
 \sum_{i_1^{(q)}=1}^n\cdots\sum_{i_n^{(q)}=1}^n\epsilon_{i_1^{(1)}\cdots
 	i_n^{(1)}}\cdots\epsilon_{i_1^{(q)}\cdots i_n^{(q)}}=n!\,,
 \end{equation}
-since $n!$ must be eliminated from the calculation of the hyperdeterminant.  
+since $n!$ must be eliminated from the calculation of the hyperdeterminant.
 
 
 There is another special array $\delta$, also widely used in indicial notations, called \textsb{Kronecker Delta}\index{Kronecker Delta}, whose elements
@@ -400,8 +400,8 @@ i_1,\cdots,i_q\rpa\\
 i_1,\cdots,i_q\rpa
 \end{dcases}\,,
 \end{equation}
-where the addressing domain is $N^{2q}$ and the set $N = \lch 1,2,\cdots,n \rch$. Differently from the Levi-Civita Symbol, in order to build $\delta$ it is necessary to specify an order of $2q$ and all dimensions equal to $n$. In the particular case of $q=1$, the Kronecker Delta results a $n\times n$ array, that is, a tabular array, as can be observed in 
-\begin{equation}\label{eq:matrizIdentidade} 
+where the addressing domain is $N^{2q}$ and the set $N = \lch 1,2,\cdots,n \rch$. Differently from the Levi-Civita Symbol, in order to build $\delta$ it is necessary to specify an order of $2q$ and all dimensions equal to $n$. In the particular case of $q=1$, the Kronecker Delta results a $n\times n$ array, that is, a tabular array, as can be observed in
+\begin{equation}\label{eq:matrizIdentidade}
 \delta=
 \begin{bmatrix}
     1      & 0       & \cdots & 0\\
@@ -471,11 +471,11 @@ If $\mat{A},\mat{B}\in M$ are $n_1\times n_2$ and $n_2\times n_1$ matrices respe
 	\item[iv.] $\lpa\mat{A}^{-1}\rpa^\text{T} =
 \lpa\mat{A}^\text{T}\rpa^{-1}$, if $\mat{A}$ is invertible\,.
 \end{itemize}
-Additionally, if $\mat{A}$ is invertible and $\mat{A}^{-1}=\mat{A}^\text{T}$, it is classified as \textsb{orthogonal}\index{matrix!orthogonal}. In this context, the property $\dete{\mat{A}}^\text{T}=\dete{\mat{A}}$ enables us to write 
+Additionally, if $\mat{A}$ is invertible and $\mat{A}^{-1}=\mat{A}^\text{T}$, it is classified as \textsb{orthogonal}\index{matrix!orthogonal}. In this context, the property $\dete{\mat{A}}^\text{T}=\dete{\mat{A}}$ enables us to write
 \begin{equation}\label{eq:detMatOrtog}
 1=\dete{\mat{AA}^{-1}}=\dete{\mat{AA}^\text{T}}= \dete{\mat{A}}\dete{\mat{A}} = (\dete{\mat{A}}) ^2\,,
 \end{equation}
-which means that $\dete{\mat{A}}=\pm 1$. Considering this result, matrix $\mat{A}$ is called a \textsb{proper orthogonal matrix}\index{matrix!proper orthogonal} when it has a positive determinant or an \textsb{improper orthogonal matrix}\index{matrix!improper orthogonal} when its determinant is negative. 
+which means that $\dete{\mat{A}}=\pm 1$. Considering this result, matrix $\mat{A}$ is called a \textsb{proper orthogonal matrix}\index{matrix!proper orthogonal} when it has a positive determinant or an \textsb{improper orthogonal matrix}\index{matrix!improper orthogonal} when its determinant is negative.
 
 {\footnotesize
 \begin{proof}

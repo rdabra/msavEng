@@ -1,0 +1,35 @@
+\begin{picture}(0,0)%
+\includegraphics{mapeamentos.eps}%
+\end{picture}%
+%
+%  Created by WinFIG version 7.1 
+%  METADATA <version>1.0</version> 
+%
+\setlength{\unitlength}{3947sp}%
+%
+\begingroup\makeatletter\ifx\SetFigFont\undefined%
+\gdef\SetFigFont#1#2#3#4#5{%
+  \reset@font\fontsize{#1}{#2pt}%
+  \fontfamily{#3}\fontseries{#4}\fontshape{#5}%
+  \selectfont}%
+\fi\endgroup%
+\begin{picture}(5141,2925)(2355,-4609)
+%  METADATA <id>13</id> 
+\put(2626,-4469){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$U=D_f=D_g$}%
+}}}}
+%  METADATA <id>14</id> 
+\put(6511,-2217){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$R_f$}%
+}}}}
+%  METADATA <id>15</id> 
+\put(4636,-2226){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$f$}%
+}}}}
+%  METADATA <id>16</id> 
+\put(4472,-3165){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$f^{-1}$}%
+}}}}
+%  METADATA <id>17</id> 
+\put(6876,-4478){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$V=R_g$}%
+}}}}
+%  METADATA <id>33</id> 
+\put(4309,-3921){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$g$}%
+}}}}
+\end{picture}%

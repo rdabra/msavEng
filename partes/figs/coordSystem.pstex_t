@@ -1,0 +1,50 @@
+\begin{picture}(0,0)%
+\includegraphics{coordSystem.eps}%
+\end{picture}%
+%
+%  Created by WinFIG version 7.4 
+%  METADATA <version>1.0</version> 
+%
+\setlength{\unitlength}{3947sp}%
+%
+\begingroup\makeatletter\ifx\SetFigFont\undefined%
+\gdef\SetFigFont#1#2#3#4#5{%
+  \reset@font\fontsize{#1}{#2pt}%
+  \fontfamily{#3}\fontseries{#4}\fontshape{#5}%
+  \selectfont}%
+\fi\endgroup%
+\begin{picture}(4369,2228)(1355,-5481)
+%  METADATA <id>13</id> 
+\put(1978,-4956){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$a$}%
+}}}}
+%  METADATA <id>15</id> 
+\put(2592,-4865){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$o$}%
+}}}}
+%  METADATA <id>17</id> 
+\put(2258,-4779){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\vto{w}$}%
+}}}}
+%  METADATA <id>19</id> 
+\put(2491,-4306){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\vto{v}_1$}%
+}}}}
+%  METADATA <id>21</id> 
+\put(3038,-4371){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\vto{v}_2$}%
+}}}}
+%  METADATA <id>23</id> 
+\put(2978,-5102){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\vto{v}_n$}%
+}}}}
+%  METADATA <id>25</id> 
+\put(5353,-3509){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\eamd{U}{F}{m}$}%
+}}}}
+%  METADATA <id>27</id> 
+\put(4775,-3833){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\eamsd{S}{F}{a}{n}$}%
+}}}}
+%  METADATA <id>29</id> 
+\put(2237,-3832){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$((\mathcal{B}_1)_o)^1_\cam{F}$}%
+}}}}
+%  METADATA <id>31</id> 
+\put(3351,-3934){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$((\mathcal{B}_2)_o)^1_\cam{F}$}%
+}}}}
+%  METADATA <id>33</id> 
+\put(3639,-5161){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$((\mathcal{B}_n)_o)^1_\cam{F}$}%
+}}}}
+\end{picture}%
