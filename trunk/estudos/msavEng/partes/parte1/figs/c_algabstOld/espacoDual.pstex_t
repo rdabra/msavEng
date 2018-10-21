@@ -1,0 +1,47 @@
+\begin{picture}(0,0)%
+\includegraphics{espacoDual.eps}%
+\end{picture}%
+%
+%  Created by WinFIG version 7.4 
+%  METADATA <version>1.0</version> 
+%
+\setlength{\unitlength}{3947sp}%
+%
+\begingroup\makeatletter\ifx\SetFigFont\undefined%
+\gdef\SetFigFont#1#2#3#4#5{%
+  \reset@font\fontsize{#1}{#2pt}%
+  \fontfamily{#3}\fontseries{#4}\fontshape{#5}%
+  \selectfont}%
+\fi\endgroup%
+\begin{picture}(3855,2213)(2859,-4082)
+%  METADATA <id>2</id> 
+\put(3465,-3589){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$B^\perp$}%
+}}}}
+%  METADATA <id>4</id> 
+\put(5924,-3637){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$B^*$}%
+}}}}
+%  METADATA <id>6</id> 
+\put(5782,-2286){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$(B^*)^\perp$}%
+}}}}
+%  METADATA <id>8</id> 
+\put(3491,-2317){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$B$}%
+}}}}
+%  METADATA <id>10</id> 
+\put(3099,-3974){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$U_\mathcal{R}$}%
+}}}}
+%  METADATA <id>12</id> 
+\put(6460,-4005){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$U_\mathcal{R}^*$}%
+}}}}
+%  METADATA <id>14</id> 
+\put(4722,-3513){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\Phi$}%
+}}}}
+%  METADATA <id>16</id> 
+\put(4717,-2187){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\Phi^{-1}$}%
+}}}}
+%  METADATA <id>18</id> 
+\put(3357,-2880){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\perp$}%
+}}}}
+%  METADATA <id>20</id> 
+\put(6024,-2896){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\perp$}%
+}}}}
+\end{picture}%
