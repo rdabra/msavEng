@@ -103,8 +103,15 @@ We define that two vectors project on each other or have a projective interrelat
 \overline{\alpha_2}\fua{\xi}{\vto{u}_1,\vto{u}_2} + \overline{\alpha_3}\fua{\xi}{\vto{u}_1,\vto{u}_3}\,;
 	\end{equation*}
 \end{itemize}
-where $\vto{u}_1,\vto{u}_2,\vto{u}_3\in U_\cam{F}$ and  $\alpha_1,\alpha_2,\alpha_3\in\cam{F}$ are arbitrary elements of their respective sets. In this context, function $\xi$ is called a \textsb{positive-definite inner product} because the projection of a vector on itself is a nonnegative real number, as described by the first axiom. In our study, $\xi$ is simply called an \textsb{inner product}\index{inner product!of vectors}, and the double $(U_\cam{F},\xi)$ an \textsb{inner product space}\index{space!inner product}. From this double, we conclude that $\xi$ structures the group $U$ in such a way that a projective interrelationship of any pair of its elements can be obtained.
-Henceforth, in order to shorten notation, $\gloref{prdint}$ will also be used to represent the inner product $\fua{\xi}{\vto{x},\vto{y}}$.
+where $\vto{u}_1,\vto{u}_2,\vto{u}_3\in U_\cam{F}$ and  $\alpha_1,\alpha_2,\alpha_3\in\cam{F}$ are arbitrary elements of their respective sets. In this context, function $\xi$ is called a \textsb{positive-definite inner product} because the projection of a vector on itself is a nonnegative real number, as described by the first axiom. In our study, $\xi$ is simply called an \textsb{inner product}\index{inner product!of vectors}, and the double $(U_\cam{F},\xi)$ an \textsb{inner product space}\index{space!inner product}. From this double, we conclude that $\xi$ structures the group $U$ in such a way that a projective interrelationship of any pair of its elements can be obtained. Henceforth, in order to shorten notation, $\gloref{prdint}$ will also be used to represent the inner product $\fua{\xi}{\vto{x},\vto{y}}$. Moreover, in an inner product space, it is valid the so called \textsb{Cauchy-Schwartz Inequality}\index{Inequality!Cauchy-Schwartz}, where 
+\begin{equation}
+|\vto{u}\cdot\vto{v}|\leq \sqrt{(\vto{u}\cdot\vto{u})(\vto{v}\cdot\vto{v})}\,,\,\,\forall\,\vto{u},\vto{v}\in U_\cam{F}\,.
+\end{equation}
+
+{\footnotesize
+\begin{proof}
+Let's prove the above inequality. If vectors $\vto{u}$ or $\vto{v}$ are zero, proof is trivial. Now, considering $\vto{v}\neq \vto{0}$ and a scalar $\lambda=(\vto{u}\cdot\vto{v})/(\vto{v}\cdot\vto{v})$, from the first axiom above scalar $(\vto{u}-\lambda\vto{v})\cdot(\vto{u}-\lambda\vto{v})$ is nonnegative. 
+\end{proof}}
 
 \begin{comment}
 Alternatively, if we had considered the function in $\map{\xi^c}{U_\cam{F}\times \overline{U_\cam{F}}}{\cam{F}}$ to be the inner product, where $\fua{\xi^c}{\vto{u}_1,\vto{u}_2^c}=\fua{\xi}{\vto{u}_1,\vto{u}_2}$, it would have to observe the axioms
@@ -168,7 +175,8 @@ where the function in $\map{g}{\real^+}{\real^+}$ enables us to say that \emph{t
 \end{comment}
 
 
-Any two vectors $\gloref{unita}$ and $\vun{u}_2$ of $(V_\cam{F},\eta,\xi)$ are said to be orthonormal if they are orthogonal and each one is \textsb{unitary}\index{vector!unitary}, where $\|\vun{u}_i\|=1$. Thereby, if the vector space $V_\cam{F}$ is $n$-dimensional, a subset $\hat{U}=\{\vun{u}_1,\vun{u}_2,\cdots,\vun{u}_n\}$ of orthonormal vectors is called an \textsb{orthonormal basis}\index{basis!orthonormal} of $V_\cam{F}$. It is important to note that to every orthogonal basis $\{\vto{u}_1,\vto{u}_2,\cdots,\vto{u}_n\}$, where $\vto{u}_i\cdot\vto{u}_j=0$ when $i\neq j$, there is always an orthonormal basis $\{\vun{u}_1,\vun{u}_2,\cdots,\vun{u}_n\}$ where each $\vun{u}_i:=\vto{u}_i/\|\vto{u}_i\|$ and then $\|\vun{u}_i\|=\|\vto{u}_i/\|\vto{u}_i\|\|=\|\vto{u}_i\|/\|\vto{u}_i\|=1$, when we say that the orthonormal basis results from \textsb{normalizing}\index{basis!normalization of} the orthogonal basis.
+Any two vectors $\gloref{unita}$ and $\vun{u}_2$ of a normed inner product space $(V_\cam{F},\eta,\xi)$ are said to be orthonormal if they are orthogonal and each one is \textsb{unitary}\index{vector!unitary}, where $\|\vun{u}_i\|=1$. Thereby, if the vector space $V_\cam{F}$ is $n$-dimensional, a subset $\hat{U}=\{\vun{u}_1,\vun{u}_2,\cdots,\vun{u}_n\}$ of orthonormal vectors is called an \textsb{orthonormal basis}\index{basis!orthonormal} of $V_\cam{F}$. It is important to note that to every orthogonal basis $\{\vto{u}_1,\vto{u}_2,\cdots,\vto{u}_n\}$, where $\vto{u}_i\cdot\vto{u}_j=0$ when $i\neq j$, there is always an orthonormal basis $\{\vun{u}_1,\vun{u}_2,\cdots,\vun{u}_n\}$ where each $\vun{u}_i:=\vto{u}_i/\|\vto{u}_i\|$ and then $\|\vun{u}_i\|=\|\vto{u}_i/\|\vto{u}_i\|\|=\|\vto{u}_i\|/\|\vto{u}_i\|=1$, when we say that the orthonormal basis results from \textsb{normalizing}\index{basis!normalization of} the orthogonal basis. 
+
 
 
 \section{Structuring by Metrics}
