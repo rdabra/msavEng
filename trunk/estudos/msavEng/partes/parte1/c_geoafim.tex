@@ -23,9 +23,13 @@ In this context, the triple $(U_\cam{F},\epu{U},\oplus)$ is called an affine spa
 \titfigura{Vector as an arrow identified by points $a$ and $b$.}\label{fg:vetorSeta}
 \end{figure}
 
-\noindent As an arbitrary vector can be identified by infinite doubles of points, given arbitrary points $x,y,a,b\in\eam{U}{F}$, the first operand of $\vv{xy}+\vv{ab}$ can be described by $\vv{bc}$, where $\vv{xy}\oplus b=c$, and thereby equalities $(\vv{bc}+\vv{ab})\oplus a=\vv{bc}\oplus b=c$ enable us to write that $\vv{ab}+\vv{bc}=\vv{ac}$. From this algebraic property, it is possible to depict graphically a sum of vectors by concatenating each one of the their representative arrows in such a way that a head point to a tail, as shown in figure XX. It is then straightforward to conclude that a vector $\alpha\vv{ab}$, where $\alpha\in\real$, is represented by a ``compressed'' ($\alpha\leq 1$) or ``stretched'' ($\alpha >1$) vector $\vv{ab}$. 
+\noindent As an arbitrary vector can be identified by infinite doubles of points, given arbitrary points $x,y,a,b\in\eam{U}{F}$, the first operand of $\vv{xy}+\vv{ab}$ can be described by $\vv{bc}$, where $\vv{xy}\oplus b=c$, and thereby equalities $(\vv{bc}+\vv{ab})\oplus a=\vv{bc}\oplus b=c$ enable us to write that $\vv{ab}+\vv{bc}=\vv{ac}$. From this algebraic property, it is possible to depict graphically a sum of vectors by concatenating each one of the their representative arrows in such a way that a head point to a tail, as shown in the following figure XX. 
 
- 
+
+%COLOCAR FIGURA
+
+
+\noindent It is then straightforward to conclude that a vector $\alpha\vv{ab}$, where $\alpha\in\real$, is represented by a ``compressed'' ($\alpha\leq 1$) or ``stretched'' ($\alpha >1$) vector $\vv{ab}$. Moreover, we can say that the coordinates of vector $\alpha\vv{ab}$ are the coordinates of $\vv{ab}$ equally multiplied, that is equally ``compressed'' or ``stretched'' in geometric terms, by the real number $\alpha$. For the case of a complex affine space $\eam{U}{C}$, the polar complex coordinates of a vector when multiplied by a complex $\alpha$ are equally multiplied by the real scalar $|\alpha|$ and equally rotated by $\arg{(\alpha)}$ on the complex plane, according to the basic theory of complex number multiplication. Therefore, in affine geometric representation, a complex vector $\alpha\vv{ab}\in U_\cam{C}$ results also in a ``compressed'' or ``stretched'' complex vector $\vv{ab}$.  
 
 Considering previous conditions, given an arbitrary point $a\in \eam{U}{F}$ and a vector subspace $S_\cam{F}\subset U_\cam{F}$, the triple $(S_\cam{F},\epu{S}_a,\oplus)$ is called an \textsb{affine subspace}\index{affine!subspace} of $\eam{U}{F}$, represented by $\eams{S}{F}{a}$, if point space $\epu{S}_a:=\{\vto{x}\oplus a:\forall \vto{x}\in V_\cam{F}\}$, to which point $a$ also belongs since vector $\vto{0}\in V_\cam{F}$. In the case of affine space $\eam{U}{F}$ defined by a $m$-dimensional vector space, an arbitrary affine subspace $\eams{S}{F}{a}$ becomes another fundamental geometric object -- other than points -- called a \textsb{hyperplane}\index{hyperplane}, obviously defined by a vector subspace $S_\cam{F}$ with dimension less than $m$: we specifically call the hyperplane a \textsb{line}\index{line} or a \textsb{plane}\index{plane} when $S_\cam{F}$ is one or two-dimensional respectively. Since it is the vector space which bears a dimensional feature, it is defined that $\dim{(\eam{U}{F})}=\dim{(U_\cam{F})}=m$ and then we use $\eamd{U}{F}{m}$ to represent a $m$-dimensional affine space. Now, given a point $o\in\eams{S}{F}{a}$ and a basis $B=\{\vto{v}_1,\cdots,\vto{v}_n\}$ of $S_\cam{F}$, where $n<m$, we call double $(o,B)$ an \textsb{affine coordinate system}\index{affine!coordinate system} of $\eamsd{S}{F}{a}{n}$ since point space $\epu{S}_a$ can be obtained from $o$ and $B$ as follows:
 \begin{equation}
@@ -46,10 +50,8 @@ On section \ref{sec:group}, we said that in a group action a biunivocal relation
 \begin{equation}
 \fua{\varrho}{u,v} := \|\vv{ou} - \vv{ov}\|=\|\vv{vo} + \vv{ou}\|=\|\vv{vu}\|=\|\vv{uv}\|\,,
 \end{equation}
-norm enables distance measurement.
+norm enables distance measurement. FALAR SOBRE A GEOMETRIA DO PRODUTO INTERNO.
 
-
-Thereby, it is clear that vector $\vv{ab}+\vv{bc}=\vv{ac}$.
 
 Since an affine subspace is itself an affine space, representation of triple $(\eams{S}{F}{a},o,B)$ will be shortened by $\eam{S}{F}$, where point $a$ and the coordinate system are implicit.
 
