@@ -110,7 +110,15 @@ where $\vto{u}_1,\vto{u}_2,\vto{u}_3\in U_\cam{F}$ and  $\alpha_1,\alpha_2,\alph
 
 {\footnotesize
 \begin{proof}
-Let's prove the above inequality. If vectors $\vto{u}$ or $\vto{v}$ are zero, proof is trivial. Now, considering $\vto{v}\neq \vto{0}$ and a scalar $\lambda=(\vto{u}\cdot\vto{v})/(\vto{v}\cdot\vto{v})$, from the first axiom above scalar $(\vto{u}-\lambda\vto{v})\cdot(\vto{u}-\lambda\vto{v})$ is nonnegative. 
+Let's prove the above inequality. If vectors $\vto{u}$ or $\vto{v}$ are zero, proof is trivial. Now, considering $\vto{v}\neq \vto{0}$ and a scalar $\lambda=(\vto{u}\cdot\vto{v})/(\vto{v}\cdot\vto{v})$, from the first axiom above,  
+\begin{align*}
+0&\leq(\vto{u}-\lambda\vto{v})\cdot(\vto{u}-\lambda\vto{v})\\
+0&\leq\vto{u}\cdot\vto{u}-\overline{\lambda}\vto{u}\cdot\vto{v}-\lambda\vto{v}\cdot\vto{u}+\lambda\overline{\lambda}\vto{v}\cdot\vto{v}\\
+0&\leq\vto{u}\cdot\vto{u}-\overline{\lambda}\lambda\vto{v}\cdot\vto{v}-\lambda\overline{\lambda}\vto{v}\cdot\vto{v}+\lambda\overline{\lambda}\vto{v}\cdot\vto{v}\\
+|\lambda|^2\vto{v}\cdot\vto{v}&\leq\vto{u}\cdot\vto{u} \\
+ |\vto{u}\cdot\vto{v}|^2&\leq(\vto{u}\cdot\vto{u})(\vto{v}\cdot\vto{v})\,, 
+\end{align*}
+since $\vto{v}\cdot\vto{v}$ is a positive real number.  
 \end{proof}}
 
 \begin{comment}
@@ -175,7 +183,7 @@ where the function in $\map{g}{\real^+}{\real^+}$ enables us to say that \emph{t
 \end{comment}
 
 
-Any two vectors $\gloref{unita}$ and $\vun{u}_2$ of a normed inner product space $(V_\cam{F},\eta,\xi)$ are said to be orthonormal if they are orthogonal and each one is \textsb{unitary}\index{vector!unitary}, where $\|\vun{u}_i\|=1$. Thereby, if the vector space $V_\cam{F}$ is $n$-dimensional, a subset $\hat{U}=\{\vun{u}_1,\vun{u}_2,\cdots,\vun{u}_n\}$ of orthonormal vectors is called an \textsb{orthonormal basis}\index{basis!orthonormal} of $V_\cam{F}$. It is important to note that to every orthogonal basis $\{\vto{u}_1,\vto{u}_2,\cdots,\vto{u}_n\}$, where $\vto{u}_i\cdot\vto{u}_j=0$ when $i\neq j$, there is always an orthonormal basis $\{\vun{u}_1,\vun{u}_2,\cdots,\vun{u}_n\}$ where each $\vun{u}_i:=\vto{u}_i/\|\vto{u}_i\|$ and then $\|\vun{u}_i\|=\|\vto{u}_i/\|\vto{u}_i\|\|=\|\vto{u}_i\|/\|\vto{u}_i\|=1$, when we say that the orthonormal basis results from \textsb{normalizing}\index{basis!normalization of} the orthogonal basis. 
+Any two vectors $\gloref{unita}$ and $\vun{u}_2$ of a normed inner product space $(V_\cam{F},\eta,\xi)$ are said to be orthonormal if they are orthogonal and each one is \textsb{unitary}\index{vector!unitary}, where $\|\vun{u}_i\|=1$. If the vector space $V_\cam{F}$ is $n$-dimensional, a subset $\hat{U}=\{\vun{u}_1,\vun{u}_2,\cdots,\vun{u}_n\}$ of orthonormal vectors is called an \textsb{orthonormal basis}\index{basis!orthonormal} of $V_\cam{F}$. Thereby, to every orthogonal basis $\{\vto{u}_1,\vto{u}_2,\cdots,\vto{u}_n\}$, where $\vto{u}_i\cdot\vto{u}_j=0$ when $i\neq j$, there is always an orthonormal basis $\{\vun{u}_1,\vun{u}_2,\cdots,\vun{u}_n\}$ where each $\vun{u}_i:=\vto{u}_i/\|\vto{u}_i\|$ and then $\|\vun{u}_i\|=\|\vto{u}_i/\|\vto{u}_i\|\|=\|\vto{u}_i\|/\|\vto{u}_i\|=1$, when we say that the orthonormal basis results from \textsb{normalizing}\index{basis!normalization of} the orthogonal basis. 
 
 
 
