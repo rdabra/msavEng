@@ -1,0 +1,35 @@
+#FIG 3.2
+# Created by WinFIG version 7.5
+# METADATA <version>1.0</version>
+Portrait
+Flush left
+Metric
+A4
+100.00
+Single
+-2
+1200 2
+# METADATA <id>39</id>
+2 5 0 0 0 7 50 0 -1 0.000 0 0 0 0 0 5
+	0 C:/myWork/msavEng/partes/figs/vetorSomaScr.eps
+	 1710 6840 1710 9015 5670 9015 5670 6840 1710 6840
+# METADATA <id>45</id>
+4 0 0 50 0 0 12 0.0000 6 207 936 2717 7929 $\\vv{ab}$\001
+# METADATA <id>47</id>
+4 0 0 50 0 0 12 0.0000 6 207 1331 5328 7110 $\\eam{U}{F}$\001
+# METADATA <id>49</id>
+4 0 0 50 0 0 12 0.0000 6 207 925 3733 7252 $\\vv{xy}$\001
+# METADATA <id>51</id>
+4 0 0 50 0 0 12 0.0000 6 207 1771 3789 7950 $\\vv{ab}+\\vv{xy}$\001
+# METADATA <id>53</id>
+4 0 0 50 0 0 12 0.0000 6 207 925 3568 8524 $\\vv{xy}$\001
+# METADATA <id>55</id>
+4 0 0 50 0 0 12 0.0000 6 207 338 2458 8605 $a$\001
+# METADATA <id>57</id>
+4 0 0 50 0 0 12 0.0000 6 207 350 3208 7377 $b$\001
+# METADATA <id>59</id>
+4 0 0 50 0 0 12 0.0000 6 207 327 4557 7174 $c$\001
+# METADATA <id>61</id>
+4 0 0 50 0 0 12 0.0000 6 207 338 3135 8764 $x$\001
+# METADATA <id>63</id>
+4 0 0 50 0 0 12 0.0000 6 207 338 4608 8494 $y$\001
