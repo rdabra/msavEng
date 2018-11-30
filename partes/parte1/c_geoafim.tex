@@ -13,7 +13,7 @@ Recalling the concept of group action presented on chapter \ref{ch:Collect}, let
 \item[ii.] $\vto{u}\oplus(\vto{v}\oplus a)=(\vto{u}+\vto{v})\oplus a, \forall \, \ele{a}\in \epu{U},\,\forall\, \vto{u},\vto{v}\in U_\cam{F}$;
 \item[iii.]  $\exists !\,\, \vto{u}\in U_\cam{F}\textrm{ such that } \vto{u}\oplus a=b$.	
 \end{itemize}
-In this context, the triple $(U_\cam{F},\epu{U},\oplus)$ is called an affine space, henceforth represented by $\eam{U}{F}$, which will also be used to refer to the point space $\epu{U}$, as we adopted similarly for other cases in order to simplify notation. Moreover, vector space $U_\cam{F}$ is usually called the \textsb{direction space}\index{space!direction} of affine space $\eam{U}{F}$. Therefore, we can say that an affine space is defined by a direction space, a point space and a group action. From axiom iii above, every double of points uniquely identifies a certain vector: if $\vto{u}\oplus a=b$, we define that double $(a,b)$ identifies vector $\vto{u}$, when this vector is represented by $\vv{ab}$. \emph{The converse is not true: a certain vector can be identified by different doubles of points because $\vto{u}\oplus x=y$ and then $\vv{ab}=\vv{xy}$}. Now, from axioms i and ii, considering point $\vto{v}\oplus a=c$, we conclude that $-\vto{v}\oplus c=a$, and then vector $\vto{v}=\vv{ac}=-\vv{ca}$. From this characteristic relationship between points and vectors, the classical pictorial representation of a vector identified by a double os points $(a,b)$ as an arrow whose tail ``starts'' on $a$ and head points to $b$ arises naturally (figure \ref{fg:vetorSeta}).
+In this context, the triple $(U_\cam{F},\epu{U},\oplus)$ is called an affine space, henceforth represented by $\eam{U}{F}$, which will also be used to refer to the point space $\epu{U}$, as we adopted similarly for other cases in order to simplify notation. Moreover, vector space $U_\cam{F}$ is usually called the \textsb{direction space}\index{space!direction} of affine space $\eam{U}{F}$. Therefore, we can say that an affine space is defined by a direction space, a point space and a group action. From axiom iii above, every double of points uniquely identifies a certain vector: if $\vto{u}\oplus a=b$, we define that double $(a,b)$ identifies vector $\vto{u}$, when this vector is represented by $\vv{ab}$. \emph{The converse is not true: a certain vector can be identified by different doubles of points because $\vto{u}\oplus x=y$ for arbitrary $x\in\eam{U}{F}$ and then $\vv{ab}=\vv{xy}$}. Now, from axioms i and ii, considering point $\vto{v}\oplus a=c$, we conclude that $-\vto{v}\oplus c=a$, and then vector $\vto{v}=\vv{ac}=-\vv{ca}$. From this characteristic relationship between points and vectors, the classical pictorial representation of a vector identified by a double of points $(a,b)$ as an arrow whose tail ``starts'' on $a$ and head points to $b$ arises naturally (figure \ref{fg:vetorSeta}).
 
 \begin{figure}[!ht]
 \centering
@@ -31,7 +31,7 @@ In this context, the triple $(U_\cam{F},\epu{U},\oplus)$ is called an affine spa
 \begin{center}
 \scalebox{.72}{\input{partes/figs/vetorSoma.pstex_t}}
 \end{center}
-\titfigura{Sum of vectors $\protect\vv{ab}$ and $\protect\vv{xy}$.}\label{fg:vetorSoma}
+\titfigura{Sum of vectors $\protect\vv{ab}$ and $\protect\vv{xy}$ where $\protect\vv{xy}\oplus b=c$.}\label{fg:vetorSoma}
 \end{figure}
 
 \noindent It is then straightforward to conclude that a vector $\alpha\vv{ab}$, where $\alpha\in\real$, is represented by a ``compressed'' ($\alpha\leq 1$) or ``stretched'' ($\alpha >1$) vector $\vv{ab}$. Moreover, we can say that the coordinates of vector $\alpha\vv{ab}$ are the coordinates of $\vv{ab}$ equally multiplied, that is equally ``compressed'' or ``stretched'' in geometric terms, by the real number $\alpha$. For the case of a complex affine space $\eam{U}{C}$, the polar complex coordinates of a vector when multiplied by a complex $\alpha$ are equally multiplied by the real scalar $|\alpha|$ and equally rotated by $\arg{(\alpha)}$ on the complex plane, according to the basic theory of complex number multiplication. Therefore, in affine geometric representation, a complex vector $\alpha\vv{ab}\in U_\cam{C}$ results also in a ``compressed'' or ``stretched'' complex vector $\vv{ab}$.
@@ -55,11 +55,34 @@ On section \ref{sec:group}, we said that in a group action a biunivocal relation
 \begin{equation}
 \fua{\varrho}{u,v} := \|\vv{ou} - \vv{ov}\|=\|\vv{vo} + \vv{ou}\|=\|\vv{vu}\|=\|\vv{uv}\|\,,
 \end{equation}
-norm enables distance measurement. Now, regarding the geometric effects of the inner product, we already said on a previous chapter that this product is closely related to  vector incidence\footnote{See page \pageref{wd:incidence}.}, being a scalar measure of this concept. In the context of affine normed inner product spaces, the incidence interrelationship of non zero vectors $\vv{ov}$ and $\vv{ou}$ is expressed both by the \textsb{projection}\index{projection} $\fua{\zeta}{\vv{ov},\vv{ou}}$ of $\vv{ov}$ onto the line defined by the set $\spn{(\{\vv{ou}\})}$ and projection $\fua{\zeta}{\vv{ou},\vv{ov}}$ of $\vv{ou}$ onto the line defined by $\spn{(\{\vv{ov}\})}$, where $\map{\zeta}{U_\cam{F}^2}{\cam{F}}$ and $\fua{\zeta}{\vv{ox},\vv{oy}}=\vv{ox}\cdot \vv{oy}/\|\vv{oy}\|$. From this rule, if projection is known and not the inner product, we can write that $\vv{ox}\cdot \vv{oy}=\fua{\zeta}{\vv{ox},\vv{oy}}\|\vv{oy}\|$, which is usually and imprecisely regarded as the ``geometric definition'' of the inner product. It is important to note that if arguments $\vv{ox}$ and $\vv{oy}$ are orthogonal, then $\fua{\zeta}{\vv{ox},\vv{oy}}=0$. Moreover, in the context of affine Hilbert spaces, where $\|\vv{ox}\|^2=\vv{ox}\cdot \vv{ox}$, when $\vv{oy}=\alpha\vv{ox}$ then
-\begin{equation*}
-\fua{\zeta}{\vv{ox},\alpha\vv{ox}}=\dfrac{\overline{\alpha}(\vv{ox}\cdot \vv{ox})}{|\alpha|\|\vv{ox}\|}=\dfrac{\overline{\alpha}\|\vv{ox}\|}{|\alpha|}=\dfrac{|\alpha|}{\alpha}\|\vv{ox}\|\,,\,\forall\alpha\in\{\cam{F}\setminus 0\}.
-\end{equation*}
-For the specific case of affine Euclidean spaces, these equalities enable us to write that $\fua{\zeta}{\vv{ox},\alpha\vv{ox}}=\pm\|\vv{ox}\|$ for all $\alpha\in\{\real\setminus 0\}$.
+norm enables distance measurement. Now, regarding the geometric effects of the inner product, we already said on section \ref{sec:espacoVet} that this product is closely related to vector incidence, being a scalar measure of this fundamental concept\footnote{See page \pageref{sec:incidence}.}. In the context of affine normed inner product spaces, the incidence interrelationship of non zero vectors $\vv{ov}$ and $\vv{ou}$ is expressed both by the \textsb{projection}\index{projection} $\fua{\zeta}{\vv{ov},\vv{ou}}$ of $\vv{ov}$ onto the line defined by the set $\spn{(\{\vv{ou}\})}$ and the projection $\fua{\zeta}{\vv{ou},\vv{ov}}$ of $\vv{ou}$ onto the line defined by $\spn{(\{\vv{ov}\})}$, where $\map{\zeta}{S_\cam{F}^2}{\cam{F}}$ whose function rule is 
+\begin{equation}
+\fua{\zeta}{\vv{ox},\vv{oy}}=\vv{ox}\cdot \vv{oy}/\|\vv{oy}\|
+\end{equation}
+and $S_\cam{F}$ defines an affine normed inner product space. From the previous rule, if projection is known and not the inner product, we can write that $\vv{ox}\cdot \vv{oy}=\fua{\zeta}{\vv{ox},\vv{oy}}\|\vv{oy}\|$, which is usually and imprecisely regarded as the ``geometric definition'' of the inner product. It is important to note that if arguments $\vv{ox}$ and $\vv{oy}$ are orthogonal, then $\fua{\zeta}{\vv{ox},\vv{oy}}=0$. 
+ Moreover, in the context of affine Hilbert spaces, where $\|\vv{ox}\|^2=\vv{ox}\cdot \vv{ox}$, when $\vv{oy}=\alpha\vv{ox}$ then
+\begin{equation}
+\fua{\zeta}{\vv{ox},\alpha\vv{ox}}=\dfrac{\overline{\alpha}(\vv{ox}\cdot \vv{ox})}{|\alpha|\|\vv{ox}\|}=\dfrac{\overline{\alpha}\|\vv{ox}\|}{|\alpha|}=\|\vv{ox}\|\sqrt{\dfrac{\overline{\alpha}}{\alpha}}\,,\,\forall\alpha\in\{\cam{F}\setminus 0\}.
+\end{equation}
+For the specific case of affine Euclidean spaces, these equalities lead to $\fua{\zeta}{\vv{ox},\alpha\vv{ox}}=\|\vv{ox}\|$ for all $\alpha\in\{\real\setminus 0\}$, where the projection does not depend on the real value $\alpha$. Concerning projections on the context of affine Hilbert spaces, there is a property presented on the following theorem, which will be important for future geometric concepts.
+
+\begin{mteo}{Modulus of Projection}{isoComp}
+Given the arbitrary vectors $\vv{ox},\vv{oy}\in S_\cam{F}$, where $ S_\cam{F}$ defines an affine Hilbert space $\eamd{S}{F}{n}$, the modulus of projection $\fua{\zeta}{\vv{ox},\vv{oy}}$ is never greater than the norm of the projected vector. In other words,
+$|\fua{\zeta}{\vv{ox},\vv{oy}}|\leq\|\vv{ox}\|$. 
+\end{mteo}
+
+{\footnotesize
+\begin{proof}
+From the Cauchy-Schwartz Inequality \eqref{eq:Cauchy-Schwartz} and the ``geometric definition'' of the inner product, the following development proves the theorem.
+\begin{align*}
+|\vv{ox}\cdot\vv{oy}|^2 &\leq (\vv{ox}\cdot\vv{ox})(\vv{oy}\cdot\vv{oy})\\
+|\fua{\zeta}{\vv{ox},\vv{oy}}|^2\|\vv{oy}\|^2 &\leq \|\vv{ox}\|^2\|\vv{oy}\|^2\\
+|\fua{\zeta}{\vv{ox},\vv{oy}}| &\leq \|\vv{ox}\|\,.
+\end{align*}
+\end{proof}}
+
+
+EXPLICAR QUE NO CONTEXTO DOS REAIS UM COROLÁRIO DESTE TEOREMA É AQUELA DESIGUALDADE DUPLA.
 
 
 
