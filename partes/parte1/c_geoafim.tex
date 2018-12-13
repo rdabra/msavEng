@@ -50,14 +50,13 @@ In this context, point $o$ is called the \textsb{origin}\index{origin} of the co
 \titfigura{$n$-dimensional affine coordinate system $(o,B)$ and its axes.}\label{fg:coordSystem}
 \end{figure}
 
-
 On section \ref{sec:group}, we said that in a group action a biunivocal relationship between its definer set and its definer group is possible if an element of the set is fixed. For the case of affine spaces, this fixation is established by a coordinate system, which enables to define a point $v$ from a vector $\vto{v}$ through an origin $o$, as we have done. The association $(\eamsd{S}{F}{a}{n},o,B)$ of an affine subspace with a coordinate system can be structured like a vector space and then inherits the same classification, outlined in figure \ref{fig:esquemaEspacos}, from its direction space $S_\cam{F}$ if suitable expressions for metric, norm and inner product are defined. Thereby, for arbitrary points $v$ and $u$ of $\eamsd{S}{F}{a}{n}$, triple $(\eamsd{S}{F}{a}{n},o,B)$ is called an affine metric space if $\fua{\varrho}{u,v}:=\fua{\varrho}{\vv{ou},\vv{ov}}$, an affine normed space if a norm $\|\vv{ov}\|$ is defined or an affine inner product space if there is the scalar $\vv{ov}\cdot\vv{ou}\,$. Since an affine subspace is itself an affine space, representation of triple $(\eamsd{S}{F}{a}{n},o,B)$ will be shortened by $\eamd{S}{F}{n}$, where point $a$ and the coordinate system are implicit. As we are dealing in this chapter with morphological matters, what are the geometric manifestations of metric, norm and inner product? We already said that metric refers to the concept of distance and thus scalar $\fua{\varrho}{u,v}$ results the distance between arbitrary points $u$ and $v$ in the context of affine metric spaces. Norm however is not applicable to points, being geometrically represented by the size of a vector, which also depicts the concept of vector intensity: a ``bigger'' vector is considered to be a more ``intense'' vector. In the context of affine Banach spaces, where distance
 \begin{equation}
 \fua{\varrho}{u,v} := \|\vv{ou} - \vv{ov}\|=\|\vv{vo} + \vv{ou}\|=\|\vv{vu}\|=\|\vv{uv}\|\,,
 \end{equation}
 norm enables distance measurement. Now, regarding the geometric effects of the inner product, we already said on section \ref{sec:espacoVet} that this product is closely related to vector incidence, being a scalar measure of this fundamental concept\footnote{See page \pageref{sec:incidence}.}. In the context of affine normed inner product spaces, the incidence interrelationship of non zero vectors $\vv{ov}$ and $\vv{ou}$ is expressed both by the \textsb{projection}\index{projection} $\fua{\zeta}{\vv{ov},\vv{ou}}$ of $\vv{ov}$ onto the line defined by the set $\spn{(\{\vv{ou}\})}$ and the projection $\fua{\zeta}{\vv{ou},\vv{ov}}$ of $\vv{ou}$ onto the line defined by $\spn{(\{\vv{ov}\})}$, where $\map{\zeta}{S_\cam{F}^2}{\cam{F}}$ whose function rule is 
-\begin{equation}
-\fua{\zeta}{\vv{ox},\vv{oy}}=\vv{ox}\cdot \vv{oy}/\|\vv{oy}\|
+\begin{equation}\label{eq:projection}
+\fua{\zeta}{\vv{ox},\vv{oy}}=\dfrac{\vv{ox}\cdot \vv{oy}}{\|\vv{oy}\|}
 \end{equation}
 and $S_\cam{F}$ defines an affine normed inner product space. From the previous rule, if projection is known and not the inner product, we can write that $\vv{ox}\cdot \vv{oy}=\fua{\zeta}{\vv{ox},\vv{oy}}\|\vv{oy}\|$, which is usually and imprecisely regarded as the ``geometric definition'' of the inner product. It is important to note that if arguments $\vv{ox}$ and $\vv{oy}$ are orthogonal, then $\fua{\zeta}{\vv{ox},\vv{oy}}=0$. 
  Moreover, in the context of affine Hilbert spaces, where $\|\vv{ox}\|^2=\vv{ox}\cdot \vv{ox}$, when $\vv{oy}=\alpha\vv{ox}$ then
@@ -67,7 +66,7 @@ and $S_\cam{F}$ defines an affine normed inner product space. From the previous 
 For the specific case of affine Euclidean spaces, these equalities lead to $\fua{\zeta}{\vv{ox},\alpha\vv{ox}}=\|\vv{ox}\|$ for all $\alpha\in\{\real\setminus 0\}$, where the projection does not depend on the real value $\alpha$. Concerning projections on the context of affine Hilbert spaces, there is a property presented on the following theorem, which will be important for future geometric concepts.
 
 \begin{mteo}{Modulus of Projection}{isoComp}
-Given the arbitrary vectors $\vv{ox},\vv{oy}\in S_\cam{F}$, where $ S_\cam{F}$ defines an affine Hilbert space $\eamd{S}{F}{n}$, the modulus of projection $\fua{\zeta}{\vv{ox},\vv{oy}}$ is never greater than the norm of the projected vector. In other words,
+Given the arbitrary vectors $\vv{ox},\vv{oy}\in S_\cam{F}$, where $S_\cam{F}$ defines an affine Hilbert space $\eamd{S}{F}{n}$, the modulus of projection $\fua{\zeta}{\vv{ox},\vv{oy}}$ is never greater than the norm of the projected vector. In other words,
 $|\fua{\zeta}{\vv{ox},\vv{oy}}|\leq\|\vv{ox}\|$. 
 \end{mteo}
 
@@ -81,8 +80,28 @@ From the Cauchy-Schwartz Inequality \eqref{eq:Cauchy-Schwartz} and the ``geometr
 \end{align*}
 \end{proof}}
 
+\begin{mcoro}{Projection of Euclidean Vectors}{projEuclid}
+In the context of an affine Euclidean space $\eamd{S}{R}{n}$ where $\hat{\vv{ox}},\hat{\vv{oy}}\in S_\cam{R}$ are arbitrary unitary vectors, it is valid that $-1\leq\hat{\vv{ox}}\cdot\hat{\vv{oy}}\leq+1$.
+\end{mcoro}
 
-EXPLICAR QUE NO CONTEXTO DOS REAIS UM COROLÁRIO DESTE TEOREMA É AQUELA DESIGUALDADE DUPLA.
+{\footnotesize
+\begin{proof}
+For the case of affine Euclidean spaces, projection $\fua{\zeta}{\vv{ox},\vv{oy}}$ is always a real number, where concepts of ``greater than'' and ``less than'' are admissible. Thereby, from definition \ref{eq:projection}, the following development proves the corollary:
+\begin{eqnarray*}
+&-\|\vv{ox}\|\leq\fua{\zeta}{\vv{ox},\vv{oy}}\leq+\|\vv{ox}\|&\\
+&-1\leq\dfrac{\fua{\zeta}{\vv{ox},\vv{oy}}}{\|\vv{ox}\|}\leq+1&\\
+&-1\leq\dfrac{\vv{ox}\cdot\vv{oy}}{\|\vv{ox}\|\|\vv{oy}\|}\leq+1\,.&
+\end{eqnarray*}
+\end{proof}}
+
+
+For the case of affine Euclidean spaces, projection $\fua{\zeta}{\vv{ox},\vv{oy}}$ is always a real number, that is, $\fua{\zeta}{\vv{ox},\vv{oy}}=|\fua{\zeta}{\vv{ox},\vv{oy}}|$,  and then a corollary of the previous theorem is the following inequality:
+\begin{equation}
+-1\leq\dfrac{\fua{\zeta}{,\vv{oy}}}{\|\vv{ox}\|}\leq+1\,,\,\forall\, x,y\in\{\eamd{S}{R}{n}\setminus o\}\,,
+\end{equation}  
+where the definition \ref{eq:projection} of projection is considered and 
+
+
 
 
 
