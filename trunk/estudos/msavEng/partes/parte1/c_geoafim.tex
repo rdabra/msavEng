@@ -58,7 +58,7 @@ norm enables distance measurement. Now, regarding the geometric effects of the i
 \begin{equation}\label{eq:projection}
 \fua{\zeta}{\vv{ox},\vv{oy}}=\dfrac{\vv{ox}\cdot \vv{oy}}{\|\vv{oy}\|}
 \end{equation}
-and $S_\cam{F}$ defines an affine normed inner product space. From the previous rule, if projection is known and not the inner product, we can write that $\vv{ox}\cdot \vv{oy}=\fua{\zeta}{\vv{ox},\vv{oy}}\|\vv{oy}\|$, which is usually and imprecisely regarded as the ``geometric definition'' of the inner product. It is important to note that if arguments $\vv{ox}$ and $\vv{oy}$ are orthogonal, then $\fua{\zeta}{\vv{ox},\vv{oy}}=0$. 
+and $S_\cam{F}$ defines an affine normed inner product space. Considering $\vv{ow}:=\fua{\zeta}{\vv{ox},\vv{oy}}\vv{oy}$, we can state that vector $\vv{ow}\in\spn{(\{\vv{oy}\})}$ where points $w$ and $y$ belong to the line defined by $\spn{(\{\vv{oy}\})}$. From the previous rule, if projection is known and not the inner product, we can write that $\vv{ox}\cdot \vv{oy}=\fua{\zeta}{\vv{ox},\vv{oy}}\|\vv{oy}\|$, which is usually and imprecisely regarded as the ``geometric definition'' of the inner product. It is important to note that if arguments $\vv{ox}$ and $\vv{oy}$ are orthogonal, then $\fua{\zeta}{\vv{ox},\vv{oy}}=0$. 
  Moreover, in the context of affine Hilbert spaces, where $\|\vv{ox}\|^2=\vv{ox}\cdot \vv{ox}$, when $\vv{oy}=\alpha\vv{ox}$ then
 \begin{equation}
 \fua{\zeta}{\vv{ox},\alpha\vv{ox}}=\dfrac{\overline{\alpha}(\vv{ox}\cdot \vv{ox})}{|\alpha|\|\vv{ox}\|}=\dfrac{\overline{\alpha}\|\vv{ox}\|}{|\alpha|}=\|\vv{ox}\|\sqrt{\dfrac{\overline{\alpha}}{\alpha}}\,,\,\forall\alpha\in\{\cam{F}\setminus 0\}.
@@ -81,7 +81,7 @@ From the Cauchy-Schwartz Inequality \eqref{eq:Cauchy-Schwartz} and the ``geometr
 \end{proof}}
 
 \begin{mcoro}{Projection of Euclidean Vectors}{projEuclid}
-In the context of an affine Euclidean space $\eamd{S}{R}{n}$ where $\hat{\vv{ox}},\hat{\vv{oy}}\in S_\cam{R}$ are arbitrary unitary vectors, it is valid that $-1\leq\hat{\vv{ox}}\cdot\hat{\vv{oy}}\leq+1$.
+In the context of an affine Euclidean space $\eamd{S}{R}{n}$ where $\hat{\vv{ox}},\hat{\vv{oy}}\in S_\cam{R}$ are the normalized vectors of $\vv{ox},\vv{oy}$ respectively, it is valid that $-1\leq\hat{\vv{ox}}\cdot\hat{\vv{oy}}\leq+1$.
 \end{mcoro}
 
 {\footnotesize
@@ -94,13 +94,7 @@ For the case of affine Euclidean spaces, projection $\fua{\zeta}{\vv{ox},\vv{oy}
 \end{eqnarray*}
 \end{proof}}
 
-
-For the case of affine Euclidean spaces, projection $\fua{\zeta}{\vv{ox},\vv{oy}}$ is always a real number, that is, $\fua{\zeta}{\vv{ox},\vv{oy}}=|\fua{\zeta}{\vv{ox},\vv{oy}}|$,  and then a corollary of the previous theorem is the following inequality:
-\begin{equation}
--1\leq\dfrac{\fua{\zeta}{,\vv{oy}}}{\|\vv{ox}\|}\leq+1\,,\,\forall\, x,y\in\{\eamd{S}{R}{n}\setminus o\}\,,
-\end{equation}  
-where the definition \ref{eq:projection} of projection is considered and 
-
+From the previous corollary, it is possible to define an angle between vectors 
 
 
 
