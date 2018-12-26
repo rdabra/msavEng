@@ -63,11 +63,11 @@ and $S_\cam{F}$ defines an affine normed inner product space. Considering $\vv{o
 \begin{equation}
 \fua{\zeta}{\vv{ox},\alpha\vv{ox}}=\dfrac{\overline{\alpha}(\vv{ox}\cdot \vv{ox})}{|\alpha|\|\vv{ox}\|}=\dfrac{\overline{\alpha}\|\vv{ox}\|}{|\alpha|}=\|\vv{ox}\|\sqrt{\dfrac{\overline{\alpha}}{\alpha}}\,,\,\forall\alpha\in\{\cam{F}\setminus 0\}.
 \end{equation}
-For the specific case of affine Euclidean spaces, these equalities lead to $\fua{\zeta}{\vv{ox},\alpha\vv{ox}}=\|\vv{ox}\|$ for all $\alpha\in\{\real\setminus 0\}$, where the projection does not depend on the real value $\alpha$. Concerning projections on the context of affine Hilbert spaces, there is a property presented on the following theorem, which will be important for future geometric concepts.
+For the specific case of affine Euclidean spaces, these equalities lead to $\fua{\zeta}{\vv{ox},\alpha\vv{ox}}=\|\vv{ox}\|$ for all $\alpha\in\{\real\setminus 0\}$, where the projection does not depend on the real value $\alpha$. Concerning projections on the context of affine Hilbert spaces, there is a property, presented on the following theorem, that will be important for future geometric concepts.
 
 \begin{mteo}{Modulus of Projection}{isoComp}
 Given the arbitrary vectors $\vv{ox},\vv{oy}\in S_\cam{F}$, where $S_\cam{F}$ defines an affine Hilbert space $\eamd{S}{F}{n}$, the modulus of projection $\fua{\zeta}{\vv{ox},\vv{oy}}$ is never greater than the norm of the projected vector. In other words,
-$|\fua{\zeta}{\vv{ox},\vv{oy}}|\leq\|\vv{ox}\|$. 
+$|\fua{\zeta}{\vv{ox},\vv{oy}}|\leq \|\vv{ox}\|$. 
 \end{mteo}
 
 {\footnotesize
@@ -80,8 +80,36 @@ From the Cauchy-Schwartz Inequality \eqref{eq:Cauchy-Schwartz} and the ``geometr
 \end{align*}
 \end{proof}}
 
+Now, for an affine Euclidean space $\eamd{S}{R}{n}$, if $\theta$ is the angle defined by vectors $\vv{ox},\vv{oy}\in S_\cam{R}$, the linear combination  $\alpha\vv{oy}/\|\vv{oy}\|$ and the scalar $\alpha\in\real$ are called respectively the vector and scalar geometric projections of $\vv{ox}$ onto $\vv{oy}$ when 
+\begin{equation}
+\alpha:=\|\vv{ox}\|\cos\theta\,,
+\end{equation}
+which can be visualized in figure XX. In this context, the following corollary establishes a connection between geometric and algebraic projections.
+
+
+
 \begin{mcoro}{Projection of Euclidean Vectors}{projEuclid}
-In the context of an affine Euclidean space $\eamd{S}{R}{n}$ where $\hat{\vv{ox}},\hat{\vv{oy}}\in S_\cam{R}$ are the normalized vectors of $\vv{ox},\vv{oy}$ respectively, it is valid that $-1\leq\hat{\vv{ox}}\cdot\hat{\vv{oy}}\leq+1$.
+Considering an affine Euclidean space $\eamd{S}{R}{n}$, if $\alpha$ is the scalar geometric projection of $\vv{ox}\in S_\cam{R}$ onto $\vv{oy}\in S_\cam{R}$, then 
+$-\alpha\leq\fua{\zeta}{\vv{ox},\vv{oy}}\leq+\alpha$.
+\end{mcoro}
+
+{\footnotesize
+\begin{proof}
+For the case of affine Euclidean spaces, projection $\fua{\zeta}{\vv{ox},\vv{oy}}$ is always a real number, where concepts of ``greater than'' and ``less than'' are admissible. Thereby, from definition \ref{eq:projection} and previous theorem, we have for all $\theta\in\real$:
+\begin{eqnarray*}
+&-\|\vv{ox}\|\leq\fua{\zeta}{\vv{ox},\vv{oy}}\leq+\|\vv{ox}\|&\\
+&-\cos\theta\|\vv{ox}\|\leq\cos\theta\fua{\zeta}{\vv{ox},\vv{oy}}\leq+\cos\theta\|\vv{ox}\|&\\
+&-\alpha\leq\cos\theta\fua{\zeta}{\vv{ox},\vv{oy}}\leq+\alpha.&
+\end{eqnarray*}
+Choosing $\theta=0$, we prove the theorem.
+\end{proof}}
+
+% FAZER FIGURA SOBRE PROJECOES GEOMÉRICAS
+
+
+\begin{comment}
+\begin{mcoro}{Projection of Euclidean Vectors}{projEuclid}
+In the context of an affine Euclidean space $\eamd{S}{R}{n}$, where $\hat{\vv{ox}},\hat{\vv{oy}}\in S_\cam{R}$ are the normalized vectors of $\vv{ox}$ and $\vv{oy}$  respectively, it is valid that $-1\leq\hat{\vv{ox}}\cdot\hat{\vv{oy}}\leq+1$.
 \end{mcoro}
 
 {\footnotesize
@@ -93,6 +121,7 @@ For the case of affine Euclidean spaces, projection $\fua{\zeta}{\vv{ox},\vv{oy}
 &-1\leq\dfrac{\vv{ox}\cdot\vv{oy}}{\|\vv{ox}\|\|\vv{oy}\|}\leq+1\,.&
 \end{eqnarray*}
 \end{proof}}
+\end{comment}
 
 From the previous corollary, it is possible to define an angle between vectors 
 
