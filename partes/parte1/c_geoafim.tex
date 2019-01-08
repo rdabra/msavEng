@@ -60,10 +60,14 @@ norm enables distance measurement. Now, regarding the geometric effects of the i
 \end{equation}
 and $S_\cam{F}$ defines an affine normed inner product space. Considering $\vv{ow}:=\fua{\zeta}{\vv{ox},\vv{oy}}\vv{oy}$, we can state that vector $\vv{ow}\in\spn{(\{\vv{oy}\})}$ where points $w$ and $y$ belong to the line defined by $\spn{(\{\vv{oy}\})}$. From the previous rule, if projection is known and not the inner product, we can write that $\vv{ox}\cdot \vv{oy}=\fua{\zeta}{\vv{ox},\vv{oy}}\|\vv{oy}\|$, which is usually and imprecisely regarded as the ``geometric definition'' of the inner product. It is important to note that if arguments $\vv{ox}$ and $\vv{oy}$ are orthogonal, then $\fua{\zeta}{\vv{ox},\vv{oy}}=0$. 
  Moreover, in the context of affine Hilbert spaces, where $\|\vv{ox}\|^2=\vv{ox}\cdot \vv{ox}$, when $\vv{oy}=\alpha\vv{ox}$ then
-\begin{equation}
+\begin{equation}\label{eq:projColinear}
 \fua{\zeta}{\vv{ox},\alpha\vv{ox}}=\dfrac{\overline{\alpha}(\vv{ox}\cdot \vv{ox})}{|\alpha|\|\vv{ox}\|}=\dfrac{\overline{\alpha}\|\vv{ox}\|}{|\alpha|}\,,\,\forall\alpha\in\{\cam{F}\setminus 0\}.
 \end{equation}
-For the specific case of affine Euclidean spaces, these equalities lead to $|\fua{\zeta}{\vv{ox},\alpha\vv{ox}}|=\|\vv{ox}\|$ for all $\alpha\in\{\real\setminus 0\}$, where the modulus of projection does not depend on the real value $\alpha$. Concerning projections on affine Hilbert spaces, there is a property, presented on the following theorem, that will be important for future geometric concepts.
+For the case of affine Euclidean spaces, these equalities lead to 
+\begin{equation}\label{eq:projColinearEuclid}
+\fua{\zeta}{\vv{ox},\alpha\vv{ox}}=\sgn{\alpha}\|\vv{ox}\|\,,\,\,\forall\,\alpha\in\{\real\setminus 0\}\,.
+\end{equation}
+Concerning projections on affine Hilbert spaces, there is a property, presented on the following theorem, that will be important for future geometric concepts.
 
 \begin{mteo}{Modulus of Projection}{isoComp}
 Given the arbitrary vectors $\vv{ox},\vv{oy}\in S_\cam{F}$, where $S_\cam{F}$ defines an affine Hilbert space $\eamd{S}{F}{n}$, the modulus of projection $\fua{\zeta}{\vv{ox},\vv{oy}}$ is never greater than the norm of the projected vector. In other words,
@@ -80,11 +84,11 @@ From the Cauchy-Schwartz Inequality \eqref{eq:Cauchy-Schwartz} and the ``geometr
 \end{align*}
 \end{proof}}
 
-Now, for an affine Euclidean space $\eamd{S}{R}{n}$, if $\theta$ is the angle defined by vectors $\vv{ox},\vv{oy}\in S_\cam{R}$, the linear combination  $\vartheta\vv{oy}/\|\vv{oy}\|$ and the scalar $\vartheta\in\real$ are called respectively the vector and scalar geometric projections of $\vv{ox}$ onto $\vv{oy}$ when 
+Now, for an affine Euclidean space $\eamd{S}{R}{n}$, if $\theta$ is the angle defined by vectors $\vv{ox},\vv{oy}\in S_\cam{R}$, the linear combination  $\vartheta\vv{oy}/\|\vv{oy}\|$ and the scalar $\vartheta\in\real$ are called respectively the \textsb{vector and scalar geometric projections}\index{projection!vector}\index{projection!scalar} of $\vv{ox}$ onto $\vv{oy}$ when 
 \begin{equation}\label{eq:projgeo}
 \vartheta:=\|\vv{ox}\|\cos\theta\,,
 \end{equation}
-which can be visualized in figure XX. In this context, the following corollary establishes a connection between geometric and algebraic projections.
+which can be visualized in figure XX. In this context, the following corollary establishes a connection between geometric and algebraic projections. From this connection and rule \eqref{eq:projection}, the so called ``geometric definition'' of the Euclidean inner product results the classic expression $\vv{ox}\cdot\vv{oy}=\|\vv{ox}\|\|\vv{oy}\|\cos\theta$.
 
 
 \begin{mcoro}{Projection of Euclidean Vectors}{projEuclid}
@@ -98,10 +102,12 @@ From definition \eqref{eq:projgeo} and previous theorem, we have the following:
 \begin{align*}
 |\fua{\zeta}{\vv{ox},\vv{oy}}|&\leq\|\vv{ox}\|\\
 |\cos\theta||\fua{\zeta}{\vv{ox},\vv{oy}}|&\leq|\cos\theta|\|\vv{ox}\|\\
-|\cos\theta|&\leq|\vartheta|/|\fua{\zeta}{\vv{ox},\vv{oy}}|\,.
+|\cos\theta||\fua{\zeta}{\vv{ox},\vv{oy}}|&\leq|\vartheta|\,.
 \end{align*}
-The last inequality is only valid for all $\theta$ if $|\vartheta|\geq|\fua{\zeta}{\vv{ox},\vv{oy}}|$. Now let's choose $\vv{oy}=\alpha\vv{ox}$, where $\alpha\in\{\real\setminus 0\}$ and $\cos\theta=\pm 1$ since both vectors $\vv{ox}$ and $\vv{oy}$ define the same line. In this case, we know from \eqref{eq:projgeo} that $|\vartheta|=\|\vv{ox}\|$ and also that $|\fua{\zeta}{\vv{ox},\vv{oy}}|=\|\vv{ox}\|$, from which we conclude that $\fua{\zeta}{\vv{ox},\vv{oy}}=\vartheta$. 
+The last inequality is true for all $\theta$ only if $|\vartheta|\geq|\fua{\zeta}{\vv{ox},\vv{oy}}|$, otherwise it would fail for $|\cos\theta|=1$. Now, inequality  $|\vartheta|\geq|\fua{\zeta}{\vv{ox},\vv{oy}}|$ is valid for all $\vv{ox},\vv{oy}\in S_\cam{R}$ only if $\fua{\zeta}{\vv{ox},\vv{oy}}=\vartheta$, otherwise it would fail for $\vv{oy}=\alpha\vv{ox}$, $\alpha\in\{\real\setminus 0\}$, because in this condition if we rewrite \eqref{eq:projgeo} as $\vartheta=\|\vv{ox}\||\cos\theta|\sgn{cos\theta}$, we obtain from \eqref{eq:projColinearEuclid} that $\fua{\zeta}{\vv{ox},\vv{oy}}=\vartheta$ since $\sgn{\alpha}=\sgn{\cos\theta}$ and $|\cos\theta|=1$.
 \end{proof}}
+
+ 
 
 % FAZER FIGURA SOBRE PROJECOES GEOMÉRICAS
 
