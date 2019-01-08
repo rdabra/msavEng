@@ -676,7 +676,7 @@ In order to verify this theorem, we need to present some preliminary definitions
 \begin{equation*}
 \dete{\mat{A}} = \sum_{j=1}^{n}\mat{A}_{ij} \underbrace{\lpa-1\rpa^{i+j}\dete{\mat{M}_{(ij)}}}_{\mat{C}_{ij}}\,,
 \end{equation*}
-where $\mat{C}$ is called \textsb{cofactor matrix}\index{matrix!cofactor} of $\mat{A}$ and $\mat{M}_{(ij)}$ is a square matrix of dimension $n-1$ which results from removing the line $i$ and the column $j$ from $\mat{A}$. The matrix $\mat{C}^{T}$ is called the \textsb{adjugate matrix}\index{matrix!adjugate} of $\mat{A}$, represented by $\gloref{adju}{\mat{A}}$. Now, considering $\mat{A}=\mat{H}-x\mat{I}$ and the property $\adj{\mat{X}}\mat{X}=(\dete\mat{X})\mat{I}$, we have that
+where $\mat{C}$ is called \textsb{cofactor matrix}\index{matrix!cofactor} of $\mat{A}$ and $\mat{M}_{(ij)}$ is a square matrix of dimension $n-1$ which results from removing the line $i$ and the column $j$ from $\mat{A}$. The matrix $\mat{C}^{T}$ is called the \textsb{adjugate matrix}\index{matrix!adjugate} of $\mat{A}$, represented by $\gloref{adju}{\mat{A}}$. Now, considering $\mat{A}=\mat{H}-x\mat{I}$ and the property $\adj{\mat{X}}\mat{X}=(\dete{\mat{X}})\mat{I}$, we have that
 \begin{equation*}
 \adj{\mat{A}}(\mat{H}-x\mat{I})=\fua{g}{x}\mat{I}=\mat{I}(-1)^nx^n+\mat{I}a_1x^{n-1}+\cdots+\mat{I}a_{n-1}x+\mat{I}a_n\,.
 \end{equation*}
