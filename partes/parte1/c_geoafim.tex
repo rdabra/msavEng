@@ -51,32 +51,38 @@ In this context, point $o$ is called the \textsb{origin}\index{origin} of the co
 \end{figure}
 
 
-From the definition of affine spaces using a linear algebraic approach, as we have done, angles and distances cannot be obtained, and then it results that requiring these two concepts means two additional features that turn affine geometry into Euclidean geometry, when we state that Euclidean is a more restricted form of affine geometry. On the other hand, our algebraic definition of affine spaces does not require to explicitly present Playfair's Axiom as a restriction to be observed because this axiom becomes a natural property. In order to present this very important property, we must first deal with the concept of parallelism using previous definitions. Considering our algebraic approach, two hyperplanes are considered to be \textsb{parallel}\index{parallelism} if the direction space of one is an improper subset of the other\footnote{This concept of parallelism admits that a hyperplane (a line or a plane, for example) is parallel to itself.}. In mathematical terms, we define two hyperplanes $\eamsd{S}{F}{a}{n}$ and $\eamsd{V}{F}{b}{r}$ of $\eamd{U}{F}{m}$, where $m\geq n+r$, to be parallel, represented by $\eamsd{S}{F}{a}{n}\parallel\eamsd{V}{F}{b}{r}\,$, if direction space $S_\cam{F}\subseteq V_\cam{F}$ or $V_\cam{F}\subseteq S_\cam{F}$. From this definition, when $\eamsd{S}{F}{a}{n}$ and $\eamsd{V}{F}{b}{r}\,$ are actually parallel, the following properties can be obtained:
+From the definition of affine spaces using a linear algebraic approach, as we have done, angles and distances cannot be obtained, and then it results that requiring these two concepts means two additional features that turn affine geometry into Euclidean geometry, when we state that Euclidean is a more restricted form of affine geometry. On the other hand, our algebraic definition of affine spaces does not require to explicitly present the Playfair's Axiom as a restriction, as an axiom itself to be observed because this restriction becomes a natural property, a theorem. In order to present this very important property, we must first deal with the concept of parallelism using previous definitions. Considering our algebraic approach, two hyperplanes are considered to be \textsb{parallel}\index{parallelism} if the direction space of one is an improper subset of the other\footnote{This concept of parallelism admits that a hyperplane (a line or a plane, for example) is parallel to itself.}. In mathematical terms, we define two hyperplanes $\eamsd{S}{F}{a}{n}$ and $\eamsd{V}{F}{b}{r}$ of $\eamd{U}{F}{m}$, where $m\geq n+r$, to be parallel, represented by $\eamsd{S}{F}{a}{n}\parallel\eamsd{V}{F}{b}{r}\,$, if direction space $S_\cam{F}\subseteq V_\cam{F}$ or $V_\cam{F}\subseteq S_\cam{F}$. From this definition, when $\eamsd{S}{F}{a}{n}$ and $\eamsd{V}{F}{b}{r}\,$ are indeed parallel, the following properties can be obtained:
 \begin{itemize}
 	\setlength\itemsep{.1em}
-	\item[i.] If dimension $n=r$ then $S_\cam{F}=V_\cam{F}$;
-	\item[ii.] If point $a\in \eamsd{V}{F}{b}{r}$ then $\eamsd{S}{F}{a}{n}\subseteq\eamsd{V}{F}{b}{r}$ or $\eamsd{V}{F}{b}{r}\subseteq\eamsd{S}{F}{a}{n}\,$;
-	\item[iii.] If point $a\notin \eamsd{V}{F}{b}{r}$ or $b\notin \eamsd{S}{F}{a}{n}$ then $\eamsd{S}{F}{a}{n}\cap\eamsd{V}{F}{b}{r}=\emptyset$.
+	\item[i.] $n=r\iff S_\cam{F}=V_\cam{F}$;
+	\item[ii.] $a\in \eamsd{V}{F}{b}{r}\,\wedge\, S_\cam{F}\subseteq V_\cam{F}\iff\eamsd{S}{F}{a}{n}\subseteq\eamsd{V}{F}{b}{r}$;
+	\item[iii.] $a\notin \eamsd{V}{F}{b}{r}\,\vee\, b\notin \eamsd{S}{F}{a}{n} \iff \eamsd{S}{F}{a}{n}\cap\eamsd{V}{F}{b}{r}=\emptyset$.
 \end{itemize}
 
 {\footnotesize
 \begin{proof}
-For the first item, since $S_\cam{F}\subseteq V_\cam{F}$ or $V_\cam{F}\subseteq S_\cam{F}$, a direction space is a proper subset of the other only if they have different dimensions, otherwise they are equal. For the second item, if $a\in \eamsd{V}{F}{b}{r}$ there is a vector $\vto{w}\in V_\cam{F}$ where $a=\vto{w}\oplus b$. 
-Therefore, from axiom ii on page \pageref{ax:pointSpaces}, equalities
-\begin{equation*}
-\epu{S}_a=\{\vto{x}\oplus a:\forall \vto{x}\in S_\cam{F}\}=\{(\vto{x}+\vto{w})\oplus b:\forall \vto{x}\in S_\cam{F}\} 
-\end{equation*}
-and $\epu{V}_b=\{\vto{y}\oplus b:\forall \vto{y}\in V_\cam{F}\}$ lead to $\eamsd{S}{F}{a}{n}\subseteq\eamsd{V}{F}{b}{r}$ if $S_\cam{F}\subseteq V_\cam{F}$ since $\{\vto{x}+\vto{w}:\forall \vto{x}\in S_\cam{F}\}\subseteq\{\vto{y}:\forall \vto{y}\in V_\cam{F}\}$ or $S_\cam{F} \cup \{\vto{w}\}\subseteq V_\cam{F}$ . For the case of $V_\cam{F}\subseteq S_\cam{F}$, we similarly arrive at $\eamsd{V}{F}{b}{r}\subseteq\eamsd{S}{F}{a}{n}\,$. For the third property, let's verify the condition where $a\notin \eamsd{V}{F}{b}{r}$. In this case, there is no vector in $V_\cam{F}$ relating the pair of points $(b,a)$, that is, $\vv{ba}\notin V_\cam{F}$. Now, supposing that $\eamsd{S}{F}{a}{n}\cap\eamsd{V}{F}{b}{r}=\emptyset$ is valid, we have for all $\vto{x}\in S_\cam{F}$ and $\vto{y}\in V_\cam{F}$ that 
+For the first item, since $S_\cam{F}\subseteq V_\cam{F}$ or $V_\cam{F}\subseteq S_\cam{F}$, a direction space is a proper subset of the other only if they have different dimensions, otherwise they are equal. The inverse implication is trivial. For the second item, if $a\in \eamsd{V}{F}{b}{r}$ there is a vector $\vto{w}\in V_\cam{F}$ where $a=\vto{w}\oplus b$. Then, from axiom ii on page \pageref{ax:pointSpaces}, we can write $\vto{x}\oplus a=(\vto{x}+\vto{w})\oplus b$, $\forall \vto{x}\in S_\cam{F}$, since $S_\cam{F}\subseteq V_\cam{F}$, from which we conclude that $\eamsd{S}{F}{a}{n}\subseteq\eamsd{V}{F}{b}{r}$. Now, if $\eamsd{S}{F}{a}{n}\subseteq\eamsd{V}{F}{b}{r}$ is true we always have a vector $\vto{y}\in V_\cam{F}$ related to an arbitrary $\vto{x}\in S_\cam{F}$ where $\vto{x}\oplus a=\vto{y}\oplus b$ or $a=(\vto{y}-\vto{x})\oplus b$, from which we conclude that $a\in \eamsd{V}{F}{b}{r}$ and $S_\cam{F}\subseteq V_\cam{F}$. For  property iii, we prove only for $a\notin \eamsd{V}{F}{b}{r}$. In this case, there is no vector in $V_\cam{F}$ relating the pair of points $(b,a)$. Since $S_\cam{F}\subseteq V_\cam{F}$ or $V_\cam{F}\subseteq S_\cam{F}$, we can write for all $\vto{x}\in S_\cam{F}$ and $\vto{y}\in V_\cam{F}$ that
+\begin{align*}
+a &\neq \vto{y}\oplus b\\
+\vto{x}\oplus a &\neq \vto{x}\oplus(\vto{y}\oplus b)\\
+\vto{x}\oplus a &\neq (\vto{x}+\vto{y})\oplus b\,,
+\end{align*}
+from which we conclude that $\eamsd{S}{F}{a}{n}\cap\eamsd{V}{F}{b}{r}=\emptyset$. The inverse implication is verified considering $\eamsd{S}{F}{a}{n}\cap\eamsd{V}{F}{b}{r}=\emptyset$ valid and then, for all $\vto{x}\in S_\cam{F}$ and $\vto{y}\in V_\cam{F}$,  
 \begin{align*}
 \vto{x}\oplus a &\neq \vto{y}\oplus b\\
 -\vto{x}\oplus(\vto{x}\oplus a) &\neq -\vto{x}\oplus(\vto{y}\oplus b)\\
 a &\neq (\vto{y}-\vto{x})\oplus b\,,
 \end{align*}
-which confirms our supposition since it is indeed true that we can't obtain $a$ from $b$.
+from which we conclude that $a\notin \eamsd{V}{F}{b}{r}$.
 \end{proof}}
 
-
-
+\begin{mteo}{Playfair's ``Axiom''}{playfair}
+If $\eamd{U}{F}{m}$ is an affine space where $\eamsd{S}{F}{a}{n}$ is one of its hyperplanes and $k\notin \eamsd{S}{F}{a}{n}$ one of its points, there is one and only one hyperplane $\eamsd{V}{F}{b}{r}\parallel\eamsd{S}{F}{a}{n}$, $r\leq m-n$, where $k\in\eamsd{V}{F}{b}{r}$. 
+\end{mteo}
+{\footnotesize
+\begin{proof}
+If $\eamsd{S}{F}{a}{n}$ exists, so does $\eamsd{S}{F}{b}{n}$, where $b\neq a$. Since these hyperplanes are obviously parallel, the existence of hyperplane $\eamsd{V}{F}{b}{r}=\eamsd{S}{F}{b}{n}$ is proved. Uniqueness is verified by 
+\end{proof}}
 
 On section \ref{sec:group}, we said that in a group action a biunivocal relationship between its definer set and its definer group is possible if an element of the set is fixed. For the case of affine spaces, this fixation is established by a coordinate system, which enables to define a point $v$ from a vector $\vto{v}$ through an origin $o$, as we have done. The association $(\eamsd{S}{F}{a}{n},o,B)$ of an affine subspace with a coordinate system can be structured like a vector space and then inherits the same classification, outlined in figure \ref{fig:esquemaEspacos}, from its direction space $S_\cam{F}$ if suitable expressions for metric, norm and inner product are defined. Thereby, for arbitrary points $v$ and $u$ of $\eamsd{S}{F}{a}{n}$, triple $(\eamsd{S}{F}{a}{n},o,B)$ is called an affine metric space if $\fua{\varrho}{u,v}:=\fua{\varrho}{\vv{ou},\vv{ov}}$, an affine normed space if a norm $\|\vv{ov}\|$ is defined or an affine inner product space if there is the scalar $\vv{ov}\cdot\vv{ou}\,$. Since an affine subspace is itself an affine space, representation of triple $(\eamsd{S}{F}{a}{n},o,B)$ will be shortened by $\eamd{S}{F}{n}$, where point $a$ and the coordinate system are implicit. As we are dealing in this chapter with morphological matters, what are the geometric manifestations of metric, norm and inner product? We already said that metric refers to the concept of distance and thus scalar $\fua{\varrho}{u,v}$ results the distance between arbitrary points $u$ and $v$ in the context of affine metric spaces. Norm however is not applicable to points, being geometrically represented by the size of a vector, which also depicts the concept of vector intensity: a ``bigger'' vector is considered to be a more ``intense'' vector. In the context of affine Banach spaces, where distance
 \begin{equation}
