@@ -475,6 +475,23 @@ If $\vto{u}$ is zero, it is evident that ${\|\vto{u}^*\|=\|\vto{u}\|}$; otherwis
 \end{proof}
 }
 
+\begin{mcoro}{Covectors and Linear Functions}{covLin}
+A mapping $\map{\varphi}{\evl{\cam{F}}{U}{V}}{\evl{\cam{F}}{U^*}{V}}$, where $V_\cam{F}$ is a Hilbert space, with function rule  ${{}^*\vtf{g}} :=\fua{\varphi}{\vtf{g}}=\vtf{g}\circ\Phi^{-1}$ is a linear bijective transformation.
+\end{mcoro}
+{\footnotesize
+	\begin{proof}
+		Considering $\vto{u}$ and $\vto{v}$ vectors of $U_\cam{F}$, function $\Phi$ is antilinear from the following equalities:
+		\begin{equation*}
+		\fua{\lco\fua{\Phi}{\alpha\vto{u}+\beta\vto{v}}\rco}{\vto{x}}=\vto{x}\cdot(\alpha\vto{u}+\beta\vto{v})=\overline{\alpha}\vto{u}^*(\vto{x})+\overline{\beta}\vto{v}^*(\vto{x})=\fua{\lco\overline{\alpha}\fua{\Phi}{\vto{u}}+\overline{\beta}\fua{\Phi}{\vto{v}}\rco}{\vto{x}}\,.
+		\end{equation*}
+		If $\Phi$ were not an injection, there would be different covectors $\vto{u}^*$ and $\vto{v}^*$ where $\fua{\vto{u}^*}{\vto{x}}=\fua{\vto{v}^*}{\vto{x}}$ or $\vto{x}\cdot\vto{u}=\vto{x}\cdot\vto{v}$. From this supposition, the following equalities $\vto{x}\cdot(\vto{u}-\vto{v})=\fua{(\vtf{u}-\vtf{v})^*}{\vto{x}}=0$ do not confirm $\vto{u}^*\neq\vto{v}^*$ since $(\vtf{u}-\vtf{v})^*=\vto{u}^*-\vto{v}^*$. In order to prove that $\Phi$ is a surjection, we need to obtain for an arbitrary functional $\vtf{g}\in U_\cam{F}^*$ a vector $\vto{u}\in U_\cam{F}$ such that $\fua{\Phi}{\vto{u}}=\vtf{g}$. Considering the rule \eqref{eq:regraCoord} and an orthonormal basis $\hat{B}=\{\vun{u}_1,\cdots,\vun{u}_n\}$ of $U_\cam{F}$ whose coordinate functionals span $U^*_\cam{F}$, we can say that
+		\begin{equation*}
+		\fua{\vtf{g}}{\vto{x}}=\fua{[\sum_{i=1}^n\alpha_i\vtf{f}^{\hat{B}}_i]}{\vto{x}}=\sum_{i=1}^n\alpha_i\fua{\vtf{f}^{\hat{B}}_i}{\vto{x}}=\sum_{i=1}^n\alpha_i\lpa\vto{x}\cdot\vun{u}_i\rpa=\vto{x}	\cdot ( \sum_{i=1}^n\overline{\alpha_i} \vun{u}_i)\,.
+		\end{equation*}
+		As $\fua{\vtf{g}}{\vto{x}}=\fua{\lco\fua{\Phi}{\vto{u}}\rco}{\vto{x}}=\vto{x}\cdot\vto{u}$, the existence of $\vto{u}=\sum_{i=1}^n\overline{\alpha_i} \vun{u}_i$ is verified. 
+	\end{proof}
+}
+
 The Riesz-Fréchet Representation enables us to define a rule for coordinate functionals on bases not necessarily orthogonal. Then, let's see how this happens. Considering the conditions of the theorem, let $B=\{\vto{u}_1,\cdots,\vto{u}_n\}$ be a basis of $U_\cam{F}$ and basis $B^*=\{\vtf{f}_1^B,\cdots,\vtf{f}_n^B\}$ its dual correspondent. In this context, functionals $\vtf{f}_i^B\in U_\cam{F}^*$ are biunivocaly related to $\vto{v}_i\in U_\cam{F}$ in such a way that, given a vector $\vto{u}\in U_\cam{F}$, the following equalities are valid:
 \begin{equation*}
 \fua{\vtf{f}_i^B}{\vto{u}}=\vto{u}\cdot\vto{v_i}=\sum_{j=1}^n\fua{\vtf{f}_j^B}{\vto{u}}\vto{u}_j \cdot \vto{v}_i\,.
@@ -688,9 +705,7 @@ where left and right matrices have dimension $n\times m$. Moreover, if $\vtf{g}$
 \end{align}
 When we consider an operator $\vtf{h}\in\evlc{\cam{F}}{X}{X}$ and only one orthogonal basis $B$, equalities \eqref{eq:matRepTransp} and \eqref{eq:matRepTranspT} enable us to affirm that the matrix representations of operators $\vtf{h}^\dagger$ and $\vtf{h}^\text{T}$ are respectively the conjugate transpose and the transpose of the representation matrix of $\vtf{h}$.
 
-
 There are concepts that arise from all these matrix representations of vectors and linear functions. One of them has a fundamental importance for us and we call it \textsb{change of coordinates}\index{coordinates!change of}. In this study, \emph{to change coordinates of a vector or linear operator from a basis $B$ to a basis $C$ means to relate biunivocaly the representative matrix of this vector or linear operator on $B$ with its representative matrix on $C$}. In order to mathematically substantiate this idea, here is the following theorem.
-
 
 \begin{mteo}{Change of Vector Coordinates}{mudCoordVec}
 If $U(B)_\cam{F}$ and $U(C)_\cam{F}$ are vector spaces constituted by representative matrices of the elements of vector space $U_\cam{F}$ on its bases $B$ and $C$ respectively, there is one and only one linear bijective transformation ${\map{\Gamma}{U(B)_\cam{F}}{U(C)_\cam{F}}}$, called change of coordinates from $B$ to $C$, where  ${{\Gamma}({\mav{\vto{x}}{B}})=\mav{\vto{x}}{C}}$ for all $\vto{x}\in U_\cam{F}$.
