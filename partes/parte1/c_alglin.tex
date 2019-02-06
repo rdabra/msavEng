@@ -360,7 +360,7 @@ Let's verify the uniqueness and existence of reciprocal sets on the context abov
 The most fundamental relationships studied in Linear Algebra have the feature of preserving group structures involved, including those defined by fields. Such relationships are expressed by homomorphisms whose main property is to keep structures of vector spaces unaltered. Moreover, if these vector spaces are metric, it is required this additional structure to remain unchanged as well. In practical terms, this means that if the homomorphism domain is a metric vector space, so must be its image. Selected through a criteria of defining the same mapping, we study these functions by gathering them in a vector space, where there are additional restrictions concerning the relations to their arguments.
 
 Let's start the study of linear functions considering first an additive group $V^{U}$ constituted of generic functions that define mappings of the type $U\mapsto V$, where $U$ and $V$ are complete spaces with an additive structure. This group is said to define a vector space \gloref{espacFunc}, usually called a \textsb{function space}\index{space!function}, if for arbitrary $\vtf{f},\vtf{g}\in V^U_\cam{F}$ and $\alpha\in\cam{F}$ the following restrictions are observed:
-\begin{itemize}
+\begin{itemize}\label{restricFuncs}
 	\setlength\itemsep{.1em}
 	\item[i.] $\fua{\vtf{0}}{x}=0$;
 	\item[ii.] $\fua{\lco\alpha\vtf{f}\rco}{x}=\alpha\,\fua{\vtf{f}}{x}$;
@@ -454,10 +454,7 @@ enable us to conclude that $\vtf{f}_i^B$ spans $V_\cam{F}^*$ and if $\vtf{h}=\vt
 \begin{mteo}{Riesz-Fréchet Representation}{repRiesz}
 Let $\map{\Phi}{U_\cam{F}}{U^*_\cam{F}}$ be a mapping where $U_\cam{F}$ is a Hilbert space and
 $U^*_\cam{F}$ its dual space. If for every $\vto{u}\in U_\cam{F}$, a covector  \gloref{covetor}$:=\fua{\Phi}{\vto{u}}$ is described by the rule
-\begin{equation*}
-\fua{\vto{u}^*}{\vto{x}}=\vto{x}\cdot\vto{u}\,,
-\end{equation*}
-then $\Phi$ results an antilinear bijection. When $\vto{u}^*$ is continuous,  $\|\vto{u}^*\|_{U^*_\cam{F}}=\|\vto{u}\|_{U_\cam{F}}$.
+$\fua{\vto{u}^*}{\vto{x}}=\vto{x}\cdot\vto{u}$, then $\Phi$ results an antilinear bijection. When $\vto{u}^*$ is continuous,  $\|\vto{u}^*\|_{U^*_\cam{F}}=\|\vto{u}\|_{U_\cam{F}}$.
 \end{mteo}
 \hspace{1pt}
 {\footnotesize
@@ -475,24 +472,24 @@ If $\vto{u}$ is zero, it is evident that ${\|\vto{u}^*\|=\|\vto{u}\|}$; otherwis
 \end{proof}
 }
 
-\begin{mcoro}{Covectors and Linear Functions}{covLin}
-A mapping $\map{\varphi}{\evl{\cam{F}}{U}{V}}{\evl{\cam{F}}{U^*}{V}}$, where $V_\cam{F}$ is a Hilbert space, with function rule  ${{}^*\vtf{g}} :=\fua{\varphi}{\vtf{g}}=\vtf{g}\circ\Phi^{-1}$ is a linear bijective transformation.
+
+ Considering the conditions of the theorem, if $\vtf{f}$ is a vector function whose domain is a Hilbert space, it is obvious that $\fua{\vtf{f}}{\vto{x}}=\fua{\vtf{f}\circ\Phi^{-1}}{\vto{x}^*}$. From this equality and by defining a \textsb{covector function}\index{function!covector} as a function whose domain is constituted by covectors, we state that every linear vector function $\vtf{g}$ on the context of Hilbert spaces has a unique associated linear covector function\index{function!associated linear covector} 
+$\vtf{g}_\Phi:=\vtf{g}\circ\Phi^{-1}$ and vice-versa. The following corollary explains this important statement more formally.  
+
+\begin{mcoro}{Linear Vector and Covector Functions}{covLin}
+Given a Hilbert space $V_\cam{F}$, a mapping $\map{\varphi}{\evl{\cam{F}}{U}{V}}{\evl{\cam{F}}{U^*}{V}}$ is a linear bijective transformation if its function rule is $\fua{\varphi}{\vtf{x}}=\vtf{x}_\Phi=\vtf{x}\circ\Phi^{-1}$.
 \end{mcoro}
 {\footnotesize
-	\begin{proof}
-		Considering $\vto{u}$ and $\vto{v}$ vectors of $U_\cam{F}$, function $\Phi$ is antilinear from the following equalities:
-		\begin{equation*}
-		\fua{\lco\fua{\Phi}{\alpha\vto{u}+\beta\vto{v}}\rco}{\vto{x}}=\vto{x}\cdot(\alpha\vto{u}+\beta\vto{v})=\overline{\alpha}\vto{u}^*(\vto{x})+\overline{\beta}\vto{v}^*(\vto{x})=\fua{\lco\overline{\alpha}\fua{\Phi}{\vto{u}}+\overline{\beta}\fua{\Phi}{\vto{v}}\rco}{\vto{x}}\,.
-		\end{equation*}
-		If $\Phi$ were not an injection, there would be different covectors $\vto{u}^*$ and $\vto{v}^*$ where $\fua{\vto{u}^*}{\vto{x}}=\fua{\vto{v}^*}{\vto{x}}$ or $\vto{x}\cdot\vto{u}=\vto{x}\cdot\vto{v}$. From this supposition, the following equalities $\vto{x}\cdot(\vto{u}-\vto{v})=\fua{(\vtf{u}-\vtf{v})^*}{\vto{x}}=0$ do not confirm $\vto{u}^*\neq\vto{v}^*$ since $(\vtf{u}-\vtf{v})^*=\vto{u}^*-\vto{v}^*$. In order to prove that $\Phi$ is a surjection, we need to obtain for an arbitrary functional $\vtf{g}\in U_\cam{F}^*$ a vector $\vto{u}\in U_\cam{F}$ such that $\fua{\Phi}{\vto{u}}=\vtf{g}$. Considering the rule \eqref{eq:regraCoord} and an orthonormal basis $\hat{B}=\{\vun{u}_1,\cdots,\vun{u}_n\}$ of $U_\cam{F}$ whose coordinate functionals span $U^*_\cam{F}$, we can say that
-		\begin{equation*}
-		\fua{\vtf{g}}{\vto{x}}=\fua{[\sum_{i=1}^n\alpha_i\vtf{f}^{\hat{B}}_i]}{\vto{x}}=\sum_{i=1}^n\alpha_i\fua{\vtf{f}^{\hat{B}}_i}{\vto{x}}=\sum_{i=1}^n\alpha_i\lpa\vto{x}\cdot\vun{u}_i\rpa=\vto{x}	\cdot ( \sum_{i=1}^n\overline{\alpha_i} \vun{u}_i)\,.
-		\end{equation*}
-		As $\fua{\vtf{g}}{\vto{x}}=\fua{\lco\fua{\Phi}{\vto{u}}\rco}{\vto{x}}=\vto{x}\cdot\vto{u}$, the existence of $\vto{u}=\sum_{i=1}^n\overline{\alpha_i} \vun{u}_i$ is verified. 
-	\end{proof}
+\begin{proof}
+If $\vtf{g}$ and $\vtf{h}$ are elements of $\evl{\cam{F}}{U}{V}$, then $\varphi$ is linear because 
+\begin{equation*}
+(\alpha\vtf{g}+\beta\vtf{h})_\Phi=(\alpha\vtf{g}+\beta\vtf{h})\circ\Phi^{-1}=[\alpha\vtf{g}]\circ\Phi^{-1}+[\beta\vtf{h}]\circ\Phi^{-1}=\alpha\vtf{g}_\Phi+\beta\vtf{h}_\Phi\,,
+\end{equation*}
+according to restrictions on page \pageref{restricFuncs}. If $\varphi$ weren't an injection there'd be two distinct functions $\vtf{g}$ and $\vtf{h}$ where $\fua{\vtf{g}\circ\Phi^{-1}}{\vto{x}^*}=\fua{\vtf{h}\circ\Phi^{-1}}{\vto{x}^*}$; but this equality leads to $\fua{\vtf{g}}{\vto{x}}=\fua{\vtf{h}}{\vto{x}}$, which shows that functions $\vtf{g}$ and $\vtf{h}$ are not distinct. Moreover, function $\varphi$ is also a surjection because for every covector function $\vtf{z}\in\evl{\cam{F}}{U^*}{V}$ we can find a vector function $\vtf{z}\circ\Phi\in\evl{\cam{F}}{U}{V}$.
+\end{proof}
 }
 
-The Riesz-Fréchet Representation enables us to define a rule for coordinate functionals on bases not necessarily orthogonal. Then, let's see how this happens. Considering the conditions of the theorem, let $B=\{\vto{u}_1,\cdots,\vto{u}_n\}$ be a basis of $U_\cam{F}$ and basis $B^*=\{\vtf{f}_1^B,\cdots,\vtf{f}_n^B\}$ its dual correspondent. In this context, functionals $\vtf{f}_i^B\in U_\cam{F}^*$ are biunivocaly related to $\vto{v}_i\in U_\cam{F}$ in such a way that, given a vector $\vto{u}\in U_\cam{F}$, the following equalities are valid:
+The Riesz-Fréchet Representation also enables us to define a rule for coordinate functionals on bases not necessarily orthogonal. Then, let's see how this happens. Considering the conditions of the theorem, let $B=\{\vto{u}_1,\cdots,\vto{u}_n\}$ be a basis of $U_\cam{F}$ and basis $B^*=\{\vtf{f}_1^B,\cdots,\vtf{f}_n^B\}$ its dual correspondent. In this context, functionals $\vtf{f}_i^B\in U_\cam{F}^*$ are biunivocaly related to $\vto{v}_i\in U_\cam{F}$ in such a way that, given a vector $\vto{u}\in U_\cam{F}$, the following equalities are valid:
 \begin{equation*}
 \fua{\vtf{f}_i^B}{\vto{u}}=\vto{u}\cdot\vto{v_i}=\sum_{j=1}^n\fua{\vtf{f}_j^B}{\vto{u}}\vto{u}_j \cdot \vto{v}_i\,.
 \end{equation*}
