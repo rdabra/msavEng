@@ -153,7 +153,7 @@ The last inequality is true for all $\theta$ only if $|\vartheta|\geq|\fua{\zeta
 
 \section{Affinities}
 The subject of Geometry is to study not only morphological sets and their elements, as we have done on the previous section, but also the correlation of geometrical objects, that is, functions whose domain and image are morphological sets. Thereby, in the context of Affine Geometry, this section deals exclusively with affinities, here understood as ``geometrical'' functions that correlate points, defined by linear vector functions. In more precise terms, given a bijective mapping $\map{\mathit{g}}{\eamd{U}{F}{m}}{\eamd{U}{F}{m}}$, an affine space $\eamd{U}{F}{m}$ and a vector space $\evl{\cam{F}}{U}{U}$, we call mapping $\map{\mathit{f}}{\eamd{U}{F}{m}}{\eamd{U}{F}{m}}$ an \textsb{affine transformation}\index{affine!transformation} and its function an \textsb{affinity}\index{affinity} when there is a unique linear bijection $\vtf{f}\in\evl{\cam{F}}{U}{U}$ where
-\begin{equation}
+\begin{equation}\label{eq:affty}
 \fua{\mathit{f}}{\vto{u}\oplus a}=\fua{\vtf{f}}{\vto{u}}\oplus\fua{\mathit{g}}{a}\,,\,\,\forall\,a\in\eamd{U}{F}{m}\,,\,\vto{u}\in U_\cam{F}\,. 
 \end{equation} 
 It is straightforward to note that since $\vtf{f}$ and $\mathit{g}$ are bijections, so results affinity $\mathit{f}$. Among other properties, it is possible to obtain that every affinity preserves parallelism and hyperplane dimensionality; in other words, parallel hyperplanes on the  domain remain parallel on the image and $n$-dimensional hyperplanes on the domain, $n\leq m$, remain $n$-dimensional on the image: for example, lines are mapped to lines, planes are mapped to planes and so on. According to corollary \ref{cor:soTens}, there is a second order tensor $\tnr{A}\in\ete{\cam{F}}{U^2}$ where linear function $\vtf{f}=\tnr{A}_1^*\circ\Phi$, and then  previous definition can be rewritten as 
@@ -161,14 +161,18 @@ It is straightforward to note that since $\vtf{f}$ and $\mathit{g}$ are bijectio
 \fua{\mathit{f}}{\vto{u}\oplus a}=(\vto{u}^*\odot_1\tnr{A})\oplus\fua{\mathit{g}}{a}\,,\,\,\forall\,a\in\eamd{U}{F}{m}\,,\,\vto{v}\in U_\cam{F}\,,
 \end{equation} 
 when $\tnr{A}$ is called an \textsb{affinity tensor}\index{tensor!afinity}\index{affinity!tensor}.
-Moreover, an affinity $\mathit{f}$ is said to be centered at point $a$, represented by $\mathit{f}_a$, when $\mathit{g}$ is the identity function, that is, when point $\fua{\mathit{f}_a}{\vto{u}\oplus a}=\fua{\vtf{f}}{\vto{u}}\oplus a$. 
+
 
 {\footnotesize
 \begin{proof}
-First, let's prove that an affinity preserves parallelism. Considering $\eamsd{S}{F}{a}{n}$ and $\eamsd{V}{F}{b}{r}$ parallel hyperplanes of $\eamd{U}{F}{m}$, where $S_\cam{F}\subseteq V_\cam{F}$, we can say that if $\{\vto{u}_1,\cdots,\vto{u}_n,\cdots,\vto{u}_r,\cdots,\vto{u}_m\}$ is a basis of $U_\cam{F}$, so are $\{\vto{u}_1,\cdots,\vto{u}_n\}$ and $\{\vto{u}_1,\cdots,\vto{u}_n,\cdots,\vto{u}_r\}$ bases of $S_\cam{F}$ and $V_\cam{F}$ respectively.
+Let's prove that an affinity preserves parallelism and dimension of hyperplanes. Considering $\eamsd{S}{F}{a}{n}$ and $\eamsd{V}{F}{b}{r}$ parallel hyperplanes of $\eamd{U}{F}{m}$, where $S_\cam{F}\subseteq V_\cam{F}$, we can say that if $\{\vto{u}_1,\cdots,\vto{u}_n,\cdots,\vto{u}_r,\cdots,\vto{u}_m\}$ is a basis of $U_\cam{F}$, so are $\{\vto{u}_1,\cdots,\vto{u}_n\}$ and $\{\vto{u}_1,\cdots,\vto{u}_n,\cdots,\vto{u}_r\}$ bases of $S_\cam{F}$ and $V_\cam{F}$ respectively. From definition \eqref{eq:affty}, only function $\vtf{f}$ is responsible for preserving parallelism or not. Thereby, since $\vtf{f}$ is a bijective linear unary operator, we already know that $\{\fua{\vtf{f}}{\vto{u}_1},\cdots,\fua{\vtf{f}}{\vto{u}_n}\}$ and $\{\fua{\vtf{f}}{\vto{u}_1},\cdots,\fua{\vtf{f}}{\vto{u}_n},\cdots,\fua{\vtf{f}}{\vto{u}_r}\}$ are bases of $S_\cam{F}$ and $V_\cam{F}$ (see p. \pageref{pg:bijecOpe}) and then $S_\cam{F}\subseteq V_\cam{F}$ is preserved. From these same arguments, it is straightforward to conclude that $\vtf{f}$ does not change vector space dimensions. 
 \end{proof}}
 
 
+Considering previous conditions, an affinity $\mathit{f}$ is said to be centered at point $a$, represented by $\mathit{f}_a$, when $\mathit{g}$ is the identity function, that is, when point $\fua{\mathit{f}_a}{\vto{u}\oplus a}=\fua{\vtf{f}}{\vto{u}}\oplus a$. On the other hand, when $\vtf{f}$ is the identity function and $\fua{\mathit{g}}{a}=\vto{u}\oplus a$, we call affinity $\mathit{f}$ a \textsb{translation}\index{translation}, represented by $\mathit{t}_\vto{u}$ and described by the rule
+\begin{equation}
+\fua{\mathit{t}_\vto{u}}{x}=\vto{u}\oplus x\,. 
+\end{equation} 
 
 
 
