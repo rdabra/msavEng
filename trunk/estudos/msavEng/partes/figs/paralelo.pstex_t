@@ -1,0 +1,32 @@
+\begin{picture}(0,0)%
+\includegraphics{paralelo.eps}%
+\end{picture}%
+%
+%  Created by WinFIG version 7.5 
+%  METADATA <version>1.0</version> 
+%
+\setlength{\unitlength}{3947sp}%
+%
+\begingroup\makeatletter\ifx\SetFigFont\undefined%
+\gdef\SetFigFont#1#2#3#4#5{%
+  \reset@font\fontsize{#1}{#2pt}%
+  \fontfamily{#3}\fontseries{#4}\fontshape{#5}%
+  \selectfont}%
+\fi\endgroup%
+\begin{picture}(5385,2715)(1181,-5611)
+%  METADATA <id>15</id> 
+\put(2472,-3999){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$b$}%
+}}}}
+%  METADATA <id>17</id> 
+\put(4593,-3583){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\eamsd{V}{R}{b}{1}$}%
+}}}}
+%  METADATA <id>19</id> 
+\put(2810,-5241){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$a$}%
+}}}}
+%  METADATA <id>27</id> 
+\put(5890,-3380){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\eamd{U}{R}{5}$}%
+}}}}
+%  METADATA <id>39</id> 
+\put(4403,-4454){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\eamsd{S}{R}{a}{2}$}%
+}}}}
+\end{picture}%
