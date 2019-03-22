@@ -155,9 +155,7 @@ where linear functional $(\vtf{t}_j)_i\in(U_j)_\cam{F}^*$ is the $j$-th polyad o
 \begin{equation}\label{eq:TensPoliadic}
 \tnr{T}=\sum_{i=1}^m(\vtf{t}_1)_i\otimes\cdots\otimes(\vtf{t}_m)_i=\tnr{t}_1\otimes\cdots\otimes\tnr{t}_m \,.
 \end{equation}
-
-
-In the context of Hilbert spaces, if a tensor space has a unitary order, its tensors are covectors because every linear functional whose domain is a Hilbert space is biunivocaly related to a vector, as described by the Riesz-Fréchet Representation. Therefore, given an arbitrary vector $\vto{u}\in U_\cam{F}$, its covector $\vto{u}^*$ is a first order tensor, or $\vto{u}^*\in \ete{\cam{F}}{U}$. Moreover, if a scalar $\alpha$ belongs to a Hilbert space $\cam{F}_\cam{F}$, then covector $\alpha^*$ is defined to be a tensor of order zero where $\fua{\alpha^*}{x}=\alpha x$. In other words, \emph{concerning tensor spaces defined by Hilbert spaces, covectors with a vector domain are first order tensors and covectors with a scalar domain are defined to be zeroth order tensors}. Now, given a tensor space $\ete{\real}{E^m}$, where $E_\real$ is a three-dimensional Euclidean space, let $\hat{B}$ be a basis whose $3^m$ elements have the format $\vun{e}_{j_1}^*\otimes\cdots\otimes\vun{e}_{j_m}^*$, $j_i=1,2,3$. Thereby, we call \textsb{cartesian tensor}\index{tensor!cartesian} any linear combination of the elements of $\hat{B}$.
+It is important to note that, in the context of Hilbert spaces, where Riesz-Fréchet Representation Theorem is valid, \emph{every polyad of a polyadic tensor is a covector}. Moreover, also from this theorem, if a tensor space has a unitary order, its tensors are covectors because every linear functional whose domain is a Hilbert space is biunivocaly related to a vector. Therefore, given an arbitrary vector $\vto{u}\in U_\cam{F}$, its covector $\vto{u}^*$ is a first order tensor, or $\vto{u}^*\in \ete{\cam{F}}{U}$. Moreover, if a scalar $\alpha$ belongs to a Hilbert space $\cam{F}_\cam{F}$, then covector $\alpha^*$ is defined to be a tensor of order zero where $\fua{\alpha^*}{x}=\alpha x$. In other words, \emph{concerning tensor spaces defined by Hilbert spaces, covectors with a vector domain are first order tensors and covectors with a scalar domain are defined to be zeroth order tensors}. Now, given a tensor space $\ete{\real}{E^m}$, where $E_\real$ is a three-dimensional Euclidean space, let $\hat{B}$ be a basis whose $3^m$ elements have the format $\vun{e}_{j_1}^*\otimes\cdots\otimes\vun{e}_{j_m}^*$, $j_i=1,2,3$. Thereby, we call \textsb{cartesian tensor}\index{tensor!cartesian} any linear combination of the elements of $\hat{B}$.
 
 The tensors of space $\ete{\cam{F}}{V^{m}}$, $m>1$, can have the positions of their arguments interchanged, that is, given a tensor of $\ete{\cam{F}}{V^{2}}$, for example, arguments in $(\vto{x},\vto{y})$ can be changed to $(\vto{y},\vto{x})$, where $\vto{x},\vto{y}\in V_\cam{F}$. In this context, we say that a tensor $\tnr{T}_1$ is a permutation of tensor $\tnr{T}_2$ if $\fua{\tnr{T}_1}{\vto{x},\vto{y}}=\fua{\tnr{T}_2}{\vto{y},\vto{x}}$. In general terms, given a bijective mapping $\map{\pi}{\{ 1,\cdots,n \}}{\{1,\cdots,n \}}$, where the sets involved are constituted by ordinals, and a function $\pi$ called permutation of order $m$, in definition
 \begin{equation}\label{eq:permutacaoTensor}
@@ -604,17 +602,35 @@ where polyadic tensors are defined by orthonormal bases according to theorem \re
 \end{proof}
 }
 
-
-In the context of Hilbert spaces, the theorem above establishes a biunivocal relationship between a tensor space and a linear tensor function space. We already know that corollary \ref{cor:covLin} establishes a biunivocal relationship between a linear vector function space and a linear covector function space. Thereby, since a linear covector function is a tensor function whose domain is constituted by first order tensors (covectors), then we conclude that every linear vector function has its correspondent second order tensor. Let's now rewrite this rationale in a more concise form in the following corollary. 
+In the context of Hilbert spaces, we already know that corollary \ref{cor:covLin} establishes a biunivocal relationship between a linear vector function space and a linear covector function space, that is, if $\vtf{g}$ is a linear vector function, there is always a linear covector function $\vtf{g}_\Phi$, which is a linear tensor function whose domain is constituted by first order tensors (covectors). But the theorem above establishes a biunivocal relationship between a linear tensor function space and a tensor space, when we conclude that covector function $\vtf{g}_\Phi$ has its correspondent second order tensor $\tnr{G}$. Therefore, if covector function $\vtf{g}_\Phi=\tnr{G}_1^*$ has a correspondent function $\vtf{g}$ and a correspondent second order tensor $\tnr{G}$, we can conclude that $\vtf{g}$ and $\tnr{G}$ are correspondents. Let's now rewrite this rationale in a more concise form in the following corollary. 
 
 \begin{mcoro}{Second Order Tensors and Linear Vector Functions}{soTens}
-Considering Hilbert spaces $U_\cam{F}$ and $V_\cam{F}$, a mapping $\map{\tnr{\Upsilon}}{\ete{\cam{F}}{U\times V}}{\evl{\cam{F}}{U}{V}}$ is a bijective transformation if its function rule is $\fua{\tnr{\Upsilon}}{\tnr{X}}=\vtf{X}^*_1\circ\Phi$, where $\Phi$ is defined on theorem \ref{teo:repRiesz}. 
+Considering Hilbert spaces $U_\cam{F}$ and $V_\cam{F}$, a mapping $\map{\tnr{\Upsilon}}{\ete{\cam{F}}{U\times V}}{\evl{\cam{F}}{U}{V}}$ is a bijective transformation if its function rule is $\fua{\tnr{\Upsilon}}{\tnr{X}}=\Phi^{-1}\circ\vtf{X}^*_1\circ\Phi$, where $\Phi$ is defined on theorem \ref{teo:repRiesz}. 
 \end{mcoro}
 {\footnotesize
 \begin{proof}
-If function $\tnr{\Upsilon}$ were not an injection, there would be two distinct tensors $\tnr{T}$ and $\tnr{W}$ where $\vtf{T}^*_1\circ\Phi(\vto{x})=\vtf{W}^*_1\circ\Phi(\vto{x})$; but this equality leads to $\vtf{T}^*_1(\vto{x}^*)=\vtf{W}^*_1(\vto{x}^*)$, which shows that $\vtf{T}^*_1=\vtf{W}^*_1$. Therefore, since $p$-cotensors are biunivocaly related to tensors, $\tnr{T}$ and $\tnr{W}$ cannot be distinct. Function $\tnr{\Upsilon}$ is also a surjection because, through corollary \ref{cor:covLin}, for every linear function $\vtf{g}\in\evl{\cam{F}}{U}{V}$ a covector function $\vtf{g}_\Phi$ can be defined and then, for every tensor function $\vtf{g}_\Phi$ there exists a unique second order tensor $G\in\ete{\cam{F}}{U\times V}$ where $1$-cotensor $G_1^*=\vtf{g}_\Phi$.
+If function $\tnr{\Upsilon}$ were not an injection, there would be two distinct tensors $\tnr{T}$ and $\tnr{W}$ where $\Phi^{-1}\circ\vtf{T}^*_1\circ\Phi(\vto{x})=\Phi^{-1}\circ\vtf{W}^*_1\circ\Phi(\vto{x})$; but this equality leads to $\vtf{T}^*_1(\vto{x}^*)=\vtf{W}^*_1(\vto{x}^*)$, which shows that $\vtf{T}^*_1=\vtf{W}^*_1$. Therefore, since $p$-cotensors are biunivocaly related to tensors, $\tnr{T}$ and $\tnr{W}$ cannot be distinct. Function $\tnr{\Upsilon}$ is also a surjection because, through corollary \ref{cor:covLin}, for every linear function $\vtf{g}\in\evl{\cam{F}}{U}{V}$ a covector function $\vtf{g}_\Phi$ can be defined and then, for every tensor function $\vtf{g}_\Phi$ there exists a unique second order tensor $\tnr{G}\in\ete{\cam{F}}{U\times V}$ where $1$-cotensor $\tnr{G}_1^*=\vtf{g}_\Phi$.
 \end{proof}
 }
+
+
+From the previous corollary, we can state that every linear function $\vtf{g}\in\evl{\cam{F}}{U}{V}$ can be written as a composite function $\Phi^{-1}\circ(\vto{g}_1^*\otimes\vto{g}_2^*)^*_1\circ\Phi$, where $\vto{g}_1^*\otimes\vto{g}_2^*$ is the dyadic description of the arbitrary second order tensor $\tnr{G}\in\ete{\cam{F}}{U\times V}$. Therefore, considering arbitrary vectors $\vto{v}\in V_\cam{F}$ and $\vto{u}\in U_\cam{F}$, the scalar
+\begin{align}
+\vto{v}\cdot\fua{\vtf{g}}{\vto{u}}&=\fua{[\fua{\vtf{g}}{\vto{u}}]^*}{\vto{v}}\nonumber\\
+&=\fua{[\fua{\Phi^{-1}\circ(\vto{g}_1^*\otimes\vto{g}_2^*)^*_1\circ\Phi}{\vto{u}}]^*}{\vto{v}}\nonumber\\
+&=\fua{[\fua{[\Phi^{-1}\circ(\vto{g}_1^*\otimes\vto{g}_2^*)^*_1]}{\vto{u}^*}]^*}{\vto{v}}\nonumber\\
+&=\fua{[(\vto{u}\cdot\vto{g}_2)\Phi^{-1}\circ\vto{g}_1^*]^*}{\vto{v}}\nonumber\\
+&=(\vto{u}\cdot\vto{g}_2)\fua{[\Phi^{-1}\circ\vto{g}_1^*]^*}{\vto{v}}\nonumber\\
+&=\fua{\vto{g}_2^*}{\vto{u}}\fua{\vto{g}_1^*}{\vto{v}}\nonumber\\
+&=\fua{\tnr{G}}{\vto{v},\vto{u}}\,.
+\end{align}
+
+
+
+
+% se a funcao vetorial for simétrica como fica o tensor de segunda? e se a função vetorial for positiva como fica o tensor de segunda ordem?
+
+
 
 Still considering the conditions of the theorem, let's see what is the $p$-cotensor of identity tensor $\tnr{I}\in\ete{\cam{F}}{W^{\times p}\times W^{\times p}}$. If equality \eqref{eq:poliadIdentidade} and its definer conditions are considered, development
 \begin{align}\label{eq:cotensIdent}
