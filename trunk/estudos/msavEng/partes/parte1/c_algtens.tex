@@ -613,19 +613,59 @@ If function $\tnr{\Upsilon}$ were not an injection, there would be two distinct 
 \end{proof}
 }
 
+\begin{mcoro}{Symmetric Tensors and Symmetric Operators}{soSymTens}
+The set of all symmetric operators of $\evlc{\cam{F}}{U}{U}$ is biunivocaly related to the space of all symmetric second order tensors $\ets{\cam{F}}{U^2}$. 
+\end{mcoro}
+{\footnotesize
+\begin{proof}
+Every linear operator $\vtf{g}\in\evl{\cam{F}}{U}{U}$ can be written as a composite function $\Phi^{-1}\circ(\vto{g}_1^*\otimes\vto{g}_2^*)^*_1\circ\Phi$, where $\vto{g}_1^*\otimes\vto{g}_2^*$ is the dyadic description of the arbitrary second order tensor $\tnr{G}\in\ete{\cam{F}}{U^2}$. Thereby, considering arbitrary vectors $\vto{v},\vto{u}\in U_\cam{F}$, the scalar
+\begin{align*}
+\vto{v}\cdot\fua{\vtf{g}}{\vto{u}^c}&=\fua{[\fua{\vtf{g}}{\vto{u}^c}]^*}{\vto{v}}\nonumber\\
+&=\fua{[\fua{\Phi^{-1}\circ(\vto{g}_1^*\otimes\vto{g}_2^*)^*_1\circ\Phi}{\vto{u}^c}]^*}{\vto{v}}\nonumber\\
+&=\fua{[\fua{[\Phi^{-1}\circ(\vto{g}_1^*\otimes\vto{g}_2^*)^*_1]}{{\vto{u}^c}^*}]^*}{\vto{v}}\nonumber\\
+&=\fua{[(\vto{u}^c\cdot\vto{g}_2)\Phi^{-1}\circ\vto{g}_1^*]^*}{\vto{v}}\nonumber\\
+&=(\vto{u}^c\cdot\vto{g}_2)\fua{[\Phi^{-1}\circ\vto{g}_1^*]^*}{\vto{v}}\nonumber\\
+&=\fua{\vto{g}_2^*}{\vto{u}^c}\fua{\vto{g}_1^*}{\vto{v}}\nonumber\\
+&=\fua{\tnr{G}}{\vto{v},\vto{u}^c}\,.
+\end{align*}
+From equality \eqref{eq:vecCompConjug}, if function $\vtf{g}$ is symmetric, then
+\begin{equation*}
+\fua{\tnr{G}}{\vto{v},\vto{u}^c}=\fua{\vtf{g}}{\vto{v}}\cdot\vto{u}^c=\overline{\vto{u}^c\cdot\fua{\vtf{g}}{\vto{v}}}=\overline{\fua{\tnr{G}}{\vto{u}^c,\vto{v}}}
+\end{equation*}
+\end{proof}
+}
+
+
+
 
 From the previous corollary, we can state that every linear function $\vtf{g}\in\evl{\cam{F}}{U}{V}$ can be written as a composite function $\Phi^{-1}\circ(\vto{g}_1^*\otimes\vto{g}_2^*)^*_1\circ\Phi$, where $\vto{g}_1^*\otimes\vto{g}_2^*$ is the dyadic description of the arbitrary second order tensor $\tnr{G}\in\ete{\cam{F}}{U\times V}$. Thereby, considering arbitrary vectors $\vto{v}\in V_\cam{F}$ and $\vto{u}\in U_\cam{F}$, the scalar
 \begin{align}
-\vto{v}\diamond[\fua{\vtf{g}}{\vto{u}}]^c=\vto{v}\cdot\fua{\vtf{g}}{\vto{u}}&=\fua{[\fua{\vtf{g}}{\vto{u}}]^*}{\vto{v}}\nonumber\\
-&=\fua{[\fua{\Phi^{-1}\circ(\vto{g}_1^*\otimes\vto{g}_2^*)^*_1\circ\Phi}{\vto{u}}]^*}{\vto{v}}\nonumber\\
-&=\fua{[\fua{[\Phi^{-1}\circ(\vto{g}_1^*\otimes\vto{g}_2^*)^*_1]}{\vto{u}^*}]^*}{\vto{v}}\nonumber\\
-&=\fua{[(\vto{u}\cdot\vto{g}_2)\Phi^{-1}\circ\vto{g}_1^*]^*}{\vto{v}}\nonumber\\
-&=(\vto{u}\cdot\vto{g}_2)\fua{[\Phi^{-1}\circ\vto{g}_1^*]^*}{\vto{v}}\nonumber\\
-&=\fua{\vto{g}_2^*}{\vto{u}}\fua{\vto{g}_1^*}{\vto{v}}\nonumber\\
-&=\fua{\tnr{G}}{\vto{v},\vto{u}}\,.
+\vto{v}\cdot\fua{\vtf{g}}{\vto{u}^c}&=\fua{[\fua{\vtf{g}}{\vto{u}^c}]^*}{\vto{v}}\nonumber\\
+&=\fua{[\fua{\Phi^{-1}\circ(\vto{g}_1^*\otimes\vto{g}_2^*)^*_1\circ\Phi}{\vto{u}^c}]^*}{\vto{v}}\nonumber\\
+&=\fua{[\fua{[\Phi^{-1}\circ(\vto{g}_1^*\otimes\vto{g}_2^*)^*_1]}{{\vto{u}^c}^*}]^*}{\vto{v}}\nonumber\\
+&=\fua{[(\vto{u}^c\cdot\vto{g}_2)\Phi^{-1}\circ\vto{g}_1^*]^*}{\vto{v}}\nonumber\\
+&=(\vto{u}^c\cdot\vto{g}_2)\fua{[\Phi^{-1}\circ\vto{g}_1^*]^*}{\vto{v}}\nonumber\\
+&=\fua{\vto{g}_2^*}{\vto{u}^c}\fua{\vto{g}_1^*}{\vto{v}}\nonumber\\
+&=\fua{\tnr{G}}{\vto{v},\vto{u}^c}\,.
 \end{align}
 
 
+\begin{align}
+	\fua{\vtf{g}}{\vto{v}}\cdot\vto{u}^c&=\fua{{\vto{u}^c}^*}{\fua{\vtf{g}}{\vto{v}}}\nonumber\\
+&=\fua{{\vto{u}^c}^*}{\fua{\Phi^{-1}\circ(\vto{g}_1^*\otimes\vto{g}_2^*)^*_1\circ\Phi}{\vto{v}}}\nonumber\\
+&=(\vto{v}\cdot\vto{g}_2)\fua{{\vto{u}^c}^*}{\vto{g}_1}
+\end{align}
+
+If function $\vtf{g}$ is symmetric, then 
+\begin{align}
+	\fua{\tnr{G}}{\vto{v},\vto{u}^c}&=\vto{v}\cdot\fua{\vtf{g}}{\vto{u}^c}\nonumber\\
+	&=\fua{[\fua{\Phi^{-1}\circ(\vto{g}_1^*\otimes\vto{g}_2^*)^*_1\circ\Phi}{\vto{u}^c}]^*}{\vto{v}}\nonumber\\
+	&=\fua{[\fua{[\Phi^{-1}\circ(\vto{g}_1^*\otimes\vto{g}_2^*)^*_1]}{{\vto{u}^c}^*}]^*}{\vto{v}}\nonumber\\
+	&=\fua{[(\vto{u}^c\cdot\vto{g}_2)\Phi^{-1}\circ\vto{g}_1^*]^*}{\vto{v}}\nonumber\\
+	&=(\vto{u}^c\cdot\vto{g}_2)\fua{[\Phi^{-1}\circ\vto{g}_1^*]^*}{\vto{v}}\nonumber\\
+	&=\fua{\vto{g}_2^*}{\vto{u}^c}\fua{\vto{g}_1^*}{\vto{v}}\nonumber\\
+	&=\fua{\tnr{G}}{\vto{v},\vto{u}^c}\,.
+\end{align}
 
 
 % se a funcao vetorial for simétrica como fica o tensor de segunda? e se a função vetorial for positiva como fica o tensor de segunda ordem?
