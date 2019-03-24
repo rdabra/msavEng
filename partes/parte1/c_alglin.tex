@@ -20,7 +20,7 @@ for all $\alpha,\beta\in \cam{F}$ and $\vto{x}, \vto{y}\in V$. Under these condi
 
 
 Under these conditions, an element of $V$ is called  \textsb{vector}\index{vector} and the triple $(V,\cam{F},p)$ is a \textsb{vector space}\index{space!vector} of $V$ in $\cam{F}$, whose representation is abbreviated by the symbol $\gloref{espacVet}$, which will be treated from now on as a set, in order to simplify notation. Moreover, if the field $\cam{F}$ is complex, vector space $V_\complexo$ is said to be \textsb{complex}\index{space!complex vector}, for an arbitrary group $V$; similarly, $V_\real$ is called a \textsb{real vector space}\index{space!real vector}. From the previous definitions, we can conclude that if a field is a group, then $\cam{F}_{\cam{F}}$ or $\cam{F}$ is also a vector space. Now, when we consider a mapping $\map{\overline{p}}{\cam{F}\times\con{V}}{\con{V}}$ whose function rule is $\fua{\overline{p}}{\alpha,\vto{x}}=\fua{p}{\overline{\alpha},\vto{x}}=\overline{\alpha}\vto{x}$, vector space $(V,\cam{F},\overline{p})$, represented by $\gloref{espacVetConj}$, is called the \textsb{conjugate vector space}\index{vector space!conjugate} of $V_\cam{F}$. It is interesting to note that only the rule of multiplication by scalar distinguishes a vector space from its conjugate; both being defined by the same additive group and field, that is, they have the same elements which can be multiplied by the same scalars. Since the definer group and field are the same, in order to avoid any dubieties on which vector space is being considered, an arbitrary vector $\vto{v}\in V_\cam{F}$ is represented by \gloref{vetorConj} when $V$ defines $\overline{V_\cam{F}}$, that is, $\vto{v}\in V_\cam{F}$ and $\vto{v}^c\in \overline{V_\cam{F}}$ are representations of the same vector, which are related through
-\begin{equation}
+\begin{equation}\label{eq:vecComplex}
 \alpha\vto{v}^c=\overline{\alpha}\vto{v}\,,\forall\alpha\in\cam{F}\,.
 \end{equation}
 Note that when $\Im(\alpha)=0$, the arbitrary vector $\vto{v}$ is equal to $\vto{v}^c$, which is valid since they refer to the same element of $V$. From previous equality, we can obtain the following property
@@ -103,7 +103,11 @@ We define that two vectors have an \textsb{incidence interrelationship}\index{in
 \overline{\alpha_2}\fua{\xi}{\vto{u}_1,\vto{u}_2} + \overline{\alpha_3}\fua{\xi}{\vto{u}_1,\vto{u}_3}\,;
 	\end{equation*}
 \end{itemize}
-where $\vto{u}_1,\vto{u}_2,\vto{u}_3\in U_\cam{F}$ and  $\alpha_1,\alpha_2,\alpha_3\in\cam{F}$ are arbitrary elements of their respective sets. In this context, function $\xi$ is called a \textsb{positive-definite inner product} because the incidence of a vector on itself is a nonnegative real number, as described by the first axiom. In our study, $\xi$ is simply called \textsb{inner product}\index{inner product!of vectors}, and the double $(U_\cam{F},\xi)$ an \textsb{inner product space}\index{space!inner product}. From this double, we conclude that $\xi$ structures the group $U$ in such a way that an incidence interrelationship of any pair of its elements can be obtained. Henceforth, in order to shorten notation, $\gloref{prdint}$ will also be used to represent the inner product $\fua{\xi}{\vto{x},\vto{y}}$. Moreover, in an inner product space, it is valid the so called \textsb{Cauchy-Schwartz Inequality}\index{inequality!Cauchy-Schwartz}, where 
+where $\vto{u}_1,\vto{u}_2,\vto{u}_3\in U_\cam{F}$ and  $\alpha_1,\alpha_2,\alpha_3\in\cam{F}$ are arbitrary elements of their respective sets. In this context, function $\xi$ is called a \textsb{positive-definite inner product} because the incidence of a vector on itself is a nonnegative real number, as described by the first axiom. In our study, $\xi$ is simply called \textsb{inner product}\index{inner product!of vectors}, and the double $(U_\cam{F},\xi)$ an \textsb{inner product space}\index{space!inner product}. From this double, we conclude that $\xi$ structures the group $U$ in such a way that an incidence interrelationship of any pair of its elements can be obtained. Henceforth, in order to shorten notation, $\gloref{prdint}$ will also be used to represent the inner product $\fua{\xi}{\vto{x},\vto{y}}$. From equality \eqref{eq:vecComplex}, if $\vto{x}=\alpha\vto{u}_1$ and $\vto{y}=\beta\vto{u}_2$, we can write that 
+\begin{equation}\label{eq:vecCompConjug}
+\overline{\vto{x}\cdot\vto{y}}=\overline{\alpha}\beta\overline{\vto{u}_1\cdot\vto{u}_2}=\overline{\alpha}\vto{u}_2\cdot\overline{\beta}\vto{u}_1=\alpha\vto{u}_2^c\cdot\beta\vto{u}_1^c=\overline{\beta}\vto{u}_2^c\cdot\overline{\alpha}\vto{u}_1^c=\vto{y}^c\cdot\vto{x}^c\,.
+\end{equation}
+Moreover, in an inner product space, it is valid the so called \textsb{Cauchy-Schwartz Inequality}\index{inequality!Cauchy-Schwartz}, where 
 \begin{equation}\label{eq:Cauchy-Schwartz}
 |\vto{u}\cdot\vto{v}|\leq \sqrt{(\vto{u}\cdot\vto{u})(\vto{v}\cdot\vto{v})}\,,\,\,\forall\,\vto{u},\vto{v}\in U_\cam{F}\,.
 \end{equation}
@@ -385,9 +389,14 @@ From this definition we can conclude that every Lipschitz continuous function is
 
 Now, considering that $U$ and $V$ define complete vector spaces on $\cam{F}$, let a function $\vto{h}\in V^U_\cam{F}$ be a homomorphism that keeps the additive structure of $U$ unaltered. To our purposes, this function must also preserve the structure created by the field $\cam{F}$ in such a way that
 \begin{equation}
-\fua{\vtf{h}}{\alpha\vto{u}_1+\beta\vto{u}_2}=\alpha\fua{\vtf{h}}{\vto{u}_1}+\beta\fua{\vtf{h}}{\vto{u}_2}\,,
+\fua{\vtf{h}}{\alpha\vto{x}+\beta\vto{y}}=\alpha\fua{\vtf{h}}{\vto{x}}+\beta\fua{\vtf{h}}{\vto{y}}\,,
 \end{equation}
-for all $\alpha,\beta\in\cam{F},\,\vto{u}_1,\vto{u}_2\in U$. Thereby, we call $\vtf{h}$ a \textsb{linear function}\index{function!linear}\label{def:linear} and the corresponding mapping a \textsb{linear transformation}\index{transformation!linear}. If the function space $V^U_\cam{F}$ has only linear functions, its usual representation is $\gloref{evl}$. Now, considering $\{\vto{u}_1,\cdots,\vto{u}_n\}$ a basis of $U_\cam{F}$, a bijective 
+for all $\alpha,\beta\in\cam{F},\,\vto{x},\vto{y}\in U$. Thereby, we call $\vtf{h}$ a \textsb{linear function}\index{function!linear}\label{def:linear} and the corresponding mapping a \textsb{linear transformation}\index{transformation!linear}. If the function space $V^U_\cam{F}$ has only linear functions, its usual representation is $\gloref{evl}$. Considering \eqref{eq:vecComplex} and \eqref{eq:antiLinConjVect}, an interesting property of linear functions can be obtained from
+equalities $\overline{\alpha}\fua{\vtf{h}}{\vto{u}}=\alpha(\fua{\vtf{h}}{\vto{u}})^c$ and $\overline{\alpha}\fua{\vtf{h}}{\vto{u}}=\fua{\vtf{h}}{\overline{\alpha}\vto{u}}=\alpha\fua{\vtf{h}}{\vto{u}^c}$, when we conclude that $(\fua{\vtf{h}}{\vto{u}})^c=\fua{\vtf{h}}{\vto{u}^c}$; and if $\vto{u}=\overline{\alpha}\vto{x}+\overline{\beta}\vto{y}$,
+\begin{equation}\label{eq:complexLinear}
+\alpha(\fua{\vtf{h}}{\vto{x}})^c+\beta(\fua{\vtf{h}}{\vto{y}})^c=\alpha\fua{\vtf{h}}{\vto{x}^c}+\beta\fua{\vtf{h}}{\vto{y}^c}\,.
+\end{equation}
+Now, considering $\{\vto{u}_1,\cdots,\vto{u}_n\}$ a basis of $U_\cam{F}$, a bijective 
 linear operator $\vtf{g}\in\evl{\cam{F}}{U}{U}$ and an arbitrary vector $\vto{u}\in U_\cam{F}$, we can say that since $\fua{\vtf{g}}{\vto{u}}$ is an arbitrary vector of $U_\cam{F}$, then set $\{\fua{\vtf{g}}{\vto{u}_1},\cdots,\fua{\vtf{g}}{\vto{u}_n}\}$ is also a basis of $U_\cam{F}$ because linearity leads to $\fua{\vtf{g}}{\vto{u}}=\sum_{i=1}^n\alpha_i\fua{\vtf{g}}{\vto{u}_i}$\label{pg:bijecOpe}. 
 
 	
@@ -551,13 +560,8 @@ Therefore, $\Phi$ is indeed an isometry in this case.
 
 Now, if $U_\cam{F}$ and $V_\cam{F}$ are Hilbert spaces from which the space $\evlc{\cam{F}}{U}{V}$ is defined, we call $\vtf{g}^\dagger\in \evlc{\cam{F}}{V}{U}$ and $\vtf{g}^\text{T}\in \evlc{\cam{F}}{V}{U}$ the \textsb{Hilbert-adjoint}\index{function!Hilbert-adjoint} and \textsb{transpose}\index{function!transpose} functions of $\vtf{g}\in \evlc{\cam{F}}{U}{V}$ respectively when, given arbitrary vectors $\vto{u}\in U_\cam{F}$ and $\vto{v}\in V_\cam{F}$, we have
 \begin{alignat}{3}\label{eq:funcaoTransposta}
-\fua{\vtf{g}^\dagger}{\vto{u}}\cdot\vto{v}=\vto{u}\cdot\fua{\vtf{g}}{\vto{v}}&\qquad \text{and}\qquad & \fua{\vtf{g}^\text{T}}{\vto{u}}\diamond\vto{v}=\vto{u}\diamond\fua{\vtf{g}}{\vto{v}}\,,
+\fua{\vtf{g}^\dagger}{\vto{u}}\cdot\vto{v}=\vto{u}\cdot\fua{\vtf{g}}{\vto{v}}&\qquad \text{and}\qquad & \fua{\vtf{g}^\text{T}}{\vto{u}}\cdot\vto{v}^c=\vto{u}\cdot\fua{\vtf{g}}{\vto{v}^c}\,.
 \end{alignat}
-where $\vto{x}\diamond\vto{y}:=\vto{x}\cdot\vto{y}^c$ is called the \textsb{contractive product}\index{contractive product!of vectors} of vectors $\vto{x}$ and $\vto{y}$, which is clearly bilinear. 
-
-%REESCREVER A EXPRESSÃO DA FUNCAO TRANSPOSTA USANDO O C E PROVAR LOGO ABAIXO
-
-
 From these equalities, it is clear that $\vtf{g}^\dagger=\vtf{g}^\text{T}$ for real fields. In the case of Hilbert-adjoint functions, the following properties are valid for all $\alpha\in\cam{F}$ and $\vtf{k}\in \evlc{\cam{F}}{V}{U}\,$:
 \begin{itemize}\label{eq:propAdj}
 	\setlength\itemsep{.1em}
@@ -592,7 +596,7 @@ Another consequence of $\vtf{q}$ preserving inner products is the following: if 
 \begin{equation}\label{eq:unitOrthon}
 \fua{\vtf{g}}{\vto{x}}=\sum_{j=1}^m\fua{\vtf{f}^B_j}{\vto{x}}\vun{v}_j
 \end{equation}
-is unitary and clearly enables $\fua{\vtf{g}}{\vun{u}_i}=\vun{v}_i$. Thereby, \emph{every pair of orthonormal bases can be related through a unitary operator}. Now, a development similar to equalities \eqref{eq:unitPreservInner} enable us to state that any orthogonal operator $\vtf{h}\in\evlc{\cam{F}}{V}{V}$ preserves the contractive product, that is, $\fua{\vtf{h}}{\vto{u}}\diamond\fua{\vtf{h}}{\vto{v}}=\vto{u}\diamond\vto{v}$. If only real fields are considered, every orthogonal operator $\vtf{h}$ is unitary since $\vtf{h}^{-1}=\vtf{h}^\text{T}=\vtf{h}^\dagger$.
+is unitary and clearly enables $\fua{\vtf{g}}{\vun{u}_i}=\vun{v}_i$. Thereby, \emph{every pair of orthonormal bases can be related through a unitary operator}. If only real fields are considered, every orthogonal operator $\vtf{h}$ is unitary since $\vtf{h}^{-1}=\vtf{h}^\text{T}=\vtf{h}^\dagger$.
 
 {\footnotesize
 \begin{proof}
