@@ -604,34 +604,40 @@ where polyadic tensors are defined by orthonormal bases according to theorem \re
 
 In the context of Hilbert spaces, we already know that corollary \ref{cor:covLin} establishes a biunivocal relationship between a linear vector function space and a linear covector function space, that is, if $\vtf{g}$ is a linear vector function, there is always a linear covector function $\vtf{g}_\Phi$, which is a linear tensor function whose domain is constituted by first order tensors (covectors). But the theorem above establishes a biunivocal relationship between a linear tensor function space and a tensor space, when we conclude that covector function $\vtf{g}_\Phi$ has its correspondent second order tensor $\tnr{G}$. Therefore, if covector function $\vtf{g}_\Phi=\tnr{G}_1^*$ has a correspondent function $\vtf{g}$ and a correspondent second order tensor $\tnr{G}$, we can conclude that $\vtf{g}$ and $\tnr{G}$ are correspondents. Let's now rewrite this rationale in a more concise form in the following corollary. 
 
-\begin{mcoro}{Second Order Tensors and Linear Vector Functions}{soTens}
+\begin{mcoro}{Second Order Tensors and Linear Functions}{soTens}
 Considering Hilbert spaces $U_\cam{F}$ and $V_\cam{F}$, a mapping $\map{\tnr{\Upsilon}}{\ete{\cam{F}}{U\times V}}{\evl{\cam{F}}{U}{V}}$ is a bijective transformation if its function rule is $\fua{\tnr{\Upsilon}}{\tnr{X}}=\Phi^{-1}\circ\vtf{X}^*_1\circ\Phi$, where $\Phi$ is defined on theorem \ref{teo:repRiesz}. 
 \end{mcoro}
 {\footnotesize
 \begin{proof}
-If function $\tnr{\Upsilon}$ were not an injection, there would be two distinct tensors $\tnr{T}$ and $\tnr{W}$ where $\Phi^{-1}\circ\vtf{T}^*_1\circ\Phi(\vto{x})=\Phi^{-1}\circ\vtf{W}^*_1\circ\Phi(\vto{x})$; but this equality leads to $\vtf{T}^*_1(\vto{x}^*)=\vtf{W}^*_1(\vto{x}^*)$, which shows that $\vtf{T}^*_1=\vtf{W}^*_1$. Therefore, since $p$-cotensors are biunivocaly related to tensors, $\tnr{T}$ and $\tnr{W}$ cannot be distinct. Function $\tnr{\Upsilon}$ is also a surjection because, through corollary \ref{cor:covLin}, for every linear function $\vtf{g}\in\evl{\cam{F}}{U}{V}$ a covector function $\vtf{g}_\Phi$ can be defined and then, for every tensor function $\vtf{g}_\Phi$ there exists a unique second order tensor $\tnr{G}\in\ete{\cam{F}}{U\times V}$ where $1$-cotensor $\tnr{G}_1^*=\vtf{g}_\Phi$.
+If function $\tnr{\Upsilon}$ were not an injection, there would be two distinct tensors $\tnr{T}$ and $\tnr{W}$ where $\Phi^{-1}\circ\vtf{T}^*_1\circ\Phi(\vto{x})=\Phi^{-1}\circ\vtf{W}^*_1\circ\Phi(\vto{x})$; but this equality leads to $\vtf{T}^*_1(\vto{x}^*)=\vtf{W}^*_1(\vto{x}^*)$, which shows that $\vtf{T}^*_1=\vtf{W}^*_1$. Therefore, since $p$-cotensors are biunivocaly related to tensors, $\tnr{T}$ and $\tnr{W}$ cannot be distinct. Function $\tnr{\Upsilon}$ is also a surjection because, through corollary \ref{cor:covLin}, for every linear function $\vtf{g}\in\evl{\cam{F}}{U}{V}$ a covector function $\vtf{g}_\Phi$ can be defined and then, for every tensor function $\vtf{g}_\Phi$ there exists a unique second order tensor $\tnr{G}\in\ete{\cam{F}}{U\times V}$ where $1$-cotensor $\tnr{G}_1^*=\Phi\circ\vtf{g}_\Phi$.
 \end{proof}
 }
+
+\noindent From this corollary, linear function $\tnr{\Upsilon}_{\tnr{G}}:=\fua{\tnr{\Upsilon}}{\tnr{G}}$ is called the \textsb{representative function}\index{function!representative} of second order tensor $\tnr{G}\in\ete{\cam{F}}{U\times V}$. If $\vto{g}_1^*\otimes\vto{g}_2^*$ is the dyadic description of $\tnr{G}$, then, considering arbitrary vectors $\vto{u}\in U_\cam{F}$ and $\vto{v}\in V_\cam{F}$, the scalar 
+\begin{align}\label{eq:secTens2Lin}
+\vto{v}\cdot\fua{\tnr{\Upsilon}_{\tnr{G}}}{\vto{u}}&=\fua{[\fua{\tnr{\Upsilon}_{\tnr{G}}}{\vto{u}}]^*}{\vto{v}}\nonumber\\
+&=\fua{[\fua{\Phi^{-1}\circ(\vto{g}_1^*\otimes\vto{g}_2^*)^*_1\circ\Phi}{\vto{u}}]^*}{\vto{v}}\nonumber\\
+&=\fua{[\fua{[\Phi^{-1}\circ(\vto{g}_1^*\otimes\vto{g}_2^*)^*_1]}{{\vto{u}}^*}]^*}{\vto{v}}\nonumber\\
+&=\fua{[(\vto{g}_1\cdot\vto{u})\Phi^{-1}\circ\vto{g}_2^*]^*}{\vto{v}}\nonumber\\
+&=\overline{\vto{u}\cdot\vto{g}_1}\fua{[\Phi^{-1}\circ\vto{g}_2^*]^*}{\vto{v}}\nonumber\\
+&=\overline{\fua{\vto{g}_1^*}{\vto{u}}}\fua{\vto{g}_2^*}{\vto{v}}\nonumber\\
+&=\fua{\vto{g}_1^*}{\vto{u}^c}\fua{\vto{g}_2^*}{\vto{v}}=\fua{\tnr{G}}{\vto{u}^c,\vto{v}}\,.
+\end{align}
+Moreover, vector
+\begin{equation}\label{eq:Lin2secTens}
+\fua{\tnr{\Upsilon}_{\tnr{G}}}{\vto{u}} = \fua{\Phi^{-1}\circ\tnr{G}^*_1\circ\Phi}{\vto{u}} = \fua{\Phi^{-1}}{\vto{u}^*\odot_1\tnr{G}} =(\vto{g}_1\cdot\vto{u})\vto{g}_2\,.
+\end{equation}
+
+
 
 \begin{mcoro}{Symmetric Tensors and Symmetric Operators}{soSymTens}
 The set of all symmetric operators of $\evlc{\cam{F}}{U}{U}$ is biunivocaly related to the space of all symmetric second order tensors $\ets{\cam{F}}{U^2}$. 
 \end{mcoro}
 {\footnotesize
 \begin{proof}
-Every linear operator $\vtf{g}\in\evl{\cam{F}}{U}{U}$ can be written as a composite function $\Phi^{-1}\circ(\vto{g}_1^*\otimes\vto{g}_2^*)^*_1\circ\Phi$, where $\vto{g}_1^*\otimes\vto{g}_2^*$ is the dyadic description of the arbitrary second order tensor $\tnr{G}\in\ete{\cam{F}}{U^2}$. Thereby, considering arbitrary vectors $\vto{v},\vto{u}\in U_\cam{F}$, the scalar
-\begin{align*}
-\vto{v}\cdot\fua{\vtf{g}}{\vto{u}^c}&=\fua{[\fua{\vtf{g}}{\vto{u}^c}]^*}{\vto{v}}\nonumber\\
-&=\fua{[\fua{\Phi^{-1}\circ(\vto{g}_1^*\otimes\vto{g}_2^*)^*_1\circ\Phi}{\vto{u}^c}]^*}{\vto{v}}\nonumber\\
-&=\fua{[\fua{[\Phi^{-1}\circ(\vto{g}_1^*\otimes\vto{g}_2^*)^*_1]}{{\vto{u}^c}^*}]^*}{\vto{v}}\nonumber\\
-&=\fua{[(\vto{g}_1\cdot\vto{u}^c)\Phi^{-1}\circ\vto{g}_2^*]^*}{\vto{v}}\nonumber\\
-&=\overline{\vto{u}^c\cdot\vto{g}_1}\fua{[\Phi^{-1}\circ\vto{g}_2^*]^*}{\vto{v}}\nonumber\\
-&=\overline{\fua{\vto{g}_1^*}{\vto{u}^c}}\fua{\vto{g}_2^*}{\vto{v}}\nonumber\\
-&=\fua{\vto{g}_1^*}{(\vto{u}^c)^c}\fua{\vto{g}_2^*}{\vto{v}}\nonumber\\
-&=\fua{\tnr{G}}{\vto{u},\vto{v}}\,.
-\end{align*}
-From this equality, if function $\vtf{g}$ is symmetric, then
+From \eqref{eq:secTens2Lin}, we know that $\vto{v}\cdot\fua{\tnr{\Upsilon}_{\tnr{G}}}{\vto{u}^c}=\fua{\tnr{G}}{\vto{u},\vto{v}}$. But if function $\tnr{\Upsilon}_{\tnr{G}}$ is symmetric, then
 \begin{equation*}
-\fua{\tnr{G}}{\vto{u},\vto{v}}=\fua{\vtf{g}}{\vto{v}}\cdot\vto{u}^c=\overline{\vto{u}^c\cdot\fua{\vtf{g}}{\vto{v}}}=\overline{\fua{\tnr{G}}{\vto{v}^c,\vto{u}^c}}=\fua{\vto{g}_1^*}{(\vto{v}^c)^c}\fua{\vto{g}_2^*}{(\vto{u}^c)^c}=\fua{\tnr{G}}{\vto{v},\vto{u}}.
+\fua{\tnr{G}}{\vto{u},\vto{v}}=\fua{\tnr{\Upsilon}_{\tnr{G}}}{\vto{v}}\cdot\vto{u}^c=\overline{\vto{u}^c\cdot\fua{\tnr{\Upsilon}_{\tnr{G}}}{\vto{v}}}=\overline{\fua{\tnr{G}}{\vto{v}^c,\vto{u}^c}}=\fua{\vto{g}_1^*}{(\vto{v}^c)^c}\fua{\vto{g}_2^*}{(\vto{u}^c)^c}=\fua{\tnr{G}}{\vto{v},\vto{u}}.
 \end{equation*}
 \end{proof}
 }
@@ -667,7 +673,7 @@ whose existence and uniqueness are straightforward consequences of the theorem i
 \begin{equation}\label{eq:polyRepre}
 \fua{\gloref{substFunc}}{\vto{x}_1^*\otimes\cdots\otimes\vto{x}_m^*} = \tnr{T}\cdot(\vto{x}_1^*\otimes\cdots\otimes\vto{x}_m^*)=\fua{\tnr{T}}{\vto{x}_1,\cdots,\vto{x}_m}\,,
 \end{equation}
-where $\frt{T}$ results a \textsb{representative function}\index{function!representative} of tensor $\tnr{T}$ since their values are the same when variables $\vto{x}_i\in (U_i)_\cam{F}$ are arranged as above. Now, it is possible to study tensors through their conjugate cotensors, which substitute them numerically and have only one argument. If we consider the context of expression  \eqref{eq:identProdInt}, \emph{equalities
+where $\frt{T}$ results a \textsb{representative tensor functional}\index{functional!representative tensor} of tensor $\tnr{T}$ since their values are the same when variables $\vto{x}_i\in (U_i)_\cam{F}$ are arranged as above. Now, it is possible to study tensors through their conjugate cotensors, which substitute them numerically and have only one argument. If we consider the context of expression  \eqref{eq:identProdInt}, \emph{equalities
 $\fua{\frt{I}}{\tnr{X}} = \tnr{I}\cdot \tnr{X} = \overline{\mathrm{tr}}\,\tnr{X}$ show that the conjugate trace represents the identity tensor}. Moreover, if the identity tensor described by \eqref{eq:poliadIdentidade} is the argument of a representative function $(\tnr{A}\otimes\tnr{B})^\circledast$ where $\tnr{A},\tnr{B}\in\ete{\cam{F}}{V^{\times p}}$, we have the following:
 \begin{align}
 \fua{(\tnr{A}\otimes\tnr{B})^\circledast}{\tnr{I}} &= \sum_{{i_1}=1}^{n_1}\cdots\sum_{{i_p}=1}^{n_p}\fua{(\tnr{A}\otimes\tnr{B})^\circledast}{\vtf{f}_{i_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{i_p}^{B_p}\otimes\vtf{f}_{i_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{i_p}^{B_p}}\nonumber\\
