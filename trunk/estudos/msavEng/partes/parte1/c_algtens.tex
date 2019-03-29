@@ -517,7 +517,7 @@ whose strategy can also prove that $\tnr{W}\cdot\tnr{A} + \tnr{W}\cdot\tnr{B}=\t
 
 In this study, a tensor function is treated like an ordinary function, on which the same functional definitions and nomenclature already presented can be applied properly. For instance, it is possible to consider a tensor function that is the composition of other tensor functions and consequently to define an inverse tensor function. Considering a tensor function $\tnr{\psi}\in\evlc{\cam{F}}{\ete{\cam{F}}{U^{\times p}}}{\ete{\cam{F}}{V^{\times q}}}$, where domain $\ete{\cam{F}}{U^{\times p}}$ and codomain $\ete{\cam{F}}{V^{\times p}}$ are Hilbert tensor spaces, the existence of an inner product for tensors enables us to write, for arbitrary tensors $\tnr{U}\in\ete{\cam{F}}{U^{\times p}}$ and $\tnr{V}\in\ete{\cam{F}}{V^{\times p}}$, 
 \begin{alignat}{3}\label{eq:HilbAdj}
-\fua{\tnr{\psi}^\dagger}{\tnr{V}}\cdot\vto{U}=\tnr{V}\cdot\fua{\tnr{\psi}}{\tnr{U}}&\qquad \text{and}\qquad&\fua{\tnr{\psi}^\text{T}}{\tnr{V}}\cdot\vto{U}^c=\tnr{V}\cdot(\fua{\tnr{\psi}}{\tnr{U}})^c\,,
+\fua{\tnr{\psi}^\dagger}{\tnr{V}}\cdot\vto{U}=\tnr{V}\cdot\fua{\tnr{\psi}}{\tnr{U}}&\qquad \text{and}\qquad&\fua{\tnr{\psi}^\text{T}}{\tnr{V}}\cdot\vto{U}^c=\tnr{V}\cdot\fua{\tnr{\psi}}{\tnr{U}^c}\,,
 \end{alignat}
 where functions $\tnr{\psi}^\dagger,\tnr{\psi}^\text{T}\in\evlc{\cam{F}}{\ete{\cam{F}}{V^{\times q}}}{\ete{\cam{F}}{U^{\times p}}}$ are called the Hilbert-adjoint and transpose tensor functions of $\tnr{\psi}$ respectively, as defined on section \ref{sec:FuncLin}. In this context, all properties of ordinary adjoint or transpose functions presented on page \pageref{eq:propAdj} are also valid and for an operator $\tnr{\varphi}\in\evlc{\cam{F}}{\ete{\cam{F}}{U^{\times p}}}{\ete{\cam{F}}{U^{\times p}}}$, it is said to be Hermitian when  $\tnr{\varphi}=\tnr{\varphi}^\dagger$ and anti-Hermitian when $\tnr{\varphi}=-\tnr{\varphi}^\dagger$. Moreover, operator $\tnr{\varphi}$ is called symmetric if $\tnr{\varphi}=\tnr{\varphi}^\text{T}$ and antisymmetric when $\tnr{\varphi}=-\tnr{\varphi}^\text{T}$. As defined previously, if tensor function $\tnr{\psi}$ is an injection whose inverse equals the adjoint, it is called unitary; or if injection $\tnr{\psi}$ has its inverse equal to its transpose, it is called orthogonal. Similarly to ordinary unitary and orthogonal operators, the set of all unitary tensor operators on domain $\ete{\cam{F}}{U^{\times p}}$ defines a unitary group of tensors $\grt{U}{\cam{F}}{U^{\times p}}\subset\grt{G}{\cam{F}}{U^{\times p}}$ on this same domain and the set of all orthogonal tensor operators on $\ete{\cam{F}}{U^{\times p}}$ defines an orthogonal group  $\grt{O}{\cam{F}}{U^{\times p}}\subset\grt{G}{\cam{F}}{U^{\times p}}$. Again, like ordinary unitary operators, unitary tensor operators clearly preserve inner product. An operator $\tnr{\kappa}\in\evl{\cam{F}}{\ete{\cam{F}}{U^{\times p}}}{\ete{\cam{F}}{U^{\times p}}}$ is called isometric if  $\varrho\,[\fua{\tnr{\kappa}}{\tnr{U}_1},\fua{\tnr{\kappa}}{\tnr{U}_2}]=\fua{\varrho}{\tnr{U}_1,\tnr{U}_2}$, where tensors $\tnr{U}_1$ and $\tnr{U}_2$ are arbitrary. Thereby, the set of all isometric tensor operators defines an isometry group $\grt{I}{\cam{F}}{U^{\times p}}$. For Euclidean tensor spaces, an isometry group is also an unitary group whose elements preserve inner product; it is also true that adjoint, (anti-)Hermitian and unitary functions equal respectively to transpose, (anti)symmetric and orthogonal functions.
 
@@ -623,54 +623,18 @@ Every linear operator $\vtf{g}\in\evl{\cam{F}}{U}{U}$ can be written as a compos
 \vto{v}\cdot\fua{\vtf{g}}{\vto{u}^c}&=\fua{[\fua{\vtf{g}}{\vto{u}^c}]^*}{\vto{v}}\nonumber\\
 &=\fua{[\fua{\Phi^{-1}\circ(\vto{g}_1^*\otimes\vto{g}_2^*)^*_1\circ\Phi}{\vto{u}^c}]^*}{\vto{v}}\nonumber\\
 &=\fua{[\fua{[\Phi^{-1}\circ(\vto{g}_1^*\otimes\vto{g}_2^*)^*_1]}{{\vto{u}^c}^*}]^*}{\vto{v}}\nonumber\\
-&=\fua{[(\vto{u}^c\cdot\vto{g}_2)\Phi^{-1}\circ\vto{g}_1^*]^*}{\vto{v}}\nonumber\\
-&=(\vto{u}^c\cdot\vto{g}_2)\fua{[\Phi^{-1}\circ\vto{g}_1^*]^*}{\vto{v}}\nonumber\\
-&=\fua{\vto{g}_2^*}{\vto{u}^c}\fua{\vto{g}_1^*}{\vto{v}}\nonumber\\
-&=\fua{\tnr{G}}{\vto{v},\vto{u}^c}\,.
+&=\fua{[(\vto{g}_1\cdot\vto{u}^c)\Phi^{-1}\circ\vto{g}_2^*]^*}{\vto{v}}\nonumber\\
+&=\overline{\vto{u}^c\cdot\vto{g}_1}\fua{[\Phi^{-1}\circ\vto{g}_2^*]^*}{\vto{v}}\nonumber\\
+&=\overline{\fua{\vto{g}_1^*}{\vto{u}^c}}\fua{\vto{g}_2^*}{\vto{v}}\nonumber\\
+&=\fua{\vto{g}_1^*}{(\vto{u}^c)^c}\fua{\vto{g}_2^*}{\vto{v}}\nonumber\\
+&=\fua{\tnr{G}}{\vto{u},\vto{v}}\,.
 \end{align*}
-From equality \eqref{eq:vecCompConjug}, if function $\vtf{g}$ is symmetric, then
+From this equality, if function $\vtf{g}$ is symmetric, then
 \begin{equation*}
-\fua{\tnr{G}}{\vto{v},\vto{u}^c}=\fua{\vtf{g}}{\vto{v}}\cdot\vto{u}^c=\overline{\vto{u}^c\cdot\fua{\vtf{g}}{\vto{v}}}=\overline{\fua{\tnr{G}}{\vto{u}^c,\vto{v}}}
+\fua{\tnr{G}}{\vto{u},\vto{v}}=\fua{\vtf{g}}{\vto{v}}\cdot\vto{u}^c=\overline{\vto{u}^c\cdot\fua{\vtf{g}}{\vto{v}}}=\overline{\fua{\tnr{G}}{\vto{v}^c,\vto{u}^c}}=\fua{\vto{g}_1^*}{(\vto{v}^c)^c}\fua{\vto{g}_2^*}{(\vto{u}^c)^c}=\fua{\tnr{G}}{\vto{v},\vto{u}}.
 \end{equation*}
 \end{proof}
 }
-
-
-
-
-From the previous corollary, we can state that every linear function $\vtf{g}\in\evl{\cam{F}}{U}{V}$ can be written as a composite function $\Phi^{-1}\circ(\vto{g}_1^*\otimes\vto{g}_2^*)^*_1\circ\Phi$, where $\vto{g}_1^*\otimes\vto{g}_2^*$ is the dyadic description of the arbitrary second order tensor $\tnr{G}\in\ete{\cam{F}}{U\times V}$. Thereby, considering arbitrary vectors $\vto{v}\in V_\cam{F}$ and $\vto{u}\in U_\cam{F}$, the scalar
-\begin{align}
-\vto{v}\cdot\fua{\vtf{g}}{\vto{u}^c}&=\fua{[\fua{\vtf{g}}{\vto{u}^c}]^*}{\vto{v}}\nonumber\\
-&=\fua{[\fua{\Phi^{-1}\circ(\vto{g}_1^*\otimes\vto{g}_2^*)^*_1\circ\Phi}{\vto{u}^c}]^*}{\vto{v}}\nonumber\\
-&=\fua{[\fua{[\Phi^{-1}\circ(\vto{g}_1^*\otimes\vto{g}_2^*)^*_1]}{{\vto{u}^c}^*}]^*}{\vto{v}}\nonumber\\
-&=\fua{[(\vto{u}^c\cdot\vto{g}_2)\Phi^{-1}\circ\vto{g}_1^*]^*}{\vto{v}}\nonumber\\
-&=(\vto{u}^c\cdot\vto{g}_2)\fua{[\Phi^{-1}\circ\vto{g}_1^*]^*}{\vto{v}}\nonumber\\
-&=\fua{\vto{g}_2^*}{\vto{u}^c}\fua{\vto{g}_1^*}{\vto{v}}\nonumber\\
-&=\fua{\tnr{G}}{\vto{v},\vto{u}^c}\,.
-\end{align}
-
-
-\begin{align}
-	\fua{\vtf{g}}{\vto{v}}\cdot\vto{u}^c&=\fua{{\vto{u}^c}^*}{\fua{\vtf{g}}{\vto{v}}}\nonumber\\
-&=\fua{{\vto{u}^c}^*}{\fua{\Phi^{-1}\circ(\vto{g}_1^*\otimes\vto{g}_2^*)^*_1\circ\Phi}{\vto{v}}}\nonumber\\
-&=(\vto{v}\cdot\vto{g}_2)\fua{{\vto{u}^c}^*}{\vto{g}_1}
-\end{align}
-
-If function $\vtf{g}$ is symmetric, then 
-\begin{align}
-	\fua{\tnr{G}}{\vto{v},\vto{u}^c}&=\vto{v}\cdot\fua{\vtf{g}}{\vto{u}^c}\nonumber\\
-	&=\fua{[\fua{\Phi^{-1}\circ(\vto{g}_1^*\otimes\vto{g}_2^*)^*_1\circ\Phi}{\vto{u}^c}]^*}{\vto{v}}\nonumber\\
-	&=\fua{[\fua{[\Phi^{-1}\circ(\vto{g}_1^*\otimes\vto{g}_2^*)^*_1]}{{\vto{u}^c}^*}]^*}{\vto{v}}\nonumber\\
-	&=\fua{[(\vto{u}^c\cdot\vto{g}_2)\Phi^{-1}\circ\vto{g}_1^*]^*}{\vto{v}}\nonumber\\
-	&=(\vto{u}^c\cdot\vto{g}_2)\fua{[\Phi^{-1}\circ\vto{g}_1^*]^*}{\vto{v}}\nonumber\\
-	&=\fua{\vto{g}_2^*}{\vto{u}^c}\fua{\vto{g}_1^*}{\vto{v}}\nonumber\\
-	&=\fua{\tnr{G}}{\vto{v},\vto{u}^c}\,.
-\end{align}
-
-
-% se a funcao vetorial for simétrica como fica o tensor de segunda? e se a função vetorial for positiva como fica o tensor de segunda ordem?
-
-
 
 Still considering the conditions of the theorem, let's see what is the $p$-cotensor of identity tensor $\tnr{I}\in\ete{\cam{F}}{W^{\times p}\times W^{\times p}}$. If equality \eqref{eq:poliadIdentidade} and its definer conditions are considered, development
 \begin{align}\label{eq:cotensIdent}
@@ -703,7 +667,7 @@ whose existence and uniqueness are straightforward consequences of the theorem i
 \begin{equation}\label{eq:polyRepre}
 \fua{\gloref{substFunc}}{\vto{x}_1^*\otimes\cdots\otimes\vto{x}_m^*} = \tnr{T}\cdot(\vto{x}_1^*\otimes\cdots\otimes\vto{x}_m^*)=\fua{\tnr{T}}{\vto{x}_1,\cdots,\vto{x}_m}\,,
 \end{equation}
-where $\frt{T}$ results a \textsb{representative function}\index{function!representative} of tensor $\tnr{T}$ since their values are the same when variables $\vto{x}_i\in (U_i)_\cam{F}$ are arranged as above. Now, it is possible to study tensors through their conjugate cotensors, which substitute them numerically. If we consider the context of expression  \eqref{eq:identProdInt}, \emph{equalities
+where $\frt{T}$ results a \textsb{representative function}\index{function!representative} of tensor $\tnr{T}$ since their values are the same when variables $\vto{x}_i\in (U_i)_\cam{F}$ are arranged as above. Now, it is possible to study tensors through their conjugate cotensors, which substitute them numerically and have only one argument. If we consider the context of expression  \eqref{eq:identProdInt}, \emph{equalities
 $\fua{\frt{I}}{\tnr{X}} = \tnr{I}\cdot \tnr{X} = \overline{\mathrm{tr}}\,\tnr{X}$ show that the conjugate trace represents the identity tensor}. Moreover, if the identity tensor described by \eqref{eq:poliadIdentidade} is the argument of a representative function $(\tnr{A}\otimes\tnr{B})^\circledast$ where $\tnr{A},\tnr{B}\in\ete{\cam{F}}{V^{\times p}}$, we have the following:
 \begin{align}
 \fua{(\tnr{A}\otimes\tnr{B})^\circledast}{\tnr{I}} &= \sum_{{i_1}=1}^{n_1}\cdots\sum_{{i_p}=1}^{n_p}\fua{(\tnr{A}\otimes\tnr{B})^\circledast}{\vtf{f}_{i_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{i_p}^{B_p}\otimes\vtf{f}_{i_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{i_p}^{B_p}}\nonumber\\
@@ -716,7 +680,6 @@ where equality \eqref{eq:prodContrCoord} was considered.
 
 
 \section{Array Representations}
-
 
 
 
