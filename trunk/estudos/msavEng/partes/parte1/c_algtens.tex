@@ -613,21 +613,14 @@ If function $\tnr{\Upsilon}$ were not an injection, there would be two distinct 
 \end{proof}
 }
 
-\noindent From this corollary, linear function $\tnr{\Upsilon}_{\tnr{G}}:=\fua{\tnr{\Upsilon}}{\tnr{G}}$ is called the \textsb{representative function}\index{function!representative} of second order tensor $\tnr{G}\in\ete{\cam{F}}{U\times V}$. If $\vto{g}_1^*\otimes\vto{g}_2^*$ is the dyadic description of $\tnr{G}$, then, considering arbitrary vectors $\vto{u}\in U_\cam{F}$ and $\vto{v}\in V_\cam{F}$, the scalar 
-\begin{align}\label{eq:secTens2Lin}
-\vto{v}\cdot\fua{\tnr{\Upsilon}_{\tnr{G}}}{\vto{u}}&=\fua{[\fua{\tnr{\Upsilon}_{\tnr{G}}}{\vto{u}}]^*}{\vto{v}}\nonumber\\
-&=\fua{[\fua{\Phi^{-1}\circ(\vto{g}_1^*\otimes\vto{g}_2^*)^*_1\circ\Phi}{\vto{u}}]^*}{\vto{v}}\nonumber\\
-&=\fua{[\fua{[\Phi^{-1}\circ(\vto{g}_1^*\otimes\vto{g}_2^*)^*_1]}{{\vto{u}}^*}]^*}{\vto{v}}\nonumber\\
-&=\fua{[(\vto{g}_1\cdot\vto{u})\Phi^{-1}\circ\vto{g}_2^*]^*}{\vto{v}}\nonumber\\
-&=\overline{\vto{u}\cdot\vto{g}_1}\fua{[\Phi^{-1}\circ\vto{g}_2^*]^*}{\vto{v}}\nonumber\\
-&=\overline{\fua{\vto{g}_1^*}{\vto{u}}}\fua{\vto{g}_2^*}{\vto{v}}\nonumber\\
-&=\fua{\vto{g}_1^*}{\vto{u}^c}\fua{\vto{g}_2^*}{\vto{v}}=\fua{\tnr{G}}{\vto{u}^c,\vto{v}}\,.
-\end{align}
-Moreover, vector
+\noindent From this corollary, linear function $\tnr{\Upsilon}_{\tnr{G}}:=\fua{\tnr{\Upsilon}}{\tnr{G}}$ is called the \textsb{representative function}\index{function!representative} of second order tensor $\tnr{G}\in\ete{\cam{F}}{U\times V}$. Considering  $\vto{g}_1^*\otimes\vto{g}_2^*$ the dyadic description of $\tnr{G}$, arbitrary vectors $\vto{u}\in U_\cam{F}$ and $\vto{v}\in V_\cam{F}$, we can write that
 \begin{equation}\label{eq:Lin2secTens}
-\fua{\tnr{\Upsilon}_{\tnr{G}}}{\vto{u}} = \fua{\Phi^{-1}\circ\tnr{G}^*_1\circ\Phi}{\vto{u}} = \fua{\Phi^{-1}}{\vto{u}^*\odot_1\tnr{G}} =(\vto{g}_1\cdot\vto{u})\vto{g}_2\,.
+\fua{\tnr{\Upsilon}_{\tnr{G}}}{\vto{u}} = \fua{\Phi^{-1}\circ\tnr{G}^*_1\circ\Phi}{\vto{u}} = \fua{\Phi^{-1}}{\vto{u}^*\odot_1\tnr{G}} =\Phi^{-1}[(\vto{g}_1\cdot\vto{u})\vto{g}_2^*]=(\vto{u}\cdot\vto{g}_1)\vto{g}_2\,,
 \end{equation}
-
+and from this result scalar
+\begin{equation}\label{eq:secTens2Lin}
+\fua{\tnr{G}}{\vto{u},\vto{v}} = \fua{\vto{g}_1^*}{\vto{u}}\fua{\vto{g}_2^*}{\vto{v}} = \vto{v}\cdot\overline{\fua{\vto{g}_1^*}{\vto{u}}}\vto{g}_2 = \vto{v}\cdot\fua{\vto{g}_1^*}{\vto{u}^c}\vto{g}_2= \vto{v}\cdot\fua{\tnr{\Upsilon}_{\tnr{G}}}{\vto{u}^c}\,.
+\end{equation}
 
 
 \begin{mcoro}{Symmetric Tensors and Symmetric Operators}{soSymTens}
@@ -635,7 +628,7 @@ The set of all symmetric operators of $\evlc{\cam{F}}{U}{U}$ is biunivocaly rela
 \end{mcoro}
 {\footnotesize
 \begin{proof}
-From \eqref{eq:secTens2Lin}, we know that $\vto{v}\cdot\fua{\tnr{\Upsilon}_{\tnr{G}}}{\vto{u}^c}=\fua{\tnr{G}}{\vto{u},\vto{v}}$. But if function $\tnr{\Upsilon}_{\tnr{G}}$ is symmetric, then
+From \eqref{eq:secTens2Lin}, we know that $\fua{\tnr{G}}{\vto{u},\vto{v}}=\vto{v}\cdot\fua{\tnr{\Upsilon}_{\tnr{G}}}{\vto{u}^c}$. But if function $\tnr{\Upsilon}_{\tnr{G}}$ is symmetric, then
 \begin{equation*}
 \fua{\tnr{G}}{\vto{u},\vto{v}}=\fua{\tnr{\Upsilon}_{\tnr{G}}}{\vto{v}}\cdot\vto{u}^c=\overline{\vto{u}^c\cdot\fua{\tnr{\Upsilon}_{\tnr{G}}}{\vto{v}}}=\overline{\fua{\tnr{G}}{\vto{v}^c,\vto{u}^c}}=\fua{\vto{g}_1^*}{(\vto{v}^c)^c}\fua{\vto{g}_2^*}{(\vto{u}^c)^c}=\fua{\tnr{G}}{\vto{v},\vto{u}}.
 \end{equation*}
