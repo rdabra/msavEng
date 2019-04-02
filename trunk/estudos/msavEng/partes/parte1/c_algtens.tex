@@ -621,7 +621,11 @@ and from this result scalar
 \begin{equation}\label{eq:secTens2Lin}
 \fua{\tnr{G}}{\vto{u},\vto{v}} = \fua{\vto{g}_1^*}{\vto{u}}\fua{\vto{g}_2^*}{\vto{v}} = \vto{v}\cdot\overline{\fua{\vto{g}_1^*}{\vto{u}}}\vto{g}_2 = \vto{v}\cdot\fua{\vto{g}_1^*}{\vto{u}^c}\vto{g}_2= \vto{v}\cdot\fua{\tnr{\Upsilon}_{\tnr{G}}}{\vto{u}^c}\,.
 \end{equation}
-
+Now, considering these equalities, we extend the concept of positivity that can be applied to the representative operator $\tnr{\Upsilon}_{\tnr{T}}\in\evl{\cam{F}}{U}{U}$, described by definition \eqref{eq:linPosDef}, to tensor $\tnr{T}\in\ete{\cam{F}}{U^2}$. Thereby, a second order tensor $\tnr{T}$ is said to be \textsb{nonnegative}\index{tensor!nonnegative} if 
+\begin{equation}\label{eq:nonnegTensor}
+\Re(\fua{\tnr{\Upsilon}_{\tnr{T}}}{\vto{y}}\cdot\vto{y})=\Re(\vto{y}\cdot\fua{\tnr{\Upsilon}_{\tnr{T}}}{\vto{y}})=\Re(\fua{\tnr{T}}{\vto{y},\vto{y}})\geqslant 0\,,\,\forall\,\vto{y}\in U_\cam{F}\,,
+\end{equation}
+and \textsb{positive-definite}\index{tensor!positive-definite} if the real value on the left side is never zero. 
 
 \begin{mcoro}{Symmetric Tensors and Symmetric Operators}{soSymTens}
 The set of all symmetric operators of $\evlc{\cam{F}}{U}{U}$ is biunivocaly related to the space of all symmetric second order tensors $\ets{\cam{F}}{U^2}$. 
@@ -728,13 +732,8 @@ where equalities \eqref{eq:regraCoordTens} and \eqref{eq:propProdIndTens} were c
 {\maf{\tnr{\psi}}{B^c}{D}}^\text{T}=[\tnr{\psi}^\text{T}_{D}]^{B^c}\,.
 \end{equation}
 
-Tensors and linear tensor operators can be represented in a higher aggregate form through the use of matrices. The strategy consists in considering each polyadic tensor of a given basis as an ordinary basis vector of its tensor space, which is actually a vector space of linear functionals, as we already know. In general terms, the labeling scheme changes from the basis vectors of $(U_\cam{F})_i$ to the basis tensors of $\ete{\cam{F}}{U^{\times m}}$. Thereby, it is implicit in labeling an arbitrary basis $\tnr{B}_i:=\{\vtf{f}_{i_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{i_m}^{B_m}\}$ of $\ete{\cam{F}}{U^{\times m}}$ the definition of a bijective mapping $\map{\nu}{(\cam{N}^+)^m}{\cam{N}^+}$, where integers involved are ordinals and $\fua{\nu}{i_1,\cdots,i_m}=i$. The dimension $p=n_1n_2\cdots n_m$ of $\ete{\cam{F}}{U^{\times m}}$ clearly leads to $i=1,\cdots,p$. In this context, we can write that tensor
-\begin{equation}\label{eq:tensMatrix}
-\tnr{\tnr{T}}=\sum_{i=1}^p \fua{\vtf{f}_i^{B}}{\tnr{T}}\tnr{B}_i\,,
-\end{equation}
-where $\fua{\vtf{f}_i^{B}}{\tnr{T}}=\fua{\frt{T}}{\tnr{B}_i}$, according to \eqref{eq:regraCoordTens} and \eqref{eq:polyRepre}, and then define $\mav{\tnr{T}}{B}_{i1}:=\fua{\vtf{f}_i^{B}}{\tnr{T}}$, similarly to the case of vectors. Now, considering $C$ a basis of $\ete{\cam{F}}{(U^{\times m})^*}$ whose elements are also labeled by bijection $\nu$, a tensor operator $\tnr{\psi}\in\evl{\cam{F}}{\ete{\cam{F}}{U^{\times m}}}{\ete{\cam{F}}{U^{\times m}}}$ can be represented by a matrix on basis $B$ and $C$ through definition $\maf{\tnr{\psi}}{B}{C}_{ij}=\vtf{f}^\con{C}_{i}[\fua{\tnr{\psi}}{\tnr{B}_j}]$, which results from the same development that led to \eqref{eq:repMatMape}. These two fundamental definitions enable matrix representation of tensors and linear tensor operators, that is performed the same way as for the case of vectors and linear functions, already presented in section \ref{sec:Matrix}. Because of this similarity, we shall not proceed here with these matrix representations.
 
-In this context of array representation, it is also possible to develop change of coordinates and change of basis as we did for vector and linear functions. For the sake of clarity and rigor we shall reproduce here both theorem \ref{teo:mudCoordVec} and its corollary \ref{cor:mudaBase} with minor changes in order to adapt them for the current case.    
+It is possible to develop change of coordinates and of basis as we did for vector and linear functions. For the sake of clarity we shall reproduce here both theorem \ref{teo:mudCoordVec} and its corollary \ref{cor:mudaBase} with minor changes in order to adapt them for the current case.    
 
 \begin{mteo}{Change of Tensor Coordinates}{mudCoordTens}
 If $U^{\times m}(B)_\cam{F}$ and $U^{\times m}(C)_\cam{F}$ are vector spaces constituted by representative arrays of the elements of tensor space $\ete{\cam{F}}{U^{\times m}}$ on its bases $B$ and $C$ respectively, there is one and only one linear bijective transformation $\map{\tnr{\Gamma}}{U^{\times m}(B)_\cam{F}}{U^{\times m}(C)_\cam{F}}$, called change of coordinates from $B$ to $C$, where  ${\tnr{\Gamma}}({\mav{\tnr{X}}{B}})=\mav{\tnr{X}}{C}$ for all $\tnr{X}\in \ete{\cam{F}}{U^{\times p}}$.
@@ -762,7 +761,7 @@ where bases $B_i=\{\vun{u}_{1}^{(i)},\cdots,\vun{u}_{n_i}^{(i)}\}$ and $C_i=\{\v
 \underbrace{\prod_{k=1}^m\vun{z}_{l_k}^{(k)}\cdot\vun{v}_{i_k}^{(k)}}_{\mat{C}_{l_1\cdots l_m i_1\cdots i_m}}&=\sum_{j_1=1}^{n_1}\cdots\sum_{j_p=1}^{n_p}\underbrace{\prod_{k=1}^m\vun{z}_{l_k}^{(k)}	\cdot \vun{u}_{j_k}^{(k)}}_{\mat{B}_{l_1\cdots l_m j_1\cdots j_m}}\underbrace{\prod_{k=1}^m\vun{u}_{j_k}^{(k)}	\cdot \vun{v}_{i_k}^{(k)}}_{\maf{\tnr{i}}{C}{B}_{j_1\cdots j_m i_1\cdots i_m}}\nonumber\\
 \mat{C}&=\mat{B}\,\mat{*_m}\,\maf{\tnr{i}}{C}{B}\,,
 \end{align}  
-where $\maf{\tnr{i}}{C}{B}$ performs a change of basis from $B$ to $C$ when the coordinates of the elements of bases $B$ and $C$ on an arbitrary basis $Z$ are arranged according to arrays $\mat{B}$ and $\mat{C}$ defined in the development. Therefore, we can say that the coordinates of tensors are contravariant because if a change of coordinates is enabled by an array $\maf{\tnr{i}}{B}{C}$, the correspondent change of basis is performed by $\maf{\tnr{i}}{C}{B}$.   
+where $\maf{\tnr{i}}{C}{B}$ performs a change of basis from $B$ to $C$ when the coordinates of the elements of bases $B$ and $C$ on an arbitrary basis $Z$ are arranged according to arrays $\mat{B}$ and $\mat{C}$ defined in the development. Therefore, we can say that the coordinates of tensors are contravariant because if a change of coordinates is enabled by an array $\maf{\tnr{i}}{B}{C}$, the correspondent change of basis is performed by $\maf{\tnr{i}}{C}{B}$ in order to avoid any confusion.   
 
 \begin{mcoro}{Change of Linear Tensor Operator Coordinates}{mudaBaseTens}
 If $V^{\times m}(B)_\cam{F}$ and $V^{\times m}(C)_\cam{F}$ are vector spaces constituted by the representative arrays of linear tensor operators that belong to $\evl{\cam{F}}{\ete{\cam{F}}{V^{\times m}}}{\ete{\cam{F}}{V^{\times m}}}$, described respectively on bases $B$ and $C$ of tensor space $\ete{\cam{F}}{V^{\times m}}$, the change of coordinates $\map{\tnr{\Theta}}{V^{\times m}(B)_\cam{F}}{V^{\times m}(C)_\cam{F}}$ is described by $\fua{\tnr{\Theta}}{\mat{X}}=\maf{\vtf{i}}{B}{C}\,\mat{*_m}\,\mat{X}\,\mat{*_m}\,\maf{\vtf{i}}{C}{B}$.
@@ -783,6 +782,12 @@ enables us to affirm that
 \end{equation*}
 \end{proof}
 }
+
+Tensors and linear tensor operators can be represented in a higher aggregate form through the use of matrices. The strategy consists in considering each polyadic tensor of a given basis as an ordinary basis vector of its tensor space, which is actually a vector space of linear functionals, as we already know. In general terms, the labeling scheme changes from the basis vectors of $(U_\cam{F})_i$ to the basis tensors of $\ete{\cam{F}}{U^{\times m}}$. Thereby, it is implicit in labeling an arbitrary basis $\tnr{B}_i:=\{\vtf{f}_{i_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{i_m}^{B_m}\}$ of $\ete{\cam{F}}{U^{\times m}}$ the definition of a bijective mapping $\map{\nu}{(\cam{N}^+)^m}{\cam{N}^+}$, where integers involved are ordinals and $\fua{\nu}{i_1,\cdots,i_m}=i$. The dimension $p=n_1n_2\cdots n_m$ of $\ete{\cam{F}}{U^{\times m}}$ clearly leads to $i=1,\cdots,p$. In this context, we can write that tensor
+\begin{equation}\label{eq:tensMatrix}
+\tnr{\tnr{T}}=\sum_{i=1}^p \fua{\vtf{f}_i^{B}}{\tnr{T}}\tnr{B}_i\,,
+\end{equation}
+where $\fua{\vtf{f}_i^{B}}{\tnr{T}}=\fua{\frt{T}}{\tnr{B}_i}$, according to \eqref{eq:regraCoordTens} and \eqref{eq:polyRepre}, and then define $\mav{\tnr{T}}{B}_{i1}:=\fua{\vtf{f}_i^{B}}{\tnr{T}}$, similarly to the case of vectors. Now, considering $C$ a basis of $\ete{\cam{F}}{(U^{\times m})^*}$ whose elements are also labeled by bijection $\nu$, a tensor operator $\tnr{\psi}\in\evl{\cam{F}}{\ete{\cam{F}}{U^{\times m}}}{\ete{\cam{F}}{U^{\times m}}}$ can be represented by a matrix on basis $B$ and $C$ through definition $\maf{\tnr{\psi}}{B}{C}_{ij}=\vtf{f}^\con{C}_{i}[\fua{\tnr{\psi}}{\tnr{B}_j}]$, which results from the same development that led to \eqref{eq:repMatMape}. These two fundamental definitions enable matrix representation of tensors and linear tensor operators, that is performed the same way as for the case of vectors and linear functions, already presented in section \ref{sec:Matrix}. Because of this similarity, we shall not proceed here with these matrix representations.
 
  
 \section{Invariance of Tensors}
