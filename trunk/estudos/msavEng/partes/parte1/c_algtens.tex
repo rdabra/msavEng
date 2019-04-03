@@ -621,23 +621,30 @@ and from this result scalar
 \begin{equation}\label{eq:secTens2Lin}
 \fua{\tnr{G}}{\vto{u},\vto{v}} = \fua{\vto{g}_1^*}{\vto{u}}\fua{\vto{g}_2^*}{\vto{v}} = \vto{v}\cdot\overline{\fua{\vto{g}_1^*}{\vto{u}}}\vto{g}_2 = \vto{v}\cdot\fua{\vto{g}_1^*}{\vto{u}^c}\vto{g}_2= \vto{v}\cdot\fua{\tnr{\Upsilon}_{\tnr{G}}}{\vto{u}^c}\,.
 \end{equation}
-Now, considering these equalities, we extend the concept of positivity that can be applied to the representative operator $\tnr{\Upsilon}_{\tnr{T}}\in\evl{\cam{F}}{U}{U}$, described by definition \eqref{eq:linPosDef}, to tensor $\tnr{T}\in\ete{\cam{F}}{U^2}$. Thereby, a second order tensor $\tnr{T}$ is said to be \textsb{nonnegative}\index{tensor!nonnegative} if 
-\begin{equation}\label{eq:nonnegTensor}
-\Re(\fua{\tnr{\Upsilon}_{\tnr{T}}}{\vto{y}}\cdot\vto{y})=\Re(\vto{y}\cdot\fua{\tnr{\Upsilon}_{\tnr{T}}}{\vto{y}})=\Re(\fua{\tnr{T}}{\vto{y},\vto{y}})\geqslant 0\,,\,\forall\,\vto{y}\in U_\cam{F}\,,
-\end{equation}
-and \textsb{positive-definite}\index{tensor!positive-definite} if the real value on the left side is never zero. 
+From these equalities we can write that $\fua{\tnr{G}}{\vto{u}^c,\vto{v}}=\vto{v}\cdot\fua{\tnr{\Upsilon}_{\tnr{G}}}{\vto{u}}$. It is interesting to note that if a representative operator $\tnr{\Upsilon}_{\tnr{T}}\in\evl{\cam{F}}{U}{U}$ is Hermitian then
+\begin{equation*}
+\fua{\tnr{T}}{\vto{x}^c,\vto{y}}=\fua{\tnr{\Upsilon}_{\tnr{T}}}{\vto{y}}\cdot\vto{x}=\overline{\vto{x}\cdot\fua{\tnr{\Upsilon}_{\tnr{T}}}{\vto{y}}}=\overline{\fua{\tnr{T}}{\vto{y}^c,\vto{x}}}=\fua{\vto{t}_1^*}{(\vto{y}^c)^c}\fua{\vto{t}_2^*}{\vto{x}^c}=\fua{\tnr{T}}{\vto{y},\vto{x}^c}\,,
+\end{equation*}
+from which we can not conclude that $\tnr{T}$ is symmetric since its arguments are $\vto{x}$ and $\vto{y}$; but, in the case of $\tnr{\Upsilon}_{\tnr{T}}$ symmetric, we can and this result leads to the following corollary. 
 
 \begin{mcoro}{Symmetric Tensors and Symmetric Operators}{soSymTens}
-The set of all symmetric operators of $\evlc{\cam{F}}{U}{U}$ is biunivocaly related to the space of all symmetric second order tensors $\ets{\cam{F}}{U^2}$. 
+The set of symmetric operators, subset of $\evlc{\cam{F}}{U}{U}$, is biunivocaly related to the space of symmetric second order tensors $\ets{\cam{F}}{U^2}$.
 \end{mcoro}
 {\footnotesize
 \begin{proof}
-From \eqref{eq:secTens2Lin}, we know that $\fua{\tnr{G}}{\vto{u},\vto{v}}=\vto{v}\cdot\fua{\tnr{\Upsilon}_{\tnr{G}}}{\vto{u}^c}$. But if function $\tnr{\Upsilon}_{\tnr{G}}$ is symmetric, then
+From \eqref{eq:secTens2Lin}, if $\tnr{\Upsilon}_{\tnr{T}}$ is a symmetric representative operator, we have
 \begin{equation*}
-\fua{\tnr{G}}{\vto{u},\vto{v}}=\fua{\tnr{\Upsilon}_{\tnr{G}}}{\vto{v}}\cdot\vto{u}^c=\overline{\vto{u}^c\cdot\fua{\tnr{\Upsilon}_{\tnr{G}}}{\vto{v}}}=\overline{\fua{\tnr{G}}{\vto{v}^c,\vto{u}^c}}=\fua{\vto{g}_1^*}{(\vto{v}^c)^c}\fua{\vto{g}_2^*}{(\vto{u}^c)^c}=\fua{\tnr{G}}{\vto{v},\vto{u}}.
+\fua{\tnr{T}}{\vto{x},\vto{y}}=\fua{\tnr{\Upsilon}_{\tnr{T}}}{\vto{y}}\cdot\vto{x}^c=\overline{\vto{x}^c\cdot\fua{\tnr{\Upsilon}_{\tnr{T}}}{\vto{y}}}=\overline{\fua{\tnr{T}}{\vto{y}^c,\vto{x}^c}}=\fua{\vto{t}_1^*}{(\vto{y}^c)^c}\fua{\vto{t}_2^*}{(\vto{x}^c)^c}=\fua{\tnr{T}}{\vto{y},\vto{x}}.
 \end{equation*}
 \end{proof}
 }
+
+
+Now, considering equalities \eqref{eq:secTens2Lin}, we extend the concept of positivity that can be applied to the representative operator $\tnr{\Upsilon}_{\tnr{T}}\in\evl{\cam{F}}{U}{U}$, described by definition \eqref{eq:linPosDef}, to tensor $\tnr{T}\in\ete{\cam{F}}{U^2}$. Thereby, a second order tensor $\tnr{T}$ is said to be \textsb{nonnegative}\index{tensor!nonnegative} if 
+\begin{equation}\label{eq:nonnegTensor}
+\Re(\fua{\tnr{\Upsilon}_{\tnr{T}}}{\vto{y}}\cdot\vto{y})=\Re(\vto{y}\cdot\fua{\tnr{\Upsilon}_{\tnr{T}}}{\vto{y}})=\Re(\fua{\tnr{T}}{\vto{y},\vto{y}})\geqslant 0\,,\,\forall\,\vto{y}\in U_\cam{F}\,,
+\end{equation}
+and \textsb{positive-definite}\index{tensor!positive-definite} if the real value on the left side is never zero. Moreover, we also extend to a second order tensor $\tnr{T}\in\ete{\cam{F}}{U^2}$ the concepts of eigenvalues and eigenvectors of their representative operator $\tnr{\Upsilon}_{\tnr{T}}\in\evl{\cam{F}}{U}{U}$, that is, the eigenvalues and eigenvectors of $\tnr{\Upsilon}_{\tnr{T}}$ are also of $\tnr{T}$, by definition.
 
 Still considering the conditions of the theorem, let's see what is the $p$-cotensor of identity tensor $\tnr{I}\in\ete{\cam{F}}{W^{\times p}\times W^{\times p}}$. If equality \eqref{eq:poliadIdentidade} and its definer conditions are considered, development
 \begin{align}\label{eq:cotensIdent}
