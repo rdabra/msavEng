@@ -161,11 +161,11 @@ The last inequality is true for all $\theta$ only if $|\vartheta|\geq|\fua{\zeta
 \section{Affinities}
 The subject of Geometry is to study not only morphological sets and their elements, as we have done on the previous section, but also the correlation of geometrical objects, that is, functions whose domain and image are morphological sets. Thereby, in the context of Affine Geometry, this section deals exclusively with affinities, here understood as ``geometrical'' functions that correlate points, defined by linear vector functions on Hilbert spaces. In more precise terms, given a Hilbert affine space $\eamd{U}{F}{m}$, a bijective mapping $\map{\mathit{g}}{\eamd{U}{F}{m}}{\eamd{U}{F}{m}}$ and a vector space $\evl{\cam{F}}{U}{U}$, we call  $\map{\mathit{f}}{\eamd{U}{F}{m}}{\eamd{U}{F}{m}}$ an \textsb{affine transformation}\index{affine!transformation} and its function an \textsb{affinity}\index{affinity} when there is a unique linear bijection $\vtf{f}\in\evl{\cam{F}}{U}{U}$ where
 \begin{equation}\label{eq:affty}
-\fua{\mathit{f}}{\vto{u}\oplus a}=\fua{\vtf{f}}{\vto{u}}\oplus\fua{\mathit{g}}{a}\,,\,\,\forall\,a\in\eamd{U}{F}{m}\,,\,\vto{u}\in U_\cam{F}\,.
+\fua{\mathit{f}}{\vto{x}\oplus a}=\fua{\vtf{f}}{\vto{x}}\oplus\fua{\mathit{g}}{a}\,,\,\,\forall\,a\in\eamd{U}{F}{m}\,,\,\vto{x}\in U_\cam{F}\,.
 \end{equation}
 It is straightforward to note that since $\vtf{f}$ and $\mathit{g}$ are bijections, so results affinity $\mathit{f}$. Among other properties, it is possible to obtain that every affinity preserves parallelism and hyperplane dimensionality; in other words, parallel hyperplanes on the  domain remain parallel on the image and $n$-dimensional hyperplanes on the domain, $n\leq m$, remain $n$-dimensional on the image: for example, lines are mapped to lines, planes are mapped to planes and so on. From corollary \ref{cor:soTens} and equalities \eqref{eq:Lin2secTens}, we know that operator $\vtf{f}$ is the representative function $\tnr{\Upsilon}_{\tnr{A}}$ of a tensor $\tnr{A}=\vto{a}_1\otimes\vto{a}_2\in\ete{\cam{F}}{U^2}$ in such a way that the previous definition can be rewritten as
 \begin{equation}
-\fua{\mathit{f}}{\vto{u}\oplus a}=\fua{\tnr{\Upsilon}_{\tnr{A}}}{\vto{u}}\oplus\fua{\mathit{g}}{a}=(\vto{u}\cdot\vto{a}_1)\vto{a}_2\oplus\fua{\mathit{g}}{a}\,,\,\,\forall\,a\in\eamd{U}{F}{m}\,,\,\vto{v}\in U_\cam{F}\,,
+\fua{\mathit{f}}{\vto{x}\oplus a}=\fua{\tnr{\Upsilon}_{\tnr{A}}}{\vto{x}}\oplus\fua{\mathit{g}}{a}=(\vto{x}\cdot\vto{a}_1)\vto{a}_2\oplus\fua{\mathit{g}}{a}\,,\,\,\forall\,a\in\eamd{U}{F}{m}\,,\,\vto{v}\in U_\cam{F}\,,
 \end{equation}
 when $\tnr{A}$ is called an \textsb{affinity tensor}\index{tensor!afinity}\index{affinity!tensor}.
 
@@ -176,7 +176,7 @@ Let's prove that an affinity preserves parallelism and dimension of hyperplanes.
 \end{proof}}
 
 
-Considering previous conditions, an affinity $\mathit{f}$ is said to be centered at point $a$, represented by $\mathit{f}_a$, when $\mathit{g}$ is the identity function, that is, when point $\fua{\mathit{f}_a}{\vto{u}\oplus a}=\fua{\vtf{f}}{\vto{u}}\oplus a$. On the other hand, when $\vtf{f}$ is the identity function and $\fua{\mathit{g}}{a}=\vto{u}\oplus a$, we call affinity $\mathit{f}$ a \textsb{translation}\index{translation}, represented by $\mathit{t}_\vto{u}$, described by the rule
+Considering previous conditions, an affinity $\mathit{f}$ is said to be centered at point $a$, represented by $\mathit{f}_a$, when $\mathit{g}$ is the identity function, that is, when point $\fua{\mathit{f}_a}{\vto{x}\oplus a}=\fua{\vtf{f}}{\vto{x}}\oplus a$. Moreover, when $\fua{\vtf{f}}{\vto{x}}=\vto{u}$ and $\fua{\mathit{g}}{a}=\vto{x}\oplus a$, we call affinity $\mathit{f}$ a \textsb{translation}\index{translation}, represented by $\mathit{t}_\vto{u}$, described by the rule
 \begin{equation}\label{eq:translt}
 \fua{\mathit{t}_\vto{u}}{x}=\vto{u}\oplus x
 \end{equation}
@@ -203,7 +203,7 @@ $\mathit{t}_\vto{u} \circ  \mathit{t}_{-\vto{u}}= \mathit{t}_{-\vto{u}} \circ \m
  
 Still considering previous conditions, the affinity in $\map{\mathit{h}}{\eamd{U}{F}{m}}{\eamd{U}{F}{m}}$ is called a \textsb{dilation}\index{dilation} if bijection $\vtf{h}\in\evl{\cam{F}}{U}{U}$ in
 \begin{equation}\label{eq:dilat}
-\fua{\mathit{h}}{\vto{u}\oplus a}=\fua{\vtf{h}}{\vto{u}}\oplus\fua{\mathit{g}}{a}\,,\,\,\forall\,a\in\eamd{U}{F}{m}\,,\,\vto{u}\in U_\cam{F}\,,
+\fua{\mathit{h}}{\vto{x}\oplus a}=\fua{\vtf{h}}{\vto{x}}\oplus\fua{\mathit{g}}{a}\,,\,\,\forall\,a\in\eamd{U}{F}{m}\,,\,\vto{x}\in U_\cam{F}\,,
 \end{equation}
 is a positive-definite Hermitian operator usually called \textsb{stretch operator}\index{operator!stretch}, which represents, according to inequality \eqref{eq:nonnegTensor}, a positive-definite affinity tensor $\tnr{H}$, called \textsb{stretch tensor}\index{tensor!stretch}. Since the eigenvalues $\lambda_1,\cdots,\lambda_m$ of stretch operator $\vtf{h}$, or of stretch tensor $\tnr{H}$, are positive real scalars\footnote{See section \ref{sec:autoPares}.}, we call $\lambda_i$ a \textsb{stretch coefficient}\index{stretch coefficient}. If coefficient $\lambda_i>1$ or $\lambda_i\leqslant1$, it is called an \textsb{expansion}\index{expansion} or a \textsb{contraction}\index{contraction} respectively and in the case of proportional stretch, where $\lambda_1=\cdots=\lambda_m$, function $\vtf{h}$ (or tensor $\tnr{H}$) is equally called an expansion\index{operator!expansion} or contraction operator(tensor)\index{operator!contraction}. It is important to note that, from corollary \ref{cor:soSymTens}, in the specific context of Euclidean spaces, where $\vtf{h}^\dagger=\vtf{h}^\text{T}$, the stretch tensor $\tnr{H}$ is symmetric. As any other affinity, a dilation $\mathit{h}$ can be centered at point $a$, represented by $\mathit{h}_a$, where $\fua{\mathit{h}_a}{\vto{u}\oplus a}=\fua{\vtf{h}}{\vto{u}}\oplus a$. Figure XX shows different types of dilations.
 
@@ -212,9 +212,9 @@ is a positive-definite Hermitian operator usually called \textsb{stretch operato
 
 Given two arbitrary dilations $\mathit{h}_1$ and $\mathit{h}_2$, equalities 
 \begin{equation*}
-\fua{\mathit{h}_1\circ\mathit{h}_2}{\vto{u}\oplus a}=\fua{\mathit{h}_1}{\fua{\vtf{h}_2}{\vto{u}}\oplus\fua{\mathit{g}_2}{a}}=\fua{\vtf{h}_1\circ\vtf{h}_2}{\vto{u}}\oplus\fua{\mathit{g}_1\circ\mathit{g}_2}{a}
+\fua{\mathit{h}_1\circ\mathit{h}_2}{\vto{x}\oplus a}=\fua{\mathit{h}_1}{\fua{\vtf{h}_2}{\vto{x}}\oplus\fua{\mathit{g}_2}{a}}=\fua{\vtf{h}_1\circ\vtf{h}_2}{\vto{x}}\oplus\fua{\mathit{g}_1\circ\mathit{g}_2}{a}
 \end{equation*}
-prove that $\mathit{h}_1\circ\mathit{h}_2$ is also a dilation and that $\fua{\mathit{h}^{-1}_1}{\vto{u}\oplus a}=\fua{\vtf{h}^{-1}_1}{\vto{u}}\oplus\fua{\mathit{g}^{-1}_1}{a}$. Considering the identity dilation $\mathit{i}$, similarly to the case of translations, it is straightforward to verify that dilations also obey the axioms of associativity, identity element, inverse element and commutativity on the operation of composition. Therefore, the set $H$ of all dilations on $\eamd{U}{F}{m}$ defines the abelian group $(H,\circ)$.
+prove that $\mathit{h}_1\circ\mathit{h}_2$ is also a dilation and that $\fua{\mathit{h}^{-1}_1}{\vto{x}\oplus a}=\fua{\vtf{h}^{-1}_1}{\vto{x}}\oplus\fua{\mathit{g}^{-1}_1}{a}$. Considering the identity dilation $\mathit{i}$, similarly to the case of translations, it is straightforward to verify that dilations also obey the axioms of associativity, identity element, inverse element and commutativity on the operation of composition. Therefore, the set $H$ of all dilations on $\eamd{U}{F}{m}$ defines the abelian group $(H,\circ)$.
 
 
 
