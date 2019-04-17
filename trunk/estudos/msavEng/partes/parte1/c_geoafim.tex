@@ -176,7 +176,7 @@ Let's prove that an affinity preserves parallelism and dimension of hyperplanes.
 \end{proof}}
 
 
-Considering previous conditions, an affinity $\mathit{f}$ is said to be centered at point $a$, represented by $\mathit{f}_a$, when $\mathit{g}$ is the identity function, that is, when point $\fua{\mathit{f}_a}{\vto{x}\oplus a}=\fua{\vtf{f}}{\vto{x}}\oplus a$. Moreover, when $\fua{\vtf{f}}{\vto{x}}=\vto{u}$ and $\fua{\mathit{g}}{a}=\vto{x}\oplus a$, we call affinity $\mathit{f}$ a \textsb{translation}\index{translation}, represented by $\mathit{t}_\vto{u}$, described by the rule
+Considering previous conditions, an affinity $\mathit{f}$ is said to be centered at point $a$, represented by $\mathit{f}_a$, when $\mathit{g}$ is the identity function, that is, when point $\fua{\mathit{f}_a}{\vto{x}\oplus a}=\fua{\vtf{f}}{\vto{x}}\oplus a$. From this equality, when $\fua{\vtf{f}}{\vto{x}}=\vto{u}+\vto{x}$, we have $\fua{\mathit{f}_a}{\vto{x}\oplus a}=\vto{u}\oplus(\vto{x}\oplus a)$ and then affinity $\mathit{f}_a$ is called a \textsb{translation}\index{translation}, represented by $\mathit{t}_\vto{u}$, described by the rule
 \begin{equation}\label{eq:translt}
 \fua{\mathit{t}_\vto{u}}{x}=\vto{u}\oplus x
 \end{equation}
@@ -214,9 +214,30 @@ Given two arbitrary dilations $\mathit{h}_1$ and $\mathit{h}_2$, equalities
 \begin{equation*}
 \fua{\mathit{h}_1\circ\mathit{h}_2}{\vto{x}\oplus a}=\fua{\mathit{h}_1}{\fua{\vtf{h}_2}{\vto{x}}\oplus\fua{\mathit{g}_2}{a}}=\fua{\vtf{h}_1\circ\vtf{h}_2}{\vto{x}}\oplus\fua{\mathit{g}_1\circ\mathit{g}_2}{a}
 \end{equation*}
-prove that $\mathit{h}_1\circ\mathit{h}_2$ is also a dilation and that $\fua{\mathit{h}^{-1}_1}{\vto{x}\oplus a}=\fua{\vtf{h}^{-1}_1}{\vto{x}}\oplus\fua{\mathit{g}^{-1}_1}{a}$. Considering the identity dilation $\mathit{i}$, similarly to the case of translations, it is straightforward to verify that dilations also obey the axioms of associativity, identity element, inverse element and commutativity on the operation of composition. Therefore, the set $H$ of all dilations on $\eamd{U}{F}{m}$ defines the abelian group $(H,\circ)$. Now, if we consider a mapping $\vtf{g}$ 
+prove that $\mathit{h}_1\circ\mathit{h}_2$ is also a dilation and that $\fua{\mathit{h}^{-1}_1}{\vto{x}\oplus a}=\fua{\vtf{h}^{-1}_1}{\vto{x}}\oplus\fua{\mathit{g}^{-1}_1}{a}$. Considering the identity dilation $\mathit{i}$, similarly to the case of translations, it is straightforward to verify that dilations also obey the axioms of associativity, identity element, inverse element and commutativity on the operation of composition. Therefore, the set $H$ of all dilations on $\eamd{U}{F}{m}$ defines the abelian group $(H,\circ)$. 
+
+\begin{mteo}{Decompositions of Dilation}{dilaDecomp}
+Given a dilation $\mathit{h}$ and a translation $\mathit{t}_\vto{x}$ on an affine space $\eamd{U}{F}{m}$, if vector $\fua{\kappa}{a}:=\vv{\fua{\mathit{g}}{a}a}$ then
+\begin{equation*}
+\mathit{h} = \mathit{t}_{\fua{\kappa}{a}}\circ\mathit{h}_a=\mathit{h}_{\fua{\mathit{g}}{a}}\circ\mathit{t}_{\fua{\kappa}{a}}\,,\,\forall a\in\eamd{U}{F}{m}\,. 
+\end{equation*}
+\end{mteo}
+
+{\footnotesize
+\begin{proof}
+Development 
+\begin{equation*}
+\fua{\mathit{h}}{\vto{x}\oplus a} = \fua{\vtf{h}}{\vto{x}}\oplus (\fua{\kappa}{a}\oplus a) = \fua{\kappa}{a}\oplus (\fua{\vtf{h}}{\vto{x}}\oplus a) = \fua{\mathit{t}_{\fua{\kappa}{a}}\circ\mathit{h}_a}{\vto{x}\oplus a}
+\end{equation*}
+proves the first decomposition and
+\begin{equation*}
+\fua{\mathit{h}}{\vto{x}\oplus a} = \fua{\vtf{h}}{\vto{x}}\oplus \fua{\mathit{g}}{a} = \fua{\mathit{h}_{\fua{\mathit{g}}{a}}}{\vto{x}\oplus \fua{\mathit{g}}{a}} = \fua{\mathit{h}_{\fua{\mathit{g}}{a}}}{(\fua{\kappa}{a}+\vto{x})\oplus a} = \fua{\mathit{h}_{\fua{\mathit{g}}{a}}\circ\mathit{t}_{\fua{\kappa}{a}}}{\vto{x}\oplus a}
+\end{equation*}
+proves the second.
+\end{proof}}
 
 
+% AGORA FALAR DE AFINIDADE ISOMÉTRIA
 
 
 \begin{comment}
