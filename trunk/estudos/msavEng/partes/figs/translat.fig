@@ -1,0 +1,31 @@
+#FIG 3.2
+# Created by WinFIG version 7.5
+# METADATA <version>1.0</version>
+Portrait
+Flush left
+Metric
+A4
+100.00
+Single
+-2
+1200 2
+# METADATA <id>11</id>
+2 5 0 0 0 7 50 0 -1 0.000 0 0 0 0 0 5
+	0 C:/myWork/msavEng/partes/figs/translatScr.eps
+	 1180 3735 1180 6450 6445 6450 6445 3735 1180 3735
+# METADATA <id>13</id>
+4 0 0 50 0 0 12 0.0000 6 204 1940 2990 4600 $\\mathit{t}_\\vto{u}$\001
+# METADATA <id>27</id>
+4 0 0 50 0 0 12 0.0000 6 204 1810 5760 4230 $\\eamd{U}{F}{m}$\001
+# METADATA <id>37</id>
+4 0 0 50 0 0 12 0.0000 6 204 900 3170 5670 $\\vto{u}$\001
+# METADATA <id>39</id>
+4 0 0 50 0 0 12 0.0000 6 204 1730 1840 5820 $\\eamd{S}{F}{n}$\001
+# METADATA <id>41</id>
+4 0 0 50 0 0 12 0.0000 6 204 1740 5000 4760 $\\eamd{V}{F}{n}$\001
+# METADATA <id>43</id>
+4 0 0 50 0 0 12 0.0000 6 204 900 3285 5400 $\\vto{u}$\001
+# METADATA <id>45</id>
+4 0 0 50 0 0 12 0.0000 6 204 900 3495 5150 $\\vto{u}$\001
+# METADATA <id>47</id>
+4 0 0 50 0 0 12 0.0000 6 204 900 3685 4890 $\\vto{u}$\001

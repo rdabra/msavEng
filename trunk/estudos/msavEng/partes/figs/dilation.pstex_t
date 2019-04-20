@@ -1,0 +1,50 @@
+\begin{picture}(0,0)%
+\includegraphics{dilation.eps}%
+\end{picture}%
+%
+%  Created by WinFIG version 7.5 
+%  METADATA <version>1.0</version> 
+%
+\setlength{\unitlength}{3947sp}%
+%
+\begingroup\makeatletter\ifx\SetFigFont\undefined%
+\gdef\SetFigFont#1#2#3#4#5{%
+  \reset@font\fontsize{#1}{#2pt}%
+  \fontfamily{#3}\fontseries{#4}\fontshape{#5}%
+  \selectfont}%
+\fi\endgroup%
+\begin{picture}(5265,2700)(1181,-5596)
+%  METADATA <id>27</id> 
+\put(5691,-3431){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\eamd{U}{F}{m}$}%
+}}}}
+%  METADATA <id>47</id> 
+\put(2111,-3911){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$a$}%
+}}}}
+%  METADATA <id>49</id> 
+\put(2451,-5291){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\fua{\mathit{g}}{a}$}%
+}}}}
+%  METADATA <id>51</id> 
+\put(2336,-3531){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\vto{u}$}%
+}}}}
+%  METADATA <id>53</id> 
+\put(2706,-3341){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\vto{u}\oplus a$}%
+}}}}
+%  METADATA <id>55</id> 
+\put(3136,-3681){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\fua{\vtf{h}}{\vto{u}}$}%
+}}}}
+%  METADATA <id>57</id> 
+\put(4056,-3761){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\fua{\mathit{h}_a}{\vto{u}\oplus a}$}%
+}}}}
+%  METADATA <id>59</id> 
+\put(3006,-4601){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\lambda\vto{u}$}%
+}}}}
+%  METADATA <id>61</id> 
+\put(3636,-4241){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\fua{\mathit{s}}{\vto{u}\oplus a}$}%
+}}}}
+%  METADATA <id>63</id> 
+\put(4606,-5131){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\fua{\mathit{h}}{\vto{u}\oplus a}$}%
+}}}}
+%  METADATA <id>65</id> 
+\put(3661,-5071){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\fua{\vtf{h}}{\vto{u}}$}%
+}}}}
+\end{picture}%

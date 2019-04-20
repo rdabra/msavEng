@@ -1,0 +1,41 @@
+\begin{picture}(0,0)%
+\includegraphics{translat.eps}%
+\end{picture}%
+%
+%  Created by WinFIG version 7.5 
+%  METADATA <version>1.0</version> 
+%
+\setlength{\unitlength}{3947sp}%
+%
+\begingroup\makeatletter\ifx\SetFigFont\undefined%
+\gdef\SetFigFont#1#2#3#4#5{%
+  \reset@font\fontsize{#1}{#2pt}%
+  \fontfamily{#3}\fontseries{#4}\fontshape{#5}%
+  \selectfont}%
+\fi\endgroup%
+\begin{picture}(5265,2715)(1181,-5611)
+%  METADATA <id>13</id> 
+\put(2991,-3761){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\mathit{t}_\vto{u}$}%
+}}}}
+%  METADATA <id>27</id> 
+\put(5761,-3391){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\eamd{U}{F}{m}$}%
+}}}}
+%  METADATA <id>37</id> 
+\put(3171,-4831){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\vto{u}$}%
+}}}}
+%  METADATA <id>39</id> 
+\put(1841,-4981){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\eamd{S}{F}{n}$}%
+}}}}
+%  METADATA <id>41</id> 
+\put(5001,-3921){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\eamd{V}{F}{n}$}%
+}}}}
+%  METADATA <id>43</id> 
+\put(3286,-4561){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\vto{u}$}%
+}}}}
+%  METADATA <id>45</id> 
+\put(3496,-4311){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\vto{u}$}%
+}}}}
+%  METADATA <id>47</id> 
+\put(3686,-4051){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\vto{u}$}%
+}}}}
+\end{picture}%
