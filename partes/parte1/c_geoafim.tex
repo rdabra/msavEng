@@ -180,16 +180,22 @@ Considering previous conditions, an affinity $\mathit{f}$ is said to be centered
 \begin{equation}\label{eq:translt}
 \fua{\mathit{t}_\vto{u}}{x}=\vto{u}\oplus x
 \end{equation}
-and depicted in figure XX, where $\mathit{t}_\vto{u}$ preserves the shapes of the hyperplanes involved.  
+and depicted in figure \ref{fg:translat}, where $\mathit{t}_\vto{u}$ preserves the shape of the hyperplane $\eamd{S}{F}{n}$.
 
 
 
-% COLOCAR FIGURA DO DIA 27/02
+\begin{figure}[!ht]
+\centering
+\begin{center}
+\scalebox{.72}{\input{partes/figs/translat.pstex_t}}
+\end{center}
+\titfigura{Hyperplane $\eamd{S}{F}{n}$ is mapped to $\eamd{V}{F}{n}$ by translation $\mathit{t}_\vto{u}$.}\label{fg:translat}
+\end{figure}
 
 
 
 \noindent Given an arbitrary vector $\vto{v}\in U_\cam{F}$, from equality $\fua{\mathit{t}_\vto{v}\circ\mathit{t}_\vto{u}}{x}=(\vto{v}+\vto{u})\oplus x$,
-it is straightforward to conclude that $\mathit{t}_\vto{v}\circ\mathit{t}_\vto{u}=\mathit{t}_{\vto{v}+\vto{u}}$. Moreover, if $\vto{v}=-\vto{u}$ we can affirm that $\mathit{t}_{-\vto{u}}=\mathit{t}_\vto{u}^{-1}$ and translation $\mathit{t}_\vto{0}$ is the identity function. Previous equality $\mathit{t}_\vto{v}\circ\mathit{t}_\vto{u}=\mathit{t}_{\vto{v}+\vto{u}}$ also allows us to conclude that the set $\mathit{T}$ of all translations on $\eamd{U}{F}{m}$ defines an abelian group $(\mathit{T},\circ)$ because the composition of translations clearly observes the axioms of 
+it is straightforward to conclude that $\mathit{t}_\vto{v}\circ\mathit{t}_\vto{u}=\mathit{t}_{\vto{v}+\vto{u}}$. Moreover, if $\vto{v}=-\vto{u}$ we can affirm that $\mathit{t}_{-\vto{u}}=\mathit{t}_\vto{u}^{-1}$ and translation $\mathit{t}_\vto{0}$ is the identity function. Previous equality $\mathit{t}_\vto{v}\circ\mathit{t}_\vto{u}=\mathit{t}_{\vto{v}+\vto{u}}$ also allows us to conclude that the set $\mathit{T}$ of all translations on $\eamd{U}{F}{m}$ defines an abelian group $(\mathit{T},\circ)$ because the composition of translations clearly observes the axioms of
 \begin{itemize}
 \setlength\itemsep{.1em}
 \item[i.] associativity, where $\mathit{t}_\vto{u}\circ\lpa \mathit{t}_\vto{v} \circ \mathit{t}_\vto{w} \rpa =
@@ -197,35 +203,42 @@ it is straightforward to conclude that $\mathit{t}_\vto{v}\circ\mathit{t}_\vto{u
 \item[ii.] identity element, where $\mathit{t}_\vto{u}\circ\mathit{t}_\vto{0}=\mathit{t}_\vto{0}\circ\mathit{t}_\vto{u}=\mathit{t}_\vto{u}\,,\forall \, \vto{u} \in U_\cam{F}$,
 \item[iii.] inverse element, where
 $\mathit{t}_\vto{u} \circ  \mathit{t}_{-\vto{u}}= \mathit{t}_{-\vto{u}} \circ \mathit{t}_{\vto{u}} = \mathit{t}_{\vto{0}}$, $\forall \, \vto{u} \in \{U_\cam{F}\setminus\vto{0}\}$, and of
-\item[iv.] commutativity, where $\mathit{t}_\vto{u}\circ \mathit{t}_\vto{v}= \mathit{t}_\vto{v}\circ \mathit{t}_\vto{u}\,,\forall \, \vto{u},\vto{v} \in U_\cam{F}$. 
+\item[iv.] commutativity, where $\mathit{t}_\vto{u}\circ \mathit{t}_\vto{v}= \mathit{t}_\vto{v}\circ \mathit{t}_\vto{u}\,,\forall \, \vto{u},\vto{v} \in U_\cam{F}$.
 \end{itemize}
 
- 
+
 Still considering previous conditions, the affinity in $\map{\mathit{h}}{\eamd{U}{F}{m}}{\eamd{U}{F}{m}}$ is called a \textsb{dilation}\index{dilation} if bijection $\vtf{h}\in\evl{\cam{F}}{U}{U}$ in
 \begin{equation}\label{eq:dilat}
 \fua{\mathit{h}}{\vto{x}\oplus a}=\fua{\vtf{h}}{\vto{x}}\oplus\fua{\mathit{g}}{a}\,,\,\,\forall\,a\in\eamd{U}{F}{m}\,,\,\vto{x}\in U_\cam{F}\,,
 \end{equation}
-is a positive-definite Hermitian operator usually called \textsb{stretch operator}\index{operator!stretch}, which represents, according to inequality \eqref{eq:nonnegTensor}, a positive-definite affinity tensor $\tnr{H}$, called \textsb{stretch tensor}\index{tensor!stretch}. Since the eigenvalues $\lambda_1,\cdots,\lambda_m$ of stretch operator $\vtf{h}$, or of stretch tensor $\tnr{H}$, are positive real scalars\footnote{See section \ref{sec:autoPares}.}, we call $\lambda_i$ a \textsb{stretch coefficient}\index{stretch coefficient}. If coefficient $\lambda_i>1$ or $\lambda_i\leqslant1$, it is called an \textsb{expansion}\index{expansion} or a \textsb{contraction}\index{contraction} respectively and in the case of proportional stretch, where $\lambda_1=\cdots=\lambda_m$, function $\vtf{h}$ (or tensor $\tnr{H}$) is equally called an expansion\index{operator!expansion} or contraction operator(tensor)\index{operator!contraction}. It is important to note that, from corollary \ref{cor:soSymTens}, in the specific context of Euclidean spaces, where $\vtf{h}^\dagger=\vtf{h}^\text{T}$, the stretch tensor $\tnr{H}$ is symmetric. As any other affinity, a dilation $\mathit{h}$ can be centered at point $a$, represented by $\mathit{h}_a$, where $\fua{\mathit{h}_a}{\vto{u}\oplus a}=\fua{\vtf{h}}{\vto{u}}\oplus a$. Figure XX shows different types of dilations.
+is a positive-definite Hermitian operator usually called \textsb{stretch operator}\index{operator!stretch}, which represents, according to inequality \eqref{eq:nonnegTensor}, a positive-definite affinity tensor $\tnr{H}$, called \textsb{stretch tensor}\index{tensor!stretch}. Since the eigenvalues $\lambda_1,\cdots,\lambda_m$ of stretch operator $\vtf{h}$, or of stretch tensor $\tnr{H}$, are positive real scalars\footnote{See section \ref{sec:autoPares}.}, we call $\lambda_i$ a \textsb{stretch coefficient}\index{stretch coefficient}. If coefficient $\lambda_i>1$ or $\lambda_i\leqslant1$, it is called an \textsb{expansion}\index{expansion} or a \textsb{contraction}\index{contraction} respectively and in the case of proportional stretch, where $\lambda_1=\cdots=\lambda_m$, function $\vtf{h}$ (or tensor $\tnr{H}$) is equally called an expansion\index{operator!expansion} or contraction operator(tensor)\index{operator!contraction}. It is important to note that, from corollary \ref{cor:soSymTens}, in the specific context of Euclidean spaces, where $\vtf{h}^\dagger=\vtf{h}^\text{T}$, the stretch tensor $\tnr{H}$ is symmetric. As any other affinity, a dilation $\mathit{h}$ can be centered at point $a$, represented by $\mathit{h}_a$, where $\fua{\mathit{h}_a}{\vto{u}\oplus a}=\fua{\vtf{h}}{\vto{u}}\oplus a$. Figure \ref{fg:dilation} shows different types of dilations.
 
 
-% COLOCAR FIGURA DO DIA 03/04
+\begin{figure}[!ht]
+\centering
+\begin{center}
+\scalebox{.72}{\input{partes/figs/dilation.pstex_t}}
+\end{center}
+\titfigura{Affinities $\mathit{h}$, $\mathit{h}_a$ and $\mathit{s}$ are ordinary, centered and proportional dilations.}\label{fg:dilation}
+\end{figure}
 
-Given two arbitrary dilations $\mathit{h}_1$ and $\mathit{h}_2$, equalities 
+
+Given two arbitrary dilations $\mathit{h}_1$ and $\mathit{h}_2$, equalities
 \begin{equation*}
 \fua{\mathit{h}_1\circ\mathit{h}_2}{\vto{x}\oplus a}=\fua{\mathit{h}_1}{\fua{\vtf{h}_2}{\vto{x}}\oplus\fua{\mathit{g}_2}{a}}=\fua{\vtf{h}_1\circ\vtf{h}_2}{\vto{x}}\oplus\fua{\mathit{g}_1\circ\mathit{g}_2}{a}
 \end{equation*}
-prove that $\mathit{h}_1\circ\mathit{h}_2$ is also a dilation and that $\fua{\mathit{h}^{-1}_1}{\vto{x}\oplus a}=\fua{\vtf{h}^{-1}_1}{\vto{x}}\oplus\fua{\mathit{g}^{-1}_1}{a}$. Considering the identity dilation $\mathit{i}$, similarly to the case of translations, it is straightforward to verify that dilations also obey the axioms of associativity, identity element, inverse element and commutativity on the operation of composition. Therefore, the set $H$ of all dilations on $\eamd{U}{F}{m}$ defines the abelian group $(H,\circ)$. 
+prove that $\mathit{h}_1\circ\mathit{h}_2$ is also a dilation and that $\fua{\mathit{h}^{-1}_1}{\vto{x}\oplus a}=\fua{\vtf{h}^{-1}_1}{\vto{x}}\oplus\fua{\mathit{g}^{-1}_1}{a}$. Considering the identity dilation $\mathit{i}$, similarly to the case of translations, it is straightforward to verify that dilations also obey the axioms of associativity, identity element, inverse element and commutativity on the operation of composition. Therefore, the set $H$ of all dilations on $\eamd{U}{F}{m}$ defines the abelian group $(H,\circ)$.
 
 \begin{mteo}{Decompositions of Dilation}{dilaDecomp}
 Given a dilation $\mathit{h}$ and a translation $\mathit{t}_\vto{x}$ on an affine space $\eamd{U}{F}{m}$, if vector $\fua{\kappa}{a}:=\vv{\fua{\mathit{g}}{a}a}$ then
 \begin{equation*}
-\mathit{h} = \mathit{t}_{\fua{\kappa}{a}}\circ\mathit{h}_a=\mathit{h}_{\fua{\mathit{g}}{a}}\circ\mathit{t}_{\fua{\kappa}{a}}\,,\,\forall a\in\eamd{U}{F}{m}\,. 
+\mathit{h} = \mathit{t}_{\fua{\kappa}{a}}\circ\mathit{h}_a=\mathit{h}_{\fua{\mathit{g}}{a}}\circ\mathit{t}_{\fua{\kappa}{a}}\,,\,\forall a\in\eamd{U}{F}{m}\,.
 \end{equation*}
 \end{mteo}
 
 {\footnotesize
 \begin{proof}
-Development 
+Development
 \begin{equation*}
 \fua{\mathit{h}}{\vto{x}\oplus a} = \fua{\vtf{h}}{\vto{x}}\oplus (\fua{\kappa}{a}\oplus a) = \fua{\kappa}{a}\oplus (\fua{\vtf{h}}{\vto{x}}\oplus a) = \fua{\mathit{t}_{\fua{\kappa}{a}}\circ\mathit{h}_a}{\vto{x}\oplus a}
 \end{equation*}
@@ -240,11 +253,11 @@ proves the second.
 Still considering previous conditions, an affinity $\mathit{r}$ is called \textsb{isometric}\index{affinity!isometric} when its correspondent linear operator $\vtf{r}$ is isometric, that is, $\vtf{r}\in\grc{I}{\cam{F}}{U}$. In the context of Euclidean spaces, we already know that an isometric operator is also an orthogonal operator that preserves inner product\footnote{See p. \pageref{prg:IsometOrth}.}, and thereby the isometric group $\grc{I}{\real}{U}$ is the orthogonal group $\grc{O}{\real}{U}$, whose elements have determinant $\pm 1$. The centered isometric affinity $\mathit{r}_a$, described by $\fua{\mathit{r}_a}{\vto{x}\oplus a}=\fua{\vtf{r}}{\vto{x}}\oplus a$, is called a \textsb{rotation}\index{rotation} if isometric operator $\vtf{r}$ is proper orthogonal, or $\vtf{r}\in\grc{O^+}{\real}{U}$; otherwise, it is called a \textsb{reflection}\index{reflection}. The affinity tensor $\tnr{R}$ of a rotation is called a \textsb{rotation tensor}\index{rotation!tensor} and, similarly, tensor $\overline{\tnr{R}}$ of a reflection is called a \textsb{reflection tensor}\index{reflection!tensor}.
 
 %
-% DADO UM PONTO B, O CONJUNTO DAS AFINIDADES ISOMETRICAS CENTRADAS NO PONTO A constitui UMA HIPERESFERA COM CENTRO EM A E RAIO |AB|. 
+% DADO UM PONTO B, O CONJUNTO DAS AFINIDADES ISOMETRICAS CENTRADAS NO PONTO A constitui UMA HIPERESFERA COM CENTRO EM A E RAIO |AB|.
 % DESENHAR ESSA HIPERESFERA.
 % DISCORRER SOBRE QUAL O EFEITO GEOMÉRICO QUE O DETERMINANTE POSITIVO OU NEGATIVO PRODUZ PARA DIFERENCIAR GEOMETRICAMENTE ROTACAO E REFLEXAO.
 % PARA ISSO, COMEÇAR PELA P. 87 ONDE UMA BASE CONTINUA BASE QUANDO SOBRE ELA ATUA UM OPERADOR ORTOGONAL, MANTENDO A MESMA ORIENTAÇÃO SE O OPERAOR FOR ORTOG. PROPRIO
-% TAVLVEZ A COISA SAIA CONSIDERANDO VETORES E FUNCOES VETORIAS NA PAGINA 87 PORQUE AÍ EU TENHO O EFEITO DE DET POSITIVO OU NEGATIVO SOBRE UM DADO VETOR 
+% TAVLVEZ A COISA SAIA CONSIDERANDO VETORES E FUNCOES VETORIAS NA PAGINA 87 PORQUE AÍ EU TENHO O EFEITO DE DET POSITIVO OU NEGATIVO SOBRE UM DADO VETOR
 
 
 

@@ -1,0 +1,37 @@
+#FIG 3.2
+# Created by WinFIG version 7.5
+# METADATA <version>1.0</version>
+Portrait
+Flush left
+Metric
+A4
+100.00
+Single
+-2
+1200 2
+# METADATA <id>11</id>
+2 5 0 0 0 7 50 0 -1 0.000 0 0 0 0 0 5
+	0 C:/myWork/msavEng/partes/figs/dilationScr.eps
+	 1180 3735 1180 6435 6445 6435 6445 3735 1180 3735
+# METADATA <id>27</id>
+4 0 0 50 0 0 12 0.0000 6 204 1810 5690 4270 $\\eamd{U}{F}{m}$\001
+# METADATA <id>47</id>
+4 0 0 50 0 0 12 0.0000 6 204 340 2110 4750 $a$\001
+# METADATA <id>49</id>
+4 0 0 50 0 0 12 0.0000 6 204 2070 2450 6130 $\\fua{\\mathit{g}}{a}$\001
+# METADATA <id>51</id>
+4 0 0 50 0 0 12 0.0000 6 204 900 2335 4370 $\\vto{u}$\001
+# METADATA <id>53</id>
+4 0 0 50 0 0 12 0.0000 6 204 1620 2705 4180 $\\vto{u}\\oplus a$\001
+# METADATA <id>55</id>
+4 0 0 50 0 0 12 0.0000 6 204 2280 3135 4520 $\\fua{\\vtf{h}}{\\vto{u}}$\001
+# METADATA <id>57</id>
+4 0 0 50 0 0 12 0.0000 6 204 3570 4055 4600 $\\fua{\\mathit{h}_a}{\\vto{u}\\oplus a}$\001
+# METADATA <id>59</id>
+4 0 0 50 0 0 12 0.0000 6 204 1640 3005 5440 $\\lambda\\vto{u}$\001
+# METADATA <id>61</id>
+4 0 0 50 0 0 12 0.0000 6 204 3330 3635 5080 $\\fua{\\mathit{s}}{\\vto{u}\\oplus a}$\001
+# METADATA <id>63</id>
+4 0 0 50 0 0 12 0.0000 6 204 3350 4605 5970 $\\fua{\\mathit{h}}{\\vto{u}\\oplus a}$\001
+# METADATA <id>65</id>
+4 0 0 50 0 0 12 0.0000 6 204 2280 3660 5910 $\\fua{\\vtf{h}}{\\vto{u}}$\001
