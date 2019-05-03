@@ -36,17 +36,18 @@ In this context, the triple $(U_\cam{F},\epu{U},\oplus)$ is called an affine spa
 
 \noindent It is then straightforward to conclude that a vector $\alpha\vv{ab}$, where $\alpha\in\real$, is represented by a ``compressed'' ($\alpha\leq 1$) or ``expanded'' ($\alpha >1$) vector $\vv{ab}$. Moreover, we can say that the coordinates of vector $\alpha\vv{ab}$ are the coordinates of $\vv{ab}$ equally multiplied, that is equally ``compressed'' or ``expanded'' in geometric terms, by the real number $\alpha$. For the case of a complex affine space $\eam{U}{C}$, the polar complex coordinates of a vector when multiplied by a complex $\alpha$ are equally multiplied by the real scalar $|\alpha|$ and equally rotated by $\arg{(\alpha)}$ on the complex plane, according to the basic theory of complex number multiplication. Therefore, in affine geometric representation, a complex vector $\alpha\vv{ab}\in U_\cam{C}$ results also in a ``compressed'' or ``expanded'' complex vector $\vv{ab}$.
 
-Considering previous conditions, given an arbitrary point $a\in \eam{U}{F}$ and a vector subspace $S_\cam{F}\subset U_\cam{F}$, the triple $(S_\cam{F},\epu{S}_a,\oplus)$ is called an \textsb{affine subspace}\index{affine!subspace} of $\eam{U}{F}$, represented by $\eams{S}{F}{a}$, if point space $\epu{S}_a:=\{\vto{x}\oplus a:\forall \vto{x}\in S_\cam{F}\}$, to which point $a$ also belongs since vector $\vto{0}\in S_\cam{F}$. In the case of affine space $\eam{U}{F}$ defined by a $m$-dimensional vector space, an arbitrary affine subspace $\eams{S}{F}{a}\subset\eam{U}{F}$ becomes another fundamental geometric object -- other than points -- called a \textsb{hyperplane}\index{hyperplane}, obviously defined by a vector subspace $S_\cam{F}$ with dimension less than $m$: we specifically call the hyperplane a \textsb{line}\index{line} or a \textsb{plane}\index{plane} when $S_\cam{F}$ is one or two-dimensional respectively. Since it is the vector space which bears a dimensional feature, it is defined that $\dim{(\eam{U}{F})}=\dim{(U_\cam{F})}=m$ and then we use $\eamd{U}{F}{m}$ to represent a $m$-dimensional affine space. Now, from the definition of affine spaces using a linear algebraic approach, as we have done, angles and distances cannot be obtained, and then it results that requiring these two concepts means two additional features that turn affine geometry into Euclidean geometry, when we state that Euclidean is a more restricted form of affine geometry. On the other hand, our algebraic definition of affine spaces does not require to explicitly present the Playfair's Axiom as a restriction, as an axiom itself to be observed because this restriction becomes a natural property, a theorem. In order to present this very important property, we must first deal with the concept of parallelism using previous definitions. Considering our algebraic approach, two hyperplanes are considered to be \textsb{parallel}\index{parallelism} if the direction space of one is an improper subset of the other\footnote{This concept of parallelism admits that a hyperplane (a line or a plane, for example) is parallel to itself.}. In mathematical terms, we define two hyperplanes $\eamsd{S}{F}{a}{n}$ and $\eamsd{V}{F}{b}{r}$ of $\eamd{U}{F}{m}$ to be parallel, represented by $\eamsd{S}{F}{a}{n}\parallel\eamsd{V}{F}{b}{r}\,$, if direction space $S_\cam{F}\subseteq V_\cam{F}$ or $V_\cam{F}\subseteq S_\cam{F}$. Figure \ref{fg:paralelo} depicts a line and plane parallel to each other for the case of a five-dimensional real affine space. From this definition of parallelism, when $\eamsd{S}{F}{a}{n}$ and $\eamsd{V}{F}{b}{r}\,$ are indeed parallel, we obtain the following properties:
+Considering previous conditions, given an arbitrary point $a\in \eam{U}{F}$ and a vector subspace $S_\cam{F}\subset U_\cam{F}$, the triple $(S_\cam{F},\epu{S}_a,\oplus)$ is called an \textsb{affine subspace}\index{affine!subspace} of $\eam{U}{F}$, represented by $\eams{S}{F}{a}$, if point space $\epu{S}_a:=\{\vto{x}\oplus a:\forall \vto{x}\in S_\cam{F}\}$, to which point $a$ also belongs since vector $\vto{0}\in S_\cam{F}$. In the case of affine space $\eam{U}{F}$ defined by a $m$-dimensional vector space, an arbitrary affine subspace $\eams{S}{F}{a}\subset\eam{U}{F}$ becomes another fundamental geometric object -- other than points -- called a \textsb{hyperplane}\index{hyperplane}, obviously defined by a vector subspace $S_\cam{F}$ with dimension less than $m$: we specifically call the hyperplane a \textsb{line}\index{line} or a \textsb{plane}\index{plane} when $S_\cam{F}$ is one or two-dimensional respectively. Since it is the vector space which bears a dimensional feature, it is defined that $\dim{(\eam{U}{F})}=\dim{(U_\cam{F})}=m$ and then we use $\eamd{U}{F}{m}$ to represent a $m$-dimensional affine space. Now, from the definition of affine spaces using a linear algebraic approach, as we have done, angles and distances cannot be obtained, and then it results that requiring these two concepts means two additional features that turn affine geometry into Euclidean geometry, when we state that Euclidean is a more restricted form of affine geometry. On the other hand, our algebraic definition of affine spaces does not require to explicitly present the Playfair's Axiom as a restriction, as an axiom itself to be observed because this restriction becomes a natural property, a theorem. In order to present this very important property, we must first deal with the concept of parallelism using previous definitions. Considering our algebraic approach, two hyperplanes are considered to be \textsb{parallel}\index{parallelism} if the direction space of one is an improper subset of the other\footnote{This concept of parallelism admits that a hyperplane (a line or a plane, for example) is parallel to itself.}. In mathematical terms, we define two hyperplanes $\eamsd{S}{F}{a}{n}$ and $\eamsd{V}{F}{b}{r}$ of $\eamd{U}{F}{m}$ to be parallel, represented by $\eamsd{S}{F}{a}{n}\parallel\eamsd{V}{F}{b}{r}\,$, if direction space $S_\cam{F}\subseteq V_\cam{F}$ or $V_\cam{F}\subseteq S_\cam{F}$. From this definition of parallelism, when $\eamsd{S}{F}{a}{n}$ and $\eamsd{V}{F}{b}{r}\,$ are indeed parallel, we obtain the following properties:
 \begin{itemize}
 	\setlength\itemsep{.1em}
 	\item[i.] $n=r\iff S_\cam{F}=V_\cam{F}$;
 	\item[ii.] $a\in \eamsd{V}{F}{b}{r}\,\wedge\, S_\cam{F}\subseteq V_\cam{F}\iff\eamsd{S}{F}{a}{n}\subseteq\eamsd{V}{F}{b}{r}$;
 	\item[iii.] $a\notin \eamsd{V}{F}{b}{r}\,\vee\, b\notin \eamsd{S}{F}{a}{n} \iff \eamsd{S}{F}{a}{n}\cap\eamsd{V}{F}{b}{r}=\emptyset$.
 \end{itemize}
+Figure \ref{fg:paralelo} depicts a line and plane parallel to each other for the case of a fi\-ve-di\-men\-sio\-nal real affine space. Now, we say that hyperplanes $\eamsd{W}{F}{c}{r}$ and $\eamsd{S}{F}{a}{n}$ are \textsb{perpendicular}\index{perpendicularity}, represented by $\eamsd{W}{F}{c}{r}\perp\eamsd{S}{F}{a}{n}\,$, if vectors of $W_\cam{F}$ and $V_\cam{F}$ do not have an incidence interrelationship, that is, if $W_\cam{F}\perp V_\cam{F}$. Geometrical representation of perpendicularity is more intuitive in the context of affine Euclidean spaces through the concept of angle, which we shall present later in this section.
 
 {\footnotesize
 \begin{proof}
-For the first item, since $S_\cam{F}\subseteq V_\cam{F}$ or $V_\cam{F}\subseteq S_\cam{F}$, a direction space is a proper subset of the other only if they have different dimensions, otherwise they are equal. The inverse implication is trivial. For the second item, if $a\in \eamsd{V}{F}{b}{r}$ there is a vector $\vto{w}\in V_\cam{F}$ where $a=\vto{w}\oplus b$. Then, from axiom ii on page \pageref{ax:pointSpaces}, we can write $\vto{x}\oplus a=(\vto{x}+\vto{w})\oplus b$, $\forall \vto{x}\in S_\cam{F}$, since $S_\cam{F}\subseteq V_\cam{F}$, from which we conclude that $\eamsd{S}{F}{a}{n}\subseteq\eamsd{V}{F}{b}{r}$. Now, if $\eamsd{S}{F}{a}{n}\subseteq\eamsd{V}{F}{b}{r}$ is true we always have a vector $\vto{y}\in V_\cam{F}$ related to an arbitrary $\vto{x}\in S_\cam{F}$ where $\vto{x}\oplus a=\vto{y}\oplus b$ or $a=(\vto{y}-\vto{x})\oplus b$, from which we conclude that $a\in \eamsd{V}{F}{b}{r}$ and $S_\cam{F}\subseteq V_\cam{F}$. For  property iii, we prove only for $a\notin \eamsd{V}{F}{b}{r}$. In this case, there is no vector in $V_\cam{F}$ relating the pair of points $(b,a)$. Since $S_\cam{F}\subseteq V_\cam{F}$ or $V_\cam{F}\subseteq S_\cam{F}$, we can write for all $\vto{x}\in S_\cam{F}$ and $\vto{y}\in V_\cam{F}$ that
+For the first item of the previous properties, since $S_\cam{F}\subseteq V_\cam{F}$ or $V_\cam{F}\subseteq S_\cam{F}$, a direction space is a proper subset of the other only if they have different dimensions, otherwise they are equal. The inverse implication is trivial. For the second item, if $a\in \eamsd{V}{F}{b}{r}$ there is a vector $\vto{w}\in V_\cam{F}$ where $a=\vto{w}\oplus b$. Then, from axiom ii on page \pageref{ax:pointSpaces}, we can write $\vto{x}\oplus a=(\vto{x}+\vto{w})\oplus b$, $\forall \vto{x}\in S_\cam{F}$, since $S_\cam{F}\subseteq V_\cam{F}$, from which we conclude that $\eamsd{S}{F}{a}{n}\subseteq\eamsd{V}{F}{b}{r}$. Now, if $\eamsd{S}{F}{a}{n}\subseteq\eamsd{V}{F}{b}{r}$ is true we always have a vector $\vto{y}\in V_\cam{F}$ related to an arbitrary $\vto{x}\in S_\cam{F}$ where $\vto{x}\oplus a=\vto{y}\oplus b$ or $a=(\vto{y}-\vto{x})\oplus b$, from which we conclude that $a\in \eamsd{V}{F}{b}{r}$ and $S_\cam{F}\subseteq V_\cam{F}$. For  property iii, we prove only for $a\notin \eamsd{V}{F}{b}{r}$. In this case, there is no vector in $V_\cam{F}$ relating the pair of points $(b,a)$. Since $S_\cam{F}\subseteq V_\cam{F}$ or $V_\cam{F}\subseteq S_\cam{F}$, we can write for all $\vto{x}\in S_\cam{F}$ and $\vto{y}\in V_\cam{F}$ that
 \begin{align*}
 a &\neq \vto{y}\oplus b\\
 \vto{x}\oplus a &\neq \vto{x}\oplus(\vto{y}\oplus b)\\
@@ -61,15 +62,13 @@ a &\neq (\vto{y}-\vto{x})\oplus b\,,
 from which we conclude that $a\notin \eamsd{V}{F}{b}{r}$.
 \end{proof}}
 
-
 \begin{figure}[!ht]
-\centering
-\begin{center}
-\scalebox{.72}{\input{partes/figs/paralelo.pstex_t}}
-\end{center}
-\titfigura{Line and plane parallel to each other.}\label{fg:paralelo}
+	\centering
+	\begin{center}
+		\scalebox{.72}{\input{partes/figs/paralelo.pstex_t}}
+	\end{center}
+	\titfigura{Line and plane parallel to each other.}\label{fg:paralelo}
 \end{figure}
-
 
 \begin{mteo}{Playfair's ``Axiom''}{playfair}
 If $\eamd{U}{F}{m}$ is an affine space where $\eamsd{S}{F}{a}{n}$ is one of its hyperplanes and $k\notin \eamsd{S}{F}{a}{n}$ one of its points, there is one and only one hyperplane $\eamsd{V}{F}{b}{r}\parallel\eamsd{S}{F}{a}{n}$, $r\leq m-n$, where $k\in\eamsd{V}{F}{b}{r}$.
@@ -136,6 +135,14 @@ which can be visualized in figure \ref{fg:geoProject}. In this context, the foll
 \vv{ox}\cdot\vv{oy}=\|\vv{ox}\|\|\vv{oy}\|\cos\theta.
 \end{equation}
 
+\begin{figure}[!ht]
+	\centering
+	\begin{center}
+		\scalebox{.72}{\input{partes/figs/geoProject.pstex_t}}
+	\end{center}
+	\titfigura{Vector and scalar geometric projections.}\label{fg:geoProject}
+\end{figure}
+
 \begin{mcoro}{Projection of Euclidean Vectors}{projEuclid}
 Considering an affine Euclidean space $\eamd{S}{R}{n}$, if $\vartheta$ is the scalar geometric projection of $\vv{ox}\in S_\cam{R}$ onto $\vv{oy}\in S_\cam{R}$, then
 $\fua{\zeta}{\vv{ox},\vv{oy}}=\vartheta$.
@@ -152,16 +159,11 @@ From definition \eqref{eq:projgeo} and previous theorem, we have the following:
 The last inequality is true for all $\theta$ only if $|\vartheta|\geq|\fua{\zeta}{\vv{ox},\vv{oy}}|$, otherwise it would fail for $|\cos\theta|=1$. Now, inequality  $|\vartheta|\geq|\fua{\zeta}{\vv{ox},\vv{oy}}|$ is valid for all $\vv{ox},\vv{oy}\in S_\cam{R}$ only if $\fua{\zeta}{\vv{ox},\vv{oy}}=\vartheta$, otherwise it would fail for $\vv{oy}=\alpha\vv{ox}$, $\alpha\in\{\real\setminus 0\}$, because in this condition if we rewrite \eqref{eq:projgeo} as $\vartheta=\|\vv{ox}\||\cos\theta|\sgn{cos\theta}$, we obtain from \eqref{eq:projColinearEuclid} that $\fua{\zeta}{\vv{ox},\vv{oy}}=\vartheta$ since $\sgn{\alpha}=\sgn{\cos\theta}$ and $|\cos\theta|=1$.
 \end{proof}}
 
-\begin{figure}[!ht]
-\centering
-\begin{center}
-\scalebox{.72}{\input{partes/figs/geoProject.pstex_t}}
-\end{center}
-\titfigura{Vector and scalar geometric projections.}\label{fg:geoProject}
-\end{figure}
+
+From the previous corollary and equality \eqref{eq:projgeo}, if there is no geometric projection between $\vv{ox}$ and $\vv{oy}$, that is, $\vartheta=0$, we conclude that the angle $\theta=\pi(k+1/2)$, $k=0,1,..\,$. Thereby, if line $\eamsd{W}{\real}{b}{1}$ and plane $\eamsd{V}{\real}{a}{2}$, subspaces of affine Euclidean space $\eamd{S}{\real}{5}$, are perpendicular, we can represent them as depicted on figure XX.
 
 
- ***************** FALAR DE ORTOGONALIDADE DE RETAS
+%copiar a figura \label{fg:paralelo} e fazer perpendicular
 
 
 \section{Affinities}
@@ -259,9 +261,7 @@ proves the second.
 Still considering previous conditions, an affinity $\mathit{r}$ is called \textsb{isometric}\index{affinity!isometric} when its correspondent linear operator $\vtf{r}$ is isometric, that is, $\vtf{r}\in\grc{I}{\cam{F}}{U}$. In the context of Euclidean spaces, we already know that an isometric operator is also an orthogonal operator\footnote{See p. \pageref{prg:IsometOrth}.}, that is, the isometric group $\grc{I}{\real}{U}$ equals the orthogonal group $\grc{O}{\real}{U}$, whose elements preserve inner product and have determinant $\pm 1$. The centered isometric affinity $\mathit{r}_a$, described by $\fua{\mathit{r}_a}{\vto{x}\oplus a}=\fua{\vtf{r}}{\vto{x}}\oplus a$, is called a \textsb{rotation}\index{rotation} if isometric operator $\vtf{r}$ is proper orthogonal, or $\vtf{r}\in\grc{O^+}{\real}{U}$; otherwise, it is called a \textsb{reflection}\index{reflection}. The affinity tensor $\tnr{R}$ of a rotation is called a \textsb{rotation tensor}\index{rotation!tensor} and, similarly, tensor $\overline{\tnr{R}}$ of a reflection is called a \textsb{reflection tensor}\index{reflection!tensor}. Now, recalling the concept of unimodular tensors presented in section \ref{sec:TensSpac}, let $(U_\real,\tnr{A}_B)$ be an $m$-dimensional Euclidean space oriented by the basis $B=\{\vun{u}_1,\cdots,\vun{u}_m\}$ where $\tnr{A}_B\in\etng{m}{\real}{U^m}$ is a unimodular tensor. Considering $\mathit{r}_a$ a rotation and $\overline{\mathit{r}}_a$ a reflection, since every pair of Euclidean orthonormal basis can be related through an orthogonal operator\footnote{See p. \pageref{prg:orthBases}.}, we conclude that rotation  $C=\{\fua{\vtf{r}}{\vun{u}_1},\cdots,\fua{\vtf{r}}{\vun{u}_m}\}$ and reflection $\overline{C}=\{\fua{\overline{\vtf{r}}}{\vun{u}_1},\cdots,\fua{\overline{\vtf{r}}}{\vun{u}_m}\}$ of basis $B$ are positively and negatively oriented bases respectively because $\fua{\tnr{A}_C}{\vun{u}_1,\cdots,\vun{u}_m}=-\fua{\tnr{A}_{\overline{C}}}{\vun{u}_1,\cdots,\vun{u}_m}=1$ from definition \eqref{eq:basisAltern}. In order to geometrically represent in a simple way basis rotation and reflection, we specify the affine Euclidean space in question to be two-dimensional, that is, $m=2$. Thereby, for the basis vectors $\vun{u}_1$ and $\vun{u}_2$ the smallest angle $\theta$ between them leads to equalities $0=\vun{u}_1\cdot\vun{u}_2=\|\vun{u}_1\|\|\vun{u}_2\|\cos\theta=\cos\theta$, and since orthogonal functions preserve inner product, then $\theta$ is also the smallest angle between $\fua{\vtf{r}}{\vun{u}_1}$ and $\fua{\vtf{r}}{\vun{u}_2}$, or between $\fua{\overline{\vtf{r}}}{\vun{u}_1}$ and $\fua{\overline{\vtf{r}}}{\vun{u}_2}$, that is, $0=\vun{u}_1\cdot\vun{u}_2=\fua{\vtf{r}}{\vun{u}_1}\cdot\fua{\vtf{r}}{\vun{u}_2}=\fua{\overline{\vtf{r}}}{\vun{u}_1}\cdot\fua{\overline{\vtf{r}}}{\vun{u}_2}=0$. From these angle and size preserving features, we can intuitively represent an anticlockwise acute angle $\phi$ rotation and reflection of basis $B$ according to the following figure XX.
 
 
-%INSERIR FIGURA DE ROTACAO E REFLEXÃO   
-%colocar a base B no meio, uma seta representando a rotação para a direita e uma seta representando a reflexão para a esquerda (colocar a base original pontilhada em cada uma)
-
+%Figura com tres conjuntos do dia 03/05
 
 \noindent However, for the mathematical spirit, intuition is necessary but not sufficient. Since both isometric affinities on the figure preserve angles and sizes, how do we verify mathematically that the function on the right is indeed a rotation and on the left a reflection? By proving that the rotated and reflected bases are positively and negatively oriented respectively, in relation to $(U_\real,\tnr{A}_B)$, that is, by calculating $\fua{\tnr{A}_C}{\vun{u}_1,\vun{u}_2}$ and $\fua{\tnr{A}_{\overline{C}}}{\vun{u}_1,\vun{u}_2}$. From definition \eqref{eq:basisAltern} and equality \eqref{eq:geoProdInt}, development
 \begin{align*}
@@ -272,18 +272,12 @@ Still considering previous conditions, an affinity $\mathit{r}$ is called \texts
 proves that $C$ is positively oriented and, by this same procedure, $\overline{C}$ results negatively oriented.
 
 
-
-
-
-
-
-%
-% DADO UM PONTO B, O CONJUNTO DAS AFINIDADES ISOMETRICAS CENTRADAS NO PONTO A constitui UMA HIPERESFERA COM CENTRO EM A E RAIO |AB|.
-% DESENHAR ESSA HIPERESFERA.
-% DISCORRER SOBRE QUAL O EFEITO GEOMÉRICO QUE O DETERMINANTE POSITIVO OU NEGATIVO PRODUZ PARA DIFERENCIAR GEOMETRICAMENTE ROTACAO E REFLEXAO.
-% PARA ISSO, COMEÇAR PELA P. 87 ONDE UMA BASE CONTINUA BASE QUANDO SOBRE ELA ATUA UM OPERADOR ORTOGONAL, MANTENDO A MESMA ORIENTAÇÃO SE O OPERAOR FOR ORTOG. PROPRIO
-% TAVLVEZ A COISA SAIA CONSIDERANDO VETORES E FUNCOES VETORIAS NA PAGINA 87 PORQUE AÍ EU TENHO O EFEITO DE DET POSITIVO OU NEGATIVO SOBRE UM DADO VETOR
-
+% https://en.wikipedia.org/wiki/Multivector
+% - DEFINIR PRODUTO EXTERNO DE N VETORES
+% - DIZER QUE PRODUTO EXTERNO DE N VETORES DO ESPAÇO v PRODUZ UMA ENTIDADE CHAMADA SIMPLE MULTIVETOR OU SIMPLE N-VETOR QUE PERTENCE AO ESPACO AV
+% - DEFINIR BIVETOR E TRIVETOR SIMPLES EM ESPAÇO EUCLIDIANO E DIZER QUE O PRODUTO EXTERNO NESSE CASO É CHAMADO DE CROSS PRODUCT
+% - DIZER QUE O TAMANHO DE UM BIVETOR SIMPLES NO CONTEXTO DE UM ESPACO EUCLIDIANO É A AREA DO PARALELOGRAMO DEFINIDO POR SEUS ARGUMENTOS
+% - DIZER QUE O TAMANHO DE UM TRIVETOR SIMPLES NO CONTEXTO DE UM ESPACO EUCLIDIANO É O VOLUME DO PARALELEPIPEDIO DEFINIDO POR SEUS AGUMENTOS
 
 
 
