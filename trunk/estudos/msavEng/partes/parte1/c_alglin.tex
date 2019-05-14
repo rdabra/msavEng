@@ -294,7 +294,7 @@ show that every Cauchy Sequence in $\con{R}_{f}$ is convergent.
 
 Now, let's bring the concept of distance to the realm of vector spaces, which are the most fundamental constructs of Linear Algebra. A vector space $V_\cam{F}$ that is structured by a metric $\varrho$ is defined to be a \textsb{metric vetor space}\index{vector space!metric} $(V_\cam{F},\varrho)$. From this definition, specific types of metric and vector spaces already presented can be combined, and then three important spaces arise: a normed complete space or, more briefly, a
 \textsb{Banach space}\index{space!Banach}\index{Banach space}, represented by  $(V_\cam{F},\varrho,\eta)$, where
-\begin{equation}
+\begin{equation}\label{eq:distNorm}
 \fua{\varrho}{\vto{v}_1,\vto{v}_2} := \fua{\eta}{\vto{v}_1-\vto{v}_2}
 ,\,\forall
 \,\vto{v}_1,\vto{v}_2\in\con{V}_\cam{F}\,;
@@ -812,7 +812,7 @@ Now, an interesting consequence of equalities \eqref{eq:mudaBaseTranspHilbert} i
 \begin{mcoro}{Change of Linear Operator Coordinates}{mudaBase}
 If $Y(B)_\cam{F}$ and $Y(C)_\cam{F}$ are vector spaces constituted by the representative matrices of linear operators that belong to $\evl{\cam{F}}{Y}{Y}$, described respectively on bases $B$ and $C$ of vector space $Y_\cam{F}$, the change of coordinates $\map{\Theta}{Y(B)_\cam{F}}{Y(C)_\cam{F}}$ is always a similarity transformation where $\fua{\Theta}{\mat{X}}=\maf{\vtf{i}}{B}{C}\mat{X}\,\maf{\vtf{i}}{C}{B}$.
 \end{mcoro}
-
+\hspace{.1pt}
 {\footnotesize
 \begin{proof}
 Considering a function $\vtf{g}\in\evl{\cam{F}}{Y}{Y}$ and a vector $\vto{u}\in Y_\cam{F}$, the last equality of the following development

@@ -93,7 +93,7 @@ In this context, point $o$ is called the \textsb{origin}\index{origin} of the co
 	\titfigura{$n$-dimensional affine coordinate system $(o,B)$ and its axes.}\label{fg:coordSystem}
 \end{figure}
 \noindent On section \ref{sec:group}, we said that in a group action a biunivocal relationship between its definer set and its definer group is possible if an element of the set is fixed. For the case of affine spaces, this fixation is established by a coordinate system, which enables to define a point $v$ from a vector $\vto{v}$ through an origin $o$, as we have done. The association $(\eamsd{S}{F}{a}{n},o,B)$ of an affine subspace with a coordinate system can be structured like a vector space and then inherits the same classification, outlined in figure \ref{fig:esquemaEspacos}, from its direction space $S_\cam{F}$ if suitable expressions for metric, norm and inner product are defined. Thereby, for arbitrary points $v$ and $u$ of $\eamsd{S}{F}{a}{n}$, triple $(\eamsd{S}{F}{a}{n},o,B)$ is called an affine metric space if $\fua{\varrho}{u,v}:=\fua{\varrho}{\vv{ou},\vv{ov}}$, an affine normed space if a norm $\|\vv{ov}\|$ is defined or an affine inner product space if there is the scalar $\vv{ov}\cdot\vv{ou}\,$. Since an affine subspace is itself an affine space, representation of triple $(\eamsd{S}{F}{a}{n},o,B)$ will be shortened by $\eamd{S}{F}{n}$, where point $a$ and the coordinate system are implicit. As we are dealing in this chapter with morphological matters, what are the geometric manifestations of metric, norm and inner product? We already said that metric refers to the concept of distance and thus scalar $\fua{\varrho}{u,v}$ results the distance between arbitrary points $u$ and $v$ in the context of affine metric spaces. Norm however is not applicable to points, being geometrically represented by the size of a vector, which also depicts the concept of vector intensity: a ``bigger'' vector is considered to be a more ``intense'' vector. In the context of affine Banach spaces, where distance
-\begin{equation}
+\begin{equation}\label{eq:affDistance}
 \fua{\varrho}{u,v} := \|\vv{ou} - \vv{ov}\|=\|\vv{vo} + \vv{ou}\|=\|\vv{vu}\|=\|\vv{uv}\|\,,
 \end{equation}
 norm enables distance measurement. Now, regarding the geometric effects of the inner product, we already said on section \ref{sec:espacoVet} that this product is closely related to vector incidence, being a scalar measure of this fundamental concept\footnote{See page \pageref{sec:incidence}.}. In the context of affine normed inner product spaces, the incidence interrelationship of non zero vectors $\vv{ov}$ and $\vv{ou}$ is expressed both by the \textsb{projection}\index{projection} $\fua{\zeta}{\vv{ov},\vv{ou}}$ of $\vv{ov}$ onto the line defined by the set $\spn{(\{\vv{ou}\})}$ and the projection $\fua{\zeta}{\vv{ou},\vv{ov}}$ of $\vv{ou}$ onto the line defined by $\spn{(\{\vv{ov}\})}$, where $\map{\zeta}{S_\cam{F}^2}{\cam{F}}$ whose function rule is
@@ -263,13 +263,47 @@ Still considering previous conditions, an affinity $\mathit{r}$ is called \texts
 
 %Figura com tres conjuntos do dia 03/05
 
-\noindent However, for the mathematical spirit, intuition is necessary but not sufficient. Since both isometric affinities on the figure preserve angles and sizes, how do we verify mathematically that the function on the right is indeed a rotation and on the left a reflection? By proving that the rotated and reflected bases are positively and negatively oriented respectively, in relation to $(U_\real,\tnr{A}_B)$, that is, by calculating $\fua{\tnr{A}_C}{\vun{u}_1,\vun{u}_2}$ and $\fua{\tnr{A}_{\overline{C}}}{\vun{u}_1,\vun{u}_2}$. From definition \eqref{eq:basisAltern} and equality \eqref{eq:geoProdInt}, development
+\noindent However, for the mathematical spirit, intuition is necessary but not sufficient. Since both isometric affinities on the figure preserve angles and sizes, how do we verify mathematically that the function on the right is indeed a rotation and on the left a reflection? By proving that the rotated and reflected bases are positively and negatively oriented respectively in relation to $(U_\real,\tnr{A}_B)$, that is, by calculating $\fua{\tnr{A}_C}{\vun{u}_1,\vun{u}_2}$ and $\fua{\tnr{A}_{\overline{C}}}{\vun{u}_1,\vun{u}_2}$. From definition \eqref{eq:basisAltern} and equality \eqref{eq:geoProdInt}, development
 \begin{align*}
 \fua{\tnr{A}_{C}}{\vun{u}_1,\vun{u}_2}&=\sum_{i=1}^2\sum_{j=1}^2\fua{\vtf{f}^\con{C}_{i}}{\vto{x}_1}\fua{\vtf{f}^\con{C}_{j}}{\vto{x}_2}\epsilon_{ij}\\
 &=(\vto{x}_1\cdot\fua{\vtf{r}}{\vun{u}_1})(\vto{x}_2\cdot\fua{\vtf{r}}{\vun{u}_2})-(\vto{x}_1\cdot\fua{\vtf{r}}{\vun{u}_2})(\vto{x}_2\cdot\fua{\vtf{r}}{\vun{u}_1})\\
 &=(cos\phi cos\phi) - (-\sin\phi\sin\phi)=1
 \end{align*}
-proves that $C$ is positively oriented and, by this same procedure, $\overline{C}$ results negatively oriented.
+proves that $C$ is positively oriented and, similarly, $\overline{C}$ results negatively oriented.
+
+
+Considering a rotation $\mathit{r}_a$ , in the context of a three-dimensional Euclidean affine oriented space $(U_\real,\tnr{A}_B)$, we now search for a vector $\vto{u}\in U_\mathcal{\real}$, usually called an \textsb{axial vector}\index{vector!axial}, that observes the property $\fua{\vtf{r}}{\vto{u}}=\fua{\vtf{r}}{-\vto{u}}$ because certain physical quantities, such as angular momentum, are accordingly described by axial vectors. However, with the algebraic apparatus presented so far, there is no axial vector $\vto{u}\neq\vto{0}$ on $U_\real$ and then we need to define a binary operation whose resulting vector always observes this new property. Then, given two arbitrary vectors $\vto{x},\vto{y}\in U_\real$, from operation $\map{\times}{U_\real^2}{U_\real}$, vector $\vto{x}\times\vto{y}$, called the \textsb{cross product}\index{product!cross} of vectors $\vto{x}$ and $\vto{y}$, is axial if  
+\begin{equation}
+\vto{x}\times\vto{y} = \tnr{A}_B\odot_2 (\vto{x}\otimes\vto{y})\,.
+\end{equation}
+The triple $(U_\real,\tnr{A}_B,\times)$ is an example of what is known as algebra over real numbers, whose generalized concept, founded on multivectors defined by an exterior product, is out of the scope of this elementary study. For an additional arbitrary vector $\vto{z}\in U_\real$ and scalars $\alpha,\beta\in\real$, the cross product has the following properties. 
+\begin{itemize}
+\setlength\itemsep{.1em}
+\item[i.] Self cross product: $\vto{x}\times\vto{x}=\vto{0}$;
+\item[ii.] Anticommutativity: $\vto{x}\times\vto{y}=-(\vto{y}\times\vto{x})$;
+\item[iii.] Distributivity over addition: $\vto{x}\times(\vto{y}+\vto{z})=(\vto{x}\times\vto{y})+(\vto{x}\times\vto{z})$;
+\item[iv.] Scalar multiplication: $\alpha\beta(\vto{x}\times\vto{y})=(\alpha\vto{x})\times(\beta\vto{y})=(\beta\vto{x})\times(\alpha\vto{y})$.
+\item[....]
+\end{itemize}
+  
+{\footnotesize
+	\begin{proof}
+		Development
+		\begin{equation*}
+		\fua{\mathit{h}}{\vto{x}\oplus a} = \fua{\vtf{h}}{\vto{x}}\oplus (\fua{\kappa}{a}\oplus a) = \fua{\kappa}{a}\oplus (\fua{\vtf{h}}{\vto{x}}\oplus a) = \fua{\mathit{t}_{\fua{\kappa}{a}}\circ\mathit{h}_a}{\vto{x}\oplus a}
+		\end{equation*}
+		proves the first decomposition and
+		\begin{equation*}
+		\fua{\mathit{h}}{\vto{x}\oplus a} = \fua{\vtf{h}}{\vto{x}}\oplus \fua{\mathit{g}}{a} = \fua{\mathit{h}_{\fua{\mathit{g}}{a}}}{\vto{x}\oplus \fua{\mathit{g}}{a}} = \fua{\mathit{h}_{\fua{\mathit{g}}{a}}}{(\fua{\kappa}{a}+\vto{x})\oplus a} = \fua{\mathit{h}_{\fua{\mathit{g}}{a}}\circ\mathit{t}_{\fua{\kappa}{a}}}{\vto{x}\oplus a}
+		\end{equation*}
+		proves the second.
+\end{proof}}
+
+
+
+
+
+
 
 
 % https://en.wikipedia.org/wiki/Multivector
