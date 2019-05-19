@@ -1,0 +1,47 @@
+#FIG 3.2
+# Created by WinFIG version 7.5
+# METADATA <version>1.0</version>
+Portrait
+Flush left
+Metric
+A4
+100.00
+Single
+-2
+1200 2
+# METADATA <id>11</id>
+2 5 0 0 0 7 50 0 -1 0.000 0 0 0 0 0 5
+	0 C:/myWork/msavEng/partes/figs/rotoReflexScr.eps
+	 1180 3735 1180 6450 8020 6450 8020 3735 1180 3735
+# METADATA <id>15</id>
+4 0 0 50 0 0 12 0.0000 6 199 555 1941 5414 $\\phi$\001
+# METADATA <id>19</id>
+4 0 0 50 0 0 12 0.0000 6 199 318 4159 5416 $a$\001
+# METADATA <id>27</id>
+4 0 0 50 0 0 12 0.0000 6 199 1675 7444 4026 $\\eamd{U}{R}{2}$\001
+# METADATA <id>39</id>
+4 0 0 50 0 0 12 0.0000 6 199 1110 5086 5495 $\\vun{u}_1$\001
+# METADATA <id>41</id>
+4 0 0 50 0 0 12 0.0000 6 199 318 2301 5279 $a$\001
+# METADATA <id>43</id>
+4 0 0 50 0 0 12 0.0000 6 199 318 6460 5425 $a$\001
+# METADATA <id>47</id>
+4 0 0 50 0 0 12 0.0000 6 199 1675 4418 4130 $\\eamd{U}{R}{2}$\001
+# METADATA <id>49</id>
+4 0 0 50 0 0 12 0.0000 6 199 1675 1438 4223 $\\eamd{U}{R}{2}$\001
+# METADATA <id>51</id>
+4 0 0 50 0 0 12 0.0000 6 199 1110 4357 4623 $\\vun{u}_2$\001
+# METADATA <id>53</id>
+4 0 0 50 0 0 12 0.0000 6 199 555 6807 5286 $\\phi$\001
+# METADATA <id>55</id>
+4 0 0 50 0 0 12 0.0000 6 199 2373 7295 5065 $\\fua{\\vtf{r}}{\\vun{u}_1}$\001
+# METADATA <id>57</id>
+4 0 0 50 0 0 12 0.0000 6 199 2373 6267 4660 $\\fua{\\vtf{r}}{\\vun{u}_2}$\001
+# METADATA <id>59</id>
+4 0 0 50 0 0 12 0.0000 6 199 3298 1603 5903 $\\fua{\\overline{\\vtf{r}}}{\\vun{u}_1}$\001
+# METADATA <id>61</id>
+4 0 0 50 0 0 12 0.0000 6 199 3298 2702 6001 $\\fua{\\overline{\\vtf{r}}}{\\vun{u}_2}$\001
+# METADATA <id>63</id>
+4 0 0 50 0 0 12 0.0000 6 199 1295 5671 4125 $\\mathit{r}_a$\001
+# METADATA <id>65</id>
+4 0 0 50 0 0 12 0.0000 6 199 2219 3354 4148 $\\overline{\\mathit{r}}_a$\001
