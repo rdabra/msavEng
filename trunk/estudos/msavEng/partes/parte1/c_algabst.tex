@@ -403,6 +403,12 @@ where the addressing domain is $N^{2q}$ and the set $N = \lch 1,2,\cdots,n \rch$
 \begin{equation}\label{eq:matrizIdentidade}
 \delta=
 \begin{bmatrix}
+\delta_{11}      & \delta_{12}       & \cdots & \delta_{1n}\\
+\delta_{21}      & \delta_{22}       & \ddots & \vdots\\
+\vdots & \ddots  & \ddots & \delta_{n-1\,n}\\
+\delta_{n1}      & \cdots  & \delta_{n\,n-1}     & \delta_{nn}
+\end{bmatrix}=
+\begin{bmatrix}
     1      & 0       & \cdots & 0\\
     0      & 1       & \ddots & \vdots\\
 	\vdots & \ddots  & \ddots & 0\\
@@ -417,6 +423,8 @@ where $\mat{A}$ is a $n\times\cdots\times n$ array, with $n$ repeated $q$ times.
 \begin{equation}
 \sum_{i_1=1}^{n}\delta_{ji_1}\mat{A}_{i_1\cdots i_q}=\mat{A}_{ji_2\cdots i_q}\,.
 \end{equation}
+
+  
 
 At this point, it is convenient to say that every $n_1\times n_2$ array, whose elements are arranged in a tabular format, is called a \textsb{matrix}\index{matrix}. The elements of a matrix are addressed by lines and columns: the escalar with $ij$ position is located on the line $i$ and column $j$. If $n_1=n_2=n$, we have a hypercubic matrix, called \textsb{square matrix}\index{matrix!square}, whose size is $n$. Henceforth, recalling the additive group $Y$ of arrays, we will consider
 $\bar{Y}\subset Y$ the set of hypercubic arrays of size $n$, $M\subset Y$ the set of matrices and  $\bar{M}\subset \bar{Y}$ the set of square matrices with size $n$. For example, the set $\bar{M}$ has the $n\times n$ Kronecker Delta, represented in \eqref{eq:matrizIdentidade}, as an element, which we usually call \textsb{identity matrix}\index{matrix!identity} $\mat{I}$ because $\mat{A}\mat{I} = \mat{I}\mat{A} = \mat{A}$, for an arbitrary $\mat{A}\in\bar{M}$.
@@ -433,13 +441,15 @@ which is actually equality \eqref{eq:Hiperdeterminante} applied to square matric
 \dete{\mat{X}} = \sum_{i_1=1}^n\cdots\sum_{i_n=1}^n
 \epsilon_{i_1\cdots i_n}\prod_{k=1}^{n}\mat{X}_{i_kk}\,,
 \end{equation}
-where $1/n!$ is no longer necessary because equality \eqref{eq:productProp} does not occur. When $\dete{\mat{X}}=0$, matrix $\mat{X}$ is said to be \textsb{singular}\index{matrix!singular} or \textsb{non-invertible}\index{matrix!non-invertible}; otherwise, it is called \textsb{non-singular}\index{matrix!non-singular} or \textsb{invertible}\index{matrix!invertible}. From the above definition, we can obtain a zero value determinant when its argument is the zero matrix and a unitary value for the identity matrix. Moreover, the main property of determinants of square matrices is to preserve multiplications, that is, the determinant of the product is the product of determinants; in other words $\dete{\mat{AB}}=\dete{\mat{A}}\cdot\dete{\mat{B}}$. Recalling our classification of groups, we can say that a subset of $\bar{M}$ whose matrices are all invertible defines, together with the operation of multiplication, a non-abelian group.
-
+where $1/n!$ is no longer necessary because equality \eqref{eq:productProp} does not occur. When $\dete{\mat{X}}=0$, matrix $\mat{X}$ is said to be \textsb{singular}\index{matrix!singular} or \textsb{non-invertible}\index{matrix!non-invertible}; otherwise, it is called \textsb{non-singular}\index{matrix!non-singular} or \textsb{invertible}\index{matrix!invertible}. From the above definition, we can obtain a zero value determinant when its argument is the zero matrix and a unitary value for the identity matrix. Moreover, the main property of determinants of square matrices is to preserve multiplications, that is, the determinant of the product is the product of determinants; in other words $\dete{\mat{AB}}=\dete{\mat{A}}\cdot\dete{\mat{B}}$. Recalling our classification of groups, we can say that a subset of $\bar{M}$ whose matrices are all invertible defines, together with the operation of multiplication, a non-abelian group. From the above definition of determinant of matrices, it is possible to obtain an important equality that correlates the Kronecker Delta with the Levi-Civita Symbol when size $n=3$, namely 
+\begin{equation}\label{eq:LeviKronecker}
+\sum_{i=1}^{3}\epsilon_{ijk} \epsilon_{ilm} = \delta_{jl}\delta_{km}-\delta_{jm}\delta_{kl}\,.
+\end{equation}
 
 
 {\footnotesize
 \begin{proof}
-We want to verify the above multiplicative property of the determinant; and for that, we need a preliminar definition, presented as following. An invertible matrix is called \textsb{elementary}\index{matrix!elementary} when it differs from the identity matrix by one of the following three line actions: exchange, scalar multiplication and addition with the multiple of another line. The multiplication of an elementary matrix $\mat{E}$ by an arbitrary $\mat{B}\in\bar{M}$ means to accomplish in $\mat{B}$ the same line action accomplished on $\mat{I}$ to arrive at $\mat{E}$. On an invertible matrix $\mat{A}$, it is possible to accomplish successive line actions resulting the identity matrix. It means that
+First, we want to verify the above multiplicative property of the determinant; and for that, we need a preliminar definition, presented as following. An invertible matrix is called \textsb{elementary}\index{matrix!elementary} when it differs from the identity matrix by one of the following three line or column actions: exchange, scalar multiplication and addition with the multiple of another line. The pre-multiplication of an elementary matrix $\mat{E}$ by an arbitrary $\mat{B}\in\bar{M}$ means to accomplish in $\mat{B}$ the same line action accomplished on $\mat{I}$ to arrive at $\mat{E}$; conversely, post-multiplication of $\mat{B}$ by an elementary matrix $\mat{E}$ means to accomplish in $\mat{B}$ the same column action accomplished on $\mat{I}$ to arrive at $\mat{E}$. On an invertible matrix $\mat{A}$, it is possible to accomplish successive line actions resulting the identity matrix. It means that
 \begin{equation*}
 \mat{E}_r\mat{E}_{r-1}\cdots\mat{E}_{2}\mat{E}_{1}\mat{A}=\mat{I}\,,
 \end{equation*}
@@ -447,15 +457,35 @@ where matrices $\mat{E}_i$ are elementary. Thus, the equality
 \begin{equation*}
 \mat{A}=\mat{E}_{1}^{-1}\mat{E}_{2}^{-1}\cdots\mat{E}_{r-1}^{-1}\mat{E}_r^{-1}
 \end{equation*}
-is a decomposition of $\mat{A}$ in elementary matrices, since the inverse of an elementary matrix is also elementary. The determinant of a matrix $\mat{A}'$ that results from a line action on the matrix $\mat{A}$ is given by $\dete{\mat{A}'}=\alpha\dete{\mat{A}}$, onde $\alpha\in\real$. Therefore, we can state that $\dete{\mat{E}}=\beta\dete{\mat{I}}=\beta$, where $\beta\in\real$. Considering what has been defined so far, we can say that
+is a decomposition of $\mat{A}$ in elementary matrices, since the inverse of an elementary matrix is also elementary. The determinant of a matrix $\mat{B}'$ that results from a line action on the matrix $\mat{B}$ is given by $\dete{\mat{B}'}=\alpha\dete{\mat{B}}$, where $\alpha\in\real$. Therefore, we can state that $\dete{\mat{E}}=\beta\dete{\mat{I}}=\beta$, where $\beta\in\real$. Considering what has been defined so far, we can say that
 \begin{equation*}
 \dete{\mat{AB}}=\dete{\mat{E}_{1}^{-1}\mat{E}_{2}^{-1}\cdots\mat{E}_{r-1}^{-1}\mat{E}_r^{-1}\mat{B}}=\kappa\dete{\mat{B}}\,,
 \end{equation*}
 where $\kappa\in\real$ is obtained from the $r$ line actions on $\mat{B}$. We can also state that
 \begin{equation*}
-\dete{\mat{E}_{1}^{-1}\mat{E}_{2}^{-1}\cdots\mat{E}_{r-1}^{-1}\mat{E}_r^{-1}\mat{I}}=\kappa\dete{\mat{I}}=\kappa\,.
+\dete{\mat{AI}}=\dete{\mat{E}_{1}^{-1}\mat{E}_{2}^{-1}\cdots\mat{E}_{r-1}^{-1}\mat{E}_r^{-1}\mat{I}}=\kappa\dete{\mat{I}}=\kappa\,.
 \end{equation*}
-Therefore, we conclude that $\dete{\mat{AB}}=\dete{\mat{A}}\dete{\mat{B}}$. Now, considering $\mat{A}$ singular, it is clear that $\dete{\mat{A}}\dete{\mat{B}}=0$. If the matrix $\mat{AB}$ is invertible, then there exists a square matrix $C$ where $\mat{ABC}=\mat{I}$. But, saying this means saying also that matrix $\mat{BC}$ is an inverse of $\mat{A}$, which is inconsistent since $\mat{A}$ is singular. Therefore, $\mat{AB}$ is also singular, and then $\dete{\mat{AB}}=0$. In this case, we have also $\dete{\mat{AB}}=\dete{\mat{A}}\dete{\mat{B}}$.
+Therefore, we conclude that $\dete{\mat{AB}}=\dete{\mat{A}}\dete{\mat{B}}$. Now, considering $\mat{A}$ singular, it is clear that $\dete{\mat{A}}\dete{\mat{B}}=0$. If the matrix $\mat{AB}$ is invertible, then there exists a square matrix $C$ where $\mat{ABC}=\mat{I}$. But, saying this means saying also that matrix $\mat{BC}$ is an inverse of $\mat{A}$, which is inconsistent since $\mat{A}$ is singular. Therefore, $\mat{AB}$ is also singular, and then $\dete{\mat{AB}}=0$. In this case, we have also $\dete{\mat{AB}}=\dete{\mat{A}}\dete{\mat{B}}$. Now, we prove equality \eqref{eq:LeviKronecker} by considering that 
+$\dete{\mat{E}_{1}\mat{E}_{2}\cdots\mat{E}_k\mat{B}\mat{X}_{1}\mat{X}_{2}\cdots\mat{X}_r}=(-1)^{k+r}\dete{\mat{B}}$,
+where elementary matrices $\mat{E_i}$ and $\mat{X_i}$ promote a line and column exchange respectively, and that $B$ is singular if a pair of its rows or columns are equal. Therefore, since $\det{\mat{I}}=1$, we can write that
+\begin{equation*}
+\det{\begin{bmatrix}
+	\delta_{11}      & \delta_{12}       & \delta_{13}\\
+	\delta_{21}      & \delta_{22}       & \delta_{23}\\
+	\delta_{31}      & \delta_{32}       & \delta_{33}\\
+	\end{bmatrix}} = 1
+\implies
+\det{\begin{bmatrix}
+	\delta_{in}      & \delta_{il}       & \delta_{im}\\
+	\delta_{jn}      & \delta_{jl}       & \delta_{jm}\\
+	\delta_{kn}      & \delta_{kl}       & \delta_{km}\\
+	\end{bmatrix}} = \underbrace{\epsilon_{ijk}}_{\text{line exchange}}\overbrace{\epsilon_{nlm}}^{\text{column exchange}}\,. 
+\end{equation*}
+for a generic line and column exchanges. Multiplying the last equality by $\delta_{in}$, we have 
+\begin{equation*}
+\epsilon_{ijk}\epsilon_{ilm} = \delta_{ii}\delta_{jl}\delta_{km}+\delta_{il}\delta_{jm}\delta_{ki}+\delta_{im}\delta_{ji}\delta_{kl}-\delta_{im}\delta_{jl}\delta_{ki}-\delta_{il}\delta_{ji}\delta_{km}-\delta_{ii}\delta_{jm}\delta_{ki} 
+\end{equation*}
+
 \end{proof}}
 
 If $\mat{A},\mat{B}\in M$ are $n_1\times n_2$ and $n_2\times n_1$ matrices respectively in such a way that $\mat{A}_{ij}=\mat{B}_{ji}$, we call them \textsb{transpose} or that one is the transpose\index{matrix!transpose} of the other, from which we adopt the representation $\gloref{mTransp}$ to $\mat{B}$ and $\mat{B}^\text{T}$ to $\mat{A}$. In particular, the matrix $\mat{S}\in\bar{M}$ is said to be \textsb{symmetric}\index{matrix!symmetric} when it is identical to its transpose and \textsb{antisymmetric}\index{matrix!antisymmetric} if $\mat{S}=-\mat{S}^\text{T}$. From the definition of transpose, we have the following:
