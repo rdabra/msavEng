@@ -481,10 +481,12 @@ where elementary matrices $\mat{E_i}$ and $\mat{X_i}$ promote a line and column 
 	\delta_{kn}      & \delta_{kl}       & \delta_{km}\\
 	\end{bmatrix}} = \underbrace{\epsilon_{ijk}}_{\text{line exchange}}\overbrace{\epsilon_{nlm}}^{\text{column exchange}}\,. 
 \end{equation*}
-for a generic line and column exchanges. Multiplying the last equality by $\delta_{in}$, we have 
-\begin{equation*}
-\epsilon_{ijk}\epsilon_{ilm} = \delta_{ii}\delta_{jl}\delta_{km}+\delta_{il}\delta_{jm}\delta_{ki}+\delta_{im}\delta_{ji}\delta_{kl}-\delta_{im}\delta_{jl}\delta_{ki}-\delta_{il}\delta_{ji}\delta_{km}-\delta_{ii}\delta_{jm}\delta_{ki} 
-\end{equation*}
+for a generic line and column exchanges. Then we have 
+\begin{align*}
+\epsilon_{ijk}\epsilon_{nlm} & =  \delta_{in}\delta_{jl}\delta_{km}+\delta_{il}\delta_{jm}\delta_{kn}+\delta_{im}\delta_{jn}\delta_{kl}-\delta_{im}\delta_{jl}\delta_{kn}-\delta_{in}\delta_{jm}\delta_{kl}-\delta_{il}\delta_{jn}\delta_{km}\\
+& =  \delta_{in}(\delta_{jl}\delta_{km}+\delta_{jm}\delta_{kl}+\delta_{jm}\delta_{kl}-\delta_{jl}\delta_{km}-\delta_{jl}\delta_{km}-\delta_{jm}\delta_{kl}) \\
+& =  \delta_{jm}\delta_{kl}-\delta_{jl}\delta_{km}
+\end{align*}
 
 \end{proof}}
 
