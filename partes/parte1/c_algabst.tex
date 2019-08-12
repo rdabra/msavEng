@@ -481,13 +481,17 @@ where elementary matrices $\mat{E_i}$ and $\mat{X_i}$ promote a line and column 
 	\delta_{kn}      & \delta_{kl}       & \delta_{km}\\
 	\end{bmatrix}} = \underbrace{\epsilon_{ijk}}_{\text{line exchange}}\overbrace{\epsilon_{nlm}}^{\text{column exchange}}\,. 
 \end{equation*}
-for a generic line and column exchanges. Then we have 
+for a generic line and column exchanges. Multiplying both sides by $\delta_{in}$, we have 
 \begin{align*}
-\epsilon_{ijk}\epsilon_{nlm} & =  \delta_{in}\delta_{jl}\delta_{km}+\delta_{il}\delta_{jm}\delta_{kn}+\delta_{im}\delta_{jn}\delta_{kl}-\delta_{im}\delta_{jl}\delta_{kn}-\delta_{in}\delta_{jm}\delta_{kl}-\delta_{il}\delta_{jn}\delta_{km}\\
-& =  \delta_{in}(\delta_{jl}\delta_{km}+\delta_{jm}\delta_{kl}+\delta_{jm}\delta_{kl}-\delta_{jl}\delta_{km}-\delta_{jl}\delta_{km}-\delta_{jm}\delta_{kl}) \\
-& =  \delta_{jm}\delta_{kl}-\delta_{jl}\delta_{km}
+\epsilon_{ijk}\epsilon_{ilm} & =  \delta_{ii}\delta_{jl}\delta_{km}+\delta_{il}\delta_{jm}\delta_{ki}+\delta_{im}\delta_{ji}\delta_{kl}-\delta_{im}\delta_{jl}\delta_{ki}-\delta_{ii}\delta_{jm}\delta_{kl}-\delta_{il}\delta_{ji}\delta_{km}\\
+& =  \delta_{ii}\delta_{jl}\delta_{km}+\delta_{jm}\delta_{kl}+\delta_{jm}\delta_{kl}-\delta_{jl}\delta_{km}-\delta_{ii}\delta_{jm}\delta_{kl}-\delta_{jl}\delta_{km}\\
+& =  \delta_{jl}\delta_{km}(\delta_{ii}-2) + \delta_{jm}\delta_{kl}(2-\delta_{ii})\\
+& =  (2-\delta_{ii})(\delta_{jm}\delta_{kl}-\delta_{jl}\delta_{km})
 \end{align*}
-
+Summing both sides on $i$, we arrive at 
+\begin{equation*}
+\sum_{i=1}^3\epsilon_{ijk}\epsilon_{ilm}=3(\delta_{jl}\delta_{km}-\delta_{jl}\delta_{km})
+\end{equation*}
 \end{proof}}
 
 If $\mat{A},\mat{B}\in M$ are $n_1\times n_2$ and $n_2\times n_1$ matrices respectively in such a way that $\mat{A}_{ij}=\mat{B}_{ji}$, we call them \textsb{transpose} or that one is the transpose\index{matrix!transpose} of the other, from which we adopt the representation $\gloref{mTransp}$ to $\mat{B}$ and $\mat{B}^\text{T}$ to $\mat{A}$. In particular, the matrix $\mat{S}\in\bar{M}$ is said to be \textsb{symmetric}\index{matrix!symmetric} when it is identical to its transpose and \textsb{antisymmetric}\index{matrix!antisymmetric} if $\mat{S}=-\mat{S}^\text{T}$. From the definition of transpose, we have the following:
