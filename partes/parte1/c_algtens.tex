@@ -614,9 +614,9 @@ If function $\tnr{\Upsilon}$ were not an injection, there would be two distinct 
 
 \noindent From this corollary, linear function $\tnr{\Upsilon}_{\tnr{G}}:=\fua{\tnr{\Upsilon}}{\tnr{G}}$ is called the \textsb{representative function}\index{function!representative} of second order tensor $\tnr{G}\in\ete{\cam{F}}{U\times V}$. Considering  $\vto{g}_1^*\otimes\vto{g}_2^*$ the dyadic description of $\tnr{G}$, arbitrary vectors $\vto{u}\in U_\cam{F}$ and $\vto{v}\in V_\cam{F}$, we can write that
 \begin{equation}\label{eq:Lin2secTens}
-\fua{\tnr{\Upsilon}_{\tnr{G}}}{\vto{u}} = \fua{\Phi^{-1}\circ\tnr{G}^*_1\circ\Phi}{\vto{u}} = \fua{\Phi^{-1}}{\vto{u}^*\odot_1\tnr{G}} =\Phi^{-1}[(\vto{g}_1\cdot\vto{u})\vto{g}_2^*]=(\vto{u}\cdot\vto{g}_1)\vto{g}_2\,,
+\fua{\tnr{\Upsilon}_{\tnr{G}}}{\vto{u}} = \fua{\Phi^{-1}\circ\tnr{G}^*_1\circ\Phi}{\vto{u}} = \fua{\Phi^{-1}}{\vto{u}^*\odot_1\tnr{G}} =\Phi^{-1}[(\vto{g}_1\cdot\vto{u})\vto{g}_2^*]=(\vto{u}\cdot\vto{g}_1)\vto{g}_2
 \end{equation}
-and from this result scalar
+because $\Phi^{-1}$ is antilinear, and from this result scalar
 \begin{equation}\label{eq:secTens2Lin}
 \fua{\tnr{G}}{\vto{u},\vto{v}} = \fua{\vto{g}_1^*}{\vto{u}}\fua{\vto{g}_2^*}{\vto{v}} = \vto{v}\cdot\overline{\fua{\vto{g}_1^*}{\vto{u}}}\vto{g}_2 = \vto{v}\cdot\fua{\vto{g}_1^*}{\vto{u}^c}\vto{g}_2= \vto{v}\cdot\fua{\tnr{\Upsilon}_{\tnr{G}}}{\vto{u}^c}\,.
 \end{equation}
@@ -819,9 +819,9 @@ is valid for all $\tnr{P}\in\{\etn{\cam{F}}{A^p}\setminus \tnr{0}\}$ and all $\t
 \begin{equation*}
 \fua{\tnr{P}}{\fua{\tnr{\psi}}{\tnr{B}_1},\cdots,{\fua{\tnr{\psi}}{\tnr{B}_p}}}={\fua{\tnr{P}}{\tnr{B}_1,\cdots,\tnr{B}_p}}\,,
 \end{equation*}
-when we say that $\{\fua{\tnr{\psi}}{\tnr{B}_1},\cdots,\fua{\tnr{\psi}}{\tnr{B}_p}\}$, which is also a basis according to theorem \ref{teo:basesUnit}, has the same orientation of $B$. Now, according to theorem \ref{teo:repRieszTensor}, in the particular case where operator $\tnr{\psi}$ is a $m$-cotensor of $\tnr{T}\in \eteg{n}{\cam{F}}{A^2}$, that is, $\tnr{T}_m^*=\tnr{\psi}$, it is possible to state that $\hdet{\tnr{T}}:=\hdet{\tnr{\psi}}$ and then
-\begin{equation}
-\fua{\tnr{P}}{\fua{\tnr{T}_m^*}{\tnr{X}_1},\cdots,{\fua{\tnr{T}_m^*}{\tnr{X}_p}}}=\hdet{\tnr{T}}{\fua{\tnr{P}}{\tnr{X}_1,\cdots,\tnr{X}_p}}\,.
+when we say that $\{\fua{\tnr{\psi}}{\tnr{B}_1},\cdots,\fua{\tnr{\psi}}{\tnr{B}_p}\}$, which is also a basis according to theorem \ref{teo:basesUnit}, has the same orientation of $B$. Now, according to theorem \ref{teo:repRieszTensor}, in the particular case where operator $\tnr{\psi}$ is a $1$-cotensor of a second order tensor $\tnr{T}\in \eteg{n}{\cam{F}}{A\times A}$, that is, $\tnr{T}_1^*=\tnr{\psi}$, it is possible to state that $\hdet{\tnr{T}}:=\hdet{\tnr{\psi}}$ and then
+\begin{equation}\label{eq:detTensorSeg}
+\fua{\tnr{P}}{\fua{\tnr{T}_1^*}{\vto{x}_1^*},\cdots,{\fua{\tnr{T}_1^*}{\vto{x}_p^*}}}=\hdet{\tnr{T}}{\fua{\tnr{P}}{\vto{x}_1^*,\cdots,\vto{x}_p^*}}\,.
 \end{equation}
 Now, considering arbitrary functions $\tnr{\psi},\tnr{\varphi}\in\evl{\cam{F}}{\eteg{n}{\cam{F}}{A}}{\eteg{n}{\cam{F}}{A}}$, the following properties of determinant of tensor operators are valid:
 \begin{itemize}
