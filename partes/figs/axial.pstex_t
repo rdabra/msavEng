@@ -1,0 +1,47 @@
+\begin{picture}(0,0)%
+\includegraphics{axial.eps}%
+\end{picture}%
+%
+%  Created by WinFIG version 7.5 
+%  METADATA <version>1.0</version> 
+%
+\setlength{\unitlength}{3947sp}%
+%
+\begingroup\makeatletter\ifx\SetFigFont\undefined%
+\gdef\SetFigFont#1#2#3#4#5{%
+  \reset@font\fontsize{#1}{#2pt}%
+  \fontfamily{#3}\fontseries{#4}\fontshape{#5}%
+  \selectfont}%
+\fi\endgroup%
+\begin{picture}(5265,2700)(1181,-5596)
+%  METADATA <id>27</id> 
+\put(5691,-3431){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\eamd{U}{R}{3}$}%
+}}}}
+%  METADATA <id>47</id> 
+\put(1773,-4591){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$a$}%
+}}}}
+%  METADATA <id>51</id> 
+\put(2973,-4899){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\vto{x}$}%
+}}}}
+%  METADATA <id>61</id> 
+\put(3295,-4254){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\eamsd{\{\vto{x},\vto{y}\}}{R}{a}{2}$}%
+}}}}
+%  METADATA <id>67</id> 
+\put(3064,-3892){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\vto{y}$}%
+}}}}
+%  METADATA <id>69</id> 
+\put(2002,-3661){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\vto{z}$}%
+}}}}
+%  METADATA <id>71</id> 
+\put(5238,-5228){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\vun{u}_1$}%
+}}}}
+%  METADATA <id>73</id> 
+\put(5214,-4813){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\vun{u}_2$}%
+}}}}
+%  METADATA <id>74</id> 
+\put(4698,-4751){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\vun{u}_3$}%
+}}}}
+%  METADATA <id>76</id> 
+\put(4839,-5158){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$o$}%
+}}}}
+\end{picture}%
