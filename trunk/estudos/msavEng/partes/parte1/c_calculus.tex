@@ -10,8 +10,8 @@ Analysis is the branch of Mathematics that studies the behaviour of functions by
 In the context of Banach tensor spaces, which are normed and complete, to differentiate a tensor function $\tnr{\psi}$ is to obtain its derivative, here understood as a linear tensor function that measures qualitatively and quantitatively the sensitivity of $\tnr{\psi}$ on each element of the domain. Intuitively speaking, sensitivity refers to the intrinsic ``susceptibility'' of a function, in terms of its values, to an \emph{eventual change} on its argument. However, not all tensor functions can be differentiable: the following mathematical conditions and definitions will describe which functions can. Considering $\ete{\cam{F}}{U^{\times m}}$ and $\ete{\cam{F}}{V^{\times s}}$ Banach tensor spaces, both defined by the same field $\cam{F}$, let $\pmb{\mathcal{U}}\subset\ete{\cam{F}}{U^{\times m}}$ be an open set and element  $\tnr{X}_0\in\pmb{\mathcal{U}}$ an arbitrary tensor. Functions in $\map{\tnr{\psi}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}$ and $\map{\tnr{\kappa}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}$ are said to be \textsb{tangent}\index{function!tangent} to each other at $\tnr{X}_0$ if
 \begin{equation}\label{eq:tangent}
 \lim_{\tnr{X}\to \tnr{0}} \dfrac{\fua{\tnr{\psi}}{\tnr{X}_0+\tnr{X}}-\fua{\tnr{\kappa}}{\tnr{X}_0+\tnr{X}}}{\|\tnr{X}\|}=\tnr{0}\,,
-\end{equation} 
-In other words, as the norm $\|\tnr{X}\|$, defined for the tensor space $\ete{\cam{F}}{U^{\times m}}$, tends to zero, equality $\fua{\tnr{\psi}}{\tnr{X}_0}=\fua{\tnr{\kappa}}{\tnr{X}_0}$ must be true. From this definition, it is possible to obtain that if two functions are tangent to $\tnr{\psi}$ at $\tnr{X}_0$, they are tangent to each other at this tensor.
+\end{equation}
+In other words, as $\tnr{X}$ tends to the zero tensor, the numerator tends to the zero tensor faster than $\|\tnr{X}\|$ tends to zero and then, on the limit, equality $\fua{\tnr{\psi}}{\tnr{X}_0}=\fua{\tnr{\kappa}}{\tnr{X}_0}$ must hold. From this definition, it is possible to obtain that if two functions are tangent to $\tnr{\psi}$ at $\tnr{X}_0$, they are tangent to each other at this tensor.
 
 {\footnotesize
 \begin{proof}
@@ -27,18 +27,24 @@ Proceeding with the above conditions, if there is a function $\tnr{\delta}$, tan
 \fua{\tnr{\delta}}{\tnr{X}}=\fua{\tnr{\psi}}{\tnr{X}_0}+\fua{[\fua{\tnr{\psi}'}{\tnr{X}_0}]}{\tnr{X}-\tnr{X}_0}\,,
 \end{equation}
 where function $\fua{\tnr{\psi}'}{\tnr{X}_0}\in\evl{\cam{F}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}$ is bounded, then $\tnr{\psi}$ is called \textsb{Fréchet differentiable}\index{function! Fréchet differentiable} or simply \textsb{differentiable}\index{function!differentiable} at $\tnr{X}_0$ while the linear function $\fua{\tnr{\psi}'}{\tnr{X}_0}$ is called the \textsb{derivative}\index{derivative} of $\tnr{\psi}$ at $\tnr{X}_0$. Moreover, the function in 
-$\map{\tnr{\psi}'}{\pmb{\mathcal{U}}}{\evl{\cam{F}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}}$ is said to be the \textsb{derivative function}\index{derivative!function} of $\tnr{\psi}$. Rewriting expression \eqref{eq:tangent} for $\tnr{\psi}$ and $\tnr{\delta}$ tangent at $\tnr{X}_0$, the result is
+$\map{\tnr{\psi}'}{\pmb{\mathcal{U}}}{\evl{\cam{F}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}}$ is said to be the \textsb{derivative function}\index{derivative!function} or simply the derivative of $\tnr{\psi}$. Rewriting expression \eqref{eq:tangent} for $\tnr{\psi}$ and $\tnr{\delta}$ tangent at $\tnr{X}_0$, the result is
 \begin{equation}
 \lim_{\tnr{X}\to \tnr{0}} \dfrac{\fua{\tnr{\psi}}{\tnr{X}_0+\tnr{X}}-\fua{\tnr{\psi}}{\tnr{X}_0}-\fua{[\fua{\tnr{\psi}'}{\tnr{X}_0}]}{\tnr{X}}}{\|\tnr{X}\|}=\tnr{0}\,,
 \end{equation} 
 from which we can conclude that the numerator tends to the zero tensor faster than the denominator tends to zero, otherwise there would be no definite limit. If numerator tends to the zero tensor, the term $\fua{[\fua{\tnr{\psi}'}{\tnr{X}_0}]}{\tnr{X}}$ results a linear approximation for the difference $\fua{\tnr{\psi}}{\tnr{X}_0+\tnr{X}}-\fua{\tnr{\psi}}{\tnr{X}_0}$ and then the tensor function in $\map{r}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}$, where
-\begin{equation}
+\begin{equation}\label{eq:residue}
 \fua{r}{\tnr{X}}=\fua{\tnr{\psi}}{\tnr{X}_0+\tnr{X}}-\fua{\tnr{\psi}}{\tnr{X}_0}-\fua{[\fua{\tnr{\psi}'}{\tnr{X}_0}]}{\tnr{X}}\,,
 \end{equation} 
-can be called the \textsb{residue}\index{function!residue} of $\tnr{\psi}$ at $\tnr{X}_0$. Thereby, it is true that $\lim_{\tnr{X}\to \tnr{0}}\fua{r}{\tnr{X}}=\tnr{0}$
-
-
-that We know that this residue is increasingly small when as tensor $\|\tnr{X}\|$ tends to zero or  
+can be called the \textsb{residue}\index{function!residue} of $\tnr{\psi}$ at $\tnr{X}_0$. From the fact that $\lim_{\tnr{X}\to \tnr{0}}\fua{r}{\tnr{X}}=\tnr{0}$, if we choose a certain tensor $\tnr{H}\in\pmb{\mathcal{U}}$, it is valid to write that $\lim_{\alpha\to 0}\fua{r}{\alpha\tnr{H}}=\tnr{0}$, where $\alpha\in\cam{F}$. Thereby, considering the argument $\tnr{X}=\alpha\tnr{H}$ on the rule \eqref{eq:residue}, the resulting equality
+\begin{equation*}
+\fua{[\fua{\tnr{\psi}'}{\tnr{X}_0}]}{\tnr{H}}=\dfrac{\fua{\tnr{\psi}}{\tnr{X}_0+\alpha\tnr{H}}-\fua{\tnr{\psi}}{\tnr{X}_0}-\fua{r}{\alpha\tnr{H}}}{\alpha}
+\end{equation*}
+can have its both sides taken to the limit of $\alpha$ tending to zero and then the tensor
+\begin{equation}
+\fua{[\fua{\tnr{\psi}'}{\tnr{X}_0}]}{\tnr{H}}=\lim_{\alpha\to 0}\dfrac{\fua{\tnr{\psi}}{\tnr{X}_0+\alpha\tnr{H}}-\fua{\tnr{\psi}}{\tnr{X}_0}}{\alpha}\,.
+\end{equation}
+Since $\tnr{H}$ is a specific tensor, we call $\fua{[\fua{\tnr{\psi}'}{\tnr{X}_0}]}{\tnr{H}}\in\ete{\cam{F}}{V^{\times s}}$ the \textsb{directional derivative}\index{derivative!directional} of $\tnr{\psi}$ along $\tnr{H}$ at $\tnr{X}_0$. Moreover, the function in mapping $\map{\tnr{\psi}'_{\tnr{H}}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}$, whose rule is $\fua{\tnr{\psi}'_{\tnr{H}}}{\tnr{X}}=\fua{[\fua{\tnr{\psi}'}{\tnr{X}}]}{\tnr{H}}$, is called the directional derivative of $\tnr{\psi}$ along $\tnr{H}$.   
+ 
 
 
 
