@@ -7,7 +7,7 @@ Analysis is the branch of Mathematics that studies the behaviour of functions by
 
 \section{Differentiation}
 
-In the context of Banach tensor spaces, which are normed and complete, to differentiate a tensor function $\tnr{\psi}$ is to obtain its derivative, here understood as a linear tensor function that measures qualitatively and quantitatively the sensitivity of $\tnr{\psi}$ on each element of the domain. Intuitively speaking, sensitivity refers to the intrinsic ``susceptibility'' of a function, in terms of its values, to an \emph{eventual change} on its argument. However, not all tensor functions can be differentiable: the following mathematical conditions and definitions will describe which functions can. Considering $\ete{\cam{F}}{U^{\times m}}$ and $\ete{\cam{F}}{V^{\times s}}$ Banach tensor spaces, both defined by the same field $\cam{F}$, let $\pmb{\mathcal{U}}\subset\ete{\cam{F}}{U^{\times m}}$ be an open set and element  $\tnr{X}_0\in\pmb{\mathcal{U}}$ an arbitrary tensor. Functions in $\map{\tnr{\psi}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}$ and $\map{\tnr{\kappa}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}$ are said to be \textsb{tangent}\index{function!tangent} to each other at $\tnr{X}_0$ if
+In the context of Banach tensor spaces, which are normed and complete, to differentiate a tensor function $\tnr{\psi}$ is to obtain its derivative, here understood as a linear tensor function that measures qualitatively and quantitatively the sensitivity of $\tnr{\psi}$ on each element of the domain. Intuitively speaking, sensitivity refers to the intrinsic ``susceptibility'' of a function, in terms of its values, to an \emph{eventual change} on its argument. However, not all tensor functions can be differentiable: the following mathematical conditions and definitions will describe which functions can. Considering $\ete{\cam{F}}{U^{\times m}}$ and $\ete{\cam{F}}{V^{\times s}}$ Banach tensor spaces, both defined by the same field $\cam{F}$, let $\pmb{\mathcal{U}}\subset\ete{\cam{F}}{U^{\times m}}$ be an open set and element  $\tnr{X}_0\in\pmb{\mathcal{U}}$ an arbitrary tensor. The functions in $\map{\tnr{\psi}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}$ and $\map{\tnr{\kappa}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}$ are said to be \textsb{tangent}\index{function!tangent} to each other at $\tnr{X}_0$ if
 \begin{equation}\label{eq:tangent}
 \lim_{\tnr{X}\to \tnr{0}} \dfrac{\fua{\tnr{\psi}}{\tnr{X}_0+\tnr{X}}-\fua{\tnr{\kappa}}{\tnr{X}_0+\tnr{X}}}{\|\tnr{X}\|}=\tnr{0}\,,
 \end{equation}
@@ -22,7 +22,7 @@ Since the sum of limits is the limit of sums, the previous statement can be veri
 \end{align*} 
 \end{proof}}
 
-Proceeding with the above conditions, if there is a function $\tnr{\delta}$, tangent to $\tnr{\psi}$ at $\tnr{X}_0$, described by the rule
+Proceeding with the above conditions, if there is one and only one tensor function $\tnr{\delta}$, tangent to $\tnr{\psi}$ at $\tnr{X}_0$, described by the rule
 \begin{equation}
 \fua{\tnr{\delta}}{\tnr{X}}=\fua{\tnr{\psi}}{\tnr{X}_0}+\fua{[\fua{\tnr{\psi}'}{\tnr{X}_0}]}{\tnr{X}-\tnr{X}_0}\,,
 \end{equation}
@@ -31,20 +31,24 @@ $\map{\tnr{\psi}'}{\pmb{\mathcal{U}}}{\evl{\cam{F}}{\pmb{\mathcal{U}}}{\ete{\cam
 \begin{equation}
 \lim_{\tnr{X}\to \tnr{0}} \dfrac{\fua{\tnr{\psi}}{\tnr{X}_0+\tnr{X}}-\fua{\tnr{\psi}}{\tnr{X}_0}-\fua{[\fua{\tnr{\psi}'}{\tnr{X}_0}]}{\tnr{X}}}{\|\tnr{X}\|}=\tnr{0}\,,
 \end{equation} 
-from which we can conclude that the numerator tends to the zero tensor faster than the denominator tends to zero, otherwise there would be no definite limit. If numerator tends to the zero tensor, the term $\fua{[\fua{\tnr{\psi}'}{\tnr{X}_0}]}{\tnr{X}}$ results a linear approximation for the difference $\fua{\tnr{\psi}}{\tnr{X}_0+\tnr{X}}-\fua{\tnr{\psi}}{\tnr{X}_0}$ and then the tensor function in $\map{r}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}$, where
-\begin{equation}\label{eq:residue}
-\fua{r}{\tnr{X}}=\fua{\tnr{\psi}}{\tnr{X}_0+\tnr{X}}-\fua{\tnr{\psi}}{\tnr{X}_0}-\fua{[\fua{\tnr{\psi}'}{\tnr{X}_0}]}{\tnr{X}}\,,
-\end{equation} 
-can be called the \textsb{residue}\index{function!residue} of $\tnr{\psi}$ at $\tnr{X}_0$. From the fact that $\lim_{\tnr{X}\to \tnr{0}}\fua{r}{\tnr{X}}=\tnr{0}$, if we choose a certain tensor $\tnr{H}\in\pmb{\mathcal{U}}$, it is valid to write that $\lim_{\alpha\to 0}\fua{r}{\alpha\tnr{H}}=\tnr{0}$, where $\alpha\in\cam{F}$. Thereby, considering the argument $\tnr{X}=\alpha\tnr{H}$ on the rule \eqref{eq:residue}, the resulting equality
+from which we can conclude that the numerator tends to the zero tensor faster than the denominator tends to zero, otherwise there would be no definite limit. If numerator tends to the zero tensor, the term $\fua{[\fua{\tnr{\psi}'}{\tnr{X}_0}]}{\tnr{X}}$ results an approximation for the difference $\fua{\tnr{\psi}}{\tnr{X}_0+\tnr{X}}-\fua{\tnr{\psi}}{\tnr{X}_0}$, and that is why the derivative is said to be a local linear approximation of a function. Moreover, since the previous equality is valid for $\tnr{X}$ tending to the zero tensor through any ``path'', let's choose a specific direction by considering a certain tensor $\tnr{H}\in\pmb{\mathcal{U}}$ in such a way that $\tnr{X}=\alpha\tnr{H}$, where $\alpha\in\cam{F}$, and then 
 \begin{equation*}
-\fua{[\fua{\tnr{\psi}'}{\tnr{X}_0}]}{\tnr{H}}=\dfrac{\fua{\tnr{\psi}}{\tnr{X}_0+\alpha\tnr{H}}-\fua{\tnr{\psi}}{\tnr{X}_0}-\fua{r}{\alpha\tnr{H}}}{\alpha}
-\end{equation*}
-can have its both sides taken to the limit of $\alpha$ tending to zero and then the tensor
-\begin{equation}
-\fua{[\fua{\tnr{\psi}'}{\tnr{X}_0}]}{\tnr{H}}=\lim_{\alpha\to 0}\dfrac{\fua{\tnr{\psi}}{\tnr{X}_0+\alpha\tnr{H}}-\fua{\tnr{\psi}}{\tnr{X}_0}}{\alpha}\,.
-\end{equation}
-Since $\tnr{H}$ is a specific tensor, we call $\fua{[\fua{\tnr{\psi}'}{\tnr{X}_0}]}{\tnr{H}}\in\ete{\cam{F}}{V^{\times s}}$ the \textsb{directional derivative}\index{derivative!directional} of $\tnr{\psi}$ along $\tnr{H}$ at $\tnr{X}_0$. Moreover, the function in mapping $\map{\tnr{\psi}'_{\tnr{H}}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}$, whose rule is $\fua{\tnr{\psi}'_{\tnr{H}}}{\tnr{X}}=\fua{[\fua{\tnr{\psi}'}{\tnr{X}}]}{\tnr{H}}$, is called the directional derivative of $\tnr{\psi}$ along $\tnr{H}$.   
- 
+\lim_{\alpha\to 0} \dfrac{\fua{\tnr{\psi}}{\tnr{X}_0+\alpha\tnr{H}}-\fua{\tnr{\psi}}{\tnr{X}_0}-\fua{[\fua{\tnr{\psi}'}{\tnr{X}_0}]}{\alpha\tnr{H}}}{|\alpha|}=\tnr{0}\,.
+\end{equation*} 
+Multiplying both sides by $\sgn{\alpha}$, we have
+\begin{equation*}
+\lim_{\alpha\to 0} \dfrac{\fua{\tnr{\psi}}{\tnr{X}_0+\alpha\tnr{H}}-\fua{\tnr{\psi}}{\tnr{X}_0}}{\alpha}-\lim_{\alpha\to 0} \dfrac{\alpha\fua{[\fua{\tnr{\psi}'}{\tnr{X}_0}]}{\tnr{H}}}{\alpha}=\sgn{\alpha}\tnr{0}\,,
+\end{equation*} 
+\begin{align}
+\fua{[\fua{\tnr{\psi}'}{\tnr{X}_0}]}{\tnr{H}}=\lim_{\alpha\to 0} \dfrac{\fua{\tnr{\psi}}{\tnr{X}_0+\alpha\tnr{H}}-\fua{\tnr{\psi}}{\tnr{X}_0}}{\alpha}\,
+\end{align}
+where $\fua{[\fua{\tnr{\psi}'}{\tnr{X}_0}]}{\tnr{H}}\in\ete{\cam{F}}{V^{\times s}}$ is called the \textsb{directional derivative}\index{derivative!directional} of $\tnr{\psi}$ along $\tnr{H}$ at $\tnr{X}_0$. The function in mapping $\map{\tnr{\psi}'_{\tnr{H}}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}$, described by $\fua{\tnr{\psi}'_{\tnr{H}}}{\tnr{X}}=\fua{[\fua{\tnr{\psi}'}{\tnr{X}}]}{\tnr{H}}$, is the directional derivative of $\tnr{\psi}$ along $\tnr{H}$.   
+
+{\footnotesize
+\begin{proof}
+The above theory would be useless if there were no tangent functions. Considering the rules $\fua{\tnr{\psi}}{\tnr{X}}=\alpha\tnr{X}$ and $\fua{\tnr{\delta}}{\tnr{X}}=\alpha\tnr{X}_0+\alpha(\tnr{X}-\tnr{X}_0)=$, function $\tnr{\delta}$ tangent to $\tnr{\psi}$ can be proved by 
+\end{proof}}
+
 
 
 
