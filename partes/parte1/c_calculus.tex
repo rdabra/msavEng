@@ -22,13 +22,13 @@ Since the sum of limits is the limit of sums, the previous statement can be veri
 \end{align*} 
 \end{proof}}
 
-Proceeding with the above conditions, if there is one and only one tensor function $\tnr{\delta}$, tangent to $\tnr{\psi}$ at $\tnr{X}_0$, described by the rule
+Proceeding with the above conditions, if there is one and only one tensor function $\tnr{\psi_\mathit{d}}$, tangent to $\tnr{\psi}$ at $\tnr{X}_0$, described by the rule
 \begin{equation}
 \fua{\tnr{\psi_\mathit{d}}}{\tnr{X}}=\fua{\tnr{\psi}}{\tnr{X}_0}+\fua{[\fua{\tnr{\psi}'}{\tnr{X}_0}]}{\tnr{X}-\tnr{X}_0}\,,
 \end{equation}
 where function $\fua{\tnr{\psi}'}{\tnr{X}_0}\in\evl{\cam{F}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}$ is bounded, then $\tnr{\psi}$ is called \textsb{Fréchet differentiable}\index{function! Fréchet differentiable} or simply \textsb{differentiable}\index{function!differentiable} at $\tnr{X}_0$ while the linear function $\fua{\tnr{\psi}'}{\tnr{X}_0}$ is called the \textsb{derivative}\index{derivative} of $\tnr{\psi}$ at $\tnr{X}_0$. Moreover, the function in 
-$\map{\tnr{\psi}'}{\pmb{\mathcal{U}}}{\evl{\cam{F}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}}$ is said to be the \textsb{derivative function}\index{derivative!function} or simply the derivative of $\tnr{\psi}$. Rewriting expression \eqref{eq:tangent} for $\tnr{\psi}$ and $\tnr{\delta}$ tangent at $\tnr{X}_0$, the result is
-\begin{equation}
+$\map{\tnr{\psi}'}{\pmb{\mathcal{U}}}{\evl{\cam{F}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}}$ is said to be the \textsb{derivative function}\index{derivative!function} or simply the derivative of $\tnr{\psi}$. Rewriting expression \eqref{eq:tangent} for $\tnr{\psi}$ and $\tnr{\psi_\mathit{d}}$ tangent at $\tnr{X}_0$, the result is
+\begin{equation}\label{eq:preDirect}
 \lim_{\tnr{X}\to \tnr{0}} \dfrac{\fua{\tnr{\psi}}{\tnr{X}_0+\tnr{X}}-\fua{\tnr{\psi}}{\tnr{X}_0}-\fua{[\fua{\tnr{\psi}'}{\tnr{X}_0}]}{\tnr{X}}}{\|\tnr{X}\|}=\tnr{0}\,,
 \end{equation} 
 from which we can conclude that the numerator tends to the zero tensor faster than the denominator tends to zero, otherwise there would be no definite limit. If numerator tends to the zero tensor, the term $\fua{[\fua{\tnr{\psi}'}{\tnr{X}_0}]}{\tnr{X}}$ results an approximation for the difference $\fua{\tnr{\psi}}{\tnr{X}_0+\tnr{X}}-\fua{\tnr{\psi}}{\tnr{X}_0}$, and that is why the derivative is said to be a local linear approximation of a function. Moreover, since the previous equality is valid for $\tnr{X}$ tending to the zero tensor through any ``path'', let's choose a specific direction by considering a certain tensor $\tnr{H}\in\pmb{\mathcal{U}}$ in such a way that $\tnr{X}=\alpha\tnr{H}$, where $\alpha\in\cam{F}$, and then 
@@ -46,7 +46,15 @@ where $\fua{[\fua{\tnr{\psi}'}{\tnr{X}_0}]}{\tnr{H}}\in\ete{\cam{F}}{V^{\times s
 
 {\footnotesize
 \begin{proof}
-The above theory would be useless if there were no tangent functions. Considering the rules $\fua{\tnr{\psi}}{\tnr{X}}=\alpha\tnr{X}+\tnr{Y}$ and $\fua{\tnr{\delta}}{\tnr{X}}=\alpha\tnr{X}_0+\alpha(\tnr{X}-\tnr{X}_0)=$, function $\tnr{\delta}$ tangent to $\tnr{\psi}$ can be proved by 
+The above theory would be useless if there were no tangent function $\tnr{\delta_\mathit{d}}$ for any given function $\tnr{\delta}$. Considering the rules $\fua{\tnr{\delta}}{\tnr{X}}=\alpha\tnr{X}$ and $\fua{\tnr{\delta_\mathit{d}}}{\tnr{X}}=\fua{\tnr{\delta}}{\tnr{X}_0}+\alpha(\tnr{X}-\tnr{X}_0)=\alpha\tnr{X}$, function $\tnr{\delta_\mathit{d}}$ tangent to $\tnr{\delta}$ on $\tnr{X}_0$ can be easily verified from \eqref{eq:preDirect}. Now, let's prove that there is only one function $\tnr{\psi_\mathit{d}}$ tangent to $\tnr{\psi}$ by supposing functions $\tnr{\psi_\mathit{d1}}$ and $\tnr{\psi_\mathit{d2}}$ tangent to $\tnr{\psi}$. One equality \eqref{eq:preDirect} can be obtained for each function and subtracting them results
+\begin{equation*}
+\lim_{\tnr{X}\to \tnr{0}} \dfrac{\fua{[\fua{\tnr{\psi}'_2}{\tnr{X}_0}]}{\tnr{X}}-\fua{[\fua{\tnr{\psi}'_1}{\tnr{X}_0}]}{\tnr{X}}}{\|\tnr{X}\|}=\lim_{\tnr{X}\to \tnr{0}} \dfrac{\{[\tnr{\psi}'_2-\tnr{\psi}'_1](\tnr{X}_0)\}(\tnr{X})}{\|\tnr{X}\|}=\tnr{0}\,.
+\end{equation*}
+Since these equalities are valid for any $\tnr{X}\in\pmb{\mathcal{U}}$, let's admit $\tnr{X}=\alpha\tnr{H}$, where $\tnr{H}\in\pmb{\mathcal{U}}$ is a non zero given tensor and $\alpha$ is a positive real number. Thereby, previous equalities lead to
+\begin{equation*}
+	\lim_{\alpha\to 0} \dfrac{\{[\tnr{\psi}'_2-\tnr{\psi}'_1](\tnr{X}_0)\}(\alpha\tnr{H})}{\|\alpha\tnr{H}\|}=\dfrac{\{[\tnr{\psi}'_2-\tnr{\psi}'_1](\tnr{X}_0)\}(\tnr{H})}{\|\tnr{H}\|}=\tnr{0}\,
+\end{equation*}
+which are valid for any chosen $\tnr{X}_0$ and then $\tnr{\psi}'_2=\tnr{\psi}'_1$.
 \end{proof}}
 
 
