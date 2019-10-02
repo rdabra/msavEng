@@ -43,7 +43,11 @@ which results
 \begin{equation}
 \fua{[\fua{\tnr{\psi}'}{\tnr{X}_0}]}{\tnr{H}}=\lim_{\alpha\to 0} \dfrac{\fua{\tnr{\psi}}{\tnr{X}_0+\alpha\tnr{H}}-\fua{\tnr{\psi}}{\tnr{X}_0}}{\alpha}\,,\forall \tnr{H}\in\pmb{\mathcal{U}}\,,
 \end{equation}
-where $\fua{[\fua{\tnr{\psi}'}{\tnr{X}_0}]}{\tnr{H}}\in\ete{\cam{F}}{V^{\times s}}$ is called the \textsb{directional derivative}\index{derivative!directional} of $\tnr{\psi}$ along $\tnr{H}$ at $\tnr{X}_0$. The function in mapping $\map{\tnr{\psi}'_{\tnr{H}}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}$, described by $\fua{\tnr{\psi}'_{\tnr{H}}}{\tnr{X}}=\fua{[\fua{\tnr{\psi}'}{\tnr{X}}]}{\tnr{H}}$, is the directional derivative of $\tnr{\psi}$ along $\tnr{H}$.   
+where $\fua{[\fua{\tnr{\psi}'}{\tnr{X}_0}]}{\tnr{H}}\in\ete{\cam{F}}{V^{\times s}}$ is called the \textsb{directional derivative}\index{derivative!directional} of $\tnr{\psi}$ along $\tnr{H}$ at $\tnr{X}_0$. The function in mapping $\map{\tnr{\psi}'_{\tnr{H}}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}$, described by
+\begin{equation}\label{eq:directDeriv}
+\fua{\tnr{\psi}'_{\tnr{H}}}{\tnr{X}}=\fua{[\fua{\tnr{\psi}'}{\tnr{X}}]}{\tnr{H}}\,,
+\end{equation}
+is said to be the directional derivative of $\tnr{\psi}$ along $\tnr{H}$.   
 
 {\footnotesize
 \begin{proof}
@@ -62,13 +66,32 @@ At this point, for the sake of completeness, we shall say a few words about a le
 \begin{equation}
 \fua{[\fua{\tnr{\varphi}'_G}{\tnr{X}_0}]}{\tnr{X}}=\lim_{\alpha\to 0} \dfrac{\fua{\tnr{\varphi}}{\tnr{X}_0+\alpha\tnr{X}}-\fua{\tnr{\varphi}}{\tnr{X}_0}}{\alpha}\,.
 \end{equation}
-Similarly to Fréchet differentiation, tensor function $\fua{[\fua{\tnr{\varphi}'_G}{\tnr{X}_0}]}{\tnr{X}}$ is called the \textsb{Gâteaux differential}\index{differential!Gâteaux} of $\tnr{\varphi}$ at $\tnr{X}_0$ and $\tnr{\varphi}'_G$ is the \textsb{Gâteaux derivative}\index{derivative!Gâteaux} of $\tnr{\varphi}$. Is is important to say that every Fréchet differentiable function is also Gâteaux differential, but the converse is obviously not true. What is less obvious is the following: even when Gâteaux derivative $\fua{\tnr{\varphi}'_G}{\tnr{X}_0}$ is bounded and linear, Gâteaux differentiability, which means differentiability along all directions at a point, does not assure total differentiability. This present study will require only the stronger restrictions of the Fréchet differentiation and then further developments of the Gâteaux derivative is out of our scope\footnote{For a detailed introduction to the subject see \aut{Wouk}\cite{wouk_1979_1}, chapter 12.}.
+Similarly to Fréchet differentiation, tensor function $\fua{[\fua{\tnr{\varphi}'_G}{\tnr{X}_0}]}{\tnr{X}}$ is called the \textsb{Gâteaux differential}\index{differential!Gâteaux} of $\tnr{\varphi}$ at $\tnr{X}_0$ and $\tnr{\varphi}'_G$ is the \textsb{Gâteaux derivative}\index{derivative!Gâteaux} of $\tnr{\varphi}$. Is is important to say that every Fréchet differentiable function is also Gâteaux differential, but the converse is obviously not true. What is less obvious is the following: even when Gâteaux derivative $\fua{\tnr{\varphi}'_G}{\tnr{X}_0}$ is bounded and linear, Gâteaux differentiability, which means differentiability along all directions at a point, does not assure total differentiability. This present study will require only the stronger restrictions from the Fréchet differentiation and further developments of the Gâteaux derivative will not be performed\footnote{For a detailed introduction to the subject see \aut{Wouk}\cite{wouk_1979_1}, chapter 12.}.
 
 
 In the context of Hilbert spaces, we already know that there is a biunivocal relationship between a linear tensor function space and a tensor space described by the theorem \ref{teo:repRieszTensor}. For the present case, considering the terms of this theorem and the previous conditions restricted to Hilbert spaces, the derivative $\fua{\tnr{\psi}'}{\tnr{X}_0}\in\evl{\cam{F}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}$ has its correspondent tensor $\fua{\nabla\tnr{\psi}}{\tnr{X}_0}\in\ete{\cam{F}}{U^{\times m}\times V^{\times s}}$, called the \textsb{gradient}\index{gradient} of $\tnr{\psi}$ at $\tnr{X}_0$, if the following rule is defined:
 \begin{equation}
 [\fua{\tnr{\psi}'}{\tnr{X}_0}](\tnr{X}) = \tnr{X}\odot_m\fua{\nabla\tnr{\psi}}{\tnr{X}_0}\,.
 \end{equation} 
+Moreover, the tensor function in $\map{\nabla\tnr{\psi}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{U^{\times m}\times V^{\times s}}}$, called the gradient of $\tnr{\psi}$, assigns to a tensor of order $m$ a tensor of order $m+s$. Therefore, for the particular case of a differentiable tensor operator, its gradient assigns to a $m$-th order tensor a $2m$-th order tensor. 
+Now, from this definition of gradient and rule \eqref{eq:directDeriv}, the directional derivative of $\tnr{\psi}$ along $\tnr{H}\in\pmb{\mathcal{U}}$ is described by 
+\begin{equation}
+\fua{\tnr{\psi}'_{\tnr{H}}}{\tnr{X}}=\tnr{H}\odot_m\fua{\nabla\tnr{\psi}}{\tnr{X}}\,.
+\end{equation}
+
+
+
+
+% falar do divergente
+% falar das propriedades do gradiente
+
+
+
+
+
+
+
+
 
 
 It is interesting to note that derivatives may be differentiable themselves, and also derivatives of derivatives, and so on. Considering previous conditions, tensor function $\tnr{\psi}$ is defined to be the derivative of order zero of itself, function $\tnr{\psi}'$ is the derivative of order one of $\tnr{\psi}$, $\tnr{\psi}''$ of order two and $\tnr{\psi}^{(k)}$ of order $k\geqslant 0$. Thereby, a tensor function $\tnr{\psi}$ is said to be differentiable of order $k+1$ at $\tnr{X}_0$ if there is a function $\tnr{\psi_\mathit{d}}^{(k)}$ tangent to $\tnr{\psi}^{(k)}$ at $\tnr{X}_0$ where   
