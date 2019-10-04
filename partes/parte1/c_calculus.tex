@@ -41,11 +41,11 @@ Multiplying both sides by $\sgn{\alpha}$, we have
 \end{equation*} 
 which results
 \begin{equation}
-\fua{[\fua{\tnr{\psi}'}{\tnr{X}_0}]}{\tnr{H}}=\lim_{\alpha\to 0} \dfrac{\fua{\tnr{\psi}}{\tnr{X}_0+\alpha\tnr{H}}-\fua{\tnr{\psi}}{\tnr{X}_0}}{\alpha}\,,\forall \tnr{H}\in\pmb{\mathcal{U}}\,,
+\fua{[\fua{\tnr{\psi}'}{\tnr{X}_0}]}{\tnr{H}}=\lim_{\alpha\to 0} \dfrac{\fua{\tnr{\psi}}{\tnr{X}_0+\alpha\tnr{H}}-\fua{\tnr{\psi}}{\tnr{X}_0}}{\alpha}\,,
 \end{equation}
-where $\fua{[\fua{\tnr{\psi}'}{\tnr{X}_0}]}{\tnr{H}}\in\ete{\cam{F}}{V^{\times s}}$ is called the \textsb{directional derivative}\index{derivative!directional} of $\tnr{\psi}$ along $\tnr{H}$ at $\tnr{X}_0$. The function in mapping $\map{\tnr{\psi}'_{\tnr{H}}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}$, described by
+where $\fua{[\fua{\tnr{\psi}'}{\tnr{X}_0}]}{\tnr{H}}\in\ete{\cam{F}}{V^{\times s}}$ is called the \textsb{directional derivative}\index{derivative!directional} of $\tnr{\psi}$ along $\tnr{H}$ at $\tnr{X}_0$. From this definition, when there is a directional derivative of $\tnr{\psi}$ for any $\tnr{X}_0\in\pmb{\mathcal{U}}$, the function described by
 \begin{equation}\label{eq:directDeriv}
-\fua{\tnr{\psi}'_{\tnr{H}}}{\tnr{X}}=\fua{[\fua{\tnr{\psi}'}{\tnr{X}}]}{\tnr{H}}\,,
+\fua{[\fua{\tnr{\psi}'}{\tnr{X}}]}{\tnr{H}}=\lim_{\alpha\to 0} \dfrac{\fua{\tnr{\psi}}{\tnr{X}+\alpha\tnr{H}}-\fua{\tnr{\psi}}{\tnr{X}}}{\alpha}
 \end{equation}
 is said to be the directional derivative of $\tnr{\psi}$ along $\tnr{H}$.   
 
@@ -73,12 +73,20 @@ In the context of Hilbert spaces, we already know that there is a biunivocal rel
 \begin{equation}
 [\fua{\tnr{\psi}'}{\tnr{X}_0}](\tnr{X}) = \tnr{X}\odot_m\fua{\nabla\tnr{\psi}}{\tnr{X}_0}\,.
 \end{equation} 
-Moreover, the tensor function in $\map{\nabla\tnr{\psi}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{U^{\times m}\times V^{\times s}}}$, called the gradient of $\tnr{\psi}$, assigns to a tensor of order $m$ a tensor of order $m+s$. Therefore, for the particular case of a differentiable tensor operator, its gradient assigns to a $m$-th order tensor a $2m$-th order tensor. 
-Now, from this definition of gradient and rule \eqref{eq:directDeriv}, the directional derivative of $\tnr{\psi}$ along $\tnr{H}\in\pmb{\mathcal{U}}$ is described by 
+Moreover, the tensor function in $\map{\nabla\tnr{\psi}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{U^{\times m}\times V^{\times s}}}$, called the gradient of $\tnr{\psi}$, assigns to a tensor of order $m$ a tensor of order $m+s$. Therefore, for the particular case of a differentiable tensor operator, its gradient assigns to a $m$-th order tensor a $2m$-th order tensor. Now, from this definition of gradient and rule \eqref{eq:directDeriv}, the directional derivative of $\tnr{\psi}$ along $\tnr{H}\in\pmb{\mathcal{U}}$ is described by 
 \begin{equation}
-\fua{\tnr{\psi}'_{\tnr{H}}}{\tnr{X}}=\tnr{H}\odot_m\fua{\nabla\tnr{\psi}}{\tnr{X}}\,.
+\fua{[\fua{\tnr{\psi}'}{\tnr{X}}]}{\tnr{H}}=\tnr{H}\odot_m\fua{\nabla\tnr{\psi}}{\tnr{X}}=\lim_{\alpha\to 0} \dfrac{\fua{\tnr{\psi}}{\tnr{X}+\alpha\tnr{H}}-\fua{\tnr{\psi}}{\tnr{X}}}{\alpha}\,.
 \end{equation}
-
+It is then possible to obtain the following important properties by considering the function in $\map{\tnr{\psi}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}$ differentiable in its domain and direction $\tnr{H}\in\pmb{\mathcal{U}}$.
+\begin{itemize}
+	\setlength\itemsep{.1em}
+	\item[i.] Sum rule: if $\tnr{\psi}=\tnr{\psi}_1+\tnr{\psi}_2$ then $\nabla\tnr{\psi}=\nabla\tnr{\psi}_1+\nabla\tnr{\psi}_2\,$;
+	\item[ii.] Product rule: if $\fua{\tnr{\psi}}{\tnr{X}}=\fua{\tnr{\psi}_1}{\tnr{X}}\odot_q\fua{\tnr{\psi}_2}{\tnr{X}}$, where mappings  $\map{\tnr{\psi}_1}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times r}\times W^{\times q}}}$ and $\map{\tnr{\psi}_2}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{W^{\times q}\times V^{\times p}}}$ are defined for $s=r+p$, then
+	\begin{equation*}
+	 \fua{[\fua{\tnr{\psi}'}{\tnr{X}}]}{\tnr{H}}=\fua{\tnr{\psi}_1}{\tnr{X}}\odot_{q}\fua{[\fua{\tnr{\psi}_2'}{\tnr{X}}]}{\tnr{H}} + \fua{[\fua{\tnr{\psi}_1'}{\tnr{X}}]}{\tnr{H}} \odot_{q} \fua{\tnr{\psi}_2}{\tnr{X}}\,;
+	\end{equation*}
+	\item[iii.] Chain rule:.
+\end{itemize}
 
 
 
