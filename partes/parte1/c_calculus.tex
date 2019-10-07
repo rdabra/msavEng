@@ -73,11 +73,18 @@ Considering previous conditions, it is possible to obtain the following importan
 	\item[ii.] If $\fua{\tnr{\psi}}{\tnr{X}}=\alpha\tnr{X}$ then $\tnr{\psi}'=????$\,
 	\item[ii.] If $\fua{\tnr{\psi}}{\tnr{X}}=\tnr{H}$ then $\tnr{\psi}'=\tnr{0}\,$;
 	\item[iii.] Sum rule: if $\tnr{\psi}=\tnr{\psi}_1+\tnr{\psi}_2$ then $\tnr{\psi}'=\tnr{\psi}_1'+\tnr{\psi}_2'\,$;
-    \item[iv.] Product rule: if $\fua{\tnr{\psi}}{\tnr{X}}=\fua{\tnr{\psi}_1}{\tnr{X}}\odot_q\fua{\tnr{\psi}_2}{\tnr{X}}$, where mappings  $\map{\tnr{\psi}_1}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times r}\times W^{\times q}}}$ and $\map{\tnr{\psi}_2}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{W^{\times q}\times V^{\times p}}}$ are defined for $s=r+p$, then
-	\begin{equation*}
+	\item[iv.] Chain rule: if $\tnr{\psi}=\tnr{\psi}_1\circ\tnr{\psi}_2$, where $\map{\tnr{\psi}_1}{\ete{\cam{F}}{W^{\times r}}}{\ete{\cam{F}}{V^{\times s}}}$ and $\map{\tnr{\psi}_2}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{W^{\times r}}}$, then
+	\begin{equation}
+		\fua{\tnr{\psi}'}{\tnr{X}}=[\fua{\tnr{\psi}_1'\circ\tnr{\psi}_2}{\tnr{X}}]\circ\fua{\tnr{\psi}_2'}{\tnr{X}}\,;
+	\end{equation}
+    \item[v.] Product rule: if $\fua{\tnr{\psi}}{\tnr{X}}=\fua{\tnr{\psi}_1}{\tnr{X}}\odot_q\fua{\tnr{\psi}_2}{\tnr{X}}$, where mappings  $\map{\tnr{\psi}_1}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times r}\times W^{\times q}}}$ and $\map{\tnr{\psi}_2}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{W^{\times q}\times V^{\times p}}}$ are defined for $s=r+p$, then
+	\begin{equation}
 		\fua{[\fua{\tnr{\psi}'}{\tnr{X}}]}{\tnr{H}}=\fua{\tnr{\psi}_1}{\tnr{X}}\odot_{q}\fua{[\fua{\tnr{\psi}_2'}{\tnr{X}}]}{\tnr{H}} + \fua{[\fua{\tnr{\psi}_1'}{\tnr{X}}]}{\tnr{H}} \odot_{q} \fua{\tnr{\psi}_2}{\tnr{X}}\,;
+	\end{equation}
+	\item[v.] Inner product rule: if function in $\map{\tnr{\psi}}{\pmb{\mathcal{U}}}{\cam{F}}$ is described by $\fua{\tnr{\psi}}{\tnr{X}}=\fua{\tnr{\psi}_1}{\tnr{X}}\cdot\fua{\tnr{\psi}_2}{\tnr{X}}$, where $\map{\tnr{\psi}_1}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}$ and $\map{\tnr{\psi}_2}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}$, then
+	\begin{equation*}
+	\fua{[\fua{\tnr{\psi}'}{\tnr{X}}]}{\tnr{H}}=\fua{\tnr{\psi}_1}{\tnr{X}}\cdot\fua{[\fua{\tnr{\psi}_2'}{\tnr{X}}]}{\tnr{H}} + \fua{[\fua{\tnr{\psi}_1'}{\tnr{X}}]}{\tnr{H}} \cdot \fua{\tnr{\psi}_2}{\tnr{X}}\,.
 	\end{equation*}
-	\item[vi.] Chain rule:
 \end{itemize}  
 
 In the context of Hilbert spaces, we already know that there is a biunivocal relationship between a linear tensor function space and a tensor space described by the theorem \ref{teo:repRieszTensor}. For the present case, considering the terms of this theorem and the previous conditions restricted to Hilbert spaces, the derivative $\fua{\tnr{\psi}'}{\tnr{X}_0}\in\evl{\cam{F}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}$ has its correspondent tensor $\fua{\nabla\tnr{\psi}}{\tnr{X}_0}\in\ete{\cam{F}}{U^{\times m}\times V^{\times s}}$, called the \textsb{gradient}\index{gradient} of $\tnr{\psi}$ at $\tnr{X}_0$, if the following rule is defined:
@@ -92,11 +99,14 @@ REESCREVER It is then possible to obtain the following important properties by c
 \begin{itemize}
 	\setlength\itemsep{.1em}
 	\item[i.] If $\tnr{\psi}=\tnr{\psi}_1+\tnr{\psi}_2$ then $\nabla\tnr{\psi}=\nabla\tnr{\psi}_1+\nabla\tnr{\psi}_2\,$;
-	\item[ii.] If $\fua{\tnr{\psi}}{\tnr{X}}=\fua{\tnr{\psi}_1}{\tnr{X}}\cdot\fua{\tnr{\psi}_2}{\tnr{X}}$, where mappings  $\map{\tnr{\psi}_1}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{W^{\times q}}}$ and $\map{\tnr{\psi}_2}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{W^{\times q}}}$ are defined for $s=0$, then
+	\item[ii.] If $\tnr{\psi}=\tnr{\psi}_1\circ\tnr{\psi}_2$, where $\map{\tnr{\psi}_1}{\ete{\cam{F}}{W^{\times r}}}{\ete{\cam{F}}{V^{\times s}}}$ and $\map{\tnr{\psi}_2}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{W^{\times r}}}$, then 
 	\begin{equation*}
-	\fua{\nabla\tnr{\psi}}{\tnr{X}} = \fua{\nabla\tnr{\psi}_1}{\tnr{X}}\odot_q\fua{\tnr{\psi}_2}{\tnr{X}}+\fua{\nabla\tnr{\psi}_2}{\tnr{X}}\odot_q\fua{\tnr{\psi}_1}{\tnr{X}}\,;
+	\fua{\nabla\tnr{\psi}}{\tnr{X}} = \fua{\nabla\tnr{\psi}_2}{\tnr{X}} \odot_r \fua{\nabla\tnr{\psi}_1\circ\tnr{\psi}_2}{\tnr{X}}\,;
 	\end{equation*}	
-	\item[iii.] Chain rule: NO CADERNO.
+	\item[iii.] If $\fua{\tnr{\psi}}{\tnr{X}}=\fua{\tnr{\psi}_1}{\tnr{X}}\cdot\fua{\tnr{\psi}_2}{\tnr{X}}$, where   $\map{\tnr{\psi}_1}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}$ and $\map{\tnr{\psi}_2}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}$, then
+	\begin{equation*}
+	\fua{\nabla\tnr{\psi}}{\tnr{X}} = \fua{\nabla\tnr{\psi}_1}{\tnr{X}}\odot_s\fua{\tnr{\psi}_2}{\tnr{X}}+\fua{\nabla\tnr{\psi}_2}{\tnr{X}}\odot_s\fua{\tnr{\psi}_1}{\tnr{X}}\,;
+	\end{equation*}	
 \end{itemize}
 
 
