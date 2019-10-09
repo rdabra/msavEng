@@ -7,7 +7,7 @@ Analysis is the branch of Mathematics that studies the behaviour of functions by
 
 \section{Differentiation}
 
-In the context of Banach tensor spaces, which are normed and complete, to differentiate a tensor function $\tnr{\psi}$ is to obtain its derivative, here understood as a linear tensor function that measures qualitatively and quantitatively the sensitivity of $\tnr{\psi}$ on each element of the domain. Intuitively speaking, sensitivity refers to the intrinsic ``susceptibility'' of a function, or how it ``reacts'' in terms of its values, to an \emph{eventual change} on its argument. However, not all tensor functions can be differentiable: the following mathematical conditions and definitions will describe which functions can. Considering $\ete{\cam{F}}{U^{\times m}}$ and $\ete{\cam{F}}{V^{\times s}}$ Banach tensor spaces, both defined by the same field $\cam{F}$, let $\pmb{\mathcal{U}}\subset\ete{\cam{F}}{U^{\times m}}$ be an open set and element  $\tnr{X}_0\in\pmb{\mathcal{U}}$ an arbitrary tensor. The functions in $\map{\tnr{\psi}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}$ and $\map{\tnr{\kappa}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}$ are said to be \textsb{tangent}\index{function!tangent} to each other at $\tnr{X}_0$ if
+In the context of Banach tensor spaces, which are normed and complete, to differentiate a tensor function $\tnr{\psi}$ is to obtain its derivative, here understood as a linear tensor function that measures qualitatively and quantitatively the sensitivity of $\tnr{\psi}$ on each element of the domain. Intuitively speaking, sensitivity refers to the intrinsic ``susceptibility'' of a function, or how it ``reacts'' in terms of its values, to an \emph{eventual change} on its argument. However, not all tensor functions can be differentiable: the following mathematical conditions and definitions will describe which functions admit differentiation. Considering $\ete{\cam{F}}{U^{\times m}}$ and $\ete{\cam{F}}{V^{\times s}}$ Banach tensor spaces, both defined by the same field $\cam{F}$, let $\pmb{\mathcal{U}}\subset\ete{\cam{F}}{U^{\times m}}$ be an open set and element  $\tnr{X}_0\in\pmb{\mathcal{U}}$ an arbitrary tensor. The functions in $\map{\tnr{\psi}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}$ and $\map{\tnr{\kappa}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}$ are said to be \textsb{tangent}\index{function!tangent} to each other at $\tnr{X}_0$ if
 \begin{equation}\label{eq:tangent}
 \lim_{\tnr{X}\to \tnr{0}} \dfrac{\fua{\tnr{\psi}}{\tnr{X}_0+\tnr{X}}-\fua{\tnr{\kappa}}{\tnr{X}_0+\tnr{X}}}{\|\tnr{X}\|}=\tnr{0}\,,
 \end{equation}
@@ -48,10 +48,10 @@ where $\fua{[\fua{\tnr{\psi}'}{\tnr{X}_0}]}{\tnr{H}}\in\ete{\cam{F}}{V^{\times s
 \fua{[\fua{\tnr{\psi}'}{\tnr{X}}]}{\tnr{H}}=\lim_{\alpha\to 0} \dfrac{\fua{\tnr{\psi}}{\tnr{X}+\alpha\tnr{H}}-\fua{\tnr{\psi}}{\tnr{X}}}{\alpha}
 \end{equation}
 is said to be the directional derivative\footnote{It is important to say a few words about a less restricted or weaker type of derivative than the Fréchet derivative just presented. It is not defined from the concept of tangency but from a directional derivative in which the derivative involved is not necessarily bounded and linear. Considering the above conditions, the tensor function in $\map{\tnr{\varphi}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}$ is said to be \textsb{Gâteaux differentiable}\index{function!Gâteaux differentiable} at $\tnr{X}_0$ if there exists a mapping $\map{\fua{\tnr{\varphi}'_G}{\tnr{X}_0}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}$ where 
-	\begin{equation*}
-	\fua{[\fua{\tnr{\varphi}'_G}{\tnr{X}_0}]}{\tnr{X}}=\lim_{\alpha\to 0} \dfrac{\fua{\tnr{\varphi}}{\tnr{X}_0+\alpha\tnr{X}}-\fua{\tnr{\varphi}}{\tnr{X}_0}}{\alpha}\,.
-	\end{equation*}
-	The tensor function $\fua{[\fua{\tnr{\varphi}'_G}{\tnr{X}_0}]}{\tnr{X}}$ is called the \textsb{Gâteaux differential}\index{differential!Gâteaux} of $\tnr{\varphi}$ at $\tnr{X}_0$ and $\tnr{\varphi}'_G$ is the \textsb{Gâteaux derivative}\index{derivative!Gâteaux} of $\tnr{\varphi}$. Every Fréchet differentiable function is also Gâteaux differential, but the converse is obviously not true. What is less obvious is the following: even when Gâteaux derivative $\fua{\tnr{\varphi}'_G}{\tnr{X}_0}$ is bounded and linear, Gâteaux differentiability, which means differentiability along all directions at a point, does not assure total differentiability. This present study will require only the stronger restrictions from the Fréchet differentiation. For further developments of the Gâteaux derivative, see \aut{Wouk}\cite{wouk_1979_1}, chapter 12.} of $\tnr{\psi}$ along $\tnr{H}$. 
+\begin{equation*}
+\fua{[\fua{\tnr{\varphi}'_G}{\tnr{X}_0}]}{\tnr{X}}=\lim_{\alpha\to 0} \dfrac{\fua{\tnr{\varphi}}{\tnr{X}_0+\alpha\tnr{X}}-\fua{\tnr{\varphi}}{\tnr{X}_0}}{\alpha}\,.
+\end{equation*}
+The tensor function $\fua{[\fua{\tnr{\varphi}'_G}{\tnr{X}_0}]}{\tnr{X}}$ is called the \textsb{Gâteaux differential}\index{differential!Gâteaux} of $\tnr{\varphi}$ at $\tnr{X}_0$ and $\tnr{\varphi}'_G$ is the \textsb{Gâteaux derivative}\index{derivative!Gâteaux} of $\tnr{\varphi}$. Every Fréchet differentiable function is also Gâteaux differential, but the converse is obviously not true. What is less obvious is the following: even when Gâteaux derivative $\fua{\tnr{\varphi}'_G}{\tnr{X}_0}$ is bounded and linear, Gâteaux differentiability, which means differentiability along all directions at a point, does not assure total differentiability. This present study will require only the stronger restrictions from the Fréchet differentiation. For further developments of the Gâteaux derivative, see \aut{Wouk}\cite{wouk_1979_1}, chapter 12.} of $\tnr{\psi}$ along $\tnr{H}$. 
  
 
 {\footnotesize
@@ -67,11 +67,11 @@ Since these equalities are valid for any $\tnr{X}\in\pmb{\mathcal{U}}$, let's ad
 which are valid for any chosen $\tnr{X}_0$ and then $\tnr{\psi}'_2=\tnr{\psi}'_1$.
 \end{proof}}
 
-Considering previous conditions, it is possible to obtain the following important properties for derivatives by considering the function in mapping $\map{\tnr{\psi}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}$ differentiable in its domain, an arbitrary tensor $\tnr{H}\in\pmb{\mathcal{U}}$ and a scalar $\alpha\in\cam{F}$.
+Considering previous conditions, it is possible to obtain the following important properties for derivatives by considering the function in mapping $\map{\tnr{\psi}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}$ differentiable in its domain, an arbitrary tensor $\tnr{H}\in\pmb{\mathcal{U}}$ and a scalar $\beta\in\cam{F}$.
 \begin{itemize}
 	\setlength\itemsep{.1em}
-	\item[ii.] If $\fua{\tnr{\psi}}{\tnr{X}}=\alpha\tnr{X}$ then $\tnr{\psi}'=????$\,
-	\item[ii.] If $\fua{\tnr{\psi}}{\tnr{X}}=\tnr{H}$ then $\tnr{\psi}'=\tnr{0}\,$;
+	\item[i.] If $\fua{\tnr{\psi}}{\tnr{X}}=\tnr{H}$ then $\tnr{\psi}'=\tnr{0}\,$;
+	\item[ii.] If $\fua{\tnr{\psi}}{\tnr{X}}=\beta\tnr{X}$ then $\fua{[\fua{\tnr{\psi}'}{\tnr{X}}]}{\tnr{H}}=\beta\tnr{H}\,$;
 	\item[iii.] Sum rule: if $\tnr{\psi}=\tnr{\psi}_1+\tnr{\psi}_2$ then $\tnr{\psi}'=\tnr{\psi}_1'+\tnr{\psi}_2'\,$;
 	\item[iv.] Chain rule: if $\tnr{\psi}=\tnr{\psi}_1\circ\tnr{\psi}_2$, where $\map{\tnr{\psi}_1}{\ete{\cam{F}}{W^{\times r}}}{\ete{\cam{F}}{V^{\times s}}}$ and $\map{\tnr{\psi}_2}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{W^{\times r}}}$, then
 	\begin{equation}
@@ -81,21 +81,56 @@ Considering previous conditions, it is possible to obtain the following importan
 	\begin{equation}
 		\fua{[\fua{\tnr{\psi}'}{\tnr{X}}]}{\tnr{H}}=\fua{\tnr{\psi}_1}{\tnr{X}}\odot_{q}\fua{[\fua{\tnr{\psi}_2'}{\tnr{X}}]}{\tnr{H}} + \fua{[\fua{\tnr{\psi}_1'}{\tnr{X}}]}{\tnr{H}} \odot_{q} \fua{\tnr{\psi}_2}{\tnr{X}}\,;
 	\end{equation}
-	\item[v.] Inner product rule: if function in $\map{\tnr{\psi}}{\pmb{\mathcal{U}}}{\cam{F}}$ is described by $\fua{\tnr{\psi}}{\tnr{X}}=\fua{\tnr{\psi}_1}{\tnr{X}}\cdot\fua{\tnr{\psi}_2}{\tnr{X}}$, where $\map{\tnr{\psi}_1}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}$ and $\map{\tnr{\psi}_2}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}$, then
-	\begin{equation*}
+	\item[vi.] Inner product rule: if function in $\map{\tnr{\psi}}{\pmb{\mathcal{U}}}{\cam{F}}$ is described by $\fua{\tnr{\psi}}{\tnr{X}}=\fua{\tnr{\psi}_1}{\tnr{X}}\cdot\fua{\tnr{\psi}_2}{\tnr{X}}$, where $\map{\tnr{\psi}_1}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}$ and $\map{\tnr{\psi}_2}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}$, then
+	\begin{equation}
 	\fua{[\fua{\tnr{\psi}'}{\tnr{X}}]}{\tnr{H}}=\fua{\tnr{\psi}_1}{\tnr{X}}\cdot\fua{[\fua{\tnr{\psi}_2'}{\tnr{X}}]}{\tnr{H}} + \fua{[\fua{\tnr{\psi}_1'}{\tnr{X}}]}{\tnr{H}} \cdot \fua{\tnr{\psi}_2}{\tnr{X}}\,.
-	\end{equation*}
-\end{itemize}  
+	\end{equation}
+\end{itemize}
+
+{\footnotesize
+\begin{proof}
+Verification of items i and ii are straightforward results after specifying their respective rules of $\tnr{\psi}$ on definition \eqref{eq:directDeriv}. For the case of item iii, the use of \eqref{eq:directDeriv} leads to 
+\begin{equation*}
+\fua{[\fua{\tnr{\psi}'}{\tnr{X}}]}{\tnr{H}} = \fua{[\fua{\tnr{\psi}_1'}{\tnr{X}}]}{\tnr{H}} + \fua{[\fua{\tnr{\psi}'_2}{\tnr{X}}]}{\tnr{H}} = \fua{[\fua{\tnr{\psi}'_1}{\tnr{X}}+\fua{\tnr{\psi}'_2}{\tnr{X}}]}{\tnr{H}}=\fua{[\fua{[\tnr{\psi}'_1+\tnr{\psi}'_2]}{\tnr{X}}]}{\tnr{H}}\,.
+\end{equation*}  
+Now, in order to prove the chain rule, we adapt the strategy of \aut{Zeidler}\cite{zeidler_1995_1}, p. 248, as follows. Considering the concept of derivative as an approximation, from \eqref{eq:directDeriv} it is correct to say that there is a residue $\fua{r_1}{\beta\tnr{Z}}$ that tends to the zero tensor when non-zero $\beta\in\cam{F}$ tends to zero, where 
+\begin{equation*}
+\beta\fua{[\fua{\tnr{\psi}'_1}{\tnr{Y}}]}{\tnr{Z}}=\fua{\tnr{\psi}_1}{\tnr{Y}+\beta\tnr{Z}}-\fua{\tnr{\psi}_1}{\tnr{Y}}+\fua{r_1}{\beta\tnr{Z}}
+\end{equation*}
+and $\tnr{Y},\tnr{Z}\in\ete{\cam{F}}{W^{\times r}}$ are arbitrary. For the case of $\tnr{\psi}_2$, we write
+\begin{equation*}
+\fua{\tnr{\psi}_2}{\tnr{X}}=\fua{\tnr{\psi}_2}{\tnr{X}+\alpha\tnr{H}}-\alpha\fua{[\fua{\tnr{\psi}'_2}{\tnr{X}}]}{\tnr{H}}+\fua{r_2}{\alpha\tnr{H}}.
+\end{equation*}
+Specifying $\tnr{Y}=\fua{\tnr{\psi}_2}{\tnr{X}}$ and $\tnr{Z}=\alpha/\beta\fua{[\fua{\tnr{\psi}'_2}{\tnr{X}}]}{\tnr{H}}$ on the first equality, then
+\begin{align*}
+	\alpha\fua{[\fua{\tnr{\psi}'_1\circ\tnr{\psi}_2}{\tnr{X}}]}{\fua{[\fua{\tnr{\psi}'_2}{\tnr{X}}]}{\tnr{H}}}&=\fua{\tnr{\psi}_1}{\fua{\tnr{\psi}_2}{\tnr{X}}+\alpha\fua{[\fua{\tnr{\psi}'_2}{\tnr{X}}]}{\tnr{H}}}-\fua{\tnr{\psi}_1}{\tnr{Y}}+\fua{r_1}{\alpha\fua{[\fua{\tnr{\psi}'_2}{\tnr{X}}]}{\tnr{H}}}\\
+	\alpha[[\fua{\tnr{\psi}_1'\circ\tnr{\psi}_2}{\tnr{X}}]\circ\fua{\tnr{\psi}_2'}{\tnr{X}}](\tnr{H})&=\fua{\tnr{\psi}_1}{\fua{\tnr{\psi}_2}{\tnr{X}+\alpha\tnr{H}}+\fua{r_2}{\alpha\tnr{H}}}-\fua{\tnr{\psi}_1\circ\tnr{\psi}_2}{\tnr{X}}+\fua{r_1}{\alpha\fua{[\fua{\tnr{\psi}'_2}{\tnr{X}}]}{\tnr{H}}}
+\end{align*}
+Dividing both sides by $\alpha$ and taking them to the limit of $\alpha$ tending to zero, item iv is verified. The product rule is proved by the following development: adding and subtracting the right hand side of 
+\begin{equation*}
+\fua{[\fua{\tnr{\psi}'}{\tnr{X}}]}{\tnr{H}}=\lim_{\alpha\to 0}1/\alpha[\fua{\tnr{\psi}_1}{\tnr{X}+\alpha\tnr{H}}\odot_q\fua{\tnr{\psi}_2}{\tnr{X}+\alpha\tnr{H}}-\fua{\tnr{\psi}_1}{\tnr{X}}\odot_q\fua{\tnr{\psi}_2}{\tnr{X}}]
+\end{equation*} 
+by $\fua{\tnr{\psi}_1}{\tnr{X}+\alpha\tnr{H}}\odot_{q}\fua{\tnr{\psi}_2}{\tnr{X}}$, we arrive at 
+\begin{align*}
+\fua{[\fua{\tnr{\psi}'}{\tnr{X}}]}{\tnr{H}}&=\lim_{\alpha\to 0}1/\alpha\{ \fua{\tnr{\psi}_1}{\tnr{X}+\alpha\tnr{H}}\odot_{q}[\fua{\tnr{\psi}_2}{\tnr{X}+\alpha\tnr{H}}-\fua{\tnr{\psi}_2}{\tnr{X}}] +\\
+& \qquad\qquad\qquad+[\fua{\tnr{\psi}_1}{\tnr{X}+\alpha\tnr{H}}-\fua{\tnr{\psi}_1}{\tnr{X}}]\odot_q\fua{\tnr{\psi}_2}{\tnr{X}}\}\\
+&= \fua{\tnr{\psi}_1}{\tnr{X}}\odot_{q}\lim_{\alpha\to 0}1/\alpha[\fua{\tnr{\psi}_2}{\tnr{X}+\alpha\tnr{H}}-\fua{\tnr{\psi}_2}{\tnr{X}}] +\\
+& \qquad\qquad\qquad+\lim_{\alpha\to 0}1/\alpha[\fua{\tnr{\psi}_1}{\tnr{X}+\alpha\tnr{H}}-\fua{\tnr{\psi}_1}{\tnr{X}}]\odot_q\fua{\tnr{\psi}_2}{\tnr{X}}\,.
+\end{align*}
+Since item vi is a corollary of the product rule, its verification is trivial.
+\end{proof}}
+
+  
 
 In the context of Hilbert spaces, we already know that there is a biunivocal relationship between a linear tensor function space and a tensor space described by the theorem \ref{teo:repRieszTensor}. For the present case, considering the terms of this theorem and the previous conditions restricted to Hilbert spaces, the derivative $\fua{\tnr{\psi}'}{\tnr{X}_0}\in\evl{\cam{F}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}$ has its correspondent tensor $\fua{\nabla\tnr{\psi}}{\tnr{X}_0}\in\ete{\cam{F}}{U^{\times m}\times V^{\times s}}$, called the \textsb{gradient}\index{gradient} of $\tnr{\psi}$ at $\tnr{X}_0$, if the following rule is defined:
 \begin{equation}
 [\fua{\tnr{\psi}'}{\tnr{X}_0}](\tnr{X}) = \tnr{X}\odot_m\fua{\nabla\tnr{\psi}}{\tnr{X}_0}\,.
 \end{equation} 
-Moreover, the tensor function in $\map{\nabla\tnr{\psi}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{U^{\times m}\times V^{\times s}}}$, called the gradient of $\tnr{\psi}$, assigns to a tensor of order $m$ a tensor of order $m+s$. Therefore, for the particular case of a differentiable tensor operator, its gradient assigns to a $m$-th order tensor a $2m$-th order tensor. Now, from this definition of gradient and rule \eqref{eq:directDeriv}, the directional derivative of $\tnr{\psi}$ along $\tnr{H}\in\pmb{\mathcal{U}}$ is described by 
+Moreover, the tensor function in $\map{\nabla\tnr{\psi}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{U^{\times m}\times V^{\times s}}}$, called the gradient of $\tnr{\psi}$, assigns to a tensor of order $m$ a tensor of order $m+s$. Therefore, for the particular case of a differentiable tensor operator, its gradient assigns to a $m$-th order tensor a $2m$-th order tensor. Now, from this definition of gradient and from rule \eqref{eq:directDeriv}, the directional derivative of $\tnr{\psi}$ along $\tnr{H}\in\pmb{\mathcal{U}}$ is described by 
 \begin{equation}
 \fua{[\fua{\tnr{\psi}'}{\tnr{X}}]}{\tnr{H}}=\tnr{H}\odot_m\fua{\nabla\tnr{\psi}}{\tnr{X}}=\lim_{\alpha\to 0} \dfrac{\fua{\tnr{\psi}}{\tnr{X}+\alpha\tnr{H}}-\fua{\tnr{\psi}}{\tnr{X}}}{\alpha}\,.
 \end{equation}
-REESCREVER It is then possible to obtain the following important properties by considering the function in $\map{\tnr{\psi}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}$ differentiable in its domain and direction $\tnr{H}\in\pmb{\mathcal{U}}$.
+From the above properties of derivatives, it is then possible to obtain the following important properties of gradients.
 \begin{itemize}
 	\setlength\itemsep{.1em}
 	\item[i.] If $\tnr{\psi}=\tnr{\psi}_1+\tnr{\psi}_2$ then $\nabla\tnr{\psi}=\nabla\tnr{\psi}_1+\nabla\tnr{\psi}_2\,$;
