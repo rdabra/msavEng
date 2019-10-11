@@ -122,7 +122,7 @@ Since item vi is a corollary of the product rule, its verification is trivial.
 
   
 
-In the context of Hilbert spaces, we already know that there is a biunivocal relationship between a linear tensor function space and a tensor space described by the theorem \ref{teo:repRieszTensor}. For the present case, considering the terms of this theorem and the previous conditions restricted to Hilbert spaces, the derivative $\fua{\tnr{\psi}'}{\tnr{X}_0}\in\evl{\cam{F}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}$ has its correspondent tensor $\fua{\nabla\tnr{\psi}}{\tnr{X}_0}\in\ete{\cam{F}}{U^{\times m}\times V^{\times s}}$, called the \textsb{gradient}\index{gradient} of $\tnr{\psi}$ at $\tnr{X}_0$, if the following rule is defined:
+In the context of Hilbert spaces, we already know that there is a biunivocal relationship between a linear tensor function space and a tensor space described by the theorem \ref{teo:repRieszTensor}. For the present case, considering the terms of this theorem and the previous conditions restricted to Hilbert spaces, the derivative $\fua{\tnr{\psi}'}{\tnr{X}_0}\in\evl{\cam{F}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}$ is the $m$-cotensor of tensor $\fua{\nabla\tnr{\psi}}{\tnr{X}_0}\in\ete{\cam{F}}{U^{\times m}\times V^{\times s}}$, called the \textsb{gradient}\index{gradient} of $\tnr{\psi}$ at $\tnr{X}_0$, if the following rule is defined:
 \begin{equation}
 [\fua{\tnr{\psi}'}{\tnr{X}_0}](\tnr{X}) = \tnr{X}\odot_m\fua{\nabla\tnr{\psi}}{\tnr{X}_0}\,.
 \end{equation} 
@@ -146,11 +146,20 @@ From the above properties of derivatives, it is then possible to obtain the foll
 
 {\footnotesize
 \begin{proof}
-The first item is verified through the following equalities:
-	\begin{equation*}
-\fua{[\fua{\tnr{\psi}'_1+\tnr{\psi}'_2}{\tnr{X}}]}{\tnr{H}}=
-\end{equation*}	
-
+The first item is verified through the following development:
+\begin{align*}
+\fua{[\fua{[\tnr{\psi}']}{\tnr{X}}}{\tnr{H}}&=\fua{\{[\fua{\tnr{\psi}'_1+\tnr{\psi}'_2]}{\tnr{X}}\}}{\tnr{H}}\\
+\tnr{H}\odot_m\fua{\nabla\tnr{\psi}}{\tnr{X}}&=\fua{\fua{\tnr{\psi}'_1}{\tnr{X}}}{\tnr{H}}+\fua{\fua{\tnr{\psi}'_2}{\tnr{X}}}{\tnr{H}}\\
+&=\tnr{H}\odot_m\fua{\nabla\tnr{\psi}_1}{\tnr{X}}+\tnr{H}\odot_m\fua{\nabla\tnr{\psi}_2}{\tnr{X}}\\
+&=\tnr{H}\odot_m\fua{[\nabla\tnr{\psi}_1+\nabla\tnr{\psi}_2]}{\tnr{X}}\,.
+\end{align*}	
+Proof of item ii is obtained from the chain rule, where $\fua{[\fua{\tnr{\psi}'}{\tnr{X}}]}{\tnr{H}}=\fua{\{[\fua{\tnr{\psi}_1'\circ\tnr{\psi}_2}{\tnr{X}}]\circ\fua{\tnr{\psi}_2'}{\tnr{X}}\}}{\tnr{H}}$. We can develop the right hand side of this equality using equalities \eqref{eq:compoCotens} because 
+$\fua{\tnr{\psi}_1'\circ\tnr{\psi}_2}{\tnr{X}}$ and $\fua{\tnr{\psi}_2'}{\tnr{X}}$ are the $r$-cotensor and $m$-cotensor of $\fua{\nabla\tnr{\psi}_1\circ\tnr{\psi}_2}{\tnr{X}}$ and $\fua{\nabla\tnr{\psi}_2}{\tnr{X}}$ respectively. Thereby,
+\begin{align*}
+\fua{[\fua{\tnr{\psi}'}{\tnr{X}}]}{\tnr{H}}&=\fua{\{[\fua{\tnr{\psi}_1'\circ\tnr{\psi}_2}{\tnr{X}}]\circ\fua{\tnr{\psi}_2'}{\tnr{X}}\}}{\tnr{H}}\\
+\tnr{H}\odot_m\fua{\nabla\tnr{\psi}}{\tnr{X}}&=\tnr{H}\odot_m[\fua{\nabla\tnr{\psi}_2}{\tnr{X}}\odot_r\fua{\nabla\tnr{\psi}_1\circ\tnr{\psi}_2}{\tnr{X}}]\,.
+\end{align*}  
+Now, from the inner product rule we prove item iii as follows:
 \end{proof}}
 
 
