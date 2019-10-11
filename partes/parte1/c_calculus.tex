@@ -122,11 +122,11 @@ Since item vi is a corollary of the product rule, its verification is trivial.
 
   
 
-In the context of Hilbert spaces, we already know that there is a biunivocal relationship between a linear tensor function space and a tensor space described by the theorem \ref{teo:repRieszTensor}. For the present case, considering the terms of this theorem and the previous conditions restricted to Hilbert spaces, the derivative $\fua{\tnr{\psi}'}{\tnr{X}_0}\in\evl{\cam{F}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}$ is the $m$-cotensor of tensor $\fua{\nabla\tnr{\psi}}{\tnr{X}_0}\in\ete{\cam{F}}{U^{\times m}\times V^{\times s}}$, called the \textsb{gradient}\index{gradient} of $\tnr{\psi}$ at $\tnr{X}_0$, if the following rule is defined:
+In the context of Hilbert spaces, we already know that there is a biunivocal relationship between a linear tensor function space and a tensor space described by the Riesz-Fréchet Representation of Tensors, as presented on theorem \ref{teo:repRieszTensor}. For the present case, considering the terms of this theorem and the previous conditions restricted to Hilbert spaces, the derivative $\fua{\tnr{\psi}'}{\tnr{X}_0}\in\evl{\cam{F}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}$ is the $m$-cotensor of tensor $\fua{\nabla\tnr{\psi}}{\tnr{X}_0}\in\ete{\cam{F}}{U^{\times m}\times V^{\times s}}$, called the \textsb{gradient}\index{gradient} of $\tnr{\psi}$ at $\tnr{X}_0$, if the following rule is defined:
 \begin{equation}
 [\fua{\tnr{\psi}'}{\tnr{X}_0}](\tnr{X}) = \tnr{X}\odot_m\fua{\nabla\tnr{\psi}}{\tnr{X}_0}\,.
 \end{equation} 
-Moreover, the tensor function in $\map{\nabla\tnr{\psi}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{U^{\times m}\times V^{\times s}}}$, called the gradient of $\tnr{\psi}$, assigns to a tensor of order $m$ a tensor of order $m+s$. Therefore, for the particular case of a differentiable tensor operator, its gradient assigns to a $m$-th order tensor a $2m$-th order tensor. Now, from this definition of gradient and from rule \eqref{eq:directDeriv}, the directional derivative of $\tnr{\psi}$ along $\tnr{H}\in\pmb{\mathcal{U}}$ is described by 
+Moreover, the tensor function in $\map{\nabla\tnr{\psi}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{U^{\times m}\times V^{\times s}}}$, called the gradient of $\tnr{\psi}$, assigns to a tensor of order $m$ a tensor of order $m+s$. Therefore, \emph{for the particular case of a differentiable tensor operator on $\pmb{\mathcal{U}}$, its gradient assigns to a $m$-th order tensor a $2m$-th order tensor}. Now, from this definition of gradient and from rule \eqref{eq:directDeriv}, the directional derivative of $\tnr{\psi}$ along $\tnr{H}\in\pmb{\mathcal{U}}$ is described by 
 \begin{equation}
 \fua{[\fua{\tnr{\psi}'}{\tnr{X}}]}{\tnr{H}}=\tnr{H}\odot_m\fua{\nabla\tnr{\psi}}{\tnr{X}}=\lim_{\alpha\to 0} \dfrac{\fua{\tnr{\psi}}{\tnr{X}+\alpha\tnr{H}}-\fua{\tnr{\psi}}{\tnr{X}}}{\alpha}\,.
 \end{equation}
@@ -159,7 +159,13 @@ $\fua{\tnr{\psi}_1'\circ\tnr{\psi}_2}{\tnr{X}}$ and $\fua{\tnr{\psi}_2'}{\tnr{X}
 \fua{[\fua{\tnr{\psi}'}{\tnr{X}}]}{\tnr{H}}&=\fua{\{[\fua{\tnr{\psi}_1'\circ\tnr{\psi}_2}{\tnr{X}}]\circ\fua{\tnr{\psi}_2'}{\tnr{X}}\}}{\tnr{H}}\\
 \tnr{H}\odot_m\fua{\nabla\tnr{\psi}}{\tnr{X}}&=\tnr{H}\odot_m[\fua{\nabla\tnr{\psi}_2}{\tnr{X}}\odot_r\fua{\nabla\tnr{\psi}_1\circ\tnr{\psi}_2}{\tnr{X}}]\,.
 \end{align*}  
-Now, from the inner product rule we prove item iii as follows:
+Now, from the inner product rule we have
+\begin{align*}
+\fua{[\fua{\tnr{\psi}'}{\tnr{X}}]}{\tnr{H}}&=\fua{[\fua{\tnr{\psi}_1'}{\tnr{X}}]}{\tnr{H}} \cdot \fua{\tnr{\psi}_2}{\tnr{X}}+\fua{[\fua{\tnr{\psi}_2'}{\tnr{X}}]}{\tnr{H}}\cdot\fua{\tnr{\psi}_1}{\tnr{X}}\\
+\tnr{H}\odot_m\fua{[\nabla\tnr{\psi}]}{\tnr{X}}&=\tnr{H}\odot_m\fua{[\nabla\tnr{\psi}_1]}{\tnr{X}}\odot_s\fua{\tnr{\psi}_2}{\tnr{X}}+\tnr{H}\odot_m\fua{[\nabla\tnr{\psi}_2]}{\tnr{X}}\odot_s\fua{\tnr{\psi}_1}{\tnr{X}}\\
+&=\tnr{H}\odot_m\{\fua{[\nabla\tnr{\psi}_1]}{\tnr{X}}\odot_s\fua{\tnr{\psi}_2}{\tnr{X}}+\fua{[\nabla\tnr{\psi}_2]}{\tnr{X}}\odot_s\fua{\tnr{\psi}_1}{\tnr{X}}\}\,,
+\end{align*}
+which proves item iii.
 \end{proof}}
 
 
@@ -180,7 +186,7 @@ It is interesting to note that derivatives may be differentiable themselves, and
 \begin{equation}
 \fua{\tnr{\psi_\mathit{d}}^{(k)}}{\tnr{X}}=\fua{\tnr{\psi}}{\tnr{X}_0}+\fua{[\fua{\tnr{\psi}^{(k+1)}}{\tnr{X}_0}]}{\tnr{X}-\tnr{X}_0}\,.
 \end{equation}
-. 
+
 
 
 
