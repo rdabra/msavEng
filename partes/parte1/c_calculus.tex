@@ -85,6 +85,10 @@ Considering previous conditions, it is possible to obtain the following importan
 	\begin{equation}
 	\fua{[\fua{\tnr{\psi}'}{\tnr{X}}]}{\tnr{H}}=\fua{\tnr{\psi}_1}{\tnr{X}}\cdot\fua{[\fua{\tnr{\psi}_2'}{\tnr{X}}]}{\tnr{H}} + \fua{[\fua{\tnr{\psi}_1'}{\tnr{X}}]}{\tnr{H}} \cdot \fua{\tnr{\psi}_2}{\tnr{X}}\,.
 	\end{equation}
+	\item[vii.] If $\fua{\tnr{\psi}}{\tnr{X}}=\fua{\tnr{\psi}_1}{\tnr{X}}\otimes\fua{\tnr{\psi}_2}{\tnr{X}}$, where $\map{\tnr{\psi}_1}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s-r}}}$ and $\map{\tnr{\psi}_2}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times r}}}$, then
+\begin{equation}
+\fua{[\fua{\tnr{\psi}'}{\tnr{X}}]}{\tnr{H}}=\fua{\tnr{\psi}_1}{\tnr{X}}\otimes\fua{[\fua{\tnr{\psi}_2'}{\tnr{X}}]}{\tnr{H}} + \fua{[\fua{\tnr{\psi}_1'}{\tnr{X}}]}{\tnr{H}} \otimes \fua{\tnr{\psi}_2}{\tnr{X}}\,.
+\end{equation}	
 \end{itemize}
 
 {\footnotesize
@@ -117,7 +121,7 @@ by $\fua{\tnr{\psi}_1}{\tnr{X}+\alpha\tnr{H}}\odot_{q}\fua{\tnr{\psi}_2}{\tnr{X}
 &= \fua{\tnr{\psi}_1}{\tnr{X}}\odot_{q}\lim_{\alpha\to 0}1/\alpha[\fua{\tnr{\psi}_2}{\tnr{X}+\alpha\tnr{H}}-\fua{\tnr{\psi}_2}{\tnr{X}}] +\\
 & \qquad\qquad\qquad+\lim_{\alpha\to 0}1/\alpha[\fua{\tnr{\psi}_1}{\tnr{X}+\alpha\tnr{H}}-\fua{\tnr{\psi}_1}{\tnr{X}}]\odot_q\fua{\tnr{\psi}_2}{\tnr{X}}\,.
 \end{align*}
-Since item vi is a corollary of the product rule, its verification is trivial.
+Since item vi is a corollary of the product rule, its verification is trivial. Item vii is verified by the same procedure we used for the product rule.
 \end{proof}}
 
   
@@ -135,13 +139,17 @@ From the above properties of derivatives, it is then possible to obtain the foll
 	\setlength\itemsep{.1em}
 	\item[i.] If $\tnr{\psi}=\tnr{\psi}_1+\tnr{\psi}_2$ then $\nabla\tnr{\psi}=\nabla\tnr{\psi}_1+\nabla\tnr{\psi}_2\,$;
 	\item[ii.] If $\tnr{\psi}=\tnr{\psi}_1\circ\tnr{\psi}_2$, where $\map{\tnr{\psi}_1}{\ete{\cam{F}}{W^{\times r}}}{\ete{\cam{F}}{V^{\times s}}}$ and $\map{\tnr{\psi}_2}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{W^{\times r}}}$, then 
-	\begin{equation*}
+	\begin{equation}
 	\fua{\nabla\tnr{\psi}}{\tnr{X}} = \fua{\nabla\tnr{\psi}_2}{\tnr{X}} \odot_r \fua{\nabla\tnr{\psi}_1\circ\tnr{\psi}_2}{\tnr{X}}\,;
-	\end{equation*}	
+	\end{equation}	
 	\item[iii.] If $\fua{\tnr{\psi}}{\tnr{X}}=\fua{\tnr{\psi}_1}{\tnr{X}}\cdot\fua{\tnr{\psi}_2}{\tnr{X}}$, where   $\map{\tnr{\psi}_1}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}$ and $\map{\tnr{\psi}_2}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}$, then
-	\begin{equation*}
+	\begin{equation}
 	\fua{\nabla\tnr{\psi}}{\tnr{X}} = \fua{\nabla\tnr{\psi}_1}{\tnr{X}}\odot_s\fua{\tnr{\psi}_2}{\tnr{X}}+\fua{\nabla\tnr{\psi}_2}{\tnr{X}}\odot_s\fua{\tnr{\psi}_1}{\tnr{X}}\,;
-	\end{equation*}	
+	\end{equation}
+	\item[iv.] If $\fua{\tnr{\psi}}{\vto{x}}=\fua{\tnr{\psi}_1}{\vto{x}}\times\fua{\tnr{\psi}_2}{\vto{x}}$, where $U_\real$ in mappings  $\map{\tnr{\psi}_1}{\pmb{\mathcal{U}}}{U_\cam{R}}$ and $\map{\tnr{\psi}_2}{\pmb{\mathcal{U}}}{U_\cam{R}}$ is properly defined for enabling cross products, then
+	\begin{equation}
+	\fua{\nabla\tnr{\psi}}{\vto{x}} = ??????\,.
+	\end{equation}
 \end{itemize}
  
 {\footnotesize
@@ -168,16 +176,48 @@ Now, from the inner product rule we have
 which proves item iii.
 \end{proof}}
 
-Still in the context of Hilbert spaces, we define from the concept of gradient three important and very useful tensor functions, namely divergence, curl and Laplacian. Considering the mapping $\map{\tnr{\varphi}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{U^{\times m}\times V^{\times s}}}$ where function $\tnr{\varphi}$ is differentiable on its domain, the function in $\map{\dvt{\tnr{\varphi}}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}$ is called the \textsb{divergence}\index{divergence} of $\tnr{\varphi}$ if its rule is described by
+Still in the context of Hilbert spaces, we define from the concept of gradient three important and very useful tensor functions, namely divergence, Laplacian and curl. Considering the mapping $\map{\tnr{\varphi}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{U^{\times m}\times V^{\times s}}}$ where function $\tnr{\varphi}$ is differentiable on its domain, the function in $\map{\dvt{\tnr{\varphi}}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}$ is called the \textsb{divergence}\index{divergence} of $\tnr{\varphi}$ if its rule is described by
 \begin{equation}\label{eq:divergence}
 \fua{\dvt{\tnr{\varphi}}}{\tnr{X}}=\tnr{I}\odot_{2m}\fua{\nabla\tnr{\varphi}}{\tnr{X}}\,,
 \end{equation}
-where identity tensor $\tnr{I}\in\ete{\cam{F}}{U^{\times m}\times U^{\times m}}$ and $\fua{\nabla\tnr{\varphi}}{\tnr{X}}\in\ete{\cam{F}}{U^{\times m}\times U^{\times m}\times V^{\times s}}$. While the gradient always assigns to a tensor $\tnr{X}$ a tensor of higher order, the divergence assigns to $\tnr{X}$ a tensor of lower order only when $s<m$. Moreover, if $\tnr{\varphi}$ is a unary tensor operator on $\pmb{\mathcal{U}}$, then its divergence is a scalar function for all $m>0$. 
+where identity tensor $\tnr{I}\in\ete{\cam{F}}{U^{\times m}\times U^{\times m}}$ and $\fua{\nabla\tnr{\varphi}}{\tnr{X}}\in\ete{\cam{F}}{U^{\times m}\times U^{\times m}\times V^{\times s}}$. While the gradient always assigns to a tensor $\tnr{X}$ a tensor of higher order, the divergence assigns to $\tnr{X}$ a tensor of lower order only when $s<m$. Moreover, if $\tnr{\varphi}$ is a unary tensor operator on $\pmb{\mathcal{U}}$, that is $s=0$, then its divergence is a scalar function for all $m>0$. 
+From this concept of divergence and from mapping $\map{\nabla\tnr{\psi}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{U^{\times m}\times V^{\times s}}}$, it is valid and convenient to define a function
+\begin{equation}\label{eq:laplace}
+\Delta\tnr{\psi}=\dvt{\nabla\tnr{\psi}}\,,
+\end{equation}
+called the \textsb{Laplacian}\index{Laplacian} of $\tnr{\psi}$, where $\fua{\Delta\tnr{\psi}}{\tnr{X}}\in \ete{\cam{F}}{V^{\times s}}$. Now, we restrict the context of function $\tnr{\varphi}$ to tensor spaces of order $m=1$ and $s=1$, specifying that $V_\real$ is an Euclidean space and $U_\real$ defines a three dimensional oriented Euclidean space $(U_\real,\tnr{A}_B)$, where $B$ is an orthonormal basis of $U_\cam{R}$. In this context, it is possible to define a mapping  $\map{\crl{\tnr{\varphi}}}{\pmb{\mathcal{U}}}{V_\real}$, whose function is called the \textsb{curl}\index{curl} of $\tnr{\varphi}$, with rule 
+\begin{equation}\label{eq:curl}
+\fua{\crl{\tnr{\varphi}}}{\vto{x}}=\tnr{A}_B\odot_{2}\fua{\nabla\tnr{\varphi}}{\vto{x}}\,,
+\end{equation}
+where third order tensor $\fua{\nabla\tnr{\varphi}}{\vto{x}}\in\ete{\cam{F}}{U^2\times V}$. Therefore, it is clear that  $\fua{\dvt{\tnr{\varphi}}}{\vto{x}}$ and $\fua{\crl{\tnr{\varphi}}}{\vto{x}}$ are vectors of $V_\real$. Similarly to the case of gradients, there are some notable properties of divergence and curl, presented as follows and considering the appropriate previous conditions.
+\begin{itemize}
+\setlength\itemsep{.1em}
+\item[i.] If $\tnr{\varphi}=\tnr{\varphi}_1+\tnr{\varphi}_2$ then $\dvt{\tnr{\varphi}}=\dvt{\tnr{\varphi}_1}+\dvt{\tnr{\varphi}_2}$ and $\crl{\tnr{\varphi}}=\crl{\tnr{\varphi}_1}+\crl{\tnr{\varphi}_2}\,$;
+\item[ii.] If $\tnr{\varphi}=\tnr{\varphi}_1\circ\tnr{\varphi}_2$, where mapping $\map{\tnr{\varphi}_1}{\ete{\cam{F}}{W^{\times r}}}{\ete{\cam{F}}{U^{\times m}\times V^{\times s}}}$ and mapping $\map{\tnr{\varphi}_2}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{W^{\times r}}}$ are defined, then 
+\begin{equation}
+\fua{\dvt{\tnr{\varphi}}}{\tnr{X}} = ???????????\,,
+\end{equation}	
+and for $r=m=s=1$,
+\begin{equation}
+\fua{\crl{\tnr{\varphi}}}{\vto{x}} = ???????????\,;
+\end{equation}	
 
+\item[iii.] If $\fua{\tnr{\varphi}}{\tnr{X}}=\fua{\tnr{\varphi}_1}{\tnr{X}}\cdot\fua{\tnr{\varphi}_2}{\tnr{X}}$, where mapping  $\map{\tnr{\varphi}_1}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{U^{\times m}\times V^{\times s}}}$ and mapping $\map{\tnr{\varphi}_2}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{U^{\times m}\times V^{\times s}}}$ are defined, then
+\begin{equation}
+\fua{\dvt{\tnr{\varphi}}}{\tnr{X}} = ???????????\,,
+\end{equation}	
+and for $m=s=1$,
+\begin{equation}
+\fua{\crl{\tnr{\varphi}}}{\vto{x}} = ???????????\,;
+\end{equation}
 
-% ver se 3.43 consegue provar chain rule
-% falar do divergente
-% falar das propriedades do gradiente
+\item[iv.] If $\fua{\tnr{\varphi}}{\vto{x}}=\fua{\tnr{\varphi}_1}{\vto{x}}\times\fua{\tnr{\varphi}_2}{\vto{x}}$, where mappings  $\map{\tnr{\psi}_1}{\pmb{\mathcal{U}}}{U_\cam{R}}$ and $\map{\tnr{\psi}_2}{\pmb{\mathcal{U}}}{U_\cam{R}}$ are defined, then
+\begin{equation}
+\fua{\crl{\tnr{\varphi}}}{\vto{x}} = ???????????\,;
+\end{equation}
+	
+\item[iv.]	The curl of the gradient is always zero, or $\fua{\crl{\nabla\tnr{\varphi}}}{\vto{x}}=\vto{0}$;
+\end{itemize}
 
 
 
