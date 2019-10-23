@@ -7,7 +7,7 @@ Analysis is the branch of Mathematics that studies the behaviour of functions by
 
 \section{Differentiation}
 
-In the context of Banach tensor spaces, which are normed and complete, to differentiate a tensor function $\tnr{\psi}$ is to obtain its derivative, here understood as a linear tensor function that measures qualitatively and quantitatively the sensitivity of $\tnr{\psi}$ on each element of the domain. Intuitively speaking, sensitivity refers to the intrinsic ``susceptibility'' of a function, or how it ``reacts'' in terms of its values, to an \emph{eventual change} on its argument. However, not all tensor functions can be differentiable: the following mathematical conditions and definitions will describe which functions admit differentiation. Considering $\ete{\cam{F}}{U^{\times m}}$ and $\ete{\cam{F}}{V^{\times s}}$ Banach tensor spaces, both defined by the same field $\cam{F}$, let $\pmb{\mathcal{U}}\subset\ete{\cam{F}}{U^{\times m}}$ be an open set and element  $\tnr{X}_0\in\pmb{\mathcal{U}}$ an arbitrary tensor. The functions in $\map{\tnr{\psi}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}$ and $\map{\tnr{\kappa}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}$ are said to be \textsb{tangent}\index{function!tangent} to each other at $\tnr{X}_0$ if
+In the context of Banach tensor spaces, which are normed and complete, to differentiate a tensor function $\tnr{\psi}$ is to obtain its derivative, here understood as a linear tensor function that measures qualitatively and quantitatively the sensitivity of $\tnr{\psi}$ on each element of the domain. Intuitively speaking, sensitivity refers to the intrinsic ``susceptibility'' of a function, or how it would ``react'', in terms of its values, to an \emph{eventual change} on its argument. In the specific case of derivatives, this function ``reaction'' is \emph{linearly estimated} on an element of its domain. However, not all tensor functions can be differentiable: the following mathematical conditions and definitions will describe which functions admit differentiation. Considering $\ete{\cam{F}}{U^{\times m}}$ and $\ete{\cam{F}}{V^{\times s}}$ Banach tensor spaces, both defined by the same field $\cam{F}$, let $\pmb{\mathcal{U}}\subset\ete{\cam{F}}{U^{\times m}}$ be an open set and element  $\tnr{X}_0\in\pmb{\mathcal{U}}$ an arbitrary tensor. The functions in $\map{\tnr{\psi}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}$ and $\map{\tnr{\kappa}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}$ are said to be \textsb{tangent}\index{function!tangent} to each other at $\tnr{X}_0$ if
 \begin{equation}\label{eq:tangent}
 \lim_{\tnr{X}\to \tnr{0}} \dfrac{\fua{\tnr{\psi}}{\tnr{X}_0+\tnr{X}}-\fua{\tnr{\kappa}}{\tnr{X}_0+\tnr{X}}}{\|\tnr{X}\|}=\tnr{0}\,,
 \end{equation}
@@ -90,11 +90,9 @@ Considering previous conditions, it is possible to obtain the following importan
 \fua{[\fua{\tnr{\psi}'}{\tnr{X}}]}{\tnr{H}}=\fua{\tnr{\psi}_1}{\tnr{X}}\otimes\fua{[\fua{\tnr{\psi}_2'}{\tnr{X}}]}{\tnr{H}} + \fua{[\fua{\tnr{\psi}_1'}{\tnr{X}}]}{\tnr{H}} \otimes \fua{\tnr{\psi}_2}{\tnr{X}}\,;
 \end{equation}
 	\item[viii.] If $\fua{\tnr{\psi}}{\vto{x}}=\fua{\tnr{\psi}_1}{\vto{x}}\times\fua{\tnr{\psi}_2}{\vto{x}}$, where $U_\real$ in mappings  $\map{\tnr{\psi}_1}{\pmb{\mathcal{U}}}{U_\cam{R}}$ and $\map{\tnr{\psi}_2}{\pmb{\mathcal{U}}}{U_\cam{R}}$ defines a three dimensional oriented Euclidean space, then
-\begin{equation}
+\begin{equation}\label{eq:crossRule}
 \fua{[\fua{\tnr{\psi}'}{\vto{x}}]}{\vto{h}} = \fua{\tnr{\psi}_1}{\vto{x}}\times\fua{[\fua{\tnr{\psi}_2'}{\vto{x}}]}{\vto{h}} + \fua{[\fua{\tnr{\psi}_1'}{\vto{x}}]}{\vto{h}} \times \fua{\tnr{\psi}_2}{\vto{x}}\,.
 \end{equation}
-
-	
 \end{itemize}
 
 {\footnotesize
@@ -154,15 +152,15 @@ From the above properties of derivatives, it is then possible to obtain the foll
 	\setlength\itemsep{.1em}
 	\item[i.] If $\tnr{\psi}=\tnr{\psi}_1+\tnr{\psi}_2$ then $\nabla\tnr{\psi}=\nabla\tnr{\psi}_1+\nabla\tnr{\psi}_2\,$;
 	\item[ii.] If $\tnr{\psi}=\tnr{\psi}_1\circ\tnr{\psi}_2$, where $\map{\tnr{\psi}_1}{\ete{\cam{F}}{W^{\times r}}}{\ete{\cam{F}}{V^{\times s}}}$ and $\map{\tnr{\psi}_2}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{W^{\times r}}}$, then 
-	\begin{equation}
+	\begin{equation}\label{eq:prop1Grad}
 	\fua{\nabla\tnr{\psi}}{\tnr{X}} = \fua{\nabla\tnr{\psi}_2}{\tnr{X}} \odot_r \fua{\nabla\tnr{\psi}_1\circ\tnr{\psi}_2}{\tnr{X}}\,;
 	\end{equation}	
 	\item[iii.] If $\fua{\tnr{\psi}}{\tnr{X}}=\fua{\tnr{\psi}_1}{\tnr{X}}\cdot\fua{\tnr{\psi}_2}{\tnr{X}}$, where   $\map{\tnr{\psi}_1}{\pmb{\mathcal{U}}}{\ete{\real}{V^{\times s}}}$, $\map{\tnr{\psi}_2}{\pmb{\mathcal{U}}}{\ete{\real}{V^{\times s}}}$ and domain $\pmb{\mathcal{U}}\subset\ete{\real}{U^{\times m}}$, then
-	\begin{equation}
+	\begin{equation}\label{eq:prop2Grad}
 	\fua{\nabla\tnr{\psi}}{\tnr{X}} = \fua{\nabla\tnr{\psi}_1}{\tnr{X}}\odot_s\fua{\tnr{\psi}_2}{\tnr{X}}+\fua{\nabla\tnr{\psi}_2}{\tnr{X}}\odot_s\fua{\tnr{\psi}_1}{\tnr{X}}\,;
 	\end{equation}
 	\item[iv.] If $\fua{\tnr{\psi}}{\vto{x}}=\fua{\tnr{\psi}_1}{\vto{x}}\times\fua{\tnr{\psi}_2}{\vto{x}}$, where $U_\real$ in mappings  $\map{\tnr{\psi}_1}{\pmb{\mathcal{U}}}{U_\cam{R}}$ and $\map{\tnr{\psi}_2}{\pmb{\mathcal{U}}}{U_\cam{R}}$ is properly defined for enabling cross products, then
-	\begin{equation}
+	\begin{equation}\label{eq:prop3Grad}
 	\fua{\nabla\tnr{\psi}}{\vto{x}} = \fua{\nabla\tnr{\psi}_1}{\vto{x}}\times\fua{\tnr{\psi}_2}{\vto{x}}-\fua{\nabla\tnr{\psi}_2}{\vto{x}}\times\fua{\tnr{\psi}_1}{\vto{x}}\,;
 	\end{equation}
 \end{itemize}
@@ -182,13 +180,18 @@ $\fua{\tnr{\psi}_1'\circ\tnr{\psi}_2}{\tnr{X}}$ and $\fua{\tnr{\psi}_2'}{\tnr{X}
 \fua{[\fua{\tnr{\psi}'}{\tnr{X}}]}{\tnr{H}}&=\fua{\{[\fua{\tnr{\psi}_1'\circ\tnr{\psi}_2}{\tnr{X}}]\circ\fua{\tnr{\psi}_2'}{\tnr{X}}\}}{\tnr{H}}\\
 \tnr{H}\odot_m\fua{\nabla\tnr{\psi}}{\tnr{X}}&=\tnr{H}\odot_m[\fua{\nabla\tnr{\psi}_2}{\tnr{X}}\odot_r\fua{\nabla\tnr{\psi}_1\circ\tnr{\psi}_2}{\tnr{X}}]\,.
 \end{align*}  
-Now, from the inner product rule we have
+Now, from the Leibniz's rule we have
 \begin{align*}
 \fua{[\fua{\tnr{\psi}'}{\tnr{X}}]}{\tnr{H}}&=\fua{[\fua{\tnr{\psi}_1'}{\tnr{X}}]}{\tnr{H}} \cdot \fua{\tnr{\psi}_2}{\tnr{X}}+\fua{[\fua{\tnr{\psi}_2'}{\tnr{X}}]}{\tnr{H}}\cdot\fua{\tnr{\psi}_1}{\tnr{X}}\\
 \tnr{H}\odot_m\fua{[\nabla\tnr{\psi}]}{\tnr{X}}&=\tnr{H}\odot_m\fua{[\nabla\tnr{\psi}_1]}{\tnr{X}}\odot_s\fua{\tnr{\psi}_2}{\tnr{X}}+\tnr{H}\odot_m\fua{[\nabla\tnr{\psi}_2]}{\tnr{X}}\odot_s\fua{\tnr{\psi}_1}{\tnr{X}}\\
 &=\tnr{H}\odot_m\{\fua{[\nabla\tnr{\psi}_1]}{\tnr{X}}\odot_s\fua{\tnr{\psi}_2}{\tnr{X}}+\fua{[\nabla\tnr{\psi}_2]}{\tnr{X}}\odot_s\fua{\tnr{\psi}_1}{\tnr{X}}\}\,,
 \end{align*}
-which proves item iii.
+which proves item iii. From \eqref{eq:crossRule}, development
+\begin{align*}
+\fua{[\fua{\tnr{\psi}'}{\vto{x}}]}{\vto{h}} &= \fua{[\fua{\tnr{\psi}_1'}{\vto{x}}]}{\vto{h}} \times \fua{\tnr{\psi}_2}{\vto{x}}-\fua{[\fua{\tnr{\psi}_2'}{\vto{x}}]}{\vto{h}}\times\fua{\tnr{\psi}_1}{\vto{x}}\\
+\vto{h}\odot_{1}\fua{\nabla\tnr{\psi}}{\vto{x}}&=\vto{h}\odot_{1}[\fua{\nabla\tnr{\psi}_1}{\vto{x}}\times\fua{\tnr{\psi}_2}{\vto{x}}-\fua{\nabla\tnr{\psi}_2}{\vto{x}}\times\fua{\tnr{\psi}_1}{\vto{x}}]\,,
+\end{align*}
+proves item iv. 
 \end{proof}}
 
 Still in the context of Hilbert spaces, we define from the concept of gradient three important and very useful tensor functions, namely divergence, Laplacian and curl. Considering the mapping $\map{\tnr{\varphi}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{U^{\times m}\times V^{\times s}}}$ where function $\tnr{\varphi}$ is differentiable on its domain, the function in $\map{\dvt{\tnr{\varphi}}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}$ is called the \textsb{divergence}\index{divergence} of $\tnr{\varphi}$ if its rule is described by
@@ -204,37 +207,40 @@ called the \textsb{Laplacian}\index{Laplacian} of $\tnr{\psi}$, where $\fua{\Del
 \begin{equation}\label{eq:curl}
 \fua{\crl{\tnr{\varphi}}}{\vto{x}}=\tnr{A}_B\odot_{2}\fua{\nabla\tnr{\varphi}}{\vto{x}}\,,
 \end{equation}
-where third order tensor $\fua{\nabla\tnr{\varphi}}{\vto{x}}\in\ete{\cam{F}}{U^2\times V}$. Therefore, it is clear that  $\fua{\dvt{\tnr{\varphi}}}{\vto{x}}$ and $\fua{\crl{\tnr{\varphi}}}{\vto{x}}$ are vectors of $V_\real$. Similarly to the case of gradients, there are some notable properties of divergence and curl, presented as follows and considering the appropriate previous conditions.
+where third order tensor $\fua{\nabla\tnr{\varphi}}{\vto{x}}\in\ete{\cam{F}}{U^2\times V}$. Therefore, it is clear that  $\fua{\dvt{\tnr{\varphi}}}{\vto{x}}$ and $\fua{\crl{\tnr{\varphi}}}{\vto{x}}$ are vectors of $V_\real$. Similarly to the case of gradients, there are some notable properties of divergence and curl, presented as follows, considering the appropriate previous conditions.
 \begin{itemize}
 \setlength\itemsep{.1em}
 \item[i.] If $\tnr{\varphi}=\tnr{\varphi}_1+\tnr{\varphi}_2$ then $\dvt{\tnr{\varphi}}=\dvt{\tnr{\varphi}_1}+\dvt{\tnr{\varphi}_2}$ and $\crl{\tnr{\varphi}}=\crl{\tnr{\varphi}_1}+\crl{\tnr{\varphi}_2}\,$;
 \item[ii.] If $\tnr{\varphi}=\tnr{\varphi}_1\circ\tnr{\varphi}_2$, where mapping $\map{\tnr{\varphi}_1}{\ete{\cam{F}}{W^{\times r}}}{\ete{\cam{F}}{U^{\times m}\times V^{\times s}}}$ and mapping $\map{\tnr{\varphi}_2}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{W^{\times r}}}$ are defined, then 
 \begin{equation}
-\fua{\dvt{\tnr{\varphi}}}{\tnr{X}} = ???????????\,,
+\fua{\dvt{\tnr{\varphi}}}{\tnr{X}} =\fua{\dvt{\tnr{\varphi}_2}}{\tnr{X}}\odot_{r}\fua{\nabla\tnr{\varphi}_1\circ\tnr{\varphi}_2}{\tnr{X}}\,,
 \end{equation}	
 and for $r=m=s=1$,
 \begin{equation}
-\fua{\crl{\tnr{\varphi}}}{\vto{x}} = ???????????\,;
+\fua{\crl{\tnr{\varphi}}}{\vto{x}} = \fua{\crl{\tnr{\varphi}_2}}{\vto{x}}\odot_{1}\fua{\nabla\tnr{\varphi}_1\circ\tnr{\varphi}_2}{\vto{x}}\,;
 \end{equation}	
 
 \item[iii.] If $\fua{\tnr{\varphi}}{\tnr{X}}=\fua{\tnr{\varphi}_1}{\tnr{X}}\cdot\fua{\tnr{\varphi}_2}{\tnr{X}}$, where mapping  $\map{\tnr{\varphi}_1}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{U^{\times m}\times V^{\times s}}}$ and mapping $\map{\tnr{\varphi}_2}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{U^{\times m}\times V^{\times s}}}$ are defined, then
 \begin{equation}
-\fua{\dvt{\tnr{\varphi}}}{\tnr{X}} = ???????????\,,
+\fua{\dvt{\tnr{\varphi}}}{\tnr{X}} = \fua{\dvt{\tnr{\varphi}_1}}{\tnr{X}}\odot_s\fua{\tnr{\varphi}_2}{\tnr{X}}+\fua{\dvt{\tnr{\varphi}_2}}{\tnr{X}}\odot_s\fua{\tnr{\varphi}_1}{\tnr{X}}\,,
 \end{equation}	
 and for $m=s=1$,
 \begin{equation}
-\fua{\crl{\tnr{\varphi}}}{\vto{x}} = ???????????\,;
+\fua{\crl{\tnr{\varphi}}}{\vto{x}} = \fua{\crl{\tnr{\varphi}_1}}{\vto{x}}\odot_s\fua{\tnr{\varphi}_2}{\vto{x}}+\fua{\crl{\tnr{\varphi}_2}}{\vto{x}}\odot_s\fua{\tnr{\varphi}_1}{\vto{x}}\,;
 \end{equation}
 
 \item[iv.] If $\fua{\tnr{\varphi}}{\vto{x}}=\fua{\tnr{\varphi}_1}{\vto{x}}\times\fua{\tnr{\varphi}_2}{\vto{x}}$, where mappings  $\map{\tnr{\psi}_1}{\pmb{\mathcal{U}}}{U_\cam{R}}$ and $\map{\tnr{\psi}_2}{\pmb{\mathcal{U}}}{U_\cam{R}}$ are defined, then
 \begin{equation}
-\fua{\crl{\tnr{\varphi}}}{\vto{x}} = ???????????\,;
+\fua{\crl{\tnr{\varphi}}}{\vto{x}} = \fua{\crl{\tnr{\varphi}_1}}{\vto{x}}\times\fua{\tnr{\varphi}_2}{\vto{x}}-\fua{\crl{\tnr{\varphi}_2}}{\vto{x}}\times\fua{\tnr{\psi}_1}{\vto{x}}\,;
 \end{equation}
 	
-\item[iv.]	The curl of the gradient is always zero, or $\fua{\crl{\nabla\tnr{\varphi}}}{\vto{x}}=\vto{0}$;
+\item[iv.]	The curl of the gradient of a scalar function is always zero, or $\fua{\crl{\nabla \varphi}}{x}=0\,$.
 \end{itemize}
 
-
+{\footnotesize
+\begin{proof}
+Considering definitions \eqref{eq:divergence} and \eqref{eq:curl}, since partial inner products are left (right) distributive, proof of item i is trivial. Pre multiplying properties \eqref{eq:prop1Grad}, \eqref{eq:prop2Grad} and \eqref{eq:prop3Grad} adequately by $\tnr{I}$ or $\tnr{A}_B$, proofs of items ii, iii and iv are straightforward.  
+\end{proof}}
 
 
 
