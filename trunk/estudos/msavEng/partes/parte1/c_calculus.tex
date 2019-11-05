@@ -137,30 +137,27 @@ and then by adding and subtracting the limit on the right hand side by $\fua{\tn
 from which we easily verify the item.
 \end{proof}}
 
-It is interesting to note that derivatives may be differentiable themselves, and also derivatives of derivatives, and so on. Considering previous conditions, tensor function $\tnr{\psi}$ is defined to be the zero order derivative of itself, function $\tnr{\psi}'$ is the order one derivative of $\tnr{\psi}$, $\tnr{\psi}''$ the order two and $\tnr{\psi}^{(k)}$ the order $k\geqslant 0$. Thereby, from definition \eqref{eq:tangentFunct}, a tensor function $\tnr{\psi}$ is said to be differentiable of order two at $\tnr{X}_0$ if it is differentiable of order one and there is a unique function $\tnr{\psi_\mathit{d}}^{(1)}$ tangent to function $\fua{\tnr{\psi}'}{\tnr{X}_0}$ at $\tnr{X}_0$ where   
+It is interesting to note that derivatives may be differentiable themselves, and also derivatives of derivatives, and so on. Considering previous conditions, the tensor function $\tnr{\psi}$ is defined to be the zero order derivative of itself, function $\tnr{\psi}'$ is the order one derivative of $\tnr{\psi}$, $\tnr{\psi}''$ the order two and $\tnr{\psi}^{(k)}$ the order $k\geqslant 0$. Thereby, from definition \eqref{eq:tangentFunct}, a tensor function $\tnr{\psi}$ is said to be differentiable of order two at $\tnr{X}_0$ if it is differentiable at $\tnr{X}_0$ and there is a unique function $\tnr{\psi_\mathit{d}}^{(1)}$ tangent to the function in $\map{\tnr{\psi}'}{\pmb{\mathcal{U}}}{\evl{\cam{F}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}}$ at $\tnr{X}_0$ where   
 \begin{equation*}
-\fua{\tnr{\psi_\mathit{d}}^{(1)}}{\tnr{X}}=[\fua{\tnr{\psi}'}{\tnr{X}_0}](\tnr{X}_0)+\fua{[\fua{\tnr{\tilde{\psi}}^{(2)}}{\tnr{X}_0\otimes\tnr{X}_0}]}{\tnr{X}-\tnr{X}_0}
+\fua{\tnr{\psi_\mathit{d}}^{(1)}}{\tnr{X}}=\fua{\tnr{\psi}'}{\tnr{X}_0}+\fua{[\fua{\tnr{\psi}''}{\tnr{X}_0}]}{\tnr{X}-\tnr{X}_0}\,.
 \end{equation*}
-and $\fua{\tnr{\tilde{\psi}}^{(2)}}{\tnr{X}_0\otimes\tnr{X}_0}:=[\fua{\tnr{\psi}''}{\tnr{X}_0}](\tnr{X}_0)$. Similarly, if $\tnr{\psi}$ is differentiable of order three, then it is differentiable of order two and there is a unique  $\tnr{\psi_\mathit{d}}^{(2)}$ tangent to $\fua{\tnr{\tilde{\psi}}''}{\tnr{X}_0\otimes\tnr{X}_0}$ at $\tnr{X}_0$ where
+Since function $\fua{\tnr{\psi}'}{\tnr{X}_0}\in\evl{\cam{F}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}$ then  $\map{\tnr{\psi}''}{\pmb{\mathcal{U}}}{\evl{\cam{F}}{\pmb{\mathcal{U}}}{\evl{\cam{F}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}}}$. Similarly, if $\tnr{\psi}$ is differentiable of order three at $\tnr{X}_0$, then it is differentiable of order two at $\tnr{X}_0$ and there is a unique $\tnr{\psi_\mathit{d}}^{(2)}$ tangent to $\tnr{\psi}''$ at $\tnr{X}_0$ where
 \begin{equation*}
-\fua{\tnr{\psi_\mathit{d}}^{(2)}}{\tnr{X}}=[\fua{\tnr{\tilde{\psi}}^{(2)}}{\tnr{X}_0\otimes\tnr{X}_0}](\tnr{X}_0)+\fua{[\fua{\tnr{\tilde{\psi}}^{(3)}}{\tnr{X}_0\otimes\tnr{X}_0\otimes\tnr{X}_0}]}{\tnr{X}-\tnr{X}_0}
+\fua{\tnr{\psi_\mathit{d}}^{(2)}}{\tnr{X}}=\fua{\tnr{\psi}''}{\tnr{X}_0}+\fua{[\fua{\tnr{\psi}'''}{\tnr{X}_0}]}{\tnr{X}-\tnr{X}_0}
 \end{equation*}
-and $\fua{\tnr{\tilde{\psi}}^{(3)}}{\tnr{X}_0\otimes\tnr{X}_0\otimes\tnr{X}_0}:=[[\fua{\tnr{\psi}'''}{\tnr{X}_0}](\tnr{X}_0)](\tnr{X}_0)$. Generically, a tensor function $\tnr{\psi}$ is said to be differentiable of order $k+1$ at $\tnr{X}_0$ if it is differentiable of order $k$ and there is a unique function $\tnr{\psi_\mathit{d}}^{(k)}$ tangent to function $\fua{\tnr{\tilde{\psi}}^{(k)}}{\tnr{X}_0\otimes\cdots\otimes\tnr{X}_0}$ at $\tnr{X}_0$ where   
+and $\map{\tnr{\psi}'''}{\pmb{\mathcal{U}}}{\evl{\cam{F}}{\pmb{\mathcal{U}}}{\evl{\cam{F}}{\pmb{\mathcal{U}}}{\evl{\cam{F}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}}}}$. Generically, tensor function $\tnr{\psi}$ is said to be differentiable of order $k+1$ at $\tnr{X}_0$ if it is differentiable of order $k$ at $\tnr{X}_0$ and there is a unique function $\tnr{\psi_\mathit{d}}^{(k)}$ tangent to function $\tnr{\psi}^{(k)}$ at $\tnr{X}_0$ described by
 \begin{equation}\label{eq:tangentOrderK1}
-\fua{\tnr{\psi_\mathit{d}}^{(k)}}{\tnr{X}}=[\fua{\tnr{\tilde{\psi}}^{(k)}}{\underbrace{\tnr{X}_0\otimes\cdots\otimes\tnr{X}_0}_{k\text{ times}}}](\tnr{X}_0)+\fua{[\fua{\tnr{\tilde{\psi}}^{(k+1)}}{\underbrace{\tnr{X}_0\otimes\cdots\otimes\tnr{X}_0}_{k+1\text{ times}}}]}{\tnr{X}-\tnr{X}_0}\,.
+\fua{\tnr{\psi_\mathit{d}}^{(k)}}{\tnr{X}}=\fua{\tnr{\psi}^{(k)}}{\tnr{X}_0}+\fua{[\fua{\tnr{\psi}^{(k+1)}}{\tnr{X}_0}]}{\tnr{X}-\tnr{X}_0}\,,
 \end{equation}
-A tensor function $\tnr{\psi}$ is said to be a differentiable function of order $k+1$ on its domain if it is a differentiable function of order a $k$ on its domain. In this context, from previous equality, we can write that
-\begin{equation}\label{eq:tangentOrderK1}
-\fua{\tnr{\psi_\mathit{d}}^{(k)}}{\tnr{X}}=[\fua{\tnr{\tilde{\psi}}^{(k)}}{\tnr{X}_1\otimes\cdots\otimes\tnr{X}_k}](\tnr{X}_0)+\fua{[\fua{\tnr{\tilde{\psi}}^{(k+1)}}{\tnr{X}_0\otimes\cdots\otimes\tnr{X}_0}]}{\tnr{X}-\tnr{X}_0}\,.
-\end{equation}
-
-
-
-In this context, proceeding a similar development we performed for one order derivative, the previous expression leads to equality
+where 
+\begin{equation*}
+\map{\tnr{\psi}^{(k+1)}}{\pmb{\mathcal{U}}}{{\evl{\cam{F}}{\pmb{\mathcal{U}}_1}{\evl{\cam{F}}{\pmb{\mathcal{U}}_2}{\cdots\evl{\cam{F}}{\pmb{\mathcal{U}}_{k+1}}{\ete{\cam{F}}{V^{\times s}}}}}}}
+\end{equation*}
+and $\pmb{\mathcal{U}}_i=\pmb{\mathcal{U}}$. In this context, proceeding with a similar development we performed for one order derivative, rule \eqref{eq:tangentOrderK1} leads to equality
 \begin{equation}
-\fua{[\fua{\tnr{\psi}'}{\tnr{X}}]}{\tnr{H}}=\lim_{\alpha\to 0} \dfrac{\fua{\tnr{\psi}}{\tnr{X}+\alpha\tnr{H}}-\fua{\tnr{\psi}}{\tnr{X}}}{\alpha}
+\fua{[\fua{\tnr{\psi}^{(k+1)}}{\tnr{X}}]}{\tnr{H}}=\lim_{\alpha\to 0} \dfrac{\fua{\tnr{\psi}^{(k)}}{\tnr{X}+\alpha\tnr{H}}-\fua{\tnr{\psi}^{(k)}}{\tnr{X}}}{\alpha}\,,
 \end{equation}
-which is the $k+1$ order directional derivative of $\tnr{\psi}$ along ????? 
+which is the $k+1$ order directional derivative of $\tnr{\psi}$ along $\tnr{H}\in\pmb{\mathcal{U}}$. 
 
 \section{The Gradient}  
 
