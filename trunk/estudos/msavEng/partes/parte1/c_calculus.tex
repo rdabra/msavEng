@@ -26,8 +26,8 @@ Proceeding with the above conditions, if there is one and only one tensor functi
 \begin{equation}\label{eq:tangentFunct}
 \fua{\tnr{\psi_\mathit{d}}}{\tnr{X}}=\fua{\tnr{\psi}}{\tnr{X}_0}+\fua{[\fua{\tnr{\psi}'}{\tnr{X}_0}]}{\tnr{X}-\tnr{X}_0}\,,
 \end{equation}
-where function $\fua{\tnr{\psi}'}{\tnr{X}_0}\in\evl{\cam{F}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}$ is bounded\footnote{Linearity and boundedness imply continuity. See definition \eqref{eq:funcaoLimitada}.}, then $\tnr{\psi}$ is called \textsb{Fréchet differentiable}\index{function!Fréchet differentiable}, \textsb{totally differentiable}\index{function!totally differentiable} or simply \textsb{differentiable}\index{function!differentiable} at $\tnr{X}_0$, while the linear function $\fua{\tnr{\psi}'}{\tnr{X}_0}$ is called the \textsb{derivative}\index{derivative} of $\tnr{\psi}$ at $\tnr{X}_0$. Moreover, the function in 
-$\map{\tnr{\psi}'}{\pmb{\mathcal{U}}}{\evl{\cam{F}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}}$ is said to be the \textsb{derivative function}\index{derivative!function} or simply the derivative of $\tnr{\psi}$. Rewriting expression \eqref{eq:tangent} for $\tnr{\psi}$ and $\tnr{\psi_\mathit{d}}$ tangent at $\tnr{X}_0$, the result is
+where function $\fua{\tnr{\psi}'}{\tnr{X}_0}\in\evl{\cam{F}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}$ is bounded, then $\tnr{\psi}$ is called \textsb{Fréchet differentiable}\index{function!Fréchet differentiable}, \textsb{totally differentiable}\index{function!totally differentiable} or simply \textsb{differentiable}\index{function!differentiable} at $\tnr{X}_0$, while the linear function $\fua{\tnr{\psi}'}{\tnr{X}_0}$ is called the \textsb{derivative}\index{derivative} of $\tnr{\psi}$ at $\tnr{X}_0$. According to \eqref{eq:funcaoLimitada}, linearity and boundedness imply continuity, and then $\fua{\tnr{\psi}'}{\tnr{X}_0}$ belongs to function space $\evlc{\cam{F}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}$, which we specify to be also a Banach space of continuous linear functions. Moreover, the function in 
+$\map{\tnr{\psi}'}{\pmb{\mathcal{U}}}{\evlc{\cam{F}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}}$ is said to be the \textsb{derivative function}\index{derivative!function} or simply the derivative of $\tnr{\psi}$. Rewriting expression \eqref{eq:tangent} for $\tnr{\psi}$ and $\tnr{\psi_\mathit{d}}$ tangent at $\tnr{X}_0$, the result is
 \begin{equation}\label{eq:preDirect}
 \lim_{\tnr{X}\to \tnr{0}} \dfrac{\fua{\tnr{\psi}}{\tnr{X}_0+\tnr{X}}-\fua{\tnr{\psi}}{\tnr{X}_0}-\fua{[\fua{\tnr{\psi}'}{\tnr{X}_0}]}{\tnr{X}}}{\|\tnr{X}\|}=\tnr{0}\,,
 \end{equation} 
@@ -137,41 +137,40 @@ and then by adding and subtracting the limit on the right hand side by $\fua{\tn
 from which we easily verify the item.
 \end{proof}}
 
-It is interesting to note that derivatives may be differentiable themselves, and also derivatives of derivatives, and so on. Considering previous conditions, the tensor function $\tnr{\psi}$ is defined to be the zero order derivative of itself, function $\tnr{\psi}'$ is the order one derivative of $\tnr{\psi}$, $\tnr{\psi}''$ the order two and $\tnr{\psi}^{(k)}$ the order $k\geqslant 0$. Thereby, from definition \eqref{eq:tangentFunct}, a tensor function $\tnr{\psi}$ is said to be differentiable of order two at $\tnr{X}_0$ if it is differentiable at $\tnr{X}_0$ and there is a unique function $\tnr{\psi_\mathit{d}}^{(1)}$ tangent to the function in $\map{\tnr{\psi}'}{\pmb{\mathcal{U}}}{\evl{\cam{F}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}}$ at $\tnr{X}_0$ where   
+It is interesting to note that derivatives may be differentiable themselves, and also derivatives of derivatives, and so on. Considering previous conditions, the tensor function $\tnr{\psi}$ is defined to be the zero order derivative of itself, function $\tnr{\psi}'$ is the order one derivative of $\tnr{\psi}$, $\tnr{\psi}''$ the order two and $\tnr{\psi}^{(k)}$ the order $k\geqslant 0$. Thereby, from definition \eqref{eq:tangentFunct}, a tensor function $\tnr{\psi}$ is said to be differentiable of order two at $\tnr{X}_0$ if it is differentiable at $\tnr{X}_0$ and there is a unique function $\tnr{\psi_\mathit{d}}^{(1)}$ tangent to the function in $\map{\tnr{\psi}'}{\pmb{\mathcal{U}}}{\evlc{\cam{F}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}}$ at $\tnr{X}_0$ where   
 \begin{equation*}
 \fua{\tnr{\psi_\mathit{d}}^{(1)}}{\tnr{X}}=\fua{\tnr{\psi}'}{\tnr{X}_0}+\fua{[\fua{\tnr{\psi}''}{\tnr{X}_0}]}{\tnr{X}-\tnr{X}_0}\,.
 \end{equation*}
-Since function $\fua{\tnr{\psi}'}{\tnr{X}_0}\in\evl{\cam{F}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}$ then  $\map{\tnr{\psi}''}{\pmb{\mathcal{U}}}{\evl{\cam{F}}{\pmb{\mathcal{U}}}{\evl{\cam{F}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}}}$. Similarly, if $\tnr{\psi}$ is differentiable of order three at $\tnr{X}_0$, then it is differentiable of order two at $\tnr{X}_0$ and there is a unique $\tnr{\psi_\mathit{d}}^{(2)}$ tangent to $\tnr{\psi}''$ at $\tnr{X}_0$ where
+Since function $\fua{\tnr{\psi}'}{\tnr{X}_0}\in\evlc{\cam{F}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}$ then  $\map{\tnr{\psi}''}{\pmb{\mathcal{U}}}{\evlc{\cam{F}}{\pmb{\mathcal{U}}}{\evlc{\cam{F}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}}}$. Similarly, if $\tnr{\psi}$ is differentiable of order three at $\tnr{X}_0$, then it is differentiable of order two at $\tnr{X}_0$ and there is a unique $\tnr{\psi_\mathit{d}}^{(2)}$ tangent to $\tnr{\psi}''$ at $\tnr{X}_0$ where
 \begin{equation*}
 \fua{\tnr{\psi_\mathit{d}}^{(2)}}{\tnr{X}}=\fua{\tnr{\psi}''}{\tnr{X}_0}+\fua{[\fua{\tnr{\psi}'''}{\tnr{X}_0}]}{\tnr{X}-\tnr{X}_0}
 \end{equation*}
-and $\map{\tnr{\psi}'''}{\pmb{\mathcal{U}}}{\evl{\cam{F}}{\pmb{\mathcal{U}}}{\evl{\cam{F}}{\pmb{\mathcal{U}}}{\evl{\cam{F}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}}}}$. Generically, tensor function $\tnr{\psi}$ is said to be differentiable of order $k+1$ at $\tnr{X}_0$ if it is differentiable of order $k$ at $\tnr{X}_0$ and there is a unique function $\tnr{\psi_\mathit{d}}^{(k)}$ tangent to function $\tnr{\psi}^{(k)}$ at $\tnr{X}_0$ described by
+and $\map{\tnr{\psi}'''}{\pmb{\mathcal{U}}}{\evlc{\cam{F}}{\pmb{\mathcal{U}}}{\evlc{\cam{F}}{\pmb{\mathcal{U}}}{\evlc{\cam{F}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}}}}$. Generically, tensor function $\tnr{\psi}$ is said to be differentiable of order $k+1$ at $\tnr{X}_0$ if it is differentiable of order $k$ at $\tnr{X}_0$ and there is a unique function $\tnr{\psi_\mathit{d}}^{(k)}$ tangent to function $\tnr{\psi}^{(k)}$ at $\tnr{X}_0$ described by
 \begin{equation}\label{eq:tangentOrderK1}
 \fua{\tnr{\psi_\mathit{d}}^{(k)}}{\tnr{X}}=\fua{\tnr{\psi}^{(k)}}{\tnr{X}_0}+\fua{[\fua{\tnr{\psi}^{(k+1)}}{\tnr{X}_0}]}{\tnr{X}-\tnr{X}_0}\,,
 \end{equation}
 where 
 \begin{equation*}
-\map{\tnr{\psi}^{(k+1)}}{\pmb{\mathcal{U}}}{{\evl{\cam{F}}{\pmb{\mathcal{U}}_1}{\evl{\cam{F}}{\pmb{\mathcal{U}}_2}{\cdots\evl{\cam{F}}{\pmb{\mathcal{U}}_{k+1}}{\ete{\cam{F}}{V^{\times s}}}}}}}
+\map{\tnr{\psi}^{(k+1)}}{\pmb{\mathcal{U}}}{{\evlc{\cam{F}}{\pmb{\mathcal{U}}_{k+1}}{\evlc{\cam{F}}{\pmb{\mathcal{U}}_k}{\cdots\evlc{\cam{F}}{\pmb{\mathcal{U}}_{1}}{\ete{\cam{F}}{V^{\times s}}}}}}}
 \end{equation*}
 and $\pmb{\mathcal{U}}_i=\pmb{\mathcal{U}}$. In this context, proceeding with a similar development we performed for one order derivative, rule \eqref{eq:tangentOrderK1} leads to equality
 \begin{equation}\label{eq:directDerivK1}
 \fua{[\fua{\tnr{\psi}^{(k+1)}}{\tnr{X}}]}{\tnr{H}}=\lim_{\alpha\to 0} \dfrac{\fua{\tnr{\psi}^{(k)}}{\tnr{X}+\alpha\tnr{H}}-\fua{\tnr{\psi}^{(k)}}{\tnr{X}}}{\alpha}\,,
 \end{equation}
-which is the $k+1$ order directional derivative of $\tnr{\psi}$ along $\tnr{H}\in\pmb{\mathcal{U}}$. From previous equality, if $k>0$, then there is a unique direction $\tnr{H}^{(k+1)}\in\pmb{\mathcal{U}}$ where 
+which is the $k+1$ order directional derivative of $\tnr{\psi}$ along $\tnr{H}\in\pmb{\mathcal{U}}$. From previous equality, if $k>0$ the directional derivative of order $k+1$ along a given tensor is always a function and then by choosing arbitrary tensors $\tnr{H}_1,\cdots,\tnr{H}_{k+1}\in\pmb{\mathcal{U}}$, we conclude that
 \begin{equation}
-\fua{\tnr{\psi}^{(k)}}{\tnr{X}}=\fua{[\fua{\tnr{\psi}^{(k+1)}}{\tnr{X}}]}{\tnr{H}^{(k+1)}}\,.
+[[\fua{[\fua{\tnr{\psi}^{(k+1)}}{\tnr{X}}]}{\tnr{H}_{k+1}}](\tnr{H}_k)\cdots](\tnr{H}_{1})\in\ete{\cam{F}}{V^{\times s}}\,.
 \end{equation}
 
-{\footnotesize
-\begin{proof}
 
-\end{proof}
-}
+
+
+
 % ---------------
 
 \section{The Gradient}  
 
-The concept of gradient we shall detail in this section is restricted to the context of Hilbert tensor spaces because it relies on the Riesz-Fréchet Representation of Tensors, described on theorem \ref{teo:repRieszTensor}. Similarly to what we already presented in this chapter, an open set $\pmb{\mathcal{U}}\subset\ete{\cam{F}}{U^{\times m}}$ and a differentiable function in $\map{\tnr{\psi}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}$ are also considered, but $\ete{\cam{F}}{U^{\times m}}$ and $\ete{\cam{F}}{V^{\times s}}$ are Hilbert tensor spaces here. Considering the conditions of the aforementioned theorem, there is a unique tensor $\fua{\nabla\tnr{\psi}}{\tnr{X}_0}\in\ete{\cam{F}}{U^{\times m}\times V^{\times s}}$, called the \textsb{gradient}\index{gradient} of $\tnr{\psi}$ at $\tnr{X}_0$, which the derivative $\fua{\tnr{\psi}'}{\tnr{X}_0}\in\evl{\cam{F}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}$ is the $m$-cotensor of and where 
+The concept of gradient we shall detail in this section is restricted to the context of Hilbert tensor spaces because it relies on the Riesz-Fréchet Representation of Tensors, described on theorem \ref{teo:repRieszTensor}. Similarly to what we already presented in this chapter, an open set $\pmb{\mathcal{U}}\subset\ete{\cam{F}}{U^{\times m}}$ and a differentiable function in $\map{\tnr{\psi}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}$ are also considered, but $\ete{\cam{F}}{U^{\times m}}$ and $\ete{\cam{F}}{V^{\times s}}$ are Hilbert tensor spaces here. Considering the conditions of the aforementioned theorem, there is a unique tensor $\fua{\nabla\tnr{\psi}}{\tnr{X}_0}\in\ete{\cam{F}}{U^{\times m}\times V^{\times s}}$, called the \textsb{gradient}\index{gradient} of $\tnr{\psi}$ at $\tnr{X}_0$, which the derivative $\fua{\tnr{\psi}'}{\tnr{X}_0}\in\evlc{\cam{F}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}$ is the $m$-cotensor of and where 
 \begin{equation}\label{eq:defGradient}
 [\fua{\tnr{\psi}'}{\tnr{X}_0}](\tnr{X}) = \tnr{X}\odot_m\fua{\nabla\tnr{\psi}}{\tnr{X}_0}\,.
 \end{equation} 
@@ -276,11 +275,11 @@ Considering definitions \eqref{eq:divergence} and \eqref{eq:curl}, since partial
 \end{proof}}
 
 
-Recalling the concept of higher order differentiation presented on the previous section and the conditions of theorem \ref{teo:repRieszTensor}, we can state that if $\tnr{\psi}$ is $k+1$ differentiable at $\tnr{X}_0$ then there is one and only one tensor $\fua{\nabla^{k+1}\tnr{\psi}}{\tnr{X}_0}\in\ete{\cam{F}}{(U^{\times m})^{k+1}\times V^{\times s}}$, the $k+1$ gradient of $\tnr{\psi}$ at $\tnr{X}_0$, which the derivative 
+Recalling the concept of higher order differentiation presented on the previous section and the conditions of theorem \ref{teo:repRieszTensor}, we can state that if $\tnr{\psi}$ is $k+1$ differentiable at $\tnr{X}_0$ then there is a unique tensor $\fua{\nabla\tnr{\psi}^{(k)}}{\tnr{X}_0}\in\ete{\cam{F}}{(U^{\times m})^{k+1}\times V^{\times s}}$ which the derivative 
 \begin{equation*}
-\fua{\tnr{\psi}^{(k+1)}}{\tnr{X}_0}\in{\evl{\cam{F}}{\pmb{\mathcal{U}}_1}{\evl{\cam{F}}{\pmb{\mathcal{U}}_2}{\cdots\evl{\cam{F}}{\pmb{\mathcal{U}}_{k+1}}{\ete{\cam{F}}{V^{\times s}}}}}}
+\fua{\tnr{\psi}^{(k+1)}}{\tnr{X}_0}\in{\evlc{\cam{F}}{\pmb{\mathcal{U}}_{k+1}}{\evlc{\cam{F}}{\pmb{\mathcal{U}}_k}{\cdots\evlc{\cam{F}}{\pmb{\mathcal{U}}_{1}}{\ete{\cam{F}}{V^{\times s}}}}}}
 \end{equation*}
-is the $m$-cotensor of.
+is the $m$-cotensor of and each $\pmb{\mathcal{U}}_i=\pmb{\mathcal{U}}$ defines a Hilbert space of continuous functions. 
 
 
 
