@@ -158,10 +158,11 @@ and $\pmb{\mathcal{U}}_i=\pmb{\mathcal{U}}$. In this context, proceeding with a 
 \fua{[\fua{\tnr{\psi}^{(k+1)}}{\tnr{X}}]}{\tnr{H}}=\lim_{\alpha\to 0} \dfrac{\fua{\tnr{\psi}^{(k)}}{\tnr{X}+\alpha\tnr{H}}-\fua{\tnr{\psi}^{(k)}}{\tnr{X}}}{\alpha}\,,
 \end{equation}
 which is the $k+1$ order directional derivative of $\tnr{\psi}$ along $\tnr{H}\in\pmb{\mathcal{U}}$. From previous equality, if $k>0$ the directional derivative of order $k+1$ along a given tensor is always a function and then by choosing arbitrary tensors $\tnr{H}_1,\cdots,\tnr{H}_{k+1}\in\pmb{\mathcal{U}}$, we conclude that
-\begin{equation}
+\begin{equation}\label{eq:toOrderZero}
 [[\fua{[\fua{\tnr{\psi}^{(k+1)}}{\tnr{X}}]}{\tnr{H}_{k+1}}](\tnr{H}_k)\cdots](\tnr{H}_{1})\in\ete{\cam{F}}{V^{\times s}}\,.
 \end{equation}
 
+Now, let's restrict our attention to tensor functions that are continuous, that is, to elements of function space $\evc{\cam{F}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}$ in this case, when they are said to be of \textsb{differentiability class}\index{differentiability class} $\mathcal{C}^0$. Function $\tnr{\psi}$ is of class $\mathcal{C}^1$ or \textsb{continuously differentiable}\index{function!continuously differentiable} if it is of class $\mathcal{C}^0$ and differentiable of order one where its derivative $\tnr{\psi}^{'}$ is also of differentiability class $\mathcal{C}^0$. In general terms, $\tnr{\psi}$ is of class $\mathcal{C}^{k+1}$ if it is of class $\mathcal{C}^{k}$ and differentiable of order $k+1$ where $\tnr{\psi}^{(k+1)}$ is of class $\mathcal{C}^k$. Stating that function $\tnr{\psi}$ is of class $\mathcal{C}^{k+1}$ is equal to stating that $\tnr{\psi}$ is \textsb{smooth}\index{function!smooth} of order $k+1$ and for the case where $\tnr{\psi}$ is smooth of any order, we say that it is of class $\mathcal{C}^\infty$ or simply call it smooth. 
 
 
 
@@ -279,8 +280,10 @@ Recalling the concept of higher order differentiation presented on the previous 
 \begin{equation*}
 \fua{\tnr{\psi}^{(k+1)}}{\tnr{X}_0}\in{\evlc{\cam{F}}{\pmb{\mathcal{U}}_{k+1}}{\evlc{\cam{F}}{\pmb{\mathcal{U}}_k}{\cdots\evlc{\cam{F}}{\pmb{\mathcal{U}}_{1}}{\ete{\cam{F}}{V^{\times s}}}}}}
 \end{equation*}
-is the $m$-cotensor of and each $\pmb{\mathcal{U}}_i=\pmb{\mathcal{U}}$ defines a Hilbert space of continuous functions. 
-
+is the $m$-cotensor of and each $\pmb{\mathcal{U}}_i=\pmb{\mathcal{U}}$ defines a Hilbert space of continuous functions. Moreover, choosing arbitrary directions $\tnr{H}_1,\cdots,\tnr{H}_{k+1}\in\pmb{\mathcal{U}}$ and specifying $r=m\cdot(k+1)$, statement \eqref{eq:toOrderZero} can be rewritten as
+\begin{equation}
+\tnr{H}_{1}\otimes\cdots\otimes\tnr{H}_{k+1}\odot_r\fua{\nabla\tnr{\psi}^{(k)}}{\tnr{X}}\in\ete{\cam{F}}{V^{\times s}}\,.
+\end{equation}
 
 
 
