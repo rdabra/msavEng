@@ -137,6 +137,20 @@ and then by adding and subtracting the limit on the right hand side by $\fua{\tn
 from which we easily verify the item.
 \end{proof}}
 
+Considering a mapping $\map{\tnr{\varphi}}{\pmb{\mathcal{U}}_1\times\cdots\times\pmb{\mathcal{U}}_q}{\ete{\cam{F}}{V^{\times s}}}$, where $\pmb{\mathcal{U}}_i\subset\ete{\cam{F}}{U^{\times m}}$ is open and the values of $\tnr{\varphi}$ are represented by the multivariate notation $\fua{\tnr{\varphi}}{\tnr{X}_1,\cdots,\tnr{X}_q}$, if there is a tangent function 
+\begin{equation*}
+\fua{\tnr{\varphi_\mathit{d}}}{\tnr{X}_1,\cdots,\tnr{X}_q}=\fua{\tnr{\varphi}}{\tnr{Y}_1,\cdots,\tnr{Y}_q}+\fua{[\fua{\tnr{\varphi}'}{\tnr{Y}_1,\cdots,\tnr{Y}_q}]}{\tnr{X}_1-\tnr{Y}_1,\cdots,\tnr{X}_q-\tnr{Y}_q}
+\end{equation*}
+to $\tnr{\varphi}$ at $(\tnr{Y}_1,\cdots,\tnr{Y}_q)\in\pmb{\mathcal{U}}_1\times\cdots\times\pmb{\mathcal{U}}_q$, then $\tnr{\varphi}$ is totally differentiable and, by a similar development to the case of univariate tensor functions, we arrive at the multivariate definition for directional derivatives:
+\begin{equation}
+\fua{[\fua{\tnr{\varphi}'}{\tnr{X}_1,\cdots,\tnr{X}_q}]}{\tnr{H}_1,\cdots,\tnr{H}_q}=\lim_{\alpha\to 0} \dfrac{\fua{\tnr{\varphi}}{\tnr{X}_1+\alpha\tnr{H}_1,\cdots,\tnr{X}_q+\alpha\tnr{H}_q}-\fua{\tnr{\varphi}}{\tnr{X}_1,\cdots,\tnr{X}_q}}{\alpha}\,,
+\end{equation}
+where $\tnr{H}_i\in\pmb{\mathcal{U}}_i$ is an arbitrary direction. When the strategy is to study each variable $\tnr{X}_i$ independently, \emph{caeteris paribus}, development from the concept of tangency is the same as the univariate case, but now the derivative of $\tnr{\varphi}$  is called \textsb{partial derivative}\index{derivative!partial} with respect to $\tnr{X}_r$, $1\leqslant r\leqslant q$, represented by $\tnr{\varphi}_{\tnr{X}_r}^{'}$, where 
+\begin{equation}
+[\fua{\tnr{\varphi}_{\tnr{X}_r}^{'}}{\tnr{X}_1,\cdots,\tnr{X}_q}]{(\tnr{H}_r)}=\lim_{\alpha\to 0} \dfrac{\fua{\tnr{\varphi}}{\tnr{X}_1,\cdots,\tnr{X}_r+\alpha\tnr{H}_r,\cdots,\tnr{X}_q}-\fua{\tnr{\varphi}}{\tnr{X}_1,\cdots,\tnr{X}_q}}{\alpha}\,.
+\end{equation}
+
+
 It is interesting to note that derivatives may be differentiable themselves, and also derivatives of derivatives, and so on. Considering previous conditions, the tensor function $\tnr{\psi}$ is defined to be the zero order derivative of itself, function $\tnr{\psi}'$ is the order one derivative of $\tnr{\psi}$, $\tnr{\psi}''$ the order two and $\tnr{\psi}^{(k)}$ the order $k\geqslant 0$. Thereby, from definition \eqref{eq:tangentFunct}, a tensor function $\tnr{\psi}$ is said to be differentiable of order two at $\tnr{X}_0$ if it is differentiable at $\tnr{X}_0$ and there is a unique function $\tnr{\psi_\mathit{d}}^{(1)}$ tangent to the function in $\map{\tnr{\psi}'}{\pmb{\mathcal{U}}}{\evlc{\cam{F}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}}$ at $\tnr{X}_0$ where   
 \begin{equation*}
 \fua{\tnr{\psi_\mathit{d}}^{(1)}}{\tnr{X}}=\fua{\tnr{\psi}'}{\tnr{X}_0}+\fua{[\fua{\tnr{\psi}''}{\tnr{X}_0}]}{\tnr{X}-\tnr{X}_0}\,.
@@ -162,7 +176,7 @@ which is the $k+1$ order directional derivative of $\tnr{\psi}$ along $\tnr{H}\i
 [[\fua{[\fua{\tnr{\psi}^{(k+1)}}{\tnr{X}}]}{\tnr{H}_{k+1}}](\tnr{H}_k)\cdots](\tnr{H}_{1})\in\ete{\cam{F}}{V^{\times s}}\,.
 \end{equation}
 
-Now, let's restrict our attention to tensor functions that are continuous, that is, to elements of function space $\evc{\cam{F}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}$ in this case, when they are said to be of \textsb{differentiability class}\index{differentiability class} $\mathcal{C}^0$. Function $\tnr{\psi}$ is of class $\mathcal{C}^1$ or \textsb{continuously differentiable}\index{function!continuously differentiable} if it is of class $\mathcal{C}^0$ and differentiable of order one where its derivative $\tnr{\psi}^{'}$ is also of differentiability class $\mathcal{C}^0$. In general terms, $\tnr{\psi}$ is of class $\mathcal{C}^{k+1}$ if it is of class $\mathcal{C}^{k}$ and differentiable of order $k+1$ where $\tnr{\psi}^{(k+1)}$ is of class $\mathcal{C}^k$. Stating that function $\tnr{\psi}$ is of class $\mathcal{C}^{k+1}$ is equal to stating that $\tnr{\psi}$ is \textsb{smooth}\index{function!smooth} of order $k+1$ and for the case where $\tnr{\psi}$ is smooth of any order, we say that it is of class $\mathcal{C}^\infty$ or simply call it smooth. 
+Now, let's restrict our attention to tensor functions that are continuous, that is, to elements of function space $\evc{\cam{F}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}$ in this present case, when they are said to be of \textsb{differentiability class}\index{differentiability class} $\mathcal{C}^0$. Function $\tnr{\psi}$ is of class $\mathcal{C}^1$ or \textsb{continuously differentiable}\index{function!continuously differentiable} if it is of class $\mathcal{C}^0$ and differentiable of order one with derivative $\tnr{\psi}^{'}$ also of differentiability class $\mathcal{C}^0$. In general terms, $\tnr{\psi}$ is of class $\mathcal{C}^{k+1}$ if it is of class $\mathcal{C}^{k}$ and differentiable of order $k+1$ with $\tnr{\psi}^{(k+1)}$ of class $\mathcal{C}^k$. Stating that function $\tnr{\psi}$ is of class $\mathcal{C}^{k+1}$ is equal to stating that $\tnr{\psi}$ is \textsb{smooth}\index{function!smooth} of order $k+1$ and for the case where $\tnr{\psi}$ is smooth of any order, we say that it is of class $\mathcal{C}^\infty$ or simply call it smooth. A differentiable tensor function is called a \textsb{diffeomorphism}\index{diffeomorphism} if it is a bijection and its inverse is also differentiable. When a diffeomorphism is smooth of order $k+1$, then it is called a $\mathcal{C}^{k+1}$-diffeomorphism.
 
 
 
