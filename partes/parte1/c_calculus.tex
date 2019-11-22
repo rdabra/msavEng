@@ -22,12 +22,12 @@ Since the sum of limits is the limit of sums, the previous statement can be veri
 \end{align*} 
 \end{proof}}
 
-Proceeding with the above conditions, if there is one and only one tensor function $\tnr{\psi_\mathit{d}}$, tangent to $\tnr{\psi}$ at $\tnr{X}_0$, described by the rule
+Proceeding with the above conditions, if there is one and only one tensor function \gloref{tangent}, tangent to $\tnr{\psi}$ at $\tnr{X}_0$, described by the rule
 \begin{equation}\label{eq:tangentFunct}
 \fua{\tnr{\psi_\mathit{d}}}{\tnr{X}}=\fua{\tnr{\psi}}{\tnr{X}_0}+\fua{[\fua{\tnr{\psi}'}{\tnr{X}_0}]}{\tnr{X}-\tnr{X}_0}\,,
 \end{equation}
 where function $\fua{\tnr{\psi}'}{\tnr{X}_0}\in\evl{\cam{F}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}$ is bounded, then $\tnr{\psi}$ is called \textsb{Fréchet differentiable}\index{function!Fréchet differentiable}, \textsb{totally differentiable}\index{function!totally differentiable} or simply \textsb{differentiable}\index{function!differentiable} at $\tnr{X}_0$, while the linear function $\fua{\tnr{\psi}'}{\tnr{X}_0}$ is called the \textsb{derivative}\index{derivative} of $\tnr{\psi}$ at $\tnr{X}_0$. According to \eqref{eq:funcaoLimitada}, linearity and boundedness imply continuity, and then $\fua{\tnr{\psi}'}{\tnr{X}_0}$ belongs to function space $\evlc{\cam{F}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}$, which we specify to be also a Banach space of continuous linear functions. Moreover, the function in 
-$\map{\tnr{\psi}'}{\pmb{\mathcal{U}}}{\evlc{\cam{F}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}}$ is said to be the \textsb{derivative function}\index{derivative!function} or simply the derivative of $\tnr{\psi}$. Rewriting expression \eqref{eq:tangent} for $\tnr{\psi}$ and $\tnr{\psi_\mathit{d}}$ tangent at $\tnr{X}_0$, the result is
+$\map{\gloref{derivative}}{\pmb{\mathcal{U}}}{\evlc{\cam{F}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}}$ is said to be the \textsb{derivative function}\index{derivative!function} or simply the derivative of $\tnr{\psi}$. Rewriting expression \eqref{eq:tangent} for $\tnr{\psi}$ and $\tnr{\psi_\mathit{d}}$ tangent at $\tnr{X}_0$, the result is
 \begin{equation}\label{eq:preDirect}
 \lim_{\tnr{X}\to \tnr{0}} \dfrac{\fua{\tnr{\psi}}{\tnr{X}_0+\tnr{X}}-\fua{\tnr{\psi}}{\tnr{X}_0}-\fua{[\fua{\tnr{\psi}'}{\tnr{X}_0}]}{\tnr{X}}}{\|\tnr{X}\|}=\tnr{0}\,,
 \end{equation} 
@@ -145,7 +145,7 @@ and $\fua{\tnr{\varphi}'}{\tnr{Y}_1,\cdots,\tnr{Y}_q}$ is multilinear, then $\tn
 \begin{equation}\label{eq:totalDerivative}
 \fua{[\fua{\tnr{\varphi}'}{\tnr{X}_1,\cdots,\tnr{X}_q}]}{\tnr{H}_1,\cdots,\tnr{H}_q}=\lim_{\alpha\to 0} \dfrac{\fua{\tnr{\varphi}}{\tnr{X}_1+\alpha\tnr{H}_1,\cdots,\tnr{X}_q+\alpha\tnr{H}_q}-\fua{\tnr{\varphi}}{\tnr{X}_1,\cdots,\tnr{X}_q}}{\alpha}\,,
 \end{equation}
-where $\tnr{H}_i\in\pmb{\mathcal{U}}_i$ is an arbitrary direction. When the strategy is to study each variable $\tnr{X}_i$ independently, \emph{caeteris paribus}, development from the concept of tangency is the same as the univariate case, but now the derivative of $\tnr{\varphi}$  is called \textsb{partial derivative}\index{derivative!partial} of $\tnr{\varphi}$ with respect to $\tnr{X}_r$, $1\leqslant r\leqslant q$, represented by $\tnr{\varphi}_{\tnr{X}_r}^{'}$, where 
+where $\tnr{H}_i\in\pmb{\mathcal{U}}_i$ is an arbitrary direction. When the strategy is to study each variable $\tnr{X}_i$ independently, \emph{caeteris paribus}, development from the concept of tangency is the same as the univariate case, but now the derivative of $\tnr{\varphi}$  is called \textsb{partial derivative}\index{derivative!partial} of $\tnr{\varphi}$ with respect to $\tnr{X}_r$, $1\leqslant r\leqslant q$, represented by \gloref{partialDer}, where 
 \begin{equation}\label{eq:partialDerivative}
 [\fua{\tnr{\varphi}_{\tnr{X}_r}^{'}}{\tnr{X}_1,\cdots,\tnr{X}_q}]{(\tnr{H}_r)}=\lim_{\alpha\to 0} \dfrac{\fua{\tnr{\varphi}}{\tnr{X}_1,\cdots,\tnr{X}_r+\alpha\tnr{H}_r,\cdots,\tnr{X}_q}-\fua{\tnr{\varphi}}{\tnr{X}_1,\cdots,\tnr{X}_q}}{\alpha}\,.
 \end{equation}
@@ -165,7 +165,7 @@ Summing these $q$ equalities, we prove the property because function $\fua{\tnr{
 
 
 
-It is interesting to note that derivatives may be differentiable themselves, and also derivatives of derivatives, and so on. Considering previous conditions, the tensor function $\tnr{\psi}$ is defined to be the zero order derivative of itself, function $\tnr{\psi}'$ is the order one derivative of $\tnr{\psi}$, $\tnr{\psi}''$ the order two and $\tnr{\psi}^{(k)}$ the order $k\geqslant 0$. Thereby, from definition \eqref{eq:tangentFunct}, a tensor function $\tnr{\psi}$ is said to be differentiable of order two at $\tnr{X}_0$ if it is differentiable at $\tnr{X}_0$ and there is a unique function $\tnr{\psi_\mathit{d}}^{(1)}$ tangent to the function in $\map{\tnr{\psi}'}{\pmb{\mathcal{U}}}{\evlc{\cam{F}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}}$ at $\tnr{X}_0$ where   
+It is interesting to note that derivatives may be differentiable themselves, and also derivatives of derivatives, and so on. Considering previous conditions, the tensor function $\tnr{\psi}$ is defined to be the zero order derivative of itself, function $\tnr{\psi}'$ is the order one derivative of $\tnr{\psi}$, $\tnr{\psi}''$ the order two and $\gloref{derivHigh}$ the order $k\geqslant 0$. Thereby, from definition \eqref{eq:tangentFunct}, a tensor function $\tnr{\psi}$ is said to be differentiable of order two at $\tnr{X}_0$ if it is differentiable at $\tnr{X}_0$ and there is a unique function $\tnr{\psi_\mathit{d}}^{(1)}$ tangent to the function in $\map{\tnr{\psi}'}{\pmb{\mathcal{U}}}{\evlc{\cam{F}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}}$ at $\tnr{X}_0$ where   
 \begin{equation*}
 \fua{\tnr{\psi_\mathit{d}}^{(1)}}{\tnr{X}}=\fua{\tnr{\psi}'}{\tnr{X}_0}+\fua{[\fua{\tnr{\psi}''}{\tnr{X}_0}]}{\tnr{X}-\tnr{X}_0}\,.
 \end{equation*}
@@ -203,7 +203,7 @@ The concept of gradient we shall detail in this section is restricted to the con
 \begin{equation}\label{eq:defGradient}
 [\fua{\tnr{\psi}'}{\tnr{X}_0}](\tnr{X}) = \tnr{X}\odot_m\fua{\nabla\tnr{\psi}}{\tnr{X}_0}\,.
 \end{equation} 
-Moreover, the tensor function in $\map{\nabla\tnr{\psi}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{U^{\times m}\times V^{\times s}}}$, called the gradient of $\tnr{\psi}$, assigns to a tensor of order $m$ a tensor of order $m+s$. Therefore, \emph{for the particular case of a differentiable unary tensor operator on $\pmb{\mathcal{U}}$, its gradient assigns to a $m$-th order tensor a $2m$-th order tensor}. Now, from this definition of gradient and from rule \eqref{eq:directDeriv}, the directional derivative of $\tnr{\psi}$ along $\tnr{H}\in\pmb{\mathcal{U}}$ is described by 
+Moreover, the tensor function in $\map{\gloref{gradi}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{U^{\times m}\times V^{\times s}}}$, called the gradient of $\tnr{\psi}$, assigns to a tensor of order $m$ a tensor of order $m+s$. Therefore, \emph{for the particular case of a differentiable unary tensor operator on $\pmb{\mathcal{U}}$, its gradient assigns to a $m$-th order tensor a $2m$-th order tensor}. Now, from this definition of gradient and from rule \eqref{eq:directDeriv}, the directional derivative of $\tnr{\psi}$ along $\tnr{H}\in\pmb{\mathcal{U}}$ is described by 
 \begin{equation}
 \fua{[\fua{\tnr{\psi}'}{\tnr{X}}]}{\tnr{H}}=\tnr{H}\odot_m\fua{\nabla\tnr{\psi}}{\tnr{X}}=\lim_{\alpha\to 0} \dfrac{\fua{\tnr{\psi}}{\tnr{X}+\alpha\tnr{H}}-\fua{\tnr{\psi}}{\tnr{X}}}{\alpha}\,.
 \end{equation}
@@ -255,7 +255,7 @@ proves item iv.
 \end{proof}}
 
 
-Still in the context of Hilbert spaces, we define from the concept of gradient three important and very useful tensor functions, namely divergence, Laplacian and curl. Considering the mapping $\map{\tnr{\varphi}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{U^{\times m}\times V^{\times s}}}$ where function $\tnr{\varphi}$ is differentiable on its domain, the function in $\map{\dvt{\tnr{\varphi}}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}$ is called the \textsb{divergence}\index{divergence} of $\tnr{\varphi}$ if its rule is described by
+Still in the context of Hilbert spaces, we define from the concept of gradient three important and very useful tensor functions, namely divergence, Laplacian and curl. Considering the mapping $\map{\tnr{\varphi}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{U^{\times m}\times V^{\times s}}}$ where function $\tnr{\varphi}$ is differentiable on its domain, the function in $\map{\gloref{diverg}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}$ is called the \textsb{divergence}\index{divergence} of $\tnr{\varphi}$ if its rule is described by
 \begin{equation}\label{eq:divergence}
 \fua{\dvt{\tnr{\varphi}}}{\tnr{X}}=\tnr{I}\odot_{2m}\fua{\nabla\tnr{\varphi}}{\tnr{X}}\,,
 \end{equation}
@@ -264,7 +264,7 @@ From this concept of divergence and from mapping $\map{\nabla\tnr{\psi}}{\pmb{\m
 \begin{equation}\label{eq:laplace}
 \Delta\tnr{\psi}=\dvt{\nabla\tnr{\psi}}\,,
 \end{equation}
-called the \textsb{Laplacian}\index{Laplacian} of $\tnr{\psi}$, where $\fua{\Delta\tnr{\psi}}{\tnr{X}}\in \ete{\cam{F}}{V^{\times s}}$. Now, we restrict the context of function $\tnr{\varphi}$ to tensor spaces of order $m=1$ and $s=1$, specifying that $V_\real$ is an Euclidean space and $U_\real$ defines a three dimensional oriented Euclidean space $(U_\real,\tnr{A}_B)$, where $B$ is an orthonormal basis of $U_\cam{R}$. In this context, it is possible to define a mapping  $\map{\crl{\tnr{\varphi}}}{\pmb{\mathcal{U}}}{V_\real}$, whose function is called the \textsb{curl}\index{curl} of $\tnr{\varphi}$, with rule 
+called the \textsb{Laplacian}\index{Laplacian} of $\tnr{\psi}$, where $\fua{\gloref{laplac}}{\tnr{X}}\in \ete{\cam{F}}{V^{\times s}}$. Now, we restrict the context of function $\tnr{\varphi}$ to tensor spaces of order $m=1$ and $s=1$, specifying that $V_\real$ is an Euclidean space and $U_\real$ defines a three dimensional oriented Euclidean space $(U_\real,\tnr{A}_B)$, where $B$ is an orthonormal basis of $U_\cam{R}$. In this context, it is possible to define a mapping  $\map{\gloref{curl}}{\pmb{\mathcal{U}}}{V_\real}$, whose function is called the \textsb{curl}\index{curl} of $\tnr{\varphi}$, with rule 
 \begin{equation}\label{eq:curl}
 \fua{\crl{\tnr{\varphi}}}{\vto{x}}=\tnr{A}_B\odot_{2}\fua{\nabla\tnr{\varphi}}{\vto{x}}\,,
 \end{equation}
