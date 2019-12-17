@@ -59,7 +59,7 @@ These generic problems, al-Khw\=arizm\={\i} did not solve them using a symbolic 
 Translations to the latin language of the al-Khw\=arizm\={\i} work in 1145 helped to incorporate the arab mathematics in the western thought. The works of Diophantus and al-Khw\=arizm\={\i}, dealing essentially with the solution of equations, are the two most relevant origins of what today we call Algebra.
 
 
-\section{Sets}
+\section{Sets}\label{sec:Sets}
 
 In conceptual terms, the least restricted algebraic collection is called set\index{set}, which can have a finite or infinite number of distinct elements, or none\footnote{This is not the approach of the Axiomatic Set Theory. See \aut{Cameron}\cite{cameron_1999_1}.}. Therefore, from the finite collection $a,b,b,a,c$, we can define a finite set $\lch \gloref{eleA},b,c \rch$ of three distinct\footnote{A set does not admit repeated elements. See \aut{Shen \& Vereshchagin}\cite{shen_2002_1}.} elements. In concrete examples, this distinction -- that can be done abstractly by labeling objects with letters -- depends on the element characteristics elected to distinguish each other, as in figure \ref{fg:conjunto}. It is important to say that the descriptive sequence of its elements does not alter the definition of a set: for example, definitions $\gloref{conjA}\gloref{defPor}\lch \ele{a},\ele{b}\rch$ and $\con{A}:=\lch \ele{b},\ele{a}\rch$ are identical. Speaking of comparisons, the sets $\con{A}$ and $\con{B}$ are said to be equal, $\con{A}=\con{B}$, if they have the same elements; otherwise, they are different: $\con{A}\neq\con{B}$.
 
@@ -117,6 +117,7 @@ A_1\setminus\lpa A_2\cap A_3\rpa&= A_1\cap\lpa A_2\cap A_3\rpa'\nonumber\\
 \end{align}
 \end{proof}}
 
+A set $C$ of sets is called a \textsb{class}, here represented by $\css{C}$. When all the elements of $\css{C}$ are disjoint then $\css{C}$ is also called disjoint. If $\css{C}$ is constituted by subsets of set $M$, then $\css{C}$ is said to be a class of $M$. A class $\css{C}$ is \textsb{countable}\index{class!countable} if a bijective mapping $\css{C}\mapsto\mathbb{N}^+$ can be defined, that is, $\css{C}=\{C_1,C_2,\cdots\}$. Given a non empty class $\css{M}$, an arbitrary countable class $\{A_1,\cdots,A_n\}\subseteq\css{M}$ and arbitrary elements $A,B\in\css{M}$, if both sets $\bigcup_{i=1}^n A_i$ and $A\setminus B$ also belong to $\css{M}$, then this class is called a \textsb{ring}\index{ring}. From this definition, if $\css{M}$ is a ring and we choose $A=B$, it is clear that every ring has the empty set because $A\setminus B=\emptyset$. Considering the arbitrary countable class $\{A_1,A_2,\cdots\}$ an improper subset of ring $\css{M}$, if $\bigcup_{i=1}^\infty A_i\in\css{M}$, then $\css{M}$ is called a \textsb{$\sigma$-ring}\index{ring!$\sigma$-}. 
 
 \section{Sequences}\index{sequence}
 
@@ -165,7 +166,7 @@ The fundamental concept that establishes algebraic relationships we call it func
 \begin{equation}
 \fua{f}{\ele{d}_1}\neq\fua{f}{\ele{d}_2}\implies \ele{d}_1\neq \ele{d}_2\,,\,\,\forall\, d_1,d_2\in D.
 \end{equation}
-When we want to emphasize the domain $D$ of function $f$, we use the combined notation $\gloref{dominio}$. There is also an alternative notation for the function $f$ that makes its domain explicit: $\ele{d}\gloref{mapsto}\fua{f}{\ele{d}}$, where each element $d\in D$ is related to a value $\fua{f}{d}$ by $f$ in terms already described.
+When we want to emphasize the domain $D$ of function $f$, we use the combined notation $\gloref{dominio}$. There is also an alternative notation for the function $f$ that makes its domain explicit: $\ele{d}\gloref{mapsto}\fua{f}{\ele{d}}$, where each element $d\in D$ is related to a value $\fua{f}{d}$ by $f$ in terms already described. Additionally, it is important to say that just like any other set, classes can also be the domain of functions, which are usually called \textsb{set functions}\index{function!set}.
 
 The description of $f$, as a rule, is done through an algebraic expression, where the symbol that represents an arbitrary element of the domain is called a \textsb{variable}\index{variable}. For example, let  $\lpa \gloref{real},f \rpa$ be a function and
 \begin{equation}
