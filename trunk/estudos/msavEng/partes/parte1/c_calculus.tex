@@ -1,7 +1,7 @@
 
 \chapter{Basic Tensor Calculus}
 
-Analysis is the branch of Mathematics that studies the behaviour of functions by using the idea of limit, considered fundamental, and its subordinate concepts. When such concepts involve  differentiation and integration, as well as their related definitions, Analysis is commonly known as Calculus. Intuitively speaking, up to this point, we have dealt with functions in a kind of ``static'' approach: on previous chapters, the sole definition of a mapping, with its associated function explicitly described or not, was sufficient for developing the concepts presented. Now, we are also interested in a ``dynamic'' approach for functions, where it is important not only to specify them but also to describe how their values evolve on their images, or how they behave, through derivatives and integrals. In this context, considering the study of tensors started on chapter \ref{cp:tensor}, the following pages introduce the Calculus of tensor functions, usually called Tensor Calculus. Since a tensor function is the most general type of function presented so far, we do not deviate from our main objective of being as abstract as possible on behalf of mathematical beauty.  
+Analysis is the branch of Mathematics that studies the behaviour of functions by using the idea of limit, considered fundamental, and its subordinate concepts. When such concepts involve  differentiation and integration, as well as their related definitions, Analysis is commonly known as Calculus. Intuitively speaking, up to this point, we have dealt with functions in a kind of ``static'' approach: on previous chapters, the sole definition of a mapping, with its associated function explicitly described or not, was sufficient for developing the concepts presented. Now, we are also interested in a ``dynamic'' approach for functions, where it is important not only to specify them but also to describe how their values evolve on their images, or how they behave, through derivatives and integrals. In this context, considering the study of tensors started on chapter \ref{cp:tensor}, the following pages introduce the Calculus of tensor functions, usually called Tensor Calculus. Since a tensor function is the most general type of function presented so far, we do not deviate from our main objective of being as abstract as possible on behalf of mathematical beauty.
 
 
 
@@ -15,30 +15,30 @@ In other words, as $\tnr{X}$ tends to the zero tensor, the numerator tends to th
 
 {\footnotesize
 \begin{proof}
-Since the sum of limits is the limit of sums, the previous statement can be verified by considering functions $\tnr{\kappa}_1$ and $\tnr{\kappa}_2$ tangent to $\tnr{\psi}$ at $\tnr{X}_0$ and subtracting both limit expressions described by \eqref{eq:tangent} : 
+Since the sum of limits is the limit of sums, the previous statement can be verified by considering functions $\tnr{\kappa}_1$ and $\tnr{\kappa}_2$ tangent to $\tnr{\psi}$ at $\tnr{X}_0$ and subtracting both limit expressions described by \eqref{eq:tangent} :
 \begin{align*}
 \tnr{0}&=\lim_{\tnr{X}\to \tnr{0}} \dfrac{\fua{\tnr{\psi}}{\tnr{X}_0+\tnr{X}}-\fua{\tnr{\kappa}_1}{\tnr{X}_0+\tnr{X}}-\fua{\tnr{\psi}}{\tnr{X}_0+\tnr{X}}+\fua{\tnr{\kappa}_2}{\tnr{X}_0+\tnr{X}}}{\|\tnr{X}\|}\\
 &=\lim_{\tnr{X}\to \tnr{0}} \dfrac{\fua{\tnr{\kappa}_2}{\tnr{X}_0+\tnr{X}}-\fua{\tnr{\kappa}_1}{\tnr{X}_0+\tnr{X}}}{\|\tnr{X}\|}\,.
-\end{align*} 
+\end{align*}
 \end{proof}}
 
 Proceeding with the above conditions, if there is one and only one tensor function \gloref{tangent}, tangent to $\tnr{\psi}$ at $\tnr{X}_0$, described by the rule
 \begin{equation}\label{eq:tangentFunct}
 \fua{\tnr{\psi_\mathit{d}}}{\tnr{X}}=\fua{\tnr{\psi}}{\tnr{X}_0}+\fua{[\fua{\tnr{\psi}'}{\tnr{X}_0}]}{\tnr{X}-\tnr{X}_0}\,,
 \end{equation}
-where function $\fua{\tnr{\psi}'}{\tnr{X}_0}\in\evl{\cam{F}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}$ is bounded, then $\tnr{\psi}$ is called \textsb{Fréchet differentiable}\index{function!Fréchet differentiable}, \textsb{totally differentiable}\index{function!totally differentiable} or simply \textsb{differentiable}\index{function!differentiable} at $\tnr{X}_0$, while the linear function $\fua{\tnr{\psi}'}{\tnr{X}_0}$ is called the \textsb{derivative}\index{derivative} of $\tnr{\psi}$ at $\tnr{X}_0$. According to \eqref{eq:funcaoLimitada}, linearity and boundedness imply continuity, and then $\fua{\tnr{\psi}'}{\tnr{X}_0}$ belongs to function space $\evlc{\cam{F}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}$, which we specify to be also a Banach space of continuous linear functions. Moreover, the function in 
+where function $\fua{\tnr{\psi}'}{\tnr{X}_0}\in\evl{\cam{F}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}$ is bounded, then $\tnr{\psi}$ is called \textsb{Fréchet differentiable}\index{function!Fréchet differentiable}, \textsb{totally differentiable}\index{function!totally differentiable} or simply \textsb{differentiable}\index{function!differentiable} at $\tnr{X}_0$, while the linear function $\fua{\tnr{\psi}'}{\tnr{X}_0}$ is called the \textsb{derivative}\index{derivative} of $\tnr{\psi}$ at $\tnr{X}_0$. According to \eqref{eq:funcaoLimitada}, linearity and boundedness imply continuity, and then $\fua{\tnr{\psi}'}{\tnr{X}_0}$ belongs to function space $\evlc{\cam{F}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}$, which we specify to be also a Banach space of continuous linear functions. Moreover, the function in
 $\map{\gloref{derivative}}{\pmb{\mathcal{U}}}{\evlc{\cam{F}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}}$ is said to be the \textsb{derivative function}\index{derivative!function} or simply the derivative of $\tnr{\psi}$. Rewriting expression \eqref{eq:tangent} for $\tnr{\psi}$ and $\tnr{\psi_\mathit{d}}$ tangent at $\tnr{X}_0$, the result is
 \begin{equation}\label{eq:preDirect}
 \lim_{\tnr{X}\to \tnr{0}} \dfrac{\fua{\tnr{\psi}}{\tnr{X}_0+\tnr{X}}-\fua{\tnr{\psi}}{\tnr{X}_0}-\fua{[\fua{\tnr{\psi}'}{\tnr{X}_0}]}{\tnr{X}}}{\|\tnr{X}\|}=\tnr{0}\,,
-\end{equation} 
-from which we can conclude that the numerator tends to the zero tensor faster than the denominator tends to zero, otherwise there would be no definite limit. If numerator tends to the zero tensor, the term $\fua{[\fua{\tnr{\psi}'}{\tnr{X}_0}]}{\tnr{X}}$ results an approximation for the difference $\fua{\tnr{\psi}}{\tnr{X}_0+\tnr{X}}-\fua{\tnr{\psi}}{\tnr{X}_0}$, and that is why the derivative is said to be a local linear approximation of a function and $\fua{[\fua{\tnr{\psi}'}{\tnr{X}_0}]}{\tnr{X}}$ is called the \textsb{differential}\index{differential} of $\tnr{\psi}$ at $\tnr{X}_0$. Moreover, since the previous equality is valid for $\tnr{X}$ tending to the zero tensor through any ``path'', let's choose a specific direction by considering an arbitrary tensor $\tnr{H}\in\pmb{\mathcal{U}}$ in such a way that $\tnr{X}=\alpha\tnr{H}$, where $\alpha\in\cam{F}$, and then 
+\end{equation}
+from which we can conclude that the numerator tends to the zero tensor faster than the denominator tends to zero, otherwise there would be no definite limit. If numerator tends to the zero tensor, the term $\fua{[\fua{\tnr{\psi}'}{\tnr{X}_0}]}{\tnr{X}}$ results an approximation for the difference $\fua{\tnr{\psi}}{\tnr{X}_0+\tnr{X}}-\fua{\tnr{\psi}}{\tnr{X}_0}$, and that is why the derivative is said to be a local linear approximation of a function and $\fua{[\fua{\tnr{\psi}'}{\tnr{X}_0}]}{\tnr{X}}$ is called the \textsb{differential}\index{differential} of $\tnr{\psi}$ at $\tnr{X}_0$. Moreover, since the previous equality is valid for $\tnr{X}$ tending to the zero tensor through any ``path'', let's choose a specific direction by considering an arbitrary tensor $\tnr{H}\in\pmb{\mathcal{U}}$ in such a way that $\tnr{X}=\alpha\tnr{H}$, where $\alpha\in\cam{F}$, and then
 \begin{equation*}
 \lim_{\alpha\to 0} \dfrac{\fua{\tnr{\psi}}{\tnr{X}_0+\alpha\tnr{H}}-\fua{\tnr{\psi}}{\tnr{X}_0}-\fua{[\fua{\tnr{\psi}'}{\tnr{X}_0}]}{\alpha\tnr{H}}}{|\alpha|}=\tnr{0}\,.
-\end{equation*} 
+\end{equation*}
 Multiplying both sides by $\sgn{\alpha}$, we have
 \begin{equation*}
 \lim_{\alpha\to 0} \dfrac{\fua{\tnr{\psi}}{\tnr{X}_0+\alpha\tnr{H}}-\fua{\tnr{\psi}}{\tnr{X}_0}}{\alpha}-\lim_{\alpha\to 0} \dfrac{\alpha\fua{[\fua{\tnr{\psi}'}{\tnr{X}_0}]}{\tnr{H}}}{\alpha}=\sgn{\alpha}\tnr{0}\,,
-\end{equation*} 
+\end{equation*}
 which results
 \begin{equation}
 \fua{[\fua{\tnr{\psi}'}{\tnr{X}_0}]}{\tnr{H}}=\lim_{\alpha\to 0} \dfrac{\fua{\tnr{\psi}}{\tnr{X}_0+\alpha\tnr{H}}-\fua{\tnr{\psi}}{\tnr{X}_0}}{\alpha}\,,
@@ -47,12 +47,12 @@ where $\fua{[\fua{\tnr{\psi}'}{\tnr{X}_0}]}{\tnr{H}}\in\ete{\cam{F}}{V^{\times s
 \begin{equation}\label{eq:directDeriv}
 \fua{[\fua{\tnr{\psi}'}{\tnr{X}}]}{\tnr{H}}=\lim_{\alpha\to 0} \dfrac{\fua{\tnr{\psi}}{\tnr{X}+\alpha\tnr{H}}-\fua{\tnr{\psi}}{\tnr{X}}}{\alpha}
 \end{equation}
-is said to be the directional derivative\footnote{It is important to say a few words about a less restricted or weaker type of derivative than the Fréchet derivative just presented. It is not defined from the concept of tangency but from a directional derivative in which the derivative involved is not necessarily bounded and linear. Considering the above conditions, the tensor function in $\map{\tnr{\varphi}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}$ is said to be \textsb{Gâteaux differentiable}\index{function!Gâteaux differentiable} at $\tnr{X}_0$ if there exists a mapping $\map{\fua{\tnr{\varphi}'_G}{\tnr{X}_0}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}$ where 
+is said to be the directional derivative\footnote{It is important to say a few words about a less restricted or weaker type of derivative than the Fréchet derivative just presented. It is not defined from the concept of tangency but from a directional derivative in which the derivative involved is not necessarily bounded and linear. Considering the above conditions, the tensor function in $\map{\tnr{\varphi}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}$ is said to be \textsb{Gâteaux differentiable}\index{function!Gâteaux differentiable} at $\tnr{X}_0$ if there exists a mapping $\map{\fua{\tnr{\varphi}'_G}{\tnr{X}_0}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}$ where
 \begin{equation*}
 \fua{[\fua{\tnr{\varphi}'_G}{\tnr{X}_0}]}{\tnr{X}}=\lim_{\alpha\to 0} \dfrac{\fua{\tnr{\varphi}}{\tnr{X}_0+\alpha\tnr{X}}-\fua{\tnr{\varphi}}{\tnr{X}_0}}{\alpha}\,.
 \end{equation*}
-The tensor function $\fua{[\fua{\tnr{\varphi}'_G}{\tnr{X}_0}]}{\tnr{X}}$ is called the \textsb{Gâteaux differential}\index{differential!Gâteaux} of $\tnr{\varphi}$ at $\tnr{X}_0$ and $\tnr{\varphi}'_G$ is the \textsb{Gâteaux derivative}\index{derivative!Gâteaux} of $\tnr{\varphi}$. Every Fréchet differentiable function is also Gâteaux differential, but the converse is obviously not true. What is less obvious is the following: even when Gâteaux derivative $\fua{\tnr{\varphi}'_G}{\tnr{X}_0}$ is bounded and linear, Gâteaux differentiability, which means differentiability along all directions at a point, does not assure total differentiability. This present study will require only the stronger restrictions from the Fréchet differentiation. For further developments of the Gâteaux derivative, see \aut{Wouk}\cite{wouk_1979_1}, chapter 12.} of $\tnr{\psi}$ along $\tnr{H}$. 
- 
+The tensor function $\fua{[\fua{\tnr{\varphi}'_G}{\tnr{X}_0}]}{\tnr{X}}$ is called the \textsb{Gâteaux differential}\index{differential!Gâteaux} of $\tnr{\varphi}$ at $\tnr{X}_0$ and $\tnr{\varphi}'_G$ is the \textsb{Gâteaux derivative}\index{derivative!Gâteaux} of $\tnr{\varphi}$. Every Fréchet differentiable function is also Gâteaux differential, but the converse is obviously not true. What is less obvious is the following: even when Gâteaux derivative $\fua{\tnr{\varphi}'_G}{\tnr{X}_0}$ is bounded and linear, Gâteaux differentiability, which means differentiability along all directions at a point, does not assure total differentiability. This present study will require only the stronger restrictions from the Fréchet differentiation. For further developments of the Gâteaux derivative, see \aut{Wouk}\cite{wouk_1979_1}, chapter 12.} of $\tnr{\psi}$ along $\tnr{H}$.
+
 
 {\footnotesize
 \begin{proof}
@@ -97,11 +97,11 @@ Considering previous conditions, it is possible to obtain the following importan
 
 {\footnotesize
 \begin{proof}
-Verification of items i and ii are straightforward results after specifying their respective rules of $\tnr{\psi}$ on definition \eqref{eq:directDeriv}. For the case of item iii, the use of \eqref{eq:directDeriv} leads to 
+Verification of items i and ii are straightforward results after specifying their respective rules of $\tnr{\psi}$ on definition \eqref{eq:directDeriv}. For the case of item iii, the use of \eqref{eq:directDeriv} leads to
 \begin{equation*}
 \fua{[\fua{\tnr{\psi}'}{\tnr{X}}]}{\tnr{H}} = \fua{[\fua{\tnr{\psi}_1'}{\tnr{X}}]}{\tnr{H}} + \fua{[\fua{\tnr{\psi}'_2}{\tnr{X}}]}{\tnr{H}} = \fua{[\fua{\tnr{\psi}'_1}{\tnr{X}}+\fua{\tnr{\psi}'_2}{\tnr{X}}]}{\tnr{H}}=\fua{[\fua{[\tnr{\psi}'_1+\tnr{\psi}'_2]}{\tnr{X}}]}{\tnr{H}}\,.
-\end{equation*}  
-Now, in order to prove the chain rule, we adapt the strategy of \aut{Zeidler}\cite{zeidler_1995_1}, p. 248, as follows. Considering the concept of derivative as an approximation, from \eqref{eq:directDeriv} it is correct to say that there is a residue $\fua{r_1}{\beta\tnr{Z}}$ that tends to the zero tensor when non-zero $\beta\in\cam{F}$ tends to zero, where 
+\end{equation*}
+Now, in order to prove the chain rule, we adapt the strategy of \aut{Zeidler}\cite{zeidler_1995_1}, p. 248, as follows. Considering the concept of derivative as an approximation, from \eqref{eq:directDeriv} it is correct to say that there is a residue $\fua{r_1}{\beta\tnr{Z}}$ that tends to the zero tensor when non-zero $\beta\in\cam{F}$ tends to zero, where
 \begin{equation*}
 \beta\fua{[\fua{\tnr{\psi}'_1}{\tnr{Y}}]}{\tnr{Z}}=\fua{\tnr{\psi}_1}{\tnr{Y}+\beta\tnr{Z}}-\fua{\tnr{\psi}_1}{\tnr{Y}}+\fua{r_1}{\beta\tnr{Z}}
 \end{equation*}
@@ -114,11 +114,11 @@ Specifying $\tnr{Y}=\fua{\tnr{\psi}_2}{\tnr{X}}$ and $\tnr{Z}=\alpha/\beta\fua{[
 	\alpha\fua{[\fua{\tnr{\psi}'_1\circ\tnr{\psi}_2}{\tnr{X}}]}{\fua{[\fua{\tnr{\psi}'_2}{\tnr{X}}]}{\tnr{H}}}&=\fua{\tnr{\psi}_1}{\fua{\tnr{\psi}_2}{\tnr{X}}+\alpha\fua{[\fua{\tnr{\psi}'_2}{\tnr{X}}]}{\tnr{H}}}-\fua{\tnr{\psi}_1}{\tnr{Y}}+\fua{r_1}{\alpha\fua{[\fua{\tnr{\psi}'_2}{\tnr{X}}]}{\tnr{H}}}\\
 	\alpha[[\fua{\tnr{\psi}_1'\circ\tnr{\psi}_2}{\tnr{X}}]\circ\fua{\tnr{\psi}_2'}{\tnr{X}}](\tnr{H})&=\fua{\tnr{\psi}_1}{\fua{\tnr{\psi}_2}{\tnr{X}+\alpha\tnr{H}}+\fua{r_2}{\alpha\tnr{H}}}-\fua{\tnr{\psi}_1\circ\tnr{\psi}_2}{\tnr{X}}+\fua{r_1}{\alpha\fua{[\fua{\tnr{\psi}'_2}{\tnr{X}}]}{\tnr{H}}}
 \end{align*}
-Dividing both sides by $\alpha$ and taking them to the limit of $\alpha$ tending to zero, item iv is verified. The product rule is proved by the following development: adding and subtracting the right hand side of 
+Dividing both sides by $\alpha$ and taking them to the limit of $\alpha$ tending to zero, item iv is verified. The product rule is proved by the following development: adding and subtracting the right hand side of
 \begin{equation*}
 \fua{[\fua{\tnr{\psi}'}{\tnr{X}}]}{\tnr{H}}=\lim_{\alpha\to 0}1/\alpha[\fua{\tnr{\psi}_1}{\tnr{X}+\alpha\tnr{H}}\odot_q\fua{\tnr{\psi}_2}{\tnr{X}+\alpha\tnr{H}}-\fua{\tnr{\psi}_1}{\tnr{X}}\odot_q\fua{\tnr{\psi}_2}{\tnr{X}}]
-\end{equation*} 
-by $\fua{\tnr{\psi}_1}{\tnr{X}+\alpha\tnr{H}}\odot_{q}\fua{\tnr{\psi}_2}{\tnr{X}}$, we arrive at 
+\end{equation*}
+by $\fua{\tnr{\psi}_1}{\tnr{X}+\alpha\tnr{H}}\odot_{q}\fua{\tnr{\psi}_2}{\tnr{X}}$, we arrive at
 \begin{align*}
 \fua{[\fua{\tnr{\psi}'}{\tnr{X}}]}{\tnr{H}}&=\lim_{\alpha\to 0}1/\alpha\{ \fua{\tnr{\psi}_1}{\tnr{X}+\alpha\tnr{H}}\odot_{q}[\fua{\tnr{\psi}_2}{\tnr{X}+\alpha\tnr{H}}-\fua{\tnr{\psi}_2}{\tnr{X}}] +\\
 & \qquad\qquad\qquad+[\fua{\tnr{\psi}_1}{\tnr{X}+\alpha\tnr{H}}-\fua{\tnr{\psi}_1}{\tnr{X}}]\odot_q\fua{\tnr{\psi}_2}{\tnr{X}}\}\\
@@ -133,7 +133,7 @@ Since item vi is a corollary of the product rule, its verification is trivial. I
 and then by adding and subtracting the limit on the right hand side by $\fua{\tnr{\psi}_1}{\vto{x}+\alpha\vto{h}}\otimes\fua{\tnr{\psi}_2}{\vto{x}}$, as we similarly did for the product rule. The result is
 \begin{equation*}
 \fua{[\fua{\tnr{\psi}'}{\vto{x}}]}{\vto{h}}= \tnr{A}_B\odot_{2}[\fua{\tnr{\psi}_1}{\vto{x}}\otimes\fua{[\fua{\tnr{\psi}_2'}{\vto{x}}]}{\vto{h}}]+\tnr{A}_B\odot_{2}[ \fua{[\fua{\tnr{\psi}_1'}{\vto{x}}]}{\vto{h}} \otimes \fua{\tnr{\psi}_2}{\vto{x}}]\,,
-\end{equation*} 
+\end{equation*}
 from which we easily verify the item.
 \end{proof}}
 
@@ -145,7 +145,7 @@ and $\fua{\tnr{\varphi}'}{\tnr{Y}_1,\cdots,\tnr{Y}_q}$ is multilinear, then $\tn
 \begin{equation}\label{eq:totalDerivative}
 \fua{[\fua{\tnr{\varphi}'}{\tnr{X}_1,\cdots,\tnr{X}_q}]}{\tnr{H}_1,\cdots,\tnr{H}_q}=\lim_{\alpha\to 0} \dfrac{\fua{\tnr{\varphi}}{\tnr{X}_1+\alpha\tnr{H}_1,\cdots,\tnr{X}_q+\alpha\tnr{H}_q}-\fua{\tnr{\varphi}}{\tnr{X}_1,\cdots,\tnr{X}_q}}{\alpha}\,,
 \end{equation}
-where $\tnr{H}_i\in\pmb{\mathcal{U}}_i$ is an arbitrary direction. When the strategy is to study each variable $\tnr{X}_i$ independently, \emph{caeteris paribus}, development from the concept of tangency is the same as the univariate case, but now the derivative of $\tnr{\varphi}$  is called \textsb{partial derivative}\index{derivative!partial} of $\tnr{\varphi}$ with respect to $\tnr{X}_r$, $1\leqslant r\leqslant q$, represented by \gloref{partialDer}, where 
+where $\tnr{H}_i\in\pmb{\mathcal{U}}_i$ is an arbitrary direction. When the strategy is to study each variable $\tnr{X}_i$ independently, \emph{caeteris paribus}, development from the concept of tangency is the same as the univariate case, but now the derivative of $\tnr{\varphi}$  is called \textsb{partial derivative}\index{derivative!partial} of $\tnr{\varphi}$ with respect to $\tnr{X}_r$, $1\leqslant r\leqslant q$, represented by \gloref{partialDer}, where
 \begin{equation}\label{eq:partialDerivative}
 [\fua{\tnr{\varphi}_{\tnr{X}_r}^{'}}{\tnr{X}_1,\cdots,\tnr{X}_q}]{(\tnr{H}_r)}=\lim_{\alpha\to 0} \dfrac{\fua{\tnr{\varphi}}{\tnr{X}_1,\cdots,\tnr{X}_r+\alpha\tnr{H}_r,\cdots,\tnr{X}_q}-\fua{\tnr{\varphi}}{\tnr{X}_1,\cdots,\tnr{X}_q}}{\alpha}\,.
 \end{equation}
@@ -160,12 +160,12 @@ Let's prove this property. From \eqref{eq:totalDerivative} and \eqref{eq:partial
 \begin{equation*}
 \fua{[\fua{\tnr{\varphi}'}{\tnr{X}_1,\cdots,\tnr{X}_q}]}{\tnr{0},\cdots,\tnr{H}_i,\cdots,\tnr{0}}=[\fua{\tnr{\varphi}_{\tnr{X}_r}^{'}}{\tnr{X}_1,\cdots,\tnr{X}_q}]{(\tnr{H}_i)}\,.
 \end{equation*}
-Summing these $q$ equalities, we prove the property because function $\fua{\tnr{\varphi}'}{\tnr{X}_1,\cdots,\tnr{X}_q}$ is multilinear. 
+Summing these $q$ equalities, we prove the property because function $\fua{\tnr{\varphi}'}{\tnr{X}_1,\cdots,\tnr{X}_q}$ is multilinear.
 \end{proof}}
 
 
 
-It is interesting to note that derivatives may be differentiable themselves, and also derivatives of derivatives, and so on. Considering previous conditions, the tensor function $\tnr{\psi}$ is defined to be the zero order derivative of itself, function $\tnr{\psi}'$ is the order one derivative of $\tnr{\psi}$, $\tnr{\psi}''$ the order two and $\gloref{derivHigh}$ the order $k\geqslant 0$. Thereby, from definition \eqref{eq:tangentFunct}, a tensor function $\tnr{\psi}$ is said to be differentiable of order two at $\tnr{X}_0$ if it is differentiable at $\tnr{X}_0$ and there is a unique function $\tnr{\psi_\mathit{d}}^{(1)}$ tangent to the function in $\map{\tnr{\psi}'}{\pmb{\mathcal{U}}}{\evlc{\cam{F}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}}$ at $\tnr{X}_0$ where   
+It is interesting to note that derivatives may be differentiable themselves, and also derivatives of derivatives, and so on. Considering previous conditions, the tensor function $\tnr{\psi}$ is defined to be the zero order derivative of itself, function $\tnr{\psi}'$ is the order one derivative of $\tnr{\psi}$, $\tnr{\psi}''$ the order two and $\gloref{derivHigh}$ the order $k\geqslant 0$. Thereby, from definition \eqref{eq:tangentFunct}, a tensor function $\tnr{\psi}$ is said to be differentiable of order two at $\tnr{X}_0$ if it is differentiable at $\tnr{X}_0$ and there is a unique function $\tnr{\psi_\mathit{d}}^{(1)}$ tangent to the function in $\map{\tnr{\psi}'}{\pmb{\mathcal{U}}}{\evlc{\cam{F}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}}$ at $\tnr{X}_0$ where
 \begin{equation*}
 \fua{\tnr{\psi_\mathit{d}}^{(1)}}{\tnr{X}}=\fua{\tnr{\psi}'}{\tnr{X}_0}+\fua{[\fua{\tnr{\psi}''}{\tnr{X}_0}]}{\tnr{X}-\tnr{X}_0}\,.
 \end{equation*}
@@ -177,7 +177,7 @@ and $\map{\tnr{\psi}'''}{\pmb{\mathcal{U}}}{\evlc{\cam{F}}{\pmb{\mathcal{U}}}{\e
 \begin{equation}\label{eq:tangentOrderK1}
 \fua{\tnr{\psi_\mathit{d}}^{(k)}}{\tnr{X}}=\fua{\tnr{\psi}^{(k)}}{\tnr{X}_0}+\fua{[\fua{\tnr{\psi}^{(k+1)}}{\tnr{X}_0}]}{\tnr{X}-\tnr{X}_0}\,,
 \end{equation}
-where 
+where
 \begin{equation*}
 \map{\tnr{\psi}^{(k+1)}}{\pmb{\mathcal{U}}}{{\evlc{\cam{F}}{\pmb{\mathcal{U}}_{k+1}}{\evlc{\cam{F}}{\pmb{\mathcal{U}}_k}{\cdots\evlc{\cam{F}}{\pmb{\mathcal{U}}_{1}}{\ete{\cam{F}}{V^{\times s}}}}}}}
 \end{equation*}
@@ -197,13 +197,13 @@ Now, let's restrict our attention to tensor functions that are continuous, that 
 
 % ---------------
 
-\section{The Gradient}  
+\section{The Gradient}
 
-The concept of gradient we shall detail in this section is restricted to the context of Hilbert tensor spaces because it relies on the Riesz-Fréchet Representation of Tensors, described on theorem \ref{teo:repRieszTensor}. Similarly to what we already presented in this chapter, an open set $\pmb{\mathcal{U}}\subset\ete{\cam{F}}{U^{\times m}}$ and a differentiable function in $\map{\tnr{\psi}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}$ are also considered, but $\ete{\cam{F}}{U^{\times m}}$ and $\ete{\cam{F}}{V^{\times s}}$ are Hilbert tensor spaces here. Considering the conditions of the aforementioned theorem, there is a unique tensor $\fua{\nabla\tnr{\psi}}{\tnr{X}_0}\in\ete{\cam{F}}{U^{\times m}\times V^{\times s}}$, called the \textsb{gradient}\index{gradient} of $\tnr{\psi}$ at $\tnr{X}_0$, which the derivative $\fua{\tnr{\psi}'}{\tnr{X}_0}\in\evlc{\cam{F}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}$ is the $m$-cotensor of and where 
+The concept of gradient we shall detail in this section is restricted to the context of Hilbert tensor spaces because it relies on the Riesz-Fréchet Representation of Tensors, described on theorem \ref{teo:repRieszTensor}. Similarly to what we already presented in this chapter, an open set $\pmb{\mathcal{U}}\subset\ete{\cam{F}}{U^{\times m}}$ and a differentiable function in $\map{\tnr{\psi}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}$ are also considered, but $\ete{\cam{F}}{U^{\times m}}$ and $\ete{\cam{F}}{V^{\times s}}$ are Hilbert tensor spaces here. Considering the conditions of the aforementioned theorem, there is a unique tensor $\fua{\nabla\tnr{\psi}}{\tnr{X}_0}\in\ete{\cam{F}}{U^{\times m}\times V^{\times s}}$, called the \textsb{gradient}\index{gradient} of $\tnr{\psi}$ at $\tnr{X}_0$, which the derivative $\fua{\tnr{\psi}'}{\tnr{X}_0}\in\evlc{\cam{F}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}$ is the $m$-cotensor of and where
 \begin{equation}\label{eq:defGradient}
 [\fua{\tnr{\psi}'}{\tnr{X}_0}](\tnr{X}) = \tnr{X}\odot_m\fua{\nabla\tnr{\psi}}{\tnr{X}_0}\,.
-\end{equation} 
-Moreover, the tensor function in $\map{\gloref{gradi}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{U^{\times m}\times V^{\times s}}}$, called the gradient of $\tnr{\psi}$, assigns to a tensor of order $m$ a tensor of order $m+s$. Therefore, \emph{for the particular case of a differentiable unary tensor operator on $\pmb{\mathcal{U}}$, its gradient assigns to a $m$-th order tensor a $2m$-th order tensor}. Now, from this definition of gradient and from rule \eqref{eq:directDeriv}, the directional derivative of $\tnr{\psi}$ along $\tnr{H}\in\pmb{\mathcal{U}}$ is described by 
+\end{equation}
+Moreover, the tensor function in $\map{\gloref{gradi}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{U^{\times m}\times V^{\times s}}}$, called the gradient of $\tnr{\psi}$, assigns to a tensor of order $m$ a tensor of order $m+s$. Therefore, \emph{for the particular case of a differentiable unary tensor operator on $\pmb{\mathcal{U}}$, its gradient assigns to a $m$-th order tensor a $2m$-th order tensor}. Now, from this definition of gradient and from rule \eqref{eq:directDeriv}, the directional derivative of $\tnr{\psi}$ along $\tnr{H}\in\pmb{\mathcal{U}}$ is described by
 \begin{equation}
 \fua{[\fua{\tnr{\psi}'}{\tnr{X}}]}{\tnr{H}}=\tnr{H}\odot_m\fua{\nabla\tnr{\psi}}{\tnr{X}}=\lim_{\alpha\to 0} \dfrac{\fua{\tnr{\psi}}{\tnr{X}+\alpha\tnr{H}}-\fua{\tnr{\psi}}{\tnr{X}}}{\alpha}\,.
 \end{equation}
@@ -211,7 +211,7 @@ From the properties of derivatives presented on previous section, it is then pos
 \begin{itemize}
 	\setlength\itemsep{.1em}
 	\item[i.] If $\tnr{\psi}=\tnr{\psi}_1+\tnr{\psi}_2$ then $\nabla\tnr{\psi}=\nabla\tnr{\psi}_1+\nabla\tnr{\psi}_2\,$;
-	\item[ii.] If $\tnr{\psi}=\tnr{\psi}_1\circ\tnr{\psi}_2$, where $\map{\tnr{\psi}_1}{\ete{\cam{F}}{W^{\times r}}}{\ete{\cam{F}}{V^{\times s}}}$ and $\map{\tnr{\psi}_2}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{W^{\times r}}}$, then 
+	\item[ii.] If $\tnr{\psi}=\tnr{\psi}_1\circ\tnr{\psi}_2$, where $\map{\tnr{\psi}_1}{\ete{\cam{F}}{W^{\times r}}}{\ete{\cam{F}}{V^{\times s}}}$ and $\map{\tnr{\psi}_2}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{W^{\times r}}}$, then
 	\begin{equation}\label{eq:prop1Grad}
 	\fua{\nabla\tnr{\psi}}{\tnr{X}} = \fua{\nabla\tnr{\psi}_2}{\tnr{X}} \odot_r \fua{\nabla\tnr{\psi}_1\circ\tnr{\psi}_2}{\tnr{X}}\,;
 	\end{equation}	
@@ -224,7 +224,7 @@ From the properties of derivatives presented on previous section, it is then pos
 	\fua{\nabla\tnr{\psi}}{\vto{x}} = \fua{\nabla\tnr{\psi}_1}{\vto{x}}\times\fua{\tnr{\psi}_2}{\vto{x}}-\fua{\nabla\tnr{\psi}_2}{\vto{x}}\times\fua{\tnr{\psi}_1}{\vto{x}}\,;
 	\end{equation}
 \end{itemize}
- 
+
 {\footnotesize
 \begin{proof}
 The first item is verified through the following development:
@@ -234,12 +234,12 @@ The first item is verified through the following development:
 &=\tnr{H}\odot_m\fua{\nabla\tnr{\psi}_1}{\tnr{X}}+\tnr{H}\odot_m\fua{\nabla\tnr{\psi}_2}{\tnr{X}}\\
 &=\tnr{H}\odot_m\fua{[\nabla\tnr{\psi}_1+\nabla\tnr{\psi}_2]}{\tnr{X}}\,.
 \end{align*}	
-Proof of item ii is obtained from the chain rule, where $\fua{[\fua{\tnr{\psi}'}{\tnr{X}}]}{\tnr{H}}=\fua{\{[\fua{\tnr{\psi}_1'\circ\tnr{\psi}_2}{\tnr{X}}]\circ\fua{\tnr{\psi}_2'}{\tnr{X}}\}}{\tnr{H}}$. We can develop the right hand side of this equality using equalities \eqref{eq:compoCotens} because 
+Proof of item ii is obtained from the chain rule, where $\fua{[\fua{\tnr{\psi}'}{\tnr{X}}]}{\tnr{H}}=\fua{\{[\fua{\tnr{\psi}_1'\circ\tnr{\psi}_2}{\tnr{X}}]\circ\fua{\tnr{\psi}_2'}{\tnr{X}}\}}{\tnr{H}}$. We can develop the right hand side of this equality using equalities \eqref{eq:compoCotens} because
 $\fua{\tnr{\psi}_1'\circ\tnr{\psi}_2}{\tnr{X}}$ and $\fua{\tnr{\psi}_2'}{\tnr{X}}$ are the $r$-cotensor and $m$-cotensor of $\fua{\nabla\tnr{\psi}_1\circ\tnr{\psi}_2}{\tnr{X}}$ and $\fua{\nabla\tnr{\psi}_2}{\tnr{X}}$ respectively. Item ii is proved by
 \begin{align*}
 \fua{[\fua{\tnr{\psi}'}{\tnr{X}}]}{\tnr{H}}&=\fua{\{[\fua{\tnr{\psi}_1'\circ\tnr{\psi}_2}{\tnr{X}}]\circ\fua{\tnr{\psi}_2'}{\tnr{X}}\}}{\tnr{H}}\\
 \tnr{H}\odot_m\fua{\nabla\tnr{\psi}}{\tnr{X}}&=\tnr{H}\odot_m[\fua{\nabla\tnr{\psi}_2}{\tnr{X}}\odot_r\fua{\nabla\tnr{\psi}_1\circ\tnr{\psi}_2}{\tnr{X}}]\,.
-\end{align*}  
+\end{align*}
 Now, from the Leibniz's rule we have
 \begin{align*}
 \fua{[\fua{\tnr{\psi}'}{\tnr{X}}]}{\tnr{H}}&=\fua{[\fua{\tnr{\psi}_1'}{\tnr{X}}]}{\tnr{H}} \cdot \fua{\tnr{\psi}_2}{\tnr{X}}+\fua{[\fua{\tnr{\psi}_2'}{\tnr{X}}]}{\tnr{H}}\cdot\fua{\tnr{\psi}_1}{\tnr{X}}\\
@@ -251,7 +251,7 @@ which proves item iii. From \eqref{eq:crossRule}, development
 \fua{[\fua{\tnr{\psi}'}{\vto{x}}]}{\vto{h}} &= \fua{[\fua{\tnr{\psi}_1'}{\vto{x}}]}{\vto{h}} \times \fua{\tnr{\psi}_2}{\vto{x}}-\fua{[\fua{\tnr{\psi}_2'}{\vto{x}}]}{\vto{h}}\times\fua{\tnr{\psi}_1}{\vto{x}}\\
 \vto{h}\odot_{1}\fua{\nabla\tnr{\psi}}{\vto{x}}&=\vto{h}\odot_{1}[\fua{\nabla\tnr{\psi}_1}{\vto{x}}\times\fua{\tnr{\psi}_2}{\vto{x}}-\fua{\nabla\tnr{\psi}_2}{\vto{x}}\times\fua{\tnr{\psi}_1}{\vto{x}}]\,,
 \end{align*}
-proves item iv. 
+proves item iv.
 \end{proof}}
 
 
@@ -259,12 +259,12 @@ Still in the context of Hilbert spaces, we define from the concept of gradient t
 \begin{equation}\label{eq:divergence}
 \fua{\dvt{\tnr{\varphi}}}{\tnr{X}}=\tnr{I}\odot_{2m}\fua{\nabla\tnr{\varphi}}{\tnr{X}}\,,
 \end{equation}
-where identity tensor $\tnr{I}\in\ete{\cam{F}}{U^{\times m}\times U^{\times m}}$ and $\fua{\nabla\tnr{\varphi}}{\tnr{X}}\in\ete{\cam{F}}{U^{\times m}\times U^{\times m}\times V^{\times s}}$. While the gradient always assigns to a tensor $\tnr{X}$ a tensor of higher order, the divergence assigns to $\tnr{X}$ a tensor of lower order only when $s<m$. Moreover, if $\tnr{\varphi}$ is a unary tensor operator on $\pmb{\mathcal{U}}$, that is $s=0$, then its divergence is a scalar function for all $m>0$. 
+where identity tensor $\tnr{I}\in\ete{\cam{F}}{U^{\times m}\times U^{\times m}}$ and $\fua{\nabla\tnr{\varphi}}{\tnr{X}}\in\ete{\cam{F}}{U^{\times m}\times U^{\times m}\times V^{\times s}}$. While the gradient always assigns to a tensor $\tnr{X}$ a tensor of higher order, the divergence assigns to $\tnr{X}$ a tensor of lower order only when $s<m$. Moreover, if $\tnr{\varphi}$ is a unary tensor operator on $\pmb{\mathcal{U}}$, that is $s=0$, then its divergence is a scalar function for all $m>0$.
 From this concept of divergence and from mapping $\map{\nabla\tnr{\psi}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{U^{\times m}\times V^{\times s}}}$, it is valid and convenient to define a function
 \begin{equation}\label{eq:laplace}
 \Delta\tnr{\psi}=\dvt{\nabla\tnr{\psi}}\,,
 \end{equation}
-called the \textsb{Laplacian}\index{Laplacian} of $\tnr{\psi}$, where $\fua{\gloref{laplac}}{\tnr{X}}\in \ete{\cam{F}}{V^{\times s}}$. Now, we restrict the context of function $\tnr{\varphi}$ to tensor spaces of order $m=1$ and $s=1$, specifying that $V_\real$ is an Euclidean space and $U_\real$ defines a three dimensional oriented Euclidean space $(U_\real,\tnr{A}_B)$, where $B$ is an orthonormal basis of $U_\cam{R}$. In this context, it is possible to define a mapping  $\map{\gloref{curl}}{\pmb{\mathcal{U}}}{V_\real}$, whose function is called the \textsb{curl}\index{curl} of $\tnr{\varphi}$, with rule 
+called the \textsb{Laplacian}\index{Laplacian} of $\tnr{\psi}$, where $\fua{\gloref{laplac}}{\tnr{X}}\in \ete{\cam{F}}{V^{\times s}}$. Now, we restrict the context of function $\tnr{\varphi}$ to tensor spaces of order $m=1$ and $s=1$, specifying that $V_\real$ is an Euclidean space and $U_\real$ defines a three dimensional oriented Euclidean space $(U_\real,\tnr{A}_B)$, where $B$ is an orthonormal basis of $U_\cam{R}$. In this context, it is possible to define a mapping  $\map{\gloref{curl}}{\pmb{\mathcal{U}}}{V_\real}$, whose function is called the \textsb{curl}\index{curl} of $\tnr{\varphi}$, with rule
 \begin{equation}\label{eq:curl}
 \fua{\crl{\tnr{\varphi}}}{\vto{x}}=\tnr{A}_B\odot_{2}\fua{\nabla\tnr{\varphi}}{\vto{x}}\,,
 \end{equation}
@@ -272,7 +272,7 @@ where third order tensor $\fua{\nabla\tnr{\varphi}}{\vto{x}}\in\ete{\cam{F}}{U^2
 \begin{itemize}
 \setlength\itemsep{.1em}
 \item[i.] If $\tnr{\varphi}=\tnr{\varphi}_1+\tnr{\varphi}_2$ then $\dvt{\tnr{\varphi}}=\dvt{\tnr{\varphi}_1}+\dvt{\tnr{\varphi}_2}$ and $\crl{\tnr{\varphi}}=\crl{\tnr{\varphi}_1}+\crl{\tnr{\varphi}_2}\,$;
-\item[ii.] If $\tnr{\varphi}=\tnr{\varphi}_1\circ\tnr{\varphi}_2$, where mapping $\map{\tnr{\varphi}_1}{\ete{\cam{F}}{W^{\times r}}}{\ete{\cam{F}}{U^{\times m}\times V^{\times s}}}$ and mapping $\map{\tnr{\varphi}_2}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{W^{\times r}}}$ are defined, then 
+\item[ii.] If $\tnr{\varphi}=\tnr{\varphi}_1\circ\tnr{\varphi}_2$, where mapping $\map{\tnr{\varphi}_1}{\ete{\cam{F}}{W^{\times r}}}{\ete{\cam{F}}{U^{\times m}\times V^{\times s}}}$ and mapping $\map{\tnr{\varphi}_2}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{W^{\times r}}}$ are defined, then
 \begin{equation}
 \fua{\dvt{\tnr{\varphi}}}{\tnr{X}} =\fua{\dvt{\tnr{\varphi}_2}}{\tnr{X}}\odot_{r}\fua{\nabla\tnr{\varphi}_1\circ\tnr{\varphi}_2}{\tnr{X}}\,,
 \end{equation}	
@@ -304,7 +304,7 @@ Considering definitions \eqref{eq:divergence} and \eqref{eq:curl}, since partial
 \end{proof}}
 
 
-Recalling the concept of higher order differentiation presented on the previous section and the conditions of theorem \ref{teo:repRieszTensor}, we can state that if $\tnr{\psi}$ is $k+1$ differentiable at $\tnr{X}_0$ then there is a unique tensor $\fua{\nabla\tnr{\psi}^{(k)}}{\tnr{X}_0}\in\ete{\cam{F}}{(U^{\times m})^{k+1}\times V^{\times s}}$ which the derivative 
+Recalling the concept of higher order differentiation presented on the previous section and the conditions of theorem \ref{teo:repRieszTensor}, we can state that if $\tnr{\psi}$ is $k+1$ differentiable at $\tnr{X}_0$ then there is a unique tensor $\fua{\nabla\tnr{\psi}^{(k)}}{\tnr{X}_0}\in\ete{\cam{F}}{(U^{\times m})^{k+1}\times V^{\times s}}$ which the derivative
 \begin{equation*}
 \fua{\tnr{\psi}^{(k+1)}}{\tnr{X}_0}\in{\evlc{\cam{F}}{\pmb{\mathcal{U}}_{k+1}}{\evlc{\cam{F}}{\pmb{\mathcal{U}}_k}{\cdots\evlc{\cam{F}}{\pmb{\mathcal{U}}_{1}}{\ete{\cam{F}}{V^{\times s}}}}}}
 \end{equation*}
@@ -314,22 +314,23 @@ is the $m$-cotensor of and each $\pmb{\mathcal{U}}_i=\pmb{\mathcal{U}}$ defines 
 \end{equation}
 
 
-\section{Integration}\index{integration} 
+\section{Integration}\index{integration}
 
 The integration approach with which we shall deal in this section relies fundamentally on the generalization of the concept of size, that is, length, area, volume or \textsb{hypervolume}\index{hypervolume} of respectively one, two, three or $n$ dimensional affine Hilbert spaces. In simple terms, this generalization is strong, based on assigning a nonnegative real number to a set, whatever measure this real number expresses. But this general measure must obey certain rules that require and lead to new important definitions. In this context, from specific scalar functions with measurable domains, integrable tensor functions can be defined. These concepts and definitions, with their profusion of names, constitute the fundamentals of what is commonly known as Measure Theory\footnote{See \aut{Halmos}\cite{halmos_1974_1}.}.
 
-From the concept of class and its dependent definitions presented on section \ref{sec:Sets}, the double $(M,\css{M})$ is said to be a \textsb{measurable space}\index{space!measurable} when $\sigma$-ring $\css{M}$ is a class of the set $M$; and when this set defines a group or a field we also qualify them with ``measurable''. Now, considering the mapping $\map{\mu}{\css{M}}{\real}$ and an arbitrary disjoint countable class $\{A_1,\cdots,A_n\}$, set function $\mu$ is called additive if 
+From the concept of class and its dependent definitions presented on section \ref{sec:Sets}, the double $(M,\css{M})$ is said to be a \textsb{measurable space}\index{space!measurable} when $\sigma$-ring $\css{M}$ is a class of the set $M$; and when this set defines a group or a field we also qualify them with ``measurable''. Now, considering the mapping $\map{\mu}{\css{M}}{\real}$ and an arbitrary disjoint countable class $\{A_1,\cdots,A_n\}$, set function $\mu$ is called additive if
 \begin{equation}
 \fua{\mu}{\bigcup_{i=1}^nA_i}=\sum_{{i}=1}^n\fua{\mu}{A_i}\,.
 \end{equation}
-From this definition, it is clear that $\fua{\mu}{\emptyset}=\fua{\mu}{\emptyset\cup\emptyset}=2\fua{\mu}{\emptyset}=0$. For the special case of a mapping $\map{\mu}{\css{M}}{\real^+}$ where $\css{M}$ is a ring, additive set function $\mu$ is said to be a \textsb{continent}\index{ring!continent} of ring $\css{M}$. But if $\css{M}$ is a $\sigma$-ring, its continent $\mu$ is a \textsb{measure}\index{measure} when 
+From this definition, it is clear that $\fua{\mu}{\emptyset}=\fua{\mu}{\emptyset\cup\emptyset}=2\fua{\mu}{\emptyset}=0$. For the special case of a mapping $\map{\mu}{\css{M}}{\real^+}$ where $\css{M}$ is a ring, additive set function $\mu$ is said to be a \textsb{continent}\index{ring!continent} of ring $\css{M}$. But if $\css{M}$ is a $\sigma$-ring, its continent $\mu$ is a \textsb{measure}\index{measure} when
 \begin{equation}
 \fua{\mu}{\bigcup_{i=1}^\infty A_i}=\sum_{{i}=1}^\infty\fua{\mu}{A_i}\,,
-\end{equation}           
-for an arbitrary countable class $\{A_1,A_2,\cdots\}\subseteq\css{M}$. Thereby, the double constituted by a measurable space and a measure, that is $((M,\css{M}),\mu)$, is called a \textsb{measure space}\index{space!measure}, which we shall hereafter represent by the triple $(M,\css{M},\mu)$. Considering measure space $(M,\css{M},\mu)$, a measurable field $(\cam{F},\css{F})$ and a mapping  $\map{f}{M}{\cam{F}}$, a sequence of functions $f_1,f_2,\cdots$ that also map $M$ to $\cam{F}$ converges to function $f$ in measure\index{convergence!in measure} $\mu$ when, given an arbitrary real number $\epsilon>0$,
+\end{equation}
+for an arbitrary countable class $\{A_1,A_2,\cdots\}\subseteq\css{M}$. Thereby, the double constituted by a measurable space and a measure, that is $((M,\css{M}),\mu)$, is called a \textsb{measure space}\index{space!measure}, which we shall hereafter represent by the triple $(M,\css{M},\mu)$. 
+Considering measure space $(M,\css{M},\mu)$, a measurable field $(\cam{F},\css{F})$ and a mapping  $\map{f}{M}{\cam{F}}$, a sequence of functions $f_1,f_2,\cdots$ that also map $M$ to $\cam{F}$ converges to function $f$ in measure\index{convergence!in measure} $\mu$ when, given an arbitrary real number $\epsilon>0$,
 \begin{equation}
 \lim_{i\to\infty}\fua{\mu}{\{x\in M : |\fua{f}{x}-\fua{f_i}{x}|\geqslant\epsilon\}}=0\,.
-\end{equation} 
+\end{equation}
 
 Now, let $(M,\css{M})$ be a measurable space and $(\cam{F},\css{F})$ a measurable field. The function in $\map{s}{M}{\cam{F}}$ is called \textsb{measurable}\index{function!measurable} if, for every element $\con{B}\in\css{F}$, preimage $\con{R}^{-1}_{\con{B}} \in \css{M}$. Considering a disjoint countable class $\{A_1,\cdots,A_n\}\subseteq\css{M}$ and scalars $\alpha_1,\cdots,\alpha_n\in\cam{F}$, measurable function $s$ is called \textsb{simple}\index{function!simple} if its rule is
 \begin{equation}
@@ -342,9 +343,9 @@ where the function in $\map{\tnr{1}_{A_i}}{A_i}{\cam{F}}$ is commonly known as t
 0 & \text{if } x\notin A_i\\
 1 & \text{if } x\in A_i
 \end{dcases}\,.
-\end{equation*} 
-In the particular case of a measure space $(M,\css{M},\mu)$, the simple function $s$ is defined to be \textsb{integrable}\index{function!integrable simple} on set $E\in\css{M}$ when $\sum_{i=1}^n\fua{\mu}{E\cap A_i} < \infty$. If this is the case, scalar 
+\end{equation*}
+In the particular case of a measure space $(M,\css{M},\mu)$, the simple function $s$ is defined to be \textsb{integrable}\index{function!integrable simple} on set $E\in\css{M}$ when $\sum_{i=1}^n\fua{\mu}{E\cap A_i} < \infty$. If this is the case, scalar
 \begin{equation}
-\int_E s := \sum_{i=1}^n\alpha_i\fua{\mu}{E\cap A_i} 
+\int_E s := \sum_{i=1}^n\alpha_i\fua{\mu}{E\cap A_i}
 \end{equation}
-is called the \textsb{integral}\index{integral!of simple function} of $s$ on $E$.
+is called the \textsb{integral}\index{integral!of simple function} of $s$ on $E$. 

@@ -117,7 +117,7 @@ A_1\setminus\lpa A_2\cap A_3\rpa&= A_1\cap\lpa A_2\cap A_3\rpa'\nonumber\\
 \end{align}
 \end{proof}}
 
-A set $C$ of sets is called a \textsb{class}, here represented by $\gloref{css}$. When all the elements of $\css{C}$ are disjoint then $\css{C}$ is also called disjoint. If $\css{C}$ is constituted by subsets of set $M$, then $\css{C}$ is said to be a class of $M$. A class $\css{C}$ is \textsb{countable}\index{class!countable} if a bijective mapping $\css{C}\mapsto\mathbb{N}^+$ can be defined, that is, $\css{C}=\{C_1,C_2,\cdots\}$. Given a non empty class $\css{M}$, an arbitrary countable class $\{A_1,\cdots,A_n\}\subseteq\css{M}$ and arbitrary elements $A,B\in\css{M}$, if both sets $\bigcup_{i=1}^n A_i$ and $A\setminus B$ also belong to $\css{M}$, then this class is called a \textsb{ring}\index{ring}. From this definition, if $\css{M}$ is a ring and we choose $A=B$, it is clear that every ring has the empty set because $A\setminus B=\emptyset$. Considering the arbitrary countable class $\{A_1,A_2,\cdots\}$ an improper subset of ring $\css{M}$, if $\bigcup_{i=1}^\infty A_i\in\css{M}$, then $\css{M}$ is called a \textsb{$\sigma$-ring}\index{ring!$\sigma$-}. 
+A set $C$ of sets is called a \textsb{class}, here represented by $\gloref{css}$. When all the elements of $\css{C}$ are disjoint then $\css{C}$ is also called disjoint. If $\css{C}$ is constituted by subsets of set $M$, then $\css{C}$ is said to be a class of $M$. A class $\css{C}$ is \textsb{countable}\index{class!countable} if a bijective mapping $\css{C}\mapsto\mathbb{N}^+$ can be defined, that is, $\css{C}=\{C_1,C_2,\cdots\}$. Given a non empty class $\css{M}$, an arbitrary countable class $\{A_1,\cdots,A_n\}\subseteq\css{M}$ and arbitrary elements $A,B\in\css{M}$, if both sets $\bigcup_{i=1}^n A_i$ and $A\setminus B$ also belong to $\css{M}$, then this class is called a \textsb{ring}\index{ring}. From this definition, if $\css{M}$ is a ring and we choose $A=B$, it is clear that every ring has the empty set because $A\setminus B=\emptyset$. Considering the arbitrary countable class $\{A_1,A_2,\cdots\}$ an improper subset of ring $\css{M}$, if $\bigcup_{i=1}^\infty A_i\in\css{M}$, then $\css{M}$ is called a \textsb{$\sigma$-ring}\index{ring!$\sigma$-}.
 
 \section{Sequences}\index{sequence}
 
@@ -155,6 +155,25 @@ And then the double $\lpa a_1,x\rpa\in \lpa A\times B\rpa\wedge\lpa a_1,x\rpa\in
 \end{equation*}
 Therefore, double $\lpa a_1,x\rpa\in \lpa A\times B\rpa\wedge\lpa a_1,x\rpa\notin \lpa A\times C\rpa$.
 \end{proof}}
+
+\begin{figure}[ht]
+\centering
+\footnotesize
+{
+\begin{forest}
+	for tree={align=center,parent anchor=south, child anchor=north}
+	[Collection
+    [Set of elements [Empty] [Subset [Proper] [Improper] ] ]
+    [Set of sets (class) [Countable,name=counta][Ring[$\sigma$-ring,name=sigma] ] ]
+    [Sequence [Tuple [Monad] [Double] [Triple] [Quadruple] [$n$-tuple]]]
+    ]
+    \draw (counta)--(sigma);
+\end{forest}
+}
+\newline
+\titfigura{Conceptual hierarchy of sets and sequences.}
+\label{fig:esquemaSets}
+\end{figure}
 
 
 
@@ -389,7 +408,7 @@ when the order $q$ is even and $\hdet{\mat{X}}=0$ when it is odd. Although this 
 since $n!$ must be eliminated from the calculation of the hyperdeterminant.
 
 
-There is another special array $\delta$, also widely used in indicial notations, called \textsb{Kronecker Delta}\index{Kronecker Delta}, whose elements
+There is another hypercubic array $\delta$, also widely used in indicial notations, called \textsb{Kronecker Delta}\index{Kronecker Delta}, whose elements
 \begin{equation}
     \delta_{i_1\cdots i_{q}j_1\cdots j_{q}}:=
 \begin{dcases}
@@ -425,7 +444,7 @@ where $\mat{A}$ is a $n\times\cdots\times n$ array, with $n$ repeated $q$ times.
 \sum_{i_1=1}^{n}\delta_{ji_1}\mat{A}_{i_1\cdots i_q}=\mat{A}_{ji_2\cdots i_q}\,.
 \end{equation}
 
-  
+
 
 At this point, it is convenient to say that every $n_1\times n_2$ array, whose elements are arranged in a tabular format, is called a \textsb{matrix}\index{matrix}. The elements of a matrix are addressed by lines and columns: the escalar with $ij$ position is located on the line $i$ and column $j$. If $n_1=n_2=n$, we have a hypercubic matrix, called \textsb{square matrix}\index{matrix!square}, whose size is $n$. Henceforth, recalling the additive group $Y$ of arrays, we will consider
 $\bar{Y}\subset Y$ the set of hypercubic arrays of size $n$, $M\subset Y$ the set of matrices and  $\bar{M}\subset \bar{Y}$ the set of square matrices with size $n$. For example, the set $\bar{M}$ has the $n\times n$ Kronecker Delta, represented in \eqref{eq:matrizIdentidade}, as an element, which we usually call \textsb{identity matrix}\index{matrix!identity} $\mat{I}$ because $\mat{A}\mat{I} = \mat{I}\mat{A} = \mat{A}$, for an arbitrary $\mat{A}\in\bar{M}$.
@@ -442,7 +461,7 @@ which is actually equality \eqref{eq:Hiperdeterminante} applied to square matric
 \dete{\mat{X}} = \sum_{i_1=1}^n\cdots\sum_{i_n=1}^n
 \epsilon_{i_1\cdots i_n}\prod_{k=1}^{n}\mat{X}_{i_kk}\,,
 \end{equation}
-where $1/n!$ is no longer necessary because equality \eqref{eq:productProp} does not occur. When $\dete{\mat{X}}=0$, matrix $\mat{X}$ is said to be \textsb{singular}\index{matrix!singular} or \textsb{non-invertible}\index{matrix!non-invertible}; otherwise, it is called \textsb{non-singular}\index{matrix!non-singular} or \textsb{invertible}\index{matrix!invertible}. From the above definition, we can obtain a zero value determinant when its argument is the zero matrix and a unitary value for the identity matrix. Moreover, the main property of determinants of square matrices is to preserve multiplications, that is, the determinant of the product is the product of determinants; in other words $\dete{\mat{AB}}=\dete{\mat{A}}\cdot\dete{\mat{B}}$. Recalling our classification of groups, we can say that a subset of $\bar{M}$ whose matrices are all invertible defines, together with the operation of multiplication, a non-abelian group. From the above definition of determinant of matrices, it is possible to obtain an important equality, called \textsb{contracted epsilon identity}\index{contracted epsilon identity}, which correlates the Kronecker Delta with the Levi-Civita Symbol when size $n=3$, namely 
+where $1/n!$ is no longer necessary because equality \eqref{eq:productProp} does not occur. When $\dete{\mat{X}}=0$, matrix $\mat{X}$ is said to be \textsb{singular}\index{matrix!singular} or \textsb{non-invertible}\index{matrix!non-invertible}; otherwise, it is called \textsb{non-singular}\index{matrix!non-singular} or \textsb{invertible}\index{matrix!invertible}. From the above definition, we can obtain a zero value determinant when its argument is the zero matrix and a unitary value for the identity matrix. Moreover, the main property of determinants of square matrices is to preserve multiplications, that is, the determinant of the product is the product of determinants; in other words $\dete{\mat{AB}}=\dete{\mat{A}}\cdot\dete{\mat{B}}$. Recalling our classification of groups, we can say that a subset of $\bar{M}$ whose matrices are all invertible defines, together with the operation of multiplication, a non-abelian group. From the above definition of determinant of matrices, it is possible to obtain an important equality, called \textsb{contracted epsilon identity}\index{contracted epsilon identity}, which correlates the Kronecker Delta with the Levi-Civita Symbol when size $n=3$, namely
 \begin{equation}\label{eq:LeviKronecker}
 \sum_{i=1}^{3}\epsilon_{ijk} \epsilon_{ilm} = \delta_{jl}\delta_{km}-\delta_{jm}\delta_{kl}\,.
 \end{equation}
@@ -466,7 +485,7 @@ where $\kappa\in\real$ is obtained from the $r$ line actions on $\mat{B}$. We ca
 \begin{equation*}
 \dete{\mat{AI}}=\dete{\mat{E}_{1}^{-1}\mat{E}_{2}^{-1}\cdots\mat{E}_{r-1}^{-1}\mat{E}_r^{-1}\mat{I}}=\kappa\dete{\mat{I}}=\kappa\,.
 \end{equation*}
-Therefore, we conclude that $\dete{\mat{AB}}=\dete{\mat{A}}\dete{\mat{B}}$. Now, considering $\mat{A}$ singular, it is clear that $\dete{\mat{A}}\dete{\mat{B}}=0$. If the matrix $\mat{AB}$ is invertible, then there exists a square matrix $C$ where $\mat{ABC}=\mat{I}$. But, saying this means saying also that matrix $\mat{BC}$ is an inverse of $\mat{A}$, which is inconsistent since $\mat{A}$ is singular. Therefore, $\mat{AB}$ is also singular, and then $\dete{\mat{AB}}=0$. In this case, we have also $\dete{\mat{AB}}=\dete{\mat{A}}\dete{\mat{B}}$. Now, we prove equality \eqref{eq:LeviKronecker} by considering that 
+Therefore, we conclude that $\dete{\mat{AB}}=\dete{\mat{A}}\dete{\mat{B}}$. Now, considering $\mat{A}$ singular, it is clear that $\dete{\mat{A}}\dete{\mat{B}}=0$. If the matrix $\mat{AB}$ is invertible, then there exists a square matrix $C$ where $\mat{ABC}=\mat{I}$. But, saying this means saying also that matrix $\mat{BC}$ is an inverse of $\mat{A}$, which is inconsistent since $\mat{A}$ is singular. Therefore, $\mat{AB}$ is also singular, and then $\dete{\mat{AB}}=0$. In this case, we have also $\dete{\mat{AB}}=\dete{\mat{A}}\dete{\mat{B}}$. Now, we prove equality \eqref{eq:LeviKronecker} by considering that
 $\dete{\mat{E}_{1}\mat{E}_{2}\cdots\mat{E}_k\mat{B}\mat{X}_{1}\mat{X}_{2}\cdots\mat{X}_r}=(-1)^{k+r}\dete{\mat{B}}$,
 where elementary matrices $\mat{E_i}$ and $\mat{X_i}$ promote a line and column exchange respectively, and that $B$ is singular if a pair of its rows or columns are equal. Therefore, since $\det{\mat{I}}=1$, we can write that
 \begin{equation*}
@@ -480,9 +499,9 @@ where elementary matrices $\mat{E_i}$ and $\mat{X_i}$ promote a line and column 
 	\delta_{in}      & \delta_{il}       & \delta_{im}\\
 	\delta_{jn}      & \delta_{jl}       & \delta_{jm}\\
 	\delta_{kn}      & \delta_{kl}       & \delta_{km}\\
-	\end{bmatrix}} = \underbrace{\epsilon_{ijk}}_{\text{line exchange}}\overbrace{\epsilon_{nlm}}^{\text{column exchange}}\,. 
+	\end{bmatrix}} = \underbrace{\epsilon_{ijk}}_{\text{line exchange}}\overbrace{\epsilon_{nlm}}^{\text{column exchange}}\,.
 \end{equation*}
-for a generic line and column exchanges. From equalities \eqref{eq:deltaIdent1} and \eqref{eq:deltaIdent2}, summing $\epsilon_{ijk}\epsilon_{nlm}$ on $i$ when $n=i$, we have 
+for a generic line and column exchanges. From equalities \eqref{eq:deltaIdent1} and \eqref{eq:deltaIdent2}, summing $\epsilon_{ijk}\epsilon_{nlm}$ on $i$ when $n=i$, we have
 \begin{align*}
 \sum_{{i}=1}^3\epsilon_{ijk}\epsilon_{ilm} & =  \sum_{{i}=1}^3(\delta_{ii}\delta_{jl}\delta_{km}+\delta_{il}\delta_{jm}\delta_{ki}+\delta_{im}\delta_{ji}\delta_{kl}-\delta_{im}\delta_{jl}\delta_{ki}-\delta_{ii}\delta_{jm}\delta_{kl}-\delta_{il}\delta_{ji}\delta_{km})\\
 & =  \sum_{{i}=1}^3(\delta_{ii}\delta_{jl}\delta_{km})+\delta_{jm}\delta_{kl}+\delta_{jm}\delta_{kl}-\delta_{jl}\delta_{km}-\sum_{{i}=1}^3(\delta_{ii}\delta_{jm}\delta_{kl})-\delta_{jl}\delta_{km}\\
@@ -583,7 +602,7 @@ For any normal matrix $\mat{N}$, there is always an unitary matrix $\mat{U}$ suc
 \end{equation}
 where $\widetilde{\mat{N}}$ is a diagonal matrix whose elements constitute the spectrum of $\mat{N}$.
 \end{mteo}
-
+\hspace{1pt}
 {\footnotesize
 \begin{proof}
 Firstly we must say that, considering any square matrix $\mat{A}$ and a unitary matrix $\mat{U}$, it is always possible to obtain an \textsb{upper triangular matrix}\index{matrix!upper triangular} $\mat{T} = \mat{U}^\dagger\mat{A}\mat{U}$, whose elements in positions $i>j$ are null. This statement is known as \textsb{Schur's Lemma}\index{Schur!Lemma}, whose tedious proof can be seen in \aut{Strang}\cite{strang_2006_4}. Now we need to show that if $\mat{A}$ is normal, $\mat{T}$ is diagonal: if $\mat{A}$ is normal,
@@ -699,8 +718,7 @@ Let $\bar{M}$ be the set of all square matrices and $\map{\hat{g}}{\bar{M}}{\bar
 \end{equation}
 If the coefficients on this rule equal the coefficients of the characteristic polynomial of a square matrix $\mat{H}$, then the matrix $\fua{\hat{g}}{\mat{H}}$ is null.
 \end{mteo}
-
-
+\hspace{1pt}
 {\footnotesize
 \begin{proof}
 In order to verify this theorem, we need to present some preliminary definitions. There is an algorithm \footnote{After \aut{Knuth}\cite{knuth_1997_1}, the word ``algorithm'' has the same etymological source of ``algebra''.}, called \textsb{Laplace Expansion}\index{Expansion!Laplace} or \textsb{Cofactorial Expansion}\index{Expansion!Cofactorial}, that is used in certain cases to find determinants. Here it is: given a square matrix $\mat{A}$, we can obtain for an arbitrary line $i$ that
@@ -734,6 +752,28 @@ If we post-multiply the sequence of equalities successively by $\mat{H}^n,\mat{H
 \end{equation*}
 that is, $\fua{\hat{g}}{\mat{H}}=0$.
 \end{proof}}
+
+\begin{landscape}
+\vspace*{\fill}
+\begin{figure}[ht]
+\centering
+\footnotesize
+{
+\begin{forest}
+	for tree={align=center,parent anchor=south, child anchor=north}
+	[Collection
+    [Group [Abelian [Additive,name=adit] [Multiplicative [Field, name=field] ] ] [Non-abelian] ]
+    [Array  [Hypercubic [Levi-Civita symbol] [Kronecker Delta] [Square matrix,name=smat [Diagonal [Identity] ] [(Anti)symmetric]  [(Anti)hermitian]  [(Semi)positive] [Similar] [Normal] [Singular] [Invertible [Unitary [Proper] [Improper]] [Orthogonal [Proper] [Improper]]] ]] [Transpose [Conjugate transpose]] ]
+    ]
+    \draw (adit)--(field);
+\end{forest}
+}
+\newline
+\titfigura{Conceptual hierarchy of groups and arrays.}
+\label{fig:esquemaEspacos}
+\end{figure}
+\vspace*{\fill}
+\end{landscape}
 
 
 
