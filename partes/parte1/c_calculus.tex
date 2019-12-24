@@ -314,7 +314,7 @@ is the $m$-cotensor of and each $\pmb{\mathcal{U}}_i=\pmb{\mathcal{U}}$ defines 
 \end{equation}
 
 
-\section{Integration}\index{integration}
+\section{Labesgue Integration}\index{integration!Labesgue}
 
 The integration approach with which we shall deal in this section relies fundamentally on the generalization of the concept of size, that is, length, area, volume or \textsb{hypervolume}\index{hypervolume} of respectively one, two, three or $n$ dimensional affine Hilbert spaces. In simple terms, this generalization is strong, based on assigning a nonnegative real number to a set, whatever measure this real number expresses. But this general measure must obey certain rules that require and lead to new important definitions. In this context, from specific scalar functions with measurable domains, integrable tensor functions can be defined. These concepts and definitions, with their profusion of names, constitute the fundamentals of what is commonly known as Measure Theory\footnote{See \aut{Halmos}\cite{halmos_1974_1}.}.
 
@@ -352,8 +352,28 @@ is called the \textsb{integral}\index{integral!of step function} of $s$ on $E$. 
 \begin{alignat} {3}
 \|s\|=\int_E |s|&\qquad \text{ and } \qquad&\fua{\varrho}{g_1,g_2}=\|g_1-g_2\|\,,
 \end{alignat}
-where $|s|(x)=|\fua{s}{x}|$ and $|s|,g_1,g_2\in S$. In this context, if a Cauchy sequence of step functions $s_1,s_2,\cdots\in S$ exists and converges in measure $\mu$ to the measurable function in $\map{f}{M}{\cam{F}}$, we say that $f$ is integrable on $E$ and scalar 
+where $|s|(x):=|\fua{s}{x}|$ and $|s|,g_1,g_2\in S$. In this context, if a Cauchy sequence of integrable step functions $s_1,s_2,\cdots\in S$ exists and converges in measure $\mu$ to the measurable function in $\map{f}{M}{\cam{F}}$, we say that $f$ is integrable or Labesgue integrable on $E$ and scalar 
 \begin{equation}
-\int_E f := \lim_{i\to \infty}\int_E s_i
+\int_E f := \lim_{i\to \infty}\int_E s_i = \lim_{i\to \infty} \sum_{j=1}^n\alpha_{ij}\fua{\mu}{E\cap A_j}
 \end{equation} 
-is the integral of $f$ on $E$.
+is the integral or Labesgue integral of $f$ on $E$.
+
+It is important to study some fundamental properties of integrals because, among other benefits, they enable us to see this concept on a functional approach. Firstly, we shall present these properties as follows by specifying functions in $\map{f}{M}{\cam{F}}$ and $\map{g}{M}{\cam{F}}$ to be measurable, and scalars $\alpha,\beta\in\cam{F}$, where $(M,\css{M})$ and $(\cam{F},\css{F})$ are measurable.
+
+\begin{itemize}
+	\setlength\itemsep{.1em}
+	\item[i.] If $f$ is integrable on every element of disjoint class $\{E_1,\cdots,E_m\}\subseteq \css{M}$, then
+	\begin{equation}
+	\int_{\bigcup_{i=1}^mE_i}f = \sum_{{i}=1}^{m} \int_{E_i}f\,;
+	\end{equation}
+	\item[ii.] If $f$ is integrable $E\in\css{M}$ and $\fua{\mu}{E}=0$, then
+	\begin{equation}
+	\int_{E}f =0\,;
+	\end{equation}
+	 \item[iii.] If $f$ and $g$ are integrable on $E\in\css{M}$, then
+	 \begin{equation}
+	 \alpha\int_{E}f+\beta\int_{E}g = \int_{E}(\alpha f +\beta g) \,;
+	 \end{equation}
+	 
+%	 VERIFICAR A ULTIMA PROP
+\end{itemize}
