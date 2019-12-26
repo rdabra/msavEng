@@ -89,7 +89,6 @@ The concept of belonging just presented can also be used to create sets. A \text
 \begin{equation}
 A_1\cap\lpa A_2\cup A_3\rpa=\lpa A_1\cap A_2\rpa\cup\lpa A_1\cap A_3\rpa.
 \end{equation}
-When a set $\con{A}_1\cap\con{A}_2$ is empty, we say that $\con{A}_1$ and $\con{A}_2$ are \textsb{disjoint}\index{sets!disjoint}. In this case, if $x\in\con{A}_1\cup\con{A}_2$ then $(x\in\con{A}_1)\gloref{vee} (x\in\con{A}_2)$, where the symbol $\vee$ means ``OR'' literally.
 \begin{figure}[!ht]
 \centering
 \begin{center}
@@ -97,6 +96,7 @@ When a set $\con{A}_1\cap\con{A}_2$ is empty, we say that $\con{A}_1$ and $\con{
 \end{center}
 \titfigura{Intersection is distributive in union.}\label{fg:interDistrib}
 \end{figure}
+When a set $\con{A}_1\cap\con{A}_2$ is empty, we say that $\con{A}_1$ and $\con{A}_2$ are \textsb{disjoint}\index{sets!disjoint}. In this case, if $x\in\con{A}_1\cup\con{A}_2$ then $(x\in\con{A}_1)\gloref{vee} (x\in\con{A}_2)$, where the symbol $\vee$ means ``OR'' literally. Concerning disjoint sets, a trivial but important property is the following: if $B\subset\bigcup_{i=1}^nA_i$ where $A_i$ and $A_j$ are disjoint whenever $i\neq j$, then it is clear that $B=\bigcup_{i=1}^nB\cap A_i\,$.    
 
 The \textsb{difference set}\index{set!difference} $\con{A}_1\gloref{setminus}\con{A}_2$ is the set of elements of $\con{A}_1$ not belonging to $\con{A}_2$. From this definition, if $\con{A}_1$ is subset of $\con{A}$, the set $\gloref{complementar}_1:=\con{A}\setminus\con{A}_1$ is called the \textsb{complement}\index{set!complement} of $\con{A}_1$ in $\con{A}$. Thereby, if $A_1$ and $A_2$ are subsets of $A$, it is possible to verify, also by Veen diagrams, that the union complement $\lpa A_1\cup A_2\rpa' = A_1'\cap A_2'$, that the intersection complement $\lpa A_1\cap A_2\rpa' = A_1'\cup A_2'$ and that the difference $A_1\setminus A_2= A_1\cap A_2'$. From these three equalities, we can say that in union the difference is distributed according to
 \begin{equation}\label{eq:distribUniao}
@@ -116,6 +116,7 @@ A_1\setminus\lpa A_2\cap A_3\rpa&= A_1\cap\lpa A_2\cap A_3\rpa'\nonumber\\
 &= \lpa A_1\setminus A_2\rpa\cup \lpa A_1\setminus A_3\rpa.\nonumber
 \end{align}
 \end{proof}}
+
 
 A set $C$ of sets is called a \textsb{class}, here represented by $\gloref{css}$. When all the elements of $\css{C}$ are disjoint then $\css{C}$ is also called disjoint. If $\css{C}$ is constituted by subsets of set $M$, then $\css{C}$ is said to be a class of $M$. A class $\css{C}$ is \textsb{countable}\index{class!countable} if a bijective mapping $\css{C}\mapsto\mathbb{N}^+$ can be defined, that is, $\css{C}=\{C_1,C_2,\cdots\}$. Given a non empty class $\css{M}$, an arbitrary countable class $\{A_1,\cdots,A_n\}\subseteq\css{M}$ and arbitrary elements $A,B\in\css{M}$, if both sets $\bigcup_{i=1}^n A_i$ and $A\setminus B$ also belong to $\css{M}$, then this class is called a \textsb{ring}\index{ring}. From this definition, if $\css{M}$ is a ring and we choose $A=B$, it is clear that every ring has the empty set because $A\setminus B=\emptyset$. Considering the arbitrary countable class $\{A_1,A_2,\cdots\}$ an improper subset of ring $\css{M}$, if $\bigcup_{i=1}^\infty A_i\in\css{M}$, then $\css{M}$ is called a \textsb{$\sigma$-ring}\index{ring!$\sigma$-}.
 
