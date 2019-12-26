@@ -323,20 +323,20 @@ From the concept of class and its dependent definitions presented on section \re
 \fua{\mu}{\bigcup_{i=1}^nA_i}=\sum_{{i}=1}^n\fua{\mu}{A_i}\,.
 \end{equation}
 From this definition, it is clear that $\fua{\mu}{\emptyset}=\fua{\mu}{\emptyset\cup\emptyset}=2\fua{\mu}{\emptyset}=0$. For the special case of a mapping $\map{\mu}{\css{M}}{\real^+}$ where $\css{M}$ is a ring, additive set function $\mu$ is said to be a \textsb{continent}\index{ring!continent} of ring $\css{M}$. But if $\css{M}$ is a $\sigma$-ring, its continent $\mu$ is a \textsb{measure}\index{measure} when
-\begin{equation}
+\begin{equation}\label{eq:measuSum}
 \fua{\mu}{\bigcup_{i=1}^\infty A_i}=\sum_{{i}=1}^\infty\fua{\mu}{A_i}\,,
 \end{equation}
 for an arbitrary countable class $\{A_1,A_2,\cdots\}\subseteq\css{M}$. Thereby, the double constituted by a measurable space and a measure, that is $((M,\css{M}),\mu)$, is called a \textsb{measure space}\index{space!measure}, which we shall hereafter represent by the triple $(M,\css{M},\mu)$. 
-Considering measure space $(M,\css{M},\mu)$, a measurable field $(\cam{F},\css{F})$ and a mapping  $\map{f}{M}{\cam{F}}$, a sequence of functions $f_1,f_2,\cdots$ that also map $M$ to $\cam{F}$ \textsb{converges in measure}\index{convergence!in measure} $\mu$ to function $f$ when, given an arbitrary real number $\epsilon>0$,
+Considering measure space $(M,\css{M},\mu)$, a measurable field $(\real,\css{F})$ and a mapping  $\map{f}{M}{\real}$, a sequence of functions $f_1,f_2,\cdots$ that also map $M$ to $\real$ \textsb{converges in measure}\index{convergence!in measure} $\mu$ to function $f$ when, given an arbitrary real number $\epsilon>0$,
 \begin{equation}
 \lim_{i\to\infty}\fua{\mu}{\{x\in M : |\fua{f}{x}-\fua{f_i}{x}|\geqslant\epsilon\}}=0\,.
 \end{equation}
 
-Now, let $(M,\css{M})$ be a measurable space and $(\cam{F},\css{F})$ a measurable field. The function in $\map{s}{M}{\cam{F}}$ is called \textsb{measurable}\index{function!measurable} if, for every element $\con{B}\in\css{F}$, preimage $\con{R}^{-1}_{\con{B}} \in \css{M}$. Considering a disjoint countable class $\{A_1,\cdots,A_n\}\subseteq\css{M}$ and scalars $\alpha_1,\cdots,\alpha_n\in\cam{F}$, measurable function $s$ is called \textsb{step}\index{function!step} or \textsb{simple}\index{function!simple} if its rule is
+Now, let $(M,\css{M})$ be a measurable space and $(\real,\css{F})$ a measurable field. The function in $\map{s}{M}{\real}$ is called \textsb{measurable}\index{function!measurable} if, for every element $\con{B}\in\css{F}$, preimage $\con{R}^{-1}_{\con{B}} \in \css{M}$. Considering a disjoint countable class $\{A_1,\cdots,A_n\}\subseteq\css{M}$ and non zero scalars $\alpha_1,\cdots,\alpha_n\in\real$, measurable function in $s$ is called \textsb{step}\index{function!step} or \textsb{simple}\index{function!simple} if its rule is
 \begin{equation}
 \fua{s}{x} = \sum_{i=1}^n\alpha_i\fua{\tnr{1}_{A_i}}{x}\,,
 \end{equation}
-where the function in $\map{\tnr{1}_{A_i}}{A_i}{\cam{F}}$ is commonly known as the \textsb{indicator function}\index{function!indicator} of $A_i$, defined by
+where the function in $\map{\tnr{1}_{A_i}}{A_i}{\real}$ is commonly known as the \textsb{indicator function}\index{function!indicator} of $A_i$, defined by
 \begin{equation*}
 \fua{\tnr{1}_{A_i}}{x}=
 \begin{dcases}
@@ -348,13 +348,20 @@ In the particular case of a measure space $(M,\css{M},\mu)$, the step function $
 \begin{equation}
 \int_E s := \sum_{i=1}^n\alpha_i\fua{\mu}{E\cap A_i}
 \end{equation}
-is called the \textsb{integral}\index{integral!of step function} of $s$ on $E$. Let  $(S,\varrho)$ be a normed metric space of integrable step functions on $E$ with norm and metric respectively defined by
+is called the \textsb{integral}\index{integral!of step function} of $s$ on $E$. In this context, it is important to note that if there are a countable class $\{B_1,\cdots,B_n\}\subseteq\css{M}$ and non zero scalars $\beta_1,\cdots,\beta_n\in\real$ which also describe step function $s$, then we can obtain that 
+\begin{equation*}
+\int_E s = \sum_{i=1}^n\beta_i\fua{\mu}{E\cap B_i}\,,
+\end{equation*}
+that is, the integral of a step function is independent of its description.
+% https://mathcs.org/analysis/reals/integ/answers/simpint5.html
+
+ Now, let $(S,\varrho)$ be a normed metric space of integrable step functions on $E$ with norm and metric respectively defined by
 \begin{alignat} {3}
 \|s\|=\int_E |s|&\qquad \text{ and } \qquad&\fua{\varrho}{g_1,g_2}=\|g_1-g_2\|\,,
 \end{alignat}
-where $|s|(x):=|\fua{s}{x}|$ and $|s|,g_1,g_2\in S$. In this context, if a Cauchy sequence of integrable step functions $s_1,s_2,\cdots\in S$ exists and converges in measure $\mu$ to the measurable function in $\map{f}{M}{\cam{F}}$, we say that $f$ is integrable or Labesgue integrable on $E$ and scalar 
-\begin{equation}
-\int_E f := \lim_{i\to \infty}\int_E s_i = \lim_{i\to \infty} \sum_{j=1}^n\alpha_{ij}\fua{\mu}{E\cap A_j}
+where $|s|(x):=|\fua{s}{x}|$ and $|s|,g_1,g_2\in S$. In this context, if a Cauchy sequence of integrable step functions $s_1,s_2,\cdots\in S$ exists and converges in measure $\mu$ to the measurable nonnegative function in $\map{g}{M}{\cam{F}}$, we say that $g$ is integrable or Labesgue integrable on $E$ and scalar 
+\begin{equation}\label{eq:integ}
+\int_E g := \lim_{i\to \infty}\int_E s_i = \lim_{i\to \infty} \sum_{j=1}^n\alpha_{ij}\fua{\mu}{E\cap A_{ij}}
 \end{equation} 
 is the integral or Labesgue integral of $f$ on $E$.
 
@@ -364,7 +371,7 @@ It is important to study some fundamental properties of integrals because, among
 	\setlength\itemsep{.1em}
 	\item[i.] If $f$ is integrable on every element of disjoint class $\{E_1,\cdots,E_m\}\subseteq \css{M}$, then
 	\begin{equation}
-	\int_{\bigcup_{i=1}^mE_i}f = \sum_{{i}=1}^{m} \int_{E_i}f\,;
+	\sum_{{i}=1}^{m} \int_{E_i}f=\int_{\bigcup_{i=1}^mE_i}f\,;
 	\end{equation}
 	\item[ii.] If $f$ is integrable $E\in\css{M}$ and $\fua{\mu}{E}=0$, then
 	\begin{equation}
@@ -377,3 +384,11 @@ It is important to study some fundamental properties of integrals because, among
 	 
 %	 VERIFICAR A ULTIMA PROP
 \end{itemize}
+
+{\footnotesize
+\begin{proof}
+Considering equality \eqref{eq:measuSum} and definition \eqref{eq:integ}, the following development proves item i.
+\begin{equation}
+\sum_{{i}=1}^{m} \int_{E_i}f = \sum_{{i}=1}^{m} \lim_{i\to \infty} \sum_{j=1}^n\alpha_{ij}\fua{\mu}{E_i\cap A_j}
+\end{equation}
+\end{proof}}
