@@ -314,9 +314,9 @@ is the $m$-cotensor of and each $\pmb{\mathcal{U}}_i=\pmb{\mathcal{U}}$ defines 
 \end{equation}
 
 
-\section{Labesgue Integration}\index{integration!Labesgue}
+\section{Integration}\index{integration}
 
-The integration approach with which we shall deal in this section relies fundamentally on the generalization of the concept of size, that is, length, area, volume or \textsb{hypervolume}\index{hypervolume} of respectively one, two, three or $n$ dimensional affine Hilbert spaces. In simple terms, this generalization is strong, based on assigning a nonnegative real number to a set, whatever measure this real number expresses. But this general measure must obey certain rules that require and lead to new important definitions. In this context, from specific scalar functions with measurable domains, integrable tensor functions can be defined. These concepts and definitions, with their profusion of names, constitute the fundamentals of what is commonly known as Measure Theory\footnote{See \aut{Halmos}\cite{halmos_1974_1}.}.
+The integration approach we shall deal with in this section relies fundamentally on Lebesgue's theory, which is built from the generalization of the concept of size, that is, length, area, volume or \textsb{hypervolume}\index{hypervolume} of respectively one, two, three or $n$ dimensional affine Hilbert spaces. In simple terms, this generalization is strong, based on assigning a nonnegative real number to a set, whatever measure this real number expresses. But this general measure must obey certain rules that require and lead to new important definitions. In this context, from specific scalar functions with measurable domains, integrable tensor functions can be defined.
 
 From the concept of class and its dependent definitions presented on section \ref{sec:Sets}, the double $(M,\css{M})$ is said to be a \textsb{measurable space}\index{space!measurable} when $\sigma$-ring $\css{M}$ is a class of the set $M$; and when this set defines a group or a field we also qualify them with ``measurable''. Now, considering the mapping $\map{\mu}{\css{M}}{\real}$ and an arbitrary disjoint countable class $\{A_1,\cdots,A_n\}\subseteq\css{M}$, set function $\mu$ is called additive if
 \begin{equation}\label{eq:addMeasure}
@@ -344,7 +344,7 @@ where the function in $\map{\tnr{1}_{A_i}}{A_i}{\real}$ is commonly known as the
 1 & \text{if } x\in A_i
 \end{dcases}\,.
 \end{equation*}
-In the particular case of a measure space $(M,\css{M},\mu)$, step function $s_\css{A}$ is defined to be \textsb{integrable}\index{function!integrable step} on set $E\in\css{M}$ when $\fua{\mu}{E\cap A_i} < \infty$. If this is the case, scalar
+In the particular case of a measure space $(M,\css{M},\mu)$, a nonnegative step function $s_\css{A}$, where $\alpha_i\geqslant 0$, is defined to be \textsb{integrable}\index{function!integrable step} on set $E\in\css{M}$ when $\fua{\mu}{E\cap A_i} < \infty$. If this is the case, real number
 \begin{equation}
 \int_E s_\css{A} := \sum_{i=1}^n\alpha_i\fua{\mu}{E\cap A_i}
 \end{equation}
@@ -368,16 +368,28 @@ From these equalities, when $x\in A_i\cap B_j$ it is clear that $\alpha_i=\beta_
 since intersection is distributive on union and $\mu$ is additive according to \eqref{eq:addMeasure}. For integration purposes, this equality enables us to remove the identification of the partition of $A$ from the representation of the function in a step mapping $\map{s}{M}{\real}$, since the integral of $s$ is the same for any partition of arbitrary $A\subseteq M$.  
 
 Let $(S,\varrho)$ be a normed metric space of integrable step functions on $E$ with norm and metric respectively defined by
-\begin{alignat} {3}
+\begin{alignat*} {3}
 \|s\|=\int_E |s|&\qquad \text{ and } \qquad&\fua{\varrho}{g_1,g_2}=\|g_1-g_2\|\,,
-\end{alignat}
-where $|s|(x):=|\fua{s}{x}|$ and $|s|,g_1,g_2\in S$. In this context, if a Cauchy sequence of nonnegative integrable step functions $s_1,s_2,\cdots\in S$ exists and converges in measure $\mu$ to the measurable nonnegative function in $\map{g}{M}{\real}$, we say that $g$ is integrable or Labesgue integrable on $E$ and scalar 
+\end{alignat*}
+where $|s|(x):=|\fua{s}{x}|$ and $|s|,g_1,g_2\in S$. In this context, if a Cauchy sequence of integrable step functions $s_1,s_2,\cdots\in S$ exists and converges in measure $\mu$ to the measurable nonnegative function in $\map{g}{M}{\real}$, we say that $g$ is integrable or Labesgue integrable on $E$ and scalar 
 \begin{equation}\label{eq:integ}
 \int_E g := \lim_{i\to \infty}\int_E s_i 
 \end{equation} 
-is the integral or Labesgue integral of $g$ on $E$.
-
-It is important to study some fundamental properties of integrals because, among other benefits, they enable us to see this concept on a functional approach. Firstly, we shall present these properties as follows by specifying functions in $\map{f}{M}{\cam{F}}$ and $\map{g}{M}{\cam{F}}$ to be measurable, and scalars $\alpha,\beta\in\cam{F}$, where $(M,\css{M})$ and $(\cam{F},\css{F})$ are measurable.
+is the integral or Labesgue integral of $g$ on $E$. Considering a mapping $\map{f}{M}{\real}$ where $f=f^{+}-f^{-}$ such that 
+\begin{alignat*} {3}
+\fua{f^+}{x} = \begin{dcases}
+\fua{f}{x} & \text{if } \fua{f}{x}> 0\\
+0 & \text{if } \fua{f}{x} \leqslant 0
+\end{dcases} &\qquad \text{ and } \qquad&\fua{f^-}{x} = \begin{dcases}
+-\fua{f}{x} & \text{if } \fua{f}{x}< 0\\
+0 & \text{if } \fua{f}{x} \geqslant 0
+\end{dcases}\,.
+\end{alignat*}
+Since functions $f^{+}$ and $f^{-}$ are nonnegative, we can define that $f$ is integrable on $E$ if and only if both $f^{+}$ and $f^{-}$ are integrable on $E$ and also that 
+\begin{equation}\label{eq:decompInt}
+\int_E f = \int_E f^{+} + \int_E f^{-}\,. 
+\end{equation}
+It is important to study some fundamental properties of integrals and we shall presented them as follows by firstly specifying functions in $\map{f}{M}{\real}$ and $\map{g}{M}{\real}$ to be measurable, and scalars $\alpha,\beta\in\real$, where $(M,\css{M})$ and $(\real,\css{F})$ are also measurable.
 
 \begin{itemize}
 	\setlength\itemsep{.1em}
@@ -385,7 +397,7 @@ It is important to study some fundamental properties of integrals because, among
 	\begin{equation}
 	\sum_{{i}=1}^{m} \int_{E_i}f=\int_{\bigcup_{i=1}^mE_i}f\,;
 	\end{equation}
-	\item[ii.] If $f$ is integrable $E\in\css{M}$ and $\fua{\mu}{E}=0$, then
+	\item[ii.] If $f$ is integrable on $E\in\css{M}$ and $\fua{\mu}{E}=0$, then
 	\begin{equation}
 	\int_{E}f =0\,;
 	\end{equation}
@@ -399,8 +411,16 @@ It is important to study some fundamental properties of integrals because, among
 
 {\footnotesize
 \begin{proof}
-Considering equality \eqref{eq:measuSum} and definition \eqref{eq:integ}, the following development proves item i.
-\begin{equation}
-\sum_{{i}=1}^{m} \int_{E_i}f = \sum_{{i}=1}^{m} \lim_{i\to \infty} \sum_{j=1}^n\alpha_{ij}\fua{\mu}{E_i\cap A_j}
-\end{equation}
+Considering equality \eqref{eq:measuSum}, definition \eqref{eq:integ} and mapping $\map{h}{M}{\real^+}$, we have
+\begin{align*}
+\int_{\bigcup_{i=1}^mE_i}h &= \lim_{k\to \infty}\int_{\bigcup_{i=1}^mE_i} s_k\\
+&=\lim_{k\to \infty} \sum_{j=1}^n\alpha_{j}^{(k)}\fua{\mu}{A_j^{(k)}\cap\bigcup_{i=1}^m E_i}\\
+&=\sum_{i=1}^m\lim_{k\to \infty} \sum_{j=1}^n\alpha_{j}^{(k)}\fua{\mu}{ E_i\cap A_j^{(k)}}\\
+&=\sum_{i=1}^m\lim_{k\to \infty} \int_{E_i} s_k = \sum_{i=1}^m \int_{E_i} h\,.
+\end{align*}
+Therefore, we prove item i by 
+\begin{equation*}
+\int_{\bigcup_{i=1}^mE_i}f = \int_{\bigcup_{i=1}^mE_i}f^+ -\int_{\bigcup_{i=1}^mE_i}f^- = \sum_{i=1}^m \int_{E_i} f^+ - \sum_{i=1}^m \int_{E_i} f^- = \sum_{i=1}^m \int_{E_i} f\,.
+\end{equation*}
 \end{proof}}
+
