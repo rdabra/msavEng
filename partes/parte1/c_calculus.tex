@@ -345,7 +345,7 @@ where the function in $\map{\tnr{1}_{A_i}}{A_i}{\real}$ is commonly known as the
 \end{dcases}\,.
 \end{equation*}
 In the particular case of a measure space $(M,\css{M},\mu)$, a nonnegative step function $s_\css{A}$, where $\alpha_i\geqslant 0$, is defined to be \textsb{integrable}\index{function!integrable step} on set $E\in\css{M}$ when $\fua{\mu}{E\cap A_i} < \infty$. If this is the case, real number
-\begin{equation}
+\begin{equation}\label{eq:defInteSimp}
 \int_E s_\css{A} := \sum_{i=1}^n\alpha_i\fua{\mu}{E\cap A_i}
 \end{equation}
 is called the \textsb{integral}\index{integral!of step function} of $s_\css{A}$ on $E$. In this context, if $\css{B}=\{B_1,\cdots,B_m\}\subseteq\css{M}$ is another partition of $A$, it is clear that class $\css{C}=\{A_1\cap B_1,A_1\cap B_2,\cdots,A_n\cap B_m\}$ is also a partition of $A$ and then, by using previous definition, we can write 
@@ -395,7 +395,7 @@ It is important to study some fundamental properties of integrals and we shall p
 	\setlength\itemsep{.1em}
 	\item[i.] If $f$ is integrable on every element of disjoint class $\{E_1,\cdots,E_m\}\subseteq \css{M}$, then
 	\begin{equation}
-	\sum_{{i}=1}^{m} \int_{E_i}f=\int_{\bigcup_{i=1}^mE_i}f\,;
+	\int_{\bigcup_{i=1}^mE_i}f=\sum_{{i}=1}^{m} \int_{E_i}f\,;
 	\end{equation}
 	\item[ii.] If $f$ is integrable on $E\in\css{M}$ and $\fua{\mu}{E}=0$, then
 	\begin{equation}
@@ -403,10 +403,8 @@ It is important to study some fundamental properties of integrals and we shall p
 	\end{equation}
 	 \item[iii.] If $f$ and $g$ are integrable on $E\in\css{M}$, then
 	 \begin{equation}
-	 \alpha\int_{E}f+\beta\int_{E}g = \int_{E}(\alpha f +\beta g) \,;
+	 \int_{E}(\alpha f +\beta g) = \alpha\int_{E}f+\beta\int_{E}g \,;
 	 \end{equation}
-	 
-%	 VERIFICAR A ULTIMA PROP
 \end{itemize}
 
 {\footnotesize
@@ -422,5 +420,10 @@ Therefore, we prove item i by
 \begin{equation*}
 \int_{\bigcup_{i=1}^mE_i}f = \int_{\bigcup_{i=1}^mE_i}f^+ -\int_{\bigcup_{i=1}^mE_i}f^- = \sum_{i=1}^m \int_{E_i} f^+ - \sum_{i=1}^m \int_{E_i} f^- = \sum_{i=1}^m \int_{E_i} f\,.
 \end{equation*}
+Now, since $\mu$ is nonnegative and additive, that is $\fua{\mu}{X\cup Y}=0\Longleftrightarrow\fua{\mu}{X}=\fua{\mu}{Y}=0$, and partitioned set $A$ on \eqref{eq:defInteSimp} is arbitrary, then choosing $E$ to be partitioned leads to equalities
+\begin{equation*}
+\int_E f^+ = \lim_{k\to \infty} \sum_{i=1}^n\alpha_{i}^{(k)}\fua{\mu}{ E\cap E_i^{(k)}} = \lim_{k\to \infty} \sum_{i=1}^n\alpha_{i}^{(k)}\fua{\mu}{E_i^{(k)}} = 0
+\end{equation*}
+and, by the same development, $\int_E f^-=0$, which prove item ii. From property i and trivial properties of multiplication by scalar, proof of item iii is straightforward.  
 \end{proof}}
 
