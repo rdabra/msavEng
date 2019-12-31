@@ -424,6 +424,23 @@ Now, since $\mu$ is nonnegative and additive, that is $\fua{\mu}{X\cup Y}=0\Long
 \begin{equation*}
 \int_E f^+ = \lim_{k\to \infty} \sum_{i=1}^n\alpha_{i}^{(k)}\fua{\mu}{ E\cap E_i^{(k)}} = \lim_{k\to \infty} \sum_{i=1}^n\alpha_{i}^{(k)}\fua{\mu}{E_i^{(k)}} = 0
 \end{equation*}
-and, by the same development, $\int_E f^-=0$, which prove item ii. From property i and trivial properties of multiplication by scalar, proof of item iii is straightforward.  
+and, by the same development, $\int_E f^-=0$, which prove item ii. Now, we prove item iii. It is easy to obtain equality
+\begin{equation*}
+\alpha\int_{E}f+\beta\int_{E}g = (\alpha\int_{E}f^++\beta\int_{E}g^+) - (\alpha\int_{E}f^-+\beta\int_{E}g^-)\,.
+\end{equation*}
+Therefore, it suffices to prove only one of the nonnegative terms. Let's specify two partitions $\{A_1^{(k)},\cdots,A_n^{(k)}\}$ and $\{B_1^{(k)},\cdots,B_m^{(k)}\}$ of a set $A^{(k)}\subset M$ which define two step functions $s_k=\sum_{{i}=1}^n\alpha^{(k)}_i\tnr{1}_{A_i^{(k)}}$ and $t_k=\sum_{{j}=1}^m\beta^{(k)}_j\tnr{1}_{B_j^{(k)}}$ in such a way that 
+\begin{align*}
+\alpha\int_{E}f^++\beta\int_{E}g^+&=\lim_{k\to\infty}\alpha\int_{E}s_k + \lim_{k\to\infty}\beta\int_{E}t_k\\
+&=\lim_{k\to\infty}\sum_{i=1}^n\alpha\alpha_i^{(k)}\fua{\mu}{E\cap A_i^{(k)}}+\lim_{k\to\infty}\sum_{j=1}^m\beta\beta_j^{(k)}\fua{\mu}{E\cap B_j^{(k)}}\\
+&=\lim_{k\to\infty}\sum_{i=1}^n\sum_{j=1}^m\alpha\alpha_i^{(k)}\fua{\mu}{E\cap A_i^{(k)}\cap B_j^{(k)}} + \sum_{i=1}^n\sum_{j=1}^m\beta\beta_j^{(k)}\fua{\mu}{E\cap A_i^{(k)}\cap B_j^{(k)}}\\
+&=\lim_{k\to\infty}\sum_{i=1}^n\sum_{j=1}^m(\alpha\alpha_i^{(k)}+\beta\beta_j^{(k)})\fua{\mu}{E\cap A_i^{(k)}\cap B_j^{(k)}}.
+\end{align*}
+Let's label this result with (a) and proceed with another development.
+\begin{align*}
+\alpha s_k+\beta t_k&=\sum_{{i}=1}^n\alpha\alpha^{(k)}_i\tnr{1}_{A_i^{(k)}}+\sum_{{j}=1}^m\beta\beta^{(k)}_j\tnr{1}_{B_j^{(k)}}\\
+&=\sum_{{i}=1}^n\sum_{{j}=1}^m\alpha\alpha^{(k)}_i\tnr{1}_{A_i^{(k)}\cap B_j^{(k)}}+\sum_{{i}=1}^n\sum_{{j}=1}^m\beta\beta^{(k)}_j\tnr{1}_{A_i^{(k)}\cap B_j^{(k)}}\\
+&=\sum_{{i}=1}^n\sum_{{j}=1}^m(\alpha\alpha_i^{(k)}+\beta\beta_j^{(k)})\tnr{1}_{A_i^{(k)}\cap B_j^{(k)}}
+\end{align*}
+
 \end{proof}}
 
