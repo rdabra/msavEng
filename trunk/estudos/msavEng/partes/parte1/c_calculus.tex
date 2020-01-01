@@ -371,11 +371,21 @@ Let $(S,\varrho)$ be a normed metric space of integrable step functions on $E$ w
 \begin{alignat*} {3}
 \|s\|=\int_E |s|&\qquad \text{ and } \qquad&\fua{\varrho}{g_1,g_2}=\|g_1-g_2\|\,,
 \end{alignat*}
-where $|s|(x):=|\fua{s}{x}|$ and $|s|,g_1,g_2\in S$. In this context, if a Cauchy sequence of integrable step functions $s_1,s_2,\cdots\in S$ exists and converges in measure $\mu$ to the measurable nonnegative function in $\map{g}{M}{\real}$, we say that $g$ is integrable or Labesgue integrable on $E$ and scalar 
+where $|s|(x):=|\fua{s}{x}|$ and $|s|,g_1,g_2\in S$. In this context, if a Cauchy sequence of integrable step functions $s_1,s_2,\cdots\in S$ exists and converges in measure $\mu$ to the nonnegative measurable function in $\map{g}{M}{\real^+}$, we say that $g$ is integrable or Labesgue integrable on $E$ and scalar 
 \begin{equation}\label{eq:integ}
 \int_E g := \lim_{i\to \infty}\int_E s_i 
 \end{equation} 
-is the integral or Labesgue integral of $g$ on $E$. Considering a mapping $\map{f}{M}{\real}$ where $f=f^{+}-f^{-}$ such that 
+is the integral or Labesgue integral of $g$ on $E$. For future purposes, we must say that if $s_1,s_2,\cdots\in S$ and $t_1,t_2,\cdots\in S$ are convergent Chauchy sequences of integrable nonnegative step functions, then sequence $ \alpha s_1+\beta t_1,\alpha s_2+\beta t_2,\cdots$ also is, $\alpha,\beta\in\real$. Moreover, 
+\begin{equation}
+s_1,s_2,\cdots\to g\,\,\, \wedge\,\,\, t_1,t_2,\cdots\to h \implies \alpha s_1+\beta t_1,\alpha s_2+\beta t_2,\cdots\to \alpha g+\beta h\,. 
+\end{equation}
+
+{\footnotesize
+	\begin{proof}
+%https://math.la.asu.edu/~kawski/classes/mat300/handouts/convsumprod.pdf
+\end{proof}}
+
+Considering a mapping $\map{f}{M}{\real}$ where $f=f^{+}-f^{-}$ such that 
 \begin{alignat*} {3}
 \fua{f^+}{x} = \begin{dcases}
 \fua{f}{x} & \text{if } \fua{f}{x}> 0\\
