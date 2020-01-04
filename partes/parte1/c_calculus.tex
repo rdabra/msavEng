@@ -344,7 +344,7 @@ where the function in $\map{\tnr{1}_{A_i}}{A_i}{\real}$ is commonly known as the
 1 & \text{if } x\in A_i
 \end{dcases}\,.
 \end{equation*}
-In the particular case of a measure space $(M,\css{M},\mu)$, a nonnegative step function $s_\css{A}$, where $\alpha_i\geqslant 0$, is defined to be \textsb{integrable}\index{function!integrable step} on set $E\in\css{M}$ when $\fua{\mu}{E\cap A_i} < \infty$. If this is the case, real number
+In the particular case of a measure space $(M,\css{M},\mu)$, a step function $s_\css{A}$, where $\alpha_i\geqslant 0$, is defined to be \textsb{integrable}\index{function!integrable step} on set $E\in\css{M}$ when $\fua{\mu}{E\cap A_i} < \infty$. If this is the case, real number
 \begin{equation}\label{eq:defInteSimp}
 \int_E s_\css{A} := \sum_{i=1}^n\alpha_i\fua{\mu}{E\cap A_i}
 \end{equation}
@@ -371,24 +371,25 @@ Let $(S,\varrho)$ be a normed metric space of integrable step functions on $E$ w
 \begin{alignat*} {3}
 \|s\|=\int_E |s|&\qquad \text{ and } \qquad&\fua{\varrho}{g_1,g_2}=\|g_1-g_2\|\,,
 \end{alignat*}
-where $|s|(x):=|\fua{s}{x}|$ and $|s|,g_1,g_2\in S$. In this context, if a Cauchy sequence of integrable step functions $s_1,s_2,\cdots\in S$ exists and converges in measure $\mu$ to the nonnegative measurable function in $\map{g}{M}{\real^+}$, we say that $g$ is integrable or Labesgue integrable on $E$ and scalar 
+where $|s|(x):=|\fua{s}{x}|$ and $|s|,g_1,g_2\in S$. In this context, if a Cauchy sequence of integrable step functions $s_1,s_2,\cdots\in S$ exists and converges to the measurable function in $\map{g}{M}{\real}$, we say that $g$ is integrable or Labesgue integrable on $E$ and scalar 
 \begin{equation}\label{eq:integ}
 \int_E g := \lim_{i\to \infty}\int_E s_i 
 \end{equation} 
-is the integral or Labesgue integral of $g$ on $E$. For future purposes, we must say that if $s_1,s_2,\cdots\in S$ and $t_1,t_2,\cdots\in S$ are convergent Chauchy sequences of integrable nonnegative step functions, then sequence $ \alpha s_1+\beta t_1,\alpha s_2+\beta t_2,\cdots$ also is, $\alpha,\beta\in\real$. Moreover, 
+is the integral or Labesgue integral of $g$ on $E$. It is important to say that if $s_1,s_2,\cdots\in S$ and $t_1,t_2,\cdots\in S$ are convergent Chauchy sequences of integrable step functions, then sequence $ s_1+t_1, s_2+ t_2,\cdots$ also is. Moreover, 
 \begin{equation}\label{eq:cauchySum}
-s_1,s_2,\cdots\to g\,\,\, \wedge\,\,\, t_1,t_2,\cdots\to h \implies \alpha s_1+\beta t_1,\alpha s_2+\beta t_2,\cdots\to \alpha g+\beta h\,. 
+s_1,s_2,\cdots\to f\,\,\, \wedge\,\,\, t_1,t_2,\cdots\to g \implies \alpha s_1+ \beta t_1, \alpha s_2+ \beta t_2,\cdots\to \alpha f+\beta g\,. 
 \end{equation}
 
 {\footnotesize
 \begin{proof}
-Since scalar multiplication does not affect the properties of above sequences, we will verify only the effect of the sum. First we prove that $  s_1+ t_1,s_2+ t_2,\cdots$ is also a Cauchy Sequence. If both expressions $\lim_{\min{\lpa i,j\rpa}\to\infty}{\fua{\varrho}{s_i,s_j}}=0$ and $\lim_{\min{\lpa i,j\rpa}\to\infty}{\fua{\varrho}{t_i,t_j}}=0$ are valid, then, by summing these two equalities, we obtain $\lim_{\min{\lpa i,j\rpa}\to\infty}\fua{\varrho}{s_i,s_j}+\fua{\varrho}{t_i,t_j}=0\,$. From the property of triangular inequality of norms, since
+Since scalar multiplication does not affect the convergence of Cauchy sequences $s_1,s_2,\cdots$ and $t_1,t_2,\cdots$, we will verify only the effect of the sum. First we prove that $  h_1+ r_1,h_2+ r_2,\cdots$, where $h_i=\alpha s_i$ and $r_i=\beta t_i$, is also a Cauchy sequence. If both expressions $\lim_{\min{\lpa i,j\rpa}\to\infty}{\fua{\varrho}{h_i,h_j}}=0$ and $\lim_{\min{\lpa i,j\rpa}\to\infty}{\fua{\varrho}{r_i,r_j}}=0$ are valid, then, by summing these two equalities, we obtain $\lim_{\min{\lpa i,j\rpa}\to\infty}\fua{\varrho}{h_i,h_j}+\fua{\varrho}{r_i,r_j}=0\,$. From the property of triangular inequality of norms, since
 \begin{equation*}
-\fua{\varrho}{s_i,s_j}+\fua{\varrho}{t_i,t_j} = \|s_i-s_j\| + \|t_i-t_j\| \geqslant \|s_i-s_j + t_i-t_j\|\,,
+\fua{\varrho}{h_i,h_j}+\fua{\varrho}{r_i,r_j} = \|h_i-h_j\| + \|r_i-r_j\| \geqslant \|h_i-h_j + r_i-r_j\|\,,
 \end{equation*}
-it is obvious that $\lim_{\min{\lpa i,j\rpa}\to\infty}\|(s_i+ t_i) -(s_j +t_j)\|=0\,$, which proves the sum to be a Cauchy sequence. The Cauchy convergence can be  proved by this same procedure.  
+it is obvious that $\lim_{\min{\lpa i,j\rpa}\to\infty}\|(h_i+ r_i) -(h_j +r_j)\|=0\,$, which proves the sum to be a Cauchy sequence. The convergence to $\alpha f+\beta g$ can be  proved by this same procedure.  
 \end{proof}}
 
+\begin{comment}
 Considering a mapping $\map{f}{M}{\real}$ where $f=f^{+}-f^{-}$ such that 
 \begin{alignat*} {3}
 \fua{f^+}{x} = \begin{dcases}
@@ -403,7 +404,10 @@ Since functions $f^{+}$ and $f^{-}$ are nonnegative, we can define that $f$ is i
 \begin{equation}\label{eq:decompInt}
 \int_E f = \int_E f^{+} + \int_E f^{-}\,. 
 \end{equation}
+\end{comment}
+
 It is important to study some fundamental properties of integrals and we shall presented them as follows by firstly specifying functions in $\map{f}{M}{\real}$ and $\map{g}{M}{\real}$ to be measurable, and scalars $\alpha,\beta\in\real$, where $(M,\css{M})$ and $(\real,\css{F})$ are also measurable.
+
 
 \begin{itemize}
 	\setlength\itemsep{.1em}
@@ -424,28 +428,28 @@ It is important to study some fundamental properties of integrals and we shall p
 
 {\footnotesize
 \begin{proof}
-In order to prove item i, since the integrable step functions $s_i$ that converges to $f$ are nonnegative, so are their coefficients. Therefore, by definition \eqref{eq:defInteSimp}, since $\mu$ is nonnegative then $\int_{E}s_i$ is also nonnegative and so the integral on \eqref{eq:integ}. Now, for item ii, considering equality \eqref{eq:measuSum}, definition \eqref{eq:integ} and mapping $\map{h}{M}{\real^+}$, we have
+In order to prove item i, let's specify a sequence of integrable step functions $s_1,s_2,\cdots$ where  
+\begin{equation*}
+\fua{s_k}{x}=\sum_{{i}=1}^n(\fua{f}{x}+k^{-1})\fua{\tnr{1}_{A_i^{(k)}}}{x}
+\end{equation*} 
+is defined from partitioning $A^{(k)}\subset M$. This is obviously a Cauchy sequence that converges to $f$ as $k\to\infty$ and since the coefficients of $s_k$ are nonnegative, then 
+\begin{equation*}
+\int_E f=\lim_{k\to \infty}\sum_{i=1}^n(\fua{f}{x}+k^{-1})\fua{\mu}{E\cap A_i}\geqslant 0\,.
+\end{equation*}
+Considering equality \eqref{eq:measuSum} and definition \eqref{eq:integ}, we prove item ii by
 \begin{align*}
-\int_{\bigcup_{i=1}^mE_i}h &= \lim_{k\to \infty}\int_{\bigcup_{i=1}^mE_i} s_k\\
+\int_{\bigcup_{i=1}^mE_i}f &= \lim_{k\to \infty}\int_{\bigcup_{i=1}^mE_i} s_k\\
 &=\lim_{k\to \infty} \sum_{j=1}^n\alpha_{j}^{(k)}\fua{\mu}{A_j^{(k)}\cap\bigcup_{i=1}^m E_i}\\
 &=\sum_{i=1}^m\lim_{k\to \infty} \sum_{j=1}^n\alpha_{j}^{(k)}\fua{\mu}{ E_i\cap A_j^{(k)}}\\
-&=\sum_{i=1}^m\lim_{k\to \infty} \int_{E_i} s_k = \sum_{i=1}^m \int_{E_i} h\,.
+&=\sum_{i=1}^m\lim_{k\to \infty} \int_{E_i} s_k = \sum_{i=1}^m \int_{E_i} f\,.
 \end{align*}
-Therefore, we prove second property by 
+Now, since $\mu$ is nonnegative and additive, that is $\fua{\mu}{X\cup Y}=0\Longleftrightarrow\fua{\mu}{X}=\fua{\mu}{Y}=0$, and partitioned set $A$ on \eqref{eq:defInteSimp} is arbitrary, then choosing $E$ to be partitioned we prove item iii by 
 \begin{equation*}
-\int_{\bigcup_{i=1}^mE_i}f = \int_{\bigcup_{i=1}^mE_i}f^+ -\int_{\bigcup_{i=1}^mE_i}f^- = \sum_{i=1}^m \int_{E_i} f^+ - \sum_{i=1}^m \int_{E_i} f^- = \sum_{i=1}^m \int_{E_i} f\,.
+\int_E f = \lim_{k\to \infty} \sum_{i=1}^n\alpha_{i}^{(k)}\fua{\mu}{ E\cap E_i^{(k)}} = \lim_{k\to \infty} \sum_{i=1}^n\alpha_{i}^{(k)}\underbrace{\fua{\mu}{E_i^{(k)}}}_{0} = 0
 \end{equation*}
-Now, since $\mu$ is nonnegative and additive, that is $\fua{\mu}{X\cup Y}=0\Longleftrightarrow\fua{\mu}{X}=\fua{\mu}{Y}=0$, and partitioned set $A$ on \eqref{eq:defInteSimp} is arbitrary, then choosing $E$ to be partitioned leads to equalities
-\begin{equation*}
-\int_E f^+ = \lim_{k\to \infty} \sum_{i=1}^n\alpha_{i}^{(k)}\fua{\mu}{ E\cap E_i^{(k)}} = \lim_{k\to \infty} \sum_{i=1}^n\alpha_{i}^{(k)}\fua{\mu}{E_i^{(k)}} = 0
-\end{equation*}
-and, by the same development, $\int_E f^-=0$, which prove item iii. Now, we prove item iv. It is easy to obtain equality
-\begin{equation*}
-\alpha\int_{E}f+\beta\int_{E}g = (\alpha\int_{E}f^++\beta\int_{E}g^+) - (\alpha\int_{E}f^-+\beta\int_{E}g^-)\,.
-\end{equation*}
-Therefore, it suffices to prove only one of the nonnegative terms. Let's specify two partitions $\{A_1^{(k)},\cdots,A_n^{(k)}\}$ and $\{B_1^{(k)},\cdots,B_m^{(k)}\}$ of a set $A^{(k)}\subset M$ which define two step functions $s_k=\sum_{{i}=1}^n\alpha^{(k)}_i\tnr{1}_{A_i^{(k)}}$ and $t_k=\sum_{{j}=1}^m\beta^{(k)}_j\tnr{1}_{B_j^{(k)}}$ in such a way that 
+For item iv, let's specify two partitions $\{A_1^{(k)},\cdots,A_n^{(k)}\}$ and $\{B_1^{(k)},\cdots,B_m^{(k)}\}$ of a set $A^{(k)}\subset M$ which define two step functions $s_k=\sum_{{i}=1}^n\alpha^{(k)}_i\tnr{1}_{A_i^{(k)}}$ and $t_k=\sum_{{j}=1}^m\beta^{(k)}_j\tnr{1}_{B_j^{(k)}}$ in such a way that 
 \begin{align*}
-\alpha\int_{E}f^++\beta\int_{E}g^+&=\lim_{k\to\infty}\alpha\int_{E}s_k + \lim_{k\to\infty}\beta\int_{E}t_k\\
+\alpha\int_{E}f+\beta\int_{E}g&=\lim_{k\to\infty}\alpha\int_{E}s_k + \lim_{k\to\infty}\beta\int_{E}t_k\\
 &=\lim_{k\to\infty}\sum_{i=1}^n\alpha\alpha_i^{(k)}\fua{\mu}{E\cap A_i^{(k)}}+\lim_{k\to\infty}\sum_{j=1}^m\beta\beta_j^{(k)}\fua{\mu}{E\cap B_j^{(k)}}\\
 &=\lim_{k\to\infty}\sum_{i=1}^n\sum_{j=1}^m\alpha\alpha_i^{(k)}\fua{\mu}{E\cap A_i^{(k)}\cap B_j^{(k)}} + \sum_{i=1}^n\sum_{j=1}^m\beta\beta_j^{(k)}\fua{\mu}{E\cap A_i^{(k)}\cap B_j^{(k)}}\\
 &=\lim_{k\to\infty}\sum_{i=1}^n\sum_{j=1}^m(\alpha\alpha_i^{(k)}+\beta\beta_j^{(k)})\fua{\mu}{E\cap A_i^{(k)}\cap B_j^{(k)}}\tag{a}\label{eq:a}.
@@ -460,15 +464,18 @@ Thereby, from  property \eqref{eq:cauchySum}, we have
 \begin{equation*}
 \int_E \alpha f+\beta g = \lim_{k\to\infty}\int_E\alpha s_k+\beta t_k = \lim_{k\to\infty}\sum_{i=1}^n\sum_{j=1}^m(\alpha\alpha_i^{(k)}+\beta\beta_j^{(k)})\fua{\mu}{E\cap A_i^{(k)}\cap B_j^{(k)}}\,,
 \end{equation*}
-which is equal to equality \eqref{eq:a}.
+which is equal to result \eqref{eq:a}. 
 \end{proof}}
 
-Considering $\ete{\real}{U^{\times m}}$ and $\ete{\real}{V^{\times s}}$ Hilbert tensor spaces, let the function in mapping $\map{f}{\pmb{\mathcal{U}}}{\real}$ be described by $f = \frt{T}\circ\tnr{\psi}$, where $\pmb{\mathcal{U}}\subseteq\ete{\real}{U^{\times m}}$, function $\frt{T}$ is the representative tensor functional of an arbitrary tensor $\tnr{T}\in\ete{\real}{V^{\times s}}$ and $\map{\tnr{\psi}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}$. If $f$ is integrable on $\pmb{\mathcal{U}}$, we define that $\tnr{\psi}$ is also integrable on $\pmb{\mathcal{U}}$. If this is the case, specifying a rule 
-\begin{equation}
+Considering $\ete{\real}{U^{\times m}}$ and $\ete{\real}{V^{\times s}}$ Hilbert tensor spaces, let the function in mapping $\map{f}{\pmb{\mathcal{U}}}{\real}$ be described by $f = \frt{T}\circ\tnr{\psi}$, where $\pmb{\mathcal{U}}\subseteq\ete{\real}{U^{\times m}}$, function $\frt{T}$ is the representative tensor functional of an arbitrary tensor $\tnr{T}\in\ete{\real}{V^{\times s}}$ and $\map{\tnr{\psi}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}$. If $f$ is integrable on $\pmb{\mathcal{U}}$, we define that $\tnr{\psi}$ is also integrable on $\pmb{\mathcal{U}}$. If this is the case, by specifying a rule 
+\begin{equation*}
 \fua{h}{\tnr{X}} = \int_{\pmb{\mathcal{U}}} \frt{X}\circ\tnr{\psi}\,,
-\end{equation}
+\end{equation*}
 where tensor functional $h\in\eted{\real}{V^{\times s}}$ is linear because of property iv above, there exists a unique tensor $\tnr{H}\in\ete{\real}{V^{\times s}}$ which $h$ is the cotensor of, according to corollary \ref{cor:eqNorm}. In this context, tensor 
 \begin{equation}
 \int_{\pmb{\mathcal{U}}}\tnr{\psi}:=\tnr{H} 
 \end{equation}
-is called the integral of tensor function $\tnr{\psi}$ on $\pmb{\mathcal{U}}$.
+is called the integral of tensor function $\tnr{\psi}$ on $\pmb{\mathcal{U}}$. Therefore, since previous corollary establishes a one to one correspondence between linear functional $h$ and tensor $\tnr{H}$ through $\tnr{H}^*$, we conclude that 
+\begin{equation}
+\fua{h}{\tnr{X}}=\int_{\pmb{\mathcal{U}}} \frt{X}\circ\tnr{\psi}=\tnr{X}\cdot\int_{\pmb{\mathcal{U}}}\tnr{\psi}\,.
+\end{equation}
