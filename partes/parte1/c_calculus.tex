@@ -467,7 +467,7 @@ Thereby, from  property \eqref{eq:cauchySum}, we have
 which is equal to result \eqref{eq:a}. 
 \end{proof}}
 
-Considering $\ete{\real}{U^{\times m}}$ and $\ete{\real}{V^{\times s}}$ Hilbert tensor spaces, let the function in mapping $\map{f}{\pmb{\mathcal{U}}}{\real}$ be described by $f = \frt{T}\circ\tnr{\psi}$, where $\pmb{\mathcal{U}}\subseteq\ete{\real}{U^{\times m}}$, function $\frt{T}$ is the representative tensor functional of an arbitrary tensor $\tnr{T}\in\ete{\real}{V^{\times s}}$ and $\map{\tnr{\psi}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}$. If $f$ is integrable on $\pmb{\mathcal{U}}$, we define that $\tnr{\psi}$ is also integrable on $\pmb{\mathcal{U}}$. If this is the case, by specifying a rule 
+Considering $\ete{\real}{U^{\times m}}$ and $\ete{\real}{V^{\times s}}$ Hilbert tensor spaces, let the function in mapping $\map{f}{\pmb{\mathcal{U}}}{\real}$ be described by $f = \frt{T}\circ\tnr{\psi}$, where $\pmb{\mathcal{U}}\subseteq\ete{\real}{U^{\times m}}$, function $\frt{T}$ is the representative tensor functional of an arbitrary tensor $\tnr{T}\in\ete{\real}{V^{\times s}}$ and $\map{\tnr{\psi}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}$. We define that $\tnr{\psi}$ is integrable on $\pmb{\mathcal{U}}$ if $f$ is integrable on $\pmb{\mathcal{U}}$. If this is the case, by specifying a rule 
 \begin{equation*}
 \fua{h}{\tnr{X}} = \int_{\pmb{\mathcal{U}}} \frt{X}\circ\tnr{\psi}\,,
 \end{equation*}
@@ -475,7 +475,17 @@ where tensor functional $h\in\eted{\real}{V^{\times s}}$ is linear because of pr
 \begin{equation}
 \int_{\pmb{\mathcal{U}}}\tnr{\psi}:=\tnr{H} 
 \end{equation}
-is called the integral of tensor function $\tnr{\psi}$ on $\pmb{\mathcal{U}}$. Therefore, since previous corollary establishes a one to one correspondence between linear functional $h$ and tensor $\tnr{H}$ through $\tnr{H}^*$, we conclude that 
+is called the integral of tensor function $\tnr{\psi}$ on $\pmb{\mathcal{U}}$. Therefore, since previous corollary establishes a one to one correspondence between linear functional $h$ and tensor $\tnr{H}$ through $\fua{h}{\tnr{X}}=\tnr{X}\cdot\tnr{H}$, we conclude that 
 \begin{equation}
-\fua{h}{\tnr{X}}=\int_{\pmb{\mathcal{U}}} \frt{X}\circ\tnr{\psi}=\tnr{X}\cdot\int_{\pmb{\mathcal{U}}}\tnr{\psi}\,.
+\int_{\pmb{\mathcal{U}}} \frt{X}\circ\tnr{\psi}=\tnr{X}\cdot\int_{\pmb{\mathcal{U}}}\tnr{\psi}\,.
 \end{equation}
+
+\section{Two Green's Identities}
+
+% contorno regular
+%	http://mathworld.wolfram.com/RegularSurface.html
+%	http://noodle.med.yale.edu/seminar/shi/lecture2.pdf
+% contorno orientável
+%	http://mathworld.wolfram.com/OrientableSurface.html
+%	http://mathonline.wikidot.com/orientable-surfaces
+%	https://en.wikipedia.org/wiki/Normal_(geometry)
