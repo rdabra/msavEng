@@ -51,7 +51,10 @@ is said to be the directional derivative\footnote{It is important to say a few w
 \begin{equation*}
 \fua{[\fua{\tnr{\varphi}'_G}{\tnr{X}_0}]}{\tnr{X}}=\lim_{\alpha\to 0} \dfrac{\fua{\tnr{\varphi}}{\tnr{X}_0+\alpha\tnr{X}}-\fua{\tnr{\varphi}}{\tnr{X}_0}}{\alpha}\,.
 \end{equation*}
-The tensor function $\fua{[\fua{\tnr{\varphi}'_G}{\tnr{X}_0}]}{\tnr{X}}$ is called the \textsb{Gâteaux differential}\index{differential!Gâteaux} of $\tnr{\varphi}$ at $\tnr{X}_0$ and $\tnr{\varphi}'_G$ is the \textsb{Gâteaux derivative}\index{derivative!Gâteaux} of $\tnr{\varphi}$. Every Fréchet differentiable function is also Gâteaux differential, but the converse is obviously not true. What is less obvious is the following: even when Gâteaux derivative $\fua{\tnr{\varphi}'_G}{\tnr{X}_0}$ is bounded and linear, Gâteaux differentiability, which means differentiability along all directions at a point, does not assure total differentiability. This present study will require only the stronger restrictions from the Fréchet differentiation. For further developments of the Gâteaux derivative, see \aut{Wouk}\cite{wouk_1979_1}, chapter 12.} of $\tnr{\psi}$ along $\tnr{H}$.
+The tensor function $\fua{[\fua{\tnr{\varphi}'_G}{\tnr{X}_0}]}{\tnr{X}}$ is called the \textsb{Gâteaux differential}\index{differential!Gâteaux} of $\tnr{\varphi}$ at $\tnr{X}_0$ and $\tnr{\varphi}'_G$ is the \textsb{Gâteaux derivative}\index{derivative!Gâteaux} of $\tnr{\varphi}$. Every Fréchet differentiable function is also Gâteaux differential, but the converse is obviously not true. What is less obvious is the following: even when Gâteaux derivative $\fua{\tnr{\varphi}'_G}{\tnr{X}_0}$ is bounded and linear, Gâteaux differentiability, which means differentiability along all directions at a point, does not assure total differentiability. This present study will require only the stronger restrictions from the Fréchet differentiation. For further developments of the Gâteaux derivative, see \aut{Wouk}\cite{wouk_1979_1}, chapter 12.} of $\tnr{\psi}$ along $\tnr{H}$. For the particular case of open set $\pmb{\mathcal{U}}$ constituted by scalars, that is $\pmb{\mathcal{U}}\subset\cam{F}$, there is no much sense in talking about directional derivative since vector space $\cam{F}$ is one-dimensional and then has only one direction. In this context, from previous equality, if we conveniently choose 1 as direction, then
+\begin{equation}
+\fua{\tnr{\psi}'}{x}=\fua{[\fua{\tnr{\psi}'}{x}]}{1}=\lim_{\alpha\to 0} \dfrac{\fua{\tnr{\psi}}{x+\alpha}-\fua{\tnr{\psi}}{x}}{\alpha}
+\end{equation}
 
 
 {\footnotesize
@@ -502,8 +505,11 @@ Let $U_\real$ be a $n$-dimensional Euclidean space, $n\geqslant 2\,$, and $\pmb{
 \end{equation*}	
 \end{itemize}
 
-Considering $\pmb{\mathcal{U}}$ a Lipschitz domain, we additionally require orientation of the Lipschitz surface $\partial\pmb{\mathcal{U}}$ on each of its boundary points. In order to adequately accomplish this, let    	
-
+Considering $\pmb{\mathcal{U}}$ a Lipschitz domain, we additionally require orientation of the Lipschitz surface $\partial\pmb{\mathcal{U}}$ on each of its boundary points. In order to adequately accomplish this, let the function in $\map{h}{\real^{n-1}}{\real}$ be Lipschitz continuous whose graph describes $\partial\pmb{\mathcal{U}}$ in such a way that 
+\begin{equation*}
+\fua{\vtf{f}_n^B}{\vto{u}} = \fua{h}{\fua{\vtf{f}_1^B}{\vto{u}},\cdots,\fua{\vtf{f}_{n-1}^B}{\vto{u}}}\,,\,\forall\,\vto{u}\in\partial\pmb{\mathcal{U}}\,, 
+\end{equation*}
+where $B$ is an arbitrary orthonormal basis of $U_\real$.
        
 
 % FIGURE xx - BOUNDARY SHAOES NOT ALLOWED ON LIPSCHITZ DOMAINS
