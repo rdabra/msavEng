@@ -503,24 +503,27 @@ In rough geometrical terms, domains whose boundary shapes show a specific form o
 %DESENHAR FOTO DO DIA 06/02
 
 
-Let $U_\real$ be a $n$-dimensional Euclidean space, $n\geqslant 2\,$, and $\pmb{\mathcal{U}}$ one of its proper subsets, which we assume to be a domain of a certain function. Considering an arbitrary non zero scalar $\alpha\in\real^+$, a disjoint cover $\css{C}=\{\widehat{C}_1,\cdots,\widehat{C}_r\}$ of boundary $\partial\pmb{\mathcal{U}}$ and a class $\{A_1,\cdots,A_r\}$ where $A_i\subset C_i$ defines a $(n-1)$-dimensional Euclidean subspace of $U_\real$ from the first $n-1$ dimensions of $U_\real$, the subset $\pmb{\mathcal{U}}$ is called a \textsb{Lipschitz domain}\index{domain!Lipschitz} and its boundary a \textsb{Lipschitz surface}\index{surface!Lipschitz} if the following conditions are observed. 
+Let $U_\real$ be a $n$-dimensional Euclidean space, $n\geqslant 2\,$, and $\pmb{\mathcal{V}}$ one of its proper subsets, which we assume to be a domain of a certain function. Considering an arbitrary non zero scalar $\alpha\in\real^+$, a disjoint cover $\css{C}=\{\widehat{C}_1,\cdots,\widehat{C}_r\}$ of boundary $\partial\pmb{\mathcal{V}}$ and a class $\{A_1,\cdots,A_r\}$ where $A_i\subset C_i$ defines a $(n-1)$-dimensional Euclidean subspace of $U_\real$ from the first $n-1$ dimensions of $U_\real$, the subset $\pmb{\mathcal{V}}$ is called a \textsb{Lipschitz domain}\index{domain!Lipschitz} and its boundary a \textsb{Lipschitz surface}\index{surface!Lipschitz} if the following conditions are observed. 
 
 \begin{itemize}
 	\setlength\itemsep{.1em}
-	\item[i.] Every element $\widehat{C}_j$ of $\css{C}$ must have a specific shape such that arbitrary vectors $\vto{u},\vto{v}\in\{\vto{x}\in\pmb{\mathcal{U}}:\fua{\varrho}{\vto{x},\partial\pmb{\mathcal{U}}}<\alpha\}$, where distance $\fua{\varrho}{\vto{u},\vto{v}}<\alpha$, are also elements of the subset $\{\vto{x}\in\widehat{C}_j:\fua{\varrho}{\vto{x},\partial C_j}>\alpha\}\,$;
+	\item[i.] Every element $\widehat{C}_j$ of $\css{C}$ must have a specific shape such that arbitrary vectors $\vto{u},\vto{v}\in\{\vto{x}\in\pmb{\mathcal{V}}:\fua{\varrho}{\vto{x},\partial\pmb{\mathcal{V}}}<\alpha\}$, where distance $\fua{\varrho}{\vto{u},\vto{v}}<\alpha$, are also elements of the subset $\{\vto{x}\in\widehat{C}_j:\fua{\varrho}{\vto{x},\partial C_j}>\alpha\}\,$;
 
-	\item[ii.] Every set $\pmb{\mathcal{U}}\cap \widehat{C}_j$ must be on the same ``side'' of boundary $\partial\pmb{\mathcal{U}}$, whose points coordinates must constitute the graph of a Lipschitz continuous function. In other words, there must exist a set of Lipschitz continuous functionals $\{f_1,\cdots,f_r\}$ where $\map{f_i}{A_i}{\real}$ in such a way that for an orthonormal basis $B=\{\vun{u}_1,\cdots,\vun{u}_n\}$ of $\widehat{C}_j$ and arbitrary vector $\vto{w}\in \pmb{\mathcal{U}}\cap\widehat{C}_j$, 
+	\item[ii.] Every set $\pmb{\mathcal{V}}\cap \widehat{C}_j$ must be on the same ``side'' of boundary $\partial\pmb{\mathcal{V}}$, whose points coordinates must constitute the graph of a Lipschitz continuous function. In other words, there must exist a set of Lipschitz continuous functionals $\{f_1,\cdots,f_r\}$ where $\map{f_i}{A_i}{\real}$ in such a way that for an orthonormal basis $Z=\{\vun{v}_1,\cdots,\vun{v}_n\}$ of $\widehat{C}_j$ and arbitrary vector $\vto{w}\in \pmb{\mathcal{V}}\cap\widehat{C}_j$, 
 \begin{equation*}
-|\fua{\vtf{f}_n^B}{\vto{w}}|<|f_j[\sum_{i=1}^{n-1}\fua{\vtf{f}_i^B}{\vto{w}}\vun{u}_i]|\,.
+|\fua{\vtf{f}_n^Z}{\vto{w}}|<|f_j[\sum_{i=1}^{n-1}\fua{\vtf{f}_i^Z}{\vto{w}}\vun{v}_i]|\,.
 \end{equation*}	
 \end{itemize}
 
-Considering $\pmb{\mathcal{U}}$ a Lipschitz domain, we additionally require orientation of the Lipschitz surface $\partial\pmb{\mathcal{U}}$ on each of its boundary points. In order to adequately accomplish this, let the function in $\map{h}{\real^{n-1}}{\real}$ be Lipschitz continuous whose graph describes $\partial\pmb{\mathcal{U}}$ in such a way that 
+Considering $\pmb{\mathcal{V}}$ a Lipschitz domain, we additionally require orientation of the Lipschitz surface $\partial\pmb{\mathcal{V}}$ on each of its points. In order to adequately accomplish this, let $\pmb{\mathcal{W}}$ be a proper subset of $\partial\pmb{\mathcal{V}}$ and the function in $\map{\vtf{g}}{\pmb{\mathcal{W}}}{\real}$ be Lipschitz continuous whose graph describes $\partial\pmb{\mathcal{V}}$ in such a way that 
 \begin{equation*}
-\fua{\vtf{f}_n^B}{\vto{u}} = \fua{h}{\fua{\vtf{f}_1^B}{\vto{u}},\cdots,\fua{\vtf{f}_{n-1}^B}{\vto{u}}}\,,\,\forall\,\vto{u}\in\partial\pmb{\mathcal{U}}\,, 
+\fua{\vtf{f}_n^B}{\vto{u}} = \fua{\vtf{g}}{\sum_{i=1}^{n-1}\fua{\vtf{f}_i^B}{\vto{u}}\vun{u}_i}\,,\,\forall\,\vto{u}\in\partial\pmb{\mathcal{V}}\,, 
 \end{equation*}
-where $B$ is an arbitrary orthonormal basis of $U_\real$.
-       
+where $B=\{\vun{u}_1,\cdots,\vun{u}_n\}$ is an arbitrary orthonormal basis of $U_\real$. Thereby, the constant vector function in $\map{\vtf{s}}{\partial\pmb{\mathcal{V}}}{\real}$, described by 
+\begin{equation}
+\fua{\vtf{s}}{\vto{x}} = \fua{\vtf{f}_n^B}{\vto{x}} - \fua{\vtf{g}}{\sum_{i=1}^{n-1}\fua{\vtf{f}_i^B}{\vto{x}}\vun{u}_i}=0\,,
+\end{equation}
+is called the \textsb{implicit function}\index{function!implict} of $\partial\pmb{\mathcal{V}}$ and it is obvious that       
 
 % FIGURE xx - BOUNDARY SHAOES NOT ALLOWED ON LIPSCHITZ DOMAINS
 
