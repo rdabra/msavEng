@@ -495,7 +495,7 @@ is called the integral of tensor function $\tnr{\psi}$ on $\pmb{\mathcal{U}}$. T
 \int_{\pmb{\mathcal{U}}} \frt{X}\circ\tnr{\psi}=\tnr{X}\cdot\int_{\pmb{\mathcal{U}}}\tnr{\psi}\,.
 \end{equation}
 
-\section{Integral identities}\index{integral!identities}
+\section{The Gauss-Ostrogradsky theorem}
 
 In rough geometrical terms, domains whose boundary shapes show a specific form of regularity -- where sharp edges and different types of self intersection are not allowed, as shown in figure XX -- enable identities that equalize integrations on surfaces and interiors, which are fundamental for the present study. First of all, we recall the biunivocal correspondence between an affine space and a vector space enabled by a coordinate system, as shown in section \ref{sec:affine}, in order to henceforth make geometrical statements and assumptions on finite dimensional Euclidean spaces. In this context and from the concept of smoothness presented on section \ref{sec:diffe}, a set of strong mathematical requirements that avoid the irregularities cited above is given by introductory texts on Differential Geometry, such as \aut{Do Carmo}\cite{docarmo_2016}, where surfaces called smooth are defined. However, for the sake of generality, we choose to study a less restrictive regularity condition, which defines the so called Lipschitz surface\footnote{ See \aut{Ciarlet}\cite{ciarlet_1988_2}, p.32.}; that also does not present the above irregularities and is less difficult to deal with than smooth surfaces. We shall adopt this concept by adapting the accessible approach of \aut{Adams \& Fournier}\cite{adams_2003_2}, which is more than sufficient for our purposes\footnote{For a more rigorous treatment, see \aut{Agranovich}\cite{agranovitch_2015_1}, chapter 3.}. 
 
@@ -503,31 +503,48 @@ In rough geometrical terms, domains whose boundary shapes show a specific form o
 %DESENHAR FOTO DO DIA 06/02
 
 
-Let $U_\real$ be a $n$-dimensional Euclidean space, $n\geqslant 2\,$, and $\pmb{\mathcal{V}}$ one of its proper subsets, which we assume to be a domain of a certain function. Considering an arbitrary non zero scalar $\alpha\in\real^+$, a disjoint cover $\css{C}=\{\widehat{C}_1,\cdots,\widehat{C}_r\}$ of boundary $\partial\pmb{\mathcal{V}}$ and a class $\{A_1,\cdots,A_r\}$ where $A_i\subset C_i$ defines a $(n-1)$-dimensional Euclidean subspace of $U_\real$ from the first $n-1$ dimensions of $U_\real$, the subset $\pmb{\mathcal{V}}$ is called a \textsb{Lipschitz domain}\index{domain!Lipschitz} and its boundary a \textsb{Lipschitz surface}\index{surface!Lipschitz} if the following conditions are observed. 
+Let $U_\real$ be a $n$-dimensional Euclidean space, $n\geqslant 2\,$, and $\pmb{\mathcal{U}}$ one of its proper subsets, which we assume to be a domain of a certain function. Considering an arbitrary non zero scalar $\alpha\in\real^+$, a disjoint cover $\css{C}=\{\widehat{C}_1,\cdots,\widehat{C}_r\}$ of boundary $\partial\pmb{\mathcal{U}}$ and a class $\{A_1,\cdots,A_r\}$ where $A_i\subset C_i$ defines a $(n-1)$-dimensional Euclidean subspace of $U_\real$ from the first $n-1$ dimensions of $U_\real$, the subset $\pmb{\mathcal{U}}$ is called a \textsb{Lipschitz domain}\index{domain!Lipschitz} and its boundary a \textsb{Lipschitz surface}\index{surface!Lipschitz} if the following conditions are observed. 
 
 \begin{itemize}
 	\setlength\itemsep{.1em}
-	\item[i.] Every element $\widehat{C}_j$ of $\css{C}$ must have a specific shape such that arbitrary vectors $\vto{u},\vto{v}\in\{\vto{x}\in\pmb{\mathcal{V}}:\fua{\varrho}{\vto{x},\partial\pmb{\mathcal{V}}}<\alpha\}$, where distance $\fua{\varrho}{\vto{u},\vto{v}}<\alpha$, are also elements of the subset $\{\vto{x}\in\widehat{C}_j:\fua{\varrho}{\vto{x},\partial C_j}>\alpha\}\,$;
+	\item[i.] Every element $\widehat{C}_j$ of $\css{C}$ must have a specific shape such that arbitrary vectors $\vto{u},\vto{v}\in\{\vto{x}\in\pmb{\mathcal{U}}:\fua{\varrho}{\vto{x},\partial\pmb{\mathcal{U}}}<\alpha\}$, where distance $\fua{\varrho}{\vto{u},\vto{v}}<\alpha$, are also elements of the subset $\{\vto{x}\in\widehat{C}_j:\fua{\varrho}{\vto{x},\partial C_j}>\alpha\}\,$;
 
-	\item[ii.] Every set $\pmb{\mathcal{V}}\cap \widehat{C}_j$ must be on the same ``side'' of boundary $\partial\pmb{\mathcal{V}}$, whose points coordinates must constitute the graph of a Lipschitz continuous function. In other words, there must exist a set of Lipschitz continuous functionals $\{f_1,\cdots,f_r\}$ where $\map{f_i}{A_i}{\real}$ in such a way that for an orthonormal basis $Z=\{\vun{v}_1,\cdots,\vun{v}_n\}$ of $\widehat{C}_j$ and arbitrary vector $\vto{w}\in \pmb{\mathcal{V}}\cap\widehat{C}_j$, 
+	\item[ii.] Every set $\pmb{\mathcal{U}}\cap \widehat{C}_j$ must be on the same ``side'' of boundary $\partial\pmb{\mathcal{U}}$, whose points coordinates must constitute the graph of a Lipschitz continuous function. In other words, there must exist a set of Lipschitz continuous functionals $\{f_1,\cdots,f_r\}$ where $\map{f_i}{A_i}{\real}$ in such a way that for an orthonormal basis $Z=\{\vun{v}_1,\cdots,\vun{v}_n\}$ of $\widehat{C}_j$ and arbitrary vector $\vto{w}\in \pmb{\mathcal{U}}\cap\widehat{C}_j$, 
 \begin{equation*}
 |\fua{\vtf{f}_n^Z}{\vto{w}}|<|f_j[\sum_{i=1}^{n-1}\fua{\vtf{f}_i^Z}{\vto{w}}\vun{v}_i]|\,.
 \end{equation*}	
 \end{itemize}
 
-Considering $\pmb{\mathcal{V}}\subset U_\cam{R}$ a Lipschitz domain, we additionally require orientation of the Lipschitz surface $\partial\pmb{\mathcal{V}}$ on each of its points. In order to adequately accomplish this, let $\pmb{\mathcal{W}}$ be a $(n-1)$-dimensional subspace of $U_\cam{R}$ and the function in $\map{\vtf{g}}{\pmb{\mathcal{W}}}{\real}$ be Lipschitz continuous whose graph describes $\partial\pmb{\mathcal{V}}$ in such a way that 
+Considering $\pmb{\mathcal{U}}\subset U_\cam{R}$ a Lipschitz domain, we additionally require orientation of the Lipschitz surface $\partial\pmb{\mathcal{U}}$ on each of its points. In order to adequately accomplish this, let $\pmb{\mathcal{W}}$ be a $(n-1)$-dimensional subspace of $U_\cam{R}$ and the function in $\map{\vtf{g}}{\pmb{\mathcal{W}}}{\real}$ be Lipschitz continuous whose graph describes $\partial\pmb{\mathcal{U}}$ in such a way that 
 \begin{equation*}
-\fua{\vtf{f}_n^B}{\vto{v}} = \fua{\vtf{g}}{\sum_{i=1}^{n-1}\fua{\vtf{f}_i^B}{\vto{v}}\vun{u}_i}\,,\,\forall\,\vto{v}\in\partial\pmb{\mathcal{V}}\,, 
+\fua{\vtf{f}_n^B}{\vto{v}} = \fua{\vtf{g}}{\sum_{i=1}^{n-1}\fua{\vtf{f}_i^B}{\vto{v}}\vun{u}_i}\,,\,\forall\,\vto{v}\in\partial\pmb{\mathcal{U}}\,, 
 \end{equation*}
 where $B=\{\vun{u}_1,\cdots,\vun{u}_n\}$ is an arbitrary orthonormal basis of $U_\real$. Thereby, the function in mapping $\map{\vtf{s}}{U_\cam{R}}{\real}$ where 
 \begin{alignat}{3}\label{eq:impliSurf}
-\fua{\vtf{s}}{\vto{v}} = \fua{\vtf{f}_n^B}{\vto{v}} - \fua{\vtf{g}}{\sum_{i=1}^{n-1}\fua{\vtf{f}_i^B}{\vto{v}}\vun{u}_i}=0& \quad\text{and} \quad &\fua{\nabla\vtf{s}}{\vto{v}}\neq 0\,,\,\forall\,\vto{v}\in\partial\pmb{\mathcal{V}}\,,
+\fua{\vtf{s}}{\vto{v}} = \fua{\vtf{f}_n^B}{\vto{v}} - \fua{\vtf{g}}{\sum_{i=1}^{n-1}\fua{\vtf{f}_i^B}{\vto{v}}\vun{u}_i}=0& \quad\text{and} \quad &\fua{\nabla\vtf{s}}{\vto{v}}\neq 0\,,\,\forall\,\vto{v}\in\partial\pmb{\mathcal{U}}\,,
 \end{alignat}
-is called the \textsb{implicit function}\index{function!implict} of $\partial\pmb{\mathcal{V}}$ and since it is constant, equality $[\fua{\vtf{s}'}{\vto{v}}](\vto{h})=0$ is valid along any direction $\vto{h}\in\partial\pmb{\mathcal{V}}$. Therefore,  from \eqref{eq:defGradient}, we can say that $\vto{h}\cdot\fua{\nabla\vtf{s}}{\vto{v}}=0$ for all $\vto{h}\in\{\viz{\vto{v}}\cap\partial\pmb{\mathcal{V}}\}$, that is, vector $\fua{\nabla\vtf{s}}{\vto{v}}$ is orthogonal to surface $\partial\pmb{\mathcal{V}}$ at arbitrary $\vto{v}\in\partial\pmb{\mathcal{V}}$. From this conclusion, surface $\partial\pmb{\mathcal{V}}$ is called \textsb{orientable}\index{surface!orientable} if it is possible to define a mapping $\map{\vtf{n}}{\partial\pmb{\mathcal{V}}}{U_\cam{R}}$ whose function, called the \textsb{unit normal function}\index{function!unit normal} on $\partial\pmb{\mathcal{V}}$, is described by 
+is called the \textsb{implicit function}\index{function!implict} of $\partial\pmb{\mathcal{U}}$ and since it is constant, equality $[\fua{\vtf{s}'}{\vto{v}}](\vto{h})=0$ is valid along any direction $\vto{h}\in\partial\pmb{\mathcal{U}}$. Therefore,  from \eqref{eq:defGradient}, we can say that $\vto{h}\cdot\fua{\nabla\vtf{s}}{\vto{v}}=0$ for all $\vto{h}\in\{\viz{\vto{v}}\cap\partial\pmb{\mathcal{U}}\}$, that is, vector $\fua{\nabla\vtf{s}}{\vto{v}}$ is orthogonal to surface $\partial\pmb{\mathcal{U}}$ at arbitrary $\vto{v}\in\partial\pmb{\mathcal{U}}$. From this conclusion, surface $\partial\pmb{\mathcal{U}}$ is called \textsb{orientable}\index{surface!orientable} if it is possible to define a mapping $\map{\vtf{n}}{\partial\pmb{\mathcal{U}}}{U_\cam{R}}$ whose function, called the \textsb{unit normal function}\index{function!unit normal} on $\partial\pmb{\mathcal{U}}$, is described by 
 \begin{equation}
 \fua{\vtf{n}}{\vto{x}}=\dfrac{\fua{\nabla\vtf{s}}{\vto{x}}}{\|\fua{\nabla\vtf{s}}{\vto{x}}\|}\,.
 \end{equation}
-Additionally to $\vtf{n}$, it is true that an implicit function $-\vtf{s}$ leads to a unit normal function $-\vtf{n}$ and when one of these directions $\vtf{n}$ or $-\vtf{n}$ is specified as positive, we say that $\partial\pmb{\mathcal{V}}$ is \textsb{oriented}\index{surface!oriented}. For the purposes of this study, we choose $\vtf{n}$ to orientate the surfaces. In the case of three-dimensional Euclidean spaces, the values of function $\vtf{n}$ are outward unit vectors with respect to the surface and the values of $-\vtf{n}$ are inward unit vectors. 
+Additionally to $\vtf{n}$, it is true that an implicit function $-\vtf{s}$ leads to a unit normal function $-\vtf{n}$ and when one of these directions $\vtf{n}$ or $-\vtf{n}$ is specified as positive, we say that $\partial\pmb{\mathcal{U}}$ is \textsb{oriented}\index{surface!oriented}. For the purposes of this study, we choose $\vtf{n}$ to orientate the surfaces. In the case of three-dimensional Euclidean spaces, the values of function $\vtf{n}$ are outward unit vectors with respect to the surface and the values of $-\vtf{n}$ are inward unit vectors. 
+
+From what we have studied so far, it is finally possible to present a fundamental identity of elementary Calculus, which is the objective of this section, called the Gauss-Ostrogradsky or \textsb{Divergence}\index{theorem!Divergence} theorem. We shall not deal with its most general form, the notorious Generalized Stokes' theorem, because it would demand us to cover an extensive material on Exterior Calculus, which is out of the scope of this work\footnote{For an introduction on Exterior Calculus, see \aut{Flanders}\cite{flanders_1989_1}, \aut{Loomis \& Sternberg}\cite{loomis_2014_1}  and \aut{Spivak}\cite{spivak_1965_1}.}. In general terms, the following theorem relates the ``flux'' of a function on the boundary of its domain -- understood as projections of function values on unit normals -- with its divergence on the interior.     
+
+\begin{mteo}{Gauss-Ostrogradsky}{gauss}
+Considering $U_\real$ and $\ete{\real}{U\times V^{\times s}}$ finite dimensional Euclidean spaces, $\map{\vtf{\varphi}}{\pmb{\mathcal{U}}}{\ete{\real}{U\times V^{\times s}}}$ a continuous mapping where $\pmb{\mathcal{U}}\subset U_\real$ is a Lipschitz domain, $\vtf{\varphi}$ continuously differentiable on interior $\hat{\pmb{\mathcal{U}}}$, surface $\partial\pmb{\mathcal{U}}$ oriented by a unit normal vector function $\vtf{n}$ and 
+$\map{\vtf{\varphi}_\odot}{\pmb{\mathcal{U}}}{\ete{\real}{U\times V^{\times s}}}$ a mapping
+where $\fua{\vtf{\varphi}_\odot}{\vto{x}}=\fua{\vtf{n}}{\vto{x}}\odot_1\fua{\vtf{\varphi}}{\vto{x}}$, then
+\begin{equation*}
+\int_{\hat{\pmb{\mathcal{U}}}}\dvt{\vtf{\varphi}} = \int_{\partial{\pmb{\mathcal{U}}}}\vtf{\varphi}_\odot\,\,.
+\end{equation*}
+\end{mteo}
+\hspace{1pt}
+{\footnotesize
+\begin{proof}
+Considering 
+\end{proof}
+}
 
 
 
