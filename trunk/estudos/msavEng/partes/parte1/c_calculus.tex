@@ -520,18 +520,16 @@ Considering $\pmb{\mathcal{V}}\subset U_\cam{R}$ a Lipschitz domain, we addition
 \fua{\vtf{f}_n^B}{\vto{v}} = \fua{\vtf{g}}{\sum_{i=1}^{n-1}\fua{\vtf{f}_i^B}{\vto{v}}\vun{u}_i}\,,\,\forall\,\vto{v}\in\partial\pmb{\mathcal{V}}\,, 
 \end{equation*}
 where $B=\{\vun{u}_1,\cdots,\vun{u}_n\}$ is an arbitrary orthonormal basis of $U_\real$. Thereby, the function in mapping $\map{\vtf{s}}{U_\cam{R}}{\real}$ where 
-\begin{equation}\label{eq:impliSurf}
-\fua{\vtf{s}}{\vto{v}} = \fua{\vtf{f}_n^B}{\vto{v}} - \fua{\vtf{g}}{\sum_{i=1}^{n-1}\fua{\vtf{f}_i^B}{\vto{v}}\vun{u}_i}=0\,,\,\forall\,\vto{v}\in\partial\pmb{\mathcal{V}}\,,
-\end{equation}
-is called the \textsb{implicit function}\index{function!implict} of $\partial\pmb{\mathcal{V}}$ and since it is constant, equality $[\fua{\vtf{s}'}{\vto{v}}](\vto{h})=0$ is valid along any direction $\vto{h}\in\partial\pmb{\mathcal{V}}$. Therefore,  from \eqref{eq:defGradient}, we can say that $\vto{h}\cdot\fua{\nabla\vtf{s}}{\vto{v}}=0$ for all $\vto{h}\in\{\viz{\vto{v}}\cap\partial\pmb{\mathcal{V}}\}$, that is, vector $\fua{\nabla\vtf{s}}{\vto{v}}$ is orthogonal to surface $\partial\pmb{\mathcal{V}}$ at arbitrary $\vto{v}\in\partial\pmb{\mathcal{V}}$. From this conclusion, surface $\partial\pmb{\mathcal{V}}$ is called \textsb{positively oriented}\index{surface!positively oriented} if it is possible to define a mapping $\map{\vtf{n}^+}{\partial\pmb{\mathcal{V}}}{U_\cam{R}}$ whose function, called the \textsb{outward unit normal function}\index{function!outward unit normal} on $\partial\pmb{\mathcal{V}}$, is described by 
+\begin{alignat}{3}\label{eq:impliSurf}
+\fua{\vtf{s}}{\vto{v}} = \fua{\vtf{f}_n^B}{\vto{v}} - \fua{\vtf{g}}{\sum_{i=1}^{n-1}\fua{\vtf{f}_i^B}{\vto{v}}\vun{u}_i}=0& \quad\text{and} \quad &\fua{\nabla\vtf{s}}{\vto{v}}\neq 0\,,\,\forall\,\vto{v}\in\partial\pmb{\mathcal{V}}\,,
+\end{alignat}
+is called the \textsb{implicit function}\index{function!implict} of $\partial\pmb{\mathcal{V}}$ and since it is constant, equality $[\fua{\vtf{s}'}{\vto{v}}](\vto{h})=0$ is valid along any direction $\vto{h}\in\partial\pmb{\mathcal{V}}$. Therefore,  from \eqref{eq:defGradient}, we can say that $\vto{h}\cdot\fua{\nabla\vtf{s}}{\vto{v}}=0$ for all $\vto{h}\in\{\viz{\vto{v}}\cap\partial\pmb{\mathcal{V}}\}$, that is, vector $\fua{\nabla\vtf{s}}{\vto{v}}$ is orthogonal to surface $\partial\pmb{\mathcal{V}}$ at arbitrary $\vto{v}\in\partial\pmb{\mathcal{V}}$. From this conclusion, surface $\partial\pmb{\mathcal{V}}$ is called \textsb{orientable}\index{surface!orientable} if it is possible to define a mapping $\map{\vtf{n}}{\partial\pmb{\mathcal{V}}}{U_\cam{R}}$ whose function, called the \textsb{unit normal function}\index{function!unit normal} on $\partial\pmb{\mathcal{V}}$, is described by 
 \begin{equation}
-\fua{\vtf{n}^+}{\vto{x}}=\dfrac{\fua{\nabla\vtf{s}}{\vto{x}}}{\|\fua{\nabla\vtf{s}}{\vto{x}}\|}\,.
+\fua{\vtf{n}}{\vto{x}}=\dfrac{\fua{\nabla\vtf{s}}{\vto{x}}}{\|\fua{\nabla\vtf{s}}{\vto{x}}\|}\,.
 \end{equation}
-As a consequence of our definition of implicit function \eqref{eq:impliSurf}, the values of $\vtf{n}^+$ are outward unit normal vectors with respect to the surface. In some particular cases, it is useful to define an \textsb{inward unit normal function}\index{function!inward unit normal}  $\vtf{n}^-=-\vtf{n}^+$, when the surface in question is called \textsb{negatively oriented}\index{surface!negatively oriented}. 
+Additionally to $\vtf{n}$, it is true that an implicit function $-\vtf{s}$ leads to a unit normal function $-\vtf{n}$ and when one of these directions $\vtf{n}$ or $-\vtf{n}$ is specified as positive, we say that $\partial\pmb{\mathcal{V}}$ is \textsb{oriented}\index{surface!oriented}. For the purposes of this study, we choose $\vtf{n}$ to orientate the surfaces. In the case of three-dimensional Euclidean spaces, the values of function $\vtf{n}$ are outward unit vectors with respect to the surface and the values of $-\vtf{n}$ are inward unit vectors. 
 
 
-%In our study and many other cases, it is necessary to \emph{specify} the direction of unit normal vectors: inward or outward, with respect to the surface. If we choose that there is always a non zero scalar $\alpha\in\real^+$ for all $\vto{x}\in\partial\pmb{\mathcal{V}}$ where $\vto{x}+\alpha\fua{\vtf{n}}{\vto{x}}\notin\pmb{\mathcal{V}}$, then 
-%$\vtf{n}^+:=\vtf{n}$ is an \textsb{outward}\index{function!outward unit normal} unit normal function on $\partial\pmb{\mathcal{V}}$. When the previous restriction is chosen to be $\vto{x}+\alpha\fua{\vtf{n}}{\vto{x}}\in\pmb{\mathcal{V}}$, then $\vtf{n}^-:=\vtf{n}$ is called an \textsb{inward}\index{function!inward unit normal} unit normal function.
 
 % FIGURE xx - BOUNDARY SHAOES NOT ALLOWED ON LIPSCHITZ DOMAINS
 
