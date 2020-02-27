@@ -277,11 +277,11 @@ From this concept of divergence and from mapping $\map{\nabla\tnr{\psi}}{\pmb{\m
 \begin{equation}\label{eq:laplace}
 \Delta\tnr{\psi}=\dvt{\nabla\tnr{\psi}}\,,
 \end{equation}
-called the \textsb{Laplacian}\index{Laplacian} of $\tnr{\psi}$, where $\fua{\gloref{laplac}}{\tnr{X}}\in \ete{\cam{F}}{V^{\times s}}$. Now, we restrict the context of function $\tnr{\varphi}$ to tensor spaces of order $m=1$ and $s=1$, specifying that $V_\real$ is an Euclidean space and $U_\real$ defines a three dimensional oriented Euclidean space $(U_\real,\tnr{A}_B)$, where $B$ is an orthonormal basis of $U_\cam{R}$. In this context, it is possible to define a mapping  $\map{\gloref{curl}}{\pmb{\mathcal{U}}}{V_\real}$, whose function is called the \textsb{curl}\index{curl} of $\tnr{\varphi}$, with rule
+called the \textsb{Laplacian}\index{Laplacian} of $\tnr{\psi}$, where $\fua{\gloref{laplac}}{\tnr{X}}\in \ete{\cam{F}}{V^{\times s}}$. Now, we restrict the context of function $\tnr{\varphi}$ to tensor spaces of order $m=1$ and $s=1$, specifying that $V_\real$ is an Euclidean space and $U_\real$ defines a three dimensional oriented Euclidean space $(U_\real,\tnr{A}_B)$, where $B$ is an orthonormal basis of $U_\cam{R}$. In this context, it is possible to define a mapping  $\map{\gloref{curl}}{\pmb{\mathcal{U}}}{ \ete{\cam{F}}{U\times V}}$, whose function is called the \textsb{curl}\index{curl} of $\tnr{\varphi}$, with rule
 \begin{equation}\label{eq:curl}
 \fua{\crl{\tnr{\varphi}}}{\vto{x}}=\tnr{A}_B\odot_{2}\fua{\nabla\tnr{\varphi}}{\vto{x}}\,,
 \end{equation}
-where third order tensor $\fua{\nabla\tnr{\varphi}}{\vto{x}}\in\ete{\cam{F}}{U^2\times V}$. Therefore, it is clear that  $\fua{\dvt{\tnr{\varphi}}}{\vto{x}}$ and $\fua{\crl{\tnr{\varphi}}}{\vto{x}}$ are vectors of $V_\real$. Similarly to the case of gradients, there are some notable properties of divergence and curl, presented as follows, considering the appropriate previous conditions.
+where third order tensor $\fua{\nabla\tnr{\varphi}}{\vto{x}}\in\ete{\cam{F}}{U^2\times V}$. Similarly to the case of gradients, there are some notable properties of divergence and curl, presented as follows, considering the appropriate previous conditions.
 \begin{itemize}
 \setlength\itemsep{.1em}
 \item[i.] If $\tnr{\varphi}=\tnr{\varphi}_1+\tnr{\varphi}_2$ then $\dvt{\tnr{\varphi}}=\dvt{\tnr{\varphi}_1}+\dvt{\tnr{\varphi}_2}$ and $\crl{\tnr{\varphi}}=\crl{\tnr{\varphi}_1}+\crl{\tnr{\varphi}_2}\,$;
@@ -564,6 +564,8 @@ But from definition \eqref{eq:repTensFunc}, we have equalities $\fua{\frt{I}\cir
 }
 
 \begin{mcoro}{Stokes'}{stokes}
+If 
+
 	For a continuous mapping $\map{\vtf{\varphi}_\otimes}{\pmb{\mathcal{U}}}{\ete{\real}{U\times V^{\times s}}}$ where $\fua{\vtf{\varphi}_\otimes}{\vto{x}}=\fua{\vtf{n}}{\vto{x}}\otimes\fua{\vtf{\varphi}}{\vto{x}}$, then
 	\begin{equation*}
 		\int_{\hat{\pmb{\mathcal{U}}}}\nabla{\vtf{\varphi}} = \int_{\partial{\pmb{\mathcal{U}}}}\vtf{\varphi}_\otimes\,\,.
