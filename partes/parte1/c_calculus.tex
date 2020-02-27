@@ -491,7 +491,7 @@ where tensor functional $h\in\eted{\real}{V^{\times s}}$ is linear because of pr
 \int_{\pmb{\mathcal{U}}}\tnr{\psi}:=\tnr{H} 
 \end{equation}
 is called the integral of tensor function $\tnr{\psi}$ on $\pmb{\mathcal{U}}$. Therefore, since previous corollary establishes a one to one correspondence between linear functional $h$ and tensor $\tnr{H}$ through $\fua{h}{\tnr{X}}=\tnr{X}\cdot\tnr{H}$, we conclude that 
-\begin{equation}
+\begin{equation}\label{eq:repInte}
 \int_{\pmb{\mathcal{U}}} \frt{X}\circ\tnr{\psi}=\tnr{X}\cdot\int_{\pmb{\mathcal{U}}}\tnr{\psi}\,.
 \end{equation}
 
@@ -529,7 +529,7 @@ is called the \textsb{implicit function}\index{function!implict} of $\partial\pm
 \end{equation}
 Additionally to $\vtf{n}$, it is true that an implicit function $-\vtf{s}$ leads to a unit normal function $-\vtf{n}$ and when one of these directions $\vtf{n}$ or $-\vtf{n}$ is specified as positive, we say that $\partial\pmb{\mathcal{U}}$ is \textsb{oriented}\index{surface!oriented}. For the purposes of this study, we choose $\vtf{n}$ to orientate the surfaces. In the case of three-dimensional Euclidean spaces, the values of function $\vtf{n}$ are outward unit vectors with respect to the surface and the values of $-\vtf{n}$ are inward unit vectors. 
 
-From what we have studied so far, it is finally possible to present a fundamental identity of elementary Calculus, which is the objective of this section, called the Gauss-Ostrogradsky or \textsb{Divergence}\index{theorem!Divergence} theorem. We shall not deal with its most general form, the notorious Generalized Stokes' theorem, because it would demand us to cover an extensive material on Exterior Calculus, which is out of the scope of this work\footnote{For an introduction on Exterior Calculus, see \aut{Flanders}\cite{flanders_1989_1}, \aut{Loomis \& Sternberg}\cite{loomis_2014_1}  and \aut{Spivak}\cite{spivak_1965_1}.}. In general terms, the following theorem relates the ``flux'' of a function -- understood as projections of function values on unit normals -- on the boundary of its domain with its divergence on the interior.     
+From what we have studied so far, it is finally possible to attain the objective of this section which is to present a fundamental identity of elementary Calculus, called the Gauss-Ostrogradsky or the \textsb{Divergence}\index{theorem!Divergence} theorem. We shall not deal with its most general form, the notorious Generalized Stokes' theorem, because it would demand us to cover an extensive material on Exterior Calculus, which is out of the scope of this work\footnote{For an introduction on Exterior Calculus, see \aut{Flanders}\cite{flanders_1989_1}, \aut{Loomis \& Sternberg}\cite{loomis_2014_1}  and \aut{Spivak}\cite{spivak_1965_1}.}. In general terms, the following theorem relates projections of function values on unit normals along the domain boundary (flux) with the divergence of the function on the domain interior.     
 
 \begin{mteo}{Gauss-Ostrogradsky}{gauss}
 Considering $U_\real$ and $\ete{\real}{U\times V^{\times s}}$ finite dimensional Euclidean spaces, $\map{\vtf{\varphi}}{\pmb{\mathcal{U}}}{\ete{\real}{U\times V^{\times s}}}$ a continuous mapping where $\pmb{\mathcal{U}}\subset U_\real$ is a Lipschitz domain, $\vtf{\varphi}$ continuously differentiable on interior $\hat{\pmb{\mathcal{U}}}$, surface $\partial\pmb{\mathcal{U}}$ oriented by a unit normal vector function $\vtf{n}$ and 
@@ -542,10 +542,43 @@ where $\fua{\vtf{\varphi}_\odot}{\vto{x}}=\fua{\vtf{n}}{\vto{x}}\odot_1\fua{\vtf
 \hspace{1pt}
 {\footnotesize
 \begin{proof}
-For a simplified and elegant proof of this theorem in the context of $n$-dimensional Euclidean spaces, we recommend the interested reader to take a look at the approach of \aut{Figueiredo}\cite{figueiredo_1964_1}. 
+Instead of developing here this very long demonstration, we recommend the interested reader to see the elegant proof presented by \aut{Figueiredo}\cite{figueiredo_1964_1} in the context of $n$-dimensional Euclidean spaces. 
 \end{proof}
 }
 
+\begin{mcoro}{Gauss-Ostrogradsky for Gradients}{gauss2}
+For a continuous mapping $\map{\vtf{\varphi}_\otimes}{\pmb{\mathcal{U}}}{\ete{\real}{U\times V^{\times s}}}$ where $\fua{\vtf{\varphi}_\otimes}{\vto{x}}=\fua{\vtf{n}}{\vto{x}}\otimes\fua{\vtf{\varphi}}{\vto{x}}$, then
+\begin{equation*}
+	\int_{\hat{\pmb{\mathcal{U}}}}\nabla{\vtf{\varphi}} = \int_{\partial{\pmb{\mathcal{U}}}}\vtf{\varphi}_\otimes\,\,.
+\end{equation*}
+\end{mcoro}
+{\footnotesize
+\begin{proof}
+Considering identity tensor $\tnr{I}\in\ete{\real}{U^2}$ and property \eqref{eq:repInte}, we can write that 
+\begin{align*}
+\tnr{I}\odot_2	\int_{\hat{\pmb{\mathcal{U}}}}\nabla{\vtf{\varphi}} & = \tnr{I}\odot_2 \int_{\partial{\pmb{\mathcal{U}}}}\vtf{\varphi}_\otimes\\
+\int_{\hat{\pmb{\mathcal{U}}}} \frt{I}\circ\nabla{\vtf{\varphi}}& =\int_{\partial{\pmb{\mathcal{U}}}}\frt{I}\circ\vtf{\varphi}_\otimes\,.
+\end{align*}
+But from definition \eqref{eq:repTensFunc}, we have equalities $\fua{\frt{I}\circ\nabla{\vtf{\varphi}}}{\vto{x}}=\tnr{I}\cdot\fua{\nabla{\vtf{\varphi}}}{\vto{x}}=\tnr{I}\odot_2\fua{\nabla{\vtf{\varphi}}}{\vto{x}}=\fua{\dvt{\vtf{\varphi}}}{\vto{x}}$ and from \eqref{eq:identidade} we have $\fua{\frt{I}\circ\vtf{\varphi}_\otimes}{\vto{x}}=\tnr{I}\cdot[\fua{\vtf{n}}{\vto{x}}\otimes\fua{\vtf{\varphi}}{\vto{x}}]=\fua{\vtf{n}}{\vto{x}}\odot_1\fua{\vtf{\varphi}}{\vto{x}}=\fua{\vtf{\varphi}_\odot}{\vto{x}}$\,.	From theses results, we arrive at the previous theorem.
+\end{proof}
+}
+
+\begin{mcoro}{Stokes'}{stokes}
+	For a continuous mapping $\map{\vtf{\varphi}_\otimes}{\pmb{\mathcal{U}}}{\ete{\real}{U\times V^{\times s}}}$ where $\fua{\vtf{\varphi}_\otimes}{\vto{x}}=\fua{\vtf{n}}{\vto{x}}\otimes\fua{\vtf{\varphi}}{\vto{x}}$, then
+	\begin{equation*}
+		\int_{\hat{\pmb{\mathcal{U}}}}\nabla{\vtf{\varphi}} = \int_{\partial{\pmb{\mathcal{U}}}}\vtf{\varphi}_\otimes\,\,.
+	\end{equation*}
+\end{mcoro}
+{\footnotesize
+	\begin{proof}
+		Considering identity tensor $\tnr{I}\in\ete{\real}{U^2}$ and property \eqref{eq:repInte}, we can write that 
+		\begin{align*}
+			\tnr{I}\odot_2	\int_{\hat{\pmb{\mathcal{U}}}}\nabla{\vtf{\varphi}} & = \tnr{I}\odot_2 \int_{\partial{\pmb{\mathcal{U}}}}\vtf{\varphi}_\otimes\\
+			\int_{\hat{\pmb{\mathcal{U}}}} \frt{I}\circ\nabla{\vtf{\varphi}}& =\int_{\partial{\pmb{\mathcal{U}}}}\frt{I}\circ\vtf{\varphi}_\otimes\,.
+		\end{align*}
+		But from definition \eqref{eq:repTensFunc}, we have equalities $\fua{\frt{I}\circ\nabla{\vtf{\varphi}}}{\vto{x}}=\tnr{I}\cdot\fua{\nabla{\vtf{\varphi}}}{\vto{x}}=\tnr{I}\odot_2\fua{\nabla{\vtf{\varphi}}}{\vto{x}}=\fua{\dvt{\vtf{\varphi}}}{\vto{x}}$ and from \eqref{eq:identidade} we have $\fua{\frt{I}\circ\vtf{\varphi}_\otimes}{\vto{x}}=\tnr{I}\cdot[\fua{\vtf{n}}{\vto{x}}\otimes\fua{\vtf{\varphi}}{\vto{x}}]=\fua{\vtf{n}}{\vto{x}}\odot_1\fua{\vtf{\varphi}}{\vto{x}}=\fua{\vtf{\varphi}_\odot}{\vto{x}}$\,.	From theses results, we arrive at the previous theorem.
+	\end{proof}
+}
 
 
 % FIGURE xx - BOUNDARY SHAOES NOT ALLOWED ON LIPSCHITZ DOMAINS
