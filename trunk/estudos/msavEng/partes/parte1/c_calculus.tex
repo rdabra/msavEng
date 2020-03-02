@@ -495,7 +495,7 @@ is called the integral of tensor function $\tnr{\psi}$ on $\pmb{\mathcal{U}}$. T
 \int_{\pmb{\mathcal{U}}} \frt{X}\circ\tnr{\psi}=\tnr{X}\cdot\int_{\pmb{\mathcal{U}}}\tnr{\psi}\,.
 \end{equation}
 
-\section{The Gauss-Ostrogradsky theorem}
+\section{Stokes' Identities}
 
 In rough geometrical terms, domains whose boundary shapes show a specific form of regularity -- where sharp edges and different types of self intersection are not allowed, as shown in figure XX -- enable identities that equalize integrations on surfaces and interiors, which are fundamental for the present study. First of all, we recall the biunivocal correspondence between an affine space and a vector space enabled by a coordinate system, as shown in section \ref{sec:affine}, in order to henceforth make geometrical statements and assumptions on finite dimensional Euclidean spaces. In this context and from the concept of smoothness presented on section \ref{sec:diffe}, a set of strong mathematical requirements that avoid the irregularities cited above is given by introductory texts on Differential Geometry, such as \aut{Do Carmo}\cite{docarmo_2016}, where surfaces called smooth are defined. However, for the sake of generality, we choose to study a less restrictive regularity condition, which defines the so called Lipschitz surface\footnote{ See \aut{Ciarlet}\cite{ciarlet_1988_2}, p.32.}; that also does not present the above irregularities and is less difficult to deal with than smooth surfaces. We shall adopt this concept by adapting the accessible approach of \aut{Adams \& Fournier}\cite{adams_2003_2}, which is more than sufficient for our purposes\footnote{For a more rigorous treatment, see \aut{Agranovich}\cite{agranovitch_2015_1}, chapter 3.}. 
 
@@ -529,7 +529,7 @@ is called the \textsb{implicit function}\index{function!implict} of $\partial\pm
 \end{equation}
 Additionally to $\vtf{n}$, it is true that an implicit function $-\vtf{s}$ leads to a unit normal function $-\vtf{n}$ and when one of these directions $\vtf{n}$ or $-\vtf{n}$ is specified as positive, we say that $\partial\pmb{\mathcal{U}}$ is \textsb{oriented}\index{surface!oriented}. For the purposes of this study, we choose $\vtf{n}$ to orientate the surfaces. In the case of three-dimensional Euclidean spaces, the values of function $\vtf{n}$ are outward unit vectors with respect to the surface and the values of $-\vtf{n}$ are inward unit vectors. 
 
-From what we have studied so far, it is finally possible to attain the objective of this section which is to present a fundamental identity of elementary Calculus, called the Gauss-Ostrogradsky or the \textsb{Divergence}\index{theorem!Divergence} theorem. We shall not deal with its most general form, the notorious Generalized Stokes' theorem, because it would demand us to cover an extensive material on Exterior Calculus, which is out of the scope of this work\footnote{For an introduction on Exterior Calculus, see \aut{Flanders}\cite{flanders_1989_1}, \aut{Loomis \& Sternberg}\cite{loomis_2014_1}  and \aut{Spivak}\cite{spivak_1965_1}.}. In general terms, the following theorem relates projections of function values on unit normals along the domain boundary (flux) with the divergence of the function on the domain interior.     
+From what we have studied so far, it is finally possible to attain the objective of this section which is to present a fundamental identity of elementary Calculus, called the \textsb{Gauss-Ostrogradsky} or the \textsb{Divergence}\index{theorem!Divergence} theorem. We shall not deal with its most general form, the notorious Generalized Stokes' theorem, because it would demand us to cover an extensive material on Exterior Calculus, which is out of the scope of this work\footnote{For an introduction to Exterior Calculus, see \aut{Flanders}\cite{flanders_1989_1}, \aut{Loomis \& Sternberg}\cite{loomis_2014_1}  and \aut{Spivak}\cite{spivak_1965_1}.}. In general terms, the following theorem relates projections of function values on unit normals along the domain boundary (flux) with the divergence of the function on the domain interior.     
 
 \begin{mteo}{Gauss-Ostrogradsky}{gauss}
 Considering $U_\real$ and $\ete{\real}{U\times V^{\times s}}$ finite dimensional Euclidean spaces, $\map{\vtf{\varphi}}{\pmb{\mathcal{U}}}{\ete{\real}{U\times V^{\times s}}}$ a continuous mapping where $\pmb{\mathcal{U}}\subset U_\real$ is a Lipschitz domain, $\vtf{\varphi}$ continuously differentiable on interior $\hat{\pmb{\mathcal{U}}}$, surface $\partial\pmb{\mathcal{U}}$ oriented by a unit normal vector function $\vtf{n}$ and 
@@ -563,26 +563,37 @@ But from definition \eqref{eq:repTensFunc}, we have equalities $\fua{\frt{I}\cir
 \end{proof}
 }
 
-\begin{mcoro}{Stokes'}{stokes}
-If 
-
-	For a continuous mapping $\map{\vtf{\varphi}_\otimes}{\pmb{\mathcal{U}}}{\ete{\real}{U\times V^{\times s}}}$ where $\fua{\vtf{\varphi}_\otimes}{\vto{x}}=\fua{\vtf{n}}{\vto{x}}\otimes\fua{\vtf{\varphi}}{\vto{x}}$, then
-	\begin{equation*}
-		\int_{\hat{\pmb{\mathcal{U}}}}\nabla{\vtf{\varphi}} = \int_{\partial{\pmb{\mathcal{U}}}}\vtf{\varphi}_\otimes\,\,.
-	\end{equation*}
+\begin{mcoro}{Gauss-Ostrogradsky for Curls}{gauss3}
+In the case of continuous mappings $\map{\vtf{\varphi}}{\pmb{\mathcal{U}}}{U_\real}$ and $\map{\vtf{\varphi}_\times}{\pmb{\mathcal{U}}}{U_\real}$ where $(U_\real,\tnr{A}_B)$ is an three dimensional oriented Euclidean space and $\fua{\vtf{\varphi}_\times}{\vto{x}}=\fua{\vtf{n}}{\vto{x}}\times\fua{\vtf{\varphi}}{\vto{x}}$, then
+\begin{equation*}
+\int_{\hat{\pmb{\mathcal{U}}}}\crl{\vtf{\varphi}} = \int_{\partial{\pmb{\mathcal{U}}}}\vtf{\varphi}_\times\,\,.
+\end{equation*}
 \end{mcoro}
 {\footnotesize
-	\begin{proof}
-		Considering identity tensor $\tnr{I}\in\ete{\real}{U^2}$ and property \eqref{eq:repInte}, we can write that 
-		\begin{align*}
-			\tnr{I}\odot_2	\int_{\hat{\pmb{\mathcal{U}}}}\nabla{\vtf{\varphi}} & = \tnr{I}\odot_2 \int_{\partial{\pmb{\mathcal{U}}}}\vtf{\varphi}_\otimes\\
-			\int_{\hat{\pmb{\mathcal{U}}}} \frt{I}\circ\nabla{\vtf{\varphi}}& =\int_{\partial{\pmb{\mathcal{U}}}}\frt{I}\circ\vtf{\varphi}_\otimes\,.
-		\end{align*}
-		But from definition \eqref{eq:repTensFunc}, we have equalities $\fua{\frt{I}\circ\nabla{\vtf{\varphi}}}{\vto{x}}=\tnr{I}\cdot\fua{\nabla{\vtf{\varphi}}}{\vto{x}}=\tnr{I}\odot_2\fua{\nabla{\vtf{\varphi}}}{\vto{x}}=\fua{\dvt{\vtf{\varphi}}}{\vto{x}}$ and from \eqref{eq:identidade} we have $\fua{\frt{I}\circ\vtf{\varphi}_\otimes}{\vto{x}}=\tnr{I}\cdot[\fua{\vtf{n}}{\vto{x}}\otimes\fua{\vtf{\varphi}}{\vto{x}}]=\fua{\vtf{n}}{\vto{x}}\odot_1\fua{\vtf{\varphi}}{\vto{x}}=\fua{\vtf{\varphi}_\odot}{\vto{x}}$\,.	From theses results, we arrive at the previous theorem.
-	\end{proof}
+\begin{proof}
+Considering \eqref{eq:repInte}, \eqref{eq:crossProduct}, \eqref{eq:repTensFunc}, we have $\fua{\vtf{n}}{\vto{x}}\times\fua{\vtf{\varphi}}{\vto{x}}=\tnr{A}_B\odot_2[\fua{\vtf{n}}{\vto{x}}\otimes\fua{\vtf{\varphi}}{\vto{x}}]=\fua{\frt{A}_B\circ\vtf{\varphi}_\otimes}{\vto{x}}$. Thereby, we arrive at corollary \ref{cor:gauss2} by   
+\begin{align*}
+\int_{\hat{\pmb{\mathcal{U}}}}\crl{\vtf{\varphi}} & = \int_{\partial{\pmb{\mathcal{U}}}}\vtf{\varphi}_\times\\
+\int_{\hat{\pmb{\mathcal{U}}}}\tnr{A}_B\odot_2\nabla{\vtf{\varphi}} & = \int_{\partial{\pmb{\mathcal{U}}}}\frt{A}_B\circ\vtf{\varphi}_\otimes\\
+\tnr{A}_B\odot_2\int_{\hat{\pmb{\mathcal{U}}}}\nabla{\vtf{\varphi}} & = \tnr{A}_B\odot_2\int_{\partial{\pmb{\mathcal{U}}}}\vtf{\varphi}_\otimes\,.
+\end{align*}
+\end{proof}
 }
 
-
+\begin{mteo}{Stokes}{stokes}
+Considering $U_\real$ and $\ete{\real}{U\times V^{\times s}}$ finite dimensional Euclidean spaces, $\map{\vtf{\varphi}}{\pmb{\mathcal{U}}}{\ete{\real}{U\times V^{\times s}}}$ a continuous mapping where $\pmb{\mathcal{U}}\subset U_\real$ is a Lipschitz domain, $\vtf{\varphi}$ continuously differentiable on interior $\hat{\pmb{\mathcal{U}}}$, surface $\partial\pmb{\mathcal{U}}$ oriented by a unit normal vector function $\vtf{n}$ and 
+$\map{\vtf{\varphi}_\odot}{\pmb{\mathcal{U}}}{\ete{\real}{U\times V^{\times s}}}$ a continuous mapping
+where $\fua{\vtf{\varphi}_\odot}{\vto{x}}=\fua{\vtf{n}}{\vto{x}}\odot_1\fua{\vtf{\varphi}}{\vto{x}}$, then
+\begin{equation*}
+\int_{\hat{\pmb{\mathcal{U}}}}\dvt{\vtf{\varphi}} = \int_{\partial{\pmb{\mathcal{U}}}}\vtf{\varphi}_\odot\,\,.
+\end{equation*}
+\end{mteo}
+\hspace{1pt}
+{\footnotesize
+\begin{proof}
+Instead of developing here this very long demonstration, we recommend the interested reader to see the elegant proof presented by \aut{Figueiredo}\cite{figueiredo_1964_1} in the context of $n$-dimensional Euclidean spaces. 
+\end{proof}
+}
 % FIGURE xx - BOUNDARY SHAOES NOT ALLOWED ON LIPSCHITZ DOMAINS
 
 % contorno regular
