@@ -495,7 +495,7 @@ is called the integral of tensor function $\tnr{\psi}$ on $\pmb{\mathcal{U}}$. T
 \int_{\pmb{\mathcal{U}}} \frt{X}\circ\tnr{\psi}=\tnr{X}\cdot\int_{\pmb{\mathcal{U}}}\tnr{\psi}\,.
 \end{equation}
 
-\section{Stokes' Identities}
+\section{Integral Identities}
 
 In rough geometrical terms, domains whose boundary shapes show a specific form of regularity -- where sharp edges and different types of self intersection are not allowed, as shown in figure XX -- enable identities that equalize integrations on surfaces and interiors, which are fundamental for the present study. First of all, we recall the biunivocal correspondence between an affine space and a vector space enabled by a coordinate system, as shown in section \ref{sec:affine}, in order to henceforth make geometrical statements and assumptions on finite dimensional Euclidean spaces. In this context and from the concept of smoothness presented on section \ref{sec:diffe}, a set of strong mathematical requirements that avoid the irregularities cited above is given by introductory texts on Differential Geometry, such as \aut{Do Carmo}\cite{docarmo_2016}, where surfaces called smooth are defined. However, for the sake of generality, we choose to study a less restrictive regularity condition, which defines the so called Lipschitz surface\footnote{ See \aut{Ciarlet}\cite{ciarlet_1988_2}, p.32.}; that also does not present the above irregularities and is less difficult to deal with than smooth surfaces. We shall adopt this concept by adapting the accessible approach of \aut{Adams \& Fournier}\cite{adams_2003_2}, which is more than sufficient for our purposes\footnote{For a more rigorous treatment, see \aut{Agranovich}\cite{agranovitch_2015_1}, chapter 3.}. 
 
@@ -534,7 +534,7 @@ From what we have studied so far, it is finally possible to attain the objective
 \begin{mteo}{Gauss-Ostrogradsky}{gauss}
 Considering $U_\real$ and $\ete{\real}{U\times V^{\times s}}$ finite dimensional Euclidean spaces, $\map{\vtf{\varphi}}{\pmb{\mathcal{U}}}{\ete{\real}{U\times V^{\times s}}}$ a continuous mapping where $\pmb{\mathcal{U}}\subset U_\real$ is a Lipschitz domain, $\vtf{\varphi}$ continuously differentiable on interior $\hat{\pmb{\mathcal{U}}}$, surface $\partial\pmb{\mathcal{U}}$ oriented by a unit normal vector function $\vtf{n}$ and 
 $\map{\vtf{\varphi}_\odot}{\pmb{\mathcal{U}}}{\ete{\real}{U\times V^{\times s}}}$ a continuous mapping
-where $\fua{\vtf{\varphi}_\odot}{\vto{x}}=\fua{\vtf{n}}{\vto{x}}\odot_1\fua{\vtf{\varphi}}{\vto{x}}$, then
+where $\fua{\vtf{\varphi}_\odot}{\vto{x}}=\fua{\vtf{n}}{\vto{x}}\odot_1\fua{\vtf{\varphi}}{\vto{x}}$, 
 \begin{equation*}
 \int_{\hat{\pmb{\mathcal{U}}}}\dvt{\vtf{\varphi}} = \int_{\partial{\pmb{\mathcal{U}}}}\vtf{\varphi}_\odot\,\,.
 \end{equation*}
@@ -547,7 +547,7 @@ Instead of developing here this very long demonstration, we invite the intereste
 }
 
 \begin{mcoro}{Gauss-Ostrogradsky for Gradients}{gauss2}
-For a continuous mapping $\map{\vtf{\varphi}_\otimes}{\pmb{\mathcal{U}}}{\ete{\real}{U\times V^{\times s}}}$ where $\fua{\vtf{\varphi}_\otimes}{\vto{x}}=\fua{\vtf{n}}{\vto{x}}\otimes\fua{\vtf{\varphi}}{\vto{x}}$, then
+For a continuous mapping $\map{\vtf{\varphi}_\otimes}{\pmb{\mathcal{U}}}{\ete{\real}{U\times V^{\times s}}}$ where $\fua{\vtf{\varphi}_\otimes}{\vto{x}}=\fua{\vtf{n}}{\vto{x}}\otimes\fua{\vtf{\varphi}}{\vto{x}}$, 
 \begin{equation*}
 	\int_{\hat{\pmb{\mathcal{U}}}}\nabla{\vtf{\varphi}} = \int_{\partial{\pmb{\mathcal{U}}}}\vtf{\varphi}_\otimes\,\,.
 \end{equation*}
@@ -564,7 +564,7 @@ But from definition \eqref{eq:repTensFunc}, we have equalities $\fua{\frt{I}\cir
 }
 
 \begin{mcoro}{Gauss-Ostrogradsky for Curls}{gauss3}
-In the case of continuous mappings $\map{\vtf{\varphi}}{\pmb{\mathcal{U}}}{U_\real}$ and $\map{\vtf{\varphi}_\times}{\pmb{\mathcal{U}}}{U_\real}$ where $(U_\real,\tnr{A}_B)$ is an three dimensional oriented Euclidean space and $\fua{\vtf{\varphi}_\times}{\vto{x}}=\fua{\vtf{n}}{\vto{x}}\times\fua{\vtf{\varphi}}{\vto{x}}$, then
+In the case of continuous mappings $\map{\vtf{\varphi}}{\pmb{\mathcal{U}}}{U_\real}$ and $\map{\vtf{\varphi}_\times}{\pmb{\mathcal{U}}}{U_\real}$ where $(U_\real,\tnr{A}_B)$ is an three dimensional oriented Euclidean space and $\fua{\vtf{\varphi}_\times}{\vto{x}}=\fua{\vtf{n}}{\vto{x}}\times\fua{\vtf{\varphi}}{\vto{x}}$, 
 \begin{equation*}
 \int_{\hat{\pmb{\mathcal{U}}}}\crl{\vtf{\varphi}} = \int_{\partial{\pmb{\mathcal{U}}}}\vtf{\varphi}_\times\,\,.
 \end{equation*}
@@ -580,21 +580,18 @@ Considering \eqref{eq:repInte}, \eqref{eq:crossProduct}, \eqref{eq:repTensFunc},
 \end{proof}
 }
 
-\begin{mteo}{Stokes}{stokes}
-Let $(U_\real,\tnr{A}_B)$ be a three dimensional oriented Euclidean space and $\map{\vtf{\varphi}}{\partial\pmb{\mathcal{U}}}{U_\real}$ a mapping where  $\vtf{\varphi}$ is continuously differentiable on Lipschitz surface $\partial\pmb{\mathcal{U}}\subset U_\real$, which is oriented by a unit normal vector function $\vtf{n}$.
+There are Lipschitz surfaces in three dimensional Euclidean spaces for which it is possible to define a boundary. In general terms, the intersection of a bounded set $A$ with an open ball centered at an element of boundary $\partial A$ is not a subset of $A$. Considering this idea on a three-dimensional Euclidean space $U_\real$ , the boundary of a surface $\partial\pmb{\mathcal{U}}\subset U_\real$ is a curve $\partial\partial\pmb{\mathcal{U}}\subset\partial\pmb{\mathcal{U}}$ where $B_{\vto{x},r}\cap\partial\pmb{\mathcal{U}}\not\subset\partial\pmb{\mathcal{U}}$ for all $\vto{x}\in\partial\partial\pmb{\mathcal{U}}$ and $r\in\real$. For Lipschitz surfaces with boundaries, we present the following classical theorem that establishes a relationship between an integral on a surface and an integral on its boundary.  
 
-
-, surface $\partial\pmb{\mathcal{U}}$ oriented by a unit normal vector function $\vtf{n}$ and 
-$\map{\vtf{\varphi}_\odot}{\pmb{\mathcal{U}}}{\ete{\real}{U\times V^{\times s}}}$ a continuous mapping
-where $\fua{\vtf{\varphi}_\odot}{\vto{x}}=\fua{\vtf{n}}{\vto{x}}\odot_1\fua{\vtf{\varphi}}{\vto{x}}$, then
+\begin{mteo}{Kelvin-Stokes}{stokes}
+Let $(U_\real,\tnr{A}_B)$ be a three dimensional oriented Euclidean space and $\map{\vtf{\varphi}}{\pmb{\mathcal{U}}}{\ete{\real}{U\times V}}$ a continuous mapping where  $\vtf{\varphi}$ is continuously differentiable on Lipschitz surface $\partial\pmb{\mathcal{U}}\subset U_\real$, which is oriented by an outward unit normal vector function $\vtf{n}$. Let $\map{\vtf{\tau}}{\partial\partial\pmb{\mathcal{U}}}{U_\real}$ be a continuous mapping where $\fua{\vtf{n}}{\vto{x}}\perp\fua{\vtf{\tau}}{\vto{x}}$ such that $\fua{\tnr{A}_B}{\fua{\vtf{n}}{\vto{x}}\times\fua{\vtf{\tau}}{\vto{x}},\fua{\vtf{n}}{\vto{x}},\fua{\vtf{\tau}}{\vto{x}}}>0$ and $\partial\partial\pmb{\mathcal{U}}$ is the boundary of $\partial\pmb{\mathcal{U}}$. Considering the continuous mappings $\map{\vtf{\varphi}_{\partial\partial\pmb{\mathcal{U}}}}{\partial\partial\pmb{\mathcal{U}}}{V_\real}$ and $\map{\vtf{\varphi}_{\partial\pmb{\mathcal{U}}}}{\partial\pmb{\mathcal{U}}}{V_\real}$ where $\fua{\vtf{\varphi}_{\partial\partial\pmb{\mathcal{U}}}}{\vto{x}}=\fua{\vtf{\tau}}{\vto{x}}\odot_1\fua{\vtf{\varphi}}{\vto{x}}$ and $\fua{\vtf{\varphi}_{\partial\pmb{\mathcal{U}}}}{\vto{x}}=\fua{\vtf{n}}{\vto{x}}\odot_1\fua{\crl{\vtf{\varphi}}}{\vto{x}}$,  
 \begin{equation*}
-\int_{\hat{\pmb{\mathcal{U}}}}\dvt{\vtf{\varphi}} = \int_{\partial{\pmb{\mathcal{U}}}}\vtf{\varphi}_\odot\,\,.
+\int_{\partial{\pmb{\mathcal{U}}}}\vtf{\varphi}_{\partial\pmb{\mathcal{U}}} = \int_{\partial\partial{\pmb{\mathcal{U}}}}\vtf{\varphi}_{\partial\partial\pmb{\mathcal{U}}}\,\,.
 \end{equation*}
 \end{mteo}
-\hspace{1pt}
+%\hspace{1pt}
 {\footnotesize
 \begin{proof}
-Instead of developing here this very long demonstration, we recommend the interested reader to see the elegant proof presented by \aut{Figueiredo}\cite{figueiredo_1964_1} in the context of $n$-dimensional Euclidean spaces. 
+We recommend the reader to see the proof presented by \aut{Backus}\cite{backus_1997_1}, p.131. 
 \end{proof}
 }
 % FIGURE xx - BOUNDARY SHAOES NOT ALLOWED ON LIPSCHITZ DOMAINS
