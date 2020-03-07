@@ -103,29 +103,29 @@ We define that two vectors have an \textsb{incidence interrelationship}\index{in
 \overline{\alpha_2}\fua{\xi}{\vto{u}_1,\vto{u}_2} + \overline{\alpha_3}\fua{\xi}{\vto{u}_1,\vto{u}_3}\,;
 	\end{equation*}
 \end{itemize}
-where $\vto{u}_1,\vto{u}_2,\vto{u}_3\in U_\cam{F}$ and  $\alpha_1,\alpha_2,\alpha_3\in\cam{F}$ are arbitrary elements of their respective sets. In this context, function $\xi$ is called a \textsb{positive-definite inner product} because the incidence of a vector on itself is a nonnegative real number, as described by the first axiom. In our study, $\xi$ is simply called \textsb{inner product}\index{inner product!of vectors}, and the double $(U_\cam{F},\xi)$ an \textsb{inner product space}\index{space!inner product}. From this double, we conclude that $\xi$ structures the group $U$ in such a way that an incidence interrelationship of any pair of its elements can be obtained. Henceforth, in order to shorten notation, $\gloref{prdint}$ will also be used to represent the inner product $\fua{\xi}{\vto{x},\vto{y}}$. From equality \eqref{eq:vecComplex}, if $\vto{x}=\alpha\vto{u}_1$ and $\vto{y}=\beta\vto{u}_2$, we can write that 
+where $\vto{u}_1,\vto{u}_2,\vto{u}_3\in U_\cam{F}$ and  $\alpha_1,\alpha_2,\alpha_3\in\cam{F}$ are arbitrary elements of their respective sets. In this context, function $\xi$ is called a \textsb{positive-definite inner product} because the incidence of a vector on itself is a nonnegative real number, as described by the first axiom. In our study, $\xi$ is simply called \textsb{inner product}\index{inner product!of vectors}, and the double $(U_\cam{F},\xi)$ an \textsb{inner product space}\index{space!inner product}. From this double, we conclude that $\xi$ structures the group $U$ in such a way that an incidence interrelationship of any pair of its elements can be obtained. Henceforth, in order to shorten notation, $\gloref{prdint}$ will also be used to represent the inner product $\fua{\xi}{\vto{x},\vto{y}}$. From equality \eqref{eq:vecComplex}, if $\vto{x}=\alpha\vto{u}_1$ and $\vto{y}=\beta\vto{u}_2$, we can write that
 \begin{equation}\label{eq:vecCompConjug}
 \overline{\vto{x}\cdot\vto{y}}=\overline{\alpha}\beta\overline{\vto{u}_1\cdot\vto{u}_2}=\overline{\alpha}\vto{u}_2\cdot\overline{\beta}\vto{u}_1=\alpha\vto{u}_2^c\cdot\beta\vto{u}_1^c=\overline{\beta}\vto{u}_2^c\cdot\overline{\alpha}\vto{u}_1^c=\vto{y}^c\cdot\vto{x}^c\,.
 \end{equation}
-Moreover, in an inner product space, it is valid the so called \textsb{Cauchy-Schwartz Inequality}\index{inequality!Cauchy-Schwartz}, where 
+Moreover, in an inner product space, it is valid the so called \textsb{Cauchy-Schwartz Inequality}\index{inequality!Cauchy-Schwartz}, where
 \begin{equation}\label{eq:Cauchy-Schwartz}
 |\vto{u}\cdot\vto{v}|\leq \sqrt{(\vto{u}\cdot\vto{u})(\vto{v}\cdot\vto{v})}\,,\,\,\forall\,\vto{u},\vto{v}\in U_\cam{F}\,.
 \end{equation}
 
 {\footnotesize
 \begin{proof}
-Let's prove the above inequality. If vectors $\vto{u}$ or $\vto{v}$ are zero, proof is trivial. Now, considering $\vto{v}\neq \vto{0}$ and a scalar $\lambda=(\vto{u}\cdot\vto{v})/(\vto{v}\cdot\vto{v})$, from the first axiom above,  
+Let's prove the above inequality. If vectors $\vto{u}$ or $\vto{v}$ are zero, proof is trivial. Now, considering $\vto{v}\neq \vto{0}$ and a scalar $\lambda=(\vto{u}\cdot\vto{v})/(\vto{v}\cdot\vto{v})$, from the first axiom above,
 \begin{align*}
 0&\leq(\vto{u}-\lambda\vto{v})\cdot(\vto{u}-\lambda\vto{v})\\
 0&\leq\vto{u}\cdot\vto{u}-\overline{\lambda}\vto{u}\cdot\vto{v}-\lambda\vto{v}\cdot\vto{u}+\lambda\overline{\lambda}\vto{v}\cdot\vto{v}\\
 0&\leq\vto{u}\cdot\vto{u}-\overline{\lambda}\lambda\vto{v}\cdot\vto{v}-\lambda\overline{\lambda}\vto{v}\cdot\vto{v}+\lambda\overline{\lambda}\vto{v}\cdot\vto{v}\\
 |\lambda|^2\vto{v}\cdot\vto{v}&\leq\vto{u}\cdot\vto{u} \\
- |\vto{u}\cdot\vto{v}|^2&\leq(\vto{u}\cdot\vto{u})(\vto{v}\cdot\vto{v})\,, 
+ |\vto{u}\cdot\vto{v}|^2&\leq(\vto{u}\cdot\vto{u})(\vto{v}\cdot\vto{v})\,,
 \end{align*}
-since $\vto{v}\cdot\vto{v}$ is a positive real number.  
+since $\vto{v}\cdot\vto{v}$ is a positive real number.
 \end{proof}}
 
-Considering the inner product space $(U_\cam{F},\xi)$, it is now possible to present in more mathematical terms the definition of orthogonality: arbitrary vectors $\vto{u}_1,\vto{u}_2\in U_\cam{F}$ are said to be orthogonal, or $\vto{u}_1\gloref{perpend}\vto{u}_2$, when $\vto{u}_1\cdot\vto{u}_2=0$. Given the subspaces $Z_\cam{F}$ and $W_\cam{F}$ of $U_\cam{F}$, if $\vto{u}\in U_\cam{F}$ is orthogonal to every vector of $Z_\cam{F}$, we write $\vto{u}\perp Z_\cam{F}$, and if every vector of $Z_\cam{F}$ is orthogonal to every vector of $W_\cam{F}$, we write $Z_\cam{F}\perp W_\cam{F}$. A set $\{\vto{u}_1,\cdots,\vto{u}_n\}\subset U_\cam{F}$ is called orthogonal if $\vto{u}_i\perp\vto{u}_j$, $i\neq j$. Thereby, when the vectors of this set are non zero, the inner product of each side of $\alpha\vto{u}_j=\vto{u}_i$ and $\vto{u}_j$, where $\alpha\in\cam{F}$ and $i\neq j$, results $\alpha\,(\vto{u}_j\cdot\vto{u}_j)=0$, from where we conclude that $\alpha=0$ or that every orthogonal set is linearly independent. This conclusion permits us to state that in a \emph{$n$-dimensional inner product space, every orthogonal subset of $n$ elements is a basis}. Moreover, any two vectors $\gloref{unita}$ and $\vun{u}_2$ of a normed inner product space $(U_\cam{F},\eta,\xi)$ are said to be orthonormal if they are orthogonal and each one is \textsb{unitary}\index{vector!unitary}, where $\|\vun{u}_i\|=1$. If the vector space $U_\cam{F}$ is $n$-dimensional, a subset $\{\vun{u}_1,\vun{u}_2,\cdots,\vun{u}_n\}$ of orthonormal vectors is called an \textsb{orthonormal basis}\index{basis!orthonormal} of $U_\cam{F}$. Thereby, to every orthogonal basis $\{\vto{u}_1,\vto{u}_2,\cdots,\vto{u}_n\}$, where $\vto{u}_i\cdot\vto{u}_j=0$ when $i\neq j$, there is always an orthonormal basis $\{\vun{u}_1,\vun{u}_2,\cdots,\vun{u}_n\}$ where each $\vun{u}_i:=\vto{u}_i/\|\vto{u}_i\|$ and then $\|\vun{u}_i\|=\|\vto{u}_i/\|\vto{u}_i\|\|=\|\vto{u}_i\|/\|\vto{u}_i\|=1$, when we say that the orthonormal basis results from \textsb{normalizing}\index{basis!normalization of} the orthogonal basis.  
+Considering the inner product space $(U_\cam{F},\xi)$, it is now possible to present in more mathematical terms the definition of orthogonality: arbitrary vectors $\vto{u}_1,\vto{u}_2\in U_\cam{F}$ are said to be orthogonal, or $\vto{u}_1\gloref{perpend}\vto{u}_2$, when $\vto{u}_1\cdot\vto{u}_2=0$. Given the subspaces $Z_\cam{F}$ and $W_\cam{F}$ of $U_\cam{F}$, if $\vto{u}\in U_\cam{F}$ is orthogonal to every vector of $Z_\cam{F}$, we write $\vto{u}\perp Z_\cam{F}$, and if every vector of $Z_\cam{F}$ is orthogonal to every vector of $W_\cam{F}$, we write $Z_\cam{F}\perp W_\cam{F}$. A set $\{\vto{u}_1,\cdots,\vto{u}_n\}\subset U_\cam{F}$ is called orthogonal if $\vto{u}_i\perp\vto{u}_j$, $i\neq j$. Thereby, when the vectors of this set are non zero, the inner product of each side of $\alpha\vto{u}_j=\vto{u}_i$ and $\vto{u}_j$, where $\alpha\in\cam{F}$ and $i\neq j$, results $\alpha\,(\vto{u}_j\cdot\vto{u}_j)=0$, from where we conclude that $\alpha=0$ or that every orthogonal set is linearly independent. This conclusion permits us to state that in a \emph{$n$-dimensional inner product space, every orthogonal subset of $n$ elements is a basis}. Moreover, any two vectors $\gloref{unita}$ and $\vun{u}_2$ of a normed inner product space $(U_\cam{F},\eta,\xi)$ are said to be orthonormal if they are orthogonal and each one is \textsb{unitary}\index{vector!unitary}, where $\|\vun{u}_i\|=1$. If the vector space $U_\cam{F}$ is $n$-dimensional, a subset $\{\vun{u}_1,\vun{u}_2,\cdots,\vun{u}_n\}$ of orthonormal vectors is called an \textsb{orthonormal basis}\index{basis!orthonormal} of $U_\cam{F}$. Thereby, to every orthogonal basis $\{\vto{u}_1,\vto{u}_2,\cdots,\vto{u}_n\}$, where $\vto{u}_i\cdot\vto{u}_j=0$ when $i\neq j$, there is always an orthonormal basis $\{\vun{u}_1,\vun{u}_2,\cdots,\vun{u}_n\}$ where each $\vun{u}_i:=\vto{u}_i/\|\vto{u}_i\|$ and then $\|\vun{u}_i\|=\|\vto{u}_i/\|\vto{u}_i\|\|=\|\vto{u}_i\|/\|\vto{u}_i\|=1$, when we say that the orthonormal basis results from \textsb{normalizing}\index{basis!normalization of} the orthogonal basis.
 
 
 
@@ -334,8 +334,8 @@ equalities $\overline{\alpha}\fua{\vtf{h}}{\vto{u}}=\alpha(\fua{\vtf{h}}{\vto{u}
 \begin{equation}\label{eq:complexLinear}
 \alpha(\fua{\vtf{h}}{\vto{x}})^c+\beta(\fua{\vtf{h}}{\vto{y}})^c=\alpha\fua{\vtf{h}}{\vto{x}^c}+\beta\fua{\vtf{h}}{\vto{y}^c}\,.
 \end{equation}
-Given $\{\vto{u}_1,\cdots,\vto{u}_n\}$ a basis of $U_\cam{F}$, a bijective 
-linear operator $\vtf{g}\in\evl{\cam{F}}{U}{U}$ and an arbitrary vector $\vto{u}\in U_\cam{F}$, we can say that since $\fua{\vtf{g}}{\vto{u}}$ is an arbitrary vector of $U_\cam{F}$, then set $\{\fua{\vtf{g}}{\vto{u}_1},\cdots,\fua{\vtf{g}}{\vto{u}_n}\}$ is also a basis of $U_\cam{F}$ because linearity leads to $\fua{\vtf{g}}{\vto{u}}=\sum_{i=1}^n\alpha_i\fua{\vtf{g}}{\vto{u}_i}$\label{pg:bijecOpe}. 
+Given $\{\vto{u}_1,\cdots,\vto{u}_n\}$ a basis of $U_\cam{F}$, a bijective
+linear operator $\vtf{g}\in\evl{\cam{F}}{U}{U}$ and an arbitrary vector $\vto{u}\in U_\cam{F}$, we can say that since $\fua{\vtf{g}}{\vto{u}}$ is an arbitrary vector of $U_\cam{F}$, then set $\{\fua{\vtf{g}}{\vto{u}_1},\cdots,\fua{\vtf{g}}{\vto{u}_n}\}$ is also a basis of $U_\cam{F}$ because linearity leads to $\fua{\vtf{g}}{\vto{u}}=\sum_{i=1}^n\alpha_i\fua{\vtf{g}}{\vto{u}_i}$\label{pg:bijecOpe}.
 
 	
 Still considering the previous conditions, in certain cases where domain $U_\cam{F}=W^{\times q}_\cam{F}$, a function $\vtf{k}$ is said to be \textsb{multilinear}\index{function!multilinear}, or \textsb{bilinear}\index{function!bilinear} if $q=2$, when
@@ -424,15 +424,15 @@ If $\vto{u}$ is zero, it is evident that ${\|\vto{u}^*\|=\|\vto{u}\|}$; otherwis
 }
 
 
- Considering the conditions of the theorem, if $\vtf{f}$ is a vector function whose domain is a Hilbert space, it is obvious that $\fua{\vtf{f}}{\vto{x}}=\fua{\vtf{f}\circ\Phi^{-1}}{\vto{x}^*}$. From this equality and by defining a \textsb{covector function}\index{function!covector} as a function whose domain is constituted by covectors, we state that every linear vector function $\vtf{g}$ on the context of Hilbert spaces has a unique associated linear covector function\index{function!associated linear covector} 
-$\vtf{g}_\Phi:=\vtf{g}\circ\Phi^{-1}$ and vice-versa. The following corollary explains this important statement more formally.  
+ Considering the conditions of the theorem, if $\vtf{f}$ is a vector function whose domain is a Hilbert space, it is obvious that $\fua{\vtf{f}}{\vto{x}}=\fua{\vtf{f}\circ\Phi^{-1}}{\vto{x}^*}$. From this equality and by defining a \textsb{covector function}\index{function!covector} as a function whose domain is constituted by covectors, we state that every linear vector function $\vtf{g}$ on the context of Hilbert spaces has a unique associated linear covector function\index{function!associated linear covector}
+$\vtf{g}_\Phi:=\vtf{g}\circ\Phi^{-1}$ and vice-versa. The following corollary explains this important statement more formally.
 
 \begin{mcoro}{Linear Vector and Covector Functions}{covLin}
 Given a Hilbert space $V_\cam{F}$, a mapping $\map{\varphi}{\evl{\cam{F}}{U}{V}}{\evl{\cam{F}}{U^*}{V}}$ is a linear bijective transformation if its function rule is $\fua{\varphi}{\vtf{x}}=\vtf{x}_\Phi=\vtf{x}\circ\Phi^{-1}$.
 \end{mcoro}
 {\footnotesize
 \begin{proof}
-If $\vtf{g}$ and $\vtf{h}$ are elements of $\evl{\cam{F}}{U}{V}$, then $\varphi$ is linear because 
+If $\vtf{g}$ and $\vtf{h}$ are elements of $\evl{\cam{F}}{U}{V}$, then $\varphi$ is linear because
 \begin{equation*}
 (\alpha\vtf{g}+\beta\vtf{h})_\Phi=(\alpha\vtf{g}+\beta\vtf{h})\circ\Phi^{-1}=[\alpha\vtf{g}]\circ\Phi^{-1}+[\beta\vtf{h}]\circ\Phi^{-1}=\alpha\vtf{g}_\Phi+\beta\vtf{h}_\Phi\,,
 \end{equation*}
@@ -447,7 +447,7 @@ In the case of a one dimensional $U_\cam{F}$, considering set $\{\vun{u}\}$ its 
 \end{mcoro}
 {\footnotesize
 \begin{proof}
-The proof of $\omega$ linearity is trivial. Now let's verify if it is an injection: considering arbitrary nonzero and distinct $\alpha,\beta\in\cam{F}$, since $\fua{x\vun{u}^*}{\vto{x}}=x(\vto{x}\cdot \vun{u})=\vto{x}\cdot x\vun{u}=\fua{(x\vun{u})^*}{\vto{x}}$, the inequality $\fua{\omega}{\alpha}=(\alpha\vun{u})^*\neq (\beta\vun{u})^*=\fua{\omega}{\beta}$ is always valid because $\alpha\vun{u}\neq \beta\vun{u}$. Injection $\omega$ is also a surjection because, for an arbitrary $\vto{v}^*\in U_\cam{F}^*$, we have $\vto{v}^*=(\|\vto{v}\|\vun{u})^*=\|\vto{v}\|\vun{u}^*=\fua{\omega}{\|\vto{v}\|}$. 
+The proof of $\omega$ linearity is trivial. Now let's verify if it is an injection: considering arbitrary nonzero and distinct $\alpha,\beta\in\cam{F}$, since $\fua{x\vun{u}^*}{\vto{x}}=x(\vto{x}\cdot \vun{u})=\vto{x}\cdot x\vun{u}=\fua{(x\vun{u})^*}{\vto{x}}$, the inequality $\fua{\omega}{\alpha}=(\alpha\vun{u})^*\neq (\beta\vun{u})^*=\fua{\omega}{\beta}$ is always valid because $\alpha\vun{u}\neq \beta\vun{u}$. Injection $\omega$ is also a surjection because, for an arbitrary $\vto{v}^*\in U_\cam{F}^*$, we have $\vto{v}^*=(\|\vto{v}\|\vun{u})^*=\|\vto{v}\|\vun{u}^*=\fua{\omega}{\|\vto{v}\|}$.
 \end{proof}
 }
 

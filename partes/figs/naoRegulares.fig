@@ -1,0 +1,23 @@
+#FIG 3.2
+# Created by WinFIG version 7.5
+# METADATA <version>1.0</version>
+Portrait
+Flush left
+Metric
+A4
+100.00
+Single
+-2
+1200 2
+# METADATA <id>11</id>
+2 5 0 0 0 7 50 0 -1 0.000 0 0 0 0 0 5
+	0 C:/myWork/msavEng/partes/figs/naoRegularesScr.eps
+	 1038 3848 1038 5003 7293 5003 7293 3848 1038 3848
+# METADATA <id>27</id>
+4 0 0 50 0 0 12 0.0000 6 209 2228 2183 4020 $\\pmb{\\mathcal{U}}_1$\001
+# METADATA <id>89</id>
+4 0 0 50 0 0 12 0.0000 6 209 2228 3525 3983 $\\pmb{\\mathcal{U}}_2$\001
+# METADATA <id>91</id>
+4 0 0 50 0 0 12 0.0000 6 209 2228 5168 3962 $\\pmb{\\mathcal{U}}_3$\001
+# METADATA <id>93</id>
+4 0 0 50 0 0 12 0.0000 6 209 2228 7365 4103 $\\pmb{\\mathcal{U}}_4$\001

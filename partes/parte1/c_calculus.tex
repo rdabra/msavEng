@@ -55,7 +55,7 @@ The tensor function $\fua{[\fua{\tnr{\varphi}'_G}{\tnr{X}_0}]}{\tnr{X}}$ is call
 \begin{equation}
 \fua{\dfrac{d\tnr{\psi}}{dx}}{x}:=\fua{[\fua{\tnr{\psi}'}{x}]}{1}=\lim_{\alpha\to 0} \dfrac{\fua{\tnr{\psi}}{x+\alpha}-\fua{\tnr{\psi}}{x}}{\alpha}\,,
 \end{equation}
-where ${d\tnr{\psi}}/{dx}$ is the notation we use for the derivative of $\tnr{\psi}$ when its domain is a scalar field. In this case, it is important to note that, given a scalar $x_0\in\cam{F}$, the derivative $\fua{{d\tnr{\psi}}/{dx}}{x_0}$ is not a function like the derivative $\fua{\tnr{\psi}'}{x_0}$, but an element of $\ete{\cam{F}}{V^{\times s}}$. Moreover, if codomain $\ete{\cam{F}}{V^{\times s}}=\real$, we have the classical geometrical interpretation of scalar $\fua{{d\tnr{\psi}}/{dx}}{x_0}$ as being the slope of the tangent line $\tnr{\psi_\mathit{d}}$ to $\tnr{\psi}$ at $x_0$.    
+where ${d\tnr{\psi}}/{dx}$ is the notation we use for the derivative of $\tnr{\psi}$ when its domain is a scalar field. In this case, it is important to note that, given a scalar $x_0\in\cam{F}$, the derivative $\fua{{d\tnr{\psi}}/{dx}}{x_0}$ is not a function like the derivative $\fua{\tnr{\psi}'}{x_0}$, but an element of $\ete{\cam{F}}{V^{\times s}}$. Moreover, if codomain $\ete{\cam{F}}{V^{\times s}}=\real$, we have the classical geometrical interpretation of scalar $\fua{{d\tnr{\psi}}/{dx}}{x_0}$ as being the slope of the tangent line $\tnr{\psi_\mathit{d}}$ to $\tnr{\psi}$ at $x_0$.
 
 {\footnotesize
 \begin{proof}
@@ -339,7 +339,7 @@ From this definition, it is clear that $\fua{\mu}{\emptyset}=\fua{\mu}{\emptyset
 \begin{equation}\label{eq:measuSum}
 \fua{\mu}{\bigcup_{i=1}^\infty A_i}=\sum_{{i}=1}^\infty\fua{\mu}{A_i}\,,
 \end{equation}
-for an arbitrary countable class $\{A_1,A_2,\cdots\}\subseteq\css{M}$. Thereby, the double constituted by a measurable space and a measure, that is $((M,\css{M}),\mu)$, is called a \textsb{measure space}\index{space!measure}, which we shall hereafter represent by the triple $(M,\css{M},\mu)$. 
+for an arbitrary countable class $\{A_1,A_2,\cdots\}\subseteq\css{M}$. Thereby, the double constituted by a measurable space and a measure, that is $((M,\css{M}),\mu)$, is called a \textsb{measure space}\index{space!measure}, which we shall hereafter represent by the triple $(M,\css{M},\mu)$.
 Considering measure space $(M,\css{M},\mu)$, a measurable field $(\real,\css{F})$ and a mapping  $\map{f}{M}{\real}$, a sequence of functions $f_1,f_2,\cdots$ that also map $M$ to $\real$ \textsb{converges in measure}\index{convergence!in measure} $\mu$ to function $f$ when, given an arbitrary real number $\epsilon>0$,
 \begin{equation}
 \lim_{i\to\infty}\fua{\mu}{\{x\in M : |\fua{f}{x}-\fua{f_i}{x}|\geqslant\epsilon\}}=0\,.
@@ -347,7 +347,7 @@ Considering measure space $(M,\css{M},\mu)$, a measurable field $(\real,\css{F})
 
 
 
-Now, let $(M,\css{M})$ be a measurable space and $(\real,\css{F})$ a measurable field. The function in $\map{s}{M}{\real}$ is called \textsb{measurable}\index{function!measurable} if, for every element $\con{B}\in\css{F}$, preimage $\con{R}^{-1}_{\con{B}} \in \css{M}$. Considering a disjoint countable class $\{A_1,\cdots,A_n\}\subseteq\css{M}$ and non zero scalars $\alpha_1,\cdots,\alpha_n\in\real$, where $\css{A}=\{A_1,\cdots,A_n\}$ is called a \textsb{partition}\index{set!partition of} of an arbitrary set $A\in\css{M}$, that is $A=\bigcup_{i=1}^nA_i$, the measurable function in $\map{s_A}{M}{\real}$ is called \textsb{step}\index{function!step} or \textsb{simple}\index{function!simple} with respect to $\css{A}$ if its rule is described by 
+Now, let $(M,\css{M})$ be a measurable space and $(\real,\css{F})$ a measurable field. The function in $\map{s}{M}{\real}$ is called \textsb{measurable}\index{function!measurable} if, for every element $\con{B}\in\css{F}$, preimage $\con{R}^{-1}_{\con{B}} \in \css{M}$. Considering a disjoint countable class $\{A_1,\cdots,A_n\}\subseteq\css{M}$ and non zero scalars $\alpha_1,\cdots,\alpha_n\in\real$, where $\css{A}=\{A_1,\cdots,A_n\}$ is called a \textsb{partition}\index{set!partition of} of an arbitrary set $A\in\css{M}$, that is $A=\bigcup_{i=1}^nA_i$, the measurable function in $\map{s_A}{M}{\real}$ is called \textsb{step}\index{function!step} or \textsb{simple}\index{function!simple} with respect to $\css{A}$ if its rule is described by
 \begin{equation}
 \fua{s_\css{A}}{x} = \sum_{i=1}^n\alpha_i\fua{\tnr{1}_{A_i}}{x}\,,
 \end{equation}
@@ -363,7 +363,7 @@ In the particular case of a measure space $(M,\css{M},\mu)$, a step function $s_
 \begin{equation}\label{eq:defInteSimp}
 \int_E s_\css{A} := \sum_{i=1}^n\alpha_i\fua{\mu}{E\cap A_i}
 \end{equation}
-is called the \textsb{integral}\index{integral!of step function} of $s_\css{A}$ on $E$. In this context, if $\css{B}=\{B_1,\cdots,B_m\}\subseteq\css{M}$ is another partition of $A$, it is clear that class $\css{C}=\{A_1\cap B_1,A_1\cap B_2,\cdots,A_n\cap B_m\}$ is also a partition of $A$ and then, by using previous definition, we can write 
+is called the \textsb{integral}\index{integral!of step function} of $s_\css{A}$ on $E$. In this context, if $\css{B}=\{B_1,\cdots,B_m\}\subseteq\css{M}$ is another partition of $A$, it is clear that class $\css{C}=\{A_1\cap B_1,A_1\cap B_2,\cdots,A_n\cap B_m\}$ is also a partition of $A$ and then, by using previous definition, we can write
 \begin{equation*}
 \int_E s_\css{C} = \sum_{i=1}^n\sum_{j=1}^m\gamma_{ij}\fua{\mu}{E\cap A_i\cap B_j}\,,
 \end{equation*}
@@ -380,19 +380,19 @@ From these equalities, when $x\in A_i\cap B_j$ it is clear that $\alpha_i=\beta_
 &= \sum_{j=1}^m\beta_j\fua{\mu}{E\cap B_j}\\
 &=\int_E s_\css{B}\,,
 \end{align*}
-since intersection is distributive on union and $\mu$ is additive according to \eqref{eq:addMeasure}. For integration purposes, this equality enables us to remove the identification of the partition of $A$ from the representation of the function in a step mapping $\map{s}{M}{\real}$, since the integral of $s$ is the same for any partition of arbitrary $A\subseteq M$.  
+since intersection is distributive on union and $\mu$ is additive according to \eqref{eq:addMeasure}. For integration purposes, this equality enables us to remove the identification of the partition of $A$ from the representation of the function in a step mapping $\map{s}{M}{\real}$, since the integral of $s$ is the same for any partition of arbitrary $A\subseteq M$.
 
 Let $(S,\varrho)$ be a normed metric space of integrable step functions on $E$ with norm and metric respectively defined by
 \begin{alignat*} {3}
 \|s\|=\int_E |s|&\qquad \text{ and } \qquad&\fua{\varrho}{g_1,g_2}=\|g_1-g_2\|\,,
 \end{alignat*}
-where $|s|(x):=|\fua{s}{x}|$ and $|s|,g_1,g_2\in S$. In this context, if a Cauchy sequence of integrable step functions $s_1,s_2,\cdots\in S$ exists and converges to the measurable function in $\map{g}{M}{\real}$, we say that $g$ is integrable or Labesgue integrable on $E$ and scalar 
+where $|s|(x):=|\fua{s}{x}|$ and $|s|,g_1,g_2\in S$. In this context, if a Cauchy sequence of integrable step functions $s_1,s_2,\cdots\in S$ exists and converges to the measurable function in $\map{g}{M}{\real}$, we say that $g$ is integrable or Labesgue integrable on $E$ and scalar
 \begin{equation}\label{eq:integ}
-\int_E g := \lim_{i\to \infty}\int_E s_i 
-\end{equation} 
-is the integral or Labesgue integral of $g$ on $E$. It is important to say that if $s_1,s_2,\cdots\in S$ and $t_1,t_2,\cdots\in S$ are convergent Chauchy sequences of integrable step functions, then sequence $ s_1+t_1, s_2+ t_2,\cdots$ also is. Moreover, 
+\int_E g := \lim_{i\to \infty}\int_E s_i
+\end{equation}
+is the integral or Labesgue integral of $g$ on $E$. It is important to say that if $s_1,s_2,\cdots\in S$ and $t_1,t_2,\cdots\in S$ are convergent Chauchy sequences of integrable step functions, then sequence $ s_1+t_1, s_2+ t_2,\cdots$ also is. Moreover,
 \begin{equation}\label{eq:cauchySum}
-s_1,s_2,\cdots\to f\,\,\, \wedge\,\,\, t_1,t_2,\cdots\to g \implies \alpha s_1+ \beta t_1, \alpha s_2+ \beta t_2,\cdots\to \alpha f+\beta g\,. 
+s_1,s_2,\cdots\to f\,\,\, \wedge\,\,\, t_1,t_2,\cdots\to g \implies \alpha s_1+ \beta t_1, \alpha s_2+ \beta t_2,\cdots\to \alpha f+\beta g\,.
 \end{equation}
 
 {\footnotesize
@@ -401,11 +401,11 @@ Since scalar multiplication does not affect the convergence of Cauchy sequences 
 \begin{equation*}
 \fua{\varrho}{h_i,h_j}+\fua{\varrho}{r_i,r_j} = \|h_i-h_j\| + \|r_i-r_j\| \geqslant \|h_i-h_j + r_i-r_j\|\,,
 \end{equation*}
-it is obvious that $\lim_{\min{\lpa i,j\rpa}\to\infty}\|(h_i+ r_i) -(h_j +r_j)\|=0\,$, which proves the sum to be a Cauchy sequence. The convergence to $\alpha f+\beta g$ can be  proved by this same procedure.  
+it is obvious that $\lim_{\min{\lpa i,j\rpa}\to\infty}\|(h_i+ r_i) -(h_j +r_j)\|=0\,$, which proves the sum to be a Cauchy sequence. The convergence to $\alpha f+\beta g$ can be  proved by this same procedure.
 \end{proof}}
 
 \begin{comment}
-Considering a mapping $\map{f}{M}{\real}$ where $f=f^{+}-f^{-}$ such that 
+Considering a mapping $\map{f}{M}{\real}$ where $f=f^{+}-f^{-}$ such that
 \begin{alignat*} {3}
 \fua{f^+}{x} = \begin{dcases}
 \fua{f}{x} & \text{if } \fua{f}{x}> 0\\
@@ -415,9 +415,9 @@ Considering a mapping $\map{f}{M}{\real}$ where $f=f^{+}-f^{-}$ such that
 0 & \text{if } \fua{f}{x} \geqslant 0
 \end{dcases}\,.
 \end{alignat*}
-Since functions $f^{+}$ and $f^{-}$ are nonnegative, we can define that $f$ is integrable on $E$ if and only if both $f^{+}$ and $f^{-}$ are integrable on $E$ and also that 
+Since functions $f^{+}$ and $f^{-}$ are nonnegative, we can define that $f$ is integrable on $E$ if and only if both $f^{+}$ and $f^{-}$ are integrable on $E$ and also that
 \begin{equation}\label{eq:decompInt}
-\int_E f = \int_E f^{+} + \int_E f^{-}\,. 
+\int_E f = \int_E f^{+} + \int_E f^{-}\,.
 \end{equation}
 \end{comment}
 
@@ -443,11 +443,11 @@ It is important to study some fundamental properties of integrals and we shall p
 
 {\footnotesize
 \begin{proof}
-In order to prove item i, let's specify a sequence of integrable step functions $s_1,s_2,\cdots$ where  
+In order to prove item i, let's specify a sequence of integrable step functions $s_1,s_2,\cdots$ where
 \begin{equation*}
 \fua{s_k}{x}=\sum_{{i}=1}^n(\fua{f}{x}+k^{-1})\fua{\tnr{1}_{A_i^{(k)}}}{x}
-\end{equation*} 
-is defined from partitioning $A^{(k)}\subset M$. This is obviously a Cauchy sequence that converges to $f$ as $k\to\infty$ and since the coefficients of $s_k$ are nonnegative, then 
+\end{equation*}
+is defined from partitioning $A^{(k)}\subset M$. This is obviously a Cauchy sequence that converges to $f$ as $k\to\infty$ and since the coefficients of $s_k$ are nonnegative, then
 \begin{equation*}
 \int_E f=\lim_{k\to \infty}\sum_{i=1}^n(\fua{f}{x}+k^{-1})\fua{\mu}{E\cap A_i}\geqslant 0\,.
 \end{equation*}
@@ -458,11 +458,11 @@ Considering equality \eqref{eq:measuSum} and definition \eqref{eq:integ}, we pro
 &=\sum_{i=1}^m\lim_{k\to \infty} \sum_{j=1}^n\alpha_{j}^{(k)}\fua{\mu}{ E_i\cap A_j^{(k)}}\\
 &=\sum_{i=1}^m\lim_{k\to \infty} \int_{E_i} s_k = \sum_{i=1}^m \int_{E_i} f\,.
 \end{align*}
-Now, since $\mu$ is nonnegative and additive, that is $\fua{\mu}{X\cup Y}=0\Longleftrightarrow\fua{\mu}{X}=\fua{\mu}{Y}=0$, and partitioned set $A$ on \eqref{eq:defInteSimp} is arbitrary, then choosing $E$ to be partitioned we prove item iii by 
+Now, since $\mu$ is nonnegative and additive, that is $\fua{\mu}{X\cup Y}=0\Longleftrightarrow\fua{\mu}{X}=\fua{\mu}{Y}=0$, and partitioned set $A$ on \eqref{eq:defInteSimp} is arbitrary, then choosing $E$ to be partitioned we prove item iii by
 \begin{equation*}
 \int_E f = \lim_{k\to \infty} \sum_{i=1}^n\alpha_{i}^{(k)}\fua{\mu}{ E\cap E_i^{(k)}} = \lim_{k\to \infty} \sum_{i=1}^n\alpha_{i}^{(k)}\underbrace{\fua{\mu}{E_i^{(k)}}}_{0} = 0
 \end{equation*}
-For item iv, let's specify two partitions $\{A_1^{(k)},\cdots,A_n^{(k)}\}$ and $\{B_1^{(k)},\cdots,B_m^{(k)}\}$ of a set $A^{(k)}\subset M$ which define two step functions $s_k=\sum_{{i}=1}^n\alpha^{(k)}_i\tnr{1}_{A_i^{(k)}}$ and $t_k=\sum_{{j}=1}^m\beta^{(k)}_j\tnr{1}_{B_j^{(k)}}$ in such a way that 
+For item iv, let's specify two partitions $\{A_1^{(k)},\cdots,A_n^{(k)}\}$ and $\{B_1^{(k)},\cdots,B_m^{(k)}\}$ of a set $A^{(k)}\subset M$ which define two step functions $s_k=\sum_{{i}=1}^n\alpha^{(k)}_i\tnr{1}_{A_i^{(k)}}$ and $t_k=\sum_{{j}=1}^m\beta^{(k)}_j\tnr{1}_{B_j^{(k)}}$ in such a way that
 \begin{align*}
 \alpha\int_{E}f+\beta\int_{E}g&=\lim_{k\to\infty}\alpha\int_{E}s_k + \lim_{k\to\infty}\beta\int_{E}t_k\\
 &=\lim_{k\to\infty}\sum_{i=1}^n\alpha\alpha_i^{(k)}\fua{\mu}{E\cap A_i^{(k)}}+\lim_{k\to\infty}\sum_{j=1}^m\beta\beta_j^{(k)}\fua{\mu}{E\cap B_j^{(k)}}\\
@@ -475,66 +475,72 @@ Now, let's verify that a sum of two step functions is also a step function:
 &=\sum_{{i}=1}^n\sum_{{j}=1}^m\alpha\alpha^{(k)}_i\tnr{1}_{A_i^{(k)}\cap B_j^{(k)}}+\sum_{{i}=1}^n\sum_{{j}=1}^m\beta\beta^{(k)}_j\tnr{1}_{A_i^{(k)}\cap B_j^{(k)}}\\
 &=\sum_{{i}=1}^n\sum_{{j}=1}^m(\alpha\alpha_i^{(k)}+\beta\beta_j^{(k)})\tnr{1}_{A_i^{(k)}\cap B_j^{(k)}}\,.
 \end{align*}
-Thereby, from  property \eqref{eq:cauchySum}, we have 
+Thereby, from  property \eqref{eq:cauchySum}, we have
 \begin{equation*}
 \int_E \alpha f+\beta g = \lim_{k\to\infty}\int_E\alpha s_k+\beta t_k = \lim_{k\to\infty}\sum_{i=1}^n\sum_{j=1}^m(\alpha\alpha_i^{(k)}+\beta\beta_j^{(k)})\fua{\mu}{E\cap A_i^{(k)}\cap B_j^{(k)}}\,,
 \end{equation*}
-which is equal to result \eqref{eq:a}. 
+which is equal to result \eqref{eq:a}.
 \end{proof}}
 
-Considering $\ete{\real}{U^{\times m}}$ and $\ete{\real}{V^{\times s}}$ Euclidean tensor spaces, let the function in mapping $\map{f}{\pmb{\mathcal{U}}}{\real}$ be described by $f = \frt{T}\circ\tnr{\psi}$, where $\pmb{\mathcal{U}}\subseteq\ete{\real}{U^{\times m}}$, function $\frt{T}$ is the representative tensor functional of an arbitrary tensor $\tnr{T}\in\ete{\real}{V^{\times s}}$ and $\map{\tnr{\psi}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}$. We define that $\tnr{\psi}$ is integrable on $\pmb{\mathcal{U}}$ if $f$ is integrable on $\pmb{\mathcal{U}}$. If this is the case, by specifying a rule 
+Considering $\ete{\real}{U^{\times m}}$ and $\ete{\real}{V^{\times s}}$ Euclidean tensor spaces, let the function in mapping $\map{f}{\pmb{\mathcal{U}}}{\real}$ be described by $f = \frt{T}\circ\tnr{\psi}$, where $\pmb{\mathcal{U}}\subseteq\ete{\real}{U^{\times m}}$, function $\frt{T}$ is the representative tensor functional of an arbitrary tensor $\tnr{T}\in\ete{\real}{V^{\times s}}$ and $\map{\tnr{\psi}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}$. We define that $\tnr{\psi}$ is integrable on $\pmb{\mathcal{U}}$ if $f$ is integrable on $\pmb{\mathcal{U}}$. If this is the case, by specifying a rule
 \begin{equation*}
 \fua{h}{\tnr{X}} = \int_{\pmb{\mathcal{U}}} \frt{X}\circ\tnr{\psi}\,,
 \end{equation*}
-where tensor functional $h\in\eted{\real}{V^{\times s}}$ is linear because of property iv above, there exists a unique tensor $\tnr{H}\in\ete{\real}{V^{\times s}}$ which $h$ is the cotensor of, according to corollary \ref{cor:eqNorm}. In this context, tensor 
+where tensor functional $h\in\eted{\real}{V^{\times s}}$ is linear because of property iv above, there exists a unique tensor $\tnr{H}\in\ete{\real}{V^{\times s}}$ which $h$ is the cotensor of, according to corollary \ref{cor:eqNorm}. In this context, tensor
 \begin{equation}
-\int_{\pmb{\mathcal{U}}}\tnr{\psi}:=\tnr{H} 
+\int_{\pmb{\mathcal{U}}}\tnr{\psi}:=\tnr{H}
 \end{equation}
-is called the integral of tensor function $\tnr{\psi}$ on $\pmb{\mathcal{U}}$. Therefore, since previous corollary establishes a one to one correspondence between linear functional $h$ and tensor $\tnr{H}$ through $\fua{h}{\tnr{X}}=\tnr{X}\cdot\tnr{H}$, we conclude that 
+is called the integral of tensor function $\tnr{\psi}$ on $\pmb{\mathcal{U}}$. Therefore, since previous corollary establishes a one to one correspondence between linear functional $h$ and tensor $\tnr{H}$ through $\fua{h}{\tnr{X}}=\tnr{X}\cdot\tnr{H}$, we conclude that
 \begin{equation}\label{eq:repInte}
 \int_{\pmb{\mathcal{U}}} \frt{X}\circ\tnr{\psi}=\tnr{X}\cdot\int_{\pmb{\mathcal{U}}}\tnr{\psi}\,.
 \end{equation}
 
 \section{Integral Identities}
 
-In rough geometrical terms, domains whose boundary shapes show a specific form of regularity -- where sharp edges and different types of self intersection are not allowed, as shown in figure XX -- enable identities that equalize integrations on surfaces and interiors, which are fundamental for the present study. First of all, we recall the biunivocal correspondence between an affine space and a vector space enabled by a coordinate system, as shown in section \ref{sec:affine}, in order to henceforth make geometrical statements and assumptions on finite dimensional Euclidean spaces. In this context and from the concept of smoothness presented on section \ref{sec:diffe}, a set of strong mathematical requirements that avoid the irregularities cited above is given by introductory texts on Differential Geometry, such as \aut{Do Carmo}\cite{docarmo_2016}, where surfaces called smooth are defined. However, for the sake of generality, we choose to study a less restrictive regularity condition, which defines the so called Lipschitz surface\footnote{ See \aut{Ciarlet}\cite{ciarlet_1988_2}, p.32.}; that also does not present the above irregularities and is less difficult to deal with than smooth surfaces. We shall adopt this concept by adapting the accessible approach of \aut{Adams \& Fournier}\cite{adams_2003_2}, which is more than sufficient for our purposes\footnote{For a more rigorous treatment, see \aut{Agranovich}\cite{agranovitch_2015_1}, chapter 3.}. 
+In rough geometrical terms, domains whose boundary shapes show a specific form of regularity -- where sharp edges and different types of self intersection are not allowed, as shown in figure \ref{fg:naoRegulares} -- enable identities that equalize integrations on surfaces and interiors, which are fundamental for the present study. First of all, we recall the biunivocal correspondence between an affine space and a vector space enabled by a coordinate system, as shown in section \ref{sec:affine}, in order to henceforth make geometrical statements and assumptions on finite dimensional Euclidean spaces. In this context and from the concept of smoothness presented on section \ref{sec:diffe}, a set of strong mathematical requirements that avoid the irregularities cited above is given by introductory texts on Differential Geometry, such as \aut{Do Carmo}\cite{docarmo_2016}, where surfaces called smooth are defined. However, for the sake of generality, we choose to study a less restrictive regularity condition, which defines the so called Lipschitz surface\footnote{ See \aut{Ciarlet}\cite{ciarlet_1988_2}, p.32.}; that also does not present the above irregularities and is less difficult to deal with than smooth surfaces. We shall adopt this concept by adapting the accessible approach of \aut{Adams \& Fournier}\cite{adams_2003_2}, which is more than sufficient for our purposes\footnote{For a more rigorous treatment, see \aut{Agranovich}\cite{agranovitch_2015_1}, chapter 3.}.
 
 
-%DESENHAR FOTO DO DIA 06/02
+\begin{figure}[!ht]
+	\centering
+	\begin{center}
+		\scalebox{.72}{\input{partes/figs/naoRegulares.pstex_t}}
+	\end{center}
+	\titfigura{Examples of two dimensional domains that are not Lipschitz.}\label{fg:naoRegulares}
+\end{figure}
 
 
-Let $U_\real$ be a $n$-dimensional Euclidean space, $n\geqslant 2\,$, and $\pmb{\mathcal{U}}$ one of its proper subsets, which we assume to be a domain of a certain function. Considering an arbitrary non zero scalar $\alpha\in\real^+$, a disjoint cover $\css{C}=\{\widehat{C}_1,\cdots,\widehat{C}_r\}$ of boundary $\partial\pmb{\mathcal{U}}$ and a class $\{A_1,\cdots,A_r\}$ where $A_i\subset C_i$ defines a $(n-1)$-dimensional Euclidean subspace of $U_\real$ from the first $n-1$ dimensions of $U_\real$, the subset $\pmb{\mathcal{U}}$ is called a \textsb{Lipschitz domain}\index{domain!Lipschitz} and its boundary a \textsb{Lipschitz surface}\index{surface!Lipschitz} if the following conditions are observed. 
+Let $U_\real$ be a $n$-dimensional Euclidean space, $n\geqslant 2\,$, and $\pmb{\mathcal{U}}$ one of its proper subsets, which we assume to be a domain of a certain function. Considering an arbitrary non zero scalar $\alpha\in\real^+$, a disjoint cover $\css{C}=\{\widehat{C}_1,\cdots,\widehat{C}_r\}$ of boundary $\partial\pmb{\mathcal{U}}$ and a class $\{A_1,\cdots,A_r\}$ where $A_i\subset C_i$ defines a $(n-1)$-dimensional Euclidean subspace of $U_\real$ from the first $n-1$ dimensions of $U_\real$, the subset $\pmb{\mathcal{U}}$ is called a \textsb{Lipschitz domain}\index{domain!Lipschitz} and its boundary a \textsb{Lipschitz surface}\index{surface!Lipschitz} if the following conditions are observed.
 
 \begin{itemize}
 	\setlength\itemsep{.1em}
 	\item[i.] Every element $\widehat{C}_j$ of $\css{C}$ must have a specific shape such that arbitrary vectors $\vto{u},\vto{v}\in\{\vto{x}\in\pmb{\mathcal{U}}:\fua{\varrho}{\vto{x},\partial\pmb{\mathcal{U}}}<\alpha\}$, where distance $\fua{\varrho}{\vto{u},\vto{v}}<\alpha$, are also elements of the subset $\{\vto{x}\in\widehat{C}_j:\fua{\varrho}{\vto{x},\partial C_j}>\alpha\}\,$;
 
-	\item[ii.] Every set $\pmb{\mathcal{U}}\cap \widehat{C}_j$ must be on the same ``side'' of boundary $\partial\pmb{\mathcal{U}}$, whose points coordinates must constitute the graph of a Lipschitz continuous function. In other words, there must exist a set of Lipschitz continuous functionals $\{f_1,\cdots,f_r\}$ where $\map{f_i}{A_i}{\real}$ in such a way that for an orthonormal basis $Z=\{\vun{v}_1,\cdots,\vun{v}_n\}$ of $\widehat{C}_j$ and arbitrary vector $\vto{w}\in \pmb{\mathcal{U}}\cap\widehat{C}_j$, 
+	\item[ii.] Every set $\pmb{\mathcal{U}}\cap \widehat{C}_j$ must be on the same ``side'' of boundary $\partial\pmb{\mathcal{U}}$, whose points coordinates must constitute the graph of a Lipschitz continuous function. In other words, there must exist a set of Lipschitz continuous functionals $\{f_1,\cdots,f_r\}$ where $\map{f_i}{A_i}{\real}$ in such a way that for an orthonormal basis $Z=\{\vun{v}_1,\cdots,\vun{v}_n\}$ of $\widehat{C}_j$ and arbitrary vector $\vto{w}\in \pmb{\mathcal{U}}\cap\widehat{C}_j$,
 \begin{equation*}
 |\fua{\vtf{f}_n^Z}{\vto{w}}|<|f_j[\sum_{i=1}^{n-1}\fua{\vtf{f}_i^Z}{\vto{w}}\vun{v}_i]|\,.
 \end{equation*}	
 \end{itemize}
 
-Considering $\pmb{\mathcal{U}}\subset U_\cam{R}$ a Lipschitz domain, we additionally require orientation of the Lipschitz surface $\partial\pmb{\mathcal{U}}$ on each of its points. In order to adequately accomplish this, let $\pmb{\mathcal{W}}$ be a $(n-1)$-dimensional subspace of $U_\cam{R}$ and the function in $\map{\vtf{g}}{\pmb{\mathcal{W}}}{\real}$ be Lipschitz continuous whose graph describes $\partial\pmb{\mathcal{U}}$ in such a way that 
+Considering $\pmb{\mathcal{U}}\subset U_\cam{R}$ a Lipschitz domain, we additionally require orientation of the Lipschitz surface $\partial\pmb{\mathcal{U}}$ on each of its points. In order to adequately accomplish this, let $\pmb{\mathcal{W}}$ be a $(n-1)$-dimensional subspace of $U_\cam{R}$ and the function in $\map{\vtf{g}}{\pmb{\mathcal{W}}}{\real}$ be Lipschitz continuous whose graph describes $\partial\pmb{\mathcal{U}}$ in such a way that
 \begin{equation*}
-\fua{\vtf{f}_n^B}{\vto{v}} = \fua{\vtf{g}}{\sum_{i=1}^{n-1}\fua{\vtf{f}_i^B}{\vto{v}}\vun{u}_i}\,,\,\forall\,\vto{v}\in\partial\pmb{\mathcal{U}}\,, 
+\fua{\vtf{f}_n^B}{\vto{v}} = \fua{\vtf{g}}{\sum_{i=1}^{n-1}\fua{\vtf{f}_i^B}{\vto{v}}\vun{u}_i}\,,\,\forall\,\vto{v}\in\partial\pmb{\mathcal{U}}\,,
 \end{equation*}
-where $B=\{\vun{u}_1,\cdots,\vun{u}_n\}$ is an arbitrary orthonormal basis of $U_\real$. Thereby, the function in mapping $\map{\vtf{s}}{U_\cam{R}}{\real}$ where 
+where $B=\{\vun{u}_1,\cdots,\vun{u}_n\}$ is an arbitrary orthonormal basis of $U_\real$. Thereby, the function in mapping $\map{\vtf{s}}{U_\cam{R}}{\real}$ where
 \begin{alignat}{3}\label{eq:impliSurf}
 \fua{\vtf{s}}{\vto{v}} = \fua{\vtf{f}_n^B}{\vto{v}} - \fua{\vtf{g}}{\sum_{i=1}^{n-1}\fua{\vtf{f}_i^B}{\vto{v}}\vun{u}_i}=0& \quad\text{and} \quad &\fua{\nabla\vtf{s}}{\vto{v}}\neq 0\,,\,\forall\,\vto{v}\in\partial\pmb{\mathcal{U}}\,,
 \end{alignat}
-is called the \textsb{implicit function}\index{function!implict} of $\partial\pmb{\mathcal{U}}$ and since it is constant, equality $[\fua{\vtf{s}'}{\vto{v}}](\vto{h})=0$ is valid along any direction $\vto{h}\in\partial\pmb{\mathcal{U}}$. Therefore,  from \eqref{eq:defGradient}, we can say that $\vto{h}\cdot\fua{\nabla\vtf{s}}{\vto{v}}=0$ for all $\vto{h}\in\{\viz{\vto{v}}\cap\partial\pmb{\mathcal{U}}\}$, that is, vector $\fua{\nabla\vtf{s}}{\vto{v}}$ is orthogonal to surface $\partial\pmb{\mathcal{U}}$ at arbitrary $\vto{v}\in\partial\pmb{\mathcal{U}}$. From this conclusion, surface $\partial\pmb{\mathcal{U}}$ is called \textsb{orientable}\index{surface!orientable} if it is possible to define a mapping $\map{\vtf{n}}{\partial\pmb{\mathcal{U}}}{U_\cam{R}}$ whose function, called the \textsb{unit normal function}\index{function!unit normal} on $\partial\pmb{\mathcal{U}}$, is described by 
+is called the \textsb{implicit function}\index{function!implict} of $\partial\pmb{\mathcal{U}}$ and since it is constant, equality $[\fua{\vtf{s}'}{\vto{v}}](\vto{h})=0$ is valid along any direction $\vto{h}\in\partial\pmb{\mathcal{U}}$. Therefore,  from \eqref{eq:defGradient}, we can say that $\vto{h}\cdot\fua{\nabla\vtf{s}}{\vto{v}}=0$ for all $\vto{h}\in\{\viz{\vto{v}}\cap\partial\pmb{\mathcal{U}}\}$, that is, vector $\fua{\nabla\vtf{s}}{\vto{v}}$ is orthogonal to surface $\partial\pmb{\mathcal{U}}$ at arbitrary $\vto{v}\in\partial\pmb{\mathcal{U}}$. From this conclusion, surface $\partial\pmb{\mathcal{U}}$ is called \textsb{orientable}\index{surface!orientable} if it is possible to define a mapping $\map{\vtf{n}}{\partial\pmb{\mathcal{U}}}{U_\cam{R}}$ whose function, called the \textsb{unit normal function}\index{function!unit normal} on $\partial\pmb{\mathcal{U}}$, is described by
 \begin{equation}
 \fua{\vtf{n}}{\vto{x}}=\dfrac{\fua{\nabla\vtf{s}}{\vto{x}}}{\|\fua{\nabla\vtf{s}}{\vto{x}}\|}\,.
 \end{equation}
-Additionally to $\vtf{n}$, it is true that an implicit function $-\vtf{s}$ leads to a unit normal function $-\vtf{n}$ and when one of these directions $\vtf{n}$ or $-\vtf{n}$ is specified as positive, we say that $\partial\pmb{\mathcal{U}}$ is \textsb{oriented}\index{surface!oriented}. For the purposes of this study, we choose $\vtf{n}$ to orientate the surfaces. In the case of three-dimensional Euclidean spaces, the values of function $\vtf{n}$ are outward unit vectors with respect to the surface and the values of $-\vtf{n}$ are inward unit vectors. 
+Additionally to $\vtf{n}$, it is true that an implicit function $-\vtf{s}$ leads to a unit normal function $-\vtf{n}$ and when one of these directions $\vtf{n}$ or $-\vtf{n}$ is specified as positive, we say that $\partial\pmb{\mathcal{U}}$ is \textsb{oriented}\index{surface!oriented}. For the purposes of this study, we choose $\vtf{n}$ to orientate the surfaces. In the case of three-dimensional Euclidean spaces, the values of function $\vtf{n}$ are outward unit vectors with respect to the surface and the values of $-\vtf{n}$ are inward unit vectors.
 
-From what we have studied so far, it is finally possible to attain the objective of this section which is to present a fundamental identity of elementary Calculus, called the \textsb{Gauss-Ostrogradsky} or the \textsb{Divergence}\index{theorem!Divergence} theorem. We shall not deal with its most general form, the notorious Generalized Stokes' theorem, because it would demand us to cover an extensive material on Exterior Calculus, which is out of the scope of this work\footnote{For an introduction to Exterior Calculus, see \aut{Flanders}\cite{flanders_1989_1}, \aut{Loomis \& Sternberg}\cite{loomis_2014_1}  and \aut{Spivak}\cite{spivak_1965_1}.}. In general terms, the following theorem relates projections of function values on unit normals along the domain boundary (flux) with the divergence of the function on the domain interior.     
+From what we have studied so far, it is finally possible to attain the objective of this section which is to present a fundamental identity of elementary Calculus, called the \textsb{Gauss-Ostrogradsky} or the \textsb{Divergence}\index{theorem!Divergence} theorem. We shall not deal with its most general form, the notorious Generalized Stokes' theorem, because it would demand us to cover an extensive material on Exterior Calculus, which is out of the scope of this work\footnote{For an introduction to Exterior Calculus, see \aut{Flanders}\cite{flanders_1989_1}, \aut{Loomis \& Sternberg}\cite{loomis_2014_1}  and \aut{Spivak}\cite{spivak_1965_1}.}. In general terms, the following theorem relates projections of function values on unit normals along the domain boundary (flux) with the divergence of the function on the domain interior.
 
 \begin{mteo}{Gauss-Ostrogradsky}{gauss}
-Considering $U_\real$ and $\ete{\real}{U\times V^{\times s}}$ finite dimensional Euclidean spaces, $\map{\vtf{\varphi}}{\pmb{\mathcal{U}}}{\ete{\real}{U\times V^{\times s}}}$ a continuous mapping where $\pmb{\mathcal{U}}\subset U_\real$ is a Lipschitz domain, $\vtf{\varphi}$ continuously differentiable on interior $\hat{\pmb{\mathcal{U}}}$, surface $\partial\pmb{\mathcal{U}}$ oriented by a unit normal vector function $\vtf{n}$ and 
+Considering $U_\real$ and $\ete{\real}{U\times V^{\times s}}$ finite dimensional Euclidean spaces, $\map{\vtf{\varphi}}{\pmb{\mathcal{U}}}{\ete{\real}{U\times V^{\times s}}}$ a continuous mapping where $\pmb{\mathcal{U}}\subset U_\real$ is a Lipschitz domain, $\vtf{\varphi}$ continuously differentiable on interior $\hat{\pmb{\mathcal{U}}}$, surface $\partial\pmb{\mathcal{U}}$ oriented by a unit normal vector function $\vtf{n}$ and
 $\map{\vtf{\varphi}_\odot}{\pmb{\mathcal{U}}}{\ete{\real}{U\times V^{\times s}}}$ a continuous mapping
-where $\fua{\vtf{\varphi}_\odot}{\vto{x}}=\fua{\vtf{n}}{\vto{x}}\odot_1\fua{\vtf{\varphi}}{\vto{x}}$, 
+where $\fua{\vtf{\varphi}_\odot}{\vto{x}}=\fua{\vtf{n}}{\vto{x}}\odot_1\fua{\vtf{\varphi}}{\vto{x}}$,
 \begin{equation*}
 \int_{\hat{\pmb{\mathcal{U}}}}\dvt{\vtf{\varphi}} = \int_{\partial{\pmb{\mathcal{U}}}}\vtf{\varphi}_\odot\,\,.
 \end{equation*}
@@ -542,19 +548,19 @@ where $\fua{\vtf{\varphi}_\odot}{\vto{x}}=\fua{\vtf{n}}{\vto{x}}\odot_1\fua{\vtf
 \hspace{1pt}
 {\footnotesize
 \begin{proof}
-Instead of developing here this very long demonstration, we invite the interested reader to see the elegant proof presented by \aut{Figueiredo}\cite{figueiredo_1964_1} in the context of $n$-dimensional Euclidean spaces. 
+Instead of developing here this very long demonstration, we invite the interested reader to see the elegant proof presented by \aut{Figueiredo}\cite{figueiredo_1964_1} in the context of $n$-dimensional Euclidean spaces.
 \end{proof}
 }
 
 \begin{mcoro}{Gauss-Ostrogradsky for Gradients}{gauss2}
-For a continuous mapping $\map{\vtf{\varphi}_\otimes}{\pmb{\mathcal{U}}}{\ete{\real}{U\times V^{\times s}}}$ where $\fua{\vtf{\varphi}_\otimes}{\vto{x}}=\fua{\vtf{n}}{\vto{x}}\otimes\fua{\vtf{\varphi}}{\vto{x}}$, 
+For a continuous mapping $\map{\vtf{\varphi}_\otimes}{\pmb{\mathcal{U}}}{\ete{\real}{U\times V^{\times s}}}$ where $\fua{\vtf{\varphi}_\otimes}{\vto{x}}=\fua{\vtf{n}}{\vto{x}}\otimes\fua{\vtf{\varphi}}{\vto{x}}$,
 \begin{equation*}
 	\int_{\hat{\pmb{\mathcal{U}}}}\nabla{\vtf{\varphi}} = \int_{\partial{\pmb{\mathcal{U}}}}\vtf{\varphi}_\otimes\,\,.
 \end{equation*}
 \end{mcoro}
 {\footnotesize
 \begin{proof}
-Considering identity tensor $\tnr{I}\in\ete{\real}{U^2}$ and property \eqref{eq:repInte}, we can write that 
+Considering identity tensor $\tnr{I}\in\ete{\real}{U^2}$ and property \eqref{eq:repInte}, we can write that
 \begin{align*}
 \tnr{I}\odot_2	\int_{\hat{\pmb{\mathcal{U}}}}\nabla{\vtf{\varphi}} & = \tnr{I}\odot_2 \int_{\partial{\pmb{\mathcal{U}}}}\vtf{\varphi}_\otimes\\
 \int_{\hat{\pmb{\mathcal{U}}}} \frt{I}\circ\nabla{\vtf{\varphi}}& =\int_{\partial{\pmb{\mathcal{U}}}}\frt{I}\circ\vtf{\varphi}_\otimes\,.
@@ -564,14 +570,14 @@ But from definition \eqref{eq:repTensFunc}, we have equalities $\fua{\frt{I}\cir
 }
 
 \begin{mcoro}{Gauss-Ostrogradsky for Curls}{gauss3}
-In the case of continuous mappings $\map{\vtf{\varphi}}{\pmb{\mathcal{U}}}{U_\real}$ and $\map{\vtf{\varphi}_\times}{\pmb{\mathcal{U}}}{U_\real}$ where $(U_\real,\tnr{A}_B)$ is an three dimensional oriented Euclidean space and $\fua{\vtf{\varphi}_\times}{\vto{x}}=\fua{\vtf{n}}{\vto{x}}\times\fua{\vtf{\varphi}}{\vto{x}}$, 
+In the case of continuous mappings $\map{\vtf{\varphi}}{\pmb{\mathcal{U}}}{U_\real}$ and $\map{\vtf{\varphi}_\times}{\pmb{\mathcal{U}}}{U_\real}$ where $(U_\real,\tnr{A}_B)$ is an three dimensional oriented Euclidean space and $\fua{\vtf{\varphi}_\times}{\vto{x}}=\fua{\vtf{n}}{\vto{x}}\times\fua{\vtf{\varphi}}{\vto{x}}$,
 \begin{equation*}
 \int_{\hat{\pmb{\mathcal{U}}}}\crl{\vtf{\varphi}} = \int_{\partial{\pmb{\mathcal{U}}}}\vtf{\varphi}_\times\,\,.
 \end{equation*}
 \end{mcoro}
 {\footnotesize
 \begin{proof}
-Considering \eqref{eq:repInte}, \eqref{eq:crossProduct}, \eqref{eq:repTensFunc}, we have $\fua{\vtf{n}}{\vto{x}}\times\fua{\vtf{\varphi}}{\vto{x}}=\tnr{A}_B\odot_2[\fua{\vtf{n}}{\vto{x}}\otimes\fua{\vtf{\varphi}}{\vto{x}}]=\fua{\frt{A}_B\circ\vtf{\varphi}_\otimes}{\vto{x}}$. Thereby, we arrive at corollary \ref{cor:gauss2} by   
+Considering \eqref{eq:repInte}, \eqref{eq:crossProduct}, \eqref{eq:repTensFunc}, we have $\fua{\vtf{n}}{\vto{x}}\times\fua{\vtf{\varphi}}{\vto{x}}=\tnr{A}_B\odot_2[\fua{\vtf{n}}{\vto{x}}\otimes\fua{\vtf{\varphi}}{\vto{x}}]=\fua{\frt{A}_B\circ\vtf{\varphi}_\otimes}{\vto{x}}$. Thereby, we arrive at corollary \ref{cor:gauss2} by
 \begin{align*}
 \int_{\hat{\pmb{\mathcal{U}}}}\crl{\vtf{\varphi}} & = \int_{\partial{\pmb{\mathcal{U}}}}\vtf{\varphi}_\times\\
 \int_{\hat{\pmb{\mathcal{U}}}}\tnr{A}_B\odot_2\nabla{\vtf{\varphi}} & = \int_{\partial{\pmb{\mathcal{U}}}}\frt{A}_B\circ\vtf{\varphi}_\otimes\\
@@ -580,10 +586,10 @@ Considering \eqref{eq:repInte}, \eqref{eq:crossProduct}, \eqref{eq:repTensFunc},
 \end{proof}
 }
 
-There are Lipschitz surfaces in three dimensional Euclidean spaces for which it is possible to define a boundary. In general terms, the intersection of a bounded set $A$ with an open ball centered at an element of boundary $\partial A$ is not a subset of $A$. Considering this idea on a three-dimensional Euclidean space $U_\real$ , the boundary of a surface $\partial\pmb{\mathcal{U}}\subset U_\real$ is a curve $\partial\partial\pmb{\mathcal{U}}\subset\partial\pmb{\mathcal{U}}$ where $B_{\vto{x},r}\cap\partial\pmb{\mathcal{U}}\not\subset\partial\pmb{\mathcal{U}}$ for all $\vto{x}\in\partial\partial\pmb{\mathcal{U}}$ and $r\in\real$. For Lipschitz surfaces with boundaries, we present the following classical theorem that establishes a relationship between an integral on a surface and an integral on its boundary.  
+There are Lipschitz surfaces in three dimensional Euclidean spaces for which it is possible to define a boundary. In general terms, the intersection of a bounded set $A$ with an open ball centered at an element of boundary $\partial A$ is not a subset of $A$. Considering this idea on a three-dimensional Euclidean space $U_\real$ , the boundary of a surface $\partial\pmb{\mathcal{U}}\subset U_\real$ is a curve $\partial\partial\pmb{\mathcal{U}}\subset\partial\pmb{\mathcal{U}}$ where $B_{\vto{x},r}\cap\partial\pmb{\mathcal{U}}\not\subset\partial\pmb{\mathcal{U}}$ for all $\vto{x}\in\partial\partial\pmb{\mathcal{U}}$ and $r\in\real$. For Lipschitz surfaces with boundaries, we present the following classical theorem that establishes a relationship between an integral on a surface and an integral on its boundary.
 
 \begin{mteo}{Kelvin-Stokes}{stokes}
-Let $(U_\real,\tnr{A}_B)$ be a three dimensional oriented Euclidean space and $\map{\vtf{\varphi}}{\pmb{\mathcal{U}}}{\ete{\real}{U\times V}}$ a continuous mapping where  $\vtf{\varphi}$ is continuously differentiable on Lipschitz surface $\partial\pmb{\mathcal{U}}\subset U_\real$, which is oriented by an outward unit normal vector function $\vtf{n}$. Let $\map{\vtf{\tau}}{\partial\partial\pmb{\mathcal{U}}}{U_\real}$ be a continuous mapping where $\fua{\vtf{n}}{\vto{x}}\perp\fua{\vtf{\tau}}{\vto{x}}$ such that $\fua{\tnr{A}_B}{\fua{\vtf{n}}{\vto{x}}\times\fua{\vtf{\tau}}{\vto{x}},\fua{\vtf{n}}{\vto{x}},\fua{\vtf{\tau}}{\vto{x}}}>0$ and $\partial\partial\pmb{\mathcal{U}}$ is the boundary of $\partial\pmb{\mathcal{U}}$. Considering the continuous mappings $\map{\vtf{\varphi}_{\partial\partial\pmb{\mathcal{U}}}}{\partial\partial\pmb{\mathcal{U}}}{V_\real}$ and $\map{\vtf{\varphi}_{\partial\pmb{\mathcal{U}}}}{\partial\pmb{\mathcal{U}}}{V_\real}$ where $\fua{\vtf{\varphi}_{\partial\partial\pmb{\mathcal{U}}}}{\vto{x}}=\fua{\vtf{\tau}}{\vto{x}}\odot_1\fua{\vtf{\varphi}}{\vto{x}}$ and $\fua{\vtf{\varphi}_{\partial\pmb{\mathcal{U}}}}{\vto{x}}=\fua{\vtf{n}}{\vto{x}}\odot_1\fua{\crl{\vtf{\varphi}}}{\vto{x}}$,  
+Let $(U_\real,\tnr{A}_B)$ be a three dimensional oriented Euclidean space and $\map{\vtf{\varphi}}{\pmb{\mathcal{U}}}{\ete{\real}{U\times V}}$ a continuous mapping where  $\vtf{\varphi}$ is continuously differentiable on Lipschitz surface $\partial\pmb{\mathcal{U}}\subset U_\real$, which is oriented by an outward unit normal vector function $\vtf{n}$. Let $\map{\vtf{\tau}}{\partial\partial\pmb{\mathcal{U}}}{U_\real}$ be a continuous mapping where $\fua{\vtf{n}}{\vto{x}}\perp\fua{\vtf{\tau}}{\vto{x}}$ such that $\fua{\tnr{A}_B}{\fua{\vtf{n}}{\vto{x}}\times\fua{\vtf{\tau}}{\vto{x}},\fua{\vtf{n}}{\vto{x}},\fua{\vtf{\tau}}{\vto{x}}}>0$ and $\partial\partial\pmb{\mathcal{U}}$ is the boundary of $\partial\pmb{\mathcal{U}}$. Considering the continuous mappings $\map{\vtf{\varphi}_{\partial\partial\pmb{\mathcal{U}}}}{\partial\partial\pmb{\mathcal{U}}}{V_\real}$ and $\map{\vtf{\varphi}_{\partial\pmb{\mathcal{U}}}}{\partial\pmb{\mathcal{U}}}{V_\real}$ where $\fua{\vtf{\varphi}_{\partial\partial\pmb{\mathcal{U}}}}{\vto{x}}=\fua{\vtf{\tau}}{\vto{x}}\odot_1\fua{\vtf{\varphi}}{\vto{x}}$ and $\fua{\vtf{\varphi}_{\partial\pmb{\mathcal{U}}}}{\vto{x}}=\fua{\vtf{n}}{\vto{x}}\odot_1\fua{\crl{\vtf{\varphi}}}{\vto{x}}$,
 \begin{equation*}
 \int_{\partial{\pmb{\mathcal{U}}}}\vtf{\varphi}_{\partial\pmb{\mathcal{U}}} = \int_{\partial\partial{\pmb{\mathcal{U}}}}\vtf{\varphi}_{\partial\partial\pmb{\mathcal{U}}}\,\,.
 \end{equation*}
@@ -591,7 +597,7 @@ Let $(U_\real,\tnr{A}_B)$ be a three dimensional oriented Euclidean space and $\
 %\hspace{1pt}
 {\footnotesize
 \begin{proof}
-We recommend the reader to see the proof presented by \aut{Backus}\cite{backus_1997_1}, p.131. 
+We recommend the reader to see the proof presented by \aut{Backus}\cite{backus_1997_1}, p.131.
 \end{proof}
 }
 % FIGURE xx - BOUNDARY SHAOES NOT ALLOWED ON LIPSCHITZ DOMAINS
