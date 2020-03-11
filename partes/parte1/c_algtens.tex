@@ -660,11 +660,11 @@ The verification of previous theorem is not compromised by the conditions of thi
 \end{proof}
 }
 
-Considering the conditions of this last corollary and a function space $\cam{F}^V_\cam{F}$, where the set $V=\ete{\cam{F}}{U^{\times m}}$, let $\frt{T}\in \cam{F}^V_\cam{F}$ be an antilinear tensor functional described by the rule
+Given the conditions of this last corollary and a function space of tensor functionals $\cam{F}^V_\cam{F}$, where the set $V=\ete{\cam{F}}{U^{\times m}}$, let $\frt{T}\in \cam{F}^V_\cam{F}$ be an antilinear tensor functional described by the rule
 \begin{equation}\label{eq:repTensFunc}
 \fua{\frt{T}}{\tnr{X}} = \fua{\overline{\vtf{T}^*}}{\tnr{X}}=\tnr{T}\cdot\tnr{X}\,,
 \end{equation}
-whose existence and uniqueness are straightforward consequences of the theorem in question. Therefore, every tensor $\tnr{T}$ has not only a correspondent cotensor $\tnr{T}^*$ but also a correspondent \textsb{conjugate cotensor}\index{cotensor!conjugate} $\frt{T}$. A function space, subset of $\cam{F}^V_\cam{F}$, that is constituted by all of these conjugate cotensors is called the \textsb{conjugate dual space}\index{dual space!conjugate} of $\ete{\cam{F}}{U^{\times m}}$, represented by $\etec{\cam{F}}{U^{\times m}}$. It is important to observe that if the variable $\tnr{X}$ is expressed in its polyadic form $\vto{x}_1^*\otimes\cdots\otimes\vto{x}_m^*$, the conjugate cotensor is linear on each variable $\vto{x}_i$. In this context, from the above definition and equalities \eqref{eq:propProdIndTens}, we can write that scalar
+whose existence and uniqueness are straightforward consequences of the previous theorem. Therefore, every tensor $\tnr{T}$ has not only a correspondent cotensor $\tnr{T}^*$ but also a correspondent \textsb{conjugate cotensor}\index{cotensor!conjugate} $\frt{T}$. A function space, subset of $\cam{F}^V_\cam{F}$, that is constituted by all of these conjugate cotensors is called the \textsb{conjugate dual space}\index{dual space!conjugate} of $\ete{\cam{F}}{U^{\times m}}$, represented by $\etec{\cam{F}}{U^{\times m}}$. It is important to observe that if the variable $\tnr{X}$ is expressed in its polyadic form $\vto{x}_1^*\otimes\cdots\otimes\vto{x}_m^*$, the conjugate cotensor is linear on each variable $\vto{x}_i$. In this context, from the above definition and equalities \eqref{eq:propProdIndTens}, we can write that scalar
 \begin{equation}\label{eq:polyRepre}
 \fua{\gloref{substFunc}}{\vto{x}_1^*\otimes\cdots\otimes\vto{x}_m^*} = \tnr{T}\cdot(\vto{x}_1^*\otimes\cdots\otimes\vto{x}_m^*)=\fua{\tnr{T}}{\vto{x}_1,\cdots,\vto{x}_m}\,,
 \end{equation}
@@ -688,12 +688,16 @@ Vectors and linear functions are adequately represented by matrices, whose eleme
 \begin{equation}
 \alpha\mav{\vto{X}}{B}+\beta\mav{\vto{Y}}{B}=\mav{\alpha\vto{X}+\beta\vto{Y}}{B}\,,
 \end{equation}
-where $\alpha,\beta\in\cam{F}$ and $\vto{X},\vto{Y}\in\ete{\cam{F}}{U^{\times m}}$ are arbitrary. For the case of a linear tensor function $\tnr{\psi}\in\evl{\cam{F}}{\ete{\cam{F}}{U^{\times m}}}{\ete{\cam{F}}{V^{\times p}}}$ and a basis $C$ of $\ete{\cam{F}}{V^{\times p}}$, the development
+where $\alpha,\beta\in\cam{F}$ and $\vto{X},\vto{Y}\in\ete{\cam{F}}{U^{\times m}}$ are arbitrary. For the case of a linear tensor function $\tnr{\psi}\in\evl{\cam{F}}{\ete{\cam{F}}{U^{\times m}}}{\ete{\cam{F}}{V^{\times p}}}$ and a basis $C$ of $\ete{\cam{F}}{V^{\times p}}$, from development
 \begin{align*}
 \fua{\tnr{\psi}}{\tnr{X}}&=\sum_{i_1=1}^{n_1}\cdots\sum_{i_p=1}^{n_p} \vtf{f}_{i_1\cdots i_p}^{C}(\fua{\tnr{\psi}}{\tnr{X}})\,\vtf{f}_{i_1}^{C_1}\otimes\cdots\otimes\vtf{f}_{i_p}^{C_p}\nonumber\\
-&=\sum_{i_1=1}^{n_1}\cdots\sum_{i_p=1}^{n_p}\sum_{j_1=1}^{l_1}\cdots\sum_{j_m=1}^{l_m}\underbrace{\vtf{f}_{i_1\cdots i_p}^{C}(\fua{\tnr{\psi}}{\vtf{f}_{j_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{j_m}^{B_m}})}_{{\maf{\tnr{\psi}}{B}{C}}_{i_1\cdots i_p j_1\cdots j_m}}\vtf{f}_{j_1\cdots j_m}^{B}(\tnr{X})\,\vtf{f}_{i_1}^{C_1}\otimes\cdots\otimes\vtf{f}_{i_p}^{C_p}\nonumber
+&=\sum_{i_1=1}^{n_1}\cdots\sum_{i_p=1}^{n_p}\sum_{j_1=1}^{l_1}\cdots\sum_{j_m=1}^{l_m}\vtf{f}_{i_1\cdots i_p}^{C}(\fua{\tnr{\psi}}{\vtf{f}_{j_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{j_m}^{B_m}})\vtf{f}_{j_1\cdots j_m}^{B}(\tnr{X})\,\vtf{f}_{i_1}^{C_1}\otimes\cdots\otimes\vtf{f}_{i_p}^{C_p}\nonumber
 \end{align*}
-leads to
+we define
+\begin{equation}\label{eq:matFunc}
+{\maf{\tnr{\psi}}{B}{C}}_{i_1\cdots i_p j_1\cdots j_m} = \vtf{f}_{i_1\cdots i_p}^{C}(\fua{\tnr{\psi}}{\vtf{f}_{j_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{j_m}^{B_m}})\,,
+\end{equation}
+which leads to
 \begin{equation}\label{eq:repArrayTensF}
 \mav{\fua{\tnr{\psi}}{\tnr{X}}}{C}=\maf{\tnr{\psi}}{B}{C}\mat{*_m\,}\mav{\tnr{X}}{B}\,,
 \end{equation}
@@ -705,7 +709,7 @@ Given an element $\tnr{\gamma}$ and a basis $D$ of a tensor space $\evl{\cam{F}}
 \begin{equation}
 \mav{\tnr{\gamma}\circ\tnr{\psi}(\tnr{X})}{D}=\maf{\tnr{\gamma}}{C}{D}\mat{*_p\,}\mav{\fua{\tnr{\psi}}{\tnr{X}}}{C}=\maf{\tnr{\gamma}}{C}{D}\mat{*_p\,}\maf{\tnr{\psi}}{B}{C}\mat{*_m\,}\mav{\tnr{X}}{B}\,.
 \end{equation}
-As array $\mav{\fua{\tnr{\gamma}\circ\tnr{\psi}}{\tnr{X}}}{D}=\maf{(\tnr{\gamma}\circ\tnr{\psi})}{B}{D}\mav{\vto{u}}{B}$, we can state that
+Since array $\mav{\fua{\tnr{\gamma}\circ\tnr{\psi}}{\tnr{X}}}{D}=\maf{(\tnr{\gamma}\circ\tnr{\psi})}{B}{D}\mav{\tnr{X}}{B}$, we can state that
 \begin{equation}\label{eq:compTensFunct}
 \maf{(\tnr{\gamma}\circ\tnr{\psi})}{B}{D}=\maf{\tnr{\gamma}}{C}{D}\mat{*_p\,}\maf{\tnr{\psi}}{B}{C}\,.
 \end{equation}
@@ -719,7 +723,7 @@ In the previous section, equalities \eqref{eq:prodContrCoord} and \eqref{eq:prod
 \begin{alignat}{3}
 \tnr{A}\diamond\tnr{B} = \mav{\tnr{A}}{B}:\overline{\mav{\tnr{B}}{B}}&\qquad\text{ and }\qquad&\tnr{A}\cdot\tnr{B} = \mav{\tnr{A}}{B}:{\mav{\tnr{B}}{B}}\,.
 \end{alignat}
-Now, we shall verify if it is possible to establish a relation between a Hilbert-adjoint tensor function and a conjugate transpose array and also between a transpose function and a transpose array. If a function $\tnr{\psi}\in\evl{\cam{F}}{\ete{\cam{F}}{U^{\times m}}}{\ete{\cam{F}}{V^{\times m}}}$ has a Hilbert-adjoint, sets $B$ and $D$ are bases of $\ete{\cam{F}}{U^{\times m}}$ and $\ete{\cam{F}}{V^{\times m}}$ respectively, then, from the definition of Hilbert-adjoint tensor function,
+Now, we shall verify if it is possible to establish a relation between a Hilbert-adjoint tensor function and a conjugate transpose array and also between a transpose function and a transpose array. If a function $\tnr{\psi}\in\evl{\cam{F}}{\ete{\cam{F}}{U^{\times m}}}{\ete{\cam{F}}{V^{\times m}}}$ is Hilbert-adjoint, sets $B$ and $D$ are bases of $\ete{\cam{F}}{U^{\times m}}$ and $\ete{\cam{F}}{V^{\times m}}$ respectively, then, from the definition of Hilbert-adjoint tensor function,
 \begin{align}\label{eq:propHilbAjd}
 \fua{\tnr{\psi}}{\vtf{f}_{i_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{i_p}^{B_m}}\cdot \vtf{f}_{j_1}^{D_1}\otimes\cdots\otimes\vtf{f}_{j_m}^{D_m} &= \overline{\tnr{\psi}^\dagger(\vtf{f}_{j_1}^{D_1}\otimes\cdots\otimes\vtf{f}_{j_m}^{D_m})\cdot\vtf{f}_{i_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{i_m}^{B_m}}\nonumber\\
 \vtf{f}^D_{j_1\cdots j_m}[\fua{\tnr{\psi}}{\vtf{f}_{i_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{i_m}^{B_m}}] &=\overline{\vtf{f}^B_{i_1\cdots i_m}[\fua{\tnr{\psi}^\dagger}{\vtf{f}_{j_1}^{D_1}\otimes\cdots\otimes\vtf{f}_{j_m}^{D_m}}]}\nonumber\\
@@ -735,7 +739,7 @@ where equalities \eqref{eq:regraCoordTens} and \eqref{eq:propProdIndTens} were c
 It is possible to develop change of coordinates and of basis as we did for vector and linear functions. For the sake of clarity we shall reproduce here both theorem \ref{teo:mudCoordVec} and its corollary \ref{cor:mudaBase} with minor changes in order to adapt them for the current case.
 
 \begin{mteo}{Change of Tensor Coordinates}{mudCoordTens}
-If $U^{\times m}(B)_\cam{F}$ and $U^{\times m}(C)_\cam{F}$ are vector spaces constituted by representative arrays of the elements of tensor space $\ete{\cam{F}}{U^{\times m}}$ on its bases $B$ and $C$ respectively, there is one and only one linear bijective transformation $\map{\tnr{\Gamma}}{U^{\times m}(B)_\cam{F}}{U^{\times m}(C)_\cam{F}}$, called change of coordinates from $B$ to $C$, where  ${\tnr{\Gamma}}({\mav{\tnr{X}}{B}})=\mav{\tnr{X}}{C}$ for all $\tnr{X}\in \ete{\cam{F}}{U^{\times p}}$.
+If $U^{\times m}(B)_\cam{F}$ and $U^{\times m}(C)_\cam{F}$ are vector spaces constituted by representative arrays of the elements of tensor space $\ete{\cam{F}}{U^{\times m}}$ on its bases $B$ and $C$ respectively, there is one and only one linear bijective transformation $\map{\tnr{\Gamma}}{U^{\times m}(B)_\cam{F}}{U^{\times m}(C)_\cam{F}}$, called change of coordinates from $B$ to $C$, where  ${\tnr{\Gamma}}({\mav{\tnr{X}}{B}})=\mav{\tnr{X}}{C}$ for all $\tnr{X}\in \ete{\cam{F}}{U^{\times m}}$.
 \end{mteo}
 \hspace{1pt}
 {\footnotesize
@@ -746,10 +750,10 @@ Adaptation of theorem \ref{teo:mudCoordVec}'s proof to this case is trivial.
 
 An arbitrary tensor $\tnr{X}\in\ete{\cam{F}}{U^{\times m}}$ can be distinctly represented by arrays on distinct bases $B$ and $C$ according to theorem \ref{teo:geraEte}. From these two representations, it is possible to obtain the rule for $\tnr{\Gamma}$, as described in the above theorem \ref{teo:mudCoordTens}, by considering $\tnr{\psi}=\tnr{i}$ on equality \eqref{eq:repArrayTensF}, which leads to $\mav{\tnr{X}}{C}=\maf{\tnr{i}}{B}{C}\mat{*_m\,}\mav{\tnr{X}}{B}$. Thereby, the rule for change of coordinates from $B$ to $C$ is
 \begin{equation}
-\fua{\tnr{\Gamma}}{\mat{X}} = \maf{\tnr{i}}{B}{C}\mat{*_m\,}\mat{X}
+\fua{\tnr{\Gamma}}{\mat{X}} = \maf{\tnr{i}}{B}{C}\mat{*_m\,}\mat{X}\,.
 \end{equation}
 It is clear from the definition of Hilbert-adjoint tensor functions in \eqref{eq:HilbAdj} and from equality \eqref{eq:propHilbAjd} that
-$\maf{\tnr{i}}{B}{C}={\maf{\tnr{i}}{C}{B}}^\dagger$. Moreover, considering equalities \eqref{eq:regraOrtonmFunc} and \eqref{eq:regraCoordTens}, we can write that the elements
+$\maf{\tnr{i}}{B}{C}={\maf{\tnr{i}}{C}{B}}^\dagger$. Moreover, considering equalities \eqref{eq:regraOrtonmFunc}, \eqref{eq:regraCoordTens} and  \eqref{eq:matFunc}, we can write that the elements
 \begin{equation}\label{eq:elemChangeCoord}
 \maf{\tnr{i}}{B}{C}_{i_1\cdots i_m j_1\cdots j_m}= \vtf{f}_{j_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{j_m}^{B_m}(\vun{v}_{i_1}^{(1)},\cdots,\vun{v}_{i_m}^{(m)})=\prod_{k=1}^m\vun{v}_{i_k}^{(k)}	\cdot \vun{u}_{j_k}^{(k)}\,,
 \end{equation}
@@ -760,7 +764,7 @@ where bases $B_i=\{\vun{u}_{1}^{(i)},\cdots,\vun{u}_{n_i}^{(i)}\}$ and $C_i=\{\v
 \underbrace{\prod_{k=1}^m\vun{z}_{l_k}^{(k)}\cdot\vun{v}_{i_k}^{(k)}}_{\mat{C}_{l_1\cdots l_m i_1\cdots i_m}}&=\sum_{j_1=1}^{n_1}\cdots\sum_{j_p=1}^{n_p}\underbrace{\prod_{k=1}^m\vun{z}_{l_k}^{(k)}	\cdot \vun{u}_{j_k}^{(k)}}_{\mat{B}_{l_1\cdots l_m j_1\cdots j_m}}\underbrace{\prod_{k=1}^m\vun{u}_{j_k}^{(k)}	\cdot \vun{v}_{i_k}^{(k)}}_{\maf{\tnr{i}}{C}{B}_{j_1\cdots j_m i_1\cdots i_m}}\nonumber\\
 \mat{C}&=\mat{B}\,\mat{*_m}\,\maf{\tnr{i}}{C}{B}\,,
 \end{align}
-where $\maf{\tnr{i}}{C}{B}$ performs a change of basis from $B$ to $C$ when the coordinates of the elements of bases $B$ and $C$ on an arbitrary basis $Z$ are arranged according to arrays $\mat{B}$ and $\mat{C}$ defined in the development. Therefore, we can say that the coordinates of tensors are contravariant because if a change of coordinates is enabled by an array $\maf{\tnr{i}}{B}{C}$, the correspondent change of basis is performed by $\maf{\tnr{i}}{C}{B}$ in order to avoid any confusion.
+where $\maf{\tnr{i}}{C}{B}$ performs a change of basis from $B$ to $C$ when the coordinates of the elements of bases $B$ and $C$ on an arbitrary basis $Z$ are arranged according to arrays $\mat{B}$ and $\mat{C}$ defined in the development. Therefore, we can say that the coordinates of tensors are contravariant because if a change of coordinates is enabled by an array $\maf{\tnr{i}}{B}{C}$, the correspondent change of basis is performed by $\maf{\tnr{i}}{C}{B}$.
 
 \begin{mcoro}{Change of Linear Tensor Operator Coordinates}{mudaBaseTens}
 If $V^{\times m}(B)_\cam{F}$ and $V^{\times m}(C)_\cam{F}$ are vector spaces constituted by the representative arrays of linear tensor operators that belong to $\evl{\cam{F}}{\ete{\cam{F}}{V^{\times m}}}{\ete{\cam{F}}{V^{\times m}}}$, described respectively on bases $B$ and $C$ of tensor space $\ete{\cam{F}}{V^{\times m}}$, the change of coordinates $\map{\tnr{\Theta}}{V^{\times m}(B)_\cam{F}}{V^{\times m}(C)_\cam{F}}$ is described by $\fua{\tnr{\Theta}}{\mat{X}}=\maf{\vtf{i}}{B}{C}\,\mat{*_m}\,\mat{X}\,\mat{*_m}\,\maf{\vtf{i}}{C}{B}$.
@@ -768,7 +772,7 @@ If $V^{\times m}(B)_\cam{F}$ and $V^{\times m}(C)_\cam{F}$ are vector spaces con
 \hspace{1pt}
 {\footnotesize
 \begin{proof}
-Considering a function $\tnr{\psi}\in\evl{\cam{F}}{\ete{\cam{F}}{V^{\times m}}}{\ete{\cam{F}}{V^{\times m}}}$ and a tensor $\vto{T}\in \ete{\cam{F}}{V^{\times m}}$, the last equality of the following development
+Considering an arbitrary function $\tnr{\psi}\in\evl{\cam{F}}{\ete{\cam{F}}{V^{\times m}}}{\ete{\cam{F}}{V^{\times m}}}$ and a tensor $\vto{T}\in \ete{\cam{F}}{V^{\times m}}$, the last equality of the following development
 \begin{align*}
 \mav{\fua{\tnr{\psi}}{\tnr{T}}}{B}&=\maf{\tnr{\psi}}{B}{B}\mat{*_m}\mav{\tnr{T}}{B}\nonumber\\
 \maf{\vtf{i}}{C}{B}\mat{*_m}\mav{\fua{\tnr{\psi}}{\tnr{T}}}{C}&=\maf{\tnr{\psi}}{B}{B}\mat{*_m}\maf{\vtf{i}}{C}{B}\mat{*_m}\mav{\tnr{T}}{C}\nonumber\\
@@ -782,7 +786,7 @@ enables us to affirm that
 \end{proof}
 }
 
-Tensors and linear tensor operators can be represented in a higher aggregate form through the use of matrices. The strategy consists in considering each polyadic tensor of a given basis as an ordinary basis vector of its tensor space, which is actually a vector space of linear functionals, as we already know. In general terms, the labeling scheme changes from the basis vectors of $(U_\cam{F})_i$ to the basis tensors of $\ete{\cam{F}}{U^{\times m}}$. Thereby, it is implicit in labeling an arbitrary basis $\tnr{B}_i:=\{\vtf{f}_{i_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{i_m}^{B_m}\}$ of $\ete{\cam{F}}{U^{\times m}}$ the definition of a bijective mapping $\map{\nu}{(\cam{N}^+)^m}{\cam{N}^+}$, where integers involved are ordinals and $\fua{\nu}{i_1,\cdots,i_m}=i$. The dimension $p=n_1n_2\cdots n_m$ of $\ete{\cam{F}}{U^{\times m}}$ clearly leads to $i=1,\cdots,p$. In this context, we can write that tensor
+Tensors and linear tensor operators can be represented in a higher aggregate form through the use of matrices. The strategy consists in considering each polyadic tensor of a given basis as an ordinary basis vector of its tensor space, which is actually a vector space of multilinear functionals, as we already know. In general terms, the labeling scheme changes from the basis vectors of $(U_\cam{F})_i$ to the basis tensors of $\ete{\cam{F}}{U^{\times m}}$. Thereby, it is implicit in labeling an arbitrary basis $\tnr{B}_i:=\{\vtf{f}_{i_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{i_m}^{B_m}\}$ of $\ete{\cam{F}}{U^{\times m}}$ the definition of a bijective mapping $\map{\nu}{(\cam{N}^+)^m}{\cam{N}^+}$, where integers involved are ordinals and $\fua{\nu}{i_1,\cdots,i_m}=i$. The dimension $p=n_1n_2\cdots n_m$ of $\ete{\cam{F}}{U^{\times m}}$ clearly leads to $i=1,\cdots,p$. In this context, we can write that tensor
 \begin{equation}\label{eq:tensMatrix}
 \tnr{\tnr{T}}=\sum_{i=1}^p \fua{\vtf{f}_i^{B}}{\tnr{T}}\tnr{B}_i\,,
 \end{equation}
@@ -791,13 +795,13 @@ where $\fua{\vtf{f}_i^{B}}{\tnr{T}}=\fua{\frt{T}}{\tnr{B}_i}$, according to \eqr
 
 \section{Invariance of Tensors}
 
-The notion of invariance is of paramount importance in Classical Physics because the fundamental description of mechanical phenomena must be not only qualitatively immune to arbitrary changes of reference frame but also quantitatively indifferent when such changes are of unitary type. From a constitutive viewpoint, materials have their invariance too, when some or all of their inherent mechanical properties present themselves indistinctly on certain directions, that is, the overall mechanical behavior of a portion of matter in study is the same when this portion is subjected to specific motions. A tensor, as an algebraic entity that suitably embodies a physical magnitude, can be used to accordingly describe a mechanical measurement or a constitutive material property, including their eventual invariance requirements which we referred to. Thereby, it is the purpose of this section to briefly develop in mathematical terms this intuitive concept of invariance applied to tensors.
+The notion of invariance is of paramount importance in Classical Physics because the fundamental description of mechanical phenomena must be not only qualitatively immune to arbitrary changes of reference frame but also quantitatively indifferent when such changes are of unitary type. From a constitutive viewpoint, materials have their invariance too, when some or all of their inherent mechanical properties present themselves indistinctly on certain directions, that is, the overall mechanical behavior of a portion of matter in study is the same when this portion is subjected to specific motions. A tensor, as an algebraic entity that suitably embodies a physical magnitude, can be used to accordingly describe a mechanical measurement or a constitutive material property, including their eventual invariance features which we referred to. Thereby, it is the purpose of this section to briefly develop in mathematical terms this intuitive concept of invariance applied to tensors.
 
-Before we develop mathematically this notion of tensor invariance, there is a preliminary definition that needs to be addressed. The feature of proper orthogonality -- to which anti-isotropic tensors are invariant -- is also valid for tensor operators. As presented in section \ref{sec:Matrix}, an orthogonal operator is called proper if its determinant is $1$, but we still don't know what a determinant of a tensor operator is. In order to present this unusual definition as concisely as possible, we shall sacrifice self-containedness and tacitly accept the approach of \aut{Spivak}\cite{spivak_1965_1}\footnote{See also \aut{Bishop \& Goldberg}\cite{bishop_1980_1}, pp.97-100, and \aut{Backus}\cite{backus_1997_1}, pp.17-21.}, adapting to our case his theorem 4-6. Firstly, let's consider $\tnr{P}\in\etng{n}{\cam{F}}{A^p}$ an arbitrary non-zero antisymmetric tensor where set $A=U^{\times m}$ and $p=\dim(\eteg{n}{\cam{F}}{A})=n^m$. Let tensor function $\tnr{\psi}\in\evl{\cam{F}}{\eteg{n}{\cam{F}}{A}}{\eteg{n}{\cam{F}}{A}}$ and tensor   $\tnr{P}^{\tnr{\psi}}\in\etng{n}{\cam{F}}{A^p}$ such that scalar
+Before we develop mathematically this notion of tensor invariance, there is a preliminary definition that needs to be addressed. The feature of proper orthogonality -- to which anti-isotropic tensors, defined ahead, are invariant -- is also valid for tensor operators. As presented in section \ref{sec:Matrix}, an orthogonal operator is called proper if its determinant is $1$, but we still don't know what a determinant of a tensor operator is. In order to present this unusual definition as concisely as possible, we shall sacrifice self-containedness and tacitly accept the approach of \aut{Spivak}\cite{spivak_1965_1}\footnote{See also \aut{Bishop \& Goldberg}\cite{bishop_1980_1}, pp.97-100, and \aut{Backus}\cite{backus_1997_1}, pp.17-21.}, adapting to our case his theorem 4-6. Firstly, let's consider $\tnr{P}\in\etng{p}{\cam{F}}{A^p}$ an arbitrary non-zero alternating tensor where set $A=U^{\times m}$. Let tensor function $\tnr{\psi}\in\evl{\cam{F}}{\eteg{n}{\cam{F}}{U^{\times m}}}{\eteg{n}{\cam{F}}{U^{\times m}}}$ and alternating tensor   $\tnr{P}^{\tnr{\psi}}\in\etng{p}{\cam{F}}{A^p}$ such that scalar
 \begin{equation}\label{eq:defDetPsi}
 \fua{\tnr{P}^{\tnr{\psi}}}{\tnr{X}_1,\cdots,\tnr{X}_p}:=\fua{\tnr{P}}{\fua{\tnr{\psi}}{\tnr{X}_1},\cdots,{\fua{\tnr{\psi}}{\tnr{X}_p}}}\,,\,\forall\,\tnr{X}_i\in\eteg{n}{\cam{F}}{A}\,.
 \end{equation}
-We already know the interesting feature that any antisymmetric tensor space is one-di\-men\-sional and thereby the set $\{\tnr{P}\}$ can be a basis of $\etn{\cam{F}}{A^p}$, when it is valid to write that $\tnr{P}^{\tnr{\psi}}=\alpha\tnr{P}$, where $\alpha\in\cam{F}$ is the coordinate of $\tnr{P}^{\tnr{\psi}}$ on $\{\tnr{P}\}$. If a non-zero arbitrary tensor $\tnr{K}\in\etn{\cam{F}}{A^p}$ is considered, let $\beta\in\cam{F}$ be its coordinate on $\{\tnr{P}\}$. As the previous definition \eqref{eq:defDetPsi} is valid for an arbitrary tensor of $\etn{\cam{F}}{A^p}$, the following development
+We already know the interesting feature that any alternating tensor space is one-di\-men\-sional and thereby the set $\{\tnr{P}\}$ can be a basis of $\etng{p}{\cam{F}}{A^p}$, when it is valid to write that $\tnr{P}^{\tnr{\psi}}=\alpha\tnr{P}$, where $\alpha\in\cam{F}$ is the coordinate of $\tnr{P}^{\tnr{\psi}}$ on $\{\tnr{P}\}$. If a non-zero arbitrary tensor $\tnr{K}\in\etng{p}{\cam{F}}{A^p}$ is considered, let $\beta\in\cam{F}$ be its coordinate on $\{\tnr{P}\}$. Since the previous definition \eqref{eq:defDetPsi} is valid for an arbitrary tensor of $\etng{p}{\cam{F}}{A^p}$, the following development
 \begin{align*}
 \fua{\tnr{K}^{\tnr{\psi}}}{\tnr{X}_1,\cdots,\tnr{X}_p}&=\fua{\beta\tnr{P}}{\fua{\tnr{\psi}}{\tnr{X}_1},\cdots,{\fua{\tnr{\psi}}{\tnr{X}_p}}}\\
 &=\beta\fua{\tnr{P}^{\tnr{\psi}}}{\tnr{X}_1,\cdots,\tnr{X}_p}\\
@@ -808,22 +812,22 @@ leads to equality $\tnr{K}^{\tnr{\psi}}=\alpha\tnr{K}$. Therefore, it is possibl
 \begin{equation}\label{eq:detFunDef}
 \fua{\tnr{P}}{\fua{\tnr{\psi}}{\tnr{X}_1},\cdots,{\fua{\tnr{\psi}}{\tnr{X}_p}}}=\hdet{\tnr{\psi}}{\fua{\tnr{P}}{\tnr{X}_1,\cdots,\tnr{X}_p}}\,,
 \end{equation}
-is valid for all $\tnr{P}\in\{\etn{\cam{F}}{A^p}\setminus \tnr{0}\}$ and all $\tnr{X}_i\in\eteg{n}{\cam{F}}{A}$. From this equality, given a basis $B=\{\tnr{B}_1,\cdots,\tnr{B}_p\}$ of tensor space $\eteg{n}{\cam{F}}{A}$, if operator $\tnr{\psi}$ is proper unitary (see property vii below), then
+is valid for all $\tnr{P}\in\{\etng{p}{\cam{F}}{A^p}\setminus \tnr{0}\}$ and all $\tnr{X}_i\in\eteg{n}{\cam{F}}{U^{\times m}}$. From this equality, given a basis $B=\{\tnr{B}_1,\cdots,\tnr{B}_p\}$ of tensor space $\etng{n}{\cam{F}}{U^{\times m}}$ where $p=mn$, if operator $\tnr{\psi}$ is proper unitary (see property vii below), then
 \begin{equation*}
 \fua{\tnr{P}}{\fua{\tnr{\psi}}{\tnr{B}_1},\cdots,{\fua{\tnr{\psi}}{\tnr{B}_p}}}={\fua{\tnr{P}}{\tnr{B}_1,\cdots,\tnr{B}_p}}\,,
 \end{equation*}
-when we say that $\{\fua{\tnr{\psi}}{\tnr{B}_1},\cdots,\fua{\tnr{\psi}}{\tnr{B}_p}\}$, which is also a basis according to theorem \ref{teo:basesUnit}, has the same orientation of $B$. Now, according to theorem \ref{teo:repRieszTensor}, in the particular case where operator $\tnr{\psi}$ is a $1$-cotensor of a second order tensor $\tnr{T}\in \eteg{n}{\cam{F}}{A\times A}$, that is, $\tnr{T}_1^*=\tnr{\psi}$, it is possible to state that $\hdet{\tnr{T}}:=\hdet{\tnr{\psi}}$ and then
+when we say that $\{\fua{\tnr{\psi}}{\tnr{B}_1},\cdots,\fua{\tnr{\psi}}{\tnr{B}_p}\}$, which is also a basis according to theorem \ref{teo:basesUnit}, has the same orientation of $B$. Now, according to theorem \ref{teo:repRieszTensor}, in the particular case where operator $\tnr{\psi}$ is a $1$-cotensor of a second order tensor $\tnr{T}\in \eteg{n}{\cam{F}}{U^{\times 2}}$, that is, $\tnr{T}_1^*=\tnr{\psi}$, it is possible to state that $\hdet{\tnr{T}}:=\hdet{\tnr{\psi}}$ and then
 \begin{equation}\label{eq:detTensorSeg}
 \fua{\tnr{P}}{\fua{\tnr{T}_1^*}{\vto{x}_1^*},\cdots,{\fua{\tnr{T}_1^*}{\vto{x}_p^*}}}=\hdet{\tnr{T}}{\fua{\tnr{P}}{\vto{x}_1^*,\cdots,\vto{x}_p^*}}\,.
 \end{equation}
-Now, considering arbitrary functions $\tnr{\psi},\tnr{\varphi}\in\evl{\cam{F}}{\eteg{n}{\cam{F}}{A}}{\eteg{n}{\cam{F}}{A}}$, the following properties of determinant of tensor operators are valid:
+Now, considering arbitrary functions $\tnr{\psi},\tnr{\varphi}\in\evl{\cam{F}}{\eteg{n}{\cam{F}}{U^{\times m}}}{\eteg{n}{\cam{F}}{U^{\times m}}}$, the following properties of determinant of tensor operators are valid:
 \begin{itemize}
 \setlength\itemsep{.1em}
 \item[i.] $\hdet{\tnr{i}} =  1$;
 \item[ii.] $\hdet{\tnr{\psi}\circ\tnr{\varphi}} =  \hdet{\tnr{\psi}}\,\hdet{\tnr{\varphi}}$;
 \item[iii.] If $\tnr{\psi}$ is a bijection, then $\hdet{\tnr{\psi}^{-1}} =  (\hdet{\tnr{\psi}})^{-1}$;
 \item[iv.] If $\hdet{\tnr{\psi}}\neq 0$, then $\tnr{\psi}$ is a bijection;
-\item[v.] If $B$ and $C$ are bases of $\eteg{n}{\cam{F}}{A}$, then $\hdet{\tnr{\psi}}=\hdet{\maf{\tnr{\psi}}{B}{C}}$;
+\item[v.] If $B$ and $C$ are bases of $\eteg{n}{\cam{F}}{U^{\times m}}$, then $\hdet{\tnr{\psi}}=\hdet{\maf{\tnr{\psi}}{B}{C}}$;
 \item[vi.] $\hdet{\tnr{\psi}^\dagger}=\overline{\hdet{\tnr{\psi}}}$;
 \item[vii.] If $\tnr{\psi}$ is unitary, then $\hdet{\tnr{\psi}}=\pm 1$.
 \end{itemize}
@@ -862,8 +866,6 @@ since an equality similar to \eqref{eq:DeterminanteSimplificado} can be obtained
 \end{proof}
 }
 
-This theory of determinant presented so far is obviously valid for the context of order $m=1$, that is, the context of a tensor space $\etng{n}{\cam{F}}{U^n}$. Equalities \eqref{eq:alternDete} consist a specific example of the validity of \eqref{eq:detFunDef} for alternating tensors. The following theorem considers the result obtained by equality \eqref{eq:opeTensOrdin}, where a unitary tensor operator is always related to an ordinary unitary operator.
-
 \begin{mteo}{Unitary Tensor Operators and Alternating Tensors}{unimodAltern}
 Considering an arbitrary alternating tensor $\tnr{A}\in\etng{n}{\cam{F}}{U^n}$ and an arbitrary unitary tensor operator $\tnr{\psi}\in\grt{N}{\cam{F}}{U^{n}}$, it is valid that $\tnr{A}=\hdet{\tnr{\psi}}\,\fua{\tnr{\psi}}{\tnr{A}}$.
 \end{mteo}
@@ -882,7 +884,7 @@ Now, given a unimodular tensor $\tnr{A}_B$, where $B$ is an orthonormal basis of
 \end{proof}
 }
 
-Now that we know the determinant of linear tensor operators and its properties, let $\eteg{n}{\cam{F}}{U^{\times m}}$ be a Hilbert tensor space and function $\tnr{\varphi}$ be an arbitrary element of a group $\grt{G}{\cam{F}}{U^{\times m}}$ of invertible continuous linear tensor operators whose domain is $\eteg{n}{\cam{F}}{U^{\times m}}$. A tensor $\tnr{T}\in\eteg{n}{\cam{F}}{U^{\times m}}$ is said to be \textsb{invariant}\index{tensor!invariant} on group $\grt{G}{\cam{F}}{U^{\times m}}$ if $\fua{\tnr{\varphi}}{\tnr{T}}=\tnr{T}$. This equality and the linearity of $\tnr{\varphi}$ enable us to affirm that a set $V$ constituted by all tensors of $\eteg{n}{\cam{F}}{U^{\times m}}$ that are invariant on group $\grt{G}{\cam{F}}{U^{\times m}}$ is a tensor subspace of $\eteg{n}{\cam{F}}{U^{\times m}}$, when $V$ is represented by the invariant tensor space $\eti{\cam{F}}{U^{\times m}}$ on group $\grt{G}{\cam{F}}{U^{\times m}}$. This group is represented by $\grt{V}{\cam{F}}{U^{\times m}}$ and called the \textsb{invariance group}\index{group!invariant} of $\eti{\cam{F}}{U^{\times m}}$ if it is constituted by all the invertible continuous linear tensor operators on which every element of $\eti{\cam{F}}{U^{\times m}}$ is invariant. Thus, it is evident that operator $\tnr{i}\in\grt{V}{\cam{F}}{U^{\times m}}$. The unitary group $\grt{N}{\cam{F}}{U^{\times m}}\subseteq\grt{V}{\cam{F}}{U^{\times m}}$ is the invariance group of the invariant tensor space \gloref{isoTE}, whose tensors are said to be \textsb{isotropic}\index{tensor!isotropic}\footnote{\aut{Appleby et al}\cite{appleby_1987} define an isotropic tensor relative to certain changes of bases as the tensor whose coordinates are preserved under these changes, which is assured in our approach by all unitary operators.} relative to $\grt{N}{\cam{F}}{U^{\times m}}$, and then $\eti{\cam{F}}{U^{\times m}}\subseteq\eto{\cam{F}}{U^{\times m}}$. Moreover, the unitary group $\tnr{\mathcal{U}}^+_{\cam{F}}({U^{\times m}})\subset\grt{N}{\cam{F}}{U^{\times m}}$, where $\hdet{\tnr{\varphi}}=1$ for all $\tnr{\varphi}\in\tnr{\mathcal{U}}^+_{\cam{F}}({U^{\times m}})$, is the invariance group of \gloref{isoTO}, whose tensors are called \textsb{anti isotropic}\index{tensor!anti isotropic} relative to $\tnr{\mathcal{U}}^+_{\cam{F}}({U^{\times m}})$ and tensor space ${\eto{\cam{F}}{U^{\times m}}\subset\etom{\cam{F}}{U^{\times m}}}$. Then, we can say that every isotropic tensor is also anti isotropic. Tensors that are not isotropic are called \textsb{anisotropic}\index{tensor!anisotropic}. From definitions \eqref{eq:HilbAdj}, in the context of Euclidean spaces, we can say that (anti) isotropic tensors are defined by (proper) orthogonal groups.
+Now that we know the determinant of linear tensor operators and its properties, let $\eteg{n}{\cam{F}}{U^{\times m}}$ be a Hilbert tensor space and function $\tnr{\varphi}$ be an arbitrary element of a group $\grt{G}{\cam{F}}{U^{\times m}}$ of invertible continuous linear tensor operators whose domain is $\eteg{n}{\cam{F}}{U^{\times m}}$. A tensor $\tnr{T}\in\eteg{n}{\cam{F}}{U^{\times m}}$ is said to be \textsb{invariant}\index{tensor!invariant} on group $\grt{G}{\cam{F}}{U^{\times m}}$ if $\fua{\tnr{\varphi}}{\tnr{T}}=\tnr{T}$. This equality and the linearity of $\tnr{\varphi}$ enable us to affirm that a set $V$ constituted by all tensors of $\eteg{n}{\cam{F}}{U^{\times m}}$ that are invariant on group $\grt{G}{\cam{F}}{U^{\times m}}$ is a tensor subspace of $\eteg{n}{\cam{F}}{U^{\times m}}$, when $V$ is represented by the invariant tensor space $\eti{\cam{F}}{U^{\times m}}$ on group $\grt{G}{\cam{F}}{U^{\times m}}$. This group is represented by $\grt{V}{\cam{F}}{U^{\times m}}$ and called the \textsb{invariance group}\index{group!invariant} of $\eti{\cam{F}}{U^{\times m}}$ if it is constituted by all the invertible continuous linear tensor operators on which every element of $\eti{\cam{F}}{U^{\times m}}$ is invariant. Thus, it is evident that operator $\tnr{i}\in\grt{V}{\cam{F}}{U^{\times m}}$. The unitary group $\grt{N}{\cam{F}}{U^{\times m}}\subseteq\grt{V}{\cam{F}}{U^{\times m}}$ is the invariance group of the invariant tensor space \gloref{isoTE}, whose tensors are said to be \textsb{isotropic}\index{tensor!isotropic}\footnote{\aut{Appleby et al}\cite{appleby_1987} define an isotropic tensor relative to certain changes of bases as the tensor whose coordinates are preserved under these changes, which is assured in our approach by all unitary operators.} relative to $\grt{N}{\cam{F}}{U^{\times m}}$, and then $\eti{\cam{F}}{U^{\times m}}\subseteq\eto{\cam{F}}{U^{\times m}}$. Moreover, the unitary group $\tnr{\mathcal{N}}^+_{\cam{F}}({U^{\times m}})\subset\grt{N}{\cam{F}}{U^{\times m}}$, where $\hdet{\tnr{\varphi}}=1$ for all $\tnr{\varphi}\in\tnr{\mathcal{N}}^+_{\cam{F}}({U^{\times m}})$, is the invariance group of \gloref{isoTO}, whose tensors are called \textsb{anti isotropic}\index{tensor!anti isotropic} relative to $\tnr{\mathcal{N}}^+_{\cam{F}}({U^{\times m}})$ and tensor space ${\eto{\cam{F}}{U^{\times m}}\subset\etom{\cam{F}}{U^{\times m}}}$. Then, we can say that every isotropic tensor is also anti isotropic. Tensors that are not isotropic are called \textsb{anisotropic}\index{tensor!anisotropic}. From definitions \eqref{eq:HilbAdj}, in the context of Euclidean spaces, we can say that (anti) isotropic tensors are defined by (proper) orthogonal groups.
 
 
 \begin{mteo}{Coordinate Invariance of Isotropic Tensors}{coordIsot}
