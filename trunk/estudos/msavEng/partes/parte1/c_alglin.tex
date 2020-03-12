@@ -368,11 +368,12 @@ where $(\fua{\vtf{f}^\con{B}_{1}}{\vto{u}},\cdots,\fua{\vtf{f}^\con{B}_{n}}{\vto
 \vto{u}^c=(\sum_{i=1}^{n}\fua{\vtf{f}^\con{B}_{i}}{\vto{u}}\vto{u}_i)^c=\sum_{i=1}^{n}\fua{\overline{\vtf{f}^\con{B}_{i}}}{\vto{u}}\vto{u}_i^c\implies\fua{\overline{\vtf{f}^\con{B}_{i}}}{\vto{u}}=\fua{\vtf{f}^\con{B^c}_{i}}{\vto{u}^c}\,.
 \end{equation}
 where $B^c:=\{\vto{u}_1^c,\cdots,\vto{u}_n^c\}$ is a basis of $\overline{U_\cam{F}}$.
-As an arbitrary basis vector
-\begin{equation}
-\vto{u}_i=\sum_{j=1}^{n}\fua{\vtf{f}^\con{B}_{j}}{\vto{u}_i}\vto{u}_j\,,
+Additionally, since an arbitrary basis vector $\vto{u}_i=\sum_{j=1}^{n}\fua{\vtf{f}^\con{B}_{j}}{\vto{u}_i}\vto{u}_j$,
+we conclude that
+\begin{equation}\label{eq:coordBase}
+\fua{\vtf{f}^{B}_j}{\vto{u}_i}=\delta_{ij}\,.
 \end{equation}
-it results that $\fua{\vtf{f}^{B}_j}{\vto{u}_i}=\delta_{ij}$. Moreover, considering the set $\hat{B}=\{\vun{u}_1,\cdots,\vun{u}_n\}$ an orthonormal basis of the Hilbert space $U_\cam{F}$, we can say that
+Moreover, considering the set $\hat{B}=\{\vun{u}_1,\cdots,\vun{u}_n\}$ an orthonormal basis of the Hilbert space $U_\cam{F}$, we can say that
 \begin{equation}
 \vto{x}\cdot\vun{u}_i=\sum_{j=1}^{n}\fua{\vtf{f}^\con{\hat{B}}_{j}}{\vto{x}}\vun{u}_j\cdot\vun{u}_i=\sum_{j=1}^{n}\fua{\vtf{f}^\con{\hat{B}}_{j}}{\vto{x}}\delta_{ji}=\fua{\vtf{f}^\con{\hat{B}}_{i}}{\vto{x}}\,,\,\forall\, \vto{x}\in U_\cam{F}\,,
 \end{equation}
