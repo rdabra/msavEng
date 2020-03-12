@@ -305,18 +305,19 @@ From this definition, if $(V_\cam{F})_i$ is a Hilbert space and $B_i=\{\vun{u}_1
 &=\sum_{{i_1}=1}^{n_1}\cdots\sum_{{i_p}=1}^{n_p}\sum_{{j_1}=1}^{n_1}\cdots\sum_{{j_p}=1}^{n_p}\prod_{k=1}^p\fua{\vtf{f}^\con{B_k}_{i_k}}{\vto{x}_k}\fua{\vtf{f}^\con{B_k}_{j_k}}{\vto{y}_k}\delta_{i_1j_1}\cdots\delta_{i_pj_p}\\
 &=\sum_{{i_1}=1}^{n_1}\cdots\sum_{{i_p}=1}^{n_p}\prod_{k=1}^p\fua{\vtf{f}^\con{B_k}_{i_k}}{\vto{x}_k}\fua{\vtf{f}^\con{B_k}_{i_k}}{\vto{y}_k}\,,
 \end{align*}
-considering equalities \eqref{eq:decompVectConj} and \eqref{eq:orthoConju}. Thereby, from the definition of tensor product, we can write that tensor
+where equalities \eqref{eq:decompVectConj}, \eqref{eq:coordBase}, \eqref{eq:orthoConju} were considered. Thereby, from the definition of tensor product, we can write that tensor
 \begin{equation}\label{eq:poliadIdentidade}
 \tnr{I}=\sum_{{i_1}=1}^{n_1}\cdots\sum_{{i_p}=1}^{n_p}\vtf{f}_{i_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{i_p}^{B_p}\otimes\vtf{f}_{i_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{i_p}^{B_p}
 \end{equation}
 or, more completely,
 \begin{equation}
-\tnr{I}=\sum_{{i_1}=1}^{n_1}\cdots\sum_{{i_p}=1}^{n_p}\sum_{{j_1}=1}^{n_1}\cdots\sum_{{j_p}=1}^{n_p}\delta_{i_1j_1}\cdots\delta_{i_pj_p}\vtf{f}_{i_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{i_p}^{B_p}\otimes\vtf{f}_{j_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{j_p}^{B_p}\,,
+\tnr{I}=\sum_{{i_1}=1}^{n_1}\cdots\sum_{{i_p}=1}^{n_p}\sum_{{j_1}=1}^{n_1}\cdots\sum_{{j_p}=1}^{n_p}\delta_{i_1j_1}\cdots\delta_{i_pj_p}\vtf{f}_{i_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{i_p}^{B_p}\otimes\vtf{f}_{j_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{j_p}^{B_p}\,.
 \end{equation}
-from which we conclude for an arbitrary basis $B$ of $\ete{\cam{F}}{V^{\times p}\times V^{\times p}}$ that
+From this result, we conclude that
 \begin{equation}\label{eq:coordIdent}
-\vtf{f}_{i_1\cdots i_pj_1\cdots j_p}^{B}(\tnr{I})=\prod_{k=1}^p \delta_{i_kj_k}.
+\vtf{f}_{i_1\cdots i_pj_1\cdots j_p}^{B}(\tnr{I})=\prod_{k=1}^p \delta_{i_kj_k}\,,
 \end{equation}
+where $B$ is a basis of $\ete{\cam{F}}{V^{\times p}\times V^{\times p}}$ constructed by $B_i$.
 
 
 \section{Tensor Functions}
@@ -532,12 +533,12 @@ In this study, a tensor function is treated like an ordinary function, on which 
 where functions $\tnr{\psi}^\dagger,\tnr{\psi}^\text{T}\in\evlc{\cam{F}}{\ete{\cam{F}}{V^{\times q}}}{\ete{\cam{F}}{U^{\times p}}}$ are called the Hilbert-adjoint and transpose tensor functions of $\tnr{\psi}$ respectively, as defined on section \ref{sec:FuncLin}. In this context, all properties of ordinary adjoint or transpose functions presented on page \pageref{eq:propAdj} are also valid and operator $\tnr{\varphi}\in\evlc{\cam{F}}{\ete{\cam{F}}{U^{\times p}}}{\ete{\cam{F}}{U^{\times p}}}$ is said to be Hermitian when  $\tnr{\varphi}=\tnr{\varphi}^\dagger$ and anti-Hermitian when $\tnr{\varphi}=-\tnr{\varphi}^\dagger$. Moreover, operator $\tnr{\varphi}$ is called symmetric if $\tnr{\varphi}=\tnr{\varphi}^\text{T}$ and antisymmetric when $\tnr{\varphi}=-\tnr{\varphi}^\text{T}$. As defined previously, if tensor function $\tnr{\psi}$ is an injection whose inverse equals the adjoint, it is called unitary; or if injection $\tnr{\psi}$ has its inverse equal to its transpose, it is called orthogonal. Similarly to unitary and orthogonal vector operators, the set of all unitary tensor operators on domain $\ete{\cam{F}}{U^{\times p}}$ defines a unitary group of tensors $\grt{N}{\cam{F}}{U^{\times p}}\subset\grt{G}{\cam{F}}{U^{\times p}}$ on this same domain and the set of all orthogonal tensor operators on $\ete{\cam{F}}{U^{\times p}}$ defines an orthogonal group  $\grt{O}{\cam{F}}{U^{\times p}}\subset\grt{G}{\cam{F}}{U^{\times p}}$. Again, like ordinary unitary operators, unitary tensor operators clearly preserve inner product. An operator $\tnr{\kappa}\in\evl{\cam{F}}{\ete{\cam{F}}{U^{\times p}}}{\ete{\cam{F}}{U^{\times p}}}$ is called isometric if  $\varrho\,[\fua{\tnr{\kappa}}{\tnr{U}_1},\fua{\tnr{\kappa}}{\tnr{U}_2}]=\fua{\varrho}{\tnr{U}_1,\tnr{U}_2}$, where tensors $\tnr{U}_1$ and $\tnr{U}_2$ are arbitrary. Thereby, the set of all isometric tensor operators defines an isometry group $\grt{I}{\cam{F}}{U^{\times p}}$. For Euclidean tensor spaces, an isometry group is also an unitary group whose elements preserve inner product; it is also true that adjoint, (anti-)Hermitian and unitary functions equal respectively to transpose, (anti)symmetric and orthogonal functions.
 
 \begin{mteo}{Bases and Unitary Tensor Operators}{basesUnit}
-Considering $\tnr{\psi}\in\grt{N}{\cam{F}}{U^{\times p}}$ an arbitrary operator and $\vtf{f}_{i_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{i_p}^{B_p}$ an arbitrary element of a basis of $\ete{\cam{F}}{U^{\times p}}$, then $\fua{\tnr{\psi}}{\vtf{f}_{i_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{i_p}^{B_p}}$ is also an element of a basis of  $\ete{\cam{F}}{U^{\times p}}$.
+Let $\tnr{\psi}\in\grt{N}{\cam{F}}{U^{\times p}}$ be an arbitrary operator and $B_i$ an orthonormal basis of ${(U_i)}_\cam{F}$. If tensor $\vtf{f}_{i_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{i_p}^{B_p}$ is an arbitrary element of a basis of $\ete{\cam{F}}{U^{\times p}}$, then $\fua{\tnr{\psi}}{\vtf{f}_{i_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{i_p}^{B_p}}$ is also an element of a basis of  $\ete{\cam{F}}{U^{\times p}}$.
 \end{mteo}
 
 {\footnotesize
 \begin{proof}
-Let's verify if $\fua{\tnr{\psi}}{\vtf{f}_{i_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{i_p}^{B_p}}$ really builds a basis of $\ete{\cam{F}}{U^{\times p}}$. As $\tnr{\psi}$ preserves inner products and considering $B_i$ an orthonormal basis, equalities
+Let's verify if $\fua{\tnr{\psi}}{\vtf{f}_{i_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{i_p}^{B_p}}$ really builds a basis of $\ete{\cam{F}}{U^{\times p}}$. As $\tnr{\psi}$ preserves inner products,
 \begin{equation*}
 \fua{\tnr{\psi}}{\vtf{f}_{i_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{i_p}^{B_p}}\cdot\fua{\tnr{\psi}}{\vtf{f}_{j_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{j_p}^{B_p}}=\vtf{f}_{i_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{i_p}^{B_p}\cdot\vtf{f}_{j_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{j_p}^{B_p}=\prod_{k=1}^p\delta_{i_kj_k}
 \end{equation*}
@@ -812,15 +813,15 @@ leads to equality $\tnr{K}^{\tnr{\psi}}=\alpha\tnr{K}$. Therefore, it is possibl
 \begin{equation}\label{eq:detFunDef}
 \fua{\tnr{P}}{\fua{\tnr{\psi}}{\tnr{X}_1},\cdots,{\fua{\tnr{\psi}}{\tnr{X}_p}}}=\hdet{\tnr{\psi}}{\fua{\tnr{P}}{\tnr{X}_1,\cdots,\tnr{X}_p}}\,,
 \end{equation}
-is valid for all $\tnr{P}\in\{\etng{p}{\cam{F}}{A^p}\setminus \tnr{0}\}$ and all $\tnr{X}_i\in\eteg{n}{\cam{F}}{U^{\times m}}$. From this equality, given a basis $B=\{\tnr{B}_1,\cdots,\tnr{B}_p\}$ of tensor space $\etng{n}{\cam{F}}{U^{\times m}}$ where $p=mn$, if operator $\tnr{\psi}$ is proper unitary (see property vii below), then
+is valid for all $\tnr{P}\in\{\etng{p}{\cam{F}}{A^p}\setminus \tnr{0}\}$ and all $\tnr{X}_i\in\eteg{n}{\cam{F}}{U^{\times m}}$. From this equality, given a basis $B=\{\tnr{B}_1,\cdots,\tnr{B}_p\}$ of tensor space $\eteg{n}{\cam{F}}{U^{\times m}}$ where $p=n^m$, if operator $\tnr{\psi}$ is proper unitary (see property vii below), then
 \begin{equation*}
 \fua{\tnr{P}}{\fua{\tnr{\psi}}{\tnr{B}_1},\cdots,{\fua{\tnr{\psi}}{\tnr{B}_p}}}={\fua{\tnr{P}}{\tnr{B}_1,\cdots,\tnr{B}_p}}\,,
 \end{equation*}
 when we say that $\{\fua{\tnr{\psi}}{\tnr{B}_1},\cdots,\fua{\tnr{\psi}}{\tnr{B}_p}\}$, which is also a basis according to theorem \ref{teo:basesUnit}, has the same orientation of $B$. Now, according to theorem \ref{teo:repRieszTensor}, in the particular case where operator $\tnr{\psi}$ is a $1$-cotensor of a second order tensor $\tnr{T}\in \eteg{n}{\cam{F}}{U^{\times 2}}$, that is, $\tnr{T}_1^*=\tnr{\psi}$, it is possible to state that $\hdet{\tnr{T}}:=\hdet{\tnr{\psi}}$ and then
 \begin{equation}\label{eq:detTensorSeg}
-\fua{\tnr{P}}{\fua{\tnr{T}_1^*}{\vto{x}_1^*},\cdots,{\fua{\tnr{T}_1^*}{\vto{x}_p^*}}}=\hdet{\tnr{T}}{\fua{\tnr{P}}{\vto{x}_1^*,\cdots,\vto{x}_p^*}}\,.
+\fua{\tnr{P}}{\fua{\tnr{T}_1^*}{\vto{x}_1^*},\cdots,{\fua{\tnr{T}_1^*}{\vto{x}_{p}^*}}}=\hdet{\tnr{T}}{\fua{\tnr{P}}{\vto{x}_1^*,\cdots,\vto{x}_{p}^*}}\,,
 \end{equation}
-Now, considering arbitrary functions $\tnr{\psi},\tnr{\varphi}\in\evl{\cam{F}}{\eteg{n}{\cam{F}}{U^{\times m}}}{\eteg{n}{\cam{F}}{U^{\times m}}}$, the following properties of determinant of tensor operators are valid:
+where $p=n^2$. Now, considering arbitrary functions $\tnr{\psi},\tnr{\varphi}\in\evl{\cam{F}}{\eteg{n}{\cam{F}}{U^{\times m}}}{\eteg{n}{\cam{F}}{U^{\times m}}}$, the following properties of determinant of tensor operators are valid:
 \begin{itemize}
 \setlength\itemsep{.1em}
 \item[i.] $\hdet{\tnr{i}} =  1$;
@@ -888,20 +889,20 @@ Now that we know the determinant of linear tensor operators and its properties, 
 
 
 \begin{mteo}{Coordinate Invariance of Isotropic Tensors}{coordIsot}
-Considering  an arbitrary unitary operator $\tnr{\psi}\in\grt{N}{\cam{F}}{U^{\times m}}$ where $\dim{({U_\cam{F}})_i=n}$, tensor bases $B=\{\tnr{B}_1,\cdots,\tnr{B}_p\}$ and  $C=\{\fua{\tnr{\psi}}{\tnr{B}_1},\cdots,\fua{\tnr{\psi}}{\tnr{B}_p}\}$ of $\eto{\cam{F}}{U^{\times m}}$, where $p=n^m$, equalities $\fua{\tnr{f}_{i}^B}{\tnr{Q}}=\fua{\tnr{f}_{i}^C}{\tnr{Q}}$ are valid for arbitrary $\tnr{Q}\in\eto{\cam{F}}{U^{\times m}}$. Moreover, if $\fua{\tnr{f}_{i}^B}{\tnr{T}}=\fua{\tnr{f}_{i}^C}{\tnr{T}}$ for a certain tensor $\tnr{T}\in\eteg{n}{\cam{F}}{U^{\times m}}$, then $\tnr{T}$ also belongs to $\eto{\cam{F}}{U^{\times m}}$.
+Considering  an arbitrary unitary operator $\tnr{\psi}\in\grt{N}{\cam{F}}{U^{\times m}}$ where $\dim{({U_\cam{F}})_i=n}$, tensor bases $B=\{\tnr{B}_1,\cdots,\tnr{B}_p\}$ and  $C=\{\fua{\tnr{\psi}}{\tnr{B}_1},\cdots,\fua{\tnr{\psi}}{\tnr{B}_p}\}$ of $\eto{\cam{F}}{U^{\times m}}$, where $p=n^m$ and tensor $\tnr{B}_i$ is defined by orthonormal bases, according to theorem \ref{teo:basesUnit}, then equalities $\fua{\tnr{f}_{i}^B}{\tnr{Q}}=\fua{\tnr{f}_{i}^C}{\tnr{Q}}$ are valid for arbitrary $\tnr{Q}\in\eto{\cam{F}}{U^{\times m}}$. Moreover, if $\fua{\tnr{f}_{i}^B}{\tnr{T}}=\fua{\tnr{f}_{i}^C}{\tnr{T}}$ for a certain tensor $\tnr{T}\in\eteg{n}{\cam{F}}{U^{\times m}}$, then $\tnr{T}$ also belongs to $\eto{\cam{F}}{U^{\times m}}$.
 \end{mteo}
 
 {\footnotesize
 \begin{proof}
-First, let's verify if set $V$ is indeed a vector space of invariant tensors on $\grt{G}{\cam{F}}{U^{\times m}}$. Considering operator $\tnr{\varphi}\in\grt{G}{\cam{F}}{U^{\times m}}$, $\alpha,\beta\in\cam{F}$ and $\tnr{A},\tnr{B}\in V$ arbitrary elements of their respective sets, the following equalities $\alpha\tnr{A}+\beta\tnr{B}=\fua{\alpha\tnr{\varphi}}{\tnr{A}}+\beta\fua{\tnr{\varphi}}{\tnr{B}}=\fua{\tnr{\varphi}}{\alpha\tnr{A}+\beta\tnr{B}}$ prove that sum and multiplication by scalar of invariant tensors result in an invariant tensor, since $\tnr{\varphi}$ is linear. This condition also justifies that $\tnr{0}\in V$ because $\fua{\tnr{\varphi}}{\tnr{0}}=\tnr{0}$. The verification of other axioms of vector spaces is trivial. Now, let's prove the theorem above. From theorem \ref{teo:basesUnit}, we know that set $C=\{\fua{\tnr{\psi}}{\tnr{B}_1},\cdots,\fua{\tnr{\psi}}{\tnr{B}_p}\}$ is indeed a basis of $\eto{\cam{F}}{U^{\times m}}$. As $\fua{\tnr{\psi}}{\tnr{Q}}=\tnr{Q}$, equalities
+First, let's verify if set $V$ is indeed a vector space of invariant tensors on $\grt{G}{\cam{F}}{U^{\times m}}$. Considering operator $\tnr{\varphi}\in\grt{G}{\cam{F}}{U^{\times m}}$, $\alpha,\beta\in\cam{F}$ and $\tnr{A},\tnr{B}\in V$ arbitrary elements of their respective sets, the following equalities $\alpha\tnr{A}+\beta\tnr{B}=\fua{\alpha\tnr{\varphi}}{\tnr{A}}+\beta\fua{\tnr{\varphi}}{\tnr{B}}=\fua{\tnr{\varphi}}{\alpha\tnr{A}+\beta\tnr{B}}$ prove that sum and multiplication by scalar of invariant tensors result in an invariant tensor, since $\tnr{\varphi}$ is linear. This condition also justifies that $\tnr{0}\in V$ because $\fua{\tnr{\varphi}}{\tnr{0}}=\tnr{0}$. The verification of other axioms of vector spaces is trivial. Now, let's prove the theorem above. From theorem \ref{teo:basesUnit}, we know that set $C=\{\fua{\tnr{\psi}}{\tnr{B}_1},\cdots,\fua{\tnr{\psi}}{\tnr{B}_p}\}$ is indeed a basis of $\eto{\cam{F}}{U^{\times m}}$. Since $\fua{\tnr{\psi}}{\tnr{Q}}=\tnr{Q}$, equalities
 \begin{alignat*}{3}
 \fua{\tnr{\psi}}{\tnr{Q}}=\sum_{{i}=1}^p\fua{\tnr{f}_{i}^B}{\tnr{Q}} \fua{\tnr{\psi}}{\tnr{B}_i} &\qquad \text{and}\qquad& \tnr{Q}=\sum_{{i}=1}^p\fua{\tnr{f}_{i}^C}{\tnr{Q}} \fua{\tnr{\psi}}{\tnr{B}_i}
 \end{alignat*}
-enable us to verify that coordinates $\fua{\tnr{f}_{i}^B}{\tnr{Q}}=\fua{\tnr{f}_{i}^C}{\tnr{Q}}$. Considering these same equalities for the case of a tensor $\tnr{T}$ that has equal coordinates on bases $B$ and $C$, the conclusion of $\fua{\tnr{\psi}}{\tnr{T}}=\tnr{T}$ is straightforward.
+enable us to conclude that coordinates $\fua{\tnr{f}_{i}^B}{\tnr{Q}}=\fua{\tnr{f}_{i}^C}{\tnr{Q}}$. Considering these same equalities for the case of a tensor $\tnr{T}$ that has equal coordinates on bases $B$ and $C$, the conclusion of $\fua{\tnr{\psi}}{\tnr{T}}=\tnr{T}$ is straightforward.
 \end{proof}
 }
 
-Admitting a tensor space $\eteg{m}{\cam{F}}{U^p}$ and a group $\grt{N}{\cam{F}}{U^p}$, where $p$ is even, by equality \eqref{eq:coordIdent} we know that the coordinates of identity tensor $\tnr{I}\in\eteg{m}{\cam{F}}{U^p}$ are the same for any chosen basis. Therefore, from theorem above, it is clear that $\tnr{I}$ is isotropic, that is, $\tnr{I}\in\eto{\cam{F}}{U^p}$. In this context, again by equality \eqref{eq:coordIdent}, it is straightforward to see that the coordinates of an arbitrary tensor belonging to $\spn(\{\tnr{I}\})$ are the same for any chosen basis of $\eteg{m}{\cam{F}}{U^p}$. Therefore, it is possible to affirm that \emph{any linear combination of an identity tensor is isotropic}. Now, from the context of theorem \ref{teo:unimodAltern}, it is straightforward to conclude that an arbitrary alternating tensor $\tnr{A}\in\etng{m}{\cam{F}}{U^m}$ is anti isotropic, that is, equality $\tnr{A}=\fua{\tnr{\psi}}{\tnr{A}}$ is valid only when $\hdet{\tnr{\psi}}=1$. Moreover, we can say that \emph{any linear combination of alternating tensors is anti isotropic}. Finally, it can be obtained that \emph{every permutation of an (anti) isotropic tensor and a linear combination of such permutations are also (anti) isotropic}. It is important to say also that tensor products preserve (anti) isotropy the following way:
+Admitting a tensor space $\eteg{m}{\cam{F}}{U^p}$ and a group $\grt{N}{\cam{F}}{U^p}$, where $p$ is even, by equality \eqref{eq:coordIdent} we know that the coordinates of identity tensor $\tnr{I}\in\eteg{m}{\cam{F}}{U^p}$ are the same for any chosen basis defined from orthonormal bases of $U_\cam{F}$. Therefore, from theorem above, it is clear that $\tnr{I}$ is isotropic, that is, $\tnr{I}\in\eto{\cam{F}}{U^p}$. In this context, again by equality \eqref{eq:coordIdent}, it is straightforward to see that the coordinates of an arbitrary tensor belonging to $\spn(\{\tnr{I}\})$ are the same for any chosen basis of $\eteg{m}{\cam{F}}{U^p}$ defined from orthonormal bases of $U_\cam{F}$. Therefore, it is possible to affirm that \emph{any linear combination of an identity tensor is isotropic}. Now, from the context of theorem \ref{teo:unimodAltern}, it is straightforward to conclude that an arbitrary alternating tensor $\tnr{A}\in\etng{m}{\cam{F}}{U^m}$ is anti isotropic, that is, equality $\tnr{A}=\fua{\tnr{\psi}}{\tnr{A}}$ is valid only when $\hdet{\tnr{\psi}}=1$. Moreover, we can say that \emph{any linear combination of alternating tensors is anti isotropic}. Finally, it can be obtained that \emph{every permutation of an (anti) isotropic tensor and a linear combination of such permutations are also (anti) isotropic}. It is important to say also that tensor products preserve (anti) isotropy the following way:
 \begin{itemize}
 \setlength\itemsep{.1em}
 \item[i.] If $\tnr{Q}_1,\tnr{Q}_2\in\eto{\cam{F}}{U^{m}}$ then $\tnr{Q}_1\otimes\tnr{Q}_2\in\eto{\cam{F}}{U^{m}\times U^{m}}$;
@@ -910,7 +911,7 @@ Admitting a tensor space $\eteg{m}{\cam{F}}{U^p}$ and a group $\grt{N}{\cam{F}}{
 
 {\footnotesize
 \begin{proof}
-First, let's verify the (anti) isotropy of permutation of tensors. Considering equality \eqref{eq:opeTensOrdin}, in the context where unitary operators $\tnr{\psi}^{-1}$ and $\vtf{h}$ are related, for an arbitrary isotropic tensor $\tnr{Q}\in\eto{\cam{F}}{U^{m}}$, the following development proves that $\tnr{Q}_\pi=\fua{\tnr{\psi}}{\tnr{Q}_\pi}$:
+First, let's verify the (anti) isotropy of permutation of tensors. Considering equality \eqref{eq:opeTensOrdin} and the definition of unitary function, in the context where unitary operators $\tnr{\psi}^{-1}$ and $\vtf{h}$ are related, for an arbitrary isotropic tensor $\tnr{Q}\in\eto{\cam{F}}{U^{m}}$, the following development proves that $\tnr{Q}_\pi=\fua{\tnr{\psi}}{\tnr{Q}_\pi}$:
 \begin{align*}
 \fua{\tnr{Q}_\pi}{\vto{x}_1,\cdots,\vto{x}_m}&=\fua{\fua{\tnr{\psi}}{\tnr{Q}}}{\vto{x}_{\fua{\pi}{1}},\cdots,\vto{x}_{\fua{\pi}{m}}}\\
 &=\fua{\tnr{\psi}}{\tnr{Q}}\cdot(\vto{x}_{\fua{\pi}{1}}\otimes\cdots\otimes\vto{x}_{\fua{\pi}{m}})\\
@@ -931,11 +932,11 @@ where $\tnr{\phi}\in\grt{N}{\cam{F}}{U^{m}\times U^{m}}$, proves the first prope
 \end{proof}
 }
 
-At this point, we sacrifice once again self-containednes and humbly stand upon the shoulders of a giant: the german mathematician Hermann Weyl(1885-1955). By proving his Theorem 2.9.A, \aut{Weyl}\cite{weil_1953_2} shows that identity tensor $\tnr{I}\in\eto{\cam{F}}{U^p}$, where $p$ is even, its transpositions and their linear combinations constitute the isotropy group, that is, tensor space
+At this point, we sacrifice once again self-containednes and humbly stand upon the shoulders of a giant: the german mathematician Hermann Weyl(1885-1955). By proving his Theorem 2.9.A, \aut{Weyl}\cite{weil_1953_2} showed that identity tensor $\tnr{I}\in\eto{\cam{F}}{U^p}$, where $p$ is even, its transpositions and their linear combinations constitute the isotropy group, that is, tensor space
 \begin{equation}
 \eto{\cam{F}}{U^{p}}= \spn(\{\tnr{I}\})\,\cup\,\spn(\{\tnr{I}_\pi\})\,.
 \end{equation}
-For the case of anti isotropic tensors, he arrives at
+For the case of anti isotropic tensors, he arrived at
 \begin{equation}
 \etom{\cam{F}}{U^p\times U^m}= \spn(\{\tnr{I}\otimes\tnr{A}\})\,\cup\,\spn(\{(\tnr{I}\otimes\tnr{A})_\pi\})\,,
 \end{equation}
