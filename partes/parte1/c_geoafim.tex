@@ -132,6 +132,11 @@ which can be visualized in figure \ref{fg:geoProject}. In this context, the foll
 \begin{equation}\label{eq:geoProdInt}
 \vv{ox}\cdot\vv{oy}=\|\vv{ox}\|\|\vv{oy}\|\cos\theta.
 \end{equation}
+From this equality and the scalar geometric projection $\vartheta$ of $\vv{ox}$ onto $\vv{oy}$, then
+\begin{equation}
+\fua{\zeta}{\vv{ox},\vv{oy}}=\dfrac{\vv{ox}\cdot \vv{oy}}{\|\vv{oy}\|} = \dfrac{\|\vv{ox}\|\|\vv{oy}\|\cos\theta }{\|\vv{oy}\|}= \|\vv{ox}\|\cos\theta=\vartheta\,.
+\end{equation}
+
 \begin{figure}[!ht]
 	\centering
 	\begin{center}
@@ -140,29 +145,7 @@ which can be visualized in figure \ref{fg:geoProject}. In this context, the foll
 	\titfigura{Vector and scalar geometric projections.}\label{fg:geoProject}
 \end{figure}
 
-\begin{mcoro}{Projection of Euclidean Vectors}{projEuclid}
-Considering an affine Euclidean space $\eamd{S}{R}{n}$, if $\vartheta$ is the scalar geometric projection of $\vv{ox}\in S_\cam{R}$ onto $\vv{oy}\in S_\cam{R}$, then
-$\fua{\zeta}{\vv{ox},\vv{oy}}=\vartheta$.
-\end{mcoro}
-\hspace{1pt}
-{\footnotesize
-\begin{proof}
-From definition \eqref{eq:projgeo} and previous theorem, we have the following:
-\begin{align*}
-|\fua{\zeta}{\vv{ox},\vv{oy}}|&\leq\|\vv{ox}\|\\
-|\cos\theta||\fua{\zeta}{\vv{ox},\vv{oy}}|&\leq|\cos\theta|\|\vv{ox}\|\\
-|\cos\theta||\fua{\zeta}{\vv{ox},\vv{oy}}|&\leq|\vartheta|\,.
-\end{align*}
-Since last inequality is true for all $\vv{ox},\vv{oy}\in S_\cam{R}$, choosing $\vv{oy}=\vv{ox}$, then $|\vartheta|\geq|\fua{\zeta}{\vv{ox},\vv{ox}}|$ since because $\theta=0$. In this context, from \eqref{eq:projgeo} and \eqref{eq:projColinearEuclid} we obtain $\vartheta=\|\vv{ox}\|$ and $\fua{\zeta}{\vv{ox},\vv{ox}}=\|\vv{ox}\|$ respectively, and then 
-$\vartheta=|\fua{\zeta}{\vv{ox},\vv{ox}}|$
-
- Moreover, since inequality  $|\vartheta|\geq|\fua{\zeta}{\vv{ox},\vv{oy}}|$ is valid for all $\vv{ox},\vv{oy}\in S_\cam{R}$ then, if  $\vv{oy}=\alpha\vv{ox}$, $\alpha\in\{\real\setminus 0\}$, we conclude that $\fua{\zeta}{\vv{ox},\vv{oy}}\geq\vartheta$
-
-only if $\fua{\zeta}{\vv{ox},\vv{oy}}=\vartheta$, otherwise it would fail for $\vv{oy}=\alpha\vv{ox}$, $\alpha\in\{\real\setminus 0\}$, because in this condition if we rewrite \eqref{eq:projgeo} as $\vartheta=\|\vv{ox}\||\cos\theta|\sgn{cos\theta}$, we obtain from \eqref{eq:projColinearEuclid} that $\fua{\zeta}{\vv{ox},\vv{oy}}=\vartheta$ since $\sgn{\alpha}=\sgn{\cos\theta}$ and $|\cos\theta|=1$.
-\end{proof}}
-
-
-From the previous corollary and equality \eqref{eq:projgeo}, if there is no geometric projection between $\vv{ox}$ and $\vv{oy}$, that is, $\vartheta=0$, we conclude that the angle $\theta=\pi(k+1/2)$, $k=0,1,..\,$. Thereby, if line $\eamsd{W}{\real}{b}{1}$ and plane $\eamsd{V}{\real}{a}{2}$, subspaces of affine Euclidean space $\eamd{S}{\real}{5}$, are perpendicular, we can represent them as depicted on figure \ref{fg:perpend}.
+From the previous equality and definition \eqref{eq:projgeo}, if there is no geometric projection between $\vv{ox}$ and $\vv{oy}$, that is, $\vartheta=0$, we conclude that the angle $\theta=\pi(k+1/2)$, $k=0,1,..\,$. Thereby, if line $\eamsd{W}{\real}{b}{1}$ and plane $\eamsd{V}{\real}{a}{2}$, subspaces of affine Euclidean space $\eamd{S}{\real}{5}$, are perpendicular, we can represent them as depicted on figure \ref{fg:perpend}.
 \begin{figure}[!ht]
 	\centering
 	\begin{center}
@@ -177,7 +160,7 @@ The subject of Geometry is to study not only morphological sets and their elemen
 \begin{equation}\label{eq:affty}
 \fua{\mathit{f}}{\vto{x}\oplus a}=\fua{\vtf{f}}{\vto{x}}\oplus\fua{\mathit{g}}{a}\,,\,\,\forall\,a\in\eamd{U}{F}{m}\,,\,\vto{x}\in U_\cam{F}\,.
 \end{equation}
-It is straightforward to note that since $\vtf{f}$ and $\mathit{g}$ are bijections, so results affinity $\mathit{f}$. Among other properties, it is possible to obtain that every affinity preserves parallelism and hyperplane dimensionality; in other words, parallel hyperplanes on the  domain remain parallel on the image and $n$-dimensional hyperplanes on the domain, $n\leq m$, remain $n$-dimensional on the image: for example, lines are mapped to lines, planes are mapped to planes and so on. From corollary \ref{cor:soTens} and equalities \eqref{eq:Lin2secTens}, we know that operator $\vtf{f}$ is the representative function $\tnr{\Upsilon}_{\tnr{A}}$ of a tensor $\tnr{A}=\vto{a}_1\otimes\vto{a}_2\in\ete{\cam{F}}{U^2}$ in such a way that the previous definition can be rewritten as
+It is straightforward to note that since $\vtf{f}$ and $\mathit{g}$ are bijections, so results affinity $\mathit{f}$. Among other properties, it is possible to obtain that every affinity preserves parallelism and dimensionality; in other words, parallel subspaces on the  domain remain parallel on the image and $n$-dimensional subspaces on the domain, $n\leq m$, remain $n$-dimensional on the image: for example, lines are mapped to lines, planes are mapped to planes and so on. From corollary \ref{cor:soTens} and equalities \eqref{eq:Lin2secTens}, we know that operator $\vtf{f}$ is the representative function $\tnr{\Upsilon}_{\tnr{A}}$ of a tensor $\tnr{A}=\vto{a}_1\otimes\vto{a}_2\in\ete{\cam{F}}{U^2}$ in such a way that the previous definition can be rewritten as
 \begin{equation}
 \fua{\mathit{f}}{\vto{x}\oplus a}=\fua{\tnr{\Upsilon}_{\tnr{A}}}{\vto{x}}\oplus\fua{\mathit{g}}{a}=(\vto{x}\cdot\vto{a}_1)\vto{a}_2\oplus\fua{\mathit{g}}{a}\,,\,\,\forall\,a\in\eamd{U}{F}{m}\,,\,\vto{x}\in U_\cam{F}\,,
 \end{equation}
@@ -186,7 +169,7 @@ when $\tnr{A}$ is called an \textsb{affinity tensor}\index{tensor!afinity}\index
 
 {\footnotesize
 \begin{proof}
-Let's prove that an affinity preserves parallelism and dimension of hyperplanes. Considering $\eamsd{S}{F}{a}{n}$ and $\eamsd{V}{F}{b}{r}$ parallel hyperplanes of $\eamd{U}{F}{m}$, where $S_\cam{F}\subseteq V_\cam{F}$, we can say that if $\{\vto{u}_1,\cdots,\vto{u}_n,\cdots,\vto{u}_r,\cdots,\vto{u}_m\}$ is a basis of $U_\cam{F}$, so are $\{\vto{u}_1,\cdots,\vto{u}_n\}$ and $\{\vto{u}_1,\cdots,\vto{u}_n,\cdots,\vto{u}_r\}$ bases of $S_\cam{F}$ and $V_\cam{F}$ respectively. From definition \eqref{eq:affty}, only function $\vtf{f}$ is responsible for preserving parallelism or not. Thereby, since $\vtf{f}$ is a bijective linear unary operator, we already know that $\{\fua{\vtf{f}}{\vto{u}_1},\cdots,\fua{\vtf{f}}{\vto{u}_n}\}$ and $\{\fua{\vtf{f}}{\vto{u}_1},\cdots,\fua{\vtf{f}}{\vto{u}_n},\cdots,\fua{\vtf{f}}{\vto{u}_r}\}$ are bases of $S_\cam{F}$ and $V_\cam{F}$ (see p. \pageref{pg:bijecOpe}) and then $S_\cam{F}\subseteq V_\cam{F}$ is preserved. From these same arguments, it is straightforward to conclude that $\vtf{f}$ does not change vector space dimensions.
+Let's prove that an affinity preserves parallelism and dimension of subspaces. Considering $\eamsd{S}{F}{a}{n}$ and $\eamsd{V}{F}{b}{r}$ parallel subspaces of $\eamd{U}{F}{m}$, where $S_\cam{F}\subseteq V_\cam{F}$, we can say that if $\{\vto{u}_1,\cdots,\vto{u}_n,\cdots,\vto{u}_r,\cdots,\vto{u}_m\}$ is a basis of $U_\cam{F}$, so are $\{\vto{u}_1,\cdots,\vto{u}_n\}$ and $\{\vto{u}_1,\cdots,\vto{u}_n,\cdots,\vto{u}_r\}$ bases of $S_\cam{F}$ and $V_\cam{F}$ respectively. From definition \eqref{eq:affty}, function $\vtf{f}$ is the sole responsible for preserving parallelism or not. Thereby, since $\vtf{f}$ is a bijective linear unary operator, we already know that $\{\fua{\vtf{f}}{\vto{u}_1},\cdots,\fua{\vtf{f}}{\vto{u}_n}\}$ and $\{\fua{\vtf{f}}{\vto{u}_1},\cdots,\fua{\vtf{f}}{\vto{u}_n},\cdots,\fua{\vtf{f}}{\vto{u}_r}\}$ are bases of $S_\cam{F}$ and $V_\cam{F}$ (see p. \pageref{pg:bijecOpe}) and then $S_\cam{F}\subseteq V_\cam{F}$ is preserved. From these same arguments, it is straightforward to conclude that $\vtf{f}$ does not change vector space dimensions.
 \end{proof}}
 
 
@@ -194,7 +177,7 @@ Considering previous conditions, an affinity $\mathit{f}$ is said to be centered
 \begin{equation}\label{eq:translt}
 \fua{\mathit{t}_\vto{u}}{x}=\vto{u}\oplus x
 \end{equation}
-and depicted in figure \ref{fg:translat}, where $\mathit{t}_\vto{u}$ preserves the shape of the hyperplane $\eamd{S}{F}{n}$.
+and depicted in figure \ref{fg:translat}, where $\mathit{t}_\vto{u}$ preserves the shape of the subspace $\eamd{S}{F}{n}$.
 \begin{figure}[!ht]
 \centering
 \begin{center}
@@ -271,7 +254,7 @@ We can confirm that the function on the right of this figure is indeed a rotatio
 proves that $C$ is positively oriented and, similarly, $\overline{C}$ results negatively oriented.
 
 
-Considering  an oriented Euclidean space $(U_\real,\tnr{A}_B)$ where $B=\{\vun{u}_1,\cdots,\vun{u}_m\}$, the \textsb{simple bivector} $z$ defined by vectors $\vto{x},\vto{y}\in U_\real$ is here understood as the mathematical object, endowed with magnitude and orientation, used to express rotational physical quantities such as angular momentum and torque. In geometrical terms, the magnitude of a simple bivector is defined to be the area of the parallelogram constructed from line segments $\overline{a\,\vto{x}\oplus a}$ and $\overline{a\,\vto{y}\oplus a}$ while its orientation is related to $\tnr{A}_B$ and to rotating $\overline{a\,\vto{x}\oplus a}$ to $\overline{a\,\vto{y}\oplus a}$, which is the inverse of rotating $\overline{a\,\vto{y}\oplus a}$ to $\overline{a\,\vto{x}\oplus a}$ for the case of the simple bivector $-z$. It is important to say that this new entity is here loosely defined because it is a particular case of a more general concept called multivector, which is out of the scope of this elementary study. Nevertheless, to our good fortune, this simple bivector can be represented as a vector if $\dim(U_\real)=3$, when it is called an \textsb{axial vector}\index{vector!axial}. In this context, considering vector $\vto{z}$ defined by the simple bivector $z$, where $\{\vto{x},\vto{y}\}$ is linearly independent, line $(\{\vto{z}\}_a)_\real^1$ is defined to be perpendicular to the plane $(\{\vto{x},\vto{y}\}_a)_\real^2$ and vector $\vv{a\,\vto{z}\oplus a}$ must be oriented in such a way that basis $\{\vto{z},\vto{x},\vto{y}\}$ is positively oriented, that is, $\fua{\tnr{A}_B}{\vto{z},\vto{x},\vto{y}}>0$.
+Considering  an oriented Euclidean space $(U_\real,\tnr{A}_B)$ where $B=\{\vun{u}_1,\cdots,\vun{u}_m\}$, the \textsb{simple bivector} $z$ defined by vectors $\vto{x},\vto{y}\in U_\real$ is here understood as the mathematical object, endowed with magnitude and orientation, used to express rotational physical quantities such as angular momentum and torque. In geometrical terms, the magnitude of this simple bivector $z$ is defined to be the area of the parallelogram constructed from line segments $\overline{a\,\vto{x}\oplus a}$ and $\overline{a\,\vto{y}\oplus a}$ while its orientation is related to $\tnr{A}_B$ and to rotating $\overline{a\,\vto{x}\oplus a}$ to $\overline{a\,\vto{y}\oplus a}$, which is the inverse of rotating $\overline{a\,\vto{y}\oplus a}$ to $\overline{a\,\vto{x}\oplus a}$ for the case of the simple bivector $-z$. It is important to say that this new entity is here loosely defined because it is a particular case of a more general concept called multivector, which is out of the scope of this elementary study. Nevertheless, to our good fortune, this simple bivector can be represented as a vector if $\dim(U_\real)=3$, when it is called an \textsb{axial vector}\index{vector!axial}. In this context, considering an axial vector $\vto{z}$ defined by the simple bivector $z$, where $\{\vto{x},\vto{y}\}$ is linearly independent, line $(\{\vto{z}\}_a)_\real^1$ is defined to be perpendicular to the plane $(\{\vto{x},\vto{y}\}_a)_\real^2$ and vector $\vv{a\,\vto{z}\oplus a}$ must be oriented in such a way that basis $\{\vto{z},\vto{x},\vto{y}\}$ is positively oriented, that is, $\fua{\tnr{A}_B}{\vto{z},\vto{x},\vto{y}}>0$.
 \begin{figure}[!ht]
 \centering
 \begin{center}
@@ -279,7 +262,7 @@ Considering  an oriented Euclidean space $(U_\real,\tnr{A}_B)$ where $B=\{\vun{u
 \end{center}
 \titfigura{Axial vector $\vto{z}$ defined by $\vto{x}$, $\vto{y}$ and oriented Euclidean space $(U_\real,\tnr{A}_B)$, where basis $B=\{\vun{u}_1,\vun{u}_2,\vun{u}_3\}$.}\label{fg:axial}
 \end{figure}
-There is a classic mnemonic rule for obtaining the direction of $\vv{a\,\vto{z}\oplus o}$ that works as follows: considering my right hand, I must point my index and middle fingers to the same directions of $\vv{o\,\vun{u}_1\oplus o}$ and $\vv{o\,\vun{u}_2\oplus o}$ respectively, and then if my thumb points to the same direction of $\vv{o\,\vun{u}_3\oplus o}$, then space $(U_\real,\tnr{A}_B)$ is oriented according to the \textsb{right-hand rule}\index{right-hand rule}; on the other hand literally, space $(U_\real,\tnr{A}_B)$ is oriented according to the \textsb{left-hand rule}\index{left-hand rule}. Once a hand is found, if I point my index and middle fingers to the same directions of $\vv{a\,\vto{x}\oplus a}$ and $\vv{a\,\vto{y}\oplus a}$ respectively, then the direction of my thumb defines the direction of $\vv{a\,\vto{z}\oplus a}$. For practical purposes, a three-dimensional Euclidean affine space is usually oriented according to the right-hand rule. An axial vector is always the result of a \textsb{cross product}\index{product!cross} of two vectors, that is, $\vto{z}=\gloref{crossProd}$ in the present case, where
+There is a classic mnemonic rule for obtaining the direction of $\vv{a\,\vto{z}\oplus a}$ that works as follows: considering my right hand, I must point my index and middle fingers to the same directions of $\vv{o\,\vun{u}_1\oplus o}$ and $\vv{o\,\vun{u}_2\oplus o}$ respectively, and then if my thumb points to the same direction of $\vv{o\,\vun{u}_3\oplus o}$, then space $(U_\real,\tnr{A}_B)$ is oriented according to the \textsb{right-hand rule}\index{right-hand rule}; on the other hand literally, space $(U_\real,\tnr{A}_B)$ is oriented according to the \textsb{left-hand rule}\index{left-hand rule}. Once a hand is found, if I point my index and middle fingers to the same directions of $\vv{a\,\vto{x}\oplus a}$ and $\vv{a\,\vto{y}\oplus a}$ respectively, then the direction of my thumb defines the direction of $\vv{a\,\vto{z}\oplus a}$. For practical purposes, a three-dimensional Euclidean affine space is usually oriented according to the right-hand rule. An axial vector is always the result of a \textsb{cross product}\index{product!cross} of two vectors, that is, $\vto{z}=\gloref{crossProd}$ in the present case, where
 \begin{equation}\label{eq:crossProduct}
 \vto{x}\times\vto{y} := \tnr{A}_B\odot_2 (\vto{x}\otimes\vto{y})\,.
 \end{equation}
@@ -314,9 +297,9 @@ and, since $\tnr{A}_B$ is antisymmetric, equalities $(\vto{u}\times\vto{v})\cdot
 \begin{align*}
 \vto{u}\times(\vto{v}\times\vto{w})&=\tnr{A}_B\odot_2 [\vto{u}\otimes\tnr{A}_B\odot_2 (\vto{v}\otimes\vto{w})]\\
 &=\sum_{i,j,k=1}^{m}\epsilon_{ijk}\vun{x}_i^*\otimes\vun{x}_j^*\otimes\vun{x}_k^*\odot_2 [\sum_{j=1}^{m}\fua{\vto{f}^X_j}{\vto{u}}\vun{x}_j\otimes\sum_{k,r,s=1}^{m}\epsilon_{krs}\fua{\vto{f}^X_r}{\vto{v}}\fua{\vto{f}^X_s}{\vto{w}}\vun{x}_k]\\
-&=\sum_{i,j,k=1}^{m}\sum_{i,r,s=1}^{m}-\epsilon_{kji}\epsilon_{krs}\fua{\vto{f}^X_j}{\vto{u}}\fua{\vto{f}^X_r}{\vto{v}}\fua{\vto{f}^X_s}{\vto{w}}\vun{x}_k\\
-&=\sum_{j,k=1}^{m}\sum_{r,s=1}^{m}(\delta_{js}\delta_{ir}-\delta_{jr}\delta_{is})\fua{\vto{f}^X_j}{\vto{u}}\fua{\vto{f}^X_r}{\vto{v}}\fua{\vto{f}^X_s}{\vto{w}}\vun{x}_k\\
-&=\sum_{k=1}^{m}\sum_{r=1}^{m}\sum_{s=1}^{m}\fua{\vto{f}^X_s}{\vto{u}}\fua{\vto{f}^X_i}{\vto{v}}\fua{\vto{f}^X_s}{\vto{w}}\vun{x}_k-\fua{\vto{f}^X_r}{\vto{u}}\fua{\vto{f}^X_r}{\vto{v}}\fua{\vto{f}^X_i}{\vto{w}}\vun{x}_k\\
+&=\sum_{i,j,k=1}^{m}\sum_{r,s=1}^{m}-\epsilon_{kji}\epsilon_{krs}\fua{\vto{f}^X_j}{\vto{u}}\fua{\vto{f}^X_r}{\vto{v}}\fua{\vto{f}^X_s}{\vto{w}}\vun{x}_i\\
+&=\sum_{i,j,k,r,s=1}^{m}(\delta_{js}\delta_{ir}-\delta_{jr}\delta_{is})\fua{\vto{f}^X_j}{\vto{u}}\fua{\vto{f}^X_r}{\vto{v}}\fua{\vto{f}^X_s}{\vto{w}}\vun{x}_i\\
+&=\sum_{i,j,k,r,s=1}^{m}\fua{\vto{f}^X_s}{\vto{u}}\fua{\vto{f}^X_i}{\vto{v}}\fua{\vto{f}^X_s}{\vto{w}}\vun{x}_i-\fua{\vto{f}^X_r}{\vto{u}}\fua{\vto{f}^X_r}{\vto{v}}\fua{\vto{f}^X_i}{\vto{w}}\vun{x}_i\\
 &=(\vto{u}\cdot\vto{w})\vto{v}-(\vto{u}\cdot\vto{v})\vto{w}
 \end{align*}
 proves property vii. Now, in order to prove the last item, equality $\vto{u}\cdot\tnr{A}_B\odot_2\vto{v}\otimes\vto{w}=\tnr{A}_B(\vto{u},\vto{v},\vto{w})$, property vii and equality \eqref{eq:geoProdInt} are required. Then,
@@ -342,7 +325,7 @@ where $\alpha$ is the area of parallelogram defined by $\overline{a\vto{y}\oplus
 \end{center}
 \titfigura{Parallelogram of volume $\alpha\beta$ defined by $\vto{x},\vto{y},\vto{z}$.}\label{fg:paralelogramo}
 \end{figure}
-Considering definition \eqref{eq:detTensorSeg} in the present context of an Euclidean three-di\-men\-sional space and $\{\vto{x},\vto{y},\vto{z}\}\subset U$ a linearly independent set, for a second order tensor $\tnr{T}\in\ete{\cam{F}}{U^2}$ equalities
+Considering definition \eqref{eq:detTensorSeg} in the present context of a three-di\-men\-sional Euclidean space and $\{\vto{x},\vto{y},\vto{z}\}\subset U$ a linearly independent set, for a second order tensor $\tnr{T}\in\ete{\cam{F}}{U^2}$ equalities
 \begin{equation}
 \hdet{\tnr{T}}=\dfrac{\fua{\tnr{A}_B}{\fua{\tnr{T}_1^*}{\vto{x}^*},{\fua{\tnr{T}_1^*}{\vto{y}^*}},{\fua{\tnr{T}_1^*}{\vto{z}^*}}}}{\fua{\tnr{A}_B}{\vto{x},\vto{y},\vto{z}}}=\dfrac{\fua{\tnr{T}_1^*}{\vto{x}^*}\cdot[\,\fua{\tnr{T}_1^*}{\vto{y}^*}\times\fua{\tnr{T}_1^*}{\vto{z}^*}\,]}{\vto{x}\cdot(\vto{y}\times\vto{z})}
 \end{equation}
