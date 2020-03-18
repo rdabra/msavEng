@@ -202,7 +202,7 @@ Now, let's restrict our attention to continuous tensor functions, that is, to el
 
 \section{The Gradient}
 
-The concept of gradient we shall detail in this section is restricted to the context of Hilbert tensor spaces because it relies on the Riesz-Fréchet Representation of Tensors, described on theorem \ref{teo:repRieszTensor}. Similarly to what we already presented in this chapter, an open set $\pmb{\mathcal{U}}\subset\ete{\cam{F}}{U^{\times m}}$ and a differentiable function in $\map{\tnr{\psi}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}$ are also considered, but $\ete{\cam{F}}{U^{\times m}}$ and $\ete{\cam{F}}{V^{\times s}}$ are Hilbert tensor spaces here and $m+s>0$. Considering the conditions of the aforementioned theorem, there is a unique tensor $\fua{\nabla\tnr{\psi}}{\tnr{X}_0}\in\ete{\cam{F}}{U^{\times m}\times V^{\times s}}$, called the \textsb{gradient}\index{gradient} of $\tnr{\psi}$ at $\tnr{X}_0$, which the derivative $\fua{\tnr{\psi}'}{\tnr{X}_0}\in\evlc{\cam{F}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}$ is the $m$-cotensor of and where
+The concept of gradient we shall detail in this section is restricted to the context of Hilbert tensor spaces because it relies on the Riesz-Fréchet Representation of Tensors, described on theorem \ref{teo:repRieszTensor}. Similarly to what we already presented in this chapter, an open set $\pmb{\mathcal{U}}\subset\ete{\cam{F}}{U^{\times m}}$ and a differentiable function in $\map{\tnr{\psi}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}$ are also considered, but $\ete{\cam{F}}{U^{\times m}}$ and $\ete{\cam{F}}{V^{\times s}}$ are Hilbert tensor spaces here and $m+s>0$. Considering the conditions of the aforementioned theorem, there is a unique tensor $\fua{\nabla\tnr{\psi}}{\tnr{X}_0}\in\ete{\cam{F}}{U^{\times m}\times V^{\times s}}$, called the \textsb{gradient}\index{gradient} of $\tnr{\psi}$ at $\tnr{X}_0$, which the derivative $\fua{\tnr{\psi}'}{\tnr{X}_0}\in\evlc{\cam{F}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}$ is the $m$-cotensor of and then
 \begin{equation}\label{eq:defGradient}
 [\fua{\tnr{\psi}'}{\tnr{X}_0}](\tnr{X}) = \tnr{X}\odot_m\fua{\nabla\tnr{\psi}}{\tnr{X}_0}\,.
 \end{equation}
@@ -329,20 +329,20 @@ is the $m$-cotensor of and each $\pmb{\mathcal{U}}_i=\pmb{\mathcal{U}}$ defines 
 
 \section{Integration}\index{integration}
 
-The integration approach we shall deal with in this section relies fundamentally on Lebesgue's theory, which is built from the generalization of the concept of size, that is, length, area, volume or \textsb{hypervolume}\index{hypervolume} of respectively one, two, three or $n$ dimensional affine Hilbert spaces. In simple terms, this generalization is strong, based on assigning a nonnegative real number to a set, whatever measure this real number expresses. But this general measure must obey certain rules that require and lead to new important definitions. In this context, from specific scalar functions with measurable domains, integrable tensor functions can be defined.
+The integration approach we shall deal with in this section relies fundamentally on Lebesgue's theory, which is built from the generalization of the concept of size, that is, length, area, volume or \textsb{hypervolume}\index{hypervolume} of respectively one, two, three or $n$ dimensional affine Hilbert spaces. In simple terms, this generalization is strong, based on assigning a real number to a set, whatever measure this scalar expresses. But this general measure must obey certain rules that require and lead to new important definitions. In this context, from specific scalar functions with measurable domains, integrable tensor functions can be defined.
 
 From the concept of class and its dependent definitions presented on section \ref{sec:Sets}, the double $(M,\css{M})$ is said to be a \textsb{measurable space}\index{space!measurable} when $\sigma$-ring $\css{M}$ is a class of the set $M$; and when this set defines a group or a field we also qualify them with ``measurable''. Now, considering the mapping $\map{\mu}{\css{M}}{\real}$ and an arbitrary disjoint countable class $\{A_1,\cdots,A_n\}\subseteq\css{M}$, set function $\mu$ is called additive if
 \begin{equation}\label{eq:addMeasure}
 \fua{\mu}{\bigcup_{i=1}^nA_i}=\sum_{{i}=1}^n\fua{\mu}{A_i}\,.
 \end{equation}
-From this definition, it is clear that $\fua{\mu}{\emptyset}=\fua{\mu}{\emptyset\cup\emptyset}=2\fua{\mu}{\emptyset}=0$. For the special case of a mapping $\map{\mu}{\css{M}}{\real^+}$ where $\css{M}$ is a ring, additive set function $\mu$ is said to be a \textsb{continent}\index{ring!continent} of ring $\css{M}$. But if $\css{M}$ is a $\sigma$-ring, its continent $\mu$ is called a \textsb{measure}\index{measure} when
+From this definition, it is clear that $\fua{\mu}{\emptyset}=\fua{\mu}{\emptyset\cup\emptyset}=2\fua{\mu}{\emptyset}=0$. For the special case of a mapping $\map{\mu}{\css{M}}{\real}$ where $\css{M}$ is a ring, additive set function $\mu$ is said to be a \textsb{continent}\index{ring!continent} of ring $\css{M}$. But if $\css{M}$ is a $\sigma$-ring, its continent $\mu$ is called a \textsb{measure}\index{measure} when
 \begin{equation}\label{eq:measuSum}
 \fua{\mu}{\bigcup_{i=1}^\infty A_i}=\sum_{{i}=1}^\infty\fua{\mu}{A_i}\,,
 \end{equation}
 for an arbitrary countable class $\{A_1,A_2,\cdots\}\subseteq\css{M}$. Thereby, the double constituted by a measurable space and a measure, that is $((M,\css{M}),\mu)$, is called a \textsb{measure space}\index{space!measure}, which we shall hereafter represent by the triple $(M,\css{M},\mu)$.
 Considering measure space $(M,\css{M},\mu)$, a measurable field $(\real,\css{F})$ and a mapping  $\map{f}{M}{\real}$, a sequence of functions $f_1,f_2,\cdots$ that also map $M$ to $\real$ \textsb{converges in measure}\index{convergence!in measure} $\mu$ to function $f$ when, given an arbitrary real number $\epsilon>0$,
 \begin{equation}
-\lim_{i\to\infty}\fua{\mu}{\{x\in M : |\fua{f}{x}-\fua{f_i}{x}|\geqslant\epsilon\}}=0\,.
+\lim_{i\to\infty}\fua{\mu}{\{x\in M : |\fua{f}{x}-\fua{f_i}{x}|\leqslant\epsilon\}}=0\,.
 \end{equation}
 
 
