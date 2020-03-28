@@ -329,25 +329,25 @@ is the $m$-cotensor of and each $\pmb{\mathcal{U}}_i=\pmb{\mathcal{U}}$ defines 
 
 \section{Integration}\index{integration}
 
-The integration approach we shall deal with in this section relies fundamentally on Lebesgue's theory, which is built from the generalization of the concept of size, that is, length, area, volume or \textsb{hypervolume}\index{hypervolume} of respectively one, two, three or $n$ dimensional affine Hilbert spaces. In simple terms, this generalization is strong, based on assigning a real number to a set, whatever measure this scalar expresses. But this general measure must obey certain rules that require and lead to new important definitions. In this context, from specific scalar functions with measurable domains, integrable tensor functions can be defined.
+The integration approach we shall deal with in this section relies fundamentally on Lebesgue's theory, which is built from the generalization of the concept of size, that is, length, area, volume or \textsb{hypervolume}\index{hypervolume} of respectively one, two, three or $n$ dimensional affine Hilbert spaces. In simple terms, this generalization is strong, based on assigning a real number to a set, whatever measure this scalar expresses. But this general measure must obey certain rules that require and lead to new important definitions. In this context, from specific scalar functions with domains called measurable, integrable tensor functions can be defined.
 
 From the concept of class and its dependent definitions presented on section \ref{sec:Sets}, the double $(M,\css{M})$ is said to be a \textsb{measurable space}\index{space!measurable} when $\sigma$-ring $\css{M}$ is a class of the set $M$; and when this set defines a group or a field we also qualify them with ``measurable''. Now, considering the mapping $\map{\mu}{\css{M}}{\real}$ and an arbitrary disjoint countable class $\{A_1,\cdots,A_n\}\subseteq\css{M}$, set function $\mu$ is called additive if
 \begin{equation}\label{eq:addMeasure}
 \fua{\mu}{\bigcup_{i=1}^nA_i}=\sum_{{i}=1}^n\fua{\mu}{A_i}\,.
 \end{equation}
-From this definition, it is clear that $\fua{\mu}{\emptyset}=\fua{\mu}{\emptyset\cup\emptyset}=2\fua{\mu}{\emptyset}=0$. For the special case of a mapping $\map{\mu}{\css{M}}{\real}$ where $\css{M}$ is a ring, additive set function $\mu$ is said to be a \textsb{continent}\index{ring!continent} of ring $\css{M}$. But if $\css{M}$ is a $\sigma$-ring, its continent $\mu$ is called a \textsb{measure}\index{measure} when
+From this definition, it is clear that $\fua{\mu}{\emptyset}=\fua{\mu}{\emptyset\cup\emptyset}=2\fua{\mu}{\emptyset}=0$. For the special case of a mapping $\map{\mu}{\css{M}}{\real^+}$ where $\css{M}$ is a ring, additive nonegative set function $\mu$ is said to be a \textsb{continent}\index{ring!continent} of ring $\css{C}$. But in the case of the $\sigma$-ring $\css{M}$, its continent $\mu$ is called a \textsb{measure}\index{measure} if
 \begin{equation}\label{eq:measuSum}
 \fua{\mu}{\bigcup_{i=1}^\infty A_i}=\sum_{{i}=1}^\infty\fua{\mu}{A_i}\,,
 \end{equation}
-for an arbitrary countable class $\{A_1,A_2,\cdots\}\subseteq\css{M}$. Thereby, the double constituted by a measurable space and a measure, that is $((M,\css{M}),\mu)$, is called a \textsb{measure space}\index{space!measure}, which we shall hereafter represent by the triple $(M,\css{M},\mu)$.
-Considering measure space $(M,\css{M},\mu)$, a measurable field $(\real,\css{F})$ and a mapping  $\map{f}{M}{\real}$, a sequence of functions $f_1,f_2,\cdots$ that also map $M$ to $\real$ \textsb{converges in measure}\index{convergence!in measure} $\mu$ to function $f$ when, given an arbitrary real number $\epsilon>0$,
+for an arbitrary countable class $\{A_1,A_2,\cdots\}\subseteq\css{M}$. Thereby, we call the double constituted by a measurable space and a measure, that is $((M,\css{M}),\mu)$, a \textsb{measure space}\index{space!measure}, which will hereafter be represented by the triple $(M,\css{M},\mu)$.
+Considering measure space $(M,\css{M},\mu)$, a measurable field $(\real,\css{F})$ and a mapping  $\map{f}{M}{\real}$, we say that a sequence of functions $f_1,f_2,\cdots$ that also map $M$ to $\real$ \textsb{converges in measure}\index{convergence!in measure} $\mu$ to function $f$ when, given an arbitrary real number $\epsilon>0$,
 \begin{equation}
 \lim_{i\to\infty}\fua{\mu}{\{x\in M : |\fua{f}{x}-\fua{f_i}{x}|\leqslant\epsilon\}}=0\,.
 \end{equation}
 
 
 
-Now, let $(M,\css{M})$ be a measurable space and $(\real,\css{F})$ a measurable field. The function in $\map{s}{M}{\real}$ is called \textsb{measurable}\index{function!measurable} if, for every element $\con{B}\in\css{F}$, preimage $\con{R}^{-1}_{\con{B}} \in \css{M}$. Considering a disjoint countable class $\{A_1,\cdots,A_n\}\subseteq\css{M}$ and non zero scalars $\alpha_1,\cdots,\alpha_n\in\real$, where $\css{A}=\{A_1,\cdots,A_n\}$ is called a \textsb{partition}\index{set!partition of} of an arbitrary set $A\in\css{M}$, that is $A=\bigcup_{i=1}^nA_i$, the measurable function in $\map{s_A}{M}{\real}$ is called \textsb{step}\index{function!step} or \textsb{simple}\index{function!simple} with respect to $\css{A}$ if its rule is described by
+Now, let $(M,\css{M})$ be a measurable space and $(\real,\css{F})$ a measurable field. The function in $\map{s}{M}{\real}$ is called \textsb{measurable}\index{function!measurable} if, for every element $\con{B}\in\css{F}$, preimage $\con{R}^{-1}_{\con{B}} \in \css{M}$. Considering a disjoint countable class $\{A_1,\cdots,A_n\}\subseteq\css{M}$ and scalars $\alpha_1,\cdots,\alpha_n\in\real$, where $\css{A}=\{A_1,\cdots,A_n\}$ is called a \textsb{partition}\index{set!partition of} of an arbitrary set $A\in\css{M}$, that is $A=\bigcup_{i=1}^nA_i$, the measurable function in $\map{s_A}{M}{\real}$ is called \textsb{step}\index{function!step} or \textsb{simple}\index{function!simple} with respect to $\css{A}$ if its rule is described by
 \begin{equation}
 \fua{s_\css{A}}{x} = \sum_{i=1}^n\alpha_i\fua{\tnr{1}_{A_i}}{x}\,,
 \end{equation}
@@ -359,19 +359,23 @@ where the function in $\map{\tnr{1}_{A_i}}{A_i}{\real}$ is commonly known as the
 1 & \text{if } x\in A_i
 \end{dcases}\,.
 \end{equation*}
-In the particular case of a measure space $(M,\css{M},\mu)$, a step function $s_\css{A}$, where $\alpha_i\geqslant 0$, is defined to be \textsb{integrable}\index{function!integrable step} on set $E\in\css{M}$ when $\fua{\mu}{E\cap A_i} < \infty$. If this is the case, real number
+In the particular case of a measure space $(M,\css{M},\mu)$, a step function $s_\css{A}$ is defined to be \textsb{integrable}\index{function!integrable step} on set $E\in\css{M}$ when for every $\alpha_i\neq 0$, scalar $\fua{\mu}{E\cap A_i} < \infty$. If this is the case, real number
 \begin{equation}\label{eq:defInteSimp}
 \int_E s_\css{A} := \sum_{i=1}^n\alpha_i\fua{\mu}{E\cap A_i}
 \end{equation}
-is called the \textsb{integral}\index{integral!of step function} of $s_\css{A}$ on $E$. In this context, if $\css{B}=\{B_1,\cdots,B_m\}\subseteq\css{M}$ is another partition of $A$, it is clear that class $\css{C}=\{A_1\cap B_1,A_1\cap B_2,\cdots,A_n\cap B_m\}$ is also a partition of $A$ and then, by using previous definition, we can write
+is called the \textsb{integral}\index{integral!of step function} of $s_\css{A}$ on $E$. In this context, if $\css{B}=\{B_1,\cdots,B_m\}\subseteq\css{M}$ is another partition of $A$, it is clear that class 
+\begin{equation*}
+\css{C}=\{A_1\cap B_1,A_1\cap B_2,\cdots,A_1\cap B_m,A_2\cap B_1,\cdots,A_n\cap B_m\}
+\end{equation*}
+is also a partition of $A$ and then, by using previous definition, we can write
 \begin{equation*}
 \int_E s_\css{C} = \sum_{i=1}^n\sum_{j=1}^m\gamma_{ij}\fua{\mu}{E\cap A_i\cap B_j}\,,
 \end{equation*}
-which means that, when $A_i$ and $B_j$ are not disjoint,
+which means that
 \begin{equation*}
-\fua{s_\css{C}}{x} = \sum_{i=1}^n\sum_{j=1}^m\gamma_{ij}\fua{\tnr{1}_{A_i\cap B_j}}{x} = \sum_{i=1}^n\underbrace{\sum_{j=1}^m\gamma_{ij}}_{\alpha_i}\fua{\tnr{1}_{A_i}}{x}=\sum_{j=1}^m\underbrace{\sum_{i=1}^n\gamma_{ij}}_{\beta_j}\fua{\tnr{1}_{B_j}}{x}\,.
+\fua{s_\css{C}}{x} = \sum_{i=1}^n\sum_{j=1}^m\gamma_{ij}\fua{\tnr{1}_{A_i\cap B_j}}{x} = \sum_{i=1}^n\underbrace{\sum_{j=1}^m\gamma_{ij}\fua{\tnr{1}_{A_i\cap B_j}}{x}}_{\alpha_i\fua{\tnr{1}_{A_i}}{x}}=\sum_{j=1}^m\underbrace{\sum_{i=1}^n\gamma_{ij}\fua{\tnr{1}_{B_i\cap A_j}}{x}}_{\beta_j\fua{\tnr{1}_{B_j}}{x}}\,.
 \end{equation*}
-From these equalities, when $x\in A_i\cap B_j$ it is clear that $\alpha_i=\beta_j$ and therefore
+Thereby, from these equalities, scalar 
 \begin{align*}
 \int_E s_\css{A} &= \sum_{i=1}^n\alpha_i\fua{\mu}{E\cap A_i}\\
 &= \sum_{i=1}^n\alpha_i\fua{\mu}{E\cap \bigcup_{j=1}^mA_i\cap B_j}\\
@@ -386,7 +390,7 @@ Let $(S,\varrho)$ be a normed metric space of integrable step functions on $E$ w
 \begin{alignat*} {3}
 \|s\|=\int_E |s|&\qquad \text{ and } \qquad&\fua{\varrho}{g_1,g_2}=\|g_1-g_2\|\,,
 \end{alignat*}
-where $|s|(x):=|\fua{s}{x}|$ and $|s|,g_1,g_2\in S$. In this context, if a Cauchy sequence of integrable step functions $s_1,s_2,\cdots\in S$ exists and converges to the measurable function in $\map{g}{M}{\real}$, we say that $g$ is integrable or Labesgue integrable on $E$ and scalar
+where $|s|(x):=|\fua{s}{x}|$ and $s,g_1,g_2\in S$. In this context, if a Cauchy sequence of integrable step functions $s_1,s_2,\cdots\in S$ exists and converges to the measurable function in $\map{g}{M}{\real}$, we say that $g$ is integrable or Labesgue integrable on $E$ and scalar
 \begin{equation}\label{eq:integ}
 \int_E g := \lim_{i\to \infty}\int_E s_i
 \end{equation}
@@ -426,7 +430,7 @@ It is important to study some fundamental properties of integrals and we shall p
 
 \begin{itemize}
 	\setlength\itemsep{.1em}
-	\item[i.] If $f$ is nonnegative, so its integral on $E$;
+	\item[i.] If nonnegative function $f$ is integrable, then its integral on $E$ is also nonnegative;
 	\item[ii.] If $f$ is integrable on every element of disjoint class $\{E_1,\cdots,E_m\}\subseteq \css{M}$, then
 	\begin{equation}
 	\int_{\bigcup_{i=1}^mE_i}f=\sum_{{i}=1}^{m} \int_{E_i}f\,;
@@ -482,7 +486,7 @@ Thereby, from  property \eqref{eq:cauchySum}, we have
 which is equal to result \eqref{eq:a}.
 \end{proof}}
 
-Considering $\ete{\real}{U^{\times m}}$ and $\ete{\real}{V^{\times s}}$ Euclidean tensor spaces, let the function in mapping $\map{f}{\pmb{\mathcal{U}}}{\real}$ be described by $f = \frt{T}\circ\tnr{\psi}$, where $\pmb{\mathcal{U}}\subseteq\ete{\real}{U^{\times m}}$, function $\frt{T}$ is the representative tensor functional of an arbitrary tensor $\tnr{T}\in\ete{\real}{V^{\times s}}$ and $\map{\tnr{\psi}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}$. We define that $\tnr{\psi}$ is integrable on $\pmb{\mathcal{U}}$ if $f$ is integrable on $\pmb{\mathcal{U}}$. If this is the case, by specifying a rule
+Considering $\ete{\real}{U^{\times m}}$ and $\ete{\real}{V^{\times s}}$ Euclidean tensor spaces, let the function in mapping $\map{f}{\pmb{\mathcal{U}}}{\real}$ be described by $f = \frt{T}\circ\tnr{\psi}$, where $\pmb{\mathcal{U}}\subseteq\ete{\real}{U^{\times m}}$, function $\frt{T}$ is the representative tensor functional of an arbitrary tensor $\tnr{T}\in\ete{\real}{V^{\times s}}$, according to equalities \eqref{eq:polyRepre}, and $\map{\tnr{\psi}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}$. We define that $\tnr{\psi}$ is integrable on $\pmb{\mathcal{U}}$ if $f$ is integrable on $\pmb{\mathcal{U}}$. If this is the case, by specifying a rule
 \begin{equation*}
 \fua{h}{\tnr{X}} = \int_{\pmb{\mathcal{U}}} \frt{X}\circ\tnr{\psi}\,,
 \end{equation*}
@@ -597,7 +601,7 @@ Let $(U_\real,\tnr{A}_B)$ be a three dimensional oriented Euclidean space and $\
 %\hspace{1pt}
 {\footnotesize
 \begin{proof}
-We recommend the reader to see the proof presented by \aut{Backus}\cite{backus_1997_1}, p.131.
+We recommend the reader to see the proof presented by \aut{Backus}\cite{backus_1997_1}, p.131. 
 \end{proof}
 }
 % FIGURE xx - BOUNDARY SHAOES NOT ALLOWED ON LIPSCHITZ DOMAINS
