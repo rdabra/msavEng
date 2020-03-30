@@ -363,11 +363,11 @@ In the particular case of a measure space $(M,\css{M},\mu)$, a step function $s_
 \begin{equation}\label{eq:defInteSimp}
 \int_E s_\css{A} := \sum_{i=1}^n\alpha_i\fua{\mu}{E\cap A_i}
 \end{equation}
-is called the \textsb{integral}\index{integral!of step function} of $s_\css{A}$ on $E$. In this context, if $\css{B}=\{B_1,\cdots,B_m\}\subseteq\css{M}$ is another partition of $A$, it is clear that class 
+is called the \textsb{integral}\index{integral!of step function} of $s_\css{A}$ on $E$. In this context, if $\css{B}=\{B_1,\cdots,B_m\}\subseteq\css{M}$ is another partition of $A$, we conclude that there is no element of $A$ which does not belong to some $A_i\cap B_j$ and then it is obvious that class 
 \begin{equation*}
 \css{C}=\{A_1\cap B_1,A_1\cap B_2,\cdots,A_1\cap B_m,A_2\cap B_1,\cdots,A_n\cap B_m\}
 \end{equation*}
-is also a partition of $A$ and then, by using previous definition, we can write
+is disjoint and also a partition of $A$. Therefore, from previous definition, we can write
 \begin{equation*}
 \int_E s_\css{C} = \sum_{i=1}^n\sum_{j=1}^m\gamma_{ij}\fua{\mu}{E\cap A_i\cap B_j}\,,
 \end{equation*}
@@ -486,22 +486,22 @@ Thereby, from  property \eqref{eq:cauchySum}, we have
 which is equal to result \eqref{eq:a}.
 \end{proof}}
 
-Considering $\ete{\real}{U^{\times m}}$ and $\ete{\real}{V^{\times s}}$ Euclidean tensor spaces, let the function in mapping $\map{f}{\pmb{\mathcal{U}}}{\real}$ be described by $f = \frt{T}\circ\tnr{\psi}$, where $\pmb{\mathcal{U}}\subseteq\ete{\real}{U^{\times m}}$, function $\frt{T}$ is the representative tensor functional of an arbitrary tensor $\tnr{T}\in\ete{\real}{V^{\times s}}$, according to equalities \eqref{eq:polyRepre}, and $\map{\tnr{\psi}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}$. We define that $\tnr{\psi}$ is integrable on $\pmb{\mathcal{U}}$ if $f$ is integrable on $\pmb{\mathcal{U}}$. If this is the case, by specifying a rule
-\begin{equation*}
-\fua{h}{\tnr{X}} = \int_{\pmb{\mathcal{U}}} \frt{X}\circ\tnr{\psi}\,,
-\end{equation*}
-where tensor functional $h\in\eted{\real}{V^{\times s}}$ is linear because of property iv above, there exists a unique tensor $\tnr{H}\in\ete{\real}{V^{\times s}}$ which $h$ is the cotensor of, according to corollary \ref{cor:eqNorm}. In this context, tensor
+Considering $\ete{\real}{U^{\times m}}$ and $\ete{\real}{V^{\times s}}$ Euclidean tensor spaces, let the functional in mapping $\map{f}{\pmb{\mathcal{U}}}{\real}$ be a composition of functions described by $f = \frt{T}\circ\tnr{\psi}$, where domain $\pmb{\mathcal{U}}\subseteq\ete{\real}{U^{\times m}}$, function $\frt{T}$ is the representative tensor functional of an arbitrary tensor $\tnr{T}\in\ete{\real}{V^{\times s}}$, according to equalities \eqref{eq:polyRepre}, and $\map{\tnr{\psi}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}$ is a tensor mapping. We define that function $\tnr{\psi}$ is integrable on $\pmb{\mathcal{U}}$ if functional $f$ is integrable on $\pmb{\mathcal{U}}$. If this is the case, by specifying a rule
+\begin{equation}
+\fua{\tnr{h}}{\tnr{X}} = \int_{\pmb{\mathcal{U}}} \frt{X}\circ\tnr{\psi}\,,
+\end{equation}
+where tensor functional $\tnr{h}\in\eted{\real}{V^{\times s}}$ is linear because of property iv above, there exists a unique tensor $\tnr{H}\in\ete{\real}{V^{\times s}}$ which $\tnr{h}$ is the cotensor of, according to corollary \ref{cor:eqNorm}. In this context, tensor
 \begin{equation}
 \int_{\pmb{\mathcal{U}}}\tnr{\psi}:=\tnr{H}
 \end{equation}
-is called the integral of tensor function $\tnr{\psi}$ on $\pmb{\mathcal{U}}$. Therefore, since previous corollary establishes a one to one correspondence between linear functional $h$ and tensor $\tnr{H}$ through $\fua{h}{\tnr{X}}=\tnr{X}\cdot\tnr{H}$, we conclude that
+is called the integral of tensor function $\tnr{\psi}$ on $\pmb{\mathcal{U}}$. Therefore, since corollary \ref{cor:eqNorm} establishes a one to one correspondence between linear tensor functional $\tnr{h}$ and tensor $\tnr{H}$ through $\fua{\tnr{h}}{\tnr{X}}=\tnr{X}\cdot\tnr{H}$, we conclude that
 \begin{equation}\label{eq:repInte}
 \int_{\pmb{\mathcal{U}}} \frt{X}\circ\tnr{\psi}=\tnr{X}\cdot\int_{\pmb{\mathcal{U}}}\tnr{\psi}\,.
 \end{equation}
 
 \section{Integral Identities}
 
-In rough geometrical terms, domains whose boundary shapes show a specific form of regularity -- where sharp edges and different types of self intersection are not allowed, as shown in figure \ref{fg:naoRegulares} -- enable identities that equalize integrations on surfaces and interiors, which are fundamental for the present study. First of all, we recall the biunivocal correspondence between an affine space and a vector space enabled by a coordinate system, as shown in section \ref{sec:affine}, in order to henceforth make geometrical statements and assumptions on finite dimensional Euclidean spaces. In this context and from the concept of smoothness presented on section \ref{sec:diffe}, a set of strong mathematical requirements that avoid the irregularities cited above is given by introductory texts on Differential Geometry, such as \aut{Do Carmo}\cite{docarmo_2016}, where surfaces called smooth are defined. However, for the sake of generality, we choose to study a less restrictive regularity condition, which defines the so called Lipschitz surface\footnote{ See \aut{Ciarlet}\cite{ciarlet_1988_2}, p.32.}; that also does not present the above irregularities and is less difficult to deal with than smooth surfaces. We shall adopt this concept by adapting the accessible approach of \aut{Adams \& Fournier}\cite{adams_2003_2}, which is more than sufficient for our purposes\footnote{For a more rigorous treatment, see \aut{Agranovich}\cite{agranovitch_2015_1}, chapter 3.}.
+In rough geometrical terms, domains whose boundary shapes show a specific form of regularity -- where sharp edges and different types of self intersection are not allowed, as shown in figure \ref{fg:naoRegulares} -- enable identities that equalize integrations on surfaces and interiors, which are fundamental for Mathematical Physics. First of all, we recall the biunivocal correspondence between an affine space and a vector space established by defining a coordinate system, as shown in section \ref{sec:affine}, in order to henceforth make geometrical statements and assumptions on finite dimensional Euclidean spaces. In this context and from the concept of smoothness presented on section \ref{sec:diffe}, a set of strong mathematical requirements that avoid the irregularities cited above is given by introductory texts on Differential Geometry, such as \aut{Do Carmo}\cite{docarmo_2016}, where surfaces called smooth are defined. However, for the sake of generality, we choose to study a less restrictive regularity condition, which defines the so called Lipschitz surface\footnote{ See \aut{Ciarlet}\cite{ciarlet_1988_2}, p.32.}; that also does not present the above irregularities and is less complex to work with than smooth surfaces. We shall adopt this concept by adapting the accessible approach of \aut{Adams \& Fournier}\cite{adams_2003_2}, which is more than sufficient for our purposes\footnote{For a more rigorous treatment, see \aut{Agranovich}\cite{agranovitch_2015_1}, chapter 3.}.
 
 
 \begin{figure}[!ht]
@@ -513,15 +513,22 @@ In rough geometrical terms, domains whose boundary shapes show a specific form o
 \end{figure}
 
 
-Let $U_\real$ be a $n$-dimensional Euclidean space, $n\geqslant 2\,$, and $\pmb{\mathcal{U}}$ one of its proper subsets, which we assume to be a domain of a certain function. Considering an arbitrary non zero scalar $\alpha\in\real^+$, a disjoint cover $\css{C}=\{\widehat{C}_1,\cdots,\widehat{C}_r\}$ of boundary $\partial\pmb{\mathcal{U}}$ and a class $\{A_1,\cdots,A_r\}$ where $A_i\subset C_i$ defines a $(n-1)$-dimensional Euclidean subspace of $U_\real$ from the first $n-1$ dimensions of $U_\real$, the subset $\pmb{\mathcal{U}}$ is called a \textsb{Lipschitz domain}\index{domain!Lipschitz} and its boundary a \textsb{Lipschitz surface}\index{surface!Lipschitz} if the following conditions are observed.
+Let $U_\real$ be a $n$-dimensional Euclidean space, $n\geqslant 2\,$, and $\pmb{\mathcal{U}}$ one of its proper subsets, which we assume to be a domain of a certain function. Considering an arbitrary non zero scalar $\alpha\in\real^+$, a disjoint cover $\css{C}=\{\widehat{C}_1,\cdots,\widehat{C}_r\}$ of boundary $\partial\pmb{\mathcal{U}}$ and a class $\{A_1,\cdots,A_r\}$ where each set $A_i\subset C_i$ defines a $(n-1)$-dimensional Euclidean subspace of $U_\real$ from the first $n-1$ dimensions of $U_\real$, the subset $\pmb{\mathcal{U}}$ is called a \textsb{Lipschitz domain}\index{domain!Lipschitz} and its boundary a \textsb{Lipschitz surface}\index{surface!Lipschitz} if both of the following conditions are observed.
 
 \begin{itemize}
 	\setlength\itemsep{.1em}
-	\item[i.] Every element $\widehat{C}_j$ of $\css{C}$ must have a specific shape such that arbitrary vectors $\vto{u},\vto{v}\in\{\vto{x}\in\pmb{\mathcal{U}}:\fua{\varrho}{\vto{x},\partial\pmb{\mathcal{U}}}<\alpha\}$, where distance $\fua{\varrho}{\vto{u},\vto{v}}<\alpha$, are also elements of the subset $\{\vto{x}\in\widehat{C}_j:\fua{\varrho}{\vto{x},\partial C_j}>\alpha\}\,$;
-
-	\item[ii.] Every set $\pmb{\mathcal{U}}\cap \widehat{C}_j$ must be on the same ``side'' of boundary $\partial\pmb{\mathcal{U}}$, whose points coordinates must constitute the graph of a Lipschitz continuous function. In other words, there must exist a set of Lipschitz continuous functionals $\{f_1,\cdots,f_r\}$ where $\map{f_i}{A_i}{\real}$ in such a way that for an orthonormal basis $Z=\{\vun{v}_1,\cdots,\vun{v}_n\}$ of $\widehat{C}_j$ and arbitrary vector $\vto{w}\in \pmb{\mathcal{U}}\cap\widehat{C}_j$,
+	\item[i.] Every element $\widehat{C}_j$ of $\css{C}$ must have a specific shape such that arbitrary vectors 
 \begin{equation*}
-|\fua{\vtf{f}_n^Z}{\vto{w}}|<|f_j[\sum_{i=1}^{n-1}\fua{\vtf{f}_i^Z}{\vto{w}}\vun{v}_i]|\,.
+\vto{u},\vto{v}\in\{\vto{x}\in\pmb{\mathcal{U}}:\min_{\vto{y}\in \partial\pmb{\mathcal{U}}}\fua{\varrho}{\vto{x},\vto{y}}<\alpha\}\,,
+\end{equation*}
+where distance $\fua{\varrho}{\vto{u},\vto{v}}<\alpha$, are also elements of the subset	
+\begin{equation*}
+\{\vto{x}\in\widehat{C}_j:\min_{\vto{y}\in \partial C_j}\fua{\varrho}{\vto{x},\vto{y}}>\alpha\}\,;
+\end{equation*}
+
+	\item[ii.] Every set $\pmb{\mathcal{U}}\cap \widehat{C}_j$ must be on the same ``side'' of boundary $\partial\pmb{\mathcal{U}}$, whose points coordinates must constitute the graph of a Lipschitz continuous function. In other words, there must exist a set of Lipschitz continuous functionals $\{g_1,\cdots,g_r\}$ where $\map{g_i}{A_i}{\real}$ in such a way that for an orthonormal basis $B_j=\{\vun{v}_1^{(j)},\cdots,\vun{v}_n^{(j)}\}$ of $\widehat{C}_j$, the nonnegative real number
+\begin{equation*}
+|\fua{\vtf{f}_n^{B_j}}{\vto{x}}|<|g_j[\sum_{i=1}^{n-1}\fua{\vtf{f}_i^{B_j}}{\vto{x}}\vun{v}_i^{(j)}]|\,,\,\forall \vto{x}\in \pmb{\mathcal{U}}\cap\widehat{C}_j.
 \end{equation*}	
 \end{itemize}
 
