@@ -206,15 +206,14 @@ The concept of gradient we shall detail in this section is restricted to the con
 \begin{equation}\label{eq:defGradient}
 [\fua{\tnr{\psi}'}{\tnr{X}_0}](\tnr{X}) = \tnr{X}\odot_m\fua{\nabla\tnr{\psi}}{\tnr{X}_0}\,.
 \end{equation}
-Moreover, the tensor function in $\map{\gloref{gradi}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{U^{\times m}\times V^{\times s}}}$, called the gradient of $\tnr{\psi}$, assigns to a tensor of order $m$ a tensor of order $m+s$. Therefore, \emph{for the particular case of a differentiable unary tensor operator on $\pmb{\mathcal{U}}$, its gradient assigns to a $m$-th order tensor a $2m$-th order tensor}. In the context of $m+s=0$, that is $\cam{F}=\ete{\cam{F}}{U^{\times m}}=\ete{\cam{F}}{V^{\times s}}$, we consider $\{\vun{u}\}$ the basis of a one dimensional Hilbert space $U_\cam{F}$ to write, according to theorem $\ref{teo:repRiesz}$ and its  corollary \ref{cor:scalCov}, equalities
+Moreover, the tensor function in $\map{\gloref{gradi}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{U^{\times m}\times V^{\times s}}}$, called the gradient of $\tnr{\psi}$, assigns to a tensor of order $m$ a tensor of order $m+s$. Therefore, \emph{for the particular case of a differentiable unary tensor operator on $\pmb{\mathcal{U}}$, its gradient assigns to a $m$-th order tensor a $2m$-th order tensor}. In the context of $m+s=0$, that is $\cam{F}=\ete{\cam{F}}{U^{\times m}}=\ete{\cam{F}}{V^{\times s}}$, we consider $\{\vun{u}\}$ the basis of a one dimensional Hilbert space $U_\cam{F}$ to write, according to theorem \ref{teo:repRiesz}, equalities
 \begin{equation*}
-\fua{\dfrac{d\psi}{dx}}{x_0} = [\fua{\psi'}{x_0}](1) = 1\fua{\psi'}{x_0} = \vun{u}\cdot\fua{\psi'}{x_0}\vun{u}
+\fua{\dfrac{d\psi}{dx}}{x_0} = [\fua{\psi'}{x_0}](1) = 1\fua{\psi'}{x_0} = [\fua{\psi'}{x_0}\vun{u}]\cdot\vun{u}.
 \end{equation*}
 from which we define that $\fua{\nabla\psi}{x_0} = \fua{\psi'}{x_0}\vun{u}$ and then
 \begin{equation}
-\fua{\dfrac{d\psi}{dx}}{x_0} = \vun{u}\cdot\fua{\nabla\psi}{x_0}\,.
+\fua{\dfrac{d\psi}{dx}}{x_0} = \fua{\nabla\psi}{x_0}\cdot\vun{u}\,.
 \end{equation}
-
 
 Now, from the definition of gradient \eqref{eq:defGradient} and from rule \eqref{eq:directDeriv}, the directional derivative of $\tnr{\psi}$ along $\tnr{H}\in\pmb{\mathcal{U}}$ is described by
 \begin{equation}
@@ -597,12 +596,26 @@ Considering \eqref{eq:repInte}, \eqref{eq:crossProduct}, \eqref{eq:repTensFunc},
 \end{proof}
 }
 
-There are Lipschitz surfaces in three dimensional Euclidean spaces for which it is possible to define a boundary. In general terms, the intersection of a bounded set $A$ with an open ball centered at an element of boundary $\partial A$ is not a subset of $A$. Considering this idea on a three-dimensional Euclidean space $U_\real$ , the boundary of a surface $\partial\pmb{\mathcal{U}}\subset U_\real$ is a curve $\partial\partial\pmb{\mathcal{U}}\subset\partial\pmb{\mathcal{U}}$ where $B_{\vto{x},r}\cap\partial\pmb{\mathcal{U}}\not\subset\partial\pmb{\mathcal{U}}$ for all $\vto{x}\in\partial\partial\pmb{\mathcal{U}}$ and $r\in\real$. For Lipschitz surfaces with boundaries, we present the following classical theorem that establishes a relationship between an integral on a surface and an integral on its boundary.
+
+
+For the next theorem, we need to define at this point a function that assigns a tangent vector to each of the elements of a curve. Firstly, given an open interval $(\alpha_1,\alpha_2)\subset\real$ and a $n$-dimensional Euclidean space $U_\real$, if the function in $\map{r}{(\alpha_1,\alpha_2)}{U_\real}$ is continuously differentiable on its domain and its image is a curve $\pmb{\mathcal{R}}$, then $r$ is called the parametric function of $\pmb{\mathcal{R}}$. From the terms of definition \eqref{eq:defGradient}, we conclude mapping $\map{\nabla r}{(\alpha_1,\alpha_2)}{U_\real}$ and then define $\map{\vtf{\tau}}{\pmb{\mathcal{R}}}{U_\real}$ where 
+
+There are Lipschitz surfaces in three dimensional Euclidean spaces for which it is possible to define a boundary, like elliptic paraboloids for example. In general terms, the intersection of a bounded set $A$ with an open ball centered at an arbitrary element of boundary $\partial A$ is not a subset of the interior of $A$. Considering this idea on a three dimensional Euclidean space $U_\real$, the boundary of a surface $\pmb{\mathcal{S}}\subset U_\real$ is a curve $\partial\pmb{\mathcal{S}}\subset\pmb{\mathcal{S}}$ constituted by points $\vto{x}\in\partial\pmb{\mathcal{S}}$ such that $B_{\vto{x},r}\cap\pmb{\mathcal{S}}\not\subset\widehat{\pmb{\mathcal{S}}}$ for all $r\in\real$. 
+
+that is, function $r$ ``draws''or traces curve $\pmb{\mathcal{R}}$, being called .   
+
+
+Before describing 
+the following classical theorem that establishes a relationship between an integral on a three dimensional surface and an integral on its boundary, we must define a tangent function
+The Considering  
+
+
+For three dimensional Lipschitz surfaces with boundaries, we present the following classical theorem that establishes a relationship between an integral on a surface and an integral on its boundary.
 
 \begin{mteo}{Kelvin-Stokes}{stokes}
-Let $(U_\real,\tnr{A}_B)$ be a three dimensional oriented Euclidean space and $\map{\vtf{\varphi}}{\pmb{\mathcal{U}}}{\ete{\real}{U\times V}}$ a continuous mapping where  $\vtf{\varphi}$ is continuously differentiable on Lipschitz surface $\partial\pmb{\mathcal{U}}\subset U_\real$, which is oriented by an outward unit normal vector function $\vtf{n}$. Let $\map{\vtf{\tau}}{\partial\partial\pmb{\mathcal{U}}}{U_\real}$ be a continuous mapping where $\fua{\vtf{n}}{\vto{x}}\perp\fua{\vtf{\tau}}{\vto{x}}$ such that $\fua{\tnr{A}_B}{\fua{\vtf{n}}{\vto{x}}\times\fua{\vtf{\tau}}{\vto{x}},\fua{\vtf{n}}{\vto{x}},\fua{\vtf{\tau}}{\vto{x}}}>0$ and $\partial\partial\pmb{\mathcal{U}}$ is the boundary of $\partial\pmb{\mathcal{U}}$. Considering the continuous mappings $\map{\vtf{\varphi}_{\partial\partial\pmb{\mathcal{U}}}}{\partial\partial\pmb{\mathcal{U}}}{V_\real}$ and $\map{\vtf{\varphi}_{\partial\pmb{\mathcal{U}}}}{\partial\pmb{\mathcal{U}}}{V_\real}$ where $\fua{\vtf{\varphi}_{\partial\partial\pmb{\mathcal{U}}}}{\vto{x}}=\fua{\vtf{\tau}}{\vto{x}}\odot_1\fua{\vtf{\varphi}}{\vto{x}}$ and $\fua{\vtf{\varphi}_{\partial\pmb{\mathcal{U}}}}{\vto{x}}=\fua{\vtf{n}}{\vto{x}}\odot_1\fua{\crl{\vtf{\varphi}}}{\vto{x}}$,
+Let $(U_\real,\tnr{A}_B)$ be a three dimensional oriented Euclidean space and $\map{\vtf{\varphi}}{\pmb{\mathcal{S}}}{\ete{\real}{U\times V}}$ a mapping where  $\vtf{\varphi}$ is continuously differentiable on Lipschitz surface $\widehat{\pmb{\mathcal{S}}}\subset U_\real$, which is oriented by an outward unit normal vector function $\vtf{n}$. Let $\map{\vtf{\tau}}{\partial\pmb{\mathcal{S}}}{U_\real}$ be a continuous mapping where $\fua{\vtf{n}}{\vto{x}}\perp\fua{\vtf{\tau}}{\vto{x}}$ such that $\fua{\tnr{A}_B}{\fua{\vtf{n}}{\vto{x}}\times\fua{\vtf{\tau}}{\vto{x}},\fua{\vtf{n}}{\vto{x}},\fua{\vtf{\tau}}{\vto{x}}}>0$ and $\partial\pmb{\mathcal{S}}$ is the boundary of $\pmb{\mathcal{S}}$. Considering the continuous mappings $\map{\vtf{\varphi}_{\partial\pmb{\mathcal{S}}}}{\partial\pmb{\mathcal{S}}}{V_\real}$ and $\map{\vtf{\varphi}_{\widehat{\pmb{\mathcal{S}}}}}{\widehat{\pmb{\mathcal{S}}}}{V_\real}$ where $\fua{\vtf{\varphi}_{\partial\pmb{\mathcal{S}}}}{\vto{x}}=\fua{\vtf{\tau}}{\vto{x}}\odot_1\fua{\vtf{\varphi}}{\vto{x}}$ and $\fua{\vtf{\varphi}_{\widehat{\pmb{\mathcal{S}}}}}{\vto{x}}=\fua{\vtf{n}}{\vto{x}}\odot_1\fua{\crl{\vtf{\varphi}}}{\vto{x}}$,
 \begin{equation*}
-\int_{\partial{\pmb{\mathcal{U}}}}\vtf{\varphi}_{\partial\pmb{\mathcal{U}}} = \int_{\partial\partial{\pmb{\mathcal{U}}}}\vtf{\varphi}_{\partial\partial\pmb{\mathcal{U}}}\,\,.
+\int_{\widehat{{\pmb{\mathcal{S}}}}}\vtf{\varphi}_{\widehat{\pmb{\mathcal{S}}}} = \int_{\partial{\pmb{\mathcal{S}}}}\vtf{\varphi}_{\partial\pmb{\mathcal{S}}}\,\,.
 \end{equation*}
 \end{mteo}
 %\hspace{1pt}
