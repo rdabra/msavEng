@@ -346,13 +346,13 @@ There can be an abelian group $F$ that is simultaneously additive and multiplica
 \alpha,\alpha_i \in
     \con{F}\,\text{ and } n\in\gloref{inteirosPosNNulo}.
 \end{equation}
-In these circumstances, the triple $\lpa F, +, \cdot \rpa$ is called a \textsb{field}\index{field}, abbreviated by $\gloref{campo}$. When it is convenient, in order to simplify notation, $\cam{F}$ will represent the definer set $F$. An element of $\cam{F}$ is named a \textsb{scalar}\index{scalar}, of which $\beta\in\real$ and $\gamma\in\gloref{complexo}$ are examples. Henceforth, for the purposes of our study, an arbitrary field $\cam{F}$ will always refer to either a complex field $\complexo$ or a real field $\real$, that is, $\cam{F}\in\{\real,\complexo\}$. In this sense, where the real field will not be considered  a subset of the complex field, when $\cam{F}$ is $\real$, we must define that the conjugate $\overline{\alpha}=\alpha$, the real part $\gloref{parteReal}(\alpha)=\alpha$ and imaginary part $\gloref{parteImag}(\alpha)=0$, for all $\alpha\in \cam{F}$. Moreover, considering $f$ an arbitrary scalar valued function and $\fua{\overline{f}}{x}:=\overline{\fua{f}{x}}$, we have $\overline{f}=f$ in the case of $\cam{F}=\cam{R}$.
+In these circumstances, the triple $\lpa F, +, \cdot \rpa$ is called a \textsb{field}\index{field}, abbreviated by $\gloref{campo}$. When it is convenient, in order to simplify notation, $\cam{F}$ will represent the definer set $F$. An element of $\cam{F}$ is named a \textsb{scalar}\index{scalar}, of which $\beta\in\real$ and $\gamma\in\gloref{complexo}$ are examples. Henceforth, for the purposes of our study, an arbitrary field $\cam{F}$ will always refer to either a complex field $\complexo$ or a real field $\real$, that is, $\cam{F}\in\{\real,\complexo\}$. In this sense, where the real field will not be considered  a subset of the complex field\footnote{Since the complex field does not allow the concepts of ``greater than'' and ``less than''.}, when $\cam{F}$ is $\real$, we must define that the conjugate $\overline{\alpha}=\alpha$, the real part $\gloref{parteReal}(\alpha)=\alpha$ and imaginary part $\gloref{parteImag}(\alpha)=0$, for all $\alpha\in \cam{F}$. Moreover, considering $f$ an arbitrary scalar valued function and $\fua{\overline{f}}{x}:=\overline{\fua{f}{x}}$, we have $\overline{f}=f$ in the case of $\cam{F}=\cam{R}$.
 
 
 \section{Arrays}\index{array}
 
 
-We already learned that sequences are collections of ordered elements; or, more precisely, elements arranged in a queue, where each one has a position labeled by an index. Generalizing this idea, we shall build collections whose elements are arranged in a higher number of perspectives, like a table arrangement, for instance. Thereby, let $H$ be a collection of scalars, arranged by the mapping $\map{\fun{h}}{\crt{N}{q}}{\cam{F}}$, where the function $h$ is called \textsb{addressing}\index{array!addressing of} and each $N_i = \lch 1,2,\cdots,n_i \rch$ is a finite subset of $\mathbb{N}^*$ whose elements are ordinals. In this context, we call the collection $H$ an array, represented by $\gloref{array}$, whose scalars $\fua{\fun{h}}{( i_1,\cdots,i_q)}$ are notated by $\gloref{elArray1}$, where the subscript show explicitly the element position. The description of perspectives or \textsb{dimension}\index{array!dimension of} of an array is given by the $n$-tuple $(n_1 , \cdots , n_q)$ or, more usually, $n_1\times\cdots\times n_q\,$, where the number of perspectives $q$ expresses the \textsb{order}\index{array!order of} of the array and $n_i$ the \textsb{size}\index{array!size of} of each perspective.
+We already learned that sequences are collections of ordered elements; or, more precisely, elements arranged in a queue, where each one has a position labeled by an index. Generalizing this idea, we shall build collections whose elements are arranged in a higher number of perspectives, like a table arrangement, for instance. Thereby, let $H$ be a collection of scalars, arranged by the mapping $\map{\fun{h}}{\crt{N}{q}}{\cam{F}}$, where the function $h$ is called \textsb{addressing}\index{array!addressing of} and each $N_i = \lch 1,2,\cdots,n_i \rch$ is a finite subset of $\gloref{inteirosPosNNulo}$ whose elements are ordinals. In this context, we call the collection $H$ an array, represented by $\gloref{array}$, whose scalars $\fua{\fun{h}}{( i_1,\cdots,i_q)}$ are notated by $\gloref{elArray1}$, where the subscript show explicitly the element position. The description of perspectives or \textsb{dimension}\index{array!dimension of} of an array is given by the $n$-tuple $(n_1 , \cdots , n_q)$ or, more usually, $n_1\times\cdots\times n_q\,$, where the number of perspectives $q$ expresses the \textsb{order}\index{array!order of} of the array and $n_i$ the \textsb{size}\index{array!size of} of each perspective.
 
 Arrays can be added and multiplied. If an array  $\mat{A+B}$ is the sum of $\mat{A}$ and $\mat{B}$, these three arrays have equal dimension $n_1\times\cdots\times n_q\,$ and each element
 \begin{equation}\label{eq:adicaoArray}
@@ -374,12 +374,12 @@ Speaking of scalars, it is also possible to multiply a scalar $\alpha$ and an ar
 	i_q}\,.
 \end{equation}
 This definition of multiplication by scalars in the case of $\alpha=-1$, from which we can establish the additive inverse $-\mat{C}$, together with the addition described
-in \eqref{eq:adicaoArray}, allow us to state that the set $Y$ of all $n_1\times\cdots\times n_q$ arrays defines an additive group considering the existence of the null array\index{array!null} $\mat{0}\in Y$, whose elements are all zero. Conversely, since it is not possible to obtain a multiplicative inverse for every element of $Y$, this set can not define a group. Additionally, it is of fundamental importance for upcoming concepts to define $l_1\times\cdots \times l_q\times n_1\times\cdots\times n_q$ arrays $\mat{A}^\text{T}$ and $\mat{A}^\dagger$, which we call here the \textsb{transpose}\index{array!transpose} and the \textsb{conjugate transpose}\index{array!conjugate transpose} of array $A$ respectively, whose elements
+in \eqref{eq:adicaoArray}, allow us to state that the set $Y$ of all $n_1\times\cdots\times n_q$ arrays defines an additive group considering the existence of the null array\index{array!null} $\mat{0}\in Y$, whose elements are all zero. Conversely, since it is not possible to obtain a multiplicative inverse for every element of $Y$, this set can not define a multiplicative group. Additionally, it is of fundamental importance for upcoming concepts to define $l_1\times\cdots \times l_q\times n_1\times\cdots\times n_q$ arrays $\mat{A}^\text{T}$ and $\mat{A}^\dagger$, which we call here the \textsb{transpose}\index{array!transpose} and the \textsb{conjugate transpose}\index{array!conjugate transpose} of array $A$ respectively, whose elements
 \begin{alignat} {3}
 \mat{A}^\text{T}_{i_1\cdots i_q j_1\cdots j_q}:=\mat{A}_{j_1\cdots j_q i_1\cdots i_q}&\qquad \text{ and } \qquad&\mat{A}^\dagger_{i_1\cdots i_q j_1\cdots j_q}:=\overline{\mat{A}_{j_1\cdots j_q i_1\cdots i_q}}\,.
 \end{alignat}
 
-An example of array that is widely used to accomplish indicial notation of complex quantities and operations is called \textsb{Levi-Civita Symbol}\index{Levi-Civita!Symbol} or \textsb{Permutation Symbol}\index{Permutation!Symbol}, notated by the letter $\epsilon$, whose scalars are defined the following way:
+An example of array that is widely used to accomplish indicial notation of sophisticated quantities and operations is called \textsb{Levi-Civita Symbol}\index{Levi-Civita!Symbol} or \textsb{Permutation Symbol}\index{Permutation!Symbol}, notated by the letter $\epsilon$, whose scalars are defined the following way:
 \begin{equation}
     \epsilon_{i_1\cdots i_n}=
 \begin{dcases}
@@ -390,7 +390,7 @@ i_1,\cdots,i_n\rpa\\\
 \end{dcases}\,,
 \end{equation}
 where function $p$ permutes the $n$-tuple elements $(1,\cdots,n)$. In this array, the addressing domain is $N^n$, where the set of ordinals $N = \lch 1,2,\cdots,n \rch$. The term $\fua{\alpha_p}{ 1,\cdots,n }$ means the number of transpositions made on $\lpa 1,\cdots,n \rpa$, after which the resulting $n$-tuple is $\fua{p}{1,\cdots,n }$.
-Because of its definition, the Levi-Civita Symbol is an array of order $n$ whose dimension is $n\times\cdots\times n$. Arrays having the same size $n$ in each perspective, like the Levi-Civita Symbol, are usually called \textsb{hypercubic}\index{array!hypercubic} of size $n$. Therefore, $\epsilon$ is a hypercubic array of order $n$ and size $n$. For instance, when the order and size are $2$, $\epsilon$ can be represented in a  tabular arrangement; more precisely,
+Because of its definition, the Levi-Civita Symbol is an array of order $n$ whose dimension is $n\times\cdots\times n$. Arrays having the same size $n$ in each perspective, like the Levi-Civita Symbol, are usually called \textsb{hypercubic}\index{array!hypercubic} of size $n$. Therefore, $\epsilon$ is a particular hypercubic array of size $n$ that also has order $n$. For instance, when $n=2$, $\epsilon$ can be represented in a  tabular arrangement; more precisely,
 \begin{equation}
 \epsilon=
 \begin{bmatrix}
@@ -405,7 +405,7 @@ The Levi-Civita symbol enables us to define a notable mapping $\map{\text{Det}}{
 	i_n^{(1)}}\cdots\epsilon_{i_1^{(q)}\cdots i_n^{(q)}}
 \prod_{k=1}^{n}\mat{X}_{i_k^{(1)}\cdots i_k^{(q)}}
 \end{equation}
-when the order $q$ is even and $\hdet{\mat{X}}=0$ when it is odd. Although this definition lacks an adequate justification at this point, it will support future concepts that will have their own intuitive meaning. The term $1/n!$ is justified by the property
+when the order $q$ is even and $\hdet{\mat{X}}=0$ when it is odd. Although this definition lacks an adequate justification at this point, it will support future concepts that will have their own intuitive meaning. The term $1/n!$ is justified by the equality
 \begin{equation}\label{eq:productProp}
 \sum_{i_1^{(1)}=1}^n\cdots\sum_{i_n^{(1)}=1}^n\cdots
 \sum_{i_1^{(q)}=1}^n\cdots\sum_{i_n^{(q)}=1}^n\epsilon_{i_1^{(1)}\cdots
@@ -416,16 +416,16 @@ since $n!$ must be eliminated from the calculation of the hyperdeterminant.
 
 There is another hypercubic array $\delta$, also widely used in indicial notations, called \textsb{Kronecker Delta}\index{Kronecker Delta}, whose elements
 \begin{equation}
-    \delta_{i_1\cdots i_{q}j_1\cdots j_{q}}:=
+    \delta_{i_1\cdots i_{r}j_1\cdots j_{r}}:=
 \begin{dcases}
-    \lpa-1\rpa^{\fua{\alpha_p}{ j_1,\cdots,j_q }}  & \text{if } \exists\,\,\fua{p}{j_1,\cdots,j_{q} }=\lpa
-i_1,\cdots,i_q\rpa\\
+    \lpa-1\rpa^{\fua{\alpha_p}{ j_1,\cdots,j_r }}  & \text{if } \exists\,\,\fua{p}{j_1,\cdots,j_{r} }=\lpa
+i_1,\cdots,i_r\rpa\\
 0 & \text{se }  \nexists\,\,
-\fua{p}{j_1,\cdots,j_{q} }=\lpa
-i_1,\cdots,i_q\rpa
+\fua{p}{j_1,\cdots,j_{r} }=\lpa
+i_1,\cdots,i_r\rpa
 \end{dcases}\,,
 \end{equation}
-where the addressing domain is $N^{2q}$ and the set $N = \lch 1,2,\cdots,n \rch$. Differently from the Levi-Civita Symbol, in order to build $\delta$ it is necessary to specify an order of $2q$ and all dimensions equal to $n$. In the particular case of $q=1$, the Kronecker Delta results a $n\times n$ array, that is, a tabular array, as can be observed in
+where the addressing domain is $N^{2r}$ and the set $N = \lch 1,2,\cdots,n \rch$. Differently from the Levi-Civita Symbol, in order to build $\delta$ it is necessary to specify an order of $2r$ and all dimensions equal to $n$. In the particular case of $r=1$, the Kronecker Delta results a $n\times n$ array, that is, a tabular array, as can be observed in
 \begin{equation}\label{eq:matrizIdentidade}
 \delta=
 \begin{bmatrix}
@@ -441,7 +441,7 @@ where the addressing domain is $N^{2q}$ and the set $N = \lch 1,2,\cdots,n \rch$
 	0      & \cdots  & 0      & 1
 \end{bmatrix}\,.
 \end{equation}
-Along this text, the following important property of the Kronecker Delta will be used to handle indices in various proofs and expression developments:
+Along this text, the following important property of the Kronecker Delta with $r=1$ will be used to handle indices in various proofs and expression developments:
 \begin{equation}\label{eq:deltaIdent1}
 \sum_{i_q=1}^{n}\mat{A}_{i_1\cdots i_q}\delta_{i_qj}=\mat{A}_{i_1\cdots i_{q-1}j}\,,
 \end{equation}
@@ -467,7 +467,7 @@ which is actually equality \eqref{eq:Hiperdeterminante} applied to square matric
 \dete{\mat{X}} = \sum_{i_1=1}^n\cdots\sum_{i_n=1}^n
 \epsilon_{i_1\cdots i_n}\prod_{k=1}^{n}\mat{X}_{i_kk}\,,
 \end{equation}
-where $1/n!$ is no longer necessary because equality \eqref{eq:productProp} does not occur. When $\dete{\mat{X}}=0$, matrix $\mat{X}$ is said to be \textsb{singular}\index{matrix!singular} or \textsb{non-invertible}\index{matrix!non-invertible}; otherwise, it is called \textsb{non-singular}\index{matrix!non-singular} or \textsb{invertible}\index{matrix!invertible}. From the above definition, we can obtain a zero value determinant when its argument is the zero matrix and a unitary value for the identity matrix. Moreover, the main property of determinants of square matrices is to preserve multiplications, that is, the determinant of the product is the product of determinants; in other words $\dete{\mat{AB}}=\dete{\mat{A}}\cdot\dete{\mat{B}}$. Recalling our classification of groups, we can say that a subset of $\bar{M}$ whose matrices are all invertible defines, together with the operation of multiplication, a non-abelian group. From the above definition of determinant of matrices, it is possible to obtain an important equality, called \textsb{contracted epsilon identity}\index{contracted epsilon identity}, which correlates the Kronecker Delta with the Levi-Civita Symbol when size $n=3$, namely
+where $1/n!$ is no longer necessary because equality \eqref{eq:productProp} does not occur. When $\dete{\mat{X}}=0$, matrix $\mat{X}$ is said to be \textsb{singular}\index{matrix!singular} or \textsb{non-invertible}\index{matrix!non-invertible}; otherwise, it is called \textsb{non-singular}\index{matrix!non-singular} or \textsb{invertible}\index{matrix!invertible}. From the above definition, we can obtain a zero value determinant when its argument is the zero matrix and a unitary value for the identity matrix. Moreover, the main property of determinants of square matrices is to preserve multiplications, that is, the determinant of the product is the product of determinants; in other words $\dete{\mat{AB}}=\dete{\mat{A}}\cdot\dete{\mat{B}}$. Recalling our classification of groups, we can say that a subset of $\bar{M}$ whose matrices are all invertible defines, together with the operation of multiplication, a non-abelian multiplicative group. From the above definition of determinant of matrices, it is possible to obtain an important equality, called \textsb{contracted epsilon identity}\index{contracted epsilon identity}, which correlates the Kronecker Delta with the Levi-Civita Symbol when size $n=3$, namely
 \begin{equation}\label{eq:LeviKronecker}
 \sum_{i=1}^{3}\epsilon_{ijk} \epsilon_{ilm} = \delta_{jl}\delta_{km}-\delta_{jm}\delta_{kl}\,.
 \end{equation}
@@ -595,7 +595,7 @@ It is important to note that $\mat{A}$ and $\mat{B}$ positions in the equality d
 \begin{equation}
 \dete {\mat{A}} = \dete {\mat{Q}^{-1}}\dete{\mat{B}}\dete{\mat{Q}}=(\dete{\mat{Q}})^{-1}\dete{\mat{Q}}\dete{\mat{B}}=\dete{\mat{B}}.
 \end{equation}
-A mapping $\map{q}{\bar{M}}{\bar{N}}$ is a \textsb{similarity transformation}\index{similarity!transformation} if
+A mapping $\map{q}{\bar{M}}{\bar{N}}$, where $\bar{N}\subset\bar{M}$, is a \textsb{similarity transformation}\index{similarity!transformation} if
 \begin{equation}
 \fua{q}{\mat{X}} = \mat{Q}^{-1}\mat{X}\mat{Q}.
 \end{equation}
@@ -645,7 +645,7 @@ where $\mat{H}$ is a square matrix. By developing the right term, we arrive at
 \begin{equation}\label{eq:poliCaracDesen}
 \fua{g}{x}=(-1)^nx^n+a_1x^{n-1}+a_2x^{n-2}+\cdots+a_{n-1}x+a_n\,,
 \end{equation}
-which is a polynomial of order $n$, named characteristic polynomial of $\mat{H}$, whose coefficients are
+which is a polynomial of order $n$, named characteristic polynomial of $\mat{H}$, whose coefficients are 
 \begin{align}
 a_1 & = \lpa-1\rpa^{n+1}\trc{\mat{H}}\label{eq:coefAUm}\,;\\
 a_2 & = -\dfrac{1}{2}\lco a_{1}\trc{\mat{H}}+\lpa-1\rpa^n\trc{\mat{H}^2}\rco\,;\\
@@ -674,10 +674,10 @@ from where we conclude $\mat{A}$ and $\mat{B}$ isospectral.
 
 The spectrum of a matrix has a close relation with determinant and trace functions, which \emph{respectively preserve the operations of multiplication and addition}. If
 $\lch\lambda_1,\cdots,\lambda_n\rch$ is the spectrum of $\mat{A}$, this close relation is expressed through the following equalities:
-\begin{alignat}{3}
+\begin{alignat}{3}\label{eq:detTrace}
 \dete{\mat{A}}  = \prod_{i=1}^n  \lambda_i & \qquad\text{and} \qquad & \trc{\mat{A}} & = \sum_{i=1}^n  \lambda_i \,.
 \end{alignat}
-When two matrices have the same pair of determinant and trace, we can say that these matrices have a kind of equivalence if we interpret the two functions as scalar measures whose absolute values express a quantitative aspect and whose signs express a qualitative aspect of the matrix in question. Therefore, isospectral matrices are said to be equivalent in this sense; \emph{something that, in a certain way, confers a metric feature on the spectrum of matrices}.
+When two matrices have the same pair of determinant and trace, we can say that these matrices have a kind of equivalence if we interpret the two functions as scalar measures whose absolute values express a quantitative aspect and whose signs express a qualitative aspect of the matrix in question. Therefore, isospectral matrices are said to be equivalent in this sense; \emph{something that, in a certain way, confers a metric feature for the spectrum of matrices}.
 
 {\footnotesize
 \begin{proof}
@@ -707,8 +707,7 @@ A matrix $\mat{A}\in\bar{M}$ is said to be \textsb{nonnegative}\index{matrix!non
 \begin{equation}
 \Re\lpa\mat{X}^\dagger\mat{A}\mat{X}\rpa_{11}\geqslant0\,,
 \end{equation}
-where $\mat{X}$ is a non zero $n\times 1$ matrix. When the inequality imposes the left side to be always positive, $\mat{A}$ is called  \textsb{positive-definite}\index{matrix!positive-definite}. A necessary and sufficient condition that ensures positivity of a matrix is that the spectrum of its hermitian part be constituted of nonnegative elements\footnote{This condition will be verified after the definition of eigenvalue on the next chapter %à p.\pageref{sec:autoPares}
-.}, when this matrix results nonnegative; similarly, if these same elements are all positive, the matrix is positive-definite. Thereby, from the two equalities of the previous paragraph, it can be concluded that the determinant and trace of a nonnegative Hermitian matrix are always nonnegative, while for a positive-definite Hermitian matrix both are positive. Therefore, in the context of Hermitian matrices, the determinant value indicates whether a matrix is nonnegative or not. From this conclusion, we can state that \emph{every positive-definite hermitian matrix is invertible}. Moreover, when a positive-definite hermitian matrix $\mat{H}$ pre or post multiplies an arbitrary matrix
+where $\mat{X}$ is a non zero $n\times 1$ matrix. When the inequality imposes the left side to be always positive, $\mat{A}$ is called  \textsb{positive-definite}\index{matrix!positive-definite}. A necessary and sufficient condition that ensures positivity of a matrix is that the spectrum of its hermitian part be constituted of nonnegative elements\footnote{This condition will be verified on section \ref{sec:autoPares}.}, when this matrix results nonnegative; similarly, if these same elements are all positive, the matrix is positive-definite. Thereby, from the two equalities \eqref{eq:detTrace} of the previous paragraph, it can be concluded that the determinant and trace of a nonnegative Hermitian matrix are always nonnegative, while for a positive-definite Hermitian matrix both are positive. Therefore, in the context of Hermitian matrices, the determinant value indicates whether a matrix is nonnegative or not. From this conclusion and the definition of invertibility, we can state that \emph{every positive-definite hermitian matrix is invertible}. Moreover, when a positive-definite hermitian matrix $\mat{H}$ pre or post multiplies an arbitrary matrix
 $\mat{B}\in\bar{M}$, we have
 \begin{equation}
 \sgn{\dete{\mat{BH}}}=\sgn{\dete{\mat{HB}}}=\sgn{\dete{\mat{B}}} \sgn{\dete{\mat{H}}}=\sgn{\dete{\mat{B}}}\,,
@@ -718,7 +717,7 @@ where the sign ``\gloref{signum}'' of the determinant of $\mat{B}$ defines the s
 We shall finish this chapter by presenting the following fundamental equality, a property of any square matrix that will make further developments feasible.
 
 \begin{mteo}{Cayley-Hamilton}{cayleyhamilton}
-Let $\bar{M}$ be the set of all square matrices and $\map{\hat{g}}{\bar{M}}{\bar{M}}$ a mapping whose function rule is described by
+Let $\bar{M}$ be the set of all square matrices and $\map{\hat{g}}{\bar{M}}{\bar{M}}$ an operation whose function rule is described by
 \begin{equation}
 \fua{\hat{g}}{\mat{X}}=(-1)^n\mat{X}^n+a_1\mat{X}^{n-1}+a_2\mat{X}^{n-2}+\cdots+a_{n-1}\mat{X}+a_n\mat{I}\,.
 \end{equation}
@@ -727,7 +726,7 @@ If the coefficients on this rule equal the coefficients of the characteristic po
 \hspace{1pt}
 {\footnotesize
 \begin{proof}
-In order to verify this theorem, we need to present some preliminary definitions. There is an algorithm \footnote{After \aut{Knuth}\cite{knuth_1997_1}, the word ``algorithm'' has the same etymological source of ``algebra''.}, called \textsb{Laplace Expansion}\index{Expansion!Laplace} or \textsb{Cofactorial Expansion}\index{Expansion!Cofactorial}, that is used in certain cases to find determinants. Here it is: given a square matrix $\mat{A}$, we can obtain for an arbitrary line $i$ that
+In order to verify this theorem, we need to present some preliminary definitions. There is an algorithm \footnote{According to \aut{Knuth}\cite{knuth_1997_1}, the word ``algorithm'' has the same etymological source of ``algebra''.}, called \textsb{Laplace Expansion}\index{Expansion!Laplace} or \textsb{Cofactorial Expansion}\index{Expansion!Cofactorial}, that is used in certain cases to find determinants. Here it is: given a square matrix $\mat{A}$, we can obtain for an arbitrary line $i$ that
 \begin{equation*}
 \dete{\mat{A}} = \sum_{j=1}^{n}\mat{A}_{ij} \underbrace{\lpa-1\rpa^{i+j}\dete{\mat{M}_{(ij)}}}_{\mat{C}_{ij}}\,,
 \end{equation*}
@@ -735,7 +734,7 @@ where $\mat{C}$ is called \textsb{cofactor matrix}\index{matrix!cofactor} of $\m
 \begin{equation*}
 \adj{\mat{A}}(\mat{H}-x\mat{I})=\fua{g}{x}\mat{I}=\mat{I}(-1)^nx^n+\mat{I}a_1x^{n-1}+\cdots+\mat{I}a_{n-1}x+\mat{I}a_n\,.
 \end{equation*}
-Through a tedious development, it can be obtained that the adjugate of $\mat{A}$ results a polynomial of order $q$, with matrix coefficients $\mat{H}_i$, described in
+Through a tedious development, it can be obtained that the adjugate of $\mat{A}$ results a polynomial of order $q$, with matrix coefficients $\mat{H}_i$, described by
 \begin{equation*}
 \adj{\mat{A}} = \mat{H}_1x^q+\mat{H}_2x^{q-1}+\cdots+\mat{H}_{n-1}x+\mat{H}_{n}\,.
 \end{equation*}
