@@ -194,7 +194,7 @@ It is important to say that the empty set and the set $A$, to which the elements
 Let's prove that $W_1$ and $W_2$ are clopen in $W:=W_1\cup W_2$. Let $(w-1/2,w+1/2)$ be an open interval in $\real$ where $w\in W$. This interval centered in $w=2$ results $(3/2,2)$, which is also open since there are no elements greater than 2 and less than $5/2$. Through this same process, it is always possible to find an open interval centered in an arbitrary $w\in W_1$; when we conclude that $W_1$ is open in $W$. By this same reasoning, $W_2$ is also open. But $W_1$ and $W_2$ are also closed because they are each other's open complement in $W$.
 \end{proof}}
 
-Still considering the conditions above, the space $(A,\varrho)$ is called \textsb{connected}\index{space!connected} when there is no proper non empty subset that is clopen in $A$; otherwise, the space is said to be \textsb{disconnected}\index{space!disconnected}, as is the case of a metric space defined by $W_1\cup W_2$. In other words, a disconnected space results from the union of disjoint open non empty subsets. Intuitively, we can say that this space is fragmented, constituted by scattered collections of elements. Therefore, it is possible to conclude that vector spaces can not be disconnected since their definer fields $\real$ or $\complexo$ are connected.
+Still considering the conditions above, the space $(A,\varrho)$ is called \textsb{connected}\index{space!connected} when there is no proper non empty subset that is clopen in $A$; otherwise, the space is said to be \textsb{disconnected}\index{space!disconnected}, as is the case of a metric space defined by $W_1\cup W_2$. In other words, a disconnected space results from the union of disjoint open non empty subsets. Intuitively, we can say that this space is fragmented, constituted by scattered collections of elements. Therefore, it is possible to conclude that vector spaces, as defined in this chapter, can not be disconnected because their definer fields $\real$ or $\complexo$ are connected.
 
 A metric space $(U,\varrho)$, subspace of $(Z,\varrho)$, is called \textsb{bounded}\index{space!bounded} if there are an element $u\in U$ and a scalar $r \in \real$ such that $U\subset B_{{u},r}$. Now we shall restrict this condition a little more, but firstly let $C=\{U_1, U_2,\cdots\}$ be an infinite set constituted by subsets of $Z$. We say that $C$ covers $U$ or that $C$ is a \textsb{cover}\index{set!cover of} of $U$ when $U\subseteq \bigcup_{i=1}^\infty U_i$. If there is a finite set $\{ B_{{u_1},r}\,,B_{{u_2},r}\,,\cdots,B_{{u_n}\,,r}\}$, $u_i\in U$ and $r \in \real$, that covers $U$, we say that $(U,\varrho)$ is a \textsb{totally bounded}\index{space!totally bounded} space. Boundedness and, more strongly, total boundedness are restrictions that impose on the space in question a feature of being delimited, from which it is possible to attain the concept of size.
 
@@ -264,11 +264,11 @@ a Banach space with an inner product $(V_\cam{F},\varrho,\eta,\xi)$, called a \t
 
 {\footnotesize
 \begin{proof}
-Through a long and tedious proof, starting from the so called \textsb{Zorn's Lemma}\index{Zorn's Lemma}, it is possible to obtain that every Hilbert space has a basis (See \aut{Kreyszig}\cite{kreyszig_1978_1}). Once the existence of a basis is assured, the \textsb{Gram-Schmidt Algorithm}\index{Gram-Schmidt!Algorithm} is able to find an orthogonal set from any other set as follows. Let $U=\{\vto{u}_1,\cdots,\vto{u}_n\}$ be a basis and $X=\{\vto{x}_1,\cdots,\vto{x}_n\}$ a set where $\vto{x}_1=\vto{u}_1$. If  $n=2$, the goal is to find a $\vto{x}_2\perp\vto{x}_1$ that makes $X$ orthogonal. The algorithm proposes that $\vto{x}_2=p_{21}\vto{x}_1+\vto{u}_2$, where $p_{21}:=-(\vto{u}_2\cdot\vto{x}_1)/\|\vto{x}_1\|^2$. It is evident that an arbitrary vector $\vto{u}=\alpha_1\vto{u}_1+\alpha_2\vto{u}_2$, and then $\vto{u}=(\alpha_1-p_{21})\vto{x}_1+\alpha_2\vto{x}_2$; therefore, $\spn (U)=\spn(X)$. When $n=3$, vector $\vto{x}_3\perp\{\vto{x}_1,\vto{x}_2\}$ is found from $\vto{x}_3=p_{31}\vto{x}_1+p_{32}\vto{x}_2+\vto{u}_3$, where scalar $p_{31}:=-(\vto{u}_3\cdot\vto{x}_1)/\|\vto{x}_1\|^2$ and scalar $p_{32}:=-(\vto{u}_3\cdot\vto{x}_2)/\|\vto{x}_2\|^2$. A vector $\vto{u}=\alpha_1\vto{u}_1+\alpha_2\vto{u}_2+\alpha_3\vto{u}_3$ can be rewritten as the vector $\vto{u}=(\alpha_1-\alpha_2 p_{21}-\alpha_3 p_{31})\vto{x}_1+(\alpha_2-\alpha_3 p_{32})\vto{x}_2+\alpha_3\vto{x}_3$, from which results $\spn (U)=\spn(X)$. This same process can be done for any $n>3$.
+Through a long and tedious proof, starting from the so called \textsb{Zorn's Lemma}\index{Zorn's Lemma}, it is possible to obtain that every Hilbert space has a basis (see \aut{Kreyszig}\cite{kreyszig_1978_1}). Once the existence of a basis is assured, the \textsb{Gram-Schmidt Algorithm}\index{Gram-Schmidt!Algorithm} is able to find an orthogonal set from any other set as follows. Let $U=\{\vto{u}_1,\cdots,\vto{u}_n\}$ be a basis and $X=\{\vto{x}_1,\cdots,\vto{x}_n\}$ a set where $\vto{x}_1=\vto{u}_1$. If  $n=2$, the goal is to find a $\vto{x}_2\perp\vto{x}_1$ that makes $X$ orthogonal. The algorithm proposes that $\vto{x}_2=p_{21}\vto{x}_1+\vto{u}_2$, where $p_{21}:=-(\vto{u}_2\cdot\vto{x}_1)/\|\vto{x}_1\|^2$. It is evident that an arbitrary vector $\vto{u}=\alpha_1\vto{u}_1+\alpha_2\vto{u}_2$, and then $\vto{u}=(\alpha_1-p_{21})\vto{x}_1+\alpha_2\vto{x}_2$; therefore, $\spn (U)=\spn(X)$. When $n=3$, vector $\vto{x}_3\perp\{\vto{x}_1,\vto{x}_2\}$ is found from $\vto{x}_3=p_{31}\vto{x}_1+p_{32}\vto{x}_2+\vto{u}_3$, where scalar $p_{31}:=-(\vto{u}_3\cdot\vto{x}_1)/\|\vto{x}_1\|^2$ and scalar $p_{32}:=-(\vto{u}_3\cdot\vto{x}_2)/\|\vto{x}_2\|^2$. A vector $\vto{u}=\alpha_1\vto{u}_1+\alpha_2\vto{u}_2+\alpha_3\vto{u}_3$ can be rewritten as the vector $\vto{u}=(\alpha_1-\alpha_2 p_{21}-\alpha_3 p_{31})\vto{x}_1+(\alpha_2-\alpha_3 p_{32})\vto{x}_2+\alpha_3\vto{x}_3$, from which results $\spn (U)=\spn(X)$. This same process can be done for any $n>3$.
 \end{proof}
 }
 
-The theorem above also assures the existence of orthonormal bases because they can be obtained from normalization of orthogonal bases. Thereby, for an arbitrary orthonormal basis $\{\vun{u}_1,\cdots,\vun{u}_n\}$ of a Hilbert space, it is clear that inner products
+The theorem above also assures the existence of orthonormal bases because they can be obtained from normalization of orthogonal bases. Thereby, for an arbitrary orthogonal basis $\{\vto{u}_1,\cdots,\vto{u}_n\}$ of a Hilbert space, it is clear that inner products
 \begin{equation*}
 \vto{u}_i\cdot\vto{u}_j/\|\vto{u}_i\|\overline{\|\vto{u}_j\|}=\vun{u}_i\cdot\vun{u}_j=\delta_{ij}\,.
 \end{equation*}
@@ -280,15 +280,15 @@ where $(\alpha_1,\cdots,\alpha_n)$ and $(\beta_1,\cdots,\beta_n)$ are the coordi
 
 
 The presence of \textsb{reciprocal sets}\index{sets!reciprocal} is another consequence of the existence of orthogonal sets in Hilbert spaces. We say that $\con{U}=\lch \vto{u}_1,\cdots,\vto{u}_n
-\rch$ and $\con{W}=\lch \vto{w}_1,\cdots,\vto{w}_n \rch$, subsets of the Hilbert space $V_\cam{F}$, are reciprocal or \textsb{biorthogonal}\index{sets!biorthogonal} if their vectors are non zero and $\vto{u}_i\cdot\vto{w}_j = \delta_{ij}$. As the pair of reciprocal sets is unique, notations relative to one of these sets are usually defined: for instance, a set $U^\perp:=W$ and vectors $\vto{u}^i:=\vto{w}_i$. It is interesting to note that if the subset $U$ is orthonormal, its reciprocal set $U^\perp=U$. Now, considering $B$ a basis of $V_\cam{F}$ and $\con{B}^\perp$ its reciprocal set, let $\vto{u}=\sum_{i=1}^n\gamma_i\vto{u}^i$. If this vector $\vto{u}$ is zero, then
-\begin{equation}
+\rch$ and $\con{W}=\lch \vto{w}_1,\cdots,\vto{w}_n \rch$, subsets of the Hilbert space $V_\cam{F}$, are reciprocal or \textsb{biorthogonal}\index{sets!biorthogonal} if their vectors are non zero and $\vto{u}_i\cdot\vto{w}_j = \delta_{ij}$. As the pair of reciprocal sets is unique, notations relative to one of these sets are usually defined: for the present case, set $U^\perp:=W$ and vectors $\vto{u}^i:=\vto{w}_i$. It is interesting to note that if the subset $U$ is orthonormal, its reciprocal set $U^\perp=U$. Now, considering $B$ a basis of $V_\cam{F}$ and $\con{B}^\perp$ its reciprocal set, let $\vto{u}=\sum_{i=1}^n\gamma_i\vto{u}^i$. If this vector $\vto{u}$ is zero, then
+\begin{equation*}
 (\sum_{j=1}^n\gamma_j\vto{u}^j)\cdot\vto{u}_i\,=\,\sum_{j=1}^n\gamma_j\delta_{ij}\,=\,\gamma_i\,=\,0\,.
-\end{equation}
+\end{equation*}
 This result shows that $B^\perp$ is linearly independent since the scalars $\gamma_i$ are zero when $\vto{u}=0$. Moreover, as both reciprocal sets have the same number of elements, we can conclude that if one of them is a basis of $V_\cam{F}$, so is the other. Thereby, if $(\alpha_1,\cdots,\alpha_n)$ are the coordinates of a vector on basis $B$, we usually use $(\alpha^1,\cdots,\alpha^n)$ to represent the coordinates of this same vector on basis $B^\perp$.
 
 {\footnotesize
 \begin{proof}
-Let's verify the uniqueness and existence of reciprocal sets on the context above. From theorem \ref{teo:temOrtonormal}, we can admit an orthogonal subset $Z=\{\vto{z}_1,\cdots,\vto{z}_n\}$. Thereby, let $\{\vto{\tilde{z}}_1,\cdots,\vto{\tilde{z}}_n\}$ be a subset where $\vto{\tilde{z}}_i:=\vto{z}_i/\|\vto{z}_i\|^2$. Therefore, $\vto{z}_i\cdot\vto{\tilde{z}}_j=(\vto{z}_i\cdot\vto{z}_j)/\|\vto{z}_j\|^2=\delta_{ij}$, which proves the existence. Now, supposing that there exists another subset $\{\vto{x}_1,\cdots,\vto{x}_n\}$ reciprocal to $Z$, we can say that $\vto{z}_i\cdot(\vto{\tilde{z}}_j-\vto{x}_j)=0$. As vectors $\vto{z}_i$, $\vto{\tilde{z}}_j$ and $\vto{x}_j$ can not be zero, then $\vto{\tilde{z}}_j=\vto{x}_j$, which proves the uniqueness.
+Let's verify the uniqueness and existence of reciprocal sets on the context above. From theorem \ref{teo:temOrtonormal}, we can admit an orthogonal subset $Z=\{\vto{z}_1,\cdots,\vto{z}_n\}$. Thereby, let $\{\vto{\tilde{z}}_1,\cdots,\vto{\tilde{z}}_n\}$ be a subset where $\vto{\tilde{z}}_i:=\vto{z}_i/\|\vto{z}_i\|\overline{\|\vto{z}_i\|}$. Therefore, $\vto{z}_i\cdot\vto{\tilde{z}}_j=(\vto{z}_i\cdot\vto{z}_j)/\|\vto{z}_j\|\overline{\|\vto{z}_j\|}=\delta_{ij}$, which proves the existence. Now, supposing that there exists another subset $\{\vto{x}_1,\cdots,\vto{x}_n\}$ reciprocal to $Z$, we can say that $\vto{z}_i\cdot(\vto{\tilde{z}}_j-\vto{x}_j)=0$. As vectors $\vto{z}_i$, $\vto{\tilde{z}}_j$ and $\vto{x}_j$ can not be zero, then $\vto{\tilde{z}}_j=\vto{x}_j$, which proves the uniqueness.
 \end{proof}
 }
 
@@ -296,7 +296,7 @@ Let's verify the uniqueness and existence of reciprocal sets on the context abov
 
 \section{Linear Functions}\label{sec:FuncLin}
 
-The most fundamental relationships studied in Linear Algebra have the feature of preserving group structures involved, including those defined by fields. Such relationships are expressed by homomorphisms whose main property is to keep structures of vector spaces unaltered. Moreover, if these vector spaces are metric, it is required this additional structure to remain unchanged as well. In practical terms, this means that if the homomorphism domain is a metric vector space, so must be its image. Selected through a criteria of defining the same mapping, we study these functions by gathering them in a vector space, where there are additional restrictions concerning the relations to their arguments.
+The most fundamental relationships studied in Linear Algebra have the feature of preserving the group structures involved, including those defined by fields. Such relationships are expressed by homomorphisms whose main property is to keep structures of vector spaces unaltered. Moreover, if these vector spaces are metric, it is required this additional structure to remain unchanged as well. In practical terms, this means that if the homomorphism domain is a metric vector space, so must be its image. Selected through a criteria of defining the same mapping, we study these functions by gathering them in a vector space, where there are additional restrictions concerning the relations to their arguments.
 
 Let's start the study of linear functions considering first an additive group $V^{U}$ constituted of generic functions that define mappings of the type $U\mapsto V$, where $U$ and $V$ are complete spaces with an additive structure. This group is said to define a vector space \gloref{espacFunc}, usually called a \textsb{function space}\index{space!function}, if for arbitrary $\vtf{f},\vtf{g}\in V^U_\cam{F}$ and $\alpha\in\cam{F}$ the following restrictions are observed:
 \begin{itemize}\label{restricFuncs}
@@ -322,7 +322,7 @@ There is also a particular type of function continuity that has a stronger restr
 From this definition we can conclude that every Lipschitz continuous function is also continuous, with the additional property of presenting upper limited distance ratios relative to every element $u$ of its domain.
 
 
-Now, considering that $U$ and $V$ define complete vector spaces on $\cam{F}$, let a function $\vto{h}\in V^U_\cam{F}$ be a homomorphism that keeps the additive structure of $U$ unaltered. To our purposes, this function must also preserve the structure created by the field $\cam{F}$ in such a way that
+Now, still considering previous conditions, let a function $\vto{h}\in V^U_\cam{F}$ be a homomorphism that keeps the additive structure of $U$ unaltered. To our purposes, this function must also preserve the structure created by the field $\cam{F}$ in such a way that
 \begin{equation}
 \fua{\vtf{h}}{\alpha\vto{x}+\beta\vto{y}}=\alpha\fua{\vtf{h}}{\vto{x}}+\beta\fua{\vtf{h}}{\vto{y}}\,,
 \end{equation}
@@ -331,7 +331,7 @@ equalities $\overline{\alpha}\fua{\vtf{h}}{\vto{u}}=\alpha(\fua{\vtf{h}}{\vto{u}
 \begin{equation}\label{eq:complexLinear}
 \alpha(\fua{\vtf{h}}{\vto{x}})^c+\beta(\fua{\vtf{h}}{\vto{y}})^c=\alpha\fua{\vtf{h}}{\vto{x}^c}+\beta\fua{\vtf{h}}{\vto{y}^c}\,.
 \end{equation}
-Given $\{\vto{u}_1,\cdots,\vto{u}_n\}$ a basis of $U_\cam{F}$, a bijective
+Now, given $\{\vto{u}_1,\cdots,\vto{u}_n\}$ a basis of $U_\cam{F}$, a bijective
 linear operator $\vtf{g}\in\evl{\cam{F}}{U}{U}$ and an arbitrary vector $\vto{u}\in U_\cam{F}$, we can say that since $\fua{\vtf{g}}{\vto{u}}$ is an arbitrary vector of $U_\cam{F}$, then set $\{\fua{\vtf{g}}{\vto{u}_1},\cdots,\fua{\vtf{g}}{\vto{u}_n}\}$ is also a basis of $U_\cam{F}$ because linearity leads to $\fua{\vtf{g}}{\vto{u}}=\sum_{i=1}^n\alpha_i\fua{\vtf{g}}{\vto{u}_i}$\label{pg:bijecOpe}.
 
 	
@@ -345,9 +345,9 @@ for all $\alpha,\beta\in\cam{F}$ and $\vto{w},\vto{w}_i\in W_i$. In this context
 \lefteqn{\fua{\vtf{c}}{\vto{w}_1,\cdots,\alpha\vto{w}_i+ \beta\vto{w},\cdots,\vto{w}_q}=} & & \nonumber\\
 & &\overline{\alpha}\,\fua{\vtf{c}}{\vto{w}_1,\cdots,\vto{w}_i,\cdots,\vto{w}_q}+\overline{\beta}\,\fua{\vtf{c}}{\vto{w}_1,\cdots,\vto{w},\cdots,\vto{w}_q}\,,
 \end{align}
-for all $\alpha,\beta\in\cam{F}$ and $\vto{w},\vto{w}_i\in W_i$. In the context of vector spaces defined in real fields, a multiantilinear function results multilinear. If $q=1$ or $q=2$, $\vtf{c}$ is called antilinear or biantilinear respectively.
+for all $\alpha,\beta\in\cam{F}$ and $\vto{w},\vto{w}_i\in W_i$. In the context of vector spaces defined by real fields, a multiantilinear function results multilinear. If $q=1$ or $q=2$, function $\vtf{c}$ is called antilinear or biantilinear respectively.
 
-Linear functions, as we presented, can also be continuous and constitute a normed function space if a norm is defined. In our study, given $Z_\cam{F}$ and $Y_\cam{F}$ Banach spaces, we define that \emph{a vector space $\evl{\cam{F}}{Z}{Y}$ of continuous linear functions, represented thereafter by \gloref{evlc}, is not only normed but also metric inner product where the norm and the inner product\label{txt:prodInt} are related through $\|\vtf{g}\|=\sqrt{\vtf{g}\cdot\vtf{g}}$ and the distance $\fua{\varrho}{\vtf{g},\vtf{f}} := \|\vtf{g}-\vtf{f}\|$ for all $\vtf{g},\vtf{f}\in \evlc{\cam{F}}{Z}{Y}$}. Thereby, for any linear function $\vtf{h}$ in $Y_\cam{F}^Z$ to be continuous, a necessary and sufficient condition requires that it is \textsb{bounded}\index{function!bounded}\footnote{See theorem on \aut{Kreyszig}\cite{kreyszig_1978_1}, p.97.}, namely, that there exists a number $\nu\in\real^+$ where
+Linear functions, as we presented, can also be continuous and constitute a normed function space if a norm is defined. In our study, given $Z_\cam{F}$ and $Y_\cam{F}$ Banach spaces, we define that \emph{a vector space $\evl{\cam{F}}{Z}{Y}$ of continuous linear functions, represented hereafter by \gloref{evlc}, is not only normed but also metric inner product where the norm and the inner product\label{txt:prodInt} are related through $\|\vtf{g}\|=\sqrt{\vtf{g}\cdot\vtf{g}}$ and the distance $\fua{\varrho}{\vtf{g},\vtf{f}} := \|\vtf{g}-\vtf{f}\|$ for all $\vtf{g},\vtf{f}\in \evlc{\cam{F}}{Z}{Y}$}. Thereby, for any linear function $\vtf{h}$ in $Y_\cam{F}^Z$ to be continuous, a necessary and sufficient condition requires that it is \textsb{bounded}\index{function!bounded}\footnote{See theorem on \aut{Kreyszig}\cite{kreyszig_1978_1}, p.97.}, namely, that there exists a number $\nu\in\real^+$ where
 \begin{equation}\label{eq:funcaoLimitada}
 \nu\geqslant \|\fua{\vtf{h}}{\vto{z}}\|/\|\vto{z}\| \,,\forall\, \vto{z}\in \{Z_\cam{F}\setminus\{\vto{0}\}\}\,.
 \end{equation}
@@ -356,7 +356,7 @@ Here, we consider the minimum of all these values $\nu$ to be the norm of $\vtf{
 \fua{\eta}{\vtf{x}}=\sup\lch \|\fua{\vtf{x}}{\vto{z}}\|/\|\vto{z}\| \,,\forall\, \vto{z}\in \{Z_\cam{F}\setminus\{\vto{0}\}\} \rch\,.
 \end{equation}
 
-As any field $\cam{F}$ is also a vector space, we call \textsb{functional}\index{functional} an element of the function space $\cam{F}^{U_\cam{F}}_\cam{F}$ or simply $\cam{F}^{U_\cam{F}}$, whose domain and codomain are complete vector spaces. Therefore, it can be stated that \emph{a mapping defined by a functional maps a complete vector space to its structuring field}. By gathering the concepts of functional and linear function, the coordinates of a vector on a certain basis can be obtained from a sequence of values of linear functionals whose argument is the vector in question. In this sense, given a basis $B=\{\vto{u}_1,\cdots,\vto{u}_n\}$ of the complete vector space $U_\cam{F}$, the elements of the $n$-tuple $(\vtf{f}_1^{B},\cdots,\vtf{f}_n^{B})$ are called \textsb{coordinate functionals}\index{coordinate functionals} of basis $B$ if each \gloref{funcCoord} belongs to $\evl{\cam{F}}{U}{\cam{F}}$ and
+Since any field $\cam{F}$ is also a vector space, we call \textsb{functional}\index{functional} an element of the function space $\cam{F}^{U_\cam{F}}_\cam{F}$ or simply $\cam{F}^{U_\cam{F}}$, whose domain and codomain are complete vector spaces. Therefore, it can be stated that \emph{a mapping defined by a functional maps a complete vector space to its structuring field}. In other words, if the domain of a functional has a complex field, for example, then its values are complex. By gathering the concepts of functional and linear function, the coordinates of a vector on a certain basis can be obtained from a sequence of values of linear functionals whose argument is the vector in question. In this sense, given a basis $B=\{\vto{u}_1,\cdots,\vto{u}_n\}$ of the complete vector space $U_\cam{F}$, the elements of the $n$-tuple $(\vtf{f}_1^{B},\cdots,\vtf{f}_n^{B})$ are called \textsb{coordinate functionals}\index{coordinate functionals} of basis $B$ if each \gloref{funcCoord} belongs to $\evl{\cam{F}}{U}{\cam{F}}$ and
 \begin{equation}
 \vto{u}=\sum_{i=1}^{n}\fua{\vtf{f}^\con{B}_{i}}{\vto{u}}\vto{u}_i\,,\,\forall\,\, \vto{u}\in U_\cam{F}\,,
 \end{equation}
@@ -365,7 +365,7 @@ where $(\fua{\vtf{f}^\con{B}_{1}}{\vto{u}},\cdots,\fua{\vtf{f}^\con{B}_{n}}{\vto
 \vto{u}^c=(\sum_{i=1}^{n}\fua{\vtf{f}^\con{B}_{i}}{\vto{u}}\vto{u}_i)^c=\sum_{i=1}^{n}\fua{\overline{\vtf{f}^\con{B}_{i}}}{\vto{u}}\vto{u}_i^c\implies\fua{\overline{\vtf{f}^\con{B}_{i}}}{\vto{u}}=\fua{\vtf{f}^\con{B^c}_{i}}{\vto{u}^c}\,.
 \end{equation}
 where $B^c:=\{\vto{u}_1^c,\cdots,\vto{u}_n^c\}$ is a basis of $\overline{U_\cam{F}}$.
-Additionally, since an arbitrary basis vector $\vto{u}_i=\sum_{j=1}^{n}\fua{\vtf{f}^\con{B}_{j}}{\vto{u}_i}\vto{u}_j$,
+Now, since any basis vector $\vto{u}_i=\sum_{j=1}^{n}\fua{\vtf{f}^\con{B}_{j}}{\vto{u}_i}\vto{u}_j$,
 we conclude that
 \begin{equation}\label{eq:coordBase}
 \fua{\vtf{f}^{B}_j}{\vto{u}_i}=\delta_{ij}\,.
@@ -394,7 +394,7 @@ $\{\vtf{g}_1,\cdots,\vtf{g}_m\}$ of $V^*_\cam{F}$ is a \textsb{dual set}\index{s
 \begin{equation*}
 \fua{\vtf{g}_i}{\vto{x}}=\vtf{g}_i(\sum_{j=1}^{n}\fua{\vtf{f}^\con{B}_{j}}{\vto{x}}\vto{u}_j)=\sum_{j=1}^{n}\fua{\vtf{f}^\con{B}_{j}}{\vto{x}}\fua{\vtf{g}_i}{\vto{u}_j}=\sum_{j=1}^{n}\fua{\vtf{f}^\con{B}_{j}}{\vto{x}}\delta_{ij}=\fua{\vtf{f}^\con{B}_{i}}{\vto{x}}\,.
 \end{equation*}
-But a set constituted of coordinate functionals, in this case $B^*:=\{\vtf{f}^\con{B}_1,\cdots,\vtf{f}^\con{B}_n\}$, is itself a basis of its dual space, that is, a dual set $B^*$ of a basis $B$ is itself a basis of the dual space, when we call it a \textsb{dual basis}\index{basis!dual} of $V_\cam{F}$. Let's verify if this is true: given an arbitrary dual vector $\vtf{h}\in V^*_\cam{F}$, equalities
+But a set constituted of coordinate functionals, in this case $B^*:=\{\vtf{f}^\con{B}_1,\cdots,\vtf{f}^\con{B}_n\}$, is itself a basis of its dual space, that is, dual set $B^*$ of a basis $B$ is a basis of dual space $V_\cam{F}^*$, when we call it a \textsb{dual basis}\index{basis!dual} of $V_\cam{F}$. Let's verify if this is true: given an arbitrary dual vector $\vtf{h}\in V^*_\cam{F}$, equalities
 \begin{equation}\label{eq:coordVetorDual}
 \fua{\vtf{h}}{\vto{x}}=\vtf{h}[\,{\sum_{i=1}^n\fua{\vtf{f}_i^B}{\vto{x}}\vto{u}_i}\,]=\sum_{i=1}^n\fua{\vtf{h}}{\vto{u}_i}\fua{\vtf{f}_i^B}{\vto{x}}=[\,\sum_{i=1}^n\fua{\vtf{h}}{\vto{u}_i}\vtf{f}_i^B\,] (\vto{x})
 \end{equation}
@@ -408,7 +408,7 @@ $\fua{\vto{u}^*}{\vto{x}}=\vto{x}\cdot\vto{u}$, then $\Phi$ results an antilinea
 \hspace{1pt}
 {\footnotesize
 \begin{proof}
-Considering $\vto{u}$ and $\vto{v}$ vectors of $U_\cam{F}$, function $\Phi$ is antilinear from the following equalities:
+Considering $\vto{u}$ and $\vto{v}$ vectors of $U_\cam{F}$, function $\Phi$ is proved antilinear from the following equalities:
 \begin{equation*}
 \fua{\lco\fua{\Phi}{\alpha\vto{u}+\beta\vto{v}}\rco}{\vto{x}}=\vto{x}\cdot(\alpha\vto{u}+\beta\vto{v})=\overline{\alpha}\vto{u}^*(\vto{x})+\overline{\beta}\vto{v}^*(\vto{x})=\fua{\lco\overline{\alpha}\fua{\Phi}{\vto{u}}+\overline{\beta}\fua{\Phi}{\vto{v}}\rco}{\vto{x}}\,.
 \end{equation*}
@@ -416,8 +416,8 @@ If $\Phi$ were not an injection, there would be different covectors $\vto{u}^*$ 
 \begin{equation*}
 \fua{\vtf{g}}{\vto{x}}=\fua{[\sum_{i=1}^n\alpha_i\vtf{f}^{\hat{B}}_i]}{\vto{x}}=\sum_{i=1}^n\alpha_i\fua{\vtf{f}^{\hat{B}}_i}{\vto{x}}=\sum_{i=1}^n\alpha_i\lpa\vto{x}\cdot\vun{u}_i\rpa=\vto{x}	\cdot ( \sum_{i=1}^n\overline{\alpha_i} \vun{u}_i)\,.
 \end{equation*}
-As $\fua{\vtf{g}}{\vto{x}}=\fua{\lco\fua{\Phi}{\vto{u}}\rco}{\vto{x}}=\vto{x}\cdot\vto{u}$, the existence of $\vto{u}=\sum_{i=1}^n\overline{\alpha_i} \vun{u}_i$ is verified. Finally, using definition \eqref{eq:normaFuncao} on the present conditions, leaving space representation on norms implicit, we obtain equality ${\|\vto{u}^*\|=\sup\{ |\vto{x}\cdot\vto{u}|/\|\vto{x}\|\}}$ for all non zero $\vto{x}$.
-If $\vto{u}$ is zero, it is evident that ${\|\vto{u}^*\|=\|\vto{u}\|}$; otherwise, $\vto{u}^*$ is non zero and we conclude that ${\|\vto{u}^*\|\geqslant |\, \vto{x}\cdot\vto{u}|/\|\vto{x}\|}$. Cauchy-Schwarz Inequality states that ${|\, \vto{x}\cdot\vto{u}| \leqslant \|\vto{x}\|\,\,\|\vto{u}\|}$. Subtracting these two previous inequalities, we arrive at ${(\|\vto{u}^*\|-\|\vto{u}\|)\|\vto{x}\|\geqslant 0}$, whose left side can be zero for arbitrary non zero $\vto{u}^*$, $\vto{u}$ and $\vto{x}$; therefore, ${\|\vto{u}^*\|=\|\vto{u}\|}$.
+Since $\fua{\vtf{g}}{\vto{x}}=\fua{\lco\fua{\Phi}{\vto{u}}\rco}{\vto{x}}=\vto{x}\cdot\vto{u}$, the existence of $\vto{u}=\sum_{i=1}^n\overline{\alpha_i} \vun{u}_i$ is verified. Finally, using definition \eqref{eq:normaFuncao} on the present conditions, leaving space representation on norms implicit, we obtain equality ${\|\vto{u}^*\|=\sup\{ |\vto{x}\cdot\vto{u}|/\|\vto{x}\|\}}$ for all non zero $\vto{x}$.
+If $\vto{u}$ is zero, it is evident that ${\|\vto{u}^*\|=\|\vto{u}\|}$; otherwise, $\vto{u}^*$ is non zero and we conclude that ${\|\vto{u}^*\|\geqslant |\, \vto{x}\cdot\vto{u}|/\|\vto{x}\|}$. Cauchy-Schwarz Inequality states that ${|\, \vto{x}\cdot\vto{u}| \leqslant \|\vto{x}\|\,\,\|\vto{u}\|}$. Subtracting these two previous inequalities, we arrive at inequality ${(\|\vto{u}^*\|-\|\vto{u}\|)\|\vto{x}\|\geqslant 0}$, whose left side we assume to be zero. In this context, we conclude ${\|\vto{u}^*\|=\|\vto{u}\|}$ because $\vto{u}^*$, $\vto{u}$ and $\vto{x}$ are not zero.
 \end{proof}
 }
 
@@ -438,7 +438,7 @@ according to restrictions on page \pageref{restricFuncs}. If $\varphi$ weren't a
 \end{proof}
 }
 
-In the context of a field $\cam{F}$, which is also a Hilbert space, the Riesz-Fréchet Representation Theorem leads to another interesting property that biunivocally relates $\cam{F}$ and the dual space of a one dimensional Hilbert space $U_\cam{F}$. Since this property will be relevant for future purposes, we shall present it as follows.
+In the context of a field $\cam{F}$, which is also a Hilbert space, the Riesz-Fréchet Representation theorem leads to another interesting property that biunivocally relates $\cam{F}$ and the dual space of a one dimensional Hilbert space $U_\cam{F}$. Since this property will be relevant for future purposes, we shall present it as follows.
 
 \begin{mcoro}{Scalars and Covectors}{scalCov}
 In the case of a one dimensional $U_\cam{F}$, considering set $\{\vun{u}\}$ its orthonormal basis, the mapping $\map{\omega}{\cam{F}}{U^*_\cam{F}}$ is a linear bijective transformation if $\fua{\omega}{x}=x\vun{u}^*$.
@@ -449,16 +449,16 @@ The proof of $\omega$ linearity is trivial. Now let's verify if it is an injecti
 \end{proof}
 }
 
-The Riesz-Fréchet Representation also enables us to define a rule for coordinate functionals on bases not necessarily orthogonal. Then, let's see how this happens. Considering the conditions of the theorem, let $B=\{\vto{u}_1,\cdots,\vto{u}_n\}$ be a basis of $U_\cam{F}$ and basis $B^*=\{\vtf{f}_1^B,\cdots,\vtf{f}_n^B\}$ its dual correspondent. In this context, functionals $\vtf{f}_i^B\in U_\cam{F}^*$ are biunivocaly related to $\vto{v}_i\in U_\cam{F}$ in such a way that, given a vector $\vto{u}\in U_\cam{F}$, the following equalities are valid:
+The Riesz-Fréchet Representation also enables us to define a rule for coordinate functionals on bases not necessarily orthogonal. Let's see how this happens. Considering the conditions of the theorem, let $B=\{\vto{u}_1,\cdots,\vto{u}_n\}$ be a basis of $U_\cam{F}$ and basis $B^*=\{\vtf{f}_1^B,\cdots,\vtf{f}_n^B\}$ its dual correspondent. In this context, functionals $\vtf{f}_i^B\in U_\cam{F}^*$ are biunivocaly related to vectors $\vto{v}_i\in U_\cam{F}$ in such a way that, given a vector $\vto{u}\in U_\cam{F}$, the following equalities are valid:
 \begin{equation*}
 \fua{\vtf{f}_i^B}{\vto{u}}=\vto{u}\cdot\vto{v_i}=\sum_{j=1}^n\fua{\vtf{f}_j^B}{\vto{u}}\vto{u}_j \cdot \vto{v}_i\,.
 \end{equation*}
-In order to obtain the identity $\fua{\vtf{f}_i^B}{\vto{u}}=\fua{\vtf{f}_i^B}{\vto{u}}$, inner product
-$\vto{u}_j \cdot \vto{v}_i$ must be $\delta_{ji}$. Thereby, we can say that a subset $\{\vto{v}_1,\cdots,\vto{v}_n\}$, whose elements are biunivocaly related to the vectors of $B^*$, is the reciprocal basis $B^\perp=\{\vto{u}^1,\cdots,\vto{u}^n\}$, that is, covectors $(\vtf{u}^i)^*=\vtf{f}_i^B$. The rule for coordinate functionals can be described by
+From these equalities, in order to obtain identity $\fua{\vtf{f}_i^B}{\vto{u}}=\fua{\vtf{f}_i^B}{\vto{u}}$, inner product
+$\vto{u}_j \cdot \vto{v}_i$ must be $\delta_{ji}$. Thereby, we can say that subset $\{\vto{v}_1,\cdots,\vto{v}_n\}$, whose elements are biunivocaly related to the vectors of $B^*$, is the reciprocal basis $B^\perp=\{\vto{u}^1,\cdots,\vto{u}^n\}$, that is, covectors $\vtf{v}_i^*=(\vtf{u}^i)^*=\vtf{f}_i^B$. Then, from the previous theorem, the rule for coordinate functionals can be described by
 \begin{equation}\label{eq:regraFuncCoord}
 \fua{\vtf{f}_i^B}{\vto{x}}=\fua{(\vtf{u}^i)^*}{\vto{x}}=\vto{x} \cdot \vto{u}^i\,.
 \end{equation}
-If $B^\perp$ is the reciprocal basis of $B$, the inverse is also true; thus, from the previous rule, we can affirm that
+If $B^\perp$ is the reciprocal basis of $B$, the inverse is also true; thus, we can affirm that
 \begin{equation}\label{eq:regraFuncCoordReciproco}
 \fua{\vtf{f}_i^{B^\perp}}{\vto{x}}=\fua{(\vtf{u}_i)^*}{\vto{x}}=\vto{x} \cdot \vto{u}_i\,.
 \end{equation}
@@ -473,31 +473,23 @@ In this context, the inner product between two arbitrary vectors $\vto{u}$ and $
 	\end{center}
 	\titfigura{Relationships between bases induced by $B$ in terms of theorem \ref{teo:repRiesz}.}\label{fg:espacoDual}
 \end{figure}
-If $B$ is orthonormal, then basis $B^\perp=B$. Moreover, if the field $\cam{F}$ is real, we have ${\vto{u}\cdot\vto{v}=\sum_{i=1}^n\fua{\vtf{f}_i^{B}}{\vto{u}}\fua{\vtf{f}_i^{B}}{\vto{v}}}$. Figure \ref{fg:espacoDual} summarizes the relationships between basis $B$ and the reciprocal bases it induces.
+If $B$ is orthonormal, then basis $B^\perp=B$. Moreover, if the field $\cam{F}$ is real, we have ${\vto{u}\cdot\vto{v}=\sum_{i=1}^n\fua{\vtf{f}_i^{B}}{\vto{u}}\fua{\vtf{f}_i^{B}}{\vto{v}}}$. Figure \ref{fg:espacoDual} summarizes the relationships between basis $B$ and the reciprocal bases it induces. In the particular case of an orthonormal basis $\hat{B}$ vectors $\vun{u}_i=\vun{u}^i$, from which we conclude that the vectors of $\hat{B}$ and of $\hat{B}^*$ have a biunivocal relationship, in terms of the previous theorem. Thereby, equalities
+$\fua{\vtf{f}_i^{\hat{B}}}{\vto{x}}=\fua{(\vun{u}_i)^*}{\vto{x}}=\vto{x} \cdot \vun{u}_i$
+enable us to say that \eqref{eq:regraFuncCoord} is a generalization of \eqref{eq:regraCoord} in the context of Hilbert spaces.
 
 
-In the particular case of an orthonormal basis $\hat{B}$ vectors $\vun{u}_i=\vun{u}^i$, from which we conclude that the vectors of $\hat{B}$ and of $\hat{B}^*$ have a biunivocal relationship, in terms of the previous theorem. Thereby, it can be said that coordinates
-\begin{equation}\label{eq:regraOrtonmFunc}
-\fua{\vtf{f}_i^{\hat{B}}}{\vto{x}}=\fua{(\vun{u}_i)^*}{\vto{x}}=\vto{x} \cdot \vun{u}_i\,.
-\end{equation}
-
-Still considering the terms of the previous theorem, the equality between norms of continuous vectors and covectors enables us to state that the dual space $U^*_\cam{F}$ is also a Hilbert space. As this feature is very important, we shall present it in a more formal way, through the following corollary.
+Still considering the terms of the previous theorem, from equality between norms of vectors and norms of continuous covectors it is possible to obtain that the dual space $U^*_\cam{F}$ is also a Hilbert space. Since this feature is very important, we shall present it in a more formal way, through the following corollary.
 
 \begin{mcoro}{Hilbert Dual Space}{dualHilb}
-If the linear functionals of $U_\cam{F}^*$ are continuous and $U_\cam{F}$ is a Hilbert space, then $U_\cam{F}^*$ is also a Hilbert space.
+If the covectors of $U_\cam{F}^*$ are continuous, then $U_\cam{F}^*$ is a Hilbert space.
 \end{mcoro}
 
 {\footnotesize
 \begin{proof}
-By the rule \eqref{eq:normaFuncao},  $U_\cam{F}^*$ is a normed space that is also defined to be metric inner product (See p. \pageref{txt:prodInt}). Thus, it remains here to verify that $U_\cam{F}^*$ is complete. This condition is assured if the bijection $\Phi$ is isometric, according to theorem \ref{teo:isoComp}. From the rule for covectors established by Riesz-Fréchet Representation, if $\vto{u}=\vto{v}-\vto{w}$ then
+By the rule \eqref{eq:normaFuncao},  $U_\cam{F}^*$ is a normed space that is also defined to be metric inner product (See p. \pageref{txt:prodInt}). Thus, it remains here to verify that $U_\cam{F}^*$ is complete. This condition is assured if the bijection $\Phi$ is isometric, according to theorem \ref{teo:isoComp}. From the rule for covectors established by Riesz-Fréchet Representation, it is trivial to obtain that $(\vtf{v}-\vtf{w})^*=\vto{v}^*-\vtf{w}^*$, or that $\fua{\Phi}{\vto{v}-\vto{w}}=\fua{\Phi}{\vto{v}}-\fua{\Phi}{\vto{w}}$. Thereby, knowing that $\|\fua{\Phi}{\vto{x}}\|_{U_\cam{F}^*}=\|\vto{x}\|_{U_\cam{F}}$, 
 \begin{equation*}
-\fua{(\vto{v}-\vtf{w})^*}{\vto{x}}=\vto{x}\cdot(\vto{v}-\vto{w})=\vto{x}\cdot\vto{v}-\vto{x}\cdot\vto{w}=\fua{\vto{v}^*}{\vto{x}}-\fua{\vtf{w}^*}{\vto{x}}=\fua{(\vto{v}^*-\vtf{w}^*)}{\vto{x}}\,,
+\fua{\varrho_{U_\cam{F}^*}}{\fua{\Phi}{\vto{v}},\fua{\Phi}{\vto{w}}}=\|\fua{\Phi}{\vto{v}}-\fua{\Phi}{\vto{w}}\|_{U_\cam{F}^*}= \|\fua{\Phi}{\vto{v}-\vto{w}}\|_{U_\cam{F}^*}= \|\vto{v}-\vto{w}\|_{U_\cam{F}}=\fua{\varrho_{U_\cam{F}}}{\vto{v},\vto{w}}\,.
 \end{equation*}
-from which we conclude that $(\vtf{v}-\vtf{w})^*=(\vto{v}^*-\vtf{w}^*)$, or that $\fua{\Phi}{\vto{v}-\vto{w}}=\fua{\Phi}{\vto{v}}-\fua{\Phi}{\vto{w}}$. Thereby, knowing that $\|\fua{\Phi}{\vto{x}}\|_{U_\cam{F}^*}=\|\vto{x}\|_{U_\cam{F}}$, metric
-\begin{equation*}
-\fua{\varrho_{U_\cam{F}^*}}{\fua{\Phi}{\vto{v}},\fua{\Phi}{\vto{w}}}=\|\fua{\Phi}{\vto{v}}-\fua{\Phi}{\vto{w}}\|_{U_\cam{F}^*}= \|\fua{\Phi}{\vto{v}-\vto{w}}\|_{U_\cam{F}^*}= \|\vto{v}-\vto{w}\|_{U_\cam{F}}\,.
-\end{equation*}
-Therefore, $\Phi$ is indeed an isometry in this case.
 \end{proof}
 }
 
