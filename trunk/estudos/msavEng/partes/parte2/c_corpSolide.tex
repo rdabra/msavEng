@@ -1,0 +1,210 @@
+\documentclass[leqno,openright,smallroyalvopaper,8pt,twoside,showtrims]{memoir}
+\medievalpage[15]
+\setlrmargins{*}{1.4cm}{*}
+\setulmargins{*}{*}{1}
+\checkandfixthelayout
+\usepackage[english]{babel}
+\usepackage{slantsc}
+\usepackage{array}
+\usepackage{amsmath}
+\usepackage{adforn}
+\pagestyle{empty}
+
+
+\renewcommand*\rmdefault{obn}
+\usepackage[LCYW]{fontenc}
+\usepackage{mathtools}
+
+\newtheorem{thm}{Theorem}
+\renewcommand\thethm{\Roman{thm}}
+
+
+\begin{document}
+\vspace*{0.5cm}
+\noindent
+\rule{\textwidth}{0.5pt}\vspace*{-\baselineskip}\vspace*{2pt} 
+%\rule{\textwidth}{0.5pt} 
+\vspace*{.2cm}
+\begin{center}
+{\LARGE \textbf{ON THE PRESSURE OR TENSION}}\vspace*{3pt} 
+
+{\Large \textbf{IN A SOLID BODY.}}\vspace*{10pt} 
+
+{\large BY Mr. AUGUSTIN-LOUIS CAUCHY} \vspace*{2pt} 
+
+{CHIEF ENGINEER AT PONTS ET CHAUSS\'EES, PROFESSOR AT \'ECOLE POLYTECHNIQUE, ADJOINT PROFESSOR AT FACULT\'E DES SCIENCES, MEMBER OF THE ACADEMY OF SCIENCES, KNIGHT OF THE LEGION OF HONOUR}\vspace*{2pt} 
+
+
+{\small Translated by Mr. R.D. {\normalfont\scshape Algarte}}.\vspace*{.5cm}
+
+\adforn{21}\quad\adforn{11}\quad\adforn{49}\vspace*{.5cm}
+
+
+\end{center}
+%\linespread{1.0}
+\normalfont
+
+Geometers who have researched the equations of equilibrium or motion of plates or of elastic or non-elastic surfaces have distinguished two types of forces produced, some by expansion or contraction, others by the flexion of these same surfaces. Moreover, they generally assumed, in their calculations, that the forces of the first type, called tensions, remain perpendicular to the lines against which they are exerted. It seemed to me that these two types of forces could be reduced by a single one, which must constantly be called tension or pressure, acting on each element of a section chosen at will, not only in a flexible surface, but also in an elastic or non-elastic solid, and which is of the same nature as the hydrostatic pressure exerted by a fluid at rest against the exterior surface of a body. However, the new pressure does not always remain perpendicular to the faces which are subjected to it, nor the same in all directions at a given point. In developing this idea, I came to recognize that the pressure or tension exerted against any plane at a given point of a solid body is very easily deduced, both in magnitude and in direction, from the pressures or tensions exerted against three rectangular planes defined on this same point. This proposition, which I have already addressed in the January 1823 edition of the \emph{Bulletin Des Sciences de La Soci\'et\'e Philomatique de Paris}, can be established using the following considerations.
+
+If in an elastic or non-elastic solid body, a small element of volume defined by any faces is made rigid and invariable, this small element will experience on its different faces and at each point of each of them a certain pressure or tension. This pressure or tension will be similar to the pressure that a fluid exerts against an element of the surface of a solid body, with the only difference that the pressure exerted by a fluid at rest, against the surface of a solid body, is directed perpendicular to this surface from outside to inside, and independent at each point of the inclination of the surface with respect to the coordinate planes, while the pressure or tension exerted at a given point of a solid body, through which a very small surface element passes can be directed perpendicular or obliquely to this surface, sometimes from outside to inside, if there is contraction, sometimes from inside to outside, if there is expansion, and may depend on the inclination of the surface in relation to the planes in question. That being said, let $\upsilon$ be the volume of a portion of the body that has become rigid, $s$, $s'$, $s''$, ... the areas of the plane or curved surfaces which cover the volume $\upsilon$; $x$, $y$, $z$ the rectangular coordinates of a point taken at random in the surface $s$; $p$ the pressure or tension exerted at this point against the surface; $\alpha$, $\beta$, $\gamma$ the angles that the perpendicular to the surface forms with the semi-axes of the positive coordinates; finally $\lambda$, $\mu$, $\nu$ the angles formed with the same semi-axes by the direction of the force $p$. If we project onto the $x$, $y$ and $z$ axes the various pressures or tensions to which the surface will be subjected, the sums of their algebraic projections on these three axes will be represented by the integrals\footnote{All the subsequent terms $\sec\gamma\, dydx$ correct the term  $\cos\gamma\, dydx$ of the original text. (TN)}
+ \begin{equation}\label{eq:forcas}
+   \begin{dcases}
+     \textstyle\iint   p\cos\lambda\sec\gamma\, dydx,\\
+     \textstyle\iint   p\cos\mu\sec\gamma\, dydx,\\
+     \textstyle\iint   p\cos\nu\sec\gamma\, dydx,
+   \end{dcases}
+ \end{equation}
+while the sums of the algebraic projections of their linear moments will be respectively
+ \begin{equation}
+   \begin{dcases}
+     \textstyle\iint   p(y\cos\nu-z\cos\mu)\sec\gamma\, dydx,\\
+     \textstyle\iint   p(z\cos\lambda-x\cos\nu)\sec\gamma\, dydx,\\
+     \textstyle\iint   p(x\cos\mu-y\cos\lambda)\sec\gamma\, dydx,
+   \end{dcases}
+ \end{equation}
+if we take the origin of the coordinates as the center of moments, or, if we transport it to a point with coordinates $x_0$, $y_0$, $z_0$, 
+ \begin{equation}\label{eq:momentos}
+   \begin{dcases}
+     \textstyle\iint   p[(y-y_0)\cos\nu-(z-z_0)\cos\mu]\sec\gamma\, dydx,\\
+     \textstyle\iint   p[(z-z_0)\cos\lambda-(x-x_0)\cos\nu]\sec\gamma\, dydx,\\
+     \textstyle\iint   p[(x-x_0)\cos\mu-(y-y_0)\cos\lambda]\sec\gamma\, dydx.
+   \end{dcases}
+ \end{equation}
+ In all these integrals, the limits of the integrations relating to variables $x$, $y$ must be determined from the shape of the contour of the surface $s$, so that inside these limits 
+\begin{equation}
+\textstyle\iint\sec\gamma\, dydx = s\,.
+\end{equation}
+
+If the surface $s$ becomes plane and the volume $\upsilon$ very small, so that each of its dimensions can be considered an infinitely small quantity of the first order, then the variations that the three products
+\begin{equation}
+p\cos\lambda,\quad p\cos\mu,\quad p\cos\nu
+\end{equation}
+will experience, in the passage from one point to another in the surface $s$, will still be infinitely small of the first order; and, by neglecting the infinitely small third order values in the integrals \eqref{eq:forcas}, we will reduce these integrals to the quantities
+\begin{equation}\label{eq:ps}
+ps\cos\lambda,\quad ps\cos\mu,\quad ps\cos\nu\,.
+\end{equation}
+Moreover, if we make the center of moments coincide with a point in volume $\upsilon$, the integrals \eqref{eq:momentos} will be infinitely small quantities of the third order, and it will suffice to neglect, in these integrals, the infinitely small term of the fourth order, so that they are reduced to products
+ \begin{equation}\label{eq:ps2}
+   \begin{dcases}
+        ps[(\eta-y_0)\cos\nu-(\zeta-z_0)\cos\mu],\\
+       ps[(\zeta-z_0)\cos\lambda-(\xi-x_0)\cos\nu],\\
+        ps[(\xi-x_0)\cos\mu-(\eta-y_0)\cos\lambda],
+   \end{dcases}
+ \end{equation}
+ $\xi$, $\eta$, $\zeta$ designating the fractions
+ \begin{equation}
+ \dfrac{\textstyle\iint x\sec\gamma\, dydx}{s},\quad  \dfrac{\textstyle\iint y\sec\gamma\, dydx}{s},\quad  \dfrac{\textstyle\iint z\sec\gamma\, dydx}{s},
+ \end{equation}
+that is, the coordinates of the center of gravity of the surface $s$.
+
+Now, let $m$ be the infinitely small mass related to the volume $\upsilon$. Moreover, let us consider that the letter $\varphi$ represents the accelerating force applied to this mass, if the solid body is in equilibrium, and, on the contrary case, the excess of the accelerating force applied on it which would be able to produce the observed motion of mass $m$. Finally, let us call X, Y, Z the algebraic projections of the force $\varphi$, and $\xi_0$, $\eta_0$, $\zeta_0$ the coordinates of the center of gravity of the mass $m$. If we suppose that the accelerating force $\varphi$ remains the same in magnitude and direction in all points of the mass $m$, there must be equilibrium between the driving force $m\varphi$ applied at the point $(\xi_0,\eta_0,\zeta_0)$ and the forces to which the pressures or tensions exerted on the surfaces $s$, $s'$, ... are reduced. So the sums of the algebraic projections of all these forces and their linear moments on the axes $x$, $y$, $z$ will have to be reduced to zero. So, if we want to place one or more accents after the letters $p$, $\lambda$, $\mu$, $\nu$, $\xi$, $\eta$, $\zeta$, present in expressions \eqref{eq:ps} and \eqref{eq:ps2}, to indicate the new values that these expressions take when one passes from the surface $s$ to the surface $s'$, or $s''$, or $s''',$ ... one will find, neglecting, in the sums of the projected forces, the infinitely small of the third order, and in the sums of the projected linear moments, the infinitely small of the fourth order,
+ \begin{equation}\label{eq:forcas}
+   \begin{dcases}
+        ps\cos\lambda+p's'\cos\lambda'+\cdots+m\text{X}=0,\\
+       ps\cos\mu+p's'\cos\mu'+\cdots+m\text{Y}=0,\\
+        ps\cos\nu+p's'\cos\nu'+\cdots+m\text{Z}=0;
+   \end{dcases}
+ \end{equation}
+ \begin{equation}\label{eq:momentos}
+   \begin{dcases}
+   \begin{aligned}
+        ps[(\eta-y_0)\cos\nu-(\zeta-z_0)\cos\mu&]+p's'[(\eta'-y_0)\cos\nu'-(\zeta'-z_0)\cos\mu']+\\
+        &+\cdots+m[(\eta_0-y_0)\text{Z}-(\zeta_0-z_0)\text{Y}]=0,
+   \end{aligned}\\
+         \begin{aligned}
+        ps[(\zeta-z_0)\cos\lambda-(\xi-x_0)\cos\nu&]+p's'[(\zeta'-z_0)\cos\lambda'-(\xi'-x_0)\cos\nu']+\\
+        &+\cdots+m[(\zeta_0-z_0)\text{X}-(\xi_0-x_0)\text{Z}]=0
+   \end{aligned}\\
+         \begin{aligned}
+        ps[(\xi-x_0)\cos\mu-(\eta-y_0)\cos\lambda&]+p's'[(\xi'-x_0)\cos\mu'-(\eta'-y_0)\cos\lambda']+\\
+        &+\cdots+m[(\xi_0-x_0)\text{Y}-(\eta_0-y_0)\text{X}]=0.
+   \end{aligned}
+   \end{dcases}
+ \end{equation}
+Now, the mass $m$ being itself infinitely small of the third order, the terms which contain it will be of the third order in the formulas \eqref{eq:forcas}, of the fourth order in the formulas \eqref{eq:momentos}. We can therefore neglect these terms, and replace the formulas in question by the following
+\begin{equation}\label{eq:forcas2}
+   \begin{dcases}
+        ps\cos\lambda+p's'\cos\lambda'+p''s''\cos\lambda''+p'''s'''\cos\lambda'''+\cdots=0,\\
+       ps\cos\mu+p's'\cos\mu'+p''s''\cos\mu''+p'''s'''\cos\mu'''+\cdots=0,\\
+        ps\cos\nu+p's'\cos\nu'+p''s''\cos\nu''+p'''s'''\cos\nu'''+\cdots=0;
+   \end{dcases}
+ \end{equation}
+ \begin{equation}\label{eq:momentos2}
+   \begin{dcases}
+   \begin{aligned}
+        ps[(\eta-y_0)\cos\nu-(\zeta-z_0)\cos\mu]+p's'[(\eta'-y_0)\cos\nu'-&(\zeta'-z_0)\cos\mu']+\\
+        &+\cdots=0,
+   \end{aligned}\\
+         \begin{aligned}
+        ps[(\zeta-z_0)\cos\lambda-(\xi-x_0)\cos\nu]+p's'[(\zeta'-z_0)\cos\lambda'-&(\xi'-x_0)\cos\nu']+\\
+        &+\cdots=0
+   \end{aligned}\\
+         \begin{aligned}
+        ps[(\xi-x_0)\cos\mu-(\eta-y_0)\cos\lambda]+p's'[(\xi'-x_0)\cos\mu'-&(\eta'-y_0)\cos\lambda']+\\
+        &+\cdots=0.
+   \end{aligned}
+   \end{dcases}
+ \end{equation}
+
+ If we wanted to take into account the variations that the accelerating force $\varphi$ and its projections X, Y, Z can experience, when we go from one point to another in the mass $m$, we would have to replace, in equations \eqref{eq:forcas} and \eqref{eq:momentos}, the six quantities
+\begin{align*}
+m\text{X},\quad m&\text{Y},\quad m\text{Z};\\[5pt]
+m[(\eta_0-y_0)\text{Z}&-(\zeta_0-z_0)\text{Y}],\\
+m[(\zeta_0-z_0)\text{X}&-(\xi_0-x_0)\text{Z}],\\
+m[(\xi_0-x_0)\text{Y}&-(\eta_0-y_0)\text{X}]
+\end{align*}
+by six integrals of the form
+\begin{align*}
+\textstyle\iiint \rho \text{X}\,dzdydx,\quad \textstyle\iiint \rho &\text{Y}\,dzdydx,\quad \textstyle\iiint \rho \text{Z}\,dzdydx;\\[5pt]
+\textstyle\iiint\rho[(y-y_0)&\text{Z}-(z-z_0)\text{Y}]\,dzdydx,\\
+\textstyle\iiint\rho[(z-z_0)&\text{X}-(x-x_0)\text{Z}]\,dzdydx,\\
+\textstyle\iiint\rho[(x-x_0)&\text{Y}-(y-y_0)\text{X}]\,dzdydx;
+\end{align*}
+$\rho$ denoting the density of the solid body at the point $(x, y, z)$, and the limits of the integrations being relative to the limits of the volume $\upsilon$. But, since the first three integrals would be infinitely small of the third order, and the last three infinitely small of the fourth order, we would still find ourselves brought back to formulas \eqref{eq:forcas2} and \eqref{eq:momentos2}. It remains to show how, with the help of these formulas, one can discover the relations that exist between the pressures or tensions exerted in a given point of a solid body against various planes carried out successively by the same point.
+
+Let us first consider that the volume $\upsilon$ takes the form of a right prism, the two bases of which are represented by $s$ and by $s'$. We will have $s'=s$; and if, the dimensions of each base being considered as infinitely small of the first order, the height of the prism becomes an infinitely small quantity of an order greater than the first, then, neglecting, in formulas \eqref{eq:forcas2}, the infinitely small order greater than the second, we will find
+\begin{equation*}
+(p\cos\lambda+p'\cos\lambda')s=0, \quad(p\cos\mu+p'\cos\mu')s=0,\quad(p\cos\nu+p'\cos\nu')s=0,
+\end{equation*}
+or equally,
+\begin{equation*}
+p'\cos\lambda'=-p\cos\lambda, \quad p'\cos\mu'=-p\cos\mu,\quad p'\cos\nu'=-p\cos\nu,
+\end{equation*}
+and we conclude that
+\begin{align*}
+p&=p',\\
+\cos\lambda'=-\cos\lambda,\quad \cos\mu'&=-\cos\mu,\quad \cos\nu'=-\cos\nu.
+\end{align*}
+These last equations, which take place only in the case where the height of the prism vanishes, comprise a theorem easy to predict, the statement of which is the following:
+\begin{thm}
+The pressures or tensions, at a given point of a solid body, exerted against the two faces of any plane whatsoever through this point, are equal and directly opposite forces.
+\end{thm} 
+
+
+
+
+\vspace*{2cm} 
+These researches were undertaken on the occasion of a Memoir published by Mr. Navier, on August 14, 1820. The author, in order to establish the equation of equilibrium of an elastic plane, considered two types of forces produced, one by expansion or contraction, the other by flexion of the same plane. Moreover, he assumed, in his calculations, both one and the other perpendicular to the lines or faces against which they are exerted. It seemed to me that these two types of forces could be reduced to one, which must constantly be called tension or pressure, and which was of the same nature as the hydrostatic pressure exerted by a resting fluid against the surface of a solid body. But this new pressure did not always remain perpendicular to the faces submitted to it, nor the same in all directions at a given point. By developing this idea, I soon arrived at the following conclusions. 
+
+If in an elastic or non-elastic solid body, a small element of its volume, defined by any faces, is made rigid and invariable, this small element will experience on its different faces, and at any point of each of them, a certain pressure or tension. This pressure or tension will be similar to the pressure which a fluid exerts against an element of the surface of a solid body, with the only difference that the pressure exerted by a fluid at rest against the surface of a solid body is directed perpendicular to this surface, from outside to inside, and independent, at each point, of the inclination of the surface with respect to the coordinate planes, while the pressure or tension exerted at a given point of a solid body through which a very small surface element passes can be directed perpendicularly or obliquely to this surface, sometimes from outside to inside, if there is contraction, sometimes from inside to outside, if there is expansion, and may depend on the inclination of the surface with respect to the planes in question. In addition, the pressure or tension exerted against each plane can be deduced very easily, both in magnitude and in direction, from the pressures or tensions exerted against three given rectangular planes. I was at this point when Mr. Fresnel, coming to talk to me about the work he was developing on light, and of which he had presented only a part at the institute, told me that, for his part, he had obtained, by the laws according to which elasticity varies in the many directions that emanate from a single point, a theorem analogous to mine. However, at that time, the theorem in question was far from being sufficient for me to attain the objective I had proposed, namely, to obtain the general equations of equilibrium and internal motion of a body; and only recently have I  succeeded in establishing new principles that suitably led me to this result and that I will make known. 
+
+
+From the theorem stated above, it follows that the pressure or tension at each point is equivalent to one divided by the vector radius of an ellipsoid. To the three axes of this ellipsoid, three pressures or tensions are related, which we will call \emph{principal}, and we can prove\footnote{Our remark here agrees with the latest research of Mr. Fresnel. (See \emph{Bulletin}, May 1822)} that each of them is perpendicular to the plane against which it is exerted. Amongst these principal pressures or tensions, there are the maximum pressure or tension and the minimum pressure or tension. The other pressures or tensions are distributed symmetrically around the three axes. Moreover, the pressure or tension normal to each plane, that is to say, the component, perpendicular to a plane, of the pressure or tension exerted against this plane is reciprocally proportional to the square of the vector radius of a second ellipsoid. Sometimes this second ellipsoid is replaced by two hyperboloids, one with a single sheet, the other with two sheets, which have the same center, the same axes, and touch each other to infinity defining a conical surface of second degree, whose edges indicate the directions to which the normal pressure or tension decreases to zero. 
+
+That being said, if we consider a solid body of variable shape and subjected to any accelerating forces, in order to establish the equilibrium equations of this solid body, it will suffice to write that there is a balance between the motive forces which stress an infinitely small element in the direction of the coordinate axes and the orthogonal components of the external pressures or tensions which act on the faces of this element. We will thus obtain three equilibrium equations which include, as a special case, those of the equilibrium of fluids. But, in the general case, these equations contain six unknown functions of the coordinates $x, y, z$. It remains to determine the values of these six unknowns; but the solution of this last problem varies according to the nature of the body and its more or less perfect elasticity. Let us now explain how we manage to solve it for elastic bodies. 
+
+When an elastic body is in equilibrium by virtue of any accelerating forces, each molecule must be assumed to be displaced from the position it occupied when the body was in its natural state. By virtue of the displacements of this kind, there are, around each point, different contractions or expansions in different directions. Now, it is clear that each expansion produces a tension, and each contraction a pressure. Moreover, I have demonstrated that the various contractions or expansions around a point, decreased or increased by unity, become equal, except for the sign, to the vector radii of an ellipsoid. I call \emph{principal contractions or expansions} those which take place along the axes of this ellipsoid, around which all the others are symmetrically distributed. That being said, it is clear that in an elastic solid, if the tensions or pressures depend only on the contractions or expansions, the principal tensions or pressures will have the same direction of the principal contractions or expansions. Moreover, it is natural to suppose, at least when the displacements of the molecules are very small, that the principal pressures or tensions are respectively proportional to the principal contractions or expansions. By admitting this principle, we immediately arrive at the equations of the equilibrium of an elastic body. In the case of very small displacements, the component, perpendicular to a plane, of the pressure or tension exerted against this plane, always preserves the same relation with the contraction or expansion which takes place in the direction of this component, and the equilibrium formulas are reduced to four partial differential equations, one of which separately determines the contraction or expansion of the volume, while each of the others serves to fix the displacement parallel to one of the coordinate axes. 
+
+Once the equilibrium equations of an elastic body are obtained, it is easy to deduce the equations of motion by ordinary methods. The latter are still four in number, and each of them is a linear partial differential equation with an appended  variable term. They are integrated by the methods exposed in our previous Memoir. One of these equations contains only the unknown which represents the volume contraction or expansion. In the particular case where the accelerating force becomes constant and preserves the same direction, this equation is reduced to that which describes the propagation of sound in air, with the only difference that the constant which it contains, instead of depending on the height of the supposedly homogeneous atmosphere, depends on the linear expansion or contraction of a body under a given pressure. We must conclude that the speed of sound in an elastic solid is constant, as in the air, but it varies from one body to another depending on the matter of which the body is composed. This constancy is even more remarkable since the displacements of successive molecules considered in fluids and elastic solids follow different laws.
+
+My Memoir ends by obtaining the equations of the internal motion of solid bodies entirely devoid of elasticity. In order to achieve this, it suffices to suppose that in these bodies the pressures or tensions around a moving point no longer depend on total contractions or expansions which correspond to the absolute displacements relative to the initial positions of the molecules, but only, during any period of time, on very small contractions or expansions which correspond to the respective displacements of the different points during a very short period of time. We then find that the contraction of volume is determined by an equation similar to that of heat, which establishes a remarkable analogy between the propagation of calorie and the propagation of vibrations in a body entirely devoid of elasticity.
+
+In another Memoir, I will perform the application of the formulas that I obtained to the theory of elastic plates and laminae.
+
+\vspace*{.5cm}
+\noindent
+\rule{\textwidth}{0.5pt}\vspace*{-\baselineskip}\vspace*{2pt} 
+\rule{\textwidth}{0.5pt} 
+
+
+\end{document}
