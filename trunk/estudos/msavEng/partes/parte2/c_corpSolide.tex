@@ -198,13 +198,109 @@ while their algebraic projections on the axes $(x,y,z)$ will clearly reduce to t
        p's'\cos\nu'\Delta y\Delta z,\quad p''s''\cos\nu''\Delta z\Delta x,\quad p'''s'''\cos\nu'''\Delta x\Delta y.
    \end{dcases}
  \end{equation}
-Concerning the pressures or tensions supported by the faces which end at the point $(x, y, z)$, they will be, by virtue of Theorem I, respectively equal, but directly opposite to those which act on the parallel faces reaching the point $(x+\Delta x, y+\Delta y, z+\Delta z)$. So the algebraic projections of these new tensions will be numerically equal to the algebraic projections of the other three, but affected by opposite signs, so that each of the formulas \eqref{eq:forcas2} will become an identity. Let us add that the centers of gravity of the six faces of the parallelepiped will merge with their centers of figure, and will be located on three lines carried out parallel to the axes $(x, y, z)$ through the center of the parallelepiped, that is to say through the point which has for coordinates
+Concerning the pressures or tensions supported by the faces which end at the point $(x, y, z)$, they will be, by virtue of Theorem I, respectively equal, but directly opposite, to those which act on the parallel faces reaching the point $(x+\Delta x, y+\Delta y, z+\Delta z)$. So the algebraic projections of these new tensions will be numerically equal to the algebraic projections of the other three, but affected by opposite signs, so that each of the formulas \eqref{eq:forcas2} will become an identity. Let us add that the centers of gravity of the six faces of the parallelepiped will merge with their geometric centers, and will be located on three lines carried out parallel to the axes $(x, y, z)$ through the center of the parallelepiped, that is to say, through the point which has for coordinates
+\begin{equation*}
+x+\dfrac{1}{2} \Delta x,\quad y+\dfrac{1}{2} \Delta y,\quad z+\dfrac{1}{2} \Delta z.
+\end{equation*}
+That said, it is clear that, if we take this last point as the center of the moments, the first of the formulas \eqref{eq:momentos2} will give
+\begin{align*}
+p''\cos\nu''\Delta z\Delta x\dfrac{\Delta y}{2}- p'''\cos\mu'''\Delta x\Delta y&\dfrac{\Delta z}{2}-(-p''\cos\nu'')\Delta z\Delta x\dfrac{\Delta y}{2}+\\
+&+(-p'''\cos\mu''')\Delta x\Delta y\dfrac{\Delta z}{2}=0
+\end{align*}
+and consequently 
+\begin{equation}\label{eq:momentos3}
+   \begin{dcases}
+   p''\cos\nu'' = p'''\cos\mu'''.\\
+\text{Similarly, one will find that}\\
+p'''\cos\lambda''' = p'\cos\nu',\\
+p'\cos\mu'=p''\cos\lambda''.
+    \end{dcases}
+ \end{equation}
+Since the axes $x$, $y$, $z$ are entirely arbitrary, the equations \eqref{eq:momentos3} obviously comprise the theorem we are going to state:
+\begin{thm}
+If through any point of a solid body we define two axes which intersect at right angles, and if we project onto one of these axes the pressure or tension supported by a plane perpendicular to the other at the point from which it acts, the projection thus obtained will not vary when these same axes are exchanged between them.
+\end{thm} 
 
+Let us now consider that the volume takes the form of a tetrahedron of which three edges coincide with three infinitely small lengths carried from the point $(x, y, z)$ on lines parallel to the coordinate axes. Consider the point $(x, y, z)$ to be the vertex of this tetrahedron; denote its base by $s$, and let $\alpha$, $\beta$, $\gamma$ be the angles formed, with its semi-axes of positive coordinates, by a perpendicular raised through a point of this base, but extended outside the tetrahedron. The three faces which end at the top of the tetrahedron will be measured by the numerical values of the products
+\begin{equation}
+s\cos\alpha,\quad s\cos\beta,\quad s\cos\gamma.
+\end{equation}
+Thereby, if one calls $p$ the pressure or tension supported by the base of the tetrahedron, and if one continues to attribute to the quantities $p'$, $p''$, $p'''$ the values which they received in equations \eqref{eq:momentos3}, the first of the formulas \eqref{eq:forcas2} will obviously give
+\begin{equation*}
+ps\cos\lambda-p'\cos\lambda's\cos\alpha-p''\cos\lambda''s\cos\beta-p'''\cos\lambda'''s\cos\gamma = 0
+\end{equation*}
+and consequently
+\begin{equation}
+   \begin{dcases}
+   p\cos\lambda = p'\cos\lambda'\cos\alpha+p''\cos\lambda''\cos\beta+p'''\cos\lambda'''\cos\gamma.\\
+\text{Similarly, one will find that}\\
+p\cos\mu = p'\cos\mu'\cos\alpha+p''\cos\mu''\cos\beta+p'''\cos\mu'''\cos\gamma,\\
+p\cos\nu = p'\cos\nu'\cos\alpha+p''\cos\nu''\cos\beta+p'''\cos\nu'''\cos\gamma.
+    \end{dcases}
+ \end{equation}
+ So, in order to shorten expressions, we make
+ \begin{equation}
+   \begin{dcases}
+   \text{A} = p'\cos\lambda',\\
+   \text{B} = p''\cos\mu'',\\
+   \text{C} = p'''\cos\nu''',\\
+    \text{D} = p''\cos\nu''=p'''\cos\mu''',\\  
+    \text{E} = p'''\cos\lambda'''=p'\cos\nu',\\ 
+    \text{F} = p'\cos\mu'=p''\cos\lambda'',\\ 
+    \end{dcases}
+ \end{equation}
+ we will simply have 
+\begin{equation}\label{eq:matriz}
+   \begin{dcases}
+p\cos\lambda = \text{A}\cos\alpha+\text{F}\cos\beta+\text{E}\cos\gamma,\\
+p\cos\mu = \text{F}\cos\alpha+\text{B}\cos\beta+\text{D}\cos\gamma,\\
+p\cos\nu = \text{E}\cos\alpha+\text{D}\cos\beta+\text{C}\cos\gamma.
+    \end{dcases}
+ \end{equation}
+These last equations show the relations which subsist, for the point $(x, y, z)$, between the algebraic projections
+\begin{equation}\left\{
+   \begin{array}{ccc}
+\text{A}, & \text{F}, & \text{E};\\
+\text{F}, & \text{B}, & \text{D};\\
+\text{E}, & \text{D}, & \text{C}
+    \end{array}\right.
+ \end{equation}
+ of pressures $p'$, $p''$, $p'''$ exerted at this point, on the side of the positive coordinates, against three planes parallel to the coordinate planes, and the algebraic projections
+\begin{equation*}
+p\cos\lambda,\quad p\cos\mu,\quad p\cos\nu
+\end{equation*}
+of the pressure or tension $p$ exerted at this same point against any plane perpendicular to a straight line which, extended from the side where the force $p$ occurs, forms, with the semi-axes of positive coordinates, the angles $\alpha$, $\beta$, $\gamma$. 
 
+From equations \eqref{eq:matriz}, it is easy to recognize that, if the volume $\upsilon$, instead of having the shape of a tetrahedron, is defined by any number of plane faces, the formulas \eqref{eq:forcas2} and \eqref{eq:momentos2} will always be verified. Indeed, these different faces being represented by $s$, $s'$, ..., let us call $\alpha$, $\beta$, $\gamma$; $\alpha'$, $\beta'$, $\gamma'$; ... the angles that straight lines perpendicular to the planes of these same faces, and extended outside the volume $\upsilon$, form with the semi-axes of positive coordinates. In order to obtain the first of formulas \eqref{eq:forcas2}, it will suffice to add the equations (1) on page 55\footnote{This reference concerns the article \textit{Sur Quelques Propri\'et\'es des Poly\`edres}, in the same volume of the current article, from which we extract the following excerpt. (TN).
 
-
-
-
+\noindent\textbf{Theorem I} - \emph{The sum of the algebraic projections of the faces of any polyhedron on the coordinate planes results zero.} ...
+\begin{equation*}
+   \begin{dcases}
+s\cos\alpha+s'\cos\alpha'+s''\cos\alpha''+\cdots = 0,\\
+s\cos\beta+s'\cos\beta'+s''\cos\beta''+\cdots = 0,\\
+s\cos\gamma+s'\cos\gamma'+s''\cos\gamma''+\cdots = 0.
+    \end{dcases}\tag{1}
+ \end{equation*}
+}, after having respectively multiplied them by A, F, E, taking into account the first of formulas \eqref{eq:matriz}, as well as similar formulas. We establish, in the same way, the second and the third of the formulas \eqref{eq:forcas2}, by adding the equations (1) (p.55), after having respectively multiplied them by the coefficients F, B, D, or by the coefficients E, D, C. Finally, if we combine the formulas \eqref{eq:matriz} and others from the same type, not only with the equations (1) on page 55, but also with the equations (5) on page 56\footnote{Again referring to the same article of the previous footnote, this equation (5) can be expressed by the following equality:
+\begin{equation}\left[
+   \begin{array}{ccc}
+s\xi & s'\xi' & \cdots\\
+s\eta & s'\eta' & \cdots\\
+s\zeta & s'\zeta' & \cdots
+    \end{array}\right]+\left[
+   \begin{array}{ccc}
+\cos\alpha & \cos\beta  & \cos\gamma\\
+\cos\alpha' & \cos\beta' & \cos\gamma'\\
+\vdots & \vdots & \vdots
+    \end{array}\right]=\left[
+   \begin{array}{ccc}
+\upsilon & 0 & 0\\
+0 & \upsilon & 0\\
+0 & 0 & \upsilon
+    \end{array}\right]\,,\tag{5}
+ \end{equation}
+where $\upsilon$ is the volume of a polyhedron. (TN)
+}, we will easily arrive at formulas \eqref{eq:momentos2}. 
 
 
 
