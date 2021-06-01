@@ -302,34 +302,95 @@ s'\cos\alpha' & s'\cos\beta' & s'\cos\gamma'\\
 according to what is developed in the article. (TN)
 }, we will easily arrive at formulas \eqref{eq:momentos2}. 
 
+One can easily deduce from formulas \eqref{eq:matriz}:  1\textsuperscript{o} the intensity of the force $p$; 2\textsuperscript{o} the angle between the direction of this force and the perpendicular to the plane against which it is exerted. Thereby, if we add these formulas, after having squared each of their members, we will find
+\begin{align}\label{eq:p2}
+\begin{dcases}
+p^2 = &(\text{A}\cos\alpha+\text{F}\cos\beta+\text{E}\cos\gamma)^2+\\
+&(\text{F}\cos\alpha+\text{B}\cos\beta+\text{D}\cos\gamma)^2+\\
+&(\text{E}\cos\alpha+\text{D}\cos\beta+\text{C}\cos\gamma)^2.
+\end{dcases}
+\end{align}
+Moreover, if we call $\delta$ the angle that we have just spoken, we will obviously have
+\begin{equation}
+\cos\delta = \cos\alpha\cos\lambda + \cos\beta\cos\mu+\cos\gamma\cos\nu,
+\end{equation}
+and consequently,
+\begin{align}
+\cos\delta = \dfrac{1}{p}(\text{A}\cos^2\alpha+\text{B}\cos^2\beta+\text{C}\cos^2\gamma+2\text{D}\cos\beta\cos\gamma &+2\text{E}\cos\gamma\cos\alpha+\\
+&+2\text{F}\cos\alpha\cos\beta).\nonumber
+\end{align}
+Let us add that, if we replace the force $p$ by two components, one of which is included in the plane under consideration, and the other perpendicular to this plane, the second component will be represented, except for the sign, by the product
+\begin{equation}\label{eq:componente}
+\begin{dcases}
+\begin{aligned}
+p\cos\delta &= \text{A}\cos^2\alpha+\text{B}\cos^2\beta+\text{C}\cos^2\gamma+\\
+&+2\text{D}\cos\beta\cos\gamma +2\text{E}\cos\gamma\cos\alpha+2\text{F}\cos\alpha\cos\beta.
+\end{aligned}
+\end{dcases}
+\end{equation}
+Let us observe finally that this second component will be a tension or a pressure according to whether the formula \eqref{eq:componente} will have a positive or negative quantity in the second member.
+
+Suppose now that from the point $(x, y, z)$ we define, on the perpendicular to the plane against which the force $p$ acts, a length $r$ whose square represents the numerical value of the ratio
+\begin{equation}
+\dfrac{1}{p\cos\delta}
+\end{equation}
+and denote by $x + \text{x}$, $y + \text{y}$, $z + \text{z}$ the coordinates of the extremity of that same length. We'll have
+\begin{align}
+\dfrac{\text{x}}{\cos\alpha}=\dfrac{\text{y}}{\cos\beta}=\dfrac{\text{z}}{\cos\gamma}=&\pm\sqrt{\text{x}^2+\text{y}^2+\text{z}^2}=\pm r\,,\\
+\dfrac{1}{p\cos\delta}=&\pm r^2;
+\end{align}
+and, therefore, formula \eqref{eq:componente} will give
+\begin{equation}\label{eq:quadr}
+\text{A}\text{x}^2+\text{B}\text{y}^2+\text{C}\text{z}^2+2\text{Dyz}+2\text{Ezx}+2\text{Fxy} = \pm 1\,.
+\end{equation}
+The variables x, y, z, included in equation \eqref{eq:quadr}, are the coordinates of the end of the length $r$, computed from the point $(x, y, z)$ on three rectangular axes; and this equation itself defines a quadratic surface whose center is the point $(x, y, z)$. When the polynomial
+\begin{equation}\label{eq:ellip}
+\begin{dcases}
+\begin{aligned}
+\text{A}\cos^2\alpha &+\text{B}\cos^2\beta+\text{C}\cos^2\gamma+\\
+&+2\text{D}\cos\beta\cos\gamma +2\text{E}\cos\gamma\cos\alpha+2\text{F}\cos\alpha\cos\beta.
+\end{aligned}
+\end{dcases}
+\end{equation}
+preserves the same sign, for whatever values assigned to the angles $\alpha$, $\beta$, $\gamma$, then equation \eqref{eq:componente}, reduced to one of the following
+\begin{align}
+\text{A}\text{x}^2+\text{B}\text{y}^2+\text{C}\text{z}^2+2\text{Dyz}+2\text{Ezx}+2\text{Fxy} =& 1\,,\label{eq:ellip1}\\
+\text{A}\text{x}^2+\text{B}\text{y}^2+\text{C}\text{z}^2+2\text{Dyz}+2\text{Ezx}+2\text{Fxy} =& -1\,,\label{eq:ellip2}
+\end{align}
+represents an ellipsoid. But, if the polynomial \eqref{eq:ellip} changes in sign while the angles $\alpha$, $\beta$, $\gamma$ vary, the ellipsoid in question will give way to the system of two hyperboloids, one of which will be represented by the equation \eqref{eq:ellip1}, the other by equation \eqref{eq:ellip2}; and these two hyperboloids, one of which will have a single sheet, the other two distinct sheets, will be conjugated\footnote{Regarding the properties of conjugated hyperboloids, see \emph{Le\c{c}ons sur les applications du Calcul infinit\'esimal \`a la G\'eom\'etrie}, p. 275, (\emph{OEuvres de Cauchy}, S. II, T.V)} between them, so that they will have the same center with the same axes, and will be touched in the infinite by the same conical surface of the second degree. Let us add that, in the first case, the force
+\begin{equation}
+ \pm p\cos\delta = \dfrac{1}{r^2}
+ \end{equation}
+ will always be a tension, if the polynomial \eqref{eq:ellip} is positive, a pressure if it is negative. In the second case, on the contrary, the force in question will be sometimes a pressure, sometimes a tension, according to whether the end of the vector ray $r$ is located on the surface of one or the other hyperboloid; and the same force will vanish whenever this vector ray is directed along a generatrix of the above mentioned conical surface.
+
+It can be easily demonstrated that the normal, defined at the end of the radius vector $r$ on the surface \eqref{eq:ellip1} or \eqref{eq:ellip2}, forms, with the semi-axes of positive coordinates, angles whose cosines are proportional to the three polynomials
+\begin{align*}
+&\text{A}\cos\alpha+\text{F}\cos\beta+\text{E}\cos\gamma\,,\\
+&\text{F}\cos\alpha+\text{B}\cos\beta+\text{D}\cos\gamma\,,\\ 
+&\text{E}\cos\alpha+\text{D}\cos\beta+\text{C}\cos\gamma\,.
+\end{align*}
+So this normal will be directed along the same line as the radius vector if we have
+\begin{equation}\label{eq:princ}
+\begin{dcases}
+\begin{aligned}
+&\dfrac{\text{A}\cos\alpha+\text{F}\cos\beta+\text{E}\cos\gamma}{\cos\alpha}\\
+=&\dfrac{\text{F}\cos\alpha+\text{B}\cos\beta+\text{D}\cos\gamma}{\cos\beta}\\
+=&\dfrac{\text{E}\cos\alpha+\text{D}\cos\beta+\text{C}\cos\gamma}{\cos\gamma}\,.
+\end{aligned}
+\end{dcases}
+\end{equation}
+Formula \eqref{eq:princ} is verified, in fact, when the radius vector coincides with one of the axes of the surface \eqref{eq:ellip1} or \eqref{eq:ellip2}. So also we write equations \eqref{eq:matriz}, combined with formula \eqref{eq:princ}, as
+\begin{equation}
+\dfrac{\cos\lambda}{\cos\alpha}=\dfrac{\cos\mu}{\cos\beta}=\dfrac{\cos\nu}{\cos\gamma}=\pm\dfrac{\sqrt{\cos^2\lambda+\cos^2\mu+\cos^2\nu}}{\sqrt{\cos^2\alpha+\cos^2\beta+\cos^2\gamma}}=\pm 1\,,
+\end{equation}
+and it follows that the force $p$ is itself directed along the radius vector $r$, or along its extension. Consequently, to the three axes of the surface \eqref{eq:ellip1} or \eqref{eq:ellip2} correspond three pressures or tensions, each of which is perpendicular to the plane against which it is exerted. We will call them \emph{principal pressures} or \emph{tensions}. It is then easy to ensure that one finds among them the \emph{maximum} pressure or tension and the \emph{minimum} pressure or tension; because, if we equal to zero the value of $p$ taken from formula \eqref{eq:p2}, and if we consider the equation
+\begin{equation}
+\cos^2\alpha+\cos^2\beta+\cos^2\gamma = 1\,,
+\end{equation}
+from which one of the three variables $\alpha$, $\beta$, $\gamma$ becomes a function of the two others considered as independent, we will immediately be brought back to formula \eqref{eq:princ}.
 
 
-
-
-
-
-
-
-
-
-\vspace*{2cm} 
-These researches were undertaken on the occasion of a Memoir published by Mr. Navier, on August 14, 1820. The author, in order to establish the equation of equilibrium of an elastic plane, considered two types of forces produced, one by expansion or contraction, the other by flexion of the same plane. Moreover, he assumed, in his calculations, both one and the other perpendicular to the lines or faces against which they are exerted. It seemed to me that these two types of forces could be reduced to one, which must constantly be called tension or pressure, and which was of the same nature as the hydrostatic pressure exerted by a resting fluid against the surface of a solid body. But this new pressure did not always remain perpendicular to the faces submitted to it, nor the same in all directions at a given point. By developing this idea, I soon arrived at the following conclusions. 
-
-If in an elastic or non-elastic solid body, a small element of its volume, defined by any faces, is made rigid and invariable, this small element will experience on its different faces, and at any point of each of them, a certain pressure or tension. This pressure or tension will be similar to the pressure which a fluid exerts against an element of the surface of a solid body, with the only difference that the pressure exerted by a fluid at rest against the surface of a solid body is directed perpendicular to this surface, from outside to inside, and independent, at each point, of the inclination of the surface with respect to the coordinate planes, while the pressure or tension exerted at a given point of a solid body through which a very small surface element passes can be directed perpendicularly or obliquely to this surface, sometimes from outside to inside, if there is contraction, sometimes from inside to outside, if there is expansion, and may depend on the inclination of the surface with respect to the planes in question. In addition, the pressure or tension exerted against each plane can be deduced very easily, both in magnitude and in direction, from the pressures or tensions exerted against three given rectangular planes. I was at this point when Mr. Fresnel, coming to talk to me about the work he was developing on light, and of which he had presented only a part at the institute, told me that, for his part, he had obtained, by the laws according to which elasticity varies in the many directions that emanate from a single point, a theorem analogous to mine. However, at that time, the theorem in question was far from being sufficient for me to attain the objective I had proposed, namely, to obtain the general equations of equilibrium and internal motion of a body; and only recently have I  succeeded in establishing new principles that suitably led me to this result and that I will make known. 
-
-
-From the theorem stated above, it follows that the pressure or tension at each point is equivalent to one divided by the vector radius of an ellipsoid. To the three axes of this ellipsoid, three pressures or tensions are related, which we will call \emph{principal}, and we can prove\footnote{Our remark here agrees with the latest research of Mr. Fresnel. (See \emph{Bulletin}, May 1822)} that each of them is perpendicular to the plane against which it is exerted. Amongst these principal pressures or tensions, there are the maximum pressure or tension and the minimum pressure or tension. The other pressures or tensions are distributed symmetrically around the three axes. Moreover, the pressure or tension normal to each plane, that is to say, the component, perpendicular to a plane, of the pressure or tension exerted against this plane is reciprocally proportional to the square of the vector radius of a second ellipsoid. Sometimes this second ellipsoid is replaced by two hyperboloids, one with a single sheet, the other with two sheets, which have the same center, the same axes, and touch each other to infinity defining a conical surface of second degree, whose edges indicate the directions to which the normal pressure or tension decreases to zero. 
-
-That being said, if we consider a solid body of variable shape and subjected to any accelerating forces, in order to establish the equilibrium equations of this solid body, it will suffice to write that there is a balance between the motive forces which stress an infinitely small element in the direction of the coordinate axes and the orthogonal components of the external pressures or tensions which act on the faces of this element. We will thus obtain three equilibrium equations which include, as a special case, those of the equilibrium of fluids. But, in the general case, these equations contain six unknown functions of the coordinates $x, y, z$. It remains to determine the values of these six unknowns; but the solution of this last problem varies according to the nature of the body and its more or less perfect elasticity. Let us now explain how we manage to solve it for elastic bodies. 
-
-When an elastic body is in equilibrium by virtue of any accelerating forces, each molecule must be assumed to be displaced from the position it occupied when the body was in its natural state. By virtue of the displacements of this kind, there are, around each point, different contractions or expansions in different directions. Now, it is clear that each expansion produces a tension, and each contraction a pressure. Moreover, I have demonstrated that the various contractions or expansions around a point, decreased or increased by unity, become equal, except for the sign, to the vector radii of an ellipsoid. I call \emph{principal contractions or expansions} those which take place along the axes of this ellipsoid, around which all the others are symmetrically distributed. That being said, it is clear that in an elastic solid, if the tensions or pressures depend only on the contractions or expansions, the principal tensions or pressures will have the same direction of the principal contractions or expansions. Moreover, it is natural to suppose, at least when the displacements of the molecules are very small, that the principal pressures or tensions are respectively proportional to the principal contractions or expansions. By admitting this principle, we immediately arrive at the equations of the equilibrium of an elastic body. In the case of very small displacements, the component, perpendicular to a plane, of the pressure or tension exerted against this plane, always preserves the same relation with the contraction or expansion which takes place in the direction of this component, and the equilibrium formulas are reduced to four partial differential equations, one of which separately determines the contraction or expansion of the volume, while each of the others serves to fix the displacement parallel to one of the coordinate axes. 
-
-Once the equilibrium equations of an elastic body are obtained, it is easy to deduce the equations of motion by ordinary methods. The latter are still four in number, and each of them is a linear partial differential equation with an appended  variable term. They are integrated by the methods exposed in our previous Memoir. One of these equations contains only the unknown which represents the volume contraction or expansion. In the particular case where the accelerating force becomes constant and preserves the same direction, this equation is reduced to that which describes the propagation of sound in air, with the only difference that the constant which it contains, instead of depending on the height of the supposedly homogeneous atmosphere, depends on the linear expansion or contraction of a body under a given pressure. We must conclude that the speed of sound in an elastic solid is constant, as in the air, but it varies from one body to another depending on the matter of which the body is composed. This constancy is even more remarkable since the displacements of successive molecules considered in fluids and elastic solids follow different laws.
-
-My Memoir ends by obtaining the equations of the internal motion of solid bodies entirely devoid of elasticity. In order to achieve this, it suffices to suppose that in these bodies the pressures or tensions around a moving point no longer depend on total contractions or expansions which correspond to the absolute displacements relative to the initial positions of the molecules, but only, during any period of time, on very small contractions or expansions which correspond to the respective displacements of the different points during a very short period of time. We then find that the contraction of volume is determined by an equation similar to that of heat, which establishes a remarkable analogy between the propagation of calorie and the propagation of vibrations in a body entirely devoid of elasticity.
-
-In another Memoir, I will perform the application of the formulas that I obtained to the theory of elastic plates and laminae.
-
+% alfa, beta e gama são angulos das normais
 \vspace*{.5cm}
 \noindent
 \rule{\textwidth}{0.5pt}\vspace*{-\baselineskip}\vspace*{2pt} 
