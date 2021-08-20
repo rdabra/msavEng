@@ -334,19 +334,21 @@ From the concept of class and its dependent definitions presented on section \re
 \begin{equation}\label{eq:addMeasure}
 \fua{\mu}{\bigcup_{i=1}^nA_i}=\sum_{{i}=1}^n\fua{\mu}{A_i}\,.
 \end{equation}
-From this definition, it is clear that $\fua{\mu}{\emptyset}=\fua{\mu}{\emptyset\cup\emptyset}=2\fua{\mu}{\emptyset}=0$. For the special case of a mapping $\map{\mu}{\css{M}}{\real^+}$ where $\css{M}$ is a ring, additive nonegative set function $\mu$ is said to be a \textsb{continent}\index{ring!continent} of ring $\css{C}$. But in the case of the $\sigma$-ring $\css{M}$, its continent $\mu$ is called a \textsb{measure}\index{measure} if
+From this definition, it is clear that $\fua{\mu}{\emptyset}=\fua{\mu}{\emptyset\cup\emptyset}=2\fua{\mu}{\emptyset}=0$. For the special case of a mapping $\map{\mu}{\css{C}}{\real^+}$ where $\css{C}$ is a ring, additive nonegative set function $\mu$ is said to be a \textsb{continent}\index{ring!continent} of ring $\css{C}$. But in the case of the $\sigma$-ring $\css{M}$, its continent $\mu$ is called a \textsb{measure}\index{measure} if
 \begin{equation}\label{eq:measuSum}
 \fua{\mu}{\bigcup_{i=1}^\infty A_i}=\sum_{{i}=1}^\infty\fua{\mu}{A_i}\,,
 \end{equation}
 for an arbitrary countable class $\{A_1,A_2,\cdots\}\subseteq\css{M}$. Thereby, we call the double constituted by a measurable space and a measure, that is $((M,\css{M}),\mu)$, a \textsb{measure space}\index{space!measure}, which will hereafter be represented by the triple $(M,\css{M},\mu)$.
+
+\begin{comment}
 Considering measure space $(M,\css{M},\mu)$, a measurable field $(\real,\css{F})$ and a mapping  $\map{f}{M}{\real}$, we say that a sequence of functions $f_1,f_2,\cdots$ that also map $M$ to $\real$ \textsb{converges in measure}\index{convergence!in measure} $\mu$ to function $f$ when, given an arbitrary real number $\epsilon>0$,
 \begin{equation}
 \lim_{i\to\infty}\fua{\mu}{\{x\in M : |\fua{f}{x}-\fua{f_i}{x}|\leqslant\epsilon\}}=0\,.
 \end{equation}
+\end{comment}
 
 
-
-Now, let $(M,\css{M})$ be a measurable space and $(\real,\css{F})$ a measurable field. The function in $\map{s}{M}{\real}$ is called \textsb{measurable}\index{function!measurable} if, for every element $\con{B}\in\css{F}$, preimage $\con{R}^{-1}_{\con{B}} \in \css{M}$. Considering a disjoint countable class $\{A_1,\cdots,A_n\}\subseteq\css{M}$ and scalars $\alpha_1,\cdots,\alpha_n\in\real$, where $\css{A}=\{A_1,\cdots,A_n\}$ is called a \textsb{partition}\index{set!partition of} of an arbitrary set $A\in\css{M}$, that is $A=\bigcup_{i=1}^nA_i$, the measurable function in $\map{s_A}{M}{\real}$ is called \textsb{step}\index{function!step} or \textsb{simple}\index{function!simple} with respect to $\css{A}$ if its rule is described by
+Given a measurable field $(\real,\css{F})$, the function in $\map{s}{M}{\real}$ is called \textsb{measurable}\index{function!measurable} if, for every element $\con{B}\in\css{F}$, the preimage $\con{R}^{-1}_{\con{B}} \in \css{M}$. Considering a disjoint countable class $\{A_1,\cdots,A_n\}\subseteq\css{M}$ and $\alpha_1,\cdots,\alpha_n\in\real$, where $\css{A}=\{A_1,\cdots,A_n\}$ is called a \textsb{partition}\index{set!partition of} of an arbitrary set $A\in\css{M}$, that is $A=\bigcup_{i=1}^nA_i$, the measurable function in $\map{s_A}{M}{\real}$ is called \textsb{step}\index{function!step} or \textsb{simple}\index{function!simple} with respect to $\css{A}$ if its rule is described by
 \begin{equation}
 \fua{s_\css{A}}{x} = \sum_{i=1}^n\alpha_i\fua{\tnr{1}_{A_i}}{x}\,,
 \end{equation}
@@ -362,11 +364,11 @@ In the particular case of a measure space $(M,\css{M},\mu)$, a step function $s_
 \begin{equation}\label{eq:defInteSimp}
 \int_E s_\css{A} := \sum_{i=1}^n\alpha_i\fua{\mu}{E\cap A_i}
 \end{equation}
-is called the \textsb{integral}\index{integral!of step function} of $s_\css{A}$ on $E$. In this context, if $\css{B}=\{B_1,\cdots,B_m\}\subseteq\css{M}$ is another partition of $A$, we conclude that there is no element of $A$ which does not belong to some $A_i\cap B_j$ and then it is obvious that class 
+is called the \textsb{integral}\index{integral!of step function} of $s_\css{A}$ on $E$.In this context, if $\css{B}=\{B_1,\cdots,B_m\}\subseteq\css{M}$ is another partition of $A$, we conclude that there is no element of $A$ which does not belong to some $A_i\cap B_j$ and then it is obvious that class 
 \begin{equation*}
 \css{C}=\{A_1\cap B_1,A_1\cap B_2,\cdots,A_1\cap B_m,A_2\cap B_1,\cdots,A_n\cap B_m\}
 \end{equation*}
-is disjoint and also a partition of $A$. Therefore, from previous definition, we can write
+is disjoint and also a partition of $A$. Moreover, since $A=\bigcup_{i=1}^n A_i=\bigcup_{j=1}^m B_i$, it is obvious that $A_i=\bigcup_{j=1}^mA_i\cap B_j$ and $B_j=\bigcup_{i=1}^n B_j \cap A_i$. From previous definition, we can write
 \begin{equation*}
 \int_E s_\css{C} = \sum_{i=1}^n\sum_{j=1}^m\gamma_{ij}\fua{\mu}{E\cap A_i\cap B_j}\,,
 \end{equation*}
@@ -385,7 +387,7 @@ Thereby, from these equalities, scalar
 \end{align*}
 since intersection is distributive on union and $\mu$ is additive according to \eqref{eq:addMeasure}. For integration purposes, this equality enables us to remove the identification of the partition of $A$ from the representation of the function in a step mapping $\map{s}{M}{\real}$, since the integral of $s$ is the same for any partition of arbitrary $A\subseteq M$.
 
-Let $(S,\varrho)$ be a normed metric space of integrable step functions on $E$ with norm and metric respectively defined by
+In the set of all measurable functions on $(M,\css{M},\mu)$, let $(S,\varrho)$ be a normed metric space of integrable step functions on $E$ with norm and metric respectively defined by
 \begin{alignat*} {3}
 \|s\|=\int_E |s|&\qquad \text{ and } \qquad&\fua{\varrho}{g_1,g_2}=\|g_1-g_2\|\,,
 \end{alignat*}
@@ -406,30 +408,12 @@ Since scalar multiplication does not affect the convergence of Cauchy sequences 
 \end{equation*}
 it is obvious that $\lim_{\min{\lpa i,j\rpa}\to\infty}\|(h_i+ r_i) -(h_j +r_j)\|=0\,$, which proves the sum to be a Cauchy sequence. The convergence to $\alpha f+\beta g$ can be  proved by this same procedure.
 \end{proof}}
-
-\begin{comment}
-Considering a mapping $\map{f}{M}{\real}$ where $f=f^{+}-f^{-}$ such that
-\begin{alignat*} {3}
-\fua{f^+}{x} = \begin{dcases}
-\fua{f}{x} & \text{if } \fua{f}{x}> 0\\
-0 & \text{if } \fua{f}{x} \leqslant 0
-\end{dcases} &\qquad \text{ and } \qquad&\fua{f^-}{x} = \begin{dcases}
--\fua{f}{x} & \text{if } \fua{f}{x}< 0\\
-0 & \text{if } \fua{f}{x} \geqslant 0
-\end{dcases}\,.
-\end{alignat*}
-Since functions $f^{+}$ and $f^{-}$ are nonnegative, we can define that $f$ is integrable on $E$ if and only if both $f^{+}$ and $f^{-}$ are integrable on $E$ and also that
-\begin{equation}\label{eq:decompInt}
-\int_E f = \int_E f^{+} + \int_E f^{-}\,.
-\end{equation}
-\end{comment}
-
 It is important to study some fundamental properties of integrals and we shall presented them as follows by firstly specifying functions in $\map{f}{M}{\real}$ and $\map{g}{M}{\real}$ to be measurable, and scalars $\alpha,\beta\in\real$, where $(M,\css{M})$ and $(\real,\css{F})$ are also measurable.
 
 
 \begin{itemize}
 	\setlength\itemsep{.1em}
-	\item[i.] If nonnegative function $f$ is integrable, then its integral on $E$ is also nonnegative;
+	\item[i.] If $f$ is integrable and nonnegative, then its integral on $E$ is also nonnegative;
 	\item[ii.] If $f$ is integrable on every element of disjoint class $\{E_1,\cdots,E_m\}\subseteq \css{M}$, then
 	\begin{equation}
 	\int_{\bigcup_{i=1}^mE_i}f=\sum_{{i}=1}^{m} \int_{E_i}f\,;
@@ -444,8 +428,9 @@ It is important to study some fundamental properties of integrals and we shall p
 	 \end{equation}
 \end{itemize}
 
-{\footnotesize
+
 \begin{proof}
+{\footnotesize
 In order to prove item i, let's specify a sequence of integrable step functions $s_1,s_2,\cdots$ where
 \begin{equation*}
 \fua{s_k}{x}=\sum_{{i}=1}^n(\fua{f}{x}+k^{-1})\fua{\tnr{1}_{A_i^{(k)}}}{x}
@@ -483,7 +468,7 @@ Thereby, from  property \eqref{eq:cauchySum}, we have
 \int_E \alpha f+\beta g = \lim_{k\to\infty}\int_E\alpha s_k+\beta t_k = \lim_{k\to\infty}\sum_{i=1}^n\sum_{j=1}^m(\alpha\alpha_i^{(k)}+\beta\beta_j^{(k)})\fua{\mu}{E\cap A_i^{(k)}\cap B_j^{(k)}}\,,
 \end{equation*}
 which is equal to result \eqref{eq:a}.
-\end{proof}}
+}\end{proof}
 
 Considering $\ete{\real}{U^{\times m}}$ and $\ete{\real}{V^{\times s}}$ Euclidean tensor spaces, let the functional in mapping $\map{f}{\pmb{\mathcal{U}}}{\real}$ be a composition of functions described by $f = \frt{T}\circ\tnr{\psi}$, where domain $\pmb{\mathcal{U}}\subseteq\ete{\real}{U^{\times m}}$, function $\frt{T}$ is the representative tensor functional of an arbitrary tensor $\tnr{T}\in\ete{\real}{V^{\times s}}$, according to equalities \eqref{eq:polyRepre}, and $\map{\tnr{\psi}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}$ is a tensor mapping. We define that function $\tnr{\psi}$ is integrable on $\pmb{\mathcal{U}}$ if functional $f$ is integrable on $\pmb{\mathcal{U}}$. If this is the case, by specifying a rule
 \begin{equation}

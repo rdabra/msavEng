@@ -39,6 +39,8 @@
 
 \usepackage{pdfpages}
 
+\usepackage{comment}
+
 
 %\usepackage{draftwatermark}
 %\SetWatermarkColor{red}
@@ -190,8 +192,8 @@
 	arc=0mm,outer arc=.5mm,
 	breakable=true,
 	colback=black!1!white,
-	before skip=7pt,
-	after skip=7pt,
+	before skip=5pt,
+	after skip=5pt,
 	leftrule=0pt,
 	rightrule=0pt,
 	coltitle=black,
@@ -217,8 +219,8 @@
 	arc=0mm,outer arc=.5mm,
 	breakable=true,
 	colback=black!4!white,
-	before skip=7pt,
-	after skip=14pt,
+	before skip=5pt,
+	after skip=5pt,
 	leftrule=0pt,
 	rightrule=0pt,
 	coltitle=black,
@@ -238,13 +240,13 @@
 
 \tcolorboxenvironment{proof}{	
 	enhanced jigsaw, % better frame drawing
-	breakable=unlimited,
-	before skip=7pt,
-	after skip=10pt,
+	breakable=true,
+	before skip=5pt,
+	after skip=5pt,
 	left=1mm,
 	right=0mm,
-	top=0mm,
-	bottom=0mm,
+	top=0.5mm,
+	bottom=0.5mm,
 	boxsep=1mm,
 	borderline west={1.5pt}{0pt}{black!23!white}, % straigh vertical line at the left edge
 	sharp corners, % No rounded corners
