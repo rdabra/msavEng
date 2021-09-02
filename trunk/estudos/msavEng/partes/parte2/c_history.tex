@@ -201,7 +201,7 @@ Cauchy applies this same procedure for linear momenta relative to the coordinate
 \end{eqnarray*}
 from which equalities $p_1=p_2$, $\cos\lambda_1=-\cos\lambda_2$, $\cos\mu_1=-\cos\mu_2$ and  $\cos\nu_1=-\cos\nu_2$ can be concluded. Although simple, this result is fundamental in Cauchy's mechanical theory because it allows us to assert that \emph{an arbitrary infinitesimal  plane, to which a point in equilibrium belongs, defines on it a unique pair of opposing tensions or pressures with the same intensity}. Making a small parallelepiped in equilibrium an infinitesimal volume element, a consequence of the previous statement is that, among the six pressures or tensions on the element faces, only three may be distinct, namely $p_1$, $p_2$ and $p_3$. In this context, Cauchy then obtains from the balance of linear momenta that tangential pressures or tensions $p_1\cos\mu_1=p_2\cos\lambda_2$, $p_1\cos\nu_1=p_3\cos\lambda_3$ and $p_2\cos\nu_2=p_3\cos\mu_3$. 
 
-Considering the set of all deformable bodies as constituted by solids and fluids, the feature of an arbitrary plane defining a pair of opposing pressures or tensions on a point in equilibrium becomes a generalization of the particular case of perfect fluids at rest, where an arbitrary plane, to which a point of depth $h$ belongs, defines on it a pair of opposing equal pressures normal to this plane (hydrostatic). Moreover, if we represent tensions or pressures by geometric vectors and consider the general case of deformable bodies, the set of all the planes to which a point in equilibrium belongs defines on it a set of vectors that may not constitute a sphere, as does the set of all hydrostatic pressures on a point inside a perfect fluid at rest, since the intensity of an hydrostatic pressure depends only on the depth $h$, according to Euler's lemma. If the geometric shape of the set of tension or pressure vectors on a point in equilibrium may not be a sphere, which shape would it be? In order to answer this question, Cauchy elects his famous tetrahedron as a small volume element, defines pressure $p$ on a point of its basis $s$ as unknown and $(\cos\alpha,\cos\beta,\cos\gamma)$ as the cosine directions of the unit normal to $s$. From the previous expressions of balance of forces and after lengthy algebraic manipulations, he arrives at the following equations:
+Considering the set of all deformable bodies as constituted by solids and fluids, the feature of an arbitrary plane defining a pair of opposing pressures or tensions on a point in equilibrium becomes a generalization of the particular case of perfect fluids at rest, where an arbitrary plane, to which a point of depth $h$ belongs, defines on it a pair of opposing equal pressures normal to this plane (hydrostatic). Moreover, if we represent tensions or pressures by geometric vectors and consider the general case of deformable bodies, the set of all the planes to which a point in equilibrium belongs defines on it a set of vectors that may not constitute a sphere, as does the set of all hydrostatic pressures on a point inside a perfect fluid at rest, since the intensity of an hydrostatic pressure depends only on the depth $h$, according to Euler's lemma. If the geometric shape of the set of tension or pressure vectors on a point in equilibrium may not be a sphere, which shape would it be? In order to answer this question, Cauchy elected his famous tetrahedron as a small volume element, defined pressure $p$ on a point of its basis $s$ as unknown and $(\cos\alpha,\cos\beta,\cos\gamma)$ as the cosine directions of the unit normal to $s$. From the previous expressions of balance of forces and after lengthy algebraic manipulations, he arrived at the following equations:
 \begin{align*}
 p^2 = &(\text{A}\cos\alpha+\text{F}\cos\beta+\text{E}\cos\gamma)^2+\\
 &(\text{F}\cos\alpha+\text{B}\cos\beta+\text{D}\cos\gamma)^2+\\
@@ -216,25 +216,19 @@ where coefficients $\text{A} = p_1\cos\lambda_1$, $\text{B} = p_2\cos\mu_2$, $\t
 \begin{equation*}
 \text{A}\text{x}^2+\text{B}\text{y}^2+\text{C}\text{z}^2+2\text{D}\text{y}\text{z} +2\text{E}\text{z}\text{x}+2\text{F}\text{x}\text{y}- \dfrac{1}{p\cos\delta} = 0\,,
 \end{equation*}  
-which describes a quadratic surface. Based on this polynomial, Cauchy then found out that there are three mutually perpendicular bases $s_{(1)}$,$s_{(2)}$,$s_{(3)}$ of the tetrahedron to which pressures or tensions $p_{(1)}$,$p_{(2)}$,$p_{(3)}$ are respectively normal (hydrostatic) and that two of them are the maximum and the minimum values of all the pressures or tensions on the point under consideration. Because of these features, he called $p_{(1)},p_{(2)},p_{(3)}$ the principal pressures or tensions on this point. Considering the intersection of $s_{(1)}$, $s_{(2)}$ and $s_{(3)}$ as a rectangular coordinate system, any tetrahedron defined on this system will not resist tangential pressures or tensions on its three faces. In this context where $\cos\nu_2=\cos\lambda_3=\cos\mu_1=0$ and $\cos\lambda_1=\cos\mu_2=\cos\nu_3=1$, the balance of forces on the tetrahedron is rather simple:
-\begin{align*}
-p\cos\delta\cos\alpha dA= p_{(1)}
+which describes a quadratic surface. Based on this polynomial, Cauchy then found out that there are three mutually perpendicular bases $s_{(1)}$,$s_{(2)}$,$s_{(3)}$ of the tetrahedron to which pressures or tensions $p_{(1)}$,$p_{(2)}$,$p_{(3)}$ are respectively normal (hydrostatic) and that two of them are the maximum and the minimum values of all the pressures or tensions on the point under consideration. Because of these features, he called $p_{(1)},p_{(2)},p_{(3)}$ the principal pressures or tensions on this point. Considering a new tetrahedron in a rectangular coordinate system defined by the intersection of $s_{(1)}$, $s_{(2)}$ and $s_{(3)}$, the balance of forces becomes rather simple for a basis $s$ where the principal pressures or tensions appear simultaneously on the faces of the tetrahedron:
+\begin{align*} 
+p\cos\delta\cos\alpha dA - p_{(1)}\cos\alpha dA &= 0\,,\\
+p\cos\delta\cos\beta dA - p_{(2)}\cos\beta dA &= 0\,,\\
+p\cos\delta\cos\gamma dA - p_{(2)}\cos\gamma dA &= 0\,.
 \end{align*} 
+Defining $X=p\cos\delta\cos\alpha$, $Y=p\cos\delta\cos\beta$ and $Z=p\cos\delta\cos\gamma$ and by the property of three dimensional cosine directions where $\cos^2\alpha+\cos^2\beta+\cos^2\gamma=1$, we easily arrive at
+\begin{equation*}
+\dfrac{X^2}{p_{(1)}^2}+\dfrac{Y^2}{p_{(2)}^2}+\dfrac{Z^2}{p_{(3)}^2}=1\,,
+\end{equation*}
+from which it is clear that the principal pressures or tensions define the magnitutes of the axes of an ellipsoid, which is the set defined by the geometric vectors on the point under consideration. Since the ellipsoid is the geometric generalization of the sphere, pressures or tensions on a point of a perfect fluid at rest can be considered a particular case of Cauchy's theory.
 
-%VER O LIVRO DO TIMOSHENKO
-
-
-
-
-the previous polynomial assumes the following format: 
-\begin{eqnarray*}
-1 &=& p\cos\delta\text{A}\text{x}^2+p\cos\delta\text{B}\text{y}^2+p\cos\delta\text{C}\text{z}^2 \\
-&=& p_{(1)}^3p^3\cos^3\delta\cos^2\alpha/p_{(1)}^2 + p_{(2)}^3p^3\cos^3\delta\cos^2\beta/p_{(2)}^2+p_{(3)}^3p^3\cos^3\delta\cos^2\gamma/p_{(3)}^2\\
-&=& X^2/p_{(1)}^2 + Y^2/p_{(2)}^2 + Z^2/p_{(3)}^2\,,
-\end{eqnarray*} 
-where 
-
-from which it is clear that the principal pressures or tensions define the magnitutes of the axes of the ellipsoid.
+And finally our brief history ends here. For the purposes of this book, we decided not to be exhaustive and chose to present only short passages of the life and the work of the outstanding initial contributors on Continuum Mechanics. For the reader or student interested in deepening their knowledge on historical matters of this field, we strongly recommend the accounts of \aut{Timoshenko}\cite{timoshenko_1983_1}, \aut{Maugin}\cite{maugin_2013}, \aut{Maugin}\cite{maugin_2014} and \aut{Maugin}\cite{maugin_2016}.
 
 
  
