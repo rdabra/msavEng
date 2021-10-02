@@ -11,7 +11,7 @@
 
 	"settings": {
         "TEXroot": "msav.tex",
-        "open_pdf_on_build": "false"
+        "open_pdf_on_build": "true"
     }
 
 }
