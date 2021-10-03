@@ -328,7 +328,7 @@ is the $m$-cotensor of and each $\pmb{\mathcal{U}}_i=\pmb{\mathcal{U}}$ defines 
 
 \section{Integration}\index{integration}
 
-The integration approach we shall deal with in this section relies fundamentally on Lebesgue's theory, which is built from the generalization of the concept of size, that is, length, area, volume or \textsb{hypervolume}\index{hypervolume} of respectively one, two, three or $n$ dimensional affine Hilbert spaces. In simple terms, this generalization is strong, based on assigning a real number to a set, whatever measure this scalar expresses. But this general measure must obey certain rules that require and lead to new important definitions. In this context, from specific scalar functions with domains called measurable, integrable tensor functions can be defined.
+The integration approach we shall deal with in this section relies fundamentally on Lebesgue's theory, which is built from the generalization of the concept of size, that is, length, area, volume or \textsb{hypervolume}\index{hypervolume} of respectively one, two, three or $n$ dimensional Hilbert spaces. In simple terms, this generalization is strong, based on assigning a real number to a set, whatever measure this scalar expresses. But this general measure must obey certain rules that require and lead to new important definitions. In this context, from specific scalar functions with domains called measurable, integrable tensor functions can be defined.
 
 From the concept of class and its dependent definitions presented on section \ref{sec:Sets}, the double $(M,\css{M})$ is said to be a \textsb{measurable space}\index{space!measurable} when $\sigma$-ring $\css{M}$ is a class of the set $M$; and when this set defines a group or a field we also qualify them with ``measurable''. Now, considering the mapping $\map{\mu}{\css{M}}{\real}$ and an arbitrary disjoint countable class $\{A_1,\cdots,A_n\}\subseteq\css{M}$, set function $\mu$ is called additive if
 \begin{equation}\label{eq:addMeasure}
@@ -348,7 +348,7 @@ Considering measure space $(M,\css{M},\mu)$, a measurable field $(\real,\css{F})
 \end{comment}
 
 
-Given a measurable field $(\real,\css{F})$, the function in $\map{s}{M}{\real}$ is called \textsb{measurable}\index{function!measurable} if, for every element $\con{B}\in\css{F}$, the preimage $\con{R}^{-1}_{\con{B}} \in \css{M}$. Considering a disjoint countable class $\{A_1,\cdots,A_n\}\subseteq\css{M}$ and $\alpha_1,\cdots,\alpha_n\in\real$, where $\css{A}=\{A_1,\cdots,A_n\}$ is called a \textsb{partition}\index{set!partition of} of an arbitrary set $A\in\css{M}$, that is $A=\bigcup_{i=1}^nA_i$, the measurable function in $\map{s_A}{M}{\real}$ is called \textsb{step}\index{function!step} or \textsb{simple}\index{function!simple} with respect to $\css{A}$ if its rule is described by
+Given a measurable field $(\real,\css{F})$, the function in $\map{s}{M}{\real}$ is called \textsb{measurable}\index{function!measurable} if, for every element $\con{B}\in\css{F}$, the preimage $\con{R}^{-1}_{\con{B}} \in \css{M}$. Considering a disjoint countable class $\{A_1,\cdots,A_n\}\subseteq\css{M}$ and $\alpha_1,\cdots,\alpha_n\in\real$, where $\css{A}=\{A_1,\cdots,A_n\}$ is called a \textsb{partition}\index{set!partition of} of an arbitrary set $A\in\css{M}$, that is $A=\bigcup_{i=1}^nA_i$, the measurable function in $\map{s_\css{A}}{M}{\real}$ is called \textsb{step}\index{function!step} or \textsb{simple}\index{function!simple} with respect to $\css{A}$ if its rule is described by
 \begin{equation}
 \fua{s_\css{A}}{x} = \sum_{i=1}^n\alpha_i\fua{\tnr{1}_{A_i}}{x}\,,
 \end{equation}
@@ -360,11 +360,11 @@ where the function in $\map{\tnr{1}_{A_i}}{A_i}{\real}$ is commonly known as the
 1 & \text{if } x\in A_i
 \end{dcases}\,.
 \end{equation*}
-In the particular case of a measure space $(M,\css{M},\mu)$, a step function $s_\css{A}$ is defined to be \textsb{integrable}\index{function!integrable step} on set $E\in\css{M}$ when for every $\alpha_i\neq 0$, scalar $\fua{\mu}{E\cap A_i} < \infty$. If this is the case, real number
+In the particular case of a measure space $(M,\css{M},\mu)$, a step function $s_\css{A}$ is defined to be \textsb{integrable}\index{function!integrable step} on set $E\in\css{M}$ when for every $\alpha_i\neq 0$, scalar $\fua{\mu}{E\cap A_i}$ is finite. If this is the case, the real number
 \begin{equation}\label{eq:defInteSimp}
 \int_E s_\css{A} := \sum_{i=1}^n\alpha_i\fua{\mu}{E\cap A_i}
 \end{equation}
-is called the \textsb{integral}\index{integral!of step function} of $s_\css{A}$ on $E$.In this context, if $\css{B}=\{B_1,\cdots,B_m\}\subseteq\css{M}$ is another partition of $A$, we conclude that there is no element of $A$ which does not belong to some $A_i\cap B_j$ and then it is obvious that class 
+is called the \textsb{integral}\index{integral!of step function} of $s_\css{A}$ on $E$. In this context, if $\css{B}=\{B_1,\cdots,B_m\}\subseteq\css{M}$ is another partition of $A$, we conclude that there is no element of $A$ which does not belong to some $A_i\cap B_j$ and then it is obvious that class 
 \begin{equation*}
 \css{C}=\{A_1\cap B_1,A_1\cap B_2,\cdots,A_1\cap B_m,A_2\cap B_1,\cdots,A_n\cap B_m\}
 \end{equation*}
@@ -389,13 +389,13 @@ since intersection is distributive on union and $\mu$ is additive according to \
 
 In the set of all measurable functions on $(M,\css{M},\mu)$, let $(S,\varrho)$ be a normed metric space of integrable step functions on $E$ with norm and metric respectively defined by
 \begin{alignat*} {3}
-\|s\|=\int_E |s|&\qquad \text{ and } \qquad&\fua{\varrho}{g_1,g_2}=\|g_1-g_2\|\,,
+\|s\|=\int_E |s|&\qquad \text{ and } \qquad&\fua{\varrho}{s_1,s_2}=\|s_1-s_2\|\,,
 \end{alignat*}
-where $|s|(x):=|\fua{s}{x}|$ and $s,g_1,g_2\in S$. In this context, if a Cauchy sequence of integrable step functions $s_1,s_2,\cdots\in S$ exists and converges to the measurable function in $\map{g}{M}{\real}$, we say that $g$ is integrable or Labesgue integrable on $E$ and scalar
+where $|s|(x):=|\fua{s}{x}|$ and $s,s_1,s_2\in S$. In this context, if a Cauchy sequence of integrable step functions $s_1,s_2,\cdots\in S$ exists and converges to the measurable function in $\map{f}{M}{\real}$, we say that $f$ is integrable or Labesgue integrable on $E$ and scalar
 \begin{equation}\label{eq:integ}
-\int_E g := \lim_{i\to \infty}\int_E s_i
+\int_E f := \lim_{i\to \infty}\int_E s_i
 \end{equation}
-is the integral or Labesgue integral of $g$ on $E$. It is important to say that if $s_1,s_2,\cdots\in S$ and $t_1,t_2,\cdots\in S$ are convergent Chauchy sequences of integrable step functions, then sequence $ s_1+t_1, s_2+ t_2,\cdots$ also is. Moreover,
+is the integral or Labesgue integral of $f$ on $E$. It is important to say that if $s_1,s_2,\cdots\in S$ and $t_1,t_2,\cdots\in S$ are convergent Chauchy sequences of integrable step functions, so is sequence $ s_1+t_1, s_2+ t_2,\cdots$. Moreover, if the function in $\map{g}{M}{\real}$ is measurable, 
 \begin{equation}\label{eq:cauchySum}
 s_1,s_2,\cdots\to f\,\,\, \wedge\,\,\, t_1,t_2,\cdots\to g \implies \alpha s_1+ \beta t_1, \alpha s_2+ \beta t_2,\cdots\to \alpha f+\beta g\,.
 \end{equation}
@@ -408,7 +408,8 @@ Since scalar multiplication does not affect the convergence of Cauchy sequences 
 \end{equation*}
 it is obvious that $\lim_{\min{\lpa i,j\rpa}\to\infty}\|(h_i+ r_i) -(h_j +r_j)\|=0\,$, which proves the sum to be a Cauchy sequence. The convergence to $\alpha f+\beta g$ can be  proved by this same procedure.
 \end{proof}}
-It is important to study some fundamental properties of integrals and we shall presented them as follows by firstly specifying functions in $\map{f}{M}{\real}$ and $\map{g}{M}{\real}$ to be measurable, and scalars $\alpha,\beta\in\real$, where $(M,\css{M})$ and $(\real,\css{F})$ are also measurable.
+
+Given the above conditions, we present some fundamental properties of integrals:
 
 
 \begin{itemize}
@@ -422,7 +423,7 @@ It is important to study some fundamental properties of integrals and we shall p
 	\begin{equation}
 	\int_{E}f =0\,;
 	\end{equation}
-	 \item[iv.] If $f$ and $g$ are integrable on $E\in\css{M}$, then
+	 \item[iv.] If $f$ and $g$ are integrable on $E\in\css{M}$ and scalars $\alpha,\beta\in\real$ are arbitrary, then
 	 \begin{equation}
 	 \int_{E}(\alpha f +\beta g) = \alpha\int_{E}f+\beta\int_{E}g \,.
 	 \end{equation}
@@ -470,17 +471,18 @@ Thereby, from  property \eqref{eq:cauchySum}, we have
 which is equal to result \eqref{eq:a}.
 }\end{proof}
 
-Considering $\ete{\real}{U^{\times m}}$ and $\ete{\real}{V^{\times s}}$ Euclidean tensor spaces, let the functional in mapping $\map{f}{\pmb{\mathcal{U}}}{\real}$ be a composition of functions described by $f = \frt{T}\circ\tnr{\psi}$, where domain $\pmb{\mathcal{U}}\subseteq\ete{\real}{U^{\times m}}$, function $\frt{T}$ is the representative tensor functional of an arbitrary tensor $\tnr{T}\in\ete{\real}{V^{\times s}}$, according to equalities \eqref{eq:polyRepre}, and $\map{\tnr{\psi}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}$ is a tensor mapping. We define that function $\tnr{\psi}$ is integrable on $\pmb{\mathcal{U}}$ if functional $f$ is integrable on $\pmb{\mathcal{U}}$. If this is the case, by specifying a rule
-\begin{equation}
+
+Now, our goal is to integrate a broader class of functions other than functionals, namely, tensor functions. Considering $\ete{\real}{U^{\times m}}$ and $\ete{\real}{V^{\times s}}$ Euclidean tensor spaces, let the functional in mapping $\map{f}{\pmb{\mathcal{U}}}{\real}$ be a composition of functions described by $f = \frt{T}\circ\tnr{\psi}$, where domain $\pmb{\mathcal{U}}\subseteq\ete{\real}{U^{\times m}}$, function $\frt{T}$ is the representative tensor functional of an arbitrary tensor $\tnr{T}\in\ete{\real}{V^{\times s}}$, according to equalities \eqref{eq:repTensFunc}, and $\tnr{\psi}$ defines a tensor mapping $\map{\tnr{\psi}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}$. We impose that function $\tnr{\psi}$ is integrable on $\pmb{\mathcal{U}}$ if and only if functional $f$ is integrable on $\pmb{\mathcal{U}}$. If this is the case, by specifying a rule
+\begin{equation}\label{eq:aga}
 \fua{\tnr{h}}{\tnr{X}} = \int_{\pmb{\mathcal{U}}} \frt{X}\circ\tnr{\psi}\,,
 \end{equation}
-where tensor functional $\tnr{h}\in\eted{\real}{V^{\times s}}$ is linear because of property iv above, there exists a unique tensor $\tnr{H}\in\ete{\real}{V^{\times s}}$ which $\tnr{h}$ is the cotensor of, according to corollary \ref{cor:eqNorm}. In this context, tensor
+where tensor functional $\tnr{h}\in\eted{\real}{V^{\times s}}$ is linear because of definition \eqref{eq:repTensFunc} and property iv above, there exists a unique tensor $\tnr{H}\in\ete{\real}{V^{\times s}}$ which $\tnr{h}$ is the cotensor of, according to corollary \ref{cor:eqNorm}. In this context, tensor
 \begin{equation}
 \int_{\pmb{\mathcal{U}}}\tnr{\psi}:=\tnr{H}
 \end{equation}
-is called the integral of tensor function $\tnr{\psi}$ on $\pmb{\mathcal{U}}$. Therefore, since corollary \ref{cor:eqNorm} establishes a one to one correspondence between linear tensor functional $\tnr{h}$ and tensor $\tnr{H}$ through $\fua{\tnr{h}}{\tnr{X}}=\tnr{X}\cdot\tnr{H}$, we conclude that
+is called the integral of tensor function $\tnr{\psi}$ on $\pmb{\mathcal{U}}$. Therefore, since $\fua{\tnr{h}}{\tnr{X}}=\tnr{X}\cdot\tnr{H}$, we conclude from \eqref{eq:aga} that scalar
 \begin{equation}\label{eq:repInte}
-\int_{\pmb{\mathcal{U}}} \frt{X}\circ\tnr{\psi}=\tnr{X}\cdot\int_{\pmb{\mathcal{U}}}\tnr{\psi}\,.
+\tnr{X}\cdot\int_{\pmb{\mathcal{U}}}\tnr{\psi}=\int_{\pmb{\mathcal{U}}} \frt{X}\circ\tnr{\psi}\,.
 \end{equation}
 
 \section{Integral Identities}
