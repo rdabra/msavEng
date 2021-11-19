@@ -90,7 +90,7 @@ In this context, point $o$ is called the \textsb{origin}\index{origin} of the co
 	\end{center}
 	\titfigura{$n$-dimensional affine coordinate system $(o,B)$ and its axes.}\label{fg:coordSystem}
 \end{figure}
-On section \ref{sec:group}, we said that in a group action a biunivocal relationship between its definer set and its definer group is possible if an element of the set is fixed. For the case of affine spaces, this fixation is established by a coordinate system, which enables to define a point $v$ from a vector $\vto{v}$ through an origin $o$, as we have done. In mathematical terms, considering origin $0$, the mapping $\map{\upsilon_o}{\eamsd{S}{F}{a}{n}}{\eam{S}{F}}$ is bijective if 
+On section \ref{sec:group}, we said that in a group action a biunivocal relationship between its definer set and its definer group is possible if an element of the set is fixed. For the case of affine spaces, this fixation is established by a coordinate system, which enables to define a point $v$ from a vector $\vto{v}$ through an origin $o$, as we have done. In mathematical terms, considering origin $o$, the mapping $\map{\upsilon_o}{\eamsd{S}{F}{a}{n}}{\eam{S}{F}}$ is bijective if 
 \begin{equation}\label{eq:funVect}
 \fua{\upsilon_o}{x} = \vv{ox}\,,
 \end{equation} 
@@ -273,31 +273,36 @@ There is a classic mnemonic rule for obtaining the direction of $\vv{a\,\vto{z}\
 For arbitrary vectors $\vto{u},\vto{v},\vto{w}\in U_\real$ and scalars $\alpha,\beta,\theta\in\real$, where $\theta$ is the smallest angle defined by vectors $\vv{ou},\vv{ov}$, the cross product has the following properties.
 \begin{itemize}
 	\setlength\itemsep{.1em}
-	\item[i.] Anticommutativity: $\vto{u}\times\vto{v}=-(\vto{v}\times\vto{u})$;
-	\item[ii.] Self cross product: $\vto{u}\times\vto{u}=\vto{0}$;
-	\item[iii.] Distributivity over addition: $\vto{u}\times(\vto{v}+\vto{w})=(\vto{u}\times\vto{v})+(\vto{u}\times\vto{v})$;
-	\item[iv.] Scalar multiplication: $\alpha\beta(\vto{u}\times\vto{v})=(\alpha\vto{u})\times(\beta\vto{v})=(\beta\vto{u})\times(\alpha\vto{v})$;
-	\item[v.] Positive orientation: $\tnr{A}_B(\vto{u}\times\vto{v},\vto{u},\vto{v})>0$;
-	\item[vi.] Orthogonality: $(\vto{u}\times\vto{v})\cdot\vto{u}=(\vto{u}\times\vto{v})\cdot\vto{v}=0$;
-	\item[vii.] Triple cross product: $\vto{u}\times(\vto{v}\times\vto{w})=(\vto{u}\cdot\vto{w})\vto{v}-(\vto{u}\cdot\vto{v})\vto{w}$;
-	\item[viii.] Area of parallelogram: $\|\vto{u}\times\vto{v}\|= \|\vto{u} \|\|\vto{v} \|\sin\theta$.
+	\item[i.] Mixed products: $\vto{u}\cdot(\vto{v}\times\vto{w})=\fua{\tnr{A}_B}{\vto{u},\vto{v},\vto{w}}$;
+	\item[ii.] Anticommutativity: $\vto{u}\times\vto{v}=-(\vto{v}\times\vto{u})$;
+	\item[iii.] Self cross product: $\vto{u}\times\vto{u}=\vto{0}$;
+	\item[iv.] Distributivity over addition: $\vto{u}\times(\vto{v}+\vto{w})=(\vto{u}\times\vto{v})+(\vto{u}\times\vto{v})$;
+	\item[v.] Scalar multiplication: $\alpha\beta(\vto{u}\times\vto{v})=(\alpha\vto{u})\times(\beta\vto{v})=(\beta\vto{u})\times(\alpha\vto{v})$;
+	\item[vi.] Positive orientation: $\tnr{A}_B(\vto{u}\times\vto{v},\vto{u},\vto{v})>0$;
+	\item[vii.] Orthogonality: $(\vto{u}\times\vto{v})\cdot\vto{u}=(\vto{u}\times\vto{v})\cdot\vto{v}=0$;
+	\item[viii.] Triple cross product: $\vto{u}\times(\vto{v}\times\vto{w})=(\vto{u}\cdot\vto{w})\vto{v}-(\vto{u}\cdot\vto{v})\vto{w}$;
+	\item[ix.] Area of parallelogram: $\|\vto{u}\times\vto{v}\|= \|\vto{u} \|\|\vto{v} \|\sin\theta$.
 \end{itemize}
 
 {\footnotesize
 \begin{proof}
-Given an arbitrary vector $\vto{x}\in U_\real$ and $\tnr{A}_B=\vto{a}\otimes\vto{b}\otimes\vto{c}$, item i is verified by the following equalities:
+Item i is verified by  
+\begin{equation*}
+\vto{u}\cdot(\vto{v}\times\vto{w}) = \vto{u}\cdot[\tnr{A}_B\odot_2 (\vto{v}\otimes\vto{w})] = \tnr{A}_B\odot_3(\vto{u}\otimes\vto{v}\otimes\vto{w}) =\fua{\tnr{A}_B}{\vto{u},\vto{v},\vto{w}}\,.  
+\end{equation*}
+Given an arbitrary vector $\vto{x}\in U_\real$ and $\tnr{A}_B=\vto{a}\otimes\vto{b}\otimes\vto{c}$, item ii is verified by the following equalities:
 \begin{equation*}
 \vto{x}\cdot(\vto{u}\times\vto{v})= (\vto{b}\cdot\vto{u})(\vto{c}\cdot\vto{v})(\vto{x}\cdot\vto{a})= \fua{\tnr{A}_B}{\vto{x},\vto{u},\vto{v}}=-\fua{\tnr{A}_B}{\vto{x},\vto{v},\vto{u}}=-\vto{x}\cdot(\vto{v}\times\vto{u})\,.
 \end{equation*}
-Item ii is a straightforward corollary of item i. We prove item iii similarly:
+Item iii is a straightforward corollary of item ii. We prove item iv similarly:
 \begin{equation*}
 \vto{x}\cdot[\vto{u}\times(\vto{v}+\vto{w})]= \fua{\tnr{A}_B}{\vto{x},\vto{u},\vto{v}+\vto{w}}=\fua{\tnr{A}_B}{\vto{x},\vto{v},\vto{u}}+\fua{\tnr{A}_B}{\vto{x},\vto{v},\vto{w}}=\vto{x}\cdot[(\vto{v}\times\vto{u})+(\vto{v}\times\vto{w})]\,.
 \end{equation*}
-By this same procedure, proof of property iv is trivial. Now, property v is verified by expression
+By this same procedure, proof of property v is trivial. Now, property vi is verified by expression
 \begin{equation*}
 \tnr{A}_B(\vto{u}\times\vto{v},\vto{u},\vto{v})=\tnr{A}_B((\vto{b}\cdot\vto{u})(\vto{c}\cdot\vto{v})\vto{a},\vto{u},\vto{v})=(\vto{a}\cdot\vto{a})^2(\vto{b}\cdot\vto{u})^2(\vto{c}\cdot\vto{v})^2 > 0
 \end{equation*}
-and, since $\tnr{A}_B$ is antisymmetric, equalities $(\vto{u}\times\vto{v})\cdot\vto{u}=\tnr{A}_B(\vto{u},\vto{u},\vto{v})=0$ prove item vi. Considering an arbitrary orthonormal basis $X=\{\vun{x}_1,\vun{x}_2,\vun{x}_3\}$, equality \eqref{eq:coordAltern} and identity \eqref{eq:LeviKronecker}, development
+and, since $\tnr{A}_B$ is antisymmetric, equalities $(\vto{u}\times\vto{v})\cdot\vto{u}=\tnr{A}_B(\vto{u},\vto{u},\vto{v})=0$ prove item vii. Considering an arbitrary orthonormal basis $X=\{\vun{x}_1,\vun{x}_2,\vun{x}_3\}$, equality \eqref{eq:coordAltern} and identity \eqref{eq:LeviKronecker}, development
 \begin{align*}
 \vto{u}\times(\vto{v}\times\vto{w})&=\tnr{A}_B\odot_2 [\vto{u}\otimes\tnr{A}_B\odot_2 (\vto{v}\otimes\vto{w})]\\
 &=\sum_{i,j,k=1}^{m}\epsilon_{ijk}\vun{x}_i^*\otimes\vun{x}_j^*\otimes\vun{x}_k^*\odot_2 [\sum_{j=1}^{m}\fua{\vto{f}^X_j}{\vto{u}}\vun{x}_j\otimes\sum_{k,r,s=1}^{m}\epsilon_{krs}\fua{\vto{f}^X_r}{\vto{v}}\fua{\vto{f}^X_s}{\vto{w}}\vun{x}_k]\\
@@ -306,7 +311,7 @@ and, since $\tnr{A}_B$ is antisymmetric, equalities $(\vto{u}\times\vto{v})\cdot
 &=\sum_{i,j,k,r,s=1}^{m}\fua{\vto{f}^X_s}{\vto{u}}\fua{\vto{f}^X_i}{\vto{v}}\fua{\vto{f}^X_s}{\vto{w}}\vun{x}_i-\fua{\vto{f}^X_r}{\vto{u}}\fua{\vto{f}^X_r}{\vto{v}}\fua{\vto{f}^X_i}{\vto{w}}\vun{x}_i\\
 &=(\vto{u}\cdot\vto{w})\vto{v}-(\vto{u}\cdot\vto{v})\vto{w}
 \end{align*}
-proves property vii. Now, in order to prove the last item, equality $\vto{u}\cdot\tnr{A}_B\odot_2\vto{v}\otimes\vto{w}=\tnr{A}_B(\vto{u},\vto{v},\vto{w})$, property vii and equality \eqref{eq:geoProdInt} are required. Then,
+proves property viii. Now, in order to prove the last item, equality $\vto{u}\cdot\tnr{A}_B\odot_2\vto{v}\otimes\vto{w}=\tnr{A}_B(\vto{u},\vto{v},\vto{w})$, property ix and equality \eqref{eq:geoProdInt} are required. Then,
 \begin{align*}
 \|\vto{u}\times\vto{v}\|^2 &= (\vto{u}\times\vto{v})\cdot(\vto{u}\times\vto{v})\\
 &= \tnr{A}_B(\vto{u}\times\vto{v},\vto{u},\vto{v})\\
