@@ -886,8 +886,6 @@ INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/kpfonts/jkplbite.tfm
 OUTPUT partes/parte1/c_algtens.aux
 INPUT partes/parte1/c_algtens.tex
 INPUT partes/parte1/c_algtens.tex
-INPUT /usr/local/texlive/2019/texmf-dist/fonts/vf/public/fbb/fbb-Bold-tlf-t1.vf
-INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/fbb/fbb-Bold-tlf-t1--base.tfm
 INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/fbb/fbb-Regular-tlf-sc-t1.tfm
 INPUT /usr/local/texlive/2019/texmf-dist/fonts/vf/public/fbb/fbb-Bold-tlf-t1.vf
 INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/fbb/fbb-Bold-tlf-t1--base.tfm
@@ -1105,6 +1103,17 @@ INPUT ./partes/parte2/c_cauchy.pdf
 OUTPUT partes/parte2/c_static.aux
 INPUT partes/parte2/c_static.tex
 INPUT partes/parte2/c_static.tex
+INPUT partes/figs/deformacao.pstex_t
+INPUT partes/figs/deformacao.pstex_t
+INPUT partes/figs/deformacao.eps
+INPUT ./partes/figs/deformacao.eps
+INPUT ./partes/figs/deformacao.eps
+INPUT ./partes/figs/deformacao-eps-converted-to.pdf
+INPUT ./partes/figs/deformacao-eps-converted-to.pdf
+INPUT ./partes/figs/deformacao.eps
+INPUT ./partes/figs/deformacao-eps-converted-to.pdf
+INPUT ./partes/figs/deformacao-eps-converted-to.pdf
+INPUT ./partes/figs/deformacao-eps-converted-to.pdf
 OUTPUT partes/parte2/apendice1.aux
 INPUT partes/parte2/apendice1.tex
 INPUT partes/parte2/apendice1.tex
