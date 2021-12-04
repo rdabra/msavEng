@@ -33,3 +33,5 @@ partes/figs/vetorSoma-eps-converted-to.pdf
 *.bak
 *.fdb_latexmk
 *.fls
+*.fdb_latexmk
+*.fls
