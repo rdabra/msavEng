@@ -7,7 +7,7 @@ Analysis is the branch of Mathematics that studies the behaviour of functions by
 
 \section{Differentiation}\label{sec:diffe}
 
-In the context of Banach tensor spaces, which are normed and complete, to differentiate a tensor function $\tnr{\psi}$ is to obtain its derivative, here understood as a linear tensor function that measures qualitatively and quantitatively the sensitivity of $\tnr{\psi}$ on each element of the domain. Intuitively speaking, sensitivity refers to the intrinsic ``susceptibility'' of a function, or how it would ``react'', by varying its values, to an \emph{eventual small change} on its argument. In the specific case of derivatives, this function ``reaction'' is \emph{linearly estimated} on an element of its domain. However, not all tensor functions can be differentiable: the following mathematical conditions and definitions will describe which functions admit differentiation. Considering $\ete{\cam{F}}{U^{\times m}}$ and $\ete{\cam{F}}{V^{\times s}}$ Banach tensor spaces, \emph{both defined by the same field} $\cam{F}$, let $\pmb{\mathcal{U}}\subset\ete{\cam{F}}{U^{\times m}}$ be an open set and element  $\tnr{X}_0\in\pmb{\mathcal{U}}$ an arbitrary tensor. The functions in $\map{\tnr{\psi}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}$ and $\map{\tnr{\kappa}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}$ are said to be \textsb{tangent}\index{function!tangent} to each other at $\tnr{X}_0$ if
+In the context of Banach tensor spaces, which are normed and complete, to differentiate a tensor function $\tnr{\psi}$ is to obtain its derivative, here understood as a linear tensor function that measures qualitatively and quantitatively \textsb{local sensitivity}\index{function!sensitivity}\index{sensitivity}, that is, the sensitivity of $\tnr{\psi}$ on an element of the domain. Intuitively speaking, sensitivity refers to the intrinsic ``susceptibility'' of a function, or how it would ``react'', by varying its values, to an \emph{eventual small change} on its argument. In the specific case of derivatives, this function ``reaction'' is \emph{linearly estimated} on an element of its domain. However, not all tensor functions can be differentiable: the following mathematical conditions and definitions will describe which functions admit differentiation. Considering $\ete{\cam{F}}{U^{\times m}}$ and $\ete{\cam{F}}{V^{\times s}}$ Banach tensor spaces, \emph{both defined by the same field} $\cam{F}$, let $\pmb{\mathcal{U}}\subset\ete{\cam{F}}{U^{\times m}}$ be an open set and element  $\tnr{X}_0\in\pmb{\mathcal{U}}$ an arbitrary tensor at which local sensitivity is measured. The functions in $\map{\tnr{\psi}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}$ and $\map{\tnr{\kappa}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}$ are said to be \textsb{tangent}\index{function!tangent} to each other at $\tnr{X}_0$ if
 \begin{equation}\label{eq:tangent}
 \lim_{\tnr{X}\to \tnr{0}} \dfrac{\fua{\tnr{\psi}}{\tnr{X}_0+\tnr{X}}-\fua{\tnr{\kappa}}{\tnr{X}_0+\tnr{X}}}{\|\tnr{X}\|}=\tnr{0}\,,
 \end{equation}
@@ -206,7 +206,15 @@ The concept of gradient we shall detail in this section is restricted to the con
 \begin{equation}\label{eq:defGradient}
 [\fua{\tnr{\psi}'}{\tnr{X}_0}](\tnr{X}) = \tnr{X}\odot_m\fua{\nabla\tnr{\psi}}{\tnr{X}_0}\,.
 \end{equation}
-Moreover, the tensor function in $\map{\gloref{gradi}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{U^{\times m}\times V^{\times s}}}$, called the gradient of $\tnr{\psi}$, assigns to a tensor of order $m$ a tensor of order $m+s$. Therefore, \emph{for the particular case of a differentiable unary tensor operator on $\pmb{\mathcal{U}}$, its gradient assigns to a $m$-th order tensor a $2m$-th order tensor}. In the context of $m+s=0$, that is $\cam{F}=\ete{\cam{F}}{U^{\times m}}=\ete{\cam{F}}{V^{\times s}}$, we consider $\{\vun{u}\}$ the basis of a one dimensional Hilbert space $U_\cam{F}$ to write, according to theorem \ref{teo:repRiesz}, equalities
+Moreover, the tensor function in $\map{\gloref{gradi}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{U^{\times m}\times V^{\times s}}}$, called the gradient of $\tnr{\psi}$, assigns to a tensor of order $m$ a tensor of order $m+s$. Therefore, \emph{for the particular case of a differentiable unary tensor operator on $\pmb{\mathcal{U}}$, its gradient assigns to a $m$-th order tensor a $2m$-th order tensor}. In this context, if $m=1$ then tensor space $\ete{\cam{F}}{U}=U^*_\cam{F}$, gradient $\fua{\nabla\tnr{\psi}}{\vto{x}_0^*}\in\ete{\cam{F}}{U^2}$, derivative $\fua{\tnr{\psi}'}{\vto{x}_0^*}\in\evlc{\cam{F}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{U}}$ and previous equality results
+\begin{equation}\label{eq:defGradient2}
+[\fua{\tnr{\psi}'}{\vto{x}_0^*}](\vto{x}^*) = \vto{x}^*\odot_1\fua{\nabla\tnr{\psi}}{\vto{x}_0^*}\,.
+\end{equation}
+Since $\fua{\tnr{\psi}'}{\vto{x}_0^*}$ is the $1$-cotensor of $\tnr{G}:=\fua{\nabla\tnr{\psi}}{\vto{x}_0^*}$ then the linear bijection
+ \begin{equation}\label{eq:repFuncGrad2}
+\tnr{\mathit{g}} = \Phi^{-1}\circ\fua{\tnr{\psi}'}{\vto{x}_0^*}\circ\Phi
+\end{equation}
+is the representative function of $\tnr{G}$, according to corollary \ref{cor:soTens} and definition \eqref{eq:repFunc2}. Now, in the case of $m+s=0$, that is $\cam{F}=\ete{\cam{F}}{U^{\times m}}=\ete{\cam{F}}{V^{\times s}}$, we consider $\{\vun{u}\}$ the basis of a one dimensional Hilbert space $U_\cam{F}$ to write, according to theorem \ref{teo:repRiesz}, equalities
 \begin{equation*}
 \fua{\dfrac{d\psi}{dx}}{x_0} = [\fua{\psi'}{x_0}](1) = 1\fua{\psi'}{x_0} = [\fua{\psi'}{x_0}\vun{u}]\cdot\vun{u}.
 \end{equation*}
@@ -215,7 +223,7 @@ from which we define that $\fua{\nabla\psi}{x_0} = \fua{\psi'}{x_0}\vun{u}$ and 
 \fua{\dfrac{d\psi}{dx}}{x_0} = \fua{\nabla\psi}{x_0}\cdot\vun{u}\,.
 \end{equation}
 
-Now, from the definition of gradient \eqref{eq:defGradient} and from rule \eqref{eq:directDeriv}, the directional derivative of $\tnr{\psi}$ along $\tnr{H}\in\pmb{\mathcal{U}}$ is described by
+From the definition of gradient \eqref{eq:defGradient} and rule \eqref{eq:directDeriv}, the directional derivative of $\tnr{\psi}$ along $\tnr{H}\in\pmb{\mathcal{U}}$ is described by
 \begin{equation}
 \fua{[\fua{\tnr{\psi}'}{\tnr{X}}]}{\tnr{H}}=\tnr{H}\odot_m\fua{\nabla\tnr{\psi}}{\tnr{X}}=\lim_{\alpha\to 0} \dfrac{\fua{\tnr{\psi}}{\tnr{X}+\alpha\tnr{H}}-\fua{\tnr{\psi}}{\tnr{X}}}{\alpha}\,.
 \end{equation}
