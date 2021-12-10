@@ -210,13 +210,17 @@ Moreover, the tensor function in $\map{\gloref{gradi}}{\pmb{\mathcal{U}}}{\ete{\
 \begin{equation}\label{eq:defGradient2}
 [\fua{\tnr{\psi}'}{\vto{x}_0^*}](\vto{x}^*) = \vto{x}^*\odot_1\fua{\nabla\tnr{\psi}}{\vto{x}_0^*}\,.
 \end{equation}
-Since $\fua{\tnr{\psi}'}{\vto{x}_0^*}$ is the $1$-cotensor of $\tnr{G}:=\fua{\nabla\tnr{\psi}}{\vto{x}_0^*}$ then the linear bijection
+Since the derivative $\fua{\tnr{\psi}'}{\vto{x}_0^*}$ is the $1$-cotensor of the second order tensor $\fua{\nabla\tnr{\psi}}{\vto{x}_0^*}$ then the linear bijection
  \begin{equation}\label{eq:repFuncGrad2}
 \tnr{\mathit{g}} = \Phi^{-1}\circ\fua{\tnr{\psi}'}{\vto{x}_0^*}\circ\Phi
 \end{equation}
-is the representative function of $\tnr{G}$, according to corollary \ref{cor:soTens} and definition \eqref{eq:repFunc2}. Now, in the case of $m+s=0$, that is $\cam{F}=\ete{\cam{F}}{U^{\times m}}=\ete{\cam{F}}{V^{\times s}}$, we consider $\{\vun{u}\}$ the basis of a one dimensional Hilbert space $U_\cam{F}$ to write, according to theorem \ref{teo:repRiesz}, equalities
+is the representative function of $\fua{\nabla\tnr{\psi}}{\vto{x}_0^*}$, according to corollary \ref{cor:soTens} and definition \eqref{eq:repFunc2}. Moreover, considering equality \eqref{eq:secTens2Lin}, we can write that
+\begin{equation}\label{eq:gradFuncRep}
+[\fua{\nabla\tnr{\psi}}{\vto{x}_0^*}](\vto{x},\vto{y})=\vto{x}\cdot\fua{\tnr{\mathit{g}}}{\vto{y}^c}\,,\,\,\forall\, \vto{x}^*,\vto{y}^*\in\pmb{\mathcal{U}}\,.
+\end{equation}
+Now, in the case of $m+s=0$, that is $\cam{F}=\ete{\cam{F}}{U^{\times m}}=\ete{\cam{F}}{V^{\times s}}$, we consider $\{\vun{u}\}$ the basis of a one dimensional Hilbert space $U_\cam{F}$ to write, according to theorem \ref{teo:repRiesz}, equalities
 \begin{equation*}
-\fua{\dfrac{d\psi}{dx}}{x_0} = [\fua{\psi'}{x_0}](1) = 1\fua{\psi'}{x_0} = [\fua{\psi'}{x_0}\vun{u}]\cdot\vun{u}.
+\fua{\dfrac{d\psi}{dx}}{x_0} = [\fua{\psi'}{x_0}](1) = 1\fua{\psi'}{x_0} = [\fua{\psi'}{x_0}\vun{u}]\cdot\vun{u}\,,
 \end{equation*}
 from which we define that $\fua{\nabla\psi}{x_0} = \fua{\psi'}{x_0}\vun{u}$ and then
 \begin{equation}
