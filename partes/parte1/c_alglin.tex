@@ -461,10 +461,24 @@ If $B^\perp$ is the reciprocal basis of $B$, the inverse is also true; thus, we 
 \begin{equation}\label{eq:regraFuncCoordReciproco}
 \fua{\vtf{f}_i^{B^\perp}}{\vto{x}}=\fua{(\vtf{u}_i)^*}{\vto{x}}=\vto{x} \cdot \vto{u}_i\,.
 \end{equation}
-In this context, the inner product between two arbitrary vectors $\vto{u}$ and $\vto{v}$ leads to the following equalities:
+In this context, given an arbitrary vector $\vto{u}\in U_\cam{F}$, from development 
+\begin{align*}
+ \fua{\vtf{u}^*}{\vto{x}} &= \vto{x}\cdot\sum_{i=1}^n\fua{\vtf{f}_i^B}{\vto{u}}\vto{u}_i\\
+ &= \sum_{i=1}^n\fua{\overline{\vtf{f}_i^B}}{\vto{u}}\vto{x}\cdot\vto{u}_i\\
+ &= \sum_{i=1}^n\fua{\overline{\vtf{f}_i^B}}{\vto{u}}\fua{\vtf{f}_i^{B^\perp}}{\vto{x}}\\
+ &= [\sum_{i=1}^n\fua{\overline{\vtf{f}_i^B}}{\vto{u}}\vtf{f}_i^{B^\perp}](x)\,,
+ \end{align*}
+we conclude that each coodinate of covector $\vtf{u}^*$ on basis ${(B^*)}^\perp$ is the complex conjugate of its corresponding vector coordinate basis $B$, that is,   
+\begin{equation}\label{eq:coordCovetVet}
+\vtf{u}^*= \sum_{i=1}^n\fua{\overline{\vtf{f}_i^B}}{\vto{u}}\vtf{f}_i^{B^\perp}\,.
+\end{equation}
+If basis $B$ is orthornomal, that is, $B^\perp=B$, and field $\cam{F}$ real then the coordinates of $\vto{u}$ on $B$ and of $\vtf{u}^*$ on $B^*$ are the same. Now, the inner product between two arbitrary vectors $\vto{u}$ and $\vto{v}$ leads to the following equalities:
 \begin{equation}\label{eq:prodIntGen}
 \vto{u}\cdot\vto{v}=\sum_{i=1}^n\sum_{j=1}^n\fua{\vtf{f}_i^{B}}{\vto{u}}\overline{\fua{\vtf{f}_j^{B^\perp}}{\vto{v}}}\,\vto{u}_i\cdot\vto{u}^j=\sum_{i=1}^n\fua{\vtf{f}_i^{B}}{\vto{u}}\fua{\overline{\vtf{f}_i^{B^\perp}}}{\vto{v}}\,.
 \end{equation}
+Again, if $B$ is orthonormal and $\cam{F}$ real, we have ${\vto{u}\cdot\vto{v}=\sum_{i=1}^n\fua{\vtf{f}_i^{B}}{\vto{u}}\fua{\vtf{f}_i^{B}}{\vto{v}}}$. Figure \ref{fg:espacoDual} summarizes the relationships between basis $B$ and the reciprocal bases it induces. In the particular case of an orthonormal basis $\hat{B}$, vectors $\vun{u}_i=\vun{u}^i$, from which we conclude that the elements of $\hat{B}$ and of $\hat{B}^*$ have a biunivocal relationship in terms of the previous theorem. Thereby, equalities
+$\fua{\vtf{f}_i^{\hat{B}}}{\vto{x}}=\fua{(\vun{u}_i)^*}{\vto{x}}=\vto{x} \cdot \vun{u}_i$
+enable us to say that \eqref{eq:regraFuncCoord} is a generalization of \eqref{eq:regraCoord} in the context of Hilbert spaces.
 \begin{figure}[!ht]
 	\centering
 	\begin{center}
@@ -472,9 +486,6 @@ In this context, the inner product between two arbitrary vectors $\vto{u}$ and $
 	\end{center}
 	\titfigura{Relationships between bases induced by $B$ in terms of theorem \ref{teo:repRiesz}.}\label{fg:espacoDual}
 \end{figure}
-If $B$ is orthonormal, then basis $B^\perp=B$. Moreover, if the field $\cam{F}$ is real, we have ${\vto{u}\cdot\vto{v}=\sum_{i=1}^n\fua{\vtf{f}_i^{B}}{\vto{u}}\fua{\vtf{f}_i^{B}}{\vto{v}}}$. Figure \ref{fg:espacoDual} summarizes the relationships between basis $B$ and the reciprocal bases it induces. In the particular case of an orthonormal basis $\hat{B}$ vectors $\vun{u}_i=\vun{u}^i$, from which we conclude that the vectors of $\hat{B}$ and of $\hat{B}^*$ have a biunivocal relationship, in terms of the previous theorem. Thereby, equalities
-$\fua{\vtf{f}_i^{\hat{B}}}{\vto{x}}=\fua{(\vun{u}_i)^*}{\vto{x}}=\vto{x} \cdot \vun{u}_i$
-enable us to say that \eqref{eq:regraFuncCoord} is a generalization of \eqref{eq:regraCoord} in the context of Hilbert spaces.
 
 
 Still considering the terms of the previous theorem, from equality between norms of vectors and norms of continuous covectors it is possible to obtain that the dual space $U^*_\cam{F}$ is also a Hilbert space. Since this feature is very important, we shall present it in a more formal way, through the following corollary.
