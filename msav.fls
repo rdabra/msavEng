@@ -849,6 +849,10 @@ INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/amsfonts/euler/euex10.
 INPUT /usr/local/texlive/2019/texmf-dist/fonts/vf/public/eulervm/zeuex10.vf
 INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/cm/cmex10.tfm
 INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/amsfonts/euler/euex10.tfm
+INPUT /usr/local/texlive/2019/texmf-dist/fonts/vf/public/eulervm/zeurb7.vf
+INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/amsfonts/euler/eurb7.tfm
+INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmmib7.tfm
+INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy7.tfm
 INPUT partes/figs/espacoDual.pstex_t
 INPUT partes/figs/espacoDual.pstex_t
 INPUT partes/figs/espacoDual.eps
@@ -860,10 +864,6 @@ INPUT ./partes/figs/espacoDual.eps
 INPUT ./partes/figs/espacoDual-eps-converted-to.pdf
 INPUT ./partes/figs/espacoDual-eps-converted-to.pdf
 INPUT ./partes/figs/espacoDual-eps-converted-to.pdf
-INPUT /usr/local/texlive/2019/texmf-dist/fonts/vf/public/eulervm/zeurb7.vf
-INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/amsfonts/euler/eurb7.tfm
-INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmmib7.tfm
-INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy7.tfm
 INPUT /usr/local/texlive/2019/texmf-dist/fonts/vf/public/eulervm/zeusm5.vf
 INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/amsfonts/euler/eusm5.tfm
 INPUT /usr/local/texlive/2019/texmf-dist/fonts/vf/public/fbb/fbb-Italic-tlf-t1.vf
@@ -875,11 +875,11 @@ INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/cm/cmbsy10.tfm
 INPUT /usr/local/texlive/2019/texmf-dist/fonts/vf/public/eulervm/zeuex10.vf
 INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/cm/cmex10.tfm
 INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/amsfonts/euler/euex10.tfm
+INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/kpfonts/jkplbit8t.tfm
 INPUT /usr/local/texlive/2019/texmf-dist/fonts/vf/public/eulervm/zeurb7.vf
 INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/amsfonts/euler/eurb7.tfm
 INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmmib7.tfm
 INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy7.tfm
-INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/kpfonts/jkplbit8t.tfm
 INPUT /usr/local/texlive/2019/texmf-dist/fonts/vf/public/kpfonts/jkplbit8t.vf
 INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/kpfonts/jkplbit8r.tfm
 INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/kpfonts/jkplbite.tfm
