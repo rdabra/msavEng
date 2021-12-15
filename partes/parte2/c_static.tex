@@ -45,17 +45,21 @@ From this figure, it is possible to conclude that if both configurations $\overl
 \end{equation}
 Moreover, concerning the elements of the domains represented in the figure, we say that a material particle $\text{x}\in\mathfrak{B}$, represented by the reference point $\overline{x}:=\fua{\overline{\chi}}{\text{x}}$ or by the reference vector $\vto{\overline{x}}:=\fua{\upsilon_o\circ\overline{\chi}}{\text{x}}$, occupies the place $x:=\fua{\chi_t}{\text{x}}$ or $\vto{x}:=\fua{\upsilon_o\circ\chi_t}{\text{x}}$. In order to simplify our study, since deformation was defined as a vector function, we shall mostly use vectors to denote body and shape elements.  
 
-Considering the previous regularity conditions and an open set $\pmb{\mathcal{U}}\subset\tnr{\overline{\mathcal{B}}}^*$, the local sensitivity of $\tnr{\chi}_t^*$ measured by the tensor function in $\map{\nabla\tnr{\chi}_t^*}{\pmb{\mathcal{U}}}{\ete{\real}{U^{2}}}$, called \textsb{deformation gradient}\index{deformation!gradient}, has fundamental importance in Continuum Kinematics because it bases the concept of strain. Given an arbitrary reference covector $\overline{\vto{x}}_0^*\in\pmb{\mathcal{U}}$, the second order tensor $\tnr{F}:=\fua{\nabla\tnr{\chi}_t^*}{\overline{\vto{x}}_0^*}$ is said to be the deformation gradient at this point and then, by the same procedure that leads to equality \eqref{eq:repFuncGrad2}, bijection $\tnr{\mathit{f}}\in\evl{\real}{U}{U}$ defined by
+Considering the previous regularity conditions and an open set $\pmb{\mathcal{U}}\subset\tnr{\overline{\mathcal{B}}}^*$, the local sensitivity of $\tnr{\chi}_t^*$ measured by the tensor function in $\map{\nabla\tnr{\chi}_t^*}{\pmb{\mathcal{U}}}{\ete{\real}{U^{2}}}$, called \textsb{deformation gradient}\index{deformation!gradient}, has fundamental importance in Continuum Kinematics because it bases the concept of strain. Given an arbitrary reference covector $\overline{\vto{x}}^*\in\pmb{\mathcal{U}}$, the second order tensor $\tnr{F}:=\fua{\nabla\tnr{\chi}_t^*}{\overline{\vto{x}}^*}$ is said to be the deformation gradient at this point and then, by the same procedure that leads to equality \eqref{eq:repFuncGrad2}, bijection $\tnr{\mathit{f}}'\in\evl{\real}{U}{U}$ defined by
 \begin{equation}
-\tnr{\mathit{f}} = \Phi^{-1}\circ\fua{{\tnr{\chi}_t^{*}}'}{\overline{\vto{x}}_0^*}\circ\Phi
+\tnr{\mathit{f}}' = \Phi^{-1}\circ\fua{{\tnr{\chi}_t^{*}}'}{\overline{\vto{x}}^*}\circ\Phi
 \end{equation}
 is the representative function of $\tnr{F}$. Therefore, from equality \eqref{eq:gradFuncRep}, we have
 \begin{equation}
-\fua{\tnr{F}}{\overline{\vto{x}},\overline{\vto{y}}}=\overline{\vto{x}}\cdot\fua{\tnr{\mathit{f}}}{\overline{\vto{y}}}\,,\,\,\forall\, \overline{\vto{x}}^*,\overline{\vto{y}}^*\in\pmb{\mathcal{U}}\,.
+\fua{\tnr{F}}{\overline{\vto{u}},\overline{\vto{v}}}=\overline{\vto{u}}\cdot\fua{\tnr{\mathit{f}}'}{\overline{\vto{v}}}\,,\,\,\forall\, \overline{\vto{u}}^*,\overline{\vto{v}}^*\in\pmb{\mathcal{U}}\,.
+\end{equation}
+Now, if $\{\overline{\vto{u}},\overline{\vto{v}},\overline{\vto{w}}\}\subset \tnr{\overline{\mathcal{B}}}$ is linearly independent, we can write that 
+\begin{equation}
+\hdet{\tnr{F}}=\dfrac{\fua{\tnr{\mathit{f}}'}{\overline{\vto{u}}}\cdot[\,\fua{\tnr{\mathit{f}}'}{\overline{\vto{v}}}\times\fua{\tnr{\mathit{f}}'}{\overline{\vto{w}}}\,]}{\overline{\vto{u}}\cdot(\overline{\vto{v}}\times\overline{\vto{w}})}
 \end{equation}
 
 
-%PROVAR QUE O DETERMINANTE DO GRADIENTE DE DEFORMACAO E SEMPRE POSITIVO
+%tentar mostrar que se a deformacao preserva orientacao enta f linha tambem preserva (acho que a imposicao eh sobre f e nao sobre a deformacao)
 
 
 

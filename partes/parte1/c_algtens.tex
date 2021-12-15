@@ -806,30 +806,34 @@ where $\fua{\vtf{f}_i^{B}}{\tnr{T}}=\fua{\frt{T}}{\tnr{B}_i}$, according to \eqr
 
 The notion of invariance is of paramount importance in Classical Physics because the fundamental description of mechanical phenomena must be not only qualitatively immune to arbitrary changes of reference frame but also quantitatively indifferent when such changes are of unitary type. From a constitutive viewpoint, materials have their invariance too, when some or all of their inherent mechanical properties present themselves indistinctly on certain directions, that is, the overall mechanical behavior of a portion of matter in study is the same when this portion is subjected to specific motions. A tensor, as an algebraic entity that suitably embodies a physical magnitude, can be used to accordingly describe a mechanical measurement or a constitutive material property, including their eventual invariance features which we referred to. Thereby, it is the purpose of this section to briefly develop in mathematical terms this intuitive concept of invariance applied to tensors.
 
-Before we develop mathematically this notion of tensor invariance, there is a preliminary definition that needs to be addressed. The feature of proper orthogonality -- to which anti-isotropic tensors, defined ahead, are invariant -- is also valid for tensor operators. As presented in section \ref{sec:Matrix}, an orthogonal operator is called proper if its determinant is $1$, but we still don't know what a determinant of a tensor operator is. In order to present this unusual definition as concisely as possible, we shall sacrifice self-containedness and tacitly accept the approach of \aut{Spivak}\cite{spivak_1965_1}\footnote{See also \aut{Bishop \& Goldberg}\cite{bishop_1980_1}, pp.97-100, and \aut{Backus}\cite{backus_1997_1}, pp.17-21.}, adapting to our case his theorem 4-6. Firstly, let's consider $\tnr{P}\in\etng{p}{\cam{F}}{A^p}$ an arbitrary non-zero alternating tensor where set $A=U^{\times m}$. Let tensor function $\tnr{\psi}\in\evl{\cam{F}}{\eteg{n}{\cam{F}}{U^{\times m}}}{\eteg{n}{\cam{F}}{U^{\times m}}}$ and alternating tensor   $\tnr{P}^{\tnr{\psi}}\in\etng{p}{\cam{F}}{A^p}$ such that scalar
+Before we develop mathematically this notion of tensor invariance, there is a preliminary definition that needs to be addressed. The feature of proper orthogonality -- to which anti-isotropic tensors, defined ahead, are invariant -- is also valid for tensor operators. As presented in section \ref{sec:Matrix}, an orthogonal operator is called proper if its determinant is $1$, but we still don't know what a determinant of a tensor operator is. In order to present this unusual definition as concisely as possible, we shall sacrifice self-containedness and tacitly accept the approach of \aut{Spivak}\cite{spivak_1965_1}\footnote{See also \aut{Bishop \& Goldberg}\cite{bishop_1980_1}, pp.97-100, and \aut{Backus}\cite{backus_1997_1}, pp.17-21.}, adapting to our case his theorem 4-6. Firstly, let's consider $\tnr{\mathit{P}}\in\etng{p}{\cam{F}}{A^p}$ an arbitrary non-zero alternating tensor where set $A=U^{\times m}$, that is, the arguments of $\tnr{\mathit{P}}$ are tensors of order $m$. Let tensor function $\tnr{\psi}\in\evl{\cam{F}}{\eteg{n}{\cam{F}}{U^{\times m}}}{\eteg{n}{\cam{F}}{U^{\times m}}}$ and alternating tensor   $\tnr{\mathit{P}}^{\tnr{\psi}}\in\etng{p}{\cam{F}}{A^p}$ such that scalar
 \begin{equation}\label{eq:defDetPsi}
-\fua{\tnr{P}^{\tnr{\psi}}}{\tnr{X}_1,\cdots,\tnr{X}_p}:=\fua{\tnr{P}}{\fua{\tnr{\psi}}{\tnr{X}_1},\cdots,{\fua{\tnr{\psi}}{\tnr{X}_p}}}\,,\,\forall\,\tnr{X}_i\in\eteg{n}{\cam{F}}{A}\,.
+\fua{\tnr{\mathit{P}}^{\tnr{\psi}}}{\tnr{X}_1,\cdots,\tnr{X}_p}:=\fua{\tnr{\mathit{P}}}{\fua{\tnr{\psi}}{\tnr{X}_1},\cdots,{\fua{\tnr{\psi}}{\tnr{X}_p}}}\,,\,\forall\,\tnr{X}_i\in\eteg{n}{\cam{F}}{A}\,.
 \end{equation}
-We already know the interesting feature that any alternating tensor space is one-di\-men\-sional and thereby the set $\{\tnr{P}\}$ can be a basis of $\etng{p}{\cam{F}}{A^p}$, when it is valid to write that $\tnr{P}^{\tnr{\psi}}=\alpha\tnr{P}$, where $\alpha\in\cam{F}$ is the coordinate of $\tnr{P}^{\tnr{\psi}}$ on $\{\tnr{P}\}$. If a non-zero arbitrary tensor $\tnr{K}\in\etng{p}{\cam{F}}{A^p}$ is considered, let $\beta\in\cam{F}$ be its coordinate on $\{\tnr{P}\}$. Since the previous definition \eqref{eq:defDetPsi} is valid for an arbitrary tensor of $\etng{p}{\cam{F}}{A^p}$, the following development
+We already know the interesting feature that any alternating tensor space is one-di\-men\-sional and thereby the set $\{\tnr{\mathit{P}}\}$ can be a basis of $\etng{p}{\cam{F}}{A^p}$, when it is valid to write that $\tnr{\mathit{P}}^{\tnr{\psi}}=\alpha\tnr{\mathit{P}}$, where $\alpha\in\cam{F}$ is the coordinate of $\tnr{\mathit{P}}^{\tnr{\psi}}$ on $\{\tnr{\mathit{P}}\}$. If a non-zero arbitrary tensor $\tnr{K}\in\etng{p}{\cam{F}}{A^p}$ is considered, let $\beta\in\cam{F}$ be its coordinate on $\{\tnr{\mathit{P}}\}$. Since the previous definition \eqref{eq:defDetPsi} is valid for an arbitrary tensor of $\etng{p}{\cam{F}}{A^p}$, the following development
 \begin{align*}
-\fua{\tnr{K}^{\tnr{\psi}}}{\tnr{X}_1,\cdots,\tnr{X}_p}&=\fua{\beta\tnr{P}}{\fua{\tnr{\psi}}{\tnr{X}_1},\cdots,{\fua{\tnr{\psi}}{\tnr{X}_p}}}\\
-&=\beta\fua{\tnr{P}^{\tnr{\psi}}}{\tnr{X}_1,\cdots,\tnr{X}_p}\\
-&=\beta\fua{\alpha\tnr{P}}{\tnr{X}_1,\cdots,\tnr{X}_p}\\
+\fua{\tnr{K}^{\tnr{\psi}}}{\tnr{X}_1,\cdots,\tnr{X}_p}&=\fua{\beta\tnr{\mathit{P}}}{\fua{\tnr{\psi}}{\tnr{X}_1},\cdots,{\fua{\tnr{\psi}}{\tnr{X}_p}}}\\
+&=\beta\fua{\tnr{\mathit{P}}^{\tnr{\psi}}}{\tnr{X}_1,\cdots,\tnr{X}_p}\\
+&=\beta\fua{\alpha\tnr{\mathit{P}}}{\tnr{X}_1,\cdots,\tnr{X}_p}\\
 &=\alpha\fua{\tnr{K}}{\tnr{X}_1,\cdots,\tnr{X}_p}
 \end{align*}
 leads to equality $\tnr{K}^{\tnr{\psi}}=\alpha\tnr{K}$. Therefore, it is possible to conclude that the coordinate of any tensor $\tnr{K}^{\tnr{\psi}}$ is always $\alpha$, which is then related only to function $\tnr{\psi}$. Because of this exclusivity, scalar $\alpha$ is defined to be the \textsb{determinant of operator}\index{tensor operator!determinant of} $\tnr{\psi}$ and then, from definition \eqref{eq:defDetPsi}, equality
 \begin{equation}\label{eq:detFunDef}
-\fua{\tnr{P}}{\fua{\tnr{\psi}}{\tnr{X}_1},\cdots,{\fua{\tnr{\psi}}{\tnr{X}_p}}}=\hdet{\tnr{\psi}}{\fua{\tnr{P}}{\tnr{X}_1,\cdots,\tnr{X}_p}}\,,
+\fua{\tnr{\mathit{P}}}{\fua{\tnr{\psi}}{\tnr{X}_1},\cdots,{\fua{\tnr{\psi}}{\tnr{X}_p}}}=\hdet{\tnr{\psi}}{\fua{\tnr{\mathit{P}}}{\tnr{X}_1,\cdots,\tnr{X}_p}}\,,
 \end{equation}
-is valid for all $\tnr{P}\in\{\etng{p}{\cam{F}}{A^p}\setminus \tnr{0}\}$ and all $\tnr{X}_i\in\eteg{n}{\cam{F}}{U^{\times m}}$. From this equality, given a basis $B=\{\tnr{B}_1,\cdots,\tnr{B}_p\}$ of tensor space $\eteg{n}{\cam{F}}{U^{\times m}}$ where $p=n^m$, if operator $\tnr{\psi}$ is proper unitary (see property vii below), then
+is valid for all $\tnr{\mathit{P}}\in\{\etng{p}{\cam{F}}{A^p}\setminus \tnr{0}\}$ and all $\tnr{X}_i\in\eteg{n}{\cam{F}}{U^{\times m}}$. From this equality, given a basis $B=\{\tnr{B}_1,\cdots,\tnr{B}_p\}$ of tensor space $\eteg{n}{\cam{F}}{U^{\times m}}$ where $p=n^m$, if operator $\tnr{\psi}$ is proper unitary (see property vii below), then
 \begin{equation*}
-\fua{\tnr{P}}{\fua{\tnr{\psi}}{\tnr{B}_1},\cdots,{\fua{\tnr{\psi}}{\tnr{B}_p}}}={\fua{\tnr{P}}{\tnr{B}_1,\cdots,\tnr{B}_p}}\,,
+\fua{\tnr{\mathit{P}}}{\fua{\tnr{\psi}}{\tnr{B}_1},\cdots,{\fua{\tnr{\psi}}{\tnr{B}_p}}}={\fua{\tnr{\mathit{P}}}{\tnr{B}_1,\cdots,\tnr{B}_p}}\,,
 \end{equation*}
 when we say that $\{\fua{\tnr{\psi}}{\tnr{B}_1},\cdots,\fua{\tnr{\psi}}{\tnr{B}_p}\}$, which is also a basis according to theorem \ref{teo:basesUnit}, has the same orientation of $B$. Now, according to theorem \ref{teo:repRieszTensor}, in the particular case where operator $\tnr{\psi}\in\evl{\cam{F}}{\eteg{n}{\cam{F}}{U}}{\eteg{n}{\cam{F}}{U}}$ is a $1$-cotensor of a second order tensor $\tnr{T}\in \eteg{n}{\cam{F}}{U^{\times 2}}$, that is, $\tnr{\psi}=\tnr{T}_1^*$, it is possible to state that $\hdet{\tnr{T}}:=\hdet{\tnr{T}_1^*}$ and then
 \begin{equation}\label{eq:detTensorSeg}
-\fua{\tnr{P}}{\fua{\tnr{T}_1^*}{\vto{x}_1^*},\cdots,{\fua{\tnr{T}_1^*}{\vto{x}_{p}^*}}}=\hdet{\tnr{T}}{\fua{\tnr{P}}{\vto{x}_1^*,\cdots,\vto{x}_{p}^*}}\,,
+\fua{\tnr{\mathit{P}}}{\fua{\tnr{T}_1^*}{\vto{x}_1^*},\cdots,{\fua{\tnr{T}_1^*}{\vto{x}_{p}^*}}}=\hdet{\tnr{T}}{\fua{\tnr{\mathit{P}}}{\vto{x}_1^*,\cdots,\vto{x}_{p}^*}}\,,
 \end{equation}
-where $p=n$. Now, considering arbitrary functions $\tnr{\psi},\tnr{\varphi}\in\evl{\cam{F}}{\eteg{n}{\cam{F}}{U^{\times m}}}{\eteg{n}{\cam{F}}{U^{\times m}}}$, the following properties of determinant of tensor operators are valid:
+or
+\begin{equation}\label{eq:detTensorSeg2}
+\fua{\tnr{P}}{\fua{\tnr{\mathit{t}}}{\vto{x}_1},\cdots,{\fua{\tnr{\mathit{t}}}{\vto{x}_{p}}}}=\hdet{\tnr{T}}{\fua{\tnr{{P}}}{\vto{x}_1,\cdots,\vto{x}_{p}}}\,,
+\end{equation}
+where order $p=n$ and tensor $\tnr{P}\in\etng{n}{\cam{F}}{U^{\times m}}$. Now, considering arbitrary functions $\tnr{\psi},\tnr{\varphi}\in\evl{\cam{F}}{\eteg{n}{\cam{F}}{U^{\times m}}}{\eteg{n}{\cam{F}}{U^{\times m}}}$, the following properties of determinant of tensor operators are valid:
 \begin{itemize}
 \setlength\itemsep{.1em}
 \item[i.] $\hdet{\tnr{i}} =  1$;
@@ -845,20 +849,20 @@ where $p=n$. Now, considering arbitrary functions $\tnr{\psi},\tnr{\varphi}\in\e
 \begin{proof}
 Verification of item i is a straightforward consequence of considering $\tnr{\psi}=\tnr{i}$ in \eqref{eq:detFunDef}. The second item is proved through the following equalities:
 \begin{align*}
-\hdet{\tnr{\psi}\circ\tnr{\varphi}}\fua{\tnr{P}}{\tnr{X}_1,\cdots,\tnr{X}_p}&=\fua{\tnr{P}}{\tnr{\psi}[\fua{\tnr{\varphi}}{\tnr{X}_1}],\cdots,\tnr{\psi}[\fua{\tnr{\varphi}}{\tnr{X}_p}]}\\
-&=\hdet{\tnr{\psi}}\fua{\tnr{P}}{\fua{\tnr{\varphi}}{\tnr{X}_1},\cdots,\fua{\tnr{\varphi}}{\tnr{X}_p}}\\
-&=\hdet{\tnr{\psi}}\hdet{\tnr{\varphi}}\fua{\tnr{P}}{\tnr{X}_1,\cdots,\tnr{X}_p}\,.
+\hdet{\tnr{\psi}\circ\tnr{\varphi}}\fua{\tnr{\mathit{P}}}{\tnr{X}_1,\cdots,\tnr{X}_p}&=\fua{\tnr{\mathit{P}}}{\tnr{\psi}[\fua{\tnr{\varphi}}{\tnr{X}_1}],\cdots,\tnr{\psi}[\fua{\tnr{\varphi}}{\tnr{X}_p}]}\\
+&=\hdet{\tnr{\psi}}\fua{\tnr{\mathit{P}}}{\fua{\tnr{\varphi}}{\tnr{X}_1},\cdots,\fua{\tnr{\varphi}}{\tnr{X}_p}}\\
+&=\hdet{\tnr{\psi}}\hdet{\tnr{\varphi}}\fua{\tnr{\mathit{P}}}{\tnr{X}_1,\cdots,\tnr{X}_p}\,.
 \end{align*}
-Equalities $1=\hdet{\tnr{\psi}^{-1}\circ\tnr{\psi}}=\hdet{\tnr{\psi}^{-1}}\,\hdet{\tnr{\psi}}$ prove the third item. For the item iv, let's consider  $\hdet{\tnr{\psi}}\neq 0$ and as equality $\eqref{eq:detFunDef}$ is valid for any $\tnr{X}_i\in\eteg{n}{\cam{F}}{A}$, let's choose a linearly independent set $\{\tnr{X}_1,\cdots,\tnr{X}_p\}$, which causes $\fua{\tnr{P}}{\tnr{X}_1,\cdots,\tnr{X}_p}\neq 0$ since $\tnr{P}$ is antisymmetric. These conditions imply inequality $\fua{\tnr{P}}{\fua{\tnr{\psi}}{\tnr{X}_1},\cdots,{\fua{\tnr{\psi}}{\tnr{X}_p}}}\neq 0$, from which we conclude that
+Equalities $1=\hdet{\tnr{\psi}^{-1}\circ\tnr{\psi}}=\hdet{\tnr{\psi}^{-1}}\,\hdet{\tnr{\psi}}$ prove the third item. For the item iv, let's consider  $\hdet{\tnr{\psi}}\neq 0$ and as equality $\eqref{eq:detFunDef}$ is valid for any $\tnr{X}_i\in\eteg{n}{\cam{F}}{A}$, let's choose a linearly independent set $\{\tnr{X}_1,\cdots,\tnr{X}_p\}$, which causes $\fua{\tnr{\mathit{P}}}{\tnr{X}_1,\cdots,\tnr{X}_p}\neq 0$ since $\tnr{\mathit{P}}$ is antisymmetric. These conditions imply inequality $\fua{\tnr{\mathit{P}}}{\fua{\tnr{\psi}}{\tnr{X}_1},\cdots,{\fua{\tnr{\psi}}{\tnr{X}_p}}}\neq 0$, from which we conclude that
 $\{\fua{\tnr{\psi}}{\tnr{X}_1},\cdots,{\fua{\tnr{\psi}}{\tnr{X}_p}}\}$ is also linearly independent. Therefore, $\tnr{\psi}$ must be an injection and consequently a bijection since it is an unary operator. Considering the idea in the development that leads to \eqref{eq:repMatMape} in order to verify item v, let's say that $\tnr{B}_l=\vtf{f}_{l_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{l_m}^{B_m}$ and $\tnr{C}_i=\vtf{f}_{i_1}^{C_1}\otimes\cdots\otimes\vtf{f}_{i_m}^{C_m}$ are arbitrary elements of bases $B$ and $C$ of $\eteg{n}{\cam{F}}{A}$. Thereby, equalities
 \begin{equation*}
 \fua{\tnr{\psi}}{\tnr{B}_l}=\sum_{i=1}^{p}\sum_{j=1}^{p}{\maf{\tnr{\psi}}{B}{C}}_{ij}\delta_{lj}\tnr{C}_i=\sum_{i=1}^{p}\sum_{k=1}^{p}{\maf{\tnr{\psi}}{B}{C}}_{il}\maf{\tnr{i}}{C}{B}_{ki}\tnr{B}_k= \sum_{k=1}^{p}{\maf{\tnr{\psi}}{B}{B}}_{kl}\tnr{B}_k
 \end{equation*}
 assure that the use of only one basis $B$ to represent $\tnr{\psi}$ is valid for the following results. From the left hand side of \eqref{eq:detFunDef} and considering the previous development, we can write
 \begin{align*}
-\fua{\tnr{P}}{\fua{\tnr{\psi}}{\tnr{B}_1},\cdots,\fua{\tnr{\psi}}{\tnr{B}_p}}&=\sum_{i_1=1}^{p}\cdots\sum_{i_p=1}^{p}{\maf{\tnr{\psi}}{B}{B}}_{i_11}\cdots{\maf{\tnr{\psi}}{B}{B}}_{i_pp}\fua{\tnr{P}}{{\tnr{B}_{i_1}},\cdots,{\tnr{B}_{i_p}}}\\
-&=\sum_{i_1=1}^{p}\cdots\sum_{i_p=1}^{p}{\maf{\tnr{\psi}}{B}{B}}_{i_11}\cdots{\maf{\tnr{\psi}}{B}{B}}_{i_pp}\epsilon_{i_1\cdots i_p}\fua{\tnr{P}}{{\tnr{B}_{1}},\cdots,{\tnr{B}_{p}}}\\
-&=\dete{\maf{\tnr{\psi}}{B}{B}}\fua{\tnr{P}}{{\tnr{B}_{1}},\cdots,{\tnr{B}_{p}}}\,,
+\fua{\tnr{\mathit{P}}}{\fua{\tnr{\psi}}{\tnr{B}_1},\cdots,\fua{\tnr{\psi}}{\tnr{B}_p}}&=\sum_{i_1=1}^{p}\cdots\sum_{i_p=1}^{p}{\maf{\tnr{\psi}}{B}{B}}_{i_11}\cdots{\maf{\tnr{\psi}}{B}{B}}_{i_pp}\fua{\tnr{\mathit{P}}}{{\tnr{B}_{i_1}},\cdots,{\tnr{B}_{i_p}}}\\
+&=\sum_{i_1=1}^{p}\cdots\sum_{i_p=1}^{p}{\maf{\tnr{\psi}}{B}{B}}_{i_11}\cdots{\maf{\tnr{\psi}}{B}{B}}_{i_pp}\epsilon_{i_1\cdots i_p}\fua{\tnr{\mathit{P}}}{{\tnr{B}_{1}},\cdots,{\tnr{B}_{p}}}\\
+&=\dete{\maf{\tnr{\psi}}{B}{B}}\fua{\tnr{\mathit{P}}}{{\tnr{B}_{1}},\cdots,{\tnr{B}_{p}}}\,,
 \end{align*}
 according to \eqref{eq:igAntis} and \eqref{eq:DeterminanteSimplificado}. Thus, from \eqref{eq:detFunDef}, we have $\hdet{\tnr{\psi}}=\dete{\maf{\tnr{\psi}}{B}{B}}=\hdet{\maf{\tnr{\psi}}{B}{B}}$. For the item vi verification, let's consider the previous development and equality \eqref{eq:propHilbAjd}, when we have
 \begin{equation*}
@@ -866,10 +870,10 @@ according to \eqref{eq:igAntis} and \eqref{eq:DeterminanteSimplificado}. Thus, f
 \end{equation*}
 and consequently
 \begin{align*}
-\fua{\tnr{P}}{\fua{\tnr{\psi}^\dagger}{\tnr{B}_1},\cdots,\fua{\tnr{\psi}^\dagger}{\tnr{B}_p}}
-&=\sum_{i_1=1}^{p}\cdots\sum_{i_p=1}^{p}\overline{{\maf{\tnr{\psi}}{B}{B}}_{1i_1}\cdots{\maf{\tnr{\psi}}{B}{B}}_{pi_p}}\epsilon_{i_1\cdots i_p}\fua{\tnr{P}}{{\tnr{B}_{1}},\cdots,{\tnr{B}_{p}}}\\
-&=\overline{\dete{\maf{\tnr{\psi}}{B}{B}}}\fua{\tnr{P}}{{\tnr{B}_{1}},\cdots,{\tnr{B}_{p}}}\\
-&=\overline{\hdet{\tnr{\psi}}}\fua{\tnr{P}}{{\tnr{B}_{1}},\cdots,{\tnr{B}_{p}}}\,,
+\fua{\tnr{\mathit{P}}}{\fua{\tnr{\psi}^\dagger}{\tnr{B}_1},\cdots,\fua{\tnr{\psi}^\dagger}{\tnr{B}_p}}
+&=\sum_{i_1=1}^{p}\cdots\sum_{i_p=1}^{p}\overline{{\maf{\tnr{\psi}}{B}{B}}_{1i_1}\cdots{\maf{\tnr{\psi}}{B}{B}}_{pi_p}}\epsilon_{i_1\cdots i_p}\fua{\tnr{\mathit{P}}}{{\tnr{B}_{1}},\cdots,{\tnr{B}_{p}}}\\
+&=\overline{\dete{\maf{\tnr{\psi}}{B}{B}}}\fua{\tnr{\mathit{P}}}{{\tnr{B}_{1}},\cdots,{\tnr{B}_{p}}}\\
+&=\overline{\hdet{\tnr{\psi}}}\fua{\tnr{\mathit{P}}}{{\tnr{B}_{1}},\cdots,{\tnr{B}_{p}}}\,,
 \end{align*}
 since an equality similar to \eqref{eq:DeterminanteSimplificado} can be obtained by considering $i_k=k$ on \eqref{eq:Determinante}. Now, equalities $1=\hdet{\tnr{i}}=\hdet{\tnr{\psi}\circ\tnr{\psi}^\dagger} =  \hdet{\tnr{\psi}}\,\hdet{\tnr{\psi}^\dagger}=|\hdet{\tnr{\psi}}|^2$ prove item vii.
 \end{proof}

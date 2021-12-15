@@ -215,15 +215,15 @@ Now, for the particular case of a differentiable unary tensor operator on $\pmb{
 \begin{equation}\label{eq:defGradient2}
 [\fua{\tnr{\psi}'}{\vto{x}_0^*}](\vto{x}^*) = \vto{x}^*\odot_1\fua{\nabla\tnr{\psi}}{\vto{x}_0^*}\,.
 \end{equation}
-Since the derivative $\fua{\tnr{\psi}'}{\vto{x}_0^*}$ is the $1$-cotensor of the second order tensor $\fua{\nabla\tnr{\psi}}{\vto{x}_0^*}$ then the linear bijection
+According to corollary \ref{cor:soTens} and definition \eqref{eq:repFunc2}, since the derivative $\fua{\tnr{\psi}'}{\vto{x}_0^*}$ is the $1$-cotensor of the second order tensor $\tnr{G}_{\vto{x}_0^*}:=\fua{\nabla\tnr{\psi}}{\vto{x}_0^*}$ then the linear bijection
  \begin{equation}\label{eq:repFuncGrad2}
-\tnr{\mathit{g}} = \Phi^{-1}\circ\fua{\tnr{\psi}'}{\vto{x}_0^*}\circ\Phi
+\tnr{\mathit{g}}_{\vto{x}_0^*} = \Phi^{-1}\circ\fua{\tnr{\psi}'}{\vto{x}_0^*}\circ\Phi
 \end{equation}
-is the representative function of $\fua{\nabla\tnr{\psi}}{\vto{x}_0^*}$, according to corollary \ref{cor:soTens} and definition \eqref{eq:repFunc2}. Moreover, considering equality \eqref{eq:secTens2Lin}, we can write that
+is the representative function of $\tnr{G}_{\vto{x}_0^*}$, which we represent by $\tnr{\mathit{g}}'_{\vto{x}_0^*}$. Therefore, considering equality \eqref{eq:secTens2Lin}, we can write that 
 \begin{equation}\label{eq:gradFuncRep}
-[\fua{\nabla\tnr{\psi}}{\vto{x}_0^*}](\vto{x},\vto{y})=\vto{x}\cdot\fua{\tnr{\mathit{g}}}{\vto{y}^c}\,,\,\,\forall\, \vto{x}^*,\vto{y}^*\in\pmb{\mathcal{U}}\,.
+\fua{\tnr{G}_{\vto{x}_0^*}}{\vto{x},\vto{y}}=\vto{x}\cdot\fua{\tnr{\mathit{g}}'_{\vto{x}_0^*}}{\vto{y}^c}\,,\,\,\forall\, \vto{x}^*,\vto{y}^*\in\pmb{\mathcal{U}}\,.
 \end{equation}
-Now, in the case of $m+s=0$, that is $\cam{F}=\ete{\cam{F}}{U^{\times m}}=\ete{\cam{F}}{V^{\times s}}$, we consider $\{\vun{u}\}$ the basis of a one dimensional Hilbert space $U_\cam{F}$ to write, according to theorem \ref{teo:repRiesz}, equalities
+\emph{If the interest is to always inspect function values  $\fua{D\tnr{\psi}}{\vto{x}^*}=[\fua{\tnr{\psi}'}{\vto{x}^*}](\vto{x}^*)$, then we drop the subscripts that identify $\vto{x}^*$ resulting $\tnr{\mathit{g}}':=\tnr{\mathit{g}}'_{\vto{x}^*}$ and $\tnr{G}:=\tnr{G}_{\vto{x}^*}$}. Now, for the case of $m+s=0$, that is, field $\cam{F}=\ete{\cam{F}}{U^{\times m}}=\ete{\cam{F}}{V^{\times s}}$, we consider $\{\vun{u}\}$ the basis of a one dimensional Hilbert space $U_\cam{F}$ to write, according to theorem \ref{teo:repRiesz}, equalities
 \begin{equation*}
 \fua{\dfrac{d\psi}{dx}}{x_0} = [\fua{\psi'}{x_0}](1) = 1\fua{\psi'}{x_0} = [\fua{\psi'}{x_0}\vun{u}]\cdot\vun{u}\,,
 \end{equation*}
