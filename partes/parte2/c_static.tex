@@ -29,9 +29,13 @@ where $\upsilon_o$ ``vectorizes'' the points of $\mathcal{B}_t$ relative to an o
 
 Given the mapping $\map{\tnr{\chi}_t}{\tnr{\overline{\mathcal{B}}}}{\tnr{\mathcal{B}}_t}$, bijection $\tnr{\chi}_t$ is called a deformation of $\tnr{\overline{\mathcal{B}}}$, in its most general form. However, we shall work only with deformations that observe some smoothness and positional conditions. From theorem \ref{teo:repRiesz}, let's define the function in bijective mapping $\map{\tnr{\chi}_t^*}{\tnr{\overline{\mathcal{B}}}^*}{\tnr{\mathcal{B}}_t^*}$ to be the \textsb{tensor description}\index{tensor!description} of $\tnr{\chi}_t$ when
 \begin{equation}
-\tnr{\chi}_t^* = \tnr{\chi}_t\circ\Phi^{-1}\,,
+\tnr{\chi}_t^* = \Phi\circ\tnr{\chi}_t\circ\Phi^{-1}\,,
 \end{equation} 
- where $\tnr{\overline{\mathcal{B}}}^*$ and $\tnr{\mathcal{B}}_t^*$ are constituted by the corresponding covectors of the elements of $\tnr{\overline{\mathcal{B}}}$ and $\tnr{\mathcal{B}}_t$ respectively. In this context, a deformation $\tnr{\chi}_t$ in our study must preserve orientation and define a $\mathcal{C}^{2}$-diffeomorphic tensor description $\tnr{\chi}_t^*$. By orientation-preserving, we mean that $\fua{\tnr{A}_O}{\fua{\tnr{\chi}_t}{\vun{u}_1},\fua{\tnr{\chi}_t}{\vun{u}_2},\fua{\tnr{\chi}_t}{\vun{u}_3}}=\fua{\tnr{A}_O}{\vun{u}_1,\vun{u}_2,\vun{u}_3}$ for any orthonormal basis $\{\vun{u}_1,\vun{u}_2,\vun{u}_3\}$ of $U_\real$. The continuity and bijectivity of $\tnr{\chi}_t^*$ respectively ensures that Lipschitz surfaces are preserved\footnote{See \aut{Ciarlet}\cite{ciarlet_1988_2_2}, theorem 1.2-8, p.16.} and no distinct elements in the body become collapsed in the shape; while the differentiability of class two provides the minimum level of regularity required by future concepts. The entities and their relationships presented so far are depicted in figure \ref{fg:deformacao}. 
+ where $\tnr{\overline{\mathcal{B}}}^*$ and $\tnr{\mathcal{B}}_t^*$ are constituted by the corresponding covectors of the elements of $\tnr{\overline{\mathcal{B}}}$ and $\tnr{\mathcal{B}}_t$ respectively. In our study, a deformation $\tnr{\chi}_t$ must define an orientation preserving $\mathcal{C}^{2}$-diffeomorphic tensor description $\tnr{\chi}_t^*$. By orientation-preserving, we mean 
+\begin{equation}
+\fua{\tnr{A}_O}{\fua{\tnr{\chi}_t}{\vun{u}_1},\fua{\tnr{\chi}_t}{\vun{u}_2},\fua{\tnr{\chi}_t}{\vun{u}_3}}=\fua{\tnr{A}_O}{\vun{u}_1,\vun{u}_2,\vun{u}_3}
+\end{equation}
+for any orthonormal basis $\{\vun{u}_1,\vun{u}_2,\vun{u}_3\}$ of $U_\real$. The continuity and bijectivity of $\tnr{\chi}_t^*$ respectively ensures that Lipschitz surfaces are preserved\footnote{See \aut{Ciarlet}\cite{ciarlet_1988_2_2}, theorem 1.2-8, p.16.} and no distinct elements in the body become collapsed in the shape; while the differentiability of class two provides the minimum level of regularity required by future concepts. The entities and their relationships presented so far are depicted in figure \ref{fg:deformacao}. 
 \begin{figure}[!ht]
 \centering
 \begin{center}
@@ -45,15 +49,19 @@ From this figure, it is possible to conclude that if both configurations $\overl
 \end{equation}
 Moreover, concerning the elements of the domains represented in the figure, we say that a material particle $\text{x}\in\mathfrak{B}$, represented by the reference point $\overline{x}:=\fua{\overline{\chi}}{\text{x}}$ or by the reference vector $\vto{\overline{x}}:=\fua{\upsilon_o\circ\overline{\chi}}{\text{x}}$, occupies the place $x:=\fua{\chi_t}{\text{x}}$ or $\vto{x}:=\fua{\upsilon_o\circ\chi_t}{\text{x}}$. In order to simplify our study, since deformation was defined as a vector function, we shall mostly use vectors to denote body and shape elements.  
 
-Considering the previous regularity conditions and an open set $\pmb{\mathcal{U}}\subset\tnr{\overline{\mathcal{B}}}^*$, the local sensitivity of $\tnr{\chi}_t^*$ measured by the tensor function in $\map{\nabla\tnr{\chi}_t^*}{\pmb{\mathcal{U}}}{\ete{\real}{U^{2}}}$, called \textsb{deformation gradient}\index{deformation!gradient}, has fundamental importance in Continuum Kinematics because it bases the concept of strain. Given an arbitrary reference covector $\overline{\vto{x}}^*\in\pmb{\mathcal{U}}$, the second order tensor $\tnr{F}:=\fua{\nabla\tnr{\chi}_t^*}{\overline{\vto{x}}^*}$ is said to be the deformation gradient at this point and then, by the same procedure that leads to equality \eqref{eq:repFuncGrad2}, bijection $\tnr{\mathit{f}}'\in\evl{\real}{U}{U}$ defined by
+Considering the previous regularity conditions and an open set $\pmb{\mathcal{U}}\subset\tnr{\overline{\mathcal{B}}}^*$, the local sensitivity of $\tnr{\chi}_t^*$ measured by the tensor function in $\map{\nabla\tnr{\chi}_t^*}{\pmb{\mathcal{U}}}{\ete{\real}{U^{2}}}$, called \textsb{deformation gradient}\index{deformation!gradient}, has fundamental importance in Continuum Kinematics because it bases the concept of strain. Given an arbitrary reference covector $\overline{\vto{x}}^*\in\pmb{\mathcal{U}}$, the second order tensor $\tnr{F}:=\fua{\nabla\tnr{\chi}_t^*}{\overline{\vto{x}}^*}$ is said to be the deformation gradient at this point and then, by the same procedure that leads to equalities \eqref{eq:repFuncGrad2} and \eqref{eq:primiRepFuncGrad2}, bijection $\tnr{\mathit{f}}'\in\evl{\real}{U}{U}$ described by the rule
 \begin{equation}
-\tnr{\mathit{f}}' = \Phi^{-1}\circ\fua{{\tnr{\chi}_t^{*}}'}{\overline{\vto{x}}^*}\circ\Phi
+\tnr{\mathit{f}}'(\overline{\vto{x}}) = [\Phi^{-1}\circ\fua{{\tnr{\chi}_t^{*}}'}{\overline{\vto{x}}^*}\circ\Phi](\overline{\vto{x}})
 \end{equation}
-is the representative function of $\tnr{F}$. Therefore, from equality \eqref{eq:gradFuncRep}, we have
+is the representative function of $\tnr{F}$ and vector function
+\begin{equation}
+\tnr{\mathit{f}} = \Phi^{-1}\circ\tnr{\chi}_t^{*}\circ\Phi = \tnr{\chi}_t\,.
+\end{equation}
+Therefore, from equality \eqref{eq:gradFuncRep}, we have
 \begin{equation}
 \fua{\tnr{F}}{\overline{\vto{u}},\overline{\vto{v}}}=\overline{\vto{u}}\cdot\fua{\tnr{\mathit{f}}'}{\overline{\vto{v}}}\,,\,\,\forall\, \overline{\vto{u}}^*,\overline{\vto{v}}^*\in\pmb{\mathcal{U}}\,.
 \end{equation}
-Now, if $\{\overline{\vto{u}},\overline{\vto{v}},\overline{\vto{w}}\}\subset \tnr{\overline{\mathcal{B}}}$ is linearly independent, we can write that 
+Now, if a set $\{\overline{\vto{u}},\overline{\vto{v}},\overline{\vto{w}}\}\subset \tnr{\overline{\mathcal{B}}}$ is linearly independent, we can write that 
 \begin{equation}
 \hdet{\tnr{F}}=\dfrac{\fua{\tnr{\mathit{f}}'}{\overline{\vto{u}}}\cdot[\,\fua{\tnr{\mathit{f}}'}{\overline{\vto{v}}}\times\fua{\tnr{\mathit{f}}'}{\overline{\vto{w}}}\,]}{\overline{\vto{u}}\cdot(\overline{\vto{v}}\times\overline{\vto{w}})}
 \end{equation}

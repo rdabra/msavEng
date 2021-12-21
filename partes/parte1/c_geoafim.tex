@@ -326,7 +326,7 @@ Considering the last property above, the geometrical definition of inner product
 \begin{equation}
 \fua{\tnr{A}_B}{\vto{x},\vto{y},\vto{z}}=\vto{x}\cdot(\vto{y}\times\vto{z})=\|\vto{x}\|(\|\vto{y} \|\|\vto{z} \|\sin\theta_2)\cos\theta_1=\underbrace{\|\vto{y} \|\|\vto{z} \|\sin\theta_2}_{\alpha} \underbrace{\|\vto{x}\|\cos\theta_1}_{\beta}\,,
 \end{equation}
-where $\alpha$ is the area of parallelogram defined by $\overline{a\vto{y}\oplus a}$ and $\overline{a\vto{z}\oplus a}$, as we already know. Moreover, it is possible to conclude that from vector $\vto{h}=\beta(\vto{y}\times\vto{z})/\|\vto{y}\times\vto{z}\|$, the line segments $\overline{a\vto{x}\oplus a}$, $\overline{a\vto{y}\oplus a}$ and $\overline{a\vto{z}\oplus a}$ define a parallelepiped of height $\overline{a\vto{h}\oplus a}$ and volume $\alpha\beta$, represented in figure \ref{fg:paralelogramo}.
+where $\alpha$ is the area of parallelogram defined by $\overline{a\vto{y}\oplus a}$ and $\overline{a\vto{z}\oplus a}$, as we already know. Moreover, it is possible to conclude that from vector $\vto{h}=\beta(\vto{y}\times\vto{z})/\|\vto{y}\times\vto{z}\|$, the line segments $\overline{a\vto{x}\oplus a}$, $\overline{a\vto{y}\oplus a}$ and $\overline{a\vto{z}\oplus a}$ define a parallelepiped of height $\overline{a\vto{h}\oplus a}$ and volume $\alpha\beta$, represented in figure \ref{fg:paralelogramo}. It is interesting to note that if $\{\vto{x},\vto{y},\vto{z}\}$ is negatively oriented then volume $\alpha\beta$ is negative since $\theta_1$ is obtuse.
 \begin{figure}[!ht]
 \centering
 \begin{center}
@@ -334,9 +334,13 @@ where $\alpha$ is the area of parallelogram defined by $\overline{a\vto{y}\oplus
 \end{center}
 \titfigura{Parallelogram of volume $\alpha\beta$ defined by $\vto{x},\vto{y},\vto{z}$.}\label{fg:paralelogramo}
 \end{figure}
-Considering definition \eqref{eq:detTensorSeg2} in the present context of a three-di\-men\-sional Euclidean space and $\{\vto{x},\vto{y},\vto{z}\}\subset U$ a linearly independent set, for a second order tensor $\tnr{T}\in\ete{\cam{F}}{U^2}$ equalities
+Considering definition \eqref{eq:detTensorSeg2} in the present context of a three-di\-men\-sional Euclidean space and $\{\vto{x},\vto{y},\vto{z}\}\subset U$ an arbitrary linearly independent set, for a second order tensor $\tnr{T}\in\ete{\cam{F}}{U^2}$ equalities
 \begin{equation}
 \hdet{\tnr{T}}=\dfrac{\fua{\tnr{A}_B}{\fua{\tnr{\mathit{t}}}{\vto{x}},{\fua{\tnr{\mathit{t}}}{\vto{y}}},{\fua{\tnr{\mathit{t}}}{\vto{z}}}}}{\fua{\tnr{A}_B}{\vto{x},\vto{y},\vto{z}}}=\dfrac{\fua{\tnr{\mathit{t}}}{\vto{x}}\cdot[\,\fua{\tnr{\mathit{t}}}{\vto{y}}\times\fua{\tnr{\mathit{t}}}{\vto{z}}\,]}{\vto{x}\cdot(\vto{y}\times\vto{z})}
 \end{equation}
-show that $\hdet{\tnr{T}}$ measures the change of volume of a parallelogram ``changed'' by $\tnr{T}$.
+show that $\hdet{\tnr{T}}$ measures the change of volume of a parallelogram defined by $\vto{x},\vto{y},\vto{z}$ and ``changed'' by $\tnr{T}$. Considering the orthonormal vectors of basis $B$ and \eqref{eq:secTens2Lin}, we conclude from the previous equality that
+\begin{equation}
+\hdet{\tnr{T}}=\fua{\tnr{\mathit{t}}}{\vun{u}_1}\cdot[\,\fua{\tnr{\mathit{t}}}{\vun{u}_2}\times\fua{\tnr{\mathit{t}}}{\vun{u}_3}\,]=\fua{\tnr{T}}{\fua{\tnr{\mathit{t}}}{\vun{u}_2}\times\fua{\tnr{\mathit{t}}}{\vun{u}_3},\vun{u}_1}\,.
+\end{equation}
+
 
