@@ -52,7 +52,11 @@ is said to be the directional derivative\footnote{It is important to say a few w
 \begin{equation*}
 \fua{[\fua{\tnr{\varphi}'_G}{\tnr{X}_0}]}{\tnr{X}}=\lim_{\alpha\to 0} \dfrac{\fua{\tnr{\varphi}}{\tnr{X}_0+\alpha\tnr{X}}-\fua{\tnr{\varphi}}{\tnr{X}_0}}{\alpha}\,.
 \end{equation*}
-The tensor $\fua{[\fua{\tnr{\varphi}'_G}{\tnr{X}_0}]}{\tnr{X}}$ is called the \textsb{Gâteaux differential}\index{differential!Gâteaux} of $\tnr{\varphi}$ at $\tnr{X}_0$ and $\tnr{\varphi}'_G$ is the \textsb{Gâteaux derivative}\index{derivative!Gâteaux} of $\tnr{\varphi}$. Every Fréchet differentiable function is also Gâteaux differentiable, but the converse is obviously not true. What is less obvious is the following: even when Gâteaux derivative $\fua{\tnr{\varphi}'_G}{\tnr{X}_0}$ is bounded and linear, Gâteaux differentiability, which means differentiability along all directions at a point, does not assure Fréchet differentiability. This present study will require only the stronger restrictions from the Fréchet differentiation. For further developments of the Gâteaux derivative, see \aut{Wouk}\cite{wouk_1979_1}, chapter 12.} of $\tnr{\psi}$ along $\tnr{H}$. For the particular case of $\pmb{\mathcal{U}}$ subset of a one-dimensional Hilbert space $U_\cam{F}$, there is only one ``direction'' on $U_\cam{F}$, which can be represented by the unique vector of its unique orthonormal basis $\{1\}$. Therefore, in the context of space $U_\cam{F}=\cam{F}$,
+The tensor $\fua{[\fua{\tnr{\varphi}'_G}{\tnr{X}_0}]}{\tnr{X}}$ is called the \textsb{Gâteaux differential}\index{differential!Gâteaux} of $\tnr{\varphi}$ at $\tnr{X}_0$ and $\tnr{\varphi}'_G$ is the \textsb{Gâteaux derivative}\index{derivative!Gâteaux} of $\tnr{\varphi}$. Every Fréchet differentiable function is also Gâteaux differentiable, but the converse is obviously not true. What is less obvious is the following: even when Gâteaux derivative $\fua{\tnr{\varphi}'_G}{\tnr{X}_0}$ is bounded and linear, Gâteaux differentiability, which means differentiability along all directions at a point, does not assure Fréchet differentiability. This present study will require only the stronger restrictions from the Fréchet differentiation. For further developments of the Gâteaux derivative, see \aut{Wouk}\cite{wouk_1979_1}, chapter 12.} of $\tnr{\psi}$ along $\tnr{H}$. 
+
+E QUANDO A FUNCAO FOR VETORIAL, COMO SERIA O ESQUEMA PARA SUA DIFERENCIACAO
+
+For the particular case of $\pmb{\mathcal{U}}$ subset of a one-dimensional Hilbert space $U_\cam{F}$, there is only one ``direction'' on $U_\cam{F}$, which can be represented by the unique vector of its unique orthonormal basis $\{1\}$. Therefore, in the context of space $U_\cam{F}=\cam{F}$,
 \begin{equation}
 \fua{\dfrac{d\tnr{\psi}}{dx}}{x}:=\fua{[\fua{\tnr{\psi}'}{x}]}{1}=\lim_{\alpha\to 0} \dfrac{\fua{\tnr{\psi}}{x+\alpha}-\fua{\tnr{\psi}}{x}}{\alpha}\,,
 \end{equation}
@@ -221,16 +225,20 @@ According to corollary \ref{cor:soTens} and definition \eqref{eq:repFunc2}, sinc
 \end{equation}
 is the representative function of $\tnr{G}_{\vto{x}_0^*}$ and then  
  \begin{equation}\label{eq:primiRepFuncGrad2}
- \tnr{\mathit{g}}_{\vto{x}_0^*}:=\Phi^{-1}\circ\tnr{\psi}\circ\fua{\Phi}{\vto{x}_0}\,.
+ \tnr{\mathit{g}}:=\Phi^{-1}\circ\tnr{\psi}\circ\Phi\,.
 \end{equation}
-
-OBTER DEFINICAO DE DERIVADA PARA FUNCAO VETORIAL
-
-Considering equality \eqref{eq:secTens2Lin}, we have for the present case 
+From these definitions and rule \eqref{eq:directDeriv}, given an arbitrary direction $\vto{h}^*\in\pmb{\mathcal{U}}$, it is possible to develop the following:
+\begin{align}\label{eq:derivRep}
+\fua{\tnr{\mathit{g}}'_{\vto{x}^*}}{\vto{h}}&=\Phi^{-1}\circ\fua{[\fua{\tnr{\psi}'}{\vto{x}}]}{\vto{h}^*}\nonumber\\
+&=\lim_{\alpha\to 0} \dfrac{\fua{\Phi^{-1}\circ\tnr{\psi}}{\vto{x}^*+\alpha\vto{h}^*}-\fua{\Phi^{-1}\circ\tnr{\psi}}{\vto{x}^*}}{\alpha}\nonumber\\
+&=\lim_{\alpha\to 0} \dfrac{\fua{\Phi^{-1}\circ\tnr{\psi}\circ\Phi}{\vto{x}+\alpha\vto{h}}-\fua{\Phi^{-1}\circ\tnr{\psi}\circ\Phi}{\vto{x}}}{\alpha}\nonumber\\
+&=\lim_{\alpha\to 0} \dfrac{\fua{\tnr{\mathit{g}}}{\vto{x}+\alpha\vto{h}}-\fua{\tnr{\mathit{g}}}{\vto{x}}}{\alpha}\,.
+\end{align}
+Considering equality \eqref{eq:secTens2Lin}, we also have for the present case that 
 \begin{equation}\label{eq:gradFuncRep}
 \fua{\tnr{G}_{\vto{x}_0^*}}{\vto{x},\vto{y}}=\vto{x}\cdot\fua{\tnr{\mathit{g}}'_{\vto{x}_0^*}}{\vto{y}^c}\,,\,\,\forall\, \vto{x}^*,\vto{y}^*\in\pmb{\mathcal{U}}\,.
 \end{equation}
-\emph{If the interest is to always inspect function values  $\fua{D\tnr{\psi}}{\vto{x}^*}=[\fua{\tnr{\psi}'}{\vto{x}^*}](\vto{x}^*)$, then we drop the subscripts that identify $\vto{x}^*$ resulting $\tnr{\mathit{g}}':=\tnr{\mathit{g}}'_{\vto{x}^*}$, $\tnr{\mathit{g}}:=\tnr{\mathit{g}}_{\vto{x}^*}$ and $\tnr{G}:=\tnr{G}_{\vto{x}^*}$}. Now, for the case of $m+s=0$, that is, field $\cam{F}=\ete{\cam{F}}{U^{\times m}}=\ete{\cam{F}}{V^{\times s}}$, we consider $\{\vun{u}\}$ the basis of a one dimensional Hilbert space $U_\cam{F}$ to write, according to theorem \ref{teo:repRiesz}, equalities
+\emph{If the interest is to always inspect function values  $\fua{D\tnr{\psi}}{\vto{x}^*}=[\fua{\tnr{\psi}'}{\vto{x}^*}](\vto{x}^*)$, then we drop the subscripts that identify $\vto{x}^*$ resulting $\tnr{\mathit{g}}':=\tnr{\mathit{g}}'_{\vto{x}^*}$ and $\tnr{G}:=\tnr{G}_{\vto{x}^*}$}. Now, for the case of $m+s=0$, that is, field $\cam{F}=\ete{\cam{F}}{U^{\times m}}=\ete{\cam{F}}{V^{\times s}}$, we consider $\{\vun{u}\}$ the basis of a one dimensional Hilbert space $U_\cam{F}$ to write, according to theorem \ref{teo:repRiesz}, equalities
 \begin{equation*}
 \fua{\dfrac{d\psi}{dx}}{x_0} = [\fua{\psi'}{x_0}](1) = 1\fua{\psi'}{x_0} = [\fua{\psi'}{x_0}\vun{u}]\cdot\vun{u}\,,
 \end{equation*}
@@ -239,9 +247,9 @@ from which we define that $\fua{\nabla\psi}{x_0} = \fua{\psi'}{x_0}\vun{u}$ and 
 \fua{\dfrac{d\psi}{dx}}{x_0} = \fua{\nabla\psi}{x_0}\cdot\vun{u}\,.
 \end{equation}
 
-From the definition of gradient \eqref{eq:defGradient} and rule \eqref{eq:directDeriv}, the directional derivative of $\tnr{\psi}$ along $\tnr{H}\in\pmb{\mathcal{U}}$ is described by
+For the directional derivative of $\tnr{\psi}$ along $\tnr{H}\in\pmb{\mathcal{U}}$, the definition of gradient \eqref{eq:defGradient} and rule \eqref{eq:directDeriv} enable us to easily obtain that
 \begin{equation}
-\fua{[\fua{\tnr{\psi}'}{\tnr{X}}]}{\tnr{H}}=\tnr{H}\odot_m\fua{\nabla\tnr{\psi}}{\tnr{X}}=\lim_{\alpha\to 0} \dfrac{\fua{\tnr{\psi}}{\tnr{X}+\alpha\tnr{H}}-\fua{\tnr{\psi}}{\tnr{X}}}{\alpha}\,.
+\tnr{H}\odot_m\fua{\nabla\tnr{\psi}}{\tnr{X}}=\lim_{\alpha\to 0} \dfrac{\fua{\tnr{\psi}}{\tnr{X}+\alpha\tnr{H}}-\fua{\tnr{\psi}}{\tnr{X}}}{\alpha}\,.
 \end{equation}
 From the properties of derivatives presented on previous section, it is then possible to obtain the following important properties of gradients.
 \begin{itemize}
