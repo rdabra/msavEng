@@ -26,7 +26,7 @@ Proceeding with the above conditions, if there is one and only one tensor functi
 \begin{equation}\label{eq:tangentFunct}
 \fua{\tnr{\psi_\mathit{d}}}{\tnr{X}}=\fua{\tnr{\psi}}{\tnr{X}_0}+\fua{[\fua{\tnr{\psi}'}{\tnr{X}_0}]}{\tnr{X}-\tnr{X}_0}\,,
 \end{equation}
-where function $\fua{\tnr{\psi}'}{\tnr{X}_0}\in\evl{\cam{F}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}$ is bounded, then $\tnr{\psi}$ is called \textsb{FrÈchet differentiable}\index{function!FrÈchet differentiable}, \textsb{totally differentiable}\index{function!totally differentiable} or simply \textsb{differentiable}\index{function!differentiable} at $\tnr{X}_0$, while the linear function $\fua{\tnr{\psi}'}{\tnr{X}_0}$ is called the \textsb{derivative}\index{derivative} of $\tnr{\psi}$ at $\tnr{X}_0$, whose value at $\tnr{X}_0$ is described by $\gloref{derivativeAt}:=[\fua{\tnr{\psi}'}{\tnr{X}_0}](\tnr{X}_0)$. According to \eqref{eq:funcaoLimitada}, linearity and boundedness imply continuity, and then $\fua{\tnr{\psi}'}{\tnr{X}_0}$ belongs to function space $\evlc{\cam{F}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}$, which we specify to be also a Banach space of continuous linear functions. Moreover, the function in
+where function $\fua{\tnr{\psi}'}{\tnr{X}_0}\in\evl{\cam{F}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}$ is bounded, then $\tnr{\psi}$ is called \textsb{Fr\'echet differentiable}\index{function!Fr\'echet differentiable}, \textsb{totally differentiable}\index{function!totally differentiable} or simply \textsb{differentiable}\index{function!differentiable} at $\tnr{X}_0$, while the linear function $\fua{\tnr{\psi}'}{\tnr{X}_0}$ is called the \textsb{derivative}\index{derivative} of $\tnr{\psi}$ at $\tnr{X}_0$, whose value at $\tnr{X}_0$ is described by $\gloref{derivativeAt}:=[\fua{\tnr{\psi}'}{\tnr{X}_0}](\tnr{X}_0)$. According to \eqref{eq:funcaoLimitada}, linearity and boundedness imply continuity, and then $\fua{\tnr{\psi}'}{\tnr{X}_0}$ belongs to function space $\evlc{\cam{F}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}$, which we specify to be also a Banach space of continuous linear functions. Moreover, the function in
 $\map{\gloref{derivative}}{\pmb{\mathcal{U}}}{\evlc{\cam{F}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}}$ is said to be the \textsb{derivative function}\index{derivative!function} or simply the derivative of $\tnr{\psi}$. 
 Rewriting expression \eqref{eq:tangent} for $\tnr{\psi}$ and $\tnr{\psi_\mathit{d}}$ tangent at $\tnr{X}_0$, the result is
 \begin{equation}\label{eq:preDirect}
@@ -48,19 +48,11 @@ where $\fua{[\fua{\tnr{\psi}'}{\tnr{X}_0}]}{\tnr{H}}\in\ete{\cam{F}}{V^{\times s
 \begin{equation}\label{eq:directDeriv}
 \fua{[\fua{\tnr{\psi}'}{\tnr{X}}]}{\tnr{H}}=\lim_{\alpha\to 0} \dfrac{\fua{\tnr{\psi}}{\tnr{X}+\alpha\tnr{H}}-\fua{\tnr{\psi}}{\tnr{X}}}{\alpha}
 \end{equation}
-is said to be the directional derivative\footnote{It is important to say a few words about a less restricted or weaker type of derivative than the FrÈchet derivative just presented. It is not defined from the concept of tangency but from a directional derivative in which the derivative involved is not necessarily bounded and linear. Considering the above conditions, the tensor function in $\map{\tnr{\varphi}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}$ is said to be \textsb{G‚teaux differentiable}\index{function!G‚teaux differentiable} at $\tnr{X}_0$ if there exists a mapping $\map{\fua{\tnr{\varphi}'_G}{\tnr{X}_0}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}$, not necessarily bounded and linear, where
+is said to be the directional derivative\footnote{It is important to say a few words about a less restricted or weaker type of derivative than the Fr\'echet derivative just presented. It is not defined from the concept of tangency but from a directional derivative in which the derivative involved is not necessarily bounded and linear. Considering the above conditions, the tensor function in $\map{\tnr{\varphi}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}$ is said to be \textsb{G\^ateaux differentiable}\index{function!G\^ateaux differentiable} at $\tnr{X}_0$ if there exists a mapping $\map{\fua{\tnr{\varphi}'_G}{\tnr{X}_0}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}$, not necessarily bounded and linear, where
 \begin{equation*}
 \fua{[\fua{\tnr{\varphi}'_G}{\tnr{X}_0}]}{\tnr{X}}=\lim_{\alpha\to 0} \dfrac{\fua{\tnr{\varphi}}{\tnr{X}_0+\alpha\tnr{X}}-\fua{\tnr{\varphi}}{\tnr{X}_0}}{\alpha}\,.
 \end{equation*}
-The tensor $\fua{[\fua{\tnr{\varphi}'_G}{\tnr{X}_0}]}{\tnr{X}}$ is called the \textsb{G‚teaux differential}\index{differential!G‚teaux} of $\tnr{\varphi}$ at $\tnr{X}_0$ and $\tnr{\varphi}'_G$ is the \textsb{G‚teaux derivative}\index{derivative!G‚teaux} of $\tnr{\varphi}$. Every FrÈchet differentiable function is also G‚teaux differentiable, but the converse is obviously not true. What is less obvious is the following: even when G‚teaux derivative $\fua{\tnr{\varphi}'_G}{\tnr{X}_0}$ is bounded and linear, G‚teaux differentiability, which means differentiability along all directions at a point, does not assure FrÈchet differentiability. This present study will require only the stronger restrictions from the FrÈchet differentiation. For further developments of the G‚teaux derivative, see \aut{Wouk}\cite{wouk_1979_1}, chapter 12.} of $\tnr{\psi}$ along $\tnr{H}$. 
-
-E QUANDO A FUNCAO FOR VETORIAL, COMO SERIA O ESQUEMA PARA SUA DIFERENCIACAO
-
-For the particular case of $\pmb{\mathcal{U}}$ subset of a one-dimensional Hilbert space $U_\cam{F}$, there is only one ``direction'' on $U_\cam{F}$, which can be represented by the unique vector of its unique orthonormal basis $\{1\}$. Therefore, in the context of space $U_\cam{F}=\cam{F}$,
-\begin{equation}
-\fua{\dfrac{d\tnr{\psi}}{dx}}{x}:=\fua{[\fua{\tnr{\psi}'}{x}]}{1}=\lim_{\alpha\to 0} \dfrac{\fua{\tnr{\psi}}{x+\alpha}-\fua{\tnr{\psi}}{x}}{\alpha}\,,
-\end{equation}
-where ${d\tnr{\psi}}/{dx}$ is the notation we use for the derivative of $\tnr{\psi}$ when its domain is a scalar field. If $\ete{\cam{F}}{V^{\times s}}=\real$, given an arbitrary element $x_0\in\cam{F}$, we have the classical geometric interpretation of scalar $\fua{{d\tnr{\psi}}/{dx}}{x_0}$ as being the slope of the tangent line $\tnr{\psi_\mathit{d}}$ to $\tnr{\psi}$ at $x_0$.
+The tensor $\fua{[\fua{\tnr{\varphi}'_G}{\tnr{X}_0}]}{\tnr{X}}$ is called the \textsb{G\^ateaux differential}\index{differential!G\^ateaux} of $\tnr{\varphi}$ at $\tnr{X}_0$ and $\tnr{\varphi}'_G$ is the \textsb{G\^ateaux derivative}\index{derivative!G\^ateaux} of $\tnr{\varphi}$. Every Fr\'echet differentiable function is also G\^ateaux differentiable, but the converse is obviously not true. What is less obvious is the following: even when G\^ateaux derivative $\fua{\tnr{\varphi}'_G}{\tnr{X}_0}$ is bounded and linear, G\^ateaux differentiability, which means differentiability along all directions at a point, does not assure Fr\'echet differentiability. This present study will require only the stronger restrictions from the Fr\'echet differentiation. For further developments of the G\^ateaux derivative, see \aut{Wouk}\cite{wouk_1979_1}, chapter 12.} of $\tnr{\psi}$ along $\tnr{H}$. 
 
 {\footnotesize
 \begin{proof}
@@ -207,7 +199,7 @@ Now, let's restrict our attention to continuous tensor functions, that is, to el
 
 \section{The Gradient}
 
-The concept of gradient we shall detail in this section is restricted to the context of Hilbert tensor spaces because it relies on the Riesz-FrÈchet Representation of Tensors, described on theorem \ref{teo:repRieszTensor}. Similarly to what we already presented in this chapter, an open set $\pmb{\mathcal{U}}\subset\ete{\cam{F}}{U^{\times m}}$ and a differentiable function in $\map{\tnr{\psi}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}$ are also considered, but $\ete{\cam{F}}{U^{\times m}}$ and $\ete{\cam{F}}{V^{\times s}}$ are Hilbert tensor spaces here and $m+s>0$. Considering the conditions of the aforementioned theorem, there is a unique tensor $\fua{\nabla\tnr{\psi}}{\tnr{X}_0}\in\ete{\cam{F}}{U^{\times m}\times V^{\times s}}$, called the \textsb{gradient}\index{gradient} of $\tnr{\psi}$ at $\tnr{X}_0$, which the derivative $\fua{\tnr{\psi}'}{\tnr{X}_0}\in\evlc{\cam{F}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}$ is the $m$-cotensor of and then
+The concept of gradient we shall detail in this section is restricted to the context of Hilbert tensor spaces because it relies on the Riesz-Fr\'echet Representation of Tensors, described on theorem \ref{teo:repRieszTensor}. Similarly to what we already presented in this chapter, an open set $\pmb{\mathcal{U}}\subset\ete{\cam{F}}{U^{\times m}}$ and a differentiable function in $\map{\tnr{\psi}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}$ are also considered, but $\ete{\cam{F}}{U^{\times m}}$ and $\ete{\cam{F}}{V^{\times s}}$ are Hilbert tensor spaces here and $m+s>0$. Considering the conditions of the aforementioned theorem, there is a unique tensor $\fua{\nabla\tnr{\psi}}{\tnr{X}_0}\in\ete{\cam{F}}{U^{\times m}\times V^{\times s}}$, called the \textsb{gradient}\index{gradient} of $\tnr{\psi}$ at $\tnr{X}_0$, which the derivative $\fua{\tnr{\psi}'}{\tnr{X}_0}\in\evlc{\cam{F}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}$ is the $m$-cotensor of and then
 \begin{equation}\label{eq:defGradient}
 [\fua{\tnr{\psi}'}{\tnr{X}_0}](\tnr{X}) = \tnr{X}\odot_m\fua{\nabla\tnr{\psi}}{\tnr{X}_0}\,.
 \end{equation}
@@ -227,25 +219,31 @@ is the representative function of $\tnr{G}_{\vto{x}_0^*}$ and then
  \begin{equation}\label{eq:primiRepFuncGrad2}
  \tnr{\mathit{g}}:=\Phi^{-1}\circ\tnr{\psi}\circ\Phi\,.
 \end{equation}
-From these definitions and rule \eqref{eq:directDeriv}, given an arbitrary direction $\vto{h}^*\in\pmb{\mathcal{U}}$, it is possible to develop the following:
-\begin{align}\label{eq:derivRep}
-\fua{\tnr{\mathit{g}}'_{\vto{x}^*}}{\vto{h}}&=\Phi^{-1}\circ\fua{[\fua{\tnr{\psi}'}{\vto{x}}]}{\vto{h}^*}\nonumber\\
-&=\lim_{\alpha\to 0} \dfrac{\fua{\Phi^{-1}\circ\tnr{\psi}}{\vto{x}^*+\alpha\vto{h}^*}-\fua{\Phi^{-1}\circ\tnr{\psi}}{\vto{x}^*}}{\alpha}\nonumber\\
-&=\lim_{\alpha\to 0} \dfrac{\fua{\Phi^{-1}\circ\tnr{\psi}\circ\Phi}{\vto{x}+\alpha\vto{h}}-\fua{\Phi^{-1}\circ\tnr{\psi}\circ\Phi}{\vto{x}}}{\alpha}\nonumber\\
-&=\lim_{\alpha\to 0} \dfrac{\fua{\tnr{\mathit{g}}}{\vto{x}+\alpha\vto{h}}-\fua{\tnr{\mathit{g}}}{\vto{x}}}{\alpha}\,.
-\end{align}
 Considering equality \eqref{eq:secTens2Lin}, we also have for the present case that 
 \begin{equation}\label{eq:gradFuncRep}
 \fua{\tnr{G}_{\vto{x}_0^*}}{\vto{x},\vto{y}}=\vto{x}\cdot\fua{\tnr{\mathit{g}}'_{\vto{x}_0^*}}{\vto{y}^c}\,,\,\,\forall\, \vto{x}^*,\vto{y}^*\in\pmb{\mathcal{U}}\,.
 \end{equation}
-\emph{If the interest is to always inspect function values  $\fua{D\tnr{\psi}}{\vto{x}^*}=[\fua{\tnr{\psi}'}{\vto{x}^*}](\vto{x}^*)$, then we drop the subscripts that identify $\vto{x}^*$ resulting $\tnr{\mathit{g}}':=\tnr{\mathit{g}}'_{\vto{x}^*}$ and $\tnr{G}:=\tnr{G}_{\vto{x}^*}$}. Now, for the case of $m+s=0$, that is, field $\cam{F}=\ete{\cam{F}}{U^{\times m}}=\ete{\cam{F}}{V^{\times s}}$, we consider $\{\vun{u}\}$ the basis of a one dimensional Hilbert space $U_\cam{F}$ to write, according to theorem \ref{teo:repRiesz}, equalities
+From the definitions above and rule \eqref{eq:directDeriv}, given an arbitrary direction $\vto{h}^*\in\pmb{\mathcal{U}}$, it is possible to develop the following:  
+\begin{align}\label{eq:derivRep}
+\fua{\tnr{\mathit{g}}'_{\vto{x}^*}}{\vto{h}}&=\Phi^{-1}\circ\fua{[\fua{\tnr{\psi}'}{\vto{x}^*}]}{\vto{h}^*}\nonumber\\
+&=\lim_{\alpha\to 0} \dfrac{\fua{\Phi^{-1}\circ\tnr{\psi}}{\vto{x}^*+\alpha\vto{h}^*}-\fua{\Phi^{-1}\circ\tnr{\psi}}{\vto{x}^*}}{\alpha}\nonumber\\
+&=\lim_{\alpha\to 0} \dfrac{\fua{\Phi^{-1}\circ\tnr{\psi}\circ\Phi}{\vto{x}+\alpha\vto{h}}-\fua{\Phi^{-1}\circ\tnr{\psi}\circ\Phi}{\vto{x}}}{\alpha}\nonumber\\
+&=\lim_{\alpha\to 0} \dfrac{\fua{\tnr{\mathit{g}}}{\vto{x}+\alpha\vto{h}}-\fua{\tnr{\mathit{g}}}{\vto{x}}}{\alpha}\,,
+\end{align}
+which results the rule for the directional derivative of the vector function in $\map{\tnr{\mathit{g}}}{\mathcal{U}}{U_{\mathbb{F}}}$ along $\vto{h}\in\mathcal{U}$, where $\mathcal{U}$ is constituted by the corresponding vectors of the elements of $\pmb{\mathcal{U}}$. Still in this context, when $U_{\cam{F}}=\cam{F}$, from mapping $\map{\mathit{g}}{\mathcal{U}}{{\cam{F}}}$ and the previous equality, we write that
 \begin{equation*}
-\fua{\dfrac{d\psi}{dx}}{x_0} = [\fua{\psi'}{x_0}](1) = 1\fua{\psi'}{x_0} = [\fua{\psi'}{x_0}\vun{u}]\cdot\vun{u}\,,
-\end{equation*}
-from which we define that $\fua{\nabla\psi}{x_0} = \fua{\psi'}{x_0}\vun{u}$ and then
+\fua{\mathit{g}'_{x^*}}{\beta} = \lim_{\alpha\to 0} \dfrac{\fua{\mathit{g}}{x+\alpha\beta}-\fua{\mathit{g}}{x}}{\alpha}\,,\forall\, \beta\in\cam{F}. 
+\end{equation*} 
+Considering $\beta=1$ and $\fua{\mathit{g}'}{x}:=\fua{\mathit{g}'_{x^*}}{1}$ the corresponding scalar of coscalar $\mathit{g}'_{x^*}$, 
+\begin{equation*}
+\fua{\mathit{g}'}{x} = \lim_{\alpha\to 0} \dfrac{\fua{\mathit{g}}{x+\alpha}-\fua{\mathit{g}}{x}}{\alpha}\,. 
+\end{equation*} 
+If $\cam{F}=\real$, given an arbitrary real number $x_0$, we have the classical geometric interpretation of scalar $\fua{\mathit{g}'}{x_0}$ as being the slope of the tangent line $\mathit{g_d}$ to the curve $\mathit{g}$ at $x_0$. Now, if $\{\vun{u}\}$ is the orthonormal basis of a one dimensional Hilbert space $U_\cam{F}$, according to theorem \ref{teo:repRiesz}, it is valid that
+$\fua{\mathit{g}'_{x^*}}{1} = 1\fua{\mathit{g}'}{x} = [\fua{\mathit{g}'}{x}\vun{u}]\cdot\vun{u}$, where vector  
 \begin{equation}
-\fua{\dfrac{d\psi}{dx}}{x_0} = \fua{\nabla\psi}{x_0}\cdot\vun{u}\,.
+\nabla\fua{\mathit{g}}{x}:=\fua{\mathit{g}'}{x}\vun{u}
 \end{equation}
+is called the gradient of $\mathit{g}$ at $x$.
 
 For the directional derivative of $\tnr{\psi}$ along $\tnr{H}\in\pmb{\mathcal{U}}$, the definition of gradient \eqref{eq:defGradient} and rule \eqref{eq:directDeriv} enable us to easily obtain that
 \begin{equation}
@@ -641,7 +639,7 @@ We recommend the reader to see the proof presented by \aut{Backus}\cite{backus_1
 % contorno regular
 %	http://mathworld.wolfram.com/RegularSurface.html
 %	http://noodle.med.yale.edu/seminar/shi/lecture2.pdf
-% contorno orient·vel
+% contorno orient√°vel
 %	http://mathworld.wolfram.com/OrientableSurface.html
 %	http://mathonline.wikidot.com/orientable-surfaces
 %	https://en.wikipedia.org/wiki/Normal_(geometry)
