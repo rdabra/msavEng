@@ -207,45 +207,53 @@ Moreover, the tensor function in $\map{\gloref{gradi}}{\pmb{\mathcal{U}}}{\ete{\
 \begin{equation}
 \fua{D\tnr{\psi}}{\tnr{X}} = \tnr{X}\odot_m\fua{\nabla\tnr{\psi}}{\tnr{X}}\,.
 \end{equation}
-Now, for the particular case of a differentiable unary tensor operator on $\pmb{\mathcal{U}}$, its gradient assigns to a $m$-th order tensor a $2m$-th order tensor. In this context, if $m=1$ then tensor space $\ete{\cam{F}}{U}=U^*_\cam{F}$, gradient $\fua{\nabla\tnr{\psi}}{\vto{x}_0^*}\in\ete{\cam{F}}{U^2}$, derivative $\fua{\tnr{\psi}'}{\vto{x}_0^*}\in\evlc{\cam{F}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{U}}$ and previous equality results
+Now, for the particular case of a differentiable unary tensor operator on $\pmb{\mathcal{U}}$, its gradient assigns to a $m$-th order tensor a $2m$-th order tensor. In this context, if $m=1$ then tensor space $\ete{\cam{R}}{U}=U^*_\cam{R}$, gradient $\fua{\nabla\tnr{\psi}}{\vto{x}_0^*}\in\ete{\cam{R}}{U^2}$, derivative $\fua{\tnr{\psi}'}{\vto{x}_0^*}\in\evlc{\cam{R}}{\pmb{\mathcal{U}}}{\ete{\cam{R}}{U}}$ and previous equality results
 \begin{equation}\label{eq:defGradient2}
 [\fua{\tnr{\psi}'}{\vto{x}_0^*}](\vto{x}^*) = \vto{x}^*\odot_1\fua{\nabla\tnr{\psi}}{\vto{x}_0^*}\,.
 \end{equation}
 According to corollary \ref{cor:soTens} and definition \eqref{eq:repFunc2}, since the derivative $\fua{\tnr{\psi}'}{\vto{x}_0^*}$ is the $1$-cotensor of the second order tensor $\tnr{G}_{\vto{x}_0^*}:=\fua{\nabla\tnr{\psi}}{\vto{x}_0^*}$, the linear bijection
  \begin{equation}\label{eq:repFuncGrad2}
- \tnr{\mathit{g}}'_{\vto{x}_0^*}:=\Phi^{-1}\circ\fua{\tnr{\psi}'}{\vto{x}_0^*}\circ\Phi
+ \tnr{\mathit{g}}'_{\vto{x}_0^*}:=\fua{\tnr{\Upsilon}}{\tnr{G}_{\vto{x}_0^*}}=\Phi^{-1}\circ\fua{\tnr{\psi}'}{\vto{x}_0^*}\circ\Phi
 \end{equation}
-is the representative function of $\tnr{G}_{\vto{x}_0^*}$ and then  
- \begin{equation}\label{eq:primiRepFuncGrad2}
+is the representative function of $\tnr{G}_{\vto{x}_0^*}$. Moreover, it is convenient to have a vetor function  
+\begin{equation}\label{eq:primiRepFuncGrad2}
  \tnr{\mathit{g}}:=\Phi^{-1}\circ\tnr{\psi}\circ\Phi\,.
 \end{equation}
-Considering equality \eqref{eq:secTens2Lin}, we also have for the present case that 
-\begin{equation}\label{eq:gradFuncRep}
-\fua{\tnr{G}_{\vto{x}_0^*}}{\vto{x},\vto{y}}=\vto{x}\cdot\fua{\tnr{\mathit{g}}'_{\vto{x}_0^*}}{\vto{y}^c}\,,\,\,\forall\, \vto{x}^*,\vto{y}^*\in\pmb{\mathcal{U}}\,.
+and a function
+\begin{equation}
+ \tnr{\nabla\mathit{g}}:=\nabla\tnr{\psi}\circ\Phi^{-1}\,,
 \end{equation}
-From the definitions above and rule \eqref{eq:directDeriv}, given an arbitrary direction $\vto{h}^*\in\pmb{\mathcal{U}}$, it is possible to develop the following:  
+called the gradient of $ \tnr{\mathit{g}}$, from which we conclude equality
+\begin{equation}
+\Phi\circ\fua{\tnr{\mathit{g}}'_{\vto{x}_0^*}}{\vto{x}} = \vto{x}^*\odot_1\fua{\tnr{\nabla\mathit{g}}}{\vto{x}_0}\,,
+\end{equation}
+according to \eqref{eq:defGradient2}. Now, considering equality \eqref{eq:secTens2Lin}, we also have for the present case that 
+\begin{equation}
+\fua{\tnr{G}_{\vto{x}_0^*}}{\vto{x},\vto{y}}=\vto{x}\cdot\fua{\tnr{\mathit{g}}'_{\vto{x}_0^*}}{\vto{y}}\,,\,\,\forall\, \vto{x},\vto{y}\in\mathcal{U}\,,
+\end{equation}
+where $\mathcal{U}$ is constituted by the corresponding vectors to the elements of $\pmb{\mathcal{U}}$. From the definitions above and rule \eqref{eq:directDeriv}, given an arbitrary direction $\vto{h}^*\in\pmb{\mathcal{U}}$, it is possible to develop the following:  
 \begin{align}\label{eq:derivRep}
 \fua{\tnr{\mathit{g}}'_{\vto{x}^*}}{\vto{h}}&=\Phi^{-1}\circ\fua{[\fua{\tnr{\psi}'}{\vto{x}^*}]}{\vto{h}^*}\nonumber\\
 &=\lim_{\alpha\to 0} \dfrac{\fua{\Phi^{-1}\circ\tnr{\psi}}{\vto{x}^*+\alpha\vto{h}^*}-\fua{\Phi^{-1}\circ\tnr{\psi}}{\vto{x}^*}}{\alpha}\nonumber\\
 &=\lim_{\alpha\to 0} \dfrac{\fua{\Phi^{-1}\circ\tnr{\psi}\circ\Phi}{\vto{x}+\alpha\vto{h}}-\fua{\Phi^{-1}\circ\tnr{\psi}\circ\Phi}{\vto{x}}}{\alpha}\nonumber\\
 &=\lim_{\alpha\to 0} \dfrac{\fua{\tnr{\mathit{g}}}{\vto{x}+\alpha\vto{h}}-\fua{\tnr{\mathit{g}}}{\vto{x}}}{\alpha}\,,
 \end{align}
-which results the rule for the directional derivative of the vector function in $\map{\tnr{\mathit{g}}}{\mathcal{U}}{U_{\mathbb{F}}}$ along $\vto{h}\in\mathcal{U}$, where $\mathcal{U}$ is constituted by the corresponding vectors of the elements of $\pmb{\mathcal{U}}$. Still in this context, when $U_{\cam{F}}=\cam{F}$, from mapping $\map{\mathit{g}}{\mathcal{U}}{{\cam{F}}}$ and the previous equality, we write that
+which results the rule of the directional derivative of the vector function in $\map{\tnr{\mathit{g}}}{\mathcal{U}}{U_\real}$ along $\vto{h}\in\mathcal{U}$. Still in this context, when $U_{\cam{R}}=\cam{R}$, from mapping $\map{\mathit{g}}{\mathcal{U}}{{\cam{R}}}$ and the previous equality, we write that
 \begin{equation*}
-\fua{\mathit{g}'_{x^*}}{\beta} = \lim_{\alpha\to 0} \dfrac{\fua{\mathit{g}}{x+\alpha\beta}-\fua{\mathit{g}}{x}}{\alpha}\,,\forall\, \beta\in\cam{F}. 
+\fua{\mathit{g}'_{x^*}}{\beta} = \lim_{\alpha\to 0} \dfrac{\fua{\mathit{g}}{x+\alpha\beta}-\fua{\mathit{g}}{x}}{\alpha}\,,\forall\, \beta\in\cam{R}. 
 \end{equation*} 
 Considering $\beta=1$ and $\fua{\mathit{g}'}{x}:=\fua{\mathit{g}'_{x^*}}{1}$ the corresponding scalar of coscalar $\mathit{g}'_{x^*}$, 
 \begin{equation*}
 \fua{\mathit{g}'}{x} = \lim_{\alpha\to 0} \dfrac{\fua{\mathit{g}}{x+\alpha}-\fua{\mathit{g}}{x}}{\alpha}\,. 
 \end{equation*} 
-If $\cam{F}=\real$, given an arbitrary real number $x_0$, we have the classical geometric interpretation of scalar $\fua{\mathit{g}'}{x_0}$ as being the slope of the tangent line $\mathit{g_d}$ to the curve $\mathit{g}$ at $x_0$. Now, if $\{\vun{u}\}$ is the orthonormal basis of a one dimensional Hilbert space $U_\cam{F}$, according to theorem \ref{teo:repRiesz}, it is valid that
+Given an arbitrary real number $x_0$, we have the classical geometric interpretation of scalar $\fua{\mathit{g}'}{x_0}$ as being the slope of the tangent line $\mathit{g_d}$ to the curve $\mathit{g}$ at $x_0$. Now, if $\{\vun{u}\}$ is the orthonormal basis of a one dimensional Hilbert space $U_\cam{R}$, according to theorem \ref{teo:repRiesz}, it is valid that
 $\fua{\mathit{g}'_{x^*}}{1} = 1\fua{\mathit{g}'}{x} = [\fua{\mathit{g}'}{x}\vun{u}]\cdot\vun{u}$, where vector  
 \begin{equation}
 \nabla\fua{\mathit{g}}{x}:=\fua{\mathit{g}'}{x}\vun{u}
 \end{equation}
 is called the gradient of $\mathit{g}$ at $x$.
 
-For the directional derivative of $\tnr{\psi}$ along $\tnr{H}\in\pmb{\mathcal{U}}$, the definition of gradient \eqref{eq:defGradient} and rule \eqref{eq:directDeriv} enable us to easily obtain that
+Now considering the generic conditions of definition \eqref{eq:defGradient}, from the directional derivative of $\tnr{\psi}$ along $\tnr{H}\in\pmb{\mathcal{U}}$ and rule \eqref{eq:directDeriv}, it is easy to obtain that
 \begin{equation}
 \tnr{H}\odot_m\fua{\nabla\tnr{\psi}}{\tnr{X}}=\lim_{\alpha\to 0} \dfrac{\fua{\tnr{\psi}}{\tnr{X}+\alpha\tnr{H}}-\fua{\tnr{\psi}}{\tnr{X}}}{\alpha}\,.
 \end{equation}
@@ -296,6 +304,7 @@ which proves item iii. From \eqref{eq:crossRule}, development
 proves item iv.
 \end{proof}}
 
+VER COMO FICA DAQUI PARA BAIXO FUNCAO VETORIAL E FUNCAO ESCALAR
 
 Still in the context of Hilbert spaces, we define from the concept of gradient three important and very useful tensor functions, namely divergence, Laplacian and curl. Considering the mapping $\map{\tnr{\varphi}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{U^{\times m}\times V^{\times s}}}$ where function $\tnr{\varphi}$ is differentiable on its domain, the function in $\map{\gloref{diverg}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}$ is called the \textsb{divergence}\index{divergence} of $\tnr{\varphi}$ if its rule is described by
 \begin{equation}\label{eq:divergence}
