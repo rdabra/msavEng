@@ -89,10 +89,6 @@ From previous conditions, it is possible to obtain the following important prope
 \begin{equation}
 \fua{[\fua{\tnr{\psi}'}{\tnr{X}}]}{\tnr{H}}=\fua{\tnr{\psi}_1}{\tnr{X}}\otimes\fua{[\fua{\tnr{\psi}_2'}{\tnr{X}}]}{\tnr{H}} + \fua{[\fua{\tnr{\psi}_1'}{\tnr{X}}]}{\tnr{H}} \otimes \fua{\tnr{\psi}_2}{\tnr{X}}\,;
 \end{equation}
-	\item[viii.] If $\fua{\tnr{\psi}}{\vto{x}}=\fua{\tnr{\psi}_1}{\vto{x}}\times\fua{\tnr{\psi}_2}{\vto{x}}$, where $U_\real$ in mappings  $\map{\tnr{\psi}_1}{\pmb{\mathcal{U}}}{U_\cam{R}}$ and $\map{\tnr{\psi}_2}{\pmb{\mathcal{U}}}{U_\cam{R}}$ defines a three dimensional oriented Euclidean space, then
-\begin{equation}\label{eq:crossRule}
-\fua{[\fua{\tnr{\psi}'}{\vto{x}}]}{\vto{h}} = \fua{\tnr{\psi}_1}{\vto{x}}\times\fua{[\fua{\tnr{\psi}_2'}{\vto{x}}]}{\vto{h}} + \fua{[\fua{\tnr{\psi}_1'}{\vto{x}}]}{\vto{h}} \times \fua{\tnr{\psi}_2}{\vto{x}}\,.
-\end{equation}
 \end{itemize}
 
 {\footnotesize
@@ -125,16 +121,7 @@ by $\fua{\tnr{\psi}_1}{\tnr{X}+\alpha\tnr{H}}\odot_{q}\fua{\tnr{\psi}_2}{\tnr{X}
 &= \fua{\tnr{\psi}_1}{\tnr{X}}\odot_{q}\lim_{\alpha\to 0}1/\alpha[\fua{\tnr{\psi}_2}{\tnr{X}+\alpha\tnr{H}}-\fua{\tnr{\psi}_2}{\tnr{X}}] +\\
 & \qquad\qquad\qquad+\lim_{\alpha\to 0}1/\alpha[\fua{\tnr{\psi}_1}{\tnr{X}+\alpha\tnr{H}}-\fua{\tnr{\psi}_1}{\tnr{X}}]\odot_q\fua{\tnr{\psi}_2}{\tnr{X}}\,.
 \end{align*}
-Since item vi is a corollary of the product rule, its verification is trivial. Item vii is verified by a similar procedure we used for the product rule. Considering $(U_\real,\tnr{A}_B)$ a three dimensional oriented Euclidean space, we prove the item viii first by the development
-\begin{align*}
-\fua{[\fua{\tnr{\psi}'}{\vto{x}}]}{\vto{h}}&=\lim_{\alpha\to 0}1/\alpha\{\tnr{A}_B\odot_{2}[\fua{\tnr{\psi}_1}{\vto{x}+\alpha\vto{h}}\otimes\fua{\tnr{\psi}_2}{\vto{x}+\alpha\vto{h}}]-\tnr{A}_B\odot_{2}[\fua{\tnr{\psi}_1}{\vto{x}}\otimes\fua{\tnr{\psi}_2}{\vto{x}}]\}\\
-&=\tnr{A}_B\odot_{2}\lim_{\alpha\to 0}1/\alpha\{\fua{\tnr{\psi}_1}{\vto{x}+\alpha\vto{h}}\otimes\fua{\tnr{\psi}_2}{\vto{x}+\alpha\vto{h}}-\fua{\tnr{\psi}_1}{\vto{x}}\otimes\fua{\tnr{\psi}_2}{\vto{x}}\}
-\end{align*}
-and then by adding and subtracting the limit on the right hand side by $\fua{\tnr{\psi}_1}{\vto{x}+\alpha\vto{h}}\otimes\fua{\tnr{\psi}_2}{\vto{x}}$, as we similarly did for the product rule. The result is
-\begin{equation*}
-\fua{[\fua{\tnr{\psi}'}{\vto{x}}]}{\vto{h}}= \tnr{A}_B\odot_{2}[\fua{\tnr{\psi}_1}{\vto{x}}\otimes\fua{[\fua{\tnr{\psi}_2'}{\vto{x}}]}{\vto{h}}]+\tnr{A}_B\odot_{2}[ \fua{[\fua{\tnr{\psi}_1'}{\vto{x}}]}{\vto{h}} \otimes \fua{\tnr{\psi}_2}{\vto{x}}]\,,
-\end{equation*}
-from which we easily verify the item.
+Since item vi is a corollary of the product rule, its verification is trivial. Item vii is verified by a similar procedure we used for the product rule. 
 \end{proof}}
 
 Considering a mapping $\map{\tnr{\varphi}}{\pmb{\mathcal{U}}_1\times\cdots\times\pmb{\mathcal{U}}_q}{\ete{\cam{F}}{V^{\times s}}}$, where $\pmb{\mathcal{U}}_i\subset\ete{\cam{F}}{U^{\times m}}$ is open and the values of $\tnr{\varphi}$ are represented by the multivariate notation $\fua{\tnr{\varphi}}{\tnr{X}_1,\cdots,\tnr{X}_q}$, if there is a tangent function $\tnr{\varphi_\mathit{d}}$ to $\tnr{\varphi}$ at $(\tnr{Y}_1,\cdots,\tnr{Y}_q)\in\pmb{\mathcal{U}}_1\times\cdots\times\pmb{\mathcal{U}}_q$ where
@@ -204,7 +191,7 @@ The concept of gradient we shall detail in this section is restricted to the con
 [\fua{\tnr{\psi}'}{\tnr{X}_0}](\tnr{X}) = \tnr{X}\odot_m\fua{\nabla\tnr{\psi}}{\tnr{X}_0}\,.
 \end{equation}
 Moreover, the tensor function in $\map{\gloref{gradi}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{U^{\times m}\times V^{\times s}}}$, called the gradient of $\tnr{\psi}$, assigns to a tensor of order $m$ a tensor of order $m+s$. If our interest is to inspect function values only at $\tnr{X}_0=\tnr{X}$, previous equality results
-\begin{equation}
+\begin{equation}\label{eq:derivSameArg}
 \fua{D\tnr{\psi}}{\tnr{X}} = \tnr{X}\odot_m\fua{\nabla\tnr{\psi}}{\tnr{X}}\,.
 \end{equation}
 Now, for the particular case of a differentiable unary tensor operator on $\pmb{\mathcal{U}}$, its gradient assigns to a $m$-th order tensor a $2m$-th order tensor. In this context, if $m=1$ then tensor space $\ete{\cam{R}}{U}=U^*_\cam{R}$, gradient $\fua{\nabla\tnr{\psi}}{\vto{x}_0^*}\in\ete{\cam{R}}{U^2}$, derivative $\fua{\tnr{\psi}'}{\vto{x}_0^*}\in\evlc{\cam{R}}{\pmb{\mathcal{U}}}{\ete{\cam{R}}{U}}$ and previous equality results
@@ -215,7 +202,7 @@ According to corollary \ref{cor:soTens} and definition \eqref{eq:repFunc2}, sinc
  \begin{equation}\label{eq:repFuncGrad2}
  \tnr{\mathit{g}}'_{\vto{x}_0^*}:=\fua{\tnr{\Upsilon}}{\tnr{G}_{\vto{x}_0^*}}=\Phi^{-1}\circ\fua{\tnr{\psi}'}{\vto{x}_0^*}\circ\Phi
 \end{equation}
-is the representative function of $\tnr{G}_{\vto{x}_0^*}$. Moreover, it is convenient to have a vetor function  
+is the representative function of $\tnr{G}_{\vto{x}_0^*}$. Moreover, it is convenient to have a vector function  
 \begin{equation}\label{eq:primiRepFuncGrad2}
  \tnr{\mathit{g}}:=\Phi^{-1}\circ\tnr{\psi}\circ\Phi\,.
 \end{equation}
@@ -231,14 +218,18 @@ according to \eqref{eq:defGradient2}. Now, considering equality \eqref{eq:secTen
 \begin{equation}
 \fua{\tnr{G}_{\vto{x}_0^*}}{\vto{x},\vto{y}}=\vto{x}\cdot\fua{\tnr{\mathit{g}}'_{\vto{x}_0^*}}{\vto{y}}\,,\,\,\forall\, \vto{x},\vto{y}\in\mathcal{U}\,,
 \end{equation}
-where $\mathcal{U}$ is constituted by the corresponding vectors to the elements of $\pmb{\mathcal{U}}$. From the definitions above and rule \eqref{eq:directDeriv}, given an arbitrary direction $\vto{h}^*\in\pmb{\mathcal{U}}$, it is possible to develop the following:  
+where $\mathcal{U}$ is constituted by the corresponding vectors to the elements of $\pmb{\mathcal{U}}$. Considering rule \eqref{eq:directDeriv}, from the definitions \eqref{eq:repFuncGrad2} and \eqref{eq:primiRepFuncGrad2}, it is possible to develop the following for an arbitrary direction $\vto{h}^*\in\pmb{\mathcal{U}}$:  
 \begin{align}\label{eq:derivRep}
 \fua{\tnr{\mathit{g}}'_{\vto{x}^*}}{\vto{h}}&=\Phi^{-1}\circ\fua{[\fua{\tnr{\psi}'}{\vto{x}^*}]}{\vto{h}^*}\nonumber\\
 &=\lim_{\alpha\to 0} \dfrac{\fua{\Phi^{-1}\circ\tnr{\psi}}{\vto{x}^*+\alpha\vto{h}^*}-\fua{\Phi^{-1}\circ\tnr{\psi}}{\vto{x}^*}}{\alpha}\nonumber\\
 &=\lim_{\alpha\to 0} \dfrac{\fua{\Phi^{-1}\circ\tnr{\psi}\circ\Phi}{\vto{x}+\alpha\vto{h}}-\fua{\Phi^{-1}\circ\tnr{\psi}\circ\Phi}{\vto{x}}}{\alpha}\nonumber\\
 &=\lim_{\alpha\to 0} \dfrac{\fua{\tnr{\mathit{g}}}{\vto{x}+\alpha\vto{h}}-\fua{\tnr{\mathit{g}}}{\vto{x}}}{\alpha}\,,
 \end{align}
-which results the rule of the directional derivative of the vector function in $\map{\tnr{\mathit{g}}}{\mathcal{U}}{U_\real}$ along $\vto{h}\in\mathcal{U}$. Still in this context, when $U_{\cam{R}}=\cam{R}$, from mapping $\map{\mathit{g}}{\mathcal{U}}{{\cam{R}}}$ and the previous equality, we write that
+which results the rule of the directional derivative of the vector function in $\map{\tnr{\mathit{g}}}{\mathcal{U}}{U_\real}$ along $\vto{h}\in\mathcal{U}$. From this result, \emph{the derivative $\tnr{\mathit{g}}'_{\vto{x}^*}$, as a linear vector function, inherits all the previous and forthcoming definitions of a linear tensor function $\fua{\tnr{\psi}'}{\tnr{X}}$}. For example, by \eqref{eq:derivSameArg} and \eqref{eq:defGradient2}, we can write that
+\begin{equation}\label{eq:derivSameArg2}
+\fua{D\tnr{\mathit{g}}}{\vto{x}} := \fua{\tnr{\mathit{g}}'_{\vto{x}^*}}{\vto{x}}\,.
+\end{equation}
+Still in the context of vector functions, when $U_{\cam{R}}=\cam{R}$, from mapping $\map{\mathit{g}}{\mathcal{U}}{{\cam{R}}}$ and the previous equality, we write that
 \begin{equation*}
 \fua{\mathit{g}'_{x^*}}{\beta} = \lim_{\alpha\to 0} \dfrac{\fua{\mathit{g}}{x+\alpha\beta}-\fua{\mathit{g}}{x}}{\alpha}\,,\forall\, \beta\in\cam{R}. 
 \end{equation*} 
@@ -269,10 +260,15 @@ From the properties of derivatives presented on previous section, it is then pos
 	\begin{equation}\label{eq:prop2Grad}
 	\fua{\nabla\tnr{\psi}}{\tnr{X}} = \fua{\nabla\tnr{\psi}_1}{\tnr{X}}\odot_s\fua{\tnr{\psi}_2}{\tnr{X}}+\fua{\nabla\tnr{\psi}_2}{\tnr{X}}\odot_s\fua{\tnr{\psi}_1}{\tnr{X}}\,;
 	\end{equation}
-	\item[iv.] If $\fua{\tnr{\psi}}{\vto{x}}=\fua{\tnr{\psi}_1}{\vto{x}}\times\fua{\tnr{\psi}_2}{\vto{x}}$, where $U_\real$ in mappings  $\map{\tnr{\psi}_1}{\pmb{\mathcal{U}}}{U_\cam{R}}$ and $\map{\tnr{\psi}_2}{\pmb{\mathcal{U}}}{U_\cam{R}}$ is properly defined for enabling cross products, then
+	\item[iv.] If $\fua{\tnr{\mathit{g}}}{\vto{x}}=\fua{\tnr{\mathit{g}}_1}{\vto{x}}\times\fua{\tnr{\mathit{g}}_2}{\vto{x}}$, where $U_\real$ in mappings  $\map{\tnr{\mathit{g}}_1}{{\mathcal{U}}}{U_\cam{R}}$ and $\map{\tnr{\mathit{g}}_2}{{\mathcal{U}}}{U_\cam{R}}$ is properly defined for enabling cross products, 
+\begin{equation}\label{eq:crossRule}
+\fua{[\fua{\tnr{\mathit{g}}'}{\vto{x}}]}{\vto{h}} = \fua{\tnr{\mathit{g}}_1}{\vto{x}}\times\fua{[\fua{\tnr{\mathit{g}}_2'}{\vto{x}}]}{\vto{h}} + \fua{[\fua{\tnr{\mathit{g}}_1'}{\vto{x}}]}{\vto{h}} \times \fua{\tnr{\mathit{g}}_2}{\vto{x}}\,,\,\forall \vto{h}\in\mathcal{U}\,,
+\end{equation}
+and then 
 	\begin{equation}\label{eq:prop3Grad}
-	\fua{\nabla\tnr{\psi}}{\vto{x}} = \fua{\nabla\tnr{\psi}_1}{\vto{x}}\times\fua{\tnr{\psi}_2}{\vto{x}}-\fua{\nabla\tnr{\psi}_2}{\vto{x}}\times\fua{\tnr{\psi}_1}{\vto{x}}\,;
+	\fua{\nabla\tnr{\mathit{g}}}{\vto{x}} = \fua{\nabla\tnr{\mathit{g}}_1}{\vto{x}}\times\fua{\tnr{\mathit{g}}_2}{\vto{x}}-\fua{\nabla\tnr{\mathit{g}}_2}{\vto{x}}\times\fua{\tnr{\mathit{g}}_1}{\vto{x}}\,.
 	\end{equation}
+
 \end{itemize}
 
 {\footnotesize
@@ -296,12 +292,21 @@ Now, from the Leibniz's rule we have
 \tnr{H}\odot_m\fua{[\nabla\tnr{\psi}]}{\tnr{X}}&=\tnr{H}\odot_m\fua{[\nabla\tnr{\psi}_1]}{\tnr{X}}\odot_s\fua{\tnr{\psi}_2}{\tnr{X}}+\tnr{H}\odot_m\fua{[\nabla\tnr{\psi}_2]}{\tnr{X}}\odot_s\fua{\tnr{\psi}_1}{\tnr{X}}\\
 &=\tnr{H}\odot_m\{\fua{[\nabla\tnr{\psi}_1]}{\tnr{X}}\odot_s\fua{\tnr{\psi}_2}{\tnr{X}}+\fua{[\nabla\tnr{\psi}_2]}{\tnr{X}}\odot_s\fua{\tnr{\psi}_1}{\tnr{X}}\}\,,
 \end{align*}
-which proves item iii. From \eqref{eq:crossRule}, development
+which proves item iii. Considering $(U_\real,\tnr{A}_B)$ a three dimensional oriented Euclidean space, we prove the equalities of item iv first by the development
 \begin{align*}
-\fua{[\fua{\tnr{\psi}'}{\vto{x}}]}{\vto{h}} &= \fua{[\fua{\tnr{\psi}_1'}{\vto{x}}]}{\vto{h}} \times \fua{\tnr{\psi}_2}{\vto{x}}-\fua{[\fua{\tnr{\psi}_2'}{\vto{x}}]}{\vto{h}}\times\fua{\tnr{\psi}_1}{\vto{x}}\\
-\vto{h}\odot_{1}\fua{\nabla\tnr{\psi}}{\vto{x}}&=\vto{h}\odot_{1}[\fua{\nabla\tnr{\psi}_1}{\vto{x}}\times\fua{\tnr{\psi}_2}{\vto{x}}-\fua{\nabla\tnr{\psi}_2}{\vto{x}}\times\fua{\tnr{\psi}_1}{\vto{x}}]\,,
+\fua{[\fua{\tnr{\mathit{g}}'}{\vto{x}}]}{\vto{h}}&=\lim_{\alpha\to 0}1/\alpha\{\tnr{A}_B\odot_{2}[\fua{\tnr{\mathit{g}}_1}{\vto{x}+\alpha\vto{h}}\otimes\fua{\tnr{\mathit{g}}_2}{\vto{x}+\alpha\vto{h}}]-\tnr{A}_B\odot_{2}[\fua{\tnr{\mathit{g}}_1}{\vto{x}}\otimes\fua{\tnr{\mathit{g}}_2}{\vto{x}}]\}\\
+&=\tnr{A}_B\odot_{2}\lim_{\alpha\to 0}1/\alpha\{\fua{\tnr{\mathit{g}}_1}{\vto{x}+\alpha\vto{h}}\otimes\fua{\tnr{\mathit{g}}_2}{\vto{x}+\alpha\vto{h}}-\fua{\tnr{\mathit{g}}_1}{\vto{x}}\otimes\fua{\tnr{\mathit{g}}_2}{\vto{x}}\}
 \end{align*}
-proves item iv.
+and then by adding and subtracting the limit on the right hand side by $\fua{\tnr{\mathit{g}}_1}{\vto{x}+\alpha\vto{h}}\otimes\fua{\tnr{\mathit{g}}_2}{\vto{x}}$ we obtain
+\begin{equation*}
+\fua{[\fua{\tnr{\mathit{g}}'}{\vto{x}}]}{\vto{h}}= \tnr{A}_B\odot_{2}[\fua{\tnr{\mathit{g}}_1}{\vto{x}}\otimes\fua{[\fua{\tnr{\mathit{g}}_2'}{\vto{x}}]}{\vto{h}}]+\tnr{A}_B\odot_{2}[ \fua{[\fua{\tnr{\mathit{g}}_1'}{\vto{x}}]}{\vto{h}} \otimes \fua{\tnr{\mathit{g}}_2}{\vto{x}}]\,,
+\end{equation*}
+from which we easily verify the first equality of iv. From this same equality, development
+\begin{align*}
+\fua{[\fua{\tnr{\mathit{g}}'}{\vto{x}}]}{\vto{h}} &= \fua{[\fua{\tnr{\mathit{g}}_1'}{\vto{x}}]}{\vto{h}} \times \fua{\tnr{\mathit{g}}_2}{\vto{x}}-\fua{[\fua{\tnr{\mathit{g}}_2'}{\vto{x}}]}{\vto{h}}\times\fua{\tnr{\mathit{g}}_1}{\vto{x}}\\
+\vto{h}\odot_{1}\fua{\nabla\tnr{\mathit{g}}}{\vto{x}}&=\vto{h}\odot_{1}[\fua{\nabla\tnr{\mathit{g}}_1}{\vto{x}}\times\fua{\tnr{\mathit{g}}_2}{\vto{x}}-\fua{\nabla\tnr{\mathit{g}}_2}{\vto{x}}\times\fua{\tnr{\mathit{g}}_1}{\vto{x}}]
+\end{align*}
+proves the second equality. 
 \end{proof}}
 
 VER COMO FICA DAQUI PARA BAIXO FUNCAO VETORIAL E FUNCAO ESCALAR
