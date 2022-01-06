@@ -222,12 +222,12 @@ according to \eqref{eq:genInnerProdVec} and \eqref{eq:defGradient2}. Now, consid
 \end{equation}
 where $\mathcal{U}$ is constituted by the corresponding vectors to the elements of $\pmb{\mathcal{U}}$. Considering rule \eqref{eq:directDeriv}, from the definitions \eqref{eq:repFuncGrad2} and \eqref{eq:primiRepFuncGrad2}, it is possible to develop the following for an arbitrary direction $\vto{h}^*\in\pmb{\mathcal{U}}$:  
 \begin{align}\label{eq:derivRep}
-\fua{\tnr{\hat\psi}'_{\vto{x}^*}}{\vto{h}}&=\Phi^{-1}\circ\fua{[\fua{\tnr{\psi}'}{\vto{x}^*}]}{\vto{h}^*}\nonumber\\
+\fua{\tnr{\hat\psi}'_{\vto{x}}}{\vto{h}}&=\Phi^{-1}\circ\fua{[\fua{\tnr{\psi}'}{\vto{x}^*}]}{\vto{h}^*}\nonumber\\
 &=\lim_{\alpha\to 0} \dfrac{\fua{\Phi^{-1}\circ\tnr{\psi}}{\vto{x}^*+\alpha\vto{h}^*}-\fua{\Phi^{-1}\circ\tnr{\psi}}{\vto{x}^*}}{\alpha}\nonumber\\
 &=\lim_{\alpha\to 0} \dfrac{\fua{\Phi^{-1}\circ\tnr{\psi}\circ\Phi}{\vto{x}+\alpha\vto{h}}-\fua{\Phi^{-1}\circ\tnr{\psi}\circ\Phi}{\vto{x}}}{\alpha}\nonumber\\
 &=\lim_{\alpha\to 0} \dfrac{\fua{\tnr{\hat\psi}}{\vto{x}+\alpha\vto{h}}-\fua{\tnr{\hat\psi}}{\vto{x}}}{\alpha}\,,
 \end{align}
-which results the rule of the directional derivative of the vector function in $\map{\tnr{\hat\psi}}{\mathcal{U}}{V_\cam{F}}$ along $\vto{h}\in\mathcal{U}$. From this result, \emph{the derivative $\tnr{\hat\psi}'_{\vto{x}^*}$, as a linear vector function, inherits all the previous and forthcoming definitions of a linear tensor function $\fua{\tnr{\psi}'}{\tnr{X}}$}. For example, by \eqref{eq:derivSameArg} and \eqref{eq:defGradient2}, we can write that
+which results the rule of the directional derivative of the vector function in $\map{\tnr{\hat\psi}}{\mathcal{U}}{V_\cam{F}}$ along $\vto{h}\in\mathcal{U}$. From this result, \emph{the derivative $\tnr{\hat\psi}'_{\vto{x}}$, as a linear vector function, inherits all the previous and forthcoming definitions of the linear tensor function $\fua{\tnr{\psi}'}{\vto{x}^*}$}. For example, by \eqref{eq:derivSameArg} and \eqref{eq:defGradient2}, we can write that vector
 \begin{equation}\label{eq:derivSameArg2}
 \fua{D\tnr{\hat\psi}}{\vto{x}} := \fua{\tnr{\hat\psi}'_{\vto{x}}}{\vto{x}}\,.
 \end{equation}
@@ -268,7 +268,7 @@ From the properties of derivatives presented on previous section, it is then pos
 \end{equation}
 and then 
 	\begin{equation}\label{eq:prop3Grad}
-	\fua{\nabla\tnr{\hat\psi}}{\vto{x}} = \fua{\nabla\tnr{\hat\psi}_1}{\vto{x}}\times\fua{\tnr{\hat\psi}_2}{\vto{x}}-\fua{\nabla\tnr{\hat\psi}_2}{\vto{x}}\times\fua{\tnr{\hat\psi}_1}{\vto{x}}\,.
+	\fua{D\tnr{\hat\psi}}{\vto{x}} = \fua{\tnr{\hat\psi}_1}{\vto{x}}\times\fua{D\tnr{\hat\psi}_2}{\vto{x}}+\fua{D\tnr{\hat\psi}_1}{\vto{x}}\times\fua{\tnr{\hat\psi}_2}{\vto{x}}\,.
 	\end{equation}
 \end{itemize}
 
@@ -298,16 +298,11 @@ which proves item iii. Considering $(U_\real,\tnr{A}_B)$ a three dimensional ori
 \fua{\tnr{\hat\psi}'_{\vto{x}}}{\vto{h}}&=\lim_{\alpha\to 0}1/\alpha\{\tnr{A}_B\odot_{2}[\fua{\tnr{\hat\psi}_1}{\vto{x}+\alpha\vto{h}}\otimes\fua{\tnr{\hat\psi}_2}{\vto{x}+\alpha\vto{h}}]-\tnr{A}_B\odot_{2}[\fua{\tnr{\hat\psi}_1}{\vto{x}}\otimes\fua{\tnr{\hat\psi}_2}{\vto{x}}]\}\\
 &=\tnr{A}_B\odot_{2}\lim_{\alpha\to 0}1/\alpha\{\fua{\tnr{\hat\psi}_1}{\vto{x}+\alpha\vto{h}}\otimes\fua{\tnr{\hat\psi}_2}{\vto{x}+\alpha\vto{h}}-\fua{\tnr{\hat\psi}_1}{\vto{x}}\otimes\fua{\tnr{\hat\psi}_2}{\vto{x}}\}
 \end{align*}
-and then by adding and subtracting the limit on the right hand side by $\fua{\tnr{\hat\psi}_1}{\vto{x}+\alpha\vto{h}}\otimes\fua{\tnr{\hat\psi}_2}{\vto{x}}$ we obtain
+and then by adding and subtracting the limit on the right hand side by $\tnr{A}_B\odot_{2}[\fua{\tnr{\hat\psi}_1}{\vto{x}+\alpha\vto{h}}\otimes\fua{\tnr{\hat\psi}_2}{\vto{x}}]$ we obtain
 \begin{equation*}
 \fua{\tnr{\hat\psi}'_{\vto{x}}}{\vto{h}}= \tnr{A}_B\odot_{2}[\fua{\tnr{\hat\psi}_1}{\vto{x}}\otimes\fua{{\tnr{\hat\psi}_2'}_{\vto{x}}}{\vto{h}}]+\tnr{A}_B\odot_{2}\fua{{\tnr{\hat\psi}_1'}_{\vto{x}}}{\vto{h}} \otimes \fua{\tnr{\hat\psi}_2}{\vto{x}}]\,,
 \end{equation*}
-from which we easily verify the first equality of iv. From this same equality and \eqref{eq:derivVecGradVec}, development
-\begin{align*}
-\fua{\tnr{\hat\psi}'_{\vto{x}}}{\vto{h}} &= \fua{{\tnr{\hat\psi}_1'}_{\vto{x}}}{\vto{h}} \times \fua{\tnr{\hat\psi}_2}{\vto{x}}-\fua{{\tnr{\hat\psi}_2'}_{\vto{x}}}{\vto{h}}\times\fua{\tnr{\hat\psi}_1}{\vto{x}}\\
-\Phi^{-1}\circ[\vto{h}^*\odot_{1}\fua{\nabla\tnr{\hat\psi}}{\vto{x}}]&=\Phi^{-1}\circ\{\vto{h}^*\odot_{1}[\fua{\nabla\tnr{\hat\psi}_1}{\vto{x}}\times\fua{\tnr{\hat\psi}_2}{\vto{x}}-\fua{\nabla\tnr{\hat\psi}_2}{\vto{x}}\times\fua{\tnr{\hat\psi}_1}{\vto{x}}]\}
-\end{align*}
-proves the second equality. 
+from which we easily verify the first equality of iv. By definition \eqref{eq:derivSameArg2}, proof of the second equality is straightforward. 
 \end{proof}}
 
 Still in the context of Hilbert spaces, we define from the concept of gradient three important and very useful tensor functions, namely divergence, Laplacian and curl. Considering the mapping $\map{\tnr{\varphi}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{U^{\times m}\times V^{\times s}}}$ where function $\tnr{\varphi}$ is differentiable on its domain, the function in $\map{\gloref{diverg}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}$ is called the \textsb{divergence}\index{divergence} of $\tnr{\varphi}$ if its rule is described by
@@ -322,11 +317,11 @@ From this concept of divergence and from mapping $\map{\nabla\tnr{\psi}}{\pmb{\m
 called the \textsb{Laplacian}\index{Laplacian} of $\tnr{\psi}$, where $\fua{\gloref{laplac}}{\tnr{X}}\in \ete{\cam{F}}{V^{\times s}}$. If $\tnr{\varphi}$ is a unary tensor operator on $\pmb{\mathcal{U}}$, that is $\map{\tnr{\varphi}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{U^{m}}}$, then its divergence is a scalar function for all $m>0$. 
 
 
-Now, let $(U_\real,\tnr{A}_B)$ be a three dimensional oriented Euclidean space, $V_\real$ another Euclidean space and $\map{\tnr{\varphi}}{\pmb{\mathcal{U}}}{\ete{\cam{R}}{U\times V}}$ a mapping where $\pmb{\mathcal{U}}$ is an open subset of $U_\real^*$. In this context, considering an open set $\mathcal{U}\subset U_\real$, it is possible to define a linear mapping  $\map{\gloref{curl}}{{\mathcal{U}}}{\ete{\cam{R}}{U\times V}}$, whose function is called the \textsb{curl}\index{curl} of $\tnr{\varphi}$, with rule
+Now, let $(U_\real,\tnr{A}_B)$ be a three dimensional oriented Euclidean space, $V_\real$ another Euclidean space and $\map{\tnr{{\varphi}}}{{\tnr{\mathcal{U}}}}{\ete{\cam{R}}{U\times V}}$ a mapping where $\tnr{\mathcal{U}}$ is an open subset of $U_\real^*$. In this context, considering an open set $\tnr{\mathcal{U}}\subset U_\real^*$, it is possible to define a linear mapping  $\map{\gloref{curl}}{{\tnr{\mathcal{U}}}}{\ete{\cam{R}}{U\times V}}$, whose function is called the \textsb{curl}\index{curl} of $\tnr{\varphi}$, with rule
 \begin{equation}\label{eq:curl}
-\fua{\crl{\tnr{\varphi}}}{\vto{x}}=\tnr{A}_B\odot_{2}\fua{\nabla\tnr{\hat{\varphi}}}{\vto{x}}\,,
+\fua{\crl{\tnr{{\varphi}}}}{\vto{x}^*}=\tnr{A}_B\odot_{2}\fua{\nabla\tnr{{\varphi}}}{\vto{x}^*}\,,
 \end{equation}
-where tensor $\fua{\nabla\tnr{\hat{\varphi}}}{\vto{x}}\in\ete{\cam{R}}{U^2\times V}$. Similarly to the case of gradients, there are some notable properties of divergence and curl, presented as follows, considering the appropriate previous conditions.
+where tensor $\fua{\nabla\tnr{{\varphi}}}{\vto{x}^*}\in\ete{\cam{R}}{U^2\times V}$. Similarly to the case of gradients, there are some notable properties of divergence and curl, presented as follows, where the appropriate previous conditions are implicit.
 \begin{itemize}
 \setlength\itemsep{.1em}
 \item[i.] If $\tnr{\varphi}=\tnr{\varphi}_1+\tnr{\varphi}_2$ then $\dvt{\tnr{\varphi}}=\dvt{\tnr{\varphi}_1}+\dvt{\tnr{\varphi}_2}$ and $\crl{\tnr{\varphi}}=\crl{\tnr{\varphi}_1}+\crl{\tnr{\varphi}_2}\,$;
@@ -334,32 +329,27 @@ where tensor $\fua{\nabla\tnr{\hat{\varphi}}}{\vto{x}}\in\ete{\cam{R}}{U^2\times
 \begin{equation}
 \fua{\dvt{\tnr{\varphi}}}{\tnr{X}} =\fua{\dvt{\tnr{\varphi}_2}}{\tnr{X}}\odot_{r}\fua{\nabla\tnr{\varphi}_1\circ\tnr{\varphi}_2}{\tnr{X}}\,,
 \end{equation}	
-and for $r=m=s=1$,
+\item[iii.] If $\tnr{\varphi}=\tnr{\varphi}_1\circ\tnr{\varphi}_2$, where mappings $\map{\tnr{\varphi}_1}{\ete{\cam{F}}{U\times W}}{\ete{\cam{F}}{U\times V}}$ and $\map{\tnr{\varphi}_2}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{U\times W}}$ are defined, then
 \begin{equation}
-\fua{\crl{\tnr{\varphi}}}{\vto{x}} = \fua{\crl{\tnr{\varphi}_2}}{\vto{x}}\odot_{1}\fua{\nabla\tnr{\hat{\varphi}}_1\circ\tnr{\hat{\varphi}}_2}{\vto{x}}\,;
+\fua{\crl{\tnr{\varphi}}}{\vto{x}^*} = \fua{\crl{\tnr{\varphi}_2}}{\vto{x}^*}\odot_{2}\fua{\nabla\tnr{{\varphi}}_1\circ\tnr{\varphi}_2}{\vto{x}^*}\,;
 \end{equation}	
 
-\item[iii.] If $\fua{\tnr{\varphi}}{\tnr{X}}=\fua{\tnr{\varphi}_1}{\tnr{X}}\cdot\fua{\tnr{\varphi}_2}{\tnr{X}}$, where mapping  $\map{\tnr{\varphi}_1}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{U^{\times m}\times V^{\times s}}}$ and mapping $\map{\tnr{\varphi}_2}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{U^{\times m}\times V^{\times s}}}$ are defined, then
+\item[iv.] If $\fua{\tnr{\varphi}}{\tnr{X}}=\fua{\tnr{\varphi}_1}{\tnr{X}}\cdot\fua{\tnr{\varphi}_2}{\tnr{X}}$, where mapping  $\map{\tnr{\varphi}_1}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{U^{\times m}\times V^{\times s}}}$ and mapping $\map{\tnr{\varphi}_2}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{U^{\times m}\times V^{\times s}}}$ are defined, then
 \begin{equation}
 \fua{\dvt{\tnr{\varphi}}}{\tnr{X}} = \fua{\dvt{\tnr{\varphi}_1}}{\tnr{X}}\odot_s\fua{\tnr{\varphi}_2}{\tnr{X}}+\fua{\dvt{\tnr{\varphi}_2}}{\tnr{X}}\odot_s\fua{\tnr{\varphi}_1}{\tnr{X}}\,,
 \end{equation}	
 and for $m=s=1$,
 \begin{equation}
-\fua{\crl{\tnr{\varphi}}}{\vto{x}} = \fua{\crl{\tnr{\varphi}_1}}{\vto{x}}\odot_1\fua{\tnr{\hat{\varphi}}_2}{\vto{x}}+\fua{\crl{\tnr{\varphi}_2}}{\vto{x}}\odot_1\fua{\tnr{\hat{\varphi}}_1}{\vto{x}}\,;
+\fua{\crl{\tnr{\varphi}}}{\vto{x}^*} = \fua{\crl{\tnr{\varphi}_1}}{\vto{x}^*}\odot_1\fua{\tnr{\varphi}_2}{\vto{x}^*}+\fua{\crl{\tnr{\varphi}_2}}{\vto{x}^*}\odot_1\fua{\tnr{\varphi}_1}{\vto{x}^*}\,;
 \end{equation}
 
-VERIFICAR AS DUAS PROPRIEDADES ABAIXO
-\item[iv.] If $\fua{\tnr{\hat{\varphi}}}{\vto{x}}=\fua{\tnr{\hat{\varphi}}_1}{\vto{x}}\times\fua{\tnr{\hat{\varphi}}_2}{\vto{x}}$, where mappings  $\map{\tnr{\hat{\varphi}}_1}{{\mathcal{U}}}{U_\cam{R}}$ and $\map{\tnr{\hat{\varphi}}_2}{{\mathcal{U}}}{U_\cam{R}}$ are defined, then
-\begin{equation}
-\fua{\crl{\tnr{\varphi}}}{\vto{x}} = \fua{\crl{\tnr{\varphi}_1}}{\vto{x}}\times\fua{\tnr{\hat{\varphi}}_2}{\vto{x}}-\fua{\crl{\tnr{\varphi}_2}}{\vto{x}}\times\fua{\tnr{\hat{\varphi}}_1}{\vto{x}}\,;
-\end{equation}
 	
-\item[v.]	If $\map{\tnr{\hat{\varphi}}}{\mathcal{U}}{\real}$, where $\mathcal{U}\subset U_\real$, then $\fua{\crl{\nabla \tnr{\varphi}}}{\vto{x}}=\vto{0}\,$.
+\item[v.]	If $\map{\tnr{\varphi}}{\mathcal{U}}{V_\real}$, where $\mathcal{U}\subset U_\real$, then $\fua{\crl{\nabla \tnr{\varphi}}}{\vto{x}^*}=\vto{0}\,$.
 \end{itemize}
 
 {\footnotesize
 \begin{proof}
-Considering definitions \eqref{eq:divergence} and \eqref{eq:curl}, since partial inner products are left (right) distributive, proof of item i is trivial. Pre multiplying properties \eqref{eq:prop1Grad}, \eqref{eq:prop2Grad} and \eqref{eq:prop3Grad} adequately by $\tnr{I}$ or $\tnr{A}_B$, proofs of items ii, iii and iv are straightforward. For the item v, since we already know that $\vto{u}\cdot\tnr{A}_B\hat{\odot}_2\vto{v}\otimes\vto{w}=\tnr{A}_B(\vto{u},\vto{v},\vto{w})$, if we consider $\fua{{\nabla \tnr{\hat{\varphi}}}}{\vto{x}}=\vto{v}\otimes\vto{w}$, then $\vto{u}\cdot\fua{\crl{\nabla \tnr{\varphi}}}{\vto{x}}=\tnr{A}_B(\vto{u},\vto{v},\vto{w})$ for all $\vto{u}\in\pmb{\mathcal{U}}$. Thereby, choosing $\vto{u}=\vto{v}$, we have $\vto{v}\cdot\fua{\crl{\nabla \tnr{\varphi}}}{\vto{x}}=\tnr{A}_B(\vto{v},\vto{v},\vto{w})=0$ because $\tnr{A}_B$ is antisymmetric, and since $\vto{v}\neq\vto{0}$, we prove the item.
+Considering definitions \eqref{eq:divergence} and \eqref{eq:curl}, since partial inner products are left (right) distributive, proof of item i is trivial. Pre multiplying properties \eqref{eq:prop1Grad}, \eqref{eq:prop2Grad} and \eqref{eq:prop3Grad} adequately by $\tnr{I}$ or $\tnr{A}_B$, proofs of items i, ii, iii and iv are straightforward. For item v, since we already know that $\vto{u}\cdot\tnr{A}_B\hat{\odot}_2\vto{v}^*\otimes\vto{w}^*=\tnr{A}_B(\vto{u},\vto{v},\vto{w})$, if we consider tensor $\fua{{\nabla \tnr{\varphi}}}{\vto{x}^*}=\vto{v}^*\otimes\vto{w}^*$, then $\vto{u}\cdot\fua{\crl{\nabla \tnr{\varphi}}}{\vto{x}^*}=\tnr{A}_B(\vto{u},\vto{v},\vto{w})$ for all $\vto{u}\in\pmb{\mathcal{U}}$. Thereby, choosing vector $\vto{u}=\vto{v}$, we have $\vto{v}\cdot\fua{\crl{\nabla \tnr{\varphi}}}{\vto{x}^*}=\tnr{A}_B(\vto{v},\vto{v},\vto{w})=0$ because $\tnr{A}_B$ is antisymmetric, and since $\vto{v}\neq\vto{0}$, we prove the item.
 \end{proof}}
 
 
@@ -552,7 +542,7 @@ Let $U_\real$ be a $n$-dimensional Euclidean space, $n\geqslant 2\,$, and $\pmb{
 	\setlength\itemsep{.1em}
 	\item[i.] Every element $\widehat{C}_j$ of $\css{C}$ must have a specific shape such that arbitrary vectors 
 \begin{equation*}
-\vto{u},\vto{v}\in\{\vto{x}\in\pmb{\mathcal{U}}:\min_{\vto{y}\in \partial\pmb{\mathcal{U}}}\fua{\varrho}{\vto{x},\vto{y}}<\alpha\}\,,
+\vto{u},\vto{v}\in\{\vto{x}^*\in\pmb{\mathcal{U}}:\min_{\vto{y}\in \partial\pmb{\mathcal{U}}}\fua{\varrho}{\vto{x},\vto{y}}<\alpha\}\,,
 \end{equation*}
 where distance $\fua{\varrho}{\vto{u},\vto{v}}<\alpha$, are also elements of the subset	
 \begin{equation*}

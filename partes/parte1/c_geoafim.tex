@@ -268,7 +268,7 @@ Still considering  the oriented Euclidean space $(U_\real,\tnr{A}_B)$ where $B=\
 \end{figure}
 There is a classic mnemonic rule for obtaining the direction of $\vv{a\,\vto{z}\oplus a}$ that works as follows: considering my right hand, I must point my index and middle fingers to the same directions of $\vv{o\,\vun{u}_1\oplus o}$ and $\vv{o\,\vun{u}_2\oplus o}$ respectively, and then if my thumb points to the same direction of $\vv{o\,\vun{u}_3\oplus o}$, then space $(U_\real,\tnr{A}_B)$ is oriented according to the \textsb{right-hand rule}\index{right-hand rule}; on the other hand, literally, space $(U_\real,\tnr{A}_B)$ is oriented according to the \textsb{left-hand rule}\index{left-hand rule}. Once a hand is found, if I point my index and middle fingers to the same directions of $\vv{a\,\vto{x}\oplus a}$ and $\vv{a\,\vto{y}\oplus a}$ respectively, then the direction of my thumb defines the direction of $\vv{a\,\vto{z}\oplus a}$. For practical purposes, a three-dimensional Euclidean affine space is usually oriented according to the right-hand rule. An axial vector is always the result of a \textsb{cross product}\index{product!cross} of two vectors, that is, $\vto{z}=\gloref{crossProd}$ in the present case, where
 \begin{equation}\label{eq:crossProduct}
-\vto{x}\times\vto{y} := \tnr{A}_B\hat{\odot}_2 (\vto{x}\otimes\vto{y})\,.
+\vto{x}\times\vto{y} := \tnr{A}_B\hat{\odot}_2 (\vto{x}^*\otimes\vto{y}^*)\,.
 \end{equation}
 For arbitrary vectors $\vto{u},\vto{v},\vto{w}\in U_\real$ and scalars $\alpha,\beta,\theta\in\real$, where $\theta$ is the smallest angle defined by vectors $\vv{ou},\vv{ov}$, the cross product has the following properties.
 \begin{itemize}
@@ -288,9 +288,9 @@ For arbitrary vectors $\vto{u},\vto{v},\vto{w}\in U_\real$ and scalars $\alpha,\
 \begin{proof}
 Item i is verified by  
 \begin{equation*}
-\vto{u}\cdot(\vto{v}\times\vto{w}) = \vto{u}\cdot[\tnr{A}_B\hat{\odot}_2 (\vto{v}\otimes\vto{w})] = \tnr{A}_B\odot_3(\vto{u}\otimes\vto{v}\otimes\vto{w}) =\fua{\tnr{A}_B}{\vto{u},\vto{v},\vto{w}}\,.  
+\vto{u}\cdot(\vto{v}\times\vto{w}) = \vto{u}\cdot[\tnr{A}_B\hat{\odot}_2 (\vto{v}^*\otimes\vto{w}^*)] = \tnr{A}_B\odot_3(\vto{u}^*\otimes\vto{v}\otimes\vto{w}^*) =\fua{\tnr{A}_B}{\vto{u},\vto{v},\vto{w}}\,.  
 \end{equation*}
-Given an arbitrary vector $\vto{x}\in U_\real$ and $\tnr{A}_B=\vto{a}\otimes\vto{b}\otimes\vto{c}$, item ii is verified by the following equalities:
+Given an arbitrary vector $\vto{x}\in U_\real$ and $\tnr{A}_B=\vto{a}^*\otimes\vto{b}^*\otimes\vto{c}^*$, item ii is verified by the following equalities:
 \begin{equation*}
 \vto{x}\cdot(\vto{u}\times\vto{v})= (\vto{b}\cdot\vto{u})(\vto{c}\cdot\vto{v})(\vto{x}\cdot\vto{a})= \fua{\tnr{A}_B}{\vto{x},\vto{u},\vto{v}}=-\fua{\tnr{A}_B}{\vto{x},\vto{v},\vto{u}}=-\vto{x}\cdot(\vto{v}\times\vto{u})\,.
 \end{equation*}
@@ -304,14 +304,14 @@ By this same procedure, proof of property v is trivial. Now, property vi is veri
 \end{equation*}
 and, since $\tnr{A}_B$ is antisymmetric, equalities $(\vto{u}\times\vto{v})\cdot\vto{u}=\tnr{A}_B(\vto{u},\vto{u},\vto{v})=0$ prove item vii. Considering an arbitrary orthonormal basis $X=\{\vun{x}_1,\vun{x}_2,\vun{x}_3\}$, equality \eqref{eq:coordAltern} and identity \eqref{eq:LeviKronecker}, development
 \begin{align*}
-\vto{u}\times(\vto{v}\times\vto{w})&=\tnr{A}_B\hat{\odot}_2 [\vto{u}\otimes\tnr{A}_B\hat{\odot}_2 (\vto{v}\otimes\vto{w})]\\
+\vto{u}\times(\vto{v}\times\vto{w})&=\tnr{A}_B\hat{\odot}_2 [\vto{u}^*\otimes\tnr{A}_B\hat{\odot}_2 (\vto{v}^*\otimes\vto{w}^*)]\\
 &=\sum_{i,j,k=1}^{m}\epsilon_{ijk}\vun{x}_i^*\otimes\vun{x}_j^*\otimes\vun{x}_k^*\hat{\odot}_2 [\sum_{j=1}^{m}\fua{\vto{f}^X_j}{\vto{u}}\vun{x}_j\otimes\sum_{k,r,s=1}^{m}\epsilon_{krs}\fua{\vto{f}^X_r}{\vto{v}}\fua{\vto{f}^X_s}{\vto{w}}\vun{x}_k]\\
 &=\sum_{i,j,k=1}^{m}\sum_{r,s=1}^{m}-\epsilon_{kji}\epsilon_{krs}\fua{\vto{f}^X_j}{\vto{u}}\fua{\vto{f}^X_r}{\vto{v}}\fua{\vto{f}^X_s}{\vto{w}}\vun{x}_i\\
 &=\sum_{i,j,k,r,s=1}^{m}(\delta_{js}\delta_{ir}-\delta_{jr}\delta_{is})\fua{\vto{f}^X_j}{\vto{u}}\fua{\vto{f}^X_r}{\vto{v}}\fua{\vto{f}^X_s}{\vto{w}}\vun{x}_i\\
 &=\sum_{i,j,k,r,s=1}^{m}\fua{\vto{f}^X_s}{\vto{u}}\fua{\vto{f}^X_i}{\vto{v}}\fua{\vto{f}^X_s}{\vto{w}}\vun{x}_i-\fua{\vto{f}^X_r}{\vto{u}}\fua{\vto{f}^X_r}{\vto{v}}\fua{\vto{f}^X_i}{\vto{w}}\vun{x}_i\\
 &=(\vto{u}\cdot\vto{w})\vto{v}-(\vto{u}\cdot\vto{v})\vto{w}
 \end{align*}
-proves property viii. Now, in order to prove the last item, equality $\vto{u}\cdot\tnr{A}_B\hat{\odot}_2\vto{v}\otimes\vto{w}=\tnr{A}_B(\vto{u},\vto{v},\vto{w})$, property ix and equality \eqref{eq:geoProdInt} are required. Then,
+proves property viii. Now, in order to prove the last item, equality $\vto{u}\cdot\tnr{A}_B\hat{\odot}_2\vto{v}^*\otimes\vto{w}^*=\tnr{A}_B(\vto{u},\vto{v},\vto{w})$, property ix and equality \eqref{eq:geoProdInt} are required. Then,
 \begin{align*}
 \|\vto{u}\times\vto{v}\|^2 &= (\vto{u}\times\vto{v})\cdot(\vto{u}\times\vto{v})\\
 &= \tnr{A}_B(\vto{u}\times\vto{v},\vto{u},\vto{v})\\
