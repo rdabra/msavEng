@@ -29,11 +29,11 @@ where $\upsilon_o$ ``vectorizes'' the points of $\mathcal{B}_t$ relative to an o
 
 REESCREVER O PROXIMO PARAGRAFO DEPOIS DA MUDANCA NO CAPITULO DO CALCULO 
 
-Given the mapping $\map{\tnr{\chi}}{\tnr{\overline{\mathcal{B}}}\times\tempo}{\tnr{\mathcal{B}}_t}$, bijection $\tnr{\chi}$ is called a deformation of $\tnr{\overline{\mathcal{B}}}$, in its most general form, when it is an orientation-preserving $\mathcal{C}^{2}$-diffeomorphism that observes $\fua{\tnr{\chi}}{\overline{\vto{x}},\overline{t}}=\overline{\vto{x}}$ for all $\overline{\vto{x}}\in\tnr{\overline{\mathcal{B}}}$. For most of the forthcoming concepts to be presented, it is convenient to work with an arbitrary instant of time $t\in\tempo$ and a bijective mapping $\map{\tnr{\chi}_t}{\tnr{\overline{\mathcal{B}}}}{\tnr{\mathcal{B}}_t}$ with rule $\fua{\tnr{\chi}_t}{\vto{x}}=\fua{\tnr{\chi}}{\vto{x},t}$, frown which we conclude that $\tnr{\chi}_t$ is also an orientation-preserving $\mathcal{C}^{2}$-diffeomorphism that observes $\tnr{\chi}_{\overline{t}}=\tnr{i}_{\tnr{\overline{\mathcal{B}}}}$. Given an arbitrary point $\overline{\vto{u}}\in\tnr{\overline{\mathcal{B}}}$ and conveniently chosen non zero vectors $\overline{\vto{x}}_i\in\tnr{\overline{\mathcal{B}}}$, from which $\overline{\vto{u}}_i=\overline{\vto{x}}_i-\overline{\vto{u}}$ constitute an orthogonal set $\{ \overline{\vto{u}}_1,\overline{\vto{u}}_2,\overline{\vto{u}}_3\}$, by orientation-preserving we mean that   
-\begin{equation}
-\sgn{\fua{\tnr{A}_O}{\fua{\tnr{\chi}_t}{\overline{\vto{u}}_1},\fua{\tnr{\chi}_t}{\overline{\vto{u}}_2},\fua{\tnr{\chi}_t}{\overline{\vto{u}}_3}}}=\sgn{\fua{\tnr{A}_O}{\overline{\vto{u}}_1,\overline{\vto{u}}_2,\overline{\vto{u}}_3}}\,.
+Given the mapping $\map{\tnr{\chi}}{\tnr{\overline{\mathcal{B}}}\times\tempo}{\tnr{\mathcal{B}}_t}$, bijection $\tnr{\chi}$ is called a deformation of $\tnr{\overline{\mathcal{B}}}$ when it is an orientation-preserving $\mathcal{C}^{2}$-diffeomorphism that observes $\fua{\tnr{\chi}}{\overline{\vto{x}},\overline{t}}=\overline{\vto{x}}$, $\forall\,\overline{\vto{x}}\in\tnr{\overline{\mathcal{B}}}$. For most of the forthcoming concepts to be presented, it is convenient to work with an arbitrary instant of time $t\in\tempo$ and a bijective mapping $\map{\tnr{\chi}_t}{\tnr{\overline{\mathcal{B}}}}{\tnr{\mathcal{B}}_t}$ with rule $\fua{\tnr{\chi}_t}{\vto{x}}=\fua{\tnr{\chi}}{\vto{x},t}$, frown which we conclude that $\tnr{\chi}_t$ is also an orientation-preserving $\mathcal{C}^{2}$-diffeomorphism that observes $\tnr{\chi}_{\overline{t}}=\tnr{i}_{\tnr{\overline{\mathcal{B}}}}$. Given an arbitrary point $\overline{\vto{u}}\in\tnr{\overline{\mathcal{B}}}$ and conveniently chosen non zero vectors $\overline{\vto{x}}_i\in\tnr{\overline{\mathcal{B}}}$, from which $\overline{\vto{u}}_i=\overline{\vto{x}}_i-\overline{\vto{u}}$ constitute an orthogonal set $\{ \overline{\vto{u}}_1,\overline{\vto{u}}_2,\overline{\vto{u}}_3\}$, by orientation-preserving we mean that   
+\begin{equation}\label{eq:orientPreserv}
+\mathop{\mathrm{sgn}}[\fua{\tnr{A}_O}{\fua{\tnr{\chi}_t}{\overline{\vto{u}}_1},\fua{\tnr{\chi}_t}{\overline{\vto{u}}_2},\fua{\tnr{\chi}_t}{\overline{\vto{u}}_3}}]=\mathop{\mathrm{sgn}}[\fua{\tnr{A}_O}{\overline{\vto{u}}_1,\overline{\vto{u}}_2,\overline{\vto{u}}_3}]\,.
 \end{equation}
-The continuity and bijectivity of $\tnr{\chi}_t$ respectively ensures that Lipschitz surfaces are preserved\footnote{See \aut{Ciarlet}\cite{ciarlet_1988_2_2}, theorem 1.2-8, p.16.} and no distinct elements in the body become collapsed in the shape; while the differentiability of class two provides the minimum level of regularity required by future concepts. The entities and their relationships presented so far are depicted in figure \ref{fg:deformacao}. 
+The continuity and bijectivity of $\tnr{\chi}_t$ respectively ensures that Lipschitz surfaces are preserved\footnote{See \aut{Ciarlet}\cite{ciarlet_1988_2_2}, theorem 1.2-8, p.16.} and no distinct elements of the body become indistinct in the shape; while the differentiability of class two provides the minimum level of regularity required by future concepts. The entities and their relationships presented so far are depicted in figure \ref{fg:deformacao}. 
 \begin{figure}[!ht]
 \centering
 \begin{center}
@@ -45,21 +45,28 @@ From this figure, it is possible to conclude that if both configurations $\overl
 \begin{equation}
 \tnr{\chi}_t = \upsilon_o\circ\chi_t\circ\overline{\chi}^{\,-1}\circ\upsilon_o^{-1}\,.
 \end{equation}
-Moreover, concerning the elements of the domains represented in the figure, we say that a material particle $\text{x}\in\mathfrak{B}$, represented by the reference point $\overline{x}:=\fua{\overline{\chi}}{\text{x}}$ or by the reference vector $\vto{\overline{x}}:=\fua{\upsilon_o\circ\overline{\chi}}{\text{x}}$, occupies the place $x:=\fua{\chi_t}{\text{x}}$ or $\vto{x}:=\fua{\upsilon_o\circ\chi_t}{\text{x}}$. In order to simplify our study, since deformation was defined as a vector function, we shall mostly use vectors to denote body and shape elements.  
+Moreover, concerning the elements of the domains represented in the figure, we say that a material particle $\text{x}\in\mathfrak{B}$, represented by the reference point $\overline{x}=\fua{\overline{\chi}}{\text{x}}$ or by the reference vector $\vto{\overline{x}}:=\fua{\upsilon_o\circ\overline{\chi}}{\text{x}}$, occupies the place $x:=\fua{\chi_t}{\text{x}}$ or $\vto{x}=\fua{\upsilon_o\circ\chi_t}{\text{x}}$. In order to simplify our study, since deformation was defined as a vector function, we shall mostly use vectors to denote body and shape elements.  
 
-Considering the previous regularity conditions and an open set $\pmb{\mathcal{U}}\subset\tnr{\overline{\mathcal{B}}}^*$, the local sensitivity of $\tnr{\chi}_t^*$ measured by the tensor function in $\map{\nabla\tnr{\chi}_t^*}{\pmb{\mathcal{U}}}{\ete{\real}{U^{2}}}$, called \textsb{deformation gradient}\index{deformation!gradient}, has fundamental importance in Continuum Kinematics because it bases the concept of strain. Given an arbitrary reference covector $\overline{\vto{x}}^*\in\pmb{\mathcal{U}}$, the second order tensor $\tnr{F}:=\fua{\nabla\tnr{\chi}_t^*}{\overline{\vto{x}}^*}$ is said to be the deformation gradient at this point and then, by the same procedure that leads to equalities \eqref{eq:repFuncGrad2} and \eqref{eq:primiRepFuncGrad2}, bijection $\tnr{\mathit{f}}'\in\evl{\real}{U}{U}$ described by the rule
+Considering the previous regularity conditions and an open set $\pmb{\mathcal{U}}\subset\tnr{\overline{\mathcal{B}}}$, the local sensitivity of $\tnr{\chi}_t$ measured by the vector function in $\map{\nabla\tnr{\chi}_t}{\pmb{\mathcal{U}}}{\ete{\real}{U^{2}}}$, called \textsb{deformation gradient}\index{deformation!gradient}, has fundamental importance in Continuum Kinematics because it bases the concept of strain. Given an arbitrary reference point $\overline{\vto{u}}\in\pmb{\mathcal{U}}$, the second order tensor $\fua{\nabla\tnr{\chi}_t}{\overline{\vto{u}}}$ is said to be the deformation gradient at $\overline{\vto{u}}$ and then, from equality \eqref{eq:gradFuncRep}, we have scalar
 \begin{equation}
-\tnr{\mathit{f}}'(\overline{\vto{x}}) = [\Phi^{-1}\circ\fua{{\tnr{\chi}_t^{*}}'}{\overline{\vto{x}}^*}\circ\Phi](\overline{\vto{x}})
+[\fua{\nabla\tnr{\chi}_t}{\overline{\vto{u}}}](\overline{\vto{x}},\overline{\vto{y}})=\overline{\vto{x}}\cdot\fua{{\tnr{\chi}'_t}_{\overline{\vto{u}}}}{\overline{\vto{y}}}\,,\,\,\forall\, \overline{\vto{x}},\overline{\vto{y}}\in\pmb{\mathcal{U}}\,.
 \end{equation}
-is the representative function of $\tnr{F}$ and vector function
+Now, from expression \eqref{eq:det3D} and considering the same conditions of \eqref{eq:orientPreserv}, we can write that 
 \begin{equation}
-\tnr{\mathit{f}} = \Phi^{-1}\circ\tnr{\chi}_t^{*}\circ\Phi = \tnr{\chi}_t\,.
+\textnormal{Det}[\fua{\nabla\tnr{\chi}_t}{\overline{\vto{u}}}]=\dfrac{{\tnr{A}_O}[\fua{ {\tnr{\chi}'_t}_{\overline{\vto{u}}} }{ \overline{\vto{u}}_1 },\fua{ {\tnr{\chi}'_t}_{\overline{\vto{u}}} }{ \overline{\vto{u}}_2 },{\fua{ {\tnr{\chi}'_t}_{\overline{\vto{u}} }}{ \overline{\vto{u}}_3 }}]}{\fua{\tnr{A}_O}{ \overline{\vto{u}}_1 , \overline{\vto{u}}_2 , \overline{\vto{u}}_3 }}.
 \end{equation}
-Therefore, from equality \eqref{eq:gradFuncRep}, we have
+At reference instant $t=\overline{t}$, we already know that $\tnr{\chi}_{\overline{t}}=\tnr{i}_{\tnr{\overline{\mathcal{B}}}}$ and therefore, from a basic property of directional derivatives, equality $\fua{ {\tnr{\chi}'_{\overline{t}} }_{\overline{\vto{u}}} }{ \overline{\vto{x}} }=\overline{\vto{x}}$ is valid leading to $\textnormal{Det}[\fua{\nabla\tnr{\chi}_{\overline{t}}}{\overline{\vto{u}}}]=1$. Considering $\tnr{\overline{\mathcal{B}}}$ the initial undeformed shape of a given body motion and concluding that volume $\fua{\tnr{A}_O}{\fua{\tnr{\chi}_t}{\overline{\vto{u}}_1},\fua{\tnr{\chi}_t}{\overline{\vto{u}}_2},\fua{\tnr{\chi}_t}{\overline{\vto{u}}_3}}$ is never zero because body points cannot collapse by definition, we can state that       
 \begin{equation}
-\fua{\tnr{F}}{\overline{\vto{u}},\overline{\vto{v}}}=\overline{\vto{u}}\cdot\fua{\tnr{\mathit{f}}'}{\overline{\vto{v}}}\,,\,\,\forall\, \overline{\vto{u}}^*,\overline{\vto{v}}^*\in\pmb{\mathcal{U}}\,.
+\textnormal{Det}[\fua{\nabla\tnr{\chi}_t}{\overline{\vto{u}}}]>0\,,\,\forall t\in\cam{T}\,,\,\vto{u}\in\tnr{\mathcal{U}}\,,
 \end{equation}
-Now, from equality \eqref{eq:derivRep}, since $\tnr{\mathit{f}}$ is orientation-preserving by definition, so is $\tnr{\mathit{f}}'$. Therefore, from expression \eqref{eq:det3D}, we conclude that
+since deformation $\tnr{\chi}$ and its derivative are by definition continuous. 
+
+
+from rule \eqref{eq:derivRep}, since $\tnr{\chi}_t$ is orientation-preserving on $\tnr{\mathcal{B}}_t$ by definition, so is $\tnr{\chi_t}'_{\overline{\vto{x}}}$. 
+
+
+
+Therefore, from expression \eqref{eq:det3D}, we conclude that
 \begin{equation}
 \hdet{\tnr{F}}=\dfrac{\fua{\tnr{A}_O}{\fua{\tnr{\mathit{f}}'}{\vun{e}_1},{\fua{\tnr{\mathit{f}}'}{\vun{e}_2}},{\fua{\tnr{\mathit{f}}'}{\vun{e}_3}}}}{\fua{\tnr{A}_O}{\vun{e}_1,\vun{e}_2,\vun{e}_3}}\,>\,0\,.
 \end{equation}
