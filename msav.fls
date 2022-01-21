@@ -1114,6 +1114,10 @@ INPUT ./partes/figs/deformacao.eps
 INPUT ./partes/figs/deformacao-eps-converted-to.pdf
 INPUT ./partes/figs/deformacao-eps-converted-to.pdf
 INPUT ./partes/figs/deformacao-eps-converted-to.pdf
+INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/kpfonts/jkplbit8t.tfm
+INPUT /usr/local/texlive/2019/texmf-dist/fonts/vf/public/kpfonts/jkplbit8t.vf
+INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/kpfonts/jkplbit8r.tfm
+INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/kpfonts/jkplbite.tfm
 OUTPUT partes/parte2/apendice1.aux
 INPUT partes/parte2/apendice1.tex
 INPUT partes/parte2/apendice1.tex

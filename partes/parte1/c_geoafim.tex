@@ -94,51 +94,55 @@ On section \ref{sec:group}, we said that in a group action a biunivocal relation
 \begin{equation}\label{eq:funVect}
 \fua{\upsilon_o}{x} = \vv{ox}\,,
 \end{equation} 
-where bijection $\upsilon_o$ is said to ``vectorize'' its argument and then, since the origin is fixed, we can represent $\fua{\upsilon_o}{v}=\vv{ov}$ by $\vto{v}$. The association $(\eamsd{S}{F}{a}{n},o,B)$ of an affine subspace with a coordinate system can be structured like a vector space and then inherits the same classification, outlined in figure \ref{fig:esquemaEspacos}, from its direction space $S_\cam{F}$ if suitable expressions for metric, norm and inner product are defined. Thereby, for arbitrary points $v$ and $u$ of $\eamsd{S}{F}{a}{n}$, the triple $(\eamsd{S}{F}{a}{n},o,B)$ is called an affine metric space if $\fua{\varrho}{u,v}:=\fua{\varrho}{\vv{ou},\vv{ov}}$, an affine normed space if a norm $\|\vv{ov}\|$ is defined or an affine inner product space if there is the scalar $\vv{ov}\cdot\vv{ou}\,$. Since an affine subspace is itself an affine space, representation of triple $(\eamsd{S}{F}{a}{n},o,B)$ will be shortened by $\eamd{S}{F}{n}$, where the seed point $a$ and the coordinate system are implicit. Since we are dealing in this chapter with morphological matters, what are the geometric manifestations of metric, norm and inner product? We already said that metric refers to the concept of distance and thus scalar $\fua{\varrho}{u,v}$ informs the distance between arbitrary points $u$ and $v$ in the context of affine metric spaces. Norm however is not applicable to points, being geometrically represented by the size of a vector, which also depicts the concept of vector intensity: a ``bigger'' vector is considered to be a more ``intense'' vector. In the context of affine Banach spaces, where distance
+where bijection $\upsilon_o$ is said to ``vectorize'' its argument and then, since the origin is fixed, we can represent $\fua{\upsilon_o}{v}=\vv{ov}$ by $\gloref{vecPoint}$ or $\vto{v}$. Therefore, it is clear that 
+\begin{equation}\label{eq:funVectInv}
+\fua{\upsilon_o^{-1}}{\vv{x}} = \vv{x}\oplus o\,.
+\end{equation} 
+The association $(\eamsd{S}{F}{a}{n},o,B)$ of an affine subspace with a coordinate system can be structured like a vector space and then inherits the same classification, outlined in figure \ref{fig:esquemaEspacos}, from its direction space $S_\cam{F}$ if suitable expressions for metric, norm and inner product are defined. Thereby, for arbitrary points $v$ and $u$ of $\eamsd{S}{F}{a}{n}$, the triple $(\eamsd{S}{F}{a}{n},o,B)$ is called an affine metric space if $\fua{\varrho}{u,v}:=\fua{\varrho}{\vv{u},\vv{v}}$, an affine normed space if a norm $\|\vv{v}\|$ is defined or an affine inner product space if there is the scalar $\vv{v}\cdot\vv{u}\,$. \emph{Since an affine subspace is itself an affine space, representation of triple $(\eamsd{S}{F}{a}{n},o,B)$ will be shortened by $\eamd{S}{F}{n}$, where the seed point $a$ and the coordinate system are implicit}. Since we are dealing in this chapter with morphological matters, what are the geometric manifestations of metric, norm and inner product? We already said that metric refers to the concept of distance and thus scalar $\fua{\varrho}{u,v}$ informs the distance between arbitrary points $u$ and $v$ in the context of affine metric spaces. Norm however is not applicable to points, being geometrically represented by the size of a vector, which also depicts the concept of vector intensity: a ``bigger'' vector is considered to be a more ``intense'' vector. In the context of affine Banach spaces, where distance
 \begin{equation}\label{eq:affDistance}
-\fua{\varrho}{u,v} := \|\vv{ou} - \vv{ov}\|=\|\vv{vo} + \vv{ou}\|=\|\vv{vu}\|=\|\vv{uv}\|\,,
+\fua{\varrho}{u,v} := \|\vv{u} - \vv{v}\|=\|\vv{vo} + \vv{u}\|=\|\vv{vu}\|=\|\vv{uv}\|\,,
 \end{equation}
-norm enables distance measurement. Now, regarding the geometric effects of the inner product, we already said on section \ref{sec:espacoVet} that this product is closely related to vector incidence, being a scalar measure of this fundamental concept\footnote{See page \pageref{sec:incidence}.}. In the context of affine normed inner product spaces, the incidence interrelationship of non zero vectors $\vv{ov}$ and $\vv{ou}$ is expressed both by the \textsb{projection}\index{projection} $\fua{\zeta}{\vv{ov},\vv{ou}}$ of $\vv{ov}$ onto the line defined by the set $\spn{(\{\vv{ou}\})}$ and the projection $\fua{\zeta}{\vv{ou},\vv{ov}}$ of $\vv{ou}$ onto the line defined by $\spn{(\{\vv{ov}\})}$, where $\map{\zeta}{S_\cam{F}^2}{\cam{F}}$ whose function rule is
+norm enables distance measurement. Now, regarding the geometric effects of the inner product, we already said on section \ref{sec:espacoVet} that this product is closely related to vector incidence, being a scalar measure of this fundamental concept\footnote{See page \pageref{sec:incidence}.}. In the context of affine normed inner product spaces, the incidence interrelationship of non zero vectors $\vv{v}$ and $\vv{u}$ is expressed both by the \textsb{projection}\index{projection} $\fua{\zeta}{\vv{v},\vv{u}}$ of $\vv{v}$ onto the line defined by the set $\spn{(\{\vv{u}\})}$ and the projection $\fua{\zeta}{\vv{u},\vv{v}}$ of $\vv{u}$ onto the line defined by $\spn{(\{\vv{v}\})}$, where $\map{\zeta}{S_\cam{F}^2}{\cam{F}}$ whose function rule is
 \begin{equation}\label{eq:projection}
-\fua{\zeta}{\vv{ox},\vv{oy}}=\dfrac{\vv{ox}\cdot \vv{oy}}{\|\vv{oy}\|}
+\fua{\zeta}{\vv{x},\vv{y}}=\dfrac{\vv{x}\cdot \vv{y}}{\|\vv{y}\|}
 \end{equation}
-and $S_\cam{F}$ defines an affine normed inner product space. Considering $\vv{ow}:=\fua{\zeta}{\vv{ox},\vv{oy}}\vv{oy}$, we can state that vector $\vv{ow}\in\spn{(\{\vv{oy}\})}$ where points $w$ and $y$ belong to the line defined by $\spn{(\{\vv{oy}\})}$. From the previous rule, if projection is known and not the inner product, we can write that $\vv{ox}\cdot \vv{oy}=\fua{\zeta}{\vv{ox},\vv{oy}}\|\vv{oy}\|$, which is usually and imprecisely regarded as the ``geometric definition'' of the inner product. It is important to note that if arguments $\vv{ox}$ and $\vv{oy}$ are orthogonal, then $\fua{\zeta}{\vv{ox},\vv{oy}}=0$.
- Moreover, in the context of affine Hilbert spaces, where $\|\vv{ox}\|^2=\vv{ox}\cdot \vv{ox}$, when $\vv{oy}=\alpha\vv{ox}$ then
+and $S_\cam{F}$ defines an affine normed inner product space. Considering $\vv{w}:=\fua{\zeta}{\vv{x},\vv{y}}\vv{y}$, we can state that vector $\vv{w}\in\spn{(\{\vv{y}\})}$ where points $w$ and $y$ belong to the line defined by $\spn{(\{\vv{y}\})}$. From the previous rule, if projection is known and not the inner product, we can write that $\vv{x}\cdot \vv{y}=\fua{\zeta}{\vv{x},\vv{y}}\|\vv{y}\|$, which is usually and imprecisely regarded as the ``geometric definition'' of the inner product. It is important to note that if arguments $\vv{x}$ and $\vv{y}$ are orthogonal, then $\fua{\zeta}{\vv{x},\vv{y}}=0$.
+ Moreover, in the context of affine Hilbert spaces, where $\|\vv{x}\|^2=\vv{x}\cdot \vv{x}$, when $\vv{y}=\alpha\vv{x}$ then
 \begin{equation}\label{eq:projColinear}
-\fua{\zeta}{\vv{ox},\alpha\vv{ox}}=\dfrac{\overline{\alpha}(\vv{ox}\cdot \vv{ox})}{|\alpha|\|\vv{ox}\|}=\dfrac{\overline{\alpha}\|\vv{ox}\|}{|\alpha|}\,,\,\forall\alpha\in\{\cam{F}\setminus 0\}.
+\fua{\zeta}{\vv{x},\alpha\vv{x}}=\dfrac{\overline{\alpha}(\vv{x}\cdot \vv{x})}{|\alpha|\|\vv{x}\|}=\dfrac{\overline{\alpha}\|\vv{x}\|}{|\alpha|}\,,\,\forall\alpha\in\{\cam{F}\setminus 0\}.
 \end{equation}
 For the case of affine Euclidean spaces, these equalities lead to
 \begin{equation}\label{eq:projColinearEuclid}
-\fua{\zeta}{\vv{ox},\alpha\vv{ox}}=\sgn{\alpha}\|\vv{ox}\|\,,\,\,\forall\,\alpha\in\{\real\setminus 0\}\,.
+\fua{\zeta}{\vv{x},\alpha\vv{x}}=\sgn{\alpha}\|\vv{x}\|\,,\,\,\forall\,\alpha\in\{\real\setminus 0\}\,.
 \end{equation}
 Concerning projections on affine Hilbert spaces, there is a property, presented on the following theorem, that will be important for future geometric concepts.
 
 \begin{mteo}{Modulus of Projection}{moduProj}
-Given the arbitrary vectors $\vv{ox},\vv{oy}\in S_\cam{F}$, where $S_\cam{F}$ defines an affine Hilbert space $\eamd{S}{F}{n}$, the modulus of projection $\fua{\zeta}{\vv{ox},\vv{oy}}$ is never greater than the norm of the projected vector. In other words,
-$|\fua{\zeta}{\vv{ox},\vv{oy}}|\leq \|\vv{ox}\|$.
+Given the arbitrary vectors $\vv{x},\vv{y}\in S_\cam{F}$, where $S_\cam{F}$ defines an affine Hilbert space $\eamd{S}{F}{n}$, the modulus of projection $\fua{\zeta}{\vv{x},\vv{y}}$ is never greater than the norm of the projected vector. In other words,
+$|\fua{\zeta}{\vv{x},\vv{y}}|\leq \|\vv{x}\|$.
 \end{mteo}
 \hspace{1pt}
 {\footnotesize
 \begin{proof}
 From the Cauchy-Schwartz Inequality \eqref{eq:Cauchy-Schwartz} and the ``geometric definition'' of the inner product, the following development proves the theorem.
 \begin{align*}
-|\vv{ox}\cdot\vv{oy}|^2 &\leq (\vv{ox}\cdot\vv{ox})(\vv{oy}\cdot\vv{oy})\\
-|\fua{\zeta}{\vv{ox},\vv{oy}}|^2\|\vv{oy}\|^2 &\leq \|\vv{ox}\|^2\|\vv{oy}\|^2\\
-|\fua{\zeta}{\vv{ox},\vv{oy}}| &\leq \|\vv{ox}\|\,.
+|\vv{x}\cdot\vv{y}|^2 &\leq (\vv{x}\cdot\vv{x})(\vv{y}\cdot\vv{y})\\
+|\fua{\zeta}{\vv{x},\vv{y}}|^2\|\vv{y}\|^2 &\leq \|\vv{x}\|^2\|\vv{y}\|^2\\
+|\fua{\zeta}{\vv{x},\vv{y}}| &\leq \|\vv{x}\|\,.
 \end{align*}
 \end{proof}}
 
-Now, for an affine Euclidean space $\eamd{S}{R}{n}$, if $\theta$ is the smallest angle defined by vectors $\vv{ox},\vv{oy}\in S_\cam{R}$, the linear combination  $\vv{oz}:=\vartheta\vv{oy}/\|\vv{oy}\|$ and the scalar $\vartheta\in\real$ are called respectively the \textsb{vector and scalar geometric projections}\index{projection!vector}\index{projection!scalar} of $\vv{ox}$ onto $\vv{oy}$ when
+Now, for an affine Euclidean space $\eamd{S}{R}{n}$, if $\theta$ is the smallest angle defined by vectors $\vv{x},\vv{y}\in S_\cam{R}$, the linear combination  $\vv{z}:=\vartheta\vv{y}/\|\vv{y}\|$ and the scalar $\vartheta\in\real$ are called respectively the \textsb{vector and scalar geometric projections}\index{projection!vector}\index{projection!scalar} of $\vv{x}$ onto $\vv{y}$ when
 \begin{equation}\label{eq:projgeo}
-\vartheta:=\|\vv{ox}\|\cos\theta\,,
+\vartheta:=\|\vv{x}\|\cos\theta\,,
 \end{equation}
 which can be visualized in figure \ref{fg:geoProject}. In this context, the following corollary establishes a connection between geometric and algebraic projections. From this connection and rule \eqref{eq:projection}, the so called ``geometric definition'' of the Euclidean inner product results the classic expression
 \begin{equation}\label{eq:geoProdInt}
-\vv{ox}\cdot\vv{oy}=\|\vv{ox}\|\|\vv{oy}\|\cos\theta.
+\vv{x}\cdot\vv{y}=\|\vv{x}\|\|\vv{y}\|\cos\theta.
 \end{equation}
-From this equality and the scalar geometric projection $\vartheta$ of $\vv{ox}$ onto $\vv{oy}$, then
+From this equality and the scalar geometric projection $\vartheta$ of $\vv{x}$ onto $\vv{y}$, then
 \begin{equation}
-\fua{\zeta}{\vv{ox},\vv{oy}}=\dfrac{\vv{ox}\cdot \vv{oy}}{\|\vv{oy}\|} = \dfrac{\|\vv{ox}\|\|\vv{oy}\|\cos\theta }{\|\vv{oy}\|}= \|\vv{ox}\|\cos\theta=\vartheta\,.
+\fua{\zeta}{\vv{x},\vv{y}}=\dfrac{\vv{x}\cdot \vv{y}}{\|\vv{y}\|} = \dfrac{\|\vv{x}\|\|\vv{y}\|\cos\theta }{\|\vv{y}\|}= \|\vv{x}\|\cos\theta=\vartheta\,.
 \end{equation}
 
 \begin{figure}[!ht]
@@ -149,7 +153,7 @@ From this equality and the scalar geometric projection $\vartheta$ of $\vv{ox}$ 
 	\titfigura{Vector and scalar geometric projections.}\label{fg:geoProject}
 \end{figure}
 
-From the previous equality and definition \eqref{eq:projgeo}, if there is no geometric projection between $\vv{ox}$ and $\vv{oy}$, that is, $\vartheta=0$, we conclude that the angle $\theta=\pi(k+1/2)$, $k=0,1,..\,$. Thereby, if line $\eamsd{W}{\real}{b}{1}$ and plane $\eamsd{V}{\real}{a}{2}$, subspaces of affine Euclidean space $\eamd{S}{\real}{5}$, are perpendicular, we can represent them as depicted on figure \ref{fg:perpend}.
+From the previous equality and definition \eqref{eq:projgeo}, if there is no geometric projection between $\vv{x}$ and $\vv{y}$, that is, $\vartheta=0$, we conclude that the angle $\theta=\pi(k+1/2)$, $k=0,1,..\,$. Thereby, if line $\eamsd{W}{\real}{b}{1}$ and plane $\eamsd{V}{\real}{a}{2}$, subspaces of affine Euclidean space $\eamd{S}{\real}{5}$, are perpendicular, we can represent them as depicted on figure \ref{fg:perpend}.
 \begin{figure}[!ht]
 	\centering
 	\begin{center}
@@ -168,11 +172,11 @@ It is straightforward to note that since $\vtf{f}$ and $\mathit{g}$ are bijectio
 \begin{equation}
 \fua{\mathit{f}}{\vto{x}\oplus a}=(\vto{x}^*\hat{\odot}\,\tnr{F})\oplus\fua{\mathit{g}}{a}\,,\,\,\forall\,a\in\eamd{U}{F}{m}\,,\,\vto{x}\in U_\cam{F}\,,
 \end{equation}
-when $\tnr{F}$ is called an \textsb{affinity tensor}\index{tensor!afinity}\index{affinity!tensor}. Sometimes it is very useful to ``vectorize'' affinity $\mathit{f}$ in order to work only with vectors. In this sense, linear vector function
+when $\tnr{F}$ is called an \textsb{affinity tensor}\index{tensor!afinity}\index{affinity!tensor}. Sometimes it is very useful to ``vectorize'' affinity $\mathit{f}$ in order to work only with vectors. In this sense, vector function $\tnr{\mathit{f}}:= \upsilon_o\circ\mathit{f}\circ\upsilon_o^{-1}$ described by 
 \begin{equation}
-\tnr{\mathit{f}}:= \upsilon_o\circ\mathit{f}\circ\upsilon_o^{-1}
+\fua{\tnr{\mathit{f}}}{\vv{\vto{x}\oplus a}}=\vv{\fua{\mathit{f}}{\vto{x}\oplus a}}\,,
 \end{equation}
-is said to be a vector affinity.
+is said to be a \textsb{vector affinity}\index{vector affinity}\index{affinity!vector}.
 
 {\footnotesize
 \begin{proof}
@@ -269,11 +273,11 @@ Still considering  the oriented Euclidean space $(U_\real,\tnr{A}_B)$ where $B=\
 \end{center}
 \titfigura{Axial vector $\vto{z}$ defined by $\vto{x}$, $\vto{y}$ and oriented Euclidean space $(U_\real,\tnr{A}_B)$, where basis $B=\{\vun{u}_1,\vun{u}_2,\vun{u}_3\}$.}\label{fg:axial}
 \end{figure}
-There is a classic mnemonic rule for obtaining the direction of $\vv{a\,\vto{z}\oplus a}$ that works as follows: considering my right hand, I must point my index and middle fingers to the same directions of $\vv{o\,\vun{u}_1\oplus o}$ and $\vv{o\,\vun{u}_2\oplus o}$ respectively, and then if my thumb points to the same direction of $\vv{o\,\vun{u}_3\oplus o}$, then space $(U_\real,\tnr{A}_B)$ is oriented according to the \textsb{right-hand rule}\index{right-hand rule}; on the other hand, literally, space $(U_\real,\tnr{A}_B)$ is oriented according to the \textsb{left-hand rule}\index{left-hand rule}. Once a hand is found, if I point my index and middle fingers to the same directions of $\vv{a\,\vto{x}\oplus a}$ and $\vv{a\,\vto{y}\oplus a}$ respectively, then the direction of my thumb defines the direction of $\vv{a\,\vto{z}\oplus a}$. For practical purposes, a three-dimensional Euclidean affine space is usually oriented according to the right-hand rule. An axial vector is always the result of a \textsb{cross product}\index{product!cross} of two vectors, that is, $\vto{z}=\gloref{crossProd}$ in the present case, where
+There is a classic mnemonic rule for obtaining the direction of $\vv{a\,\vto{z}\oplus a}$ that works as follows: considering my right hand, I must point my index and middle fingers to the same directions of $\vv{\,\vun{u}_1\oplus o}$ and $\vv{\,\vun{u}_2\oplus o}$ respectively, and then if my thumb points to the same direction of $\vv{\,\vun{u}_3\oplus o}$, then space $(U_\real,\tnr{A}_B)$ is oriented according to the \textsb{right-hand rule}\index{right-hand rule}; on the other hand, literally, space $(U_\real,\tnr{A}_B)$ is oriented according to the \textsb{left-hand rule}\index{left-hand rule}. Once a hand is found, if I point my index and middle fingers to the same directions of $\vv{a\,\vto{x}\oplus a}$ and $\vv{a\,\vto{y}\oplus a}$ respectively, then the direction of my thumb defines the direction of $\vv{a\,\vto{z}\oplus a}$. For practical purposes, a three-dimensional Euclidean affine space is usually oriented according to the right-hand rule. An axial vector is always the result of a \textsb{cross product}\index{product!cross} of two vectors, that is, $\vto{z}=\gloref{crossProd}$ in the present case, where
 \begin{equation}\label{eq:crossProduct}
 \vto{x}\times\vto{y} := \tnr{A}_B\hat{\odot}_2 (\vto{x}^*\otimes\vto{y}^*)\,.
 \end{equation}
-For arbitrary vectors $\vto{u},\vto{v},\vto{w}\in U_\real$ and scalars $\alpha,\beta,\theta\in\real$, where $\theta$ is the smallest angle defined by vectors $\vv{ou},\vv{ov}$, the cross product has the following properties.
+For arbitrary vectors $\vto{u},\vto{v},\vto{w}\in U_\real$ and scalars $\alpha,\beta,\theta\in\real$, where $\theta$ is the smallest angle defined by vectors $\vv{u},\vv{v}$, the cross product has the following properties.
 \begin{itemize}
 	\setlength\itemsep{.1em}
 	\item[i.] Mixed products: $\vto{u}\cdot(\vto{v}\times\vto{w})=\fua{\tnr{A}_B}{\vto{u},\vto{v},\vto{w}}$;
