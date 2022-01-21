@@ -90,14 +90,29 @@ In this context, point $o$ is called the \textsb{origin}\index{origin} of the co
 	\end{center}
 	\titfigura{$n$-dimensional affine coordinate system $(o,B)$ and its axes.}\label{fg:coordSystem}
 \end{figure}
-On section \ref{sec:group}, we said that in a group action a biunivocal relationship between its definer set and its definer group is possible if an element of the set is fixed. For the case of affine spaces, this fixation is established by a coordinate system, which enables to define a point $v$ from a vector $\vto{v}$ through an origin $o$, as we have done. In mathematical terms, considering origin $o$, the mapping $\map{\upsilon_o}{\eamsd{S}{F}{a}{n}}{\eam{S}{F}}$ is bijective if 
+On section \ref{sec:group}, we said that in a group action a biunivocal relationship between its definer set and its definer group is possible if an element of the set is fixed. For the case of affine spaces, this fixation is established by a coordinate system, which enables to define a point $v$ from a vector $\vto{v}$ through an origin $o$, as we have done. In mathematical terms, considering origin $o$, the mapping $\map{\upsilon_o}{\eamsd{S}{F}{a}{n}}{S_\cam{F}}$ is bijective if 
 \begin{equation}\label{eq:funVect}
 \fua{\upsilon_o}{x} = \vv{ox}\,,
 \end{equation} 
 where bijection $\upsilon_o$ is said to ``vectorize'' its argument and then, since the origin is fixed, we can represent $\fua{\upsilon_o}{v}=\vv{ov}$ by $\gloref{vecPoint}$ or $\vto{v}$. Therefore, it is clear that 
 \begin{equation}\label{eq:funVectInv}
 \fua{\upsilon_o^{-1}}{\vv{x}} = \vv{x}\oplus o\,.
-\end{equation} 
+\end{equation}
+Considering arbitrary $\vto{u},\vto{v}\in S_\cam{F}$, $a\in\eamsd{S}{F}{a}{n}$ and $\alpha\in\cam{F}$, there are some interesting properties involving this ``vectorization'' function, namely
+\begin{itemize}
+	\setlength\itemsep{.1em}
+	\item[i.] $\fua{\upsilon_o}{\vto{u}\oplus a} =  \vto{u}+\vv{a}$;
+	\item[ii.] ${\upsilon_o}[(\vto{u}+\vto{v})\oplus a] =  \vto{u}+\vto{v}+\vv{a}$;
+	\item[iii.] $\fua{\upsilon_o}{\alpha\vto{u}\oplus a} =  \alpha\vto{u}+\vv{a}$.
+\end{itemize}
+
+
+{\footnotesize
+\begin{proof}
+The first item is proved through the following: if point $c=\vto{u}\oplus a$ then, by the sum of vectors, it is true that $\fua{\upsilon_o}{c}=\vv{oc}=\vv{oa}+\vto{u}=\vv{a}+\vto{u}$. The second item is a straightforward consequence of the first and the third is a straightforward consequence of the second.    
+\end{proof}}
+
+
 The association $(\eamsd{S}{F}{a}{n},o,B)$ of an affine subspace with a coordinate system can be structured like a vector space and then inherits the same classification, outlined in figure \ref{fig:esquemaEspacos}, from its direction space $S_\cam{F}$ if suitable expressions for metric, norm and inner product are defined. Thereby, for arbitrary points $v$ and $u$ of $\eamsd{S}{F}{a}{n}$, the triple $(\eamsd{S}{F}{a}{n},o,B)$ is called an affine metric space if $\fua{\varrho}{u,v}:=\fua{\varrho}{\vv{u},\vv{v}}$, an affine normed space if a norm $\|\vv{v}\|$ is defined or an affine inner product space if there is the scalar $\vv{v}\cdot\vv{u}\,$. \emph{Since an affine subspace is itself an affine space, representation of triple $(\eamsd{S}{F}{a}{n},o,B)$ will be shortened by $\eamd{S}{F}{n}$, where the seed point $a$ and the coordinate system are implicit}. Since we are dealing in this chapter with morphological matters, what are the geometric manifestations of metric, norm and inner product? We already said that metric refers to the concept of distance and thus scalar $\fua{\varrho}{u,v}$ informs the distance between arbitrary points $u$ and $v$ in the context of affine metric spaces. Norm however is not applicable to points, being geometrically represented by the size of a vector, which also depicts the concept of vector intensity: a ``bigger'' vector is considered to be a more ``intense'' vector. In the context of affine Banach spaces, where distance
 \begin{equation}\label{eq:affDistance}
 \fua{\varrho}{u,v} := \|\vv{u} - \vv{v}\|=\|\vv{vo} + \vv{u}\|=\|\vv{vu}\|=\|\vv{uv}\|\,,
@@ -164,19 +179,18 @@ From the previous equality and definition \eqref{eq:projgeo}, if there is no geo
 
 
 \section{Affinities}
-The subject of Geometry is to study not only morphological sets and their elements, as we have done on the previous section, but also the correlation of geometrical objects, that is, functions whose domain and image are morphological sets. Thereby, in the context of Affine Geometry, this section deals exclusively with affinities, here understood as ``geometric'' functions that correlate points, defined by linear vector functions on Hilbert spaces. In more precise terms, given a Hilbert affine space $\eamd{U}{F}{m}$, a bijective mapping $\map{\mathit{g}}{\eamd{U}{F}{m}}{\eamd{U}{F}{m}}$ and a vector space $\evl{\cam{F}}{U}{U}$, we call  $\map{\mathit{f}}{\eamd{U}{F}{m}}{\eamd{U}{F}{m}}$ an \textsb{affine transformation}\index{affine!transformation} and its function an \textsb{affinity}\index{affinity} when there is a unique linear bijection $\vtf{f}\in\evl{\cam{F}}{U}{U}$ where
+The subject of Geometry is to study not only morphological sets and their elements, as we have done on the previous section, but also the correlation of geometrical objects, that is, functions whose domain and image are morphological sets. Thereby, in the context of Affine Geometry, this section deals exclusively with affinities, here understood as ``geometric'' functions that correlate points, defined by linear vector functions on Hilbert spaces. In more precise terms, given a Hilbert affine space $\eamd{U}{F}{m}$, a bijective mapping $\map{\mathit{g}}{\eamd{U}{F}{m}}{\eamd{U}{F}{m}}$ and a vector space $\evl{\cam{F}}{U}{U}$, we call  $\map{\mathit{f}}{\eamd{U}{F}{m}}{\eamd{U}{F}{m}}$ an \textsb{affine transformation}\index{affine!transformation} and its function an \textsb{affinity}\index{affinity} when there is a unique linear bijection $\vtf{f}\in\evl{\cam{F}}{U}{U}$ where equality
 \begin{equation}\label{eq:affty}
-\fua{\mathit{f}}{\vto{x}\oplus a}=\fua{\vtf{f}}{\vto{x}}\oplus\fua{\mathit{g}}{a}\,,\,\,\forall\,a\in\eamd{U}{F}{m}\,,\,\vto{x}\in U_\cam{F}\,.
+\fua{\mathit{f}}{\vto{x}\oplus a}=\fua{\vtf{f}}{\vto{x}}\oplus\fua{\mathit{g}}{a}\,,\,\,\forall\,a\in\eamd{U}{F}{m}\,,\,\vto{x}\in U_\cam{F}\,,
 \end{equation}
-It is straightforward to note that since $\vtf{f}$ and $\mathit{g}$ are bijections, so results affinity $\mathit{f}$. Among other properties, it is possible to obtain that every affinity preserves parallelism and dimensionality; in other words, parallel subspaces on the  domain remain parallel on the image and $n$-dimensional subspaces on the domain, $n\leq m$, remain $n$-dimensional on the image: for example, lines are mapped to lines, planes are mapped to planes and so on. From corollary \ref{cor:soTens} and equalities \eqref{eq:Lin2secTens}, we know that operator $\vtf{f}$ is the representative function of a tensor $\tnr{F}\in\ete{\cam{F}}{U^2}$ in such a way that the previous definition can be rewritten as
+is valid. It is straightforward to note that since $\vtf{f}$ and $\mathit{g}$ are bijections, so results affinity $\mathit{f}$. Among other properties, it is possible to obtain that every affinity preserves parallelism and dimensionality; in other words, parallel subspaces on the  domain remain parallel on the image and $n$-dimensional subspaces on the domain, $n\leq m$, remain $n$-dimensional on the image: for example, lines are mapped to lines, planes are mapped to planes and so on. From corollary \ref{cor:soTens} and equalities \eqref{eq:Lin2secTens}, we know that operator $\vtf{f}$ is the representative function of a tensor $\tnr{F}\in\ete{\cam{F}}{U^2}$ in such a way that the previous equality can be rewritten as
 \begin{equation}
 \fua{\mathit{f}}{\vto{x}\oplus a}=(\vto{x}^*\hat{\odot}\,\tnr{F})\oplus\fua{\mathit{g}}{a}\,,\,\,\forall\,a\in\eamd{U}{F}{m}\,,\,\vto{x}\in U_\cam{F}\,,
 \end{equation}
-when $\tnr{F}$ is called an \textsb{affinity tensor}\index{tensor!afinity}\index{affinity!tensor}. Sometimes it is very useful to ``vectorize'' affinity $\mathit{f}$ in order to work only with vectors. In this sense, vector function $\tnr{\mathit{f}}:= \upsilon_o\circ\mathit{f}\circ\upsilon_o^{-1}$ described by 
-\begin{equation}
-\fua{\tnr{\mathit{f}}}{\vv{\vto{x}\oplus a}}=\vv{\fua{\mathit{f}}{\vto{x}\oplus a}}\,,
+where $\tnr{F}$ is unique and called an \textsb{affinity tensor}\index{tensor!afinity}\index{affinity!tensor}. Sometimes it is very useful to ``vectorize'' affinity $\mathit{f}$ in order to work only with vectors. In this sense, vector function $\tnr{\mathit{f}}:= \upsilon_o\circ\mathit{f}\circ\upsilon_o^{-1}$ is said to be a \textsb{vector affinity}\index{vector affinity}\index{affinity!vector} and then, from the definition of the ``vectorization'' function and its properties, it is straightforward to obtain that 
+\begin{equation}\label{eq:vecAffi}
+\fua{\tnr{\mathit{f}}}{\vto{x}+ \vv{a}}=(\vto{x}^*\hat{\odot}\,\tnr{F})+\vv{\fua{\mathit{g}}{a}}\,.
 \end{equation}
-is said to be a \textsb{vector affinity}\index{vector affinity}\index{affinity!vector}.
 
 {\footnotesize
 \begin{proof}
@@ -207,13 +221,21 @@ it is straightforward to conclude that $\mathit{t}_\vto{v}\circ\mathit{t}_\vto{u
 $\mathit{t}_\vto{u} \circ  \mathit{t}_{-\vto{u}}= \mathit{t}_{-\vto{u}} \circ \mathit{t}_{\vto{u}} = \mathit{t}_{\vto{0}}$, $\forall \, \vto{u} \in \{U_\cam{F}\setminus\vto{0}\}$, and of
 \item[iv.] commutativity, where $\mathit{t}_\vto{u}\circ \mathit{t}_\vto{v}= \mathit{t}_\vto{v}\circ \mathit{t}_\vto{u}\,,\forall \, \vto{u},\vto{v} \in U_\cam{F}$.
 \end{itemize}
-
-
-Still considering previous conditions, the affinity in $\map{\mathit{h}}{\eamd{U}{F}{m}}{\eamd{U}{F}{m}}$ is called a \textsb{dilation}\index{dilation} if bijection $\vtf{h}\in\evl{\cam{F}}{U}{U}$ in
-\begin{equation}\label{eq:dilat}
-\fua{\mathit{h}}{\vto{x}\oplus a}=\fua{\vtf{h}}{\vto{x}}\oplus\fua{\mathit{g}}{a}\,,\,\,\forall\,a\in\eamd{U}{F}{m}\,,\,\vto{x}\in U_\cam{F}\,,
+According to \eqref{eq:vecAffi}, the correspondent vector affinity of translation $\mathit{t}_\vto{u}$ is called a \textsb{vector translation}\index{vector!translation}\index{translation!vector}, being described by equality
+\begin{equation}\label{eq:transltVec}
+\fua{\tnr{\mathit{t}}_\vto{u}}{\vv{x}}=\vto{u} + \vv{x}\,,
 \end{equation}
-is a positive-definite Hermitian operator usually called \textsb{stretch operator}\index{operator!stretch}, which represents, according to inequality \eqref{eq:nonnegTensor}, a positive-definite affinity tensor $\tnr{H}$, called \textsb{stretch tensor}\index{tensor!stretch}. Since the eigenvalues $\lambda_1,\cdots,\lambda_m$ of stretch operator $\vtf{h}$, or of stretch tensor $\tnr{H}$, are positive real scalars\footnote{See section \ref{sec:autoPares}.}, we call $\lambda_i$ a \textsb{stretch coefficient}\index{stretch coefficient}. If coefficient $\lambda_i>1$ or $\lambda_i\leqslant1$, it is called an \textsb{expansion}\index{expansion} or a \textsb{contraction}\index{contraction} respectively and in the case of proportional stretch, where $\lambda_1=\cdots=\lambda_m$, function $\vtf{h}$ (or tensor $\tnr{H}$) is equally called an expansion\index{operator!expansion} or contraction operator(tensor)\index{operator!contraction}. It is important to note that, from corollary \ref{cor:soSymTens}, in the specific context of Euclidean spaces, where $\vtf{h}^\dagger=\vtf{h}^\text{T}$, the stretch tensor $\tnr{H}$ is symmetric. As any other affinity, a dilation $\mathit{h}$ can be centered at point $a$, represented by $\gloref{dilat}$, where $\fua{\mathit{h}_a}{\vto{u}\oplus a}=\fua{\vtf{h}}{\vto{u}}\oplus a$. Figure \ref{fg:dilation} shows different types of dilations.
+from which it is clear that vector function $\tnr{\mathit{t}}_\vto{u}$ is linear, that is, $\tnr{\mathit{t}}_\vto{u}\in\evl{\cam{F}}{U}{U}$.
+
+Still considering previous conditions, the affinity in $\map{\mathit{h}}{\eamd{U}{F}{m}}{\eamd{U}{F}{m}}$ is called a \textsb{dilation}\index{dilation} and $\tnr{\mathit{h}}:= \upsilon_o\circ\mathit{h}\circ\upsilon_o^{-1}$ a \textsb{vector dilation}\index{vector!dilation} if bijection $\vtf{h}\in\evl{\cam{F}}{U}{U}$ in equality
+\begin{equation}\label{eq:dilat}
+\fua{\mathit{h}}{\vto{x}\oplus a}=\fua{\vtf{h}}{\vto{x}}\oplus\fua{\mathit{g}}{a}
+\end{equation}
+or in equality
+\begin{equation}\label{eq:dilatVec}
+\fua{\tnr{\mathit{h}}}{\vto{x}+ \vv{a}}=\fua{\vtf{h}}{\vto{x}}+\vv{\fua{\mathit{g}}{a}}
+\end{equation}
+is a positive-definite Hermitian operator, usually called a \textsb{stretch operator}\index{operator!stretch}, which represents, according to inequality \eqref{eq:nonnegTensor}, a positive-definite affinity tensor $\tnr{H}$, called \textsb{stretch tensor}\index{tensor!stretch}. Since the eigenvalues $\lambda_1,\cdots,\lambda_m$ of stretch operator $\vtf{h}$, or of stretch tensor $\tnr{H}$, are positive real scalars\footnote{See section \ref{sec:autoPares}.}, we call $\lambda_i$ a \textsb{stretch coefficient}\index{stretch coefficient}. If coefficient $\lambda_i>1$ or $\lambda_i\leqslant1$, it is called an \textsb{expansion}\index{expansion} or a \textsb{contraction}\index{contraction} respectively and in the case of proportional stretch, where $\lambda_1=\cdots=\lambda_m$, function $\vtf{h}$ (or tensor $\tnr{H}$) is equally called an expansion\index{operator!expansion} or contraction operator(tensor)\index{operator!contraction}. It is important to note that, from corollary \ref{cor:soSymTens}, in the specific context of Euclidean spaces, where $\vtf{h}^\dagger=\vtf{h}^\text{T}$, the stretch tensor $\tnr{H}$ is symmetric. As any other affinity, a dilation $\mathit{h}$ can be centered at point $a$, represented by $\gloref{dilat}$, where $\fua{\mathit{h}_a}{\vto{u}\oplus a}=\fua{\vtf{h}}{\vto{u}}\oplus a$. Figure \ref{fg:dilation} shows different types of dilations.
 \begin{figure}[!ht]
 \centering
 \begin{center}
