@@ -975,6 +975,8 @@ INPUT ./partes/figs/translat.eps
 INPUT ./partes/figs/translat-eps-converted-to.pdf
 INPUT ./partes/figs/translat-eps-converted-to.pdf
 INPUT ./partes/figs/translat-eps-converted-to.pdf
+INPUT /usr/local/texlive/2019/texmf-dist/fonts/vf/public/fbb/fbb-Italic-tlf-t1.vf
+INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/fbb/fbb-Italic-tlf-t1--base.tfm
 INPUT partes/figs/dilation.pstex_t
 INPUT partes/figs/dilation.pstex_t
 INPUT partes/figs/dilation.eps
@@ -986,8 +988,6 @@ INPUT ./partes/figs/dilation.eps
 INPUT ./partes/figs/dilation-eps-converted-to.pdf
 INPUT ./partes/figs/dilation-eps-converted-to.pdf
 INPUT ./partes/figs/dilation-eps-converted-to.pdf
-INPUT /usr/local/texlive/2019/texmf-dist/fonts/vf/public/fbb/fbb-Italic-tlf-t1.vf
-INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/fbb/fbb-Italic-tlf-t1--base.tfm
 INPUT partes/figs/rotoReflex.pstex_t
 INPUT partes/figs/rotoReflex.pstex_t
 INPUT partes/figs/rotoReflex.eps
