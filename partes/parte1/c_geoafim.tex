@@ -183,13 +183,13 @@ The subject of Geometry is to study not only morphological sets and their elemen
 \begin{equation}\label{eq:affty}
 \fua{\mathit{f}}{\vto{x}\oplus a}=\fua{\vtf{f}}{\vto{x}}\oplus\fua{\mathit{g}}{a}\,,\,\,\forall\,a\in\eamd{U}{F}{m}\,,\,\vto{x}\in U_\cam{F}\,,
 \end{equation}
-is valid. It is straightforward to note that since $\vtf{f}$ and $\mathit{g}$ are bijections, so results affinity $\mathit{f}$. Among other properties, it is possible to obtain that every affinity preserves parallelism and dimensionality; in other words, parallel subspaces on the  domain remain parallel on the image and $n$-dimensional subspaces on the domain, $n\leq m$, remain $n$-dimensional on the image: for example, lines are mapped to lines, planes are mapped to planes and so on. From corollary \ref{cor:soTens} and equalities \eqref{eq:Lin2secTens}, we know that operator $\vtf{f}$ is the representative function of a tensor $\tnr{T}\in\ete{\cam{F}}{U^2}$ in such a way that the previous equality can be rewritten as
-\begin{equation}
-\fua{\mathit{f}}{\vto{x}\oplus a}=(\vto{x}^*\hat{\odot}\,\tnr{T})\oplus\fua{\mathit{g}}{a}\,,\,\,\forall\,a\in\eamd{U}{F}{m}\,,\,\vto{x}\in U_\cam{F}\,,
+is valid. It is straightforward to note that since $\vtf{f}$ and $\mathit{g}$ are bijections, so results affinity $\mathit{f}$. Among other properties, it is possible to obtain that every affinity preserves parallelism and dimensionality; in other words, parallel subspaces on the  domain remain parallel on the image and $n$-dimensional subspaces on the domain, $n\leq m$, remain $n$-dimensional on the image: for example, lines are mapped to lines, planes are mapped to planes and so on. From corollary \ref{cor:soTens} and equalities \eqref{eq:Lin2secTens}, we know that operator $\vtf{f}$ is the representative function of a tensor $\tnr{L}\in\ete{\cam{F}}{U^2}$ in such a way that the previous equality can be rewritten as
+\begin{equation}\label{eq:afftyT}
+\fua{\mathit{f}}{\vto{x}\oplus a}=(\vto{x}^*\hat{\odot}\,\tnr{L})\oplus\fua{\mathit{g}}{a}\,,\,\,\forall\,a\in\eamd{U}{F}{m}\,,\,\vto{x}\in U_\cam{F}\,,
 \end{equation}
-where $\tnr{T}$ is unique and called an \textsb{affinity tensor}\index{tensor!afinity}\index{affinity!tensor}. Sometimes it is very useful to ``vectorize'' affinity $\mathit{f}$ in order to work only with vectors. In this sense, vector function $\tnr{\mathit{f}}:= \upsilon_o\circ\mathit{f}\circ\upsilon_o^{-1}$ is said to be a \textsb{vector affinity}\index{vector affinity}\index{affinity!vector} and then, from the definition of the ``vectorization'' function and its properties, it is straightforward to obtain that 
+where $\tnr{L}$ is unique and called an \textsb{affinity tensor}\index{tensor!afinity}\index{affinity!tensor}. Sometimes it is very useful to ``vectorize'' affinity $\mathit{f}$ in order to work only with vectors. In this sense, vector function $\tnr{\mathit{f}}:= \upsilon_o\circ\mathit{f}\circ\upsilon_o^{-1}$ is said to be a \textsb{vector affinity}\index{vector affinity}\index{affinity!vector} and then, from the definition of the ``vectorization'' function and its properties, it is straightforward to obtain that 
 \begin{equation}\label{eq:vecAffi}
-\fua{\tnr{\mathit{f}}}{\vto{x}+ \vv{a}}=(\vto{x}^*\hat{\odot}\,\tnr{T})+\vv{\fua{\mathit{g}}{a}}\,.
+\fua{\tnr{\mathit{f}}}{\vto{x}+ \vv{a}}=(\vto{x}^*\hat{\odot}\,\tnr{L})+\vv{\fua{\mathit{g}}{a}}\,.
 \end{equation}
 
 {\footnotesize
@@ -249,28 +249,48 @@ Given two arbitrary dilations $\mathit{h}_1$ and $\mathit{h}_2$, equalities
 \end{equation*}
 prove that $\mathit{h}_1\circ\mathit{h}_2$ is also a dilation and that $\fua{\mathit{h}^{-1}_1}{\vto{x}\oplus a}=\fua{\vtf{h}^{-1}_1}{\vto{x}}\oplus\fua{\mathit{g}^{-1}_1}{a}$. Considering the identity dilation $\mathit{i}$, similarly to the case of translations, it is straightforward to verify that dilations also obey the axioms of associativity, identity element, inverse element and commutativity on the operation of composition. Therefore, the set $H$ of all dilations on $\eamd{U}{F}{m}$ defines the abelian group $(H,\circ)$.
 
-\begin{mteo}{Decompositions of Dilation}{dilaDecomp}
-Given a dilation $\mathit{h}$ and a translation $\mathit{t}_\vto{x}$ on an affine space $\eamd{U}{F}{m}$, if vector $\fua{\kappa}{a}:=\vv{\fua{\mathit{g}}{a}a}$ then
+
+Still considering previous conditions, an affinity $\mathit{r}$ is called \textsb{isometric}\index{affinity!isometric} when its correspondent linear operator $\vtf{r}$ is isometric, that is, $\vtf{r}\in\grc{I}{\cam{F}}{U}$. In the context of Euclidean spaces, we already know that an isometric operator is also an orthogonal operator\footnote{See p. \pageref{prg:IsometOrth}.}, that is, the isometric group $\grc{I}{\real}{U}$ equals the orthogonal group $\grc{O}{\real}{U}$, whose elements preserve inner product and have determinant $\pm 1$. The centered isometric affinity $\mathit{r}_a$, described by $\fua{\mathit{r}_a}{\vto{x}\oplus a}=\fua{\vtf{r}}{\vto{x}}\oplus a$, is called a \textsb{rotation}\index{rotation} if isometric operator $\vtf{r}$ is proper orthogonal, or $\vtf{r}\in\grc{O^+}{\real}{U}$; otherwise, it is called a \textsb{rotoreflection}\index{rotoreflection}. The affinity tensor $\tnr{R}$ of a rotation is called a \textsb{rotation tensor}\index{rotation!tensor} and, similarly, tensor $\overline{\tnr{R}}$ of a rotoreflection is called a \textsb{rotoreflection tensor}\index{rotoreflection!tensor}. 
+
+
+\begin{mteo}{Rotodilation Function Decompositions}{rotoDilaF}
+Let a linear bijection $\vtf{f}$ be polar decomposed by orthogonal operator $\vtf{r}\in\evl{\real}{U}{U}$ and positive-definite symmetric operators $\vtf{s}_1,\vtf{s}_2\in\evl{\real}{U}{U}$ where $\vtf{f}=\vtf{r}\circ\vtf{s}_1^{\nicefrac{1}{2}}=\vtf{s}_2^{\nicefrac{1}{2}}\circ\vtf{r}$ and $U_\real$ is an $m$-dimensional Euclidean space. Given an affine transformation $\map{\mathit{f}}{\eamd{U}{R}{m}}{\eamd{U}{R}{m}}$ described by $\fua{\mathit{f}}{\vto{x}\oplus a}=\fua{\vtf{f}}{\vto{x}}\oplus\fua{\mathit{g}}{a}$, affinity
 \begin{equation*}
-\mathit{h} = \mathit{t}_{\fua{\kappa}{a}}\circ\mathit{h}_a=\mathit{h}_{\fua{\mathit{g}}{a}}\circ\mathit{t}_{\fua{\kappa}{a}}\,,\,\forall a\in\eamd{U}{F}{m}\,.
+\mathit{f} = \mathit{r}_{\fua{\mathit{g}}{a}}\circ\mathit{s}_1=\mathit{s}_2\circ\mathit{r}_{\fua{\mathit{g}}{a}}\,,
 \end{equation*}
+where $\mathit{r}_{\fua{\mathit{g}}{a}},\mathit{s}_1,\mathit{s}_2$ are respectively a rotation (rotoreflection) defined by $\vtf{r}$ and dilations defined by $\vtf{s}_1^{\nicefrac{1}{2}}$ and $\vtf{s}_2^{\nicefrac{1}{2}}$.  
 \end{mteo}
 
 {\footnotesize
 \begin{proof}
-Development
+By the right polar decomposition, the development 
 \begin{equation*}
-\fua{\mathit{h}}{\vto{x}\oplus a} = \fua{\vtf{h}}{\vto{x}}\oplus (\fua{\kappa}{a}\oplus a) = \fua{\kappa}{a}\oplus (\fua{\vtf{h}}{\vto{x}}\oplus a) = \fua{\mathit{t}_{\fua{\kappa}{a}}\circ\mathit{h}_a}{\vto{x}\oplus a}
+\fua{\mathit{f}}{\vto{x}\oplus a}=\fua{\vtf{f}}{\vto{x}}\oplus \fua{\mathit{g}}{a}=\fua{\vtf{r}\circ\vtf{s}_1^{\nicefrac{1}{2}}}{\vto{x}}\oplus \fua{\mathit{g}}{a}=\mathit{r}_{\fua{\mathit{g}}{a}}[\fua{\vtf{s}_1^{\nicefrac{1}{2}}}{\vto{x}}\oplus \fua{\mathit{g}}{a}]=\mathit{r}_{\fua{\mathit{g}}{a}}\circ\mathit{s}_1(\vto{x}\oplus a) 
 \end{equation*}
-proves the first decomposition and
-\begin{equation*}
-\fua{\mathit{h}}{\vto{x}\oplus a} = \fua{\vtf{h}}{\vto{x}}\oplus \fua{\mathit{g}}{a} = \fua{\mathit{h}_{\fua{\mathit{g}}{a}}}{\vto{x}\oplus \fua{\mathit{g}}{a}} = \fua{\mathit{h}_{\fua{\mathit{g}}{a}}}{(\fua{\kappa}{a}+\vto{x})\oplus a} = \fua{\mathit{h}_{\fua{\mathit{g}}{a}}\circ\mathit{t}_{\fua{\kappa}{a}}}{\vto{x}\oplus a}
-\end{equation*}
-proves the second.
+proves the theorem for $\mathit{s}_1$. Proof for $\mathit{s}_2$ is similar.
 \end{proof}}
 
 
-Still considering previous conditions, an affinity $\mathit{r}$ is called \textsb{isometric}\index{affinity!isometric} when its correspondent linear operator $\vtf{r}$ is isometric, that is, $\vtf{r}\in\grc{I}{\cam{F}}{U}$. In the context of Euclidean spaces, we already know that an isometric operator is also an orthogonal operator\footnote{See p. \pageref{prg:IsometOrth}.}, that is, the isometric group $\grc{I}{\real}{U}$ equals the orthogonal group $\grc{O}{\real}{U}$, whose elements preserve inner product and have determinant $\pm 1$. The centered isometric affinity $\mathit{r}_a$, described by $\fua{\mathit{r}_a}{\vto{x}\oplus a}=\fua{\vtf{r}}{\vto{x}}\oplus a$, is called a \textsb{rotation}\index{rotation} if isometric operator $\vtf{r}$ is proper orthogonal, or $\vtf{r}\in\grc{O^+}{\real}{U}$; otherwise, it is called a \textsb{rotoreflection}\index{rotoreflection}. The affinity tensor $\tnr{R}$ of a rotation is called a \textsb{rotation tensor}\index{rotation!tensor} and, similarly, tensor $\overline{\tnr{R}}$ of a rotoreflection is called a \textsb{rotoreflection tensor}\index{rotoreflection!tensor}. Now, recalling the concept of unimodular tensors presented in section \ref{sec:TensSpac}, let $(U_\real,\tnr{A}_B)$ be an $m$-dimensional oriented Euclidean space where $\tnr{A}_B\in\etng{m}{\real}{U^m}$ and $B=\{\vun{u}_1,\cdots,\vun{u}_m\}$. Considering $\mathit{r}_a$ a rotation and $\overline{\mathit{r}}_a$ a rotoreflection, since every pair of Euclidean orthonormal basis can be related through an orthogonal operator\footnote{See p. \pageref{prg:orthBases}.}, we conclude that rotation  $C=\{\fua{\vtf{r}}{\vun{u}_1},\cdots,\fua{\vtf{r}}{\vun{u}_m}\}$ and rotoreflection $\overline{C}=\{\fua{\overline{\vtf{r}}}{\vun{u}_1},\cdots,\fua{\overline{\vtf{r}}}{\vun{u}_m}\}$ of basis $B$ are positively and negatively oriented bases because $\fua{\tnr{A}_C}{\vun{u}_1,\cdots,\vun{u}_m}=-\fua{\tnr{A}_{\overline{C}}}{\vun{u}_1,\cdots,\vun{u}_m}=1$ from definition \eqref{eq:basisAltern} and equality \eqref{eq:alternDete}. In order to geometrically represent in a simple way basis rotation and rotoreflection, we specify the affine Euclidean space in question to be two-dimensional, that is, $m=2$, and rotoreflection $\overline{\vtf{r}}=-\vtf{r}$. Thereby, for the basis vectors $\vun{u}_1$ and $\vun{u}_2$ the smallest angle $\theta$ between them leads to equalities $0=\vun{u}_1\cdot\vun{u}_2=\|\vun{u}_1\|\|\vun{u}_2\|\cos\theta=\cos\theta$, and since orthogonal functions preserve inner product, then $\theta$ is also the smallest angle between $\fua{\vtf{r}}{\vun{u}_1}$ and $\fua{\vtf{r}}{\vun{u}_2}$, or between $\fua{\overline{\vtf{r}}}{\vun{u}_1}$ and $\fua{\overline{\vtf{r}}}{\vun{u}_2}$, because the following equalities are all valid: $\vun{u}_1\cdot\vun{u}_2=\fua{\vtf{r}}{\vun{u}_1}\cdot\fua{\vtf{r}}{\vun{u}_2}=\fua{\overline{\vtf{r}}}{\vun{u}_1}\cdot\fua{\overline{\vtf{r}}}{\vun{u}_2}=0$. From these angle and size preserving features, we can represent an anticlockwise acute angle $\phi$ rotation and rotoreflection of basis $B$ according to figure \ref{fg:rotoReflex}.
+\begin{mcoro}{Rotodilation Tensor Decompositions}{rotoDilaT}
+If $\tnr{L}\in\ete{\cam{R}}{U^2}$ is an affinity tensor then $\tnr{L}=\tnr{S}_1\odot_1\tnr{R}=\tnr{R}\odot_1\tnr{S}_2$, where $\tnr{R}$, $\tnr{S}_1$, $\tnr{S}_2$ are respectively a rotation (rotoreflection) and stretch tensors. 
+\end{mcoro}
+
+
+{\footnotesize
+\begin{proof}
+According to \eqref{eq:afftyT}, development
+\begin{align*}
+\fua{\mathit{f}}{\vto{x}\oplus a}&=\mathit{r}_{\fua{\mathit{g}}{a}}\circ\mathit{s}_1(\vto{x}\oplus a)\\
+&=\mathit{r}_{\fua{\mathit{g}}{a}}[(\vto{x}^*\hat{\odot}_1\,\tnr{S}_1)\oplus{\fua{\mathit{g}}{a}}]\\
+&=(\vto{x}^*{\odot_1}\,\tnr{S}_1)\hat{\odot}_1\tnr{R}\oplus{\fua{\mathit{g}}{a}}\\
+&=[\vto{x}^*{\hat{\odot}_1}\,(\tnr{S}_1\odot_1\tnr{R})]\oplus{\fua{\mathit{g}}{a}}
+\end{align*}
+proves the theorem for $\tnr{S}_1$. Proof for $\tnr{S}_2$ is similar.
+\end{proof}}
+
+
+
+Now, recalling the concept of unimodular tensors presented in section \ref{sec:TensSpac}, let $(U_\real,\tnr{A}_B)$ be an $m$-dimensional oriented Euclidean space where $\tnr{A}_B\in\etng{m}{\real}{U^m}$ and $B=\{\vun{u}_1,\cdots,\vun{u}_m\}$. Considering $\mathit{r}_a$ a rotation and $\overline{\mathit{r}}_a$ a rotoreflection, since every pair of Euclidean orthonormal basis can be related through an orthogonal operator\footnote{See p. \pageref{prg:orthBases}.}, we conclude that rotation  $C=\{\fua{\vtf{r}}{\vun{u}_1},\cdots,\fua{\vtf{r}}{\vun{u}_m}\}$ and rotoreflection $\overline{C}=\{\fua{\overline{\vtf{r}}}{\vun{u}_1},\cdots,\fua{\overline{\vtf{r}}}{\vun{u}_m}\}$ of basis $B$ are positively and negatively oriented bases respectively because equalities $\fua{\tnr{A}_C}{\vun{u}_1,\cdots,\vun{u}_m}=-\fua{\tnr{A}_{\overline{C}}}{\vun{u}_1,\cdots,\vun{u}_m}=1$ are valid according to definition \eqref{eq:basisAltern} and equality \eqref{eq:alternDete}. In order to geometrically represent in a simple way basis rotation and rotoreflection, we specify the affine Euclidean space in question to be two-dimensional, that is, $m=2$, and rotoreflection $\overline{\vtf{r}}=-\vtf{r}$. Thereby, for the basis vectors $\vun{u}_1$ and $\vun{u}_2$ the smallest angle $\theta$ between them leads to equalities $0=\vun{u}_1\cdot\vun{u}_2=\|\vun{u}_1\|\|\vun{u}_2\|\cos\theta=\cos\theta$, and since orthogonal functions preserve inner product, then $\theta$ is also the smallest angle between $\fua{\vtf{r}}{\vun{u}_1}$ and $\fua{\vtf{r}}{\vun{u}_2}$, or between $\fua{\overline{\vtf{r}}}{\vun{u}_1}$ and $\fua{\overline{\vtf{r}}}{\vun{u}_2}$, because the following equalities are all valid: $\vun{u}_1\cdot\vun{u}_2=\fua{\vtf{r}}{\vun{u}_1}\cdot\fua{\vtf{r}}{\vun{u}_2}=\fua{\overline{\vtf{r}}}{\vun{u}_1}\cdot\fua{\overline{\vtf{r}}}{\vun{u}_2}=0$. From these angle and size preserving features, we can represent an anticlockwise acute angle $\phi$ rotation and rotoreflection of basis $B$ according to figure \ref{fg:rotoReflex}.
 \begin{figure}[!ht]
 \centering
 \begin{center}
