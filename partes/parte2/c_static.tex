@@ -27,7 +27,7 @@ Concerning the subject of this chapter, the intuitive concepts and definitions i
 \end{equation}
 where $\upsilon_o$ ``vectorizes'' the points of $\mathcal{B}_t$ relative to an origin $o\in\eamd{U}{R}{3}$, according to definition \eqref{eq:funVect}. Since $\upsilon_o$ is a bijection, the sets of vectors $\tnr{\overline{\mathcal{B}}}$ and $\tnr{\mathcal{B}}_t$ will also be called body and shape respectively.
 
-Given the mapping $\map{\tnr{\chi}}{\tnr{\overline{\mathcal{B}}}\times\tempo}{\tnr{\mathcal{B}}_t}$, bijection $\tnr{\chi}$ is called a deformation of $\tnr{\overline{\mathcal{B}}}$ when it is a $\mathcal{C}^{2}$-diffeomorphism that observes $\fua{\tnr{\chi}}{\overline{\vto{x}},\overline{t}}=\overline{\vto{x}}+\fua{\vtf{c}}{\overline{\vto{x}}}$, where vector function in $\map{\vtf{c}}{\tnr{\overline{\mathcal{B}}}}{U_\real}$ is constant. For most of the forthcoming concepts to be presented, it is convenient to work with an arbitrary instant of time $t\in\tempo$ and a bijective mapping $\map{\gloref{defInst}}{\tnr{\overline{\mathcal{B}}}}{\tnr{\mathcal{B}}_t}$ with rule $\fua{\tnr{\chi}_t}{\overline{\vto{x}}}=\fua{\tnr{\chi}}{\overline{\vto{x}},t}$, from which we conclude that $\tnr{\chi}_t$ is also a $\mathcal{C}^{2}$-diffeomorphism that observes $\tnr{\chi}_{\overline{t}}(\overline{\vto{x}})=\tnr{i}_{\tnr{\overline{\mathcal{B}}}}(\overline{\vto{x}})+\fua{\vtf{c}}{\overline{\vto{x}}}$. Given an arbitrary point $\overline{\vto{u}}\in\tnr{\overline{\mathcal{B}}}$ and conveniently chosen non zero vectors $\overline{\vto{x}}_i\in\tnr{\overline{\mathcal{B}}}$, from which $\overline{\vto{u}}_i=\overline{\vto{x}}_i-\overline{\vto{u}}$ constitute a linearly independent set $\{ \overline{\vto{u}}_1,\overline{\vto{u}}_2,\overline{\vto{u}}_3\}$, since body points cannot collapse during deformation, according to \eqref{eq:volumeCross} volume
+Given the mapping $\map{\tnr{\chi}}{\tnr{\overline{\mathcal{B}}}\times\tempo}{\tnr{\mathcal{B}}_t}$, bijection $\tnr{\chi}$ is called a deformation of $\tnr{\overline{\mathcal{B}}}$ when it is a $\mathcal{C}^{2}$-diffeomorphism that observes $\fua{\tnr{\chi}}{\overline{\vto{x}},\overline{t}}=\overline{\vto{x}}+\vto{c}$, where vector $\vto{c}\in U_\real$ is constant. For most of the forthcoming concepts to be presented, it is convenient to work with an arbitrary instant of time $t\in\tempo$ and a bijective mapping $\map{\gloref{defInst}}{\tnr{\overline{\mathcal{B}}}}{\tnr{\mathcal{B}}_t}$ with rule $\fua{\tnr{\chi}_t}{\overline{\vto{x}}}=\fua{\tnr{\chi}}{\overline{\vto{x}},t}$, from which we conclude that $\tnr{\chi}_t$ is also a $\mathcal{C}^{2}$-diffeomorphism that observes $\tnr{\chi}_{\overline{t}}(\overline{\vto{x}})=\tnr{i}_{\tnr{\overline{\mathcal{B}}}}(\overline{\vto{x}})+\vto{c}$. Given an arbitrary point $\overline{\vto{u}}\in\tnr{\overline{\mathcal{B}}}$ and conveniently chosen non zero vectors $\overline{\vto{x}}_i\in\tnr{\overline{\mathcal{B}}}$, from which $\overline{\vto{u}}_i=\overline{\vto{x}}_i-\overline{\vto{u}}$ constitute a linearly independent set $\{ \overline{\vto{u}}_1,\overline{\vto{u}}_2,\overline{\vto{u}}_3\}$, since body points cannot collapse during deformation, according to \eqref{eq:volumeCross} volume
 \begin{equation}
 {\tnr{A}_O}[\fua{\tnr{\chi}_t}{\overline{\vto{u}}_1},\fua{\tnr{\chi}_t}{\overline{\vto{u}}_2},\fua{\tnr{\chi}_t}{\overline{\vto{u}}_3}]\neq 0\,.
 \end{equation}
@@ -53,30 +53,36 @@ Now, at reference instant $t=\overline{t}$, we know that $\tnr{\chi}_{\overline{
 \begin{equation}\label{eq:detPositive}
 \textnormal{Det}[\fua{\nabla\tnr{\chi}_t}{\overline{\vto{u}}}]>0\,,
 \end{equation}
-since deformation $\tnr{\chi}$ and its derivative are continuous: during motion, local volume change $\textnormal{Det}[\fua{\nabla\tnr{\chi}_{t}}{\overline{\vto{u}}}]$, which is one at $t=\overline{t}$ and different from zero otherwise, cannot ``jump'' zero and be negative. From \eqref{eq:det3D} and this previous inequality, we can conclude that vector function ${\tnr{\chi}'_t}_{\overline{\vto{u}}}$ is orientation-preserving\footnote{About this topic, professor Spivak wrote: ``\emph{The non-singular linear maps $\map{f}{V}{V}$ from a finite dimensional vector space to itself fall into two groups, those with $\det f>0$ and those with $\det f<0$; linear transformations in the first group are called \textsb{orientation preserving} and the others are called \textsb{orientation reversing}...There is no way to pass continuously between these two groups...}'' (\aut{Spivak}\cite{spivak_2005_1}, p. 84)}, a consequence that is used by some authors as a local necessary condition for the vector function $\tnr{\chi}_t$ to be considered a deformation.  
+since deformation $\tnr{\chi}$ and its derivative are continuous: during motion, local volume change $\textnormal{Det}[\fua{\nabla\tnr{\chi}_{t}}{\overline{\vto{u}}}]$, which is one at $t=\overline{t}$ and different from zero otherwise, cannot ``jump'' zero and be negative. From \eqref{eq:det3D} and this previous inequality, we can conclude that vector function ${\tnr{\chi}'_t}_{\overline{\vto{u}}}$ is orientation-preserving\footnote{About this topic, professor Spivak wrote: ``\emph{The non-singular linear maps $\map{f}{V}{V}$ from a finite dimensional vector space to itself fall into two groups, those with $\det f>0$ and those with $\det f<0$; linear transformations in the first group are called \textsb{orientation preserving} and the others are called \textsb{orientation reversing}...There is no way to pass continuously between these two groups...}'' (\aut{Spivak}\cite{spivak_2005_1}, p. 84)}, a consequence that is used by some authors as a local necessary condition for the vector function $\tnr{\chi}_t$ to be considered a deformation. A deformation  $\tnr{\chi}_t$ where the local volume change
+\begin{equation}
+\textnormal{Det}[\fua{\nabla\tnr{\chi}_t}{\overline{\vto{u}}}]=1
+\end{equation}
+is said to be \textsb{isochoric}\index{deformation!isochoric}\index{isochoric deformation} on $\overline{\vto{u}}$ or just isochoric when previous equality is valid for all $\overline{\vto{u}}\in\tnr{\overline{\mathcal{B}}}$. 
 
-A deformation  $\tnr{\chi}_t$ where the local volume change
+
+Now, the deformation in $\map{\tnr{\varphi}_t}{\tnr{\overline{\mathcal{B}}}}{\tnr{\mathcal{B}}_t}$ described by the rule
 \begin{equation}
-\textnormal{Det}[\fua{\nabla\tnr{\chi}_t}{\overline{\vto{x}}}]=1
+\fua{\tnr{\varphi}_t}{\overline{\vto{x}}} =[\overline{\vto{x}}^*\hat{\odot}_1\fua{\nabla\tnr{\varphi}_t}{\overline{\vto{x}}}] + \vto{c} 
 \end{equation}
-is said to be \textsb{isochoric}\index{deformation!isochoric}\index{isochoric deformation} on $\overline{\vto{x}}$ or just isochoric when previous equality is valid for all $\overline{\vto{x}}\in\tnr{\overline{\mathcal{B}}}$. Now, when the deformation gradient is constant on $\tnr{\overline{\mathcal{B}}}$, deformation $\tnr{\chi}_t$ is called \textsb{homogeneous}\index{deformation!homogeneous}, that is, tensor $\fua{\nabla\tnr{\chi}_t}{\overline{\vto{x}}}=\tnr{F}$ for all $\overline{\vto{x}}\in\tnr{\overline{\mathcal{B}}}$, and then from \eqref{eq:gradConst} we can write that vector
+is called an \textsb{affine deformation}\index{affine!deformation}\index{deformation!affine}. Therefore, if gradient $\fua{\nabla\tnr{\varphi}_t}{\overline{\vto{x}}}$ is the identity tensor $\tnr{I}\in\ete{\real}{U^{2}}$ or a stretch tensor for all $\overline{\vto{x}}\in\tnr{\overline{\mathcal{B}}}$, then affine deformation $\tnr{\varphi}_t$ is a vector translation or a centered vector dilation respectively, according to \eqref{eq:transltVec} and \eqref{eq:dilatVec}. It is important to observe that an affine deformation can be decomposed in a rotodilation, according to theorem \ref{teo:rotoDilaF} and corollary \ref{cor:rotoDilaT}, in such a way that 
 \begin{equation}
-\fua{\tnr{\chi}_t}{\overline{\vto{x}}} - \fua{\tnr{\chi}_t}{\overline{\vto{y}}}=(\overline{\vto{x}}^*-\overline{\vto{y}}^*)\hat{\odot}_1\tnr{F} \,,\,\forall\,\overline{\vto{x}},\overline{\vto{y}}\in\tnr{\overline{\mathcal{B}}}\,. 
+\tnr{\varphi}_t = \mathit{r}_{\vto{c}}\circ\mathit{s}_1=\mathit{s}_2\circ\mathit{r}_{\vto{c}}
 \end{equation}
-If point $\overline{\vto{y}}$ is fixed, vector $\vtf{g}(\vto{x})=\fua{\tnr{\chi}_t}{\overline{\vto{y}}}-(\overline{\vto{y}}^*\hat{\odot}_1\tnr{F})$ is constant and then
-\begin{equation}\label{eq:homoDef}
-\fua{\tnr{\chi}_t}{\overline{\vto{x}}} =(\overline{\vto{x}}^*\hat{\odot}_1\tnr{F}) + \vtf{g}(\vto{x}) 
-\end{equation}
-turns out to be a general rule for homogeneous deformations since $\overline{\vto{y}}$ is arbitrary. Considering $a=o$ a fixed point in expression \eqref{eq:vecAffi}, that is $\fua{\tnr{\mathit{f}}}{\vto{x}}=(\vto{x}^*\hat{\odot}\,\tnr{T})+\vv{\fua{\mathit{g}}{o}}$, and comparing it to \eqref{eq:homoDef}, it is straightforward to conclude that every homogeneous deformation is an affinity. In this context, recalling that mapping $\map{\vtf{c}}{\tnr{\overline{\mathcal{B}}}}{U_\real}$ is an arbitrary constant, a deformation $\tnr{\varphi}_t$ described by 
+and
 \begin{equation}
-\fua{\tnr{\varphi}_t}{\overline{\vto{x}}} =[\overline{\vto{x}}^*\hat{\odot}_1\fua{\nabla\tnr{\varphi}_t}{\overline{\vto{x}}}] + \fua{\vtf{c}}{\overline{\vto{x}}} 
+\fua{\nabla\tnr{\varphi}_t}{\overline{\vto{u}}}=\tnr{V}_{\overline{\vto{u}}}\odot_1\tnr{R}_{\overline{\vto{u}}}=\tnr{R}_{\overline{\vto{u}}}\odot_1\tnr{U}_{\overline{\vto{u}}}\,,\,\forall\, \overline{\vto{u}}\in\tnr{\overline{\mathcal{B}}}\,, 
 \end{equation}
-is called an \textsb{affine deformation}\index{affine!deformation}\index{deformation!affine}. Therefore, if gradient $\fua{\nabla\tnr{\varphi}_t}{\overline{\vto{x}}}$ is the identity tensor $\tnr{I}\in\ete{\real}{U^{2}}$ or a stretch tensor for all $\overline{\vto{x}}\in\tnr{\overline{\mathcal{B}}}$, then affine deformation $\tnr{\varphi}_t$ is a vector translation or a centered vector dilation respectively, according to \eqref{eq:transltVec} and \eqref{eq:dilatVec}. Since its deformation gradient $\tnr{I}$ is obviously constant on $\tnr{\overline{\mathcal{B}}}$,  a vector translation is an homogeneous deformation. It is important to observe that an affine deformation can be decomposed in a rotodilation, according to theorem \ref{teo:rotoDilaF} and corollary \ref{cor:rotoDilaT}, in such a way that 
+where $\tnr{V}_{\overline{\vto{u}}}$ and $\tnr{U}_{\overline{\vto{u}}}$ are the affinity tensors of $\mathit{s}_1$ and $\mathit{s}_2$, usually called \textsb{left}\index{tensor!left stretch} and \textsb{right stretch tensors}\index{tensor!right stretch}. Since the local volume change is always positive, as we already know, $\tnr{R}_{\overline{\vto{u}}}$ can never be a rotoreflection tensor. When the affine deformation gradient is constant on $\tnr{\overline{\mathcal{B}}}$, the deformation is called \textsb{homogeneous}\index{deformation!homogeneous}, represented by $\tnr{\tilde{\varphi}}_t$. In other words, tensor $\fua{\nabla\tnr{\tilde{\varphi}}_t}{\overline{\vto{u}}}=\tnr{F}$ for all $\overline{\vto{u}}\in\tnr{\overline{\mathcal{B}}}$ and then 
 \begin{equation}
-\fua{\tnr{\varphi}_t}{\overline{\vto{x}}} = \mathit{r}_{\fua{\vtf{c}}{\overline{\vto{x}}}}\circ\mathit{s}_1(\overline{\vto{x}})=\mathit{s}_2\circ\mathit{r}_{\fua{\vtf{c}}{\overline{\vto{x}}}}(\overline{\vto{x}})
+\fua{\tnr{\tilde{\varphi}}_t}{\overline{\vto{x}}} =(\overline{\vto{x}}^*\hat{\odot}_1\tnr{F}) + \vto{c}\,.
 \end{equation}
-and 
+It is interesting to note that if $\tnr{F}=\tnr{I}$, deformation $\tnr{\tilde{\varphi}}_t$ results a vector translation. In the rotodilation decomposition of the homogeneous deformation gradient $\tnr{F}$, the subscripts identifying point dependence can be removed, resulting  
 \begin{equation}
-\fua{\nabla\tnr{\varphi}_t}{\overline{\vto{x}}}=\tnr{V}\odot_1\tnr{R}=\tnr{R}\odot_1\tnr{U}\,, 
+\tnr{F}=\tnr{V}\odot_1\tnr{R}=\tnr{R}\odot_1\tnr{U}\,. 
 \end{equation}
-where $\tnr{V}_{\overline{\vto{x}}}$ and $\tnr{U}_{\overline{\vto{x}}}$ are the affinity tensors of $\mathit{s}_1$ and $\mathit{s}_2$, usually called \textsb{left}\index{tensor!left stretch} and \textsb{right stretch tensors}\index{tensor!right stretch}. Since the local volume change is always positive, as we already know, $\tnr{R}_{\overline{\vto{x}}}$ is always a rotation tensor.
+
+
+
+
+\begin{example}
+\end{example}
