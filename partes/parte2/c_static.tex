@@ -27,7 +27,7 @@ Concerning the subject of this chapter, the intuitive concepts and definitions i
 \end{equation}
 where $\upsilon_o$ ``vectorizes'' the points of $\mathcal{B}_t$ relative to an origin $o\in\eamd{U}{R}{3}$, according to definition \eqref{eq:funVect}. Since $\upsilon_o$ is a bijection, the sets of vectors $\tnr{\overline{\mathcal{B}}}$ and $\tnr{\mathcal{B}}_t$ will also be called body and shape respectively.
 
-Given the mapping $\map{\tnr{\chi}}{\tnr{\overline{\mathcal{B}}}\times\tempo}{\tnr{\mathcal{B}}_t}$, bijection $\tnr{\chi}$ is called a deformation of $\tnr{\overline{\mathcal{B}}}$ when it is a $\mathcal{C}^{2}$-diffeomorphism that observes $\fua{\tnr{\chi}}{\overline{\vto{x}},\overline{t}}=\overline{\vto{x}}+\vto{c}$, where vector $\vto{c}\in U_\real$ is constant. For most of the forthcoming concepts to be presented, it is convenient to work with an arbitrary instant of time $t\in\tempo$ and a bijective mapping $\map{\gloref{defInst}}{\tnr{\overline{\mathcal{B}}}}{\tnr{\mathcal{B}}_t}$ with rule $\fua{\tnr{\chi}_t}{\overline{\vto{x}}}=\fua{\tnr{\chi}}{\overline{\vto{x}},t}$, from which we conclude that $\tnr{\chi}_t$ is also a $\mathcal{C}^{2}$-diffeomorphism that observes $\tnr{\chi}_{\overline{t}}(\overline{\vto{x}})=\tnr{i}_{\tnr{\overline{\mathcal{B}}}}(\overline{\vto{x}})+\vto{c}$. Given an arbitrary point $\overline{\vto{u}}\in\tnr{\overline{\mathcal{B}}}$ and conveniently chosen non zero vectors $\overline{\vto{x}}_i\in\tnr{\overline{\mathcal{B}}}$, from which $\overline{\vto{u}}_i=\overline{\vto{x}}_i-\overline{\vto{u}}$ constitute a linearly independent set $\{ \overline{\vto{u}}_1,\overline{\vto{u}}_2,\overline{\vto{u}}_3\}$, since body points cannot collapse during deformation, according to \eqref{eq:volumeCross} volume
+Given the mapping $\map{\tnr{\chi}}{\tnr{\overline{\mathcal{B}}}\times\tempo}{\tnr{\mathcal{B}}_t}$, bijection $\tnr{\chi}$ is called a deformation of $\tnr{\overline{\mathcal{B}}}$ when it is a $\mathcal{C}^{2}$-diffeomorphism that observes $\fua{\tnr{\chi}}{\overline{\vto{x}},\overline{t}}=\overline{\vto{x}}+\vto{c}$, where vector $\vto{c}\in U_\real$ is constant. For most of the forthcoming concepts to be presented, it is convenient to work with an arbitrary instant of time $t\in\tempo$ and a bijective mapping $\map{\gloref{defInst}}{\tnr{\overline{\mathcal{B}}}}{\tnr{\mathcal{B}}_t}$ with rule $\fua{\tnr{\chi}_t}{\overline{\vto{x}}}=\fua{\tnr{\chi}}{\overline{\vto{x}},t}$, from which we conclude that $\tnr{\chi}_t$ is also a $\mathcal{C}^{2}$-diffeomorphism that observes $\tnr{\chi}_{\overline{t}}(\overline{\vto{x}})=\tnr{i}_{\tnr{\overline{\mathcal{B}}}}(\overline{\vto{x}})+\vto{c}$. Given an arbitrary point $\overline{\vto{u}}\in\tnr{\overline{\mathcal{B}}}$ and conveniently chosen non zero vectors $\overline{\vto{v}}_i\in\tnr{\overline{\mathcal{B}}}$, from which $\overline{\vto{u}}_i=\overline{\vto{v}}_i-\overline{\vto{u}}$ constitute a linearly independent set $\{ \overline{\vto{u}}_1,\overline{\vto{u}}_2,\overline{\vto{u}}_3\}$, since body points cannot collapse during deformation, according to \eqref{eq:volumeCross} volume
 \begin{equation}
 {\tnr{A}_O}[\fua{\tnr{\chi}_t}{\overline{\vto{u}}_1},\fua{\tnr{\chi}_t}{\overline{\vto{u}}_2},\fua{\tnr{\chi}_t}{\overline{\vto{u}}_3}]\neq 0\,.
 \end{equation}
@@ -60,7 +60,7 @@ since deformation $\tnr{\chi}$ and its derivative are continuous: during motion,
 is said to be \textsb{isochoric}\index{deformation!isochoric}\index{isochoric deformation} on $\overline{\vto{u}}$ or just isochoric when previous equality is valid for all $\overline{\vto{u}}\in\tnr{\overline{\mathcal{B}}}$. 
 
 
-Now, the deformation in $\map{\tnr{\varphi}_t}{\tnr{\overline{\mathcal{B}}}}{\tnr{\mathcal{B}}_t}$ described by the rule
+Recalling the affinities and their related concepts presented in previous chapter, the deformation in $\map{\tnr{\varphi}_t}{\tnr{\overline{\mathcal{B}}}}{\tnr{\mathcal{B}}_t}$ described by the rule
 \begin{equation}
 \fua{\tnr{\varphi}_t}{\overline{\vto{x}}} =[\overline{\vto{x}}^*\hat{\odot}_1\fua{\nabla\tnr{\varphi}_t}{\overline{\vto{x}}}] + \vto{c} 
 \end{equation}
@@ -82,7 +82,7 @@ It is interesting to note that if $\tnr{F}=\tnr{I}$, deformation $\tnr{\tilde{\v
 \end{equation}
 
 
-
-
 \begin{example}
+Before examples of notable homogeneous deformations are presented, we specify eight body points that constitute the vertices of a cube: an arbitrarily chosen $\overline{\vto{u}}$, three $\overline{\vto{u}}_i=\vun{e}_i+\overline{\vto{u}}$, $i=1,2,3$, where $\vun{e}_i$ constitute the natural basis $O$; points $\overline{\vto{u}}_5=\vun{e}_1 + \vun{e}_2 + \overline{\vto{u}}$, $\overline{\vto{u}}_6=\vun{e}_1 + \vun{e}_3 + \overline{\vto{u}}$, $\overline{\vto{u}}_7=\vun{e}_2 + \vun{e}_3 + \overline{\vto{u}}$ and $\overline{\vto{u}}_8=\vun{e}_1+\vun{e}_2 + \vun{e}_3 + \overline{\vto{u}}$.
+
 \end{example}
