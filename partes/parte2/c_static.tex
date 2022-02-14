@@ -73,7 +73,7 @@ and
 \fua{\nabla\tnr{\varphi}_t}{\overline{\vto{u}}}=\tnr{V}_{\overline{\vto{u}}}\odot_1\tnr{R}_{\overline{\vto{u}}}=\tnr{R}_{\overline{\vto{u}}}\odot_1\tnr{U}_{\overline{\vto{u}}}\,,\,\forall\, \overline{\vto{u}}\in\tnr{\overline{\mathcal{B}}}\,, 
 \end{equation}
 where $\tnr{V}_{\overline{\vto{u}}}$ and $\tnr{U}_{\overline{\vto{u}}}$ are the affinity tensors of $\mathit{s}_1$ and $\mathit{s}_2$, usually called \textsb{left}\index{tensor!left stretch} and \textsb{right stretch tensors}\index{tensor!right stretch}. Since the local volume change is always positive, as we already know, $\tnr{R}_{\overline{\vto{u}}}$ can never be a rotoreflection tensor. When the affine deformation gradient is constant on $\tnr{\overline{\mathcal{B}}}$, the deformation is called \textsb{homogeneous}\index{deformation!homogeneous}, represented by $\tnr{\tilde{\varphi}}_t$. In other words, tensor $\fua{\nabla\tnr{\tilde{\varphi}}_t}{\overline{\vto{u}}}=\tnr{F}$ for all $\overline{\vto{u}}\in\tnr{\overline{\mathcal{B}}}$ and then 
-\begin{equation}
+\begin{equation}\label{eq:homogDef}
 \fua{\tnr{\tilde{\varphi}}_t}{\overline{\vto{x}}} =(\overline{\vto{x}}^*\hat{\odot}_1\tnr{F}) + \vto{c}\,.
 \end{equation}
 It is interesting to note that if $\tnr{F}=\tnr{I}$, deformation $\tnr{\tilde{\varphi}}_t$ results a vector translation. In the rotodilation decomposition of the homogeneous deformation gradient $\tnr{F}$, the subscripts identifying point dependence can be removed, resulting  
@@ -83,6 +83,38 @@ It is interesting to note that if $\tnr{F}=\tnr{I}$, deformation $\tnr{\tilde{\v
 
 
 \begin{example}
-Before examples of notable homogeneous deformations are presented, we specify eight body points that constitute the vertices of a cube: an arbitrarily chosen $\overline{\vto{u}}$, three $\overline{\vto{u}}_i=\vun{e}_i+\overline{\vto{u}}$, $i=1,2,3$, where $\vun{e}_i$ constitute the natural basis $O$; points $\overline{\vto{u}}_5=\vun{e}_1 + \vun{e}_2 + \overline{\vto{u}}$, $\overline{\vto{u}}_6=\vun{e}_1 + \vun{e}_3 + \overline{\vto{u}}$, $\overline{\vto{u}}_7=\vun{e}_2 + \vun{e}_3 + \overline{\vto{u}}$ and $\overline{\vto{u}}_8=\vun{e}_1+\vun{e}_2 + \vun{e}_3 + \overline{\vto{u}}$.
+Before examples of notable homogeneous deformations are presented, we specify eight body points that constitute the vertices of a cube $\tnr{\overline{\mathcal{C}}}$: an arbitrarily chosen $\overline{\vto{u}}$, three orthonormal vectors $\overline{\vto{u}}_i=\vun{e}_i+\overline{\vto{u}}$, $i=1,2,3$, that constitute basis $U$, where $\vun{e}_i$ constitute the natural basis $O$; points $\overline{\vto{u}}_5=\vun{e}_1 + \vun{e}_2 + \overline{\vto{u}}$, $\overline{\vto{u}}_6=\vun{e}_1 + \vun{e}_3 + \overline{\vto{u}}$, $\overline{\vto{u}}_7=\vun{e}_2 + \vun{e}_3 + \overline{\vto{u}}$ and $\overline{\vto{u}}_8=\vun{e}_1+\vun{e}_2 + \vun{e}_3 + \overline{\vto{u}}$. If we consider $\vtf{f}$ the representative function of deformation gradient $\tnr{F}$, rule \eqref{eq:homogDef} can be rewritten as $\fua{\tnr{\tilde{\varphi}}_t}{\overline{\vto{x}}} =\fua{\vto{f}}{\overline{\vto{x}}} + \vto{c}$. An homogeneous deformation where $\tnr{F}=\tnr{R}$ is called \textbf{rigid}\index{deformation!rigid} and then $\vtf{f}$ results proper orthogonal. Figure XX depicts a rigid deformation of $\tnr{\overline{\mathcal{C}}}$ where it translates and rotates a counterclockwise angle $\theta$ around the axis defined by $\overline{\vto{u}}$ and $\overline{\vto{u}}_3$. In matrix terms, the rule of this deformation is  
+\begin{equation*}
+[\fua{\tnr{\tilde{\varphi}}_t}{\overline{\vto{x}}}]^U=
+\underbrace{\begin{bmatrix}
+\cos\theta & -\sin\theta & 0\\
+\sin\theta & \cos\theta & 0\\
+0 & 0 & 1
+\end{bmatrix}}_{[\vtf{f}_U]^U}
+[\overline{\vto{x}}]^U + [\vto{c}]^U\,.
+\end{equation*}
+In the case of $\tnr{R}=\tnr{I}$, $\vto{c}=\vto{0}$ and $\tnr{U}=\tnr{V}=\sum_{i=1}^3\lambda_{i}\overline{\vto{u}}_i\otimes\overline{\vto{u}}_i$, where $\lambda_i$ is a stretch coefficient, then $\tnr{\tilde{\varphi}}_t$ is called a \textsb{pure stretch}\index{stretch!pure}. Figure XX shows $\tnr{\overline{\mathcal{C}}}$ subjected to a pure stretch described by      
+\begin{equation*}
+[\fua{\tnr{\tilde{\varphi}}_t}{\overline{\vto{x}}}]^U=
+\begin{bmatrix}
+\lambda_1 & 0 & 0\\
+0 & \lambda_2 & 0\\
+0 & 0 & \lambda_3
+\end{bmatrix}
+[\overline{\vto{x}}]^U\,.
+\end{equation*}
+We recall that when stretch coefficients are identical, pure stretch is said to be proportional. Now, if $\vto{c}=\vto{0}$ and deformation gradient $\tnr{F}=\tnr{I}+\gamma\overline{\vto{u}}_i\otimes\overline{\vto{u}}_j$ , where $i\neq j$, then $\tnr{\tilde{\varphi}}_t$ is called a \textsb{simple shear}\index{shear!simple}. Considering $i=2$ and $j=3$, we have $\tnr{\overline{\mathcal{C}}}$ subjected to a simple shear represented on figure XX and described by
+\begin{equation*}
+[\fua{\tnr{\tilde{\varphi}}_t}{\overline{\vto{x}}}]^U=
+\begin{bmatrix}
+1 & 0 & 0\\
+0 & 1 & \gamma\\
+0 & 0 & 1
+\end{bmatrix}
+[\overline{\vto{x}}]^U\,.
+\end{equation*}
+
+
+
 
 \end{example}
