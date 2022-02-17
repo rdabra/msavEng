@@ -1,0 +1,32 @@
+\begin{picture}(0,0)%
+\includegraphics{defHomogRigida.eps}%
+\end{picture}%
+%
+%  Created by WinFIG version 7.5 
+%  METADATA <version>1.0</version> 
+%
+\setlength{\unitlength}{3947sp}%
+%
+\begingroup\makeatletter\ifx\SetFigFont\undefined%
+\gdef\SetFigFont#1#2#3#4#5{%
+  \reset@font\fontsize{#1}{#2pt}%
+  \fontfamily{#3}\fontseries{#4}\fontshape{#5}%
+  \selectfont}%
+\fi\endgroup%
+\begin{picture}(2922,2014)(1204,-4535)
+%  METADATA <id>57</id> 
+\put(1946,-4007){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\overline{\vto{u}}$}%
+}}}}
+%  METADATA <id>75</id> 
+\put(3609,-2972){\makebox(0,0)[lb]{\smash{{\SetFigFont{10}{12.0}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\theta$}%
+}}}}
+%  METADATA <id>81</id> 
+\put(1219,-4457){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\overline{\vto{u}}_1$}%
+}}}}
+%  METADATA <id>85</id> 
+\put(3034,-4355){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\overline{\vto{u}}_2$}%
+}}}}
+%  METADATA <id>87</id> 
+\put(2154,-3033){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\overline{\vto{u}}_3$}%
+}}}}
+\end{picture}%

@@ -1,0 +1,25 @@
+#FIG 3.2
+# Created by WinFIG version 7.5
+# METADATA <version>1.0</version>
+Portrait
+Flush left
+Metric
+A4
+100.00
+Single
+-2
+1200 2
+# METADATA <id>48</id>
+2 5 0 0 0 7 50 0 -1 0.000 0 0 0 0 0 5
+	0 C:/myWorks/msavEng/partes/figs/defHomogRigidaSrc.eps
+	 1380 3360 1380 5340 4125 5340 4125 3360 1380 3360
+# METADATA <id>57</id>
+4 0 0 50 0 0 12 0.0000 6 210 1846 1945 4846 $\\overline{\\vto{u}}$\001
+# METADATA <id>75</id>
+4 0 0 50 0 0 10 0.0000 6 175 640 3608 3811 $\\theta$\001
+# METADATA <id>81</id>
+4 0 0 50 0 0 12 0.0000 6 210 2061 1218 5296 $\\overline{\\vto{u}}_1$\001
+# METADATA <id>85</id>
+4 0 0 50 0 0 12 0.0000 6 210 2061 3033 5194 $\\overline{\\vto{u}}_2$\001
+# METADATA <id>87</id>
+4 0 0 50 0 0 12 0.0000 6 210 2061 2153 3872 $\\overline{\\vto{u}}_3$\001
