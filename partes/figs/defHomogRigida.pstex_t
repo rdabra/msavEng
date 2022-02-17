@@ -13,20 +13,44 @@
   \fontfamily{#3}\fontseries{#4}\fontshape{#5}%
   \selectfont}%
 \fi\endgroup%
-\begin{picture}(2922,2014)(1204,-4535)
+\begin{picture}(4515,2700)(823,-4810)
 %  METADATA <id>57</id> 
-\put(1946,-4007){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\overline{\vto{u}}$}%
+\put(1926,-3989){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\overline{\vto{u}}$}%
 }}}}
 %  METADATA <id>75</id> 
 \put(3609,-2972){\makebox(0,0)[lb]{\smash{{\SetFigFont{10}{12.0}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\theta$}%
 }}}}
 %  METADATA <id>81</id> 
-\put(1219,-4457){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\overline{\vto{u}}_1$}%
+\put(1233,-4450){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\overline{\vto{u}}_1$}%
 }}}}
 %  METADATA <id>85</id> 
-\put(3034,-4355){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\overline{\vto{u}}_2$}%
+\put(3041,-4293){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\overline{\vto{u}}_2$}%
 }}}}
 %  METADATA <id>87</id> 
-\put(2154,-3033){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\overline{\vto{u}}_3$}%
+\put(2087,-2980){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\overline{\vto{u}}_3$}%
+}}}}
+%  METADATA <id>89</id> 
+\put(2300,-4652){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\overline{\vto{u}}_4$}%
+}}}}
+%  METADATA <id>90</id> 
+\put(1298,-3262){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\overline{\vto{u}}_5$}%
+}}}}
+%  METADATA <id>91</id> 
+\put(2942,-3169){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\overline{\vto{u}}_6$}%
+}}}}
+%  METADATA <id>92</id> 
+\put(2179,-3434){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\overline{\vto{u}}_7$}%
+}}}}
+%  METADATA <id>93</id> 
+\put(2398,-3793){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\vto{c}$}%
+}}}}
+%  METADATA <id>95</id> 
+\put(4494,-2426){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$(U_\real,\tnr{A}_O)$}%
+}}}}
+%  METADATA <id>98</id> 
+\put(3819,-3357){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\tnr{\mathcal{C}}_t$}%
+}}}}
+%  METADATA <id>96</id> 
+\put(1495,-3943){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\tnr{\overline{\mathcal{C}}}$}%
 }}}}
 \end{picture}%

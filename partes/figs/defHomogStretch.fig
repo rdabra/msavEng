@@ -1,0 +1,43 @@
+#FIG 3.2
+# Created by WinFIG version 7.5
+# METADATA <version>1.0</version>
+Portrait
+Flush left
+Metric
+A4
+100.00
+Single
+-2
+1200 2
+# METADATA <id>48</id>
+2 5 0 0 0 7 50 0 -1 0.000 0 0 0 0 0 5
+	0 C:/myWorks/msavEng/partes/figs/defHomogStretchSrc.eps
+	 571 3307 571 6007 5086 6007 5086 3307 571 3307
+# METADATA <id>57</id>
+4 0 0 50 0 0 12 0.0000 6 208 1863 1925 4828 $\\overline{\\vto{u}}$\001
+# METADATA <id>81</id>
+4 0 0 50 0 0 12 0.0000 6 208 2086 1193 5114 $\\overline{\\vto{u}}_1$\001
+# METADATA <id>85</id>
+4 0 0 50 0 0 12 0.0000 6 208 2086 2993 5177 $\\overline{\\vto{u}}_2$\001
+# METADATA <id>87</id>
+4 0 0 50 0 0 12 0.0000 6 208 2086 2177 3851 $\\overline{\\vto{u}}_3$\001
+# METADATA <id>89</id>
+4 0 0 50 0 0 12 0.0000 6 208 2086 2299 5491 $\\overline{\\vto{u}}_4$\001
+# METADATA <id>90</id>
+4 0 0 50 0 0 12 0.0000 6 208 2086 1367 4095 $\\overline{\\vto{u}}_5$\001
+# METADATA <id>91</id>
+4 0 0 50 0 0 12 0.0000 6 208 2086 2941 3987 $\\overline{\\vto{u}}_6$\001
+# METADATA <id>92</id>
+4 0 0 50 0 0 12 0.0000 6 208 2086 2178 4252 $\\overline{\\vto{u}}_7$\001
+# METADATA <id>95</id>
+4 0 0 50 0 0 12 0.0000 6 208 1995 4200 3621 $(U_\\real,\\tnr{A}_O)$\001
+# METADATA <id>96</id>
+4 0 0 46 0 0 12 0.0000 6 208 2812 1494 4782 $\\tnr{\\overline{\\mathcal{C}}}$\001
+# METADATA <id>98</id>
+4 0 0 46 0 0 12 0.0000 6 208 2023 3642 4570 $\\tnr{\\mathcal{C}}_t$\001
+# METADATA <id>100</id>
+4 0 0 50 0 0 12 0.0000 6 208 1179 3509 5647 $\\lambda_1$\001
+# METADATA <id>102</id>
+4 0 0 50 0 0 12 0.0000 6 208 1179 1737 5703 $\\lambda_2$\001
+# METADATA <id>103</id>
+4 0 0 50 0 0 12 0.0000 6 208 1179 4158 4747 $\\lambda_3$\001
