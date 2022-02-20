@@ -644,8 +644,13 @@ From \eqref{eq:secTens2Lin}, if $\tnr{\mathit{t}}$ is a symmetric representative
 \end{proof}
 }
 
-
-Now, considering equalities \eqref{eq:secTens2Lin}, we extend the concept of positivity that can be applied to the representative operator $\tnr{\mathit{t}}\in\evl{\cam{F}}{U}{U}$, described by definition \eqref{eq:linPosDef}, to tensor $\tnr{T}\in\ete{\cam{F}}{U^2}$. Thereby, a second order tensor $\tnr{T}$ is said to be \textsb{nonnegative}\index{tensor!nonnegative} if
+\noindent Still considering an arbitrary second order tensor $\tnr{G}\in\ete{\cam{F}}{U\times V}$ and its representative function $\tnr{\mathit{g}}$, we now sacrifice mathematical rigor in favor of mathematical practicality by specifying three tensors in $\ete{\cam{F}}{V\times U}$:   
+\begin{itemize}
+\setlength\itemsep{.1em}
+\item[i.] $\tnr{G}^{\dagger}:=\fua{\tnr{\Upsilon}^{-1}}{\tnr{\mathit{g}}^{\dagger}}$ and $\tnr{G}^\text{T}:=\fua{\tnr{\Upsilon}^{-1}}{\tnr{\mathit{g}}^\text{T}}$; 
+\item[ii.] $\tnr{G}^{-1}:=\fua{\tnr{\Upsilon}^{-1}}{\tnr{\mathit{g}}^{-1}}$, if $\tnr{\mathit{g}}$ is invertible.
+\end{itemize}
+They belong to $\ete{\cam{F}}{V\times U}$ as a straightforward consequence of the definitions of their representative functions together with equalities \eqref{eq:Lin2secTens}. Now, from equalities \eqref{eq:secTens2Lin}, we extend the concept of positivity that can be applied to the representative operator $\tnr{\mathit{t}}\in\evl{\cam{F}}{U}{U}$, described by definition \eqref{eq:linPosDef}, to tensor $\tnr{T}\in\ete{\cam{F}}{U^2}$. Thereby, a second order tensor $\tnr{T}$ is said to be \textsb{nonnegative}\index{tensor!nonnegative} if
 \begin{equation}\label{eq:nonnegTensor}
 \Re(\fua{\tnr{\mathit{t}}}{\vto{y}}\cdot\vto{y})=\Re(\vto{y}\cdot\fua{\tnr{\mathit{t}}}{\vto{y}})=\Re(\fua{\tnr{T}}{\vto{y},\vto{y}})\geqslant 0\,,\,\forall\,\vto{y}\in U_\cam{F}\,,
 \end{equation}
