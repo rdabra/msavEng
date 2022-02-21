@@ -45,7 +45,7 @@ From this figure, it is possible to conclude that if both configurations $\overl
 \end{equation}
 Moreover, concerning the elements of the domains represented in the figure, we say that a material particle $\text{x}\in\mathfrak{B}$, represented by the \textsb{material point}\index{point!material} $\overline{x}=\fua{\overline{\chi}}{\text{x}}$ or by the \textsb{material vector}\index{vector!material} $\vto{\overline{x}}:=\fua{\upsilon_o\circ\overline{\chi}}{\text{x}}$, occupies the \textsb{spatial place}\index{spatial place} $x:=\fua{\chi_t}{\text{x}}$ or $\vto{x}=\fua{\upsilon_o\circ\chi_t}{\text{x}}$. In order to simplify our study, since deformation was defined as a vector function, we shall mostly use vectors to denote body and shape elements.  
 
-Considering the previous regularity conditions and an open set $\pmb{\mathcal{U}}\subset\tnr{\overline{\mathcal{B}}}$, the local sensitivity of $\tnr{\chi}_t$ measured by the vector function in $\map{\nabla\tnr{\chi}_t}{\pmb{\mathcal{U}}}{\ete{\real}{U^{2}}}$, called \textsb{deformation gradient}\index{deformation!gradient}, has fundamental importance in Continuum Kinematics because it bases the concept of strain. Given an arbitrary reference point $\overline{\vto{u}}\in\pmb{\mathcal{U}}$, the second order tensor $\gloref{defGrad}$ is said to be the deformation gradient at $\overline{\vto{u}}$ and then, from equality \eqref{eq:gradFuncRep}, we have scalar
+Considering the previous regularity conditions and an open set $\pmb{\mathcal{U}}\subset\tnr{\overline{\mathcal{B}}}$, the local sensitivity of $\tnr{\chi}_t$ measured by the vector function in $\map{\nabla\tnr{\chi}_t}{\pmb{\mathcal{U}}}{\ete{\real}{U^{2}}}$, called \textsb{deformation gradient}\index{deformation!gradient}, has fundamental importance in Continuum Kinematics because it bases the concept of strain. Given an arbitrary reference point $\overline{\vto{u}}\in\pmb{\mathcal{U}}$, the second order tensor $\gloref{defGrad}\in\ete{\real}{U^2}$ is said to be the deformation gradient at $\overline{\vto{u}}$ and then, from equality \eqref{eq:gradFuncRep}, we have scalar
 \begin{equation}
 [\fua{\nabla\tnr{\chi}_t}{\overline{\vto{u}}}](\overline{\vto{x}},\overline{\vto{y}})=\overline{\vto{x}}\cdot\fua{{\tnr{\chi}'_t}_{\overline{\vto{u}}}}{\overline{\vto{y}}}\,,\,\,\forall\, \overline{\vto{x}},\overline{\vto{y}}\in\pmb{\mathcal{U}}\,.
 \end{equation}
@@ -72,18 +72,33 @@ and
 \begin{equation}
 \fua{\nabla\tnr{\varphi}_t}{\overline{\vto{u}}}=\tnr{V}_{\overline{\vto{u}}}\odot_1\tnr{R}_{\overline{\vto{u}}}=\tnr{R}_{\overline{\vto{u}}}\odot_1\tnr{U}_{\overline{\vto{u}}}\,,\,\forall\, \overline{\vto{u}}\in\tnr{\overline{\mathcal{B}}}\,, 
 \end{equation}
-where $\tnr{V}_{\overline{\vto{u}}}$ and $\tnr{U}_{\overline{\vto{u}}}$, represented by square root operators, are the affinity tensors of $\mathit{s}_1$ and $\mathit{s}_2$, being usually called \textsb{left}\index{tensor!left stretch} and \textsb{right stretch tensors}\index{tensor!right stretch}. Since the local volume change is always positive, as we already know, $\tnr{R}_{\overline{\vto{u}}}$ can never be a rotoreflection tensor. When the affine deformation gradient is constant on $\tnr{\overline{\mathcal{B}}}$, the deformation is called \textsb{homogeneous}\index{deformation!homogeneous}, represented by $\tnr{\tilde{\varphi}}_t$. In other words, tensor $\fua{\nabla\tnr{\tilde{\varphi}}_t}{\overline{\vto{u}}}=\tnr{F}$ for all $\overline{\vto{u}}\in\tnr{\overline{\mathcal{B}}}$ and then 
+where $\tnr{V}_{\overline{\vto{u}}}$ and $\tnr{U}_{\overline{\vto{u}}}$ are the affinity tensors of $\mathit{s}_1$ and $\mathit{s}_2$, being usually called \textsb{left}\index{tensor!left stretch} and \textsb{right stretch tensors}\index{tensor!right stretch}. Since the local volume change is always positive, as we already know, $\tnr{R}_{\overline{\vto{u}}}$ can never be a rotoreflection tensor. It is convenient to forthcoming concepts not to deal with square root operators $\vtf{s}_1^{\nicefrac{1}{2}}$ and $\vtf{s}_2^{\nicefrac{1}{2}}$, which represent the above stretch tensors and are troublesome to calculate, but instead to specify $\tnr{B}_{\overline{\vto{u}}}:=\tnr{V}_{\overline{\vto{u}}}\odot_1\tnr{V}_{\overline{\vto{u}}}$ and $\tnr{C}_{\overline{\vto{u}}}:=\tnr{U}_{\overline{\vto{u}}}\odot_1\tnr{U}_{\overline{\vto{u}}}$, known as the \textsb{left}\index{tensor!left Cauchy-Green} and \textsb{right Cauchy-Green tensors}\index{tensor!right Cauchy-Green}, which are represented by operators $\vtf{s}_1$ and $\vtf{s}_2$ respectively, according to \eqref{eq:compoFuncRepFunc}. In terms of the deformation gradient,
+\begin{alignat}{3}
+\tnr{B}_{\overline{\vto{u}}}=\fua{\nabla\tnr{\varphi}_t}{\overline{\vto{u}}}\odot_1\fua{\nabla\tnr{\varphi}_t}{\overline{\vto{u}}}^\text{T}&\qquad \text{and}\qquad & \tnr{C}_{\overline{\vto{u}}}=\fua{\nabla\tnr{\varphi}_t}{\overline{\vto{u}}}^\text{T}\odot_1\fua{\nabla\tnr{\varphi}_t}{\overline{\vto{u}}}\,.
+\end{alignat}
+
+
+{\footnotesize
+\begin{proof}
+The following development verifies one of the above properties; proof of the other is similar. 
+\begin{align*}
+\tnr{B}_{\overline{\vto{u}}}&=\fua{\nabla\tnr{\varphi}_t}{\overline{\vto{u}}}\odot_1\fua{\nabla\tnr{\varphi}_t}{\overline{\vto{u}}}^\text{T}\\
+&=\tnr{V}_{\overline{\vto{u}}}\odot_1\tnr{R}_{\overline{\vto{u}}}\odot_1(\tnr{V}_{\overline{\vto{u}}}\odot_1\tnr{R}_{\overline{\vto{u}}})^\text{T}\\
+&=\tnr{V}_{\overline{\vto{u}}}\odot_1\tnr{R}_{\overline{\vto{u}}}\odot_1\tnr{R}_{\overline{\vto{u}}}^\text{T}\odot_1\tnr{V}_{\overline{\vto{u}}}^\text{T}\\
+&=\tnr{V}_{\overline{\vto{u}}}\odot_1\tnr{R}_{\overline{\vto{u}}}\odot_1\tnr{R}_{\overline{\vto{u}}}^\text{-1}\odot_1\tnr{V}_{\overline{\vto{u}}}\\
+&=\tnr{V}_{\overline{\vto{u}}}\odot_1\tnr{V}_{\overline{\vto{u}}}\,.
+\end{align*}
+\end{proof}
+}
+
+\noindent When the affine deformation gradient is constant on $\tnr{\overline{\mathcal{B}}}$, the deformation is called \textsb{homogeneous}\index{deformation!homogeneous}, represented by $\tnr{\tilde{\varphi}}_t$. In other words, tensor $\fua{\nabla\tnr{\tilde{\varphi}}_t}{\overline{\vto{u}}}=\tnr{F}$ for all $\overline{\vto{u}}\in\tnr{\overline{\mathcal{B}}}$ and then 
 \begin{equation}\label{eq:homogDef}
 \fua{\tnr{\tilde{\varphi}}_t}{\overline{\vto{x}}} =(\overline{\vto{x}}^*\hat{\odot}_1\tnr{F}) + \vto{c}\,.
 \end{equation}
 It is interesting to note that if $\tnr{F}=\tnr{I}$, deformation $\tnr{\tilde{\varphi}}_t$ results a vector translation. In the rotodilation decomposition of the homogeneous deformation gradient $\tnr{F}$, the subscripts identifying point dependence can be removed, resulting  
-\begin{equation}
-\tnr{F}=\tnr{V}\odot_1\tnr{R}=\tnr{R}\odot_1\tnr{U}\,. 
-\end{equation}
-
-
-
-
+\begin{alignat}{3}
+\tnr{F}=\tnr{V}\odot_1\tnr{R}=\tnr{R}\odot_1\tnr{U}\,,&\qquad \qquad &\tnr{B}=\tnr{F}\odot_1\tnr{F}^\text{T}&\qquad \text{and}\qquad & \tnr{C}=\tnr{F}^\text{T}\odot_1\tnr{F}\,.
+\end{alignat}
 
 \begin{example}
 Before examples of notable homogeneous deformations are presented, we specify eight body points that constitute the vertices of a cube $\tnr{\overline{\mathcal{C}}}$: an arbitrarily chosen $\overline{\vto{u}}$, three orthonormal vectors $\overline{\vto{u}}_i=\vun{e}_i+\overline{\vto{u}}$, $i=1,2,3$, that constitute basis $U$, where $\vun{e}_i$ constitute the natural basis $O$; points $\overline{\vto{u}}_4=\vun{e}_1 + \vun{e}_2 + \overline{\vto{u}}$, $\overline{\vto{u}}_5=\vun{e}_1 + \vun{e}_3 + \overline{\vto{u}}$, $\overline{\vto{u}}_6=\vun{e}_2 + \vun{e}_3 + \overline{\vto{u}}$ and $\overline{\vto{u}}_7=\vun{e}_1+\vun{e}_2 + \vun{e}_3 + \overline{\vto{u}}$. If we consider $\vtf{f}$ the representative function of deformation gradient $\tnr{F}$, rule \eqref{eq:homogDef} can be rewritten as $\fua{\tnr{\tilde{\varphi}}_t}{\overline{\vto{x}}} =\fua{\vto{f}}{\overline{\vto{x}}} + \vto{c}$. An homogeneous deformation where $\tnr{F}=\tnr{R}$ is called \textbf{rigid}\index{deformation!rigid} and then $\vtf{f}$ results proper orthogonal. Figure \ref{fg:defRigida} depicts a rigid deformation of $\tnr{\overline{\mathcal{C}}}$ where it translates and rotates a counterclockwise angle $\theta$ around the axis defined by $\overline{\vto{u}}$ and $\overline{\vto{u}}_3$. In matrix terms, the rule of this deformation is  
