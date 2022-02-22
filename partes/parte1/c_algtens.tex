@@ -602,79 +602,11 @@ where polyadic tensors are defined by orthonormal bases according to theorem \re
 \end{proof}
 }
 
-In the context of Hilbert spaces, we already know that corollary \ref{cor:covLin} establishes a biunivocal relationship between a linear vector function space and a linear covector function space, that is, if $\vtf{g}$ is a linear vector function, there is always a linear covector function $\vtf{g}_\Phi$, which is a linear tensor function whose domain is constituted by first order tensors (covectors). But the theorem above establishes a biunivocal relationship between a linear tensor function space and a tensor space, when we conclude that covector function $\vtf{g}_\Phi$ has its correspondent second order tensor $\tnr{G}$. Therefore, if tensor function $\vtf{g}_\Phi=\tnr{G}_1^*$ has a correspondent linear function $\vtf{g}$ through corollary \ref{cor:covLin} and a correspondent second order tensor $\tnr{G}$ through theorem above, we can conclude that $\vtf{g}$ and $\tnr{G}$ are correspondents. Let's now rewrite this rationale in a more concise form.
 
-\begin{mcoro}{Second Order Tensors and Linear Functions}{soTens}
-Considering Hilbert spaces $U_\cam{F}$ and $V_\cam{F}$, a mapping $\map{\tnr{\Upsilon}}{\ete{\cam{F}}{U\times V}}{\evl{\cam{F}}{U}{V}}$ is a bijective transformation if its function rule is $\fua{\tnr{\Upsilon}}{\tnr{X}}=\Phi^{-1}\circ\vtf{X}^*_1\circ\Phi$, where $\Phi$ is defined on theorem \ref{teo:repRiesz}.
-\end{mcoro}
-{\footnotesize
-\begin{proof}
-If function $\tnr{\Upsilon}$ were not an injection, there would be two distinct tensors $\tnr{T}$ and $\tnr{W}$ where $\Phi^{-1}\circ\vtf{T}^*_1\circ\Phi(\vto{x})=\Phi^{-1}\circ\vtf{W}^*_1\circ\Phi(\vto{x})$; but this equality leads to $\vtf{T}^*_1(\vto{x}^*)=\vtf{W}^*_1(\vto{x}^*)$, which shows that $\vtf{T}^*_1=\vtf{W}^*_1$. Therefore, since $p$-cotensors are biunivocally related to tensors, $\tnr{T}$ and $\tnr{W}$ cannot be distinct. Function $\tnr{\Upsilon}$ is also a surjection because, through corollary \ref{cor:covLin}, for every linear function $\vtf{g}\in\evl{\cam{F}}{U}{V}$ a covector function $\vtf{g}_\Phi$ can be defined and then, for every tensor function $\vtf{g}_\Phi$ there exists a unique second order tensor $\tnr{G}\in\ete{\cam{F}}{U\times V}$ where $1$-cotensor $\tnr{G}_1^*=\Phi\circ\vtf{g}_\Phi$.
-\end{proof}
-}
-
-\noindent From this corollary, the linear bijection 
-\begin{equation}\label{eq:repFunc2}
-\gloref{reprFun}:=\fua{\tnr{\Upsilon}}{\tnr{G}}
-\end{equation}
-is called the \textsb{representative function}\index{function!representative} of second order tensor $\tnr{G}\in\ete{\cam{F}}{U\times V}$. Considering  $\vto{g}_1^*\otimes\vto{g}_2^*$ the dyadic description of $\tnr{G}$, arbitrary vectors $\vto{u}\in U_\cam{F}$ and $\vto{v}\in V_\cam{F}$, we can write that
-\begin{equation}\label{eq:Lin2secTens}
-\fua{\tnr{\mathit{g}}}{\vto{u}} = \fua{\Phi^{-1}\circ\tnr{G}^*_1\circ\Phi}{\vto{u}} = \fua{\Phi^{-1}}{\vto{u}^*\odot_1\tnr{G}} =\vto{u}^*\hat{\odot}_1\tnr{G}=(\vto{u}\cdot\vto{g}_1)\vto{g}_2
-\end{equation}
-because $\Phi^{-1}$ is antilinear, and from this result scalar
-\begin{equation}\label{eq:secTens2Lin}
-\fua{\tnr{G}}{\vto{u},\vto{v}} = \fua{\vto{g}_1^*}{\vto{u}}\fua{\vto{g}_2^*}{\vto{v}} = \vto{v}\cdot\overline{\fua{\vto{g}_1^*}{\vto{u}}}\vto{g}_2 = \vto{v}\cdot\fua{\vto{g}_1^*}{\vto{u}^c}\vto{g}_2= \vto{v}\cdot[(\vto{u}^c\cdot\vto{g}_1)\vto{g}_2]= \vto{v}\cdot\fua{\tnr{\mathit{g}}}{\vto{u}^c}
-\end{equation}
-or $\fua{\tnr{G}}{\vto{u}^c,\vto{v}}=\vto{v}\cdot\fua{\tnr{\mathit{g}}}{\vto{u}}$. From definitions of Hilbert-adjoint and transpose functions described by \eqref{eq:HilbAdj}, it is interesting to note that if a representative operator $\tnr{\mathit{t}}\in\evl{\cam{F}}{U}{U}$ is Hermitian then
-\begin{equation*}
-\fua{\tnr{T}}{\vto{x}^c,\vto{y}}=\fua{\tnr{\mathit{t}}}{\vto{y}}\cdot\vto{x}=\overline{\vto{x}\cdot\fua{\tnr{\mathit{t}}}{\vto{y}}}=\overline{\fua{\tnr{T}}{\vto{y}^c,\vto{x}}}=\fua{\vto{t}_1^*}{(\vto{y}^c)^c}\fua{\vto{t}_2^*}{\vto{x}^c}=\fua{\tnr{T}}{\vto{y},\vto{x}^c}\,,
-\end{equation*}
-from which we can not conclude that $\tnr{T}$ is symmetric because a condition for symmetry in this case would be $\fua{\tnr{T}}{\vto{x}^c,\vto{y}}=\fua{\tnr{T}}{\vto{y}^c,\vto{x}}$; but, in the case of $\tnr{\mathit{t}}$ symmetric we can and this result leads to the following corollary.
-
-\begin{mcoro}{Symmetric Tensors and Symmetric Operators}{soSymTens}
-The set of symmetric operators, subset of $\evlc{\cam{F}}{U}{U}$, is biunivocally related to the space of symmetric second order tensors $\ets{\cam{F}}{U^2}$.
-\end{mcoro}
-\hspace{.1pt}
-{\footnotesize
-\begin{proof}
-From \eqref{eq:secTens2Lin}, if $\tnr{\mathit{t}}$ is a symmetric representative operator, we have
-\begin{equation*}
-\fua{\tnr{T}}{\vto{x},\vto{y}}=\fua{\tnr{\mathit{t}}}{\vto{y}}\cdot\vto{x}^c=\overline{\vto{x}^c\cdot\fua{\tnr{\mathit{t}}}{\vto{y}}}=\overline{\fua{\tnr{T}}{\vto{y}^c,\vto{x}^c}}=\fua{\vto{t}_1^*}{(\vto{y}^c)^c}\fua{\vto{t}_2^*}{(\vto{x}^c)^c}=\fua{\tnr{T}}{\vto{y},\vto{x}}.
-\end{equation*}
-\end{proof}
-}
-
-\noindent Still considering an arbitrary second order tensor $\tnr{G}\in\ete{\cam{F}}{U\times V}$ and its representative function $\tnr{\mathit{g}}$, we now sacrifice mathematical rigor in favor of mathematical practicality by specifying three tensors in $\ete{\cam{F}}{V\times U}$:   
-\begin{itemize}
-\setlength\itemsep{.1em}
-\item[i.] $\tnr{G}^{\dagger}:=\fua{\tnr{\Upsilon}^{-1}}{\tnr{\mathit{g}}^{\dagger}}$ and $\tnr{G}^\text{T}:=\fua{\tnr{\Upsilon}^{-1}}{\tnr{\mathit{g}}^\text{T}}$; 
-\item[ii.] $\tnr{G}^{-1}:=\fua{\tnr{\Upsilon}^{-1}}{\tnr{\mathit{g}}^{-1}}$, if $\tnr{\mathit{g}}$ is invertible.
-\end{itemize}
-They belong to $\ete{\cam{F}}{V\times U}$ as a straightforward consequence of the definitions of their representative functions together with equalities \eqref{eq:Lin2secTens}. From these definitions, we have the following properties:
-\begin{itemize}
-\setlength\itemsep{.1em}
-\item[i.] Given arbitrary $\vto{u}\in U_\cam{F}$ and $\vto{v}\in V_\cam{F}$, then $(\vto{u}^*\otimes\vto{v}^*)^\dagger = \vto{v}^*\otimes\vto{u}^*$ ;
-\item[ii.] $\tnr{G}^{-1}\odot_1\tnr{G}\in\ete{\cam{F}}{V^2}$ and $\tnr{G}\odot_1\tnr{G}^{-1}\in\ete{\cam{F}}{U^2}$ are identity tensors.
-\end{itemize}
-
-DEMONSTRAR AS PROPRIEDADES ACIMA
-
-There is also an interesting property relating the composition of representative functions and second order tensors: let $\tnr{\mathit{g}}_1$ and $\tnr{\mathit{g}}_2$ be the representative functions of $\tnr{G}_1\in\ete{\cam{F}}{U\times W}$ and $\tnr{G}_2\in\ete{\cam{F}}{W\times V}$ respectively. The following equalities show that tensor $\tnr{G}_1\odot_1\tnr{G}_2\in\ete{\cam{F}}{U\times V}$ is represented by $\tnr{\mathit{g}}_2\circ\tnr{\mathit{g}}_1$. 
-\begin{equation}\label{eq:compoFuncRepFunc}
-\fua{\tnr{\mathit{g}}_2\circ\tnr{\mathit{g}}_1}{\vto{u}}=\tnr{\mathit{g}}_2[\vto{u}^*\hat{\odot}_1\tnr{G}_1]
-=(\vto{u}^*\odot_1\tnr{G}_1)\hat{\odot}_1\tnr{G}_2
-= \vto{u}^*\hat{\odot}_1(\tnr{G}_1\odot_1\tnr{G}_2)\,.
-\end{equation}
-Now, from equalities \eqref{eq:secTens2Lin}, we extend the concept of positivity that can be applied to the representative operator $\tnr{\mathit{t}}\in\evl{\cam{F}}{U}{U}$, described by definition \eqref{eq:linPosDef}, to tensor $\tnr{T}\in\ete{\cam{F}}{U^2}$. Thereby, a second order tensor $\tnr{T}$ is said to be \textsb{nonnegative}\index{tensor!nonnegative} if
-\begin{equation}\label{eq:nonnegTensor}
-\Re(\fua{\tnr{\mathit{t}}}{\vto{y}}\cdot\vto{y})=\Re(\vto{y}\cdot\fua{\tnr{\mathit{t}}}{\vto{y}})=\Re(\fua{\tnr{T}}{\vto{y},\vto{y}})\geqslant 0\,,\,\forall\,\vto{y}\in U_\cam{F}\,,
-\end{equation}
-and \textsb{positive-definite}\index{tensor!positive-definite} if the real value on the left side is never zero. Moreover, we also extend to a second order tensor $\tnr{T}\in\ete{\cam{F}}{U^2}$ the concepts of eigenvalues and eigenvectors of their representative operator $\tnr{\mathit{t}}\in\evl{\cam{F}}{U}{U}$, that is, the eigenvalues and eigenvectors of $\tnr{\mathit{t}}$ are also of $\tnr{T}$, by definition.
-
-Still considering the conditions of the theorem, let's see what is the $p$-cotensor of identity tensor $\tnr{I}\in\ete{\cam{F}}{W^{\times p}\times W^{\times p}}$. If equality \eqref{eq:poliadIdentidade} and its definer conditions are considered, development
+Considering the conditions of the theorem, let's see what is the $p$-cotensor of identity tensor $\tnr{I}\in\ete{\cam{F}}{W^{\times p}\times W^{\times p}}$. If equality \eqref{eq:poliadIdentidade} and its definer conditions are considered, development
 \begin{align}\label{eq:cotensIdent}
 \fua{\vtf{I}^*_p}{\tnr{X}}&=\tnr{X}\odot_p\tnr{I}\nonumber\\
-	&=\sum_{{i_1}=1}^{n_1}\cdots\sum_{{i_p}=1}^{n_p}\prod_{k=1}^p\vun{u}_{i_k}\cdot\vto{x}_k\vun{u}_{i_1}^*\otimes\cdots\otimes\vun{u}_{i_p}^*\nonumber\\
+    &=\sum_{{i_1}=1}^{n_1}\cdots\sum_{{i_p}=1}^{n_p}\prod_{k=1}^p\vun{u}_{i_k}\cdot\vto{x}_k\vun{u}_{i_1}^*\otimes\cdots\otimes\vun{u}_{i_p}^*\nonumber\\
 &=(\sum_{{i_1}=1}^{n_1}\fua{\vtf{f}_{i_1}^{B_1}}{\vto{x}_1}\vun{u}_{i_1})^*\otimes\cdots\otimes(\sum_{{i_p}=1}^{n_1}\fua{\vtf{f}_{i_p}^{B_p}}{\vto{x}_p}\vun{u}_{i_p})^*\nonumber\nonumber\\
 &=\vto{x}_1^*\otimes\cdots\otimes\vto{x}_p^*\nonumber\\
 &=\fua{\vtf{i}}{\tnr{X}}
@@ -711,6 +643,74 @@ $\fua{\frt{I}}{\tnr{X}} = \tnr{I}\cdot \tnr{X} = \overline{\mathrm{tr}}\,\tnr{X}
 &=\sum_{{i_1}=1}^{n_1}\cdots\sum_{{i_p}=1}^{n_p}\fua{\vtf{f}_{i_1\cdots i_p}}{\tnr{A}}\fua{\vtf{f}_{i_1\cdots i_p}}{\tnr{B}}=\tnr{A}\diamond\tnr{B}\,,
 \end{align}
 where equality \eqref{eq:prodContrCoord} was considered.
+
+
+In the context of Hilbert spaces, we already know that corollary \ref{cor:covLin} establishes a biunivocal relationship between a linear vector function space and a linear covector function space, that is, if $\vtf{g}$ is a linear vector function, there is always a linear covector function $\vtf{g}_\Phi$, which is a linear tensor function whose domain is constituted by first order tensors (covectors). But the theorem above establishes a biunivocal relationship between a linear tensor function space and a tensor space, when we conclude that covector function $\vtf{g}_\Phi$ has its correspondent second order tensor $\tnr{G}$. Therefore, if tensor function $\vtf{g}_\Phi=\tnr{G}_1^*$ has a correspondent linear function $\vtf{g}$ through corollary \ref{cor:covLin} and a correspondent second order tensor $\tnr{G}$ through theorem above, we can conclude that $\vtf{g}$ and $\tnr{G}$ are correspondents. Let's now rewrite this rationale in a more concise form.
+
+\begin{mcoro}{Second Order Tensors and Linear Functions}{soTens}
+Considering Hilbert spaces $U_\cam{F}$ and $V_\cam{F}$, a mapping $\map{\tnr{\Upsilon}}{\ete{\cam{F}}{U\times V}}{\evl{\cam{F}}{U}{V}}$ is a bijective transformation if its function rule is $\fua{\tnr{\Upsilon}}{\tnr{X}}=\Phi^{-1}\circ\vtf{X}^*_1\circ\Phi$, where $\Phi$ is defined on theorem \ref{teo:repRiesz}.
+\end{mcoro}
+{\footnotesize
+\begin{proof}
+If function $\tnr{\Upsilon}$ were not an injection, there would be two distinct tensors $\tnr{T}$ and $\tnr{W}$ where $\Phi^{-1}\circ\vtf{T}^*_1\circ\Phi(\vto{x})=\Phi^{-1}\circ\vtf{W}^*_1\circ\Phi(\vto{x})$; but this equality leads to $\vtf{T}^*_1(\vto{x}^*)=\vtf{W}^*_1(\vto{x}^*)$, which shows that $\vtf{T}^*_1=\vtf{W}^*_1$. Therefore, since $p$-cotensors are biunivocally related to tensors, $\tnr{T}$ and $\tnr{W}$ cannot be distinct. Function $\tnr{\Upsilon}$ is also a surjection because, through corollary \ref{cor:covLin}, for every linear function $\vtf{g}\in\evl{\cam{F}}{U}{V}$ a covector function $\vtf{g}_\Phi$ can be defined and then, for every tensor function $\vtf{g}_\Phi$ there exists a unique second order tensor $\tnr{G}\in\ete{\cam{F}}{U\times V}$ where $1$-cotensor $\tnr{G}_1^*=\Phi\circ\vtf{g}_\Phi$.
+\end{proof}
+}
+
+\noindent From this corollary, the linear bijection 
+\begin{equation}\label{eq:repFunc2}
+\gloref{reprFun}:=\fua{\tnr{\Upsilon}}{\tnr{G}}
+\end{equation}
+is called the \textsb{representative function}\index{function!representative} of second order tensor $\tnr{G}\in\ete{\cam{F}}{U\times V}$. Considering  $\vto{g}_1^*\otimes\vto{g}_2^*$ the dyadic description of $\tnr{G}$, arbitrary vectors $\vto{u}\in U_\cam{F}$ and $\vto{v}\in V_\cam{F}$, we can write that
+\begin{equation}\label{eq:Lin2secTens}
+\fua{\tnr{\mathit{g}}}{\vto{u}} = \fua{\Phi^{-1}\circ\tnr{G}^*_1\circ\Phi}{\vto{u}} = \fua{\Phi^{-1}}{\vto{u}^*\odot_1\tnr{G}} =\vto{u}^*\hat{\odot}_1\tnr{G}=(\vto{u}\cdot\vto{g}_1)\vto{g}_2
+\end{equation}
+because $\Phi^{-1}$ is antilinear, and from this result scalar
+\begin{equation}\label{eq:secTens2Lin}
+\fua{\tnr{G}}{\vto{u},\vto{v}} = \fua{\vto{g}_1^*}{\vto{u}}\fua{\vto{g}_2^*}{\vto{v}} = \vto{v}\cdot\overline{\fua{\vto{g}_1^*}{\vto{u}}}\vto{g}_2 = \vto{v}\cdot\fua{\vto{g}_1^*}{\vto{u}^c}\vto{g}_2= \vto{v}\cdot[(\vto{u}^c\cdot\vto{g}_1)\vto{g}_2]= \vto{v}\cdot\fua{\tnr{\mathit{g}}}{\vto{u}^c}\,.
+\end{equation}
+
+\begin{mcoro}{Symmetric Tensors and Symmetric Operators}{soSymTens}
+The set of symmetric operators, subset of $\evlc{\real}{U}{U}$, is biunivocally related to the space of symmetric second order tensors $\ets{\real}{U^2}$.
+\end{mcoro}
+\hspace{.1pt}
+{\footnotesize
+\begin{proof}
+The corollary is straightforwardly obtained from \eqref{eq:secTens2Lin} for real fields and symmetric operators. 
+\end{proof}
+}
+
+\noindent Still considering an arbitrary second order tensor $\tnr{G}\in\ete{\cam{F}}{U\times V}$ and its representative function $\tnr{\mathit{g}}$, we now sacrifice mathematical rigor in favor of mathematical practicality by specifying three tensors in $\ete{\cam{F}}{V\times U}$:   
+\begin{itemize}
+\setlength\itemsep{.1em}
+\item[i.] $\tnr{G}^{\dagger}:=\fua{\tnr{\Upsilon}^{-1}}{\tnr{\mathit{g}}^{\dagger}}$ ; 
+\item[ii.] $\tnr{G}^{-1}:=\fua{\tnr{\Upsilon}^{-1}}{\tnr{\mathit{g}}^{-1}}$, if $\tnr{\mathit{g}}$ is invertible.
+\end{itemize}
+They belong to $\ete{\cam{F}}{V\times U}$ as a straightforward consequence of the definitions of their representative functions together with equalities \eqref{eq:Lin2secTens}. From these definitions, we have the following properties:
+\begin{itemize}
+\setlength\itemsep{.1em}
+\item[i.] Given arbitrary $\vto{u}\in U_\cam{F}$ and $\vto{v}\in V_\cam{F}$, then $(\vto{u}^*\otimes\vto{v}^*)^\dagger = \vto{v}^*\otimes\vto{u}^*$ ;
+\item[ii.] $\tnr{G}^{-1}\odot_1\tnr{G}\in\ete{\cam{F}}{V^2}$ and $\tnr{G}\odot_1\tnr{G}^{-1}\in\ete{\cam{F}}{U^2}$ are identity tensors.
+\end{itemize}
+
+DEMONSTRAR AS PROPRIEDADES ACIMA
+
+
+
+
+There is also an interesting property relating the composition of representative functions and second order tensors: let $\tnr{\mathit{g}}_1$ and $\tnr{\mathit{g}}_2$ be the representative functions of $\tnr{G}_1\in\ete{\cam{F}}{U\times W}$ and $\tnr{G}_2\in\ete{\cam{F}}{W\times V}$ respectively. The following equalities show that tensor $\tnr{G}_1\odot_1\tnr{G}_2\in\ete{\cam{F}}{U\times V}$ is represented by $\tnr{\mathit{g}}_2\circ\tnr{\mathit{g}}_1$. 
+\begin{equation}\label{eq:compoFuncRepFunc}
+\fua{\tnr{\mathit{g}}_2\circ\tnr{\mathit{g}}_1}{\vto{u}}=\tnr{\mathit{g}}_2[\vto{u}^*\hat{\odot}_1\tnr{G}_1]
+=(\vto{u}^*\odot_1\tnr{G}_1)\hat{\odot}_1\tnr{G}_2
+= \vto{u}^*\hat{\odot}_1(\tnr{G}_1\odot_1\tnr{G}_2)\,.
+\end{equation}
+Now, from equalities \eqref{eq:secTens2Lin}, we extend the concept of positivity that can be applied to the representative operator $\tnr{\mathit{t}}\in\evl{\cam{F}}{U}{U}$, described by definition \eqref{eq:linPosDef}, to tensor $\tnr{T}\in\ete{\cam{F}}{U^2}$. Thereby, a second order tensor $\tnr{T}$ is said to be \textsb{nonnegative}\index{tensor!nonnegative} if
+\begin{equation}\label{eq:nonnegTensor}
+\Re(\fua{\tnr{\mathit{t}}}{\vto{y}}\cdot\vto{y})=\Re(\vto{y}\cdot\fua{\tnr{\mathit{t}}}{\vto{y}})=\Re(\fua{\tnr{T}}{\vto{y},\vto{y}})\geqslant 0\,,\,\forall\,\vto{y}\in U_\cam{F}\,,
+\end{equation}
+and \textsb{positive-definite}\index{tensor!positive-definite} if the real value on the left side is never zero. Moreover, we also extend to a second order tensor $\tnr{T}\in\ete{\cam{F}}{U^2}$ the concepts of eigenvalues and eigenvectors of their representative operator $\tnr{\mathit{t}}\in\evl{\cam{F}}{U}{U}$, that is, the eigenvalues and eigenvectors of $\tnr{\mathit{t}}$ are also of $\tnr{T}$, by definition.
+
+
+
 
 
 
