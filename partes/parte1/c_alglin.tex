@@ -322,11 +322,16 @@ Now, let a vector function $\vto{h}\in V^U_\cam{F}$ be a homomorphism that keeps
 \begin{equation}
 \fua{\vtf{h}}{\alpha\vto{x}+\beta\vto{y}}=\alpha\fua{\vtf{h}}{\vto{x}}+\beta\fua{\vtf{h}}{\vto{y}}\,,
 \end{equation}
-for all $\alpha,\beta\in\cam{F},\,\vto{x},\vto{y}\in U_\cam{F}$. Thereby, we call $\vtf{h}$ a \textsb{linear function}\index{function!linear}\label{def:linear} and the corresponding mapping a \textsb{linear transformation}\index{transformation!linear}. If the function space $V^U_\cam{F}$ has only linear functions, its usual representation is $\gloref{evl}$. Considering \eqref{eq:vecComplex} and \eqref{eq:antiLinConjVect}, an interesting property of linear functions can be obtained from
-equalities $\overline{\alpha}\fua{\vtf{h}}{\vto{u}}=\alpha(\fua{\vtf{h}}{\vto{u}})^c$ and $\overline{\alpha}\fua{\vtf{h}}{\vto{u}}=\fua{\vtf{h}}{\overline{\alpha}\vto{u}}=\alpha\fua{\vtf{h}}{\vto{u}^c}$, when we conclude that $(\fua{\vtf{h}}{\vto{u}})^c=\fua{\vtf{h}}{\vto{u}^c}$; and if $\vto{u}=\overline{\alpha}\vto{x}+\overline{\beta}\vto{y}$,
+for all $\alpha,\beta\in\cam{F},\,\vto{x},\vto{y}\in U_\cam{F}$. Thereby, we call $\vtf{h}$ a \textsb{linear function}\index{function!linear}\label{def:linear} and the corresponding mapping a \textsb{linear transformation}\index{transformation!linear}. If the function space $V^U_\cam{F}$ has only linear functions, its usual representation is $\gloref{evl}$. 
+
+\begin{comment}
+Since $\fua{\vtf{h}^c}{\vto{u}}:=(\fua{\vtf{h}}{\vto{u}})^c$ then 
 \begin{equation}\label{eq:complexLinear}
-\alpha(\fua{\vtf{h}}{\vto{x}})^c+\beta(\fua{\vtf{h}}{\vto{y}})^c=\alpha\fua{\vtf{h}}{\vto{x}^c}+\beta\fua{\vtf{h}}{\vto{y}^c}\,.
+\fua{\vtf{h}^c}{\overline{\alpha}\vto{x}+\overline{\beta}\vto{y}}=(\fua{\vtf{h}}{\overline{\alpha}\vto{x}+\overline{\beta}\vto{y}})^c=\alpha(\fua{\vtf{h}}{\vto{x}})^c+\beta(\fua{\vtf{h}}{\vto{y}})^c=\alpha\fua{\vtf{h}^c}{\vto{x}}+\beta\fua{\vtf{h}^c}{\vto{y}}
 \end{equation}
+as a consequence of equalities \eqref{eq:vecComplex}, \eqref{eq:antiLinConjVect}, $\overline{\alpha}\fua{\vtf{h}}{\vto{u}}=\alpha(\fua{\vtf{h}}{\vto{u}})^c$ and $\overline{\alpha}\fua{\vtf{h}}{\vto{u}}=\fua{\vtf{h}}{\overline{\alpha}\vto{u}}$. 
+\end{comment}
+
 Now, given $\{\vto{u}_1,\cdots,\vto{u}_n\}$ a basis of $U_\cam{F}$, a bijective
 linear operator $\vtf{g}\in\evl{\cam{F}}{U}{U}$ and an arbitrary vector $\vto{u}\in U_\cam{F}$, we can say that since $\fua{\vtf{g}}{\vto{u}}$ is an arbitrary vector of $U_\cam{F}$, then set $\{\fua{\vtf{g}}{\vto{u}_1},\cdots,\fua{\vtf{g}}{\vto{u}_n}\}$ is also a basis of $U_\cam{F}$ because linearity leads to $\fua{\vtf{g}}{\vto{u}}=\sum_{i=1}^n\alpha_i\fua{\vtf{g}}{\vto{u}_i}$\label{pg:bijecOpe}.
 
@@ -504,11 +509,11 @@ By the rule \eqref{eq:normaFuncao},  $U_\cam{F}^*$ is a normed space that is als
 % https://en.wikipedia.org/wiki/Transpose
 % https://en.wikipedia.org/wiki/Hermitian_adjoint
 
-Now, if $U_\cam{F}$ and $V_\cam{F}$ are Hilbert spaces that define $\evlc{\cam{F}}{U}{V}$, we call $\vtf{g}^\dagger\in \evlc{\cam{F}}{V}{U}$ and $\vtf{g}^\text{T}\in \evlc{\cam{F}}{V}{U}$ the \textsb{Hilbert-adjoint}\index{function!Hilbert-adjoint} and \textsb{transpose}\index{function!transpose} functions of $\vtf{g}\in \evlc{\cam{F}}{U}{V}$ respectively, when, given arbitrary vectors $\vto{u}\in U_\cam{F}$ and $\vto{v}\in V_\cam{F}$ we have
-\begin{alignat}{3}\label{eq:funcaoTransposta}
-\fua{\vtf{g}^\dagger}{\vto{u}}\cdot\vto{v}=\vto{u}\cdot\fua{\vtf{g}}{\vto{v}}&\qquad \text{and}\qquad & \fua{\vtf{g}^\text{T}}{\vto{u}}\cdot\vto{v}^c=\vto{u}\cdot\fua{\vtf{g}}{\vto{v}^c}\,.
-\end{alignat}
-From these equalities, it is clear that $\vtf{g}^\dagger=\vtf{g}^\text{T}$ for real fields. In the case of Hilbert-adjoint functions, the following properties are valid for all $\alpha\in\cam{F}$ and $\vtf{k}\in \evlc{\cam{F}}{V}{U}\,$:
+Now, if $U_\cam{F}$ and $V_\cam{F}$ are Hilbert spaces that define $\evlc{\cam{F}}{U}{V}$, we call $\vtf{g}^\dagger\in \evlc{\cam{F}}{V}{U}$ the \textsb{Hilbert-adjoint}\index{function!Hilbert-adjoint} function of $\vtf{g}\in \evlc{\cam{F}}{U}{V}$, when, given arbitrary vectors $\vto{u}\in U_\cam{F}$ and $\vto{v}\in V_\cam{F}$ we have
+\begin{equation}\label{eq:funcaoTransposta}
+\fua{\vtf{g}^\dagger}{\vto{u}}\cdot\vto{v}=\vto{u}\cdot\fua{\vtf{g}}{\vto{v}}\,.
+\end{equation}
+In the particular case of real fields $\vtf{g}^\dagger$ is also called the \textsb{transpose}\index{function!transpose}of $\vtf{g}$, represented by $\vtf{g}^\text{T}$. In the case of Hilbert-adjoint functions, the following properties are valid for all $\alpha\in\cam{F}$ and $\vtf{k}\in \evlc{\cam{F}}{V}{U}\,$:
 \begin{itemize}\label{eq:propAdj}
 	\setlength\itemsep{.1em}
 	\item[i.] $\lpa\alpha\vtf{g}\rpa^\dagger=\overline{\alpha}\vtf{g}^\dagger$;
@@ -530,7 +535,7 @@ In order to prove the equality on the third property, we need to know that an id
 \end{proof}
 }
 
-A vector $\vtf{h}$ of function space $\evlc{\cam{F}}{V}{V}$ is said to be a \textsb{Hermitian}\index{operator!Hermitian} or \textsb{self-adjoint}\index{operator!self-adjoint} operator when $\vtf{h}=\vtf{h}^\dagger$; but, if $\vtf{h}=-\vtf{h}^\dagger$, it is called  \textsb{anti-Hermitian}\index{operator!anti-Hermitian}. Moreover, operator $\vtf{h}$ is said to be \textsb{symmetric}\index{operator!symmetric} if $\vtf{h}=\vtf{h}^\text{T}$ and \textsb{antisymmetric}\index{operator!antisymmetric} if $\vtf{h}=-\vtf{h}^\text{T}$. In the context of real fields, we already know that $\vtf{h}^\dagger=\vtf{h}^\text{T}$ and then (anti-)Hermitian and (anti)symmetric operators are equal. An element of the function space $\evlc{\cam{F}}{V}{U}$ constituted by invertible functions is said to be \textsb{unitary}\index{function!unitary} when it is a bijection whose inverse equals the Hilbert-adjoint or called \textsb{orthogonal}\index{function!orthogonal} if its inverse equals the transpose. Thereby, we can say that an unitary operator $\vtf{q}\in \evlc{\cam{F}}{V}{V}$ preserves inner products because, for all $\vto{u},\vto{v}\in V_\cam{F}$, equalities
+A vector $\vtf{h}$ of function space $\evlc{\cam{F}}{V}{V}$ is said to be a \textsb{Hermitian}\index{operator!Hermitian} or \textsb{self-adjoint}\index{operator!self-adjoint} operator when $\vtf{h}=\vtf{h}^\dagger$; but, if $\vtf{h}=-\vtf{h}^\dagger$, it is called  \textsb{anti-Hermitian}\index{operator!anti-Hermitian}. Moreover, in the context of real fields, (anti-)Hermitian operators are called \textsb{(anti)symmetric}\index{operator!symmetric}\index{operator!antisymmetric}, that is, $\vtf{h}=\vtf{h}^\text{T}$ or $\vtf{h}=-\vtf{h}^\text{T}$. An element of the function space $\evlc{\cam{F}}{V}{U}$ constituted by invertible functions is said to be \textsb{unitary}\index{function!unitary} when it is a bijection whose inverse equals the Hilbert-adjoint. Thereby, we can say that an unitary operator $\vtf{q}\in \evlc{\cam{F}}{V}{V}$ preserves inner products because, for all $\vto{u},\vto{v}\in V_\cam{F}$, equalities
 \begin{equation}\label{eq:unitPreservInner}
 \fua{\vtf{q}}{\vto{u}}\cdot\fua{\vtf{q}}{\vto{v}}=\vto{u}\cdot\fua{\vtf{q}^\dagger\circ\vtf{q}}{\vto{v}}=\vto{u}\cdot\fua{\vtf{q}^{-1}\circ\vtf{q}}{\vto{v}}=\vto{u}\cdot\vto{v}
 \end{equation}
@@ -542,7 +547,7 @@ Another consequence of $\vtf{q}$ preserving inner products is the following: if 
 \begin{equation}\label{eq:unitOrthon}
 \fua{\vtf{g}}{\vto{x}}=\sum_{i=1}^m\fua{\vtf{f}^B_i}{\vto{x}}\vun{v}_i
 \end{equation}
-results unitary and clearly specifies $\fua{\vtf{g}}{\vun{u}_i}=\vun{v}_i$. Thereby, \emph{every pair of orthonormal bases can be related through a unitary operator}\label{prg:orthBases}. If only real fields are considered, every orthogonal operator $\vtf{h}$ is unitary since $\vtf{h}^{-1}=\vtf{h}^\text{T}=\vtf{h}^\dagger$.
+results unitary and clearly specifies $\fua{\vtf{g}}{\vun{u}_i}=\vun{v}_i$. Thereby, \emph{every pair of orthonormal bases can be related through a unitary operator}\label{prg:orthBases}. In the context of real fields, unitary functions are usually called \textsb{orthogonal}\index{function!orthogonal}, that is, $\vtf{h}^\text{T}=\vtf{h}^{-1}$.
 
 {\footnotesize
 \begin{proof}
@@ -567,7 +572,7 @@ In the previous chapter we said that the set of all unary invertible operators d
 \vtf{q}_2^{-1}\circ\vtf{q}_1^{-1} = \vtf{q}_2^\dagger\circ\vtf{q}_1^\dagger =
 \lpa \vtf{q}_1\circ\vtf{q}_2 \rpa^\dagger
 \end{equation}
-show, for all $\vtf{q}_1,\vtf{q}_2\in X$, that bijection\footnote{See properties on page \pageref{prop:Composicao}.}  $\vtf{q}_1\circ\vtf{q}_2$ indeed belongs to the set $X$. By these same arguments, a group  $\gloref{grOrto}$ of orthogonal operators on $V_\cam{F}$ can also be defined and then, in the context of real fields, we have $\grc{N}{\real}{V}=\grc{O}{\real}{V}$. Moreover, there are linear operators which preserve metrics or distance, being called \textsb{isometric operators}\index{operator!isometric}. In more rigorous mathematical terms, $\vtf{k}\in \evl{\cam{F}}{V}{V}$ is an isometric operator if it is an injection where $\varrho\,[\fua{\vtf{k}}{\vto{u}},\fua{\vtf{k}}{\vto{v}}]=\fua{\varrho}{\vto{u},\vto{v}}$, for all $\vto{u},\vto{v}\in V_\cam{F}$. Similarly to unitary operators, the set of all isometric operators on $V_\cam{F}$ defines a group $\gloref{grIsom}\subset\evl{\cam{F}}{V}{V}$ called \textsb{isometry group}\index{group!isometry}, since the composition of isometric operators is also an isometric operator, that is, considering any $\vtf{k},\vtf{g}\in \grc{I}{\cam{F}}{V}$,
+show, for all $\vtf{q}_1,\vtf{q}_2\in X$, that bijection\footnote{See properties on page \pageref{prop:Composicao}.}  $\vtf{q}_1\circ\vtf{q}_2$ indeed belongs to the set $X$. In the context of real fields, we have the \textsb{orthogonal group}\index{group!orthogonal} $\grc{O}{}{V}:=\grc{N}{\real}{V}$. Moreover, there are linear operators which preserve metrics or distance, being called \textsb{isometric operators}\index{operator!isometric}. In more rigorous mathematical terms, $\vtf{k}\in \evl{\cam{F}}{V}{V}$ is an isometric operator if it is an injection where $\varrho\,[\fua{\vtf{k}}{\vto{u}},\fua{\vtf{k}}{\vto{v}}]=\fua{\varrho}{\vto{u},\vto{v}}$, for all $\vto{u},\vto{v}\in V_\cam{F}$. Similarly to unitary operators, the set of all isometric operators on $V_\cam{F}$ defines a group $\gloref{grIsom}\subset\evl{\cam{F}}{V}{V}$ called \textsb{isometry group}\index{group!isometry}, since the composition of isometric operators is also an isometric operator, that is, considering any $\vtf{k},\vtf{g}\in \grc{I}{\cam{F}}{V}$,
 \begin{equation}
 \varrho\,\lco\fua{\vtf{g}\circ\vtf{k}}{\vto{u}},\fua{\vtf{g}\circ\vtf{k}}{\vto{v}}\rco = \varrho\,\lco{\fua{\vtf{k}}{\vto{u}},\fua{\vtf{k}}{\vto{v}}}\rco=\fua{\varrho}{\vto{u},\vto{v}}
 \end{equation}
@@ -652,14 +657,7 @@ according to \eqref{eq:prodIntGen}. The rule \eqref{eq:regraFuncCoord} enables u
 \overline{\vtf{f}^D_i[\fua{\vtf{g}}{\vun{x}_j}]^\text{T}} &=\vtf{f}^{B}_i[\vtf{g}^\dagger(\vun{y}_j)]\nonumber\\
 {\maf{\vtf{g}}{B}{D}}^\dagger&=[\vtf{g}^\dagger_{D}]^{B}\,,
 \end{align}
-where left and right matrices have dimension $n\times m$. Moreover, if $\vtf{g}$ has a transpose function, a similar development can also be performed:
-\begin{align}\label{eq:matRepTranspT}
-\fua{\vtf{g}}{\vun{x}_i}\cdot \vun{y}_j^c &= \overline{\vtf{g}^\text{T}(\vun{y}_j)\cdot\vun{x}_i^c}\nonumber\\
-(\fua{\vtf{g}}{\vun{x}_i})^c\cdot \vun{y}_j &= \vtf{g}^\text{T}(\vun{y}_j)\cdot\vun{x}_i^c\nonumber\\
-\vtf{f}^{D}_i[\fua{\vtf{g}}{\vun{x}_j^c}]^\text{T} &=\vtf{f}^{B^c}_i[\vtf{g}^\text{T}(\vun{y}_j)]\nonumber\\
-{\maf{\vtf{g}}{B^c}{D}}^\text{T}&=[\vtf{g}^\text{T}_{D}]^{B^c}\,.
-\end{align}
-When we consider an operator $\vtf{h}\in\evlc{\cam{F}}{X}{X}$ and only one orthogonal basis $B$, equalities \eqref{eq:matRepTransp} and \eqref{eq:matRepTranspT} enable us to affirm that the matrix representations of operators $\vtf{h}^\dagger$ and $\vtf{h}^\text{T}$ are respectively the conjugate transpose and the transpose of the representation matrix of $\vtf{h}$.
+where left and right matrices have dimension $n\times m$. When we consider an operator $\vtf{h}\in\evlc{\cam{F}}{X}{X}$ and only one orthogonal basis $B$, from previous equality we can state that the matrix representation of operator $\vtf{h}^\dagger$ is the conjugate transpose of the representation matrix of $\vtf{h}$.
 
 There are concepts that arise from all these matrix representations of vectors and linear functions. One of them has a fundamental importance for us and we call it \textsb{change of coordinates}\index{coordinates!change of}. In this study, \emph{to change coordinates of a vector or linear operator from a basis $B$ to a basis $C$ means to relate biunivocally the representative matrix of this vector or linear operator on $B$ with its representative matrix on $C$}. In order to mathematically substantiate this idea, here is the following theorem.
 
