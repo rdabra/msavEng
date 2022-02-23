@@ -688,16 +688,30 @@ The corollary is straightforwardly obtained from \eqref{eq:secTens2Lin} for real
 They belong to $\ete{\cam{F}}{V\times U}$ as a straightforward consequence of the definitions of their representative functions together with equalities \eqref{eq:Lin2secTens}. From these definitions, we have the following properties:
 \begin{itemize}
 \setlength\itemsep{.1em}
-\item[i.] Given arbitrary $\vto{u}\in U_\cam{F}$ and $\vto{v}\in V_\cam{F}$, then $(\vto{u}^*\otimes\vto{v}^*)^\dagger = \vto{v}^*\otimes\vto{u}^*$ ;
+\item[i.] $(\vto{a}^*\otimes\vto{b}^*)^\dagger = \vto{b}^*\otimes\vto{a}^*$ for arbitrary $\vto{a}\in U_\cam{F}$ and $\vto{b}\in V_\cam{F}$;
 \item[ii.] $\tnr{G}^{-1}\odot_1\tnr{G}\in\ete{\cam{F}}{V^2}$ and $\tnr{G}\odot_1\tnr{G}^{-1}\in\ete{\cam{F}}{U^2}$ are identity tensors.
 \end{itemize}
 
-DEMONSTRAR AS PROPRIEDADES ACIMA
+{\footnotesize
+\begin{proof}
+From \eqref{eq:funcaoTransposta} and \eqref{eq:Lin2secTens}, if $\vtf{\mathit{f}}$ is the representative function of $\vto{a}^*\otimes\vto{b}^*$, $\vto{u}\in U_\cam{F}$ and $\vto{v}\in V_\cam{F}$, the following procedure proves the first item. 
+\begin{align*}
+\fua{\vtf{\mathit{f}}^\dagger}{\vto{u}}\cdot\vto{v}&=\vto{u}\cdot\fua{\vtf{\mathit{f}}}{\vto{v}}\\
+[\vto{u}^*\hat{\odot}_1(\vto{a}^*\otimes\vto{b}^*)^\dagger]\cdot\vto{v}&=\vto{u}\cdot[\vto{v}^*\hat{\odot}_1(\vto{a}^*\otimes\vto{b}^*)]\\
+\vto{u}\cdot[(\vto{a}^*\otimes\vto{b}^*)^\dagger\hat{\odot}_1\vto{v}^*]&=\vto{u}\cdot[(\vto{b}^*\otimes\vto{a}^*)\hat{\odot}_1\vto{v}^*]\,.
+\end{align*}
+Considering \eqref{eq:cotensIdent}, if $\vtf{\mathit{g}}$ is the representative function of $\tnr{G}$, development 
+\begin{align*}
+\tnr{i}(\vto{v})&=\tnr{\mathit{g}}\circ\tnr{\mathit{g}^{-1}}(\vto{v})\\
+\vto{v}^*\hat{\odot}_1\tnr{I}&=\tnr{\mathit{g}}[\vto{v}^*\hat{\odot}_1\tnr{G}^{-1}]\\
+&=[\vto{v}^*\odot_1\tnr{G}^{-1}]\hat{\odot}_1\tnr{G}\\
+&=\vto{v}^*\hat{\odot}_1(\tnr{G}^{-1}\odot_1\tnr{G})
+\end{align*}
+proves the first identity tensor of the second item. Verification of $\tnr{G}\odot_1\tnr{G}^{-1}$ is similar.
+\end{proof}
+}
 
-
-
-
-There is also an interesting property relating the composition of representative functions and second order tensors: let $\tnr{\mathit{g}}_1$ and $\tnr{\mathit{g}}_2$ be the representative functions of $\tnr{G}_1\in\ete{\cam{F}}{U\times W}$ and $\tnr{G}_2\in\ete{\cam{F}}{W\times V}$ respectively. The following equalities show that tensor $\tnr{G}_1\odot_1\tnr{G}_2\in\ete{\cam{F}}{U\times V}$ is represented by $\tnr{\mathit{g}}_2\circ\tnr{\mathit{g}}_1$. 
+\noindent There is also an interesting property relating the composition of representative functions and second order tensors: let functions $\tnr{\mathit{g}}_1$ and $\tnr{\mathit{g}}_2$ represent $\tnr{G}_1\in\ete{\cam{F}}{U\times W}$ and $\tnr{G}_2\in\ete{\cam{F}}{W\times V}$ respectively. The following equalities show that $\tnr{G}_1\odot_1\tnr{G}_2\in\ete{\cam{F}}{U\times V}$ is represented by $\tnr{\mathit{g}}_2\circ\tnr{\mathit{g}}_1$. 
 \begin{equation}\label{eq:compoFuncRepFunc}
 \fua{\tnr{\mathit{g}}_2\circ\tnr{\mathit{g}}_1}{\vto{u}}=\tnr{\mathit{g}}_2[\vto{u}^*\hat{\odot}_1\tnr{G}_1]
 =(\vto{u}^*\odot_1\tnr{G}_1)\hat{\odot}_1\tnr{G}_2
