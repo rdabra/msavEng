@@ -178,18 +178,18 @@ From the previous equality and definition \eqref{eq:projgeo}, if there is no geo
 \end{figure}
 
 
-\section{Affinities}
+\section{Affinities}\label{sec:aff}
 The subject of Geometry is to study not only morphological sets and their elements, as we have done on the previous section, but also the correlation of geometrical objects, that is, functions whose domain and image are morphological sets. Thereby, in the context of Affine Geometry, this section deals exclusively with affinities, here understood as ``geometric'' functions that correlate points, defined by linear vector functions on Hilbert spaces. In more precise terms, given a Hilbert affine space $\eamd{U}{F}{m}$, a bijective mapping $\map{\mathit{g}}{\eamd{U}{F}{m}}{\eamd{U}{F}{m}}$ and a vector space $\evl{\cam{F}}{U}{U}$, we call  $\map{\mathit{f}}{\eamd{U}{F}{m}}{\eamd{U}{F}{m}}$ an \textsb{affine transformation}\index{affine!transformation} and its function an \textsb{affinity}\index{affinity} when there is a unique linear bijection $\vtf{f}\in\evl{\cam{F}}{U}{U}$ where equality
 \begin{equation}\label{eq:affty}
 \fua{\mathit{f}}{\vto{x}\oplus a}=\fua{\vtf{f}}{\vto{x}}\oplus\fua{\mathit{g}}{a}\,,\,\,\forall\,a\in\eamd{U}{F}{m}\,,\,\vto{x}\in U_\cam{F}\,,
 \end{equation}
-is valid. It is straightforward to note that since $\vtf{f}$ and $\mathit{g}$ are bijections, so results affinity $\mathit{f}$. Among other properties, it is possible to obtain that every affinity preserves parallelism and dimensionality; in other words, parallel subspaces on the  domain remain parallel on the image and $n$-dimensional subspaces on the domain, $n\leq m$, remain $n$-dimensional on the image: for example, lines are mapped to lines, planes are mapped to planes and so on. From corollary \ref{cor:soTens} and equalities \eqref{eq:Lin2secTens}, we know that operator $\vtf{f}$ is the representative function of a tensor $\tnr{L}\in\ete{\cam{F}}{U^2}$ in such a way that the previous equality can be rewritten as
+is valid. It is straightforward to note that since $\vtf{f}$ and $\mathit{g}$ are bijections, so results affinity $\mathit{f}$. Among other properties, it is possible to obtain that every affinity preserves parallelism and dimensionality; in other words, parallel subspaces on the  domain remain parallel on the image and $n$-dimensional subspaces on the domain, $n\leq m$, remain $n$-dimensional on the image: for example, lines are mapped to lines, planes are mapped to planes and so on. From corollary \ref{cor:soTens} and equalities \eqref{eq:Lin2secTens}, we know that operator $\vtf{f}$ is the unique representative function of a tensor $\tnr{T}\in\ete{\cam{F}}{U^2}$ in such a way that the previous equality can be rewritten as
 \begin{equation}\label{eq:afftyT}
-\fua{\mathit{f}}{\vto{x}\oplus a}=(\vto{x}^*\hat{\odot}\,\tnr{L})\oplus\fua{\mathit{g}}{a}\,,\,\,\forall\,a\in\eamd{U}{F}{m}\,,\,\vto{x}\in U_\cam{F}\,,
+\fua{\mathit{f}}{\vto{x}\oplus a}=(\tnr{L}\hat{\odot}\,\vto{x}^*)\oplus\fua{\mathit{g}}{a}\,,\,\,\forall\,a\in\eamd{U}{F}{m}\,,\,\vto{x}\in U_\cam{F}\,,
 \end{equation}
-where $\tnr{L}$ is unique and called an \textsb{affinity tensor}\index{tensor!afinity}\index{affinity!tensor}. Sometimes it is very useful to ``vectorize'' affinity $\mathit{f}$ in order to work only with vectors. In this sense, vector function $\tnr{\mathit{f}}:= \upsilon_o\circ\mathit{f}\circ\upsilon_o^{-1}$ is said to be a \textsb{vector affinity}\index{vector affinity}\index{affinity!vector} and then, from the definition of the ``vectorization'' function and its properties, it is straightforward to obtain that 
+where $\tnr{L}:=\tnr{T}^\dagger$ is called the \textsb{affinity tensor}\index{tensor!afinity}\index{affinity!tensor} of $\mathit{f}$. Sometimes it is very useful to ``vectorize'' affinity $\mathit{f}$ in order to work only with vectors. In this sense, vector function $\tnr{\mathit{f}}:= \upsilon_o\circ\mathit{f}\circ\upsilon_o^{-1}$ is said to be a \textsb{vector affinity}\index{vector affinity}\index{affinity!vector} and then, from the definition of the ``vectorization'' function and its properties, it is straightforward to obtain that 
 \begin{equation}\label{eq:vecAffi}
-\fua{\tnr{\mathit{f}}}{\vto{x}+ \vv{a}}=(\vto{x}^*\hat{\odot}\,\tnr{L})+\vv{\fua{\mathit{g}}{a}}\,.
+\fua{\tnr{\mathit{f}}}{\vto{x}+ \vv{a}}=(\tnr{L}\hat{\odot}\,\vto{x}^*)+\vv{\fua{\mathit{g}}{a}}\,.
 \end{equation}
 
 {\footnotesize
@@ -227,30 +227,30 @@ According to \eqref{eq:vecAffi}, the correspondent vector affinity of translatio
 \end{equation}
 from which it is clear that vector function $\tnr{\mathit{t}}_\vto{u}$ is linear, that is, $\tnr{\mathit{t}}_\vto{u}\in\evl{\cam{F}}{U}{U}$.
 
-Still considering previous conditions, the affinity in $\map{\mathit{h}}{\eamd{U}{F}{m}}{\eamd{U}{F}{m}}$ is called a \textsb{dilation}\index{dilation} and $\tnr{\mathit{h}}:= \upsilon_o\circ\mathit{h}\circ\upsilon_o^{-1}$ a \textsb{vector dilation}\index{vector!dilation} if bijection $\vtf{h}\in\evl{\cam{F}}{U}{U}$ in equality
+Still considering previous conditions, the affinity in $\map{\mathit{s}}{\eamd{U}{F}{m}}{\eamd{U}{F}{m}}$ is called a \textsb{dilation}\index{dilation} and $\tnr{\mathit{s}}:= \upsilon_o\circ\mathit{h}\circ\upsilon_o^{-1}$ a \textsb{vector dilation}\index{vector!dilation} if bijection $\vtf{h}\in\evl{\cam{F}}{U}{U}$ in equality
 \begin{equation}\label{eq:dilat}
-\fua{\mathit{h}}{\vto{x}\oplus a}=\fua{\vtf{h}}{\vto{x}}\oplus\fua{\mathit{g}}{a}
+\fua{\mathit{s}}{\vto{x}\oplus a}=\fua{\vtf{s}}{\vto{x}}\oplus\fua{\mathit{g}}{a}
 \end{equation}
 or in equality
 \begin{equation}\label{eq:dilatVec}
-\fua{\tnr{\mathit{h}}}{\vto{x}+ \vv{a}}=\fua{\vtf{h}}{\vto{x}}+\vv{\fua{\mathit{g}}{a}}
+\fua{\tnr{\mathit{s}}}{\vto{x}+ \vv{a}}=\fua{\vtf{s}}{\vto{x}}+\vv{\fua{\mathit{g}}{a}}
 \end{equation}
-is a positive-definite Hermitian operator, usually called a \textsb{stretch operator}\index{operator!stretch}, which represents, according to inequality \eqref{eq:nonnegTensor}, a positive-definite affinity tensor $\tnr{H}$, called \textsb{stretch tensor}\index{tensor!stretch}. Since the eigenvalues $\lambda_1,\cdots,\lambda_m$ of stretch operator $\vtf{h}$, or of stretch tensor $\tnr{H}$, are positive real scalars\footnote{See section \ref{sec:autoPares}.}, we call $\lambda_i$ a \textsb{stretch coefficient}\index{stretch coefficient}. If coefficient $\lambda_i>1$ or $\lambda_i\leqslant1$, it is called an \textsb{expansion}\index{expansion} or a \textsb{contraction}\index{contraction} respectively and in the case of proportional stretch, where $\lambda_1=\cdots=\lambda_m$, function $\vtf{h}$ (or tensor $\tnr{H}$) is equally called an expansion\index{operator!expansion} or contraction operator(tensor)\index{operator!contraction}. It is important to note that, from corollary \ref{cor:soSymTens}, in the specific context of Euclidean spaces, where $\vtf{h}^\dagger=\vtf{h}^\text{T}$, the stretch tensor $\tnr{H}$ is symmetric. As any other affinity, a dilation $\mathit{h}$ can be centered at point $a$, represented by $\gloref{dilat}$, where $\fua{\mathit{h}_a}{\vto{u}\oplus a}=\fua{\vtf{h}}{\vto{u}}\oplus a$. Figure \ref{fg:dilation} shows different types of dilations.
+is a positive-definite Hermitian operator, usually called a \textsb{stretch operator}\index{operAS ANYator!stretch}, which represents, according to inequality \eqref{eq:nonnegTensor}, a positive-definite Hermitian tensor $\tnr{S}$, called \textsb{stretch tensor}\index{tensor!stretch}. Since $\tnr{S}$ is Hermitian, it is also the affinity tensor of $\mathit{s}$. We recall that the eigenvalues $\lambda_1,\cdots,\lambda_m$ of stretch operator $\vtf{s}$, or of stretch tensor $\tnr{S}$, are positive real scalars\footnote{See section \ref{sec:autoPares}.}, and then $\lambda_i$ called a \textsb{stretch coefficient}\index{stretch coefficient}. If coefficient $\lambda_i>1$ or $\lambda_i\leqslant1$, it is called an \textsb{expansion}\index{expansion} or a \textsb{contraction}\index{contraction} respectively and in the case of proportional stretch, where $\lambda_1=\cdots=\lambda_m$, function $\vtf{s}$ (or tensor $\tnr{S}$) is equally called an expansion\index{operator!expansion} or contraction operator(tensor)\index{operator!contraction}. It is important to note that, from corollary \ref{cor:soSymTens}, in the specific context of Euclidean spaces, where $\vtf{s}^\dagger=\vtf{s}^\text{T}$, the stretch tensor $\tnr{S}$ is symmetric. As any other affinity, a dilation $\mathit{s}$ can be centered at point $a$, represented by $\gloref{dilat}$, where $\fua{\mathit{s}_a}{\vto{u}\oplus a}=\fua{\vtf{s}}{\vto{u}}\oplus a$. Figure \ref{fg:dilation} shows different types of dilations.
 \begin{figure}[!ht]
 \centering
 \begin{center}
-\scalebox{.72}{\input{partes/figs/dilation.pstex_t}}
+\scalebox{.72}{\input{partes/figs/dilation.pstex_t}} CORRIGIR A FIRUA
 \end{center}
-\titfigura{Affinities $\mathit{h}$, $\mathit{h}_a$ and $\mathit{s}$ are ordinary, centered and proportional dilations.}\label{fg:dilation}
+\titfigura{Affinities $\mathit{s}$, $\mathit{s}_a$ and $\mathit{h}$ are ordinary, centered and proportional dilations.}\label{fg:dilation}
 \end{figure}
-Given two arbitrary dilations $\mathit{h}_1$ and $\mathit{h}_2$, equalities
+Given two arbitrary dilations $\mathit{s}_1$ and $\mathit{s}_2$, equalities
 \begin{equation*}
-\fua{\mathit{h}_1\circ\mathit{h}_2}{\vto{x}\oplus a}=\fua{\mathit{h}_1}{\fua{\vtf{h}_2}{\vto{x}}\oplus\fua{\mathit{g}_2}{a}}=\fua{\vtf{h}_1\circ\vtf{h}_2}{\vto{x}}\oplus\fua{\mathit{g}_1\circ\mathit{g}_2}{a}
+\fua{\mathit{s}_1\circ\mathit{s}_2}{\vto{x}\oplus a}=\fua{\mathit{s}_1}{\fua{\vtf{s}_2}{\vto{x}}\oplus\fua{\mathit{g}_2}{a}}=\fua{\vtf{h}_1\circ\vtf{h}_2}{\vto{x}}\oplus\fua{\mathit{g}_1\circ\mathit{g}_2}{a}
 \end{equation*}
-prove that $\mathit{h}_1\circ\mathit{h}_2$ is also a dilation and that $\fua{\mathit{h}^{-1}_1}{\vto{x}\oplus a}=\fua{\vtf{h}^{-1}_1}{\vto{x}}\oplus\fua{\mathit{g}^{-1}_1}{a}$. Considering the identity dilation $\mathit{i}$, similarly to the case of translations, it is straightforward to verify that dilations also obey the axioms of associativity, identity element, inverse element and commutativity on the operation of composition. Therefore, the set $H$ of all dilations on $\eamd{U}{F}{m}$ defines the abelian group $(H,\circ)$.
+prove that $\mathit{s}_1\circ\mathit{s}_2$ is also a dilation and that $\fua{\mathit{s}^{-1}_1}{\vto{x}\oplus a}=\fua{\vtf{s}^{-1}_1}{\vto{x}}\oplus\fua{\mathit{g}^{-1}_1}{a}$. Considering the identity dilation $\mathit{i}$, similarly to the case of translations, it is straightforward to verify that dilations also obey the axioms of associativity, identity element, inverse element and commutativity on the operation of composition. Therefore, the set $S$ of all dilations on $\eamd{U}{F}{m}$ defines the abelian group $(S,\circ)$.
 
 
-Still considering previous conditions, an affinity $\mathit{r}$ is called \textsb{isometric}\index{affinity!isometric} when its correspondent linear operator $\vtf{r}$ is isometric, that is, $\vtf{r}\in\grc{I}{\cam{F}}{U}$. In the context of Euclidean spaces, we already know that an isometric operator is also an orthogonal operator\footnote{See p. \pageref{prg:IsometOrth}.}, that is, the isometric group $\grc{I}{\real}{U}$ equals the orthogonal group $\grc{O}{\real}{U}$, whose elements preserve inner product and have determinant $\pm 1$. The centered isometric affinity $\mathit{r}_a$, described by $\fua{\mathit{r}_a}{\vto{x}\oplus a}=\fua{\vtf{r}}{\vto{x}}\oplus a$, is called a \textsb{rotation}\index{rotation} if isometric operator $\vtf{r}$ is proper orthogonal, or $\vtf{r}\in\grc{O^+}{\real}{U}$; otherwise, it is called a \textsb{rotoreflection}\index{rotoreflection}. The affinity tensor $\tnr{R}$ of a rotation is called a \textsb{rotation tensor}\index{rotation!tensor} and, similarly, tensor $\overline{\tnr{R}}$ of a rotoreflection is called a \textsb{rotoreflection tensor}\index{rotoreflection!tensor}. 
+Still considering previous conditions, an affinity $\mathit{r}$ is called \textsb{isometric}\index{affinity!isometric} when its correspondent linear operator $\vtf{r}$ is isometric, that is, $\vtf{r}\in\grc{I}{\cam{F}}{U}$. In the context of Euclidean spaces, we already know that an isometric operator is also an orthogonal operator\footnote{See p. \pageref{prg:IsometOrth}.}, that is, the isometric group $\grc{I}{\real}{U}$ equals the orthogonal group $\grc{O}{\real}{U}$, whose elements preserve inner product and have determinant $\pm 1$. The centered isometric affinity $\mathit{r}_a$, described by $\fua{\mathit{r}_a}{\vto{x}\oplus a}=\fua{\vtf{r}}{\vto{x}}\oplus a$, is called a \textsb{rotation}\index{rotation} if isometric operator $\vtf{r}$ is proper orthogonal, or $\vtf{r}\in\grc{O^+}{\real}{U}$; otherwise, it is called a \textsb{rotoreflection}\index{rotoreflection}. Considering that $\vtf{r}$ represents $\tnr{T}$, the affinity tensor $\tnr{R}:=\tnr{T}^\text{T}$ of a rotation is called a \textsb{rotation tensor}\index{rotation!tensor} and, similarly, the affinity tensor $\overline{\tnr{R}}$ of a rotoreflection is called a \textsb{rotoreflection tensor}\index{rotoreflection!tensor}. 
 
 
 \begin{mteo}{Rotodilation Function Decompositions}{rotoDilaF}
@@ -272,7 +272,7 @@ proves the theorem for $\mathit{s}_1$. Proof for $\mathit{s}_2$ is similar.
 
 
 \begin{mcoro}{Rotodilation Tensor Decompositions}{rotoDilaT}
-If $\tnr{L}\in\ete{\cam{R}}{U^2}$ is an affinity tensor then $\tnr{L}=\tnr{S}_1\odot_1\tnr{R}=\tnr{R}\odot_1\tnr{S}_2$, where $\tnr{R}$, $\tnr{S}_1$, $\tnr{S}_2$ are respectively a rotation (rotoreflection) and stretch tensors. 
+If $\tnr{L}\in\ete{\cam{R}}{U^2}$ is an affinity tensor then $\tnr{L}=\tnr{R}\odot_1\tnr{S}_1=\tnr{S}_2\odot_1\tnr{R}$, where $\tnr{R}$, $\tnr{S}_1$, $\tnr{S}_2$ are respectively a rotation (rotoreflection) and stretch tensors. 
 \end{mcoro}
 
 
@@ -281,9 +281,9 @@ If $\tnr{L}\in\ete{\cam{R}}{U^2}$ is an affinity tensor then $\tnr{L}=\tnr{S}_1\
 According to \eqref{eq:afftyT}, development
 \begin{align*}
 \fua{\mathit{f}}{\vto{x}\oplus a}&=\mathit{r}_{\fua{\mathit{g}}{a}}\circ\mathit{s}_1(\vto{x}\oplus a)\\
-&=\mathit{r}_{\fua{\mathit{g}}{a}}[(\vto{x}^*\hat{\odot}_1\,\tnr{S}_1)\oplus{\fua{\mathit{g}}{a}}]\\
-&=(\vto{x}^*{\odot_1}\,\tnr{S}_1)\hat{\odot}_1\tnr{R}\oplus{\fua{\mathit{g}}{a}}\\
-&=[\vto{x}^*{\hat{\odot}_1}\,(\tnr{S}_1\odot_1\tnr{R})]\oplus{\fua{\mathit{g}}{a}}
+&=\mathit{r}_{\fua{\mathit{g}}{a}}[(\tnr{S}_1\hat{\odot}_1\,\vto{x}^*)\oplus{\fua{\mathit{g}}{a}}]\\
+&=\tnr{R}\hat{\odot}_1(\tnr{S}_1{\odot}_1\,\vto{x}^*)\oplus{\fua{\mathit{g}}{a}}\\
+&=[(\tnr{R}\odot_1\tnr{S}_1){\hat{\odot}_1\vto{x}^*}\,]\oplus{\fua{\mathit{g}}{a}}
 \end{align*}
 proves the theorem for $\tnr{S}_1$. Proof for $\tnr{S}_2$ is similar.
 \end{proof}}

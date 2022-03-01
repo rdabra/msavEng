@@ -852,7 +852,14 @@ where $\vtf{i}$ is the identity function in $U_\cam{F}$. On an arbitrary basis o
 \end{equation}
 Recalling our matrix theory in the previous chapter, the left side of this equation is the characteristic polynomial\footnote{See definition on p. \pageref{pg:PolinomioCarac}.} of $[\vtf{l}]$ on variable $\lambda$, whose $n$ characteristic roots solve \eqref{eq:autoMatricial}, that is, there are $n$ eigenvalues of $\vtf{l}$, which are not necessarily distinct. Once we have these eigenvalues, it it possible to determine each correspondent eigenvector from equation $([\vtf{l}]-\lambda\mat{I})[\vto{x}]=0$. As this processes is valid and leads to identical results for any chosen basis, expression $\det(\vtf{l}-\lambda\vtf{i})$ is sometimes called the characteristic polynomial of linear operator $\vtf{l}$ also.
 
-Eigenvalues and eigenvectors subsidize the forthcoming Polar Decomposition Theorem in such a way that they reveal three relevant properties of every Hermitian operator: \label{prop:HermEig} a) \emph{it is always nonnegative the Hermitian operator that results from the composition of an operator with its Hilbert-adjoint}; b) \emph{the eigenvalues of a Hermitian operator are always real}; c) \emph{two distinct eigenvectors of a Hermitian operator are always orthogonal}. This last property implies that the $n$ eigenvectors of a Hermitian operator are distinct from each other and the resulting orthogonal set constituted by them is obviously a basis of $U_\cam{F}$.
+Eigenvalues and eigenvectors subsidize the forthcoming Polar Decomposition Theorem in such a way that they reveal three relevant properties of every Hermitian operator: 
+\begin{itemize}\label{prop:HermEig} 
+\setlength\itemsep{.1em}
+    \item[i.] the composition of an operator with its Hilbert-adjoint is always a nonnegative Hermitian operator;
+    \item[ii.] the eigenvalues of a Hermitian operator are always real;
+    \item[iii.] two distinct eigenvectors of a Hermitian operator are always orthogonal.
+\end{itemize}
+This last property implies that the $n$ eigenvectors of a Hermitian operator are distinct from each other and the resulting orthogonal set constituted by them is obviously a basis of $U_\cam{F}$.
 
 
 {\footnotesize
@@ -862,7 +869,7 @@ For the first property, let $\vtf{g}\circ\vtf{g}^\dagger$ be an Hermitian operat
 	\vto{x}_j\cdot\fua{\vtf{h}}{\vto{x}_i}-\fua{\vtf{h}}{\vto{x}_j}\cdot\vto{x}_i&=\vto{x}_j\cdot\lambda_i\vto{x}_i-\lambda_j\vto{x}_j\cdot\vto{x}_i\\
 	0&=(\overline{\lambda_i}-\lambda_j)\vto{x}_j\cdot\vto{x}_i\,.
 \end{align*}
-As the last equality is valid for an arbitrary pair $(i,j)$, when  $i=j$ the scalar $\overline{\lambda_i}=\lambda_i$, which proves property b). Moreover, as a pair of distinct eigenvalues imply a pair of distinct eigenvectors, we can say that $\lambda_i\neq\lambda_j$ implies $\vto{x}_i\neq\vto{x}_j$. Thus, from the last equality of the development, we conclude $\vto{x}_i\perp\vto{x}_j$, which proves c).     	
+Since the last equality is valid for an arbitrary pair $(i,j)$, when  $i=j$ the scalar $\overline{\lambda_i}=\lambda_i$, which proves property b). Moreover, as a pair of distinct eigenvalues imply a pair of distinct eigenvectors, we can say that $\lambda_i\neq\lambda_j$ implies $\vto{x}_i\neq\vto{x}_j$. Thus, from the last equality of the development, we conclude $\vto{x}_i\perp\vto{x}_j$, which proves c).     	
 \end{proof}
 }
 
@@ -879,8 +886,8 @@ From these equalities, we can state that, in the context of Hermitian operators,
 \begin{equation}
 [\vtf{h}_{\hat{C}}]^{\hat{C}}=\maf{\vtf{i}}{{\hat{X}}}{{\hat{C}}}\mav{\vtf{h}_{\hat{X}}}{{\hat{X}}}{\maf{\vtf{i}}{{\hat{C}}}{{\hat{X}}}}=\maf{\vtf{i}}{{\hat{X}}}{{\hat{C}}}\mav{\vtf{h}_{\hat{X}}}{{\hat{X}}}{\maf{\vtf{i}}{{\hat{X}}}{{\hat{C}}}}^\dagger\,,
 \end{equation}
-since $\maf{\vtf{i}}{{\hat{X}}}{{\hat{C}}}$ results a unitary matrix from equalities \eqref{eq:mudaBaseTranspHilbert}. Moreover, as the representative matrix of $\vtf{h}$ on any orthonormal basis is normal, this change of coordinates from $\hat{X}$ to $\hat{C}$ results a \textsb{spectral decomposition}\index{spectral!decomposition}\footnote{In the terms of theorem \ref{teo:decompSpec}, equalities $\widetilde{\mat{N}} = \mat{U}^\dagger\mat{N}\mat{U}$ and $\mat{N}= \mat{U}\widetilde{\mat{N}}\mat{U}^\dagger$ are said to be the spectral diagonalization and the spectral decomposition of $\mat{N}$ respectively.} of $[\vtf{h}_{\hat{C}}]^{\hat{C}}$. Let's consider now that $\vtf{h}$ is a nonnegative operator.
-From the definition presented at the end of the previous section, we can write that  $\Re(\vto{x}_i\cdot\fua{\vtf{h}}{\vto{x}_i})\geqslant 0$.  As the eigenvalues of $\vtf{h}$ are real, we have $\lambda_i(\vto{x}_i\cdot\vto{x}_i)\geqslant 0$, where scalars $\lambda_i$ result nonnegative, since the inner product $\vto{x}_i\cdot\vto{x}_i$ is always positive. Therefore, we can affirm that if $\vtf{h}$ is nonnegative, so are its eigenvalues.
+since $\maf{\vtf{i}}{{\hat{X}}}{{\hat{C}}}$ results a unitary matrix from equalities \eqref{eq:mudaBaseTranspHilbert}. Moreover, since the representative matrix of $\vtf{h}$ on any orthonormal basis is normal, this change of coordinates from $\hat{X}$ to $\hat{C}$ results a \textsb{spectral decomposition}\index{spectral!decomposition}\footnote{In the terms of theorem \ref{teo:decompSpec}, equalities $\widetilde{\mat{N}} = \mat{U}^\dagger\mat{N}\mat{U}$ and $\mat{N}= \mat{U}\widetilde{\mat{N}}\mat{U}^\dagger$ are said to be the spectral diagonalization and the spectral decomposition of $\mat{N}$ respectively.} of $[\vtf{h}_{\hat{C}}]^{\hat{C}}$. Let's consider now that $\vtf{h}$ is a nonnegative operator.
+From the definition presented at the end of the previous section, we can write that  $\Re(\vto{x}_i\cdot\fua{\vtf{h}}{\vto{x}_i})\geqslant 0$.  Since the eigenvalues of $\vtf{h}$ are real, we have $\lambda_i(\vto{x}_i\cdot\vto{x}_i)\geqslant 0$, where scalars $\lambda_i$ result nonnegative, since the inner product $\vto{x}_i\cdot\vto{x}_i$ is always positive. Therefore, \emph{we can state that if operator $\vtf{h}$ is nonnegative, so are its eigenvalues}.
 
 Before we deal with the theorem that will end this chapter, an additional definition for Hermitian operators needs to be done. In our study, a nonnegative hermitian operator $\vtf{h}$ of $\evl{\cam{F}}{U}{U}$ can be decomposed according to equality $\vtf{h}=\vtf{h}^{\nicefrac{1}{2}}\circ\vtf{h}^{\nicefrac{1}{2}}$, where operator $\vtf{h}^{\nicefrac{1}{2}}\in\evl{\cam{F}}{U}{U}$, unique and also nonnegative hermitian, is called the \textsb{square root operator}\index{operator!square root of} of $\vtf{h}$. We already know that function composition is expressed, in matrix terms, as the product of the representative matrices of these functions. Thereby, the name ``square root'' is due to equality  $[\vtf{h}]=[\vtf{h}^{\nicefrac{1}{2}}][\vtf{h}^{\nicefrac{1}{2}}]$, which refers to the same concept applied to scalars.
 
