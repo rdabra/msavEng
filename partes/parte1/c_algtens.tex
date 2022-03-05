@@ -690,8 +690,20 @@ They belong to $\ete{\cam{F}}{V\times U}$ as a straightforward consequence of th
 \begin{itemize}
 \setlength\itemsep{.1em}
 \item[i.] $(\vto{a}^*\otimes\vto{b}^*)^\dagger = \vto{b}^*\otimes\vto{a}^*$ for arbitrary $\vto{a}\in U_\cam{F}$ and $\vto{b}\in V_\cam{F}$;
-\item[ii.] $\tnr{G}^{-1}\odot_1\tnr{G}\in\ete{\cam{F}}{V^2}$ and $\tnr{G}\odot_1\tnr{G}^{-1}\in\ete{\cam{F}}{U^2}$ are identity tensors;
-\item[iii.] If $\tnr{\mathit{g}}$ is hermitian then  $\tnr{G}^\dagger=\tnr{G}$.
+\item[ii.] For arbitrary $\vto{u}\in U_\cam{F}$, vector
+\begin{equation}\label{eq:Lin2secTensTransp}
+\fua{\tnr{\mathit{g}}}{\vto{u}} = [\vto{u}^*\hat{\odot}_1\tnr{G}]^c=\tnr{G}^\dagger\hat{\odot}_1\vto{u}^*\,;
+\end{equation}
+\item[iii.] If functions $\tnr{\mathit{g}}_1$ and $\tnr{\mathit{g}}_2$ represent $\tnr{G}_1\in\ete{\cam{F}}{U\times W}$ and $\tnr{G}_2\in\ete{\cam{F}}{W\times V}$, then 
+\begin{equation}\label{eq:compoFuncRepFunc}
+\fua{\tnr{\mathit{g}}_2\circ\tnr{\mathit{g}}_1}{\vto{u}}
+=(\tnr{G}_2^\dagger\odot_1\tnr{G}_1^\dagger)\hat{\odot}_1\vto{u}^*
+= (\tnr{G}_1\odot_1\tnr{G}_2)^\dagger\hat{\odot}_1\vto{u}^*\,;
+\end{equation}
+
+\item[iv.] If $\tnr{\mathit{g}}$ is hermitian then  $\tnr{G}^\dagger=\tnr{G}$;
+
+\item[v.] $\tnr{G}^{-1}\odot_1\tnr{G}\in\ete{\cam{F}}{V^2}$ and $\tnr{G}\odot_1\tnr{G}^{-1}\in\ete{\cam{F}}{U^2}$ are identity tensors.
 \end{itemize}
 
 {\footnotesize
@@ -702,26 +714,22 @@ From \eqref{eq:funcaoTransposta} and \eqref{eq:Lin2secTens}, if $\vtf{\mathit{f}
 [\vto{u}^*\hat{\odot}_1(\vto{a}^*\otimes\vto{b}^*)^\dagger]^c\cdot\vto{v}&=\vto{u}\cdot[\vto{v}^*\hat{\odot}_1(\vto{a}^*\otimes\vto{b}^*)]^c\\
 \vto{u}\cdot[(\vto{a}^*\otimes\vto{b}^*)^\dagger\hat{\odot}_1\vto{v}^*]&=\vto{u}\cdot[(\vto{b}^*\otimes\vto{a}^*)\hat{\odot}_1\vto{v}^*]\,.
 \end{align*}
-Considering \eqref{eq:cotensIdent}, if $\vtf{\mathit{g}}$ is the representative function of $\tnr{G}$, development 
+Proof of item ii is trivial. Now, let arbitrary functions $\tnr{\mathit{g}}_1$ and $\tnr{\mathit{g}}_2$ represent $\tnr{G}_1\in\ete{\cam{F}}{U\times W}$ and $\tnr{G}_2\in\ete{\cam{F}}{W\times V}$. Then, from item ii, development
+\begin{equation*}
+\fua{\tnr{\mathit{g}}_2\circ\tnr{\mathit{g}}_1}{\vto{u}}=\tnr{\mathit{g}}_2(\tnr{G}_1^\dagger\hat{\odot}_1\vto{u}^*)
+=(\tnr{G}_2^\dagger\odot_1\tnr{G}_1^\dagger)\hat{\odot}_1\vto{u}^*
+\end{equation*}
+proves the first equality of \eqref{eq:compoFuncRepFunc}. In order to prove the second equality, we will consider functions $\tnr{\mathit{h}}_1=\tnr{\mathit{g}}_1^\dagger$ and $\tnr{\mathit{h}}_2=\tnr{\mathit{g}}_2^\dagger$ representing tensors $\tnr{H}_1=\tnr{G}_1^\dagger$ and $\tnr{H}_2=\tnr{G}_2^\dagger$. It is true to say that $\tnr{\mathit{h}}_2\circ\tnr{\mathit{h}}_1=(\tnr{\mathit{h}}_1^\dagger\circ\tnr{\mathit{h}}_2^\dagger)^\dagger$ represents $(\tnr{H}_2^\dagger\odot_1\tnr{H}_1^\dagger)^\dagger$ and then to conclude that, from the definition of $\tnr{G}^\dagger$, function $\tnr{\mathit{g}}=\tnr{\mathit{h}}_1^\dagger\circ\tnr{\mathit{h}}_2^\dagger$ represents $\tnr{G}=\tnr{H}_2^\dagger\odot_1\tnr{H}_1^\dagger$, which proves the second equality of \eqref{eq:compoFuncRepFunc}. Verification of  item iv is trivial from \eqref{eq:Lin2secTens}. Considering \eqref{eq:cotensIdent}, if $\vtf{\mathit{g}}$ is the representative function of $\tnr{G}$, development 
 \begin{align*}
 \tnr{i}(\vto{v})&=\tnr{\mathit{g}}\circ\tnr{\mathit{g}^{-1}}(\vto{v})\\
 [\vto{v}^*\hat{\odot}_1\tnr{I}]^c&=\tnr{\mathit{g}}([\vto{v}^*\hat{\odot}_1\tnr{G}^{-1}]^c)\\
-&=[\vto{v}^*\odot_1\tnr{G}^{-1}]\hat{\odot}_1\tnr{G}\\
-&=\vto{v}^*\hat{\odot}_1(\tnr{G}^{-1}\odot_1\tnr{G})
+&=[(\vto{v}^*\odot_1\tnr{G}^{-1})\hat{\odot}_1\tnr{G}]^c\\
+&=[\vto{v}^*\hat{\odot}_1(\tnr{G}^{-1}\odot_1\tnr{G})]^c
 \end{align*}
-proves the first identity tensor of the second item. Verification of $\tnr{G}\odot_1\tnr{G}^{-1}$ is similar. Proof of third item is trivial from \eqref{eq:Lin2secTens}.
+proves the first identity tensor of item v. Verification for $\tnr{G}\odot_1\tnr{G}^{-1}$ is similar. 
 \end{proof}
 }
-\noindent An important consequence of the first property is that 
-\begin{equation}\label{eq:Lin2secTensTransp}
-\fua{\tnr{\mathit{g}}}{\vto{u}} = \vto{u}^*\hat{\odot}_1\tnr{G}=[\tnr{G}^\dagger\hat{\odot}_1\vto{u}^*]^c\,.
-\end{equation}
-There is also an interesting property relating the composition of representative functions and second order tensors: let functions $\tnr{\mathit{g}}_1$ and $\tnr{\mathit{g}}_2$ represent $\tnr{G}_1\in\ete{\cam{F}}{U\times W}$ and $\tnr{G}_2\in\ete{\cam{F}}{W\times V}$ respectively. The following equalities show that $\tnr{G}_1\odot_1\tnr{G}_2\in\ete{\cam{F}}{U\times V}$ is represented by $\tnr{\mathit{g}}_2\circ\tnr{\mathit{g}}_1$. 
-\begin{equation}\label{eq:compoFuncRepFunc}
-\fua{\tnr{\mathit{g}}_2\circ\tnr{\mathit{g}}_1}{\vto{u}}=\tnr{\mathit{g}}_2[\vto{u}^*\hat{\odot}_1\tnr{G}_1]
-=(\vto{u}^*\odot_1\tnr{G}_1)\hat{\odot}_1\tnr{G}_2
-= \vto{u}^*\hat{\odot}_1(\tnr{G}_1\odot_1\tnr{G}_2)\,.
-\end{equation}
+
 Now, from equalities \eqref{eq:secTens2Lin}, we extend the concept of positivity that can be applied to the representative operator $\tnr{\mathit{t}}\in\evl{\cam{F}}{U}{U}$, described by definition \eqref{eq:linPosDef}, to tensor $\tnr{T}\in\ete{\cam{F}}{U^2}$. Thereby, a second order tensor $\tnr{T}$ is said to be \textsb{nonnegative}\index{tensor!nonnegative} if
 \begin{equation}\label{eq:nonnegTensor}
 \Re(\fua{\tnr{\mathit{t}}}{\vto{y}}\cdot\vto{y})=\Re(\vto{y}\cdot\fua{\tnr{\mathit{t}}}{\vto{y}})=\Re(\fua{\tnr{T}}{\vto{y},\vto{y}})\geqslant 0\,,\,\forall\,\vto{y}\in U_\cam{F}\,,
@@ -785,11 +793,11 @@ Now, we shall verify if it is possible to establish a relation between a Hilbert
 \end{align}
 where equalities \eqref{eq:regraCoordTens} and \eqref{eq:propProdIndTens} were considered. 
 
-In the context of an arbitrary second order tensor $\tnr{G}\in\ete{\cam{F}}{U\times V}$, we already know that it is represented by a linear bijection $\tnr{\mathit{g}}$ where $\fua{\tnr{\mathit{g}}}{\vto{u}}=\vto{u}^*\hat{\odot}_1\tnr{G}$. Considering $B_1$ and $B_2$ bases of $U_\cam{F}$ and $V_\cam{F}$, we can rewrite the previous equality as following:
+In the context of arbitrary second order tensor $\tnr{G}\in\ete{\cam{F}}{U\times V}$ and vector $\vto{u}\in U_\cam{F}$, we already know that a linear bijection $\tnr{\mathit{g}}$ represents $\tnr{G}$ in such a way that $\fua{\tnr{\mathit{g}}}{\vto{u}}=\tnr{G}^\dagger\hat{\odot}_1\vto{u}^*$. This equality can rewritten in matrix terms as following:
 \begin{equation}
-[\vtf{g}_{B_1}]^{B_2}[\vto{u}]^{B_1} = [\tnr{G}]^{B}[\vto{u}]^{B_1}\,,
+[\tnr{\mathit{g}}_{B_1}]^{B_2}[\vto{u}]^{B_1} = {[\tnr{G}]^{B}}^\dagger[\vto{u}]^{B_1}\,,
 \end{equation}
-where basis tensor $B$ is built from $B_1$ and $B_2$ according to theorem \ref{teo:geraEte}.
+where basis tensor $B$ is built from vector bases $B_1$ and $B_2$ of $U_\cam{F}$ and $V_\cam{F}$ respectively, according to theorem \ref{teo:geraEte}. Therefore, since $\vto{u}$ is arbitrary, matrix $[\tnr{\mathit{g}}_{B_1}]^{B_2}={[\tnr{G}]^{B}}^\dagger$ and then
 
 It is possible to develop change of coordinates and of basis as we did for vector and linear functions. For the sake of clarity we shall reproduce here both theorem \ref{teo:mudCoordVec} and its corollary \ref{cor:mudaBase} with minor changes in order to adapt them for the current case.
 
