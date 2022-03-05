@@ -445,7 +445,7 @@ where equality \eqref{eq:orthoConju} was considered.
 
 {\footnotesize
 \begin{proof}
-Let's prove that the $r,s$ trace and the contractive product are indeed linear. From property ii on page \pageref{prop:tensorProd}, verification of equalities $\trt{r}{s} \alpha\tnr{ X}={\alpha}\trt{r}{s}\tnr{X}$ and $(\alpha\tnr{A})\diamond_p(\beta\tnr{B})={\alpha\beta}\tnr{A}\diamond_p\tnr{B}$ is straightforward. Henceforth, in order to shorten expression sizes, without losing generality, we shall consider that a contractive product always results a scalar, that is, the order of the contractive product equals the order of its terms. Considering the above conditions, let's first verify the additive property of linear functions for a first order contractive product, that is, set $X^{\times 2}=W\times W$ and tensors $\tnr{A},\tnr{B},\tnr{W}\in\ete{\cam{F}}{W}$. Since $\vto{x}_1^*+\vto{y}_1^*=(\vto{x}_1+\vto{y}_1)^*$, equalities
+Let's prove that the $r,s$ trace and the contractive product are indeed linear. From property ii on page \pageref{prop:tensorProd}, verification of equalities $\trt{r}{s} \alpha\tnr{ X}={\alpha}\trt{r}{s}\tnr{X}$ and $(\alpha\tnr{A})\diamond_p(\beta\tnr{B})={\alpha\beta}\tnr{A}\diamond_p\tnr{B}$ is straightforward (ESTA FRASE ESTÁ ERRADA!!!). Henceforth, in order to shorten expression sizes, without losing generality, we shall consider that a contractive product always results a scalar, that is, the order of the contractive product equals the order of its terms. Considering the above conditions, let's first verify the additive property of linear functions for a first order contractive product, that is, set $X^{\times 2}=W\times W$ and tensors $\tnr{A},\tnr{B},\tnr{W}\in\ete{\cam{F}}{W}$. Since $\vto{x}_1^*+\vto{y}_1^*=(\vto{x}_1+\vto{y}_1)^*$, equalities
 \begin{equation*}
 (\tnr{A}+\tnr{B})\diamond_1\tnr{W} = (\vto{x}_1+\vto{y}_1)^*\diamond_1\vto{w}_1^*=\vto{w}^c_1\cdot(\vto{x}_1+\vto{y}_1)= \vto{w}^c_1\cdot\vto{x}_1+\vto{w}^c_1\cdot\vto{y}_1=\tnr{A}\diamond_1\tnr{W}+\tnr{B}\diamond_1\tnr{W}
 \end{equation*}
@@ -479,7 +479,7 @@ For practical reasons, whenever the partial inner product results a covector, th
 \begin{equation}\label{eq:genInnerProdVec}
 \gloref{genInnerProdVec}:=[\Phi^{-1}(\tnr{A}\odot_p\tnr{B})]^{c}\,,
 \end{equation}
-where $\Phi$ is defined in theorem \ref{teo:repRiesz}\,. In the context of Euclidean spaces, it is not unusual to see a first order partial inner product of a dyadic tensor and a covector being used to define the so called ``tensor product of vectors''\footnote{See \aut{Gurtin}\cite{gurtin_1981}, p.4; \aut{Truesdell \& Noll}\cite{truesdell_1992}, p.15; \aut{Ogden}\cite{ogden_1997}, p.16.}. Although we shall not adopt this rather obscure concept, its frequent use by renowned authors forces us to clarify it in terms of our particular approach as follows. Firstly, since vectors and covectors have a one to one correspondence, these authors use the term ``vector'' to indistinctly refer to an element of a vector space or to a covector, depending on the context: in $\vto{u}(\vto{v})=\vto{v}\cdot\vto{u}$, for example, $\vto{u}$ is a covector on the left-hand side and a vector on the right. Thereby, they get rid of the burden of defining a covector and all of its preliminary concepts. In this sense, our representation of a dyadic tensor $\vto{u}^*\otimes\vto{v}^*$ is subverted to $\vto{u}\otimes\vto{v}$ and the partial inner product operator is suppressed from our precise representation $(\vto{u}^*\otimes\vto{v}^*)\odot_1 \vto{x}^*=(\vto{x}\cdot\vto{v})\vto{u}^*$ in order to avoid defining a contraction and its supporting concepts. Finally, they define the ``tensor product'' $\vto{u}\otimes\vto{v}$  as a ``tensor'' which causes $(\vto{u}\otimes\vto{v})\vto{x}=(\vto{v}\cdot\vto{x})\vto{u}$, for an arbitrary $\vto{x}$. Again, \emph{this pragmatic approach of considering vectors as first order tensors and all of its consequences will not be adopted nor implicit in this text}.
+where $\Phi$ is defined in theorem \ref{teo:repRiesz}\,.  In the context of Euclidean spaces, it is not unusual to see a first order partial inner product of a dyadic tensor and a covector being used to define the so called ``tensor product of vectors''\footnote{See \aut{Gurtin}\cite{gurtin_1981}, p.4; \aut{Truesdell \& Noll}\cite{truesdell_1992}, p.15; \aut{Ogden}\cite{ogden_1997}, p.16.}. Although we shall not adopt this rather obscure concept, its frequent use by renowned authors forces us to clarify it in terms of our particular approach as follows. Firstly, since vectors and covectors have a one to one correspondence, these authors use the term ``vector'' to indistinctly refer to an element of a vector space or to a covector, depending on the context: in $\vto{u}(\vto{v})=\vto{v}\cdot\vto{u}$, for example, $\vto{u}$ is a covector on the left-hand side and a vector on the right. Thereby, they get rid of the burden of defining a covector and all of its preliminary concepts. In this sense, our representation of a dyadic tensor $\vto{u}^*\otimes\vto{v}^*$ is subverted to $\vto{u}\otimes\vto{v}$ and the partial inner product operator is suppressed from our precise representation $(\vto{u}^*\otimes\vto{v}^*)\odot_1 \vto{x}^*=(\vto{x}\cdot\vto{v})\vto{u}^*$ in order to avoid defining a contraction and its supporting concepts. Finally, they define the ``tensor product'' $\vto{u}\otimes\vto{v}$  as a ``tensor'' which causes $(\vto{u}\otimes\vto{v})\vto{x}=(\vto{v}\cdot\vto{x})\vto{u}$, for an arbitrary $\vto{x}$. Again, \emph{this pragmatic approach of considering vectors as first order tensors and all of its consequences will not be adopted nor implicit in this text}.
 
 When the order of a partial inner product equals the order of its terms, the result is a scalar. In this context, considering arbitrary tensors $\tnr{A},\tnr{B}\in\ete{\cam{F}}{U^{\times m}}$, where tensor $\tnr{A}=\vto{a}^*_1\otimes\cdots\otimes\vto{a}^*_m$ and $\tnr{B}=\vto{b}^*_1\otimes\cdots\otimes\vto{b}^*_m$, the scalar
 \begin{equation}\label{eq:prodIntTens}
@@ -656,13 +656,14 @@ If function $\tnr{\Upsilon}$ were not an injection, there would be two distinct 
 \end{proof}
 }
 
+
 \noindent From this corollary, the linear bijection 
 \begin{equation}\label{eq:repFunc2}
 \gloref{reprFun}:=\fua{\tnr{\Upsilon}}{\tnr{G}}
 \end{equation}
 is called the \textsb{representative function}\index{function!representative} of second order tensor $\tnr{G}\in\ete{\cam{F}}{U\times V}$. Considering  $\vto{g}_1^*\otimes\vto{g}_2^*$ the dyadic description of $\tnr{G}$, arbitrary vectors $\vto{u}\in U_\cam{F}$ and $\vto{v}\in V_\cam{F}$, we can write that
 \begin{equation}\label{eq:Lin2secTens}
-\fua{\tnr{\mathit{g}}}{\vto{u}} = \fua{\Phi^{-1}\circ\tnr{G}^*_1\circ\Phi}{\vto{u}} = \fua{\Phi^{-1}}{\vto{u}^*\odot_1\tnr{G}} =\vto{u}^*\hat{\odot}_1\tnr{G}=(\vto{u}\cdot\vto{g}_1)\vto{g}_2
+\fua{\tnr{\mathit{g}}}{\vto{u}} = \fua{\Phi^{-1}\circ\tnr{G}^*_1\circ\Phi}{\vto{u}} = \fua{\Phi^{-1}}{\vto{u}^*\odot_1\tnr{G}} =[\vto{u}^*\hat{\odot}_1\tnr{G}]^c=(\vto{g}_2\otimes\vto{g}_1)\hat{\odot}_1\vto{u}^* = (\vto{u}\cdot\vto{g}_1)\vto{g}_2
 \end{equation}
 because $\Phi^{-1}$ is antilinear, and from this result scalar
 \begin{equation}\label{eq:secTens2Lin}
@@ -679,7 +680,7 @@ The corollary is straightforwardly obtained from \eqref{eq:secTens2Lin} for real
 \end{proof}
 }
 
-\noindent Still considering an arbitrary second order tensor $\tnr{G}\in\ete{\cam{F}}{U\times V}$ and its representative function $\tnr{\mathit{g}}$, we now sacrifice mathematical rigor in favor of mathematical practicality by specifying three tensors in $\ete{\cam{F}}{V\times U}$:   
+\noindent Still considering an arbitrary second order tensor $\tnr{G}\in\ete{\cam{F}}{U\times V}$ and its representative function $\tnr{\mathit{g}}$, we now sacrifice mathematical rigor in favor of mathematical practicality by specifying two tensors in $\ete{\cam{F}}{V\times U}$:   
 \begin{itemize}
 \setlength\itemsep{.1em}
 \item[i.] $\tnr{G}^{\dagger}:=\fua{\tnr{\Upsilon}^{-1}}{\tnr{\mathit{g}}^{\dagger}}$ ; 
@@ -689,7 +690,8 @@ They belong to $\ete{\cam{F}}{V\times U}$ as a straightforward consequence of th
 \begin{itemize}
 \setlength\itemsep{.1em}
 \item[i.] $(\vto{a}^*\otimes\vto{b}^*)^\dagger = \vto{b}^*\otimes\vto{a}^*$ for arbitrary $\vto{a}\in U_\cam{F}$ and $\vto{b}\in V_\cam{F}$;
-\item[ii.] $\tnr{G}^{-1}\odot_1\tnr{G}\in\ete{\cam{F}}{V^2}$ and $\tnr{G}\odot_1\tnr{G}^{-1}\in\ete{\cam{F}}{U^2}$ are identity tensors.
+\item[ii.] $\tnr{G}^{-1}\odot_1\tnr{G}\in\ete{\cam{F}}{V^2}$ and $\tnr{G}\odot_1\tnr{G}^{-1}\in\ete{\cam{F}}{U^2}$ are identity tensors;
+\item[iii.] If $\tnr{\mathit{g}}$ is hermitian then  $\tnr{G}^\dagger=\tnr{G}$.
 \end{itemize}
 
 {\footnotesize
@@ -697,21 +699,24 @@ They belong to $\ete{\cam{F}}{V\times U}$ as a straightforward consequence of th
 From \eqref{eq:funcaoTransposta} and \eqref{eq:Lin2secTens}, if $\vtf{\mathit{f}}$ is the representative function of $\vto{a}^*\otimes\vto{b}^*$, $\vto{u}\in U_\cam{F}$ and $\vto{v}\in V_\cam{F}$, the following procedure proves the first item. 
 \begin{align*}
 \fua{\vtf{\mathit{f}}^\dagger}{\vto{u}}\cdot\vto{v}&=\vto{u}\cdot\fua{\vtf{\mathit{f}}}{\vto{v}}\\
-[\vto{u}^*\hat{\odot}_1(\vto{a}^*\otimes\vto{b}^*)^\dagger]\cdot\vto{v}&=\vto{u}\cdot[\vto{v}^*\hat{\odot}_1(\vto{a}^*\otimes\vto{b}^*)]\\
+[\vto{u}^*\hat{\odot}_1(\vto{a}^*\otimes\vto{b}^*)^\dagger]^c\cdot\vto{v}&=\vto{u}\cdot[\vto{v}^*\hat{\odot}_1(\vto{a}^*\otimes\vto{b}^*)]^c\\
 \vto{u}\cdot[(\vto{a}^*\otimes\vto{b}^*)^\dagger\hat{\odot}_1\vto{v}^*]&=\vto{u}\cdot[(\vto{b}^*\otimes\vto{a}^*)\hat{\odot}_1\vto{v}^*]\,.
 \end{align*}
 Considering \eqref{eq:cotensIdent}, if $\vtf{\mathit{g}}$ is the representative function of $\tnr{G}$, development 
 \begin{align*}
 \tnr{i}(\vto{v})&=\tnr{\mathit{g}}\circ\tnr{\mathit{g}^{-1}}(\vto{v})\\
-\vto{v}^*\hat{\odot}_1\tnr{I}&=\tnr{\mathit{g}}[\vto{v}^*\hat{\odot}_1\tnr{G}^{-1}]\\
+[\vto{v}^*\hat{\odot}_1\tnr{I}]^c&=\tnr{\mathit{g}}([\vto{v}^*\hat{\odot}_1\tnr{G}^{-1}]^c)\\
 &=[\vto{v}^*\odot_1\tnr{G}^{-1}]\hat{\odot}_1\tnr{G}\\
 &=\vto{v}^*\hat{\odot}_1(\tnr{G}^{-1}\odot_1\tnr{G})
 \end{align*}
-proves the first identity tensor of the second item. Verification of $\tnr{G}\odot_1\tnr{G}^{-1}$ is similar.
+proves the first identity tensor of the second item. Verification of $\tnr{G}\odot_1\tnr{G}^{-1}$ is similar. Proof of third item is trivial from \eqref{eq:Lin2secTens}.
 \end{proof}
 }
-
-\noindent There is also an interesting property relating the composition of representative functions and second order tensors: let functions $\tnr{\mathit{g}}_1$ and $\tnr{\mathit{g}}_2$ represent $\tnr{G}_1\in\ete{\cam{F}}{U\times W}$ and $\tnr{G}_2\in\ete{\cam{F}}{W\times V}$ respectively. The following equalities show that $\tnr{G}_1\odot_1\tnr{G}_2\in\ete{\cam{F}}{U\times V}$ is represented by $\tnr{\mathit{g}}_2\circ\tnr{\mathit{g}}_1$. 
+\noindent An important consequence of the first property is that 
+\begin{equation}\label{eq:Lin2secTensTransp}
+\fua{\tnr{\mathit{g}}}{\vto{u}} = \vto{u}^*\hat{\odot}_1\tnr{G}=[\tnr{G}^\dagger\hat{\odot}_1\vto{u}^*]^c\,.
+\end{equation}
+There is also an interesting property relating the composition of representative functions and second order tensors: let functions $\tnr{\mathit{g}}_1$ and $\tnr{\mathit{g}}_2$ represent $\tnr{G}_1\in\ete{\cam{F}}{U\times W}$ and $\tnr{G}_2\in\ete{\cam{F}}{W\times V}$ respectively. The following equalities show that $\tnr{G}_1\odot_1\tnr{G}_2\in\ete{\cam{F}}{U\times V}$ is represented by $\tnr{\mathit{g}}_2\circ\tnr{\mathit{g}}_1$. 
 \begin{equation}\label{eq:compoFuncRepFunc}
 \fua{\tnr{\mathit{g}}_2\circ\tnr{\mathit{g}}_1}{\vto{u}}=\tnr{\mathit{g}}_2[\vto{u}^*\hat{\odot}_1\tnr{G}_1]
 =(\vto{u}^*\odot_1\tnr{G}_1)\hat{\odot}_1\tnr{G}_2
@@ -779,6 +784,12 @@ Now, we shall verify if it is possible to establish a relation between a Hilbert
 {\maf{\tnr{\psi}}{B}{D}}^\dagger&=[\tnr{\psi}^\dagger_{D}]^{B}\,,
 \end{align}
 where equalities \eqref{eq:regraCoordTens} and \eqref{eq:propProdIndTens} were considered. 
+
+In the context of an arbitrary second order tensor $\tnr{G}\in\ete{\cam{F}}{U\times V}$, we already know that it is represented by a linear bijection $\tnr{\mathit{g}}$ where $\fua{\tnr{\mathit{g}}}{\vto{u}}=\vto{u}^*\hat{\odot}_1\tnr{G}$. Considering $B_1$ and $B_2$ bases of $U_\cam{F}$ and $V_\cam{F}$, we can rewrite the previous equality as following:
+\begin{equation}
+[\vtf{g}_{B_1}]^{B_2}[\vto{u}]^{B_1} = [\tnr{G}]^{B}[\vto{u}]^{B_1}\,,
+\end{equation}
+where basis tensor $B$ is built from $B_1$ and $B_2$ according to theorem \ref{teo:geraEte}.
 
 It is possible to develop change of coordinates and of basis as we did for vector and linear functions. For the sake of clarity we shall reproduce here both theorem \ref{teo:mudCoordVec} and its corollary \ref{cor:mudaBase} with minor changes in order to adapt them for the current case.
 
