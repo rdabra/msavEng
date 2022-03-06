@@ -235,7 +235,11 @@ or in equality
 \begin{equation}\label{eq:dilatVec}
 \fua{\tnr{\mathit{s}}}{\vto{x}+ \vv{a}}=\fua{\vtf{s}}{\vto{x}}+\vv{\fua{\mathit{g}}{a}}
 \end{equation}
-is a positive-definite Hermitian operator, usually called a \textsb{stretch operator}\index{operAS ANYator!stretch}, representing, according to \eqref{eq:hemritianTensor} and \eqref{eq:nonnegTensor}, a positive-definite tensor $\tnr{S}=\tnr{S}^\dagger$, called \textsb{stretch tensor}\index{tensor!stretch}, which results the affinity tensor of $\mathit{s}$. We recall that the eigenvalues $\lambda_1,\cdots,\lambda_m$ of stretch operator $\vtf{s}$, or of stretch tensor $\tnr{S}$, are positive real scalars\footnote{See section \ref{sec:autoPares}.}, and then $\lambda_i$ called a \textsb{stretch coefficient}\index{stretch coefficient}. If coefficient $\lambda_i>1$ or $\lambda_i\leqslant1$, it is called an \textsb{expansion}\index{expansion} or a \textsb{contraction}\index{contraction} respectively and in the case of proportional stretch, where $\lambda_1=\cdots=\lambda_m$, function $\vtf{s}$ (or tensor $\tnr{S}$) is equally called an expansion\index{operator!expansion} or contraction operator(tensor)\index{operator!contraction}. It is important to note that, from corollary \ref{cor:soSymTens}, in the specific context of Euclidean spaces, where $\vtf{s}^\dagger=\vtf{s}^\text{T}$, the stretch tensor $\tnr{S}$ is symmetric. As any other affinity, a dilation $\mathit{s}$ can be centered at point $a$, represented by $\gloref{dilat}$, where $\fua{\mathit{s}_a}{\vto{u}\oplus a}=\fua{\vtf{s}}{\vto{u}}\oplus a$. Figure \ref{fg:dilation} shows different types of dilations.
+is a positive-definite Hermitian operator, usually called a \textsb{stretch operator}\index{operator!stretch}, representing, according to \eqref{eq:hemritianTensor} and \eqref{eq:nonnegTensor}, a positive-definite tensor $\tnr{S}=\tnr{S}^\dagger$, called \textsb{stretch tensor}\index{tensor!stretch}, which results the affinity tensor of $\mathit{s}$. In this context and by considering the conditions of \eqref{eq:hermitTensor}, from which equality $[\tnr{S}]^{B}={[{\vtf{s}}_{B_2}]^{B_1}}$ can be concluded, we can write that the eigenvalues 
+\begin{equation}
+\lambda(\tnr{S}):=\lambda(\vtf{s})=\lambda_1,\cdots,\lambda_m\,.
+\end{equation}
+We already know from section \ref{sec:autoPares} that these eigenvalues, called \textsb{stretch coefficients}\index{stretch coefficient}, are all positive real scalars. Thereby, if coefficient $\lambda_i>1$ or $\lambda_i\leqslant1$, it is called an \textsb{expansion}\index{expansion} or a \textsb{contraction}\index{contraction} respectively and in the case of proportional stretch, where $\lambda_1=\cdots=\lambda_m$, function $\vtf{s}$ (or tensor $\tnr{S}$) is equally called an expansion\index{operator!expansion} or contraction operator(tensor)\index{operator!contraction}. It is important to note that, from corollary \ref{cor:soSymTens}, in the specific context of Euclidean spaces, where $\vtf{s}^\dagger=\vtf{s}^\text{T}$, the stretch tensor $\tnr{S}$ is symmetric. As any other affinity, a dilation $\mathit{s}$ can be centered at point $a$, represented by $\gloref{dilat}$, where $\fua{\mathit{s}_a}{\vto{u}\oplus a}=\fua{\vtf{s}}{\vto{u}}\oplus a$. Figure \ref{fg:dilation} shows different types of dilations.
 \begin{figure}[!ht]
 \centering
 \begin{center}
@@ -258,7 +262,7 @@ Let a linear bijection $\vtf{f}$ be polar decomposed by orthogonal operator $\vt
 \begin{equation*}
 \mathit{f} = \mathit{r}_{\fua{\mathit{g}}{a}}\circ\mathit{s}_1=\mathit{s}_2\circ\mathit{r}_{\fua{\mathit{g}}{a}}\,,
 \end{equation*}
-where $\mathit{r}_{\fua{\mathit{g}}{a}},\mathit{s}_1,\mathit{s}_2$ are respectively a rotation (rotoreflection) defined by $\vtf{r}$ and dilations defined by $\vtf{s}_1^{\nicefrac{1}{2}}$ and $\vtf{s}_2^{\nicefrac{1}{2}}$.  
+where $\mathit{r}_{\fua{\mathit{g}}{a}},\mathit{s}_1,\mathit{s}_2$ are respectively a rotation (rotoreflection) defined by orthogonal operator $\vtf{r}$ and dilations defined by stretch operators $\vtf{s}_1^{\nicefrac{1}{2}}$ and $\vtf{s}_2^{\nicefrac{1}{2}}$.  
 \end{mteo}
 
 {\footnotesize
@@ -272,7 +276,7 @@ proves the theorem for $\mathit{s}_1$. Proof for $\mathit{s}_2$ is similar.
 
 
 \begin{mcoro}{Rotodilation Tensor Decompositions}{rotoDilaT}
-If $\tnr{L}\in\ete{\cam{R}}{U^2}$ is an affinity tensor then $\tnr{L}=\tnr{R}\odot_1\tnr{S}_1=\tnr{S}_2\odot_1\tnr{R}$, where $\tnr{R}$, $\tnr{S}_1$, $\tnr{S}_2$ are respectively a rotation (rotoreflection) and stretch tensors. 
+If $\tnr{L}\in\ete{\cam{R}}{U^2}$ is an affinity tensor then $\tnr{L}=\tnr{R}\odot_1\tnr{S}_1=\tnr{S}_2\odot_1\tnr{R}$, where $\tnr{R}$ is a rotation (rotoreflection) tensor and $\tnr{S}_1$, $\tnr{S}_2$ are stretch tensors with the same stretch coefficients. 
 \end{mcoro}
 
 
@@ -285,9 +289,8 @@ According to \eqref{eq:afftyT}, development
 &=\tnr{R}\hat{\odot}_1(\tnr{S}_1{\odot}_1\,\vto{x}^*)\oplus{\fua{\mathit{g}}{a}}\\
 &=[(\tnr{R}\odot_1\tnr{S}_1){\hat{\odot}_1\vto{x}^*}\,]\oplus{\fua{\mathit{g}}{a}}
 \end{align*}
-proves the theorem for $\tnr{S}_1$. Proof for $\tnr{S}_2$ is similar.
+proves the theorem for $\tnr{S}_1$. Proof for $\tnr{S}_2$ is similar. Considering a tensor basis $B$, from the rotodilation decomposition we just proved, equality $[\tnr{R}]^{B}[\tnr{S}_1]^{B}=[\tnr{S}_2]^{B}[\tnr{R}]^{B}$ is valid, from which we conclude that matrices $[\tnr{S}_i]^{B}$ are similar through $\tnr{R}$ and therefore isospectral, according to theorem \ref{teo:isoMatrices}. 
 \end{proof}}
-
 
 
 Now, recalling the concept of unimodular tensors presented in section \ref{sec:TensSpac}, let $(U_\real,\tnr{A}_B)$ be an $m$-dimensional oriented Euclidean space where $\tnr{A}_B\in\etng{m}{\real}{U^m}$ and $B=\{\vun{u}_1,\cdots,\vun{u}_m\}$. Considering $\mathit{r}_a$ a rotation and $\overline{\mathit{r}}_a$ a rotoreflection, since every pair of Euclidean orthonormal basis can be related through an orthogonal operator\footnote{See p. \pageref{prg:orthBases}.}, we conclude that rotation  $C=\{\fua{\vtf{r}}{\vun{u}_1},\cdots,\fua{\vtf{r}}{\vun{u}_m}\}$ and rotoreflection $\overline{C}=\{\fua{\overline{\vtf{r}}}{\vun{u}_1},\cdots,\fua{\overline{\vtf{r}}}{\vun{u}_m}\}$ of basis $B$ are positively and negatively oriented bases respectively because equalities $\fua{\tnr{A}_C}{\vun{u}_1,\cdots,\vun{u}_m}=-\fua{\tnr{A}_{\overline{C}}}{\vun{u}_1,\cdots,\vun{u}_m}=1$ are valid according to definition \eqref{eq:basisAltern} and equality \eqref{eq:alternDete}. In order to geometrically represent in a simple way basis rotation and rotoreflection, we specify the affine Euclidean space in question to be two-dimensional, that is, $m=2$, and rotoreflection $\overline{\vtf{r}}=-\vtf{r}$. Thereby, for the basis vectors $\vun{u}_1$ and $\vun{u}_2$ the smallest angle $\theta$ between them leads to equalities $0=\vun{u}_1\cdot\vun{u}_2=\|\vun{u}_1\|\|\vun{u}_2\|\cos\theta=\cos\theta$, and since orthogonal functions preserve inner product, then $\theta$ is also the smallest angle between $\fua{\vtf{r}}{\vun{u}_1}$ and $\fua{\vtf{r}}{\vun{u}_2}$, or between $\fua{\overline{\vtf{r}}}{\vun{u}_1}$ and $\fua{\overline{\vtf{r}}}{\vun{u}_2}$, because the following equalities are all valid: $\vun{u}_1\cdot\vun{u}_2=\fua{\vtf{r}}{\vun{u}_1}\cdot\fua{\vtf{r}}{\vun{u}_2}=\fua{\overline{\vtf{r}}}{\vun{u}_1}\cdot\fua{\overline{\vtf{r}}}{\vun{u}_2}=0$. From these angle and size preserving features, we can represent an anticlockwise acute angle $\phi$ rotation and rotoreflection of basis $B$ according to figure \ref{fg:rotoReflex}.
