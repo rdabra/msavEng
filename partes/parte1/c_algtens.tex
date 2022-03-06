@@ -701,7 +701,11 @@ They belong to $\ete{\cam{F}}{V\times U}$ as a straightforward consequence of th
 = (\tnr{G}_1\odot_1\tnr{G}_2)^\dagger\hat{\odot}_1\vto{u}^*\,;
 \end{equation}
 
-\item[iv.] If $\tnr{\mathit{g}}$ is hermitian then  $\tnr{G}^\dagger=\tnr{G}$;
+\item[iv.] If a representative function $\tnr{\mathit{g}}$ of tensor $\tnr{G}$ is hermitian then
+\begin{equation}\label{eq:hemritianTensor}
+\tnr{G}^\dagger=\tnr{G}\,;
+\end{equation}
+
 
 \item[v.] $\tnr{G}^{-1}\odot_1\tnr{G}\in\ete{\cam{F}}{V^2}$ and $\tnr{G}\odot_1\tnr{G}^{-1}\in\ete{\cam{F}}{U^2}$ are identity tensors.
 \end{itemize}
@@ -793,11 +797,18 @@ Now, we shall verify if it is possible to establish a relation between a Hilbert
 \end{align}
 where equalities \eqref{eq:regraCoordTens} and \eqref{eq:propProdIndTens} were considered. 
 
-In the context of arbitrary second order tensor $\tnr{G}\in\ete{\cam{F}}{U\times V}$ and vector $\vto{u}\in U_\cam{F}$, we already know that a linear bijection $\tnr{\mathit{g}}$ represents $\tnr{G}$ in such a way that $\fua{\tnr{\mathit{g}}}{\vto{u}}=\tnr{G}^\dagger\hat{\odot}_1\vto{u}^*$. This equality can rewritten in matrix terms as following:
-\begin{equation}
+In the context of arbitrary second order tensor $\tnr{G}\in\ete{\cam{F}}{U\times V}$ and vector $\vto{u}\in U_\cam{F}$, we already know from the previous section that a linear bijection $\tnr{\mathit{g}}$ represents $\tnr{G}$ in such a way that $\fua{\tnr{\mathit{g}}}{\vto{u}}=\tnr{G}^\dagger\hat{\odot}_1\vto{u}^*$. This equality can be rewritten in matrix terms as following: 
+\begin{equation*}
 [\tnr{\mathit{g}}_{B_1}]^{B_2}[\vto{u}]^{B_1} = {[\tnr{G}]^{B}}^\dagger[\vto{u}]^{B_1}\,,
+\end{equation*}
+where basis tensor $B$ is built from vector bases $B_1$ and $B_2$ of $U_\cam{F}$ and $V_\cam{F}$, according to theorem \ref{teo:geraEte}. Therefore, since $\vto{u}$ is arbitrary, matrix 
+\begin{equation}\label{eq:matTensorRepre}
+[\tnr{G}]^{B}={[\tnr{\mathit{g}}_{B_1}]^{B_2}}^\dagger=[\tnr{\mathit{g}}_{B_2}^\dagger]^{B_1}.
 \end{equation}
-where basis tensor $B$ is built from vector bases $B_1$ and $B_2$ of $U_\cam{F}$ and $V_\cam{F}$ respectively, according to theorem \ref{teo:geraEte}. Therefore, since $\vto{u}$ is arbitrary, matrix $[\tnr{\mathit{g}}_{B_1}]^{B_2}={[\tnr{G}]^{B}}^\dagger$ and then
+If $\tnr{\mathit{g}}$ is hermitian  then 
+\begin{equation}\label{eq:hermitTensor}
+[\tnr{G}]^{B}=[\tnr{\mathit{g}}_{B_2}]^{B_1}=[\tnr{\mathit{g}}_{B_1}]^{B_2}={[\tnr{G}]^{B}}^\dagger.
+\end{equation}
 
 It is possible to develop change of coordinates and of basis as we did for vector and linear functions. For the sake of clarity we shall reproduce here both theorem \ref{teo:mudCoordVec} and its corollary \ref{cor:mudaBase} with minor changes in order to adapt them for the current case.
 
