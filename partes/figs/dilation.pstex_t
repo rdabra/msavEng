@@ -30,21 +30,21 @@
 \put(2706,-3341){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\vto{u}\oplus a$}%
 }}}}
 %  METADATA <id>55</id> 
-\put(3136,-3681){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\fua{\vtf{h}}{\vto{u}}$}%
+\put(3136,-3681){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\fua{\vtf{s}}{\vto{u}}$}%
 }}}}
 %  METADATA <id>57</id> 
-\put(4056,-3761){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\fua{\mathit{h}_a}{\vto{u}\oplus a}$}%
+\put(4056,-3761){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\fua{\mathit{s}_a}{\vto{u}\oplus a}$}%
 }}}}
 %  METADATA <id>59</id> 
 \put(3006,-4601){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\lambda\vto{u}$}%
 }}}}
 %  METADATA <id>61</id> 
-\put(3636,-4241){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\fua{\mathit{s}}{\vto{u}\oplus a}$}%
+\put(3636,-4241){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\fua{\mathit{h}}{\vto{u}\oplus a}$}%
 }}}}
 %  METADATA <id>63</id> 
-\put(4606,-5131){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\fua{\mathit{h}}{\vto{u}\oplus a}$}%
+\put(4606,-5131){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\fua{\mathit{s}}{\vto{u}\oplus a}$}%
 }}}}
 %  METADATA <id>65</id> 
-\put(3661,-5071){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\fua{\vtf{h}}{\vto{u}}$}%
+\put(3661,-5071){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\fua{\vtf{s}}{\vto{u}}$}%
 }}}}
 \end{picture}%
