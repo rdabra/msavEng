@@ -65,14 +65,22 @@ Recalling the affinities and their related concepts presented in section \ref{se
 \fua{\tnr{\varphi}_t}{\overline{\vto{x}}} =[\tnr{F}_{\overline{\vto{x}}}\,\hat{\odot}_1\,\overline{\vto{x}}^*] + \vto{c}\,, 
 \end{equation}
 where affinity tensor $\tnr{F}_{\overline{\vto{x}}}:=\fua{\nabla\tnr{\varphi}_t}{\overline{\vto{x}}}^\text{T}$ is called the \textsb{affine deformation gradient} of $\tnr{\varphi}_t$ and $\vto{c}\in U_\real$ is a constant vector. Therefore, if $\tnr{F}_{\overline{\vto{x}}}$ is the identity tensor $\tnr{I}\in\ete{\real}{U^{2}}$ or a stretch tensor for all $\overline{\vto{x}}\in\tnr{\overline{\mathcal{B}}}$, then affine deformation $\tnr{\varphi}_t$ is a vector translation or a centered vector dilation respectively, according to \eqref{eq:transltVec} and \eqref{eq:dilatVec}. It is important to observe that an affine deformation can be decomposed in a rotodilation, according to theorem \ref{teo:rotoDilaF} and corollary \ref{cor:rotoDilaT}, in such a way that 
-\begin{equation}
+\begin{equation}\label{eq:decompDefGrad}
 \tnr{\varphi}_t = \mathit{s}_2\circ\mathit{r}_{\vto{c}} = \mathit{r}_{\vto{c}}\circ\mathit{s}_1
 \end{equation}
 and
 \begin{equation}
 \tnr{F}_{\overline{\vto{u}}}=\tnr{V}_{\overline{\vto{u}}}\odot_1\tnr{R}_{\overline{\vto{u}}}=\tnr{R}_{\overline{\vto{u}}}\odot_1\tnr{U}_{\overline{\vto{u}}}\,,\,\forall\, \overline{\vto{u}}\in\tnr{\overline{\mathcal{B}}}\,, 
 \end{equation}
-where $\tnr{V}_{\overline{\vto{u}}}$ and $\tnr{U}_{\overline{\vto{u}}}$ are the affinity tensors of $\mathit{s}_2$ and $\mathit{s}_1$, both having the same stretch coefficients $\lambda_1,\lambda_2,\lambda_3$, and being usually called \textsb{left}\index{tensor!left stretch} and \textsb{right stretch tensors}\index{tensor!right stretch}. Since the local volume change is always positive, as we already know, $\tnr{R}_{\overline{\vto{u}}}$ can never be a rotoreflection tensor. It is convenient to forthcoming concepts not to deal with square root operators $\vtf{s}_1^{\nicefrac{1}{2}}$ and $\vtf{s}_2^{\nicefrac{1}{2}}$, which represent the above stretch tensors and are troublesome to calculate, but instead to specify $\tnr{B}_{\overline{\vto{u}}}:=\tnr{V}_{\overline{\vto{u}}}\odot_1\tnr{V}_{\overline{\vto{u}}}$ and $\tnr{C}_{\overline{\vto{u}}}:=\tnr{U}_{\overline{\vto{u}}}\odot_1\tnr{U}_{\overline{\vto{u}}}$, known as the \textsb{left}\index{tensor!left Cauchy-Green} and \textsb{right Cauchy-Green deformation tensors}\index{tensor!right Cauchy-Green}, which are represented by operators $\vtf{s}_1$ and $\vtf{s}_2$ respectively, according to \eqref{eq:compoFuncRepFunc}, and have stretch coefficients  $\lambda_1^2,\lambda_2^2,\lambda_3^2$. In terms of the affine deformation gradient,
+where $\tnr{V}_{\overline{\vto{u}}}$ and $\tnr{U}_{\overline{\vto{u}}}$ are the affinity tensors of $\mathit{s}_2$ and $\mathit{s}_1$, both having the same stretch coefficients $\lambda_1,\lambda_2,\lambda_3$, and being usually called \textsb{left}\index{tensor!left stretch} and \textsb{right stretch tensors}\index{tensor!right stretch}. Since the local volume change is always positive, as we already know, $\tnr{R}_{\overline{\vto{u}}}$ can never be a rotoreflection tensor. Moreover, from the polar decomposition \eqref{eq:decompDefGrad}, we can conclude that stretch operator $\vtf{s}_1^{\nicefrac{1}{2}}$ is Lagrangian and, since stretch operators are invertible due to their positiveness, operator $\vtf{s}_2^{-\nicefrac{1}{2}}$ is Eulerian. In practice, it is convenient not to deal with these square root operators, which represent the above stretch tensors, and are troublesome to compute, but instead to specify 
+
+ERRADO
+
+
+\begin{alignat}{3} 
+\tnr{B}_{\overline{\vto{u}}}:=\tnr{V}_{\overline{\vto{u}}}\odot_1\tnr{V}_{\overline{\vto{u}}}&\qquad \text{and}\qquad & \tnr{C}_{\overline{\vto{u}}}:=\tnr{U}_{\overline{\vto{u}}}\odot_1\tnr{U}_{\overline{\vto{u}}}\,,
+\end{alignat}
+known as the \textsb{left}\index{tensor!left Cauchy-Green} and \textsb{right Cauchy-Green deformation tensors}\index{tensor!right Cauchy-Green}, represented by operators $\vtf{s}_2$ and $\vtf{s}_1$ respectively, according to \eqref{eq:compoFuncRepFunc}, whose stretch coefficients are $\lambda_1^2,\lambda_2^2,\lambda_3^2$. In terms of the affine deformation gradient,
 \begin{alignat}{3}
 \tnr{B}_{\overline{\vto{u}}}=\tnr{F}_{\overline{\vto{u}}}\odot_1\tnr{F}_{\overline{\vto{u}}}^\text{T}&\qquad \text{and}\qquad & \tnr{C}_{\overline{\vto{u}}}=\tnr{F}_{\overline{\vto{u}}}^\text{T}\odot_1\tnr{F}_{\overline{\vto{u}}}\,.
 \end{alignat}
@@ -154,6 +162,27 @@ We recall that when stretch coefficients are identical, pure stretch is said to 
 \vspace{9pt}
 \captionof{figure}{Simple shear.}\label{fg:cisaSimples}
 \end{center}
+
 \end{example}
 
-The quantity or level of deformation can be obtained by measuring changes in infinitesimal lengths of the body. Any measure based on the affine deformation gradient of this local length change is called \textsb{strain}\index{strain}. 
+The quantity or level of local deformation can be obtained by measuring the change in an infinitesimal length of the body. This local length change, called \textsb{strain}\index{strain}, can be measured from the stretch tensors related to an arbitrary material point $\overline{\vto{u}}$. Thereby, in the context the eigenbases $X$ and $Y$ of the stretch operators that represent $\tnr{U}_{\overline{\vto{u}}}$ and $\tnr{V}_{\overline{\vto{u}}}$ respectively, most of the strain measures evaluate the deviation of a given stretch from the stretch of the rigid deformation where $\lambda_1=\lambda_2=\lambda_3=1$. The simplest type of this deviation is an algebraic difference called \textsb{extension}, whose Lagrangian and Eulerian forms are respectively described by $\delta_i=\lambda_i-1$ and $\Delta_i=1-\lambda_i^{-1}$, which are zero for rigid deformations. But since coefficients $\lambda_i$ are annoying square roots, convenience lead to the definition of a strain measure described by 
+\begin{alignat}{3}
+\tilde{\delta}_i=\lambda_i^2-1&\qquad \text{and}\qquad & \tilde{\Delta}_i=1-\lambda_i^{-2}\,,
+\end{alignat}
+which are valid because $\tilde{\delta}_i=\tilde{\Delta}_i=0$ in the context of rigid deformations. In matrix form, these measures can respectively be written as $[C_{\overline{\vto{u}}}]^X-I$ and $I-[B_{\overline{\vto{u}}}]^Y$. In general terms, removing the eigenbasis dependence, we arrive at the classical expressions 
+\begin{alignat}{3}
+2\tnr{E}_{\overline{\vto{u}}}=(\underbrace{\tnr{U}_{\overline{\vto{u}}}\odot_1\tnr{U}_{\overline{\vto{u}}}}_{\tnr{C}_{\overline{\vto{u}}}})-\tnr{I}&\qquad \text{and}\qquad & 2\tnr{e}_{\overline{\vto{u}}}=\tnr{I}-(\underbrace{\tnr{V}_{\overline{\vto{u}}}\odot_1\tnr{V}_{\overline{\vto{u}}}}_{\tnr{B}_{\overline{\vto{u}}}})^{-1}\,,
+\end{alignat}
+of the XXXXXXX strain measure in its Lagragian and Eulerian descriptions.
+
+
+
+VERIFICAR O QUE E TENSOR AO QUADRADO. EU ACHO QUE E SO PARA TENSOR DE SEGUNDA ORDEM QUANDO SUA FUNCAO REPRESENTANTE E ELEVADA AO QUADRADO.
+
+
+
+
+
+
+
+
