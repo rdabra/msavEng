@@ -684,8 +684,8 @@ The corollary is straightforwardly obtained from \eqref{eq:secTens2Lin} for real
 \begin{itemize}
 \setlength\itemsep{.1em}
 \item[i.] $\tnr{G}^{\dagger}:=\fua{\tnr{\Upsilon}^{-1}}{\tnr{\mathit{g}}^{\dagger}}$ ; 
-\item[ii.] $\tnr{G}^{-1}:=\fua{\tnr{\Upsilon}^{-1}}{\tnr{\mathit{g}}^{-1}}$, if $\tnr{\mathit{g}}$ is invertible.
-\item[iii.] definir potencia de tensor
+\item[ii.] $\tnr{G}^{-1}:=\fua{\tnr{\Upsilon}^{-1}}{\tnr{\mathit{g}}^{-1}}$, if $\tnr{\mathit{g}}$ is invertible;
+\item[iii.] $\tnr{G}^{n}:=\fua{\tnr{\Upsilon}^{-1}}{\underbrace{\tnr{\mathit{g}}\circ\cdots\circ\tnr{\mathit{g}}}_{n\text{ times}}}$, where $V=U$ and $n>0$.
 \end{itemize}
 They belong to $\ete{\cam{F}}{V\times U}$ as a straightforward consequence of the definitions of their representative functions together with equalities \eqref{eq:Lin2secTens}. From these definitions, we have the following properties:
 \begin{itemize}
@@ -695,11 +695,15 @@ They belong to $\ete{\cam{F}}{V\times U}$ as a straightforward consequence of th
 \begin{equation}\label{eq:Lin2secTensTransp}
 \fua{\tnr{\mathit{g}}}{\vto{u}} = [\vto{u}^*\hat{\odot}_1\tnr{G}]^c=\tnr{G}^\dagger\hat{\odot}_1\vto{u}^*\,;
 \end{equation}
-\item[iii.] If functions $\tnr{\mathit{g}}_1$ and $\tnr{\mathit{g}}_2$ represent $\tnr{G}_1\in\ete{\cam{F}}{U\times W}$ and $\tnr{G}_2\in\ete{\cam{F}}{W\times V}$, then 
+\item[iii.] If functions $\tnr{\mathit{g}}_1$ and $\tnr{\mathit{g}}_2$ represent $\tnr{G}_1\in\ete{\cam{F}}{U\times W}$ and $\tnr{G}_2\in\ete{\cam{F}}{W\times V}$, 
 \begin{equation}\label{eq:compoFuncRepFunc}
 \fua{\tnr{\mathit{g}}_2\circ\tnr{\mathit{g}}_1}{\vto{u}}
 =(\tnr{G}_2^\dagger\odot_1\tnr{G}_1^\dagger)\hat{\odot}_1\vto{u}^*
-= (\tnr{G}_1\odot_1\tnr{G}_2)^\dagger\hat{\odot}_1\vto{u}^*\,;
+= (\tnr{G}_1\odot_1\tnr{G}_2)^\dagger\hat{\odot}_1\vto{u}^*
+\end{equation}
+and then, for $\tnr{G}\in\ete{\cam{F}}{U^2}$,
+\begin{equation}\label{eq:tensPot}
+\tnr{G}^n = \underbrace{\tnr{G}\odot_1\cdots\odot_1\tnr{G}}_{n\text{ times}}\,;
 \end{equation}
 
 \item[iv.] If a representative function $\tnr{\mathit{g}}$ of tensor $\tnr{G}$ is hermitian then
@@ -724,7 +728,7 @@ Proof of item ii is trivial. Now, let arbitrary functions $\tnr{\mathit{g}}_1$ a
 \fua{\tnr{\mathit{g}}_2\circ\tnr{\mathit{g}}_1}{\vto{u}}=\tnr{\mathit{g}}_2(\tnr{G}_1^\dagger\hat{\odot}_1\vto{u}^*)
 =(\tnr{G}_2^\dagger\odot_1\tnr{G}_1^\dagger)\hat{\odot}_1\vto{u}^*
 \end{equation*}
-proves the first equality of \eqref{eq:compoFuncRepFunc}. In order to prove the second equality, we will consider functions $\tnr{\mathit{h}}_1=\tnr{\mathit{g}}_1^\dagger$ and $\tnr{\mathit{h}}_2=\tnr{\mathit{g}}_2^\dagger$ representing tensors $\tnr{H}_1=\tnr{G}_1^\dagger$ and $\tnr{H}_2=\tnr{G}_2^\dagger$. It is true to say that $\tnr{\mathit{h}}_2\circ\tnr{\mathit{h}}_1=(\tnr{\mathit{h}}_1^\dagger\circ\tnr{\mathit{h}}_2^\dagger)^\dagger$ represents $(\tnr{H}_2^\dagger\odot_1\tnr{H}_1^\dagger)^\dagger$ and then to conclude that, from the definition of $\tnr{G}^\dagger$, function $\tnr{\mathit{g}}=\tnr{\mathit{h}}_1^\dagger\circ\tnr{\mathit{h}}_2^\dagger$ represents $\tnr{G}=\tnr{H}_2^\dagger\odot_1\tnr{H}_1^\dagger$, which proves the second equality of \eqref{eq:compoFuncRepFunc}. Verification of  item iv is trivial from \eqref{eq:Lin2secTens}. Considering \eqref{eq:cotensIdent}, if $\vtf{\mathit{g}}$ is the representative function of $\tnr{G}$, development 
+proves the first equality of \eqref{eq:compoFuncRepFunc}. In order to prove the second equality, we will consider functions $\tnr{\mathit{h}}_1=\tnr{\mathit{g}}_1^\dagger$ and $\tnr{\mathit{h}}_2=\tnr{\mathit{g}}_2^\dagger$ representing tensors $\tnr{H}_1=\tnr{G}_1^\dagger$ and $\tnr{H}_2=\tnr{G}_2^\dagger$. It is true to say that $\tnr{\mathit{h}}_2\circ\tnr{\mathit{h}}_1=(\tnr{\mathit{h}}_1^\dagger\circ\tnr{\mathit{h}}_2^\dagger)^\dagger$ represents $(\tnr{H}_2^\dagger\odot_1\tnr{H}_1^\dagger)^\dagger$ and then to conclude that, from the definition of $\tnr{G}^\dagger$, function $\tnr{\mathit{g}}=\tnr{\mathit{h}}_1^\dagger\circ\tnr{\mathit{h}}_2^\dagger$ represents $\tnr{G}=\tnr{H}_2^\dagger\odot_1\tnr{H}_1^\dagger$, which proves the second equality of \eqref{eq:compoFuncRepFunc}. Equality \eqref{eq:tensPot} is a straightforward consequence of \eqref{eq:compoFuncRepFunc}. Verification of item iv is trivial from \eqref{eq:Lin2secTens}. Considering \eqref{eq:cotensIdent}, if $\vtf{\mathit{g}}$ is the representative function of $\tnr{G}$, development 
 \begin{align*}
 \tnr{i}(\vto{v})&=\tnr{\mathit{g}}\circ\tnr{\mathit{g}^{-1}}(\vto{v})\\
 [\vto{v}^*\hat{\odot}_1\tnr{I}]^c&=\tnr{\mathit{g}}([\vto{v}^*\hat{\odot}_1\tnr{G}^{-1}]^c)\\
