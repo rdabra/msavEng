@@ -574,7 +574,7 @@ In the context of invertible matrices, a matrix whose inverse equals its conjuga
 \end{equation}
 from where we can conclude that $\dete{\mat{U}}=\pm 1$. When this determinant is positive, $\mat{U}$ is called a \textsb{proper unitary}\index{matrix!proper unitary} matrix. Given a matrix $\mat{A}\in\bar{M}$, we have $\dete{\mat{U}\mat{A}}=\pm\dete{\mat{A}}$; which reveals, except for an eventual sign, the \emph{neutrality} of the unitary matrix in the determinant of matrix products. If the unitary matrix elements are reals, it results that $\mat{U}^\dagger=\mat{U}^\text{T}=\mat{U}^{-1}$, or that it is orthogonal. Moreover, for an arbitrary invertible matrix $\mat{A}$, the determinant of the inverse is the inverse of the determinant, according to the following expression:
 \begin{equation}
-1=\dete{\mat{A}\mat{A}^{-1}}=\dete{\mat{A}}\cdot\dete{\mat{A}^{-1}}\implies \dete{\mat{A}^{-1}}= \lpa\dete{\mat{A}}\rpa^{-1}\,.
+1=\dete{\mat{A}\mat{A}^{-1}}=\dete{\mat{A}}\cdot\dete{\mat{A}^{-1}}\implies \dete{\mat{A}^{-1}}= [\dete{\mat{A}}]^{-1}\,.
 \end{equation}
 
 A given square matrix $\mat{A}$ that equals its conjugate transpose $\mat{A}^\dagger$ is called \textsb{Hermitian}\index{matrix!Hermitian}. Real symmetric matrices are examples of Hermitian matrices: if the elements of the square matrix  $\mat{S}$ are real, then $\mat{S}^\dagger=\mat{S}^\text{T}$, and since $\mat{S}$ is symmetric, $\mat{S}^\dagger=\mat{S}$. Similarly to antisymmetric matrices, an \textsb{anti-Hermitian}\index{matrix!anti-Hermitian} matrix $\mat{A}$ equals the negative of its conjugate transpose, that is, $\mat{A}=-\mat{A}^\dagger$. Thus, let $\mat{B}\in\bar{M}$ be a matrix from which we write the following development:
@@ -653,7 +653,7 @@ Any scalar $\lambda\in\cam{F}$ that is root of this polynomial is called a \text
 $\lambda_1,\cdots,\lambda_n$ of characteristic roots of $\mat{H}$ is called the \textsb{spectrum}\index{matrix!spectrum of}\footnote{The spectrum is not a set because there can be repeated elements.} of $\mat{H}$, represented by $\fua{\lambda}{\mat{H}}$. In the case of a normal matrix $\mat{N}$ submitted to spectral diagonalization, its spectrum is the set of scalars that constitute the diagonal matrix $\widetilde{\mat{N}}$, which results from the diagonalization of $\mat{N}$ by unitary matrix. At this point, it is convenient to present a very important theorem involving similar matrices say that similar matrices.
 
 \begin{mteo}{Isospectral Matrices}{isoMatrices}
-Similar matrices are isospectral\index{matrices!isospectral}, that is, they always have the same spectrum.
+Similar matrices are isospectral\index{matrices!isospectral}, that is, they have the same spectrum.
 \end{mteo}
 
 {\footnotesize
@@ -672,8 +672,7 @@ it is possible to say that
 from where we conclude $\mat{A}$ and $\mat{B}$ isospectral.
 \end{proof}}
 
-The spectrum of a matrix has a close relation with determinant and trace functions, which \emph{respectively preserve the operations of multiplication and addition}. If
-$\lch\lambda_1,\cdots,\lambda_n\rch$ is the spectrum of $\mat{A}$, this close relation is expressed through the following equalities:
+The spectrum of a matrix has a close relation with determinant and trace functions, which \emph{respectively preserve the operations of multiplication and addition}. If $\lambda_1,\cdots,\lambda_n$ is the spectrum of $\mat{A}$, this close relation is expressed through the following equalities:
 \begin{alignat}{3}\label{eq:detTrace}
 \dete{\mat{A}}  = \prod_{i=1}^n  \lambda_i & \qquad\text{and} \qquad & \trc{\mat{A}} & = \sum_{i=1}^n  \lambda_i \,.
 \end{alignat}

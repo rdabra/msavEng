@@ -695,13 +695,13 @@ They belong to $\ete{\cam{F}}{V\times U}$ as a straightforward consequence of th
 \begin{equation}\label{eq:Lin2secTensTransp}
 \fua{\tnr{\mathit{g}}}{\vto{u}} = [\vto{u}^*\hat{\odot}_1\tnr{G}]^c=\tnr{G}^\dagger\hat{\odot}_1\vto{u}^*\,;
 \end{equation}
-\item[iii.] If functions $\tnr{\mathit{g}}_1$ and $\tnr{\mathit{g}}_2$ represent $\tnr{G}_1\in\ete{\cam{F}}{U\times W}$ and $\tnr{G}_2\in\ete{\cam{F}}{W\times V}$, 
+\item[iii.] If functions $\tnr{\mathit{g}}_1$ and $\tnr{\mathit{g}}_2$ represent $\tnr{G}_1\in\ete{\cam{F}}{U\times W}$ and $\tnr{G}_2\in\ete{\cam{F}}{W\times V}$, then $\tnr{\mathit{g}}_2\circ\tnr{\mathit{g}}_1$ represents $\tnr{G}_1\odot_1\tnr{G}_2$ or  
 \begin{equation}\label{eq:compoFuncRepFunc}
 \fua{\tnr{\mathit{g}}_2\circ\tnr{\mathit{g}}_1}{\vto{u}}
 =(\tnr{G}_2^\dagger\odot_1\tnr{G}_1^\dagger)\hat{\odot}_1\vto{u}^*
-= (\tnr{G}_1\odot_1\tnr{G}_2)^\dagger\hat{\odot}_1\vto{u}^*
+= (\tnr{G}_1\odot_1\tnr{G}_2)^\dagger\hat{\odot}_1\vto{u}^*\,.
 \end{equation}
-and then, for $\tnr{G}\in\ete{\cam{F}}{U^2}$,
+Thereby, for $\tnr{G}\in\ete{\cam{F}}{U^2}$,
 \begin{equation}\label{eq:tensPot}
 \tnr{G}^n = \underbrace{\tnr{G}\odot_1\cdots\odot_1\tnr{G}}_{n\text{ times}}\,;
 \end{equation}
@@ -876,7 +876,7 @@ where $\fua{\vtf{f}_i^{B}}{\tnr{T}}=\fua{\frt{T}}{\tnr{B}_i}$, according to \eqr
 
 The notion of invariance is of paramount importance in Classical Physics because the fundamental description of mechanical phenomena must be not only qualitatively immune to arbitrary changes of reference frame but also quantitatively indifferent when such changes are of unitary type. From a constitutive viewpoint, materials have their invariance too, when some or all of their inherent mechanical properties present themselves indistinctly on certain directions, that is, the overall mechanical behavior of a portion of matter in study is the same when this portion is subjected to specific motions. A tensor, as an algebraic entity that suitably embodies a physical magnitude, can be used to accordingly describe a mechanical measurement or a constitutive material property, including their eventual invariance features which we referred to. Thereby, it is the purpose of this section to briefly develop in mathematical terms this intuitive concept of invariance applied to tensors.
 
-Before we develop mathematically this notion of tensor invariance, there is a preliminary definition that needs to be addressed. The feature of proper orthogonality -- to which anti-isotropic tensors, defined ahead, are invariant -- is also valid for tensor operators. As presented in section \ref{sec:Matrix}, an orthogonal operator is called proper if its determinant is $1$, but we still don't know what a determinant of a tensor operator is. In order to present this unusual definition as concisely as possible, we shall sacrifice self-containedness and tacitly accept the approach of \aut{Spivak}\cite{spivak_1965_1}\footnote{See also \aut{Bishop \& Goldberg}\cite{bishop_1980_1}, pp.97-100, and \aut{Backus}\cite{backus_1997_1}, pp.17-21.}, adapting to our case his theorem 4-6. Firstly, let's consider $\tnr{\mathit{P}}\in\etng{p}{\cam{F}}{A^p}$ an arbitrary non-zero alternating tensor where set $A=U^{\times m}$, that is, the arguments of $\tnr{\mathit{P}}$ are tensors of order $m$. Let tensor function $\tnr{\psi}\in\evl{\cam{F}}{\eteg{n}{\cam{F}}{U^{\times m}}}{\eteg{n}{\cam{F}}{U^{\times m}}}$ and alternating tensor   $\tnr{\mathit{P}}^{\tnr{\psi}}\in\etng{p}{\cam{F}}{A^p}$ such that scalar
+Before we develop mathematically this notion of tensor invariance, there is a preliminary definition that needs to be addressed. The feature of proper orthogonality -- to which anti-isotropic tensors, defined ahead, are invariant -- is also valid for tensor operators. As presented in section \ref{sec:Matrix}, an orthogonal operator is called proper if its determinant is $1$, but we still don't know what a determinant of a tensor operator is. In order to present this unusual definition as concisely as possible, we shall sacrifice self-containedness and tacitly accept the approach of \aut{Spivak}\cite{spivak_1965_1}\footnote{See also \aut{Bishop \& Goldberg}\cite{bishop_1980_1}, pp.97-100, and \aut{Backus}\cite{backus_1997_1}, pp.17-21.}, adapting to our case his theorem 4-6. Firstly, let's consider $\tnr{\mathit{P}}\in\etng{p}{\cam{F}}{A^p}$ an arbitrary non-zero alternating tensor where set $A=U^{\times m}$, that is, the arguments of $\tnr{\mathit{P}}$ are $p$ tensors of order $m$. Let tensor function $\tnr{\psi}\in\evl{\cam{F}}{\eteg{n}{\cam{F}}{U^{\times m}}}{\eteg{n}{\cam{F}}{U^{\times m}}}$ and alternating tensor   $\tnr{\mathit{P}}^{\tnr{\psi}}\in\etng{p}{\cam{F}}{A^p}$ such that scalar
 \begin{equation}\label{eq:defDetPsi}
 \fua{\tnr{\mathit{P}}^{\tnr{\psi}}}{\tnr{X}_1,\cdots,\tnr{X}_p}:=\fua{\tnr{\mathit{P}}}{\fua{\tnr{\psi}}{\tnr{X}_1},\cdots,{\fua{\tnr{\psi}}{\tnr{X}_p}}}\,,\,\forall\,\tnr{X}_i\in\eteg{n}{\cam{F}}{A}\,.
 \end{equation}
@@ -903,7 +903,7 @@ or
 \begin{equation}\label{eq:detTensorSeg2}
 \fua{\tnr{P}}{\fua{\tnr{\mathit{t}}}{\vto{x}_1},\cdots,{\fua{\tnr{\mathit{t}}}{\vto{x}_{p}}}}=\hdet{\tnr{T}}{\fua{\tnr{{P}}}{\vto{x}_1,\cdots,\vto{x}_{p}}}\,,
 \end{equation}
-where tensor $\tnr{P}\in\etng{p}{\cam{F}}{U^{p}}$ and $\tnr{\mathit{t}}$ is the representative function of $\tnr{T}$. Now, considering arbitrary functions $\tnr{\psi},\tnr{\varphi}\in\evl{\cam{F}}{\eteg{n}{\cam{F}}{U^{\times m}}}{\eteg{n}{\cam{F}}{U^{\times m}}}$, the following properties of determinant of tensor operators are valid:
+where tensor $\tnr{P}\in\etng{p}{\cam{F}}{U^{p}}$ and $\tnr{\mathit{t}}$ is the representative function of $\tnr{T}$. Now, considering arbitrary functions $\tnr{\psi},\tnr{\varphi}\in\evl{\cam{F}}{\eteg{n}{\cam{F}}{U^{\times m}}}{\eteg{n}{\cam{F}}{U^{\times m}}}$ and $\tnr{T}_1, \tnr{T}_2\in \eteg{p}{\cam{F}}{U^{\times 2}}$, the following properties of determinant are valid:
 \begin{itemize}
 \setlength\itemsep{.1em}
 \item[i.] $\hdet{\tnr{i}} =  1$;
@@ -912,7 +912,8 @@ where tensor $\tnr{P}\in\etng{p}{\cam{F}}{U^{p}}$ and $\tnr{\mathit{t}}$ is the 
 \item[iv.] If $\hdet{\tnr{\psi}}\neq 0$, then $\tnr{\psi}$ is a bijection;
 \item[v.] If $B$ and $C$ are bases of $\eteg{n}{\cam{F}}{U^{\times m}}$, then $\hdet{\tnr{\psi}}=\hdet{\maf{\tnr{\psi}}{B}{C}}$;
 \item[vi.] $\hdet{\tnr{\psi}^\dagger}=\overline{\hdet{\tnr{\psi}}}$;
-\item[vii.] If $\tnr{\psi}$ is unitary, then $\hdet{\tnr{\psi}}=\pm 1$.
+\item[vii.] If $\tnr{\psi}$ is unitary, then $\hdet{\tnr{\psi}}=\pm 1$;
+\item[viii.] If $\tnr{T}=\tnr{T}_1\odot_1\tnr{T}_2$, then $\hdet{\tnr{T}}=\hdet{\tnr{T}_1}\hdet{\tnr{T}_2}$.
 \end{itemize}
 
 {\footnotesize
@@ -945,7 +946,7 @@ and consequently
 &=\overline{\dete{\maf{\tnr{\psi}}{B}{B}}}\fua{\tnr{\mathit{P}}}{{\tnr{B}_{1}},\cdots,{\tnr{B}_{p}}}\\
 &=\overline{\hdet{\tnr{\psi}}}\fua{\tnr{\mathit{P}}}{{\tnr{B}_{1}},\cdots,{\tnr{B}_{p}}}\,,
 \end{align*}
-since an equality similar to \eqref{eq:DeterminanteSimplificado} can be obtained by considering $i_k=k$ on \eqref{eq:Determinante}. Now, equalities $1=\hdet{\tnr{i}}=\hdet{\tnr{\psi}\circ\tnr{\psi}^\dagger} =  \hdet{\tnr{\psi}}\,\hdet{\tnr{\psi}^\dagger}=|\hdet{\tnr{\psi}}|^2$ prove item vii.
+since an equality similar to \eqref{eq:DeterminanteSimplificado} can be obtained by considering $i_k=k$ on \eqref{eq:Determinante}. Now, equalities $1=\hdet{\tnr{i}}=\hdet{\tnr{\psi}\circ\tnr{\psi}^\dagger} =  \hdet{\tnr{\psi}}\,\hdet{\tnr{\psi}^\dagger}=|\hdet{\tnr{\psi}}|^2$ prove item vii. Property viii is a straightforward consequence of property ii and equality \eqref{eq:compoFuncRepFunc}.
 \end{proof}
 }
 
