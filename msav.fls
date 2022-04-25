@@ -1155,6 +1155,10 @@ INPUT ./partes/figs/defHomogCisa-eps-converted-to.pdf
 INPUT /usr/local/texlive/2019/texmf-dist/fonts/vf/public/kpfonts/jkplbn8t.vf
 INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/kpfonts/jkplbn8r.tfm
 INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/kpfonts/jkplbne.tfm
+INPUT /usr/local/texlive/2019/texmf-dist/fonts/vf/public/eulervm/zeurb5.vf
+INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/amsfonts/euler/eurb5.tfm
+INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmmib5.tfm
+INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy5.tfm
 OUTPUT partes/parte2/apendice1.aux
 INPUT partes/parte2/apendice1.tex
 INPUT partes/parte2/apendice1.tex
@@ -1356,6 +1360,7 @@ INPUT /usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/euler/eufm1
 INPUT /usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/euler/eufm5.pfb
 INPUT /usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/euler/eufm7.pfb
 INPUT /usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/euler/eurb10.pfb
+INPUT /usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/euler/eurb5.pfb
 INPUT /usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/euler/eurb7.pfb
 INPUT /usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/euler/eurm10.pfb
 INPUT /usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/euler/eurm5.pfb
