@@ -43,7 +43,7 @@ From this figure, it is possible to conclude that if both configurations $\overl
 \begin{equation}
 \tnr{\chi}_t = \upsilon_o\circ\chi_t\circ\overline{\chi}^{\,-1}\circ\upsilon_o^{-1}\,.
 \end{equation}
-Moreover, concerning the elements of the domains represented in the figure, we say that a material particle $\text{x}\in\mathfrak{B}$, represented by the \textsb{material point}\index{point!material} $\overline{x}=\fua{\overline{\chi}}{\text{x}}$ or by the \textsb{material vector}\index{vector!material} $\vto{\overline{x}}:=\fua{\upsilon_o\circ\overline{\chi}}{\text{x}}$, occupies the \textsb{spatial place}\index{spatial place} $x:=\fua{\chi_t}{\text{x}}$ or $\vto{x}=\fua{\upsilon_o\circ\chi_t}{\text{x}}$. In order to simplify our study, since deformation was defined as a vector function, we shall mostly use vectors to denote body and shape elements. In this context, when a vector function is defined on a material domain $\tnr{\overline{\mathcal{B}}}$ or on a spatial domain $\tnr{\mathcal{B}}_t$, it is called \textsb{Lagrangian}\index{function!Lagrangian}\index{Lagrangian function} or \textsb{Eulerian}\index{function!Eulerian}\index{Eulerian function} respectively.     
+Moreover, concerning the elements of the domains represented in the figure, we say that a material particle $\text{x}\in\mathfrak{B}$, represented by the \textsb{material point}\index{point!material} $\overline{x}=\fua{\overline{\chi}}{\text{x}}$ or by the \textsb{material vector}\index{vector!material} $\vto{\overline{x}}:=\fua{\upsilon_o\circ\overline{\chi}}{\text{x}}$, occupies the \textsb{spatial place}\index{spatial place} $x:=\fua{\chi_t}{\text{x}}$ or $\vto{x}=\fua{\upsilon_o\circ\chi_t}{\text{x}}$. In order to simplify our study, since deformation was defined as a vector function, we shall mostly use vectors to denote body and shape elements. In this context, when a vector function is defined on a material domain $\tnr{\overline{\mathcal{B}}}$ or on a spatial domain $\tnr{\mathcal{B}}_t$, it is called \textsb{Lagrangian}\index{function!Lagrangian}\index{Lagrangian function} or \textsb{Eulerian}\index{function!Eulerian}\index{Eulerian function} respectively. 
 
 Considering the previous regularity conditions and an open set $\pmb{\mathcal{W}}\subset\tnr{\overline{\mathcal{B}}}$, the local sensitivity of $\tnr{\chi}_t$ measured by the vector function in $\map{\nabla\tnr{\chi}_t}{\pmb{\mathcal{W}}}{\ete{\real}{U^{2}}}$, called \textsb{deformation gradient}\index{deformation!gradient}, has fundamental importance in Continuum Kinematics because it bases the concept of strain. Given an arbitrary reference point $\overline{\vto{u}}\in\pmb{\mathcal{W}}$, the second order tensor $\gloref{defGrad}\in\ete{\real}{U^2}$ is said to be the deformation gradient at $\overline{\vto{u}}$ and then, from equality \eqref{eq:gradFuncRep}, we have scalar
 \begin{equation}
@@ -235,19 +235,27 @@ $2$ & $\tnr{U}^{-1}_{\overline{\vto{u}}}$ & $\tnr{E}_{\tnr{U}^{-1}_{\overline{\v
 \captionof{table}{Examples of Doyle-Ericksen Tensors.}\label{tb:strains}
 \end{table}
 
-Now, in order to describe mathematically the context of small deformations, we need first to define a bijective Lagrangian mapping $\map{\tnr{\mathit{u}}_t}{\tnr{\overline{\mathcal{B}}}}{U_\real}$ whose function, described by 
+Now, in order to describe mathematically the context of small deformations cited above, we need first to define a bijective Lagrangian mapping $\map{\tnr{\mathit{u}}_t}{\tnr{\overline{\mathcal{B}}}}{U_\real}$ where 
 \begin{equation}
- \fua{\tnr{\mathit{u}}_t}{\overline{\vto{x}}}=\fua{\tnr{\varphi}_t}{\overline{\vto{x}}} - \overline{\vto{x}}\,,
+ \fua{\tnr{\mathit{u}}_t}{\overline{\vto{x}}}=\fua{\tnr{\varphi}_t}{\overline{\vto{x}}} - \overline{\vto{x}}\,.
  \end{equation} 
- is called \textsb{displacement function}\index{displacement} from which vector $\fua{\tnr{\mathit{u}}_t}{\overline{\vto{u}}}$ is said to be the \textsb{displacement vector}\index{vector!displacement} of an arbitrary material point $\overline{\vto{u}}$ at instant $t$. If From the previous rule, it is straightforward to obtain the \textsb{displacement gradient}\index{gradient!displacement}       
+ The function $\tnr{\mathit{u}}_t$ is called \textsb{displacement function}\index{displacement} whose value $\fua{\tnr{\mathit{u}}_t}{\overline{\vto{u}}}$ is said to be the \textsb{displacement vector}\index{vector!displacement} of an arbitrary material point $\overline{\vto{u}}$ at instant $t$. From the previous rule, it is straightforward to obtain the \textsb{displacement gradient}\index{gradient!displacement}       
 \begin{equation}
 \fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}=\tnr{F}_{\overline{\vto{u}}}^{\text{T}} - \tnr{I}\,,
 \end{equation} 
-and then, choosing the Green-St Venant tensor as measure of strain, we arrive at
-\begin{equation}
- \tnr{E}=(\fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}\odot_1\fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}^{\text{T}}+\fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}+\fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}^{\text{T}})/2\,,
+and then, as a consequence, 
+\begin{equation} 
+\begin{aligned} 
+\tnr{C}_{\overline{\vto{u}}}&=\fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}\odot_1\fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}^{\text{T}}+\fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}+\fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}^{\text{T}}+\tnr{I}\,,\\
+\tnr{B}_{\overline{\vto{u}}}&=\fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}^{\text{T}}\odot_1\fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}+\fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}+\fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}^{\text{T}}+\tnr{I}\,,
+\end{aligned}
 \end{equation}
-where the term $\fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}\odot_1\fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}^{\text{T}}$ is nonlinear. For the case near rigid deformation, or of \textsb{small deformation}\index{deformation!small}, where scalar $\|\fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}\|\ll 1$, the previous nonlinear term becomes negligible, that is $\|\fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}\odot_1\fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}^{\text{T}}\|\approx 0$, and then tensor
+where the terms $\fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}\odot_1\fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}^{\text{T}}$ and $\fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}^{\text{T}}\odot_1\fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}$ are nonlinear. For the case near rigid deformation, or of \textsb{small deformation}\index{deformation!small}, where scalar $\|\fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}\|\ll 1$, the previous nonlinear terms become negligible and then it is valid to state that $\tnr{C}_{\overline{\vto{u}}}=\tnr{B}_{\overline{\vto{u}}}$.
+
+
+
+
+  tensor
 \begin{equation}
  \tnr{\epsilon}:=(\fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}+\fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}^{\text{T}})/2\,,
 \end{equation}
@@ -257,3 +265,8 @@ called \textsb{infinitesimal strain tensor}, becomes a valid Lagrangian linear m
 
 
 
+
+
+\begin{equation}
+ \tnr{E}=(\fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}\odot_1\fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}^{\text{T}}+\fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}+\fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}^{\text{T}})/2\,,
+\end{equation}
