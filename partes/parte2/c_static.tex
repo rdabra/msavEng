@@ -45,11 +45,7 @@ From this figure, it is possible to conclude that if both configurations $\overl
 \end{equation}
 Moreover, concerning the elements of the domains represented in the figure, we say that a material particle $\text{x}\in\mathfrak{B}$, represented by the \textsb{material point}\index{point!material} $\overline{x}=\fua{\overline{\chi}}{\text{x}}$ or by the \textsb{material vector}\index{vector!material} $\vto{\overline{x}}:=\fua{\upsilon_o\circ\overline{\chi}}{\text{x}}$, occupies the \textsb{spatial place}\index{spatial place} $x:=\fua{\chi_t}{\text{x}}$ or $\vto{x}=\fua{\upsilon_o\circ\chi_t}{\text{x}}$. In order to simplify our study, since deformation was defined as a vector function, we shall mostly use vectors to denote body and shape elements. In this context, when a vector function is defined on a material domain $\tnr{\overline{\mathcal{B}}}$ or on a spatial domain $\tnr{\mathcal{B}}_t$, it is called \textsb{Lagrangian}\index{function!Lagrangian}\index{Lagrangian function} or \textsb{Eulerian}\index{function!Eulerian}\index{Eulerian function} respectively. 
 
-Considering the previous regularity conditions and an open set $\pmb{\mathcal{W}}\subset\tnr{\overline{\mathcal{B}}}$, the local sensitivity of $\tnr{\chi}_t$ measured by the vector function in $\map{\nabla\tnr{\chi}_t}{\pmb{\mathcal{W}}}{\ete{\real}{U^{2}}}$, called \textsb{deformation gradient}\index{deformation!gradient}, has fundamental importance in Continuum Kinematics because it bases the concept of strain. Given an arbitrary reference point $\overline{\vto{u}}\in\pmb{\mathcal{W}}$, the second order tensor $\gloref{defGrad}\in\ete{\real}{U^2}$ is said to be the deformation gradient at $\overline{\vto{u}}$ and then, from equality \eqref{eq:gradFuncRep}, we have scalar
-\begin{equation}
-[\fua{\nabla\tnr{\chi}_t}{\overline{\vto{u}}}](\overline{\vto{x}},\overline{\vto{y}})=\overline{\vto{x}}\cdot\fua{{\tnr{\chi}'_t}_{\overline{\vto{u}}}}{\overline{\vto{y}}}\,,\,\,\forall\, \overline{\vto{x}},\overline{\vto{y}}\in\pmb{\mathcal{W}}\,.
-\end{equation}
-Now, at reference instant $t=\overline{t}$, we know that $\tnr{\chi}_{\overline{t}}(\overline{\vto{x}})=\tnr{i}_{\tnr{\overline{\mathcal{B}}}}(\overline{\vto{x}})+\fua{\vtf{c}}{\overline{\vto{x}}}$ and therefore, from a basic property of directional derivatives, equality ${\tnr{\chi}'_{\overline{t}} }_{\overline{\vto{u}}}=\tnr{i}_{\tnr{\overline{\mathcal{B}}}}$ holds. But since ${\tnr{\chi}'_{\overline{t}} }_{\overline{\vto{u}}}$ is the representative function of second order Euclidean tensor $\fua{\nabla\tnr{\chi}_{\overline{t}}}{\overline{\vto{u}}}$, from \eqref{eq:det3D} we conclude that the infinitesimal or local volume change $\textnormal{Det}[\fua{\nabla\tnr{\chi}_{\overline{t}}}{\overline{\vto{u}}}]=1$. Moreover, since deformation $\tnr{\chi}_{t}$ is a diffeomorphism by definition, the property relative to equality \eqref{eq:indentDiffeo} is valid and then $\textnormal{Det}[\fua{\nabla\tnr{\chi}_{t}}{\overline{\vto{u}}}]\neq 0$ because $\fua{\nabla\tnr{\chi}_{t}}{\overline{\vto{u}}}\neq \tnr{0}$. Therefore, considering $\tnr{\overline{\mathcal{B}}}$ the initial undeformed shape of a given body motion, we can state that the local volume change       
+Considering the previous regularity conditions and an open set $\pmb{\mathcal{W}}\subset\tnr{\overline{\mathcal{B}}}$, the local sensitivity of $\tnr{\chi}_t$ measured by the vector function in $\map{\nabla\tnr{\chi}_t}{\pmb{\mathcal{W}}}{\ete{\real}{U^{2}}}$, called \textsb{deformation gradient}\index{deformation!gradient}, has fundamental importance in Continuum Kinematics because it bases the concept of strain. Now, at reference instant $t=\overline{t}$, we know that $\tnr{\chi}_{\overline{t}}(\overline{\vto{x}})=\tnr{i}_{\tnr{\overline{\mathcal{B}}}}(\overline{\vto{x}})+\fua{\vtf{c}}{\overline{\vto{x}}}$ and therefore, from a basic property of directional derivatives, equality ${\tnr{\chi}'_{\overline{t}} }_{\overline{\vto{u}}}=\tnr{i}_{\tnr{\overline{\mathcal{B}}}}$ holds. But since ${\tnr{\chi}'_{\overline{t}} }_{\overline{\vto{u}}}$ is the representative function of second order Euclidean tensor $\fua{\nabla\tnr{\chi}_{\overline{t}}}{\overline{\vto{u}}}$, from \eqref{eq:det3D} we conclude that the infinitesimal or local volume change $\textnormal{Det}[\fua{\nabla\tnr{\chi}_{\overline{t}}}{\overline{\vto{u}}}]=1$. Moreover, since deformation $\tnr{\chi}_{t}$ is a diffeomorphism by definition, the property relative to equality \eqref{eq:indentDiffeo} is valid and then $\textnormal{Det}[\fua{\nabla\tnr{\chi}_{t}}{\overline{\vto{u}}}]\neq 0$ because $\fua{\nabla\tnr{\chi}_{t}}{\overline{\vto{u}}}\neq \tnr{0}$. Therefore, considering $\tnr{\overline{\mathcal{B}}}$ the initial undeformed shape of a given body motion, we can state that the local volume change       
 \begin{equation}\label{eq:detPositive}
 \textnormal{Det}[\fua{\nabla\tnr{\chi}_t}{\overline{\vto{u}}}]>0\,,
 \end{equation}
@@ -76,7 +72,7 @@ where $\tnr{V}_{\overline{\vto{u}}}$ and $\tnr{U}_{\overline{\vto{u}}}$, usually
 \begin{alignat}{3} 
 \tnr{B}_{\overline{\vto{u}}}:=\tnr{V}_{\overline{\vto{u}}}^2&\qquad \text{and}\qquad & \tnr{C}_{\overline{\vto{u}}}:=\tnr{U}_{\overline{\vto{u}}}^2\,,
 \end{alignat}
-known as the \textsb{left}\index{tensor!left Cauchy-Green} and \textsb{right Cauchy-Green deformation tensors}\index{tensor!right Cauchy-Green}, represented by operators $\vtf{s}_2$ and $\vtf{s}_1$ respectively, according to \eqref{eq:compoFuncRepFunc}, whose stretch coefficients are $\lambda_1^2,\lambda_2^2,\lambda_3^2$. In terms of the affine deformation gradient,
+known as the \textsb{left}\index{tensor!left Cauchy-Green} and \textsb{right Cauchy-Green deformation tensors}\index{tensor!right Cauchy-Green}, represented by operators $\vtf{s}_2$ and $\vtf{s}_1$ respectively, according to \eqref{eq:compoFuncRepFunc}, whose stretch coefficients are $\lambda_1^2,\lambda_2^2,\lambda_3^2$. Since $\vtf{s}_2^{-1}$ and $\vtf{s}_1$ are respectively Eulerian and Lagrangian, their represented tensors $\tnr{B}_{\overline{\vto{u}}}^{-1}$ and $\tnr{C}_{\overline{\vto{u}}}$ are also called  Eulerian and Lagrangian. In terms of the affine deformation gradient,
 \begin{alignat}{3}\label{eq:CauchyGreenGradDef}
 \tnr{B}_{\overline{\vto{u}}}=\tnr{F}_{\overline{\vto{u}}}\odot_1\tnr{F}_{\overline{\vto{u}}}^\text{T}&\qquad \text{and}\qquad & \tnr{C}_{\overline{\vto{u}}}=\tnr{F}_{\overline{\vto{u}}}^\text{T}\odot_1\tnr{F}_{\overline{\vto{u}}}\,.
 \end{alignat}
@@ -187,7 +183,7 @@ usually called the \textsb{Doyle-Ericksen extension}\index{Doyle-Ericksen extens
 \begin{equation}
 \tnr{E}_{\tnr{S}}^{(k)}:=\dfrac{1}{k}(\tnr{S}^k-\tnr{I})
 \end{equation}
-where tensor $\tnr{S}$ is a positive-definite symmetric tensor equal to or defined from the stretch tensors. Professor \aut{Hill}\cite{hill_1968_1} generalized the proposition of \aut{Seth}\cite{seth_1961} even further by defining an extension $\fua{f}{\lambda_i}$, where mapping $\map{f}{\real^+_*}{\real}$ is smooth and monotonically increasing, that is, $\fua{f'}{x}>0$ for all $x>0$. Moreover, function $f$ must obviously observe $\fua{f}{1}=0$ and, in order to make all strain measures equivalent when sufficiently near the rigid deformation, a context called small deformations, he imposed $\fua{f'}{1}=1$.
+where tensor $\tnr{S}$ is a positive-definite symmetric tensor equal to or defined from the stretch tensors. Professor \aut{Hill}\cite{hill_1968_1} generalized the proposition of \aut{Seth}\cite{seth_1961} even further by defining an extension $\fua{f}{\lambda_i}$, where mapping $\map{f}{\real^+_*}{\real}$ is smooth and monotonically increasing, that is, $\fua{f'}{x}>0$ for all $x>0$. Moreover, function $f$ must obviously observe $\fua{f}{1}=0$ and, in order to make all strain measures equivalent in deformations almost rigid or small, he imposed $\fua{f'}{1}=1$.
 
 \begin{table}[!htt]
 \small
@@ -200,10 +196,6 @@ where tensor $\tnr{S}$ is a positive-definite symmetric tensor equal to or defin
 \hline
 & & & \\
 -2 & $\tnr{V}_{\overline{\vto{u}}}$   & $\tnr{E}_{\tnr{V}_{\overline{\vto{u}}}}^{(-2)}=\tnr{e}=(\tnr{I} - \tnr{B}^{-1}_{\overline{\vto{u}}})/2$   & Almansi\\
-& & & \\
-\hline
-& & & \\
--2 & $\tnr{U}_{\overline{\vto{u}}}$  & $\tnr{E}_{\tnr{U}_{\overline{\vto{u}}}}^{(-2)}=(\tnr{I} - \tnr{C}^{-1}_{\overline{\vto{u}}})/2$   & Lagrangian-Almansi\index{strain!Lagrangian-Almansi} \\
 & & & \\
 \hline
 & & & \\
@@ -235,7 +227,7 @@ $2$ & $\tnr{U}^{-1}_{\overline{\vto{u}}}$ & $\tnr{E}_{\tnr{U}^{-1}_{\overline{\v
 \captionof{table}{Examples of Doyle-Ericksen Tensors.}\label{tb:strains}
 \end{table}
 
-Now, in order to describe mathematically the context of small deformations cited above, we need first to define a bijective Lagrangian mapping $\map{\tnr{\mathit{u}}_t}{\tnr{\overline{\mathcal{B}}}}{U_\real}$ where 
+Now, in order to describe mathematically the context of \textsb{small deformations}\index{deformations!small} cited above, we need first to define a bijective Lagrangian mapping $\map{\tnr{\mathit{u}}_t}{\tnr{\overline{\mathcal{B}}}}{U_\real}$ where 
 \begin{equation}
  \fua{\tnr{\mathit{u}}_t}{\overline{\vto{x}}}=\fua{\tnr{\varphi}_t}{\overline{\vto{x}}} - \overline{\vto{x}}\,.
  \end{equation} 
@@ -243,30 +235,17 @@ Now, in order to describe mathematically the context of small deformations cited
 \begin{equation}
 \fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}=\tnr{F}_{\overline{\vto{u}}}^{\text{T}} - \tnr{I}\,,
 \end{equation} 
-and then, as a consequence, 
+and then, as a consequence, tensor
 \begin{equation} 
-\begin{aligned} 
-\tnr{C}_{\overline{\vto{u}}}&=\fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}\odot_1\fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}^{\text{T}}+\fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}+\fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}^{\text{T}}+\tnr{I}\,,\\
-\tnr{B}_{\overline{\vto{u}}}&=\fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}^{\text{T}}\odot_1\fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}+\fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}+\fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}^{\text{T}}+\tnr{I}\,,
-\end{aligned}
+\tnr{C}_{\overline{\vto{u}}}=\fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}\odot_1\fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}^{\text{T}}+\fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}+\fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}^{\text{T}}+\tnr{I}
 \end{equation}
-where the terms $\fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}\odot_1\fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}^{\text{T}}$ and $\fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}^{\text{T}}\odot_1\fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}$ are nonlinear. For the case near rigid deformation, or of \textsb{small deformation}\index{deformation!small}, where scalar $\|\fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}\|\ll 1$, the previous nonlinear terms become negligible and then it is valid to state that $\tnr{C}_{\overline{\vto{u}}}=\tnr{B}_{\overline{\vto{u}}}$.
-
-
-
-
-  tensor
+and
+\begin{equation} 
+\tnr{B}_{\overline{\vto{u}}}=\fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}^{\text{T}}\odot_1\fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}+\fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}+\fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}^{\text{T}}+\tnr{I}\,.
+\end{equation}
+A deformation is called small when $\|\fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}\|=\|\tnr{F}_{\overline{\vto{u}}}^{\text{T}} - \tnr{I}\|\ll 1$, which leads to $\tnr{F}_{\overline{\vto{u}}}\approx\tnr{I}$ and, since both nonlinear terms $\fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}\odot_1\fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}^{\text{T}}$ and $\fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}^{\text{T}}\odot_1\fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}$ are almost zero in this context, deformation tensor $\tnr{C}_{\overline{\vto{u}}}\approx\tnr{B}_{\overline{\vto{u}}}$. Moreover, if no translation is present, the reference shape  $\tnr{\overline{\mathcal{B}}}\approx\tnr{\mathcal{B}}_t$. Taking all these approximations to the limit,  we can define that the shape $\tnr{\overline{\mathcal{B}}}$ is where small deformations take place and tensor 
 \begin{equation}
- \tnr{\epsilon}:=(\fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}+\fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}^{\text{T}})/2\,,
+ \tnr{\epsilon}:=(\fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}+\fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}^{\text{T}})/2
 \end{equation}
-called \textsb{infinitesimal strain tensor}, becomes a valid Lagrangian linear measure of strain.
+is their strain measure, called \textsb{infinitesimal strain tensor}.
 
-
-
-
-
-
-
-\begin{equation}
- \tnr{E}=(\fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}\odot_1\fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}^{\text{T}}+\fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}+\fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}^{\text{T}})/2\,,
-\end{equation}
