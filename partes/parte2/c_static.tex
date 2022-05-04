@@ -46,7 +46,7 @@ From this figure, it is possible to conclude that if both configurations $\overl
 Moreover, concerning the elements of the domains represented in the figure, we say that a material particle $\text{x}\in\mathfrak{B}$, represented by the \textsb{material point}\index{point!material} $\overline{x}=\fua{\overline{\chi}}{\text{x}}$ or by the \textsb{material vector}\index{vector!material} $\vto{\overline{x}}:=\fua{\upsilon_o\circ\overline{\chi}}{\text{x}}$, occupies the \textsb{spatial place}\index{spatial place} $x:=\fua{\chi_t}{\text{x}}$ or $\vto{x}=\fua{\upsilon_o\circ\chi_t}{\text{x}}$. In order to simplify our study, since deformation was defined as a vector function, we shall mostly use vectors to denote body and shape elements. In this context, when a vector function is defined on a material domain $\tnr{\overline{\mathcal{B}}}$ or on a spatial domain $\tnr{\mathcal{B}}_t$, it is called \textsb{Lagrangian}\index{function!Lagrangian}\index{Lagrangian function} or \textsb{Eulerian}\index{function!Eulerian}\index{Eulerian function} respectively. 
 
 Considering the previous regularity conditions and an open set $\pmb{\mathcal{W}}\subset\tnr{\overline{\mathcal{B}}}$, the local sensitivity of $\tnr{\chi}_t$ measured by the vector function in $\map{\nabla\tnr{\chi}_t}{\pmb{\mathcal{W}}}{\ete{\real}{U^{2}}}$, called \textsb{deformation gradient}\index{deformation!gradient}, has fundamental importance in Continuum Kinematics because it bases the concept of strain. Since deformation $\tnr{\chi}_t$ is a diffeomorphism, we can recall property \eqref{eq:gradDiffeo2} and conclude equality
-\begin{equation}
+\begin{equation}\label{eq:invGradDef}
 \fua{\nabla\tnr{\chi}_t^{-1}}{\vto{x}} = \fua{\nabla\tnr{\chi}_t}{\overline{\vto{x}}}^{-1}\,.
 \end{equation}
 Now, at reference instant $t=\overline{t}$, we know that $\tnr{\chi}_{\overline{t}}(\overline{\vto{x}})=\tnr{i}_{\tnr{\overline{\mathcal{B}}}}(\overline{\vto{x}})+\fua{\vtf{c}}{\overline{\vto{x}}}$ and therefore, from a basic property of directional derivatives, equality ${\tnr{\chi}'_{\overline{t}} }_{\overline{\vto{u}}}=\tnr{i}_{\tnr{\overline{\mathcal{B}}}}$ holds. But since ${\tnr{\chi}'_{\overline{t}} }_{\overline{\vto{u}}}$ is the representative function of second order Euclidean tensor $\fua{\nabla\tnr{\chi}_{\overline{t}}}{\overline{\vto{u}}}$, from \eqref{eq:det3D} we conclude that the infinitesimal or local volume change $\textnormal{Det}[\fua{\nabla\tnr{\chi}_{\overline{t}}}{\overline{\vto{u}}}]=1$. Moreover, since deformation $\tnr{\chi}_{t}$ is a diffeomorphism by definition, the property relative to equality \eqref{eq:indentDiffeo} is valid and then $\textnormal{Det}[\fua{\nabla\tnr{\chi}_{t}}{\overline{\vto{u}}}]\neq 0$ because $\fua{\nabla\tnr{\chi}_{t}}{\overline{\vto{u}}}\neq \tnr{0}$. Therefore, considering $\tnr{\overline{\mathcal{B}}}$ the initial undeformed shape of a given body motion, we can state that the local volume change       
@@ -64,7 +64,11 @@ Recalling affinities and their related concepts presented in section \ref{sec:af
 \begin{equation}\label{eq:affDeform}
 \fua{\tnr{\varphi}_t}{\overline{\vto{x}}} =[\tnr{F}_{\overline{\vto{x}}}\,\hat{\odot}_1\,\overline{\vto{x}}^*] + \vto{c}\,, 
 \end{equation}
-where affinity tensor $\tnr{F}_{\overline{\vto{x}}}:=\fua{\nabla\tnr{\varphi}_t}{\overline{\vto{x}}}^\text{T}$ is called the \textsb{affine deformation gradient} of $\tnr{\varphi}_t$ and $\vto{c}\in U_\real$ is a constant vector. Therefore, if $\tnr{F}_{\overline{\vto{x}}}$ is the identity tensor $\tnr{I}\in\ete{\real}{U^{2}}$ or a stretch tensor for all $\overline{\vto{x}}\in\tnr{\overline{\mathcal{B}}}$, then affine deformation $\tnr{\varphi}_t$ is a vector translation or a centered vector dilation respectively, according to \eqref{eq:transltVec} and \eqref{eq:dilatVec}. It is important to observe that an affine deformation can be decomposed in a rotodilation, according to theorem \ref{teo:rotoDilaF} and corollary \ref{cor:rotoDilaT}, in such a way that 
+where affinity tensor 
+\begin{equation}
+\tnr{F}_{\overline{\vto{x}}}:=\fua{\nabla\tnr{\varphi}_t}{\overline{\vto{x}}}^\text{T}
+\end{equation}
+is called the \textsb{affine deformation gradient} of $\tnr{\varphi}_t$ and $\vto{c}\in U_\real$ is a constant vector. Therefore, if $\tnr{F}_{\overline{\vto{x}}}$ is the identity tensor $\tnr{I}\in\ete{\real}{U^{2}}$ or a stretch tensor for all $\overline{\vto{x}}\in\tnr{\overline{\mathcal{B}}}$, then affine deformation $\tnr{\varphi}_t$ is a vector translation or a centered vector dilation respectively, according to \eqref{eq:transltVec} and \eqref{eq:dilatVec}. It is important to observe that an affine deformation can be decomposed in a rotodilation, according to theorem \ref{teo:rotoDilaF} and corollary \ref{cor:rotoDilaT}, in such a way that 
 \begin{equation}\label{eq:decompDefGrad}
 \tnr{\varphi}_t = \tnr{\mathit{s}}_2\circ\tnr{\mathit{r}}_{\vto{c}} = \tnr{\mathit{r}}_{\vto{c}}\circ\tnr{\mathit{s}}_1
 \end{equation}
@@ -219,11 +223,11 @@ $1$ &  $\tnr{U}_{\overline{\vto{u}}}$ &$\tnr{E}_{\tnr{U}_{\overline{\vto{u}}}}^{
 & & &\\
 \hline
 & & & \\
-$2$ & $\tnr{U}_{\overline{\vto{u}}}$ & $\tnr{E}_{\tnr{U}_{\overline{\vto{u}}}}^{(2)}=\tnr{E}=(\tnr{C}_{\overline{\vto{u}}}-\tnr{I})/2$ & Green-St Venant\\
-& & & \\
+$2$ & $\tnr{U}^{-1}_{\overline{\vto{u}}}$ & $\tnr{E}_{\tnr{U}^{-1}_{\overline{\vto{u}}}}^{(2)}=(\tnr{C}^{-1}_{\overline{\vto{u}}}-\tnr{I})/2$ & Piola\index{strain!Piola} \\
+& & &\\
 \hline
 & & &\\
-$2$ & $\tnr{U}^{-1}_{\overline{\vto{u}}}$ & $\tnr{E}_{\tnr{U}^{-1}_{\overline{\vto{u}}}}^{(2)}=(\tnr{C}^{-1}_{\overline{\vto{u}}}-\tnr{I})/2$ & Piola\index{strain!Piola} \\
+$2$ & $\tnr{U}_{\overline{\vto{u}}}$ & $\tnr{E}_{\tnr{U}_{\overline{\vto{u}}}}^{(2)}=\tnr{E}=(\tnr{C}_{\overline{\vto{u}}}-\tnr{I})/2$ & Green-St Venant\\
 & & & \\
 \hline
 \end{tabular}
@@ -235,21 +239,37 @@ Now, in order to describe mathematically the context of \textsb{small deformatio
 \begin{equation}
  \fua{\tnr{\mathit{u}}_t}{\overline{\vto{x}}}=\fua{\tnr{\varphi}_t}{\overline{\vto{x}}} - \overline{\vto{x}}\,.
  \end{equation} 
- The function $\tnr{\mathit{u}}_t$ is called \textsb{displacement function}\index{displacement} whose value $\fua{\tnr{\mathit{u}}_t}{\overline{\vto{u}}}$ is said to be the \textsb{displacement vector}\index{vector!displacement} of an arbitrary material point $\overline{\vto{u}}$ at instant $t$. From the previous rule, it is straightforward to obtain the \textsb{displacement gradient}\index{gradient!displacement}       
-\begin{equation}
+ The function $\tnr{\mathit{u}}_t$ is called \textsb{displacement function}\index{displacement} whose value $\fua{\tnr{\mathit{u}}_t}{\overline{\vto{u}}}$ is said to be the \textsb{displacement vector}\index{vector!displacement} of an arbitrary material point $\overline{\vto{u}}$ at instant $t$. From the previous rule, it is straightforward to obtain that tensor       
+\begin{equation}\label{eq:gradDispla}
 \fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}=\tnr{F}_{\overline{\vto{u}}}^{\text{T}} - \tnr{I}\,,
 \end{equation} 
-and then, as a consequence, tensor
-\begin{equation} 
-\tnr{C}_{\overline{\vto{u}}}=\fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}\odot_1\fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}^{\text{T}}+\fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}+\fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}^{\text{T}}+\tnr{I}
+called the \textsb{displacement gradient}\index{gradient!displacement} of point $\overline{\vto{u}}$ at instant $t$. Thereby, the rule of the inverse of the displacement function and its corresponding gradient are respectively
+\begin{alignat}{3} \label{eq:invDisplace}
+\fua{\tnr{\mathit{u}}_t^{-1}}{\vto{x}}=\vto{x}-\fua{\tnr{\varphi}_t^{-1}}{\vto{x}}&\qquad \text{and}\qquad & \fua{\nabla\tnr{\mathit{u}}_t^{-1}}{\vto{u}}=\tnr{I}-\tnr{F}_{\overline{\vto{u}}}^{-\text{T}}\,.
+\end{alignat}
+As a consequence, the following equalities can be obtained:
+\begin{equation}
+\begin{aligned} 
+\tnr{C}_{\overline{\vto{u}}}&=\fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}\odot_1\fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}^{\text{T}}+\fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}+\fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}^{\text{T}}+\tnr{I}\\
+\tnr{B}_{\overline{\vto{u}}}&=\fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}^{\text{T}}\odot_1\fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}+\fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}+\fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}^{\text{T}}+\tnr{I}\\
+\tnr{C}_{\overline{\vto{u}}}^{-1}&=\fua{\nabla\tnr{\mathit{u}}_t^{-1}}{\vto{u}}^\text{T}\odot_1\fua{\nabla\tnr{\mathit{u}}_t^{-1}}{\vto{u}}-\fua{\nabla\tnr{\mathit{u}}_t^{-1}}{\vto{u}}-\fua{\nabla\tnr{\mathit{u}}_t^{-1}}{\vto{u}}^{\text{T}}+\tnr{I}\\
+\tnr{B}_{\overline{\vto{u}}}^{-1}&=\fua{\nabla\tnr{\mathit{u}}_t^{-1}}{\vto{u}}\odot_1\fua{\nabla\tnr{\mathit{u}}_t^{-1}}{\vto{u}}^\text{T}-\fua{\nabla\tnr{\mathit{u}}_t^{-1}}{\vto{u}}-\fua{\nabla\tnr{\mathit{u}}_t^{-1}}{\vto{u}}^{\text{T}}+\tnr{I}\,.
+\end{aligned}
 \end{equation}
-and
-\begin{equation} 
-\tnr{B}_{\overline{\vto{u}}}=\fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}^{\text{T}}\odot_1\fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}+\fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}+\fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}^{\text{T}}+\tnr{I}\,.
-\end{equation}
-A deformation is called small when $\|\fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}\|=\|\tnr{F}_{\overline{\vto{u}}}^{\text{T}} - \tnr{I}\|\ll 1$, which leads to $\tnr{F}_{\overline{\vto{u}}}\approx\tnr{I}$ and, since both nonlinear terms $\fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}\odot_1\fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}^{\text{T}}$ and $\fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}^{\text{T}}\odot_1\fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}$ are almost zero in this context, deformation tensor $\tnr{C}_{\overline{\vto{u}}}\approx\tnr{B}_{\overline{\vto{u}}}$. Moreover, by disregarding translations in rule \eqref{eq:affDeform}, which means defining a deformation $\hat{\tnr{\varphi}}_t$ where $\fua{\hat{\tnr{\varphi}}_t}{\overline{\vto{x}}}=\fua{\tnr{\varphi}_t}{\overline{\vto{x}}}-\vto{c}$, the reference shape  $\tnr{\overline{\mathcal{B}}}\approx\tnr{\mathcal{B}}_t$. Considering these approximations as equalities, we can defined that $\tnr{\overline{\mathcal{B}}}$ is the shape where small deformations take place and tensor 
+
+{\footnotesize
+\begin{proof}
+First, we verify the second expression of \eqref{eq:invDisplace} from the definition of affine deformation gradient and equality \eqref{eq:invGradDef}, from which we conclude that $\tnr{F}_{\overline{\vto{u}}}^{\text{-T}}=\fua{\nabla\tnr{\varphi}_t^{-1}}{\vto{u}}$. Now, considering \eqref{eq:CauchyGreenGradDef}, proof of the above equalities is trivial by isolating $\tnr{F}_{\overline{\vto{u}}}^{\text{T}}$, $\tnr{F}_{\overline{\vto{u}}}^{-1}$ and $\tnr{F}_{\overline{\vto{u}}}^{-\text{T}}$ in \eqref{eq:gradDispla} and \eqref{eq:invDisplace}.
+\end{proof}
+}
+
+\noindent A deformation is called small when $\|\fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}\|=\|\tnr{F}_{\overline{\vto{u}}}^{\text{T}} - \tnr{I}\|\ll 1$, which leads to $\tnr{F}_{\overline{\vto{u}}}\approx\tnr{I}$ and then, from \eqref{eq:invDisplace}, we can conclude that $\fua{\nabla\tnr{\mathit{u}}_t^{-1}}{\vto{u}}\approx\fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}$. Moreover, concerning the equalities above, the four nonlinear terms involving partial inner products of two small displacement gradients become negligible, from which equality $\tnr{C}_{\overline{\vto{u}}}=\tnr{B}_{\overline{\vto{u}}}$ can be considered valid. But since $\fua{\nabla\tnr{\mathit{u}}_t^{-1}}{\vto{u}}\approx\fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}$, we can also conclude that  $\tnr{C}_{\overline{\vto{u}}}\approx\tnr{C}_{\overline{\vto{u}}}^{-1}$ and $\tnr{B}_{\overline{\vto{u}}}\approx\tnr{B}_{\overline{\vto{u}}}^{-1}$. Therefore, concerning the Doyle-Ericksen tensors of table \ref{tb:strains}, we have
+\begin{equation*}
+\tnr{E} \approx \tnr{e} \approx  \tnr{E}_{\tnr{U}^{-1}_{\overline{\vto{u}}}}^{(2)} \approx \tnr{E}_{\tnr{V}_{\overline{\vto{u}}}}^{(-2)}
+\end{equation*}
+in the context of small deformations. Another consequence of $\tnr{F}_{\overline{\vto{u}}}\approx\tnr{I}$ is that the shape $\tnr{\overline{\mathcal{B}}}\approx\tnr{\mathcal{B}}_t$ if translations are disregarded or simply not present in the affine deformation rule. Therefore, we can assume that $\tnr{\overline{\mathcal{B}}}$ is the locus where small deformations take place and tensor 
 \begin{equation}
  \tnr{\epsilon}:=(\fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}+\fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}^{\text{T}})/2
 \end{equation}
-is their strain measure, called \textsb{infinitesimal strain tensor}.
+is their strain measure, called \textsb{infinitesimal strain tensor}, which is clearly taken from the Green-St Venant tensor written in terms of displacement gradients after neglecting the nonlinear term. 
 
