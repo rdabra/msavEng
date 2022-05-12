@@ -235,7 +235,7 @@ $2$ & $\tnr{U}_{\overline{\vto{u}}}$ & $\tnr{E}_{\tnr{U}_{\overline{\vto{u}}}}^{
 \captionof{table}{Examples of Doyle-Ericksen Tensors.}\label{tb:strains}
 \end{table}
 
-Now, in order to describe mathematically the context of \textsb{small deformations}\index{deformations!small} cited above, we need first to define a bijective Lagrangian mapping $\map{\tnr{\mathit{u}}_t}{\tnr{\overline{\mathcal{B}}}}{U_\real}$ where 
+Now, in order to describe mathematically the context of \textsb{small or infinitesimal deformations}\index{deformations!small} cited above, we need first to define a bijective Lagrangian mapping $\map{\tnr{\mathit{u}}_t}{\tnr{\overline{\mathcal{B}}}}{U_\real}$ where 
 \begin{equation}
  \fua{\tnr{\mathit{u}}_t}{\overline{\vto{x}}}=\fua{\tnr{\varphi}_t}{\overline{\vto{x}}} - \overline{\vto{x}}\,.
  \end{equation} 
@@ -250,9 +250,9 @@ called the \textsb{displacement gradient}\index{gradient!displacement} of point 
 As a consequence, the following equalities can be obtained:
 \begin{equation}
 \begin{aligned} 
-\tnr{C}_{\overline{\vto{u}}}&=\fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}\odot_1\fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}^{\text{T}}+\fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}+\fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}^{\text{T}}+\tnr{I}\\
-\tnr{B}_{\overline{\vto{u}}}&=\fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}^{\text{T}}\odot_1\fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}+\fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}+\fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}^{\text{T}}+\tnr{I}\\
-\tnr{C}_{\overline{\vto{u}}}^{-1}&=\fua{\nabla\tnr{\mathit{u}}_t^{-1}}{\vto{u}}^\text{T}\odot_1\fua{\nabla\tnr{\mathit{u}}_t^{-1}}{\vto{u}}-\fua{\nabla\tnr{\mathit{u}}_t^{-1}}{\vto{u}}-\fua{\nabla\tnr{\mathit{u}}_t^{-1}}{\vto{u}}^{\text{T}}+\tnr{I}\\
+\tnr{C}_{\overline{\vto{u}}}&=\fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}\odot_1\fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}^{\text{T}}+\fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}+\fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}^{\text{T}}+\tnr{I}\,;\\
+\tnr{B}_{\overline{\vto{u}}}&=\fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}^{\text{T}}\odot_1\fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}+\fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}+\fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}^{\text{T}}+\tnr{I}\,;\\
+\tnr{C}_{\overline{\vto{u}}}^{-1}&=\fua{\nabla\tnr{\mathit{u}}_t^{-1}}{\vto{u}}^\text{T}\odot_1\fua{\nabla\tnr{\mathit{u}}_t^{-1}}{\vto{u}}-\fua{\nabla\tnr{\mathit{u}}_t^{-1}}{\vto{u}}-\fua{\nabla\tnr{\mathit{u}}_t^{-1}}{\vto{u}}^{\text{T}}+\tnr{I}\,;\\
 \tnr{B}_{\overline{\vto{u}}}^{-1}&=\fua{\nabla\tnr{\mathit{u}}_t^{-1}}{\vto{u}}\odot_1\fua{\nabla\tnr{\mathit{u}}_t^{-1}}{\vto{u}}^\text{T}-\fua{\nabla\tnr{\mathit{u}}_t^{-1}}{\vto{u}}-\fua{\nabla\tnr{\mathit{u}}_t^{-1}}{\vto{u}}^{\text{T}}+\tnr{I}\,.
 \end{aligned}
 \end{equation}
@@ -267,9 +267,8 @@ First, we verify the second expression of \eqref{eq:invDisplace} from the defini
 \begin{equation*}
 \tnr{E} \approx \tnr{e} \approx  \tnr{E}_{\tnr{U}^{-1}_{\overline{\vto{u}}}}^{(2)} \approx \tnr{E}_{\tnr{V}_{\overline{\vto{u}}}}^{(-2)}
 \end{equation*}
-in the context of small deformations. Another consequence of $\tnr{F}_{\overline{\vto{u}}}\approx\tnr{I}$ is that the shape $\tnr{\overline{\mathcal{B}}}\approx\tnr{\mathcal{B}}_t$ if translations are disregarded or simply not present in the affine deformation rule. Therefore, we can assume that $\tnr{\overline{\mathcal{B}}}$ is the locus where small deformations take place and tensor 
+in the context of small deformations. If translations are disregarded or simply not present in the affine deformation rule, another consequence of $\tnr{F}_{\overline{\vto{u}}}\approx\tnr{I}$ is that the shape $\tnr{\overline{\mathcal{B}}}\approx\tnr{\mathcal{B}}_t$. Therefore, we can assume that $\tnr{\overline{\mathcal{B}}}$ is the locus where small deformations take place and tensor 
 \begin{equation}
  \tnr{\epsilon}:=(\fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}+\fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}^{\text{T}})/2
 \end{equation}
-is their strain measure, called \textsb{infinitesimal strain tensor}, which is clearly taken from the Green-St Venant tensor written in terms of displacement gradients after neglecting the nonlinear term. 
-
+is their strain measure, called \textsb{infinitesimal strain tensor}, which is clearly taken from the Green-St Venant tensor written in terms of displacement gradients after neglecting the nonlinear term. In those cases where these nonlinear terms cannot be neglected, that is, cases where small deformations are not valid, the context under study is said to be of \textsb{large or finite deformations}\index{deformations!finite}.
