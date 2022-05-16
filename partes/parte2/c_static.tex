@@ -27,7 +27,11 @@ Concerning the subject of this chapter, the intuitive concepts and definitions i
 \end{equation}
 where $\upsilon_o$ ``vectorizes'' the points of $\mathcal{B}_t$ relative to an origin $o\in\eamd{U}{R}{3}$, according to definition \eqref{eq:funVect}. Since $\upsilon_o$ is a bijection, the sets of vectors $\tnr{\overline{\mathcal{B}}}$ and $\tnr{\mathcal{B}}_t$ will also be called body and shape respectively.
 
-Given the mapping $\map{\tnr{\chi}}{\tnr{\overline{\mathcal{B}}}\times\tempo}{\tnr{\mathcal{B}}_t}$, bijection $\tnr{\chi}$ is called a deformation of $\tnr{\overline{\mathcal{B}}}$ when it is a $\mathcal{C}^{2}$-diffeomorphism that observes $\fua{\tnr{\chi}}{\overline{\vto{x}},\overline{t}}=\overline{\vto{x}}+\vto{c}$, where vector $\vto{c}\in U_\real$ is constant. For most of the forthcoming concepts to be presented, it is convenient to work with an arbitrary instant of time $t\in\tempo$ and a bijective mapping $\map{\gloref{defInst}}{\tnr{\overline{\mathcal{B}}}}{\tnr{\mathcal{B}}_t}$ with rule $\fua{\tnr{\chi}_t}{\overline{\vto{x}}}=\fua{\tnr{\chi}}{\overline{\vto{x}},t}$, from which we conclude that $\tnr{\chi}_t$ is also a $\mathcal{C}^{2}$-diffeomorphism that observes $\tnr{\chi}_{\overline{t}}(\overline{\vto{x}})=\tnr{i}_{\tnr{\overline{\mathcal{B}}}}(\overline{\vto{x}})+\vto{c}$. Given an arbitrary point $\overline{\vto{u}}\in\tnr{\overline{\mathcal{B}}}$ and conveniently chosen non zero vectors $\overline{\vto{v}}_i\in\tnr{\overline{\mathcal{B}}}$, from which $\overline{\vto{u}}_i=\overline{\vto{v}}_i-\overline{\vto{u}}$ constitute a linearly independent set $\{ \overline{\vto{u}}_1,\overline{\vto{u}}_2,\overline{\vto{u}}_3\}$, since body points cannot collapse during deformation, according to \eqref{eq:volumeCross} volume
+Given the mapping $\map{\tnr{\chi}}{\tnr{\overline{\mathcal{B}}}\times\tempo}{\tnr{\mathcal{B}}_t}$, bijection $\tnr{\chi}$ is called a deformation of $\tnr{\overline{\mathcal{B}}}$ when it is a $\mathcal{C}^{2}$-diffeomorphism that observes $\fua{\tnr{\chi}}{\overline{\vto{x}},\overline{t}}=\overline{\vto{x}}+\vto{c}$, where vector $\vto{c}\in U_\real$ is constant. For most of the forthcoming concepts to be presented, it is convenient to fix an arbitrary instant of time $t\in\tempo$ and define a bijective mapping $\map{\gloref{defInst}}{\tnr{\overline{\mathcal{B}}}}{\tnr{\mathcal{B}}_t}$ with rule 
+\begin{equation}
+\fua{\tnr{\chi}_t}{\overline{\vto{x}}}=\fua{\tnr{\chi}}{\overline{\vto{x}},t}\,,
+\end{equation}
+from which we conclude that the univariate deformation $\tnr{\chi}_t$ is also a $\mathcal{C}^{2}$-diffeomorphism that observes restriction $\tnr{\chi}_{\overline{t}}(\overline{\vto{x}})=\tnr{i}_{\tnr{\overline{\mathcal{B}}}}(\overline{\vto{x}})+\vto{c}$. Given an arbitrary point $\overline{\vto{u}}\in\tnr{\overline{\mathcal{B}}}$ and conveniently chosen non zero vectors $\overline{\vto{v}}_i\in\tnr{\overline{\mathcal{B}}}$, from which $\overline{\vto{u}}_i=\overline{\vto{v}}_i-\overline{\vto{u}}$ constitute a linearly independent set $\{ \overline{\vto{u}}_1,\overline{\vto{u}}_2,\overline{\vto{u}}_3\}$, since body points cannot collapse during deformation, according to \eqref{eq:volumeCross} volume
 \begin{equation}
 {\tnr{A}_O}[\fua{\tnr{\chi}_t}{\overline{\vto{u}}_1},\fua{\tnr{\chi}_t}{\overline{\vto{u}}_2},\fua{\tnr{\chi}_t}{\overline{\vto{u}}_3}]\neq 0\,.
 \end{equation}
@@ -45,9 +49,13 @@ From this figure, it is possible to conclude that if both configurations $\overl
 \end{equation}
 Moreover, concerning the elements of the domains represented in the figure, we say that a material particle $\text{x}\in\mathfrak{B}$, represented by the \textsb{material point}\index{point!material} $\overline{x}=\fua{\overline{\chi}}{\text{x}}$ or by the \textsb{material vector}\index{vector!material} $\vto{\overline{x}}:=\fua{\upsilon_o\circ\overline{\chi}}{\text{x}}$, occupies the \textsb{spatial place}\index{spatial place} $x:=\fua{\chi_t}{\text{x}}$ or $\vto{x}=\fua{\upsilon_o\circ\chi_t}{\text{x}}$. In order to simplify our study, since deformation was defined as a vector function, we shall mostly use vectors to denote body and shape elements. In this context, when a vector function is defined on a material domain $\tnr{\overline{\mathcal{B}}}$ or on a spatial domain $\tnr{\mathcal{B}}_t$, it is called \textsb{Lagrangian}\index{function!Lagrangian}\index{Lagrangian function} or \textsb{Eulerian}\index{function!Eulerian}\index{Eulerian function} respectively. 
 
-Considering the previous regularity conditions and an open set $\pmb{\mathcal{W}}\subset\tnr{\overline{\mathcal{B}}}$, the local sensitivity of $\tnr{\chi}_t$ measured by the vector function in $\map{\nabla\tnr{\chi}_t}{\pmb{\mathcal{W}}}{\ete{\real}{U^{2}}}$, called \textsb{deformation gradient}\index{deformation!gradient}, has fundamental importance in Continuum Kinematics because it bases the concept of strain. Since deformation $\tnr{\chi}_t$ is a diffeomorphism, we can recall property \eqref{eq:gradDiffeo2} and conclude equality
+Considering the previous regularity conditions and an open set $\pmb{\mathcal{W}}\subset\tnr{\overline{\mathcal{B}}}$, the derivative of $\tnr{\chi}_t$ at an arbitrary particle $\overline{\vto{u}}\in\pmb{\mathcal{W}}$ is the vector function $(\tnr{\chi}_t)'_{\overline{\vto{u}}}$ such that, from equality \eqref{eq:derivVecGradVec}, 
+\begin{equation}
+\fua{(\tnr{\chi}_t)'_{\overline{\vto{u}}}}{\vto{x}}= \fua{ \nabla\tnr{\chi}_t}{\overline{\vto{u}}}\hat{\odot}_1\vto{x}^*\,,
+\end{equation}
+where the function in $\map{\nabla\tnr{\chi}_t}{\pmb{\mathcal{W}}}{\ete{\real}{U^{2}}}$, called \textsb{deformation gradient}\index{deformation!gradient}, has fundamental importance in Continuum Kinematics because it bases the concept of strain. The second order tensor $\fua{ \nabla\tnr{\chi}_t}{\overline{\vto{u}}}$ is said to be the deformation gradient at $\overline{\vto{u}}$ and, since deformation $\tnr{\chi}_t$ is a diffeomorphism, we can recall property \eqref{eq:gradDiffeo2}, from which tensor
 \begin{equation}\label{eq:invGradDef}
-\fua{\nabla\tnr{\chi}_t^{-1}}{\vto{x}} = \fua{\nabla\tnr{\chi}_t}{\overline{\vto{x}}}^{-1}\,.
+\fua{\nabla\tnr{\chi}_t^{-1}}{\vto{u}} = \fua{\nabla\tnr{\chi}_t}{\overline{\vto{u}}}^{-1}\,.
 \end{equation}
 Now, at reference instant $t=\overline{t}$, we know that $\tnr{\chi}_{\overline{t}}(\overline{\vto{x}})=\tnr{i}_{\tnr{\overline{\mathcal{B}}}}(\overline{\vto{x}})+\fua{\vtf{c}}{\overline{\vto{x}}}$ and therefore, from a basic property of directional derivatives, equality ${\tnr{\chi}'_{\overline{t}} }_{\overline{\vto{u}}}=\tnr{i}_{\tnr{\overline{\mathcal{B}}}}$ holds. But since ${\tnr{\chi}'_{\overline{t}} }_{\overline{\vto{u}}}$ is the representative function of second order Euclidean tensor $\fua{\nabla\tnr{\chi}_{\overline{t}}}{\overline{\vto{u}}}$, from \eqref{eq:det3D} we conclude that the infinitesimal or local volume change $\textnormal{Det}[\fua{\nabla\tnr{\chi}_{\overline{t}}}{\overline{\vto{u}}}]=1$. Moreover, since deformation $\tnr{\chi}_{t}$ is a diffeomorphism by definition, the property relative to equality \eqref{eq:indentDiffeo} is valid and then $\textnormal{Det}[\fua{\nabla\tnr{\chi}_{t}}{\overline{\vto{u}}}]\neq 0$ because $\fua{\nabla\tnr{\chi}_{t}}{\overline{\vto{u}}}\neq \tnr{0}$. Therefore, considering $\tnr{\overline{\mathcal{B}}}$ the initial undeformed shape of a given body motion, we can state that the local volume change       
 \begin{equation}\label{eq:detPositive}
@@ -68,7 +76,7 @@ where affinity tensor
 \begin{equation}
 \tnr{F}_{\overline{\vto{x}}}:=\fua{\nabla\tnr{\varphi}_t}{\overline{\vto{x}}}^\text{T}
 \end{equation}
-is called the \textsb{affine deformation gradient} of $\tnr{\varphi}_t$ and $\vto{c}\in U_\real$ is a constant vector. Therefore, if $\tnr{F}_{\overline{\vto{x}}}$ is the identity tensor $\tnr{I}\in\ete{\real}{U^{2}}$ or a stretch tensor for all $\overline{\vto{x}}\in\tnr{\overline{\mathcal{B}}}$, then affine deformation $\tnr{\varphi}_t$ is a vector translation or a centered vector dilation respectively, according to \eqref{eq:transltVec} and \eqref{eq:dilatVec}. It is important to observe that an affine deformation can be decomposed in a rotodilation, according to theorem \ref{teo:rotoDilaF} and corollary \ref{cor:rotoDilaT}, in such a way that 
+is called the \textsb{affine deformation gradient} of $\tnr{\varphi}_t$ at $\overline{\vto{x}}$ and $\vto{c}\in U_\real$ is a constant vector. Therefore, if $\tnr{F}_{\overline{\vto{x}}}$ is the identity tensor $\tnr{I}\in\ete{\real}{U^{2}}$ or a stretch tensor for all $\overline{\vto{x}}\in\tnr{\overline{\mathcal{B}}}$, then affine deformation $\tnr{\varphi}_t$ is a vector translation or a centered vector dilation respectively, according to \eqref{eq:transltVec} and \eqref{eq:dilatVec}. It is important to observe that an affine deformation can be decomposed in a rotodilation, according to theorem \ref{teo:rotoDilaF} and corollary \ref{cor:rotoDilaT}, in such a way that 
 \begin{equation}\label{eq:decompDefGrad}
 \tnr{\varphi}_t = \tnr{\mathit{s}}_2\circ\tnr{\mathit{r}}_{\vto{c}} = \tnr{\mathit{r}}_{\vto{c}}\circ\tnr{\mathit{s}}_1
 \end{equation}
@@ -276,10 +284,16 @@ is their strain measure, called \textsb{infinitesimal strain tensor}, which is c
 
 \section{Motion}\index{motion}
 
-In this section, time is also considered in the mathematical analysis of deformation, when new fundamental concepts arise. But firstly, as we similarly did in the previous section, it is convenient to fix an arbitrary particle $\overline{\vto{u}}\in\tnr{\overline{\mathcal{B}}}$ and then define a bijective mapping $\map{\tnr{\chi}_{\overline{\vto{u}}}}{\tempo}{\tnr{\mathcal{B}}_t}$ with rule $\fua{\tnr{\chi}_{\overline{\vto{u}}}}{t}=\fua{\tnr{\chi}}{\overline{\vto{u}},t}$. Moreover, bijection $\tnr{\chi}_{\overline{\vto{u}}}$, which results a $\mathcal{C}^{2}$-diffeomorphism, must also  observe
-$\fua{\tnr{\chi}_{\overline{\vto{u}}}}{\overline{t}}=\tnr{i}_{\tnr{\overline{\mathcal{B}}}}(\overline{\vto{u}})+\vto{c}$, where $\overline{t}$ is a reference instant and $\vto{c}\in U_\real$ a constant vector. Given a period of time $\mathbb{P}\subset\tempo$, the set of spatial places 
+In this section, time is also considered in the mathematical analysis of deformation, when new fundamental concepts arise. But firstly, as we similarly did in the previous section, it is convenient to fix an arbitrary particle $\overline{\vto{u}}\in\tnr{\overline{\mathcal{B}}}$ and then define a bijective mapping $\map{\tnr{\chi}_{\overline{\vto{u}}}}{\tempo}{\tnr{\mathcal{B}}_t}$ with rule 
 \begin{equation}
-T_{\overline{\vto{u}}}:=\{t\in\mathbb{P}:\fua{\tnr{\chi}_{\overline{\vto{u}}}}{t}\}
+\fua{\tnr{\chi}_{\overline{\vto{u}}}}{t}=\fua{\tnr{\chi}}{\overline{\vto{u}},t}.
 \end{equation}
-is called a trajectory of particle $\overline{\vto{u}}$.
+Moreover, the univariate deformation $\tnr{\chi}_{\overline{\vto{u}}}$, which results a $\mathcal{C}^{2}$-diffeomorphism, must also  observe restriction 
+$\fua{\tnr{\chi}_{\overline{\vto{u}}}}{\overline{t}}=\tnr{i}_{\tnr{\overline{\mathcal{B}}}}(\overline{\vto{u}})+\vto{c}$, where $\overline{t}$ is a reference instant and $\vto{c}\in U_\real$ a constant vector. Therefore, $\tnr{\chi}_{\overline{\vto{u}}}$ describes the temporal deformation of particle $\overline{\vto{u}}$ and, given a period $\mathbb{P}\subset\tempo$, the set of places 
+\begin{equation}
+T_{\overline{\vto{u}}}:=\{\,\fua{\tnr{\chi}_{\overline{\vto{u}}}}{t}\,:\,t\in\mathbb{P}\,\}
+\end{equation}
+is called the trajectory of $\overline{\vto{u}}$ along $\mathbb{P}$. Additionally to this set of places, it is also important for us to describe the set of particles that occupy a given place during a period of time
+
+
 

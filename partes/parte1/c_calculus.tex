@@ -26,7 +26,11 @@ Proceeding with the above conditions, if there is one and only one tensor functi
 \begin{equation}\label{eq:tangentFunct}
 \fua{\tnr{\psi_\mathit{d}}}{\tnr{X}}=\fua{\tnr{\psi}}{\tnr{X}_0}+\fua{[\fua{\tnr{\psi}'}{\tnr{X}_0}]}{\tnr{X}-\tnr{X}_0}\,,
 \end{equation}
-where function $\fua{\tnr{\psi}'}{\tnr{X}_0}\in\evl{\cam{F}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}$ is bounded, then $\tnr{\psi}$ is called \textsb{Fr\'echet differentiable}\index{function!Fr\'echet differentiable}, \textsb{totally differentiable}\index{function!totally differentiable} or simply \textsb{differentiable}\index{function!differentiable} at $\tnr{X}_0$, while the linear function $\fua{\tnr{\psi}'}{\tnr{X}_0}$ is called the \textsb{derivative}\index{derivative} of $\tnr{\psi}$ at $\tnr{X}_0$, whose value at $\tnr{X}_0$ is described by tensor $\gloref{derivativeAt}:=[\fua{\tnr{\psi}'}{\tnr{X}_0}](\tnr{X}_0)$, from which we conclude that tensor function $D\tnr{\psi}\in\evl{\cam{F}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}$ . According to \eqref{eq:funcaoLimitada}, linearity and boundedness imply continuity, and then $\fua{\tnr{\psi}'}{\tnr{X}_0}$ belongs to function space $\evlc{\cam{F}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}$, which we specify to be also a Banach space of continuous linear functions. Moreover, the function in
+where function $\fua{\tnr{\psi}'}{\tnr{X}_0}\in\evl{\cam{F}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}$ is bounded, then $\tnr{\psi}$ is called \textsb{Fr\'echet differentiable}\index{function!Fr\'echet differentiable}, \textsb{totally differentiable}\index{function!totally differentiable} or simply \textsb{differentiable}\index{function!differentiable} at $\tnr{X}_0$, while the linear function $\fua{\tnr{\psi}'}{\tnr{X}_0}$ is called the \textsb{derivative}\index{derivative} of $\tnr{\psi}$ at $\tnr{X}_0$, whose value at $\tnr{X}_0$ is described by tensor 
+\begin{equation}
+\gloref{derivativeAt}:=[\fua{\tnr{\psi}'}{\tnr{X}_0}](\tnr{X}_0)\,, 
+\end{equation}
+from which we conclude that tensor function $D\tnr{\psi}\in\evl{\cam{F}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}$ . According to \eqref{eq:funcaoLimitada}, linearity and boundedness imply continuity, and then $\fua{\tnr{\psi}'}{\tnr{X}_0}$ belongs to function space $\evlc{\cam{F}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}$, which we specify to be also a Banach space of continuous linear functions. Moreover, the function in
 $\map{\gloref{derivative}}{\pmb{\mathcal{U}}}{\evlc{\cam{F}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}}$ is said to be the \textsb{derivative function}\index{derivative!function} or simply the derivative of $\tnr{\psi}$. 
 Rewriting expression \eqref{eq:tangent} for $\tnr{\psi}$ and $\tnr{\psi_\mathit{d}}$ tangent at $\tnr{X}_0$, the result is
 \begin{equation}\label{eq:preDirect}
@@ -227,9 +231,9 @@ where $\mathcal{U}$ is constituted by the corresponding vectors to the elements 
 &=\lim_{\alpha\to 0} \dfrac{\fua{\Phi^{-1}\circ\tnr{\psi}\circ\Phi}{\vto{x}+\alpha\vto{h}}-\fua{\Phi^{-1}\circ\tnr{\psi}\circ\Phi}{\vto{x}}}{\alpha}\nonumber\\
 &=\lim_{\alpha\to 0} \dfrac{\fua{\tnr{\hat\psi}}{\vto{x}+\alpha\vto{h}}-\fua{\tnr{\hat\psi}}{\vto{x}}}{\alpha}\,,
 \end{align}
-which results the rule of the directional derivative of the vector function in $\map{\tnr{\hat\psi}}{\mathcal{U}}{V_\cam{F}}$ along $\vto{h}\in\mathcal{U}$. From this result, \emph{the derivative $\tnr{\hat\psi}'_{\vto{x}}$, as a linear vector function, inherits all the previous and forthcoming definitions of the linear tensor function $\fua{\tnr{\psi}'}{\vto{x}^*}$}. For example, by \eqref{eq:derivSameArg} and \eqref{eq:defGradient2}, we can write that vector
+which results the rule of the directional derivative of the vector function in $\map{\tnr{\hat\psi}}{\mathcal{U}}{V_\cam{F}}$ along $\vto{h}\in\mathcal{U}$. From this result, \emph{the derivative $\tnr{\hat\psi}'_{\vto{x}}$, as a linear vector function, inherits all the previous and forthcoming definitions of the linear tensor function $\fua{\tnr{\psi}'}{\vto{x}^*}$}. For example, from \eqref{eq:derivSameArg} and \eqref{eq:defGradient2}, we can write that vector
 \begin{equation}\label{eq:derivSameArg2}
-\fua{D\tnr{\hat\psi}}{\vto{x}} := \fua{\tnr{\hat\psi}'_{\vto{x}}}{\vto{x}}\,.
+\fua{D\tnr{\hat\psi}}{\vto{x}} := \fua{\tnr{\hat\psi}'_{\vto{x}}}{\vto{x}}=\fua{ \nabla\tnr{\hat{\psi}}}{\vto{x}}^\dagger\hat{\odot}_1\vto{x}^*\,.
 \end{equation}
 Still in the context of vector functions, when $U_{\cam{F}}=V_{\cam{F}}=\cam{R}$, from mapping $\map{\hat{\psi}}{\mathcal{U}}{{\cam{R}}}$ and the previous equality, we write that
 \begin{equation*}
