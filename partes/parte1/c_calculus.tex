@@ -204,27 +204,19 @@ If tensor function $\tnr{\psi}$ is a differentiable unary tensor operator on $\p
 \begin{equation}\label{eq:defGradient2}
 [\fua{\tnr{\psi}'}{\vto{x}_0^*}](\vto{x}^*) = \vto{x}^*\odot_1\fua{\nabla\tnr{\psi}}{\vto{x}_0^*}\,.
 \end{equation}
-According to corollary \ref{cor:soTens} and definition \eqref{eq:repFunc2}, since the derivative $\fua{\tnr{\psi}'}{\vto{x}_0^*}$ is the $1$-cotensor of the second order tensor $\fua{\nabla\tnr{\psi}}{\vto{x}_0^*}$, the linear bijection
- \begin{equation}\label{eq:repFuncGrad2}
- \tnr{\hat{\psi}}'_{\vto{x}_0}:=\tnr{\Upsilon}[\fua{\nabla\tnr{\psi}}{\vto{x}_0^*}]=\Phi^{-1}\circ\fua{\tnr{\psi}'}{\vto{x}_0^*}\circ\Phi
-\end{equation}
-is the representative function of $\fua{\nabla\tnr{\psi}}{\vto{x}_0^*}$. Moreover, it is convenient to have vector functions  
-\begin{equation}\label{eq:primiRepFuncGrad2}
- \tnr{\hat{\psi}}:=\Phi^{-1}\circ\tnr{\psi}\circ\Phi
-\end{equation}
-and 
-\begin{equation}
- \nabla\tnr{\hat{\psi}}:=\nabla\tnr{\psi}\circ\Phi\,,
-\end{equation}
-called the gradient of $\tnr{\hat\psi}$, from which we conclude equality
+Now, from theorem \ref{teo:repRiesz}, we present vector functions
+\begin{alignat}{4} \label{eq:primiRepFuncGrad2}
+\tnr{\hat{\psi}}:=\Phi^{-1}\circ\tnr{\psi}\circ\Phi\,, &\qquad   \tnr{\hat{\psi}}'_{\vto{x}_0}:=\Phi^{-1}\circ\fua{\tnr{\psi}'}{\vto{x}_0^*}\circ\Phi  &\qquad \text{ and } \qquad& \nabla\tnr{\hat{\psi}}:=\nabla\tnr{\psi}\circ\Phi \,,
+\end{alignat}
+from which we can rewrite equality \eqref{eq:defGradient2} as
 \begin{equation}\label{eq:derivVecGradVec}
-\fua{\tnr{\hat\psi}'_{\vto{x}_0}}{\vto{x}} = \fua{ \nabla\tnr{\hat{\psi}}}{\vto{x}_0}^\dagger\hat{\odot}_1\vto{x}^*\,,
+\fua{\tnr{\hat\psi}'_{\vto{x}_0}}{\vto{x}} = \fua{ \nabla\tnr{\hat{\psi}}}{\vto{x}_0}^\dagger\hat{\odot}_1\vto{x}^*\,.
 \end{equation}
-according to \eqref{eq:Lin2secTensTransp} and \eqref{eq:defGradient2}. Now, considering equality \eqref{eq:secTens2Lin} and second order tensor $\fua{\nabla\tnr{\hat{\psi}}}{\vto{x}_0}=\fua{\nabla\tnr{\psi}}{\vto{x}_0^*}$, we also have for the present case that 
+Comparing this equality with \eqref{eq:Lin2secTensTransp}, we can state that $\tnr{\hat\psi}'_{\vto{x}_0}$ is the representative function of second order tensor $\fua{ \nabla\tnr{\hat{\psi}}}{\vto{x}_0}$, called the gradient of  $\tnr{\hat{\psi}}$ at $\vto{x}_0$. Now, considering equality \eqref{eq:secTens2Lin} and second order tensor $\fua{\nabla\tnr{\hat{\psi}}}{\vto{x}_0}=\fua{\nabla\tnr{\psi}}{\vto{x}_0^*}$, we also have for the present case that 
 \begin{equation}\label{eq:gradFuncRep}
 \fua{[\fua{\nabla\tnr{\hat{\psi}}}{\vto{x}_0}]}{\vto{x},\vto{y}}=\vto{y}\cdot\fua{\tnr{\hat\psi}'_{\vto{x}_0}}{\vto{x}^{c}}\,,\,\,\forall\, \vto{x},\vto{y}\in\mathcal{U}\,,
 \end{equation}
-where $\mathcal{U}$ is constituted by the corresponding vectors to the elements of $\pmb{\mathcal{U}}$. Considering rule \eqref{eq:directDeriv}, from the definitions \eqref{eq:repFuncGrad2} and \eqref{eq:primiRepFuncGrad2}, it is possible to develop the following for an arbitrary direction $\vto{h}^*\in\pmb{\mathcal{U}}$:  
+where $\mathcal{U}$ is constituted by the corresponding vectors to the elements of $\pmb{\mathcal{U}}$. Considering rule \eqref{eq:directDeriv}, from  definitions \eqref{eq:primiRepFuncGrad2}, it is possible to develop the following for an arbitrary direction $\vto{h}^*\in\pmb{\mathcal{U}}$:  
 \begin{align}\label{eq:derivRep}
 \fua{\tnr{\hat\psi}'_{\vto{x}}}{\vto{h}}&=\Phi^{-1}\circ\fua{[\fua{\tnr{\psi}'}{\vto{x}^*}]}{\vto{h}^*}\nonumber\\
 &=\lim_{\alpha\to 0} \dfrac{\fua{\Phi^{-1}\circ\tnr{\psi}}{\vto{x}^*+\alpha\vto{h}^*}-\fua{\Phi^{-1}\circ\tnr{\psi}}{\vto{x}^*}}{\alpha}\nonumber\\
@@ -236,24 +228,18 @@ which results the rule of the directional derivative of the vector function in $
 \fua{D\tnr{\hat\psi}}{\vto{x}} := \fua{\tnr{\hat\psi}'_{\vto{x}}}{\vto{x}}=\fua{ \nabla\tnr{\hat{\psi}}}{\vto{x}}^\dagger\hat{\odot}_1\vto{x}^*\,.
 \end{equation}
 
-ERRADO
-
-Based on the concepts and definitions presented above for vector functions, when $U_{\cam{F}}=\cam{R}$, from mapping $\map{\tnr{\hat{\psi}}}{\mathcal{U}}{V_\real}$, we can write that
-\begin{equation*}
-\fua{\tnr{\hat{\psi}}'_{x}}{\beta} = \lim_{\alpha\to 0} \dfrac{\fua{\tnr{\hat{\psi}}}{x+\alpha\beta}-\fua{\tnr{\hat{\psi}}}{x}}{\alpha}\,,\forall\, \beta\in\cam{R}. 
-\end{equation*} 
-Considering $\beta=1$ and $\fua{\tnr{\hat{\psi}}'}{x}:=\fua{\tnr{\hat{\psi}}'_{x}}{1}$ the corresponding scalar of coscalar $\tnr{\hat{\psi}}'_{x}$, 
-\begin{equation*}
-\fua{\tnr{\hat{\psi}}'}{x} = \lim_{\alpha\to 0} \dfrac{\fua{\tnr{\hat{\psi}}}{x+\alpha}-\fua{\tnr{\hat{\psi}}}{x}}{\alpha}\,. 
-\end{equation*} 
-Given an arbitrary real number $x_0$ in a context where $V_\real=\real$, we have the classical geometric interpretation of scalar $\fua{\tnr{\hat{\psi}}'}{x_0}$ as being the slope of the tangent line $\tnr{\hat{\psi}}_\mathit{d}$ to the curve $\tnr{\hat{\psi}}$ at $x_0$. Now, if $\{\vun{u}\}$ is the orthonormal basis of a one dimensional Hilbert space $U_\cam{R}$, according to theorem \ref{teo:repRiesz}, it is valid that
-$\fua{\tnr{\hat{\psi}}'_{x}}{1} = 1\fua{\tnr{\hat{\psi}}'}{x} = [\fua{\tnr{\hat{\psi}}'}{x}\vun{u}]\cdot\vun{u}$, where vector  
+Based on the concepts and definitions presented above for vector functions, when $U_{\cam{F}}=\cam{R}$, from mapping $\map{\tnr{\hat{\psi}}}{\mathcal{U}}{V_\real}$, we can write that $\fua{\tnr{\hat{\psi}}'_{x}}{\beta} = \beta\fua{\tnr{\hat{\psi}}'_{x}}{1}$ for all nonzero $\beta$, since the derivative is linear. In this context, our interest is to describe directional derivative $\fua{[d\tnr{\hat{\psi}}/dx]}{x}:=\fua{\tnr{\hat{\psi}}'_{x}}{1}$ by 
+\begin{equation}\label{eq:derivVecScaFun}
+\fua{\dfrac{d\tnr{\hat{\psi}}}{dx}}{x} = \lim_{\alpha\to 0} \dfrac{\fua{\tnr{\hat{\psi}}}{x+\alpha}-\fua{\tnr{\hat{\psi}}}{x}}{\alpha}\,. 
+\end{equation} 
+Given an arbitrary real number $x_0$ in a context where $V_\real=\real$, the function $\hat{\psi}$ under study is scalar and then we have the classical geometric interpretation of scalar $\fua{[d{\hat{\psi}}/dx]}{x_0}$ as being the slope of the tangent line ${\hat{\psi}}_\mathit{d}$ to the curve ${\hat{\psi}}$ at $x_0$. Still in this context, if $\{\vun{u}\}$ is the orthonormal basis of a one dimensional Hilbert space $U_\cam{R}$, it is valid to write
+$\fua{[d{\hat{\psi}}/dx]}{x}=[\fua{[d{\hat{\psi}}/dx]}{x}\vun{u}]\cdot\vun{u}$, where  
 \begin{equation}
-\nabla\fua{\tnr{\hat{\psi}}}{x}:=\fua{\tnr{\hat{\psi}}'}{x}\vun{u}
+\nabla\fua{{\hat{\psi}}}{x}:=\fua{\dfrac{d{\hat{\psi}}}{dx}}{x}\vun{u}
 \end{equation}
-is called the gradient of $\tnr{\hat{\psi}}$ at $x$.
+is said to be the gradient of ${\hat{\psi}}$ at $x$.
 
-Now considering the generic conditions of definition \eqref{eq:defGradient}, from the directional derivative of $\tnr{\psi}$ along $\tnr{H}\in\pmb{\mathcal{U}}$ and rule \eqref{eq:directDeriv}, it is easy to obtain that
+Now returning to the conditions of definition \eqref{eq:defGradient}, from the directional derivative of $\tnr{\psi}$ along $\tnr{H}\in\pmb{\mathcal{U}}$ and rule \eqref{eq:directDeriv}, it is easy to obtain that
 \begin{equation}
 \tnr{H}\odot_m\fua{\nabla\tnr{\psi}}{\tnr{X}}=\lim_{\alpha\to 0} \dfrac{\fua{\tnr{\psi}}{\tnr{X}+\alpha\tnr{H}}-\fua{\tnr{\psi}}{\tnr{X}}}{\alpha}\,.
 \end{equation}
