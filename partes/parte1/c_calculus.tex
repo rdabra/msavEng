@@ -235,20 +235,23 @@ which results the rule of the directional derivative of the vector function in $
 \begin{equation}\label{eq:derivSameArg2}
 \fua{D\tnr{\hat\psi}}{\vto{x}} := \fua{\tnr{\hat\psi}'_{\vto{x}}}{\vto{x}}=\fua{ \nabla\tnr{\hat{\psi}}}{\vto{x}}^\dagger\hat{\odot}_1\vto{x}^*\,.
 \end{equation}
-Still in the context of vector functions, when $U_{\cam{F}}=V_{\cam{F}}=\cam{R}$, from mapping $\map{\hat{\psi}}{\mathcal{U}}{{\cam{R}}}$ and the previous equality, we write that
+
+ERRADO
+
+Based on the concepts and definitions presented above for vector functions, when $U_{\cam{F}}=\cam{R}$, from mapping $\map{\tnr{\hat{\psi}}}{\mathcal{U}}{V_\real}$, we can write that
 \begin{equation*}
-\fua{\hat{\psi}'_{x}}{\beta} = \lim_{\alpha\to 0} \dfrac{\fua{\hat{\psi}}{x+\alpha\beta}-\fua{\hat{\psi}}{x}}{\alpha}\,,\forall\, \beta\in\cam{R}. 
+\fua{\tnr{\hat{\psi}}'_{x}}{\beta} = \lim_{\alpha\to 0} \dfrac{\fua{\tnr{\hat{\psi}}}{x+\alpha\beta}-\fua{\tnr{\hat{\psi}}}{x}}{\alpha}\,,\forall\, \beta\in\cam{R}. 
 \end{equation*} 
-Considering $\beta=1$ and $\fua{\hat{\psi}'}{x}:=\fua{\hat{\psi}'_{x}}{1}$ the corresponding scalar of coscalar $\hat{\psi}'_{x}$, 
+Considering $\beta=1$ and $\fua{\tnr{\hat{\psi}}'}{x}:=\fua{\tnr{\hat{\psi}}'_{x}}{1}$ the corresponding scalar of coscalar $\tnr{\hat{\psi}}'_{x}$, 
 \begin{equation*}
-\fua{\hat{\psi}'}{x} = \lim_{\alpha\to 0} \dfrac{\fua{\hat{\psi}}{x+\alpha}-\fua{\hat{\psi}}{x}}{\alpha}\,. 
+\fua{\tnr{\hat{\psi}}'}{x} = \lim_{\alpha\to 0} \dfrac{\fua{\tnr{\hat{\psi}}}{x+\alpha}-\fua{\tnr{\hat{\psi}}}{x}}{\alpha}\,. 
 \end{equation*} 
-Given an arbitrary real number $x_0$, we have the classical geometric interpretation of scalar $\fua{\hat{\psi}'}{x_0}$ as being the slope of the tangent line $\hat{\psi}_\mathit{d}$ to the curve $\hat{\psi}$ at $x_0$. Now, if $\{\vun{u}\}$ is the orthonormal basis of a one dimensional Hilbert space $U_\cam{R}$, according to theorem \ref{teo:repRiesz}, it is valid that
-$\fua{\hat{\psi}'_{x}}{1} = 1\fua{\hat{\psi}'}{x} = [\fua{\hat{\psi}'}{x}\vun{u}]\cdot\vun{u}$, where vector  
+Given an arbitrary real number $x_0$ in a context where $V_\real=\real$, we have the classical geometric interpretation of scalar $\fua{\tnr{\hat{\psi}}'}{x_0}$ as being the slope of the tangent line $\tnr{\hat{\psi}}_\mathit{d}$ to the curve $\tnr{\hat{\psi}}$ at $x_0$. Now, if $\{\vun{u}\}$ is the orthonormal basis of a one dimensional Hilbert space $U_\cam{R}$, according to theorem \ref{teo:repRiesz}, it is valid that
+$\fua{\tnr{\hat{\psi}}'_{x}}{1} = 1\fua{\tnr{\hat{\psi}}'}{x} = [\fua{\tnr{\hat{\psi}}'}{x}\vun{u}]\cdot\vun{u}$, where vector  
 \begin{equation}
-\nabla\fua{\hat{\psi}}{x}:=\fua{\hat{\psi}'}{x}\vun{u}
+\nabla\fua{\tnr{\hat{\psi}}}{x}:=\fua{\tnr{\hat{\psi}}'}{x}\vun{u}
 \end{equation}
-is called the gradient of $\hat{\psi}$ at $x$.
+is called the gradient of $\tnr{\hat{\psi}}$ at $x$.
 
 Now considering the generic conditions of definition \eqref{eq:defGradient}, from the directional derivative of $\tnr{\psi}$ along $\tnr{H}\in\pmb{\mathcal{U}}$ and rule \eqref{eq:directDeriv}, it is easy to obtain that
 \begin{equation}
