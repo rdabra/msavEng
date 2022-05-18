@@ -295,13 +295,24 @@ T_{\overline{\vto{u}}}:=\{\,\fua{\tnr{\chi}_{\overline{\vto{u}}}}{t}\,:\,t\in\ma
 \end{equation}
 is called the \textsb{trajectory}\index{trajectory} or \textsb{pathline}\index{pathline} of $\overline{\vto{u}}$ during $\mathbb{P}$. Additionally to this set of places, it is also important to define the set of particles that occupy a fixed place during a period of time. In order to do this, we first define mapping $\map{\tnr{p}_{\vto{u}}}{\tempo}{\tnr{\overline{\mathcal{B}}}}$ whose function, described by 
 \begin{equation}
-\fua{\tnr{p}_{\vto{u}}}{t}:=\fua{\tnr{\chi}_{t}^{-1}}{\vto{u}}\,,
+\fua{\tnr{p}_{\vto{u}}}{t}=\fua{\tnr{\chi}_{t}^{-1}}{\vto{u}}\,,
 \end{equation}
 is called the \textsb{streak function}\index{function!streak} of place $\vto{u}$. In this context, the set of particles
 \begin{equation}
 S_{\vto{u}}:=\{\,\fua{\tnr{p}_{\vto{u}}}{t}\,:\,t\in\mathbb{P}\,\}
 \end{equation}
-is said to be the \textsb{streakline}\index{streakline} of place $\vto{u}$ during $\mathbb{P}$.
+is said to be the \textsb{streakline}\index{streakline} of place $\vto{u}$ during $\mathbb{P}$. 
 
-
-
+Considering equality \eqref{eq:derivVecScaFun}, the time sensitivity of the deformation $\tnr{\chi}_{\overline{\vto{u}}}$ measured at instant $t$ is the vector
+\begin{equation}
+\dot{\tnr{\chi}}_{\overline{\vto{u}}}(t):=\fua{\dfrac{d\,\tnr{\chi}_{\overline{\vto{u}}}}{dt}}{t}\,,
+\end{equation}
+called the \textsb{velocity}\index{velocity} of particle $\overline{\vto{u}}$ at $t$, where $\dot{\tnr{\chi}}_{\overline{\vto{u}}}$ is said to be the \textsb{velocity function}\index{function!velocity} of $\overline{\vto{u}}$. Similarly, the time sensitivity of velocity function $\dot{\tnr{\chi}}_{\overline{\vto{u}}}$ $\dot{\tnr{\chi}}_{\overline{\vto{u}}}$    
+\begin{equation}
+\ddot{\tnr{\chi}}_{\overline{\vto{u}}}(t):=\fua{\dfrac{d\,\dot{\tnr{\chi}}_{\overline{\vto{u}}}}{dt}}{t}\,,
+\end{equation}
+called the \textsb{acceleration}\index{acceleration} of $\overline{\vto{u}}$ at $t$, where $\ddot{\tnr{\chi}}_{\overline{\vto{u}}}$ is the \textsb{acceleration function}\index{function!acceleration} of $\overline{\vto{u}}$. If both time and material particle are variables, we define the rules   
+\begin{alignat}{3} 
+\dot{\tnr{\chi}}(\overline{\vto{x}},t)=\dot{\tnr{\chi}}_{\overline{\vto{x}}}(t)&\qquad \text{and}\qquad & \ddot{\tnr{\chi}}(\overline{\vto{x}},t)=\ddot{\tnr{\chi}}_{\overline{\vto{x}}}(t)\,,
+\end{alignat}
+to be the Lagrangian descriptions of the velocity and acceleration functions of body $\tnr{\overline{\mathcal{B}}}$. From this definition, it is important to also describe both of these measures in their Eulerian form, namely 
