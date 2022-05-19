@@ -301,20 +301,32 @@ is called the \textsb{streak function}\index{function!streak} of place $\vto{u}$
 \begin{equation}
 S_{\vto{u}}:=\{\,\fua{\tnr{p}_{\vto{u}}}{t}\,:\,t\in\mathbb{P}\,\}
 \end{equation}
-is said to be the \textsb{streakline}\index{streakline} of place $\vto{u}$ during $\mathbb{P}$. From the temporal deformation and the streak function just presented, it is possible to describe the generic functions in $\map{\omega}{\tnr{\overline{\mathcal{B}}}\times\tempo}{W_\cam{F}}$ and $\map{\Omega}{\tnr{\mathcal{B}}_t\times\tempo}{W_\cam{F}}$, where $W_\cam{F}$ is a Hilbert space, in their Eulerian and Lagragian forms respectively through  
+is said to be the \textsb{streakline}\index{streakline} of place $\vto{u}$ during $\mathbb{P}$. From the temporal deformation and the streak function just presented, it is possible to describe the generic $\mathcal{C}^2$ functions in $\map{\tnr{\omega}}{\tnr{\overline{\mathcal{B}}}\times\tempo}{W_\cam{F}}$ and $\map{\tnr{\Omega}}{\tnr{\mathcal{B}}_t\times\tempo}{W_\cam{F}}$, where $W_\cam{F}$ is a Hilbert space, in their Eulerian and Lagragian forms respectively through  
 \begin{alignat}{3}\label{eq:LagEulDesc} 
-\omega_E(\vto{x},t):=\omega(\fua{\tnr{p}_{\vto{x}}}{t},t)&\qquad \text{and}\qquad & \Omega_L(\overline{\vto{x}},t):=\Omega(\fua{\tnr{\chi}_{\overline{\vto{x}}}}{t},t)\,.
+\tnr{\omega}_E(\vto{x},t):=\tnr{\omega}(\fua{\tnr{p}_{\vto{x}}}{t},t)&\qquad \text{and}\qquad & \tnr{\Omega}_L(\overline{\vto{x}},t):=\tnr{\Omega}(\fua{\tnr{\chi}_{\overline{\vto{x}}}}{t},t)\,.
 \end{alignat}
-Following the same procedure adopted so far, univariate functions ${\omega}_{\overline{\vto{u}}}$, $(\omega_E)_{\vto{u}}$, ${\Omega}_{\vto{u}}$ and $(\Omega_L)_{\overline{\vto{u}}}$ are defined by fixing the first argument of their bivariate counterparts on an arbitrary particle or spatial point.  
+Following the same procedure adopted so far, univariate $\mathcal{C}^2$ functions ${\tnr{\omega}}_{\overline{\vto{u}}}$, $(\tnr{\omega}_E)_{\vto{u}}$, ${\tnr{\Omega}}_{\vto{u}}$ and $(\tnr{\Omega}_L)_{\overline{\vto{u}}}$ are defined by fixing the first argument of their bivariate counterparts on an arbitrary particle or spatial point. Thereby, considering equality \eqref{eq:derivVecScaFun}, the dotted functions in rules  
+\begin{alignat}{3} 
+{\dot{\tnr{\omega}}}(\overline{\vto{x}},t)=\fua{\dfrac{d\,{\tnr{\omega}}_{\overline{\vto{x}}}}{dt}}{t}&\qquad \text{and}\qquad & \dot{\tnr{\Omega}}_L(\overline{\vto{x}},t)=\fua{\dfrac{d\,(\tnr{\Omega}_L)_{\overline{\vto{x}}}}{dt}}{t}
+\end{alignat}
+are said to be the Lagrangian or material time derivatives of  $\tnr{\omega}$ and $\tnr{\Omega}$ respectively. Similarly, the dotted functions in 
+\begin{alignat}{3} 
+{\dot{\tnr{\Omega}}}({\vto{x}},t)=\fua{\dfrac{d\,{\tnr{\Omega}}_{{\vto{x}}}}{dt}}{t}&\qquad \text{and}\qquad & \dot{\tnr{\omega}}_E({\vto{x}},t)=\fua{\dfrac{d\,(\tnr{\omega}_E)_{{\vto{x}}}}{dt}}{t}
+\end{alignat}
+are the Eulerian or spatial time derivatives of  $\tnr{\Omega}$ and $\tnr{\omega}$. When the time derivative is of second order, that is $d^2\bullet/dt^2$, we notate with double dots the corresponding function: $\ddot{\tnr{\omega}}$, $\ddot{\tnr{\Omega}}$, etc.    
 
-DESENVOLVER OS TIME DERIVATIVES: DERIVAR TODAS AS FUNCOES E DAR OS NOMES RESPECTIVOS. VER SE OMEGA PODE DEPENDER DO TEMPO MESMO.
+
+Considering Lagrangian time derivatives, the temporal sensitivity of the deformation of a given particle $\overline{\vto{u}}$ at instant $t$ is measured by the vector $\fua{\dot{\tnr{\chi}}}{\overline{\vto{u}},t}=\dot{\tnr{\chi}}_{\overline{\vto{u}}}(t)$, called the \textsb{velocity}\index{velocity} of $\overline{\vto{u}}$ at $t$. Similarly, the temporal sensitivity of the velocity of a particle $\overline{\vto{u}}$ at instant $t$ is the vector $\fua{\ddot{\tnr{\chi}}}{\overline{\vto{u}},t}=\ddot{\tnr{\chi}}_{\overline{\vto{u}}}(t)$, called the \textsb{acceleration}\index{acceleration} of $\overline{\vto{u}}$ at $t$. If not only time but also the material particle is variable, functions $\dot{\tnr{\chi}}$ and $\ddot{\tnr{\chi}}$ are called the velocity and  acceleration functions of body $\tnr{\overline{\mathcal{B}}}$. In many cases, it is more convenient to work with the Eulerian descriptions of velocity and acceleration, namely
+
+blablabla
+
+according to \eqref{eq:LagEulDesc}.
 
 
-Considering equality \eqref{eq:derivVecScaFun}, the time sensitivity of the deformation $\tnr{\chi}_{\overline{\vto{u}}}$ measured at instant $t$ is the vector
-\begin{equation}
-\dot{\tnr{\chi}}_{\overline{\vto{u}}}(t):=\fua{\dfrac{d\,\tnr{\chi}_{\overline{\vto{u}}}}{dt}}{t}\,,
-\end{equation}
-called the \textsb{velocity}\index{velocity} of particle $\overline{\vto{u}}$ at $t$, where $\dot{\tnr{\chi}}_{\overline{\vto{u}}}$ is said to be the \textsb{velocity function}\index{function!velocity} of $\overline{\vto{u}}$. Similarly, the time sensitivity of velocity function is the vector 
+
+---------
+
+$\fua{\tnr{\chi}}{\overline{\vto{u}},t}$ measured at instant $t$ is the vector $\fua{\dot{\tnr{\chi}}}{\overline{\vto{u}},t}$, called the \textsb{velocity}\index{velocity} of particle $\overline{\vto{u}}$ at $t$, where $\dot{\tnr{\chi}}_{\overline{\vto{u}}}$ is said to be the \textsb{velocity function}\index{function!velocity} of $\overline{\vto{u}}$. Similarly, the time sensitivity of velocity function is the vector 
 \begin{equation}
 \ddot{\tnr{\chi}}_{\overline{\vto{u}}}(t):=\fua{\dfrac{d\,\dot{\tnr{\chi}}_{\overline{\vto{u}}}}{dt}}{t}\,,
 \end{equation}

@@ -228,9 +228,13 @@ which results the rule of the directional derivative of the vector function in $
 \fua{D\tnr{\hat\psi}}{\vto{x}} := \fua{\tnr{\hat\psi}'_{\vto{x}}}{\vto{x}}=\fua{ \nabla\tnr{\hat{\psi}}}{\vto{x}}^\dagger\hat{\odot}_1\vto{x}^*\,.
 \end{equation}
 
-Based on the concepts and definitions presented above for vector functions, when $U_{\cam{F}}=\cam{R}$, from mapping $\map{\tnr{\hat{\psi}}}{\mathcal{U}}{V_\real}$, we can write that $\fua{\tnr{\hat{\psi}}'_{x}}{\beta} = \beta\fua{\tnr{\hat{\psi}}'_{x}}{1}$ for all nonzero $\beta$, since the derivative is linear. In this context, our interest is to describe directional derivative $\fua{[d\tnr{\hat{\psi}}/dx]}{x}:=\fua{\tnr{\hat{\psi}}'_{x}}{1}$ by 
+Based on the concepts and definitions presented above for vector functions, when $U_{\cam{F}}=\cam{R}$, from mapping $\map{\tnr{\hat{\psi}}}{\mathcal{U}}{V_\real}$, we can write that $\fua{\tnr{\hat{\psi}}'_{x}}{\beta} = \beta\fua{\tnr{\hat{\psi}}'_{x}}{1}$ for all nonzero $\beta$, since the derivative is linear. In this context, our interest is to describe directional derivative  
 \begin{equation}\label{eq:derivVecScaFun}
-\fua{\dfrac{d\tnr{\hat{\psi}}}{dx}}{x} = \lim_{\alpha\to 0} \dfrac{\fua{\tnr{\hat{\psi}}}{x+\alpha}-\fua{\tnr{\hat{\psi}}}{x}}{\alpha}\,. 
+\fua{\dfrac{d\tnr{\hat{\psi}}}{dx}}{x} := \fua{\tnr{\hat{\psi}}'_{x}}{1} = \lim_{\alpha\to 0} \dfrac{\fua{\tnr{\hat{\psi}}}{x+\alpha}-\fua{\tnr{\hat{\psi}}}{x}}{\alpha}\,. 
+\end{equation} 
+In this context, if $\tnr{\hat{\psi}}$ is differentiable of order $k\geqslant 1$, we adopt  
+\begin{equation}
+\fua{\dfrac{d^k\tnr{\hat{\psi}}}{dx^k}}{x}:=\fua{\tnr{\hat{\psi}}^{(k)}_{x}}{1}\,.
 \end{equation} 
 Given an arbitrary real number $x_0$ in a context where $V_\real=\real$, the function $\hat{\psi}$ under study is scalar and then we have the classical geometric interpretation of scalar $\fua{[d{\hat{\psi}}/dx]}{x_0}$ as being the slope of the tangent line ${\hat{\psi}}_\mathit{d}$ to the curve ${\hat{\psi}}$ at $x_0$. Still in this context, if $\{\vun{u}\}$ is the orthonormal basis of a one dimensional Hilbert space $U_\cam{R}$, it is valid to write
 $\fua{[d{\hat{\psi}}/dx]}{x}=[\fua{[d{\hat{\psi}}/dx]}{x}\vun{u}]\cdot\vun{u}$, where  
