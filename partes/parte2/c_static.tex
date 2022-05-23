@@ -27,9 +27,9 @@ Concerning the subject of this chapter, the intuitive concepts and definitions i
 \end{equation}
 where $\upsilon_o$ ``vectorizes'' the points of $\mathcal{B}_t$ relative to an origin $o\in\eamd{U}{R}{3}$, according to definition \eqref{eq:funVect}. Since $\upsilon_o$ is a bijection, the sets of vectors $\tnr{\overline{\mathcal{B}}}$ and $\tnr{\mathcal{B}}_t$ will also be called body and shape respectively.
 
-Given the mapping $\map{\tnr{\chi}}{\tnr{\overline{\mathcal{B}}}\times\tempo}{\tnr{\mathcal{B}}_t}$, bijection $\tnr{\chi}$ is called a deformation of $\tnr{\overline{\mathcal{B}}}$ when it is a $\mathcal{C}^{2}$-diffeomorphism that observes $\fua{\tnr{\chi}}{\overline{\vto{x}},\overline{t}}=\overline{\vto{x}}+\vto{c}$, where vector $\vto{c}\in U_\real$ is constant. For most of the forthcoming concepts to be presented, it is convenient to fix an arbitrary instant of time $t\in\tempo$ and define a bijective mapping $\map{\gloref{defInst}}{\tnr{\overline{\mathcal{B}}}}{\tnr{\mathcal{B}}_t}$ with rule 
+Given the mapping $\map{\tnr{\chi}}{\tnr{\overline{\mathcal{B}}}\times\tempo}{\tnr{\mathcal{B}}_t}$, bijection $\tnr{\chi}$ is called a deformation of $\tnr{\overline{\mathcal{B}}}$ when it is a $\mathcal{C}^{2}$-diffeomorphism that observes $\fua{\tnr{\chi}}{\overline{\vto{x}},\overline{t}}=\overline{\vto{x}}+\vto{c}$, where vector $\vto{c}\in U_\real$ is constant. For most of the forthcoming concepts to be presented, it is convenient to fix an arbitrary instant of time $t\in\tempo$ and define a bijective mapping $\map{\gloref{defInst}}{\tnr{\overline{\mathcal{B}}}}{\tnr{\mathcal{B}}_t}$ whose function obeys equality 
 \begin{equation}
-\fua{\tnr{\chi}_t}{\overline{\vto{x}}}=\fua{\tnr{\chi}}{\overline{\vto{x}},t}\,,
+\fua{\tnr{\chi}_t}{\overline{\vto{x}}}=\fua{\tnr{\chi}}{\overline{\vto{x}},t}\,,\,\forall\, \overline{\vto{x}}\in\tnr{\overline{\mathcal{B}}}\,,
 \end{equation}
 from which we conclude that the univariate deformation $\tnr{\chi}_t$ is also a $\mathcal{C}^{2}$-diffeomorphism that observes restriction $\tnr{\chi}_{\overline{t}}(\overline{\vto{x}})=\tnr{i}_{\tnr{\overline{\mathcal{B}}}}(\overline{\vto{x}})+\vto{c}$. Given an arbitrary point $\overline{\vto{u}}\in\tnr{\overline{\mathcal{B}}}$ and conveniently chosen non zero vectors $\overline{\vto{v}}_i\in\tnr{\overline{\mathcal{B}}}$, from which $\overline{\vto{u}}_i=\overline{\vto{v}}_i-\overline{\vto{u}}$ constitute a linearly independent set $\{ \overline{\vto{u}}_1,\overline{\vto{u}}_2,\overline{\vto{u}}_3\}$, since body points cannot collapse during deformation, according to \eqref{eq:volumeCross} volume
 \begin{equation}
@@ -284,47 +284,66 @@ is their strain measure, called \textsb{infinitesimal strain tensor}, which is c
 
 \section{Motion}\index{motion}
 
-In this section, time is also considered in the mathematical analysis of deformation, when new fundamental concepts arise. But firstly, as we similarly did in the previous section, it is convenient to fix an arbitrary particle $\overline{\vto{u}}\in\tnr{\overline{\mathcal{B}}}$ and then define a bijective mapping $\map{\tnr{\chi}_{\overline{\vto{u}}}}{\tempo}{\tnr{\mathcal{B}}_t}$ with rule 
+In this section, time is also considered in the mathematical analysis of deformation, when new fundamental concepts arise. But firstly, as we similarly did in the previous section, it is convenient to fix an arbitrary particle $\overline{\vto{u}}\in\tnr{\overline{\mathcal{B}}}$ and then define a bijective mapping $\map{\tnr{\chi}_{\overline{\vto{u}}}}{\tempo}{\tnr{\mathcal{B}}_t}$ where the following equality is valid:  
 \begin{equation}
-\fua{\tnr{\chi}_{\overline{\vto{u}}}}{t}=\fua{\tnr{\chi}}{\overline{\vto{u}},t}.
+\fua{\tnr{\chi}_{\overline{\vto{u}}}}{t}=\fua{\tnr{\chi}}{\overline{\vto{u}},t}\,,\,\forall t\in\tempo\,.
 \end{equation}
 Moreover, the univariate deformation $\tnr{\chi}_{\overline{\vto{u}}}$, which results a $\mathcal{C}^{2}$-diffeomorphism, must also  observe restriction 
 $\fua{\tnr{\chi}_{\overline{\vto{u}}}}{\overline{t}}=\tnr{i}_{\tnr{\overline{\mathcal{B}}}}(\overline{\vto{u}})+\vto{c}$, where $\overline{t}$ is a reference instant and $\vto{c}\in U_\real$ a constant vector. Therefore, $\tnr{\chi}_{\overline{\vto{u}}}$ describes the temporal deformation of particle $\overline{\vto{u}}$ and, given a period $\mathbb{P}\subset\tempo$, the set of places 
 \begin{equation}
 T_{\overline{\vto{u}}}:=\{\,\fua{\tnr{\chi}_{\overline{\vto{u}}}}{t}\,:\,t\in\mathbb{P}\,\}
 \end{equation}
-is called the \textsb{trajectory}\index{trajectory} or \textsb{pathline}\index{pathline} of $\overline{\vto{u}}$ during $\mathbb{P}$. Additionally to this set of places, it is also important to define the set of particles that occupy a fixed place during a period of time. In order to do this, we first define mapping $\map{\tnr{p}_{\vto{u}}}{\tempo}{\tnr{\overline{\mathcal{B}}}}$ whose function, described by 
+is called the \textsb{trajectory}\index{trajectory} or \textsb{pathline}\index{pathline} of $\overline{\vto{u}}$ during $\mathbb{P}$. Additionally to this set of places, it is also important to define the set of particles that occupy a fixed place during a period of time. In order to do this, we define the mapping $\map{\tnr{p}_{\vto{u}}}{\tempo}{\tnr{\overline{\mathcal{B}}}}$, whose function is called the \textsb{streak function}\index{function!streak} of a fixed place $\vto{u}$ if it observes the equality  
 \begin{equation}
-\fua{\tnr{p}_{\vto{u}}}{t}=\fua{\tnr{\chi}_{t}^{-1}}{\vto{u}}\,,
+\fua{\tnr{p}_{\vto{u}}}{t}=\fua{\tnr{\chi}_{t}^{-1}}{\vto{u}}\,, \forall t\in\tempo\,.
 \end{equation}
-is called the \textsb{streak function}\index{function!streak} of place $\vto{u}$. In this context, the set of particles
+In this context, the set of particles
 \begin{equation}
 S_{\vto{u}}:=\{\,\fua{\tnr{p}_{\vto{u}}}{t}\,:\,t\in\mathbb{P}\,\}
 \end{equation}
-is said to be the \textsb{streakline}\index{streakline} of place $\vto{u}$ during $\mathbb{P}$. From the temporal deformation and the streak function presented so far, it is possible to describe the generic $\mathcal{C}^2$ functions in $\map{\tnr{\omega}}{\tnr{\overline{\mathcal{B}}}\times\tempo}{W_\cam{F}}$ and $\map{\tnr{\Omega}}{\tnr{\mathcal{B}}_t\times\tempo}{W_\cam{F}}$, where $W_\cam{F}$ is a Hilbert space, in their Eulerian and Lagragian forms respectively through  
+is said to be the \textsb{streakline}\index{streakline} of place $\vto{u}$ during $\mathbb{P}$. From the deformation $\tnr{\chi}_{t}$ defined on  previous chapter, it is possible to describe the generic $\mathcal{C}^2$ functions in $\map{\tnr{\omega}}{\tnr{\overline{\mathcal{B}}}\times\tempo}{W_\cam{F}}$ and $\map{\tnr{\Omega}}{\tnr{\mathcal{B}}_t\times\tempo}{W_\cam{F}}$, where $W_\cam{F}$ is a Hilbert space, in their Eulerian and Lagrangian forms respectively through  
 \begin{alignat}{3}\label{eq:LagEulDesc} 
-\tnr{\omega}_E(\vto{x},t):=\tnr{\omega}(\fua{\tnr{p}_{\vto{x}}}{t},t)&\qquad \text{and}\qquad & \tnr{\Omega}_L(\overline{\vto{x}},t):=\tnr{\Omega}(\fua{\tnr{\chi}_{\overline{\vto{x}}}}{t},t)\,.
+\tnr{\omega}_E(\vto{x},t):=\tnr{\omega}(\fua{\tnr{\chi}_{t}^{-1}}{\vto{x}},t)&\qquad \text{and}\qquad & \tnr{\Omega}_L(\overline{\vto{x}},t):=\tnr{\Omega}(\fua{\tnr{\chi}_{t}}{\vto{x}},t)\,.
 \end{alignat}
-Following the same procedure adopted for deformations, univariate $\mathcal{C}^2$ functions ${\tnr{\omega}}_{\overline{\vto{u}}}$, $(\tnr{\omega}_E)_{\vto{u}}$, ${\tnr{\Omega}}_{\vto{u}}$ and $(\tnr{\Omega}_L)_{\overline{\vto{u}}}$ are defined by fixing the first argument of their bivariate counterparts on an arbitrary particle or spatial point. Thereby, considering equality \eqref{eq:derivVecScaFun}, the dotted functions in rules  
-\begin{alignat}{3} 
-{\dot{\tnr{\omega}}}(\overline{\vto{x}},t)=\fua{\dfrac{d\,{\tnr{\omega}}_{\overline{\vto{x}}}}{dt}}{t}&\qquad \text{and}\qquad & \dot{\tnr{\Omega}}_L(\overline{\vto{x}},t)=\fua{\dfrac{d\,(\tnr{\Omega}_L)_{\overline{\vto{x}}}}{dt}}{t}
+Following the same procedure adopted for deformations, univariate $\mathcal{C}^2$ functions ${\tnr{\omega}}_{\overline{\vto{u}}}$, $[\tnr{\omega}_E]_{\vto{u}}$, ${\tnr{\Omega}}_{\vto{u}}$ and $[\tnr{\Omega}_L]_{\overline{\vto{u}}}$ are defined by fixing the first argument of their bivariate counterparts on an arbitrary particle or spatial point. Thereby, considering equality \eqref{eq:derivVecScaFun}, the dotted functions in definitions  
+\begin{alignat}{3}\label{eq:dotDeriv1} 
+{\dot{\tnr{\omega}}}_{\overline{\vto{u}}}:=\dfrac{d\,{\tnr{\omega}}_{\overline{\vto{u}}}}{dt}&\qquad \text{and}\qquad & [\dot{\tnr{\Omega}}_L]_{\overline{\vto{u}}}:=\dfrac{d\,[\tnr{\Omega}_L]_{\overline{\vto{u}}}}{dt}
 \end{alignat}
-are said to be the Lagrangian or material time derivatives of  $\tnr{\omega}$ and $\tnr{\Omega}$ respectively. Similarly, the dotted functions in 
-\begin{alignat}{3} 
-{\dot{\tnr{\Omega}}}({\vto{x}},t)=\fua{\dfrac{d\,{\tnr{\Omega}}_{{\vto{x}}}}{dt}}{t}&\qquad \text{and}\qquad & \dot{\tnr{\omega}}_E({\vto{x}},t)=\fua{\dfrac{d\,(\tnr{\omega}_E)_{{\vto{x}}}}{dt}}{t}
+are said to be the Lagrangian or material time derivatives of  $\tnr{\omega}$ and $\tnr{\Omega}$ at particle at $\overline{\vto{u}}$ respectively. Similarly, the dotted functions in
+\begin{alignat}{3} \label{eq:dotDeriv2}
+{\dot{\tnr{\Omega}}}_{{\vto{u}}}:=\dfrac{d\,{\tnr{\Omega}}_{{\vto{u}}}}{dt}&\qquad \text{and}\qquad & [\dot{\tnr{\omega}}_E]_{{\vto{u}}}:=\dfrac{d\,[\tnr{\omega}_E]_{{\vto{u}}}}{dt}
 \end{alignat}
-are the Eulerian or spatial time derivatives of  $\tnr{\Omega}$ and $\tnr{\omega}$. When the time derivative is of second order, that is $d^2\bullet/dt^2$, we notate with double dots the function in questions, namely $\ddot{\tnr{\omega}}$, $\ddot{\tnr{\Omega}}$, etc.    
+are the Eulerian or spatial time derivatives of  $\tnr{\Omega}$ and $\tnr{\omega}$ at place $\vto{u}$. If particle, place and time are variables, we have 
+\begin{alignat*}{5} 
+\dot{\tnr{\omega}}(\overline{\vto{x}},t):={\dot{\tnr{\omega}}}_{\overline{\vto{x}}}(t)\,,&\quad& \dot{\tnr{\Omega}}_L(\overline{\vto{x}},t):=[\dot{\tnr{\Omega}}_L]_{\overline{\vto{x}}}(t)\,,&\quad&\dot{\tnr{\omega}}_E({\vto{x}},t):=[\dot{\tnr{\omega}}_E]_{{\vto{x}}}(t)&\quad \text{and}\quad &
+\dot{\tnr{\Omega}}({\vto{x}},t):={\dot{\tnr{\Omega}}}_{{\vto{x}}}(t) \,.
+\end{alignat*}
+Lagrangian and Eulerian descriptions as defined by \eqref{eq:LagEulDesc} can be extended to time derivatives: for each of the functions $\tnr{\omega}$ and $\tnr{\Omega}$, it is possible to obtain that its Eulerian (Lagrangian) time derivative equals the Eulerian (Lagrangian) description of its Lagrangian (Eulerian) time derivative, that is,  
+\begin{alignat}{3}\label{eq:matEuDerivMatEu}
+\dot{\tnr{\omega}}_E({\vto{x}},t)=\dot{\tnr{\omega}}(\fua{\tnr{\chi}_{t}^{-1}}{\vto{x}},t)&\qquad \text{and}\qquad & \dot{\tnr{\Omega}}_L(\overline{\vto{x}},t)=\dot{\tnr{\Omega}}(\fua{\tnr{\chi}_{t}}{\overline{\vto{x}}},t) \,.
+\end{alignat}
+In general terms, when the time derivative is of second order, that is $d^2\bullet/dt^2$, we notate with upper double dots all the previous functions in question.    
+
+{\footnotesize
+\begin{proof}
+From expressions \eqref{eq:LagEulDesc}, \eqref{eq:dotDeriv1} and \eqref{eq:dotDeriv2}, the following development proves one of the previous equalities \eqref{eq:matEuDerivMatEu}; the other is proved similarly.
+\begin{equation*}
+\dot{\tnr{\omega}}_E(\vto{x},t)=[\dot{\tnr{\omega}}_E]_{\vto{x}}(t)=\dfrac{d\,[{\tnr{\omega}}_E]_{\vto{x}}}{dt}(t)=\dfrac{d\,{\tnr{\omega}}_{\overline{\vto{x}}}}{dt}(t)=\dot{\tnr{\omega}}(\fua{\tnr{\chi}_{t}^{-1}}{\vto{x}},t)\,.
+\end{equation*}
+\end{proof}
+}
+
 
 Considering Lagrangian time derivatives, the temporal sensitivity of the deformation of a given fixed particle $\overline{\vto{u}}$ at instant $t$ is measured by the vector 
 \begin{equation}
-\dot{\tnr{\chi}}_{\overline{\vto{u}}}(t)=\fua{\dot{\tnr{\chi}}}{\overline{\vto{u}},t}=\fua{\dfrac{d\,{\tnr{\chi}}_{\overline{\vto{u}}}}{dt}}{t}\,,
+\dot{\tnr{\chi}}_{\overline{\vto{u}}}(t)=\fua{\dfrac{d\,{\tnr{\chi}}_{\overline{\vto{u}}}}{dt}}{t}\,,
 \end{equation}
 called the \textsb{velocity}\index{velocity} of $\overline{\vto{u}}$ at $t$. Similarly, the temporal sensitivity of the velocity of particle $\overline{\vto{u}}$ at instant $t$ is the vector 
 \begin{equation}
-\ddot{\tnr{\chi}}_{\overline{\vto{u}}}(t)=\fua{\ddot{\tnr{\chi}}}{\overline{\vto{u}},t}=\fua{\dfrac{d\,\dot{\tnr{\chi}}_{\overline{\vto{u}}}}{dt}}{t}\,,
+\ddot{\tnr{\chi}}_{\overline{\vto{u}}}(t)\fua{\dfrac{d\,\dot{\tnr{\chi}}_{\overline{\vto{u}}}}{dt}}{t}\,,
 \end{equation}
-called the \textsb{acceleration}\index{acceleration} of $\overline{\vto{u}}$ at $t$. If not only time but also the material particle is variable, functions $\dot{\tnr{\chi}}$ and $\ddot{\tnr{\chi}}$ are called the velocity and  acceleration functions of body $\tnr{\overline{\mathcal{B}}}$. In many cases, it is more convenient to work with places instead of particles, that is, to obtain the Eulerian descriptions of velocity and acceleration 
+called the \textsb{acceleration}\index{acceleration} of $\overline{\vto{u}}$ at $t$. If not only time but also the material particle is variable, functions $\dot{\tnr{\chi}}$ and $\ddot{\tnr{\chi}}$ are called the velocity and  acceleration functions of body $\tnr{\overline{\mathcal{B}}}$. In this context, it is sometimes more convenient to work with velocities and accelerations in places instead of particles, which is enabled by the equalities  
 \begin{alignat}{3}
-\dot{\tnr{\chi}}_E(\vto{x},t):=\dot{\tnr{\chi}}(\fua{\tnr{p}_{\vto{x}}}{t},t)&\qquad \text{and}\qquad & \ddot{\tnr{\chi}}_E(\vto{x},t):=\ddot{\tnr{\chi}}(\fua{\tnr{p}_{\vto{x}}}{t},t)\,,
+\dot{\tnr{\chi}}_E(\vto{x},t)=\dot{\tnr{\chi}}(\fua{\tnr{\chi}_{t}^{-1}}{\vto{x}},t)&\qquad \text{and}\qquad & \ddot{\tnr{\chi}}_E(\vto{x},t)=\ddot{\tnr{\chi}}(\fua{\tnr{\chi}_{t}^{-1}}{\vto{x}},t)\,,
 \end{alignat}
-following definition in \eqref{eq:LagEulDesc}.
+following \eqref{eq:matEuDerivMatEu}.

@@ -1,0 +1,41 @@
+\babel@toc {english}{}\relax 
+\addvspace {10pt}
+\contentsline {figure}{\numberline {1.1}{\ignorespaces If the selection criteria is ``\texttt {triangular plates with heights between 5cm and 15cm}'', then $\varDelta $ is a mathematical collection if equality is based only on the feature ``number of sides''; additionally, if it is based on ``height'', $\varDelta $ is still a collection; but, if it is based also on ``fill color'', then $\varDelta $ is a mathematical set.\relax }}{7}{}%
+\contentsline {figure}{\numberline {1.2}{\ignorespaces Intersection is distributive in union.\relax }}{8}{}%
+\contentsline {figure}{\numberline {1.3}{\ignorespaces Conceptual hierarchy of sets and sequences.\relax }}{10}{}%
+\contentsline {figure}{\numberline {1.4}{\ignorespaces Functions $f$ and $g$ map $U$ to $V$, where $f$ is an injection and $g$ a surjection. If image $R_f$ were equal to the codomain $V$, $f$ would be a bijection.\relax }}{13}{}%
+\contentsline {figure}{\numberline {1.5}{\ignorespaces Conceptual hierarchy of groups and arrays.\relax }}{29}{}%
+\addvspace {10pt}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Sphere, closed and open balls.\relax }}{37}{}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Boundary, closure and interior of $A_3$.\relax }}{38}{}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Notable combinations of vector spaces.\relax }}{40}{}%
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Relationships between bases induced by $B$ in terms of theorem \ref {teo:repRiesz}.\relax }}{48}{}%
+\addvspace {10pt}
+\addvspace {10pt}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Vector as an arrow identified by points $a$ and $b$.\relax }}{104}{}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Sum of vectors $\vv {ab}$ and $\vv {xy}$ where $\vv {xy}\oplus b=c$.\relax }}{104}{}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Line and plane parallel to each other.\relax }}{106}{}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces $n$-dimensional affine coordinate system $(o,B)$ and its axes.\relax }}{108}{}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Vector and scalar geometric projections.\relax }}{111}{}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Line and plane perpendicular to each other.\relax }}{111}{}%
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Hyperplane ${\mathcal {S}}^{n}_{\mathbb {F}}$ is mapped to ${\mathcal {V}}^{n}_{\mathbb {F}}$ by translation $\mathit {t}_\mathbold {{u}}$.\relax }}{113}{}%
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Affinities $\mathit {s}$, $\mathit {s}_a$ and $\mathit {h}$ are ordinary, centered and proportional dilations.\relax }}{114}{}%
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Two-dimensional rotoreflexion and rotation.\relax }}{116}{}%
+\contentsline {figure}{\numberline {4.10}{\ignorespaces Axial vector $\mathbold {{z}}$ defined by $\mathbold {{x}}$, $\mathbold {{y}}$ and oriented Euclidean space $(U_\mathbb {R},\pmb {A}_B)$, where basis $B=\{\mathbold {{\hat {u}}}_1,\mathbold {{\hat {u}}}_2,\mathbold {{\hat {u}}}_3\}$.\relax }}{117}{}%
+\contentsline {figure}{\numberline {4.11}{\ignorespaces Parallelogram of volume $\alpha \beta $ defined by $\mathbold {{x}},\mathbold {{y}},\mathbold {{z}}$.\relax }}{119}{}%
+\addvspace {10pt}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Examples of two dimensional irregular domains.\relax }}{137}{}%
+\addvspace {10pt}
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Paris A f.45v, Atlanticus f.908r, Madrid I f.84v (right), 177v (bottom).\relax }}{148}{}%
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Codex Atlanticus f.222r.\relax }}{149}{}%
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Beams in tension and bending (\textsc {Galileo}\cite {galileo_1954_2}).\relax }}{151}{}%
+\contentsline {figure}{\numberline {6.4}{\ignorespaces Extension of chords and Galileo's Problem (\textsc {Mariotte}\cite {mariotte_1740_1}, pp.353-355).\relax }}{154}{}%
+\contentsline {figure}{\numberline {6.5}{\ignorespaces Springs built by \textsc {Hooke}\cite {hooke_1678_1} for his Law.\relax }}{157}{}%
+\contentsline {figure}{\numberline {6.6}{\ignorespaces Study on the \emph {curva elastica} by \textsc {Jakob Bernoulli}\cite {jakob_1694}.\relax }}{158}{}%
+\contentsline {figure}{\numberline {6.7}{\ignorespaces Different configurations of the elastic band on Euler's \emph {De Curvis Elasticis}.\relax }}{165}{}%
+\addvspace {10pt}
+\contentsline {figure}{\numberline {7.1}{\ignorespaces Body configurations, vectorizations and deformations.\relax }}{185}{}%
+\contentsline {figure}{\numberline {7.2}{\ignorespaces Rigid deformation.\relax }}{188}{}%
+\contentsline {figure}{\numberline {7.3}{\ignorespaces Pure stretch.\relax }}{188}{}%
+\contentsline {figure}{\numberline {7.4}{\ignorespaces Simple shear.\relax }}{189}{}%
+\addvspace {10pt}
