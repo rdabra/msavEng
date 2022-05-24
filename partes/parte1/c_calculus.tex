@@ -77,15 +77,15 @@ From previous conditions, it is possible to obtain the following important prope
 	\item[i.] If $\fua{\tnr{\psi}}{\tnr{X}}=\tnr{H}$ then $\tnr{\psi}'=\tnr{0}\,$;
 	\item[ii.] If $\fua{\tnr{\psi}}{\tnr{X}}=\beta\tnr{X}$, tensor $\fua{[\fua{\tnr{\psi}'}{\tnr{X}}]}{\tnr{H}}=\beta\tnr{H}\,$ and therefore $\fua{\tnr{\psi}'}{\tnr{X}}=\tnr{\psi}=\tnr{i}$ for $\beta=1$;
 	\item[iii.] Sum rule: if $\tnr{\psi}=\tnr{\psi}_1+\tnr{\psi}_2$ then $\tnr{\psi}'=\tnr{\psi}_1'+\tnr{\psi}_2'\,$;
-	\item[iv.] Chain rule: if $\tnr{\psi}=\tnr{\psi}_1\circ\tnr{\psi}_2$, where $\map{\tnr{\psi}_1}{\ete{\cam{F}}{W^{\times r}}}{\ete{\cam{F}}{V^{\times s}}}$ and $\map{\tnr{\psi}_2}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{W^{\times r}}}$, then
-	\begin{equation}
+	\item[iv.] \textsb{Chain rule}\index{Chain Rule}: if $\tnr{\psi}=\tnr{\psi}_1\circ\tnr{\psi}_2$, where $\map{\tnr{\psi}_1}{\pmb{\mathcal{W}}}{\ete{\cam{F}}{V^{\times s}}}$, $\map{\tnr{\psi}_2}{\pmb{\mathcal{U}}}{\pmb{\mathcal{W}}}$ and $\pmb{\mathcal{W}}\subset\ete{\cam{F}}{W^{\times r}}$ is open, then
+	\begin{equation}\label{eq:chainRule}
 		\fua{\tnr{\psi}'}{\tnr{X}}=[\fua{\tnr{\psi}_1'\circ\tnr{\psi}_2}{\tnr{X}}]\circ\fua{\tnr{\psi}_2'}{\tnr{X}}\,;
 	\end{equation}
-    \item[v.] Product rule: if $\fua{\tnr{\psi}}{\tnr{X}}=\fua{\tnr{\psi}_1}{\tnr{X}}\odot_q\fua{\tnr{\psi}_2}{\tnr{X}}$, where mappings  $\map{\tnr{\psi}_1}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times r}\times W^{\times q}}}$ and $\map{\tnr{\psi}_2}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{W^{\times q}\times V^{\times p}}}$ are defined for $s=r+p$, then
+    \item[v.] \textsb{Product rule}\index{product rule}: if $\fua{\tnr{\psi}}{\tnr{X}}=\fua{\tnr{\psi}_1}{\tnr{X}}\odot_q\fua{\tnr{\psi}_2}{\tnr{X}}$, where mappings  $\map{\tnr{\psi}_1}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times r}\times W^{\times q}}}$ and $\map{\tnr{\psi}_2}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{W^{\times q}\times V^{\times p}}}$ are defined for $s=r+p$, then
 	\begin{equation}
 		\fua{[\fua{\tnr{\psi}'}{\tnr{X}}]}{\tnr{H}}=\fua{\tnr{\psi}_1}{\tnr{X}}\odot_{q}\fua{[\fua{\tnr{\psi}_2'}{\tnr{X}}]}{\tnr{H}} + \fua{[\fua{\tnr{\psi}_1'}{\tnr{X}}]}{\tnr{H}} \odot_{q} \fua{\tnr{\psi}_2}{\tnr{X}}\,;
 	\end{equation}
-	\item[vi.] Leibniz's rule: if function in $\map{\tnr{\psi}}{\pmb{\mathcal{U}}}{\cam{F}}$ is described by $\fua{\tnr{\psi}}{\tnr{X}}=\fua{\tnr{\psi}_1}{\tnr{X}}\cdot\fua{\tnr{\psi}_2}{\tnr{X}}$, where $\map{\tnr{\psi}_1}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}$ and $\map{\tnr{\psi}_2}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}$, then
+	\item[vi.] \textsb{Leibniz's rule}\index{Leibniz's rule}: if function in $\map{\tnr{\psi}}{\pmb{\mathcal{U}}}{\cam{F}}$ is described by $\fua{\tnr{\psi}}{\tnr{X}}=\fua{\tnr{\psi}_1}{\tnr{X}}\cdot\fua{\tnr{\psi}_2}{\tnr{X}}$, where $\map{\tnr{\psi}_1}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}$ and $\map{\tnr{\psi}_2}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}$, then
 	\begin{equation}
 	\fua{[\fua{\tnr{\psi}'}{\tnr{X}}]}{\tnr{H}}=\fua{\tnr{\psi}_1}{\tnr{X}}\cdot\fua{[\fua{\tnr{\psi}_2'}{\tnr{X}}]}{\tnr{H}} + \fua{[\fua{\tnr{\psi}_1'}{\tnr{X}}]}{\tnr{H}} \cdot \fua{\tnr{\psi}_2}{\tnr{X}}\,;
 	\end{equation}
@@ -138,23 +138,27 @@ and $\fua{\tnr{\varphi}'}{\tnr{Y}_1,\cdots,\tnr{Y}_q}$ is multilinear, then $\tn
 \end{equation}
 where $\tnr{H}_i\in\pmb{\mathcal{U}}_i$ is an arbitrary direction. When the strategy is to study each variable $\tnr{X}_i$ independently, \emph{caeteris paribus}, development from the concept of tangency is the same as the univariate case, but now the derivative of $\tnr{\varphi}$  is called \textsb{partial derivative}\index{derivative!partial} of $\tnr{\varphi}$ with respect to $\tnr{X}_r$, $1\leqslant r\leqslant q$, represented by \gloref{partialDer}, where
 \begin{equation}\label{eq:partialDerivative}
-[\fua{\tnr{\varphi}_{\tnr{X}_r}^{'}}{\tnr{X}_1,\cdots,\tnr{X}_q}]{(\tnr{H}_r)}=\lim_{\alpha\to 0} \dfrac{\fua{\tnr{\varphi}}{\tnr{X}_1,\cdots,\tnr{X}_r+\alpha\tnr{H}_r,\cdots,\tnr{X}_q}-\fua{\tnr{\varphi}}{\tnr{X}_1,\cdots,\tnr{X}_q}}{\alpha}\,.
+[\fua{\partial_r\tnr{\varphi}}{\tnr{X}_1,\cdots,\tnr{X}_q}]{(\tnr{H}_r)}=\lim_{\alpha\to 0} \dfrac{\fua{\tnr{\varphi}}{\tnr{X}_1,\cdots,\tnr{X}_r+\alpha\tnr{H}_r,\cdots,\tnr{X}_q}-\fua{\tnr{\varphi}}{\tnr{X}_1,\cdots,\tnr{X}_q}}{\alpha}\,.
 \end{equation}
-From the above conditions, an important property can be obtained which relates total and partial derivatives of multivariate tensor functions, described as follows:
+From the above conditions, the property 
 \begin{equation}
-\fua{[\fua{\tnr{\varphi}'}{\tnr{X}_1,\cdots,\tnr{X}_q}]}{\tnr{H}_1,\cdots,\tnr{H}_q}=\sum_{i=1}^{q}[\fua{\tnr{\varphi}_{\tnr{X}_i}^{'}}{\tnr{X}_1,\cdots,\tnr{X}_q}]{(\tnr{H}_i)}\,.
+\fua{[\fua{\tnr{\varphi}'}{\tnr{X}_1,\cdots,\tnr{X}_q}]}{\tnr{H}_1,\cdots,\tnr{H}_q}=\sum_{i=1}^{q}[\fua{\partial_i\tnr{\varphi}}{\tnr{X}_1,\cdots,\tnr{X}_q}]{(\tnr{H}_i)}\,
 \end{equation}
+relates total and partial derivatives of multivariate tensor functions and the following equality is commonly known as the \textsb{Chain Rule for Partial Derivatives}\index{Chain Rule!partial derivatives}:
+\begin{multline}\label{eq:chainRulePartial}
+\fua{[\fua{\tnr{\varphi}'}{\tnr{\varphi}_1(\tnr{Y}_1),\cdots,\tnr{\varphi}_q(\tnr{Y}_q)}]}{\tnr{H}_1,\cdots,\tnr{H}_q}=\\
+\sum_{i=1}^{q}[\fua{\partial_i\tnr{\varphi}}{\tnr{\varphi}_1(\tnr{Y}_1),\cdots,\tnr{\varphi}_q(\tnr{Y}_q)}\circ\tnr{\varphi}_i'(\tnr{Y}_i)]{(\tnr{H}_i)}\,,
+\end{multline}
+where the function in $\map{\tnr{\varphi}_i}{{\pmb{\mathcal{W}}_i}}{\pmb{\mathcal{U}}_i}$, ${\pmb{\mathcal{W}}_i}\subset\ete{\cam{F}}{W^{\times r}}$, must obviously be differentiable.
 
 {\footnotesize
 \begin{proof}
-Let's prove this property. From \eqref{eq:totalDerivative} and \eqref{eq:partialDerivative} it is clear that, for each direction $\tnr{H}_i$, we have $q$ equalities of the form
+Let's prove these properties. From \eqref{eq:totalDerivative} and \eqref{eq:partialDerivative} it is clear that, for each direction $\tnr{H}_i$, we have $q$ equalities of the form
 \begin{equation*}
-\fua{[\fua{\tnr{\varphi}'}{\tnr{X}_1,\cdots,\tnr{X}_q}]}{\tnr{0},\cdots,\tnr{H}_i,\cdots,\tnr{0}}=[\fua{\tnr{\varphi}_{\tnr{X}_r}^{'}}{\tnr{X}_1,\cdots,\tnr{X}_q}]{(\tnr{H}_i)}\,.
+\fua{[\fua{\tnr{\varphi}'}{\tnr{X}_1,\cdots,\tnr{X}_q}]}{\tnr{0},\cdots,\tnr{H}_i,\cdots,\tnr{0}}=[\fua{\partial_{\tnr{X}_i}\tnr{\varphi}}{\tnr{X}_1,\cdots,\tnr{X}_q}]{(\tnr{H}_i)}\,.
 \end{equation*}
-Summing these $q$ equalities, we prove the property because function $\fua{\tnr{\varphi}'}{\tnr{X}_1,\cdots,\tnr{X}_q}$ is multilinear.
+By summing up these $q$ equalities, we prove the first property because function $\fua{\tnr{\varphi}'}{\tnr{X}_1,\cdots,\tnr{X}_q}$ is multilinear. Applying the chain rule for partial deriving $\tnr{\varphi}$ with respect to argument $\tnr{\varphi}_i(\tnr{Y}_i)$,  $q$ other equalities are also obtained; and since the derivatives involved are linear and multilinear, the second property is verified by also summing up these equalities. 
 \end{proof}}
-
-
 
 It is interesting to note that derivatives may be differentiable themselves, and also derivatives of derivatives, and so on. Considering previous conditions, the tensor function $\tnr{\psi}$ is defined to be the zero order derivative of itself, function $\tnr{\psi}'$ is the order one derivative of $\tnr{\psi}$, $\tnr{\psi}''$ the order two and $\gloref{derivHigh}$ the order $k\geqslant 0$. Thereby, from definition \eqref{eq:tangentFunct}, a tensor function $\tnr{\psi}$ is said to be differentiable of order two at $\tnr{X}_0$ if it is differentiable at $\tnr{X}_0$ and there is a unique function $\tnr{\psi_\mathit{d}}^{(1)}$ tangent to the function in $\map{\tnr{\psi}'}{\pmb{\mathcal{U}}}{\evlc{\cam{F}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}}$ at $\tnr{X}_0$ where
 \begin{equation*}
@@ -206,35 +210,35 @@ If tensor function $\tnr{\psi}$ is a differentiable unary tensor operator on $\p
 \end{equation}
 Now, from theorem \ref{teo:repRiesz}, we present vector functions
 \begin{alignat}{4} \label{eq:primiRepFuncGrad2}
-\tnr{\hat{\psi}}:=\Phi^{-1}\circ\tnr{\psi}\circ\Phi\,, &\qquad   \tnr{\hat{\psi}}'_{\vto{x}_0}:=\Phi^{-1}\circ\fua{\tnr{\psi}'}{\vto{x}_0^*}\circ\Phi  &\qquad \text{ and } \qquad& \nabla\tnr{\hat{\psi}}:=\nabla\tnr{\psi}\circ\Phi \,,
+\tnr{\hat{\psi}}:=\Phi^{-1}\circ\tnr{\psi}\circ\Phi\,, &\qquad   \tnr{\hat\psi}'(\vto{x}_0):=\Phi^{-1}\circ\fua{\tnr{\psi}'}{\vto{x}_0^*}\circ\Phi  &\qquad \text{ and } \qquad& \nabla\tnr{\hat{\psi}}:=\nabla\tnr{\psi}\circ\Phi \,,
 \end{alignat}
 from which we can rewrite equality \eqref{eq:defGradient2} as
 \begin{equation}\label{eq:derivVecGradVec}
-\fua{\tnr{\hat\psi}'_{\vto{x}_0}}{\vto{x}} = \fua{ \nabla\tnr{\hat{\psi}}}{\vto{x}_0}^\dagger\hat{\odot}_1\vto{x}^*\,.
+\fua{[\tnr{\hat\psi}'(\vto{x}_0)]}{\vto{x}} = \fua{ \nabla\tnr{\hat{\psi}}}{\vto{x}_0}^\dagger\hat{\odot}_1\vto{x}^*\,.
 \end{equation}
-Comparing this equality with \eqref{eq:Lin2secTensTransp}, we can state that $\tnr{\hat\psi}'_{\vto{x}_0}$ is the representative function of second order tensor $\fua{ \nabla\tnr{\hat{\psi}}}{\vto{x}_0}$, called the gradient of  $\tnr{\hat{\psi}}$ at $\vto{x}_0$. Now, considering equality \eqref{eq:secTens2Lin} and second order tensor $\fua{\nabla\tnr{\hat{\psi}}}{\vto{x}_0}=\fua{\nabla\tnr{\psi}}{\vto{x}_0^*}$, we also have for the present case that 
+Comparing this equality with \eqref{eq:Lin2secTensTransp}, we can state that $\tnr{\hat\psi}'(\vto{x}_0)$ is the representative function of second order tensor $\fua{ \nabla\tnr{\hat{\psi}}}{\vto{x}_0}$, called the gradient of  $\tnr{\hat{\psi}}$ at $\vto{x}_0$. Now, considering equality \eqref{eq:secTens2Lin} and second order tensor $\fua{\nabla\tnr{\hat{\psi}}}{\vto{x}_0}=\fua{\nabla\tnr{\psi}}{\vto{x}_0^*}$, we also have for the present case that 
 \begin{equation}\label{eq:gradFuncRep}
-\fua{[\fua{\nabla\tnr{\hat{\psi}}}{\vto{x}_0}]}{\vto{x},\vto{y}}=\vto{y}\cdot\fua{\tnr{\hat\psi}'_{\vto{x}_0}}{\vto{x}^{c}}\,,\,\,\forall\, \vto{x},\vto{y}\in\mathcal{U}\,,
+\fua{[\fua{\nabla\tnr{\hat{\psi}}}{\vto{x}_0}]}{\vto{x},\vto{y}}=\vto{y}\cdot\fua{[\tnr{\hat\psi}'(\vto{x}_0)]}{\vto{x}^{c}}\,,\,\,\forall\, \vto{x},\vto{y}\in\mathcal{U}\,,
 \end{equation}
 where $\mathcal{U}$ is constituted by the corresponding vectors to the elements of $\pmb{\mathcal{U}}$. Considering rule \eqref{eq:directDeriv}, from  definitions \eqref{eq:primiRepFuncGrad2}, it is possible to develop the following for an arbitrary direction $\vto{h}^*\in\pmb{\mathcal{U}}$:  
 \begin{align}\label{eq:derivRep}
-\fua{\tnr{\hat\psi}'_{\vto{x}}}{\vto{h}}&=\Phi^{-1}\circ\fua{[\fua{\tnr{\psi}'}{\vto{x}^*}]}{\vto{h}^*}\nonumber\\
+\fua{[\tnr{\hat\psi}'(\vto{x})]}{\vto{h}}&=\Phi^{-1}\circ\fua{[\fua{\tnr{\psi}'}{\vto{x}^*}]}{\vto{h}^*}\nonumber\\
 &=\lim_{\alpha\to 0} \dfrac{\fua{\Phi^{-1}\circ\tnr{\psi}}{\vto{x}^*+\alpha\vto{h}^*}-\fua{\Phi^{-1}\circ\tnr{\psi}}{\vto{x}^*}}{\alpha}\nonumber\\
 &=\lim_{\alpha\to 0} \dfrac{\fua{\Phi^{-1}\circ\tnr{\psi}\circ\Phi}{\vto{x}+\alpha\vto{h}}-\fua{\Phi^{-1}\circ\tnr{\psi}\circ\Phi}{\vto{x}}}{\alpha}\nonumber\\
 &=\lim_{\alpha\to 0} \dfrac{\fua{\tnr{\hat\psi}}{\vto{x}+\alpha\vto{h}}-\fua{\tnr{\hat\psi}}{\vto{x}}}{\alpha}\,,
 \end{align}
-which results the rule of the directional derivative of the vector function in $\map{\tnr{\hat\psi}}{\mathcal{U}}{V_\cam{F}}$ along $\vto{h}\in\mathcal{U}$. From this result, \emph{the derivative $\tnr{\hat\psi}'_{\vto{x}}$, as a linear vector function, inherits all the previous and forthcoming definitions of the linear tensor function $\fua{\tnr{\psi}'}{\vto{x}^*}$}. For example, from \eqref{eq:derivSameArg} and \eqref{eq:defGradient2}, we can write that vector
+which results the rule of the directional derivative of the vector function in $\map{\tnr{\hat\psi}}{\mathcal{U}}{V_\cam{F}}$ along $\vto{h}\in\mathcal{U}$. From this result, \emph{the derivative $\tnr{\hat\psi}'(\vto{x})$, as a linear vector function, inherits all the previous and forthcoming definitions of the linear tensor function $\fua{\tnr{\psi}'}{\vto{x}^*}$}. For example, from \eqref{eq:derivSameArg} and \eqref{eq:defGradient2}, we can write that vector
 \begin{equation}\label{eq:derivSameArg2}
-\fua{D\tnr{\hat\psi}}{\vto{x}} := \fua{\tnr{\hat\psi}'_{\vto{x}}}{\vto{x}}=\fua{ \nabla\tnr{\hat{\psi}}}{\vto{x}}^\dagger\hat{\odot}_1\vto{x}^*\,.
+\fua{D\tnr{\hat\psi}}{\vto{x}} := \fua{[\tnr{\hat\psi}'(\vto{x})]}{\vto{x}}=\fua{ \nabla\tnr{\hat{\psi}}}{\vto{x}}^\dagger\hat{\odot}_1\vto{x}^*\,.
 \end{equation}
 
 Based on the concepts and definitions presented above for vector functions, when $U_{\cam{F}}=\cam{R}$, from mapping $\map{\tnr{\hat{\psi}}}{\mathcal{U}}{V_\real}$, we can write that $\fua{\tnr{\hat{\psi}}'_{x}}{\beta} = \beta\fua{\tnr{\hat{\psi}}'_{x}}{1}$ for all nonzero $\beta$, since the derivative is linear. In this context, our interest is to describe directional derivative  
 \begin{equation}\label{eq:derivVecScaFun}
-\fua{\dfrac{d\tnr{\hat{\psi}}}{dx}}{x} := \fua{\tnr{\hat{\psi}}'_{x}}{1} = \lim_{\alpha\to 0} \dfrac{\fua{\tnr{\hat{\psi}}}{x+\alpha}-\fua{\tnr{\hat{\psi}}}{x}}{\alpha}\,. 
+\fua{\dfrac{d\tnr{\hat{\psi}}}{dx}}{x} := \fua{[\tnr{\hat{\psi}}'(x)]}{1} = \lim_{\alpha\to 0} \dfrac{\fua{\tnr{\hat{\psi}}}{x+\alpha}-\fua{\tnr{\hat{\psi}}}{x}}{\alpha}\,. 
 \end{equation} 
 In this context, if $\tnr{\hat{\psi}}$ is differentiable of order $k\geqslant 1$, we adopt  
 \begin{equation}
-\fua{\dfrac{d^k\tnr{\hat{\psi}}}{dx^k}}{x}:=\fua{\tnr{\hat{\psi}}^{(k)}_{x}}{1}\,.
+\fua{\dfrac{d^k\tnr{\hat{\psi}}}{dx^k}}{x}:=\fua{[\tnr{\hat{\psi}}^{(k)}(x)]}{1}\,.
 \end{equation} 
 Given an arbitrary real number $x_0$ in a context where $V_\real=\real$, the function $\hat{\psi}$ under study is scalar and then we have the classical geometric interpretation of scalar $\fua{[d{\hat{\psi}}/dx]}{x_0}$ as being the slope of the tangent line ${\hat{\psi}}_\mathit{d}$ to the curve ${\hat{\psi}}$ at $x_0$. Still in this context, if $\{\vun{u}\}$ is the orthonormal basis of a one dimensional Hilbert space $U_\cam{R}$, it is valid to write
 $\fua{[d{\hat{\psi}}/dx]}{x}=[\fua{[d{\hat{\psi}}/dx]}{x}\vun{u}]\cdot\vun{u}$, where  
@@ -275,7 +279,7 @@ From the properties of derivatives presented on previous section, it is then pos
 	\end{equation}
 	\item[viii.] If $\fua{\tnr{\hat\psi}}{\vto{x}}=\fua{\tnr{\hat\psi}_1}{\vto{x}}\times\fua{\tnr{\hat\psi}_2}{\vto{x}}$, where $U_\real$ in mappings  $\map{\tnr{\hat\psi}_1}{{\mathcal{U}}}{U_\cam{R}}$ and $\map{\tnr{\hat\psi}_2}{{\mathcal{U}}}{U_\cam{R}}$ is properly defined for enabling cross products, 
 \begin{equation}\label{eq:crossRule}
-\fua{\tnr{\hat\psi}'_{\vto{x}}}{\vto{h}} = \fua{\tnr{\hat\psi}_1}{\vto{x}}\times\fua{{\tnr{\hat\psi}_2'}_{\vto{x}}}{\vto{h}} + \fua{{\tnr{\hat\psi}_1'}_{\vto{x}}}{\vto{h}} \times \fua{\tnr{\hat\psi}_2}{\vto{x}}\,,\,\forall \vto{h}\in\mathcal{U}\,,
+\fua{\tnr{\hat\psi}'(\vto{x})}{\vto{h}} = \fua{\tnr{\hat\psi}_1}{\vto{x}}\times\fua{{\tnr{\hat\psi}_2'}_{\vto{x}}}{\vto{h}} + \fua{{\tnr{\hat\psi}_1'}_{\vto{x}}}{\vto{h}} \times \fua{\tnr{\hat\psi}_2}{\vto{x}}\,,\,\forall \vto{h}\in\mathcal{U}\,,
 \end{equation}
 and then 
 	\begin{equation}\label{eq:prop3Grad}
@@ -306,12 +310,12 @@ Now, applying property iii on $\tnr{i}=\tnr{\psi}^{-1}\circ\tnr{\psi}$ and consi
 \end{align*}
 which proves item v. For item vi, equality $\fua{\tnr{\psi}}{\tnr{X}}=\tnr{X}\odot_m\tnr{T}+\tnr{C}$, labeled by (a) and where $\tnr{C}\in\ete{\real}{V^{\times s}}$ is arbitrary, is a function rule from which $\fua{\nabla\tnr{\psi}}{\tnr{X}}=\tnr{T}$ when we consider the product rule of directional derivatives and equality \eqref{eq:cotensIdent} in the context of real fields. The subtraction of equalities (a) defined by $\tnr{X}=\tnr{H}_1$ and $\tnr{X}=\tnr{H}_2$ proves the item. Item vii is a straighforward consequence of \eqref{eq:indentDiffeo} and \eqref{eq:identTensor}. Considering $(U_\real,\tnr{A}_B)$ a three dimensional oriented Euclidean space, we prove the equalities of item viii first by the development
 \begin{align*}
-\fua{\tnr{\hat\psi}'_{\vto{x}}}{\vto{h}}&=\lim_{\alpha\to 0}1/\alpha\{\tnr{A}_B\odot_{2}[\fua{\tnr{\hat\psi}_1}{\vto{x}+\alpha\vto{h}}\otimes\fua{\tnr{\hat\psi}_2}{\vto{x}+\alpha\vto{h}}]-\tnr{A}_B\odot_{2}[\fua{\tnr{\hat\psi}_1}{\vto{x}}\otimes\fua{\tnr{\hat\psi}_2}{\vto{x}}]\}\\
+\fua{\tnr{\hat\psi}'(\vto{x})}{\vto{h}}&=\lim_{\alpha\to 0}1/\alpha\{\tnr{A}_B\odot_{2}[\fua{\tnr{\hat\psi}_1}{\vto{x}+\alpha\vto{h}}\otimes\fua{\tnr{\hat\psi}_2}{\vto{x}+\alpha\vto{h}}]-\tnr{A}_B\odot_{2}[\fua{\tnr{\hat\psi}_1}{\vto{x}}\otimes\fua{\tnr{\hat\psi}_2}{\vto{x}}]\}\\
 &=\tnr{A}_B\odot_{2}\lim_{\alpha\to 0}1/\alpha\{\fua{\tnr{\hat\psi}_1}{\vto{x}+\alpha\vto{h}}\otimes\fua{\tnr{\hat\psi}_2}{\vto{x}+\alpha\vto{h}}-\fua{\tnr{\hat\psi}_1}{\vto{x}}\otimes\fua{\tnr{\hat\psi}_2}{\vto{x}}\}
 \end{align*}
 and then by adding and subtracting the limit on the right hand side by $\tnr{A}_B\odot_{2}[\fua{\tnr{\hat\psi}_1}{\vto{x}+\alpha\vto{h}}\otimes\fua{\tnr{\hat\psi}_2}{\vto{x}}]$ we obtain
 \begin{equation*}
-\fua{\tnr{\hat\psi}'_{\vto{x}}}{\vto{h}}= \tnr{A}_B\odot_{2}[\fua{\tnr{\hat\psi}_1}{\vto{x}}\otimes\fua{{\tnr{\hat\psi}_2'}_{\vto{x}}}{\vto{h}}]+\tnr{A}_B\odot_{2}\fua{{\tnr{\hat\psi}_1'}_{\vto{x}}}{\vto{h}} \otimes \fua{\tnr{\hat\psi}_2}{\vto{x}}]\,,
+\fua{\tnr{\hat\psi}'(\vto{x})}{\vto{h}}= \tnr{A}_B\odot_{2}[\fua{\tnr{\hat\psi}_1}{\vto{x}}\otimes\fua{{\tnr{\hat\psi}_2'}_{\vto{x}}}{\vto{h}}]+\tnr{A}_B\odot_{2}\fua{{\tnr{\hat\psi}_1'}_{\vto{x}}}{\vto{h}} \otimes \fua{\tnr{\hat\psi}_2}{\vto{x}}]\,,
 \end{equation*}
 from which we easily verify the first equality of viii. By definition \eqref{eq:derivSameArg2}, proof of the second equality is straightforward. 
 \end{proof}}

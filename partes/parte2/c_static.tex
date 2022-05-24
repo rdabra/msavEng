@@ -301,7 +301,7 @@ In this context, the set of particles
 \begin{equation}
 S_{\vto{u}}:=\{\,\fua{\tnr{p}_{\vto{u}}}{t}\,:\,t\in\mathbb{P}\,\}
 \end{equation}
-is said to be the \textsb{streakline}\index{streakline} of place $\vto{u}$ during $\mathbb{P}$. From the deformation $\tnr{\chi}_{t}$ defined on  previous chapter, it is possible to describe the generic $\mathcal{C}^2$ functions in $\map{\tnr{\omega}}{\tnr{\overline{\mathcal{B}}}\times\tempo}{W_\cam{F}}$ and $\map{\tnr{\Omega}}{\tnr{\mathcal{B}}_t\times\tempo}{W_\cam{F}}$, where $W_\cam{F}$ is a Hilbert space, in their Eulerian and Lagrangian forms respectively through  
+is said to be the \textsb{streakline}\index{streakline} of place $\vto{u}$ during $\mathbb{P}$. From the deformation $\tnr{\chi}_{t}$ defined on  previous chapter, it is possible to describe the generic $\mathcal{C}^2$ functions in $\map{\tnr{\omega}}{\tnr{\overline{\mathcal{B}}}\times\tempo}{W_\cam{F}}$ and $\map{\tnr{\Omega}}{\tnr{\mathcal{B}}_t\times\tempo}{W_\real}$, where $W_\real$ is an Euclidean space, in their Eulerian and Lagrangian forms respectively through  
 \begin{alignat}{3}\label{eq:LagEulDesc} 
 \tnr{\omega}_E(\vto{x},t):=\tnr{\omega}(\fua{\tnr{\chi}_{t}^{-1}}{\vto{x}},t)&\qquad \text{and}\qquad & \tnr{\Omega}_L(\overline{\vto{x}},t):=\tnr{\Omega}(\fua{\tnr{\chi}_{t}}{\vto{x}},t)\,.
 \end{alignat}
@@ -346,4 +346,18 @@ called the \textsb{acceleration}\index{acceleration} of $\overline{\vto{u}}$ at 
 \begin{alignat}{3}
 \dot{\tnr{\chi}}_E(\vto{x},t)=\dot{\tnr{\chi}}(\fua{\tnr{\chi}_{t}^{-1}}{\vto{x}},t)&\qquad \text{and}\qquad & \ddot{\tnr{\chi}}_E(\vto{x},t)=\ddot{\tnr{\chi}}(\fua{\tnr{\chi}_{t}^{-1}}{\vto{x}},t)\,,
 \end{alignat}
-following \eqref{eq:matEuDerivMatEu}.
+following \eqref{eq:matEuDerivMatEu}. As a consequence, it is possible to obtain that functions 
+\begin{alignat}{3}
+[\dot{\tnr{\chi}}_E]_{\vto{x}}=\dot{[\tnr{\chi}^{-1}_{{\vto{x}}}]}&\qquad \text{and}\qquad & [\ddot{\tnr{\chi}}_E]_{\vto{x}}=\ddot{[\tnr{\chi}^{-1}_{{\vto{x}}}]}\,.
+\end{alignat}
+
+FALAR DA GRADIENCIA
+
+{\footnotesize
+\begin{proof}
+From expressions \eqref{eq:LagEulDesc}, \eqref{eq:dotDeriv1} and \eqref{eq:dotDeriv2}, the following development proves one of the previous equalities \eqref{eq:matEuDerivMatEu}; the other is proved similarly.
+\begin{equation*}
+\dot{\tnr{\omega}}_E(\vto{x},t)=[\dot{\tnr{\omega}}_E]_{\vto{x}}(t)=\dfrac{d\,[{\tnr{\omega}}_E]_{\vto{x}}}{dt}(t)=\dfrac{d\,{\tnr{\omega}}_{\overline{\vto{x}}}}{dt}(t)=\dot{\tnr{\omega}}(\fua{\tnr{\chi}_{t}^{-1}}{\vto{x}},t)\,.
+\end{equation*}
+\end{proof}
+}
