@@ -27,7 +27,7 @@ Concerning the subject of this chapter, the intuitive concepts and definitions i
 \end{equation}
 where $\upsilon_o$ ``vectorizes'' the points of $\mathcal{B}_t$ relative to an origin $o\in\eamd{U}{R}{3}$, according to definition \eqref{eq:funVect}. Since $\upsilon_o$ is a bijection, the sets of vectors $\tnr{\overline{\mathcal{B}}}$ and $\tnr{\mathcal{B}}_t$ will also be called body and shape respectively.
 
-Given the mapping $\map{\tnr{\chi}}{\tnr{\overline{\mathcal{B}}}\times\tempo}{\tnr{\mathcal{B}}_t}$, bijection $\tnr{\chi}$ is called a deformation of $\tnr{\overline{\mathcal{B}}}$ when it is a $\mathcal{C}^{2}$-diffeomorphism that observes $\fua{\tnr{\chi}}{\overline{\vto{x}},\overline{t}}=\overline{\vto{x}}+\vto{c}$, where vector $\vto{c}\in U_\real$ is constant. For most of the forthcoming concepts to be presented, it is convenient to fix an arbitrary instant of time $t\in\tempo$ and define a bijective mapping $\map{\gloref{defInst}}{\tnr{\overline{\mathcal{B}}}}{\tnr{\mathcal{B}}_t}$ whose function obeys equality 
+Given the mapping $\map{\tnr{\chi}}{\tnr{\overline{\mathcal{B}}}\times\tempo}{\tnr{\mathcal{B}}_t}$, bijection $\tnr{\chi}$ is called a deformation of $\tnr{\overline{\mathcal{B}}}$ when it is a $\mathcal{C}^{2}$-diffeomorphism that observes $\fua{\tnr{\chi}}{\overline{\vto{x}},\overline{t}}=\overline{\vto{x}}+\vto{c}$, where vector $\vto{c}\in U_\real$ is constant. Since time is an independent variable, for most of the forthcoming concepts to be presented, it is convenient to fix an arbitrary instant $t\in\tempo$ and define a bijective mapping $\map{\gloref{defInst}}{\tnr{\overline{\mathcal{B}}}}{\tnr{\mathcal{B}}_t}$ whose function obeys equality 
 \begin{equation}
 \fua{\tnr{\chi}_t}{\overline{\vto{x}}}=\fua{\tnr{\chi}}{\overline{\vto{x}},t}\,,\,\forall\, \overline{\vto{x}}\in\tnr{\overline{\mathcal{B}}}\,,
 \end{equation}
@@ -301,24 +301,43 @@ In this context, the set of particles
 \begin{equation}
 S_{\vto{u}}:=\{\,\fua{\tnr{p}_{\vto{u}}}{t}\,:\,t\in\mathbb{P}\,\}
 \end{equation}
-is said to be the \textsb{streakline}\index{streakline} of place $\vto{u}$ during $\mathbb{P}$. From the deformation $\tnr{\chi}_{t}$ defined on  previous chapter, it is possible to describe the generic $\mathcal{C}^2$ functions in $\map{\tnr{\omega}}{\tnr{\overline{\mathcal{B}}}\times\tempo}{W_\cam{F}}$ and $\map{\tnr{\Omega}}{\tnr{\mathcal{B}}_t\times\tempo}{W_\real}$, where $W_\real$ is an Euclidean space, in their Eulerian and Lagrangian forms respectively through  
+is said to be the \textsb{streakline}\index{streakline} of place $\vto{u}$ during $\mathbb{P}$. 
+
+
+Now, let the functions in  $\map{\tnr{\omega}}{\tnr{\overline{\mathcal{B}}}\times\tempo}{W_\cam{F}}$ and $\map{\tnr{\Omega}}{\tnr{\mathcal{B}}_t\times\tempo}{W_\real}$, where $W_\real$ is an Euclidean space, be $\mathcal{C}^2$. The time derivative of these generic functions is said to be Lagrangian when particle $\overline{\vto{x}}\in\tnr{\overline{\mathcal{B}}}$ is defined to be an independent variable and called Eulerian when place $\vto{x}\in\tnr{\mathcal{B}}_t$ is an independent variable. Lagrangian time derivatives are here represented by $\overline{\partial}_t\bullet$, while Eulerian are represented by $\partial_t\bullet$. Therefore, we have the Lagrangian time derivatives  
+\begin{alignat}{3}\label{eq:LagEulDesc} 
+\overline{\partial}_t\tnr{\omega}(\overline{\vto{x}},t)=\dfrac{d\,{\tnr{\omega}}_{\overline{\vto{x}}}}{dt}(t)&\qquad \text{and}\qquad & \overline{\partial}_t\tnr{\Omega}(\fua{\tnr{\chi}_{t}}{\overline{\vto{x}}},t)=\tnr{\Omega}'(\fua{\tnr{\chi}_{t}}{\overline{\vto{x}}},t)\,,
+\end{alignat}
+while, for a place $\overline{\vto{u}}$, we have the Eulerian time derivatives  
+
+In other words, 
+\begin{alignat}{3}\label{eq:dotDeriv1} 
+{\dot{\tnr{\omega}}}(\overline{\vto{u}},t):=\partial_t\tnr{\omega}(\overline{\vto{u}},t)=\dfrac{d\,{\tnr{\omega}}_{\overline{\vto{u}}}}{dt}(t)&\qquad \text{and}\qquad & \dot{[\tnr{\Omega}_L]}(\overline{\vto{u}},t):=\tnr{\Omega}_L'(\overline{\vto{u}},t)
+\end{alignat}
+
+
+
+
+described in their Eulerian and Lagrangian forms respectively by      
 \begin{alignat}{3}\label{eq:LagEulDesc} 
 \tnr{\omega}_E(\vto{x},t):=\tnr{\omega}(\fua{\tnr{\chi}_{t}^{-1}}{\vto{x}},t)&\qquad \text{and}\qquad & \tnr{\Omega}_L(\overline{\vto{x}},t):=\tnr{\Omega}(\fua{\tnr{\chi}_{t}}{\vto{x}},t)\,.
 \end{alignat}
-Following the same procedure adopted for deformations, univariate $\mathcal{C}^2$ functions ${\tnr{\omega}}_{\overline{\vto{u}}}$, $[\tnr{\omega}_E]_{\vto{u}}$, ${\tnr{\Omega}}_{\vto{u}}$ and $[\tnr{\Omega}_L]_{\overline{\vto{u}}}$ are defined by fixing the first argument of their bivariate counterparts on an arbitrary particle or spatial point. Thereby, considering equality \eqref{eq:derivVecScaFun}, the dotted functions in definitions  
+The time derivative of these functions is said to be Lagrangian when particle $\overline{\vto{x}}$ is defined to be an independent variable and called Eulerian when place $\vto{x}$ is an independent variable. In other words,  is an  it can be fixed, .  enables its fixing, when time derivatives are called Lagrangian.   
+
+
+From the deformation $\tnr{\chi}_{t}$ defined on  previous chapter, it is possible to describe the generic $\mathcal{C}^2$ functions in $\map{\tnr{\omega}}{\tnr{\overline{\mathcal{B}}}\times\tempo}{W_\real}$ and $\map{\tnr{\Omega}}{\tnr{\mathcal{B}}_t\times\tempo}{W_\real}$, where $W_\real$ is an Euclidean space, in their Eulerian and Lagrangian forms respectively through  
+\begin{alignat}{3}\label{eq:LagEulDesc} 
+\tnr{\omega}_E(\vto{x},t):=\tnr{\omega}(\fua{\tnr{\chi}_{t}^{-1}}{\vto{x}},t)&\qquad \text{and}\qquad & \tnr{\Omega}_L(\overline{\vto{x}},t):=\tnr{\Omega}(\fua{\tnr{\chi}_{t}}{\vto{x}},t)\,.
+\end{alignat}
+Following the same procedure adopted for deformations, univariate $\mathcal{C}^2$ functions ${\tnr{\omega}}_{\overline{\vto{u}}}$ and ${\tnr{\Omega}}_{\vto{u}}$ are defined by fixing the first argument of their bivariate counterparts. It is important to observe that both $\tnr{\omega}_E$ and $\tnr{\Omega}_L$ do not have independent arguments since $\vto{x}$ and $\overline{\vto{x}}$ change with time, from which it makes no sense to fixing them in these functions. Thereby, considering equality \eqref{eq:derivVecScaFun}, the dotted functions in definitions  
 \begin{alignat}{3}\label{eq:dotDeriv1} 
-{\dot{\tnr{\omega}}}_{\overline{\vto{u}}}:=\dfrac{d\,{\tnr{\omega}}_{\overline{\vto{u}}}}{dt}&\qquad \text{and}\qquad & [\dot{\tnr{\Omega}}_L]_{\overline{\vto{u}}}:=\dfrac{d\,[\tnr{\Omega}_L]_{\overline{\vto{u}}}}{dt}
+{\dot{\tnr{\omega}}}(\overline{\vto{u}},t):=\partial_t\tnr{\omega}(\overline{\vto{u}},t)=\dfrac{d\,{\tnr{\omega}}_{\overline{\vto{u}}}}{dt}(t)&\qquad \text{and}\qquad & \dot{[\tnr{\Omega}_L]}(\overline{\vto{u}},t):=\tnr{\Omega}_L'(\overline{\vto{u}},t)
 \end{alignat}
-are said to be the Lagrangian or material time derivatives of  $\tnr{\omega}$ and $\tnr{\Omega}$ at particle at $\overline{\vto{u}}$ respectively. Similarly, the dotted functions in
+are said to be the Lagrangian or material time derivatives of  $\tnr{\omega}$ and $\tnr{\Omega}$ at particle $\overline{\vto{u}}$ respectively. Similarly, the dotted functions in
 \begin{alignat}{3} \label{eq:dotDeriv2}
-{\dot{\tnr{\Omega}}}_{{\vto{u}}}:=\dfrac{d\,{\tnr{\Omega}}_{{\vto{u}}}}{dt}&\qquad \text{and}\qquad & [\dot{\tnr{\omega}}_E]_{{\vto{u}}}:=\dfrac{d\,[\tnr{\omega}_E]_{{\vto{u}}}}{dt}
+{\dot{\tnr{\Omega}}}({\vto{u}},t):=\partial_t\Omega({\vto{u}},t)=\dfrac{d\,{\tnr{\Omega}}_{{\vto{u}}}}{dt}(t)&\qquad \text{and}\qquad & \dot{[\tnr{\omega}_E]}({\vto{u}},t):=\tnr{\omega}_E'({\vto{u}},t)
 \end{alignat}
-are the Eulerian or spatial time derivatives of  $\tnr{\Omega}$ and $\tnr{\omega}$ at place $\vto{u}$. If particle, place and time are variables, we have 
-\begin{alignat*}{5} 
-\dot{\tnr{\omega}}(\overline{\vto{x}},t):={\dot{\tnr{\omega}}}_{\overline{\vto{x}}}(t)\,,&\quad& \dot{\tnr{\Omega}}_L(\overline{\vto{x}},t):=[\dot{\tnr{\Omega}}_L]_{\overline{\vto{x}}}(t)\,,&\quad&\dot{\tnr{\omega}}_E({\vto{x}},t):=[\dot{\tnr{\omega}}_E]_{{\vto{x}}}(t)&\quad \text{and}\quad &
-\dot{\tnr{\Omega}}({\vto{x}},t):={\dot{\tnr{\Omega}}}_{{\vto{x}}}(t) \,.
-\end{alignat*}
-Lagrangian and Eulerian descriptions as defined by \eqref{eq:LagEulDesc} can be extended to time derivatives: for each of the functions $\tnr{\omega}$ and $\tnr{\Omega}$, it is possible to obtain that its Eulerian (Lagrangian) time derivative equals the Eulerian (Lagrangian) description of its Lagrangian (Eulerian) time derivative, that is,  
+are the Eulerian or spatial time derivatives of  $\tnr{\Omega}$ and $\tnr{\omega}$ at place $\vto{u}$. Lagrangian and Eulerian descriptions as defined by \eqref{eq:LagEulDesc} can be extended to time derivatives: for each of the functions $\tnr{\omega}$ and $\tnr{\Omega}$, it is possible to obtain that its Eulerian (Lagrangian) time derivative equals the Eulerian (Lagrangian) description of its Lagrangian (Eulerian) time derivative, that is,  
 \begin{alignat}{3}\label{eq:matEuDerivMatEu}
 \dot{\tnr{\omega}}_E({\vto{x}},t)=\dot{\tnr{\omega}}(\fua{\tnr{\chi}_{t}^{-1}}{\vto{x}},t)&\qquad \text{and}\qquad & \dot{\tnr{\Omega}}_L(\overline{\vto{x}},t)=\dot{\tnr{\Omega}}(\fua{\tnr{\chi}_{t}}{\overline{\vto{x}}},t) \,.
 \end{alignat}

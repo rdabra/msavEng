@@ -138,16 +138,16 @@ and $\fua{\tnr{\varphi}'}{\tnr{Y}_1,\cdots,\tnr{Y}_q}$ is multilinear, then $\tn
 \end{equation}
 where $\tnr{H}_i\in\pmb{\mathcal{U}}_i$ is an arbitrary direction. When the strategy is to study each variable $\tnr{X}_i$ independently, \emph{caeteris paribus}, development from the concept of tangency is the same as the univariate case, but now the derivative of $\tnr{\varphi}$  is called \textsb{partial derivative}\index{derivative!partial} of $\tnr{\varphi}$ with respect to $\tnr{X}_r$, $1\leqslant r\leqslant q$, represented by \gloref{partialDer}, where
 \begin{equation}\label{eq:partialDerivative}
-[\fua{\partial_r\tnr{\varphi}}{\tnr{X}_1,\cdots,\tnr{X}_q}]{(\tnr{H}_r)}=\lim_{\alpha\to 0} \dfrac{\fua{\tnr{\varphi}}{\tnr{X}_1,\cdots,\tnr{X}_r+\alpha\tnr{H}_r,\cdots,\tnr{X}_q}-\fua{\tnr{\varphi}}{\tnr{X}_1,\cdots,\tnr{X}_q}}{\alpha}\,.
+[\fua{\partial_{\tnr{X}_r}\tnr{\varphi}}{\tnr{X}_1,\cdots,\tnr{X}_q}]{(\tnr{H}_r)}=\lim_{\alpha\to 0} \dfrac{\fua{\tnr{\varphi}}{\tnr{X}_1,\cdots,\tnr{X}_r+\alpha\tnr{H}_r,\cdots,\tnr{X}_q}-\fua{\tnr{\varphi}}{\tnr{X}_1,\cdots,\tnr{X}_q}}{\alpha}\,.
 \end{equation}
 From the above conditions, the property 
 \begin{equation}
-\fua{[\fua{\tnr{\varphi}'}{\tnr{X}_1,\cdots,\tnr{X}_q}]}{\tnr{H}_1,\cdots,\tnr{H}_q}=\sum_{i=1}^{q}[\fua{\partial_i\tnr{\varphi}}{\tnr{X}_1,\cdots,\tnr{X}_q}]{(\tnr{H}_i)}\,
+\fua{[\fua{\tnr{\varphi}'}{\tnr{X}_1,\cdots,\tnr{X}_q}]}{\tnr{H}_1,\cdots,\tnr{H}_q}=\sum_{i=1}^{q}[\fua{\partial_{\tnr{X}_i}\tnr{\varphi}}{\tnr{X}_1,\cdots,\tnr{X}_q}]{(\tnr{H}_i)}\,
 \end{equation}
 relates total and partial derivatives of multivariate tensor functions and the following equality is commonly known as the \textsb{Chain Rule for Partial Derivatives}\index{Chain Rule!partial derivatives}:
 \begin{multline}\label{eq:chainRulePartial}
 \fua{[\fua{\tnr{\varphi}'}{\tnr{\varphi}_1(\tnr{Y}_1),\cdots,\tnr{\varphi}_q(\tnr{Y}_q)}]}{\tnr{H}_1,\cdots,\tnr{H}_q}=\\
-\sum_{i=1}^{q}[\fua{\partial_i\tnr{\varphi}}{\tnr{\varphi}_1(\tnr{Y}_1),\cdots,\tnr{\varphi}_q(\tnr{Y}_q)}\circ\tnr{\varphi}_i'(\tnr{Y}_i)]{(\tnr{H}_i)}\,,
+\sum_{i=1}^{q}[\fua{\partial_{\tnr{X}_i}\tnr{\varphi}}{\tnr{\varphi}_1(\tnr{Y}_1),\cdots,\tnr{\varphi}_q(\tnr{Y}_q)}\circ\tnr{\varphi}_i'(\tnr{Y}_i)]{(\tnr{H}_i)}\,,
 \end{multline}
 where the function in $\map{\tnr{\varphi}_i}{{\pmb{\mathcal{W}}_i}}{\pmb{\mathcal{U}}_i}$, ${\pmb{\mathcal{W}}_i}\subset\ete{\cam{F}}{W^{\times r}}$, must obviously be differentiable.
 
