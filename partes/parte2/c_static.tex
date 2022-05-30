@@ -293,22 +293,22 @@ $\fua{\tnr{\chi}_{\overline{\vto{u}}}}{\overline{t}}=\tnr{i}_{\tnr{\overline{\ma
 \begin{equation}
 T_{\overline{\vto{u}}}:=\{\,\fua{\tnr{\chi}_{\overline{\vto{u}}}}{t}\,:\,t\in\mathbb{P}\,\}
 \end{equation}
-is called the \textsb{trajectory}\index{trajectory} or \textsb{pathline}\index{pathline} of $\overline{\vto{u}}$ during $\mathbb{P}$. Additionally to this set of places, it is also important to define the set of particles that occupy a fixed place during a period of time. In order to do this, we define the mapping $\map{\tnr{p}}{\tnr{\mathcal{B}}_t\times\tempo}{\tnr{\overline{\mathcal{B}}}}$, where $\tnr{p}$ is called \textsb{streak function}\index{function!streak} if it is $\mathcal{C}^2$-diffeomorphism and observes the equality  
+is called the \textsb{trajectory}\index{trajectory} or \textsb{pathline}\index{pathline} of $\overline{\vto{u}}$ during $\mathbb{P}$. Additionally to this set of places, it is also important to define the set of particles that occupy a fixed place during a period of time. In order to do this, we define the mapping $\map{\tnr{p}}{\tnr{\mathcal{B}}_t\times\tempo}{\tnr{\overline{\mathcal{B}}}}$, where $\tnr{p}$ is called \textsb{streak function}\index{function!streak} if it is $\mathcal{C}^2$-diffeomorphism whith rule
 \begin{equation}
-\fua{\tnr{p}}{\vto{x},t}=\fua{\tnr{\chi}_{t}^{-1}}{\vto{x}}\,.
+\fua{\tnr{p}}{\vto{x},t}=\tnr{\chi}(\fua{\tnr{\chi}_{t}^{-1}}{\vto{x}},t)\,.
 \end{equation}
-Following the same procedure adopted for deformations, for a fixed position $\vto{u}$, we define univariate bijection $\tnr{p}_\vto{u}$, where $\fua{\tnr{p}_\vto{u}}{t}=\fua{\tnr{p}}{\vto{u},t}$. In this context, the set of particles
+Following the same procedure adopted for deformations, by fixing a position $\vto{u}$ we define univariate bijection $\tnr{p}_\vto{u}$, where $\fua{\tnr{p}_\vto{u}}{t}=\fua{\tnr{p}}{\vto{u},t}$. In this context, the set of particles
 \begin{equation}
 S_{\vto{u}}:=\{\,\fua{\tnr{p}_{\vto{u}}}{t}\,:\,t\in\mathbb{P}\,\}
 \end{equation}
 is said to be the \textsb{streakline}\index{streakline} of place $\vto{u}$ during $\mathbb{P}$. 
 
 
-Now, the functions in  $\map{\tnr{\omega}}{\tnr{\overline{\mathcal{B}}}\times\tempo}{W_\cam{F}}$ and $\map{\tnr{\Omega}}{\tnr{\mathcal{B}}_t\times\tempo}{W_\real}$, where $W_\real$ is an Euclidean space, are specified to be $\mathcal{C}^2$. In order to simplify notation, it is sometimes very useful to also define  
+Now, the functions in  $\map{\tnr{\omega}}{\tnr{\overline{\mathcal{B}}}\times\tempo}{U_\real}$ and $\map{\tnr{\Omega}}{\tnr{\mathcal{B}}_t\times\tempo}{U_\real}$ are specified to be $\mathcal{C}^2$. In order to simplify notation, it is sometimes very useful to also define  
 \begin{alignat}{3}\label{eq:LagEulDesc} 
-\tnr{\Omega}_L(\overline{\vto{x}},t)=\tnr{\Omega}(\fua{\tnr{\chi}}{\overline{\vto{x}},t},t)&\qquad \text{and}\qquad & \tnr{\omega}_E(\vto{x},t)=\tnr{\omega}(\fua{\tnr{p}}{\vto{x},t},t)\,,
+\tnr{\Omega}_L(\overline{\vto{x}},t)=\tnr{\Omega}(\fua{\tnr{\chi}_t}{\overline{\vto{x}}},t)&\qquad \text{and}\qquad & \tnr{\omega}_E(\vto{x},t)=\tnr{\omega}(\fua{\tnr{\chi}_t^\text{-1}}{{\vto{x}}},t)\,,
 \end{alignat}
-commonly called the Lagrangian and Eulerian descriptions of $\tnr{\Omega}$ and $\tnr{\omega}$. \emph{The time derivative of these generic functions is said to be Lagrangian or Eulerian when the particle $\overline{\vto{x}}\in\tnr{\overline{\mathcal{B}}}$ or the place $\vto{x}\in\tnr{\mathcal{B}}_t$ are fixed}. Here, notations $\overline{\partial}_t\bullet\,$ and $\tilde{\partial}_t\bullet\,$ specify Lagrangian and Eulerian time derivatives, while first and second order time derivatives of univariate functions are represented by overdotted symbols $\dot{\bullet}$ and $\ddot{\bullet}$ respectively. Thereby, for the functions $\tnr{\omega}$ and $\tnr{\Omega}$, we have the Lagrangian time derivatives at particle $\overline{\vto{u}}$
+commonly called the Lagrangian and Eulerian descriptions of $\tnr{\Omega}$ and $\tnr{\omega}$. It is then straightforward to conclude that that streak function  is the Eulerian description of the deformation, that is, $\tnr{p}=\tnr{\chi}_E$.  \emph{The time derivative of these generic functions $\tnr{\Omega}$ and $\tnr{\omega}$ is said to be Lagrangian or Eulerian when the particle $\overline{\vto{x}}\in\tnr{\overline{\mathcal{B}}}$ or the place $\vto{x}\in\tnr{\mathcal{B}}_t$ are fixed}. Here, notations $\overline{\partial}_t\bullet\,$ and $\tilde{\partial}_t\bullet\,$ specify Lagrangian and Eulerian time derivatives, while first and second order time derivatives of univariate functions are represented by overdotted symbols $\dot{\bullet}$ and $\ddot{\bullet}$ respectively. Thereby, for the functions $\tnr{\omega}$ and $\tnr{\Omega}$, we have the Lagrangian time derivatives at particle $\overline{\vto{u}}$
 \begin{alignat}{3}\label{eq:LagDesc} 
 \overline{\partial}_t\tnr{\omega}(\overline{\vto{u}},t):={\dot{\tnr{\omega}}}_{\overline{\vto{u}}}(t)&\qquad \text{and}\qquad & \overline{\partial}_t\tnr{\Omega}(\vto{u},t):=\tnr{\Omega}'(\fua{\tnr{\chi}_{\overline{\vto{u}}}}{t},t)
 \end{alignat}
@@ -316,15 +316,29 @@ as well as the Eulerian time derivatives at place ${\vto{u}}$
 \begin{alignat}{3}\label{eq:EulDesc} 
 \tilde{\partial}_t\tnr{\Omega}({\vto{u}},t):={\dot{\tnr{\Omega}}}_{{\vto{u}}}(t)&\qquad \text{and}\qquad & \tilde{\partial}_t\tnr{\omega}(\overline{\vto{u}},t):=\tnr{\omega}'(\fua{\tnr{p}_{\vto{u}}}{t},t)\,.
 \end{alignat}
-Developing the Lagrangian and Eulerian time derivatives of $\tnr{\Omega}$ and $\tnr{\omega}$ in \eqref{eq:LagDesc} and \eqref{eq:EulDesc}, it is possible to obtain that
-\begin{equation}
+Developing the Lagrangian and Eulerian time derivatives of respectively $\tnr{\Omega}$ and $\tnr{\omega}$ from \eqref{eq:LagDesc} and \eqref{eq:EulDesc}, it is possible to obtain that
+\begin{equation}\label{eq:derivPartConst}
 \overline{\partial}_t\tnr{\Omega}({\vto{x}},t)=\dot{\tnr{\Omega}}_{\vto{x}}(t)+\fua{\nabla\tnr{\Omega}_t}{{\vto{x}}}^\text{T}\hat{\odot}_1[\dot{\tnr{\chi}}_{\overline{\vto{x}}}(t)]^*
 \end{equation}
 and
-\begin{equation}
+\begin{equation}\label{eq:derivPlaceConst}
 \tilde{\partial}_t\tnr{\omega}(\overline{\vto{x}},t)=\dot{\tnr{\omega}}_{\overline{\vto{x}}}(t)+\fua{\nabla\tnr{\omega}_t}{\overline{\vto{x}}}^\text{T}\hat{\odot}_1[\dot{\tnr{p}}_{{\vto{x}}}(t)]^*\,.
 \end{equation}
-From the first of these properties, the vector $\dot{\tnr{\chi}}_{\overline{\vto{u}}}(t)$, which measures the temporal sensitivity of the deformation of a fixed particle $\overline{\vto{u}}$, is called the \textsb{velocity}\index{velocity} of $\overline{\vto{u}}$ at $t$. If the particle is variable, the function in mapping $\map{{\tnr{\nu}}}{\overline{\tnr{\mathcal{B}}}\times\tempo}{U_\real}$ is called velocity if it is a diffeomorphism where 
+
+{\footnotesize
+\begin{proof}
+From the chain rules \eqref{eq:chainRule} and \eqref{eq:chainRulePartial}, together with equality \eqref{eq:derivVecGradVec}, the following development proves the first of the above expressions; the other is similarly verified.
+\begin{align*}
+\overline{\partial}_t\tnr{\Omega}({\vto{x}},t)&=\tnr{\Omega}'(\fua{\tnr{\chi}_{\overline{\vto{x}}}}{t},t)\\
+&=\dot{\tnr{\Omega}}_\vto{t}(\fua{\tnr{\chi}_{\overline{\vto{x}}}}{t})+\dot{\tnr{\Omega}}_\vto{x}(t) \\
+&=\dot{\tnr{\Omega}}_\vto{x}(t)+[\tnr{\Omega}_t'\circ\fua{\tnr{\chi}_{\overline{\vto{x}}}}{t}]\circ\fua{\dot{\tnr{\chi}}_{\overline{\vto{x}}}}{t}\\
+&=\dot{\tnr{\Omega}}_\vto{x}(t)+[\tnr{\Omega}_t'(\vto{x})]\circ\fua{\dot{\tnr{\chi}}_{\overline{\vto{x}}}}{t}\\
+&=\dot{\tnr{\Omega}}_\vto{x}(t)+\nabla\tnr{\Omega}_t(\vto{x})^{\text{T}}\hat{\odot}_1[\fua{\dot{\tnr{\chi}}_{\overline{\vto{x}}}}{t}]^*\,.
+\end{align*}
+\end{proof}
+}
+
+\noindent From the first of the above properties, the vector $\dot{\tnr{\chi}}_{\overline{\vto{u}}}(t)$, which measures the temporal sensitivity of the deformation of a fixed particle $\overline{\vto{u}}$, is called the \textsb{velocity}\index{velocity} of $\overline{\vto{u}}$ at $t$. If the particle is variable, the function in mapping $\map{{\tnr{\nu}}}{\overline{\tnr{\mathcal{B}}}\times\tempo}{U_\real}$ is called velocity if it is a diffeomorphism where 
 \begin{equation}
 {\tnr{\nu}}(\overline{\vto{x}},t)=\dot{\tnr{\chi}}_{\overline{\vto{x}}}(t)\,.
 \end{equation}
@@ -332,6 +346,13 @@ Similarly, the temporal sensitivity of the velocity of particle $\overline{\vto{
 \begin{equation}
 {\tnr{a}}(\overline{\vto{x}},t)=\dot{\tnr{\nu}}_{\overline{\vto{x}}}(t)\,.
 \end{equation}
+Now, considering property \label{eq:derivPlaceConst}, since velocity $\tnr{\nu}$ is a Lagrangian function, from the descriptions defined in \label{eq:LagEulDesc}, it is clear that the time derivative $\dot{\tnr{p}}$, which measures the temporal sensitivity of $\tnr{p}$, is the Eulerian description $\tnr{\nu}_E$. Therefore,
+\begin{alignat}{3} 
+\dot{\tnr{p}}_{{\vto{x}}}(t)={[\tnr{\nu}_E]_{\vto{x}}}(t)&\qquad \text{and}\qquad & \ddot{\tnr{p}}_{{\vto{x}}}(t)={[\tnr{a}_E]_{\vto{x}}}(t)\,.
+\end{alignat}
+
+
+
 
 FALAR SOBRE A DERIVADA TEMPORAL DE P E DEPOIS REESCREVER AS DUAS PROPRIEDADES 7.33 e 7.34
 
