@@ -318,129 +318,59 @@ as well as the Eulerian time derivatives at place ${\vto{u}}$
 \end{alignat}
 Developing the Lagrangian and Eulerian time derivatives of respectively $\tnr{\Omega}$ and $\tnr{\omega}$ from \eqref{eq:LagDesc} and \eqref{eq:EulDesc}, it is possible to obtain that
 \begin{equation}\label{eq:derivPartConst}
-\overline{\partial}_t\tnr{\Omega}({\vto{x}},t)=\dot{\tnr{\Omega}}_{\vto{x}}(t)+\fua{\nabla\tnr{\Omega}_t}{{\vto{x}}}^\text{T}\hat{\odot}_1[\dot{\tnr{\chi}}_{\overline{\vto{x}}}(t)]^*
+\overline{\partial}_t\tnr{\Omega}({\vto{x}},t)=\tilde{\partial}_t\tnr{\Omega}({\vto{x}},t)+\fua{\nabla\tnr{\Omega}_t}{{\vto{x}}}^\text{T}\hat{\odot}_1[\dot{\tnr{\chi}}_{\overline{\vto{x}}}(t)]^*
 \end{equation}
 and
 \begin{equation}\label{eq:derivPlaceConst}
-\tilde{\partial}_t\tnr{\omega}(\overline{\vto{x}},t)=\dot{\tnr{\omega}}_{\overline{\vto{x}}}(t)+\fua{\nabla\tnr{\omega}_t}{\overline{\vto{x}}}^\text{T}\hat{\odot}_1[\dot{\tnr{p}}_{{\vto{x}}}(t)]^*\,.
+\tilde{\partial}_t\tnr{\omega}(\overline{\vto{x}},t)=\overline{\partial}_t\tnr{\omega}(\overline{\vto{u}},t)+\fua{\nabla\tnr{\omega}_t}{\overline{\vto{x}}}^\text{T}\hat{\odot}_1[\dot{\tnr{p}}_{{\vto{x}}}(t)]^*\,.
 \end{equation}
+In the specific cases of $\tnr{\omega}=\tnr{\Omega}_L$ or $\tnr{\Omega}=\tnr{\omega}_E$, vector
+\begin{equation}\label{eq:zeroGradsVeloc}
+\fua{\nabla\tnr{\Omega}_t}{{\vto{x}}}^\text{T}\hat{\odot}_1[\dot{\tnr{\chi}}_{\overline{\vto{x}}}(t)]^*+\fua{\nabla[\tnr{\Omega}_L]_t}{\overline{\vto{x}}}^\text{T}\hat{\odot}_1[\dot{\tnr{p}}_{{\vto{x}}}(t)]^*=\vto{0}
+\end{equation}
+and vector
+\begin{equation}
+\fua{\nabla\tnr{\omega}_t}{\overline{\vto{x}}}^\text{T}\hat{\odot}_1[\dot{\tnr{p}}_{{\vto{x}}}(t)]^*+\fua{\nabla[\tnr{\omega}_E]_t}{{\vto{x}}}^\text{T}\hat{\odot}_1[\dot{\tnr{\chi}}_{\overline{\vto{x}}}(t)]^*=\vto{0}\,.
+\end{equation}
+
 
 {\footnotesize
 \begin{proof}
-From the chain rules \eqref{eq:chainRule} and \eqref{eq:chainRulePartial}, together with equality \eqref{eq:derivVecGradVec}, the following development proves the first of the above expressions; the other is similarly verified.
+From the chain rules \eqref{eq:chainRule} and \eqref{eq:chainRulePartial}, together with equality \eqref{eq:derivVecGradVec}, the following development proves \eqref{eq:derivPartConst}; equality \eqref{eq:derivPlaceConst} is similarly verified.
 \begin{align*}
 \overline{\partial}_t\tnr{\Omega}({\vto{x}},t)&=\tnr{\Omega}'(\fua{\tnr{\chi}_{\overline{\vto{x}}}}{t},t)\\
-&=\dot{\tnr{\Omega}}_\vto{t}(\fua{\tnr{\chi}_{\overline{\vto{x}}}}{t})+\dot{\tnr{\Omega}}_\vto{x}(t) \\
-&=\dot{\tnr{\Omega}}_\vto{x}(t)+[\tnr{\Omega}_t'\circ\fua{\tnr{\chi}_{\overline{\vto{x}}}}{t}]\circ\fua{\dot{\tnr{\chi}}_{\overline{\vto{x}}}}{t}\\
-&=\dot{\tnr{\Omega}}_\vto{x}(t)+[\tnr{\Omega}_t'(\vto{x})]\circ\fua{\dot{\tnr{\chi}}_{\overline{\vto{x}}}}{t}\\
-&=\dot{\tnr{\Omega}}_\vto{x}(t)+\nabla\tnr{\Omega}_t(\vto{x})^{\text{T}}\hat{\odot}_1[\fua{\dot{\tnr{\chi}}_{\overline{\vto{x}}}}{t}]^*\,.
+&=\dot{\tnr{\Omega}}_\vto{x}(t)+\dot{\tnr{\Omega}}_\vto{t}(\fua{\tnr{\chi}_{\overline{\vto{x}}}}{t}) \\
+&=\tilde{\partial}_t\tnr{\Omega}({\vto{x}},t)+[\tnr{\Omega}_t'\circ\fua{\tnr{\chi}_{\overline{\vto{x}}}}{t}]\circ\fua{\dot{\tnr{\chi}}_{\overline{\vto{x}}}}{t}\\
+&=\tilde{\partial}_t\tnr{\Omega}({\vto{x}},t)+[\tnr{\Omega}_t'(\vto{x})]\circ\fua{\dot{\tnr{\chi}}_{\overline{\vto{x}}}}{t}\\
+&=\tilde{\partial}_t\tnr{\Omega}({\vto{x}},t)+\nabla\tnr{\Omega}_t(\vto{x})^{\text{T}}\hat{\odot}_1[\fua{\dot{\tnr{\chi}}_{\overline{\vto{x}}}}{t}]^*\,.
 \end{align*}
+Now, we prove only property \eqref{eq:zeroGradsVeloc}. Replacing Lagrangian function $\tnr{\omega}$ with $\tnr{\Omega}_L$ in \eqref{eq:derivPlaceConst} and considering equality $\tnr{\Omega}_L(\overline{\vto{x}},t)=\tnr{\Omega}({\vto{x}},t)$, we arrive at 
+\begin{equation*}
+\tilde{\partial}_t\tnr{\Omega}({\vto{x}},t)=\overline{\partial}_t\tnr{\Omega}(\overline{\vto{x}},t)+\fua{\nabla[\tnr{\Omega}_L]_t}{\overline{\vto{x}}}^\text{T}\hat{\odot}_1[\dot{\tnr{p}}_{{\vto{x}}}(t)]^*\,.
+\end{equation*}
+The sum of this equality with \eqref{eq:derivPartConst} proves the property.  
 \end{proof}
 }
 
-\noindent From the first of the above properties, the vector $\dot{\tnr{\chi}}_{\overline{\vto{u}}}(t)$, which measures the temporal sensitivity of the deformation of a fixed particle $\overline{\vto{u}}$, is called the \textsb{velocity}\index{velocity} of $\overline{\vto{u}}$ at $t$. If the particle is variable, the function in mapping $\map{{\tnr{\nu}}}{\overline{\tnr{\mathcal{B}}}\times\tempo}{U_\real}$ is called velocity if it is a diffeomorphism where 
+\noindent From equality \eqref{eq:derivPartConst}, the vector $\dot{\tnr{\chi}}_{\overline{\vto{u}}}(t)$, which measures the temporal sensitivity of the deformation at a fixed particle $\overline{\vto{u}}$, is called the \textsb{velocity}\index{velocity} of $\overline{\vto{u}}$ at $t$. If the particle is variable, the function in mapping $\map{{\tnr{\nu}}}{\overline{\tnr{\mathcal{B}}}\times\tempo}{U_\real}$ is called velocity if it is a diffeomorphism where 
 \begin{equation}
-{\tnr{\nu}}(\overline{\vto{x}},t)=\dot{\tnr{\chi}}_{\overline{\vto{x}}}(t)\,.
+{\tnr{\nu}}(\overline{\vto{x}},t)=\overline{\partial}_t\tnr{\chi}(\overline{\vto{x}},t)\,.
 \end{equation}
 Similarly, the temporal sensitivity of the velocity of particle $\overline{\vto{u}}$ at instant $t$ is the vector $\dot{\tnr{\nu}}_{\overline{\vto{u}}}(t)=\ddot{\tnr{\chi}}_{\overline{\vto{u}}}(t)$ called the \textsb{acceleration}\index{acceleration} of $\overline{\vto{u}}$ at $t$. The function in mapping $\map{{\tnr{a}}}{\overline{\tnr{\mathcal{B}}}\times\tempo}{U_\real}$ is called acceleration if it is a bijection where
 \begin{equation}
-{\tnr{a}}(\overline{\vto{x}},t)=\dot{\tnr{\nu}}_{\overline{\vto{x}}}(t)\,.
+{\tnr{a}}(\overline{\vto{x}},t)=\overline{\partial}_t\tnr{\nu}(\overline{\vto{x}},t)\,.
 \end{equation}
-Now, considering property \label{eq:derivPlaceConst}, since velocity $\tnr{\nu}$ is a Lagrangian function, from the descriptions defined in \label{eq:LagEulDesc}, it is clear that the time derivative $\dot{\tnr{p}}$, which measures the temporal sensitivity of $\tnr{p}$, is the Eulerian description $\tnr{\nu}_E$. Therefore,
-\begin{alignat}{3} 
-\dot{\tnr{p}}_{{\vto{x}}}(t)={[\tnr{\nu}_E]_{\vto{x}}}(t)&\qquad \text{and}\qquad & \ddot{\tnr{p}}_{{\vto{x}}}(t)={[\tnr{a}_E]_{\vto{x}}}(t)\,.
-\end{alignat}
-
-
-
-
-FALAR SOBRE A DERIVADA TEMPORAL DE P E DEPOIS REESCREVER AS DUAS PROPRIEDADES 7.33 e 7.34
-
-
-
------------
-
-
-In order to simplify notation, it is common to define  
-\begin{alignat}{3}\label{eq:LagEulDesc} 
-\tnr{\Omega}_L(\overline{\vto{x}},t)=\tnr{\Omega}(\fua{\tnr{\chi}}{\overline{\vto{x}},t},t)&\qquad \text{and}\qquad & \tnr{\omega}_E(\vto{x},t)=\tnr{\omega}(\fua{\tnr{p}}{\vto{x},t},t)
-\end{alignat}
-as the Lagrangian and Eulerian descriptions of $\tnr{\omega}$ and $\tnr{\Omega}$, regardless whether particles or positions are fixed. 
-
-
-
-
-
-
-
-
-In other words, 
-\begin{alignat}{3}\label{eq:dotDeriv1} 
-{\dot{\tnr{\omega}}}(\overline{\vto{u}},t):=\partial_t\tnr{\omega}(\overline{\vto{u}},t)=\dfrac{d\,{\tnr{\omega}}_{\overline{\vto{u}}}}{dt}(t)&\qquad \text{and}\qquad & \dot{[\tnr{\Omega}_L]}(\overline{\vto{u}},t):=\tnr{\Omega}_L'(\overline{\vto{u}},t)
-\end{alignat}
-
-
-
-
-described in their Eulerian and Lagrangian forms respectively by      
-\begin{alignat}{3}\label{eq:LagEulDesc} 
-\tnr{\omega}_E(\vto{x},t):=\tnr{\omega}(\fua{\tnr{\chi}_{t}^{-1}}{\vto{x}},t)&\qquad \text{and}\qquad & \tnr{\Omega}_L(\overline{\vto{x}},t):=\tnr{\Omega}(\fua{\tnr{\chi}_{t}}{\vto{x}},t)\,.
-\end{alignat}
-The time derivative of these functions is said to be Lagrangian when particle $\overline{\vto{x}}$ is defined to be an independent variable and called Eulerian when place $\vto{x}$ is an independent variable. In other words,  is an  it can be fixed, .  enables its fixing, when time derivatives are called Lagrangian.   
-
-
-From the deformation $\tnr{\chi}_{t}$ defined on  previous chapter, it is possible to describe the generic $\mathcal{C}^2$ functions in $\map{\tnr{\omega}}{\tnr{\overline{\mathcal{B}}}\times\tempo}{W_\real}$ and $\map{\tnr{\Omega}}{\tnr{\mathcal{B}}_t\times\tempo}{W_\real}$, where $W_\real$ is an Euclidean space, in their Eulerian and Lagrangian forms respectively through  
-\begin{alignat}{3}\label{eq:LagEulDesc} 
-\tnr{\omega}_E(\vto{x},t):=\tnr{\omega}(\fua{\tnr{\chi}_{t}^{-1}}{\vto{x}},t)&\qquad \text{and}\qquad & \tnr{\Omega}_L(\overline{\vto{x}},t):=\tnr{\Omega}(\fua{\tnr{\chi}_{t}}{\vto{x}},t)\,.
-\end{alignat}
-Following the same procedure adopted for deformations, univariate $\mathcal{C}^2$ functions ${\tnr{\omega}}_{\overline{\vto{u}}}$ and ${\tnr{\Omega}}_{\vto{u}}$ are defined by fixing the first argument of their bivariate counterparts. It is important to observe that both $\tnr{\omega}_E$ and $\tnr{\Omega}_L$ do not have independent arguments since $\vto{x}$ and $\overline{\vto{x}}$ change with time, from which it makes no sense to fixing them in these functions. Thereby, considering equality \eqref{eq:derivVecScaFun}, the dotted functions in definitions  
-\begin{alignat}{3}\label{eq:dotDeriv1} 
-{\dot{\tnr{\omega}}}(\overline{\vto{u}},t):=\partial_t\tnr{\omega}(\overline{\vto{u}},t)=\dfrac{d\,{\tnr{\omega}}_{\overline{\vto{u}}}}{dt}(t)&\qquad \text{and}\qquad & \dot{[\tnr{\Omega}_L]}(\overline{\vto{u}},t):=\tnr{\Omega}_L'(\overline{\vto{u}},t)
-\end{alignat}
-are said to be the Lagrangian or material time derivatives of  $\tnr{\omega}$ and $\tnr{\Omega}$ at particle $\overline{\vto{u}}$ respectively. Similarly, the dotted functions in
-\begin{alignat}{3} \label{eq:dotDeriv2}
-{\dot{\tnr{\Omega}}}({\vto{u}},t):=\partial_t\Omega({\vto{u}},t)=\dfrac{d\,{\tnr{\Omega}}_{{\vto{u}}}}{dt}(t)&\qquad \text{and}\qquad & \dot{[\tnr{\omega}_E]}({\vto{u}},t):=\tnr{\omega}_E'({\vto{u}},t)
-\end{alignat}
-are the Eulerian or spatial time derivatives of  $\tnr{\Omega}$ and $\tnr{\omega}$ at place $\vto{u}$. Lagrangian and Eulerian descriptions as defined by \eqref{eq:LagEulDesc} can be extended to time derivatives: for each of the functions $\tnr{\omega}$ and $\tnr{\Omega}$, it is possible to obtain that its Eulerian (Lagrangian) time derivative equals the Eulerian (Lagrangian) description of its Lagrangian (Eulerian) time derivative, that is,  
-\begin{alignat}{3}\label{eq:matEuDerivMatEu}
-\dot{\tnr{\omega}}_E({\vto{x}},t)=\dot{\tnr{\omega}}(\fua{\tnr{\chi}_{t}^{-1}}{\vto{x}},t)&\qquad \text{and}\qquad & \dot{\tnr{\Omega}}_L(\overline{\vto{x}},t)=\dot{\tnr{\Omega}}(\fua{\tnr{\chi}_{t}}{\overline{\vto{x}}},t) \,.
-\end{alignat}
-In general terms, when the time derivative is of second order, that is $d^2\bullet/dt^2$, we notate with upper double dots all the previous functions in question.    
-
-{\footnotesize
-\begin{proof}
-From expressions \eqref{eq:LagEulDesc}, \eqref{eq:dotDeriv1} and \eqref{eq:dotDeriv2}, the following development proves one of the previous equalities \eqref{eq:matEuDerivMatEu}; the other is proved similarly.
-\begin{equation*}
-\dot{\tnr{\omega}}_E(\vto{x},t)=[\dot{\tnr{\omega}}_E]_{\vto{x}}(t)=\dfrac{d\,[{\tnr{\omega}}_E]_{\vto{x}}}{dt}(t)=\dfrac{d\,{\tnr{\omega}}_{\overline{\vto{x}}}}{dt}(t)=\dot{\tnr{\omega}}(\fua{\tnr{\chi}_{t}^{-1}}{\vto{x}},t)\,.
-\end{equation*}
-\end{proof}
-}
-
-
-Considering Lagrangian time derivatives, the temporal sensitivity of the deformation of a given fixed particle $\overline{\vto{u}}$ at instant $t$ is measured by the vector 
+Now, considering property \eqref{eq:derivPlaceConst}, we can conclude that vector $\dot{\tnr{p}}_{{\vto{u}}}(t)$ measures the temporal sensitivity of the Eulerian description $\tnr{\chi}_E$ of place $\vto{u}$ at instant $t$. In this context, equalities
+\begin{alignat*}{3} 
+\dot{\tnr{p}}_{{\vto{x}}}(t) = \tilde{\partial}_t \tnr{\chi}_E(\vto{x},t) = \tilde{\partial}_t \tnr{\chi}(\overline{\vto{x}},t)&\qquad \text{and}\qquad & \dot{\tnr{\chi}}_{\overline{\vto{u}}}(t) = \tnr{\nu}(\overline{\vto{x}},t) = \tnr{\nu}_E({\vto{x}},t)\,
+\end{alignat*}
+enable us to rewrite each of expressions \eqref{eq:derivPartConst} and \eqref{eq:derivPlaceConst} solely described by places and particles respectively, namely,   
 \begin{equation}
-\dot{\tnr{\chi}}_{\overline{\vto{u}}}(t)=\fua{\dfrac{d\,{\tnr{\chi}}_{\overline{\vto{u}}}}{dt}}{t}\,,
+\overline{\partial}_t\tnr{\Omega}({\vto{x}},t)=\tilde{\partial}_t\tnr{\Omega}({\vto{x}},t)+\fua{\nabla\tnr{\Omega}_t}{{\vto{x}}}^\text{T}\hat{\odot}_1[\tnr{\nu}_E({\vto{x}},t)]^*
 \end{equation}
-called the \textsb{velocity}\index{velocity} of $\overline{\vto{u}}$ at $t$. Similarly, the temporal sensitivity of the velocity of particle $\overline{\vto{u}}$ at instant $t$ is the vector 
+and
 \begin{equation}
-\ddot{\tnr{\chi}}_{\overline{\vto{u}}}(t)\fua{\dfrac{d\,\dot{\tnr{\chi}}_{\overline{\vto{u}}}}{dt}}{t}\,,
+\tilde{\partial}_t\tnr{\omega}(\overline{\vto{x}},t)=\overline{\partial}_t\tnr{\omega}(\overline{\vto{u}},t)+\fua{\nabla\tnr{\omega}_t}{\overline{\vto{x}}}^\text{T}\hat{\odot}_1[\tilde{\partial}_t \tnr{\chi}(\overline{\vto{x}},t)]^*\,.
 \end{equation}
-called the \textsb{acceleration}\index{acceleration} of $\overline{\vto{u}}$ at $t$. If not only time but also the material particle is variable, functions $\dot{\tnr{\chi}}$ and $\ddot{\tnr{\chi}}$ are called the velocity and  acceleration functions of body $\tnr{\overline{\mathcal{B}}}$. In this context, it is sometimes more convenient to work with velocities and accelerations in places instead of particles, which is enabled by the equalities  
-\begin{alignat}{3}
-\dot{\tnr{\chi}}_E(\vto{x},t)=\dot{\tnr{\chi}}(\fua{\tnr{\chi}_{t}^{-1}}{\vto{x}},t)&\qquad \text{and}\qquad & \ddot{\tnr{\chi}}_E(\vto{x},t)=\ddot{\tnr{\chi}}(\fua{\tnr{\chi}_{t}^{-1}}{\vto{x}},t)\,,
-\end{alignat}
-following \eqref{eq:matEuDerivMatEu}. As a consequence, it is possible to obtain that functions 
-\begin{alignat}{3}
-[\dot{\tnr{\chi}}_E]_{\vto{x}}=\dot{[\tnr{\chi}^{-1}_{{\vto{x}}}]}&\qquad \text{and}\qquad & [\ddot{\tnr{\chi}}_E]_{\vto{x}}=\ddot{[\tnr{\chi}^{-1}_{{\vto{x}}}]}\,.
-\end{alignat}
 
-FALAR DA GRADIENCIA
-
-{\footnotesize
-\begin{proof}
-From expressions \eqref{eq:LagEulDesc}, \eqref{eq:dotDeriv1} and \eqref{eq:dotDeriv2}, the following development proves one of the previous equalities \eqref{eq:matEuDerivMatEu}; the other is proved similarly.
-\begin{equation*}
-\dot{\tnr{\omega}}_E(\vto{x},t)=[\dot{\tnr{\omega}}_E]_{\vto{x}}(t)=\dfrac{d\,[{\tnr{\omega}}_E]_{\vto{x}}}{dt}(t)=\dfrac{d\,{\tnr{\omega}}_{\overline{\vto{x}}}}{dt}(t)=\dot{\tnr{\omega}}(\fua{\tnr{\chi}_{t}^{-1}}{\vto{x}},t)\,.
-\end{equation*}
-\end{proof}
-}
+AGORA FALAR COMO FICA QUANDO ESSAS FUNCOES OMEGA FOREM ESCALARES.
