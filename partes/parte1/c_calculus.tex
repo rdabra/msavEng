@@ -204,7 +204,7 @@ Moreover, the tensor function in $\map{\gloref{gradi}}{\pmb{\mathcal{U}}}{\ete{\
 \end{equation}
 If tensor function $\tnr{\psi}$ is a differentiable unary tensor operator on $\pmb{\mathcal{U}}$, that is tensor space $\ete{\cam{F}}{U^{\times m}}=\ete{\cam{F}}{V^{\times s}}=\ete{\cam{F}}{U^{m}}$, its gradient assigns to a $m$-th order tensor a $2m$-th order tensor. 
 
- For the particular case of $m=s=1$, tensor space $\ete{\cam{F}}{U}=U^*_\cam{F}$, $\ete{\cam{F}}{V}=V^*_\cam{F}$, gradient $\fua{\nabla\tnr{\psi}}{\vto{x}_0^*}\in\ete{\cam{R}}{U\times V}$, derivative $\fua{\tnr{\psi}'}{\vto{x}_0^*}\in\evlc{\cam{F}}{\pmb{\mathcal{U}}}{V^*_\cam{F}}$ and then
+ For the case of a vector valued vector function, that is $m=s=1$, tensor space $\ete{\cam{F}}{U}=U^*_\cam{F}$, $\ete{\cam{F}}{V}=V^*_\cam{F}$, gradient $\fua{\nabla\tnr{\psi}}{\vto{x}_0^*}\in\ete{\cam{R}}{U\times V}$, derivative $\fua{\tnr{\psi}'}{\vto{x}_0^*}\in\evlc{\cam{F}}{\pmb{\mathcal{U}}}{V^*_\cam{F}}$, we have
 \begin{equation}\label{eq:defGradient2}
 [\fua{\tnr{\psi}'}{\vto{x}_0^*}](\vto{x}^*) = \vto{x}^*\odot_1\fua{\nabla\tnr{\psi}}{\vto{x}_0^*}\,.
 \end{equation}
@@ -232,20 +232,37 @@ which results the rule of the directional derivative of the vector function in $
 \fua{D\tnr{\hat\psi}}{\vto{x}} := \fua{[\tnr{\hat\psi}'(\vto{x})]}{\vto{x}}=\fua{ \nabla\tnr{\hat{\psi}}}{\vto{x}}^\dagger\hat{\odot}_1\vto{x}^*\,.
 \end{equation}
 
-Based on the concepts and definitions presented above for vector functions, when $U_{\cam{F}}=\cam{R}$, from mapping $\map{\tnr{\hat{\psi}}}{\mathcal{U}}{V_\real}$, we can write that $\fua{\tnr{\hat{\psi}}'_{x}}{\beta} = \beta\fua{\tnr{\hat{\psi}}'_{x}}{1}$ for all nonzero $\beta$, since the derivative is linear. In this context, our interest is to describe directional derivative  
+
+If the vector function $\tnr{\hat\psi}$ is scalar valued, that is, $V_\cam{F}=\cam{F}$, and $\{\vun{u}_1,\cdots,\vun{u}_n\}$ is an arbitrary orthonormal basis of $U_\cam{F}$, we can obtain that
+\begin{equation}
+\fua{ \nabla\tnr{\hat{\psi}}}{\vto{x}_0}=\sum_{i=1}^n\fua{[\tnr{\hat\psi}'(\vto{x}_0)]}{\vun{u}_i}\vun{u}_i\,.
+\end{equation}
+
+{\footnotesize
+\begin{proof}
+PROVAR 5.26
+\end{proof}}
+
+\noindent Now, in the case of a vector valued real function $\tnr{\hat{\psi}}$, when $U_{\cam{F}}=\cam{F}$, from mapping $\map{\tnr{\hat{\psi}}}{\mathcal{U}}{V_\real}$, we can write that $\fua{\tnr{\hat{\psi}}'_{x}}{\beta} = \beta\fua{\tnr{\hat{\psi}}'_{x}}{1}$ for all nonzero $\beta$, since the derivative is linear. In this context, our interest is to describe directional derivative  
 \begin{equation}\label{eq:derivVecScaFun}
 \fua{\dfrac{d\tnr{\hat{\psi}}}{dx}}{x} := \fua{[\tnr{\hat{\psi}}'(x)]}{1} = \lim_{\alpha\to 0} \dfrac{\fua{\tnr{\hat{\psi}}}{x+\alpha}-\fua{\tnr{\hat{\psi}}}{x}}{\alpha}\,. 
 \end{equation} 
-In this context, if $\tnr{\hat{\psi}}$ is differentiable of order $k\geqslant 1$, we adopt  
+If $\tnr{\hat{\psi}}$ is differentiable of order $k\geqslant 1$, we adopt  
 \begin{equation}
 \fua{\dfrac{d^k\tnr{\hat{\psi}}}{dx^k}}{x}:=\fua{[\tnr{\hat{\psi}}^{(k)}(x)]}{1}\,.
 \end{equation} 
-Given an arbitrary real number $x_0$ in a context where $V_\real=\real$, the function $\hat{\psi}$ under study is scalar and then we have the classical geometric interpretation of scalar $\fua{[d{\hat{\psi}}/dx]}{x_0}$ as being the slope of the tangent line ${\hat{\psi}}_\mathit{d}$ to the curve ${\hat{\psi}}$ at $x_0$. Still in this context, if $\{\vun{u}\}$ is the orthonormal basis of a one dimensional Hilbert space $U_\cam{R}$, it is valid to write
+Moreover, given an arbitrary real number $x_0$ in a context where $U_{\cam{F}}=V_{\cam{F}}=\real$, real function $\hat{\psi}$ is real valued and then we have the classical geometric interpretation of real number $\fua{[d{\hat{\psi}}/dx]}{x_0}$ as being the slope of the tangent line ${\hat{\psi}}_\mathit{d}$ to the curve ${\hat{\psi}}$ at $x_0$. 
+
+
+REVER
+Still in this context, if $\{\vun{u}\}$ is the orthonormal basis of a one dimensional Hilbert space $U_\cam{R}$, it is valid to write
 $\fua{[d{\hat{\psi}}/dx]}{x}=[\fua{[d{\hat{\psi}}/dx]}{x}\vun{u}]\cdot\vun{u}$, where  
 \begin{equation}
 \nabla\fua{{\hat{\psi}}}{x}:=\fua{\dfrac{d{\hat{\psi}}}{dx}}{x}\vun{u}
 \end{equation}
-is said to be the gradient of ${\hat{\psi}}$ at $x$.
+is said to be the gradient of ${\hat{\psi}}$ at $x$. But in the case where $\map{{\hat{\psi}}}{\mathcal{U}}{\real}$
+
+
 
 Now returning to the conditions of definition \eqref{eq:defGradient}, from the directional derivative of $\tnr{\psi}$ along $\tnr{H}\in\pmb{\mathcal{U}}$ and rule \eqref{eq:directDeriv}, it is easy to obtain that
 \begin{equation}
