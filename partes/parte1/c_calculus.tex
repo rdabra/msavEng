@@ -233,6 +233,17 @@ which results the rule of the directional derivative of the vector function in $
 \end{equation}
 
 
+If the vector function $\tnr{\hat\psi}$ is scalar valued, that is, $V_\cam{F}=\cam{F}$, so is $\fua{[\tnr{\hat\psi}'(\vto{x}_0)]}{\vto{x}}$. Therefore, rewriting equality \eqref{eq:derivVecGradVec} as $\fua{[\tnr{\hat\psi}'(\vto{x}_0)]}{\vto{x}} = \vto{x}^*\hat{\odot}_1\fua{ \nabla\tnr{\hat{\psi}}}{\vto{x}_0}$, we can conclude that $\fua{\nabla\tnr{\hat{\psi}}}{\vto{x}_0}$ is a covector. The correspondent vector to this covector is here defined as $\fua{\grad{\tnr{\hat{\psi}}}}{\vto{x}_0}$, that is,      
+\begin{equation}
+\fua{\grad{\tnr{\hat{\psi}}}}{\vto{x}_0}:=\Phi^{-1}[\fua{\nabla\tnr{\hat{\psi}}}{\vto{x}_0}]\,,
+\end{equation}
+where $\Phi$ is defined in theorem \ref{teo:repRiesz}. Therefore,
+\begin{equation}
+\fua{[\tnr{\hat\psi}'(\vto{x}_0)]}{\vto{x}} = \vto{x}\cdot\fua{\grad{\tnr{\hat{\psi}}}}{\vto{x}_0}=\overline{\fua{\grad{\tnr{\hat{\psi}}}}{\vto{x}_0}\cdot\vto{x}}
+\end{equation}
+Since these equalities are valid for all $\vto{x}\in U_\cam{F}$, let $B=\{\vun{u}_1,\cdots,\vun{u}_n\}$ be an arbitrary orthonormal basis of $U_\cam{F}$, from which it is valid to write that
+
+
 If the vector function $\tnr{\hat\psi}$ is scalar valued, that is, $V_\cam{F}=\cam{F}$, and $\{\vun{u}_1,\cdots,\vun{u}_n\}$ is an arbitrary orthonormal basis of $U_\cam{F}$, we can obtain that
 \begin{equation}
 \fua{ \nabla\tnr{\hat{\psi}}}{\vto{x}_0}=\sum_{i=1}^n\fua{[\tnr{\hat\psi}'(\vto{x}_0)]}{\vun{u}_i}\vun{u}_i\,.
