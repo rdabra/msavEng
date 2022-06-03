@@ -304,7 +304,7 @@ S_{\vto{u}}:=\{\,\fua{\tnr{p}_{\vto{u}}}{t}\,:\,t\in\mathbb{P}\,\}
 is said to be the \textsb{streakline}\index{streakline} of place $\vto{u}$ during $\mathbb{P}$. 
 
 
-Now, the functions in  $\map{\tnr{\omega}}{\tnr{\overline{\mathcal{B}}}\times\tempo}{U_\real}$ and $\map{\tnr{\Omega}}{\tnr{\mathcal{B}}_t\times\tempo}{U_\real}$ are specified to be $\mathcal{C}^2$. In order to simplify notation, it is sometimes very useful to also define  
+Now, the functions in  $\map{\tnr{\omega}}{\tnr{\overline{\mathcal{B}}}\times\tempo}{W}$ and $\map{\tnr{\Omega}}{\tnr{\mathcal{B}}_t\times\tempo}{W}$, where $W\in\{\ete{\real}{U^{s}},U_\real,\real\}$, are specified to be $\mathcal{C}^2$. In order to simplify notation, it is sometimes very useful to also define  
 \begin{alignat}{3}\label{eq:LagEulDesc} 
 \tnr{\Omega}_L(\overline{\vto{x}},t)=\tnr{\Omega}(\fua{\tnr{\chi}_t}{\overline{\vto{x}}},t)&\qquad \text{and}\qquad & \tnr{\omega}_E(\vto{x},t)=\tnr{\omega}(\fua{\tnr{\chi}_t^\text{-1}}{{\vto{x}}},t)\,,
 \end{alignat}
@@ -318,35 +318,58 @@ as well as the Eulerian time derivatives at place ${\vto{u}}$
 \end{alignat}
 Developing the Lagrangian and Eulerian time derivatives of respectively $\tnr{\Omega}$ and $\tnr{\omega}$ from \eqref{eq:LagDesc} and \eqref{eq:EulDesc}, it is possible to obtain that
 \begin{equation}\label{eq:derivPartConst}
-\overline{\partial}_t\tnr{\Omega}({\vto{x}},t)=\tilde{\partial}_t\tnr{\Omega}({\vto{x}},t)+\fua{\nabla\tnr{\Omega}_t}{{\vto{x}}}^\text{T}\hat{\odot}_1[\dot{\tnr{\chi}}_{\overline{\vto{x}}}(t)]^*
+\overline{\partial}_t\tnr{\Omega}({\vto{x}},t)=\tilde{\partial}_t\tnr{\Omega}({\vto{x}},t)+\tnr{\Omega}_t'(\vto{x})\circ\dot{\tnr{\chi}}_{\overline{\vto{x}}}(t)
 \end{equation}
 and
 \begin{equation}\label{eq:derivPlaceConst}
-\tilde{\partial}_t\tnr{\omega}(\overline{\vto{x}},t)=\overline{\partial}_t\tnr{\omega}(\overline{\vto{u}},t)+\fua{\nabla\tnr{\omega}_t}{\overline{\vto{x}}}^\text{T}\hat{\odot}_1[\dot{\tnr{p}}_{{\vto{x}}}(t)]^*\,.
+\tilde{\partial}_t\tnr{\omega}(\overline{\vto{x}},t)=\overline{\partial}_t\tnr{\omega}(\overline{\vto{u}},t)+\tnr{\omega}_t'(\overline{\vto{x}})\circ\dot{\tnr{p}}_{{\vto{x}}}(t)\,.
 \end{equation}
-In the specific cases of $\tnr{\omega}=\tnr{\Omega}_L$ or $\tnr{\Omega}=\tnr{\omega}_E$, vector
+In the specific cases of $\tnr{\omega}=\tnr{\Omega}_L$ or $\tnr{\Omega}=\tnr{\omega}_E$, 
 \begin{equation}\label{eq:zeroGradsVeloc}
-\fua{\nabla\tnr{\Omega}_t}{{\vto{x}}}^\text{T}\hat{\odot}_1[\dot{\tnr{\chi}}_{\overline{\vto{x}}}(t)]^*+\fua{\nabla[\tnr{\Omega}_L]_t}{\overline{\vto{x}}}^\text{T}\hat{\odot}_1[\dot{\tnr{p}}_{{\vto{x}}}(t)]^*=\vto{0}
+\tnr{\Omega}_t'(\vto{x})\circ\dot{\tnr{\chi}}_{\overline{\vto{x}}}(t)+[\tnr{\Omega}_L]_t'(\overline{\vto{x}})\circ\dot{\tnr{p}}_{{\vto{x}}}(t)=\vto{0}
 \end{equation}
-and vector
+and 
 \begin{equation}
-\fua{\nabla\tnr{\omega}_t}{\overline{\vto{x}}}^\text{T}\hat{\odot}_1[\dot{\tnr{p}}_{{\vto{x}}}(t)]^*+\fua{\nabla[\tnr{\omega}_E]_t}{{\vto{x}}}^\text{T}\hat{\odot}_1[\dot{\tnr{\chi}}_{\overline{\vto{x}}}(t)]^*=\vto{0}\,.
+\tnr{\omega}_t'(\overline{\vto{x}})\circ\dot{\tnr{p}}_{{\vto{x}}}(t)+[\tnr{\omega}_E]_t'(\vto{x})\circ\dot{\tnr{\chi}}_{\overline{\vto{x}}}(t)=\vto{0}\,.
 \end{equation}
-
+The specification of the codomains of functions $\tnr{\omega}$ and $\tnr{\Omega}$ leads to the following important conclusions.
+\begin{itemize}
+    \setlength\itemsep{.1em}
+    \item[i.] If $W=\ete{\real}{U^{s}}$, functions are tensor valued and then, from \eqref{eq:defGradient}, 
+\begin{equation}
+\begin{aligned}
+\tnr{\Omega}_t'(\vto{x})\circ\dot{\tnr{\chi}}_{\overline{\vto{x}}}(t)&=[\dot{\tnr{\chi}}_{\overline{\vto{x}}}(t)]^*\odot_1\fua{\nabla\tnr{\Omega}_t}{{\vto{x}}}\,,\\
+\tnr{\omega}_t'(\overline{\vto{x}})\circ\dot{\tnr{p}}_{{\vto{x}}}(t)&=[\dot{\tnr{p}}_{{\vto{x}}}(t)]^*\odot_1\fua{\nabla\tnr{\omega}_t}{\overline{\vto{x}}}\,;
+\end{aligned} 
+\end{equation}   
+    \item[ii.] If $W=U_\real$, functions are vector valued and then, from \eqref{eq:derivVecGradVec},
+\begin{equation}
+\begin{aligned}
+\tnr{\Omega}_t'(\vto{x})\circ\dot{\tnr{\chi}}_{\overline{\vto{x}}}(t)&=\fua{\nabla\tnr{\Omega}_t}{{\vto{x}}}^{\text{T}}\hat{\odot}_1[\dot{\tnr{\chi}}_{\overline{\vto{x}}}(t)]^*\,,\\
+\tnr{\omega}_t'(\overline{\vto{x}})\circ\dot{\tnr{p}}_{{\vto{x}}}(t)&=\fua{\nabla\tnr{\omega}_t}{\overline{\vto{x}}}^{\text{T}}\hat{\odot}_1[\dot{\tnr{p}}_{{\vto{x}}}(t)]^*\,;
+\end{aligned} 
+\end{equation} 
+\item[iii.] If $W=\real$, functions are scalar valued and then, from \eqref{eq:gradScalVectFunc},
+\begin{equation}
+\begin{aligned}
+\tnr{\Omega}_t'(\vto{x})\circ\dot{\tnr{\chi}}_{\overline{\vto{x}}}(t)&=\fua{\grad{\tnr{\Omega}_t}}{{\vto{x}}}\cdot\dot{\tnr{\chi}}_{\overline{\vto{x}}}(t)\,,\\
+\tnr{\omega}_t'(\overline{\vto{x}})\circ\dot{\tnr{p}}_{{\vto{x}}}(t)&=\fua{\grad{\tnr{\omega}_t}}{\overline{\vto{x}}}\cdot\dot{\tnr{p}}_{{\vto{x}}}(t)\,.
+\end{aligned} 
+\end{equation} 
+\end{itemize}
 
 {\footnotesize
 \begin{proof}
-From the chain rules \eqref{eq:chainRule} and \eqref{eq:chainRulePartial}, together with equality \eqref{eq:derivVecGradVec}, the following development proves \eqref{eq:derivPartConst}; equality \eqref{eq:derivPlaceConst} is similarly verified.
+From the chain rules \eqref{eq:chainRule} and \eqref{eq:chainRulePartial}, the following development proves \eqref{eq:derivPartConst}; equality \eqref{eq:derivPlaceConst} is similarly verified.
 \begin{align*}
 \overline{\partial}_t\tnr{\Omega}({\vto{x}},t)&=\tnr{\Omega}'(\fua{\tnr{\chi}_{\overline{\vto{x}}}}{t},t)\\
 &=\dot{\tnr{\Omega}}_\vto{x}(t)+\dot{\tnr{\Omega}}_\vto{t}(\fua{\tnr{\chi}_{\overline{\vto{x}}}}{t}) \\
 &=\tilde{\partial}_t\tnr{\Omega}({\vto{x}},t)+[\tnr{\Omega}_t'\circ\fua{\tnr{\chi}_{\overline{\vto{x}}}}{t}]\circ\fua{\dot{\tnr{\chi}}_{\overline{\vto{x}}}}{t}\\
-&=\tilde{\partial}_t\tnr{\Omega}({\vto{x}},t)+[\tnr{\Omega}_t'(\vto{x})]\circ\fua{\dot{\tnr{\chi}}_{\overline{\vto{x}}}}{t}\\
-&=\tilde{\partial}_t\tnr{\Omega}({\vto{x}},t)+\nabla\tnr{\Omega}_t(\vto{x})^{\text{T}}\hat{\odot}_1[\fua{\dot{\tnr{\chi}}_{\overline{\vto{x}}}}{t}]^*\,.
+&=\tilde{\partial}_t\tnr{\Omega}({\vto{x}},t)+\tnr{\Omega}_t'(\vto{x})\circ\fua{\dot{\tnr{\chi}}_{\overline{\vto{x}}}}{t}\,.
 \end{align*}
 Now, we prove only property \eqref{eq:zeroGradsVeloc}. Replacing Lagrangian function $\tnr{\omega}$ with $\tnr{\Omega}_L$ in \eqref{eq:derivPlaceConst} and considering equality $\tnr{\Omega}_L(\overline{\vto{x}},t)=\tnr{\Omega}({\vto{x}},t)$, we arrive at 
 \begin{equation*}
-\tilde{\partial}_t\tnr{\Omega}({\vto{x}},t)=\overline{\partial}_t\tnr{\Omega}(\overline{\vto{x}},t)+\fua{\nabla[\tnr{\Omega}_L]_t}{\overline{\vto{x}}}^\text{T}\hat{\odot}_1[\dot{\tnr{p}}_{{\vto{x}}}(t)]^*\,.
+\tilde{\partial}_t\tnr{\Omega}({\vto{x}},t)=\overline{\partial}_t\tnr{\Omega}(\overline{\vto{x}},t)+[\tnr{\Omega}_L]_t'(\overline{\vto{x}})\circ\dot{\tnr{p}}_{{\vto{x}}}(t)\,.
 \end{equation*}
 The sum of this equality with \eqref{eq:derivPartConst} proves the property.  
 \end{proof}
@@ -362,15 +385,13 @@ Similarly, the temporal sensitivity of the velocity of particle $\overline{\vto{
 \end{equation}
 Now, considering property \eqref{eq:derivPlaceConst}, we can conclude that vector $\dot{\tnr{p}}_{{\vto{u}}}(t)$ measures the temporal sensitivity of the Eulerian description $\tnr{\chi}_E$ of place $\vto{u}$ at instant $t$. In this context, equalities
 \begin{alignat*}{3} 
-\dot{\tnr{p}}_{{\vto{x}}}(t) = \tilde{\partial}_t \tnr{\chi}_E(\vto{x},t) = \tilde{\partial}_t \tnr{\chi}(\overline{\vto{x}},t)&\qquad \text{and}\qquad & \dot{\tnr{\chi}}_{\overline{\vto{u}}}(t) = \tnr{\nu}(\overline{\vto{x}},t) = \tnr{\nu}_E({\vto{x}},t)\,
+\dot{\tnr{p}}_{{\vto{x}}}(t) = \tilde{\partial}_t \tnr{\chi}_E(\vto{x},t) = \tilde{\partial}_t \tnr{\chi}(\overline{\vto{x}},t)&\qquad \text{and}\qquad & \dot{\tnr{\chi}}_{\overline{\vto{x}}}(t) = \tnr{\nu}(\overline{\vto{x}},t) = \tnr{\nu}_E({\vto{x}},t)\,
 \end{alignat*}
 enable us to rewrite each of expressions \eqref{eq:derivPartConst} and \eqref{eq:derivPlaceConst} solely described by places and particles respectively, namely,   
 \begin{equation}
-\overline{\partial}_t\tnr{\Omega}({\vto{x}},t)=\tilde{\partial}_t\tnr{\Omega}({\vto{x}},t)+\fua{\nabla\tnr{\Omega}_t}{{\vto{x}}}^\text{T}\hat{\odot}_1[\tnr{\nu}_E({\vto{x}},t)]^*
+\overline{\partial}_t\tnr{\Omega}({\vto{x}},t)=\tilde{\partial}_t\tnr{\Omega}({\vto{x}},t)+\tnr{\Omega}_t'(\vto{x})\circ\tnr{\nu}_E(\vto{x},t)
 \end{equation}
 and
 \begin{equation}
-\tilde{\partial}_t\tnr{\omega}(\overline{\vto{x}},t)=\overline{\partial}_t\tnr{\omega}(\overline{\vto{u}},t)+\fua{\nabla\tnr{\omega}_t}{\overline{\vto{x}}}^\text{T}\hat{\odot}_1[\tilde{\partial}_t \tnr{\chi}(\overline{\vto{x}},t)]^*\,.
+\tilde{\partial}_t\tnr{\omega}(\overline{\vto{x}},t)=\overline{\partial}_t\tnr{\omega}(\overline{\vto{x}},t)+\tnr{\omega}_t'(\overline{\vto{x}})\circ\tilde{\partial}_t \tnr{\chi}(\overline{\vto{x}},t)\,.
 \end{equation}
-
-AGORA FALAR COMO FICA QUANDO ESSAS FUNCOES OMEGA FOREM ESCALARES.
