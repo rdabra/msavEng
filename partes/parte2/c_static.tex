@@ -316,7 +316,15 @@ as well as the Eulerian time derivatives at place ${\vto{u}}$
 \begin{alignat}{3}\label{eq:EulDesc} 
 \tilde{\partial}_t\tnr{\Omega}({\vto{u}},t):={\dot{\tnr{\Omega}}}_{{\vto{u}}}(t)&\qquad \text{and}\qquad & \tilde{\partial}_t\tnr{\omega}(\overline{\vto{u}},t):=\tnr{\omega}'(\fua{\tnr{p}_{\vto{u}}}{t},t)\,.
 \end{alignat}
-Developing the Lagrangian and Eulerian time derivatives of respectively $\tnr{\Omega}$ and $\tnr{\omega}$ from these previous definitions, it is possible to obtain that
+Considering these previous definitions, by developing the Lagrangian and Eulerian time derivatives 
+\begin{equation}\label{eq:LagrTimeDerivative}
+\overline{\partial}_t\tnr{\Omega}({\vto{x}},t)=\dot{\tnr{\Omega}}_{\vto{x}}(t)+\dot{\tnr{\Omega}}_{t}(\tnr{\chi}_{\overline{\vto{x}}}^{-1}(t))
+\end{equation}
+and
+\begin{equation}\label{eq:EulerTimeDerivative}
+\tilde{\partial}_t\tnr{\omega}(\overline{\vto{x}},t)=\dot{\tnr{\omega}}_{\overline{\vto{x}}}(t)+\dot{\tnr{\omega}}_{t}(\tnr{\chi}_{{\vto{x}}}(t))\,,
+\end{equation}
+it is possible to obtain that
 \begin{equation}\label{eq:derivPartConst}
 \overline{\partial}_t\tnr{\Omega}({\vto{x}},t)=\tilde{\partial}_t\tnr{\Omega}({\vto{x}},t)+\tnr{\Omega}_t'(\vto{x})\circ\dot{\tnr{\chi}}_{\overline{\vto{x}}}(t)
 \end{equation}
@@ -324,14 +332,10 @@ and
 \begin{equation}\label{eq:derivPlaceConst}
 \tilde{\partial}_t\tnr{\omega}(\overline{\vto{x}},t)=\overline{\partial}_t\tnr{\omega}(\overline{\vto{u}},t)+\tnr{\omega}_t'(\overline{\vto{x}})\circ\dot{\tnr{p}}_{{\vto{x}}}(t)\,.
 \end{equation}
-In the particular cases of $\tnr{\omega}=\tnr{\Omega}_L$ and $\tnr{\Omega}=\tnr{\omega}_E$, 
-\begin{equation}\label{eq:zeroGradsVeloc}
-\tnr{\Omega}_t'(\vto{x})\circ\dot{\tnr{\chi}}_{\overline{\vto{x}}}(t)+[\tnr{\Omega}_L]_t'(\overline{\vto{x}})\circ\dot{\tnr{p}}_{{\vto{x}}}(t)=\vto{0}
-\end{equation}
-and 
-\begin{equation}\label{eq:zeroGradsStreak}
-\tnr{\omega}_t'(\overline{\vto{x}})\circ\dot{\tnr{p}}_{{\vto{x}}}(t)+[\tnr{\omega}_E]_t'(\vto{x})\circ\dot{\tnr{\chi}}_{\overline{\vto{x}}}(t)=\vto{0}\,.
-\end{equation}
+In the particular cases of $\tnr{\omega}=\tnr{\Omega}_L$ and $\tnr{\Omega}=\tnr{\omega}_E$,
+\begin{alignat}{3}\label{eq:zerosDescript} 
+[\dot{\tnr{\Omega}}_{t}]_L+\dot{[\tnr{\Omega}_L]}_{t}=\vto{0}&\qquad \text{and}\qquad & [\dot{\tnr{\omega}}_{t}]_E+\dot{[\tnr{\omega}_E]}_{t}=\vto{0}\,.
+\end{alignat}
 The specification of the codomains of functions $\tnr{\omega}$ and $\tnr{\Omega}$ leads to the following important conclusions, where Lagrangian and Eulerian gradients, related to Lagrangian and Eulerian derivatives, are represented by symbols $\overline{\bullet}$ and $\tilde{\bullet}$ respectively.
 \begin{itemize}
     \setlength\itemsep{.1em}
@@ -367,11 +371,12 @@ From the chain rules \eqref{eq:chainRule} and \eqref{eq:chainRulePartial}, the f
 &=\tilde{\partial}_t\tnr{\Omega}({\vto{x}},t)+[\tnr{\Omega}_t'\circ\fua{\tnr{\chi}_{\overline{\vto{x}}}}{t}]\circ\fua{\dot{\tnr{\chi}}_{\overline{\vto{x}}}}{t}\\
 &=\tilde{\partial}_t\tnr{\Omega}({\vto{x}},t)+\tnr{\Omega}_t'(\vto{x})\circ\fua{\dot{\tnr{\chi}}_{\overline{\vto{x}}}}{t}\,.
 \end{align*}
-Now, we prove only property \eqref{eq:zeroGradsVeloc}. Replacing Lagrangian function $\tnr{\omega}$ with $\tnr{\Omega}_L$ in \eqref{eq:derivPlaceConst} and considering equality $\tnr{\Omega}_L(\overline{\vto{x}},t)=\tnr{\Omega}({\vto{x}},t)$, we arrive at 
-\begin{equation*}
-\tilde{\partial}_t\tnr{\Omega}({\vto{x}},t)=\overline{\partial}_t\tnr{\Omega}(\overline{\vto{x}},t)+[\tnr{\Omega}_L]_t'(\overline{\vto{x}})\circ\dot{\tnr{p}}_{{\vto{x}}}(t)\,.
-\end{equation*}
-The sum of this equality with \eqref{eq:derivPartConst} proves the property.  
+Now, we prove the first of properties \eqref{eq:zerosDescript}; the other is similarly verified. From \eqref{eq:EulerTimeDerivative}, the sum of the last equality of development  
+\begin{align*}
+\tilde{\partial}_t\tnr{\Omega}_L(\overline{\vto{x}},t)&=\dot{[\tnr{\Omega}_L]}_{\overline{\vto{x}}}(t)+\dot{[\tnr{\Omega}_L}]_{t}(\tnr{\chi}_{{\vto{x}}}(t))\\
+\dot{\tnr{\Omega}}_{\vto{x}}(t)&=\overline{\partial}_t\tnr{\Omega}({\vto{x}},t)+\dot{[\tnr{\Omega}_L]}_{t}(\overline{\vto{x}})
+\end{align*}
+with \eqref{eq:LagrTimeDerivative} proves the property.  
 \end{proof}
 }
 
@@ -411,7 +416,14 @@ is said to be the \textsb{Eulerian velocity gradient}\index{velocity!Eulerian gr
  \begin{equation}\label{eq:lagrangVelocityGrad}
  \tnr{M}_{\overline{\vto{u}}}:=\fua{\overline{\nabla}\tnr{\nu}_t}{\overline{\vto{u}}}^{\text{T}}
  \end{equation}
-is the \textsb{Lagrangian velocity gradient}\index{velocity!Lagrangian gradient} of $\tnr{\nu}$ at particle $\overline{\vto{u}}$. Rewriting equality \eqref{eq:zeroGradsStreak} in the present context results
+is the \textsb{Lagrangian velocity gradient}\index{velocity!Lagrangian gradient} of $\tnr{\nu}$ at particle $\overline{\vto{u}}$. 
+
+
+
+
+
+
+Rewriting equality XX in the present context results
 \begin{equation}
 \tnr{\overline{L}}_{\overline{\vto{x}}}\hat{\odot}_1[{\tnr{\nu}}(\overline{\vto{x}},t)]^*+ \tnr{M}_{\overline{\vto{x}}}\hat{\odot}_1[\tilde{\partial}_t \tnr{p}_L(\overline{\vto{x}},t)]^*=\vto{0}
 \end{equation}
