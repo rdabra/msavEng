@@ -180,7 +180,7 @@ We recall that when stretch coefficients are identical, pure stretch is said to 
 
 \end{example}
 
-The quantity or level of local deformation can be obtained by measuring the change in an infinitesimal length of the body. This local length change, called \textsb{strain}\index{strain}, can be measured from the stretch tensors related to an arbitrary material point $\overline{\vto{u}}$. Thereby, in the context the normalized eigenbases $X$ and $Y$ of the stretch operators that represent $\tnr{U}_{\overline{\vto{u}}}$ and $\tnr{V}_{\overline{\vto{u}}}$ respectively, most of the strain measures evaluate the deviation of a given stretch from the stretch of the rigid deformation where $\lambda_1=\lambda_2=\lambda_3=1$. The simplest type of this deviation is an algebraic difference called \textsb{extension}\index{extension}, whose Lagrangian and Eulerian forms are respectively described by $\delta_i=\lambda_i-1$ and $\Delta_i=1-\lambda_i^{-1}$, which are zero for rigid deformations. But since principal stretches $\lambda_i$ are related to annoying square root operators, convenience led to the definition of extensions described by 
+The quantity or level of local deformation can be obtained by measuring the change in an infinitesimal length of the body. This local length change, called \textsb{strain}\index{strain}, can be measured from the stretch tensors related to an arbitrary material point $\overline{\vto{u}}$. Thereby, in the context of the normalized eigenbases $X$ and $Y$ of the stretch operators that represent $\tnr{U}_{\overline{\vto{u}}}$ and $\tnr{V}_{\overline{\vto{u}}}$ respectively, most of the strain measures evaluate the deviation of a given stretch from the stretch of the rigid deformation where $\lambda_1=\lambda_2=\lambda_3=1$. The simplest type of this deviation is an algebraic difference called \textsb{extension}\index{extension}, whose Lagrangian and Eulerian forms are respectively described by $\delta_i=\lambda_i-1$ and $\Delta_i=1-\lambda_i^{-1}$, which are zero for rigid deformations. But since principal stretches $\lambda_i$ are related to annoying square root operators, convenience led to the definition of extensions described by 
 \begin{alignat}{3}
 \tilde{\delta}_i=\lambda_i^2-1&\qquad \text{and}\qquad & \tilde{\Delta}_i=1-\lambda_i^{-2}\,,
 \end{alignat}
@@ -276,10 +276,17 @@ First, we verify the second expression of \eqref{eq:invDisplace} from the defini
 \tnr{E} \approx \tnr{e} \approx  \tnr{E}_{\tnr{U}^{-1}_{\overline{\vto{u}}}}^{(2)} \approx \tnr{E}_{\tnr{V}_{\overline{\vto{u}}}}^{(-2)}
 \end{equation*}
 in the context of small deformations. If translations are disregarded or simply not present in the affine deformation rule, another consequence of $\tnr{F}_{\overline{\vto{u}}}\approx\tnr{I}$ is that the shape $\tnr{\overline{\mathcal{B}}}\approx\tnr{\mathcal{B}}_t$. Therefore, we can assume that $\tnr{\overline{\mathcal{B}}}$ is the locus where small deformations take place and tensor 
-\begin{equation}
+\begin{equation}\label{eq:infinitStrain}
  \tnr{\epsilon}:=(\fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}+\fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}^{\text{T}})/2
 \end{equation}
-is their strain measure, called \textsb{infinitesimal strain tensor}, which is clearly taken from the Green-St Venant tensor written in terms of displacement gradients after neglecting the nonlinear term. In those cases where these nonlinear terms cannot be neglected, that is, cases where small deformations are not valid, the context under study is said to be of \textsb{large or finite deformations}\index{deformations!finite}.
+is their strain measure, called \textsb{infinitesimal strain tensor}\index{strain!infinitesimal}, which is clearly taken from the Green-St Venant tensor written in terms of displacement gradients after neglecting the nonlinear term.
+In those cases where these nonlinear terms cannot be neglected, that is, cases where small deformations are not valid, the context under study is said to be of \textsb{large or finite deformations}\index{deformations!finite}. From the above definition, it is evident that the matrix representation of $\tnr{\epsilon}$, which measures local stretching of infinitesimal deformations, is the symmetric part of $[\fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}]$. But if the symmetric part of $[\fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}]$ refers to the stretching portion of infinitesimal deformation, we can state that its antisymmetric part $[\tnr{\mathit{w}}]$, where
+\begin{equation}\label{eq:infinitRotation}
+\tnr{\mathit{w}}:=(\fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}-\fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}^{\text{T}})/2\,,
+\end{equation}
+refers to the rotation portion\footnote{In Continuum Mechanics literature, $\tnr{\mathit{w}}$ is commonly called the infinitesimal rotation tensor, but we shall not use this nomenclature here in order to avoid confusion.}. 
+
+FALAR DE CROSS PRODUCT
 
 
 \section{Motion}\index{motion}
@@ -438,17 +445,29 @@ is said to be the \textsb{Eulerian velocity gradient}\index{velocity!Eulerian gr
  \begin{equation}\label{eq:lagrangVelocityGrad}
  \tnr{M}_{\overline{\vto{u}}}:=\fua{\bar{\nabla}\tnr{\nu}_t}{\overline{\vto{u}}}^{\text{T}}
  \end{equation}
-is the \textsb{Lagrangian velocity gradient}\index{velocity!Lagrangian gradient} of $\tnr{\nu}$ at particle $\overline{\vto{u}}$. From these definitions in the context of affine deformations, the following important properties can be obtained:
-\begin{equation}
+is the \textsb{Lagrangian velocity gradient}\index{velocity!Lagrangian gradient} of $\tnr{\nu}$ at particle $\overline{\vto{u}}$. 
+
+Considering these previous definitions in the context of affine deformations, the following important properties can be obtained:
+\begin{equation}\label{eq:timeDerivGrad}
 \begin{aligned}
 \tnr{M}_{\overline{\vto{x}}}^\text{T}&= \tnr{L}_{\tnr{\chi}_t(\overline{\vto{x}})}\odot_1\tnr{F}_{\overline{\vto{x}}}\,;\\
 \fua{\bar{\nabla}\tnr{a}_t}{\overline{\vto{x}}}&=\fua{\tilde{\nabla}\tnr{a}_t}{\overline{\vto{x}}}^{\text{T}}\odot_1\tnr{F}_{\overline{\vto{x}}}\,.
 \end{aligned} 
 \end{equation} 
+Based on the tensors $\tnr{\epsilon}$ and $\tnr{\mathit{w}}$ defined in \eqref{eq:infinitStrain} and \eqref{eq:infinitRotation} in the context of infinitesimal deformations, since time derivative $\bar{\partial}_t\tnr{\mathit{u}}=\tnr{\nu}$, we call  
+\begin{equation}\label{eq:infinitStrain}
+\tnr{\dot{\epsilon}}:=(\fua{\bar{\nabla}\tnr{\nu}_t}{\overline{\vto{u}}}+\fua{\bar{\nabla}\tnr{\nu}_t}{\overline{\vto{u}}}^{\text{T}})/2=(\tnr{M}_{\overline{\vto{u}}}^{\text{T}}+\tnr{M}_{\overline{\vto{u}}})/2
+\end{equation}
+the \textsb{strain-rate tensor}\index{strain-rate!tensor} and
+\begin{equation}\label{eq:infinitSpin}
+\tnr{\dot{\mathit{w}}}:=(\fua{\bar{\nabla}\tnr{\nu}_t}{\overline{\vto{u}}}-\fua{\bar{\nabla}\tnr{\nu}_t}{\overline{\vto{u}}}^{\text{T}})/2=(\tnr{M}_{\overline{\vto{u}}}^{\text{T}}-\tnr{M}_{\overline{\vto{u}}})/2
+\end{equation}
+the \textsb{spin tensor}\index{spin!tensor}.
+
 
 {\footnotesize
 \begin{proof}
-The following development proves only the first of these equalities because the second is similarly verified. Making $\tnr{\Omega}=\tnr{\nu}_E$ in property \eqref{eq:gradRelFuncs}, 
+The following development proves only the first of equalities \eqref{eq:timeDerivGrad} because the second is similarly verified. Making $\tnr{\Omega}=\tnr{\nu}_E$ in property \eqref{eq:gradRelFuncs}, 
 \begin{align*}
 \bar{\nabla}\{[{\tnr{\nu}_E}]_{t}\}_L(\overline{\vto{x}})&=\bar{\nabla}{\tnr{\varphi}}_{t}(\overline{\vto{x}})\odot_1\tilde{\nabla}\{[{\tnr{\nu}_E}]_{t}\}_L(\overline{\vto{x}})\\
 \bar{\nabla}{\tnr{\nu}}_{t}(\overline{\vto{x}})&=\tilde{\nabla}[\tnr{\nu}_E]_{t}({\vto{x}})^\text{T}\odot_1\bar{\nabla}{\tnr{\varphi}}_{t}(\overline{\vto{x}})^\text{T}\\
