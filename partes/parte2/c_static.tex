@@ -244,7 +244,7 @@ $2$ & $\tnr{U}_{\overline{\vto{u}}}$ & $\tnr{E}_{\tnr{U}_{\overline{\vto{u}}}}^{
 \end{table}
 
 Now, in order to describe mathematically the context of \textsb{small or infinitesimal deformations}\index{deformations!small} cited above, we need first to define a bijective Lagrangian mapping $\map{\tnr{\mathit{u}}_t}{\tnr{\overline{\mathcal{B}}}}{U_\real}$ where 
-\begin{equation}
+\begin{equation}\label{eq:displac}
  \fua{\tnr{\mathit{u}}_t}{\overline{\vto{x}}}=\fua{\tnr{\varphi}_t}{\overline{\vto{x}}} - \overline{\vto{x}}\,.
  \end{equation} 
  The function $\tnr{\mathit{u}}_t$ is called \textsb{displacement function}\index{displacement} whose value $\fua{\tnr{\mathit{u}}_t}{\overline{\vto{u}}}$ is said to be the \textsb{displacement vector}\index{vector!displacement} of an arbitrary material point $\overline{\vto{u}}$ at instant $t$. From the previous rule, it is straightforward to obtain that tensor       
@@ -398,9 +398,17 @@ The vector $\dot{\tnr{\chi}}_{\overline{\vto{u}}}(t)$, which measures the tempor
 \begin{equation}
 {\tnr{\nu}}(\overline{\vto{x}},t)=\bar{\partial}_t\tnr{\chi}(\overline{\vto{x}},t)\,.
 \end{equation}
-Similarly, the temporal sensitivity of the velocity of particle $\overline{\vto{u}}$ at instant $t$ is the vector $\dot{\tnr{\nu}}_{\overline{\vto{u}}}(t)=\ddot{\tnr{\chi}}_{\overline{\vto{u}}}(t)$, called the \textsb{acceleration}\index{acceleration} of $\overline{\vto{u}}$ at $t$. The function in mapping $\map{{\tnr{a}}}{\overline{\tnr{\mathcal{B}}}\times\tempo}{U_\real}$ is called acceleration if it is a bijection where
+In the context of affine deformations, if instant $t$ is variable for displacements described described by \eqref{eq:displac}, that is, $\fua{\tnr{\mathit{u}}}{\overline{\vto{x}},t}=\fua{\tnr{\varphi}}{\overline{\vto{x}},t} - \overline{\vto{x}}$, then it is straightforward to obtain 
 \begin{equation}
-{\tnr{a}}(\overline{\vto{x}},t)=\bar{\partial}_t\tnr{\nu}(\overline{\vto{x}},t)\,.
+\bar{\partial}_t\fua{\tnr{\mathit{u}}}{\overline{\vto{x}},t} =  {\tnr{\nu}}(\overline{\vto{x}},t)\,,
+\end{equation}
+which is obviously a consequence, not a definition of velocity. Now, the temporal sensitivity of the velocity of particle $\overline{\vto{u}}$ at instant $t$ is the vector $\dot{\tnr{\nu}}_{\overline{\vto{u}}}(t)=\ddot{\tnr{\chi}}_{\overline{\vto{u}}}(t)$, called the \textsb{acceleration}\index{acceleration} of $\overline{\vto{u}}$ at $t$. The function in mapping $\map{{\tnr{a}}}{\overline{\tnr{\mathcal{B}}}\times\tempo}{U_\real}$ is called acceleration if it is a bijection where
+\begin{equation}
+{\tnr{a}}(\overline{\vto{x}},t)=\bar{\partial}_t\tnr{\nu}(\overline{\vto{x}},t)\,,
+\end{equation}
+from which the following equality is evident:
+\begin{equation}
+\bar{\partial}_t^2\fua{\tnr{\mathit{u}}}{\overline{\vto{x}},t} =  {\tnr{a}}(\overline{\vto{x}},t)\,.
 \end{equation}
 Considering property \eqref{eq:derivPlaceConst}, we can conclude that vector $\dot{\tnr{p}}_{{\vto{u}}}(t)$ measures the temporal sensitivity of the Eulerian description $\tnr{\chi}_E$ of place $\vto{u}$ at instant $t$. In this context, equalities
 \begin{alignat*}{3} 
@@ -442,8 +450,8 @@ is the \textsb{Lagrangian velocity gradient}\index{velocity!Lagrangian gradient}
 \begin{proof}
 The following development proves only the first of these equalities because the second is similarly verified. Making $\tnr{\Omega}=\tnr{\nu}_E$ in property \eqref{eq:gradRelFuncs}, 
 \begin{align*}
-\bar{\nabla}\{{\tnr{\nu}_E}_{t}\}_L(\overline{\vto{x}})&=\bar{\nabla}{\tnr{\varphi}}_{t}(\overline{\vto{x}})\odot_1\tilde{\nabla}\{{\tnr{\nu}_E}_{t}\}_L(\overline{\vto{x}})\\
-\bar{\nabla}{\tnr{\nu}}_{t}(\overline{\vto{x}})&=\tilde{\nabla}{\tnr{\nu}_E}_{t}({\vto{x}})^\text{T}\odot_1\bar{\nabla}{\tnr{\varphi}}_{t}(\overline{\vto{x}})^\text{T}\\
+\bar{\nabla}\{[{\tnr{\nu}_E}]_{t}\}_L(\overline{\vto{x}})&=\bar{\nabla}{\tnr{\varphi}}_{t}(\overline{\vto{x}})\odot_1\tilde{\nabla}\{[{\tnr{\nu}_E}]_{t}\}_L(\overline{\vto{x}})\\
+\bar{\nabla}{\tnr{\nu}}_{t}(\overline{\vto{x}})&=\tilde{\nabla}[\tnr{\nu}_E]_{t}({\vto{x}})^\text{T}\odot_1\bar{\nabla}{\tnr{\varphi}}_{t}(\overline{\vto{x}})^\text{T}\\
 \tnr{M}_{\overline{\vto{x}}}^\text{T}&=\tnr{L}_{{\vto{x}}}\odot_1\tnr{F}_{\overline{\vto{x}}}\,.
 \end{align*}
 \end{proof}
