@@ -308,17 +308,17 @@ Now, the functions in  $\map{\tnr{\omega}}{\tnr{\overline{\mathcal{B}}}\times\te
 \begin{alignat}{3}\label{eq:LagEulDesc} 
 \tnr{\Omega}_L(\overline{\vto{x}},t)=\tnr{\Omega}(\fua{\tnr{\chi}_t}{\overline{\vto{x}}},t)&\qquad \text{and}\qquad & \tnr{\omega}_E(\vto{x},t)=\tnr{\omega}(\fua{\tnr{\chi}_t^\text{-1}}{{\vto{x}}},t)\,,
 \end{alignat}
-commonly called the Lagrangian and Eulerian descriptions of $\tnr{\Omega}$ and $\tnr{\omega}$. It is then straightforward to conclude that that streak function  is the Eulerian description of the deformation, that is, $\tnr{p}=\tnr{\chi}_E$. Generically, since there are two domains of description for functions $\tnr{\Omega}$ and $\tnr{\omega}$, the differentiation chain rules force us to clearly specify the domain of derivation, namely, whether these functions must be derived on the material or spatial domain. Therefore, derivatives here are called Lagrangian or Eulerian when performed on particles or places respectively. In this context, \emph{it is specified that the time derivative is said to be Lagrangian or Eulerian when the particle $\overline{\vto{x}}\in\tnr{\overline{\mathcal{B}}}$ or the place $\vto{x}\in\tnr{\mathcal{B}}_t$ are fixed}. Here, notations $\overline{\partial}_t\bullet\,$ and $\tilde{\partial}_t\bullet\,$ specify Lagrangian and Eulerian time derivatives, while first and second order time derivatives of univariate functions are represented by overdotted symbols $\dot{\bullet}$ and $\ddot{\bullet}$ respectively. Thereby, for the functions $\tnr{\omega}$ and $\tnr{\Omega}$, we have the Lagrangian time derivatives at particle $\overline{\vto{u}}$
+commonly called the Lagrangian and Eulerian descriptions of $\tnr{\Omega}$ and $\tnr{\omega}$. It is then straightforward to conclude that that streak function  is the Eulerian description of the deformation, that is, $\tnr{p}=\tnr{\chi}_E$. Generically, since there are two domains of description for functions $\tnr{\Omega}$ and $\tnr{\omega}$, the differentiation chain rules force us to clearly specify the domain of derivation, namely, whether these functions must be derived on the material or spatial domain. Therefore, derivatives here are called Lagrangian or Eulerian when performed on particles or places respectively. In this context, \emph{it is specified that the time derivative is said to be Lagrangian or Eulerian when the particle $\overline{\vto{x}}\in\tnr{\overline{\mathcal{B}}}$ or the place $\vto{x}\in\tnr{\mathcal{B}}_t$ are fixed}. Here, notations ${\bar{\partial}}_t^k\bullet\,$ and ${\tilde{\partial}}_t^k\bullet\,$ specify Lagrangian and Eulerian time derivatives of order $k\leqslant 2$, while time derivatives $d\bullet/dt$ and $d^2\bullet/dt^2$ of univariate functions are shortened by overdotted symbols $\dot{\bullet}$ and $\ddot{\bullet}$ respectively. Thereby, for the functions $\tnr{\omega}$ and $\tnr{\Omega}$, we have the Lagrangian time derivatives at particle $\overline{\vto{u}}$
 \begin{alignat}{3}\label{eq:LagDesc} 
-\overline{\partial}_t\tnr{\omega}(\overline{\vto{u}},t):={\dot{\tnr{\omega}}}_{\overline{\vto{u}}}(t)&\qquad \text{and}\qquad & \overline{\partial}_t\tnr{\Omega}(\vto{u},t):=\tnr{\Omega}'(\fua{\tnr{\chi}_{\overline{\vto{u}}}}{t},t)
+\bar{\partial}_t\tnr{\omega}(\overline{\vto{u}},t):=\dfrac{d\,\tnr{\omega}_{\overline{\vto{u}}}}{dt}(t)={\dot{\tnr{\omega}}}_{\overline{\vto{u}}}(t)&\qquad \text{and}\qquad & \bar{\partial}_t\tnr{\Omega}(\vto{u},t):=\tnr{\Omega}'(\fua{\tnr{\chi}_{\overline{\vto{u}}}}{t},t)
 \end{alignat}
 as well as the Eulerian time derivatives at place ${\vto{u}}$
 \begin{alignat}{3}\label{eq:EulDesc} 
-\tilde{\partial}_t\tnr{\Omega}({\vto{u}},t):={\dot{\tnr{\Omega}}}_{{\vto{u}}}(t)&\qquad \text{and}\qquad & \tilde{\partial}_t\tnr{\omega}(\overline{\vto{u}},t):=\tnr{\omega}'(\fua{\tnr{p}_{\vto{u}}}{t},t)\,.
+\tilde{\partial}_t\tnr{\Omega}({\vto{u}},t):=\dfrac{d\,\tnr{\Omega}_{{\vto{u}}}}{dt}(t)={\dot{\tnr{\Omega}}}_{{\vto{u}}}(t)&\qquad \text{and}\qquad & \tilde{\partial}_t\tnr{\omega}(\overline{\vto{u}},t):=\tnr{\omega}'(\fua{\tnr{p}_{\vto{u}}}{t},t)\,,
 \end{alignat}
 Considering these previous definitions, by developing the Lagrangian and Eulerian time derivatives 
 \begin{equation}\label{eq:LagrTimeDerivative}
-\overline{\partial}_t\tnr{\Omega}({\vto{x}},t)=\dot{\tnr{\Omega}}_{\vto{x}}(t)+\dot{\tnr{\Omega}}_{t}(\tnr{\chi}_{\overline{\vto{x}}}^{-1}(t))
+\bar{\partial}_t\tnr{\Omega}({\vto{x}},t)=\dot{\tnr{\Omega}}_{\vto{x}}(t)+\dot{\tnr{\Omega}}_{t}(\tnr{\chi}_{\overline{\vto{x}}}^{-1}(t))
 \end{equation}
 and
 \begin{equation}\label{eq:EulerTimeDerivative}
@@ -326,47 +326,61 @@ and
 \end{equation}
 it is possible to obtain that
 \begin{equation}\label{eq:derivPartConst}
-\overline{\partial}_t\tnr{\Omega}({\vto{x}},t)=\tilde{\partial}_t\tnr{\Omega}({\vto{x}},t)+\tnr{\Omega}_t'(\vto{x})\circ\dot{\tnr{\chi}}_{\overline{\vto{x}}}(t)
+\bar{\partial}_t\tnr{\Omega}({\vto{x}},t)=\tilde{\partial}_t\tnr{\Omega}({\vto{x}},t)+\tnr{\Omega}_t'(\vto{x})\circ\dot{\tnr{\chi}}_{\overline{\vto{x}}}(t)
 \end{equation}
 and
 \begin{equation}\label{eq:derivPlaceConst}
-\tilde{\partial}_t\tnr{\omega}(\overline{\vto{x}},t)=\overline{\partial}_t\tnr{\omega}(\overline{\vto{u}},t)+\tnr{\omega}_t'(\overline{\vto{x}})\circ\dot{\tnr{p}}_{{\vto{x}}}(t)\,.
+\tilde{\partial}_t\tnr{\omega}(\overline{\vto{x}},t)=\bar{\partial}_t\tnr{\omega}(\overline{\vto{u}},t)+\tnr{\omega}_t'(\overline{\vto{x}})\circ\dot{\tnr{p}}_{{\vto{x}}}(t)\,.
 \end{equation}
 In the particular cases of $\tnr{\omega}=\tnr{\Omega}_L$ and $\tnr{\Omega}=\tnr{\omega}_E$,
 \begin{alignat}{3}\label{eq:zerosDescript} 
 [\dot{\tnr{\Omega}}_{t}]_L+\dot{[\tnr{\Omega}_L]}_{t}=\vto{0}&\qquad \text{and}\qquad & [\dot{\tnr{\omega}}_{t}]_E+\dot{[\tnr{\omega}_E]}_{t}=\vto{0}\,.
 \end{alignat}
-The specification of the codomains of functions $\tnr{\omega}$ and $\tnr{\Omega}$ leads to the following important conclusions, where Lagrangian and Eulerian gradients, related to Lagrangian and Eulerian derivatives, are represented by symbols $\overline{\bullet}$ and $\tilde{\bullet}$ respectively.
+The specification of the codomains of functions $\tnr{\omega}$ and $\tnr{\Omega}$ leads to the following important conclusions, where Lagrangian and Eulerian gradients, related to Lagrangian and Eulerian derivatives, are represented by symbols $\bar{\bullet}$ and $\tilde{\bullet}$ respectively.
 \begin{itemize}
     \setlength\itemsep{.1em}
     \item[i.] If $W=\ete{\real}{U^m}$, functions are tensor valued and then, from \eqref{eq:defGradient}, 
 \begin{equation}
 \begin{aligned}
 \tnr{\Omega}_t'(\vto{x})\circ\dot{\tnr{\chi}}_{\overline{\vto{x}}}(t)&=[\dot{\tnr{\chi}}_{\overline{\vto{x}}}(t)]^*\odot_1\fua{\tilde{\nabla}\tnr{\Omega}_t}{{\vto{x}}}\,,\\
-\tnr{\omega}_t'(\overline{\vto{x}})\circ\dot{\tnr{p}}_{{\vto{x}}}(t)&=[\dot{\tnr{p}}_{{\vto{x}}}(t)]^*\odot_1\fua{\overline{\nabla}\tnr{\omega}_t}{\overline{\vto{x}}}\,;
+\tnr{\omega}_t'(\overline{\vto{x}})\circ\dot{\tnr{p}}_{{\vto{x}}}(t)&=[\dot{\tnr{p}}_{{\vto{x}}}(t)]^*\odot_1\fua{\bar{\nabla}\tnr{\omega}_t}{\overline{\vto{x}}}\,;
 \end{aligned} 
 \end{equation}   
     \item[ii.] If $W=U_\real$, functions are vector valued and then, from \eqref{eq:derivVecGradVec},
 \begin{equation}\label{eq:compoVector}
 \begin{aligned}
 \tnr{\Omega}_t'(\vto{x})\circ\dot{\tnr{\chi}}_{\overline{\vto{x}}}(t)&=\fua{\tilde{\nabla}\tnr{\Omega}_t}{{\vto{x}}}^{\text{T}}\hat{\odot}_1[\dot{\tnr{\chi}}_{\overline{\vto{x}}}(t)]^*\,,\\
-\tnr{\omega}_t'(\overline{\vto{x}})\circ\dot{\tnr{p}}_{{\vto{x}}}(t)&=\fua{\overline{\nabla}\tnr{\omega}_t}{\overline{\vto{x}}}^{\text{T}}\hat{\odot}_1[\dot{\tnr{p}}_{{\vto{x}}}(t)]^*\,;
+\tnr{\omega}_t'(\overline{\vto{x}})\circ\dot{\tnr{p}}_{{\vto{x}}}(t)&=\fua{\bar{\nabla}\tnr{\omega}_t}{\overline{\vto{x}}}^{\text{T}}\hat{\odot}_1[\dot{\tnr{p}}_{{\vto{x}}}(t)]^*\,;
 \end{aligned} 
 \end{equation} 
 \item[iii.] If $W=\real$, functions are scalar valued and then, from \eqref{eq:gradScalVectFunc},
 \begin{equation}
 \begin{aligned}
 \tnr{\Omega}_t'(\vto{x})\circ\dot{\tnr{\chi}}_{\overline{\vto{x}}}(t)&=\fua{\tilde{\operatorname{grad}}\,{\tnr{\Omega}_t}}{{\vto{x}}}\cdot\dot{\tnr{\chi}}_{\overline{\vto{x}}}(t)\,,\\
-\tnr{\omega}_t'(\overline{\vto{x}})\circ\dot{\tnr{p}}_{{\vto{x}}}(t)&=\fua{\overline{\operatorname{grad}}\,{\tnr{\omega}_t}}{\overline{\vto{x}}}\cdot\dot{\tnr{p}}_{{\vto{x}}}(t)\,.
+\tnr{\omega}_t'(\overline{\vto{x}})\circ\dot{\tnr{p}}_{{\vto{x}}}(t)&=\fua{\bar{\operatorname{grad}}\,{\tnr{\omega}_t}}{\overline{\vto{x}}}\cdot\dot{\tnr{p}}_{{\vto{x}}}(t)\,.
 \end{aligned} 
 \end{equation} 
 \end{itemize}
+For future purposes, it is important to present properties involving Lagrangian and Eulerian gradients of respectively Eulerian and Lagrangian functions. The following equalities are straightforward consequences of property \eqref{eq:prop1Grad}, valid for tensor valued functions, which can be easily extended for vector and scalar valued functions:
+\begin{equation}\label{eq:gradRelFuncs}
+\begin{aligned}
+\bar{\nabla}[{\tnr{\Omega}}_{t}]_L(\overline{\vto{x}})&=\bar{\nabla}{\tnr{\chi}}_{t}(\overline{\vto{x}})\odot_1\tilde{\nabla}[{\tnr{\Omega}}_{t}]_L(\overline{\vto{x}})\,;\\
+\tilde{\nabla}[{\tnr{\omega}}_{t}]_E({\vto{x}})&=\tilde{\nabla}{\tnr{p}}_{t}({\vto{x}})\odot_1\bar{\nabla}[{\tnr{\omega}}_{t}]_E({\vto{x}})\,.
+\end{aligned} 
+\end{equation} 
+If $\tnr{\omega}$ and $\tnr{\Omega}$ are Lagrangian and Eulerian functions, so are their time derivatives $\bar{\partial}_t\tnr{\omega}$ and $\tilde{\partial}_t\tnr{\Omega}$. Therefore, it is obvious that all the properties above are also valid for time derivative functions up to second order. For example, the following equalities are the previous properties written for time derivative functions of order $k\leqslant 2\,$: 
+\begin{equation}\label{eq:gradTimeDerivs}
+\begin{aligned}
+\bar{\nabla}\{[{\tilde{\partial}_t^k\tnr{\Omega}}]_{t}\}_L(\overline{\vto{x}})&=\bar{\nabla}{\tnr{\chi}}_{t}(\overline{\vto{x}})\odot_1\tilde{\nabla}\{[{\tilde{\partial}_t^k\tnr{\Omega}}]_{t}\}_L(\overline{\vto{x}})\,;\\
+\tilde{\nabla}\{[{\bar{\partial}_t^k\tnr{\omega}}]_{t}\}_E({\vto{x}})&=\tilde{\nabla}{\tnr{p}}_{t}({\vto{x}})\odot_1\bar{\nabla}\{[{\bar{\partial}_t^k\tnr{\omega}}]_{t}\}_E({\vto{x}})\,.
+\end{aligned} 
+\end{equation} 
 
 {\footnotesize
 \begin{proof}
 From the chain rules \eqref{eq:chainRule} and \eqref{eq:chainRulePartial}, the following development proves \eqref{eq:derivPartConst}; equality \eqref{eq:derivPlaceConst} is similarly verified.
 \begin{align*}
-\overline{\partial}_t\tnr{\Omega}({\vto{x}},t)&=\tnr{\Omega}'(\fua{\tnr{\chi}_{\overline{\vto{x}}}}{t},t)\\
+\bar{\partial}_t\tnr{\Omega}({\vto{x}},t)&=\tnr{\Omega}'(\fua{\tnr{\chi}_{\overline{\vto{x}}}}{t},t)\\
 &=\dot{\tnr{\Omega}}_\vto{x}(t)+\dot{\tnr{\Omega}}_\vto{t}(\fua{\tnr{\chi}_{\overline{\vto{x}}}}{t}) \\
 &=\tilde{\partial}_t\tnr{\Omega}({\vto{x}},t)+[\tnr{\Omega}_t'\circ\fua{\tnr{\chi}_{\overline{\vto{x}}}}{t}]\circ\fua{\dot{\tnr{\chi}}_{\overline{\vto{x}}}}{t}\\
 &=\tilde{\partial}_t\tnr{\Omega}({\vto{x}},t)+\tnr{\Omega}_t'(\vto{x})\circ\fua{\dot{\tnr{\chi}}_{\overline{\vto{x}}}}{t}\,.
@@ -374,19 +388,19 @@ From the chain rules \eqref{eq:chainRule} and \eqref{eq:chainRulePartial}, the f
 Now, we prove the first of properties \eqref{eq:zerosDescript}; the other is similarly verified. From \eqref{eq:EulerTimeDerivative}, the sum of the last equality of development  
 \begin{align*}
 \tilde{\partial}_t\tnr{\Omega}_L(\overline{\vto{x}},t)&=\dot{[\tnr{\Omega}_L]}_{\overline{\vto{x}}}(t)+\dot{[\tnr{\Omega}_L}]_{t}(\tnr{\chi}_{{\vto{x}}}(t))\\
-\dot{\tnr{\Omega}}_{\vto{x}}(t)&=\overline{\partial}_t\tnr{\Omega}({\vto{x}},t)+\dot{[\tnr{\Omega}_L]}_{t}(\overline{\vto{x}})
+\dot{\tnr{\Omega}}_{\vto{x}}(t)&=\bar{\partial}_t\tnr{\Omega}({\vto{x}},t)+\dot{[\tnr{\Omega}_L]}_{t}(\overline{\vto{x}})
 \end{align*}
 with \eqref{eq:LagrTimeDerivative} proves the property.  
 \end{proof}
 }
 
-Now, from equality \eqref{eq:derivPartConst}, the vector $\dot{\tnr{\chi}}_{\overline{\vto{u}}}(t)$, which measures the temporal sensitivity of the deformation at a fixed particle $\overline{\vto{u}}$, is called the \textsb{velocity}\index{velocity} of $\overline{\vto{u}}$ at $t$. If the particle is variable, the function in mapping $\map{{\tnr{\nu}}}{\overline{\tnr{\mathcal{B}}}\times\tempo}{U_\real}$ is called velocity if it is a diffeomorphism where 
+The vector $\dot{\tnr{\chi}}_{\overline{\vto{u}}}(t)$, which measures the temporal sensitivity of the deformation at a fixed particle $\overline{\vto{u}}$, is called the \textsb{velocity}\index{velocity} of $\overline{\vto{u}}$ at $t$. If the particle is variable, the Lagrangian function in mapping $\map{{\tnr{\nu}}}{\overline{\tnr{\mathcal{B}}}\times\tempo}{U_\real}$ is called velocity if it is a diffeomorphism where 
 \begin{equation}
-{\tnr{\nu}}(\overline{\vto{x}},t)=\overline{\partial}_t\tnr{\chi}(\overline{\vto{x}},t)\,.
+{\tnr{\nu}}(\overline{\vto{x}},t)=\bar{\partial}_t\tnr{\chi}(\overline{\vto{x}},t)\,.
 \end{equation}
-Similarly, the temporal sensitivity of the velocity of particle $\overline{\vto{u}}$ at instant $t$ is the vector $\dot{\tnr{\nu}}_{\overline{\vto{u}}}(t)=\ddot{\tnr{\chi}}_{\overline{\vto{u}}}(t)$ called the \textsb{acceleration}\index{acceleration} of $\overline{\vto{u}}$ at $t$. The function in mapping $\map{{\tnr{a}}}{\overline{\tnr{\mathcal{B}}}\times\tempo}{U_\real}$ is called acceleration if it is a bijection where
+Similarly, the temporal sensitivity of the velocity of particle $\overline{\vto{u}}$ at instant $t$ is the vector $\dot{\tnr{\nu}}_{\overline{\vto{u}}}(t)=\ddot{\tnr{\chi}}_{\overline{\vto{u}}}(t)$, called the \textsb{acceleration}\index{acceleration} of $\overline{\vto{u}}$ at $t$. The function in mapping $\map{{\tnr{a}}}{\overline{\tnr{\mathcal{B}}}\times\tempo}{U_\real}$ is called acceleration if it is a bijection where
 \begin{equation}
-{\tnr{a}}(\overline{\vto{x}},t)=\overline{\partial}_t\tnr{\nu}(\overline{\vto{x}},t)\,.
+{\tnr{a}}(\overline{\vto{x}},t)=\bar{\partial}_t\tnr{\nu}(\overline{\vto{x}},t)\,.
 \end{equation}
 Considering property \eqref{eq:derivPlaceConst}, we can conclude that vector $\dot{\tnr{p}}_{{\vto{u}}}(t)$ measures the temporal sensitivity of the Eulerian description $\tnr{\chi}_E$ of place $\vto{u}$ at instant $t$. In this context, equalities
 \begin{alignat*}{3} 
@@ -394,47 +408,46 @@ Considering property \eqref{eq:derivPlaceConst}, we can conclude that vector $\d
 \end{alignat*}
 enable us to rewrite each of expressions \eqref{eq:derivPartConst} and \eqref{eq:derivPlaceConst} solely described by places and particles respectively, namely,   
 \begin{equation}
-\overline{\partial}_t\tnr{\Omega}({\vto{x}},t)=\tilde{\partial}_t\tnr{\Omega}({\vto{x}},t)+\tnr{\Omega}_t'(\vto{x})\circ\tnr{\nu}_E(\vto{x},t)
+\bar{\partial}_t\tnr{\Omega}({\vto{x}},t)=\tilde{\partial}_t\tnr{\Omega}({\vto{x}},t)+\tnr{\Omega}_t'(\vto{x})\circ\tnr{\nu}_E(\vto{x},t)
 \end{equation}
 and
 \begin{equation}
-\tilde{\partial}_t\tnr{\omega}(\overline{\vto{x}},t)=\overline{\partial}_t\tnr{\omega}(\overline{\vto{x}},t)+\tnr{\omega}_t'(\overline{\vto{x}})\circ\tilde{\partial}_t \tnr{p}_L(\overline{\vto{x}},t)\,.
+\tilde{\partial}_t\tnr{\omega}(\overline{\vto{x}},t)=\bar{\partial}_t\tnr{\omega}(\overline{\vto{x}},t)+\tnr{\omega}_t'(\overline{\vto{x}})\circ\tilde{\partial}_t \tnr{p}_L(\overline{\vto{x}},t)\,.
 \end{equation}
 By definition, acceleration is the Lagrangian time derivative of the velocity $\tnr{\nu}$, but what about its Eulerian time derivative? From the second of the previous qualities and expressions \eqref{eq:compoVector}, vector 
 \begin{equation}
-\tilde{\partial}_t\tnr{\nu}(\overline{\vto{x}},t)=\tnr{a}(\overline{\vto{x}},t)+\fua{\overline{\nabla}\tnr{\nu}_t}{\overline{\vto{x}}}^{\text{T}}\hat{\odot}_1[\tilde{\partial}_t \tnr{p}_L(\overline{\vto{x}},t)]^*\,.
+\tilde{\partial}_t\tnr{\nu}(\overline{\vto{x}},t)=\tnr{a}(\overline{\vto{x}},t)+\fua{\bar{\nabla}\tnr{\nu}_t}{\overline{\vto{x}}}^{\text{T}}\hat{\odot}_1[\tilde{\partial}_t \tnr{p}_L(\overline{\vto{x}},t)]^*\,.
 \end{equation}
 Similarly, the Lagrangian time derivative of the Eulerian description $\tnr{\nu}_E$ of the velocity results the Eulerian description  
 \begin{equation}
-\tnr{a}_E(\vto{x},t)=\tilde{\partial}_t\tnr{\nu}_E({\vto{x}},t)+\fua{\tilde{\nabla}[\tnr{\nu}_E]_t}{{\vto{x}}}^{\text{T}}\hat{\odot}_1[{\tnr{\nu}_E}(\vto{x},t)]^*\,,
+\tnr{a}_E(\vto{x},t)=\tilde{\partial}_t\tnr{\nu}_E({\vto{x}},t)+\fua{\tilde{\nabla}[\tnr{\nu}_t]_E}{{\vto{x}}}^{\text{T}}\hat{\odot}_1[{\tnr{\nu}_E}(\vto{x},t)]^*\,,
 \end{equation}
-from which second order tensor
+from which second order tensor 
  \begin{equation}\label{eq:eulerVelocityGrad}
- \tnr{L}_{\vto{u}}:=\fua{\tilde{\nabla}[\tnr{\nu}_E]_t}{{\vto{u}}}^{\text{T}}
+ \tnr{L}_{\vto{u}}:=\fua{\tilde{\nabla}[\tnr{\nu}_t]_E}{{\vto{u}}}^{\text{T}}
  \end{equation}
-is said to be the \textsb{Eulerian velocity gradient}\index{velocity!Eulerian gradient} of $\tnr{\nu}_E$ at place $\vto{u}$, while second order tensor
+is said to be the \textsb{Eulerian velocity gradient}\index{velocity!Eulerian gradient} of $\tnr{\nu}_E$ at place $\vto{u}$, while
  \begin{equation}\label{eq:lagrangVelocityGrad}
- \tnr{M}_{\overline{\vto{u}}}:=\fua{\overline{\nabla}\tnr{\nu}_t}{\overline{\vto{u}}}^{\text{T}}
+ \tnr{M}_{\overline{\vto{u}}}:=\fua{\bar{\nabla}\tnr{\nu}_t}{\overline{\vto{u}}}^{\text{T}}
  \end{equation}
-is the \textsb{Lagrangian velocity gradient}\index{velocity!Lagrangian gradient} of $\tnr{\nu}$ at particle $\overline{\vto{u}}$. 
-
-
-
-
-
-
-Rewriting equality XX in the present context results
+is the \textsb{Lagrangian velocity gradient}\index{velocity!Lagrangian gradient} of $\tnr{\nu}$ at particle $\overline{\vto{u}}$. From these definitions in the context of affine deformations, the following important properties can be obtained:
 \begin{equation}
-\tnr{\overline{L}}_{\overline{\vto{x}}}\hat{\odot}_1[{\tnr{\nu}}(\overline{\vto{x}},t)]^*+ \tnr{M}_{\overline{\vto{x}}}\hat{\odot}_1[\tilde{\partial}_t \tnr{p}_L(\overline{\vto{x}},t)]^*=\vto{0}
-\end{equation}
-or 
-\begin{equation}
-\tnr{L}_{\vto{x}}\hat{\odot}_1[{\tnr{\nu}_E}(\vto{x},t)]^*+ \tnr{\tilde{M}}_{\vto{x}}\hat{\odot}_1[\tilde{\partial}_t \tnr{p}({\vto{x}},t)]^*=\vto{0}
-\end{equation}
-where $\tnr{\overline{L}}_{\overline{\vto{x}}}:=\fua{\tilde{\nabla}\tnr{\nu}_t}{\overline{\vto{x}}}^{\text{T}}$ and $\tnr{\tilde{M}}_{\vto{x}}:=\fua{\overline{\nabla}[\tnr{\nu}_E]_t}{{\vto{x}}}^{\text{T}}$ are the Lagrangian and Eulerian descriptions of their respective original tensors.
+\begin{aligned}
+\tnr{M}_{\overline{\vto{x}}}^\text{T}&= \tnr{L}_{\tnr{\chi}_t(\overline{\vto{x}})}\odot_1\tnr{F}_{\overline{\vto{x}}}\,;\\
+\fua{\bar{\nabla}\tnr{a}_t}{\overline{\vto{x}}}&=\fua{\tilde{\nabla}\tnr{a}_t}{\overline{\vto{x}}}^{\text{T}}\odot_1\tnr{F}_{\overline{\vto{x}}}\,.
+\end{aligned} 
+\end{equation} 
 
-
-From now on, we restrict our study to affine deformations described by \eqref{eq:affDeform}, that is, $\tnr{\chi}=\tnr{\varphi}$. 
+{\footnotesize
+\begin{proof}
+The following development proves only the first of these equalities because the second is similarly verified. Making $\tnr{\Omega}=\tnr{\nu}_E$ in property \eqref{eq:gradRelFuncs}, 
+\begin{align*}
+\bar{\nabla}\{{\tnr{\nu}_E}_{t}\}_L(\overline{\vto{x}})&=\bar{\nabla}{\tnr{\varphi}}_{t}(\overline{\vto{x}})\odot_1\tilde{\nabla}\{{\tnr{\nu}_E}_{t}\}_L(\overline{\vto{x}})\\
+\bar{\nabla}{\tnr{\nu}}_{t}(\overline{\vto{x}})&=\tilde{\nabla}{\tnr{\nu}_E}_{t}({\vto{x}})^\text{T}\odot_1\bar{\nabla}{\tnr{\varphi}}_{t}(\overline{\vto{x}})^\text{T}\\
+\tnr{M}_{\overline{\vto{x}}}^\text{T}&=\tnr{L}_{{\vto{x}}}\odot_1\tnr{F}_{\overline{\vto{x}}}\,.
+\end{align*}
+\end{proof}
+}
 
 
 %TRAZER O CROSS PRODUCT PARA CÁ
