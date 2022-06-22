@@ -280,13 +280,14 @@ in the context of small deformations. If translations are disregarded or simply 
  \tnr{\epsilon}:=(\fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}+\fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}^{\text{T}})/2
 \end{equation}
 is their strain measure, called \textsb{infinitesimal strain tensor}\index{strain!infinitesimal}, which is clearly taken from the Green-St Venant tensor written in terms of displacement gradients after neglecting the nonlinear term.
-In those cases where these nonlinear terms cannot be neglected, that is, cases where small deformations are not valid, the context under study is said to be of \textsb{large or finite deformations}\index{deformations!finite}. From the above definition, it is evident that the matrix representation of $\tnr{\epsilon}$, which measures length changes in infinitesimal deformations, is the symmetric part of $[\fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}]$. But if the symmetric part of $[\fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}]$ refers to the length changing portion of infinitesimal deformation, we can state that its antisymmetric part $[\tnr{\mathit{w}}]$, where
+In those cases where these nonlinear terms cannot be neglected, that is, cases where small deformations are not valid, the context under study is said to be of \textsb{large or finite deformations}\index{deformations!finite}. From the above definition, it is evident that the matrix representation of $\tnr{\epsilon}$, which measures length changes in infinitesimal deformations, is the symmetric part of $[\fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}]$. But if the symmetric part of $[\fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}]$ refers to the length changing portion of infinitesimal deformation, we can state that its antisymmetric part $[\tnr{W}]$, where
 \begin{equation}\label{eq:infinitRotation}
-\tnr{\mathit{w}}:=(\fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}-\fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}^{\text{T}})/2\,,
+\tnr{W}:=(\fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}-\fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}^{\text{T}})/2\,,
 \end{equation}
-refers to the rotation portion\footnote{In Continuum Mechanics literature, $\tnr{\mathit{w}}$ is commonly called the infinitesimal rotation tensor, but we shall not use this nomenclature here in order to avoid confusion.}. 
-
-FALAR DE CROSS PRODUCT
+refers to the rotation portion\footnote{In Continuum Mechanics literature, $\tnr{W}$ is commonly called the infinitesimal rotation tensor, but we shall not use this nomenclature here in order to avoid confusion.}. Speaking of antisymmetric tensors of second order, we recall that theorem \ref{teo:antSymVectors} establishes a biunivocal relationship between them and three dimensional Euclidean vectors. Therefore, considering the conditions of this theorem, the axial vector defined by $\tnr{W}$ is  
+\begin{equation}\label{eq:vectinfinitRotation}
+\tnr{\mathit{w}}:=\tnr{A}_B\hat{\odot}_2 \tnr{W}\,.
+\end{equation}
 
 
 \section{Motion}\index{motion}
@@ -454,16 +455,19 @@ Considering these previous definitions in the context of affine deformations, th
 \fua{\bar{\nabla}\tnr{a}_t}{\overline{\vto{x}}}&=\fua{\tilde{\nabla}\tnr{a}_t}{\overline{\vto{x}}}^{\text{T}}\odot_1\tnr{F}_{\overline{\vto{x}}}\,.
 \end{aligned} 
 \end{equation} 
-Based on the tensors $\tnr{\epsilon}$ and $\tnr{\mathit{w}}$ defined in \eqref{eq:infinitStrain} and \eqref{eq:infinitRotation} in the context of infinitesimal deformations, since time derivative $\bar{\partial}_t\tnr{\mathit{u}}=\tnr{\nu}$, we call  
+Based on the tensors $\tnr{\epsilon}$ and $\tnr{W}$ defined by \eqref{eq:infinitStrain} and \eqref{eq:infinitRotation} in the context of infinitesimal deformations, since time derivative $\bar{\partial}_t\tnr{\mathit{u}}=\tnr{\nu}$, we call  
 \begin{equation}\label{eq:infinitStrain}
 \tnr{\dot{\epsilon}}:=(\fua{\bar{\nabla}\tnr{\nu}_t}{\overline{\vto{u}}}+\fua{\bar{\nabla}\tnr{\nu}_t}{\overline{\vto{u}}}^{\text{T}})/2=(\tnr{M}_{\overline{\vto{u}}}^{\text{T}}+\tnr{M}_{\overline{\vto{u}}})/2
 \end{equation}
 the \textsb{strain-rate tensor}\index{strain-rate!tensor}, which measures the rate of local changes in length,  and
 \begin{equation}\label{eq:infinitSpin}
-\tnr{\dot{\mathit{w}}}:=(\fua{\bar{\nabla}\tnr{\nu}_t}{\overline{\vto{u}}}-\fua{\bar{\nabla}\tnr{\nu}_t}{\overline{\vto{u}}}^{\text{T}})/2=(\tnr{M}_{\overline{\vto{u}}}^{\text{T}}-\tnr{M}_{\overline{\vto{u}}})/2
+\tnr{\dot{W}}:=(\fua{\bar{\nabla}\tnr{\nu}_t}{\overline{\vto{u}}}-\fua{\bar{\nabla}\tnr{\nu}_t}{\overline{\vto{u}}}^{\text{T}})/2=(\tnr{M}_{\overline{\vto{u}}}^{\text{T}}-\tnr{M}_{\overline{\vto{u}}})/2
 \end{equation}
-the \textsb{spin tensor}\index{spin!tensor}, which measures the rate of local rotation.
-
+the \textsb{spin tensor}\index{spin!tensor}, which measures the rate of local rotation. According to theorem \ref{teo:antSymVectors}, since $\tnr{\dot{W}}$ is antisymmetric, its related axial vector 
+\begin{equation}\label{eq:vectSpin}
+\tnr{\dot{\mathit{w}}}:=\tnr{A}_B\hat{\odot}_2 \tnr{\dot{W}}
+\end{equation}
+is called \textsb{spin vector}\index{spin!vector}\,.
 
 {\footnotesize
 \begin{proof}
