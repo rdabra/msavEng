@@ -353,7 +353,11 @@ Now, let $(U_\real,\tnr{A}_B)$ be a three dimensional oriented Euclidean space, 
 \begin{equation}\label{eq:curl}
 \fua{\crl{\tnr{{\varphi}}}}{\vto{x}^*}=\tnr{A}_B\odot_{2}\fua{\nabla\tnr{{\varphi}}}{\vto{x}^*}\,,
 \end{equation}
-where tensor $\fua{\nabla\tnr{{\varphi}}}{\vto{x}^*}\in\ete{\cam{R}}{U^2\times V}$. Similarly to the case of gradients, there are some notable properties of divergence and curl, presented as follows, where the appropriate previous conditions are implicit.
+where tensor $\fua{\nabla\tnr{{\varphi}}}{\vto{x}^*}\in\ete{\cam{R}}{U^2\times V}$. In the specific case of $\map{\tnr{{\varphi}}}{{{\tnr{\mathcal{U}}}}}{U_\real^*}$, we can define a vector valued vector function $\tnr{\hat{\varphi}}=\Phi^{-1}\circ\tnr{{\varphi}}\circ\Phi$, from which function 
+\begin{equation}\label{eq:curlVect}
+\nabla\times\tnr{\hat{\varphi}}:=\Phi^{-1}\circ\crl{\tnr{{\varphi}}}\circ\Phi\,.
+\end{equation}
+From this definition, it is clear that axial vector $\nabla\times\tnr{\hat{\varphi}}(\vto{x})=\tnr{A}_B\hat{\odot}_{2}\fua{\nabla\tnr{\hat{\varphi}}}{\vto{x}}$. Similarly to the case of gradients, there are some notable properties of divergence and curl, presented as follows, where the appropriate previous conditions are implicit.
 \begin{itemize}
 \setlength\itemsep{.1em}
 \item[i.] If $\tnr{\varphi}=\tnr{\varphi}_1+\tnr{\varphi}_2$ then $\dvt{\tnr{\varphi}}=\dvt{\tnr{\varphi}_1}+\dvt{\tnr{\varphi}_2}$ and $\crl{\tnr{\varphi}}=\crl{\tnr{\varphi}_1}+\crl{\tnr{\varphi}_2}\,$;
@@ -376,12 +380,12 @@ and for $m=s=1$,
 \end{equation}
 
 	
-\item[v.]	If $\map{\tnr{\varphi}}{\mathcal{U}}{V_\real}$, where $\mathcal{U}\subset U_\real$, then $\fua{\crl{\nabla \tnr{\varphi}}}{\vto{x}^*}=\vto{0}\,$.
+\item[v.]	If $\map{\tnr{\varphi}}{\tnr{\mathcal{U}}}{U_\real^*}$, where $\mathcal{U}\subset U_\real^*$, then $\fua{{\nabla \times \nabla\tnr{\hat{\varphi}}}}{\vto{x}}=\vto{0}\,$.
 \end{itemize}
 
 {\footnotesize
 \begin{proof}
-Considering definitions \eqref{eq:divergence} and \eqref{eq:curl}, since partial inner products are left (right) distributive, proof of item i is trivial. Pre multiplying properties \eqref{eq:prop1Grad}, \eqref{eq:prop2Grad} and \eqref{eq:prop3Grad} adequately by $\tnr{I}$ or $\tnr{A}_B$, proofs of items i, ii, iii and iv are straightforward. For item v, since we already know that $\vto{u}\cdot\tnr{A}_B\hat{\odot}_2\vto{v}^*\otimes\vto{w}^*=\tnr{A}_B(\vto{u},\vto{v},\vto{w})$, if we consider tensor $\fua{{\nabla \tnr{\varphi}}}{\vto{x}^*}=\vto{v}^*\otimes\vto{w}^*$, then $\vto{u}\cdot\fua{\crl{\nabla \tnr{\varphi}}}{\vto{x}^*}=\tnr{A}_B(\vto{u},\vto{v},\vto{w})$ for all $\vto{u}\in\pmb{\mathcal{U}}$. Thereby, choosing vector $\vto{u}=\vto{v}$, we have $\vto{v}\cdot\fua{\crl{\nabla \tnr{\varphi}}}{\vto{x}^*}=\tnr{A}_B(\vto{v},\vto{v},\vto{w})=0$ because $\tnr{A}_B$ is antisymmetric, and since $\vto{v}\neq\vto{0}$, we prove the item.
+Considering definitions \eqref{eq:divergence} and \eqref{eq:curl}, since partial inner products are left (right) distributive, proof of item i is trivial. Pre multiplying properties \eqref{eq:prop1Grad}, \eqref{eq:prop2Grad} and \eqref{eq:prop3Grad} adequately by $\tnr{I}$ or $\tnr{A}_B$, proofs of items i, ii, iii and iv are straightforward. For item v, since we already know that $\vto{u}\cdot\tnr{A}_B\hat{\odot}_2\vto{v}^*\otimes\vto{w}^*=\tnr{A}_B(\vto{u},\vto{v},\vto{w})$, if we consider tensor $\fua{{\nabla \tnr{\hat{\varphi}}}}{\vto{x}}=\vto{v}^*\otimes\vto{w}^*$, then $\vto{u}\cdot[\nabla\times\nabla\tnr{\hat{\varphi}}(\vto{x})]=\tnr{A}_B(\vto{u},\vto{v},\vto{w})$ for all $\vto{u}\in\tnr{\mathcal{U}}$. Thereby, choosing vector $\vto{u}=\vto{v}$, we have $\vto{v}\cdot[\nabla\times\nabla\tnr{\hat{\varphi}}(\vto{x})]=\tnr{A}_B(\vto{v},\vto{v},\vto{w})=0$ because $\tnr{A}_B$ is antisymmetric, and since $\vto{v}\neq\vto{0}$, we prove the item.
 \end{proof}}
 
 
