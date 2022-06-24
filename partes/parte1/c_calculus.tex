@@ -353,11 +353,11 @@ Now, let $(U_\real,\tnr{A}_B)$ be a three dimensional oriented Euclidean space, 
 \begin{equation}\label{eq:curl}
 \fua{\crl{\tnr{{\varphi}}}}{\vto{x}^*}=\tnr{A}_B\odot_{2}\fua{\nabla\tnr{{\varphi}}}{\vto{x}^*}\,,
 \end{equation}
-where tensor $\fua{\nabla\tnr{{\varphi}}}{\vto{x}^*}\in\ete{\cam{R}}{U^2\times V}$. In the specific case of $\map{\tnr{{\varphi}}}{{{\tnr{\mathcal{U}}}}}{U_\real^*}$, we can define a vector valued vector function $\tnr{\hat{\varphi}}=\Phi^{-1}\circ\tnr{{\varphi}}\circ\Phi$, from which function 
+where tensor $\fua{\nabla\tnr{{\varphi}}}{\vto{x}^*}\in\ete{\cam{R}}{U^2\times V}$. In the specific case of $\map{\tnr{{\varphi}}}{{{\tnr{\mathcal{U}}}}}{U_\real^*}$, we can define a vector valued vector function $\tnr{\hat{\varphi}}=\Phi^{-1}\circ\tnr{{\varphi}}\circ\Phi$, from which $\nabla\times\tnr{\hat{\varphi}}:=\Phi^{-1}\circ\crl{\tnr{{\varphi}}}\circ\Phi\,$. From this definition, it is clear that axial vector
 \begin{equation}\label{eq:curlVect}
-\nabla\times\tnr{\hat{\varphi}}:=\Phi^{-1}\circ\crl{\tnr{{\varphi}}}\circ\Phi\,.
+\nabla\times\tnr{\hat{\varphi}}(\vto{x})=\tnr{A}_B\hat{\odot}_{2}\fua{\nabla\tnr{\hat{\varphi}}}{\vto{x}}\,.
 \end{equation}
-From this definition, it is clear that axial vector $\nabla\times\tnr{\hat{\varphi}}(\vto{x})=\tnr{A}_B\hat{\odot}_{2}\fua{\nabla\tnr{\hat{\varphi}}}{\vto{x}}$. Similarly to the case of gradients, there are some notable properties of divergence and curl, presented as follows, where the appropriate previous conditions are implicit.
+Similarly to the case of gradients, there are some notable properties of divergence and curl, presented as follows, where the appropriate previous conditions are implicit.
 \begin{itemize}
 \setlength\itemsep{.1em}
 \item[i.] If $\tnr{\varphi}=\tnr{\varphi}_1+\tnr{\varphi}_2$ then $\dvt{\tnr{\varphi}}=\dvt{\tnr{\varphi}_1}+\dvt{\tnr{\varphi}_2}$ and $\crl{\tnr{\varphi}}=\crl{\tnr{\varphi}_1}+\crl{\tnr{\varphi}_2}\,$;
@@ -380,7 +380,7 @@ and for $m=s=1$,
 \end{equation}
 
 	
-\item[v.]	If $\map{\tnr{\varphi}}{\tnr{\mathcal{U}}}{U_\real^*}$, where $\mathcal{U}\subset U_\real^*$, then $\fua{{\nabla \times \nabla\tnr{\hat{\varphi}}}}{\vto{x}}=\vto{0}\,$.
+\item[v.]	If $\map{\tnr{\varphi}}{\tnr{\mathcal{U}}}{U_\real^*}$, where $\tnr{\mathcal{U}}\subset U_\real^*$, then $\fua{{\nabla \times \nabla\tnr{\hat{\varphi}}}}{\vto{x}}=\vto{0}\,$.
 \end{itemize}
 
 {\footnotesize

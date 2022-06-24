@@ -279,8 +279,7 @@ in the context of small deformations. If translations are disregarded or simply 
 \begin{equation}\label{eq:infinitStrain}
  \tnr{\epsilon}:=(\fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}+\fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}^{\text{T}})/2
 \end{equation}
-is their strain measure, called \textsb{infinitesimal strain tensor}\index{strain!infinitesimal}, which is clearly taken from the Green-St Venant tensor written in terms of displacement gradients after neglecting the nonlinear term.
-In those cases where these nonlinear terms cannot be neglected, that is, cases where small deformations are not valid, the context under study is said to be of \textsb{large or finite deformations}\index{deformations!finite}. From the above definition, it is evident that the matrix representation of $\tnr{\epsilon}$, which measures length changes in infinitesimal deformations, is the symmetric part of $[\fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}]$. But if the symmetric part of $[\fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}]$ refers to the length changing portion of infinitesimal deformation, we can state that its antisymmetric part $[\tnr{W}]$, where
+is their strain measure, called \textsb{infinitesimal strain tensor}\index{strain!infinitesimal}, which is clearly taken from the Green-St Venant tensor written in terms of displacement gradients after neglecting the very small nonlinear term. In those cases where these nonlinear terms cannot be neglected, that is, cases where small deformations are not valid, the context under study is said to be of \textsb{large or finite deformations}\index{deformations!finite}. From the above definition, it is evident that the matrix representation of $\tnr{\epsilon}$, which measures length changes in infinitesimal deformations, is the symmetric part of $[\fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}]$. But if the symmetric part of $[\fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}]$ refers to the length changing portion of infinitesimal deformation, we can state that its antisymmetric part $[\tnr{W}]$, where
 \begin{equation}\label{eq:infinitRotation}
 \tnr{W}:=(\fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}-\fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}^{\text{T}})/2\,,
 \end{equation}
@@ -454,21 +453,27 @@ Considering these previous definitions in the context of affine deformations, th
 \tnr{M}_{\overline{\vto{x}}}^\text{T}&= \tnr{L}_{\tnr{\chi}_t(\overline{\vto{x}})}\odot_1\tnr{F}_{\overline{\vto{x}}}\,;\\
 \fua{\bar{\nabla}\tnr{a}_t}{\overline{\vto{x}}}&=\fua{\tilde{\nabla}\tnr{a}_t}{\overline{\vto{x}}}^{\text{T}}\odot_1\tnr{F}_{\overline{\vto{x}}}\,.
 \end{aligned} 
-\end{equation} 
+\end{equation}
 Based on the tensors $\tnr{\epsilon}$ and $\tnr{W}$ defined by \eqref{eq:infinitStrain} and \eqref{eq:infinitRotation} in the context of infinitesimal deformations, since time derivative $\bar{\partial}_t\tnr{\mathit{u}}=\tnr{\nu}$, we call  
-\begin{equation}\label{eq:infinitStrain}
-\tnr{\dot{\epsilon}}:=(\fua{\bar{\nabla}\tnr{\nu}_t}{\overline{\vto{u}}}+\fua{\bar{\nabla}\tnr{\nu}_t}{\overline{\vto{u}}}^{\text{T}})/2=(\tnr{M}_{\overline{\vto{u}}}^{\text{T}}+\tnr{M}_{\overline{\vto{u}}})/2
+\begin{equation}\label{eq:infinitTimeStrain}
+\tnr{\dot{\epsilon}}:=(\fua{\bar{\nabla}\tnr{\nu}_t}{\overline{\vto{u}}}+\fua{\bar{\nabla}\tnr{\nu}_t}{\overline{\vto{u}}}^{\text{T}})/2
 \end{equation}
 the \textsb{strain-rate tensor}\index{strain-rate!tensor}, which measures the rate of local changes in length,  and
-\begin{equation}\label{eq:infinitSpin}
-\tnr{\dot{W}}:=(\fua{\bar{\nabla}\tnr{\nu}_t}{\overline{\vto{u}}}-\fua{\bar{\nabla}\tnr{\nu}_t}{\overline{\vto{u}}}^{\text{T}})/2=(\tnr{M}_{\overline{\vto{u}}}^{\text{T}}-\tnr{M}_{\overline{\vto{u}}})/2
+\begin{equation}\label{eq:infinitTimeSpin}
+\tnr{\dot{W}}:=(\fua{\bar{\nabla}\tnr{\nu}_t}{\overline{\vto{u}}}-\fua{\bar{\nabla}\tnr{\nu}_t}{\overline{\vto{u}}}^{\text{T}})/2
 \end{equation}
-the \textsb{spin tensor}\index{spin!tensor}, which measures the rate of local rotation. According to theorem \ref{teo:antSymVectors}, since $\tnr{\dot{W}}$ is antisymmetric, its related axial vector 
+the \textsb{spin tensor}\index{spin!tensor}, which measures the rate of local rotation. Moreover, from \eqref{eq:timeDerivGrad}, the context of infinitesimal deformations, where $\tnr{F}_{\overline{\vto{x}}}\approx\tnr{I}$, lead to the conclusion that $\tnr{M}_{\overline{\vto{x}}}^\text{T}\approx\tnr{L}_{\vto{x}}$. The neglecting conditions for the above definitions, which are the same for  \eqref{eq:infinitStrain} and \eqref{eq:infinitRotation}, allow us to assume that $\tnr{M}_{\overline{\vto{x}}}^\text{T}=\tnr{L}_{\vto{x}}$ and then obtain equalities
+\begin{alignat}{3} \label{eq:equalGradVel}
+2\tnr{\dot{\epsilon}} = \tnr{M}_{\overline{\vto{u}}}^{\text{T}}+\tnr{M}_{\overline{\vto{u}}}= \tnr{L}_{{\vto{u}}}+\tnr{L}_{{\vto{u}}}^{\text{T}} &\qquad \text{and}\qquad & 2\tnr{\dot{W}} = \tnr{M}_{\overline{\vto{u}}}^{\text{T}}-\tnr{M}_{\overline{\vto{u}}}= \tnr{L}_{{\vto{u}}}-\tnr{L}_{{\vto{u}}}^{\text{T}}\,.
+\end{alignat}
+According to theorem \ref{teo:antSymVectors}, since $\tnr{\dot{W}}$ is antisymmetric, its correspondent axial vector 
 \begin{equation}\label{eq:vectSpin}
 \tnr{\dot{\mathit{w}}}:=\tnr{A}_B\hat{\odot}_2 \tnr{\dot{W}}
 \end{equation}
-is called \textsb{spin vector}\index{spin!vector}\,.
-
+is called \textsb{vorticity vector}\index{vorticity!vector}. It is possible to obtain that the vorticity vector equals the curl of the velocity, that is,  
+\begin{equation}\label{eq:curlVelocities}
+\tnr{\dot{\mathit{w}}}=\tilde{\nabla}\times[\tnr{\nu}_t]_E({\vto{u}})=\bar{\nabla}\times\tnr{\nu}_t(\overline{\vto{u}})\,.
+\end{equation}
 {\footnotesize
 \begin{proof}
 The following development proves only the first of equalities \eqref{eq:timeDerivGrad} because the second is similarly verified. Making $\tnr{\Omega}=\tnr{\nu}_E$ in property \eqref{eq:gradRelFuncs}, 
@@ -477,8 +482,17 @@ The following development proves only the first of equalities \eqref{eq:timeDeri
 \bar{\nabla}{\tnr{\nu}}_{t}(\overline{\vto{x}})&=\tilde{\nabla}[\tnr{\nu}_E]_{t}({\vto{x}})^\text{T}\odot_1\bar{\nabla}{\tnr{\varphi}}_{t}(\overline{\vto{x}})^\text{T}\\
 \tnr{M}_{\overline{\vto{x}}}^\text{T}&=\tnr{L}_{{\vto{x}}}\odot_1\tnr{F}_{\overline{\vto{x}}}\,.
 \end{align*}
+Now, considering an arbitrary vector $\vto{x}\in U_\real$, ${\tnr{L}}_{{\vto{u}}}=\vto{g}_1^*\otimes\vto{g}_2^*$ and \eqref{eq:equalGradVel}, we prove the first of equalities \eqref{eq:curlVelocities} by
+\begin{align*}
+2\tnr{\dot{\mathit{w}}} &=\tnr{A}_B\hat{\odot}_2{\tnr{L}}_{{\vto{u}}}-\tnr{A}_B\hat{\odot}_2{\tnr{L}}_{{\vto{u}}}^{\text{T}}\\
+\vto{x}\cdot2\tnr{\dot{\mathit{w}}}&=\vto{x}\cdot\tnr{A}_B\hat{\odot}_2(\vto{g}_1^*\otimes\vto{g}_2^*) - \vto{x}\cdot\tnr{A}_B\hat{\odot}_2(\vto{g}_2^*\otimes\vto{g}_1^*)\\
+&=\tnr{A}_B(\vto{x},\vto{g}_1,\vto{g}_2) - \tnr{A}_B(\vto{x},\vto{g}_2,\vto{g}_1)\\
+&=\tnr{A}_B(\vto{x},\vto{g}_1,\vto{g}_2) + \tnr{A}_B(\vto{x},\vto{g}_1,\vto{g}_2)\\
+&=\vto{x}\cdot2\tnr{A}_B\hat{\odot}_2{\tnr{L}}_{{\vto{u}}}\\
+&=\vto{x}\cdot2\tnr{A}_B\hat{\odot}_2{\tnr{M}}_{\overline{\vto{u}}}^{\text{T}}\\
+&=\vto{x}\cdot2\nabla\times\bar{\nabla}\times\tnr{\nu}_t(\overline{\vto{u}})\,.
+\end{align*}
 \end{proof}
 }
 
 
-%TRAZER O CROSS PRODUCT PARA CÁ
