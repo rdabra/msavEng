@@ -74,19 +74,19 @@ Recalling affinities and their related concepts presented in section \ref{sec:af
 \end{equation}
 where second order tensor 
 \begin{equation}
-\tnr{F}_{\overline{\vto{x}}}:=\fua{\nabla\tnr{\varphi}_t}{\overline{\vto{x}}}^\text{T}
+\gloref{defGrad}:=\fua{\nabla\tnr{\varphi}_t}{\overline{\vto{u}}}^\text{T}
 \end{equation}
-is called the \textsb{affine deformation gradient} of vector affinity $\tnr{\varphi}_t$ at $\overline{\vto{x}}$ and $\vto{c}\in U_\real$ is a constant vector. Therefore, if $\tnr{F}_{\overline{\vto{x}}}$ is the identity tensor $\tnr{I}\in\ete{\real}{U^{2}}$ or a stretch tensor for all $\overline{\vto{x}}\in\tnr{\overline{\mathcal{B}}}$, then affine deformation $\tnr{\varphi}_t$ is a vector translation or a centered vector dilation respectively, according to \eqref{eq:transltVec} and \eqref{eq:dilatVec}. It is important to observe that an affine deformation can be decomposed in a rotodilation, according to theorem \ref{teo:rotoDilaF} and corollary \ref{cor:rotoDilaT}, in such a way that 
+is called the \textsb{affine deformation gradient} of vector affinity $\tnr{\varphi}_t$ at $\overline{\vto{u}}$ and $\vto{c}\in U_\real$ is a constant vector. Therefore, if $\tnr{F}_{\overline{\vto{x}}}$ is the identity tensor $\tnr{I}\in\ete{\real}{U^{2}}$ or a stretch tensor for all $\overline{\vto{x}}\in\tnr{\overline{\mathcal{B}}}$, then affine deformation $\tnr{\varphi}_t$ is a vector translation or a centered vector dilation respectively, according to \eqref{eq:transltVec} and \eqref{eq:dilatVec}. It is important to observe that an affine deformation can be decomposed in a rotodilation, according to theorem \ref{teo:rotoDilaF} and corollary \ref{cor:rotoDilaT}, in such a way that 
 \begin{equation}\label{eq:decompDefGrad}
 \tnr{\varphi}_t = \tnr{\mathit{s}}_2\circ\tnr{\mathit{r}}_{\vto{c}} = \tnr{\mathit{r}}_{\vto{c}}\circ\tnr{\mathit{s}}_1
 \end{equation}
 and
 \begin{equation}
-\tnr{F}_{\overline{\vto{u}}}=\tnr{V}_{\overline{\vto{u}}}\odot_1\tnr{R}_{\overline{\vto{u}}}=\tnr{R}_{\overline{\vto{u}}}\odot_1\tnr{U}_{\overline{\vto{u}}}\,,\,\forall\, \overline{\vto{u}}\in\tnr{\overline{\mathcal{B}}}\,, 
+\tnr{F}_{\overline{\vto{u}}}=\gloref{leftStretch}\odot_1\tnr{R}_{\overline{\vto{u}}}=\tnr{R}_{\overline{\vto{u}}}\odot_1\gloref{rightStretch}\,,\,\forall\, \overline{\vto{u}}\in\tnr{\overline{\mathcal{B}}}\,, 
 \end{equation}
 where $\tnr{V}_{\overline{\vto{u}}}$ and $\tnr{U}_{\overline{\vto{u}}}$, usually called \textsb{left}\index{tensor!left stretch} and \textsb{right stretch tensors}\index{tensor!right stretch}, are the affinity tensors of $\tnr{\mathit{s}}_2$ and $\tnr{\mathit{s}}_1$, both having the same stretch coefficients $\lambda_1,\lambda_2,\lambda_3$. Since the local volume change is always positive, as we already know, $\tnr{R}_{\overline{\vto{u}}}$ can never be a rotoreflection tensor. Moreover, from the polar decomposition \eqref{eq:decompDefGrad}, we can conclude that stretch operators $\vtf{s}_1^{\nicefrac{1}{2}}$ is Lagrangian and $\vtf{s}_2^{-\nicefrac{1}{2}}$ is Eulerian, representing $\tnr{V}_{\overline{\vto{u}}}^{-1}$, whose stretch coefficients are $\lambda_1^{-1},\lambda_2^{-1},\lambda_3^{-1}$. The stretch coefficients $\lambda_1,\lambda_2,\lambda_3$ and $\lambda_1^{-1},\lambda_2^{-1},\lambda_3^{-1}$ are also said to be the \textsb{principal stretches}\index{principal!stretches}, at instant $t$, on material point $\overline{\vto{u}}$ and on spatial point $\vto{u}$ respectively. In practice, it is convenient not to deal with square root operators $\vtf{s}_1^{\nicefrac{1}{2}}$ and $\vtf{s}_2^{\nicefrac{1}{2}}$, which represent the above stretch tensors and are troublesome to compute, but instead to specify 
 \begin{alignat}{3} 
-\tnr{B}_{\overline{\vto{u}}}:=\tnr{V}_{\overline{\vto{u}}}^2&\qquad \text{and}\qquad & \tnr{C}_{\overline{\vto{u}}}:=\tnr{U}_{\overline{\vto{u}}}^2\,,
+\gloref{leftCauchy}:=\tnr{V}_{\overline{\vto{u}}}^2&\qquad \text{and}\qquad & \gloref{rightCauchy}:=\tnr{U}_{\overline{\vto{u}}}^2\,,
 \end{alignat}
 known as the \textsb{left}\index{tensor!left Cauchy-Green} and \textsb{right Cauchy-Green deformation tensors}\index{tensor!right Cauchy-Green}, represented by operators $\vtf{s}_2$ and $\vtf{s}_1$ respectively, according to \eqref{eq:compoFuncRepFunc}, whose stretch coefficients are $\lambda_1^2,\lambda_2^2,\lambda_3^2$. Since $\vtf{s}_2^{-1}$ and $\vtf{s}_1$ are respectively Eulerian and Lagrangian, their represented tensors $\tnr{B}_{\overline{\vto{u}}}^{-1}$ and $\tnr{C}_{\overline{\vto{u}}}$ are also called  Eulerian and Lagrangian. In terms of the affine deformation gradient,
 \begin{alignat}{3}\label{eq:CauchyGreenGradDef}
@@ -186,9 +186,9 @@ The quantity or level of local deformation can be obtained by measuring the chan
 \end{alignat}
 which are valid because $\tilde{\delta}_i=\tilde{\Delta}_i=0$ in the context of rigid deformations. Such extensions can respectively be written in matrix form as $[\tnr{U}_{\overline{\vto{u}}}^2]^X-I$ and $I-[\tnr{V}_{\overline{\vto{u}}}^{-2}]^Y$, which are matrix representations of the classical definitions 
 \begin{alignat}{3}
-2\tnr{E}=\tnr{C}_{\overline{\vto{u}}}-\tnr{I}&\qquad \text{and}\qquad & 2\tnr{e}=\tnr{I}-\tnr{B}_{\overline{\vto{u}}}^{-1}\,,
+2\tnr{E}_{\overline{\vto{u}}}=\tnr{C}_{\overline{\vto{u}}}-\tnr{I}&\qquad \text{and}\qquad & 2\tnr{e}_{\overline{\vto{u}}}=\tnr{I}-\tnr{B}_{\overline{\vto{u}}}^{-1}\,,
 \end{alignat}
-where Lagrangian tensor $\tnr{E}$ is called the \textsb{Green-St Venant}\index{strain!Green-St Venant} strain tensor and Eulerian tensor $\tnr{e}$ the \textsb{Almansi-Hamel}\index{strain!Almansi-Hamel} strain tensor. From both of these tensors, \aut{Doyle \& Ericksen}\cite{doyle_1956} and \aut{Seth}\cite{seth_1961} independently proposed a generalization that include most of the different strain measures available. In more complicated terms, they specified the extension
+where Lagrangian tensor $\tnr{E}_{\overline{\vto{u}}}$ is called the \textsb{Green-St Venant}\index{strain!Green-St Venant} strain tensor and Eulerian tensor $\tnr{e}_{\overline{\vto{u}}}$ the \textsb{Almansi-Hamel}\index{strain!Almansi-Hamel} strain tensor. From both of these tensors, \aut{Doyle \& Ericksen}\cite{doyle_1956} and \aut{Seth}\cite{seth_1961} independently proposed a generalization that include most of the different strain measures available. In more complicated terms, they specified the extension
 \begin{alignat}{3}
 \delta_i^{(k)}:=\begin{dcases}
 (\lambda_i^k-1)/k &  \text{if } k\neq 0\\
@@ -197,7 +197,7 @@ where Lagrangian tensor $\tnr{E}$ is called the \textsb{Green-St Venant}\index{s
 \end{alignat}
 usually called the \textsb{Doyle-Ericksen extension}\index{Doyle-Ericksen extension}\index{extension!Doyle-Ericksen}, which is valid because $\delta_i^{(k)}=0$ for rigid deformations. Note that $2\delta_i^{(2)}=\tilde{\delta}_i$ and $2\delta_i^{(-2)}=\tilde{\Delta}_i$, leading to the Green-St Venant and Almansi-Hamel strain tensors when $\tnr{U}_{\overline{\vto{u}}}$ and $\tnr{V}_{\overline{\vto{u}}}$ are respectively considered, as we have done above. Table \ref{tb:strains} lists the most common strain tensors available, called the \textsb{Doyle-Ericksen tensors}\index{Doyle-Ericksen tensor}\index{Doyle-Ericksen tensor}. For $k\neq 0$, they are based on the generic strain tensor 
 \begin{equation}
-\tnr{E}_{\tnr{S}}^{(k)}:=\dfrac{1}{k}(\tnr{S}^k-\tnr{I})
+\gloref{doyle}:=\dfrac{1}{k}(\tnr{S}^k-\tnr{I})
 \end{equation}
 where tensor $\tnr{S}$ is a positive-definite symmetric tensor equal to or defined from the stretch tensors. Professor \aut{Hill}\cite{hill_1968_1} generalized the proposition of \aut{Seth}\cite{seth_1961} even further by defining an extension $\fua{f}{\lambda_i}$, where mapping $\map{f}{\real^+_*}{\real}$ is smooth and monotonically increasing, that is, $\fua{f'}{x}>0$ for all $x>0$. Moreover, function $f$ must obviously observe $\fua{f}{1}=0$ and, in order to make all strain measures equivalent in deformations almost rigid or small, he imposed $\fua{f'}{1}=1$.
 
@@ -211,7 +211,7 @@ where tensor $\tnr{S}$ is a positive-definite symmetric tensor equal to or defin
 & & & \\
 \hline
 & & & \\
--2 & $\tnr{V}_{\overline{\vto{u}}}$   & $\tnr{E}_{\tnr{V}_{\overline{\vto{u}}}}^{(-2)}=\tnr{e}=(\tnr{I} - \tnr{B}^{-1}_{\overline{\vto{u}}})/2$   & Almansi-Hamel\\
+-2 & $\tnr{V}_{\overline{\vto{u}}}$   & $\tnr{E}_{\tnr{V}_{\overline{\vto{u}}}}^{(-2)}=\tnr{e}_{\overline{\vto{u}}}=(\tnr{I} - \tnr{B}^{-1}_{\overline{\vto{u}}})/2$   & Almansi-Hamel\\
 & & & \\
 \hline
 & & & \\
@@ -235,7 +235,7 @@ $2$ & $\tnr{U}^{-1}_{\overline{\vto{u}}}$ & $\tnr{E}_{\tnr{U}^{-1}_{\overline{\v
 & & &\\
 \hline
 & & &\\
-$2$ & $\tnr{U}_{\overline{\vto{u}}}$ & $\tnr{E}_{\tnr{U}_{\overline{\vto{u}}}}^{(2)}=\tnr{E}=(\tnr{C}_{\overline{\vto{u}}}-\tnr{I})/2$ & Green-St Venant\\
+$2$ & $\tnr{U}_{\overline{\vto{u}}}$ & $\tnr{E}_{\tnr{U}_{\overline{\vto{u}}}}^{(2)}=\tnr{E}_{\overline{\vto{u}}}=(\tnr{C}_{\overline{\vto{u}}}-\tnr{I})/2$ & Green-St Venant\\
 & & & \\
 \hline
 \end{tabular}
@@ -243,7 +243,7 @@ $2$ & $\tnr{U}_{\overline{\vto{u}}}$ & $\tnr{E}_{\tnr{U}_{\overline{\vto{u}}}}^{
 \captionof{table}{Examples of Doyle-Ericksen Tensors.}\label{tb:strains}
 \end{table}
 
-Now, in order to describe mathematically the context of \textsb{small or infinitesimal deformations}\index{deformations!small} cited above, we need first to define a bijective Lagrangian mapping $\map{\tnr{\mathit{u}}_t}{\tnr{\overline{\mathcal{B}}}}{U_\real}$ where 
+Now, in order to describe mathematically the context of \textsb{small or infinitesimal deformations}\index{deformations!small} cited above, we need first to define a bijective Lagrangian mapping $\map{\gloref{displa}}{\tnr{\overline{\mathcal{B}}}}{U_\real}$ where 
 \begin{equation}\label{eq:displac}
  \fua{\tnr{\mathit{u}}_t}{\overline{\vto{x}}}=\fua{\tnr{\varphi}_t}{\overline{\vto{x}}} - \overline{\vto{x}}\,.
  \end{equation} 
@@ -273,19 +273,19 @@ First, we verify the second expression of \eqref{eq:invDisplace} from the defini
 
 \noindent A deformation is called small when $\|\fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}\|=\|\tnr{F}_{\overline{\vto{u}}}^{\text{T}} - \tnr{I}\|\ll 1$, which leads to $\tnr{F}_{\overline{\vto{u}}}\approx\tnr{I}$ and then, from \eqref{eq:invDisplace}, we can conclude that $\fua{\nabla\tnr{\mathit{u}}_t^{-1}}{\vto{u}}\approx\fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}$. Moreover, concerning the equalities above, the four nonlinear terms involving partial inner products of two small displacement gradients become negligible, from which equality $\tnr{C}_{\overline{\vto{u}}}=\tnr{B}_{\overline{\vto{u}}}$ can be considered valid. But since $\fua{\nabla\tnr{\mathit{u}}_t^{-1}}{\vto{u}}\approx\fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}$, we can also conclude that  $\tnr{C}_{\overline{\vto{u}}}\approx\tnr{C}_{\overline{\vto{u}}}^{-1}$ and $\tnr{B}_{\overline{\vto{u}}}\approx\tnr{B}_{\overline{\vto{u}}}^{-1}$. Therefore, concerning the Doyle-Ericksen tensors of table \ref{tb:strains}, we have
 \begin{equation*}
-\tnr{E} \approx \tnr{e} \approx  \tnr{E}_{\tnr{U}^{-1}_{\overline{\vto{u}}}}^{(2)} \approx \tnr{E}_{\tnr{V}_{\overline{\vto{u}}}}^{(-2)}
+\tnr{E}_{\overline{\vto{u}}} \approx \tnr{e}_{\overline{\vto{u}}} \approx  \tnr{E}_{\tnr{U}^{-1}_{\overline{\vto{u}}}}^{(2)} \approx \tnr{E}_{\tnr{V}_{\overline{\vto{u}}}}^{(-2)}
 \end{equation*}
 in the context of small deformations. If translations are disregarded or simply not present in the affine deformation rule, another consequence of $\tnr{F}_{\overline{\vto{u}}}\approx\tnr{I}$ is that the shape $\tnr{\overline{\mathcal{B}}}\approx\tnr{\mathcal{B}}_t$. Therefore, we can assume that $\tnr{\overline{\mathcal{B}}}$ is the locus where small deformations take place and tensor 
 \begin{equation}\label{eq:infinitStrain}
- \tnr{\epsilon}:=(\fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}+\fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}^{\text{T}})/2
+\gloref{inftyDef}:=(\fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}+\fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}^{\text{T}})/2
 \end{equation}
-is their strain measure, called \textsb{infinitesimal strain tensor}\index{strain!infinitesimal}, which is clearly taken from the Green-St Venant tensor written in terms of displacement gradients after neglecting the very small nonlinear term. In those cases where these nonlinear terms cannot be neglected, that is, cases where small deformations are not valid, the context under study is said to be of \textsb{large or finite deformations}\index{deformations!finite}. From the above definition, it is evident that the matrix representation of $\tnr{\epsilon}$, which measures length changes in infinitesimal deformations, is the symmetric part of $[\fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}]$. But if the symmetric part of $[\fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}]$ refers to the length changing portion of infinitesimal deformation, we can state that its antisymmetric part $[\tnr{W}]$, where
+is their strain measure, called \textsb{infinitesimal strain tensor}\index{strain!infinitesimal}, which is clearly taken from the Green-St Venant tensor written in terms of displacement gradients after neglecting the very small nonlinear term. In those cases where these nonlinear terms cannot be neglected, that is, cases where small deformations are not valid, the context under study is said to be of \textsb{large or finite deformations}\index{deformations!finite}. From the above definition, it is evident that the matrix representation of $\tnr{\epsilon}_{\overline{\vto{u}}}$, which measures length changes in infinitesimal deformations, is the symmetric part of $[\fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}]$. But if the symmetric part of $[\fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}]$ refers to the length changing portion of infinitesimal deformation, we can state that its antisymmetric part $\gloref{antiSymPart}$, where
 \begin{equation}\label{eq:infinitRotation}
-\tnr{W}:=(\fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}-\fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}^{\text{T}})/2\,,
+\tnr{W}_{\overline{\vto{u}}}:=(\fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}-\fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}^{\text{T}})/2\,,
 \end{equation}
-refers to the rotation portion\footnote{In Continuum Mechanics literature, $\tnr{W}$ is commonly called the infinitesimal rotation tensor, but we shall not use this nomenclature here in order to avoid confusion.}. Speaking of antisymmetric tensors of second order, we recall that theorem \ref{teo:antSymVectors} establishes a biunivocal relationship between them and three dimensional Euclidean vectors. Therefore, considering the conditions of this theorem, the axial vector defined by $\tnr{W}$ is  
+refers to the rotation portion\footnote{In Continuum Mechanics literature, $\tnr{W}_{\overline{\vto{u}}}$ is commonly called the infinitesimal rotation tensor, but we shall not use this nomenclature here in order to avoid confusion.}. Speaking of antisymmetric tensors of second order, we recall that theorem \ref{teo:antSymVectors} establishes a biunivocal relationship between them and three dimensional Euclidean vectors. Therefore, considering the conditions of this theorem, the axial vector defined by $\tnr{W}_{\overline{\vto{u}}}$ is  
 \begin{equation}\label{eq:vectinfinitRotation}
-\tnr{\mathit{w}}:=\tnr{A}_B\hat{\odot}_2 \tnr{W}\,.
+\tnr{\mathit{w}}_{\overline{\vto{u}}}:=\tnr{A}_B\hat{\odot}_2 \tnr{W}_{\overline{\vto{u}}}\,.
 \end{equation}
 
 
@@ -298,15 +298,15 @@ In this section, time is also considered in the mathematical analysis of deforma
 Moreover, the univariate deformation $\tnr{\chi}_{\overline{\vto{u}}}$, which results a $\mathcal{C}^{2}$-diffeomorphism, must also  observe restriction 
 $\fua{\tnr{\chi}_{\overline{\vto{u}}}}{\overline{t}}=\tnr{i}_{\tnr{\overline{\mathcal{B}}}}(\overline{\vto{u}})+\vto{c}$, where $\overline{t}$ is a reference instant and $\vto{c}\in U_\real$ a constant vector. Therefore, $\tnr{\chi}_{\overline{\vto{u}}}$ describes the temporal deformation of particle $\overline{\vto{u}}$ and, given a period $\mathbb{P}\subset\tempo$, the set of places 
 \begin{equation}
-T_{\overline{\vto{u}}}:=\{\,\fua{\tnr{\chi}_{\overline{\vto{u}}}}{t}\,:\,t\in\mathbb{P}\,\}
+\gloref{traject}:=\{\,\fua{\tnr{\chi}_{\overline{\vto{u}}}}{t}\,:\,t\in\mathbb{P}\,\}
 \end{equation}
 is called the \textsb{trajectory}\index{trajectory} or \textsb{pathline}\index{pathline} of $\overline{\vto{u}}$ during $\mathbb{P}$. Additionally to this set of places, it is also important to define the set of particles that occupy a fixed place during a period of time. In order to do this, we define the mapping $\map{\tnr{p}}{\tnr{\mathcal{B}}_t\times\tempo}{\tnr{\overline{\mathcal{B}}}}$, where $\tnr{p}$ is called \textsb{streak function}\index{function!streak} if it is $\mathcal{C}^2$-diffeomorphism whith rule
 \begin{equation}
-\fua{\tnr{p}}{\vto{x},t}=\tnr{\chi}(\fua{\tnr{\chi}_{t}^{-1}}{\vto{x}},t)\,.
+\gloref{streak}=\tnr{\chi}(\fua{\tnr{\chi}_{t}^{-1}}{\vto{x}},t)\,.
 \end{equation}
 Following the same procedure adopted for deformations, by fixing a position $\vto{u}$ we define univariate bijection $\tnr{p}_\vto{u}$, where $\fua{\tnr{p}_\vto{u}}{t}=\fua{\tnr{p}}{\vto{u},t}$. In this context, the set of particles
 \begin{equation}
-S_{\vto{u}}:=\{\,\fua{\tnr{p}_{\vto{u}}}{t}\,:\,t\in\mathbb{P}\,\}
+\gloref{streakline}:=\{\,\fua{\tnr{p}_{\vto{u}}}{t}\,:\,t\in\mathbb{P}\,\}
 \end{equation}
 is said to be the \textsb{streakline}\index{streakline} of place $\vto{u}$ during $\mathbb{P}$. 
 
@@ -315,7 +315,7 @@ Now, the functions in  $\map{\tnr{\omega}}{\tnr{\overline{\mathcal{B}}}\times\te
 \begin{alignat}{3}\label{eq:LagEulDesc} 
 \tnr{\Omega}_L(\overline{\vto{x}},t)=\tnr{\Omega}(\fua{\tnr{\chi}_t}{\overline{\vto{x}}},t)&\qquad \text{and}\qquad & \tnr{\omega}_E(\vto{x},t)=\tnr{\omega}(\fua{\tnr{\chi}_t^\text{-1}}{{\vto{x}}},t)\,,
 \end{alignat}
-commonly called the Lagrangian and Eulerian descriptions of $\tnr{\Omega}$ and $\tnr{\omega}$. It is then straightforward to conclude that that streak function  is the Eulerian description of the deformation, that is, $\tnr{p}=\tnr{\chi}_E$. Generically, since there are two domains of description for functions $\tnr{\Omega}$ and $\tnr{\omega}$, the differentiation chain rules force us to clearly specify the domain of derivation, namely, whether these functions must be derived on the material or spatial domain. Therefore, derivatives here are called Lagrangian or Eulerian when performed on particles or places respectively. In this context, \emph{it is specified that the time derivative is said to be Lagrangian or Eulerian when the particle $\overline{\vto{x}}\in\tnr{\overline{\mathcal{B}}}$ or the place $\vto{x}\in\tnr{\mathcal{B}}_t$ are fixed}. Here, notations ${\bar{\partial}}_t^k\bullet\,$ and ${\tilde{\partial}}_t^k\bullet\,$ specify Lagrangian and Eulerian time derivatives of order $k\leqslant 2$, while time derivatives $d\bullet/dt$ and $d^2\bullet/dt^2$ of univariate functions are shortened by overdotted symbols $\dot{\bullet}$ and $\ddot{\bullet}$ respectively. Thereby, for the functions $\tnr{\omega}$ and $\tnr{\Omega}$, we have the Lagrangian time derivatives at particle $\overline{\vto{u}}$
+commonly called the Lagrangian and Eulerian descriptions of $\tnr{\Omega}$ and $\tnr{\omega}$. In genereal terms, notations \gloref{lagDesc} and \gloref{eulerDesc} can be used on any Lagrangian or Eulerian function. It is then straightforward to conclude that that streak function  is the Eulerian description of the deformation, that is, $\tnr{p}=\tnr{\chi}_E$. Generically, since there are two domains of description for functions $\tnr{\Omega}$ and $\tnr{\omega}$, the differentiation chain rules force us to clearly specify the domain of derivation, namely, whether these functions must be derived on the material or spatial domain. Therefore, derivatives here are called Lagrangian or Eulerian when performed on particles or places respectively. In this context, \emph{it is specified that the time derivative is said to be Lagrangian or Eulerian when the particle $\overline{\vto{x}}\in\tnr{\overline{\mathcal{B}}}$ or the place $\vto{x}\in\tnr{\mathcal{B}}_t$ are fixed}. Here, notations \gloref{lagTimeDeriv} and \gloref{eulerTimeDeriv} specify Lagrangian and Eulerian time derivatives of order $k\leqslant 2$, while time derivatives $d\bullet/dt$ and $d^2\bullet/dt^2$ of univariate functions are shortened by overdotted symbols \gloref{timeDeriv} and \gloref{timeDerivTwo} respectively. Thereby, for the functions $\tnr{\omega}$ and $\tnr{\Omega}$, we have the Lagrangian time derivatives at particle $\overline{\vto{u}}$
 \begin{alignat}{3}\label{eq:LagDesc} 
 \bar{\partial}_t\tnr{\omega}(\overline{\vto{u}},t):=\dfrac{d\,\tnr{\omega}_{\overline{\vto{u}}}}{dt}(t)={\dot{\tnr{\omega}}}_{\overline{\vto{u}}}(t)&\qquad \text{and}\qquad & \bar{\partial}_t\tnr{\Omega}(\vto{u},t):=\tnr{\Omega}'(\fua{\tnr{\chi}_{\overline{\vto{u}}}}{t},t)
 \end{alignat}
@@ -403,7 +403,7 @@ with \eqref{eq:LagrTimeDerivative} proves the property.
 
 The vector $\dot{\tnr{\chi}}_{\overline{\vto{u}}}(t)$, which measures the temporal sensitivity of the deformation at a fixed particle $\overline{\vto{u}}$, is called the \textsb{velocity}\index{velocity} of $\overline{\vto{u}}$ at $t$. If the particle is variable, the Lagrangian function in mapping $\map{{\tnr{\nu}}}{\overline{\tnr{\mathcal{B}}}\times\tempo}{U_\real}$ is called velocity if it is a diffeomorphism where 
 \begin{equation}
-{\tnr{\nu}}(\overline{\vto{x}},t)=\bar{\partial}_t\tnr{\chi}(\overline{\vto{x}},t)\,.
+\gloref{velocity}=\bar{\partial}_t\tnr{\chi}(\overline{\vto{x}},t)\,.
 \end{equation}
 In the context of affine deformations, if instant $t$ is variable for displacements described described by \eqref{eq:displac}, that is, $\fua{\tnr{\mathit{u}}}{\overline{\vto{x}},t}=\fua{\tnr{\varphi}}{\overline{\vto{x}},t} - \overline{\vto{x}}$, then it is straightforward to obtain 
 \begin{equation}
@@ -411,7 +411,7 @@ In the context of affine deformations, if instant $t$ is variable for displaceme
 \end{equation}
 which is obviously a consequence, not a definition of velocity. Now, the temporal sensitivity of the velocity of particle $\overline{\vto{u}}$ at instant $t$ is the vector $\dot{\tnr{\nu}}_{\overline{\vto{u}}}(t)=\ddot{\tnr{\chi}}_{\overline{\vto{u}}}(t)$, called the \textsb{acceleration}\index{acceleration} of $\overline{\vto{u}}$ at $t$. The function in mapping $\map{{\tnr{a}}}{\overline{\tnr{\mathcal{B}}}\times\tempo}{U_\real}$ is called acceleration if it is a bijection where
 \begin{equation}
-{\tnr{a}}(\overline{\vto{x}},t)=\bar{\partial}_t\tnr{\nu}(\overline{\vto{x}},t)\,,
+\gloref{accel}=\bar{\partial}_t\tnr{\nu}(\overline{\vto{x}},t)\,,
 \end{equation}
 from which the following equality is evident:
 \begin{equation}
@@ -439,11 +439,11 @@ Similarly, the Lagrangian time derivative of the Eulerian description $\tnr{\nu}
 \end{equation}
 from which second order tensor 
  \begin{equation}\label{eq:eulerVelocityGrad}
- \tnr{L}_{\vto{u}}:=\fua{\tilde{\nabla}[\tnr{\nu}_t]_E}{{\vto{u}}}^{\text{T}}
+\gloref{eulerVelGrad}:=\fua{\tilde{\nabla}[\tnr{\nu}_t]_E}{{\vto{u}}}^{\text{T}}
  \end{equation}
 is said to be the \textsb{Eulerian velocity gradient}\index{velocity!Eulerian gradient} of $\tnr{\nu}_E$ at place $\vto{u}$, while
  \begin{equation}\label{eq:lagrangVelocityGrad}
- \tnr{M}_{\overline{\vto{u}}}:=\fua{\bar{\nabla}\tnr{\nu}_t}{\overline{\vto{u}}}^{\text{T}}
+\gloref{lagraVelGrad}:=\fua{\bar{\nabla}\tnr{\nu}_t}{\overline{\vto{u}}}^{\text{T}}
  \end{equation}
 is the \textsb{Lagrangian velocity gradient}\index{velocity!Lagrangian gradient} of $\tnr{\nu}$ at particle $\overline{\vto{u}}$. 
 
@@ -454,25 +454,25 @@ Considering these previous definitions in the context of affine deformations, th
 \fua{\bar{\nabla}\tnr{a}_t}{\overline{\vto{x}}}&=\fua{\tilde{\nabla}\tnr{a}_t}{\overline{\vto{x}}}\odot_1\tnr{F}_{\overline{\vto{x}}}\,.
 \end{aligned} 
 \end{equation}
-Based on the tensors $\tnr{\epsilon}$ and $\tnr{W}$ defined by \eqref{eq:infinitStrain} and \eqref{eq:infinitRotation} in the context of infinitesimal deformations, since time derivative $\bar{\partial}_t\tnr{\mathit{u}}=\tnr{\nu}$, we call  
+Based on the tensors $\tnr{\epsilon}_{\overline{\vto{u}}}$ and $\tnr{W}_{\overline{\vto{u}}}$ defined by \eqref{eq:infinitStrain} and \eqref{eq:infinitRotation} in the context of infinitesimal deformations, whose locus was chosen to be $\overline{\tnr{\mathcal{B}}}_t$, since time derivative $\bar{\partial}_t\tnr{\mathit{u}}=\tnr{\nu}$,  
 \begin{equation}\label{eq:infinitTimeStrain}
-\tnr{\dot{\epsilon}}:=(\fua{\bar{\nabla}\tnr{\nu}_t}{\overline{\vto{u}}}+\fua{\bar{\nabla}\tnr{\nu}_t}{\overline{\vto{u}}}^{\text{T}})/2
+\gloref{strainRate}:=(\tnr{M}_{\overline{\vto{u}}}^{\text{T}}+\tnr{M}_{\overline{\vto{u}}})/2
 \end{equation}
-the \textsb{strain-rate tensor}\index{strain-rate!tensor}, which measures the rate of local changes in length,  and
+is the \textsb{strain-rate tensor}\index{strain-rate!tensor} at $\overline{\vto{u}}$, which measures the rate of local changes in length,  and
 \begin{equation}\label{eq:infinitTimeSpin}
-\tnr{\dot{W}}:=(\fua{\bar{\nabla}\tnr{\nu}_t}{\overline{\vto{u}}}-\fua{\bar{\nabla}\tnr{\nu}_t}{\overline{\vto{u}}}^{\text{T}})/2
+\gloref{spin}:=(\tnr{M}_{\overline{\vto{u}}}^{\text{T}}-\tnr{M}_{\overline{\vto{u}}})/2
 \end{equation}
-the \textsb{spin tensor}\index{spin!tensor}, which measures the rate of local rotation. Moreover, from \eqref{eq:timeDerivGrad}, the context of infinitesimal deformations, where $\tnr{F}_{\overline{\vto{x}}}\approx\tnr{I}$, lead to the conclusion that $\tnr{M}_{\overline{\vto{x}}}\approx\tnr{L}_{\vto{x}}$. The neglecting conditions for the above definitions, which are the same for  \eqref{eq:infinitStrain} and \eqref{eq:infinitRotation}, allow us to assume that $\tnr{M}_{\overline{\vto{x}}}=\tnr{L}_{\vto{x}}$ and then obtain equalities
+is the \textsb{spin tensor}\index{spin!tensor} at $\overline{\vto{u}}$, which measures the rate of local rotation. Moreover, from \eqref{eq:timeDerivGrad}, the context of infinitesimal deformations, where $\tnr{F}_{\overline{\vto{x}}}\approx\tnr{I}$, leads to the conclusion that $\tnr{M}_{\overline{\vto{x}}}\approx\tnr{L}_{\vto{x}}$. The neglecting conditions for the above definitions, which are the same for  \eqref{eq:infinitStrain} and \eqref{eq:infinitRotation}, allow us to assume that $\tnr{M}_{\overline{\vto{x}}}=\tnr{L}_{\vto{x}}$, from which the following rate tensors can be defined:
 \begin{alignat}{3} \label{eq:equalGradVel}
-2\tnr{\dot{\epsilon}} = \tnr{M}_{\overline{\vto{u}}}^{\text{T}}+\tnr{M}_{\overline{\vto{u}}}= \tnr{L}_{{\vto{u}}}^{\text{T}}+\tnr{L}_{{\vto{u}}} &\qquad \text{and}\qquad & 2\tnr{\dot{W}} = \tnr{M}_{\overline{\vto{u}}}^{\text{T}}-\tnr{M}_{\overline{\vto{u}}}= \tnr{L}_{{\vto{u}}}^{\text{T}}-\tnr{L}_{{\vto{u}}}\,.
+\tnr{\dot{\epsilon}}_{{\vto{u}}}:=(\tnr{L}_{{\vto{u}}}^{\text{T}}+\tnr{L}_{{\vto{u}}})/2=\tnr{\dot{\epsilon}}_{\overline{\vto{u}}} &\qquad \text{and}\qquad & \tnr{\dot{W}}_{{\vto{u}}}:=(\tnr{L}_{{\vto{u}}}^{\text{T}}-\tnr{L}_{{\vto{u}}})/2=\tnr{\dot{W}}_{\overline{\vto{u}}}\,.
 \end{alignat}
-According to theorem \ref{teo:antSymVectors}, since $\tnr{\dot{W}}$ is antisymmetric, its correspondent axial vector 
+In the classical Continuum Mechanics literature, both of these Eulerian measures are more commonly used than their Lagrangian counterparts. In this sense, according to theorem \ref{teo:antSymVectors}, since $\tnr{\dot{W}}_{{\vto{u}}}$ is antisymmetric, its correspondent axial vector 
 \begin{equation}\label{eq:vectSpin}
-\tnr{\dot{\mathit{w}}}:=\tnr{A}_B\hat{\odot}_2 \tnr{\dot{W}}
+\gloref{vorticity}:=\tnr{A}_B\hat{\odot}_2 \tnr{\dot{W}}_{{\vto{u}}}
 \end{equation}
 is called \textsb{vorticity vector}\index{vorticity!vector}, from which it is possible to obtain that
 \begin{equation}\label{eq:curlVelocities}
-\tnr{\dot{\mathit{w}}}=\tilde{\nabla}\times[\tnr{\nu}_t]_E({\vto{u}})=\bar{\nabla}\times\tnr{\nu}_t(\overline{\vto{u}})\,.
+\tnr{\dot{\mathit{w}}}_{{\vto{u}}}=\tilde{\nabla}\times[\tnr{\nu}_t]_E({\vto{u}})=\bar{\nabla}\times\tnr{\nu}_t(\overline{\vto{u}})\,.
 \end{equation}
 {\footnotesize
 \begin{proof}
@@ -482,10 +482,10 @@ The following development proves only the first of equalities \eqref{eq:timeDeri
 \bar{\nabla}{\tnr{\nu}}_{t}(\overline{\vto{x}})^\text{T}&=\tilde{\nabla}[\tnr{\nu}_E]_{t}({\vto{x}})^\text{T}\odot_1\bar{\nabla}{\tnr{\varphi}}_{t}(\overline{\vto{x}})^\text{T}\\
 \tnr{M}_{\overline{\vto{x}}}&=\tnr{L}_{{\vto{x}}}\odot_1\tnr{F}_{\overline{\vto{x}}}\,.
 \end{align*}
-Now, considering an arbitrary vector $\vto{x}\in U_\real$, ${\tnr{L}}_{{\vto{u}}}^{\text{T}}=\vto{g}_1^*\otimes\vto{g}_2^*$ and \eqref{eq:equalGradVel}, we prove the first of equalities \eqref{eq:curlVelocities} from \eqref{eq:equalGradVel}, \eqref{eq:vectSpin} and the fact that $\tnr{A}_B$ is antisymmetric by
+Now, considering an arbitrary non zero vector $\vto{x}\in U_\real$ and tensor ${\tnr{L}}_{{\vto{u}}}^{\text{T}}=\vto{g}_1^*\otimes\vto{g}_2^*$, as well as definitions \eqref{eq:curlVect} and \eqref{eq:equalGradVel}, we prove the first of equalities \eqref{eq:curlVelocities} from \eqref{eq:vectSpin} through the following development:
 \begin{align*}
-2\tnr{\dot{\mathit{w}}} &=\tnr{A}_B\hat{\odot}_2{\tnr{L}}_{{\vto{u}}}^{\text{T}}-\tnr{A}_B\hat{\odot}_2{\tnr{L}}_{{\vto{u}}}\\
-2\vto{x}\cdot\tnr{\dot{\mathit{w}}}&=\vto{x}\cdot\tnr{A}_B\hat{\odot}_2(\vto{g}_1^*\otimes\vto{g}_2^*) - \vto{x}\cdot\tnr{A}_B\hat{\odot}_2(\vto{g}_2^*\otimes\vto{g}_1^*)\\
+2\tnr{\dot{\mathit{w}}}_{{\vto{u}}} &=\tnr{A}_B\hat{\odot}_2{\tnr{L}}_{{\vto{u}}}^{\text{T}}-\tnr{A}_B\hat{\odot}_2{\tnr{L}}_{{\vto{u}}}\\
+2\vto{x}\cdot\tnr{\dot{\mathit{w}}}_{{\vto{u}}}&=\vto{x}\cdot\tnr{A}_B\hat{\odot}_2(\vto{g}_1^*\otimes\vto{g}_2^*) - \vto{x}\cdot\tnr{A}_B\hat{\odot}_2(\vto{g}_2^*\otimes\vto{g}_1^*)\\
 &=\tnr{A}_B(\vto{x},\vto{g}_1,\vto{g}_2) + \tnr{A}_B(\vto{x},\vto{g}_1,\vto{g}_2)\\
 &=2\vto{x}\cdot\tnr{A}_B\hat{\odot}_2{\tnr{L}}_{{\vto{u}}}^{\text{T}}\\
 &=2\vto{x}\cdot\tilde{\nabla}\times\fua{[\tnr{\nu}_t]_E}{{\vto{u}}}\,.
