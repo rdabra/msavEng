@@ -454,19 +454,19 @@ Considering these previous definitions in the context of affine deformations, th
 \fua{\bar{\nabla}\tnr{a}_t}{\overline{\vto{x}}}&=\fua{\tilde{\nabla}\tnr{a}_t}{\overline{\vto{x}}}\odot_1\tnr{F}_{\overline{\vto{x}}}\,.
 \end{aligned} 
 \end{equation}
-Based on the tensors $\tnr{\epsilon}_{\overline{\vto{u}}}$ and $\tnr{W}_{\overline{\vto{u}}}$ defined by \eqref{eq:infinitStrain} and \eqref{eq:infinitRotation} in the context of infinitesimal deformations, whose locus was chosen to be $\overline{\tnr{\mathcal{B}}}$, since time derivative $\bar{\partial}_t\tnr{\mathit{u}}=\tnr{\nu}$, tensor 
+Based on the tensors $\tnr{\epsilon}_{\overline{\vto{u}}}$ and $\tnr{W}_{\overline{\vto{u}}}$ defined by \eqref{eq:infinitStrain} and \eqref{eq:infinitRotation} in the context of infinitesimal deformations, whose locus was chosen to be $\overline{\tnr{\mathcal{B}}}$, since time derivative $\bar{\partial}_t\tnr{\mathit{u}}=\tnr{\nu}$, symmetric tensor 
 \begin{equation}\label{eq:infinitTimeStrain}
 \gloref{strainRate}:=(\tnr{M}_{\overline{\vto{u}}}^{\text{T}}+\tnr{M}_{\overline{\vto{u}}})/2
 \end{equation}
-is called the \textsb{strain-rate tensor}\index{strain-rate!tensor} at $\overline{\vto{u}}$, which measures the rate of local changes in length,  and
+is called the \textsb{strain-rate tensor}\index{strain-rate!tensor} at $\overline{\vto{u}}$, which measures the rate of local changes in length,  and antisymmetric tensor
 \begin{equation}\label{eq:infinitTimeSpin}
 \gloref{spin}:=(\tnr{M}_{\overline{\vto{u}}}^{\text{T}}-\tnr{M}_{\overline{\vto{u}}})/2
 \end{equation}
 is the \textsb{spin tensor}\index{spin!tensor} at $\overline{\vto{u}}$, which measures the rate of local rotation. Moreover, from \eqref{eq:timeDerivGrad}, the context of infinitesimal deformations, where $\tnr{F}_{\overline{\vto{x}}}\approx\tnr{I}$, leads to the conclusion that $\tnr{M}_{\overline{\vto{x}}}\approx\tnr{L}_{\vto{x}}$. The neglecting conditions for the above definitions, which are the same for  \eqref{eq:infinitStrain} and \eqref{eq:infinitRotation}, allow us to assume that $\tnr{M}_{\overline{\vto{x}}}=\tnr{L}_{\vto{x}}$, from which the following rate tensors can be defined:
 \begin{alignat}{3} \label{eq:equalGradVel}
-\tnr{\dot{\epsilon}}_{{\vto{u}}}:=(\tnr{L}_{{\vto{u}}}^{\text{T}}+\tnr{L}_{{\vto{u}}})/2=\tnr{\dot{\epsilon}}_{\overline{\vto{u}}} &\qquad \text{and}\qquad & \tnr{\dot{W}}_{{\vto{u}}}:=(\tnr{L}_{{\vto{u}}}^{\text{T}}-\tnr{L}_{{\vto{u}}})/2=\tnr{\dot{W}}_{\overline{\vto{u}}}\,.
+\tnr{\dot{\epsilon}}_{{\vto{u}}}:=(\tnr{L}_{{\vto{u}}}^{\text{T}}+\tnr{L}_{{\vto{u}}})/2=\tnr{\dot{\epsilon}}_{\overline{\vto{u}}} &\qquad \text{and}\qquad & \tnr{\dot{W}}_{{\vto{u}}}:=(\tnr{L}_{{\vto{u}}}^{\text{T}}-\tnr{L}_{{\vto{u}}})/2=\tnr{\dot{W}}_{\overline{\vto{u}}}\,,
 \end{alignat}
-In the classical Continuum Mechanics literature, both of these Eulerian measures are more commonly used than their Lagrangian counterparts. In this sense, according to theorem \ref{teo:antSymVectors}, since $\tnr{\dot{W}}_{{\vto{u}}}$ is antisymmetric, its correspondent axial vector 
+from which matrices $[\tnr{\dot{\epsilon}}_{{\vto{u}}}]$ and $[\tnr{\dot{W}}_{{\vto{u}}}]$ are respectively the symmetric and antisymmetric parts of $[\tnr{L}_{{\vto{u}}}]$. In the classical Continuum Mechanics literature, both of these Eulerian measures are more commonly used than their Lagrangian counterparts. In this sense, according to theorem \ref{teo:antSymVectors}, since $\tnr{\dot{W}}_{{\vto{u}}}$ is antisymmetric, its correspondent axial vector 
 \begin{equation}\label{eq:vectSpin}
 \gloref{vorticity}:=\tnr{A}_B\hat{\odot}_2 \tnr{\dot{W}}_{{\vto{u}}}
 \end{equation}
@@ -474,7 +474,7 @@ is called \textsb{vorticity vector}\index{vorticity!vector}, from which it is po
 \begin{equation}\label{eq:curlVelocities}
 \tnr{\dot{\mathit{w}}}_{{\vto{u}}}=\tilde{\nabla}\times[\tnr{\nu}_t]_E({\vto{u}})=\bar{\nabla}\times\tnr{\nu}_t(\overline{\vto{u}})\,.
 \end{equation}
-If the spin tensor is zero at $\vto{u}$, the vorticity vector is consequently zero at this place, when the motion is said to be \textsb{irrotational}\index{motion!irrotational} at $\vto{u}$. In the case of zero spin tensor at every place, then the motion as a whole is called irrotational.
+If the spin tensor is zero at $\vto{u}$, the vorticity vector is consequently zero at this place, when the motion is said to be \textsb{irrotational}\index{motion!irrotational} or \textsb{non-vortical} at $\vto{u}$. In this context, from the definition of $\tnr{\dot{W}}_{{\vto{u}}}$, it is obvious that the Eulerian velocity gradient $\tnr{L}_{{\vto{u}}}$ results symmetric and therefore no rotation is present since the antisymmetric part of matrix $[\tnr{L}_{{\vto{u}}}]$ is zero. In the case of zero spin tensor at every place $\vto{u}$, then the motion as a whole is called irrotational or non-vortical.
 
 {\footnotesize
 \begin{proof}
