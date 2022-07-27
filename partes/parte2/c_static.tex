@@ -279,7 +279,7 @@ in the context of small deformations. If translations are disregarded or simply 
 \begin{equation}\label{eq:infinitStrain}
 \gloref{inftyDef}:=(\fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}+\fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}^{\text{T}})/2
 \end{equation}
-is their strain measure, called \textsb{infinitesimal strain tensor}\index{strain!infinitesimal}, which is clearly taken from the Green-St Venant tensor written in terms of displacement gradients after neglecting the very small nonlinear term. In those cases where these nonlinear terms cannot be neglected, that is, cases where small deformations are not valid, the context under study is said to be of \textsb{large or finite deformations}\index{deformations!finite}. From the above definition, it is evident that the matrix representation of $\tnr{\epsilon}_{\overline{\vto{u}}}$, which measures length changes in infinitesimal deformations, is the symmetric part of $[\fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}]$. But if the symmetric part of $[\fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}]$ refers to the length changing portion of infinitesimal deformation, we can state that its antisymmetric part $\gloref{antiSymPart}$, where
+is their strain measure, called \textsb{infinitesimal strain tensor}\index{strain!infinitesimal}, which is clearly taken from the Green-St Venant tensor written in terms of displacement gradients after neglecting the very small nonlinear term. In those cases where these nonlinear terms cannot be neglected, that is, cases where small deformations are not valid, the context under study is said to be of \textsb{large or finite deformations}\index{deformations!finite}. From the above definition, it is evident that the matrix representation of $\tnr{\epsilon}_{\overline{\vto{u}}}$, which measures length changes in infinitesimal deformations, is the symmetric part of matrix $[\fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}]$. But if the symmetric part of $[\fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}]$ refers to the length changing portion of infinitesimal deformation, we can state that its antisymmetric part $\gloref{antiSymPart}$, where
 \begin{equation}\label{eq:infinitRotation}
 \tnr{W}_{\overline{\vto{u}}}:=(\fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}-\fua{\nabla\tnr{\mathit{u}}_t}{\overline{\vto{u}}}^{\text{T}})/2\,,
 \end{equation}
@@ -300,7 +300,7 @@ $\fua{\tnr{\chi}_{\overline{\vto{u}}}}{\overline{t}}=\tnr{i}_{\tnr{\overline{\ma
 \begin{equation}
 \gloref{traject}:=\{\,\fua{\tnr{\chi}_{\overline{\vto{u}}}}{t}\,:\,t\in\mathbb{P}\,\}
 \end{equation}
-is called the \textsb{trajectory}\index{trajectory} or \textsb{pathline}\index{pathline} of $\overline{\vto{u}}$ during $\mathbb{P}$. Additionally to this set of places, it is also important to define the set of particles that occupy a fixed place during a period of time. In order to do this, we define the mapping $\map{\tnr{p}}{\tnr{\mathcal{B}}_t\times\tempo}{\tnr{\overline{\mathcal{B}}}}$, where $\tnr{p}$ is called \textsb{streak function}\index{function!streak} if it is $\mathcal{C}^2$-diffeomorphism whith rule
+is called the \textsb{trajectory}\index{trajectory} or \textsb{pathline}\index{pathline} of $\overline{\vto{u}}$ during $\mathbb{P}$. Additionally to this set of places, it is also important to define the set of particles that occupy a fixed place during a period of time. In order to do this, we define the mapping $\map{\tnr{p}}{\tnr{\mathcal{B}}_t\times\tempo}{\tnr{\overline{\mathcal{B}}}}$, where $\tnr{p}$ is called \textsb{streak function}\index{function!streak} if it is a $\mathcal{C}^2$-diffeomorphism whith rule
 \begin{equation}
 \gloref{streak}=\tnr{\chi}(\fua{\tnr{\chi}_{t}^{-1}}{\vto{x}},t)\,.
 \end{equation}
@@ -311,11 +311,11 @@ Following the same procedure adopted for deformations, by fixing a position $\vt
 is said to be the \textsb{streakline}\index{streakline} of place $\vto{u}$ during $\mathbb{P}$. 
 
 
-Now, the functions in  $\map{\tnr{\omega}}{\tnr{\overline{\mathcal{B}}}\times\tempo}{W}$ and $\map{\tnr{\Omega}}{\tnr{\mathcal{B}}_t\times\tempo}{W}$, where $W\in\{\ete{\real}{U^m},U_\real,\real\}$, are specified to be $\mathcal{C}^2$. In order to simplify notation, it is sometimes very useful to also define  
+The functions\footnote{In Continuum Mechanics classical literature, functions like $\tnr{\omega}$ and $\tnr{\Omega}$ are usually called tensor, vector or scalar fields, but we shall not use this nomenclature here in order to avoid confusion.} in  mappings $\map{\tnr{\omega}}{\tnr{\overline{\mathcal{B}}}\times\tempo}{W}$ and $\map{\tnr{\Omega}}{\tnr{\mathcal{B}}_t\times\tempo}{W}$, where codomain $W\in\{\ete{\real}{U^m},U_\real,\real\}$, are specified to be $\mathcal{C}^2$. In order to simplify notation, it is sometimes very useful to also define  
 \begin{alignat}{3}\label{eq:LagEulDesc} 
 \tnr{\Omega}_L(\overline{\vto{x}},t)=\tnr{\Omega}(\fua{\tnr{\chi}_t}{\overline{\vto{x}}},t)&\qquad \text{and}\qquad & \tnr{\omega}_E(\vto{x},t)=\tnr{\omega}(\fua{\tnr{\chi}_t^\text{-1}}{{\vto{x}}},t)\,,
 \end{alignat}
-commonly called the Lagrangian and Eulerian descriptions of $\tnr{\Omega}$ and $\tnr{\omega}$. In genereal terms, notations \gloref{lagDesc} and \gloref{eulerDesc} can be used on any Lagrangian or Eulerian function. It is then straightforward to conclude that that streak function  is the Eulerian description of the deformation, that is, $\tnr{p}=\tnr{\chi}_E$. Generically, since there are two domains of description for functions $\tnr{\Omega}$ and $\tnr{\omega}$, the differentiation chain rules force us to clearly specify the domain of derivation, namely, whether these functions must be derived on the material or spatial domain. Therefore, derivatives here are called Lagrangian or Eulerian when performed on particles or places respectively. In this context, \emph{it is specified that the time derivative is said to be Lagrangian or Eulerian when the particle $\overline{\vto{x}}\in\tnr{\overline{\mathcal{B}}}$ or the place $\vto{x}\in\tnr{\mathcal{B}}_t$ are fixed}. Here, notations \gloref{lagTimeDeriv} and \gloref{eulerTimeDeriv} specify Lagrangian and Eulerian time derivatives of order $k\leqslant 2$, while time derivatives $d\bullet/dt$ and $d^2\bullet/dt^2$ of univariate functions are shortened by overdotted symbols \gloref{timeDeriv} and \gloref{timeDerivTwo} respectively. Thereby, for the functions $\tnr{\omega}$ and $\tnr{\Omega}$, we have the Lagrangian time derivatives at particle $\overline{\vto{u}}$
+commonly called the Lagrangian and Eulerian descriptions of $\tnr{\Omega}$ and $\tnr{\omega}$. In genereal terms, notations \gloref{lagDesc} and \gloref{eulerDesc} can be used on any Eulerian and Lagrangian function. It is then straightforward to conclude that that streak function  is the Eulerian description of the deformation, that is, $\tnr{p}=\tnr{\chi}_E$. Generically, since each of the functions $\tnr{\Omega}$ and $\tnr{\omega}$ can be described by two domains, the differentiation chain rules force us to clearly specify the domain of derivation, namely, whether these functions will be derived on the material or spatial domain. Therefore, derivatives here are called Lagrangian or Eulerian when performed on particles or places respectively. In this context, \emph{it is specified that the time derivative is said to be Lagrangian or Eulerian when the particle $\overline{\vto{x}}\in\tnr{\overline{\mathcal{B}}}$ or the place $\vto{x}\in\tnr{\mathcal{B}}_t$ are fixed}. Here, notations \gloref{lagTimeDeriv} and \gloref{eulerTimeDeriv} define Lagrangian and Eulerian time derivatives of order $k\leqslant 2$, while time derivatives $d\bullet/dt$ and $d^2\bullet/dt^2$ of univariate functions of time are simplified by overdotted symbols \gloref{timeDeriv} and \gloref{timeDerivTwo} respectively. Thereby, for the functions $\tnr{\omega}$ and $\tnr{\Omega}$, we have the Lagrangian time derivatives at particle $\overline{\vto{u}}$
 \begin{alignat}{3}\label{eq:LagDesc} 
 \bar{\partial}_t\tnr{\omega}(\overline{\vto{u}},t):=\dfrac{d\,\tnr{\omega}_{\overline{\vto{u}}}}{dt}(t)={\dot{\tnr{\omega}}}_{\overline{\vto{u}}}(t)&\qquad \text{and}\qquad & \bar{\partial}_t\tnr{\Omega}(\vto{u},t):=\tnr{\Omega}'(\fua{\tnr{\chi}_{\overline{\vto{u}}}}{t},t)
 \end{alignat}
@@ -323,11 +323,11 @@ as well as the Eulerian time derivatives at place ${\vto{u}}$
 \begin{alignat}{3}\label{eq:EulDesc} 
 \tilde{\partial}_t\tnr{\Omega}({\vto{u}},t):=\dfrac{d\,\tnr{\Omega}_{{\vto{u}}}}{dt}(t)={\dot{\tnr{\Omega}}}_{{\vto{u}}}(t)&\qquad \text{and}\qquad & \tilde{\partial}_t\tnr{\omega}(\overline{\vto{u}},t):=\tnr{\omega}'(\fua{\tnr{p}_{\vto{u}}}{t},t)\,,
 \end{alignat}
-Considering these previous definitions, by developing the Lagrangian and Eulerian time derivatives 
+Considering these previous definitions and the Chain Rule for Partial Derivatives \eqref{eq:chainRulePartial}, by developing the Lagrangian time derivative 
 \begin{equation}\label{eq:LagrTimeDerivative}
 \bar{\partial}_t\tnr{\Omega}({\vto{x}},t)=\dot{\tnr{\Omega}}_{\vto{x}}(t)+\dot{\tnr{\Omega}}_{t}(\tnr{\chi}_{\overline{\vto{x}}}^{-1}(t))
 \end{equation}
-and
+and Eulerian time derivative 
 \begin{equation}\label{eq:EulerTimeDerivative}
 \tilde{\partial}_t\tnr{\omega}(\overline{\vto{x}},t)=\dot{\tnr{\omega}}_{\overline{\vto{x}}}(t)+\dot{\tnr{\omega}}_{t}(\tnr{\chi}_{{\vto{x}}}(t))\,,
 \end{equation}
@@ -339,11 +339,11 @@ and
 \begin{equation}\label{eq:derivPlaceConst}
 \tilde{\partial}_t\tnr{\omega}(\overline{\vto{x}},t)=\bar{\partial}_t\tnr{\omega}(\overline{\vto{u}},t)+\tnr{\omega}_t'(\overline{\vto{x}})\circ\dot{\tnr{p}}_{{\vto{x}}}(t)\,.
 \end{equation}
-In the particular cases of $\tnr{\omega}=\tnr{\Omega}_L$ and $\tnr{\Omega}=\tnr{\omega}_E$,
+Moreover, in the particular cases of $\tnr{\omega}=\tnr{\Omega}_L$ and $\tnr{\Omega}=\tnr{\omega}_E$,
 \begin{alignat}{3}\label{eq:zerosDescript} 
 [\dot{\tnr{\Omega}}_{t}]_L+\dot{[\tnr{\Omega}_L]}_{t}=\vto{0}&\qquad \text{and}\qquad & [\dot{\tnr{\omega}}_{t}]_E+\dot{[\tnr{\omega}_E]}_{t}=\vto{0}\,.
 \end{alignat}
-The specification of the codomains of functions $\tnr{\omega}$ and $\tnr{\Omega}$ leads to the following important conclusions, where Lagrangian and Eulerian gradients, related to Lagrangian and Eulerian derivatives, are represented by symbols $\bar{\bullet}$ and $\tilde{\bullet}$ respectively.
+The specification of the codomains of functions $\tnr{\omega}$ and $\tnr{\Omega}$ leads to the following important conclusions, where Lagrangian and Eulerian gradients, related to material and spatial derivatives, are represented by symbols $\bar{\bullet}$ and $\tilde{\bullet}$ respectively.
 \begin{itemize}
     \setlength\itemsep{.1em}
     \item[i.] If $W=\ete{\real}{U^m}$, functions are tensor valued and then, from \eqref{eq:defGradient}, 
@@ -368,7 +368,7 @@ The specification of the codomains of functions $\tnr{\omega}$ and $\tnr{\Omega}
 \end{aligned} 
 \end{equation} 
 \end{itemize}
-For future purposes, it is important to present properties involving Lagrangian and Eulerian gradients of respectively Eulerian and Lagrangian functions. The following equalities are straightforward consequences of property \eqref{eq:prop1Grad}, valid for tensor valued functions, which can be easily extended for vector and scalar valued functions:
+For future purposes, it is now important to present properties involving Lagrangian and Eulerian gradients of respectively Eulerian and Lagrangian functions. The following equalities are straightforward consequences of property \eqref{eq:prop1Grad}, valid for tensor valued composite functions, which can be easily extended for vector and scalar valued composite functions:
 \begin{equation}\label{eq:gradRelFuncs}
 \begin{aligned}
 \bar{\nabla}[{\tnr{\Omega}}_{t}]_L(\overline{\vto{x}})&=\bar{\nabla}{\tnr{\chi}}_{t}(\overline{\vto{x}})\odot_1\tilde{\nabla}[{\tnr{\Omega}}_{t}]_L(\overline{\vto{x}})\,;\\
@@ -405,11 +405,11 @@ The vector $\dot{\tnr{\chi}}_{\overline{\vto{u}}}(t)$, which measures the tempor
 \begin{equation}
 \gloref{velocity}=\bar{\partial}_t\tnr{\chi}(\overline{\vto{x}},t)\,.
 \end{equation}
-In the context of affine deformations, if instant $t$ is variable for displacements described described by \eqref{eq:displac}, that is, $\fua{\tnr{\mathit{u}}}{\overline{\vto{x}},t}=\fua{\tnr{\varphi}}{\overline{\vto{x}},t} - \overline{\vto{x}}$, then it is straightforward to obtain 
+In the context of affine deformations, if instant $t$ is variable for displacements described by \eqref{eq:displac}, that is, $\fua{\tnr{\mathit{u}}}{\overline{\vto{x}},t}=\fua{\tnr{\varphi}}{\overline{\vto{x}},t} - \overline{\vto{x}}$, then it is straightforward to obtain 
 \begin{equation}
 \bar{\partial}_t\fua{\tnr{\mathit{u}}}{\overline{\vto{x}},t} =  {\tnr{\nu}}(\overline{\vto{x}},t)\,,
 \end{equation}
-which is obviously a consequence, not a definition of velocity. Now, the temporal sensitivity of the velocity of particle $\overline{\vto{u}}$ at instant $t$ is the vector $\dot{\tnr{\nu}}_{\overline{\vto{u}}}(t)=\ddot{\tnr{\chi}}_{\overline{\vto{u}}}(t)$, called the \textsb{acceleration}\index{acceleration} of $\overline{\vto{u}}$ at $t$. The function in mapping $\map{{\tnr{a}}}{\overline{\tnr{\mathcal{B}}}\times\tempo}{U_\real}$ is called acceleration if it is a bijection where
+which is obviously a consequence, not a definition, of velocity. Now, the temporal sensitivity of the velocity of particle $\overline{\vto{u}}$ at instant $t$ is the vector $\dot{\tnr{\nu}}_{\overline{\vto{u}}}(t)=\ddot{\tnr{\chi}}_{\overline{\vto{u}}}(t)$, called the \textsb{acceleration}\index{acceleration} of $\overline{\vto{u}}$ at $t$. The function in mapping $\map{{\tnr{a}}}{\overline{\tnr{\mathcal{B}}}\times\tempo}{U_\real}$ is called acceleration if it is a bijection where
 \begin{equation}
 \gloref{accel}=\bar{\partial}_t\tnr{\nu}(\overline{\vto{x}},t)\,,
 \end{equation}
@@ -429,7 +429,7 @@ and
 \begin{equation}
 \tilde{\partial}_t\tnr{\omega}(\overline{\vto{x}},t)=\bar{\partial}_t\tnr{\omega}(\overline{\vto{x}},t)+\tnr{\omega}_t'(\overline{\vto{x}})\circ\tilde{\partial}_t \tnr{p}_L(\overline{\vto{x}},t)\,.
 \end{equation}
-By definition, acceleration is the Lagrangian time derivative of the velocity $\tnr{\nu}$, but what about its Eulerian time derivative? From the second of the previous qualities and expressions \eqref{eq:compoVector}, vector 
+By definition, acceleration is the Lagrangian time derivative of the velocity $\tnr{\nu}$, but what about its Eulerian time derivative? From the second of the previous qualities and expressions \eqref{eq:compoVector}, it is clear that the vector 
 \begin{equation}
 \tilde{\partial}_t\tnr{\nu}(\overline{\vto{x}},t)=\tnr{a}(\overline{\vto{x}},t)+\fua{\bar{\nabla}\tnr{\nu}_t}{\overline{\vto{x}}}^{\text{T}}\hat{\odot}_1[\tilde{\partial}_t \tnr{p}_L(\overline{\vto{x}},t)]^*\,.
 \end{equation}
@@ -454,11 +454,11 @@ Considering these previous definitions in the context of affine deformations, th
 \fua{\bar{\nabla}\tnr{a}_t}{\overline{\vto{x}}}&=\fua{\tilde{\nabla}\tnr{a}_t}{\overline{\vto{x}}}\odot_1\tnr{F}_{\overline{\vto{x}}}\,.
 \end{aligned} 
 \end{equation}
-Based on the tensors $\tnr{\epsilon}_{\overline{\vto{u}}}$ and $\tnr{W}_{\overline{\vto{u}}}$ defined by \eqref{eq:infinitStrain} and \eqref{eq:infinitRotation} in the context of infinitesimal deformations, whose locus was chosen to be $\overline{\tnr{\mathcal{B}}}_t$, since time derivative $\bar{\partial}_t\tnr{\mathit{u}}=\tnr{\nu}$,  
+Based on the tensors $\tnr{\epsilon}_{\overline{\vto{u}}}$ and $\tnr{W}_{\overline{\vto{u}}}$ defined by \eqref{eq:infinitStrain} and \eqref{eq:infinitRotation} in the context of infinitesimal deformations, whose locus was chosen to be $\overline{\tnr{\mathcal{B}}}$, since time derivative $\bar{\partial}_t\tnr{\mathit{u}}=\tnr{\nu}$, tensor 
 \begin{equation}\label{eq:infinitTimeStrain}
 \gloref{strainRate}:=(\tnr{M}_{\overline{\vto{u}}}^{\text{T}}+\tnr{M}_{\overline{\vto{u}}})/2
 \end{equation}
-is the \textsb{strain-rate tensor}\index{strain-rate!tensor} at $\overline{\vto{u}}$, which measures the rate of local changes in length,  and
+is called the \textsb{strain-rate tensor}\index{strain-rate!tensor} at $\overline{\vto{u}}$, which measures the rate of local changes in length,  and
 \begin{equation}\label{eq:infinitTimeSpin}
 \gloref{spin}:=(\tnr{M}_{\overline{\vto{u}}}^{\text{T}}-\tnr{M}_{\overline{\vto{u}}})/2
 \end{equation}
@@ -474,6 +474,8 @@ is called \textsb{vorticity vector}\index{vorticity!vector}, from which it is po
 \begin{equation}\label{eq:curlVelocities}
 \tnr{\dot{\mathit{w}}}_{{\vto{u}}}=\tilde{\nabla}\times[\tnr{\nu}_t]_E({\vto{u}})=\bar{\nabla}\times\tnr{\nu}_t(\overline{\vto{u}})\,.
 \end{equation}
+If the spin tensor is zero at $\vto{u}$, the vorticity vector is consequently zero at this place, when the motion is said to be \textsb{irrotational}\index{motion!irrotational} at $\vto{u}$. In the case of zero spin tensor at every place, then the motion as a whole is called irrotational.
+
 {\footnotesize
 \begin{proof}
 The following development proves only the first of equalities \eqref{eq:timeDerivGrad} because the second is similarly verified. Making $\tnr{\Omega}=\tnr{\nu}_E$ in property \eqref{eq:gradRelFuncs}, 
