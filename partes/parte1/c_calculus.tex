@@ -93,8 +93,11 @@ From previous conditions, it is possible to obtain the following important prope
 \begin{equation}
 \fua{[\fua{\tnr{\psi}'}{\tnr{X}}]}{\tnr{H}}=\fua{\tnr{\psi}_1}{\tnr{X}}\otimes\fua{[\fua{\tnr{\psi}_2'}{\tnr{X}}]}{\tnr{H}} + \fua{[\fua{\tnr{\psi}_1'}{\tnr{X}}]}{\tnr{H}} \otimes \fua{\tnr{\psi}_2}{\tnr{X}}\,;
 \end{equation}
+\item[viii.] If $\fua{\tnr{\psi}}{\tnr{X}}=\hdet{\tnr{X}}$, where $\map{\tnr{\psi}}{\pmb{\mathcal{U}}}{\cam{F}}$ and domain $\pmb{\mathcal{U}}\subset\ete{\cam{F}}{U^2}$ is constituted by tensors whose representative functions are invertible, then
+\begin{equation}
+\fua{[\fua{\tnr{\psi}'}{\tnr{X}}]}{\tnr{H}}=\hdet{\tnr{X}}\trc{\tnr{X}^{-1}\odot_1\tnr{H}}\,;
+\end{equation}
 \end{itemize}
-
 {\footnotesize
 \begin{proof}
 Verification of items i and ii are straightforward results after specifying their respective rules of $\tnr{\psi}$ on definition \eqref{eq:directDeriv}. For the case of item iii, the use of \eqref{eq:directDeriv} leads to
@@ -125,8 +128,24 @@ by $\fua{\tnr{\psi}_1}{\tnr{X}+\alpha\tnr{H}}\odot_{q}\fua{\tnr{\psi}_2}{\tnr{X}
 &= \fua{\tnr{\psi}_1}{\tnr{X}}\odot_{q}\lim_{\alpha\to 0}1/\alpha[\fua{\tnr{\psi}_2}{\tnr{X}+\alpha\tnr{H}}-\fua{\tnr{\psi}_2}{\tnr{X}}] +\\
 & \qquad\qquad\qquad+\lim_{\alpha\to 0}1/\alpha[\fua{\tnr{\psi}_1}{\tnr{X}+\alpha\tnr{H}}-\fua{\tnr{\psi}_1}{\tnr{X}}]\odot_q\fua{\tnr{\psi}_2}{\tnr{X}}\,.
 \end{align*}
-Since item vi is a corollary of the product rule, its verification is trivial. Item vii is verified by a similar procedure we used for the product rule. 
+Since item vi is a corollary of the product rule, its verification is trivial. Item vii is verified by a similar procedure we used for the product rule. In order to prove viii, we consider the conditions of \eqref{eq:directDeriv} and recall equalities \eqref{eq:trTentrMat} and \eqref{eq:detTensRep}. Thereby, from \eqref{eq:poliCarac} and \eqref{eq:poliCaracDesen}, we develop the following:
+\begin{align*}
+\hdet{\tnr{X}^{-1}\odot_1\tnr{H}+\alpha^{-1}\tnr{I}}&=(-1)^n(-\alpha)^{-n}+a_1(-\alpha)^{1-n}+a_2(-\alpha)^{2-n}+\cdots+a_{n-1}(-\alpha)+a_n\\
+&=\alpha^{-n}+a_1(-1)^{1-n}\alpha^{1-n}+a_2(-1)^{2-n}\alpha^{2-n}+\cdots-a_{n-1}\alpha+a_n\,.
+\end{align*}
+Considering this last equality and \eqref{eq:coefAUm}, the following development proves item viii.
+\begin{align*}
+\fua{[\fua{\tnr{\psi}'}{\tnr{X}}]}{\tnr{H}}&=\lim_{\alpha\to 0} \dfrac{\hdet{\tnr{X}+\alpha\tnr{H}}-\hdet{\tnr{X}}}{\alpha}\\
+&=\lim_{\alpha\to 0} \dfrac{\hdet{\tnr{X}}\alpha^n\hdet{\tnr{X}^{-1}\odot_1\tnr{H}+\alpha^{-1}\tnr{I}}-\hdet{\tnr{X}}}{\alpha}\\
+&=\lim_{\alpha\to 0} \dfrac{\hdet{\tnr{X}}[1+a_1(-1)^{1-n}\alpha^1+a_2(-1)^{2-n}\alpha^2+\cdots-a_{n-1}\alpha^{n+1}+a_n\alpha^n-1]}{\alpha}\\
+&=\lim_{\alpha\to 0} \hdet{\tnr{X}}[a_1(-1)^{1-n}+a_2(-1)^{2-n}\alpha+\cdots-a_{n-1}\alpha^n+a_n\alpha^{n-1}]\\
+&=\hdet{\tnr{X}}a_1(-1)^{1-n} = \hdet{\tnr{X}}\trc{\tnr{X}^{-1}\odot_1\tnr{H}}\,.
+\end{align*}
+
+
+
 \end{proof}}
+
 
 Considering a mapping $\map{\tnr{\varphi}}{\pmb{\mathcal{U}}_1\times\cdots\times\pmb{\mathcal{U}}_q}{\ete{\cam{F}}{V^{\times s}}}$, where $\pmb{\mathcal{U}}_i\subset\ete{\cam{F}}{U^{\times m}}$ is open and the values of $\tnr{\varphi}$ are represented by the multivariate notation $\fua{\tnr{\varphi}}{\tnr{X}_1,\cdots,\tnr{X}_q}$, if there is a tangent function $\tnr{\varphi_\mathit{d}}$ to $\tnr{\varphi}$ at $(\tnr{Y}_1,\cdots,\tnr{Y}_q)\in\pmb{\mathcal{U}}_1\times\cdots\times\pmb{\mathcal{U}}_q$ where
 \begin{equation*}

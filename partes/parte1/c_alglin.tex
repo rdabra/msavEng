@@ -268,9 +268,9 @@ Through a long and tedious proof, starting from the so called \textsb{Zorn's Lem
 }
 
 The theorem above also assures the existence of orthonormal bases because they can be obtained from normalization of orthogonal bases. Thereby, for an arbitrary orthogonal basis $\{\vto{u}_1,\cdots,\vto{u}_n\}$ of a Hilbert space, it is clear that inner products
-\begin{equation*}
+\begin{equation}
 \vto{u}_i\cdot\vto{u}_j/\|\vto{u}_i\|\overline{\|\vto{u}_j\|}=\vun{u}_i\cdot\vun{u}_j=\delta_{ij}\,.
-\end{equation*}
+\end{equation}
 Now, let $\vto{x}$ and $\vto{y}$ be arbitrary vectors of Euclidean space $E_\real$, of which $\hat{B}=\{\vun{v}_1,\cdots,\vun{v}_n\}$ is an orthonormal basis. Then, we can say that inner product
 \begin{equation}
 	\vto{x}\cdot\vto{y}=\sum_{i=1}^{n}\sum_{j=1}^{n}\alpha_i\beta_j\vun{v}_i\cdot\vun{v}_j=\sum_{i=1}^{n}\sum_{j=1}^{n}\alpha_i\beta_j\delta_{ij}=\sum_{i=1}^{n}\alpha_i\beta_i\,,
@@ -382,11 +382,11 @@ from which we obtain the following rule that assures the existence of coordinate
 \end{equation}
 Still in this context, for orthonormal basis vectors, it is important to point out that
 \begin{equation}\label{eq:orthoConju}
-\vun{u}_j\cdot\vun{u}_i^c=\delta_{ji}\,.
+\vun{u}_j\cdot\vun{u}_i^c=\vun{u}_j^c\cdot\vun{u}_i=\delta_{ji}\,.
 \end{equation}
 {\footnotesize
 \begin{proof}
-Multiplying $\vun{u}_j\cdot\vun{u}_i=\delta_{ji}$ by a non zero scalar $\alpha$ we have $\vun{u}_j\cdot\overline{\alpha}\vun{u}_i=\vun{u}_j\cdot\alpha\vun{u}_i^c=\overline{\alpha}\vun{u}_j\cdot\vun{u}_i^c=\alpha\delta_{ji}$ and by $\overline{\alpha}$ we arrive at $\alpha\vun{u}_j\cdot\vun{u}_i^c=\overline{\alpha}\delta_{ji}$. When $j\neq i$, it is obvious that $\vun{u}_j\cdot\vun{u}_i^c$ is zero. If $j=i$, we obtain that $\vun{u}_j\cdot\vun{u}_i^c=\alpha/ \overline{\alpha}=\overline{\alpha}/\alpha$ resulting $\alpha^2=\overline{\alpha}^2$. From this equality, if $\alpha=a+b\mathrm{i}$, we arrive at $b=-b$, which means that $\alpha$ is a real value and thus $\vun{u}_j\cdot\vun{u}_i^c=1$.
+Multiplying $\vun{u}_j\cdot\vun{u}_i=\delta_{ji}$ by a non zero scalar $\alpha$ we have $\vun{u}_j\cdot\overline{\alpha}\vun{u}_i=\vun{u}_j\cdot\alpha\vun{u}_i^c=\overline{\alpha}\vun{u}_j\cdot\vun{u}_i^c=\alpha\delta_{ji}$ and by $\overline{\alpha}$ we arrive at $\alpha\vun{u}_j\cdot\vun{u}_i^c=\overline{\alpha}\delta_{ji}$. When $j\neq i$, it is obvious that $\vun{u}_j\cdot\vun{u}_i^c$ is zero. If $j=i$, we obtain that $\vun{u}_j\cdot\vun{u}_i^c=\alpha/ \overline{\alpha}=\overline{\alpha}/\alpha$ resulting $\alpha^2=\overline{\alpha}^2$. From this equality, if $\alpha=a+b\mathrm{i}$, we arrive at $b=-b$, which means that $\alpha$ is a real value and thus $\vun{u}_j\cdot\vun{u}_i^c=1$. Verification of $\vun{u}_j^c\cdot\vun{u}_i=\delta_{ji}$ follows the same procedure.
 \end{proof}
 }
 
@@ -775,7 +775,15 @@ As $\maf{\vtf{i}}{B}{C}={\maf{\vtf{i}}{C}{B}}^{-1}$, we conclude that matrices $
 \end{proof}
 }
 
-Until the end of this chapter, we shall be working with linear functions that admit change of coordinates, that is, linear operators. In this context, some typical concepts of matrices can be applied to such operators. Let's see which and why. Given the conditions of the previous corollary, matrices $\fua{\Theta}{\mat{X}}$ and $\mat{X}$ are similar, from which it can be concluded that  \emph{the trace and determinant of any representative matrix of any linear operator are immune or indifferent to any change of basis}. Because of this indifference, we consider scalars $\dete{\vtf{g}}:=\dete{[\vtf{g}]}$ and $\trc{\vtf{g}}:= \trc{\maf{\vtf{g}}{}{}}$ as being respectively the \textsb{determinant}\index{determinant!of linear operator} and the \textsb{trace}\index{trace!of linear operator} of operator $\vtf{g}\in\evl{\cam{F}}{Y}{Y}$, where $\maf{\vtf{g}}{}{}$ is the representative matrix of this operator on any basis of $Y_\cam{F}$. Considering this definition and the linear groups presented in the previous section, it is now possible to define a \textsb{proper} $\gloref{grUniProper}\subset\grc{N}{\cam{F}}{Y}$ and \textsb{improper} $\gloref{grUniImProp}\subset\grc{N}{\cam{F}}{Y}$ \textsb{unitary groups}\footnote{These groups are called \textsb{proper and improper orthogonal groups}\index{group!proper orthogonal}\index{group!improper orthogonal} in the context of real fields.}  constituted by invertible continuous linear operators $\vtf{h}$ whose determinants are respectively positive, $\det{\vtf{h}}=1$, and negative negative, $\det{\vtf{h}}=-1$, according to \eqref{eq:determUnita}. Another concept that linear operators inherit from matrices is positivity. Considering $B$ a basis of $Y_\cam{F}$, if the following condition is observed
+Until the end of this chapter, we shall be working with linear functions that admit change of coordinates, that is, linear operators. In this context, some typical concepts of matrices can be applied to such operators. Let's see which and why. Given the conditions of the previous corollary, matrices $\fua{\Theta}{\mat{X}}$ and $\mat{X}$ are similar, from which it can be concluded that  \emph{the trace and determinant of any representative matrix of any linear operator are immune or indifferent to any change of basis}. Because of this indifference, we consider scalars 
+\begin{equation}
+\dete{\vtf{g}}:=\dete{[\vtf{g}]}
+\end{equation}
+and 
+\begin{equation}\label{eq:traceOpLin}
+\trc{\vtf{g}}:= \trc{[\vtf{g}]}
+\end{equation}
+as being respectively the \textsb{determinant}\index{determinant!of linear operator} and the \textsb{trace}\index{trace!of linear operator} of operator $\vtf{g}\in\evl{\cam{F}}{Y}{Y}$, where $\maf{\vtf{g}}{}{}$ is the representative matrix of this operator on any basis of $Y_\cam{F}$. Considering this definition and the linear groups presented in the previous section, it is now possible to define a \textsb{proper} $\gloref{grUniProper}\subset\grc{N}{\cam{F}}{Y}$ and \textsb{improper} $\gloref{grUniImProp}\subset\grc{N}{\cam{F}}{Y}$ \textsb{unitary groups}\footnote{These groups are called \textsb{proper and improper orthogonal groups}\index{group!proper orthogonal}\index{group!improper orthogonal} in the context of real fields.}  constituted by invertible continuous linear operators $\vtf{h}$ whose determinants are respectively positive, $\det{\vtf{h}}=1$, and negative negative, $\det{\vtf{h}}=-1$, according to \eqref{eq:determUnita}. Another concept that linear operators inherit from matrices is positivity. Considering $B$ a basis of $Y_\cam{F}$, if the following condition is observed
 \begin{equation}
 \Re(\,{\maf{\vtf{g}}{B}{B}{\mav{\vto{y}}{B}}:\mav{\vto{y}}{B}}\,)\geqslant0\,,
 \end{equation}

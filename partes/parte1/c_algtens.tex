@@ -207,9 +207,13 @@ Moreover, since the sum of two (anti)symmetric tensors is an (anti)symmetric ten
 \item[ii.] If basis $B=\{\vto{u}_1,\cdots,\vto{u}_m\}$, then ${\tnr{A}_B}_{(a,b)}=-\tnr{A}_B$ and $\fua{\tnr{A}_B}{\vto{u}_1,\cdots,\vto{u}_m}=1$;
 \item[iii.] If tensor $\tnr{A}$ is an arbitrary non-zero element of tensor space $\etng{m}{\cam{F}}{V^m}$ and subset $B=\{\vto{u}_1,\cdots,\vto{u}_m\}$ is a basis of $V_\cam{F}$, then $\tnr{A}=\fua{\tnr{A}}{\vto{u}_1,\cdots,\vto{u}_m}\tnr{A}_B$;
 \item[iv.] A subset $\{\vto{v}_1,\cdots,\vto{v}_m\}\subset V_\cam{F}$ is linearly dependent if and only if $\fua{\tnr{A}}{\vto{v}_1,\cdots,\vto{v}_m}=0$, where $\tnr{A}\in\{{\etng{m}{\cam{F}}{V^m}\setminus \tnr{0}}\}$ is arbitrary;
-\item[v.] Given an arbitrary operator $\vtf{g}\in\grc{N}{\cam{F}}{V}$, an alternating tensor $\tnr{A}\in\etng{m}{\cam{F}}{V^m}$ and a basis $B=\{\vto{u}_1,\cdots,\vto{u}_m\}$ of $V_\cam{F}$, then
+\item[v.] Given an arbitrary operator $\vtf{g}\in\evl{\cam{F}}{V}{V}$, an alternating tensor $\tnr{A}\in\etng{m}{\cam{F}}{V^m}$ and a basis $B=\{\vto{u}_1,\cdots,\vto{u}_m\}$ of $V_\cam{F}$, then
+\begin{equation}\label{eq:alternDeteGen}
+\fua{\tnr{A}}{\fua{\vtf{g}}{\vto{u}_1},\cdots,\fua{\vtf{g}}{\vto{u}_m}}=\dete{\vtf{g}}\fua{\tnr{A}}{\vto{u}_1,\cdots,\vto{u}_m}\,.
+\end{equation}
+\item[vi.] Given an arbitrary operator $\vtf{g}\in\grc{N}{\cam{F}}{V}$, then
 \begin{equation}\label{eq:alternDete}
-\fua{\tnr{A}}{\fua{\vtf{g}}{\vto{u}_1},\cdots,\fua{\vtf{g}}{\vto{u}_m}}=\dete{\vtf{g}}\fua{\tnr{A}}{\vto{u}_1,\cdots,\vto{u}_m}=\pm\fua{\tnr{A}}{\vto{u}_1,\cdots,\vto{u}_m}\,.
+\fua{\tnr{A}}{\fua{\vtf{g}}{\vto{u}_1},\cdots,\fua{\vtf{g}}{\vto{u}_m}}=\pm\fua{\tnr{A}}{\vto{u}_1,\cdots,\vto{u}_m}\,.
 \end{equation}
 \end{itemize}
 
@@ -271,9 +275,9 @@ Let's prove property iv. First, if $\fua{\tnr{A}}{\vto{v}_1,\cdots,\vto{v}_m}=0$
 \fua{\tnr{A}}{\fua{\vtf{g}}{\vto{u}_1},\cdots,\fua{\vtf{g}}{\vto{u}_m}}&=\sum_{{i_1}=1}^m\cdots\sum_{{i_m}=1}^m\fua{\vtf{f}_{i_1}^B}{\fua{\vtf{g}}{\vto{u}_1}}\cdots\fua{\vtf{f}_{i_m}^B}{\fua{\vtf{g}}{\vto{u}_m}}\fua{\tnr{A}}{\vto{u}_{i_1},\cdots,\vto{u}_{i_m}}\\
 &=\sum_{{i_1}=1}^m\cdots\sum_{{i_m}=1}^m\maf{\vtf{g}}{B}{B}_{i_11}\cdots\maf{\vtf{g}}{B}{B}_{i_mm}\fua{\tnr{A}}{\vto{u}_{i_1},\cdots,\vto{u}_{i_m}}\\
 &=\sum_{{i_1}=1}^m\cdots\sum_{{i_m}=1}^m \epsilon_{i_1\cdots i_n}\prod_{k=1}^m\maf{\vtf{g}}{B}{B}_{i_kk}\fua{\tnr{A}}{\vto{u}_{1},\cdots,\vto{u}_{m}}\\
-&=\dete{\vtf{g}}\fua{\tnr{A}}{\vto{u}_{1},\cdots,\vto{u}_{m}}=\pm\fua{\tnr{A}}{\vto{u}_{1},\cdots,\vto{u}_{m}}\,,
+&=\dete{\vtf{g}}\fua{\tnr{A}}{\vto{u}_{1},\cdots,\vto{u}_{m}}\,.
 \end{align*}
-since $\vtf{g}$ is unitary.
+Item vi is an obvious consequence of item v.
 \end{proof}
 }
 
@@ -410,9 +414,15 @@ It is important to observe that the product $\vto{x}_{r}^c\cdot\vto{x}_{s}$ is a
 \begin{equation}\label{eq:tracoTensor}
 \trc{\tnr{X}}:=\fua{\underbrace{\trt{r}{s}\circ\cdots\circ\trt{r}{s}}_{q \text{ times}}}{\tnr{X}}=\prod_{k=1}^q\vto{x}_{k+q}^c\cdot\vto{x}_k
 \end{equation}
-is said to be the \textsb{trace}\index{tensor!trace of} of tensor $\tnr{X}$.
+is said to be the \textsb{trace}\index{tensor!trace of} of tensor $\tnr{X}$. Still in this context, following theorem \ref{teo:geraEte}, if a basis $B$ of tensor space $\ete{\cam{F}}{X^{\times q}\times X^{\times q}}$ of order $m=2q$ is constructed from bases $B_i=\{\vun{u}_1,\cdots,\vun{u}_{n_i}\}$ of $(X_i)_\cam{F}$, $i=1,\cdots,q\,$, we can calculate the value of the trace of $\tnr{X}$ from the last equality of the following development, where \eqref{eq:orthoConju} and \eqref{eq:tensCoord} are considered: 
+\begin{align}\label{eq:calcTraco}
+\trc{\tnr{X}}&=\sum_{j_1=1}^{n_1}\cdots\sum_{j_{m}=1}^{n_{m}} \vtf{f}_{j_1\cdots j_m}^{B}(\tnr{X})\,\trc{\vtf{f}_{j_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{j_q}^{B_q}\otimes\vtf{f}_{j_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{j_q}^{B_q}}\nonumber\\
+&=\sum_{j_1=1}^{n_1}\cdots\sum_{j_{m}=1}^{n_{m}} \vtf{f}_{j_1\cdots k_m}^{B}(\tnr{X})\,\prod_{k=1}^q(\vun{u}_{j_{k+q}}^{(k+q)})^c\cdot(\vun{u}_{j_k}^{(k)})_k\nonumber\\
+&=\sum_{j_1=1}^{n_1}\cdots\sum_{j_{m}=1}^{n_{m}} \vtf{f}_{j_1\cdots k_m}^{B}(\tnr{X})\,\prod_{k=1}^q\delta_{j_{k+q}j_k}\nonumber\\
+&=\sum_{j_1=1}^{n_1}\cdots\sum_{j_{q}=1}^{n_{q}} \vtf{f}_{j_1\cdots j_qj_1\cdots j_q}^{B}(\tnr{X})\,.
+\end{align}
 
-Since the contraction that follows will take part in the majority of forthcoming definitions in this chapter, it is more relevant than the $r,s$ trace for the purposes of our study. In order to define this important contraction using conditions above, let's consider that ${X^{\times m}=A^{\times q}\times W^{\times p}\times W^{\times p}\times B^{\times n}}$,
+For the purposes of our study, the contraction that follows will take part in the majority of forthcoming definitions in this chapter. In order to define this important contraction using conditions above, let's consider that ${X^{\times m}=A^{\times q}\times W^{\times p}\times W^{\times p}\times B^{\times n}}$,
 where $m=q+2p+n$, that tensor
 \begin{equation*}
 \tnr{A}:=\vto{a}_1^*\otimes\cdots\otimes\vto{a}_{q}^*\otimes\vto{x}_1^*\otimes\cdots\otimes\vto{x}_{p}^*
@@ -802,7 +812,7 @@ Now, we shall verify if it is possible to establish a relation between a Hilbert
 \end{align}
 where equalities \eqref{eq:regraCoordTens} and \eqref{eq:propProdIndTens} were considered. 
 
-In the context of arbitrary second order tensor $\tnr{G}\in\ete{\cam{F}}{U\times V}$ and vector $\vto{u}\in U_\cam{F}$, we already know from the previous section that a linear bijection $\tnr{\mathit{g}}$ represents $\tnr{G}$ in such a way that $\fua{\tnr{\mathit{g}}}{\vto{u}}=\tnr{G}^\dagger\hat{\odot}_1\vto{u}^*$. This equality can be rewritten in matrix terms as following: 
+In the context of arbitrary second order tensor $\tnr{G}\in\ete{\cam{F}}{U\times V}$ and vector $\vto{u}\in U_\cam{F}$, we already know from \eqref{eq:Lin2secTensTransp} that a linear bijection $\tnr{\mathit{g}}$ represents $\tnr{G}$ in such a way that $\fua{\tnr{\mathit{g}}}{\vto{u}}=\tnr{G}^\dagger\hat{\odot}_1\vto{u}^*$. This equality can be rewritten in matrix terms as following: 
 \begin{equation*}
 [\tnr{\mathit{g}}_{B_1}]^{B_2}[\vto{u}]^{B_1} = {[\tnr{G}]^{B}}^\dagger[\vto{u}]^{B_1}\,,
 \end{equation*}
@@ -810,10 +820,21 @@ where basis tensor $B$ is built from vector bases $B_1$ and $B_2$ of $U_\cam{F}$
 \begin{equation}\label{eq:matTensorRepre}
 [\tnr{G}]^{B}={[\tnr{\mathit{g}}_{B_1}]^{B_2}}^\dagger=[\tnr{\mathit{g}}_{B_2}^\dagger]^{B_1}.
 \end{equation}
-From equality \eqref{eq:matOpeHermit}, if $\tnr{\mathit{g}}$ is hermitian, $V_\cam{F}=U_\cam{F}$ and $B_1=B_2$, 
+From these equalities, if $V_\cam{F}=U_\cam{F}$, that is, tensor $\tnr{G}\in\ete{\cam{F}}{U^2}$, it is possible to obtain that 
+\begin{equation}\label{eq:trTentrMat}
+\trc{\tnr{G}}=\trc{[\tnr{G}]^{B}}=\trc{\tnr{\mathit{g}}}.
+\end{equation}
+Still in this context, from equality \eqref{eq:matOpeHermit}, if $\tnr{\mathit{g}}$ is hermitian,  
 \begin{equation}\label{eq:hermitTensor}
 [\tnr{G}]^{B}=[\tnr{\mathit{g}}_{B_2}]^{B_1}=[\tnr{\mathit{g}}_{B_1}]^{B_2}={[\tnr{G}]^{B}}^\dagger.
 \end{equation}
+
+{\footnotesize
+\begin{proof}
+Let's prove equalities \eqref{eq:trTentrMat}. Considering basis $B_1=B_2=\{\vun{u}_1,\cdots,\vun{u}_n\}$, from \eqref{eq:calcTraco} we can write that equalities $\trc{\tnr{G}}=\sum_{j=1}^n \vtf{f}_{jj}^{B}(\tnr{G})=\trc{[\tnr{G}]^B}$. But since $\tnr{\mathit{g}}$ is a linear operator on $U_\cam{F}$, from \eqref{eq:traceOpLin} we have $\trc{[\tnr{G}]^B}=\trc{\tnr{\mathit{g}}}$.
+\end{proof}
+}
+
 
 It is possible to develop change of coordinates and of basis as we did for vector and linear functions. For the sake of clarity we shall reproduce here both theorem \ref{teo:mudCoordVec} and its corollary \ref{cor:mudaBase} with minor changes in order to adapt them for the current case.
 
@@ -895,7 +916,7 @@ is valid for all $\tnr{\mathit{P}}\in\{\etng{p}{\cam{F}}{A^p}\setminus \tnr{0}\}
 \begin{equation*}
 \fua{\tnr{\mathit{P}}}{\fua{\tnr{\psi}}{\tnr{B}_1},\cdots,{\fua{\tnr{\psi}}{\tnr{B}_p}}}={\fua{\tnr{\mathit{P}}}{\tnr{B}_1,\cdots,\tnr{B}_p}}\,,
 \end{equation*}
-when we say that $\{\fua{\tnr{\psi}}{\tnr{B}_1},\cdots,\fua{\tnr{\psi}}{\tnr{B}_p}\}$, which is also a basis according to theorem \ref{teo:basesUnit}, has the same orientation of $B$. Now, according to theorem \ref{teo:repRieszTensor}, in the particular case where operator $\tnr{\psi}\in\evl{\cam{F}}{\eteg{p}{\cam{F}}{U}}{\eteg{p}{\cam{F}}{U}}$ is a $1$-cotensor of a second order tensor $\tnr{T}\in \eteg{p}{\cam{F}}{U^{\times 2}}$, that is, $\tnr{\psi}=\tnr{T}_1^*$, it is possible to state that $\hdet{\tnr{T}}:=\hdet{\tnr{T}_1^*}$ and then
+when we say that $\{\fua{\tnr{\psi}}{\tnr{B}_1},\cdots,\fua{\tnr{\psi}}{\tnr{B}_p}\}$, which is also a basis according to theorem \ref{teo:basesUnit}, has the same orientation of $B$. Now, according to theorem \ref{teo:repRieszTensor}, in the particular case where operator $\tnr{\psi}\in\evl{\cam{F}}{\eteg{p}{\cam{F}}{U}}{\eteg{p}{\cam{F}}{U}}$ is a $1$-cotensor of a second order tensor $\tnr{T}\in \eteg{p}{\cam{F}}{U^2}$, that is, $\tnr{\psi}=\tnr{T}_1^*$, it is possible to state that $\hdet{\tnr{T}}:=\hdet{\tnr{T}_1^*}$ and then
 \begin{equation}\label{eq:detTensorSeg}
 \fua{\tnr{\mathit{P}}}{\fua{\tnr{T}_1^*}{\vto{x}_1^*},\cdots,{\fua{\tnr{T}_1^*}{\vto{x}_{p}^*}}}=\hdet{\tnr{T}}{\fua{\tnr{\mathit{P}}}{\vto{x}_1^*,\cdots,\vto{x}_{p}^*}}
 \end{equation}
@@ -903,17 +924,26 @@ or
 \begin{equation}\label{eq:detTensorSeg2}
 \fua{\tnr{P}}{\fua{\tnr{\mathit{t}}}{\vto{x}_1},\cdots,{\fua{\tnr{\mathit{t}}}{\vto{x}_{p}}}}=\hdet{\tnr{T}}{\fua{\tnr{{P}}}{\vto{x}_1,\cdots,\vto{x}_{p}}}\,,
 \end{equation}
-where tensor $\tnr{P}\in\etng{p}{\cam{F}}{U^{p}}$ and $\tnr{\mathit{t}}$ is the representative function of $\tnr{T}$. Now, considering arbitrary functions $\tnr{\psi},\tnr{\varphi}\in\evl{\cam{F}}{\eteg{n}{\cam{F}}{U^{\times m}}}{\eteg{n}{\cam{F}}{U^{\times m}}}$ and $\tnr{T}_1, \tnr{T}_2\in \eteg{p}{\cam{F}}{U^{\times 2}}$, the following properties of determinant are valid:
+from corollary \ref{cor:soTens}, where tensor $\tnr{P}\in\etng{p}{\cam{F}}{U^{p}}$ and operator $\tnr{\mathit{t}}\in\evl{\cam{F}}{U}{U}$ is the representative function of $\tnr{T}$. 
+
+Now, considering arbitrary functions $\tnr{\psi},\tnr{\varphi}\in\evl{\cam{F}}{\eteg{n}{\cam{F}}{U^{\times m}}}{\eteg{n}{\cam{F}}{U^{\times m}}}$ and tensors $\tnr{T},\tnr{T}_1, \tnr{T}_2\in \eteg{p}{\cam{F}}{U^2}$, the following properties of determinant are valid:
 \begin{itemize}
 \setlength\itemsep{.1em}
 \item[i.] $\hdet{\tnr{i}} =  1$;
 \item[ii.] $\hdet{\tnr{\psi}\circ\tnr{\varphi}} =  \hdet{\tnr{\psi}}\,\hdet{\tnr{\varphi}}$;
 \item[iii.] If $\tnr{\psi}$ is a bijection, then $\hdet{\tnr{\psi}^{-1}} =  (\hdet{\tnr{\psi}})^{-1}$;
 \item[iv.] If $\hdet{\tnr{\psi}}\neq 0$, then $\tnr{\psi}$ is a bijection;
-\item[v.] If $B$ and $C$ are bases of $\eteg{n}{\cam{F}}{U^{\times m}}$, then $\hdet{\tnr{\psi}}=\hdet{\maf{\tnr{\psi}}{B}{C}}$;
-\item[vi.] $\hdet{\tnr{\psi}^\dagger}=\overline{\hdet{\tnr{\psi}}}$;
-\item[vii.] If $\tnr{\psi}$ is unitary, then $\hdet{\tnr{\psi}}=\pm 1$;
-\item[viii.] If $\tnr{T}=\tnr{T}_1\odot_1\tnr{T}_2$, then $\hdet{\tnr{T}}=\hdet{\tnr{T}_1}\hdet{\tnr{T}_2}$.
+\item[v.] If $B$ and $C$ are bases of $\eteg{n}{\cam{F}}{U^{\times m}}$, then 
+\begin{equation}
+\hdet{\tnr{\psi}}=\hdet{\maf{\tnr{\psi}}{B}{C}}\,;
+\end{equation}
+\item[vi.] If $\tnr{\mathit{t}}$ is the representative function of $\tnr{T}$, then 
+\begin{equation}\label{eq:detTensRep}
+\hdet{\tnr{T}}=\dete{\tnr{\mathit{t}}}=\dete{[\tnr{\mathit{t}}]}\,;
+\end{equation}
+\item[vii.] $\hdet{\tnr{\psi}^\dagger}=\overline{\hdet{\tnr{\psi}}}$;
+\item[viii.] If $\tnr{\psi}$ is unitary, then $\hdet{\tnr{\psi}}=\pm 1$;
+\item[ix.] If $\tnr{T}=\tnr{T}_1\odot_1\tnr{T}_2$, then $\hdet{\tnr{T}}=\hdet{\tnr{T}_1}\hdet{\tnr{T}_2}$.
 \end{itemize}
 
 {\footnotesize
@@ -935,7 +965,7 @@ assure that the use of only one basis $B$ to represent $\tnr{\psi}$ is valid for
 &=\sum_{i_1=1}^{p}\cdots\sum_{i_p=1}^{p}{\maf{\tnr{\psi}}{B}{B}}_{i_11}\cdots{\maf{\tnr{\psi}}{B}{B}}_{i_pp}\epsilon_{i_1\cdots i_p}\fua{\tnr{\mathit{P}}}{{\tnr{B}_{1}},\cdots,{\tnr{B}_{p}}}\\
 &=\dete{\maf{\tnr{\psi}}{B}{B}}\fua{\tnr{\mathit{P}}}{{\tnr{B}_{1}},\cdots,{\tnr{B}_{p}}}\,,
 \end{align*}
-according to \eqref{eq:igAntis} and \eqref{eq:DeterminanteSimplificado}. Thus, from \eqref{eq:detFunDef}, we have $\hdet{\tnr{\psi}}=\dete{\maf{\tnr{\psi}}{B}{B}}=\hdet{\maf{\tnr{\psi}}{B}{B}}$. For the item vi verification, let's consider the previous development and equality \eqref{eq:propHilbAjd}, when we have
+according to \eqref{eq:igAntis} and \eqref{eq:DeterminanteSimplificado}. Thus, from \eqref{eq:detFunDef}, we have $\hdet{\tnr{\psi}}=\dete{\maf{\tnr{\psi}}{B}{B}}=\hdet{\maf{\tnr{\psi}}{B}{B}}$. Now, considering item v and comparing \eqref{eq:alternDeteGen} with \eqref{eq:detTensorSeg2}, proof of item vi is trivial. For the item vii verification, let's consider the previous development and equality \eqref{eq:propHilbAjd}, when we have
 \begin{equation*}
 \fua{\tnr{\psi}^\dagger}{\tnr{B}_l}=\sum_{k=1}^{p}{\maf{\tnr{\psi}^\dagger}{B}{B}}_{kl}\tnr{B}_k=\sum_{k=1}^{p}{\maf{\tnr{\psi}}{B}{B}}^\dagger_{kl}\tnr{B}_k=\sum_{k=1}^{p}\overline{{\maf{\tnr{\psi}}{B}{B}}_{lk}}\tnr{B}_k
 \end{equation*}
@@ -946,7 +976,7 @@ and consequently
 &=\overline{\dete{\maf{\tnr{\psi}}{B}{B}}}\fua{\tnr{\mathit{P}}}{{\tnr{B}_{1}},\cdots,{\tnr{B}_{p}}}\\
 &=\overline{\hdet{\tnr{\psi}}}\fua{\tnr{\mathit{P}}}{{\tnr{B}_{1}},\cdots,{\tnr{B}_{p}}}\,,
 \end{align*}
-since an equality similar to \eqref{eq:DeterminanteSimplificado} can be obtained by considering $i_k=k$ on \eqref{eq:Determinante}. Now, equalities $1=\hdet{\tnr{i}}=\hdet{\tnr{\psi}\circ\tnr{\psi}^\dagger} =  \hdet{\tnr{\psi}}\,\hdet{\tnr{\psi}^\dagger}=|\hdet{\tnr{\psi}}|^2$ prove item vii. Property viii is a straightforward consequence of property ii and equality \eqref{eq:compoFuncRepFunc}.
+since an equality similar to \eqref{eq:DeterminanteSimplificado} can be obtained by considering $i_k=k$ on \eqref{eq:Determinante}. Now, equalities $1=\hdet{\tnr{i}}=\hdet{\tnr{\psi}\circ\tnr{\psi}^\dagger} =  \hdet{\tnr{\psi}}\,\hdet{\tnr{\psi}^\dagger}=|\hdet{\tnr{\psi}}|^2$ prove item viii. Property ix is a straightforward consequence of property ii and equality \eqref{eq:compoFuncRepFunc}.
 \end{proof}
 }
 
