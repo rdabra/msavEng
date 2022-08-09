@@ -30,7 +30,7 @@ where $\tempo\subseteq\real$ is the set constituted by instants of time and imag
 \begin{equation}
 \mathcal{S}=\bigcup_{t\in\tempo}\mathcal{B}_t\,.
 \end{equation}
-Since time is an independent variable, for most of the forthcoming concepts to be presented, it is convenient to fix an arbitrary instant $t\in\tempo$ and define a bijective mapping $\map{\chi_t}{\mathfrak{B}}{\mathcal{B}_t}$ where $\fua{{\chi_t}}{\text{x}}=\fua{\chi}{\text{x},{t}}$. Among other reasons, since surface integrals will be a fundamental tool in this study, we shall deal only with deformations that define shapes bounded by Lipschitz surfaces. In order to identify the particles of body $\mathfrak{B}$ by geometric points, we choose a reference instant of time $\overline{t}$ in such a way that an arbitrary particle $\text{x}\in\mathfrak{B}$ is uniquely identified by the point $\fua{\overline{\chi}}{\text{x}}:=\fua{\chi_{\overline{t}}}{\text{x}}$, from which set $\overline{\mathcal{B}}:=\{\fua{\overline{\chi}}{\text{x}}:\text{x}\in\mathfrak{B}\}$ is called a reference shape. It is important to note that the reference instant is not necessarily the initial instant $t_0$ of the period $[t_0,t_f]$ under study, that is, $t_f\geqslant t_0\geqslant\overline{t}\,$; a condition that enables body $\mathfrak{B}$ to have three notable shapes: $\overline{\mathcal{B}}$, $\mathcal{B}_{t_0}$ and $\mathcal{B}_{t_f}$. The one-to-one identification of particles by points allows us to call the reference shape also a body, but now, a body with affine Euclidean features. In order to make shapes viable for mathematical calculations, we still specify that
+Since time is an independent variable, for most of the forthcoming concepts to be presented in this section, it is convenient to fix an arbitrary instant $t\in\tempo$ and define a bijective mapping $\map{\chi_t}{\mathfrak{B}}{\mathcal{B}_t}$ where $\fua{{\chi_t}}{\text{x}}=\fua{\chi}{\text{x},{t}}$. Among other reasons, since surface integrals will be a fundamental tool in this study, we shall deal only with deformations that define shapes bounded by Lipschitz surfaces. In order to identify the particles of body $\mathfrak{B}$ by geometric points, we choose a reference instant of time $\overline{t}$ in such a way that an arbitrary particle $\text{x}\in\mathfrak{B}$ is uniquely identified by the point $\fua{\overline{\chi}}{\text{x}}:=\fua{\chi_{\overline{t}}}{\text{x}}$, from which set $\overline{\mathcal{B}}:=\{\fua{\overline{\chi}}{\text{x}}:\text{x}\in\mathfrak{B}\}$ is called a reference shape. It is important to note that the reference instant is not necessarily the initial instant $t_0$ of the period $[t_0,t_f]$ under study, that is, $t_f\geqslant t_0\geqslant\overline{t}\,$; a condition that enables body $\mathfrak{B}$ to have three notable shapes: $\overline{\mathcal{B}}$, $\mathcal{B}_{t_0}$ and $\mathcal{B}_{t_f}$. The one-to-one identification of particles by points allows us to call the reference shape also a body, but now, a body with affine Euclidean features. In order to make shapes viable for mathematical calculations, we still specify that
 \begin{alignat}{3} 
 \tnr{\overline{\mathcal{B}}}:=\{\fua{\upsilon_o}{x}:\forall x\in\overline{\mathcal{B}}\}&\qquad \text{and}\qquad & \tnr{\mathcal{B}}_t:=\{\fua{\upsilon_o}{x}:\forall x\in\mathcal{B}_t\}\,,
 \end{alignat}
@@ -38,7 +38,7 @@ where $\upsilon_o$ ``vectorizes'' the points of $\overline{\mathcal{B}}$ and $\m
 \begin{equation}\label{eq:vecMotion}
 \map{\tnr{\chi}}{\tnr{\overline{\mathcal{B}}}\times\tempo}{\tnr{\mathcal{S}}}
 \end{equation}
-is a $\mathcal{C}^{3}$ surjection that observes $\fua{\tnr{\chi}}{\overline{\vto{x}},\overline{t}}=\overline{\vto{x}}$. By fixing time, we can define the bijective mapping $\map{\gloref{defInst}}{\tnr{\overline{\mathcal{B}}}}{\tnr{\mathcal{B}}_t}$ where function is called the deformation\index{deformation} or deformation\index{deformation} of $\tnr{\overline{\mathcal{B}}}$ at $t$ if it obeys equality 
+is a $\mathcal{C}^{3}$ surjection that observes $\fua{\tnr{\chi}}{\overline{\vto{x}},\overline{t}}=\overline{\vto{x}}$. By fixing time, we can define the bijective mapping $\map{\gloref{defInst}}{\tnr{\overline{\mathcal{B}}}}{\tnr{\mathcal{B}}_t}$ where function is called the deformation\index{deformation} or configuration\index{configuration} of $\tnr{\overline{\mathcal{B}}}$ at $t$ if it obeys equality 
 \begin{equation}
 \fua{\tnr{\chi}_t}{\overline{\vto{x}}}=\fua{\tnr{\chi}}{\overline{\vto{x}},t}\,,\,\forall\, \overline{\vto{x}}\in\tnr{\overline{\mathcal{B}}}\,,
 \end{equation}
@@ -348,7 +348,7 @@ it is possible to obtain that
 \end{equation}
 and
 \begin{equation}\label{eq:derivPlaceConst}
-\tilde{\partial}_t\tnr{\omega}(\overline{\vto{x}},t)=\bar{\partial}_t\tnr{\omega}(\overline{\vto{u}},t)+\tnr{\omega}_t'(\overline{\vto{x}})\circ\dot{\tnr{p}}_{{\vto{x}}}(t)\,.
+\tilde{\partial}_t\tnr{\omega}(\overline{\vto{x}},t)=\bar{\partial}_t\tnr{\omega}(\overline{\vto{x}},t)+\tnr{\omega}_t'(\overline{\vto{x}})\circ\dot{\tnr{p}}_{{\vto{x}}}(t)\,.
 \end{equation}
 Moreover, in the particular cases of $\tnr{\omega}=\tnr{\Omega}_L$ and $\tnr{\Omega}=\tnr{\omega}_E$,
 \begin{alignat}{3}\label{eq:zerosDescript} 
@@ -451,11 +451,32 @@ is said to be the \textsb{Eulerian velocity gradient}\index{velocity!Eulerian gr
  \end{equation}
 is the \textsb{Lagrangian velocity gradient}\index{velocity!Lagrangian gradient} of $\tnr{\nu}$ at particle $\overline{\vto{u}}$. From the Eulerian description of the velocity, a motion of the body $\tnr{\overline{\mathcal{B}}}$ is said to be \textsb{steady}\index{motion!steady} in a period $[t_0,t_f]$ if both $\tnr{\nu}_E$ and $\tnr{\mathcal{B}}_t$  are time independent, that is, if
 \begin{alignat}{3} 
-\tilde{\partial}_t\tnr{\nu}_E(\vto{x},t)=\vto{0} &\qquad \text{and}\qquad & \tnr{\mathcal{B}}_t= \tnr{\mathcal{B}}_{t_0}\,,
+\tilde{\partial}_t\tnr{\nu}_E(\vto{u},t)=\vto{0} &\qquad \text{and}\qquad & \tnr{\mathcal{B}}_t= \tnr{\mathcal{B}}_{t_0}\,,
 \end{alignat}
-for all $\vto{x}\in\tnr{\mathcal{B}}_{t_0}$ and $t\in [t_0,t_f]$. In this context, we can conclude that every streakline $S_{\vto{x}}$ is constituted by particles that have the same velocity and the distinct places of every trajectory $T_{\overline{\vto{x}}}$ constitute a subset of shape $\tnr{\mathcal{B}}_{t_0}$.
+for all $\vto{u}\in\tnr{\mathcal{B}}_{t_0}$ and $t\in [t_0,t_f]$. In this context, we can conclude that every streakline $S_{\vto{x}}$ is constituted by particles that have the same velocity and the distinct places of every trajectory $T_{\overline{\vto{x}}}$ constitute a subset of shape $\tnr{\mathcal{B}}_{t_0}$.
 
-Considering these previous definitions in the context of affine motions, the following important properties can be obtained:
+
+COLOCAR A FIGURA 
+
+\noindent For the next type of motion, we define the mapping $\map{\tnr{\zeta}}{\tnr{\overline{\mathcal{B}}}\times\tempo}{\ete{\real}{U^{2}}}$ whose function is described by the rule $\tnr{\zeta}(\overline{\vto{x}},t)=\fua{\nabla\tnr{\chi}_t}{\overline{\vto{x}}}$. From this definition, a motion is said to be \textsb{isochoric}\index{motion!isochoric}\index{isochoric!motion} in a period of time $[t_0,t_f]$ if 
+\begin{equation}
+\bar{\partial}_t\textnormal{Det}[\tnr{\zeta}(\overline{\vto{u}},t)] = 0\,,
+\end{equation}
+for all $\overline{\vto{u}} \in \tnr{\overline{\mathcal{B}}}$ and $t\in[t_0,t_f]$. Concerning the left hand side of this condition, it is possible to obtain that
+\begin{equation}\label{eq:derivDeteTensFunc}
+\bar{\partial}_t\textnormal{Det}[\tnr{\zeta}(\overline{\vto{u}},t)] = \textnormal{Det}[\tnr{\zeta}(\overline{\vto{u}},t)]\,\trc{\tnr{M}_{\overline{\vto{u}}}}\,,
+\end{equation}
+from which we conclude that $\trc{\tnr{M}_{\overline{\vto{u}}}}=0$ in isochoric motions due to inequality \eqref{eq:detPositive}.
+
+{\footnotesize
+\begin{proof}
+We now prove equality \eqref{eq:derivDeteTensFunc}. 
+\end{proof}
+}
+
+
+
+Considering  definitions \eqref{eq:eulerVelocityGrad} and \eqref{eq:lagrangVelocityGrad} in the context of affine motions, the following important properties can be obtained:
 \begin{equation}\label{eq:timeDerivGrad}
 \begin{aligned}
 \tnr{M}_{\overline{\vto{x}}}&= \tnr{L}_{\tnr{\chi}_t(\overline{\vto{x}})}\odot_1\tnr{F}_{\overline{\vto{x}}}\,;\\
