@@ -62,13 +62,13 @@ Moreover, concerning the elements of the domains represented in the figure, we s
 
 Considering the previous regularity conditions and an open set $\pmb{\mathcal{W}}\subset\tnr{\overline{\mathcal{B}}}$, the derivative of $\tnr{\chi}_t$ at an arbitrary particle $\overline{\vto{u}}\in\pmb{\mathcal{W}}$ is the vector function $(\tnr{\chi}_t)'_{\overline{\vto{u}}}$ such that, from equality \eqref{eq:derivVecGradVec}, 
 \begin{equation}
-\fua{(\tnr{\chi}_t)'_{\overline{\vto{u}}}}{\vto{x}}= \fua{ \nabla\tnr{\chi}_t}{\overline{\vto{u}}}\hat{\odot}_1\vto{x}^*\,,
+\fua{(\tnr{\chi}_t)'_{\overline{\vto{u}}}}{\vto{x}}= \fua{ \nabla\tnr{\chi}_t}{\overline{\vto{u}}}^{\text{T}}\hat{\odot}_1\vto{x}^*\,,
 \end{equation}
 where the function in $\map{\nabla\tnr{\chi}_t}{\pmb{\mathcal{W}}}{\ete{\real}{U^{2}}}$, called \textsb{deformation gradient}\index{deformation!gradient}, has fundamental importance in Continuum Kinematics because it bases the concept of strain. The second order tensor $\fua{ \nabla\tnr{\chi}_t}{\overline{\vto{u}}}$ is said to be the deformation gradient at $\overline{\vto{u}}$ and, since deformation $\tnr{\chi}_t$ is a diffeomorphism, we can recall property \eqref{eq:gradDiffeo2}, from which tensor
 \begin{equation}\label{eq:invGradDef}
 \fua{\nabla\tnr{\chi}_t}{\overline{\vto{u}}}^{-1} = \fua{\nabla\tnr{\chi}_t^{-1}}{\vto{u}}\,.
 \end{equation}
-Now, at reference instant $t=\overline{t}$, we know that $\tnr{\chi}_{\overline{t}}(\overline{\vto{x}})=\overline{\vto{x}}=\tnr{i}_{\tnr{\overline{\mathcal{B}}}}(\overline{\vto{x}})$ and therefore, from a basic property of directional derivatives, equality ${\tnr{\chi}'_{\overline{t}} }_{\overline{\vto{u}}}=\tnr{i}_{\tnr{\overline{\mathcal{B}}}}$ holds. But since ${\tnr{\chi}'_{\overline{t}} }_{\overline{\vto{u}}}$ is the representative function of second order Euclidean tensor $\fua{\nabla\tnr{\chi}_{\overline{t}}}{\overline{\vto{u}}}$, from \eqref{eq:det3D} we conclude that the infinitesimal or local volume change $\textnormal{Det}[\fua{\nabla\tnr{\chi}_{\overline{t}}}{\overline{\vto{u}}}]=1$. Moreover, since deformation $\tnr{\chi}_{t}$ is a diffeomorphism, the property relative to equality \eqref{eq:indentDiffeo} is valid and then $\textnormal{Det}[\fua{\nabla\tnr{\chi}_{t}}{\overline{\vto{u}}}]\neq 0$ because $\fua{\nabla\tnr{\chi}_{t}}{\overline{\vto{u}}}\neq \tnr{0}$. Therefore, we can state that the local volume change       
+Now, at reference instant $t=\overline{t}$, we know that $\tnr{\chi}_{\overline{t}}(\overline{\vto{x}})=\overline{\vto{x}}=\tnr{i}_{\tnr{\overline{\mathcal{B}}}}(\overline{\vto{x}})$ and therefore, from a basic property of directional derivatives, equality ${\tnr{\chi}'_{\overline{t}} }_{\overline{\vto{u}}}=\tnr{i}_{\tnr{\overline{\mathcal{B}}}}$ holamads. But since ${\tnr{\chi}'_{\overline{t}} }_{\overline{\vto{u}}}$ is the representative function of second order Euclidean tensor $\fua{\nabla\tnr{\chi}_{\overline{t}}}{\overline{\vto{u}}}$, from \eqref{eq:det3D} we conclude that the infinitesimal or local volume change $\textnormal{Det}[\fua{\nabla\tnr{\chi}_{\overline{t}}}{\overline{\vto{u}}}]=1$. Moreover, since deformation $\tnr{\chi}_{t}$ is a diffeomorphism, the property relative to equality \eqref{eq:indentDiffeo} is valid and then $\textnormal{Det}[\fua{\nabla\tnr{\chi}_{t}}{\overline{\vto{u}}}]\neq 0$ because $\fua{\nabla\tnr{\chi}_{t}}{\overline{\vto{u}}}\neq \tnr{0}$. Therefore, we can state that the local volume change       
 \begin{equation}\label{eq:detPositive}
 \textnormal{Det}[\fua{\nabla\tnr{\chi}_t}{\overline{\vto{u}}}]>0
 \end{equation}
@@ -334,21 +334,14 @@ as well as the Eulerian time derivatives at place ${\vto{u}}$
 \begin{alignat}{3}\label{eq:EulDesc} 
 \tilde{\partial}_t\tnr{\Omega}({\vto{u}},t):=\dfrac{d\,\tnr{\Omega}_{{\vto{u}}}}{dt}(t)={\dot{\tnr{\Omega}}}_{{\vto{u}}}(t)&\qquad \text{and}\qquad & \tilde{\partial}_t\tnr{\omega}(\overline{\vto{u}},t):=\tnr{\omega}'(\fua{\tnr{p}_{\vto{u}}}{t},t)\,,
 \end{alignat}
-Considering these previous definitions and the Chain Rule for Partial Derivatives \eqref{eq:chainRulePartial}, by developing the Lagrangian time derivative 
+Considering these previous definitions and the Chain Rule for Partial Derivatives \eqref{eq:chainRulePartial}, it is possible to obtain the Lagrangian time derivative 
 \begin{equation}\label{eq:LagrTimeDerivative}
-\bar{\partial}_t\tnr{\Omega}({\vto{x}},t)=\dot{\tnr{\Omega}}_{\vto{x}}(t)+\dot{\tnr{\Omega}}_{t}(\tnr{\chi}_{\overline{\vto{x}}}^{-1}(t))
+\bar{\partial}_t\tnr{\Omega}({\vto{x}},t)=\dot{\tnr{\Omega}}_{\vto{x}}(t)+\dot{\tnr{\Omega}}_{t}(\tnr{\chi}_{\overline{\vto{x}}}(t))=\tilde{\partial}_t\tnr{\Omega}({\vto{x}},t)+\tnr{\Omega}_t'(\vto{x})\circ\dot{\tnr{\chi}}_{\overline{\vto{x}}}(t)
 \end{equation}
 and Eulerian time derivative 
 \begin{equation}\label{eq:EulerTimeDerivative}
-\tilde{\partial}_t\tnr{\omega}(\overline{\vto{x}},t)=\dot{\tnr{\omega}}_{\overline{\vto{x}}}(t)+\dot{\tnr{\omega}}_{t}(\tnr{\chi}_{{\vto{x}}}(t))\,,
-\end{equation}
-it is possible to obtain that
-\begin{equation}\label{eq:derivPartConst}
-\bar{\partial}_t\tnr{\Omega}({\vto{x}},t)=\tilde{\partial}_t\tnr{\Omega}({\vto{x}},t)+\tnr{\Omega}_t'(\vto{x})\circ\dot{\tnr{\chi}}_{\overline{\vto{x}}}(t)
-\end{equation}
-and
-\begin{equation}\label{eq:derivPlaceConst}
-\tilde{\partial}_t\tnr{\omega}(\overline{\vto{x}},t)=\bar{\partial}_t\tnr{\omega}(\overline{\vto{x}},t)+\tnr{\omega}_t'(\overline{\vto{x}})\circ\dot{\tnr{p}}_{{\vto{x}}}(t)\,.
+\tilde{\partial}_t\tnr{\omega}(\overline{\vto{x}},t)=\dot{\tnr{\omega}}_{\overline{\vto{x}}}(t)+\dot{\tnr{\omega}}_{t}(\tnr{p}_{{\vto{x}}}(t))=
+\bar{\partial}_t\tnr{\omega}(\overline{\vto{x}},t)+\tnr{\omega}_t'(\overline{\vto{x}})\circ\dot{\tnr{p}}_{{\vto{x}}}(t)\,.
 \end{equation}
 Moreover, in the particular cases of $\tnr{\omega}=\tnr{\Omega}_L$ and $\tnr{\Omega}=\tnr{\omega}_E$,
 \begin{alignat}{3}\label{eq:zerosDescript} 
@@ -360,36 +353,36 @@ The specification of the codomains of functions $\tnr{\omega}$ and $\tnr{\Omega}
     \item[i.] If $W=\ete{\real}{U^m}$, functions are tensor valued and then, from \eqref{eq:defGradient}, 
 \begin{equation}
 \begin{aligned}
-\tnr{\Omega}_t'(\vto{x})\circ\dot{\tnr{\chi}}_{\overline{\vto{x}}}(t)&=[\dot{\tnr{\chi}}_{\overline{\vto{x}}}(t)]^*\odot_1\fua{\tilde{\nabla}\tnr{\Omega}_t}{{\vto{x}}}\,,\\
-\tnr{\omega}_t'(\overline{\vto{x}})\circ\dot{\tnr{p}}_{{\vto{x}}}(t)&=[\dot{\tnr{p}}_{{\vto{x}}}(t)]^*\odot_1\fua{\bar{\nabla}\tnr{\omega}_t}{\overline{\vto{x}}}\,;
+\dot{\tnr{\Omega}}_{t}(\tnr{\chi}_{\overline{\vto{x}}}(t))&=\tnr{\Omega}_t'(\vto{x})\circ\dot{\tnr{\chi}}_{\overline{\vto{x}}}(t)=[\dot{\tnr{\chi}}_{\overline{\vto{x}}}(t)]^*\odot_1\fua{\tilde{\nabla}\tnr{\Omega}_t}{{\vto{x}}}\,,\\
+\dot{\tnr{\omega}}_{t}(\tnr{p}_{{\vto{x}}}(t))&=\tnr{\omega}_t'(\overline{\vto{x}})\circ\dot{\tnr{p}}_{{\vto{x}}}(t)=[\dot{\tnr{p}}_{{\vto{x}}}(t)]^*\odot_1\fua{\bar{\nabla}\tnr{\omega}_t}{\overline{\vto{x}}}\,;
 \end{aligned} 
 \end{equation}   
     \item[ii.] If $W=U_\real$, functions are vector valued and then, from \eqref{eq:derivVecGradVec},
 \begin{equation}\label{eq:compoVector}
 \begin{aligned}
-\tnr{\Omega}_t'(\vto{x})\circ\dot{\tnr{\chi}}_{\overline{\vto{x}}}(t)&=\fua{\tilde{\nabla}\tnr{\Omega}_t}{{\vto{x}}}^{\text{T}}\hat{\odot}_1[\dot{\tnr{\chi}}_{\overline{\vto{x}}}(t)]^*\,,\\
-\tnr{\omega}_t'(\overline{\vto{x}})\circ\dot{\tnr{p}}_{{\vto{x}}}(t)&=\fua{\bar{\nabla}\tnr{\omega}_t}{\overline{\vto{x}}}^{\text{T}}\hat{\odot}_1[\dot{\tnr{p}}_{{\vto{x}}}(t)]^*\,;
+\dot{\tnr{\Omega}}_{t}(\tnr{\chi}_{\overline{\vto{x}}}(t))&=\tnr{\Omega}_t'(\vto{x})\circ\dot{\tnr{\chi}}_{\overline{\vto{x}}}(t)=\fua{\tilde{\nabla}\tnr{\Omega}_t}{{\vto{x}}}^{\text{T}}\hat{\odot}_1[\dot{\tnr{\chi}}_{\overline{\vto{x}}}(t)]^*\,,\\
+\dot{\tnr{\omega}}_{t}(\tnr{p}_{{\vto{x}}}(t))&=\tnr{\omega}_t'(\overline{\vto{x}})\circ\dot{\tnr{p}}_{{\vto{x}}}(t)=\fua{\bar{\nabla}\tnr{\omega}_t}{\overline{\vto{x}}}^{\text{T}}\hat{\odot}_1[\dot{\tnr{p}}_{{\vto{x}}}(t)]^*\,;
 \end{aligned} 
 \end{equation} 
 \item[iii.] If $W=\real$, functions are scalar valued and then, from \eqref{eq:gradScalVectFunc},
 \begin{equation}
 \begin{aligned}
-\tnr{\Omega}_t'(\vto{x})\circ\dot{\tnr{\chi}}_{\overline{\vto{x}}}(t)&=\fua{\tilde{\operatorname{grad}}\,{\tnr{\Omega}_t}}{{\vto{x}}}\cdot\dot{\tnr{\chi}}_{\overline{\vto{x}}}(t)\,,\\
-\tnr{\omega}_t'(\overline{\vto{x}})\circ\dot{\tnr{p}}_{{\vto{x}}}(t)&=\fua{\bar{\operatorname{grad}}\,{\tnr{\omega}_t}}{\overline{\vto{x}}}\cdot\dot{\tnr{p}}_{{\vto{x}}}(t)\,.
+\dot{\tnr{\Omega}}_{t}(\tnr{\chi}_{\overline{\vto{x}}}(t))&=\tnr{\Omega}_t'(\vto{x})\circ\dot{\tnr{\chi}}_{\overline{\vto{x}}}(t)=\fua{\tilde{\operatorname{grad}}\,{\tnr{\Omega}_t}}{{\vto{x}}}\cdot\dot{\tnr{\chi}}_{\overline{\vto{x}}}(t)\,,\\
+\dot{\tnr{\omega}}_{t}(\tnr{p}_{{\vto{x}}}(t))&=\tnr{\omega}_t'(\overline{\vto{x}})\circ\dot{\tnr{p}}_{{\vto{x}}}(t)=\fua{\bar{\operatorname{grad}}\,{\tnr{\omega}_t}}{\overline{\vto{x}}}\cdot\dot{\tnr{p}}_{{\vto{x}}}(t)\,.
 \end{aligned} 
 \end{equation} 
 \end{itemize}
 For future purposes, it is now important to present properties involving Lagrangian and Eulerian gradients of respectively Eulerian and Lagrangian functions. The following equalities are straightforward consequences of property \eqref{eq:prop1Grad}, valid for tensor valued composite functions, which can be easily extended for vector and scalar valued composite functions:
 \begin{equation}\label{eq:gradRelFuncs}
 \begin{aligned}
-\bar{\nabla}[{\tnr{\Omega}}_{t}]_L(\overline{\vto{x}})&=\bar{\nabla}{\tnr{\chi}}_{t}(\overline{\vto{x}})\odot_1\tilde{\nabla}[{\tnr{\Omega}}_{t}]_L(\overline{\vto{x}})\,;\\
-\tilde{\nabla}[{\tnr{\omega}}_{t}]_E({\vto{x}})&=\tilde{\nabla}{\tnr{p}}_{t}({\vto{x}})\odot_1\bar{\nabla}[{\tnr{\omega}}_{t}]_E({\vto{x}})\,.
+\bar{\nabla}[{\tnr{\Omega}}_{t}]_L(\overline{\vto{x}})&=\bar{\nabla}{\tnr{\Omega}}_{t}(\tnr{\chi}_{t}(\overline{\vto{x}}))=\bar{\nabla}{\tnr{\chi}}_{t}(\overline{\vto{x}})\odot_1\tilde{\nabla}[{\tnr{\Omega}}_{t}]_L(\overline{\vto{x}})\,;\\
+\tilde{\nabla}[{\tnr{\omega}}_{t}]_E({\vto{x}})&=\tilde{\nabla}{\tnr{\omega}}_{t}(\tnr{p}_{t}({\vto{x}}))=\tilde{\nabla}{\tnr{p}}_{t}({\vto{x}})\odot_1\bar{\nabla}[{\tnr{\omega}}_{t}]_E({\vto{x}})\,.
 \end{aligned} 
 \end{equation} 
 
 {\footnotesize
 \begin{proof}
-From the chain rules \eqref{eq:chainRule} and \eqref{eq:chainRulePartial}, the following development proves \eqref{eq:derivPartConst}; equality \eqref{eq:derivPlaceConst} is similarly verified.
+From the chain rules \eqref{eq:chainRule} and \eqref{eq:chainRulePartial}, the following development proves \eqref{eq:LagrTimeDerivative}; equality \eqref{eq:EulerTimeDerivative} is similarly verified.
 \begin{align*}
 \bar{\partial}_t\tnr{\Omega}({\vto{x}},t)&=\tnr{\Omega}'(\fua{\tnr{\chi}_{\overline{\vto{x}}}}{t},t)\\
 &=\dot{\tnr{\Omega}}_\vto{x}(t)+\dot{\tnr{\Omega}}_\vto{t}(\fua{\tnr{\chi}_{\overline{\vto{x}}}}{t}) \\
@@ -421,11 +414,11 @@ from which the following equality is evident:
 \begin{equation}
 \bar{\partial}_t^2\fua{\tnr{\mathit{u}}}{\overline{\vto{x}},t} =  {\tnr{a}}(\overline{\vto{x}},t)\,.
 \end{equation}
-Considering property \eqref{eq:derivPlaceConst}, we can conclude that vector $\dot{\tnr{p}}_{{\vto{u}}}(t)$ measures the temporal sensitivity of the Eulerian description $\tnr{\chi}_E$ of place $\vto{u}$ at instant $t$. In this context, equalities
+Considering property \eqref{eq:EulerTimeDerivative}, we can conclude that vector $\dot{\tnr{p}}_{{\vto{u}}}(t)$ measures the temporal sensitivity of the Eulerian description $\tnr{\chi}_E$ of place $\vto{u}$ at instant $t$. In this context, equalities
 \begin{alignat*}{3} 
 \dot{\tnr{p}}_{{\vto{x}}}(t) = \tilde{\partial}_t \tnr{p}(\vto{x},t) = \tilde{\partial}_t \tnr{p}_L(\overline{\vto{x}},t)&\qquad \text{and}\qquad & \dot{\tnr{\chi}}_{\overline{\vto{x}}}(t) = \tnr{\nu}(\overline{\vto{x}},t) = \tnr{\nu}_E({\vto{x}},t)\,
 \end{alignat*}
-enable us to rewrite each of expressions \eqref{eq:derivPartConst} and \eqref{eq:derivPlaceConst} solely described by places and particles respectively, namely,   
+enable us to write from \eqref{eq:LagrTimeDerivative} and \eqref{eq:EulerTimeDerivative} the following expressions, solely described by places and particles respectively:   
 \begin{equation}
 \bar{\partial}_t\tnr{\Omega}({\vto{x}},t)=\tilde{\partial}_t\tnr{\Omega}({\vto{x}},t)+\tnr{\Omega}_t'(\vto{x})\circ\tnr{\nu}_E(\vto{x},t)
 \end{equation}
