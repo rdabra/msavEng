@@ -451,13 +451,13 @@ for all $\vto{u}\in\tnr{\mathcal{B}}_{t_0}$ and $t\in [t_0,t_f]$. In this contex
 
 COLOCAR A FIGURA 
 
-\noindent For the next type of motion, we define the mapping $\map{\tnr{\zeta}}{\tnr{\overline{\mathcal{B}}}\times\tempo}{\ete{\real}{U^{2}}}$ whose function is described by the rule $\tnr{\zeta}(\overline{\vto{x}},t)=\fua{\nabla\tnr{\chi}_t}{\overline{\vto{x}}}$. From this definition, a motion is said to be \textsb{isochoric}\index{motion!isochoric}\index{isochoric!motion} in a period of time $[t_0,t_f]$ if 
+\noindent For the next type of motion, we define the mapping $\map{\mathit{j}}{\tnr{\overline{\mathcal{B}}}\times\tempo}{\real}$ whose function is described by the rule $\mathit{j}(\overline{\vto{x}},t)=\textnormal{Det}[\fua{\nabla\tnr{\chi}_t}{\overline{\vto{x}}}]$. From this definition, a motion is said to be \textsb{isochoric}\index{motion!isochoric}\index{isochoric!motion} in a period of time $[t_0,t_f]$ if 
 \begin{equation}
-\bar{\partial}_t\textnormal{Det}[\tnr{\zeta}(\overline{\vto{u}},t)] = 0\,,
+\bar{\partial}_t\mathit{j}(\overline{\vto{u}},t) = 0\,,
 \end{equation}
 for all $\overline{\vto{u}} \in \tnr{\overline{\mathcal{B}}}$ and $t\in[t_0,t_f]$. Concerning the left hand side of this condition, it is possible to obtain that
 \begin{equation}\label{eq:derivDeteTensFunc}
-\bar{\partial}_t\textnormal{Det}[\tnr{\zeta}(\overline{\vto{u}},t)] = \textnormal{Det}[\tnr{\zeta}(\overline{\vto{u}},t)]\,\trc{\tnr{M}_{\overline{\vto{u}}}}\,,
+\bar{\partial}_t\mathit{j}(\overline{\vto{u}},t) = \mathit{j}(\overline{\vto{u}},t)\,\trc{\tnr{M}_{\overline{\vto{u}}}}\,,
 \end{equation}
 from which we conclude that $\trc{\tnr{M}_{\overline{\vto{u}}}}=0$ in isochoric motions due to inequality \eqref{eq:detPositive}.
 
