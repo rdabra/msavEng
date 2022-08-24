@@ -146,6 +146,7 @@ Considering this last equality and \eqref{eq:coefAUm}, the following development
 
 \end{proof}}
 
+merda
 
 Considering a mapping $\map{\tnr{\varphi}}{\pmb{\mathcal{U}}_1\times\cdots\times\pmb{\mathcal{U}}_q}{\ete{\cam{F}}{V^{\times s}}}$, where $\pmb{\mathcal{U}}_i\subset\ete{\cam{F}}{U^{\times m}}$ is open and the values of $\tnr{\varphi}$ are represented by the multivariate notation $\fua{\tnr{\varphi}}{\tnr{X}_1,\cdots,\tnr{X}_q}$, if there is a tangent function $\tnr{\varphi_\mathit{d}}$ to $\tnr{\varphi}$ at $(\tnr{Y}_1,\cdots,\tnr{Y}_q)\in\pmb{\mathcal{U}}_1\times\cdots\times\pmb{\mathcal{U}}_q$ where
 \begin{equation*}
@@ -221,9 +222,21 @@ Moreover, the tensor function in $\map{\gloref{gradi}}{\pmb{\mathcal{U}}}{\ete{\
 \begin{equation}\label{eq:derivSameArg}
 \fua{D\tnr{\psi}}{\tnr{X}} = \tnr{X}\odot_m\fua{\nabla\tnr{\psi}}{\tnr{X}}\,.
 \end{equation}
-If tensor function $\tnr{\psi}$ is a differentiable unary tensor operator on $\pmb{\mathcal{U}}$, that is tensor space $\ete{\cam{F}}{U^{\times m}}=\ete{\cam{F}}{V^{\times s}}=\ete{\cam{F}}{U^{m}}$, its gradient assigns to a $m$-th order tensor a $2m$-th order tensor. 
+If tensor function $\tnr{\psi}$ is a differentiable unary tensor operator on $\pmb{\mathcal{U}}$, that is tensor space $\ete{\cam{F}}{U^{\times m}}=\ete{\cam{F}}{V^{\times s}}=\ete{\cam{F}}{U^{m}}$, its gradient assigns to a $m$-th order tensor a $2m$-th order tensor. Considering the conditions of expression \eqref{eq:toOrderZero}, it is valid to write that  
+\begin{equation}\label{eq:orderGrad}
+[[\fua{[\fua{\tnr{\psi}^{(k+1)}}{\tnr{X}}]}{\tnr{H}_{k+1}}](\tnr{H}_k)\cdots](\tnr{H}_{1})=\tnr{H}_1\otimes\cdots\otimes\tnr{H}_{k+1}\odot_{(k+1)m}\fua{\nabla^{(k+1)}\tnr{\psi}}{\tnr{X}}\,,
+\end{equation}
+where $\nabla^{k+1}\tnr{\varphi}$ is the gradient of $\tnr{\varphi}$ of order $(k+1)$. Similarly, from the conditions of \eqref{eq:partialDerivative}, which defines partial derivatives, we write 
+\begin{equation}\label{eq:partialGrad}
+[\fua{\partial_{\tnr{X}_r}\tnr{\varphi}}{\tnr{X}_1,\cdots,\tnr{X}_q}]{(\tnr{H}_r)}=\tnr{H}_r\odot_m\fua{\nabla_{\tnr{X}_r}\tnr{\varphi}}{\tnr{X}_1,\cdots,\tnr{X}_q}\,,
+\end{equation}
+where $\nabla_{\tnr{X}_r}\tnr{\varphi}$ is the gradient of $\tnr{\varphi}$ with respect to $\tnr{X}_r$. Therefore, if $\tnr{\varphi}$ is bivariate and  differentiable of order two, from both expressions above, we also write
+\begin{equation}
+[[\fua{\partial_{\tnr{X}_1}\partial_{\tnr{X}_2}\tnr{\varphi}}{\tnr{X}_1,\tnr{X}_2}]{(\tnr{H}_2)}](\tnr{H}_1)=\tnr{H}_1\otimes\tnr{H}_2\odot_{2m}\fua{\nabla^{(2)}_{\tnr{X}_1\tnr{X}_2}\tnr{\varphi}}{\tnr{X}_1,\tnr{X}_2}\,.
+\end{equation}
 
- For the particular case of $m=s=1$, tensor spaces $\ete{\cam{F}}{U}=U^*_\cam{F}$ and $\ete{\cam{F}}{V}=V^*_\cam{F}$, gradient $\fua{\nabla\tnr{\psi}}{\vto{x}_0^*}\in\ete{\cam{R}}{U\times V}$ and derivative $\fua{\tnr{\psi}'}{\vto{x}_0^*}\in\evlc{\cam{F}}{\pmb{\mathcal{U}}}{V^*_\cam{F}}$, expression \eqref{eq:defGradient} turns out to be
+
+For the particular case of $m=s=1$, tensor spaces $\ete{\cam{F}}{U}=U^*_\cam{F}$ and $\ete{\cam{F}}{V}=V^*_\cam{F}$, gradient $\fua{\nabla\tnr{\psi}}{\vto{x}_0^*}\in\ete{\cam{R}}{U\times V}$ and derivative $\fua{\tnr{\psi}'}{\vto{x}_0^*}\in\evlc{\cam{F}}{\pmb{\mathcal{U}}}{V^*_\cam{F}}$, expression \eqref{eq:defGradient} turns out to be
 \begin{equation}\label{eq:defGradient2}
 [\fua{\tnr{\psi}'}{\vto{x}_0^*}](\vto{x}^*) = \vto{x}^*\odot_1\fua{\nabla\tnr{\psi}}{\vto{x}_0^*}\,.
 \end{equation}
@@ -315,7 +328,7 @@ From the properties of derivatives presented on previous section, it is then pos
 	\begin{equation}\label{eq:gradDiffeo2}
 	\fua{\nabla\tnr{\hat\psi}^{-1}\circ\tnr{\hat\psi}}{\vto{x}}=\fua{\nabla\tnr{\hat\psi}}{\vto{x}}^{-1};
 	\end{equation}
-	\item[viii.] If $\fua{\tnr{\hat\psi}}{\vto{x}}=\fua{\tnr{\hat\psi}_1}{\vto{x}}\times\fua{\tnr{\hat\psi}_2}{\vto{x}}$, where $U_\real$ in mappings  $\map{\tnr{\hat\psi}_1}{{\mathcal{U}}}{U_\cam{R}}$ and $\map{\tnr{\hat\psi}_2}{{\mathcal{U}}}{U_\cam{R}}$ is properly defined for enabling cross products, 
+	\item[viii.] If $\fua{\tnr{\hat\psi}}{\vto{x}}=\fua{\tnr{\hat\psi}_1}{\vto{x}}\times\fua{\tnr{\hat\psi}_2}{\vto{x}}$, where mappings  $\map{\tnr{\hat\psi}_1}{{\mathcal{U}}}{U_\cam{R}}$ and $\map{\tnr{\hat\psi}_2}{{\mathcal{U}}}{U_\cam{R}}$ are properly defined to enabling cross products, 
 \begin{equation}\label{eq:crossRule}
 \fua{\tnr{\hat\psi}'(\vto{x})}{\vto{h}} = \fua{\tnr{\hat\psi}_1}{\vto{x}}\times\fua{{\tnr{\hat\psi}_2'}_{\vto{x}}}{\vto{h}} + \fua{{\tnr{\hat\psi}_1'}_{\vto{x}}}{\vto{h}} \times \fua{\tnr{\hat\psi}_2}{\vto{x}}\,,\,\forall \vto{h}\in\mathcal{U}\,,
 \end{equation}
@@ -323,7 +336,14 @@ and then
 	\begin{equation}\label{eq:prop3Grad}
 	\fua{D\tnr{\hat\psi}}{\vto{x}} = \fua{\tnr{\hat\psi}_1}{\vto{x}}\times\fua{D\tnr{\hat\psi}_2}{\vto{x}}+\fua{D\tnr{\hat\psi}_1}{\vto{x}}\times\fua{\tnr{\hat\psi}_2}{\vto{x}}\,.
 	\end{equation}
+	\item[ix.] If the function in $\map{\tnr{\hat{\varphi}}}{\pmb{\mathcal{U}}_1\times\pmb{\mathcal{U}}_2}{V_\cam{F}}$, where $\pmb{\mathcal{U}}_i\subset U_\cam{F}$, is $\mathcal{C}^2$ then
+\begin{equation}
+\nabla_{\vto{x}_1}\tnr{\varphi}
+\end{equation}
+
 \end{itemize}
+
+merda
 
 {\footnotesize
 \begin{proof}
