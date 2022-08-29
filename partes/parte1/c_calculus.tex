@@ -146,7 +146,7 @@ Considering this last equality and \eqref{eq:coefAUm}, the following development
 
 \end{proof}}
 
-merda
+
 
 Considering a mapping $\map{\tnr{\varphi}}{\pmb{\mathcal{U}}_1\times\cdots\times\pmb{\mathcal{U}}_q}{\ete{\cam{F}}{V^{\times s}}}$, where $\pmb{\mathcal{U}}_i\subset\ete{\cam{F}}{U^{\times m}}$ is open and the values of $\tnr{\varphi}$ are represented by the multivariate notation $\fua{\tnr{\varphi}}{\tnr{X}_1,\cdots,\tnr{X}_q}$, if there is a tangent function $\tnr{\varphi_\mathit{d}}$ to $\tnr{\varphi}$ at $(\tnr{Y}_1,\cdots,\tnr{Y}_q)\in\pmb{\mathcal{U}}_1\times\cdots\times\pmb{\mathcal{U}}_q$ where
 \begin{equation*}
@@ -160,7 +160,11 @@ where $\tnr{H}_i\in\pmb{\mathcal{U}}_i$ is an arbitrary direction. When the stra
 \begin{equation}\label{eq:partialDerivative}
 [\fua{\partial_{\tnr{X}_r}\tnr{\varphi}}{\tnr{X}_1,\cdots,\tnr{X}_q}]{(\tnr{H}_r)}=\lim_{\alpha\to 0} \dfrac{\fua{\tnr{\varphi}}{\tnr{X}_1,\cdots,\tnr{X}_r+\alpha\tnr{H}_r,\cdots,\tnr{X}_q}-\fua{\tnr{\varphi}}{\tnr{X}_1,\cdots,\tnr{X}_q}}{\alpha}\,.
 \end{equation}
-From the above conditions, the property 
+In the particular case of $\tnr{H}_r=\tnr{X}_r$, we have 
+\begin{equation}\label{eq:derivDPartial}
+\fua{D_{\tnr{X}_r}\tnr{\varphi}}{\tnr{X}_1,\cdots,\tnr{X}_q}:=[\fua{\partial_{\tnr{X}_r}\tnr{\varphi}}{\tnr{X}_1,\cdots,\tnr{X}_q}]{(\tnr{X}_r)}\,.
+\end{equation}
+From the conditions presented so far, the property 
 \begin{equation}
 \fua{[\fua{\tnr{\varphi}'}{\tnr{X}_1,\cdots,\tnr{X}_q}]}{\tnr{H}_1,\cdots,\tnr{H}_q}=\sum_{i=1}^{q}[\fua{\partial_{\tnr{X}_i}\tnr{\varphi}}{\tnr{X}_1,\cdots,\tnr{X}_q}]{(\tnr{H}_i)}\,
 \end{equation}
@@ -196,13 +200,29 @@ where
 \begin{equation*}
 \map{\tnr{\psi}^{(k+1)}}{\pmb{\mathcal{U}}}{{\evlc{\cam{F}}{\pmb{\mathcal{U}}_{k+1}}{\evlc{\cam{F}}{\pmb{\mathcal{U}}_k}{\cdots\evlc{\cam{F}}{\pmb{\mathcal{U}}_{1}}{\ete{\cam{F}}{V^{\times s}}}}}}}
 \end{equation*}
-and $\pmb{\mathcal{U}}_i=\pmb{\mathcal{U}}$. In this case, we also define $\fua{D^{k+1}\tnr{\psi}}{\tnr{X}_0}=[\fua{\tnr{\psi}^{(k+1)}}{\tnr{X}_0}](\tnr{X}_0)$. By a similar development we performed for one order derivative, rule \eqref{eq:tangentOrderK1} leads to equality
+and $\pmb{\mathcal{U}}_i=\pmb{\mathcal{U}}$. By a similar development we performed for one order derivative, rule \eqref{eq:tangentOrderK1} leads to equality
 \begin{equation}\label{eq:directDerivK1}
 \fua{[\fua{\tnr{\psi}^{(k+1)}}{\tnr{X}}]}{\tnr{H}}=\lim_{\alpha\to 0} \dfrac{\fua{\tnr{\psi}^{(k)}}{\tnr{X}+\alpha\tnr{H}}-\fua{\tnr{\psi}^{(k)}}{\tnr{X}}}{\alpha}\,,
 \end{equation}
 which is the $k+1$ order directional derivative of $\tnr{\psi}$ along $\tnr{H}\in\pmb{\mathcal{U}}$. From previous equality, if $k>0$ the directional derivative of order $k+1$ along a given tensor is always a function and then by choosing arbitrary tensors $\tnr{H}_1,\cdots,\tnr{H}_{k+1}\in\pmb{\mathcal{U}}$, we conclude that
 \begin{equation}\label{eq:toOrderZero}
 [[\fua{[\fua{\tnr{\psi}^{(k+1)}}{\tnr{X}}]}{\tnr{H}_{k+1}}](\tnr{H}_k)\cdots](\tnr{H}_{1})\in\ete{\cam{F}}{V^{\times s}}\,.
+\end{equation}
+In this sense, when $\tnr{H}_i=\tnr{X}$, tensor 
+\begin{equation}
+D^{(k+1)}\fua{\tnr{\psi}}{\tnr{X}}:=[[\fua{[\fua{\tnr{\psi}^{(k+1)}}{\tnr{X}}]}{\tnr{X}}](\tnr{X})\cdots](\tnr{X})\,.
+\end{equation}
+Considering the conditions of \eqref{eq:derivDPartial}, if multivariate function $\tnr{\varphi}$ is differentiable of order $q$, we specify
+\begin{equation}
+\partial_{\tnr{X}_q,\cdots,\tnr{X}_1}\fua{\tnr{\varphi}}{\tnr{X}_1,\cdots,\tnr{X}_q}:=\partial_{\tnr{X}_q}\cdots\partial_{\tnr{X}_1}\fua{\tnr{\varphi}}{\tnr{X}_1,\cdots,\tnr{X}_q}
+\end{equation}
+and 
+\begin{equation}
+D_{\tnr{X}_q,\cdots,\tnr{X}_1}\fua{\tnr{\varphi}}{\tnr{X}_1,\cdots,\tnr{X}_q}:=D_{\tnr{X}_q}\cdots D_{\tnr{X}_1}\fua{\tnr{\varphi}}{\tnr{X}_1,\cdots,\tnr{X}_q}\,.
+\end{equation}
+Therefore,
+\begin{equation}
+D_{\tnr{X}_q,\cdots,\tnr{X}_1}\fua{\tnr{\varphi}}{\tnr{X}_1,\cdots,\tnr{X}_q}=[[\fua{[\partial_{\tnr{X}_q,\cdots,\tnr{X}_1}\fua{\tnr{\varphi}}{\tnr{X}_1,\cdots,\tnr{X}_q}]}{\tnr{X}_1}](\tnr{X}_{2})\cdots](\tnr{X}_q)\,.
 \end{equation}
 
 Now, let's restrict our attention to continuous tensor functions, that is, to elements of function space $\evc{\cam{F}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}$ in this present case, when they are said to be of \textsb{differentiability class}\index{differentiability class} $\mathcal{C}^0$. Function $\tnr{\psi}$ is of class $\mathcal{C}^1$ or \textsb{continuously differentiable}\index{function!continuously differentiable} if it is of class $\mathcal{C}^0$ and differentiable of order one, with derivative $\tnr{\psi}^{'}$ also of differentiability class $\mathcal{C}^0$. In general terms, $\tnr{\psi}$ is of class $\mathcal{C}^{k+1}$ if it is of class $\mathcal{C}^{k}$ and differentiable of order $k+1$, with $\tnr{\psi}^{(k+1)}$ of class $\mathcal{C}^k$. Stating that function $\tnr{\psi}$ is of class $\mathcal{C}^{k+1}$ is equal to stating that $\tnr{\psi}$ is \textsb{smooth}\index{function!smooth} of order $k+1$ and for the case where $\tnr{\psi}$ is smooth of any order, we say that it is of class $\mathcal{C}^\infty$ or simply call it smooth. A differentiable tensor function is called a \textsb{diffeomorphism}\index{diffeomorphism} if it is a bijection and its inverse is also differentiable. When a diffeomorphism is smooth of order $k+1$, it is called a $\mathcal{C}^{k+1}$-diffeomorphism.
@@ -222,18 +242,11 @@ Moreover, the tensor function in $\map{\gloref{gradi}}{\pmb{\mathcal{U}}}{\ete{\
 \begin{equation}\label{eq:derivSameArg}
 \fua{D\tnr{\psi}}{\tnr{X}} = \tnr{X}\odot_m\fua{\nabla\tnr{\psi}}{\tnr{X}}\,.
 \end{equation}
-If tensor function $\tnr{\psi}$ is a differentiable unary tensor operator on $\pmb{\mathcal{U}}$, that is tensor space $\ete{\cam{F}}{U^{\times m}}=\ete{\cam{F}}{V^{\times s}}=\ete{\cam{F}}{U^{m}}$, its gradient assigns to a $m$-th order tensor a $2m$-th order tensor. Considering the conditions of expression \eqref{eq:toOrderZero}, it is valid to write that  
-\begin{equation}\label{eq:orderGrad}
-[[\fua{[\fua{\tnr{\psi}^{(k+1)}}{\tnr{X}}]}{\tnr{H}_{k+1}}](\tnr{H}_k)\cdots](\tnr{H}_{1})=\tnr{H}_1\otimes\cdots\otimes\tnr{H}_{k+1}\odot_{(k+1)m}\fua{\nabla^{(k+1)}\tnr{\psi}}{\tnr{X}}\,,
-\end{equation}
-where $\nabla^{k+1}\tnr{\varphi}$ is the gradient of $\tnr{\varphi}$ of order $(k+1)$. Similarly, from the conditions of \eqref{eq:partialDerivative}, which defines partial derivatives, we write 
+If tensor function $\tnr{\psi}$ is a differentiable unary tensor operator on $\pmb{\mathcal{U}}$, that is tensor space $\ete{\cam{F}}{U^{\times m}}=\ete{\cam{F}}{V^{\times s}}=\ete{\cam{F}}{U^{m}}$, its gradient assigns to a $m$-th order tensor a $2m$-th order tensor. Considering the conditions of expression \eqref{eq:partialDerivative}, which defines partial derivatives, we write 
 \begin{equation}\label{eq:partialGrad}
 [\fua{\partial_{\tnr{X}_r}\tnr{\varphi}}{\tnr{X}_1,\cdots,\tnr{X}_q}]{(\tnr{H}_r)}=\tnr{H}_r\odot_m\fua{\nabla_{\tnr{X}_r}\tnr{\varphi}}{\tnr{X}_1,\cdots,\tnr{X}_q}\,,
 \end{equation}
-where $\nabla_{\tnr{X}_r}\tnr{\varphi}$ is the gradient of $\tnr{\varphi}$ with respect to $\tnr{X}_r$. Therefore, if $\tnr{\varphi}$ is bivariate and  differentiable of order two, from both expressions above, we also write
-\begin{equation}
-[[\fua{\partial_{\tnr{X}_1}\partial_{\tnr{X}_2}\tnr{\varphi}}{\tnr{X}_1,\tnr{X}_2}]{(\tnr{H}_2)}](\tnr{H}_1)=\tnr{H}_1\otimes\tnr{H}_2\odot_{2m}\fua{\nabla^{(2)}_{\tnr{X}_1\tnr{X}_2}\tnr{\varphi}}{\tnr{X}_1,\tnr{X}_2}\,.
-\end{equation}
+where $\nabla_{\tnr{X}_r}\tnr{\varphi}$ is the gradient of $\tnr{\varphi}$ with respect to $\tnr{X}_r$. 
 
 
 For the particular case of $m=s=1$, tensor spaces $\ete{\cam{F}}{U}=U^*_\cam{F}$ and $\ete{\cam{F}}{V}=V^*_\cam{F}$, gradient $\fua{\nabla\tnr{\psi}}{\vto{x}_0^*}\in\ete{\cam{R}}{U\times V}$ and derivative $\fua{\tnr{\psi}'}{\vto{x}_0^*}\in\evlc{\cam{F}}{\pmb{\mathcal{U}}}{V^*_\cam{F}}$, expression \eqref{eq:defGradient} turns out to be
@@ -336,14 +349,11 @@ and then
 	\begin{equation}\label{eq:prop3Grad}
 	\fua{D\tnr{\hat\psi}}{\vto{x}} = \fua{\tnr{\hat\psi}_1}{\vto{x}}\times\fua{D\tnr{\hat\psi}_2}{\vto{x}}+\fua{D\tnr{\hat\psi}_1}{\vto{x}}\times\fua{\tnr{\hat\psi}_2}{\vto{x}}\,.
 	\end{equation}
-	\item[ix.] If the function in $\map{\tnr{\hat{\varphi}}}{\pmb{\mathcal{U}}_1\times\pmb{\mathcal{U}}_2}{V_\cam{F}}$, where $\pmb{\mathcal{U}}_i\subset U_\cam{F}$, is $\mathcal{C}^2$ then
+	\item[ix.] If the function in $\map{\tnr{\hat{\varphi}}}{{\mathcal{U}}_1\times{\mathcal{U}}_2}{V_\cam{R}}$, where ${\mathcal{U}}_i\subset U_\cam{R}$, is $\mathcal{C}^2$ then
 \begin{equation}
-\nabla_{\vto{x}_1}\tnr{\varphi}
+\nabla_{\vto{x}_1}D_{\vto{x}_2}\tnr{\hat{\varphi}}(\vto{x}_1,\vto{x}_2)=D_{\vto{x}_2}\nabla_{\vto{x}_1}\tnr{\hat{\varphi}}(\vto{x}_1,\vto{x}_2)\,.
 \end{equation}
-
 \end{itemize}
-
-merda
 
 {\footnotesize
 \begin{proof}
