@@ -82,7 +82,7 @@ From previous conditions, it is possible to obtain the following important prope
 		\fua{\tnr{\psi}'}{\tnr{X}}=[\fua{\tnr{\psi}_1'\circ\tnr{\psi}_2}{\tnr{X}}]\circ\fua{\tnr{\psi}_2'}{\tnr{X}}\,;
 	\end{equation}
     \item[v.] \textsb{Product rule}\index{product rule}: if $\fua{\tnr{\psi}}{\tnr{X}}=\fua{\tnr{\psi}_1}{\tnr{X}}\odot_q\fua{\tnr{\psi}_2}{\tnr{X}}$, where mappings  $\map{\tnr{\psi}_1}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times r}\times W^{\times q}}}$ and $\map{\tnr{\psi}_2}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{W^{\times q}\times V^{\times p}}}$ are defined for $s=r+p$, then
-	\begin{equation}
+	\begin{equation}\label{eq:prodRule}
 		\fua{[\fua{\tnr{\psi}'}{\tnr{X}}]}{\tnr{H}}=\fua{\tnr{\psi}_1}{\tnr{X}}\odot_{q}\fua{[\fua{\tnr{\psi}_2'}{\tnr{X}}]}{\tnr{H}} + \fua{[\fua{\tnr{\psi}_1'}{\tnr{X}}]}{\tnr{H}} \odot_{q} \fua{\tnr{\psi}_2}{\tnr{X}}\,;
 	\end{equation}
 	\item[vi.] \textsb{Leibniz's rule}\index{Leibniz's rule}: if function in $\map{\tnr{\psi}}{\pmb{\mathcal{U}}}{\cam{F}}$ is described by $\fua{\tnr{\psi}}{\tnr{X}}=\fua{\tnr{\psi}_1}{\tnr{X}}\cdot\fua{\tnr{\psi}_2}{\tnr{X}}$, where $\map{\tnr{\psi}_1}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}$ and $\map{\tnr{\psi}_2}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}$, then
@@ -94,7 +94,7 @@ From previous conditions, it is possible to obtain the following important prope
 \fua{[\fua{\tnr{\psi}'}{\tnr{X}}]}{\tnr{H}}=\fua{\tnr{\psi}_1}{\tnr{X}}\otimes\fua{[\fua{\tnr{\psi}_2'}{\tnr{X}}]}{\tnr{H}} + \fua{[\fua{\tnr{\psi}_1'}{\tnr{X}}]}{\tnr{H}} \otimes \fua{\tnr{\psi}_2}{\tnr{X}}\,;
 \end{equation}
 \item[viii.] If $\fua{\tnr{\psi}}{\tnr{X}}=\hdet{\tnr{X}}$, where $\map{\tnr{\psi}}{\pmb{\mathcal{U}}}{\cam{F}}$ and domain $\pmb{\mathcal{U}}\subset\ete{\cam{F}}{U^2}$ is constituted by tensors whose representative functions are invertible, then
-\begin{equation}
+\begin{equation}\label{eq:derivDete}
 \fua{[\fua{\tnr{\psi}'}{\tnr{X}}]}{\tnr{H}}=\hdet{\tnr{X}}\trc{\tnr{X}^{-1}\odot_1\tnr{H}}\,;
 \end{equation}
 \end{itemize}
@@ -225,7 +225,7 @@ Therefore,
 D_{\tnr{X}_q,\cdots,\tnr{X}_1}\fua{\tnr{\varphi}}{\tnr{X}_1,\cdots,\tnr{X}_q}=[[\fua{[\partial_{\tnr{X}_q,\cdots,\tnr{X}_1}\fua{\tnr{\varphi}}{\tnr{X}_1,\cdots,\tnr{X}_q}]}{\tnr{X}_1}](\tnr{X}_{2})\cdots](\tnr{X}_q)\,.
 \end{equation}
 
-Now, let's restrict our attention to continuous tensor functions, that is, to elements of function space $\evc{\cam{F}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}$ in this present case, when they are said to be of \textsb{differentiability class}\index{differentiability class} $\mathcal{C}^0$. Function $\tnr{\psi}$ is of class $\mathcal{C}^1$ or \textsb{continuously differentiable}\index{function!continuously differentiable} if it is of class $\mathcal{C}^0$ and differentiable of order one, with derivative $\tnr{\psi}^{'}$ also of differentiability class $\mathcal{C}^0$. In general terms, $\tnr{\psi}$ is of class $\mathcal{C}^{k+1}$ if it is of class $\mathcal{C}^{k}$ and differentiable of order $k+1$, with $\tnr{\psi}^{(k+1)}$ of class $\mathcal{C}^k$. Stating that function $\tnr{\psi}$ is of class $\mathcal{C}^{k+1}$ is equal to stating that $\tnr{\psi}$ is \textsb{smooth}\index{function!smooth} of order $k+1$ and for the case where $\tnr{\psi}$ is smooth of any order, we say that it is of class $\mathcal{C}^\infty$ or simply call it smooth. A differentiable tensor function is called a \textsb{diffeomorphism}\index{diffeomorphism} if it is a bijection and its inverse is also differentiable. When a diffeomorphism is smooth of order $k+1$, it is called a $\mathcal{C}^{k+1}$-diffeomorphism.
+Now, let's restrict our attention to continuous tensor functions, that is, to elements of function space $\evc{\cam{F}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}$ in this present case, when they are said to be of \textsb{differentiability class}\index{differentiability class} $\mathcal{C}^0$. Function $\tnr{\psi}$ is of class $\mathcal{C}^1$ or \textsb{continuously differentiable}\index{function!continuously differentiable} if it is of class $\mathcal{C}^0$ and differentiable of order one, with derivative $\tnr{\psi}^{'}$ also of differentiability class $\mathcal{C}^0$. In general terms, $\tnr{\psi}$ is of class $\mathcal{C}^{k+1}$ if it is of class $\mathcal{C}^{k}$ and differentiable of order $k+1$, with $\tnr{\psi}^{(k+1)}$ of class $\mathcal{C}^k$. Stating that function $\tnr{\psi}$ is of class $\mathcal{C}^{k+1}$ is equal to stating that $\tnr{\psi}$ is \textsb{smooth}\index{function!smooth} of order $k+1$ and for the case where $\tnr{\psi}$ is smooth of any order, we say that it is of class $\mathcal{C}^\infty$ or simply call it smooth. A differentiable tensor function is called a \textsb{diffeomorphism}\index{diffeomorphism} if it is a bijection and its inverse is also differentiable. When a diffeomorphism is smooth of order $k+1$, it is called a $\mathcal{C}^{k+1}$-diffeomorphism. For the case of the multivariate tensor function in $\map{\tnr{\varphi}}{\pmb{\mathcal{U}}_1\times\cdots\times\pmb{\mathcal{U}}_q}{\ete{\cam{F}}{V^{\times s}}}$, a given level of smoothness must be presented on each open set $\pmb{\mathcal{U}}_i$. In other words, $\tnr{\varphi}$ is said to be continuous if it is continuous on each $\pmb{\mathcal{U}}_i$, being classified as $\mathcal{C}^0$. Thereby, it is of class $\mathcal{C}^1$ or continuously differentiable if it is $\mathcal{C}^0$ and all of its $q$ partial derivatives are continuous; it is $\mathcal{C}^2$ if it is a $\mathcal{C}^1$ function and its $q^2$ second order partial derivatives are continuous; and so on.    
 
 
 
@@ -385,8 +385,18 @@ and then by adding and subtracting the limit on the right hand side by $\tnr{A}_
 \begin{equation*}
 \fua{\tnr{\hat\psi}'(\vto{x})}{\vto{h}}= \tnr{A}_B\odot_{2}[\fua{\tnr{\hat\psi}_1}{\vto{x}}\otimes\fua{{\tnr{\hat\psi}_2'}_{\vto{x}}}{\vto{h}}]+\tnr{A}_B\odot_{2}\fua{{\tnr{\hat\psi}_1'}_{\vto{x}}}{\vto{h}} \otimes \fua{\tnr{\hat\psi}_2}{\vto{x}}]\,,
 \end{equation*}
-from which we easily verify the first equality of viii. By definition \eqref{eq:derivSameArg2}, proof of the second equality is straightforward. 
+from which we easily verify the first equality of viii. By definition \eqref{eq:derivSameArg2}, proof of \eqref{eq:prop3Grad} is straightforward. Now, we prove item ix. From \eqref{eq:prodRule}, \eqref{eq:derivDPartial} and \eqref{eq:derivSameArg2}, we can write that
+\begin{equation*}
+D_{\vto{x}_1}D_{\vto{x}_2}\tnr{\hat{\varphi}}(\vto{x}_1,\vto{x}_2) = \vto{x}_1^*\hat{\odot}_1\fua{ \nabla_{\vto{x}_1}D_{\vto{x}_2}\tnr{\hat{\varphi}}}{\vto{x}_1,\vto{x}_2}
+\end{equation*}
+and 
+\begin{equation*}
+D_{\vto{x}_2}D_{\vto{x}_1}\tnr{\hat{\varphi}}(\vto{x}_1,\vto{x}_2) = \vto{x}_1^*\hat{\odot}_1\fua{ D_{\vto{x}_2}\nabla_{\vto{x}_1}\tnr{\hat{\varphi}}}{\vto{x}_1,\vto{x}_2}\,.
+\end{equation*}
+The item is proved by both of these equalities and the so called Theorem of Schwarz or Clairaut's theorem, which states that second derivatives of $\mathcal{C}^2$ functions are symmetric or commute (See \aut{Lang}\cite{lang_1993_3}, Theorem 7.3), that is, $D_{\vto{x}_1}D_{\vto{x}_2}\tnr{\hat{\varphi}}(\vto{x}_1,\vto{x}_2)=D_{\vto{x}_2}D_{\vto{x}_1}\tnr{\hat{\varphi}}(\vto{x}_1,\vto{x}_2)$.
 \end{proof}}
+
+
 
 Still in the context of Hilbert spaces, we define from the concept of gradient three important and very useful tensor functions, namely divergence, Laplacian and curl. Considering the mapping $\map{\tnr{\varphi}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{U^{\times m}\times V^{\times s}}}$ where function $\tnr{\varphi}$ is differentiable on its domain, the function in $\map{\gloref{diverg}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}$ is called the \textsb{divergence}\index{divergence} of $\tnr{\varphi}$ if its rule is described by
 \begin{equation}\label{eq:divergence}

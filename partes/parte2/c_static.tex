@@ -64,7 +64,7 @@ Considering the previous regularity conditions and an open set $\pmb{\mathcal{W}
 \begin{equation}
 \fua{(\tnr{\chi}_t)'_{\overline{\vto{u}}}}{\vto{x}}= \fua{ \nabla\tnr{\chi}_t}{\overline{\vto{u}}}^{\text{T}}\hat{\odot}_1\vto{x}^*\,,
 \end{equation}
-where the function in $\map{\nabla\tnr{\chi}_t}{\pmb{\mathcal{W}}}{\ete{\real}{U^{2}}}$, called \textsb{deformation gradient}\index{deformation!gradient}, has fundamental importance in Continuum Kinematics because it bases the concept of strain. The second order tensor $\fua{ \nabla\tnr{\chi}_t}{\overline{\vto{u}}}$ is said to be the deformation gradient at $\overline{\vto{u}}$ and, since deformation $\tnr{\chi}_t$ is a diffeomorphism, we can recall property \eqref{eq:gradDiffeo2}, from which tensor
+where the function in $\map{\nabla\tnr{\chi}_t}{\pmb{\mathcal{W}}}{\ete{\real}{U^{2}}}$, called \textsb{deformation gradient}\index{deformation!gradient}, has fundamental importance in Continuum Kinematics because it bases the concept of strain. The second order tensor $\fua{ \nabla\tnr{\chi}_t}{\overline{\vto{u}}}=\fua{ \nabla_{\overline{\vto{u}}}\,\tnr{\chi}}{\overline{\vto{u}},t}$ is said to be the deformation gradient at $\overline{\vto{u}}$ and, since deformation $\tnr{\chi}_t$ is a diffeomorphism, we can recall property \eqref{eq:gradDiffeo2}, from which tensor
 \begin{equation}\label{eq:invGradDef}
 \fua{\nabla\tnr{\chi}_t}{\overline{\vto{u}}}^{-1} = \fua{\nabla\tnr{\chi}_t^{-1}}{\vto{u}}\,.
 \end{equation}
@@ -452,22 +452,10 @@ for all $\vto{u}\in\tnr{\mathcal{B}}_{t_0}$ and $t\in [t_0,t_f]$. In this contex
 COLOCAR A FIGURA 
 
 \noindent For the next type of motion, we define the mapping $\map{\mathit{j}}{\tnr{\overline{\mathcal{B}}}\times\tempo}{\real}$ whose function is described by the rule $\mathit{j}(\overline{\vto{x}},t)=\textnormal{Det}[\fua{\nabla\tnr{\chi}_t}{\overline{\vto{x}}}]$. From this definition, a motion is said to be \textsb{isochoric}\index{motion!isochoric}\index{isochoric!motion} in a period of time $[t_0,t_f]$ if 
-\begin{equation}
+\begin{equation}\label{eq:isochoricMotion}
 \bar{\partial}_t\mathit{j}(\overline{\vto{u}},t) = 0\,,
 \end{equation}
-for all $\overline{\vto{u}} \in \tnr{\overline{\mathcal{B}}}$ and $t\in[t_0,t_f]$. Concerning the left hand side of this condition, it is possible to obtain that
-\begin{equation}\label{eq:derivDeteTensFunc}
-\bar{\partial}_t\mathit{j}(\overline{\vto{u}},t) = \mathit{j}(\overline{\vto{u}},t)\,\trc{\tnr{M}_{\overline{\vto{u}}}}\,,
-\end{equation}
-from which we conclude that $\trc{\tnr{M}_{\overline{\vto{u}}}}=0$ in isochoric motions due to inequality \eqref{eq:detPositive}.
-
-{\footnotesize
-\begin{proof}
-We now prove equality \eqref{eq:derivDeteTensFunc}. 
-\end{proof}
-}
-
-
+for all $\overline{\vto{u}} \in \tnr{\overline{\mathcal{B}}}$ and $t\in[t_0,t_f]$. 
 
 Considering  definitions \eqref{eq:eulerVelocityGrad} and \eqref{eq:lagrangVelocityGrad} in the context of affine motions, the following important properties can be obtained:
 \begin{equation}\label{eq:timeDerivGrad}
@@ -496,7 +484,13 @@ is called \textsb{vorticity vector}\index{vorticity!vector}, from which it is po
 \begin{equation}\label{eq:curlVelocities}
 \tnr{\dot{\mathit{w}}}_{{\vto{u}}}=\tilde{\nabla}\times[\tnr{\nu}_t]_E({\vto{u}})=\bar{\nabla}\times\tnr{\nu}_t(\overline{\vto{u}})\,.
 \end{equation}
-If the spin tensor is zero at $\vto{u}$, the vorticity vector is consequently zero at this place, when the motion is said to be \textsb{irrotational}\index{motion!irrotational} or \textsb{non-vortical} at $\vto{u}$. In this context, from the definition of $\tnr{\dot{W}}_{{\vto{u}}}$, it is obvious that the Eulerian velocity gradient $\tnr{L}_{{\vto{u}}}$ results symmetric and therefore no rotation is present since the antisymmetric part of matrix $[\tnr{L}_{{\vto{u}}}]$ is zero. In the case of zero spin tensor at every place $\vto{u}$, then the motion as a whole is called irrotational or non-vortical.
+If the spin tensor is zero at $\vto{u}$, the vorticity vector is consequently zero at this place, when the motion is said to be \textsb{irrotational}\index{motion!irrotational} or \textsb{non-vortical} at $\vto{u}$. In this context, from the definition of $\tnr{\dot{W}}_{{\vto{u}}}$, it is obvious that the Eulerian velocity gradient $\tnr{L}_{{\vto{u}}}$ results symmetric and therefore no rotation is present since the antisymmetric part of matrix $[\tnr{L}_{{\vto{u}}}]$ is zero. In the case of zero spin tensor at every place $\vto{u}$, then the motion as a whole is called irrotational or non-vortical. 
+
+Concerning affine isochoric motions, it is possible to obtain from  the left hand side of \eqref{eq:isochoricMotion} that
+\begin{equation}\label{eq:derivDeteTensFunc}
+\bar{\partial}_t\mathit{j}(\overline{\vto{u}},t) = \mathit{j}(\overline{\vto{u}},t)\,\trc{\tnr{L}_{\tnr{\chi}_t(\overline{\vto{x}})}}\,,
+\end{equation}
+from which we conclude that $\trc{\tnr{L}_{\tnr{\chi}_t(\overline{\vto{x}})}}=0$ in affine isochoric motions due to inequality \eqref{eq:detPositive}.
 
 {\footnotesize
 \begin{proof}
@@ -514,7 +508,7 @@ Now, considering an arbitrary non zero vector $\vto{x}\in U_\real$ and tensor ${
 &=2\vto{x}\cdot\tnr{A}_B\hat{\odot}_2{\tnr{L}}_{{\vto{u}}}^{\text{T}}\\
 &=2\vto{x}\cdot\tilde{\nabla}\times\fua{[\tnr{\nu}_t]_E}{{\vto{u}}}\,.
 \end{align*}
-The second equality of \eqref{eq:curlVelocities} is verified similarly.
+The second equality of \eqref{eq:curlVelocities} is verified similarly. Now, from  \eqref{eq:derivDete} and the first equality of \eqref{eq:timeDerivGrad}, the following development proves equality \eqref{eq:derivDeteTensFunc}. 
 \end{proof}
 }
 
