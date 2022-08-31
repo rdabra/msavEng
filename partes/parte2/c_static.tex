@@ -72,7 +72,7 @@ Now, at reference instant $t=\overline{t}$, we know that $\tnr{\chi}_{\overline{
 \begin{equation}\label{eq:detPositive}
 \textnormal{Det}[\fua{\nabla\tnr{\chi}_t}{\overline{\vto{u}}}]>0
 \end{equation}
-because motion $\tnr{\chi}$ and its derivative are continuous: during a motion where $\overline{t}=t_0$, the local volume change $\textnormal{Det}[\fua{\nabla\tnr{\chi}_{t}}{\overline{\vto{u}}}]$, which is one at $t=t_0$ and different from zero otherwise, cannot ``jump'' zero and be negative. From \eqref{eq:det3D} and this previous inequality, we can conclude that vector function ${\tnr{\chi}'_t}_{\overline{\vto{u}}}$ is orientation-preserving\footnote{About this topic, professor Spivak wrote: ``\emph{The non-singular linear maps $\map{f}{V}{V}$ from a finite dimensional vector space to itself fall into two groups, those with $\det f>0$ and those with $\det f<0$; linear transformations in the first group are called \textsb{orientation preserving} and the others are called \textsb{orientation reversing}...There is no way to pass continuously between these two groups...}'' (\aut{Spivak}\cite{spivak_2005_1}, p. 84)}, a consequence that is used by some authors as a local necessary condition for the vector function $\tnr{\chi}_t$ to be considered a deformation. A deformation  $\tnr{\chi}_t$ where the local volume change
+because motion $\tnr{\chi}$ and its derivative are continuous: during a motion where $\overline{t}=t_0$, the local volume change $\textnormal{Det}[\fua{\nabla\tnr{\chi}_{t}}{\overline{\vto{u}}}]$, which is one at $t=t_0$ and different from zero otherwise, cannot ``jump'' zero and be negative. From \eqref{eq:det3D} and this previous inequality, we can conclude that vector function ${\tnr{\chi}'_t}_{\overline{\vto{u}}}$ is orientation-preserving\footnote{About this topic, professor Michael Spivak wrote: ``\emph{The non-singular linear maps $\map{f}{V}{V}$ from a finite dimensional vector space to itself fall into two groups, those with $\det f>0$ and those with $\det f<0$; linear transformations in the first group are called \textsb{orientation preserving} and the others are called \textsb{orientation reversing}...There is no way to pass continuously between these two groups...}'' (\aut{Spivak}\cite{spivak_2005_1}, p. 84)}, a consequence that is used by some authors as a local necessary condition for the vector function $\tnr{\chi}_t$ to be considered a deformation. A deformation  $\tnr{\chi}_t$ where the local volume change
 \begin{equation}
 \textnormal{Det}[\fua{\nabla\tnr{\chi}_t}{\overline{\vto{u}}}]=1
 \end{equation}
@@ -326,7 +326,7 @@ The functions\footnote{In Continuum Mechanics classical literature, functions li
 \begin{alignat}{3}\label{eq:LagEulDesc} 
 \tnr{\Omega}_L(\overline{\vto{x}},t)=\tnr{\Omega}(\fua{\tnr{\chi}_t}{\overline{\vto{x}}},t)&\qquad \text{and}\qquad & \tnr{\omega}_E(\vto{x},t)=\tnr{\omega}(\fua{\tnr{\chi}_t^\text{-1}}{{\vto{x}}},t)\,,
 \end{alignat}
-commonly called the Lagrangian and Eulerian descriptions of $\tnr{\Omega}$ and $\tnr{\omega}$. In genereal terms, notations \gloref{lagDesc} and \gloref{eulerDesc} can be used on any Eulerian and Lagrangian function. It is then straightforward to conclude that that streak function  is the Eulerian description of the deformation, that is, $\tnr{p}=\tnr{\chi}_E$. Generically, since each of the functions $\tnr{\Omega}$ and $\tnr{\omega}$ can be described by two domains, the differentiation chain rules force us to clearly specify the domain of derivation, namely, whether these functions will be derived on the material or spatial domain. Therefore, derivatives here are called Lagrangian or Eulerian when performed on particles or places respectively. In this context, \emph{it is specified that the time derivative of $\bullet$ is said to be Lagrangian, represented by \gloref{lagTimeDeriv}, or Eulerian, represented by \gloref{eulerTimeDeriv}, when a particle or a place are fixed}. Whenever possible, notations ${\bar{\partial}}_t^k\bullet$ and ${\tilde{\partial}}_t^k\bullet$ define Lagrangian and Eulerian time derivatives of order $k\geqslant 2$, while time derivatives $d\bullet/dt$ and $d^2\bullet/dt^2$ of univariate functions of time are simplified by overdotted symbols \gloref{timeDeriv} and \gloref{timeDerivTwo} respectively. Concerning functions $\tnr{\omega}$ and $\tnr{\Omega}$, we have the Lagrangian time derivatives at particle $\overline{\vto{u}}$
+commonly called the Lagrangian and Eulerian descriptions of $\tnr{\Omega}$ and $\tnr{\omega}$. In genereal terms, notations \gloref{lagDesc} and \gloref{eulerDesc} can be used on any Eulerian and Lagrangian function. It is then straightforward to conclude that that streak function  is the Eulerian description of the deformation, that is, $\tnr{p}=\tnr{\chi}_E$. Generically, since each of the functions $\tnr{\Omega}$ and $\tnr{\omega}$ can be described by two domains, the differentiation chain rules force us to clearly specify the domain of derivation, namely, whether these functions will be derived on the material or spatial domain. Therefore, derivatives here are called Lagrangian or Eulerian when performed on particles or places respectively. In this context, \emph{it is specified that the time derivative of $\bullet$ is said to be Lagrangian, represented by \gloref{lagTimeDeriv}, or Eulerian, represented by \gloref{eulerTimeDeriv}, when respectively a particle or a place are fixed}. Whenever possible, notations ${\bar{\partial}}_t^k\bullet$ and ${\tilde{\partial}}_t^k\bullet$ define Lagrangian and Eulerian time derivatives of order $k\geqslant 2$, while time derivatives $d\bullet/dt$ and $d^2\bullet/dt^2$ of univariate functions of time are simplified by overdotted symbols \gloref{timeDeriv} and \gloref{timeDerivTwo} respectively. Concerning functions $\tnr{\omega}$ and $\tnr{\Omega}$, we have the Lagrangian time derivatives at particle $\overline{\vto{u}}$
 \begin{alignat}{3}\label{eq:LagDesc} 
 \bar{\partial}_t\tnr{\omega}(\overline{\vto{u}},t):=\dfrac{d\,\tnr{\omega}_{\overline{\vto{u}}}}{dt}(t)={\dot{\tnr{\omega}}}_{\overline{\vto{u}}}(t)&\qquad \text{and}\qquad & \bar{\partial}_t\tnr{\Omega}(\vto{u},t):=\tnr{\Omega}'(\fua{\tnr{\chi}_{\overline{\vto{u}}}}{t},t)
 \end{alignat}
@@ -455,7 +455,14 @@ COLOCAR A FIGURA
 \begin{equation}\label{eq:isochoricMotion}
 \bar{\partial}_t\mathit{j}(\overline{\vto{u}},t) = 0\,,
 \end{equation}
-for all $\overline{\vto{u}} \in \tnr{\overline{\mathcal{B}}}$ and $t\in[t_0,t_f]$. 
+for all $\overline{\vto{u}} \in \tnr{\overline{\mathcal{B}}}$ and $t\in[t_0,t_f]$. From the Chain Rule \eqref{eq:chainRule}, derivative \eqref{eq:derivDete} and property \eqref{eq:gradCommute}, the Lagrangian time derivative on the left hand side can be developed as follows:
+\begin{align}
+\bar{\partial}_t\mathit{j}(\overline{\vto{u}},t)&= \bar{\partial}_t\,\textnormal{Det}\circ\fua{\nabla\tnr{\chi}_t}{\overline{\vto{u}}}\nonumber\\
+&=\textnormal{Det}[\fua{\nabla\tnr{\chi}_t}{\overline{\vto{u}}}]\trc{\fua{\nabla\tnr{\chi}_t}{\overline{\vto{u}}}^{-1}\odot_1\bar{\partial}_t\fua{\nabla\tnr{\chi}_t}{\overline{\vto{u}}}}\nonumber\\
+&=\textnormal{Det}[\fua{\nabla\tnr{\chi}_t}{\overline{\vto{u}}}]\trc{\fua{\nabla\tnr{\chi}_t}{\overline{\vto{u}}}^{-1}\odot_1\fua{\nabla_{\overline{\vto{u}}}\bar{\partial}_t\tnr{\chi}}{\overline{\vto{u}},t}}\nonumber\\
+&=\textnormal{Det}[\fua{\nabla\tnr{\chi}_t}{\overline{\vto{u}}}]\trc{\fua{\nabla\tnr{\chi}_t}{\overline{\vto{u}}}^{-1}\odot_1\tnr{M}_{\overline{\vto{u}}}^\text{T}}\,,
+\end{align}
+from which we conclude that in isochoric motions, $\trc{\fua{\nabla\tnr{\chi}_t}{\overline{\vto{u}}}^{-1}\odot_1\tnr{M}_{\overline{\vto{u}}}^\text{T}}=0$ for all $\overline{\vto{u}} \in \tnr{\overline{\mathcal{B}}}$ and $t\in[t_0,t_f]$, due to inequality \eqref{eq:detPositive}.
 
 Considering  definitions \eqref{eq:eulerVelocityGrad} and \eqref{eq:lagrangVelocityGrad} in the context of affine motions, the following important properties can be obtained:
 \begin{equation}\label{eq:timeDerivGrad}
@@ -486,12 +493,6 @@ is called \textsb{vorticity vector}\index{vorticity!vector}, from which it is po
 \end{equation}
 If the spin tensor is zero at $\vto{u}$, the vorticity vector is consequently zero at this place, when the motion is said to be \textsb{irrotational}\index{motion!irrotational} or \textsb{non-vortical} at $\vto{u}$. In this context, from the definition of $\tnr{\dot{W}}_{{\vto{u}}}$, it is obvious that the Eulerian velocity gradient $\tnr{L}_{{\vto{u}}}$ results symmetric and therefore no rotation is present since the antisymmetric part of matrix $[\tnr{L}_{{\vto{u}}}]$ is zero. In the case of zero spin tensor at every place $\vto{u}$, then the motion as a whole is called irrotational or non-vortical. 
 
-Concerning affine isochoric motions, it is possible to obtain from  the left hand side of \eqref{eq:isochoricMotion} that
-\begin{equation}\label{eq:derivDeteTensFunc}
-\bar{\partial}_t\mathit{j}(\overline{\vto{u}},t) = \mathit{j}(\overline{\vto{u}},t)\,\trc{\tnr{L}_{\tnr{\chi}_t(\overline{\vto{x}})}}\,,
-\end{equation}
-from which we conclude that $\trc{\tnr{L}_{\tnr{\chi}_t(\overline{\vto{x}})}}=0$ in affine isochoric motions due to inequality \eqref{eq:detPositive}.
-
 {\footnotesize
 \begin{proof}
 The following development proves only the first of equalities \eqref{eq:timeDerivGrad} because the second is similarly verified. Making $\tnr{\Omega}=\tnr{\nu}_E$ in property \eqref{eq:gradRelFuncs}, 
@@ -508,8 +509,8 @@ Now, considering an arbitrary non zero vector $\vto{x}\in U_\real$ and tensor ${
 &=2\vto{x}\cdot\tnr{A}_B\hat{\odot}_2{\tnr{L}}_{{\vto{u}}}^{\text{T}}\\
 &=2\vto{x}\cdot\tilde{\nabla}\times\fua{[\tnr{\nu}_t]_E}{{\vto{u}}}\,.
 \end{align*}
-The second equality of \eqref{eq:curlVelocities} is verified similarly. Now, from  \eqref{eq:derivDete} and the first equality of \eqref{eq:timeDerivGrad}, the following development proves equality \eqref{eq:derivDeteTensFunc}. 
+The second equality of \eqref{eq:curlVelocities} is verified similarly.
 \end{proof}
 }
 
-
+For the case of affine isochoric motions, it is valid to write that $\trc{\tnr{F}_{\overline{\vto{u}}}^{-T}\odot_1\tnr{M}_{\overline{\vto{u}}}^{\text{T}}}=0$ for all $\overline{\vto{u}} \in \tnr{\overline{\mathcal{B}}}$ and $t\in[t_0,t_f]$. From the first equality of \eqref{eq:timeDerivGrad}, we obtain the Lagrangian description $\tnr{L}_{\tnr{\chi}_t(\overline{\vto{u}})}^{\text{T}}=\tnr{F}_{\overline{\vto{u}}}^{-T}\odot_1\tnr{M}_{\overline{\vto{u}}}^{\text{T}}$ and then conclude that, for affine isochoric motions, $\trc{\tnr{L}_{\tnr{\chi}_t(\overline{\vto{u}})}^{\text{T}}}=\trc{\tnr{L}_{\tnr{\chi}_t(\overline{\vto{u}})}}=0$, since the trace is immune to transpositions, according to equality \eqref{eq:calcTraco}.
