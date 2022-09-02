@@ -1,0 +1,37 @@
+#FIG 3.2
+# Created by WinFIG version 7.5
+# METADATA <version>1.0</version>
+Portrait
+Flush left
+Metric
+A4
+100.00
+Single
+-2
+1200 2
+# METADATA <id>48</id>
+2 5 0 0 0 7 50 0 -1 0.000 0 0 0 0 0 5
+	0 C:/myWorks/msavEng/partes/figs/steadySrc.eps
+	 1380 3360 1380 5715 7305 5715 7305 3360 1380 3360
+# METADATA <id>52</id>
+4 0 0 50 0 0 12 0.0000 6 209 1058 2744 4724 $\\tnr{\\nu}$\001
+# METADATA <id>53</id>
+4 0 0 50 0 0 12 0.0000 6 209 2325 5933 4575 $T_{\\overline{\\vto{w}}}$\001
+# METADATA <id>54</id>
+4 0 0 50 0 0 12 0.0000 6 209 1508 2579 5153 $S_{{\\vto{u}}}$\001
+# METADATA <id>57</id>
+4 0 0 50 0 0 12 0.0000 6 209 893 5215 5062 $\\vto{u}$\001
+# METADATA <id>59</id>
+4 0 0 50 0 0 12 0.0000 6 209 1680 4868 3761 $\\tnr{\\chi}_{t_0}$\001
+# METADATA <id>63</id>
+4 0 0 46 0 0 12 0.0000 6 209 2445 6180 3941 $\\tnr{\\mathcal{B}}_{t_0}$\001
+# METADATA <id>69</id>
+4 0 0 50 0 0 12 0.0000 6 209 1995 6481 3625 $(U_\\real,\\tnr{A}_O)$\001
+# METADATA <id>71</id>
+4 0 0 46 0 0 12 0.0000 6 209 2813 2595 3900 $\\tnr{\\overline{\\mathcal{B}}}$\001
+# METADATA <id>81</id>
+4 0 0 50 0 0 12 0.0000 6 209 1635 4377 4901 $\\tnr{\\chi}_{t_f}$\001
+# METADATA <id>83</id>
+4 0 0 50 0 0 12 0.0000 6 209 1058 5362 4740 $\\tnr{\\nu}$\001
+# METADATA <id>85</id>
+4 0 0 50 0 0 12 0.0000 6 209 1898 3047 4197 $\\overline{\\vto{w}}$\001

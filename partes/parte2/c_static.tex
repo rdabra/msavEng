@@ -446,12 +446,16 @@ is the \textsb{Lagrangian velocity gradient}\index{velocity!Lagrangian gradient}
 \begin{alignat}{3} 
 \tilde{\partial}_t\tnr{\nu}_E(\vto{u},t)=\vto{0} &\qquad \text{and}\qquad & \tnr{\mathcal{B}}_t= \tnr{\mathcal{B}}_{t_0}\,,
 \end{alignat}
-for all $\vto{u}\in\tnr{\mathcal{B}}_{t_0}$ and $t\in [t_0,t_f]$. In this context, we can conclude that every streakline $S_{\vto{x}}$ is constituted by particles that have the same velocity and the distinct places of every trajectory $T_{\overline{\vto{x}}}$ constitute a subset of shape $\tnr{\mathcal{B}}_{t_0}$.
+for all $\vto{u}\in\tnr{\mathcal{B}}_{t_0}$ and $t\in [t_0,t_f]$. In this context, we can conclude that every streakline $S_{\vto{u}}$ is constituted by particles that have the same velocity $\tnr{\nu}$ and the distinct places of every trajectory $T_{\overline{\vto{w}}}$ constitute a subset of shape $\tnr{\mathcal{B}}_{t_0}$ as shown schematically in figure \ref{fg:steady}.
+\begin{figure}[!ht]
+\centering
+\begin{center}
+\scalebox{.72}{\input{partes/figs/steady.pstex_t}}
+\end{center}
+\titfigura{Steady motion.}\label{fg:steady}
+\end{figure}
 
-
-COLOCAR A FIGURA 
-
-\noindent For the next type of motion, we define the mapping $\map{\mathit{j}}{\tnr{\overline{\mathcal{B}}}\times\tempo}{\real}$ whose function is described by the rule $\mathit{j}(\overline{\vto{x}},t)=\textnormal{Det}[\fua{\nabla\tnr{\chi}_t}{\overline{\vto{x}}}]$. From this definition, a motion is said to be \textsb{isochoric}\index{motion!isochoric}\index{isochoric!motion} in a period of time $[t_0,t_f]$ if 
+For the next type of motion, we define the mapping $\map{\mathit{j}}{\tnr{\overline{\mathcal{B}}}\times\tempo}{\real}$ whose function is described by the rule $\mathit{j}(\overline{\vto{x}},t)=\textnormal{Det}[\fua{\nabla\tnr{\chi}_t}{\overline{\vto{x}}}]$. From this definition, a motion is said to be \textsb{isochoric}\index{motion!isochoric}\index{isochoric!motion} in a period of time $[t_0,t_f]$ if 
 \begin{equation}\label{eq:isochoricMotion}
 \bar{\partial}_t\mathit{j}(\overline{\vto{u}},t) = 0\,,
 \end{equation}

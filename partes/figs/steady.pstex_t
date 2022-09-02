@@ -1,0 +1,50 @@
+\begin{picture}(0,0)%
+\includegraphics{steady.eps}%
+\end{picture}%
+%
+%  Created by WinFIG version 7.5 
+%  METADATA <version>1.0</version> 
+%
+\setlength{\unitlength}{3947sp}%
+%
+\begingroup\makeatletter\ifx\SetFigFont\undefined%
+\gdef\SetFigFont#1#2#3#4#5{%
+  \reset@font\fontsize{#1}{#2pt}%
+  \fontfamily{#3}\fontseries{#4}\fontshape{#5}%
+  \selectfont}%
+\fi\endgroup%
+\begin{picture}(5925,2355)(1381,-4876)
+%  METADATA <id>52</id> 
+\put(2745,-3885){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\tnr{\nu}$}%
+}}}}
+%  METADATA <id>53</id> 
+\put(5934,-3736){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$T_{\overline{\vto{w}}}$}%
+}}}}
+%  METADATA <id>54</id> 
+\put(2580,-4314){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$S_{{\vto{u}}}$}%
+}}}}
+%  METADATA <id>57</id> 
+\put(5216,-4223){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\vto{u}$}%
+}}}}
+%  METADATA <id>59</id> 
+\put(4869,-2922){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\tnr{\chi}_{t_0}$}%
+}}}}
+%  METADATA <id>85</id> 
+\put(3048,-3358){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\overline{\vto{w}}$}%
+}}}}
+%  METADATA <id>69</id> 
+\put(6482,-2786){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$(U_\real,\tnr{A}_O)$}%
+}}}}
+%  METADATA <id>83</id> 
+\put(5363,-3901){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\tnr{\nu}$}%
+}}}}
+%  METADATA <id>81</id> 
+\put(4378,-4062){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\tnr{\chi}_{t_f}$}%
+}}}}
+%  METADATA <id>63</id> 
+\put(6181,-3102){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\tnr{\mathcal{B}}_{t_0}$}%
+}}}}
+%  METADATA <id>71</id> 
+\put(2596,-3061){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\tnr{\overline{\mathcal{B}}}$}%
+}}}}
+\end{picture}%

@@ -1,0 +1,12 @@
+
+GERANDO FIGURAS A PARTIR DO COREL
+
+
+1. Após desenhar no corel, exportar para EPS com a configuração de "Vizualizar Imagem" setada para tipo = nenhum
+
+2. Importar no winfig a figura colocando como dimensão original
+
+3. Incluir o texto latex no winfig
+
+4. Exportar como pstex e mudar a extensão do arquivo de ps para eps tanto no "PostScript File to be overlaid" quanto na caixa de diálogo
+de geração do EPS. 
