@@ -462,24 +462,25 @@ is the $m$-cotensor of and each $\pmb{\mathcal{U}}_i=\pmb{\mathcal{U}}$ defines 
 
 \section{Integration}\index{integration}
 
-The integration approach we shall deal with in this section relies fundamentally on Lebesgue's theory, which is based on assigning a real number to a set, whatever measure this scalar expresses. The most commom measures related to sets are the physical concept of mass and the geometric concept of size, that is, length, area, volume or \textsb{hypervolume}\index{hypervolume} of respectively one, two, three or $n$ dimensional Hilbert spaces. In generic terms, a measure must obey certain rules that require and lead to new important definitions. In this context, from specific scalar functions with domains called measurable, integrable tensor functions can be defined.
+The integration approach we shall deal with in this section relies fundamentally on Lebesgue's theory, which is based on assigning a real number to a set, whatever measure this scalar expresses. The most commom measures related to sets are the physical concept of mass and the geometric concept of size, that is, length, area, volume or \textsb{hypervolume}\index{hypervolume} of respectively one, two, three or $n$ dimensional Hilbert spaces. In generic terms, a measure must obey certain rules that require and lead to new important definitions. In this context, from specific scalar functions with domains called measurable, integrable tensor functions can be defined.\footnote{The concise Measure Theory of this section is based mainly on the texts of \aut{Halmos}\cite{halmos_1974_1} and \aut{Lang}\cite{lang_1993_3}.}
 
-From the concept of class and its dependent definitions presented on section \ref{sec:Sets}, the double $(M,\css{M})$ is said to be a \textsb{measurable space}\index{space!measurable} when $\sigma$-ring $\css{M}$ is a class of the set $M$; and when this set defines a group or a field we also qualify them with ``measurable''. Now, considering the mapping $\map{\mu}{\css{M}}{\real}$ and an arbitrary disjoint countable class $\{A_1,\cdots,A_n\}\subseteq\css{M}$, set function $\mu$ is called additive if
+From the concept of class and its dependent definitions presented on section \ref{sec:Sets}, the double $(M,\css{M})$ is said to be a \textsb{measurable space}\index{space!measurable} when $\css{M}$ is a $\sigma$-ring and a class of the set $M$. If this set defines a group or a field we also qualify them ``measurable''. Now, considering the mapping $\map{\mu}{\css{M}}{\real}$ and an arbitrary disjoint countable class $\{A_1,\cdots,A_n\}\subseteq\css{M}$, set function $\mu$ is called additive if
 \begin{equation}\label{eq:addMeasure}
 \fua{\mu}{\bigcup_{i=1}^nA_i}=\sum_{{i}=1}^n\fua{\mu}{A_i}\,.
 \end{equation}
-From this definition, it is clear that $\fua{\mu}{\emptyset}=\fua{\mu}{\emptyset\cup\emptyset}=2\fua{\mu}{\emptyset}=0$. For the special case of a mapping $\map{\mu}{\css{C}}{\real^+}$ where $\css{C}$ is a ring, additive nonegative set function $\mu$ is said to be a \textsb{continent}\index{ring!continent} of ring $\css{C}$. But in the case of the $\sigma$-ring $\css{M}$, its continent $\mu$ is called a \textsb{measure}\index{measure} if
+From this definition, it is clear that $\fua{\mu}{\emptyset}=\fua{\mu}{\emptyset\cup\emptyset}=2\fua{\mu}{\emptyset}$, from which we conclude that $\fua{\mu}{\emptyset}=0$. For the special case of a mapping $\map{\mu}{\css{C}}{\real^+}$ where $\css{C}$ is a ring, the additive nonegative set function $\mu$ is said to be a \textsb{continent}\index{ring!continent} of ring $\css{C}$. But in the case of the $\sigma$-ring $\css{M}$, its continent $\mu$ is called a \textsb{measure}\index{measure} if
 \begin{equation}\label{eq:measuSum}
 \fua{\mu}{\bigcup_{i=1}^\infty A_i}=\sum_{{i}=1}^\infty\fua{\mu}{A_i}\,,
 \end{equation}
-for an arbitrary countable class $\{A_1,A_2,\cdots\}\subseteq\css{M}$. Thereby, we call the double constituted by a measurable space and a measure, that is $((M,\css{M}),\mu)$, a \textsb{measure space}\index{space!measure}, which will hereafter be represented by the triple $(M,\css{M},\mu)$.
+for an arbitrary countable class $\{A_1,A_2,\cdots\}\subseteq\css{M}$. Thereby, we call the double constituted by a measurable space and a measure, that is $((M,\css{M}),\mu)$, a \textsb{measure space}\index{space!measure}, which will hereafter be represented by the triple $(M,\css{M},\mu)$.  
 
 
-Given a measurable field $(\real,\css{F})$, the function in $\map{s}{M}{\real}$ is called \textsb{measurable}\index{function!measurable} if, for every element $\con{B}\in\css{F}$, the preimage $\con{R}^{-1}_{\con{B}} \in \css{M}$. Considering a disjoint countable class $\{A_1,\cdots,A_n\}\subseteq\css{M}$ and $\alpha_1,\cdots,\alpha_n\in\real$, where $\css{A}=\{A_1,\cdots,A_n\}$ is called a \textsb{partition}\index{set!partition of} of an arbitrary set $A\in\css{M}$, that is $A=\bigcup_{i=1}^nA_i$, the measurable function in $\map{s_\css{A}}{M}{\real}$ is called \textsb{step}\index{function!step} or \textsb{simple}\index{function!simple} with respect to $\css{A}$ if its rule is described by
+Given a measurable field $(\real,\css{F})$, the function in $\map{s}{M}{\real}$ is called \textsb{measurable}\index{function!measurable} if, for every element $\con{B}\in\css{F}$, the preimage $\con{R}^{-1}_{\con{B}} \in \css{M}$. 
+Now, considering an arbitrary set $A\in\css{M}$, a class $\css{A}=\{A_1,\cdots,A_n\}\subseteq\css{M}$ is called a \textsb{partition}\index{set!partition of} of $A$ if it is disjoint and $A=\bigcup_{i=1}^nA_i$. Given a sequence $\alpha_1,\cdots,\alpha_n\in\real$, the measurable function in $\map{s_\css{A}}{M}{\real}$ is called \textsb{step}\index{function!step} or \textsb{simple}\index{function!simple} with respect to $\css{A}$ if its rule is described by
 \begin{equation}
 \fua{s_\css{A}}{x} = \sum_{i=1}^n\alpha_i\fua{\tnr{1}_{A_i}}{x}\,,
 \end{equation}
-where the function in $\map{\tnr{1}_{A_i}}{A_i}{\real}$ is commonly known as the \textsb{indicator function}\index{function!indicator} of $A_i$, defined by
+where the function in $\map{\tnr{1}_{A_i}}{A_i}{\real}$ is commonly known as the \textsb{indicator} or \textsb{characteristic}\index{function!indicator}\index{function!characteristic} function of $A_i$, defined by
 \begin{equation*}
 \fua{\tnr{1}_{A_i}}{x}=
 \begin{dcases}
@@ -514,15 +515,15 @@ Thereby, from these equalities, scalar
 \end{align*}
 since intersection is distributive on union and $\mu$ is additive according to \eqref{eq:addMeasure}. For integration purposes, this equality enables us to remove the identification of the partition of $A$ from the representation of the function in a step mapping $\map{s}{M}{\real}$, since the integral of $s$ is the same for any partition of arbitrary $A\subseteq M$.
 
-In the set of all measurable functions on $(M,\css{M},\mu)$, let $(S,\varrho)$ be a normed metric space of integrable step functions on $E$ with norm and metric respectively defined by
+In the set of all measurable functions on $(M,\css{M},\mu)$, let $(S,\varrho)$ be a seminormed metric space of integrable step functions on $E$ with seminorm and metric defined by
 \begin{alignat*} {3}
 \|s\|=\int_E |s|&\qquad \text{ and } \qquad&\fua{\varrho}{s_1,s_2}=\|s_1-s_2\|\,,
 \end{alignat*}
-where $|s|(x):=|\fua{s}{x}|$ and $s,s_1,s_2\in S$. In this context, if a Cauchy sequence of integrable step functions $s_1,s_2,\cdots\in S$ exists and converges to the measurable function in $\map{f}{M}{\real}$, we say that $f$ is integrable or Labesgue integrable on $E$ and scalar
+where $|s|(x):=|\fua{s}{x}|$ and $s,s_1,s_2\in S$. Note that in this case $\|\bullet\|$ is obviously a seminorm because $\|s\|=0$ does not necessarily imply $s=0$ . In this context, if a Cauchy sequence of integrable step functions $s_1,s_2,\cdots\in S$ exists and converges to the measurable functional in $\map{f}{M}{\real}$, we say that $f$ is integrable or Labesgue integrable on $E$ and scalar
 \begin{equation}\label{eq:integ}
 \int_E f := \lim_{i\to \infty}\int_E s_i
 \end{equation}
-is the integral or Labesgue integral of $f$ on $E$. It is important to say that if $s_1,s_2,\cdots\in S$ and $t_1,t_2,\cdots\in S$ are convergent Chauchy sequences of integrable step functions, so is sequence $ s_1+t_1, s_2+ t_2,\cdots$. Moreover, if the function in $\map{g}{M}{\real}$ is measurable, 
+is the integral or Labesgue integral of $f$ on $E$. It is important to say that if $s_1,s_2,\cdots\in S$ and $t_1,t_2,\cdots\in S$ are convergent Chauchy sequences of integrable step functions, so is the sequence $ s_1+t_1, s_2+ t_2,\cdots$. Moreover, for arbitrary $\alpha,\beta\in\real$, if the function in $\map{g}{M}{\real}$ is measurable, 
 \begin{equation}\label{eq:cauchySum}
 s_1,s_2,\cdots\to f\,\,\, \wedge\,\,\, t_1,t_2,\cdots\to g \implies \alpha s_1+ \beta t_1, \alpha s_2+ \beta t_2,\cdots\to \alpha f+\beta g\,.
 \end{equation}
@@ -599,11 +600,11 @@ which is equal to result \eqref{eq:a}.
 }\end{proof}
 
 
-Now, our goal is to integrate a broader class of functions other than functionals, namely, tensor functions. Considering $\ete{\real}{U^{\times m}}$ and $\ete{\real}{V^{\times s}}$ Euclidean tensor spaces, let the functional in mapping $\map{f}{\pmb{\mathcal{U}}}{\real}$ be a composition of functions described by $f = \frt{T}\circ\tnr{\psi}$, where domain $\pmb{\mathcal{U}}\subseteq\ete{\real}{U^{\times m}}$, function $\frt{T}$ is the representative tensor functional of an arbitrary tensor $\tnr{T}\in\ete{\real}{V^{\times s}}$, according to equalities \eqref{eq:repTensFunc}, and $\tnr{\psi}$ defines a tensor mapping $\map{\tnr{\psi}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}$. We impose that function $\tnr{\psi}$ is integrable on $\pmb{\mathcal{U}}$ if and only if functional $f$ is integrable on $\pmb{\mathcal{U}}$. If this is the case, by specifying a rule
+Now, our goal is to integrate a broader class of functions other than functionals, namely, tensor functions. Considering $\ete{\real}{U^{\times m}}$ and $\ete{\real}{V^{\times s}}$ Euclidean tensor spaces, let $\map{\tnr{\psi}}{\pmb{\mathcal{U}}}{\ete{\cam{R}}{V^{\times s}}}$ be a tensor mapping, where $\pmb{\mathcal{U}}\subseteq\ete{\real}{U^{\times m}}$, and $\map{f}{\pmb{\mathcal{U}}}{\real}$ a mapping whose functional is described by the rule $f = \frt{T}\circ\tnr{\psi}$, such that function $\frt{T}$ is the representative tensor functional of an arbitrary tensor $\tnr{T}\in\ete{\real}{V^{\times s}}$, according to \eqref{eq:repTensFunc}. We define that function $\tnr{\psi}$ is integrable on $\pmb{\mathcal{U}}$ if and only if functional $f$ is integrable on $\pmb{\mathcal{U}}$. If this is the case, by specifying a rule
 \begin{equation}\label{eq:aga}
 \fua{\tnr{h}}{\tnr{X}} = \int_{\pmb{\mathcal{U}}} \frt{X}\circ\tnr{\psi}\,,
 \end{equation}
-where tensor functional $\tnr{h}\in\eted{\real}{V^{\times s}}$ is linear because of definition \eqref{eq:repTensFunc} and property iv above, there exists a unique tensor $\tnr{H}\in\ete{\real}{V^{\times s}}$ which $\tnr{h}$ is the cotensor of, according to corollary \ref{cor:eqNorm}. In this context, tensor
+where tensor functional $\tnr{h}\in\eted{\real}{V^{\times s}}$ is linear because of property iv above, there exists a unique tensor $\tnr{H}\in\ete{\real}{V^{\times s}}$ which $\tnr{h}$ is the cotensor of, according to corollary \ref{cor:eqNorm}. In this context, tensor
 \begin{equation}
 \int_{\pmb{\mathcal{U}}}\tnr{\psi}:=\tnr{H}
 \end{equation}
@@ -632,7 +633,7 @@ Let $U_\real$ be a $n$-dimensional Euclidean space, $n\geqslant 2\,$, and $\pmb{
 	\setlength\itemsep{.1em}
 	\item[i.] Every element $\widehat{C}_j$ of $\css{C}$ must have a specific shape such that arbitrary vectors 
 \begin{equation*}
-\vto{u},\vto{v}\in\{\vto{x}^*\in\pmb{\mathcal{U}}:\min_{\vto{y}\in \partial\pmb{\mathcal{U}}}\fua{\varrho}{\vto{x},\vto{y}}<\alpha\}\,,
+\vto{u},\vto{v}\in\{\vto{x}\in\pmb{\mathcal{U}}:\min_{\vto{y}\in \partial\pmb{\mathcal{U}}}\fua{\varrho}{\vto{x},\vto{y}}<\alpha\}\,,
 \end{equation*}
 where distance $\fua{\varrho}{\vto{u},\vto{v}}<\alpha$, are also elements of the subset	
 \begin{equation*}
@@ -651,11 +652,11 @@ Considering $\pmb{\mathcal{U}}\subset U_\cam{R}$ a Lipschitz domain, we addition
 \end{equation*}
 where $B=\{\vun{u}_1,\cdots,\vun{u}_n\}$ is an arbitrary orthonormal basis of $U_\real$. Thereby, the function in mapping $\map{\vtf{s}}{U_\cam{R}}{\real}$ where
 \begin{alignat}{3}\label{eq:impliSurf}
-\fua{\vtf{s}}{\vto{v}} = \fua{\vtf{f}_n^B}{\vto{v}} - \fua{\vtf{g}}{\sum_{i=1}^{n-1}\fua{\vtf{f}_i^B}{\vto{v}}\vun{u}_i}=0& \quad\text{and} \quad &\fua{\nabla\vtf{s}}{\vto{v}}\neq 0\,,\,\forall\,\vto{v}\in\partial\pmb{\mathcal{U}}\,,
+\fua{\vtf{s}}{\vto{v}} = \fua{\vtf{f}_n^B}{\vto{v}} - \fua{\vtf{g}}{\sum_{i=1}^{n-1}\fua{\vtf{f}_i^B}{\vto{v}}\vun{u}_i}=0& \quad\text{and} \quad &\fua{\grad{\vtf{s}}}{\vto{v}}\neq 0\,,\,\forall\,\vto{v}\in\partial\pmb{\mathcal{U}}\,,
 \end{alignat}
-is called the \textsb{implicit function}\index{function!implict} of $\partial\pmb{\mathcal{U}}$ and since it is constant, equality $[\fua{\vtf{s}'}{\vto{v}}](\vto{h})=0$ is valid along any direction $\vto{h}\in\partial\pmb{\mathcal{U}}$. Therefore,  from \eqref{eq:defGradient}, we can say that $\vto{h}\cdot\fua{\nabla\vtf{s}}{\vto{v}}=0$ for all $\vto{h}\in\{\viz{\vto{v}}\cap\partial\pmb{\mathcal{U}}\}$, that is, vector $\fua{\nabla\vtf{s}}{\vto{v}}$ is orthogonal to surface $\partial\pmb{\mathcal{U}}$ at arbitrary $\vto{v}\in\partial\pmb{\mathcal{U}}$. From this conclusion, surface $\partial\pmb{\mathcal{U}}$ is called \textsb{orientable}\index{surface!orientable} if it is possible to define a mapping $\map{\vtf{n}}{\partial\pmb{\mathcal{U}}}{U_\cam{R}}$ whose function, called the \textsb{unit normal function}\index{function!unit normal} on $\partial\pmb{\mathcal{U}}$, is described by
+is called the \textsb{implicit function}\index{function!implict} of $\partial\pmb{\mathcal{U}}$ and since it is constant, equality $[\fua{\vtf{s}'}{\vto{v}}](\vto{h})=0$ is valid along any direction $\vto{h}\in\partial\pmb{\mathcal{U}}$. Therefore,  from \eqref{eq:gradScalVectFunc}, we can say that $\vto{h}\cdot\fua{\grad{\vtf{s}}}{\vto{v}}=0$ for all $\vto{h}\in\{\viz{\vto{v}}\cap\partial\pmb{\mathcal{U}}\}$, that is, vector $\fua{\grad{\vtf{s}}}{\vto{v}}$ is orthogonal to surface $\partial\pmb{\mathcal{U}}$ at arbitrary $\vto{v}\in\partial\pmb{\mathcal{U}}$. From this conclusion, surface $\partial\pmb{\mathcal{U}}$ is called \textsb{orientable}\index{surface!orientable} if it is possible to define a mapping $\map{\vtf{n}}{\partial\pmb{\mathcal{U}}}{U_\cam{R}}$ whose function, called the \textsb{unit normal function}\index{function!unit normal} on $\partial\pmb{\mathcal{U}}$, is described by
 \begin{equation}
-\fua{\vtf{n}}{\vto{x}}=\dfrac{\fua{\nabla\vtf{s}}{\vto{x}}}{\|\fua{\nabla\vtf{s}}{\vto{x}}\|}\,.
+\fua{\vtf{n}}{\vto{x}}=\dfrac{\fua{\grad{\vtf{s}}}{\vto{x}}}{\|\fua{\grad{\vtf{s}}}{\vto{x}}\|}\,.
 \end{equation}
 Additionally to $\vtf{n}$, it is true that an implicit function $-\vtf{s}$ leads to a unit normal function $-\vtf{n}$ and when one of these directions $\vtf{n}$ or $-\vtf{n}$ is specified as positive, we say that $\partial\pmb{\mathcal{U}}$ is \textsb{oriented}\index{surface!oriented}. For the purposes of this study, we choose $\vtf{n}$ to orientate the surfaces. In the case of three-dimensional Euclidean spaces, the values of function $\vtf{n}$ are outward unit vectors with respect to the surface and the values of $-\vtf{n}$ are inward unit vectors.
 
@@ -720,7 +721,7 @@ For the next theorem, we first need to define a function that assigns a tangent 
 There are Lipschitz surfaces in three dimensional Euclidean spaces for which it is possible to define a boundary, like elliptic paraboloids for example. In general terms, the intersection of a bounded set $A$ with an open ball centered at an arbitrary element of boundary $\partial A$ is not a subset of the interior of $A$. Considering this idea on a three dimensional Euclidean space $U_\real$, the boundary of a surface $\pmb{\mathcal{S}}\subset U_\real$ is a curve $\partial\pmb{\mathcal{S}}\subset\pmb{\mathcal{S}}$ constituted by points $\vto{x}\in\partial\pmb{\mathcal{S}}$ such that $B_{\vto{x},r}\cap\pmb{\mathcal{S}}\not\subset\widehat{\pmb{\mathcal{S}}}$ for all $r\in\real$. For three dimensional Lipschitz surfaces with boundaries that are simple curves, we present the following classical theorem that establishes a relationship between an integral on a surface and an integral on its boundary.
 
 \begin{mteo}{Kelvin-Stokes}{stokes}
-Let $(U_\real,\tnr{A}_B)$ be a three dimensional oriented Euclidean space and $\map{\vtf{\varphi}}{\pmb{\mathcal{S}}}{\ete{\real}{U\times V}}$ a mapping where  $\vtf{\varphi}$ is continuously differentiable on Lipschitz surface $\widehat{\pmb{\mathcal{S}}}\subset U_\real$, which is oriented by an outward unit normal vector function $\vtf{n}$. Considering $\vtf{\tau}$ a unit tangent vector function on boundary $\partial\pmb{\mathcal{S}}\subset\pmb{\mathcal{S}}$ such that $\map{\vtf{\varphi}_{\partial\pmb{\mathcal{S}}}}{\partial\pmb{\mathcal{S}}}{V_\real}$ and $\map{\vtf{\varphi}_{\widehat{\pmb{\mathcal{S}}}}}{\widehat{\pmb{\mathcal{S}}}}{V_\real}$ are continuous mappings where $\fua{\vtf{\varphi}_{\partial\pmb{\mathcal{S}}}}{\vto{x}}=\fua{\vtf{\tau}}{\vto{x}}\odot_1\fua{\vtf{\varphi}}{\vto{x}}$ and $\fua{\vtf{\varphi}_{\widehat{\pmb{\mathcal{S}}}}}{\vto{x}}=\fua{\vtf{n}}{\vto{x}}\odot_1\fua{\crl{\vtf{\varphi}}}{\vto{x}}$,
+Let $(U_\real,\tnr{A}_B)$ be a three dimensional oriented Euclidean space and $\map{\vtf{\varphi}}{\pmb{\mathcal{S}}}{\ete{\real}{U\times V}}$ a mapping where  $\vtf{\varphi}$ is continuously differentiable on Lipschitz surface $\widehat{\pmb{\mathcal{S}}}\subset U_\real$, which is oriented by an outward unit normal vector function $\vtf{n}$. Considering $\vtf{\tau}$ a unit tangent vector function on boundary $\partial\pmb{\mathcal{S}}\subset\pmb{\mathcal{S}}$ such that $\map{\vtf{\varphi}_{\partial\pmb{\mathcal{S}}}}{\partial\pmb{\mathcal{S}}}{V_\real}$ and $\map{\vtf{\varphi}_{\widehat{\pmb{\mathcal{S}}}}}{\widehat{\pmb{\mathcal{S}}}}{V_\real}$ are continuous mappings where $\fua{\vtf{\varphi}_{\partial\pmb{\mathcal{S}}}}{\vto{x}}=\fua{\vtf{\tau}}{\vto{x}}\odot_1\fua{\vtf{\varphi}}{\vto{x}}$ and $\fua{\vtf{\varphi}_{\widehat{\pmb{\mathcal{S}}}}}{\vto{x}}=\fua{\vtf{n}}{\vto{x}}\odot_1\fua{\crl{\vtf{\varphi}}}{\vto{x}}$, then
 \begin{equation*}
 \int_{\widehat{{\pmb{\mathcal{S}}}}}\vtf{\varphi}_{\widehat{\pmb{\mathcal{S}}}} = \int_{\partial{\pmb{\mathcal{S}}}}\vtf{\varphi}_{\partial\pmb{\mathcal{S}}}\,\,.
 \end{equation*}
