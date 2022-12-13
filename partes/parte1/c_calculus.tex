@@ -620,7 +620,7 @@ which is equal to result \eqref{eq:a}.
 }\end{proof}
 
 
-Now, our goal is to integrate a broader class of functions other than functionals, namely, tensor functions. Considering $\ete{\real}{U^{\times m}}$ and $\ete{\real}{V^{\times s}}$ Euclidean tensor spaces, let $\map{\tnr{\psi}}{\pmb{\mathcal{U}}}{\ete{\cam{R}}{V^{\times s}}}$ be a tensor mapping, where $\pmb{\mathcal{U}}\subseteq\ete{\real}{U^{\times m}}$, and $\map{f}{\pmb{\mathcal{U}}}{\real}$ a mapping whose functional is described by the rule $f = \frt{T}\circ\tnr{\psi}$, such that function $\frt{T}$ is the representative tensor functional of an arbitrary tensor $\tnr{T}\in\ete{\real}{V^{\times s}}$, according to \eqref{eq:repTensFunc}. We define that function $\tnr{\psi}$ is integrable on $\pmb{\mathcal{U}}$ if and only if functional $f$ is integrable on $\pmb{\mathcal{U}}$. If this is the case, by specifying a rule
+Now, our goal is to integrate a broader class of functions other than functionals, namely, tensor functions. Considering $\ete{\real}{U^{\times m}}$ and $\ete{\real}{V^{\times s}}$ Euclidean tensor spaces, let $\map{\tnr{\psi}}{\pmb{\mathcal{U}}}{\ete{\cam{R}}{V^{\times s}}}$ be a tensor mapping, where $\pmb{\mathcal{U}}\subseteq\ete{\real}{U^{\times m}}$, and $\map{f}{\pmb{\mathcal{U}}}{\real}$ a mapping whose functional is described by the rule $f = \frt{T}\circ\tnr{\psi}$, such that cotensor $\frt{T}$ is the representative tensor functional of an arbitrary tensor $\tnr{T}\in\ete{\real}{V^{\times s}}$. We define that function $\tnr{\psi}$ is integrable on $\pmb{\mathcal{U}}$ if and only if functional $f$ is integrable on $\pmb{\mathcal{U}}$. If this is the case, by specifying a rule
 \begin{equation}\label{eq:aga}
 \fua{\tnr{h}}{\tnr{X}} = \int_{\pmb{\mathcal{U}}} \frt{X}\circ\tnr{\psi}\,,
 \end{equation}
@@ -628,11 +628,22 @@ where tensor functional $\tnr{h}\in\eted{\real}{V^{\times s}}$ is linear because
 \begin{equation}
 \int_{\pmb{\mathcal{U}}}\tnr{\psi}:=\tnr{H}
 \end{equation}
-is called the integral of tensor function $\tnr{\psi}$ on $\pmb{\mathcal{U}}$. Therefore, since $\fua{\tnr{h}}{\tnr{X}}=\tnr{X}\cdot\tnr{H}$, we conclude from \eqref{eq:aga} that scalar
+is called the integral of tensor function $\tnr{\psi}$ on $\pmb{\mathcal{U}}$. Therefore, since $\fua{\tnr{h}}{\tnr{T}}=\tnr{T}\cdot\tnr{H}$, we conclude from \eqref{eq:aga} that scalar
 \begin{equation}\label{eq:repInte}
-\tnr{X}\cdot\int_{\pmb{\mathcal{U}}}\tnr{\psi}=\int_{\pmb{\mathcal{U}}} \frt{X}\circ\tnr{\psi}\,.
+\tnr{T}\cdot\int_{\pmb{\mathcal{U}}}\tnr{\psi}=\int_{\pmb{\mathcal{U}}} \frt{T}\circ\tnr{\psi}\,.
 \end{equation}
-For the particular case of $m=s=1$, tensor spaces $\ete{\cam{F}}{U}=U^*_\cam{F}$ and $\ete{\cam{F}}{V}=V^*_\cam{F}$. By defining a vector valued vector function $\tnr{\hat{\psi}}=\Phi^{-1}\circ\tnr{\psi}\circ\Phi$, where $\Phi$ is defined in theorem \ref{teo:repRiesz}, we can define a mapping $\map{g}{{\mathcal{U}}}{\real}$, where $\mathcal{U}$ is constituted by the corresponding vectors to the elements of $\tnr{\mathcal{U}}$.
+Similarly as above, for the case of the vector valued vector function $\tnr{\hat{\psi}}=\Phi^{-1}\circ\tnr{\psi}\circ\Phi$, as defined in \eqref{eq:primiRepFuncGrad2}, we also specify a vector functional $f = \vto{v}^*\circ\tnr{\hat{\psi}}$ and a rule
+\begin{equation}
+\fua{\tnr{h}^*}{\vto{x}} = \int_{\pmb{\mathcal{U}}} \vto{x}^*\circ\tnr{\hat{\psi}}\,,
+\end{equation}
+where $\vto{v}^*,\tnr{h}^*\in V^*_\real$, from which $\tnr{\hat{\psi}}$ is said to be integrable on $\pmb{\mathcal{U}}$. Thereby, vector
+\begin{equation}
+\int_{\pmb{\mathcal{U}}}\tnr{\hat{\psi}}:=\tnr{h}
+\end{equation}
+is called the integral of $\tnr{\hat{\psi}}$ on $\pmb{\mathcal{U}}$ and, since $\fua{\tnr{h}^*}{\vto{v}}=\vto{v}\cdot\vto{h}$,
+\begin{equation}
+\vto{v}\cdot\int_{\pmb{\mathcal{U}}}\tnr{\hat{\psi}}=\int_{\pmb{\mathcal{U}}} \vto{v}^*\circ\tnr{\hat{\psi}}\,.
+\end{equation}
 
 
 \section{Integral Identities}

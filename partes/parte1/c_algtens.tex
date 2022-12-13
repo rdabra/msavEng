@@ -588,16 +588,16 @@ Let
 \begin{equation*}
 \map{\tnr{\Phi}}{\ete{\cam{F}}{W^{\times p}\times A^{\times q}}}{\evl{\cam{F}}{\ete{\cam{F}}{ W^{\times p}}}{\ete{\cam{F}}{A^{\times q}}}}
 \end{equation*}
-be a mapping where the tensor spaces involved are Hilbert spaces. If for every tensor $\tnr{T}$ of $\ete{\cam{F}}{W^{\times p}\times A^{\times q}}$, a $p$-cotensor  \gloref{pCotensor}$:=\fua{\tnr{\Phi}}{\tnr{T}}$ is described by the rule $\fua{\vtf{T}^*_p}{\tnr{X}}=\tnr{X}\odot_p\tnr{T}$ then $\tnr{\Phi}$ is an antilinear bijection.
+be a mapping where the tensor spaces involved are Hilbert spaces. If for every tensor $\tnr{T}$ of $\ete{\cam{F}}{W^{\times p}\times A^{\times q}}$, a $p$-cotensor \gloref{pCotensor}$:=\fua{\tnr{\Phi}}{\tnr{T}}$ is described by the rule $\fua{\frt{T}_p}{\tnr{X}}=\tnr{X}\odot_p\tnr{T}$ then $\tnr{\Phi}$ is an antilinear bijection.
 \end{mteo}
 \hspace{1pt}
 {\footnotesize
 \begin{proof}
 Considering $\tnr{A},\tnr{B}\in\ete{\cam{F}}{W^{\times p}\times A^{\times q}}$, function $\tnr{\Phi}$ is proved antilinear from the following:
 \begin{equation*}
-\fua{\lco\fua{\tnr{\Phi}}{\alpha\tnr{A}+\beta\tnr{B}}\rco}{\tnr{X}}=\tnr{X}\odot_p(\alpha\tnr{A}+\beta\tnr{B})=\overline{\alpha}\tnr{A}^*_p(\tnr{X})+\overline{\beta}\tnr{B}^*_p(\tnr{X})=\fua{\lco\overline{\alpha}\fua{\tnr{\Phi}}{\tnr{A}}+\overline{\beta}\fua{\tnr{\Phi}}{\tnr{B}}\rco}{\tnr{X}}\,.
+\fua{\lco\fua{\tnr{\Phi}}{\alpha\tnr{A}+\beta\tnr{B}}\rco}{\tnr{X}}=\tnr{X}\odot_p(\alpha\tnr{A}+\beta\tnr{B})=\overline{\alpha}\frt{A}_p(\tnr{X})+\overline{\beta}\tnr{B}^*_p(\tnr{X})=\fua{\lco\overline{\alpha}\fua{\tnr{\Phi}}{\tnr{A}}+\overline{\beta}\fua{\tnr{\Phi}}{\tnr{B}}\rco}{\tnr{X}}\,.
 \end{equation*}
-If $\tnr{\Phi}$ were not an injection, there would be different $p$-cotensors $\tnr{A}^*_p$ and $\tnr{B}^*_p$ where $\tnr{X}\odot_p\tnr{A}=\tnr{X}\odot_p\tnr{B}$. From this supposition, equality $\tnr{X}\odot_p(\tnr{A}-\tnr{B})=\tnr{0}$ do not confirm $\tnr{A}^*_p\neq\tnr{B}^*_p$ because it is valid for arbitrary $\tnr{X}$. In order to prove that $\tnr{\Phi}$ is a surjection, we need to obtain for an arbitrary tensor function ${\vtf{\psi}\in\evl{\cam{F}}{\ete{\cam{F}}{ W^{\times p}}}{\ete{\cam{F}}{A^{\times q}}}}$ a tensor ${\vto{A}\in \ete{\cam{F}}{W^{\times p}\times A^{\times q}}}$ such that $\fua{\tnr{\Phi}}{\tnr{A}}=\vtf{\psi}$. Using a strategy that we could call mathematical sagacity, let's consider a tensor
+If $\tnr{\Phi}$ were not an injection, there would be different $p$-cotensors $\frt{A}_p$ and $\tnr{B}^*_p$ where $\tnr{X}\odot_p\tnr{A}=\tnr{X}\odot_p\tnr{B}$. From this supposition, equality $\tnr{X}\odot_p(\tnr{A}-\tnr{B})=\tnr{0}$ do not confirm $\frt{A}_p\neq\tnr{B}^*_p$ because it is valid for arbitrary $\tnr{X}$. In order to prove that $\tnr{\Phi}$ is a surjection, we need to obtain for an arbitrary tensor function ${\vtf{\psi}\in\evl{\cam{F}}{\ete{\cam{F}}{ W^{\times p}}}{\ete{\cam{F}}{A^{\times q}}}}$ a tensor ${\vto{A}\in \ete{\cam{F}}{W^{\times p}\times A^{\times q}}}$ such that $\fua{\tnr{\Phi}}{\tnr{A}}=\vtf{\psi}$. Using a strategy that we could call mathematical sagacity, let's consider a tensor
 \begin{equation*}
 \tnr{A}=\sum_{i_1=1}^{n_1}\cdots\sum_{i_p=1}^{n_p}\vtf{f}_{i_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{i_p}^{B_p}\otimes\fua{\vtf{\psi}}{\vtf{f}_{i_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{i_p}^{B_p}}
 \end{equation*}
@@ -615,39 +615,47 @@ where polyadic tensors are defined by orthonormal bases according to theorem \re
 
 Considering the conditions of the theorem, let's see what is the $p$-cotensor of identity tensor $\tnr{I}\in\ete{\cam{F}}{W^{\times p}\times W^{\times p}}$. If equality \eqref{eq:poliadIdentidade} and its definer conditions are considered, development
 \begin{align}\label{eq:cotensIdent}
-\fua{\vtf{I}^*_p}{\tnr{X}}&=\tnr{X}\odot_p\tnr{I}\nonumber\\
+\fua{\frt{I}_p}{\tnr{X}}&=\tnr{X}\odot_p\tnr{I}\nonumber\\
     &=\sum_{{i_1}=1}^{n_1}\cdots\sum_{{i_p}=1}^{n_p}\prod_{k=1}^p\vun{u}_{i_k}\cdot\vto{x}_k\vun{u}_{i_1}^*\otimes\cdots\otimes\vun{u}_{i_p}^*\nonumber\\
 &=(\sum_{{i_1}=1}^{n_1}\fua{\vtf{f}_{i_1}^{B_1}}{\vto{x}_1}\vun{u}_{i_1})^*\otimes\cdots\otimes(\sum_{{i_p}=1}^{n_1}\fua{\vtf{f}_{i_p}^{B_p}}{\vto{x}_p}\vun{u}_{i_p})^*\nonumber\nonumber\\
 &=\vto{x}_1^*\otimes\cdots\otimes\vto{x}_p^*\nonumber\\
 &=\fua{\vtf{i}}{\tnr{X}}
 \end{align}
-shows that the identity operator $\tnr{i}\in\evl{\cam{F}}{\ete{\cam{F}}{ W^{\times p}}}{\ete{\cam{F}}{W^{\times p}}}$ is the $p$-cotensor of tensor $\tnr{I}$. Moreover, if scalar field $\cam{F}=\real$, then $\fua{\vtf{I}^*_p}{\tnr{X}}=\tnr{X}\odot_p\tnr{I}=\tnr{I}\odot_p\tnr{X}=\fua{\vtf{i}}{\tnr{X}}$. Now, considering an arbitrary tensor $\tnr{Z}\in\ete{\cam{F}}{A^{\times q}\times Z^{\times r}}$, the associative property \eqref{eq:contractAsso} and previous conditions, we can write that
+shows that the identity operator $\tnr{i}\in\evl{\cam{F}}{\ete{\cam{F}}{ W^{\times p}}}{\ete{\cam{F}}{W^{\times p}}}$ is the $p$-cotensor of tensor $\tnr{I}$. Moreover, if scalar field $\cam{F}=\real$, then $\fua{\frt{I}_p}{\tnr{X}}=\tnr{X}\odot_p\tnr{I}=\tnr{I}\odot_p\tnr{X}=\fua{\vtf{i}}{\tnr{X}}$. Now, considering an arbitrary tensor $\tnr{Z}\in\ete{\cam{F}}{A^{\times q}\times Z^{\times r}}$, the associative property \eqref{eq:contractAsso} and previous conditions, we can write that
 \begin{equation}\label{eq:compoCotens}
-\fua{\vtf{Z}^*_q\circ\vtf{T}^*_p}{\tnr{X}}=(\tnr{X}\odot_p\tnr{T})\odot_q\tnr{Z}=\tnr{X}\odot_p(\tnr{T}\odot_q\tnr{Z})=\fua{(\vtf{T}\odot_q\vtf{Z})^*_p}{\tnr{X}}\,,
+\fua{\frt{Z}_q\circ\frt{T}_p}{\tnr{X}}=(\tnr{X}\odot_p\tnr{T})\odot_q\tnr{Z}=\tnr{X}\odot_p(\tnr{T}\odot_q\tnr{Z})=\fua{(\vtf{T}\odot_q\vtf{Z})^\circledast_p}{\tnr{X}}\,,
 \end{equation}
-from which we conclude that the $p$-cotensor of $(\vtf{T}\odot_q\vtf{Z})\in\ete{\cam{F}}{W^{\times p}\times Z^{\times r}}$ is the composite function $\vtf{Z}^*_q\circ\vtf{T}^*_p$. In the particular case of $\tnr{Z}\in\ete{\cam{F}}{A^{\times q}\times W^{\times p}}$ and $\vtf{T}\odot_q\vtf{Z}=\tnr{I}$, we obtain from  previous equalities that $\vtf{Z}^*_q\circ\vtf{T}^*_p=\vtf{I}^*_p=\vtf{i}$, that is, the $q$-cotensor of $\tnr{Z}$ is the inverse of the $p$-cotensor of $\tnr{T}$, or vice-versa.
+from which we conclude that the $p$-cotensor of $(\vtf{T}\odot_q\vtf{Z})\in\ete{\cam{F}}{W^{\times p}\times Z^{\times r}}$ is the composite function $\frt{Z}_q\circ\frt{T}_p$. In the particular case of $\tnr{Z}\in\ete{\cam{F}}{A^{\times q}\times W^{\times p}}$ and $\vtf{T}\odot_q\vtf{Z}=\tnr{I}$, we obtain from  previous equalities that $\frt{Z}_q\circ\frt{T}_p=\frt{I}_p=\vtf{i}$, that is, the $q$-cotensor of $\tnr{Z}$ is the inverse of the $p$-cotensor of $\tnr{T}$, or vice-versa.
 
 \begin{mcoro}{Cotensors}{eqNorm}
-Given $\map{\tnr{\Phi}}{\ete{\cam{F}}{W^{\times p}}}{\eted{\cam{F}}{W^{\times p}}}$, the rule of tensor functional \gloref{cotensor}$:=\tnr{T}^*_p$, called the cotensor of $\tnr{T}$, results $\fua{\vtf{T}^*}{\tnr{X}}=\tnr{X}\cdot\tnr{T}$ and when $\tnr{T}^*$ is continuous, norm $\|\tnr{T}^*\|_{\eted{\cam{F}}{W^{\times p}}}=\|\tnr{T}\|_{\ete{\cam{F}}{W^{\times p}}}$.
+Given $\map{\tnr{\Phi}}{\ete{\cam{F}}{W^{\times p}}}{\eted{\cam{F}}{W^{\times p}}}$, the rule of tensor functional \gloref{cotensor}$:=\frt{T}_p$, called the cotensor of $\tnr{T}$, results $\fua{\frt{T}}{\tnr{X}}=\tnr{X}\cdot\tnr{T}$ and when $\frt{T}$ is continuous, norm $\|\frt{T}\|_{\eted{\cam{F}}{W^{\times p}}}=\|\tnr{T}\|_{\ete{\cam{F}}{W^{\times p}}}$.
 \end{mcoro}
 {\footnotesize
 \begin{proof}
-The verification of previous theorem is not compromised by the conditions of this corollary. Now, let`s prove the equality of norms. Using definition \eqref{eq:normaFuncaoTens} on the present conditions, leaving space representation on norms implicit, we obtain equality $\|\tnr{A}^*\|=\sup\{ |\tnr{X}\cdot\tnr{A}|/\|\tnr{X}\|\}$ for all non zero $\tnr{X}$. If $\tnr{A}$ is zero, it is evident that $\|\tnr{A}^*\|=\|\tnr{A}\|$; otherwise, $\tnr{A}^*$ is non zero and we conclude that $\|\tnr{A}^*\|\geqslant |\, \tnr{X}\cdot\tnr{A}|/\|\tnr{X}\|$. Cauchy-Schwarz Inequality states that $|\, \tnr{X}\cdot\tnr{A}| \leqslant \|\tnr{X}\|\,\,\|\tnr{A}\|$. Subtracting these two previous inequalities, we arrive at $(\|\tnr{A}^*\|-\|\tnr{A}\|)\|\tnr{X}\|\geqslant 0$, whose left side can be zero for arbitrary non zero $\tnr{A}^*$, $\tnr{A}$ and $\tnr{X}$; therefore, $\|\tnr{A}^*\|=\|\tnr{A}\|$.
+The verification of previous theorem is not compromised by the conditions of this corollary. Now, let`s prove the equality of norms. Using definition \eqref{eq:normaFuncaoTens} on the present conditions, leaving space representation on norms implicit, we obtain equality $\|\frt{A}\|=\sup\{ |\tnr{X}\cdot\tnr{A}|/\|\tnr{X}\|\}$ for all non zero $\tnr{X}$. If $\tnr{A}$ is zero, it is evident that $\|\frt{A}\|=\|\tnr{A}\|$; otherwise, $\frt{A}$ is non zero and we conclude that $\|\frt{A}\|\geqslant |\, \tnr{X}\cdot\tnr{A}|/\|\tnr{X}\|$. Cauchy-Schwarz Inequality states that $|\, \tnr{X}\cdot\tnr{A}| \leqslant \|\tnr{X}\|\,\,\|\tnr{A}\|$. Subtracting these two previous inequalities, we arrive at $(\|\frt{A}\|-\|\tnr{A}\|)\|\tnr{X}\|\geqslant 0$, whose left side can be zero for arbitrary non zero $\frt{A}$, $\tnr{A}$ and $\tnr{X}$; therefore, $\|\frt{A}\|=\|\tnr{A}\|$.
 \end{proof}
 }
-
-Given the conditions of this last corollary and a function space of tensor functionals $\cam{F}^V_\cam{F}$, where the set $V=\ete{\cam{F}}{U^{\times m}}$, it is convenient to define an antilinear tensor functional $\frt{T}\in \cam{F}^V_\cam{F}$ described by the rule
-\begin{equation}\label{eq:repTensFunc}
-\fua{\frt{T}}{\tnr{X}} = \fua{\overline{\vtf{T}^*}}{\tnr{X}}=\tnr{T}\cdot\tnr{X}\,,
+\noindent In the case of $p=1$ on the previous theorem, the tensors involved are covectors and then, for an arbitary $\vto{w}^*\in\ete{\cam{F}}{W}$ and according to equality \eqref{eq:prodIntTens}, the tensor functional $\vto{w}^\circledast:=(\vto{w}^*)^\circledast$ is described by
+\begin{equation}\label{eq:funcCotens}
+\vto{w}^\circledast(\vto{x}^*)=\vto{x}^*\cdot\vto{w}^*=\vto{w}\cdot\vto{x}=\vto{x}^*(\vto{w})\,.
 \end{equation}
-whose existence and uniqueness are straightforward consequences of the previous theorem. From this definition, it is obvious that every tensor $\tnr{T}$ has not only a correspondent cotensor $\tnr{T}^*$ but also a correspondent \textsb{conjugate cotensor}\index{cotensor!conjugate} $\frt{T}$. If the variable $\tnr{X}$ is expressed in its polyadic form $\vto{x}_1^*\otimes\cdots\otimes\vto{x}_m^*$,  the conjugate cotensor $\frt{T}$ is convenient because it is linear on each variable $\vto{x}_i$, just like its correspondent tensor $\tnr{T}$. In this context, from the above definition and equalities \eqref{eq:propProdIndTens}, we can write that scalar
+
+Given the conditions of this last corollary and a function space of tensor functionals $\cam{F}^V_\cam{F}$, where the set $V=\ete{\cam{F}}{U^{\times m}}$, it is convenient to define an antilinear tensor functional $\overline{\frt{T}}\in \cam{F}^V_\cam{F}$ described by the rule
+\begin{equation}\label{eq:repTensFunc}
+\fua{\overline{\frt{T}}}{\tnr{X}}=\tnr{T}\cdot\tnr{X}\,,
+\end{equation}
+whose existence and uniqueness are straightforward consequences of the previous theorem. Consdering the conditions of \eqref{eq:funcCotens}, where the tensors involved are covectors, scalar
+\begin{equation}
+\overline{\vto{w}^\circledast}(\vto{x}^*)=\vto{w}^*(\vto{x})\,.
+\end{equation}
+From rule \eqref{eq:repTensFunc}, it is obvious that every tensor $\tnr{T}$ has not only a correspondent cotensor $\frt{T}$ but also a correspondent \textsb{conjugate cotensor}\index{cotensor!conjugate} $\overline{\frt{T}}$. If the variable $\tnr{X}$ is expressed in its polyadic form $\vto{x}_1^*\otimes\cdots\otimes\vto{x}_m^*$,  the conjugate cotensor $\overline{\frt{T}}$ is convenient because it is linear on each variable $\vto{x}_i$, just like its correspondent tensor $\tnr{T}$. In this context, from the above definition and equalities \eqref{eq:propProdIndTens}, we can write that scalar
 \begin{equation}\label{eq:polyRepre}
 \fua{\gloref{substFunc}}{\vto{x}_1^*\otimes\cdots\otimes\vto{x}_m^*} = \tnr{T}\cdot(\vto{x}_1^*\otimes\cdots\otimes\vto{x}_m^*)=\fua{\tnr{T}}{\vto{x}_1,\cdots,\vto{x}_m}\,,
 \end{equation}
-where $\frt{T}$ results a \textsb{representative tensor functional}\index{functional!representative tensor} of tensor $\tnr{T}$ since their values are the same when variables $\vto{x}_i\in (U_i)_\cam{F}$ are arranged as above. Now, it is possible to study tensors through their conjugate cotensors, which substitute them numerically and have only one argument. If we consider the context of expression  \eqref{eq:identProdInt}, \emph{equalities
-$\fua{\frt{I}}{\tnr{X}} = \tnr{I}\cdot \tnr{X} = \overline{\mathrm{tr}}\,\tnr{X}$ show that the conjugate trace represents the identity tensor}. Moreover, if the identity tensor described by \eqref{eq:poliadIdentidade} is the argument of a representative function $(\tnr{A}\otimes\tnr{B})^\circledast$ where $\tnr{A},\tnr{B}\in\ete{\cam{F}}{V^{\times p}}$, we have the following:
+where $\overline{\frt{T}}$ results a \textsb{representative tensor functional}\index{functional!representative tensor} of tensor $\tnr{T}$ since their values are the same when variables $\vto{x}_i\in (U_i)_\cam{F}$ are arranged as above. Note that if the scalar fields involved are real, cotensor $\frt{T}$ is the representative tensor functional of $\tnr{T}$. Now, it is possible to study tensors through their conjugate cotensors, which substitute them numerically and have only one argument. If we consider the context of expression  \eqref{eq:identProdInt}, \emph{equalities
+$\fua{\overline{\frt{I}}}{\tnr{X}} = \tnr{I}\cdot \tnr{X} = \overline{\mathrm{tr}}\,\tnr{X}$ show that the conjugate trace represents the identity tensor}. Moreover, if the identity tensor described by \eqref{eq:poliadIdentidade} is the argument of a representative function $\overline{(\tnr{A}\otimes\tnr{B})^\circledast}$ where $\tnr{A},\tnr{B}\in\ete{\cam{F}}{V^{\times p}}$, we have the following:
 \begin{align}
-\fua{(\tnr{A}\otimes\tnr{B})^\circledast}{\tnr{I}} &= \sum_{{i_1}=1}^{n_1}\cdots\sum_{{i_p}=1}^{n_p}\fua{(\tnr{A}\otimes\tnr{B})^\circledast}{\vtf{f}_{i_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{i_p}^{B_p}\otimes\vtf{f}_{i_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{i_p}^{B_p}}\nonumber\\
+\fua{\overline{(\tnr{A}\otimes\tnr{B})^\circledast}}{\tnr{I}} &= \sum_{{i_1}=1}^{n_1}\cdots\sum_{{i_p}=1}^{n_p}\fua{\overline{(\tnr{A}\otimes\tnr{B})^\circledast}}{\vtf{f}_{i_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{i_p}^{B_p}\otimes\vtf{f}_{i_1}^{B_1}\otimes\cdots\otimes\vtf{f}_{i_p}^{B_p}}\nonumber\\
 &=\sum_{{i_1}=1}^{n_1}\cdots\sum_{{i_p}=1}^{n_p}\fua{\tnr{A}\otimes\tnr{B}}{\vun{u}_{i_1}^{(1)},\cdots,\vun{u}_{i_p}^{(p)},\vun{u}_{i_1}^{(1)},\cdots,\vun{u}_{i_p}^{(p)}}\nonumber\\
 &=\sum_{{i_1}=1}^{n_1}\cdots\sum_{{i_p}=1}^{n_p}\fua{\tnr{A}}{\vun{u}_{i_1}^{(1)},\cdots,\vun{u}_{i_p}^{(p)}}\fua{\tnr{B}}{\vun{u}_{i_1}^{(1)},\cdots,\vun{u}_{i_p}^{(p)}}\nonumber\\
 &=\sum_{{i_1}=1}^{n_1}\cdots\sum_{{i_p}=1}^{n_p}\fua{\vtf{f}_{i_1\cdots i_p}}{\tnr{A}}\fua{\vtf{f}_{i_1\cdots i_p}}{\tnr{B}}=\tnr{A}\diamond\tnr{B}\,,
@@ -655,14 +663,14 @@ $\fua{\frt{I}}{\tnr{X}} = \tnr{I}\cdot \tnr{X} = \overline{\mathrm{tr}}\,\tnr{X}
 where equality \eqref{eq:prodContrCoord} was considered.
 
 
-In the context of Hilbert spaces, we already know that corollary \ref{cor:covLin} establishes a biunivocal relationship between a linear vector function space and a linear covector function space, that is, if $\vtf{g}$ is a linear vector function, there is always a linear covector function $\vtf{g}_\Phi$, which is a linear tensor function whose domain is constituted by first order tensors (covectors). But the theorem above establishes a biunivocal relationship between a linear tensor function space and a tensor space, when we conclude that covector function $\vtf{g}_\Phi$ has its correspondent second order tensor $\tnr{G}$. Therefore, if tensor function $\vtf{g}_\Phi=\tnr{G}_1^*$ has a correspondent linear function $\vtf{g}$ through corollary \ref{cor:covLin} and a correspondent second order tensor $\tnr{G}$ through theorem above, we can conclude that $\vtf{g}$ and $\tnr{G}$ are correspondents. Let's now rewrite this rationale in a more concise form.
+In the context of Hilbert spaces, we already know that corollary \ref{cor:covLin} establishes a biunivocal relationship between a linear vector function space and a linear covector function space, that is, if $\vtf{g}$ is a linear vector function, there is always a linear covector function $\vtf{g}_\Phi$, which is a linear tensor function whose domain is constituted by first order tensors (covectors). But the theorem above establishes a biunivocal relationship between a linear tensor function space and a tensor space, when we conclude that covector function $\vtf{g}_\Phi$ has its correspondent second order tensor $\tnr{G}$. Therefore, if tensor function $\vtf{g}_\Phi=\frt{G}_1$ has a correspondent linear function $\vtf{g}$ through corollary \ref{cor:covLin} and a correspondent second order tensor $\tnr{G}$ through theorem above, we can conclude that $\vtf{g}$ and $\tnr{G}$ are correspondents. Let's now rewrite this rationale in a more concise form.
 
 \begin{mcoro}{Second Order Tensors and Linear Functions}{soTens}
-Considering Hilbert spaces $U_\cam{F}$ and $V_\cam{F}$, a mapping $\map{\tnr{\Upsilon}}{\ete{\cam{F}}{U\times V}}{\evl{\cam{F}}{U}{V}}$ is a bijective transformation if its function rule is $\fua{\tnr{\Upsilon}}{\tnr{X}}=\Phi^{-1}\circ\vtf{X}^*_1\circ\Phi$, where $\Phi$ is defined on theorem \ref{teo:repRiesz}.
+Considering Hilbert spaces $U_\cam{F}$ and $V_\cam{F}$, a mapping $\map{\tnr{\Upsilon}}{\ete{\cam{F}}{U\times V}}{\evl{\cam{F}}{U}{V}}$ is a bijective transformation if its function rule is $\fua{\tnr{\Upsilon}}{\tnr{X}}=\Phi^{-1}\circ\frt{X}_1\circ\Phi$, where $\Phi$ is defined on theorem \ref{teo:repRiesz}.
 \end{mcoro}
 {\footnotesize
 \begin{proof}
-If function $\tnr{\Upsilon}$ were not an injection, there would be two distinct tensors $\tnr{T}$ and $\tnr{W}$ where $\Phi^{-1}\circ\vtf{T}^*_1\circ\Phi(\vto{x})=\Phi^{-1}\circ\vtf{W}^*_1\circ\Phi(\vto{x})$; but this equality leads to $\vtf{T}^*_1(\vto{x}^*)=\vtf{W}^*_1(\vto{x}^*)$, which shows that $\vtf{T}^*_1=\vtf{W}^*_1$. Therefore, since $p$-cotensors are biunivocally related to tensors, $\tnr{T}$ and $\tnr{W}$ cannot be distinct. Function $\tnr{\Upsilon}$ is also a surjection because, through corollary \ref{cor:covLin}, for every linear function $\vtf{g}\in\evl{\cam{F}}{U}{V}$ a covector function $\vtf{g}_\Phi$ can be defined and then, for every tensor function $\vtf{g}_\Phi$ there exists a unique second order tensor $\tnr{G}\in\ete{\cam{F}}{U\times V}$ where $1$-cotensor $\tnr{G}_1^*=\Phi\circ\vtf{g}_\Phi$.
+If function $\tnr{\Upsilon}$ were not an injection, there would be two distinct tensors $\tnr{T}$ and $\tnr{W}$ where $\Phi^{-1}\circ\frt{T}_1\circ\Phi(\vto{x})=\Phi^{-1}\circ\frt{W}_1\circ\Phi(\vto{x})$; but this equality leads to $\frt{T}_1(\vto{x}^*)=\frt{W}_1(\vto{x}^*)$, which shows that $\frt{T}_1=\frt{W}_1$. Therefore, since $p$-cotensors are biunivocally related to tensors, $\tnr{T}$ and $\tnr{W}$ cannot be distinct. Function $\tnr{\Upsilon}$ is also a surjection because, through corollary \ref{cor:covLin}, for every linear function $\vtf{g}\in\evl{\cam{F}}{U}{V}$ a covector function $\vtf{g}_\Phi$ can be defined and then, for every tensor function $\vtf{g}_\Phi$ there exists a unique second order tensor $\tnr{G}\in\ete{\cam{F}}{U\times V}$ where $1$-cotensor $\frt{G}_1=\Phi\circ\vtf{g}_\Phi$.
 \end{proof}
 }
 
