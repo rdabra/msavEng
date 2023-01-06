@@ -320,11 +320,11 @@ Following the same procedure adopted for deformations, by fixing a position $\vt
 is said to be the \textsb{streakline}\index{streakline} of place $\vto{u}$ during $\mathbb{P}$. 
 
 
-The functions\footnote{In Continuum Mechanics classical literature, functions like $\tnr{\omega}$ and $\tnr{\Omega}$ are usually called tensor, vector or scalar fields, according to their codomains; but we shall not use this nomenclature here in order to avoid confusion.} in  mappings $\map{\tnr{\omega}}{\tnr{\overline{\mathcal{B}}}\times\tempo}{W}$ and $\map{\tnr{\Omega}}{\tnr{\mathcal{B}}_t\times\tempo}{W}$, where codomain $W\in\{\ete{\real}{U^m},U_\real,\real\}$, are specified to be continuously differentiable. In order to simplify notation, it is sometimes very useful to also define  
+The functions in  mappings $\map{\tnr{\omega}}{\tnr{\overline{\mathcal{B}}}\times\tempo}{W}$ and $\map{\tnr{\Omega}}{\tnr{\mathcal{B}}_t\times\tempo}{W}$, where codomain $W\in\{\ete{\real}{U^m},U_\real,\real\}$ are specified to be continuously differentiable. In our study, they are called tensor, vector or scalar \textsb{distributions}\index{distribution}\footnote{In Continuum Mechanics classical literature, functions like $\tnr{\omega}$ and $\tnr{\Omega}$ are usually called fields, but we shall not use this nomenclature here in order to avoid confusion.} according to $W$. In order to simplify notation, it is sometimes very useful to also define  
 \begin{alignat}{3}\label{eq:LagEulDesc} 
 \tnr{\Omega}_L(\overline{\vto{x}},t)=\tnr{\Omega}(\fua{\tnr{\chi}_t}{\overline{\vto{x}}},t)&\qquad \text{and}\qquad & \tnr{\omega}_E(\vto{x},t)=\tnr{\omega}(\fua{\tnr{\chi}_t^\text{-1}}{{\vto{x}}},t)\,,
 \end{alignat}
-commonly called the Lagrangian and Eulerian descriptions of $\tnr{\Omega}$ and $\tnr{\omega}$. In genereal terms, notations \gloref{lagDesc} and \gloref{eulerDesc} can be used on any Eulerian and Lagrangian function. It is then straightforward to conclude that that streak function  is the Eulerian description of the deformation, that is, $\tnr{p}=\tnr{\chi}_E$. Generically, since each of the functions $\tnr{\Omega}$ and $\tnr{\omega}$ can be described by two domains, the differentiation chain rules force us to clearly specify the domain of derivation, namely, whether these functions will be derived on the material or spatial domain. Therefore, derivatives here are called Lagrangian or Eulerian when performed on particles or places respectively. In this context, \emph{it is specified that the time derivative of $\bullet$ is said to be Lagrangian, represented by \gloref{lagTimeDeriv}, or Eulerian, represented by \gloref{eulerTimeDeriv}, when respectively a particle or a place are fixed}. Whenever possible, notations ${\bar{\partial}}_t^k\bullet$ and ${\tilde{\partial}}_t^k\bullet$ define Lagrangian and Eulerian time derivatives of order $k\geqslant 2$, while time derivatives $d\bullet/dt$ and $d^2\bullet/dt^2$ of univariate functions of time are simplified by overdotted symbols \gloref{timeDeriv} and \gloref{timeDerivTwo} respectively. Concerning functions $\tnr{\omega}$ and $\tnr{\Omega}$, we have the Lagrangian time derivatives at particle $\overline{\vto{u}}$
+commonly called the Lagrangian and Eulerian descriptions of $\tnr{\Omega}$ and $\tnr{\omega}$. In genereal terms, notations \gloref{lagDesc} and \gloref{eulerDesc} can be used on any Eulerian and Lagrangian function. It is then straightforward to conclude that that streak function  is the Eulerian description of the deformation, that is, $\tnr{p}=\tnr{\chi}_E$. Generically, since each of the distributions $\tnr{\Omega}$ and $\tnr{\omega}$ can be described by two domains, the differentiation chain rules force us to clearly specify the domain of derivation, namely, whether these functions will be derived on the material or spatial domain. Therefore, derivatives here are called Lagrangian or Eulerian when performed on particles or places respectively. In this context, \emph{it is specified that the time derivative of $\bullet$ is said to be Lagrangian, represented by \gloref{lagTimeDeriv}, or Eulerian, represented by \gloref{eulerTimeDeriv}, when respectively a particle or a place are fixed}. Whenever possible, notations ${\bar{\partial}}_t^k\bullet$ and ${\tilde{\partial}}_t^k\bullet$ define Lagrangian and Eulerian time derivatives of order $k\geqslant 2$, while time derivatives $d\bullet/dt$ and $d^2\bullet/dt^2$ of univariate functions of time are simplified by overdotted symbols \gloref{timeDeriv} and \gloref{timeDerivTwo} respectively. Concerning distributions $\tnr{\omega}$ and $\tnr{\Omega}$, we have the Lagrangian time derivatives at particle $\overline{\vto{u}}$
 \begin{alignat}{3}\label{eq:LagDesc} 
 \bar{\partial}_t\tnr{\omega}(\overline{\vto{u}},t):=\dfrac{d\,\tnr{\omega}_{\overline{\vto{u}}}}{dt}(t)={\dot{\tnr{\omega}}}_{\overline{\vto{u}}}(t)&\qquad \text{and}\qquad & \bar{\partial}_t\tnr{\Omega}(\vto{u},t):=\tnr{\Omega}'(\fua{\tnr{\chi}_{\overline{\vto{u}}}}{t},t)
 \end{alignat}
@@ -345,24 +345,24 @@ Moreover, in the particular cases of $\tnr{\omega}=\tnr{\Omega}_L$ and $\tnr{\Om
 \begin{alignat}{3}\label{eq:zerosDescript} 
 [\dot{\tnr{\Omega}}_{t}]_L+\dot{[\tnr{\Omega}_L]}_{t}=\vto{0}&\qquad \text{and}\qquad & [\dot{\tnr{\omega}}_{t}]_E+\dot{[\tnr{\omega}_E]}_{t}=\vto{0}\,.
 \end{alignat}
-The specification of the codomains of functions $\tnr{\omega}$ and $\tnr{\Omega}$ leads to the following important conclusions, where Lagrangian and Eulerian gradients, related to material and spatial derivatives, are represented by symbols $\bar{\bullet}$ and $\tilde{\bullet}$ respectively.
+The specification of the codomains of distributions $\tnr{\omega}$ and $\tnr{\Omega}$ leads to the following important conclusions, where Lagrangian and Eulerian gradients, related to material and spatial derivatives, are represented by symbols $\bar{\bullet}$ and $\tilde{\bullet}$ respectively.
 \begin{itemize}
     \setlength\itemsep{.1em}
-    \item[i.] If $W=\ete{\real}{U^m}$, functions are tensor valued and then, from \eqref{eq:defGradient}, 
+    \item[i.] If $W=\ete{\real}{U^m}$, distributions are tensor valued and then, from \eqref{eq:defGradient}, 
 \begin{equation}
 \begin{aligned}
 \dot{\tnr{\Omega}}_{t}(\tnr{\chi}_{\overline{\vto{x}}}(t))&=\tnr{\Omega}_t'(\vto{x})\circ\dot{\tnr{\chi}}_{\overline{\vto{x}}}(t)=[\dot{\tnr{\chi}}_{\overline{\vto{x}}}(t)]^*\odot_1\fua{\tilde{\nabla}\tnr{\Omega}_t}{{\vto{x}}}\,,\\
 \dot{\tnr{\omega}}_{t}(\tnr{p}_{{\vto{x}}}(t))&=\tnr{\omega}_t'(\overline{\vto{x}})\circ\dot{\tnr{p}}_{{\vto{x}}}(t)=[\dot{\tnr{p}}_{{\vto{x}}}(t)]^*\odot_1\fua{\bar{\nabla}\tnr{\omega}_t}{\overline{\vto{x}}}\,;
 \end{aligned} 
 \end{equation}   
-    \item[ii.] If $W=U_\real$, functions are vector valued and then, from \eqref{eq:derivVecGradVec},
+    \item[ii.] If $W=U_\real$, distributions are vector valued and then, from \eqref{eq:derivVecGradVec},
 \begin{equation}\label{eq:compoVector}
 \begin{aligned}
 \dot{\tnr{\Omega}}_{t}(\tnr{\chi}_{\overline{\vto{x}}}(t))&=\tnr{\Omega}_t'(\vto{x})\circ\dot{\tnr{\chi}}_{\overline{\vto{x}}}(t)=\fua{\tilde{\nabla}\tnr{\Omega}_t}{{\vto{x}}}^{\text{T}}\hat{\odot}_1[\dot{\tnr{\chi}}_{\overline{\vto{x}}}(t)]^*\,,\\
 \dot{\tnr{\omega}}_{t}(\tnr{p}_{{\vto{x}}}(t))&=\tnr{\omega}_t'(\overline{\vto{x}})\circ\dot{\tnr{p}}_{{\vto{x}}}(t)=\fua{\bar{\nabla}\tnr{\omega}_t}{\overline{\vto{x}}}^{\text{T}}\hat{\odot}_1[\dot{\tnr{p}}_{{\vto{x}}}(t)]^*\,;
 \end{aligned} 
 \end{equation} 
-\item[iii.] If $W=\real$, functions are scalar valued and then, from \eqref{eq:gradScalVectFunc},
+\item[iii.] If $W=\real$, distributions are scalar valued and then, from \eqref{eq:gradScalVectFunc},
 \begin{equation}
 \begin{aligned}
 \dot{\tnr{\Omega}}_{t}(\tnr{\chi}_{\overline{\vto{x}}}(t))&=\tnr{\Omega}_t'(\vto{x})\circ\dot{\tnr{\chi}}_{\overline{\vto{x}}}(t)=\fua{\tilde{\operatorname{grad}}\,{\tnr{\Omega}_t}}{{\vto{x}}}\cdot\dot{\tnr{\chi}}_{\overline{\vto{x}}}(t)\,,\\
@@ -396,7 +396,7 @@ with \eqref{eq:LagrTimeDerivative} proves the property.
 \end{proof}
 }
 
-The vector $\dot{\tnr{\chi}}_{\overline{\vto{u}}}(t)$, which measures the temporal sensitivity of the deformation at a fixed particle $\overline{\vto{u}}$, is called the \textsb{velocity}\index{velocity} of $\overline{\vto{u}}$ at $t$. If the particle is variable, the Lagrangian function in mapping $\map{{\tnr{\nu}}}{\overline{\tnr{\mathcal{B}}}\times\tempo}{U_\real}$ is called velocity if it is $\mathcal{C}^{2}$ and vector
+The vector $\dot{\tnr{\chi}}_{\overline{\vto{u}}}(t)$, which measures the temporal sensitivity of the deformation at a fixed particle $\overline{\vto{u}}$, is called the \textsb{velocity}\index{velocity} of $\overline{\vto{u}}$ at $t$. If the particle is variable, the Lagrangian distribution in mapping $\map{{\tnr{\nu}}}{\overline{\tnr{\mathcal{B}}}\times\tempo}{U_\real}$ is called velocity if it is $\mathcal{C}^{2}$ and vector
 \begin{equation}
 \gloref{velocity}=\bar{\partial}_t\tnr{\chi}(\overline{\vto{x}},t)\,.
 \end{equation}
@@ -404,7 +404,7 @@ In the context of affine deformations, if instant $t$ is variable for displaceme
 \begin{equation}
 \bar{\partial}_t\fua{\tnr{\mathit{u}}}{\overline{\vto{x}},t} =  {\tnr{\nu}}(\overline{\vto{x}},t)\,,
 \end{equation}
-which is obviously a consequence, not a definition, of velocity. Now, the temporal sensitivity of the velocity of particle $\overline{\vto{u}}$ at instant $t$ is the vector $\dot{\tnr{\nu}}_{\overline{\vto{u}}}(t)=\ddot{\tnr{\chi}}_{\overline{\vto{u}}}(t)$, called the \textsb{acceleration}\index{acceleration} of $\overline{\vto{u}}$ at $t$. The function in mapping $\map{{\tnr{a}}}{\overline{\tnr{\mathcal{B}}}\times\tempo}{U_\real}$ is called acceleration if it is continuously differentiable and
+which is obviously a consequence, not a definition, of velocity. Now, the temporal sensitivity of the velocity of particle $\overline{\vto{u}}$ at instant $t$ is the vector $\dot{\tnr{\nu}}_{\overline{\vto{u}}}(t)=\ddot{\tnr{\chi}}_{\overline{\vto{u}}}(t)$, called the \textsb{acceleration}\index{acceleration} of $\overline{\vto{u}}$ at $t$. The distribution in mapping $\map{{\tnr{a}}}{\overline{\tnr{\mathcal{B}}}\times\tempo}{U_\real}$ is called acceleration if it is continuously differentiable and
 \begin{equation}
 \gloref{accel}=\bar{\partial}_t\tnr{\nu}(\overline{\vto{x}},t)\,,
 \end{equation}
