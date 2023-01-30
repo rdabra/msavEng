@@ -315,7 +315,7 @@ Now returning to the conditions of definition \eqref{eq:defGradient}, from the d
 \begin{equation}
 \tnr{H}\odot_m\fua{\nabla\tnr{\psi}}{\tnr{X}}=\lim_{\alpha\to 0} \dfrac{\fua{\tnr{\psi}}{\tnr{X}+\alpha\tnr{H}}-\fua{\tnr{\psi}}{\tnr{X}}}{\alpha}\,.
 \end{equation}
-For the following important properties, the properties of derivatives presented on previous section were considered and the functions in gradients are obviously differentiable on their domains.
+For the following important items, the properties of derivatives and their definer conditions presented on previous section were considered; the functions in gradients are obviously differentiable on their domains.
 \begin{itemize}
 	\setlength\itemsep{.1em}
 	\item[i.] If $\tnr{\psi}=\tnr{\psi}_1+\tnr{\psi}_2$ then $\nabla\tnr{\psi}=\nabla\tnr{\psi}_1+\nabla\tnr{\psi}_2\,$;
@@ -354,13 +354,15 @@ and then
 \nabla_{\vto{x}_1}D_{\vto{x}_2}\tnr{\hat{\varphi}}(\vto{x}_1,\vto{x}_2)=D_{\vto{x}_2}\nabla_{\vto{x}_1}\tnr{\hat{\varphi}}(\vto{x}_1,\vto{x}_2)\,.
 \end{equation}
 
-\item[x.] \textsb{Mean Value Theorem}\index{theorem!mean value}\index{mean value theorem}: given the open interval $(a,b)\subset\real$ where $a<b$, if the function in $\map{\hat{\psi}}{(a,b)}{\cam{R}}$ is continuous on the closed interval $[a,b]$, then there is always a scalar $c\in[a,b]$ where
+\item[x.] \textsb{Mean Value Theorem}\index{theorem!mean value}\index{mean value theorem}: given the closed interval $[a,b]\subset\real$ where $a<b$, if the function in $\map{\hat{\psi}}{(a,b)}{\cam{R}}$ is continuous on its domain and differentiable on open interval $(a,b)$, then there is always a scalar $c\in[a,b]$ where
 \begin{equation}\label{eq:meanValue}
 \grad{\fua{{\hat{\psi}}}{c}} =\dfrac{\hat{\psi}(b)-\hat{\psi}(a)}{b-a}\,.
 \end{equation}
 
-\item[xi.] \textsb{Mean Value Theorem for Real Valued Vector Functions}\index{theorem!mean value}\index{mean value theorem}: if the function in $\map{\tnr{\hat\psi}}{{\mathcal{\tnr{\mathcal{U}}}}}{\real}$, where $\tnr{\mathcal{U}}\in U_\real$ is open,  
-
+\item[xi.] \textsb{Mean Value Theorem for Real Valued Vector Functions}\index{theorem!mean value}\index{mean value theorem}: considering the mapping $\map{{\hat\psi}}{{\mathcal{{\mathcal{U}}}}}{\real}$, where ${\mathcal{U}}\subset U_\real$ is open, and an Euclidean affine space $\eamd{S}{\real}{n}$ defined by that $U_\real$, given arbitrary vectors $\vv{a},\vv{b}\in{\mathcal{U}}$, if every point $x$ in the line segment $\overline{ab}\subset\eamd{S}{\real}{n}$ defines a vector $\vv{x}\in{\mathcal{U}}$, there is always a point $c\in\overline{ab}$ where
+\begin{equation}\label{eq:meanValueVectorFun}
+(\vv{b}-\vv{a})\cdot\grad{\fua{{\hat{\psi}}}{\vv{c}}} =\hat{\psi}(\vv{b})-\hat{\psi}(\vv{a})\,.
+\end{equation} 
 \end{itemize}
 
 {\footnotesize
