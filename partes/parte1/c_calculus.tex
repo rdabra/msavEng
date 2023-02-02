@@ -354,9 +354,9 @@ and then
 \nabla_{\vto{x}_1}D_{\vto{x}_2}\tnr{\hat{\varphi}}(\vto{x}_1,\vto{x}_2)=D_{\vto{x}_2}\nabla_{\vto{x}_1}\tnr{\hat{\varphi}}(\vto{x}_1,\vto{x}_2)\,.
 \end{equation}
 
-\item[x.] \textsb{Mean Value Theorem}\index{theorem!mean value}\index{mean value theorem}: given the closed interval $[a,b]\subset\real$ where $a<b$, if the function in $\map{\hat{\psi}}{(a,b)}{\cam{R}}$ is continuous on its domain and differentiable on open interval $(a,b)$, then there is always a scalar $c\in[a,b]$ where
+\item[x.] \textsb{Mean Value Theorem}\index{theorem!mean value}\index{mean value theorem}: given the closed interval $[\alpha,\beta]\subset\real$ where $\alpha<\beta$, if the function in $\map{\hat{\psi}}{[\alpha,\beta]}{\cam{R}}$ is continuous on its domain and differentiable on open interval $(\alpha,\beta)$, then there is always a scalar $\kappa\in[\alpha,\beta]$ where
 \begin{equation}\label{eq:meanValue}
-\grad{\fua{{\hat{\psi}}}{c}} =\dfrac{\hat{\psi}(b)-\hat{\psi}(a)}{b-a}\,.
+\grad{\fua{{\hat{\psi}}}{\kappa}} =\dfrac{\hat{\psi}(\beta)-\hat{\psi}(\alpha)}{\beta-\alpha}\,.
 \end{equation}
 
 \item[xi.] \textsb{Mean Value Theorem for Real Valued Vector Functions}\index{theorem!mean value}\index{mean value theorem}: considering the mapping $\map{{\hat\psi}}{{\mathcal{{\mathcal{U}}}}}{\real}$, where ${\mathcal{U}}\subset U_\real$ is open, and an Euclidean affine space $\eamd{S}{\real}{n}$ defined by that $U_\real$, given arbitrary vectors $\vv{a},\vv{b}\in{\mathcal{U}}$, if every point $x$ in the line segment $\overline{ab}\subset\eamd{S}{\real}{n}$ defines a vector $\vv{x}\in{\mathcal{U}}$, there is always a point $c\in\overline{ab}$ where
@@ -403,7 +403,10 @@ and
 \begin{equation*}
 D_{\vto{x}_2}D_{\vto{x}_1}\tnr{\hat{\varphi}}(\vto{x}_1,\vto{x}_2) = \vto{x}_1^*\hat{\odot}_1\fua{ D_{\vto{x}_2}\nabla_{\vto{x}_1}\tnr{\hat{\varphi}}}{\vto{x}_1,\vto{x}_2}\,.
 \end{equation*}
-The item is proved by both of these equalities and the so called Theorem of Schwarz or Clairaut's theorem, which states that second derivatives of $\mathcal{C}^2$ functions are symmetric or commute (see \aut{Lang}\cite{lang_1993_3}, Theorem 7.3), that is, $D_{\vto{x}_1}D_{\vto{x}_2}\tnr{\hat{\varphi}}(\vto{x}_1,\vto{x}_2)=D_{\vto{x}_2}D_{\vto{x}_1}\tnr{\hat{\varphi}}(\vto{x}_1,\vto{x}_2)$. Now we prove item x by considering a function rule $g(x)=\hat{\psi}(x)-\alpha x$, where $\alpha$ is a real constant and $g$ is obviously continuous on interval $[a,b]$. The condition where $g(a)=g(b)$ implies that $\alpha=(\hat{\psi}(b)-\hat{\psi}(a))/(b-a)$ and that there is a scalar $c\in(a,b)$ where $\grad{\fua{g}{c}}=0$, according to Rolle's Theorem (see \aut{Spivak}\cite{spivak_2008_1}, p.193). But since $\grad{\fua{g}{c}}=\grad{\fua{{\hat{\psi}}}{c}}-\alpha=0$, replacing $\alpha$ by its value results \eqref{eq:meanValue}. 
+The item is proved by both of these equalities and the so called Theorem of Schwarz or Clairaut's theorem, which states that second derivatives of $\mathcal{C}^2$ functions are symmetric or commute (see \aut{Lang}\cite{lang_1993_3}, Theorem 7.3), that is, $D_{\vto{x}_1}D_{\vto{x}_2}\tnr{\hat{\varphi}}(\vto{x}_1,\vto{x}_2)=D_{\vto{x}_2}D_{\vto{x}_1}\tnr{\hat{\varphi}}(\vto{x}_1,\vto{x}_2)$. Now we prove item x by considering a function rule $g(x)=\hat{\psi}(x)-\alpha x$, where $\alpha$ is a real constant and $g$ is obviously continuous on interval $[a,b]$. The condition where $g(a)=g(b)$ implies that $\alpha=(\hat{\psi}(b)-\hat{\psi}(a))/(b-a)$ and that there is a scalar $c\in(a,b)$ where $\grad{\fua{g}{c}}=0$, according to Rolle's Theorem (see \aut{Spivak}\cite{spivak_2008_1}, p.193). But since $\grad{\fua{g}{c}}=\grad{\fua{{\hat{\psi}}}{c}}-\alpha=0$, replacing $\alpha$ by its value results \eqref{eq:meanValue}. In order to prove item xi, let the function in $\map{f}{[0,1]}{\mathcal{U}}$ be described by the rule $f(t)=t\vv{b}+(1-t)\vv{a}$. Therefore, for an arbitrary $t\in[0,1]$, there is a point $x\in\overline{ab}$ where $\hat{\psi}(\vv{x})=\hat{\psi}\circ f(t)$. Since the function $\hat{\psi}\circ f$ observes the conditions of property x, there is always a real number $\kappa\in[0,1]$ where $\grad{\fua{{\hat{\psi}\circ f}}{\kappa}} =\hat{\psi}\circ f(1)-\hat{\psi}\circ f(0)$. From this equality, considering \eqref{eq:prop1Grad} and $\vv{c}=f(\kappa)$, the following equalities prove the property.
+\begin{equation*}
+\grad{\fua{{\hat{\psi}\circ f}}{\kappa}}=\grad{f}(\kappa)\cdot\grad{\fua{{\hat{\psi}\circ f}}{\kappa}}=(\vv{b}-\vv{a})\cdot\grad{\fua{{\hat{\psi}}}{\vv{c}}}=\hat{\psi}(\vv{b})-\hat{\psi}(\vv{a})\,.
+\end{equation*}
 \end{proof}}
 
 
