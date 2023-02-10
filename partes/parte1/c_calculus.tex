@@ -497,7 +497,7 @@ where $\{B_1,B_2,\cdots\}\subseteq\css{M}$ is also an arbitrary disjoint countab
 \begin{equation}
 \fua{\mu}{A}=0\iff A=\emptyset\,,
 \end{equation}
-a condition that avoids terms like ``almost all'' or ``almost everywhere'' in forthcoming definitions. In this context, a double constituted by a measurable space and a measure, that is $((M,\css{M}),\mu)$, is called a \textsb{measure space}\index{space!measure}, which will hereafter be represented by the triple $(M,\css{M},\mu)$.  
+a condition that avoids terms like ``almost all'' or ``almost everywhere'' in forthcoming definitions. In this context, a double constituted by a measurable space and a measure, that is $((M,\css{M}),\mu)$, is called a \textsb{measure space}\index{space!measure}, which will hereafter be represented by the triple $(M,\css{M},\mu)$. In this context, a measure space is called bounded \index{space!bounded measure} when $\mu(M)$ is finite.
 
 
 Given a measurable field $(\real,\css{F})$ and an arbitrary element $\con{B}\in\css{F}$, the function in $\map{s}{M}{\real}$ is called \textsb{measurable}\index{function!measurable} if the preimage $\con{R}^{-1}_{\con{B}} \in \css{M}$. 
@@ -572,10 +572,9 @@ it is obvious that $\lim_{\min{\lpa i,j\rpa}\to\infty}\|(h_i+ r_i) -(h_j +r_j)\|
 
 Given the above conditions, we present some fundamental properties of integrals:
 
-
 \begin{itemize}
 	\setlength\itemsep{.1em}
-	\item[i.] If $f$ is integrable and nonnegative, then its integral on $E$ is also nonnegative;
+	\item[i.] If $f$ is integrable and nonnegative on $E\in\css{M}$, then its integral on $E$ is also nonnegative;
 	\item[ii.] If $f$ is integrable on every element of disjoint class $\{E_1,\cdots,E_m\}\subseteq \css{M}$, then
 	\begin{equation}
 	\int_{\bigcup_{i=1}^mE_i}f\,d\mu=\sum_{{i}=1}^{m} \int_{E_i}f\,d\mu\,;
@@ -588,6 +587,10 @@ Given the above conditions, we present some fundamental properties of integrals:
 	 \begin{equation}
 	 \int_{E}(\alpha f +\beta g)\,d\mu = \alpha\int_{E}f\,d\mu+\beta\int_{E}g\,d\mu \,.
 	 \end{equation}
+	\item[v.] If $f$ and $g$ are integrable on $E\in\css{M}$ and $f\leqslant g$, then 
+	\begin{equation}
+	\int_{E} f\, d\mu \leqslant \int_{E} g\, d\mu\,; 
+	\end{equation}	  
 \end{itemize}
 
 
@@ -629,8 +632,18 @@ Thereby, from  property \eqref{eq:cauchySum}, we have
 \begin{equation*}
 \int_E (\alpha f+\beta g) \,d\mu= \lim_{k\to\infty}\int_E(\alpha s_k+\beta t_k) \,d\mu= \lim_{k\to\infty}\sum_{i=1}^n\sum_{j=1}^m(\alpha\alpha_i^{(k)}+\beta\beta_j^{(k)})\fua{\mu}{E\cap A_i^{(k)}\cap B_j^{(k)}}\,,
 \end{equation*}
-which is equal to result \eqref{eq:a}.
+which is equal to result \eqref{eq:a}. In order to prove v, we can say that $g-f$ is nonnegative and then from item i the integral of $g-f$ is also nonnegative. From item iv, the following expression prove the theorem: $0\leqslant \int_E (g-f) d\mu=\int_Eg d\mu-\int_Ef d\mu$. 
 }\end{proof}
+
+
+The following theorem is a fundamental result on the field of Labesgue integrations because it describes the sufficient conditions under which it is possible to commute the integral sign and the limit. 
+\begin{mteo}{Dominated Convergence Theorem}{boundedConv}
+Given the bounded measure space $(M,\css{M},\mu)$ and a set $E\in\css{M}$, let the mappings $\map{f_i}{M}{\real}$ define a sequence $f_1,f_2,\cdots$ of integrable functions on $E$ that converges to the measurable function in $\map{f}{M}{\real}$, that is, $f=\lim_{i\to \infty} f_i$. If the function in $\map{g}{M}{\real}$ is integrable on $E$ and $|f_i(x)|\leqslant g(x)$ for all $f_i$ and $x\in E$, then $f$ is integrable on $E$ and 
+\begin{equation*}
+ \lim_{i\to \infty} \int_E f_i d\mu = \int_E f d\mu\,.
+ \end{equation*} 
+\end{mteo}
+
 
 
 Now, our goal is to integrate a broader class of functions other than functionals, namely, tensor and vector functions. Considering $\ete{\real}{U^{\times m}}$ and $\ete{\real}{V^{\times s}}$ Euclidean tensor spaces, let $\map{\tnr{\psi}}{\pmb{\mathcal{U}}}{\ete{\cam{R}}{V^{\times s}}}$ be a tensor mapping, where $\pmb{\mathcal{U}}\subseteq\ete{\real}{U^{\times m}}$, and $\map{f}{\pmb{\mathcal{U}}}{\real}$ a mapping whose functional is described by the rule $f = \frt{T}\circ\tnr{\psi}$, such that cotensor $\frt{T}$ is the representative tensor functional of an arbitrary tensor $\tnr{T}\in\ete{\real}{V^{\times s}}$. We define that function $\tnr{\psi}$ is integrable on $\pmb{\mathcal{U}}$ if and only if functional $f$ is integrable on $\pmb{\mathcal{U}}$. If this is the case, by specifying a rule
