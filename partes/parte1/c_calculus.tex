@@ -636,13 +636,42 @@ which is equal to result \eqref{eq:a}. In order to prove v, we can say that $g-f
 }\end{proof}
 
 
-The following theorem is a fundamental result on the field of Labesgue integrations because it describes the sufficient conditions under which it is possible to commute the integral sign and the limit. 
+The following theorem is a fundamental result on the field of Labesgue integrations because it describes the sufficient conditions under which it is possible to make the integral of a limit of a function sequence equal to the limit of a sequence of integrals. In practical terms, the theorem lays down the conditions to commute the integral sign and the limit. 
 \begin{mteo}{Dominated Convergence Theorem}{boundedConv}
-Given the bounded measure space $(M,\css{M},\mu)$ and a set $E\in\css{M}$, let the mappings $\map{f_i}{M}{\real}$ define a sequence $f_1,f_2,\cdots$ of integrable functions on $E$ that converges to the measurable function in $\map{f}{M}{\real}$, that is, $f=\lim_{i\to \infty} f_i$. If the function in $\map{g}{M}{\real}$ is integrable on $E$ and $|f_i(x)|\leqslant g(x)$ for all $f_i$ and $x\in E$, then $f$ is integrable on $E$ and 
+Given the bounded measure space $(M,\css{M},\mu)$ and a set $E\in\css{M}$, let the mappings $\map{f_i}{M}{\real}$ define a sequence $f_1,f_2,\cdots$ of integrable functions on $E$ which converges to the measurable function in $\map{f}{M}{\real}$, that is, function $f=\lim_{i\to \infty} f_i$. If the function in $\map{g}{M}{\real^+}$ is integrable on $E$ and dominates every $f_i$, that is $|f_i(x)|\leqslant g(x)$ for all $f_i$ and $x\in E$, then $f$ is integrable on $E$ and 
 \begin{equation*}
- \lim_{i\to \infty} \int_E f_i d\mu = \int_E f d\mu\,.
+ \int_E f d\mu= \int_E \lim_{i\to \infty}f_i\, d\mu=\lim_{i\to \infty} \int_E f_i\, d\mu\,.
  \end{equation*} 
 \end{mteo}
+\begin{proof}
+{\footnotesize
+Since the sequence $f_1,f_2,\cdots$ of integrable functions on $E$ converges to $f$ and are dominated by $g$, then it is obvious that $f$ is also an integrable function on $E$ dominated by $g$. Before we proceed, considering $\alpha_1,\alpha_2,\cdots$ a sequence of real numbers, we present the definitions of \textsb{inferior limit and superior limit}\index{limit!superior}\index{limit!inferior} respectively (see \aut{Friedman}\cite{friedman_1982_1}, p.2): 
+\begin{alignat*} {3}
+\lim_{i\to\infty}\inf \alpha_i:=\lim_{i\to\infty}(\inf \{\alpha_i,\alpha_{i+1},\cdots\})&\qquad \text{ and } \qquad&\lim_{i\to\infty}\sup \alpha_i:=\lim_{i\to\infty}(\sup \{\alpha_i,\alpha_{i+1},\cdots\})\,.
+\end{alignat*} 
+According to the fundamental \textsb{Fatou's Lemma}\index{Fatou's Lemma}, which unfortunately we shall not prove here because it is quite long (see \aut{Lang}\cite{lang_1993_3}, p. 141), if the functions in $\map{h_i}{M}{\real^+}$ define a sequence $h_1,h_2,\cdots$ of integrable functions on $E$, then 
+\begin{equation*}
+\lim_{i\to\infty}\inf  \int_E h_i\, d\mu\,\geqslant\,  \int_E \lim_{i\to\infty}\inf h_i\, d\mu\,.
+\end{equation*}
+From this inequality, using the linear property of the integral and making $h_i=g-f_i$, development
+\begin{align*}
+\lim_{i\to\infty}\inf  \int_E (g-f_i)\, d\mu &\geqslant   \int_E \lim_{i\to\infty}\inf (g-f_i)\, d\mu\\
+\lim_{i\to\infty}\inf \,(\int_E g\, d\mu-\int_E f_i\, d\mu)&\geqslant\int_E (g-\lim_{i\to\infty}\inf f_i)\, d\mu\\
+\int_E g\, d\mu + \lim_{i\to\infty}\inf (-\int_E f_i\, d\mu)&\geqslant\int_E g\, d\mu - \int_E \lim_{i\to\infty}\inf f_i \, d\mu
+\end{align*}
+leads us to conclude that 
+\begin{equation}
+\tag{a}
+\lim_{i\to\infty}\sup \int_E f_i\, d\mu\, \leqslant\, \int_E f\, d\mu\,,
+\end{equation}
+since $f=\lim_{i\to\infty}\inf f_i=\lim_{i\to\infty}\inf f_i=\lim_{i\to\infty}\sup f_i$, when sequence $f_1,f_2,\cdots$ converges to $f$, and $\lim_{i\to\infty}\inf (-\alpha_i)=-\lim_{i\to\infty}\sup \alpha_i$. Applying this same procedure for $h_i=g+f_i$, we arrive at 
+\begin{equation}
+\tag{b}
+\lim_{i\to\infty}\inf \int_E f_i\, d\mu\, \geqslant\, \int_E f\, d\mu\,.
+\end{equation}
+Considering the theory of superior and inferior limits, a very important feature is the following: if the real number $\alpha=\lim_{i\to\infty}\inf \alpha_i=\lim_{i\to\infty}\sup \alpha_i$ then $\lim_{i\to\infty} \alpha_i$ exists and equals $\alpha$. Considering this property, the proof of the theorem is a straightforward consequence of (a) and (b). 
+}
+\end{proof}
 
 
 
