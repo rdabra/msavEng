@@ -294,6 +294,9 @@ obviously constitute the coordinates of vector $\fua{\grad{\tnr{\hat{\psi}}}}{\v
 \begin{equation}
 \fua{\grad{\tnr{\hat{\psi}}}}{\vto{x}_0} = \sum_{i=1}^n\fua{\overline{[\tnr{\hat\psi}'(\vto{x}_0)]}}{\vun{u}_i}\vun{u}_i\,.
 \end{equation}
+merda DEFINIR O GRAD PARCIAL
+
+
 Now, in the case of a vector valued scalar function $\tnr{\hat{\psi}}$, when $U_{\cam{F}}=\cam{F}$, from mapping $\map{\tnr{\hat{\psi}}}{\mathcal{U}}{V_\cam{F}}$, we can write that $\fua{[\tnr{\hat{\psi}}'(x)]}{\beta} = \beta\fua{[\tnr{\hat{\psi}}'(x)]}{1}$ for all $\beta\in\cam{F}$, since the derivative is linear. In this context, our interest is to describe the directional derivative  
 \begin{equation}\label{eq:derivVecScaFun}
 \fua{\gloref{derivScalar}}{x} := \fua{[\tnr{\hat{\psi}}'(x)]}{1} = \lim_{\alpha\to 0} \dfrac{\fua{\tnr{\hat{\psi}}}{x+\alpha}-\fua{\tnr{\hat{\psi}}}{x}}{\alpha}\,. 
@@ -306,6 +309,11 @@ Moreover, if $\tnr{\hat{\psi}}$ is differentiable of order $k\geqslant 1$, we ad
 \begin{equation}
 \fua{\dfrac{d^k\tnr{\hat{\psi}}}{dx^k}}{x}:=\fua{[\tnr{\hat{\psi}}^{(k)}(x)]}{1}\,.
 \end{equation} 
+For the case of a mapping $\map{\tnr{\hat{\psi}}}{\mathcal{U}_1\times\cdots\mathcal{U}_q}{V_\cam{F}}$ where $\mathcal{U}_i\subseteq\cam{F}$ is open, if $\tnr{\hat{\psi}}$ is integrable on $\mathcal{U}_r$ then 
+\begin{equation}\label{eq:gradvectFun}
+\fua{\dfrac{d\tnr{\hat{\psi}}}{dx}}{x} = \fua{\grad{\tnr{\hat{\psi}}}}{x} \,.
+\end{equation}
+
 Moreover, given an arbitrary real number $x_0$ in a context where $U_{\cam{F}}=V_{\cam{F}}=\real$, real function $\hat{\psi}$ is real valued and then we have the classical geometric interpretation of real number $\fua{[d{\hat{\psi}}/dx]}{x_0}=\fua{[{\hat{\psi}}'(x_0)]}{1}$ as the slope of the tangent line ${\hat{\psi}}_\mathit{d}$ to the curve ${\hat{\psi}}$ at $x_0$. Still in this context and again following the idea of \eqref{eq:defGradient2}, scalar
 \begin{equation}
 \fua{\dfrac{d{\hat{\psi}}}{dx}}{x}=\grad{\fua{{\hat{\psi}}}{x}}\,.
@@ -475,7 +483,7 @@ is the $m$-cotensor of and each $\pmb{\mathcal{U}}_i=\pmb{\mathcal{U}}$ defines 
 
 \section{Integration}\index{integration}
 
-The integration approach we shall deal with in this section relies fundamentally on Lebesgue's theory, which is based on assigning a real number to a set, whatever measure this scalar expresses. The most commom measure related to set is the geometric concept of size, that is, length, area, volume or \textsb{hypervolume}\index{hypervolume} of respectively one, two, three or $n$ dimensional Hilbert spaces. In generic terms, a measure must obey certain rules that require and lead to new important definitions. In this context, from specific scalar functions with domains called measurable, integrable tensor functions can be defined.\footnote{The concise theory presented in this section is based mainly on the texts of \aut{Halmos}\cite{halmos_1974_1} and \aut{Lang}\cite{lang_1993_3}.}
+The integration approach we shall deal with in this section relies fundamentally on Lebesgue's theory, which is based on assigning a real number to a set, whatever measure this scalar expresses. The most common measure related to set is the geometric concept of size, that is, length, area, volume or \textsb{hypervolume}\index{hypervolume} of respectively one, two, three or $n$ dimensional Hilbert spaces. In generic terms, a measure must obey certain rules that require and lead to new important definitions. In this context, from specific scalar functions with domains called measurable, integrable tensor functions can be defined.\footnote{The concise theory presented in this section is based mainly on the texts of \aut{Halmos}\cite{halmos_1974_1} and \aut{Lang}\cite{lang_1993_3}.}
 
 From the concept of class and its dependent definitions presented on section \ref{sec:Sets}, the double $(M,\css{M})$ is said to be a \textsb{measurable space}\index{space!measurable} when $\css{M}$ is a $\sigma$-ring and a class of the set $M$. If this set defines a group or a field we also qualify them ``measurable''. Now, considering the mapping $\map{\mu}{\css{M}}{\real^+}$ and an arbitrary disjoint countable class $\{A_1,\cdots,A_n\}\subseteq\css{M}$, set function $\mu$ is called additive if
 \begin{equation}\label{eq:addMeasure}
@@ -637,7 +645,7 @@ which is equal to result \eqref{eq:a}. In order to prove v, we can say that $g-f
 
 
 The following theorem is a fundamental result on the field of Labesgue integrations because it describes the sufficient conditions under which it is possible to make the integral of a limit of a function sequence equal to the limit of a sequence of integrals. In practical terms, the theorem lays down the conditions to commute the integral sign and the limit. 
-\begin{mteo}{Dominated Convergence Theorem}{boundedConv}
+\begin{mteo}{Dominated Convergence}{boundedConv}
 Given the bounded measure space $(M,\css{M},\mu)$ and a set $E\in\css{M}$, let the mappings $\map{f_i}{M}{\real}$ define a sequence $f_1,f_2,\cdots$ of integrable functions on $E$ which converges to the measurable function in $\map{f}{M}{\real}$, that is, function $f=\lim_{i\to \infty} f_i$. If the function in $\map{g}{M}{\real^+}$ is integrable on $E$ and dominates every $f_i$, that is $|f_i(x)|\leqslant g(x)$ for all $f_i$ and $x\in E$, then $f$ is integrable on $E$ and 
 \begin{equation*}
  \int_E f d\mu= \int_E \lim_{i\to \infty}f_i\, d\mu=\lim_{i\to \infty} \int_E f_i\, d\mu\,.
@@ -672,6 +680,17 @@ since $f=\lim_{i\to\infty}\inf f_i=\lim_{i\to\infty}\inf f_i=\lim_{i\to\infty}\s
 Considering the theory of superior and inferior limits, a very important feature is the following: if the real number $\alpha=\lim_{i\to\infty}\inf \alpha_i=\lim_{i\to\infty}\sup \alpha_i$ then $\lim_{i\to\infty} \alpha_i$ exists and equals $\alpha$. Considering this property, the proof of the theorem is a straightforward consequence of (a) and (b). 
 }
 \end{proof}
+
+\begin{mcoro}{Leibniz Integral Rule}{leibIntRule}
+Considering the mapping $\map{f}{M\times\real}{\real}$, let the univariate functions $f_x$ and $f_y$ be defined in such a way that $f_x(y)=f_y(x)=f(x,y)$. If $f$ is integrable on $E\in\css{M}$ and the function in $\map{h}{\real}{\real}$, described by the rule  
+\begin{equation*}
+h(y) = \int_E f_y(x)\, d\mu(x)\,,
+\end{equation*}
+is differentiable on $(a,b)\subset\real$ where $a\leqslant b$, then
+\begin{equation*}
+ \grad{h}(y) =  \int_E \grad{f_x}(y)\, d\mu(x)\,
+\end{equation*}
+\end{mcoro}
 
 
 
