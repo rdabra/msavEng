@@ -294,14 +294,16 @@ obviously constitute the coordinates of vector $\fua{\grad{\tnr{\hat{\psi}}}}{\v
 \begin{equation}
 \fua{\grad{\tnr{\hat{\psi}}}}{\vto{x}_0} = \sum_{i=1}^n\fua{\overline{[\tnr{\hat\psi}'(\vto{x}_0)]}}{\vun{u}_i}\vun{u}_i\,.
 \end{equation}
-merda DEFINIR O GRAD PARCIAL
-
+Considering a condition similar to \eqref{eq:partialGrad} for the case of a multivariate scalar valued vector function $\tnr{\hat{\varphi}}$, we have
+\begin{equation}
+\fua{\gradp{x_r}{\tnr{\hat{\varphi}}}}{\vto{x}_1,\cdots,\vto{x}_r,\cdots,\vto{x}_q}:=\Phi^{-1}\circ\fua{\nabla_{\vto{x}_r}\tnr{\hat{\varphi}}}{\vto{x}_1,\cdots,\vto{x}_r,\cdots,\vto{x}_q}\,.
+\end{equation}
 
 Now, in the case of a vector valued scalar function $\tnr{\hat{\psi}}$, when $U_{\cam{F}}=\cam{F}$, from mapping $\map{\tnr{\hat{\psi}}}{\mathcal{U}}{V_\cam{F}}$, we can write that $\fua{[\tnr{\hat{\psi}}'(x)]}{\beta} = \beta\fua{[\tnr{\hat{\psi}}'(x)]}{1}$ for all $\beta\in\cam{F}$, since the derivative is linear. In this context, our interest is to describe the directional derivative  
 \begin{equation}\label{eq:derivVecScaFun}
 \fua{\gloref{derivScalar}}{x} := \fua{[\tnr{\hat{\psi}}'(x)]}{1} = \lim_{\alpha\to 0} \dfrac{\fua{\tnr{\hat{\psi}}}{x+\alpha}-\fua{\tnr{\hat{\psi}}}{x}}{\alpha}\,. 
 \end{equation} 
-Thereby, following the idea of \eqref{eq:defGradient2}, we conclude that vector
+Thereby, following the idea behind \eqref{eq:defGradient2}, we conclude that there is a vector
 \begin{equation}\label{eq:gradvectFun}
 \fua{\dfrac{d\tnr{\hat{\psi}}}{dx}}{x} = \fua{\grad{\tnr{\hat{\psi}}}}{x} \,.
 \end{equation}
@@ -309,14 +311,21 @@ Moreover, if $\tnr{\hat{\psi}}$ is differentiable of order $k\geqslant 1$, we ad
 \begin{equation}
 \fua{\dfrac{d^k\tnr{\hat{\psi}}}{dx^k}}{x}:=\fua{[\tnr{\hat{\psi}}^{(k)}(x)]}{1}\,.
 \end{equation} 
-For the case of a mapping $\map{\tnr{\hat{\psi}}}{\mathcal{U}_1\times\cdots\mathcal{U}_q}{V_\cam{F}}$ where $\mathcal{U}_i\subseteq\cam{F}$ is open, if $\tnr{\hat{\psi}}$ is integrable on $\mathcal{U}_r$ then 
-\begin{equation}\label{eq:gradvectFun}
-\fua{\dfrac{d\tnr{\hat{\psi}}}{dx}}{x} = \fua{\grad{\tnr{\hat{\psi}}}}{x} \,.
-\end{equation}
-
-Moreover, given an arbitrary real number $x_0$ in a context where $U_{\cam{F}}=V_{\cam{F}}=\real$, real function $\hat{\psi}$ is real valued and then we have the classical geometric interpretation of real number $\fua{[d{\hat{\psi}}/dx]}{x_0}=\fua{[{\hat{\psi}}'(x_0)]}{1}$ as the slope of the tangent line ${\hat{\psi}}_\mathit{d}$ to the curve ${\hat{\psi}}$ at $x_0$. Still in this context and again following the idea of \eqref{eq:defGradient2}, scalar
+In a condition similar to \eqref{eq:partialDerivative} for the case of a multivariate vector valued scalar function $\tnr{\hat{\varphi}}$, vector
 \begin{equation}
-\fua{\dfrac{d{\hat{\psi}}}{dx}}{x}=\grad{\fua{{\hat{\psi}}}{x}}\,.
+\fua{\dfrac{\partial\tnr{\hat{\varphi}}}{\partial x_r}}{x_1,\cdots,x_r,\cdots,x_q} := [\partial_{x_r}\tnr{\hat{\varphi}}(x_1,\cdots,x_r,\cdots,x_q)](1)
+\end{equation}
+from which conclude from the same idea of \eqref{eq:defGradient2} that there is a vector 
+\begin{equation}
+\fua{\gradp{x_r}{\tnr{\hat{\varphi}}}}{x_1,\cdots,x_r,\cdots,x_q}=\fua{\dfrac{\partial\tnr{\hat{\varphi}}}{\partial x_r}}{x_1,\cdots,x_r,\cdots,x_q}.
+\end{equation}
+Given an arbitrary real number $x_0$ in a context where $U_{\cam{F}}=V_{\cam{F}}=\real$, real function $\hat{\psi}$ is real valued and then we have the classical geometric interpretation of real number $\fua{[d{\hat{\psi}}/dx]}{x_0}=\fua{[{\hat{\psi}}'(x_0)]}{1}$ as the slope of the tangent line ${\hat{\psi}}_\mathit{d}$ to the curve ${\hat{\psi}}$ at $x_0$. Still in this context and again following the idea behind \eqref{eq:defGradient2}, there is a scalar
+\begin{equation}
+\grad{\fua{{\hat{\psi}}}{x}}=\fua{\dfrac{d{\hat{\psi}}}{dx}}{x}\,.
+\end{equation}
+Similarly as above, for the case of a multivariate scalar valued scalar function $\hat{\varphi}$, we conclude that there is a scalar
+\begin{equation}
+\fua{\gradp{x_r}{{\hat{\varphi}}}}{x_1,\cdots,x_r,\cdots,x_q}=\fua{\dfrac{\partial{\hat{\varphi}}}{\partial x_r}}{x_1,\cdots,x_r,\cdots,x_q}\,.
 \end{equation}
 
 Now returning to the conditions of definition \eqref{eq:defGradient}, from the directional derivative of $\tnr{\psi}$ along $\tnr{H}\in\pmb{\mathcal{U}}$ and rule \eqref{eq:directDeriv}, it is easy to obtain that
@@ -682,14 +691,15 @@ Considering the theory of superior and inferior limits, a very important feature
 \end{proof}
 
 \begin{mcoro}{Leibniz Integral Rule}{leibIntRule}
-Considering the mapping $\map{f}{M\times\real}{\real}$, let the univariate functions $f_x$ and $f_y$ be defined in such a way that $f_x(y)=f_y(x)=f(x,y)$. If $f$ is integrable on $E\in\css{M}$ and the function in $\map{h}{\real}{\real}$, described by the rule  
+Given the open interval $(a,b)\subset\real$ and the mapping $\map{f}{M\times(a,b)}{\real}$, if function $f$ is integrable on $E\in\css{M}$ for every element of $(a,b)$ and the function in $\map{h}{(a,b)}{\real}$, described by the rule  
 \begin{equation*}
-h(y) = \int_E f_y(x)\, d\mu(x)\,,
+h(y) = \int_E f(x,y)\, d\mu(x)\,,
 \end{equation*}
-is differentiable on $(a,b)\subset\real$ where $a\leqslant b$, then
+is differentiable on its domain, then 
 \begin{equation*}
- \grad{h}(y) =  \int_E \grad{f_x}(y)\, d\mu(x)\,
+ \grad{h}(y) =  \int_E \gradp{y}{f}(x,y)\, d\mu(x)\,,\,\forall \, y\in(a,b)\,,
 \end{equation*}
+provided that $|\gradp{y}{f}(x,y)|\leqslant g(x)$ for every $x\in E$ and  $y\in(a,b)$.
 \end{mcoro}
 
 
