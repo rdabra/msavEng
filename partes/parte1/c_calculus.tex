@@ -305,17 +305,17 @@ Now, in the case of a vector valued scalar function $\tnr{\hat{\psi}}$, when $U_
 \end{equation} 
 Thereby, following the idea behind \eqref{eq:defGradient2}, we conclude that there is a vector
 \begin{equation}\label{eq:gradvectFun}
-\fua{\dfrac{d\tnr{\hat{\psi}}}{dx}}{x} = \fua{\grad{\tnr{\hat{\psi}}}}{x} \,.
+\fua{\grad{\tnr{\hat{\psi}}}}{x} = \fua{\dfrac{d\tnr{\hat{\psi}}}{dx}}{x} \,.
 \end{equation}
 Moreover, if $\tnr{\hat{\psi}}$ is differentiable of order $k\geqslant 1$, we adopt  
 \begin{equation}
 \fua{\dfrac{d^k\tnr{\hat{\psi}}}{dx^k}}{x}:=\fua{[\tnr{\hat{\psi}}^{(k)}(x)]}{1}\,.
 \end{equation} 
 In a condition similar to \eqref{eq:partialDerivative} for the case of a multivariate vector valued scalar function $\tnr{\hat{\varphi}}$, vector
-\begin{equation}
-\fua{\dfrac{\partial\tnr{\hat{\varphi}}}{\partial x_r}}{x_1,\cdots,x_r,\cdots,x_q} := [\partial_{x_r}\tnr{\hat{\varphi}}(x_1,\cdots,x_r,\cdots,x_q)](1)
+\begin{equation}\label{eq:parcMultScal}
+\fua{\dfrac{\partial\tnr{\hat{\varphi}}}{\partial x_r}}{x_1,\cdots,x_r,\cdots,x_q} := [\partial_{x_r}\tnr{\hat{\varphi}}(x_1,\cdots,x_r,\cdots,x_q)](1)\,,
 \end{equation}
-from which conclude from the same idea of \eqref{eq:defGradient2} that there is a vector 
+from which conclude, considering the same idea of \eqref{eq:defGradient2}, that there is a vector 
 \begin{equation}
 \fua{\gradp{x_r}{\tnr{\hat{\varphi}}}}{x_1,\cdots,x_r,\cdots,x_q}=\fua{\dfrac{\partial\tnr{\hat{\varphi}}}{\partial x_r}}{x_1,\cdots,x_r,\cdots,x_q}.
 \end{equation}
@@ -323,7 +323,7 @@ Given an arbitrary real number $x_0$ in a context where $U_{\cam{F}}=V_{\cam{F}}
 \begin{equation}
 \grad{\fua{{\hat{\psi}}}{x}}=\fua{\dfrac{d{\hat{\psi}}}{dx}}{x}\,.
 \end{equation}
-Similarly as above, for the case of a multivariate scalar valued scalar function $\hat{\varphi}$, we conclude that there is a scalar
+Similarly to definition \eqref{eq:parcMultScal}, for the case of a multivariate scalar valued scalar function $\hat{\varphi}$, we conclude that there is a scalar
 \begin{equation}
 \fua{\gradp{x_r}{{\hat{\varphi}}}}{x_1,\cdots,x_r,\cdots,x_q}=\fua{\dfrac{\partial{\hat{\varphi}}}{\partial x_r}}{x_1,\cdots,x_r,\cdots,x_q}\,.
 \end{equation}
