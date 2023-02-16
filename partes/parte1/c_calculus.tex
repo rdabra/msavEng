@@ -30,7 +30,7 @@ where function $\fua{\tnr{\psi}'}{\tnr{X}_0}\in\evl{\cam{F}}{\pmb{\mathcal{U}}}{
 \begin{equation}
 \gloref{derivativeAt}:=[\fua{\tnr{\psi}'}{\tnr{X}_0}](\tnr{X}_0)\,, 
 \end{equation}
-from which we conclude that tensor function $D\tnr{\psi}\in\evl{\cam{F}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}$. From the preceding argumentation to equality \eqref{eq:funcaoLimitada}, linearity and boundedness imply continuity, and then $\fua{\tnr{\psi}'}{\tnr{X}_0}$ belongs to function space $\evlc{\cam{F}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}$, which we specify to be also a Banach space of continuous linear functions. Moreover, the function in
+from which we conclude that tensor function $D\tnr{\psi}\in\evl{\cam{F}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}$. From the preceding argumentation of equality \eqref{eq:funcaoLimitada}, linearity and boundedness imply continuity, and then $\fua{\tnr{\psi}'}{\tnr{X}_0}$ belongs to function space $\evlc{\cam{F}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}$, which we specify to be also a Banach space of continuous linear functions. Moreover, the function in
 $\map{\gloref{derivative}}{\pmb{\mathcal{U}}}{\evlc{\cam{F}}{\pmb{\mathcal{U}}}{\ete{\cam{F}}{V^{\times s}}}}$ is said to be the \textsb{derivative function}\index{derivative!function} or simply the derivative of $\tnr{\psi}$. 
 Rewriting expression \eqref{eq:tangent} for $\tnr{\psi}$ and $\tnr{\psi_\mathit{d}}$ tangent at $\tnr{X}_0$, the result is
 \begin{equation}\label{eq:preDirect}
@@ -376,10 +376,13 @@ and then
 \grad{\fua{{\hat{\psi}}}{\kappa}} =\dfrac{\hat{\psi}(\beta)-\hat{\psi}(\alpha)}{\beta-\alpha}\,.
 \end{equation}
 
+\begin{comment}
 \item[xi.] \textsb{Mean Value Theorem for Real Valued Vector Functions}\index{theorem!mean value}\index{mean value theorem}: considering the mapping $\map{{\hat\psi}}{{\mathcal{{\mathcal{U}}}}}{\real}$, where ${\mathcal{U}}\subset U_\real$ is open, and an Euclidean affine space $\eamd{S}{\real}{n}$ defined by that $U_\real$, given arbitrary vectors $\vv{a},\vv{b}\in{\mathcal{U}}$, if every point $x$ in the line segment $\overline{ab}\subset\eamd{S}{\real}{n}$ defines a vector $\vv{x}\in{\mathcal{U}}$, there is always a point $c\in\overline{ab}$ where
 \begin{equation}\label{eq:meanValueVectorFun}
 (\vv{b}-\vv{a})\cdot\grad{\fua{{\hat{\psi}}}{\vv{c}}} =\hat{\psi}(\vv{b})-\hat{\psi}(\vv{a})\,.
 \end{equation} 
+\end{comment}
+
 \end{itemize}
 
 {\footnotesize
@@ -420,10 +423,15 @@ and
 \begin{equation*}
 D_{\vto{x}_2}D_{\vto{x}_1}\tnr{\hat{\varphi}}(\vto{x}_1,\vto{x}_2) = \vto{x}_1^*\hat{\odot}_1\fua{ D_{\vto{x}_2}\nabla_{\vto{x}_1}\tnr{\hat{\varphi}}}{\vto{x}_1,\vto{x}_2}\,.
 \end{equation*}
-The item is proved by both of these equalities and the so called Theorem of Schwarz or Clairaut's theorem, which states that second derivatives of $\mathcal{C}^2$ functions are symmetric or commute (see \aut{Lang}\cite{lang_1993_3}, Theorem 7.3), that is, $D_{\vto{x}_1}D_{\vto{x}_2}\tnr{\hat{\varphi}}(\vto{x}_1,\vto{x}_2)=D_{\vto{x}_2}D_{\vto{x}_1}\tnr{\hat{\varphi}}(\vto{x}_1,\vto{x}_2)$. Now we prove item x by considering a function rule $g(x)=\hat{\psi}(x)-\alpha x$, where $\alpha$ is a real constant and $g$ is obviously continuous on interval $[a,b]$. The condition where $g(a)=g(b)$ implies that $\alpha=(\hat{\psi}(b)-\hat{\psi}(a))/(b-a)$ and that there is a scalar $c\in(a,b)$ where $\grad{\fua{g}{c}}=0$, according to Rolle's Theorem (see \aut{Spivak}\cite{spivak_2008_1}, p.193). But since $\grad{\fua{g}{c}}=\grad{\fua{{\hat{\psi}}}{c}}-\alpha=0$, replacing $\alpha$ by its value results \eqref{eq:meanValue}. In order to prove item xi, let the function in $\map{f}{[0,1]}{\mathcal{U}}$ be described by the rule $f(t)=t\vv{b}+(1-t)\vv{a}$. Therefore, for an arbitrary $t\in[0,1]$, there is a point $x\in\overline{ab}$ where $\hat{\psi}(\vv{x})=\hat{\psi}\circ f(t)$. Since the function $\hat{\phi}:=\hat{\psi}\circ f$ observes the conditions of property x, there is always a real number $\kappa\in[0,1]$ where $\hat{\phi}(1)-\hat{\phi}(0)=\grad{\fua{{\hat{\phi}}}{\kappa}}$. From this equality, considering \eqref{eq:prop1Grad} and $\vv{c}=f(\kappa)$, the following equalities prove the property.
+The item is proved by both of these equalities and the so called Theorem of Schwarz or Clairaut's theorem, which states that second derivatives of $\mathcal{C}^2$ functions are symmetric or commute (see \aut{Lang}\cite{lang_1993_3}, Theorem 7.3), that is, $D_{\vto{x}_1}D_{\vto{x}_2}\tnr{\hat{\varphi}}(\vto{x}_1,\vto{x}_2)=D_{\vto{x}_2}D_{\vto{x}_1}\tnr{\hat{\varphi}}(\vto{x}_1,\vto{x}_2)$. Now we prove item x by considering a function rule $g(x)=\hat{\psi}(x)-\alpha x$, where $\alpha$ is a real constant and $g$ is obviously continuous on interval $[a,b]$. The condition where $g(a)=g(b)$ implies that $\alpha=(\hat{\psi}(b)-\hat{\psi}(a))/(b-a)$ and that there is a scalar $c\in(a,b)$ where $\grad{\fua{g}{c}}=0$, according to Rolle's Theorem (see \aut{Spivak}\cite{spivak_2008_1}, p.193). But since $\grad{\fua{g}{c}}=\grad{\fua{{\hat{\psi}}}{c}}-\alpha=0$, replacing $\alpha$ by its value results \eqref{eq:meanValue}. 
+
+\begin{comment}
+In order to prove item xi, let the function in $\map{f}{[0,1]}{\mathcal{U}}$ be described by the rule $f(t)=t\vv{b}+(1-t)\vv{a}$. Therefore, for an arbitrary $t\in[0,1]$, there is a point $x\in\overline{ab}$ where $\hat{\psi}(\vv{x})=\hat{\psi}\circ f(t)$. Since the function $\hat{\phi}:=\hat{\psi}\circ f$ observes the conditions of property x, there is always a real number $\kappa\in[0,1]$ where $\hat{\phi}(1)-\hat{\phi}(0)=\grad{\fua{{\hat{\phi}}}{\kappa}}$. From this equality, considering \eqref{eq:prop1Grad} and $\vv{c}=f(\kappa)$, the following equalities prove the property.
 \begin{equation*}
 \hat{\psi}(\vv{b})-\hat{\psi}(\vv{a})=\grad{\fua{{\hat{\phi}}}{\kappa}}=\grad{f}(\kappa)\cdot\grad{\fua{{\hat{\psi}\circ f}}{\kappa}}=(\vv{b}-\vv{a})\cdot\grad{\fua{{\hat{\psi}}}{\vv{c}}}\,.
 \end{equation*}
+\end{comment}
+
 \end{proof}}
 
 
@@ -681,7 +689,7 @@ leads us to conclude that
 \tag{a}
 \lim_{i\to\infty}\sup \int_E f_i\, d\mu\, \leqslant\, \int_E f\, d\mu\,,
 \end{equation}
-since $f=\lim_{i\to\infty}\inf f_i=\lim_{i\to\infty}\inf f_i=\lim_{i\to\infty}\sup f_i$, when sequence $f_1,f_2,\cdots$ converges to $f$, and $\lim_{i\to\infty}\inf (-\alpha_i)=-\lim_{i\to\infty}\sup \alpha_i$. Applying this same procedure for $h_i=g+f_i$, we arrive at 
+since function $f=\lim_{i\to\infty}\inf f_i=\lim_{i\to\infty}\sup f_i$ when sequence $f_1,f_2,\cdots$ converges to $f$, and $\lim_{i\to\infty}\inf (-\alpha_i)=-\lim_{i\to\infty}\sup \alpha_i$. Applying this same procedure for $h_i=g+f_i$, we arrive at 
 \begin{equation}
 \tag{b}
 \lim_{i\to\infty}\inf \int_E f_i\, d\mu\, \geqslant\, \int_E f\, d\mu\,.
@@ -701,8 +709,23 @@ is differentiable on its domain, then
 \end{equation*}
 provided that $|\gradp{y}{f}(x,y)|\leqslant g(x)$ for every $x\in E$ and  $y\in(a,b)$.
 \end{mcoro}
-
-
+\begin{proof}
+{\footnotesize
+If the function in $\map{f_{\alpha}}{M\times(a,b)}{\real}$ is described by 
+\begin{equation*}
+ f_{\alpha}(x,y) = \dfrac{f(x,y+\alpha)-f(x,y)}{\alpha}\,,
+\end{equation*} 	
+where real number $\alpha> 0$, then it is obvious that $\lim_{\alpha\to 0}f_{\alpha}(x,y) = \gradp{y}{f}(x,y)$. For a fixed $z\in M$, there is always a finite real number $\kappa\in[y,y+\alpha]$ so that $\gradp{y}{f}(z,\kappa)=f_{\alpha}(z,y)$, according to the Mean Value Theorem, which confers a boundedness to $f_{\alpha}$ not affected by the elements of $M$, that is, $f_{\alpha}$ is said to be uniformly bounded. Therefore, we conclude that any sequence $\alpha_1,\alpha_2,\cdots$ that converges to zero implies a sequence $f_{\alpha_1},f_{\alpha_2},\cdots$ of uniformly bounded functions that converges to $\gradp{y}{f}$, which is the same to say that every $f_{\alpha_i}$ is dominated by some function on $(a,b)$. In this context, from the Dominated Convergence Theorem, we prove the corollary through
+\begin{align*}
+\int_E \gradp{y}{f}(x,y)\, d\mu(x) &= \int_E \lim_{\alpha\to 0}f_{\alpha}(x,y)\, d\mu(x) \\
+&= \lim_{\alpha\to 0}\int_E f_{\alpha}(x,y)\, d\mu(x) \\
+&= \lim_{\alpha\to 0}\int_E\dfrac{f(x,y+\alpha)-f(x,y)}{\alpha}\, d\mu(x)\\
+&= \lim_{\alpha\to 0}\dfrac{\int_Ef(x,y+\alpha)\, d\mu(x)-\int_Ef(x,y)\, d\mu(x)}{\alpha}\\
+&= \lim_{\alpha\to 0}\dfrac{h(y+\alpha)-h(y)}{\alpha}\\
+&= \grad{h}(y)\,.
+\end{align*}
+}
+\end{proof}
 
 Now, our goal is to integrate a broader class of functions other than functionals, namely, tensor and vector functions. Considering $\ete{\real}{U^{\times m}}$ and $\ete{\real}{V^{\times s}}$ Euclidean tensor spaces, let $\map{\tnr{\psi}}{\pmb{\mathcal{U}}}{\ete{\cam{R}}{V^{\times s}}}$ be a tensor mapping, where $\pmb{\mathcal{U}}\subseteq\ete{\real}{U^{\times m}}$, and $\map{f}{\pmb{\mathcal{U}}}{\real}$ a mapping whose functional is described by the rule $f = \frt{T}\circ\tnr{\psi}$, such that cotensor $\frt{T}$ is the representative tensor functional of an arbitrary tensor $\tnr{T}\in\ete{\real}{V^{\times s}}$. We define that function $\tnr{\psi}$ is integrable on $\pmb{\mathcal{U}}$ if and only if functional $f$ is integrable on $\pmb{\mathcal{U}}$. If this is the case, by specifying a rule
 \begin{equation}\label{eq:aga}
