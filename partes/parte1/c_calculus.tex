@@ -524,12 +524,15 @@ where $\{B_1,B_2,\cdots\}\subseteq\css{M}$ is also an arbitrary disjoint countab
 \end{equation}
 a condition that avoids terms like ``almost all'' or ``almost everywhere'' in forthcoming definitions. In this context, a double constituted by a measurable space and a measure, that is $((M,\css{M}),\mu)$, is called a \textsb{measure space}\index{space!measure}, which will hereafter be represented by the triple $(M,\css{M},\mu)$. In this context, a measure space is called bounded \index{space!bounded measure} when $\mu(M)$ is finite. 
 
-Now, for the case of a measure space $(\eamd{S}{\real}{n},\css{M},\mu)$, where affine space $M=\eamd{S}{\real}{n}$ is Euclidean, let the points $a_i$ and $b_i$ be arbitrary elements of $M$. Considering distances $L_i:=\fua{\varrho}{a_i,b_i}$, let $vol(C)=\prod_{i=1}^n L_i$ be the hypervolume of an arbitrary hyperrectangle $C$. If $C_1,C_2,\cdots$ is an arbitrary sequence of hyperrectangles that covers $M$, then  
-
-
-
-
-given $A\in\css{M}$, the value $\lambda(A)$ is called the Labesgue Measure of $A$, which corresponds to distance, area and volume of $A$ according to whether $M$ is one, two or three dimension respectively.  
+Now, for the case of a measure space $(M,\css{M},\mu)$, where $M=\eamd{S}{\real}{n}$ is an Euclidean affine space, given an arbitrary $A\in\css{M}$, let $C_i\subset A$ be arbitrary hyperrectangles with side lengths $(l_1^{(i)},\cdots,l_n^{(i)})$ and hypervolumes $vol(C_i)=\prod_{k=1}^nl_k^{(i)}$ in such a way that each of the sequences $(C_1,C_2,\cdots)_j$ covers $A$. Considering $vol(C_i^{(j)})$ the hypervolume of the $i$-th hyperrectangle of the $j$-th sequence, we define the real number
+\begin{equation}
+\lambda(A)=\inf\{\sum_{i=1}^\infty vol(C_i^{(1)}),\sum_{i=1}^\infty vol(C_i^{(2)}),\cdots\}\,,
+\end{equation}
+ where $\inf$ refers to the infimum (greatest lower bound) of the set involved\footnote{The infimum is used here because the minimum value of this set cannot be determined.}. If
+\begin{equation}
+\lambda(A)=\lambda(A\cap B)+\lambda(A'\cap B)\,,\, \forall\, A,B\in\css{M}\,,
+\end{equation}
+then $\lambda$ results a specific measure $\mu$, called \textsb{Labesgue Measure}\index{measure!Labesgue}. It can be concluded that for the particular cases of one, two or three dimensional affine space $M$, the value $\lambda(A)$ corresponds to the length, area or volume of $A$ respectively.  
 
 Given a measurable field $(\real,\css{F})$ and an arbitrary element $\con{B}\in\css{F}$, the function in $\map{s}{M}{\real}$ is called \textsb{measurable}\index{function!measurable} if the preimage $\con{R}^{-1}_{\con{B}} \in \css{M}$. 
 Now, considering an arbitrary set $A\in\css{M}$, a class $\css{A}=\{A_1,\cdots,A_n\}\subseteq\css{M}$ is called a \textsb{partition}\index{set!partition of} of $A$ if it is disjoint and $A=\bigcup_{i=1}^nA_i$. Given a sequence $\alpha_1,\cdots,\alpha_n\in\real$, the measurable function in $\map{s_\css{A}}{M}{\real}$ is called \textsb{step}\index{function!step} or \textsb{simple}\index{function!simple} with respect to $\css{A}$ if its rule is described by
@@ -587,9 +590,9 @@ where $|s|(x):=|\fua{s}{x}|$ and $s,s_1,s_2\in S$. In this context, if a Cauchy 
 \begin{equation}\label{eq:integ}
 \int_E f \;d\mu := \lim_{i\to \infty}\int_E s_i \;d\mu
 \end{equation}
-is the integral or Labesgue integral of $f$ on $E$. It is important to say that if $s_1,s_2,\cdots\in S$ and $t_1,t_2,\cdots\in S$ are convergent Chauchy sequences of integrable step functions, so is the sequence $ s_1+t_1, s_2+ t_2,\cdots$. Moreover, for arbitrary $\alpha,\beta\in\real$, if the function in $\map{g}{M}{\real}$ is measurable, 
+is the integral or Labesgue integral of $f$ on $E$. It is important to say that if $s_1,s_2,\cdots\in S$ and $t_1,t_2,\cdots\in S$ define convergent Chauchy sequences of integrable step functions, the sequence $(s_1+t_1, s_2+ t_2,\cdots)$ is also Cauchy. Moreover, for arbitrary $\alpha,\beta\in\real$, if the function in $\map{g}{M}{\real}$ is measurable, 
 \begin{equation}\label{eq:cauchySum}
-s_1,s_2,\cdots\to f\,\,\, \wedge\,\,\, t_1,t_2,\cdots\to g \implies \alpha s_1+ \beta t_1, \alpha s_2+ \beta t_2,\cdots\to \alpha f+\beta g\,.
+(s_1,s_2,\cdots)\to f\,\,\, \wedge\,\,\, (t_1,t_2,\cdots)\to g \implies (\alpha s_1+ \beta t_1, \alpha s_2+ \beta t_2,\cdots)\to \alpha f+\beta g\,.
 \end{equation}
 
 {\footnotesize
@@ -813,7 +816,7 @@ Considering $U_\real$ and $\ete{\real}{U\times V^{\times s}}$ finite dimensional
 $\map{\vtf{\varphi}_\odot}{\pmb{\mathcal{U}}}{\ete{\real}{U\times V^{\times s}}}$ a continuous mapping
 where $\fua{\vtf{\varphi}_\odot}{\vto{x}}=\fua{\vtf{n}}{\vto{x}}\odot_1\fua{\vtf{\varphi}}{\vto{x}}$,
 \begin{equation*}
-\int_{\hat{\pmb{\mathcal{U}}}}\dvt{\vtf{\varphi}}\;d\mu = \int_{\partial{\pmb{\mathcal{U}}}}\vtf{\varphi}_\odot\;d\mu\,\,.
+\int_{\hat{\pmb{\mathcal{U}}}}\dvt{\vtf{\varphi}}\;d\lambda = \int_{\partial{\pmb{\mathcal{U}}}}\vtf{\varphi}_\odot\;d\lambda\,.
 \end{equation*}
 \end{mteo}
 \hspace{1pt}
@@ -826,15 +829,15 @@ The proof of this theorem is very long. We invite the interested reader to see t
 \begin{mcoro}{Gauss-Ostrogradsky for Gradients}{gauss2}
 For a continuous mapping $\map{\vtf{\varphi}_\otimes}{\pmb{\mathcal{U}}}{\ete{\real}{U\times V^{\times s}}}$ where $\fua{\vtf{\varphi}_\otimes}{\vto{x}}=\fua{\vtf{n}}{\vto{x}}\otimes\fua{\vtf{\varphi}}{\vto{x}}$,
 \begin{equation*}
-	\int_{\hat{\pmb{\mathcal{U}}}}\nabla{\vtf{\varphi}}\;d\mu = \int_{\partial{\pmb{\mathcal{U}}}}\vtf{\varphi}_\otimes\;d\mu\,\,.
+	\int_{\hat{\pmb{\mathcal{U}}}}\nabla{\vtf{\varphi}}\;d\lambda = \int_{\partial{\pmb{\mathcal{U}}}}\vtf{\varphi}_\otimes\;d\lambda\,\,.
 \end{equation*}
 \end{mcoro}
 {\footnotesize
 \begin{proof}
 Considering identity tensor $\tnr{I}\in\ete{\real}{U^2}$ and property \eqref{eq:repInte}, we can write that
 \begin{align*}
-\tnr{I}\odot_2	\int_{\hat{\pmb{\mathcal{U}}}}\nabla{\vtf{\varphi}}\;d\mu & = \tnr{I}\odot_2 \int_{\partial{\pmb{\mathcal{U}}}}\vtf{\varphi}_\otimes\;d\mu\\
-\int_{\hat{\pmb{\mathcal{U}}}} \frt{I}\circ\nabla{\vtf{\varphi}}\;d\mu& =\int_{\partial{\pmb{\mathcal{U}}}}\frt{I}\circ\vtf{\varphi}_\otimes\;d\mu\,.
+\tnr{I}\odot_2	\int_{\hat{\pmb{\mathcal{U}}}}\nabla{\vtf{\varphi}}\;d\lambda & = \tnr{I}\odot_2 \int_{\partial{\pmb{\mathcal{U}}}}\vtf{\varphi}_\otimes\;d\lambda\\
+\int_{\hat{\pmb{\mathcal{U}}}} \frt{I}\circ\nabla{\vtf{\varphi}}\;d\lambda& =\int_{\partial{\pmb{\mathcal{U}}}}\frt{I}\circ\vtf{\varphi}_\otimes\;d\lambda\,.
 \end{align*}
 But from definition \eqref{eq:repTensFunc}, we have equalities $\fua{\frt{I}\circ\nabla{\vtf{\varphi}}}{\vto{x}}=\tnr{I}\cdot\fua{\nabla{\vtf{\varphi}}}{\vto{x}}=\tnr{I}\odot_2\fua{\nabla{\vtf{\varphi}}}{\vto{x}}=\fua{\dvt{\vtf{\varphi}}}{\vto{x}}$ and from \eqref{eq:identidade} we have $\fua{\frt{I}\circ\vtf{\varphi}_\otimes}{\vto{x}}=\tnr{I}\cdot[\fua{\vtf{n}}{\vto{x}}\otimes\fua{\vtf{\varphi}}{\vto{x}}]=\fua{\vtf{n}}{\vto{x}}\odot_1\fua{\vtf{\varphi}}{\vto{x}}=\fua{\vtf{\varphi}_\odot}{\vto{x}}$\,.	From theses results, we arrive at the previous theorem.
 \end{proof}
@@ -843,16 +846,16 @@ But from definition \eqref{eq:repTensFunc}, we have equalities $\fua{\frt{I}\cir
 \begin{mcoro}{Gauss-Ostrogradsky for Curls}{gauss3}
 In the case of continuous mappings $\map{\vtf{\varphi}}{\pmb{\mathcal{U}}}{U_\real}$ and $\map{\vtf{\varphi}_\times}{\pmb{\mathcal{U}}}{U_\real}$ where $(U_\real,\tnr{A}_B)$ is an three dimensional oriented Euclidean space and $\fua{\vtf{\varphi}_\times}{\vto{x}}=\fua{\vtf{n}}{\vto{x}}\times\fua{\vtf{\varphi}}{\vto{x}}$,
 \begin{equation*}
-\int_{\hat{\pmb{\mathcal{U}}}}\crl{\vtf{\varphi}}\;d\mu = \int_{\partial{\pmb{\mathcal{U}}}}\vtf{\varphi}_\times\;d\mu\,\,.
+\int_{\hat{\pmb{\mathcal{U}}}}\crl{\vtf{\varphi}}\;d\lambda = \int_{\partial{\pmb{\mathcal{U}}}}\vtf{\varphi}_\times\;d\lambda\,\,.
 \end{equation*}
 \end{mcoro}
 {\footnotesize
 \begin{proof}
 Considering \eqref{eq:repInte}, \eqref{eq:crossProduct}, \eqref{eq:repTensFunc}, we have $\fua{\vtf{n}}{\vto{x}}\times\fua{\vtf{\varphi}}{\vto{x}}=\tnr{A}_B\odot_2[\fua{\vtf{n}}{\vto{x}}\otimes\fua{\vtf{\varphi}}{\vto{x}}]=\fua{\frt{A}_B\circ\vtf{\varphi}_\otimes}{\vto{x}}$. Thereby, we arrive at corollary \ref{cor:gauss2} by
 \begin{align*}
-\int_{\hat{\pmb{\mathcal{U}}}}\crl{\vtf{\varphi}}\;d\mu & = \int_{\partial{\pmb{\mathcal{U}}}}\vtf{\varphi}_\times\;d\mu\\
-\int_{\hat{\pmb{\mathcal{U}}}}\tnr{A}_B\odot_2\nabla{\vtf{\varphi}}\;d\mu & = \int_{\partial{\pmb{\mathcal{U}}}}\frt{A}_B\circ\vtf{\varphi}_\otimes\;d\mu\\
-\tnr{A}_B\odot_2\int_{\hat{\pmb{\mathcal{U}}}}\nabla{\vtf{\varphi}}\;d\mu & = \tnr{A}_B\odot_2\int_{\partial{\pmb{\mathcal{U}}}}\vtf{\varphi}_\otimes\;d\mu\,.
+\int_{\hat{\pmb{\mathcal{U}}}}\crl{\vtf{\varphi}}\;d\lambda & = \int_{\partial{\pmb{\mathcal{U}}}}\vtf{\varphi}_\times\;d\lambda\\
+\int_{\hat{\pmb{\mathcal{U}}}}\tnr{A}_B\odot_2\nabla{\vtf{\varphi}}\;d\lambda & = \int_{\partial{\pmb{\mathcal{U}}}}\frt{A}_B\circ\vtf{\varphi}_\otimes\;d\lambda\\
+\tnr{A}_B\odot_2\int_{\hat{\pmb{\mathcal{U}}}}\nabla{\vtf{\varphi}}\;d\lambda & = \tnr{A}_B\odot_2\int_{\partial{\pmb{\mathcal{U}}}}\vtf{\varphi}_\otimes\;d\lambda\,.
 \end{align*}
 \end{proof}
 }
@@ -869,7 +872,7 @@ There are Lipschitz surfaces in three dimensional Euclidean spaces for which it 
 \begin{mteo}{Kelvin-Stokes}{stokes}
 Let $(U_\real,\tnr{A}_B)$ be a three dimensional oriented Euclidean space and $\map{\vtf{\varphi}}{\pmb{\mathcal{S}}}{\ete{\real}{U\times V}}$ a mapping where  $\vtf{\varphi}$ is continuously differentiable on Lipschitz surface $\widehat{\pmb{\mathcal{S}}}\subset U_\real$, which is oriented by an outward unit normal vector function $\vtf{n}$. Considering $\vtf{\tau}$ a unit tangent vector function on boundary $\partial\pmb{\mathcal{S}}\subset\pmb{\mathcal{S}}$ such that $\map{\vtf{\varphi}_{\partial\pmb{\mathcal{S}}}}{\partial\pmb{\mathcal{S}}}{V_\real}$ and $\map{\vtf{\varphi}_{\widehat{\pmb{\mathcal{S}}}}}{\widehat{\pmb{\mathcal{S}}}}{V_\real}$ are continuous mappings where $\fua{\vtf{\varphi}_{\partial\pmb{\mathcal{S}}}}{\vto{x}}=\fua{\vtf{\tau}}{\vto{x}}\odot_1\fua{\vtf{\varphi}}{\vto{x}}$ and $\fua{\vtf{\varphi}_{\widehat{\pmb{\mathcal{S}}}}}{\vto{x}}=\fua{\vtf{n}}{\vto{x}}\odot_1\fua{\crl{\vtf{\varphi}}}{\vto{x}}$, then
 \begin{equation*}
-\int_{\widehat{{\pmb{\mathcal{S}}}}}\vtf{\varphi}_{\widehat{\pmb{\mathcal{S}}}}\;d\mu = \int_{\partial{\pmb{\mathcal{S}}}}\vtf{\varphi}_{\partial\pmb{\mathcal{S}}}\;d\mu\,\,.
+\int_{\widehat{{\pmb{\mathcal{S}}}}}\vtf{\varphi}_{\widehat{\pmb{\mathcal{S}}}}\;d\lambda = \int_{\partial{\pmb{\mathcal{S}}}}\vtf{\varphi}_{\partial\pmb{\mathcal{S}}}\;d\lambda\,\,.
 \end{equation*}
 \end{mteo}
 %\hspace{1pt}
