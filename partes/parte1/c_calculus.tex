@@ -524,15 +524,17 @@ where $\{B_1,B_2,\cdots\}\subseteq\css{M}$ is also an arbitrary disjoint countab
 \end{equation}
 a condition that avoids terms like ``almost all'' or ``almost everywhere'' in forthcoming definitions. In this context, a double constituted by a measurable space and a measure, that is $((M,\css{M}),\mu)$, is called a \textsb{measure space}\index{space!measure}, which will hereafter be represented by the triple $(M,\css{M},\mu)$. In this context, a measure space is called bounded \index{space!bounded measure} when $\mu(M)$ is finite. 
 
-Now, for the case of a measure space $(M,\css{M},\mu)$, where $M=\eamd{S}{\real}{n}$ is an Euclidean affine space, given an arbitrary $A\in\css{M}$, let $C_i\subset A$ be arbitrary hyperrectangles with side lengths $(l_1^{(i)},\cdots,l_n^{(i)})$ and hypervolumes $vol(C_i)=\prod_{k=1}^nl_k^{(i)}$ in such a way that each of the sequences $(C_1,C_2,\cdots)_j$ covers $A$. Considering $vol(C_i^{(j)})$ the hypervolume of the $i$-th hyperrectangle of the $j$-th sequence, we define the real number
+Now, for the case of a measure space $(M,\css{M},\mu)$, where $M=\eamd{S}{\real}{n}$ is an Euclidean affine space, given an arbitrary $A\in\css{M}$, if each of the classes $\css{C}_i:=\{C_{i1},C_{i2},\cdots\}$ are covers of $A$, where $C_{ij}\subset A$ are hyperrectangles with side lengths $(l_{ij1},\cdots,l_{ijn})$ and hypervolumes $vol(C_{ij}):=\prod_{k=1}^nl_{ijk}$, we define 
 \begin{equation}
-\lambda(A)=\inf\{\sum_{i=1}^\infty vol(C_i^{(1)}),\sum_{i=1}^\infty vol(C_i^{(2)}),\cdots\}\,,
+\lambda(A)=\inf\{\sum_{j=1}^\infty vol(C_{1j}),\sum_{j=1}^\infty vol(C_{2j}),\cdots\}\,,
 \end{equation}
  where $\inf$ refers to the infimum (greatest lower bound) of the set involved\footnote{The infimum is used here because the minimum value of this set cannot be determined.}. If
 \begin{equation}
 \lambda(A)=\lambda(A\cap B)+\lambda(A'\cap B)\,,\, \forall\, A,B\in\css{M}\,,
 \end{equation}
-then $\lambda$ results a specific measure $\mu$, called \textsb{Labesgue Measure}\index{measure!Labesgue}. It can be concluded that for the particular cases of one, two or three dimensional affine space $M$, the value $\lambda(A)$ corresponds to the length, area or volume of $A$ respectively.  
+then $\lambda$ results a specific measure $\mu$, called \textsb{Labesgue Measure}\index{measure!Labesgue}. It can be concluded that for the particular cases of one, two or three dimensional affine space $M$, real number $\lambda(A)$ corresponds to the length, area or volume of $A$ respectively. Moreover, we recall that in an Euclidean affine space, a coordinate system is implicit and then points and vectors are biunivocally correlated. Therefore, $M=U\eamd{S}{\real}{n}$
+
+in this context, the Labesgue Measure of set of vectors can be defined to be the Labesgue Measure of set of its corresponding points, that is, if $M$
 
 Given a measurable field $(\real,\css{F})$ and an arbitrary element $\con{B}\in\css{F}$, the function in $\map{s}{M}{\real}$ is called \textsb{measurable}\index{function!measurable} if the preimage $\con{R}^{-1}_{\con{B}} \in \css{M}$. 
 Now, considering an arbitrary set $A\in\css{M}$, a class $\css{A}=\{A_1,\cdots,A_n\}\subseteq\css{M}$ is called a \textsb{partition}\index{set!partition of} of $A$ if it is disjoint and $A=\bigcup_{i=1}^nA_i$. Given a sequence $\alpha_1,\cdots,\alpha_n\in\real$, the measurable function in $\map{s_\css{A}}{M}{\real}$ is called \textsb{step}\index{function!step} or \textsb{simple}\index{function!simple} with respect to $\css{A}$ if its rule is described by
@@ -597,7 +599,7 @@ is the integral or Labesgue integral of $f$ on $E$. It is important to say that 
 
 {\footnotesize
 \begin{proof}
-Since scalar multiplication does not affect the convergence of Cauchy sequences $s_1,s_2,\cdots$ and $t_1,t_2,\cdots$, we will verify only the effect of the sum. First we prove that $  h_1+ r_1,h_2+ r_2,\cdots$, where $h_i=\alpha s_i$ and $r_i=\beta t_i$, is also a Cauchy sequence. If both expressions $\lim_{\min{\lpa i,j\rpa}\to\infty}{\fua{\varrho}{h_i,h_j}}=0$ and $\lim_{\min{\lpa i,j\rpa}\to\infty}{\fua{\varrho}{r_i,r_j}}=0$ are valid, then, by summing these two equalities, we obtain $\lim_{\min{\lpa i,j\rpa}\to\infty}\fua{\varrho}{h_i,h_j}+\fua{\varrho}{r_i,r_j}=0\,$. From the property of triangular inequality of norms, since
+Since scalar multiplication does not affect the convergence of Cauchy sequences $(s_1,s_2,\cdots)$ and $(t_1,t_2,\cdots)$, we will verify only the effect of the sum. First we prove that $(h_1+ r_1,h_2+ r_2,\cdots)$, where $h_i=\alpha s_i$ and $r_i=\beta t_i$, is also a Cauchy sequence. If both expressions $\lim_{\min{\lpa i,j\rpa}\to\infty}{\fua{\varrho}{h_i,h_j}}=0$ and $\lim_{\min{\lpa i,j\rpa}\to\infty}{\fua{\varrho}{r_i,r_j}}=0$ are valid, then, by adding these two equalities, we obtain $\lim_{\min{\lpa i,j\rpa}\to\infty}\fua{\varrho}{h_i,h_j}+\fua{\varrho}{r_i,r_j}=0\,$. From the property of triangular inequality of norms, since
 \begin{equation*}
 \fua{\varrho}{h_i,h_j}+\fua{\varrho}{r_i,r_j} = \|h_i-h_j\| + \|r_i-r_j\| \geqslant \|h_i-h_j + r_i-r_j\|\,,
 \end{equation*}
@@ -630,7 +632,7 @@ Given the above conditions, we present some fundamental properties of integrals:
 
 \begin{proof}
 {\footnotesize
-In order to prove item i, let's specify a sequence of integrable step functions $s_1,s_2,\cdots$ where
+In order to prove item i, let's specify a sequence of integrable step functions $(s_1,s_2,\cdots)$ where
 \begin{equation*}
 \fua{s_k}{x}=\sum_{{i}=1}^n(\fua{f}{x}+k^{-1})\fua{\tnr{1}_{A_i^{(k)}}}{x}
 \end{equation*}
@@ -672,18 +674,18 @@ which is equal to result \eqref{eq:a}. In order to prove v, we can say that $g-f
 
 The following theorem is a fundamental result on the field of Labesgue integrations because it describes the sufficient conditions under which it is possible to make the integral of a limit of a function sequence equal to the limit of a sequence of integrals. In practical terms, the theorem lays down the conditions to commute the integral sign and the limit. The subsequent corollary, which describes a rule for differentiating under the integral sign, will be very useful in obtaining the expressions related to the Balance of Mass.  
 \begin{mteo}{Dominated Convergence}{boundedConv}
-Given the bounded measure space $(M,\css{M},\mu)$ and a set $E\in\css{M}$, let the mappings $\map{f_i}{M}{\real}$ define a sequence $f_1,f_2,\cdots$ of integrable functions on $E$ which converges to the measurable function in $\map{f}{M}{\real}$, that is, function $f=\lim_{i\to \infty} f_i$. If the function in $\map{g}{M}{\real^+}$ is integrable on $E$ and dominates every $f_i$, that is $|f_i(x)|\leqslant g(x)$ for all $f_i$ and $x\in E$, then $f$ is integrable on $E$ and 
+Given the bounded measure space $(M,\css{M},\mu)$ and a set $E\in\css{M}$, let the mappings $\map{f_i}{M}{\real}$ define a sequence $(f_1,f_2,\cdots)$ of integrable functions on $E$ which converges to the measurable function in $\map{f}{M}{\real}$, that is, function $f=\lim_{i\to \infty} f_i$. If the function in $\map{g}{M}{\real^+}$ is integrable on $E$ and dominates every $f_i$, that is $|f_i(x)|\leqslant g(x)$ for all $f_i$ and $x\in E$, then $f$ is integrable on $E$ and 
 \begin{equation*}
  \int_E f d\mu= \int_E \lim_{i\to \infty}f_i\, d\mu=\lim_{i\to \infty} \int_E f_i\, d\mu\,.
  \end{equation*} 
 \end{mteo}
 \begin{proof}
 {\footnotesize
-Since the sequence $f_1,f_2,\cdots$ of integrable functions on $E$ converges to $f$ and are dominated by $g$, then it is obvious that $f$ is also an integrable function on $E$ dominated by $g$. Before we proceed, considering $\alpha_1,\alpha_2,\cdots$ a sequence of real numbers, we present the definitions of \textsb{inferior limit and superior limit}\index{limit!superior}\index{limit!inferior} respectively (see \aut{Friedman}\cite{friedman_1982_1}, p.2): 
+Since the sequence $(f_1,f_2,\cdots)$ of integrable functions on $E$ converges to $f$ and are dominated by $g$, then it is obvious that $f$ is also an integrable function on $E$ dominated by $g$. Before we proceed, considering $(\alpha_1,\alpha_2,\cdots)$ a sequence of real numbers, we present the definitions of \textsb{inferior limit and superior limit}\index{limit!superior}\index{limit!inferior} respectively (see \aut{Friedman}\cite{friedman_1982_1}, p.2): 
 \begin{alignat*} {3}
 \lim_{i\to\infty}\inf \alpha_i:=\lim_{i\to\infty}(\inf \{\alpha_i,\alpha_{i+1},\cdots\})&\qquad \text{ and } \qquad&\lim_{i\to\infty}\sup \alpha_i:=\lim_{i\to\infty}(\sup \{\alpha_i,\alpha_{i+1},\cdots\})\,.
 \end{alignat*} 
-According to the fundamental \textsb{Fatou's Lemma}\index{Fatou's Lemma}, which unfortunately we shall not prove here because it is quite long (see \aut{Lang}\cite{lang_1993_3}, p. 141), if the functions in $\map{h_i}{M}{\real^+}$ define a sequence $h_1,h_2,\cdots$ of integrable functions on $E$, then 
+According to the fundamental \textsb{Fatou's Lemma}\index{Fatou's Lemma}, which unfortunately we shall not prove here because it is quite long (see \aut{Lang}\cite{lang_1993_3}, p. 141), if the functions in $\map{h_i}{M}{\real^+}$ define a sequence $(h_1,h_2,\cdots)$ of integrable functions on $E$, then 
 \begin{equation*}
 \lim_{i\to\infty}\inf  \int_E h_i\, d\mu\,\geqslant\,  \int_E \lim_{i\to\infty}\inf h_i\, d\mu\,.
 \end{equation*}
@@ -698,7 +700,7 @@ leads us to conclude that
 \tag{a}
 \lim_{i\to\infty}\sup \int_E f_i\, d\mu\, \leqslant\, \int_E f\, d\mu\,,
 \end{equation}
-since function $f=\lim_{i\to\infty}\inf f_i=\lim_{i\to\infty}\sup f_i$ when sequence $f_1,f_2,\cdots$ converges to $f$, and $\lim_{i\to\infty}\inf (-\alpha_i)=-\lim_{i\to\infty}\sup \alpha_i$. Applying this same procedure for $h_i=g+f_i$, we arrive at 
+since function $f=\lim_{i\to\infty}\inf f_i=\lim_{i\to\infty}\sup f_i$ when sequence $(f_1,f_2,\cdots)$ converges to $f$, and $\lim_{i\to\infty}\inf (-\alpha_i)=-\lim_{i\to\infty}\sup \alpha_i$. Applying this same procedure for $h_i=g+f_i$, we arrive at 
 \begin{equation}
 \tag{b}
 \lim_{i\to\infty}\inf \int_E f_i\, d\mu\, \geqslant\, \int_E f\, d\mu\,.
@@ -724,7 +726,7 @@ If the function in $\map{f_{\alpha}}{M\times(a,b)}{\real}$ is described by
 \begin{equation*}
  f_{\alpha}(x,y) = \dfrac{f(x,y+\alpha)-f(x,y)}{\alpha}\,,
 \end{equation*} 	
-where real number $\alpha> 0$, then it is obvious that $\lim_{\alpha\to 0}f_{\alpha}(x,y) = \gradp{y}{f}(x,y)$. For a fixed $z\in M$, there is always a finite real number $\kappa\in[y,y+\alpha]$ so that $\gradp{y}{f}(z,\kappa)=f_{\alpha}(z,y)$, according to the Mean Value Theorem, which confers a boundedness to $f_{\alpha}$ not affected by the elements of $M$, that is, $f_{\alpha}$ is said to be uniformly bounded. Therefore, we conclude that any sequence $\alpha_1,\alpha_2,\cdots$ that converges to zero implies a sequence $f_{\alpha_1},f_{\alpha_2},\cdots$ of uniformly bounded functions that converges to $\gradp{y}{f}$, which is the same to say that every $f_{\alpha_i}$ is dominated by some function on $(a,b)$. In this context, from the Dominated Convergence Theorem, we prove the corollary through
+where real number $\alpha> 0$, then it is obvious that $\lim_{\alpha\to 0}f_{\alpha}(x,y) = \gradp{y}{f}(x,y)$. For a fixed $z\in M$, there is always a finite real number $\kappa\in[y,y+\alpha]$ so that $\gradp{y}{f}(z,\kappa)=f_{\alpha}(z,y)$, according to the Mean Value Theorem, which confers a boundedness to $f_{\alpha}$ not affected by the elements of $M$, that is, $f_{\alpha}$ is said to be uniformly bounded. Therefore, we conclude that any sequence $(\alpha_1,\alpha_2,\cdots)$ that converges to zero implies a sequence $(f_{\alpha_1},f_{\alpha_2},\cdots)$ of uniformly bounded functions that converges to $\gradp{y}{f}$, which is the same to say that every $f_{\alpha_i}$ is dominated by some function on $(a,b)$. In this context, from the Dominated Convergence Theorem, we prove the corollary through
 \begin{align*}
 \int_E \gradp{y}{f}(x,y)\, d\mu(x) &= \int_E \lim_{\alpha\to 0}f_{\alpha}(x,y)\, d\mu(x) \\
 &= \lim_{\alpha\to 0}\int_E f_{\alpha}(x,y)\, d\mu(x) \\
@@ -736,7 +738,7 @@ where real number $\alpha> 0$, then it is obvious that $\lim_{\alpha\to 0}f_{\al
 }
 \end{proof}
 
-Now, our goal is to integrate a broader class of functions other than functionals, namely, tensor and vector functions. Considering $\ete{\real}{U^{\times m}}$ and $\ete{\real}{V^{\times s}}$ Euclidean tensor spaces, let $\map{\tnr{\psi}}{\pmb{\mathcal{U}}}{\ete{\cam{R}}{V^{\times s}}}$ be a tensor mapping, where $\pmb{\mathcal{U}}\subseteq\ete{\real}{U^{\times m}}$, and $\map{f}{\pmb{\mathcal{U}}}{\real}$ a mapping whose functional is described by the rule $f = \frt{T}\circ\tnr{\psi}$, such that cotensor $\frt{T}$ is the representative tensor functional of an arbitrary tensor $\tnr{T}\in\ete{\real}{V^{\times s}}$. We define that function $\tnr{\psi}$ is integrable on $\pmb{\mathcal{U}}$ if and only if functional $f$ is integrable on $\pmb{\mathcal{U}}$. If this is the case, by specifying a rule
+Now, our goal is to integrate a broader class of functions other than functionals, namely, tensor and vector functions. Considering $\ete{\real}{U^{\times m}}$ and $\ete{\real}{V^{\times s}}$ Euclidean tensor spaces, let $\map{\tnr{\psi}}{\pmb{\mathcal{U}}}{\ete{\cam{R}}{V^{\times s}}}$ be a tensor mapping, where $\pmb{\mathcal{U}}\subseteq\ete{\real}{U^{\times m}}$, and $\map{f}{\pmb{\mathcal{U}}}{\real}$ a mapping whose functional is described by the rule $f = \frt{T}\circ\tnr{\psi}$, such that cotensor $\frt{T}$ is the representative tensor functional of an arbitrary tensor $\tnr{T}\in\ete{\real}{V^{\times s}}$, according to \eqref{eq:polyRepre} in the context of real fields. We define that function $\tnr{\psi}$ is integrable on $\pmb{\mathcal{U}}$ if and only if $f$ is integrable on $\pmb{\mathcal{U}}$. If this is the case, by specifying a rule
 \begin{equation}\label{eq:aga}
 \fua{\tnr{h}}{\tnr{X}} = \int_{\pmb{\mathcal{U}}} \frt{X}\circ\tnr{\psi}\;d\mu\,,
 \end{equation}
