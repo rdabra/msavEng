@@ -402,7 +402,7 @@ But a set constituted of coordinate functionals, in this case $B^*:=\{\vtf{f}^\c
 \end{equation}
 enable us to conclude that $\vtf{f}_i^B$ spans $V_\cam{F}^*$ and if $\vtf{h}=\vtf{0}$, then functions $\vtf{f}_i^B$ result zero, which proves that $B^*$ is linearly independent. Therefore, we can state that scalars $\fua{\vtf{h}}{\vto{u}_i}$ result the coordinates of $\vtf{h}$ in $B^*$ and a complete vector space have the same dimension of its dual or that $\dim (V_\cam{F})=\dim (V_\cam{F}^*)$ in the present context. It is convenient that this strong correspondence between a complete vector space and its dual becomes even stronger, in such a way that vectors and dual vectors are biunivocally related, when dual vectors are renamed to \textsb{covectors}\index{covector}. By defining a rule similar to \eqref{eq:regraCoord}, the following theorem, the most important of our study, establishes this one-to-one relationship.
 
-\begin{mteo}{Riesz-FrÈchet Representation}{repRiesz}
+\begin{mteo}{Riesz-Fr√©chet Representation}{repRiesz}
 Let $\map{\Phi}{U_\cam{F}}{U^*_\cam{F}}$ be a mapping where $U_\cam{F}$ is a Hilbert space and
 $U^*_\cam{F}$ its dual space. If for every $\vto{u}\in U_\cam{F}$, a covector  \gloref{covetor}$:=\fua{\Phi}{\vto{u}}$ is described by the rule
 $\fua{\vto{u}^*}{\vto{x}}=\vto{x}\cdot\vto{u}$, then $\Phi$ results an antilinear bijection. When $\vto{u}^*$ is continuous,  $\|\vto{u}^*\|_{U^*_\cam{F}}=\|\vto{u}\|_{U_\cam{F}}$.
@@ -440,7 +440,7 @@ according to restrictions on page \pageref{restricFuncs}. If $\varphi$ weren't a
 \end{proof}
 }
 
-In the context of a field $\cam{F}$, which is also a Hilbert space, the Riesz-FrÈchet Representation theorem leads to another interesting property that biunivocally relates $\cam{F}$ and the dual space of a one dimensional Hilbert space $U_\cam{F}$. Since this property will be relevant for future purposes, we shall present it as follows.
+In the context of a field $\cam{F}$, which is also a Hilbert space, the Riesz-Fr√©chet Representation theorem leads to another interesting property that biunivocally relates $\cam{F}$ and the dual space of a one dimensional Hilbert space $U_\cam{F}$. Since this property will be relevant for future purposes, we shall present it as follows.
 
 \begin{mcoro}{Scalars and Covectors}{scalCov}
 In the case of a one dimensional $U_\cam{F}$, considering set $\{\vun{u}\}$ its orthonormal basis, the mapping $\map{\omega}{\cam{F}}{U^*_\cam{F}}$ is a linear bijective transformation if $\fua{\omega}{x}=x\vun{u}^*$.
@@ -451,7 +451,7 @@ The proof of $\omega$ linearity is trivial. Now let's verify if it is an injecti
 \end{proof}
 }
 
-The Riesz-FrÈchet Representation also enables us to define a rule for coordinate functionals on bases not necessarily orthogonal. Let's see how this happens. Considering the conditions of the theorem, let $B=\{\vto{u}_1,\cdots,\vto{u}_n\}$ be a basis of $U_\cam{F}$ and basis $B^*=\{\vtf{f}_1^B,\cdots,\vtf{f}_n^B\}$ its dual correspondent. In this context, functionals $\vtf{f}_i^B\in U_\cam{F}^*$ are biunivocally related to vectors $\vto{v}_i\in U_\cam{F}$ in such a way that, given a vector $\vto{u}\in U_\cam{F}$, the following equalities are valid:
+The Riesz-Fr√©chet Representation also enables us to define a rule for coordinate functionals on bases not necessarily orthogonal. Let's see how this happens. Considering the conditions of the theorem, let $B=\{\vto{u}_1,\cdots,\vto{u}_n\}$ be a basis of $U_\cam{F}$ and basis $B^*=\{\vtf{f}_1^B,\cdots,\vtf{f}_n^B\}$ its dual correspondent. In this context, functionals $\vtf{f}_i^B\in U_\cam{F}^*$ are biunivocally related to vectors $\vto{v}_i\in U_\cam{F}$ in such a way that, given a vector $\vto{u}\in U_\cam{F}$, the following equalities are valid:
 \begin{equation*}
 \fua{\vtf{f}_i^B}{\vto{u}}=\vto{u}\cdot\vto{v_i}=\sum_{j=1}^n\fua{\vtf{f}_j^B}{\vto{u}}\vto{u}_j \cdot \vto{v}_i\,.
 \end{equation*}
@@ -499,7 +499,7 @@ If the elements of $U_\cam{F}^*$ are continuous, then $U_\cam{F}^*$ is a Hilbert
 
 {\footnotesize
 \begin{proof}
-By the rule \eqref{eq:normaFuncao},  $U_\cam{F}^*$ is a normed space that is also defined to be metric inner product (See p. \pageref{txt:prodInt}). Thus, it remains here to verify that $U_\cam{F}^*$ is complete. This condition is assured if the bijection $\Phi$ is isometric, according to theorem \ref{teo:isoComp}. From the rule for covectors established by Riesz-FrÈchet Representation, it is trivial to obtain that $(\vtf{v}-\vtf{w})^*=\vto{v}^*-\vtf{w}^*$, or that $\fua{\Phi}{\vto{v}-\vto{w}}=\fua{\Phi}{\vto{v}}-\fua{\Phi}{\vto{w}}$. Thereby, knowing that $\|\fua{\Phi}{\vto{x}}\|_{U_\cam{F}^*}=\|\vto{x}\|_{U_\cam{F}}$, 
+By the rule \eqref{eq:normaFuncao},  $U_\cam{F}^*$ is a normed space that is also defined to be metric inner product (See p. \pageref{txt:prodInt}). Thus, it remains here to verify that $U_\cam{F}^*$ is complete. This condition is assured if the bijection $\Phi$ is isometric, according to theorem \ref{teo:isoComp}. From the rule for covectors established by Riesz-Fr√©chet Representation, it is trivial to obtain that $(\vtf{v}-\vtf{w})^*=\vto{v}^*-\vtf{w}^*$, or that $\fua{\Phi}{\vto{v}-\vto{w}}=\fua{\Phi}{\vto{v}}-\fua{\Phi}{\vto{w}}$. Thereby, knowing that $\|\fua{\Phi}{\vto{x}}\|_{U_\cam{F}^*}=\|\vto{x}\|_{U_\cam{F}}$, 
 \begin{equation*}
 \fua{\varrho_{U_\cam{F}^*}}{\fua{\Phi}{\vto{v}},\fua{\Phi}{\vto{w}}}=\|\fua{\Phi}{\vto{v}}-\fua{\Phi}{\vto{w}}\|_{U_\cam{F}^*}= \|\fua{\Phi}{\vto{v}-\vto{w}}\|_{U_\cam{F}^*}= \|\vto{v}-\vto{w}\|_{U_\cam{F}}=\fua{\varrho_{U_\cam{F}}}{\vto{v},\vto{w}}\,.
 \end{equation*}
@@ -748,7 +748,7 @@ From these two classifications of coordinates, considering $U_\cam{F}$ a Hilbert
 \begin{equation*}
 \vto{u}^*=\sum_{i=1}^n\fua{\vto{u}^*}{\vto{u}_i} \vtf{f}_i^{B}= \sum_{i=1}^n (\vto{u}_i\cdot\vto{u}) (\vtf{u}^i)^*\,.
 \end{equation*}
-Since $\vto{u}$ and $\vto{u}^*$ are biunivocally related through Riesz-FrÈchet Representation, the coordinates $(\vto{u}_1\cdot\vto{u},\cdots,\vto{u}_n\cdot\vto{u})$ of $\vto{u}^*$ on $B^*$ are usually called the covariant coordinates of vector $\vto{u}$ on $B^\perp$. If the Hilbert space in question is real, considering
+Since $\vto{u}$ and $\vto{u}^*$ are biunivocally related through Riesz-Fr√©chet Representation, the coordinates $(\vto{u}_1\cdot\vto{u},\cdots,\vto{u}_n\cdot\vto{u})$ of $\vto{u}^*$ on $B^*$ are usually called the covariant coordinates of vector $\vto{u}$ on $B^\perp$. If the Hilbert space in question is real, considering
 $\hat{B}=\{\vun{u}_1,\cdots,\vun{u}_n\}$ an orthonormal basis of $U_\real$, we can say that covariant and contravariant coordinates of an arbitrary vector $\vto{u}$ are always equal because expressions $\vun{u}_i=\vun{u}^i$ and the commutativity of inner product imply $\vto{u}\cdot\vto{u}^i=\vto{u}_i\cdot\vto{u}$, that is,   $\fua{\vto{u}^*}{\vto{u}_i}=\fua{\vtf{f}_i^{\hat{B}}}{\vto{u}}$. This also occurs in a tridimensional Euclidean space, when natural basis $\{\vun{e}_1,\vun{e}_2,\vun{e}_3\}$ is called  \textsb{cartesian basis}\index{basis!cartesian} and all the linear combinations of its elements are \textsb{cartesian vectors}\index{vector!cartesian}.
 
 Now, an interesting consequence of equalities \eqref{eq:mudaBaseTranspHilbert} is that matrix ${\maf{\vtf{i}}{C}{B}}$ results unitary if the bases involved are orthonormal, since they are reciprocal to themselves. Thereby, we present the following corollary, that describes an important  relationship between representative matrices of linear operators.
@@ -1024,9 +1024,9 @@ Existence and uniqueness of right and left polar decomposition follows are verif
 \end{comment}
 
 
-% Quando for falar sobre tensores, dizer que um tensor È elemento do espaÁo dual de um espaÁo vetorial constituÌdo por enuplas de vetores. Diz-se que o elemento desse espaÁo vetorial È um vetor de ordem n e o elemento do espaÁo dual um vetor dual de ordem n ou tensor.
+% Quando for falar sobre tensores, dizer que um tensor √© elemento do espa√ßo dual de um espa√ßo vetorial constitu√≠do por enuplas de vetores. Diz-se que o elemento desse espa√ßo vetorial √© um vetor de ordem n e o elemento do espa√ßo dual um vetor dual de ordem n ou tensor.
 
-%Estudar esta afirmaÁ„o com cuidado: "quando a regra de um tensor f for f(x,y)=u*(x)v*(y), ent„o a relaÁ„o entre f e (u,v) È unÌvoca, quando chamados f de produto tensorial de u com v, representando u\otimes v".
+%Estudar esta afirma√ß√£o com cuidado: "quando a regra de um tensor f for f(x,y)=u*(x)v*(y), ent√£o a rela√ß√£o entre f e (u,v) √© un√≠voca, quando chamados f de produto tensorial de u com v, representando u\otimes v".
 
 }
 

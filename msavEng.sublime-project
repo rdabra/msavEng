@@ -10,7 +10,7 @@
 	],
 
 	"settings": {
-        "TEXroot": "msav.tex",
+		"latextools.tex_root": "msav.tex",
         "open_pdf_on_build": "true"
     }
 
